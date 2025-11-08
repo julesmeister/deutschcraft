@@ -1,0 +1,41 @@
+/* Smooth Wavy Separator */
+.wavy-separator {
+  --wave-size: 12px;
+  --wave-thickness: 2.5px;
+
+  height: var(--wave-size);
+  width: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+.wavy-separator::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background:
+    radial-gradient(
+      calc(1.096 * var(--wave-size) + var(--wave-thickness) / 2)
+      at left 50% bottom calc(-0.45 * var(--wave-size)),
+      transparent 0,
+      transparent calc(99% - var(--wave-thickness)),
+      #FFD542 calc(99% - var(--wave-thickness)) 99%,
+      transparent 101%
+    )
+    calc(50% - 2 * var(--wave-size)) calc(50% - 1.5 * var(--wave-size)) /
+    calc(4 * var(--wave-size)) calc(3 * var(--wave-size)),
+    radial-gradient(
+      calc(1.096 * var(--wave-size) + var(--wave-thickness) / 2)
+      at left 50% top calc(-0.45 * var(--wave-size)),
+      transparent 0,
+      transparent calc(99% - var(--wave-thickness)),
+      #FFD542 calc(99% - var(--wave-thickness)) 99%,
+      transparent 101%
+    )
+    50% calc(50% + 1.5 * var(--wave-size)) /
+    calc(4 * var(--wave-size)) calc(3 * var(--wave-size));
+  background-repeat: repeat-x;
+}

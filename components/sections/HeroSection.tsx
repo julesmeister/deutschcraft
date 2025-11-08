@@ -1,0 +1,155 @@
+'use client';
+
+import Link from 'next/link';
+
+export function HeroSection() {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#171417] pt-20">
+      {/* Vertical line grid pattern like Piku */}
+      <div className="absolute inset-0 overflow-hidden opacity-[0.03]">
+        {[...Array(12)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute top-0 bottom-0 w-px bg-white"
+            style={{ left: `${i * 8.33}%` }}
+          />
+        ))}
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <div className="text-white space-y-8">
+            <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white animate-fade-in-down">
+              #1 German Learning Platform
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-fade-in-up">
+              work{' '}
+              <span className="text-piku-purple-dark">
+                German
+              </span>{' '}
+              share
+            </h1>
+
+            <p className="text-xl md:text-2xl text-white/90 font-manrope animate-fade-in-up animation-delay-100">
+              Seamlessly learn German with AI-powered flashcards, adaptive learning paths, and real-time progress tracking. From A1 to C2 levels.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-200">
+              <Link
+                href="/signup"
+                className="theme-btn theme-btn-light group inline-flex items-center bg-piku-purple-dark text-white font-black text-[15px] py-2 pl-8 pr-2 rounded-md"
+              >
+                <span className="btn-text relative z-10 transition-colors duration-300">Start your free trial</span>
+                <span className="btn-icon relative z-10 ml-8 w-12 h-12 flex items-center justify-center bg-white text-piku-purple-dark rounded-md transition-all duration-400 group-hover:bg-piku-cyan-accent group-hover:text-[#171417]">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+              <Link
+                href="#demo"
+                className="theme-btn theme-btn-light group inline-flex items-center bg-white text-gray-900 font-black text-[15px] py-2 pl-8 pr-2 rounded-md"
+              >
+                <span className="btn-text relative z-10 transition-colors duration-300">Watch Video</span>
+                <span className="btn-icon relative z-10 ml-8 w-12 h-12 flex items-center justify-center bg-piku-purple-dark text-white rounded-md transition-all duration-400 group-hover:bg-piku-cyan-accent group-hover:text-[#171417]">
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
+                  </svg>
+                </span>
+              </Link>
+            </div>
+
+            {/* Stats Row - Piku exact style from hero stats */}
+            <div className="grid grid-cols-3 gap-6 pt-12 animate-fade-in-up animation-delay-300">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full border-2 border-piku-cyan-accent flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-piku-cyan-accent" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-white">60x Faster Learning</h3>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full border-2 border-piku-gold flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-piku-gold" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-white">70% Better Retention</h3>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full border-2 border-piku-pink flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-piku-pink" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-white">Save 4,000+ hours</h3>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Content - Mockup/Illustration */}
+          <div className="relative animate-fade-in-right animation-delay-200">
+            <div className="relative">
+              {/* Floating Cards */}
+              <div className="absolute top-0 right-0 w-64 p-6 bg-white rounded-2xl shadow-lg animate-float">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-piku-yellow-light to-piku-gold" />
+                  <div>
+                    <p className="font-semibold text-gray-900">Daily Goal</p>
+                    <p className="text-sm text-gray-600">20 words</p>
+                  </div>
+                </div>
+                <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
+                  <div className="h-full bg-gradient-to-r from-piku-yellow-light to-piku-gold rounded-full w-3/4 animate-pulse" />
+                </div>
+                <p className="text-sm text-gray-600 mt-2">15/20 completed</p>
+              </div>
+
+              <div className="absolute bottom-0 left-0 w-64 p-6 bg-white rounded-2xl shadow-lg animate-float animation-delay-300">
+                <div className="mb-4">
+                  <p className="text-sm text-gray-600 mb-2">Current Level</p>
+                  <div className="flex items-center gap-2">
+                    <span className="text-3xl font-bold text-piku-purple-dark">B1</span>
+                    <span className="text-gray-600">Intermediate</span>
+                  </div>
+                </div>
+                <div className="flex gap-2">
+                  <div className="flex-1 h-2 bg-piku-purple-dark rounded-full" />
+                  <div className="flex-1 h-2 bg-piku-purple-dark rounded-full" />
+                  <div className="flex-1 h-2 bg-piku-purple-dark rounded-full" />
+                  <div className="flex-1 h-2 bg-gray-200 rounded-full" />
+                  <div className="flex-1 h-2 bg-gray-200 rounded-full" />
+                  <div className="flex-1 h-2 bg-gray-200 rounded-full" />
+                </div>
+              </div>
+
+              {/* Center Main Card */}
+              <div className="relative z-10 w-80 mx-auto p-8 bg-white rounded-3xl shadow-lg">
+                <div className="text-center mb-6">
+                  <p className="text-sm text-gray-600 mb-2">Flashcard</p>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-4">der Apfel</h3>
+                  <p className="text-gray-600">What does this mean?</p>
+                </div>
+                <div className="space-y-3">
+                  <button className="w-full p-4 bg-gradient-to-r from-piku-mint to-piku-green text-gray-900 font-semibold rounded-xl hover:shadow-lg transition-all">
+                    Apple
+                  </button>
+                  <button className="w-full p-4 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transition-all">
+                    Orange
+                  </button>
+                  <button className="w-full p-4 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transition-all">
+                    Banana
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  );
+}
