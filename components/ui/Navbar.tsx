@@ -3,8 +3,37 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { signIn, signOut, useSession } from 'next-auth/react';
+import { MegaDropdown } from './MegaDropdown';
 
-export function Navbar() {
+interface NavItem {
+  name: string;
+  href: string;
+}
+
+interface NavbarProps {
+  /** Navigation items (default: landing page items) */
+  navItems?: NavItem[];
+  /** Show auth button (default: true) */
+  showAuthButton?: boolean;
+  /** Custom auth button text when logged in */
+  authButtonText?: string;
+  /** Custom auth button click handler */
+  onAuthClick?: () => void;
+  /** Dark theme variant (default: false) */
+  dark?: boolean;
+}
+
+export function Navbar({
+  navItems = [
+    { name: 'Features', href: '#how-it-works' },
+    { name: 'Pricing', href: '#pricing' },
+    { name: 'Testimonials', href: '#testimonials' },
+  ],
+  showAuthButton = true,
+  authButtonText,
+  onAuthClick,
+  dark = false,
+}: NavbarProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { data: session, status } = useSession();
@@ -18,7 +47,9 @@ export function Navbar() {
   }, []);
 
   const handleAuthClick = () => {
-    if (session) {
+    if (onAuthClick) {
+      onAuthClick();
+    } else if (session) {
       // User is signed in, redirect to dashboard
       window.location.href = '/dashboard';
     } else {
@@ -27,61 +58,99 @@ export function Navbar() {
     }
   };
 
+  const getAuthButtonText = () => {
+    if (status === 'loading') return 'Loading...';
+    if (authButtonText) return authButtonText;
+    return session ? 'Go to Dashboard' : 'Start Learning';
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 py-3 lg:py-4">
       <div className="container mx-auto px-6">
-        <div className={`flex items-center justify-between transition-all duration-500 bg-white py-3 px-8 rounded-full shadow-lg ${
-          isScrolled ? 'shadow-2xl' : 'shadow-lg'
-        }`}>
+        <div className={`flex items-center justify-between transition-all duration-500 py-3 px-8 rounded-full shadow-lg ${
+          dark
+            ? 'bg-gray-900 text-white'
+            : 'bg-white'
+        } ${isScrolled ? 'shadow-2xl' : 'shadow-lg'}`}>
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 rounded-lg bg-piku-purple-dark flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-black text-xl">T</span>
+            <div className={`w-10 h-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ${
+              dark
+                ? 'rounded-full bg-white'
+                : 'rounded-lg bg-piku-purple-dark'
+            }`}>
+              <span className={`font-black text-xl ${dark ? 'text-gray-900' : 'text-white'}`}>T</span>
             </div>
-            <span className="font-black text-xl text-gray-900">
+            <span className={`font-black text-xl ${dark ? 'text-white' : 'text-gray-900'}`}>
               Testmanship
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-10">
-            <Link
-              href="#how-it-works"
-              className="font-bold text-[15px] text-gray-900 hover:text-piku-cyan-accent transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-cyan-accent after:transition-all after:duration-300 hover:after:w-full"
-            >
-              Features
-            </Link>
-            <Link
-              href="#pricing"
-              className="font-bold text-[15px] text-gray-900 hover:text-piku-cyan-accent transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-cyan-accent after:transition-all after:duration-300 hover:after:w-full"
-            >
-              Pricing
-            </Link>
-            <Link
-              href="#testimonials"
-              className="font-bold text-[15px] text-gray-900 hover:text-piku-cyan-accent transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-cyan-accent after:transition-all after:duration-300 hover:after:w-full"
-            >
-              Testimonials
-            </Link>
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`font-bold text-[15px] transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:transition-all after:duration-300 hover:after:w-full ${
+                  dark
+                    ? 'text-gray-300 hover:text-piku-cyan-accent after:bg-piku-cyan-accent'
+                    : 'text-gray-900 hover:text-piku-cyan-accent after:bg-piku-cyan-accent'
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center">
-            <button
-              onClick={handleAuthClick}
-              disabled={status === 'loading'}
-              className="theme-btn group inline-flex items-center bg-piku-purple-dark text-white font-black text-[14px] py-1.5 pl-5 pr-1.5 rounded-full disabled:opacity-50"
-            >
-              <span className="btn-text relative z-10 transition-colors duration-300">
-                {status === 'loading' ? 'Loading...' : session ? 'Go to Dashboard' : 'Start Learning'}
-              </span>
-              <span className="btn-icon relative z-10 ml-4 w-9 h-9 flex items-center justify-center bg-white text-piku-purple-dark rounded-full transition-all duration-400 group-hover:bg-piku-cyan-accent group-hover:text-[#171417]">
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </span>
-            </button>
-          </div>
+          {showAuthButton && (
+            <div className="hidden lg:flex items-center">
+              <button
+                onClick={handleAuthClick}
+                disabled={status === 'loading'}
+                className="theme-btn group inline-flex items-center bg-piku-purple-dark text-white font-black text-[14px] py-1.5 pl-5 pr-1.5 rounded-full disabled:opacity-50"
+              >
+                <span className="btn-text relative z-10 transition-colors duration-300">
+                  {getAuthButtonText()}
+                </span>
+                <span className="btn-icon relative z-10 ml-4 w-9 h-9 flex items-center justify-center bg-white text-piku-purple-dark rounded-full transition-all duration-400 group-hover:bg-piku-cyan-accent group-hover:text-[#171417]">
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          )}
+
+          {/* User Menu for Logged In Users */}
+          {!showAuthButton && session && (
+            <div className="hidden lg:flex items-center">
+              <button
+                onClick={() => signOut({ callbackUrl: '/' })}
+                className={`group inline-flex items-center font-black text-[14px] py-1.5 pl-5 pr-1.5 rounded-full ${
+                  dark
+                    ? 'theme-btn-dark bg-white text-gray-900'
+                    : 'theme-btn bg-piku-purple-dark text-white'
+                }`}
+              >
+                <span className={`relative z-10 transition-colors duration-300 ${
+                  dark ? '' : 'btn-text'
+                }`}>
+                  Sign out
+                </span>
+                <span className={`relative z-10 ml-4 w-9 h-9 flex items-center justify-center rounded-full transition-all duration-400 ${
+                  dark
+                    ? 'bg-gray-900 text-white'
+                    : 'btn-icon bg-white text-piku-purple-dark group-hover:bg-piku-cyan-accent group-hover:text-[#171417]'
+                }`}>
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          )}
 
           {/* Mobile Menu Button */}
           <button
@@ -118,23 +187,38 @@ export function Navbar() {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg animate-fade-in-down">
             <nav className="flex flex-col space-y-4 px-4">
-              <Link href="#how-it-works" className="text-gray-700 hover:text-piku-purple-dark font-medium">
-                Features
-              </Link>
-              <Link href="#pricing" className="text-gray-700 hover:text-piku-purple-dark font-medium">
-                Pricing
-              </Link>
-              <Link href="#testimonials" className="text-gray-700 hover:text-piku-purple-dark font-medium">
-                Testimonials
-              </Link>
-              <hr />
-              <button
-                onClick={handleAuthClick}
-                disabled={status === 'loading'}
-                className="px-6 py-3 bg-gradient-to-r from-piku-purple-dark to-piku-cyan text-white font-semibold rounded-xl text-center disabled:opacity-50"
-              >
-                {status === 'loading' ? 'Loading...' : session ? 'Go to Dashboard' : 'Start Learning'}
-              </button>
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-700 hover:text-piku-purple-dark font-medium"
+                >
+                  {item.name}
+                </Link>
+              ))}
+              {showAuthButton && (
+                <>
+                  <hr />
+                  <button
+                    onClick={handleAuthClick}
+                    disabled={status === 'loading'}
+                    className="px-6 py-3 bg-gradient-to-r from-piku-purple-dark to-piku-cyan text-white font-semibold rounded-xl text-center disabled:opacity-50"
+                  >
+                    {getAuthButtonText()}
+                  </button>
+                </>
+              )}
+              {!showAuthButton && session && (
+                <>
+                  <hr />
+                  <button
+                    onClick={() => signOut({ callbackUrl: '/' })}
+                    className="px-6 py-3 bg-gray-100 text-gray-700 font-semibold rounded-xl text-center hover:bg-gray-200"
+                  >
+                    Sign out
+                  </button>
+                </>
+              )}
             </nav>
           </div>
         )}

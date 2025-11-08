@@ -2,6 +2,177 @@
 
 This document describes all reusable UI components available for building the Testmanship dashboard and pages.
 
+## Dashboard Components (New!)
+
+### 5. DashboardNav Component
+
+Horizontal navigation bar for dashboard sub-pages with active state indicators.
+
+**Location:** `components/ui/DashboardNav.tsx`
+
+**Usage:**
+
+```tsx
+import { DashboardNav } from '@/components/ui/DashboardNav';
+
+// Basic usage
+<DashboardNav
+  items={[
+    { name: 'Student', href: '/dashboard/student', icon: '📚' },
+    { name: 'Teacher', href: '/dashboard/teacher', icon: '👨‍🏫' },
+    { name: 'Settings', href: '/dashboard/settings', icon: '⚙️' },
+  ]}
+/>
+
+// With custom max width
+<DashboardNav
+  items={dashboardItems}
+  maxWidth="6xl"
+  className="mt-[80px]"
+/>
+```
+
+**Props:**
+- `items`: NavItem[] - Array of navigation items
+  - `name`: string - Display name
+  - `href`: string - Link URL
+  - `icon`: string (optional) - Emoji or icon
+- `maxWidth`: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '4xl' | '6xl' | 'full' - Container max width (default: 'xl')
+- `className`: string - Additional CSS classes
+
+**Features:**
+- Active state with purple underline and text color
+- Hover states
+- Icons support
+- Responsive container widths
+- Auto-detects active route with `pathname.startsWith()`
+
+---
+
+### 6. StatCard Component
+
+Animated stat card with counter animation - perfect for dashboard KPIs.
+
+**Location:** `components/ui/StatCard.tsx`
+
+**Usage:**
+
+```tsx
+import { StatCard, WordsLearnedCard, StreakCard } from '@/components/ui/StatCard';
+
+// Generic stat card
+<StatCard
+  title="Total Users"
+  value={1234}
+  icon="👥"
+  iconBgColor="bg-piku-purple-light"
+  animate={true}
+  suffix=" users"
+/>
+
+// With trend indicator
+<StatCard
+  title="Revenue"
+  value={45678}
+  icon="💰"
+  trend={{ value: 12, isPositive: true }}
+  formatValue={(v) => `$${v.toLocaleString()}`}
+/>
+
+// Preset variants (recommended)
+<WordsLearnedCard value={342} />
+<WordsMasteredCard value={187} />
+<StreakCard value={7} />
+<SuccessRateCard value={85.5} />
+```
+
+**Props:**
+- `title`: string - Label for the stat
+- `value`: number - The target value to display
+- `icon`: ReactNode - Icon emoji or component
+- `iconBgColor`: string - Tailwind bg color class (default: 'bg-piku-purple-light')
+- `animate`: boolean - Enable counter animation (default: true)
+- `suffix`: string - Text after value (e.g., '%', 'days')
+- `trend`: { value: number, isPositive: boolean } - Trend indicator
+- `formatValue`: (value) => string - Custom value formatter
+
+**Preset Variants:**
+- `WordsLearnedCard` - Purple icon, no suffix
+- `WordsMasteredCard` - Mint green icon
+- `StreakCard` - Orange icon, 'days' suffix
+- `SuccessRateCard` - Yellow icon, '%' suffix
+
+---
+
+### 6. ProgressCard Component
+
+Card with progress bar visualization.
+
+**Location:** `components/ui/ProgressCard.tsx`
+
+**Usage:**
+
+```tsx
+import { ProgressCard, DailyGoalCard, LevelProgressCard } from '@/components/ui/ProgressCard';
+
+// Generic progress card
+<ProgressCard
+  title="Monthly Goal"
+  current={75}
+  target={100}
+  icon="🎯"
+  progressColor="bg-gradient-to-r from-piku-purple-dark to-piku-cyan"
+/>
+
+// Preset variants
+<DailyGoalCard current={15} target={20} />
+<LevelProgressCard current={180} target={300} level="B1" />
+```
+
+**Props:**
+- `title`: string - Card title
+- `current`: number - Current progress value
+- `target`: number - Target/goal value
+- `icon`: ReactNode - Icon emoji or component
+- `progressColor`: string - Tailwind gradient class for progress bar
+- `subtitle`: string - Optional subtitle text
+- `showPercentage`: boolean - Show percentage (default: true)
+- `formatLabel`: (current, target) => string - Custom label formatter
+
+**Preset Variants:**
+- `DailyGoalCard` - For daily word goals
+- `LevelProgressCard` - For CEFR level progression
+
+---
+
+## Hooks
+
+### useAnimatedCounter
+
+Animates a number from 0 to target value.
+
+**Location:** `lib/hooks/useAnimatedCounter.ts`
+
+**Usage:**
+
+```tsx
+import { useAnimatedCounter } from '@/lib/hooks/useAnimatedCounter';
+
+function MyComponent() {
+  const count = useAnimatedCounter({ target: 1000, interval: 20 });
+  return <div>{count.toLocaleString()}</div>;
+}
+```
+
+**Props:**
+- `target`: number - Value to count to
+- `initialValue`: number - Starting value (default: 0)
+- `increment`: number - Amount per step (auto-calculated if not provided)
+- `interval`: number - Milliseconds between updates (default: 20)
+- `type`: 'increment' | 'decrement' - Count direction
+
+---
+
 ## Components
 
 ### 1. Card Component
