@@ -9,13 +9,13 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pastel-ocean to-brand-purple flex items-center justify-center">
-                <span className="text-white font-bold text-xl">T</span>
+              <div className="w-10 h-10 rounded-lg bg-piku-purple-dark flex items-center justify-center">
+                <span className="text-white font-black text-xl">T</span>
               </div>
-              <span className="font-bold text-xl">Testmanship</span>
+              <span className="font-black text-xl">Testmanship</span>
             </div>
             <p className="text-gray-400">
-              Master German with AI-powered learning from A1 to C2
+              A unique approach to learning German with AI and peer collaboration
             </p>
           </div>
 

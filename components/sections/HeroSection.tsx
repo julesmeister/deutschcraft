@@ -21,19 +21,19 @@ export function HeroSection() {
           {/* Left Content */}
           <div className="text-white space-y-8">
             <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white animate-fade-in-down">
-              #1 German Learning Platform
+              AI-Powered German Learning
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-fade-in-up">
-              work{' '}
+              Learn{' '}
               <span className="text-piku-purple-dark">
                 German
               </span>{' '}
-              share
+              Together
             </h1>
 
             <p className="text-xl md:text-2xl text-white/90 font-manrope animate-fade-in-up animation-delay-100">
-              Seamlessly learn German with AI-powered flashcards, adaptive learning paths, and real-time progress tracking. From A1 to C2 levels.
+              A unique approach to learning German with AI-powered flashcards, peer collaboration, and personalized teacher feedback.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-200">

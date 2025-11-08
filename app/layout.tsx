@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
+import { SessionProvider } from "@/components/providers/SessionProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -15,13 +16,13 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Testmanship - Master German with AI-Powered Learning",
-  description: "Learn German effectively with AI-generated flashcards, adaptive learning paths, and progress tracking. From A1 to C2 levels.",
-  keywords: "German learning, language learning, flashcards, AI tutor, CEFR levels, vocabulary",
+  title: "Testmanship - Learn German Together",
+  description: "A unique approach to learning German with AI-powered flashcards, peer collaboration, and personalized teacher feedback.",
+  keywords: "German learning, language learning, flashcards, AI tutor, peer learning, teacher feedback",
   authors: [{ name: "Testmanship" }],
   openGraph: {
-    title: "Testmanship - Master German with AI-Powered Learning",
-    description: "Learn German effectively with AI-generated flashcards and adaptive learning",
+    title: "Testmanship - Learn German Together",
+    description: "A unique approach to learning German with AI-powered flashcards, peer collaboration, and personalized teacher feedback.",
     type: "website",
   },
 };
@@ -36,7 +37,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${manrope.variable} font-sans antialiased`}
       >
-        {children}
+        <SessionProvider>
+          {children}
+        </SessionProvider>
       </body>
     </html>
   );

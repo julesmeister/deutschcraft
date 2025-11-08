@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { data: session, status } = useSession();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +16,16 @@ export function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleAuthClick = () => {
+    if (session) {
+      // User is signed in, redirect to dashboard
+      window.location.href = '/dashboard';
+    } else {
+      // User is not signed in, trigger Google sign-in
+      signIn('google', { callbackUrl: '/dashboard' });
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 py-3 lg:py-4">
@@ -53,25 +65,22 @@ export function Navbar() {
             </Link>
           </nav>
 
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <Link
-              href="/login"
-              className="font-bold text-[15px] px-6 py-2 rounded-lg transition-all duration-300 hover:scale-105 text-gray-900 hover:text-piku-purple-dark"
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center">
+            <button
+              onClick={handleAuthClick}
+              disabled={status === 'loading'}
+              className="theme-btn group inline-flex items-center bg-piku-purple-dark text-white font-black text-[14px] py-1.5 pl-5 pr-1.5 rounded-full disabled:opacity-50"
             >
-              Login
-            </Link>
-            <Link
-              href="/signup"
-              className="theme-btn group inline-flex items-center bg-piku-purple-dark text-white font-black text-[14px] py-1.5 pl-5 pr-1.5 rounded-full"
-            >
-              <span className="btn-text relative z-10 transition-colors duration-300">Start Learning</span>
+              <span className="btn-text relative z-10 transition-colors duration-300">
+                {status === 'loading' ? 'Loading...' : session ? 'Go to Dashboard' : 'Start Learning'}
+              </span>
               <span className="btn-icon relative z-10 ml-4 w-9 h-9 flex items-center justify-center bg-white text-piku-purple-dark rounded-full transition-all duration-400 group-hover:bg-piku-cyan-accent group-hover:text-[#171417]">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </span>
-            </Link>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -119,15 +128,13 @@ export function Navbar() {
                 Testimonials
               </Link>
               <hr />
-              <Link href="/login" className="text-gray-700 hover:text-piku-purple-dark font-medium">
-                Login
-              </Link>
-              <Link
-                href="/signup"
-                className="px-6 py-3 bg-gradient-to-r from-piku-purple-dark to-piku-cyan text-white font-semibold rounded-xl text-center"
+              <button
+                onClick={handleAuthClick}
+                disabled={status === 'loading'}
+                className="px-6 py-3 bg-gradient-to-r from-piku-purple-dark to-piku-cyan text-white font-semibold rounded-xl text-center disabled:opacity-50"
               >
-                Start Learning
-              </Link>
+                {status === 'loading' ? 'Loading...' : session ? 'Go to Dashboard' : 'Start Learning'}
+              </button>
             </nav>
           </div>
         )}
