@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export function TestimonialsSection() {
@@ -50,37 +51,27 @@ export function TestimonialsSection() {
   return (
     <section id="testimonials" className="py-16 bg-white">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-12 gap-8">
-          {/* Left Column - Introduction */}
-          <div className="lg:col-span-5">
-            <div>
-              <div className="inline-block px-4 py-1.5 bg-gray-100 border border-gray-300 rounded-full mb-3">
-                <h5 className="text-piku-purple-dark uppercase text-xs font-bold tracking-wide">
-                  client feedback
-                </h5>
+        <div className="grid lg:grid-cols-12 gap-6">
+          {/* Left Column - Piku-style colored box */}
+          <div className="lg:col-span-6">
+            <div className="w-100 mt-30 p-8 rounded-3xl relative bg-piku-mint">
+              <h3 className="text-6xl font-black text-gray-900 mb-6 max-w-[85%]" style={{ lineHeight: '1.25em' }}>What Our Students Say</h3>
+              <div className="row mt-4">
+                <div className="col-12">
+                  <p className="text-2xl text-gray-900" style={{ lineHeight: '1.777em' }}>Real success stories from learners who achieved fluency with our AI-powered platform.</p>
+                </div>
               </div>
-              <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-2 leading-tight">
-                What Our Students Say
-              </h2>
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">
-                Indulge in the epitome of effective learning at Testmanship.
-              </p>
-              <Link
-                href="#testimonials"
-                className="theme-btn group inline-flex items-center bg-piku-purple-dark text-white font-bold text-xs py-1 pl-4 pr-1 rounded-lg"
-              >
-                <span className="btn-text relative z-10 transition-colors duration-300">View All</span>
-                <span className="btn-icon relative z-10 ml-2 w-7 h-7 flex items-center justify-center bg-white text-piku-purple-dark rounded-lg transition-all duration-400 group-hover:bg-piku-cyan-accent group-hover:text-[#171417]">
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </Link>
+              <Image
+                src="/images/shape_43.svg"
+                alt=""
+                width={50}
+                height={50}
+                className="absolute right-8 top-[32px]"
+              />
             </div>
           </div>
 
           {/* Right Column - Yellow Rounded Container */}
-          <div className="lg:col-span-1"></div>
           <div className="lg:col-span-6">
             <div className="bg-piku-yellow-light p-6 rounded-3xl">
               <div className="flex gap-4">
