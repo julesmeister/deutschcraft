@@ -1,6 +1,13 @@
 /**
  * Data Models for Testmanship Web V2
- * Extracted from Testmanship Android app (Kotlin models)
+ * FLAT STRUCTURE - Top-level collections only
+ *
+ * Collections:
+ * - users/{email}
+ * - batches/{batchId}
+ * - tasks/{taskId}
+ * - submissions/{submissionId}
+ * - progress/{progressId}
  */
 
 // CEFR Language Levels (A1-C2)
@@ -40,107 +47,237 @@ export const CEFRLevelInfo = {
   },
 } as const;
 
-// Base User model
+/**
+ * User Model
+ * Path: users/{email}
+ * ONE document per person - email is the document ID
+ */
 export interface User {
-  id: string;
-  email: string;
-  name: string;
-  profilePictureUrl?: string;
-  role: 'student' | 'teacher';
-  createdAt: number;
-  updatedAt: number;
-}
+  // Primary Key (document ID)
+  userId: string; // Email address (same as document ID)
+  email: string; // Email address (same as userId)
 
-// Student model (extends User)
-export interface Student {
-  studentId: string;
-  userId: string;
-  teacherId?: string | null;
-  targetLanguage: string;
-  currentLevel: CEFRLevel;
+  // Basic Info
+  firstName: string;
+  lastName: string;
+  role: 'STUDENT' | 'TEACHER';
+  photoURL?: string;
 
-  // Learning Statistics
-  wordsLearned: number;
-  wordsMastered: number;
-  sentencesCreated: number;
-  sentencesPerfect: number;
-  currentStreak: number;
-  longestStreak: number;
-  totalPracticeTime: number; // in minutes
+  // Student-specific fields (only if role === 'STUDENT')
+  cefrLevel?: CEFRLevel;
+  teacherId?: string | null; // Email of teacher
+  batchId?: string | null; // Reference to batch
+
+  // Student learning stats
+  wordsLearned?: number;
+  wordsMastered?: number;
+  sentencesCreated?: number;
+  sentencesPerfect?: number;
+  currentStreak?: number;
+  longestStreak?: number;
+  totalPracticeTime?: number; // minutes
+  dailyGoal?: number; // words per day
   lastActiveDate?: number | null;
 
-  // Settings
-  dailyGoal: number; // words per day
-  notificationsEnabled: boolean;
-  soundEnabled: boolean;
+  // Student settings
+  notificationsEnabled?: boolean;
+  soundEnabled?: boolean;
+
+  // Teacher-specific fields (only if role === 'TEACHER')
+  totalStudents?: number; // Computed
+  activeBatches?: number; // Computed
+
+  // Common
+  createdAt: number;
+  updatedAt: number;
+}
+
+/**
+ * Batch Model
+ * Path: batches/{batchId}
+ * Top-level collection
+ */
+export interface Batch {
+  batchId: string;
+  teacherId: string; // Email of teacher who created it
+
+  name: string;
+  description?: string;
+  currentLevel: CEFRLevel;
+
+  isActive: boolean;
+  startDate: number;
+  endDate: number | null;
+
+  studentCount: number; // Computed field
+
+  // Level progression history
+  levelHistory: BatchLevelHistory[];
 
   createdAt: number;
   updatedAt: number;
 }
 
-// Computed properties for Student
-export function getStudentSuccessRate(student: Student): number {
-  if (student.sentencesCreated === 0) return 0;
-  return (student.sentencesPerfect / student.sentencesCreated) * 100;
+export interface BatchLevelHistory {
+  level: CEFRLevel;
+  startDate: number;
+  endDate: number | null;
+  modifiedBy: string; // teacherId (email)
+  notes?: string;
 }
 
-export function isStudentActiveToday(student: Student): boolean {
-  if (!student.lastActiveDate) return false;
-  const today = Math.floor(Date.now() / (24 * 60 * 60 * 1000));
-  const lastActive = Math.floor(student.lastActiveDate / (24 * 60 * 60 * 1000));
-  return today === lastActive;
-}
+/**
+ * Writing Task Model
+ * Path: tasks/{taskId}
+ * Top-level collection
+ */
+export interface WritingTask {
+  taskId: string;
+  batchId: string; // Which batch this task belongs to
+  teacherId: string; // Email of teacher who created it
 
-// Teacher model (extends User)
-export interface Teacher {
-  teacherId: string;
-  userId: string;
-  department?: string | null;
-  specialization: string;
-  totalStudents: number;
-  activeStudents: number;
+  // Task details
+  title: string;
+  description?: string;
+  instructions: string;
+
+  // Classification
+  category: 'essay' | 'letter' | 'email' | 'story' | 'article' | 'report' | 'review' | 'other';
+  level: CEFRLevel;
+
+  // Status and priority
+  status: 'draft' | 'assigned' | 'completed';
+  priority: 'low' | 'medium' | 'high';
+
+  // Timing
+  assignedDate: number | null;
+  dueDate: number;
+  estimatedDuration?: number; // minutes
+
+  // Assignment
+  assignedStudents: string[]; // Array of student emails
+  completedStudents: string[]; // Array of student emails who completed
+
+  // Requirements
+  minWords?: number;
+  maxWords?: number;
+  requiredVocabulary?: string[];
+  totalPoints?: number;
+
   createdAt: number;
   updatedAt: number;
 }
 
-// Vocabulary Word model
+/**
+ * Task Submission Model
+ * Path: submissions/{submissionId}
+ * Top-level collection
+ */
+export interface TaskSubmission {
+  submissionId: string;
+  taskId: string; // Reference to task
+  studentId: string; // Student's email
+  batchId: string; // For easier querying
+
+  // Submission content
+  content: string; // The actual writing
+  wordCount: number;
+
+  // Status
+  status: 'draft' | 'submitted' | 'graded' | 'returned';
+
+  // Timestamps
+  startedAt?: number | null;
+  submittedAt?: number | null;
+  gradedAt?: number | null;
+
+  // Grading
+  score?: number | null;
+  maxScore?: number;
+  feedback?: string;
+  gradedBy?: string | null; // Teacher's email
+
+  // Version tracking
+  version: number;
+  revisions: TaskRevision[];
+
+  createdAt: number;
+  updatedAt: number;
+}
+
+export interface TaskRevision {
+  version: number;
+  content: string;
+  wordCount: number;
+  savedAt: number;
+}
+
+/**
+ * Study Progress Model
+ * Path: progress/{progressId}
+ * Format: PROG_{YYYYMMDD}_{email}
+ * Daily/weekly learning statistics
+ */
+export interface StudyProgress {
+  progressId: string;
+  userId: string; // Student's email
+  date: string; // YYYY-MM-DD format
+
+  // Daily stats
+  wordsStudied: number;
+  wordsCorrect: number;
+  wordsIncorrect: number;
+  timeSpent: number; // minutes
+
+  // Practice details
+  sessionsCompleted: number;
+  cardsReviewed: number;
+  sentencesCreated: number;
+
+  createdAt: number;
+}
+
+/**
+ * Vocabulary Word Model
+ * Path: vocabulary/{wordId}
+ * Top-level collection (global word bank)
+ */
 export interface VocabularyWord {
-  id: string;
+  wordId: string;
   germanWord: string;
   englishTranslation: string;
+
   partOfSpeech?: string; // noun, verb, adjective, etc.
   gender?: string; // for German nouns: der, die, das
   level: CEFRLevel;
+
   exampleSentence?: string;
+  exampleTranslation?: string;
   audioUrl?: string;
+
+  frequency: number; // How common (1-10)
+  tags: string[]; // Categories like 'family', 'food', etc.
+
   createdAt: number;
 }
 
-// Flashcard model
-export interface Flashcard {
-  id: string;
-  wordId: string;
-  question: string;
-  correctAnswer: string;
-  wrongAnswers: string[];
-  type: 'translation' | 'fill-in-blank' | 'multiple-choice';
-  level: CEFRLevel;
-  createdAt: number;
-}
-
-// Flashcard Progress (Spaced Repetition System)
+/**
+ * Flashcard Progress Model
+ * Path: flashcards/{flashcardId}
+ * Student's spaced repetition data
+ */
 export interface FlashcardProgress {
-  id: string;
-  userId: string;
-  wordId: string;
+  flashcardId: string;
+  userId: string; // Student's email
+  wordId: string; // Reference to vocabulary word
 
-  // SRS algorithm data
+  // SRS (Spaced Repetition System) data
   repetitions: number;
   easeFactor: number;
   interval: number; // days until next review
   nextReviewDate: number;
 
-  // Performance tracking
+  // Performance
   correctCount: number;
   incorrectCount: number;
   lastReviewDate?: number | null;
@@ -150,79 +287,140 @@ export interface FlashcardProgress {
   updatedAt: number;
 }
 
-// Study Progress model
-export interface StudyProgress {
-  id: string;
-  userId: string;
-  date: number; // timestamp
-  wordsStudied: number;
-  wordsCorrect: number;
-  timeSpent: number; // in minutes
-  level: CEFRLevel;
-  createdAt: number;
+// ============================================
+// Helper Types & Functions
+// ============================================
+
+/**
+ * Get user's full name
+ */
+export function getUserFullName(user: User): string {
+  return `${user.firstName} ${user.lastName}`;
 }
 
-// Dashboard Statistics
-export interface DashboardStats {
-  totalWords: number;
-  masteredWords: number;
-  currentStreak: number;
-  longestStreak: number;
-  todayProgress: number;
-  weeklyProgress: number[];
-  weakWords: VocabularyWord[];
-  recentActivity: StudyProgress[];
+/**
+ * Calculate student success rate
+ */
+export function getStudentSuccessRate(user: User): number {
+  if (!user.sentencesCreated || user.sentencesCreated === 0) return 0;
+  const perfect = user.sentencesPerfect || 0;
+  return (perfect / user.sentencesCreated) * 100;
 }
 
-// Student with User (joined data)
-export interface StudentWithUser {
-  student: Student;
-  user: User;
+/**
+ * Check if user is a student
+ */
+export function isStudent(user: User): boolean {
+  return user.role === 'STUDENT';
 }
 
-// Teacher with User (joined data)
-export interface TeacherWithUser {
-  teacher: Teacher;
-  user: User;
+/**
+ * Check if user is a teacher
+ */
+export function isTeacher(user: User): boolean {
+  return user.role === 'TEACHER';
 }
 
-// Sample data for development/preview
-export const SAMPLE_USER: User = {
-  id: 'user_1',
+/**
+ * Get batch students (query helper)
+ */
+export interface BatchWithStats extends Batch {
+  students: User[];
+  completionRate: number;
+  averageProgress: number;
+}
+
+/**
+ * Get task with stats (query helper)
+ */
+export interface TaskWithStats extends WritingTask {
+  submissionCount: number;
+  completionRate: number;
+  averageScore?: number;
+  pendingGrading: number;
+}
+
+// ============================================
+// Sample Data for Development
+// ============================================
+
+export const SAMPLE_STUDENT: User = {
+  userId: 'student@testmanship.com',
   email: 'student@testmanship.com',
-  name: 'Max Mustermann',
-  role: 'student',
-  createdAt: Date.now(),
-  updatedAt: Date.now(),
-};
+  firstName: 'Max',
+  lastName: 'Mustermann',
+  role: 'STUDENT',
+  cefrLevel: CEFRLevel.A2,
+  teacherId: 'teacher@testmanship.com',
+  batchId: 'BATCH_001',
 
-export const SAMPLE_STUDENT: Student = {
-  studentId: 'STU001',
-  userId: 'user_1',
-  targetLanguage: 'German',
-  currentLevel: CEFRLevel.B1,
   wordsLearned: 342,
   wordsMastered: 187,
-  sentencesCreated: 156,
-  sentencesPerfect: 124,
+  sentencesCreated: 125,
+  sentencesPerfect: 98,
   currentStreak: 7,
-  longestStreak: 21,
+  longestStreak: 15,
   totalPracticeTime: 1240,
+  dailyGoal: 25,
   lastActiveDate: Date.now(),
-  dailyGoal: 20,
+
   notificationsEnabled: true,
   soundEnabled: true,
-  createdAt: Date.now() - 30 * 24 * 60 * 60 * 1000,
+
+  createdAt: Date.now() - 90 * 24 * 60 * 60 * 1000, // 90 days ago
   updatedAt: Date.now(),
 };
 
-export const SAMPLE_TEACHER: Teacher = {
-  teacherId: 'TCH001',
-  userId: 'user_2',
-  department: 'Languages',
-  specialization: 'German Language',
-  totalStudents: 24,
-  activeStudents: 18,
-  createdAt: Date.now() - 90 * 24 * 60 * 60 * 1000,
+export const SAMPLE_TEACHER: User = {
+  userId: 'teacher@testmanship.com',
+  email: 'teacher@testmanship.com',
+  firstName: 'Anna',
+  lastName: 'Schmidt',
+  role: 'TEACHER',
+
+  totalStudents: 45,
+  activeBatches: 3,
+
+  createdAt: Date.now() - 180 * 24 * 60 * 60 * 1000, // 180 days ago
   updatedAt: Date.now(),
 };
+
+export const SAMPLE_BATCH: Batch = {
+  batchId: 'BATCH_001',
+  teacherId: 'teacher@testmanship.com',
+
+  name: 'Morning Batch A2',
+  description: 'Beginner German class - Morning session',
+  currentLevel: CEFRLevel.A2,
+
+  isActive: true,
+  startDate: Date.now() - 60 * 24 * 60 * 60 * 1000, // 60 days ago
+  endDate: null,
+
+  studentCount: 15,
+
+  levelHistory: [
+    {
+      level: CEFRLevel.A1,
+      startDate: Date.now() - 60 * 24 * 60 * 60 * 1000,
+      endDate: Date.now() - 30 * 24 * 60 * 60 * 1000,
+      modifiedBy: 'teacher@testmanship.com',
+      notes: 'Starting level',
+    },
+    {
+      level: CEFRLevel.A2,
+      startDate: Date.now() - 30 * 24 * 60 * 60 * 1000,
+      endDate: null,
+      modifiedBy: 'teacher@testmanship.com',
+      notes: 'Progressed to A2',
+    },
+  ],
+
+  createdAt: Date.now() - 60 * 24 * 60 * 60 * 1000,
+  updatedAt: Date.now(),
+};
+
+// Legacy exports for backwards compatibility
+export type Student = User;
+export type Teacher = User;
+export type StudentData = User;

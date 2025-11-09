@@ -1,223 +1,356 @@
 'use client';
 
-import { TaskBoard, TaskGroup, TaskMember } from '@/components/ui/TaskBoard';
+import { useState, useEffect } from 'react';
+import { TaskBoard, TaskGroup, TaskMember, Task } from '@/components/ui/TaskBoard';
+import { BatchSelector } from '@/components/ui/BatchSelector';
+import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
+import { useActiveBatches } from '@/lib/hooks/useBatches';
+import { useAllStudentsNested } from '@/lib/hooks/useUsers';
+import { useTeacherBatchTasks, useCreateWritingTask, useUpdateWritingTask, useDeleteWritingTask, useStudentTasks } from '@/lib/hooks/useWritingTasks';
+import { useCurrentStudent } from '@/lib/hooks/useUsers';
+import { Batch } from '@/lib/models';
+import { useToast } from '@/components/ui/toast';
 
 export default function TasksPage() {
-  const members: TaskMember[] = [
-    {
-      id: '1',
-      name: 'Max Mustermann',
-      avatar: 'https://ui-avatars.com/api/?name=Max+Mustermann&background=667eea&color=fff',
-    },
-    {
-      id: '2',
-      name: 'Anna Schmidt',
-      avatar: 'https://ui-avatars.com/api/?name=Anna+Schmidt&background=06b6d4&color=fff',
-    },
-    {
-      id: '3',
-      name: 'Thomas Weber',
-      avatar: 'https://ui-avatars.com/api/?name=Thomas+Weber&background=10b981&color=fff',
-    },
-    {
-      id: '4',
-      name: 'Sarah Fischer',
-      avatar: 'https://ui-avatars.com/api/?name=Sarah+Fischer&background=f59e0b&color=fff',
-    },
-    {
-      id: '5',
-      name: 'Michael Becker',
-      avatar: 'https://ui-avatars.com/api/?name=Michael+Becker&background=8b5cf6&color=fff',
-    },
-    {
-      id: '6',
-      name: 'Laura Hoffmann',
-      avatar: 'https://ui-avatars.com/api/?name=Laura+Hoffmann&background=ec4899&color=fff',
-    },
-    {
-      id: '7',
-      name: 'Felix Schneider',
-      avatar: 'https://ui-avatars.com/api/?name=Felix+Schneider&background=14b8a6&color=fff',
-    },
-  ];
+  const { session } = useFirebaseAuth();
+  const toast = useToast();
 
+  console.log('[TasksPage] Session:', session);
+  console.log('[TasksPage] Session email:', session?.user?.email);
+
+  // Fetch current user from Firestore to get accurate role
+  const { student: currentUser, isLoading: isLoadingUser, isError: isUserError } = useCurrentStudent(session?.user?.email || null);
+
+  console.log('[TasksPage] useCurrentStudent result:', { currentUser, isLoadingUser, isUserError });
+
+  // Get role from Firestore user data (handles both 'STUDENT' and 'student')
+  const userRole = currentUser?.role?.toUpperCase() as 'STUDENT' | 'TEACHER' | undefined;
+
+  console.log('[TasksPage] Session user:', session?.user);
+  console.log('[TasksPage] Firestore user:', currentUser);
+  console.log('[TasksPage] User role:', userRole);
+
+  // NEW STRUCTURE: Email is the user ID
+  const currentTeacherId = userRole === 'TEACHER' ? session?.user?.email : undefined;
+
+  // Student-specific data
+  const { tasks: studentTasks, isLoading: studentTasksLoading } = useStudentTasks(
+    userRole === 'STUDENT' ? session?.user?.email || undefined : undefined
+  );
+
+  // Teacher-specific data
+  const [selectedBatch, setSelectedBatch] = useState<Batch | null>(null);
+  const { batches } = useActiveBatches(currentTeacherId);
+
+  // Auto-select first batch (teachers only)
+  useEffect(() => {
+    if (userRole === 'TEACHER' && batches.length > 0 && !selectedBatch) {
+      setSelectedBatch(batches[0]);
+    }
+  }, [batches, selectedBatch, userRole]);
+
+  // Fetch all students (teachers only)
+  const { students: allStudents } = useAllStudentsNested();
+
+  // Filter students by selected batch - these will be the task members
+  const batchStudents = selectedBatch && currentTeacherId
+    ? allStudents.filter(student =>
+        student.teacherId === currentTeacherId &&
+        student.batchId === selectedBatch.batchId
+      )
+    : [];
+
+  // Convert students to TaskMember format
+  const members: TaskMember[] = batchStudents.map(student => {
+    // Handle both formats: {name: "Full Name"} OR {firstName: "First", lastName: "Last"}
+    const displayName = (student as any).name || `${student.firstName || ''} ${student.lastName || ''}`.trim() || student.email;
+
+    return {
+      id: student.userId, // Using email as ID now
+      name: displayName,
+      avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(displayName)}&background=667eea&color=fff`,
+    };
+  });
+
+  // Fetch writing tasks based on role
+  const { tasks: teacherTasks, isLoading: teacherTasksLoading } = useTeacherBatchTasks(
+    currentTeacherId,
+    selectedBatch?.batchId
+  );
+
+  // Use appropriate tasks based on role
+  const writingTasks = userRole === 'TEACHER' ? teacherTasks : studentTasks;
+  const tasksLoading = userRole === 'TEACHER' ? teacherTasksLoading : studentTasksLoading;
+
+  // Mutation hooks
+  const createTaskMutation = useCreateWritingTask();
+  const updateTaskMutation = useUpdateWritingTask();
+  const deleteTaskMutation = useDeleteWritingTask();
+
+  // Group tasks by category - ALWAYS show all groups, even if empty
   const taskGroups: TaskGroup[] = [
     {
-      id: 'bug-fix',
-      title: 'Bug fix',
-      tasks: [
-        {
-          id: '1',
-          title: 'Unable to upload file',
-          status: 'in-progress',
-          priority: 'high',
-          dueDate: 'August 05',
-          completed: false,
-        },
-        {
-          id: '2',
-          title: 'Error in database query',
-          status: 'completed',
-          priority: 'medium',
-          dueDate: 'July 15',
-          completed: true,
-        },
-        {
-          id: '3',
-          title: 'Authentication problem',
-          status: 'in-progress',
-          priority: 'high',
-          dueDate: 'September 20',
-          completed: false,
-        },
-        {
-          id: '4',
-          title: 'Bug in search functionality',
-          status: 'in-progress',
-          priority: 'high',
-          dueDate: 'September 05',
-          completed: false,
-        },
-        {
-          id: '5',
-          title: 'Compatibility issue with Firefox',
-          status: 'completed',
-          priority: 'medium',
-          dueDate: 'July 25',
-          completed: true,
-        },
-      ],
+      id: 'essay',
+      title: 'Essays',
+      tasks: writingTasks
+        .filter(task => task.category === 'essay')
+        .map(task => ({
+          id: task.taskId,
+          title: task.title,
+          status: task.status === 'assigned' ? 'in-progress' : task.status === 'completed' ? 'completed' : 'pending',
+          priority: task.priority,
+          dueDate: new Date(task.dueDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+          completed: task.status === 'completed',
+          assignees: task.assignedStudents,
+        })),
     },
     {
-      id: 'development',
-      title: 'Development',
-      tasks: [
-        {
-          id: '6',
-          title: 'Performance optimization',
-          status: 'pending',
-          priority: 'medium',
-          dueDate: 'August 30',
-          completed: false,
-        },
-        {
-          id: '7',
-          title: 'Payment gateway integration',
-          status: 'pending',
-          priority: 'low',
-          dueDate: 'October 15',
-          completed: false,
-        },
-        {
-          id: '8',
-          title: 'Update user profile page layout',
-          status: 'in-progress',
-          priority: 'high',
-          dueDate: 'August 10',
-          completed: false,
-        },
-        {
-          id: '9',
-          title: 'Enhance security measures',
-          status: 'pending',
-          priority: 'medium',
-          dueDate: 'August 20',
-          completed: false,
-        },
-      ],
+      id: 'letter',
+      title: 'Letters & Emails',
+      tasks: writingTasks
+        .filter(task => task.category === 'letter' || task.category === 'email')
+        .map(task => ({
+          id: task.taskId,
+          title: task.title,
+          status: task.status === 'assigned' ? 'in-progress' : task.status === 'completed' ? 'completed' : 'pending',
+          priority: task.priority,
+          dueDate: new Date(task.dueDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+          completed: task.status === 'completed',
+          assignees: task.assignedStudents,
+        })),
     },
     {
-      id: 'ui-ux',
-      title: 'UI/UX',
-      tasks: [
-        {
-          id: '10',
-          title: 'UI Layout Adjustment for Dashboard',
-          status: 'in-progress',
-          priority: 'high',
-          dueDate: 'September 25',
-          completed: false,
-        },
-        {
-          id: '11',
-          title: 'UX Improvement for Onboarding Process',
-          status: 'pending',
-          priority: 'medium',
-          dueDate: 'August 15',
-          completed: false,
-        },
-        {
-          id: '12',
-          title: 'UI Element Styling for Product Page',
-          status: 'pending',
-          priority: 'low',
-          dueDate: 'October 05',
-          completed: false,
-        },
-      ],
+      id: 'story',
+      title: 'Creative Writing',
+      tasks: writingTasks
+        .filter(task => task.category === 'story' || task.category === 'article')
+        .map(task => ({
+          id: task.taskId,
+          title: task.title,
+          status: task.status === 'assigned' ? 'in-progress' : task.status === 'completed' ? 'completed' : 'pending',
+          priority: task.priority,
+          dueDate: new Date(task.dueDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+          completed: task.status === 'completed',
+          assignees: task.assignedStudents,
+        })),
     },
     {
-      id: 'planning',
-      title: 'Planning',
-      tasks: [
-        {
-          id: '13',
-          title: 'Strategic Project Roadmap Planning',
-          status: 'in-progress',
-          priority: 'high',
-          dueDate: 'September 30',
-          completed: false,
-        },
-        {
-          id: '14',
-          title: 'Quarterly Resource Allocation Plan',
-          status: 'pending',
-          priority: 'medium',
-          dueDate: 'August 20',
-          completed: false,
-        },
-        {
-          id: '15',
-          title: 'Strategic Business Planning Session',
-          status: 'pending',
-          priority: 'low',
-          dueDate: 'October 10',
-          completed: false,
-        },
-      ],
+      id: 'report',
+      title: 'Reports & Reviews',
+      tasks: writingTasks
+        .filter(task => task.category === 'report' || task.category === 'review')
+        .map(task => ({
+          id: task.taskId,
+          title: task.title,
+          status: task.status === 'assigned' ? 'in-progress' : task.status === 'completed' ? 'completed' : 'pending',
+          priority: task.priority,
+          dueDate: new Date(task.dueDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+          completed: task.status === 'completed',
+          assignees: task.assignedStudents,
+        })),
+    },
+    {
+      id: 'other',
+      title: 'Other Tasks',
+      tasks: writingTasks
+        .filter(task => !['essay', 'letter', 'email', 'story', 'article', 'report', 'review'].includes(task.category))
+        .map(task => ({
+          id: task.taskId,
+          title: task.title,
+          status: task.status === 'assigned' ? 'in-progress' : task.status === 'completed' ? 'completed' : 'pending',
+          priority: task.priority,
+          dueDate: new Date(task.dueDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+          completed: task.status === 'completed',
+          assignees: task.assignedStudents,
+        })),
     },
   ];
 
   const handleToggleTask = (groupId: string, taskId: string) => {
-    console.log('Toggle task:', groupId, taskId);
+    const task = writingTasks.find(t => t.taskId === taskId);
+    if (!task) return;
+
+    const newStatus = task.status === 'completed' ? 'assigned' : 'completed';
+
+    updateTaskMutation.mutate({
+      taskId,
+      updates: { status: newStatus },
+    }, {
+      onSuccess: () => {
+        toast.success(newStatus === 'completed' ? 'Task completed!' : 'Task reopened');
+      },
+      onError: () => {
+        toast.error('Failed to update task');
+      },
+    });
+  };
+
+  const handleDeleteTask = (groupId: string, taskId: string) => {
+    if (userRole !== 'TEACHER') return;
+
+    deleteTaskMutation.mutate({
+      taskId,
+    }, {
+      onSuccess: () => {
+        toast.success('Task deleted successfully');
+      },
+      onError: () => {
+        toast.error('Failed to delete task');
+      },
+    });
+  };
+
+  const handleUpdateTask = (groupId: string, taskId: string, updates: Partial<Task>) => {
+    if (userRole !== 'TEACHER') return;
+
+    updateTaskMutation.mutate({
+      taskId,
+      updates: {
+        title: updates.title,
+      },
+    }, {
+      onSuccess: () => {
+        toast.success('Task updated successfully');
+      },
+      onError: () => {
+        toast.error('Failed to update task');
+      },
+    });
+  };
+
+  const handleAddTask = (groupId: string, task: Omit<Task, 'id'>) => {
+    console.log('[handleAddTask] Called with:', { groupId, task, currentTeacherId, selectedBatch });
+
+    if (!currentTeacherId || !selectedBatch) {
+      console.error('[handleAddTask] Missing required data:', { currentTeacherId, selectedBatch });
+      return;
+    }
+
+    // Map group ID to category
+    const categoryMap: Record<string, any> = {
+      'essay': 'essay',
+      'letter': 'letter',
+      'story': 'story',
+      'report': 'report',
+      'other': 'other',
+    };
+
+    // Convert UI status to WritingTask status
+    const statusMap: Record<string, any> = {
+      'pending': 'draft',
+      'in-progress': 'assigned',
+      'completed': 'completed',
+    };
+
+    const taskData = {
+      teacherId: currentTeacherId,
+      batchId: selectedBatch.batchId,
+      title: task.title,
+      instructions: task.title, // Using title as instructions for now
+      category: categoryMap[groupId] || 'other',
+      level: selectedBatch.currentLevel,
+      priority: task.priority,
+      dueDate: new Date(task.dueDate).getTime(),
+      assignedStudents: task.assignees || [],
+    };
+
+    console.log('[handleAddTask] Creating task with data:', taskData);
+
+    createTaskMutation.mutate(taskData, {
+      onSuccess: () => {
+        console.log('[handleAddTask] Task created successfully');
+        console.log('[handleAddTask] Calling toast.success');
+        toast.success('Task created successfully!');
+        console.log('[handleAddTask] Toast called');
+      },
+      onError: (error) => {
+        console.error('[handleAddTask] Error creating task:', error);
+        console.log('[handleAddTask] Calling toast.error');
+        toast.error('Failed to create task. Please try again.');
+      },
+    });
   };
 
   const handleAddMember = () => {
     console.log('Add member clicked');
+    // TODO: Open member selector to assign students to tasks
+  };
+
+  const handleCreateBatch = () => {
+    console.log('Create batch clicked');
+    // TODO: Open create batch dialog
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200">
+      <div className="border-b border-gray-200">
         <div className="container mx-auto px-6 py-6">
-          <h1 className="text-3xl font-black text-gray-900">Tasks Board 📋</h1>
-          <p className="text-gray-600 mt-1">Manage and track all your tasks</p>
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-3xl font-black text-gray-900">
+                Writing Tasks 📝
+              </h1>
+              <p className="text-gray-600 mt-1">
+                {userRole === 'TEACHER' ? (
+                  selectedBatch
+                    ? `Manage writing assignments for ${selectedBatch.name}`
+                    : 'Manage and track all your writing tasks'
+                ) : (
+                  'View and complete your writing assignments'
+                )}
+              </p>
+            </div>
+            {/* BatchSelector only visible to teachers */}
+            {userRole === 'TEACHER' && (
+              <BatchSelector
+                batches={batches}
+                selectedBatch={selectedBatch}
+                onSelectBatch={setSelectedBatch}
+                onCreateBatch={handleCreateBatch}
+              />
+            )}
+          </div>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-6 py-8">
-        <TaskBoard
-          title="Tasks"
-          groups={taskGroups}
-          members={members}
-          onToggleTask={handleToggleTask}
-          onAddMember={handleAddMember}
-          showMembers={true}
-          showAddTask={true}
-          maxVisibleMembers={4}
-        />
+        {tasksLoading ? (
+          <div className="flex items-center justify-center py-12">
+            <div className="text-center">
+              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-piku-purple-dark"></div>
+              <p className="mt-2 text-gray-600">Loading tasks...</p>
+            </div>
+          </div>
+        ) : (
+          <>
+            {console.log('[TasksPage] Rendering TaskBoard with:', {
+              userRole,
+              isTeacher: userRole === 'TEACHER',
+              showAddTask: userRole === 'TEACHER',
+              hasOnAddTask: !!handleAddTask,
+              selectedBatch,
+            })}
+            <TaskBoard
+              title={
+                userRole === 'TEACHER'
+                  ? selectedBatch ? `${selectedBatch.name} - Writing Tasks` : 'Writing Tasks'
+                  : 'My Writing Tasks'
+              }
+              groups={taskGroups}
+              members={members}
+              onAddTask={userRole === 'TEACHER' ? handleAddTask : undefined}
+              onToggleTask={handleToggleTask}
+              onDeleteTask={userRole === 'TEACHER' ? handleDeleteTask : undefined}
+              onUpdateTask={userRole === 'TEACHER' ? handleUpdateTask : undefined}
+              onAddMember={userRole === 'TEACHER' ? handleAddMember : undefined}
+              showMembers={userRole === 'TEACHER'}
+              showAddTask={userRole === 'TEACHER'}
+              maxVisibleMembers={4}
+            />
+          </>
+        )}
       </div>
     </div>
   );

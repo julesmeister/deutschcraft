@@ -2,20 +2,63 @@
 
 import dynamic from 'next/dynamic';
 import { useAnimatedCounter } from '@/lib/hooks/useAnimatedCounter';
-import { SAMPLE_STUDENT, SAMPLE_USER, CEFRLevelInfo, getStudentSuccessRate } from '@/lib/models';
+import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
+import { useCurrentStudent } from '@/lib/hooks/useUsers';
+import { useWeeklyProgress } from '@/lib/hooks/useWeeklyProgress';
+import { usePracticeStats } from '@/lib/hooks/usePracticeStats';
+import { useStudentTasks } from '@/lib/hooks/useWritingTasks';
+import { useBatch } from '@/lib/hooks/useBatches';
+import { SAMPLE_STUDENT, CEFRLevelInfo, getStudentSuccessRate } from '@/lib/models';
+import { ActivityCard } from '@/components/ui/activity/ActivityCard';
+import { ActivityTimeline, ActivityItem } from '@/components/ui/activity/ActivityTimeline';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 export default function StudentDashboard() {
-  const student = SAMPLE_STUDENT;
-  const user = SAMPLE_USER;
-  const successRate = getStudentSuccessRate(student);
+  const { session, isFirebaseReady } = useFirebaseAuth();
+  const { student: fetchedStudent, isLoading: isLoadingStudent } = useCurrentStudent(session?.user?.email || null);
+  const { weeklyData, totalWords, isLoading: isLoadingWeekly } = useWeeklyProgress(session?.user?.email || null);
+  const { cardsReady, wordsToReview } = usePracticeStats(session?.user?.email || null);
+  const { tasks: allTasks, isLoading: isLoadingTasks } = useStudentTasks(session?.user?.email || undefined);
+
+  // Get recent tasks (last 5)
+  const recentTasks = allTasks.slice(0, 5);
+
+  // Fetch batch information
+  const { batch, isLoading: isLoadingBatch } = useBatch(fetchedStudent?.batchId || undefined);
+
+  // Use fetched student data if available, otherwise fall back to sample data
+  const student = fetchedStudent || SAMPLE_STUDENT;
+  const userName = session?.user?.name || 'Student';
+
+  // Show loading state while fetching data
+  if (!isFirebaseReady || isLoadingStudent) {
+    return (
+      <div className="p-6 space-y-6">
+        <div className="flex items-center justify-center h-64">
+          <div className="text-center">
+            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-violet-600 border-r-transparent mb-4"></div>
+            <p className="text-gray-500">Loading your dashboard...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Format the Current Level display with batch name
+  const currentLevelDisplay = () => {
+    const level = session?.user?.cefrLevel || student.currentLevel || 'A1';
+    if (batch && batch.name) {
+      return `${level} • ${batch.name}`;
+    }
+    return level;
+  };
 
   const stats = [
-    { label: 'Words Learned', value: student.wordsLearned, icon: '📚', color: 'text-violet-600' },
-    { label: 'Words Mastered', value: student.wordsMastered, icon: '✨', color: 'text-emerald-600' },
-    { label: 'Current Streak', value: student.currentStreak, icon: '🔥', color: 'text-orange-600', suffix: ' days' },
-    { label: 'Success Rate', value: Math.round(successRate), icon: '🎯', color: 'text-amber-600', suffix: '%' },
+    { label: 'Words Learned', value: student.wordsLearned || 0, icon: '📚', color: 'text-violet-600' },
+    { label: 'Words Mastered', value: student.wordsMastered || 0, icon: '✨', color: 'text-emerald-600' },
+    { label: 'Current Streak', value: student.currentStreak || 0, icon: '🔥', color: 'text-orange-600', suffix: ' days' },
+    { label: 'Current Level', value: 0, displayValue: currentLevelDisplay(), icon: '🎯', color: 'text-amber-600', isText: true },
   ];
 
   return (
@@ -23,7 +66,7 @@ export default function StudentDashboard() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-black text-gray-900 mb-1">
-          Welcome back, {user.name.split(' ')[0]}!
+          Welcome back, {userName.split(' ')[0]}!
         </h1>
         <p className="text-gray-500">Continue your German learning journey</p>
       </div>
@@ -41,14 +84,14 @@ export default function StudentDashboard() {
       <div className="grid lg:grid-cols-3 gap-6">
         {/* Main Column */}
         <div className="lg:col-span-2 space-y-6">
-          <WeeklyChart />
-          <QuickActions />
+          <WeeklyChart weeklyData={weeklyData} totalWords={totalWords} />
+          <QuickActions cardsReady={cardsReady} wordsToReview={wordsToReview} />
         </div>
 
         {/* Sidebar */}
         <div className="space-y-6">
-          <LevelCard currentLevel={student.currentLevel} />
-          <DailyGoalCard current={20} target={student.dailyGoal} />
+          <RecentTasksCard tasks={recentTasks} isLoading={isLoadingTasks} />
+          <DailyGoalCard current={20} target={student.dailyGoal || 25} />
         </div>
       </div>
     </div>
@@ -56,23 +99,27 @@ export default function StudentDashboard() {
 }
 
 // Stats Card - Exactly like Slim
-function StatCard({ label, value, icon, color, suffix = '' }: any) {
+function StatCard({ label, value, icon, color, suffix = '', displayValue, isText = false }: any) {
   const count = useAnimatedCounter({ target: value, interval: 10 });
 
   return (
     <div className="p-6 flex items-center gap-4">
-      <div className={`text-5xl ${color}`}>{icon}</div>
-      <div>
+      <div className={`text-5xl ${color} flex-shrink-0`}>{icon}</div>
+      <div className="min-w-0 flex-1">
         <p className={`${color} text-sm font-bold uppercase tracking-wide`}>{label}</p>
-        <p className="text-3xl font-bold text-gray-900">{count.toLocaleString()}{suffix}</p>
+        <p className={`${isText ? 'text-xl' : 'text-3xl'} font-bold text-gray-900 break-words`}>
+          {isText ? displayValue : `${count.toLocaleString()}${suffix}`}
+        </p>
       </div>
     </div>
   );
 }
 
 // Weekly Progress - Bitcoin Earnings Style (ApexCharts area chart like Slim)
-function WeeklyChart() {
-  const totalWords = 131;
+function WeeklyChart({ weeklyData, totalWords }: { weeklyData: number[], totalWords: number }) {
+  // Generate a slightly varied secondary series for visual interest
+  // (could represent different types of practice in the future)
+  const secondarySeries = weeklyData.map(value => Math.floor(value * 0.6));
 
   // Exact Bitcoin Earnings config from Slim Dashboard 01
   const chartConfig = {
@@ -108,12 +155,12 @@ function WeeklyChart() {
     },
     series: [
       {
-        name: 'series-1',
-        data: [12, 18, 15, 22, 19, 25, 20],
+        name: 'Words Studied',
+        data: weeklyData,
       },
       {
-        name: 'series-2',
-        data: [6, 10, 8, 14, 11, 16, 13],
+        name: 'Words Reviewed',
+        data: secondarySeries,
       },
     ],
   };
@@ -156,11 +203,11 @@ function WeeklyChart() {
 }
 
 // Quick Actions - Simple bordered cards like Slim
-function QuickActions() {
+function QuickActions({ cardsReady, wordsToReview }: { cardsReady: number, wordsToReview: number }) {
   const actions = [
-    { icon: '📚', label: 'Practice', count: '15 cards ready' },
+    { icon: '📚', label: 'Practice', count: cardsReady > 0 ? `${cardsReady} cards ready` : 'No cards ready' },
     { icon: '✍️', label: 'Write', count: 'AI-powered' },
-    { icon: '🔄', label: 'Review', count: '8 words' },
+    { icon: '🔄', label: 'Review', count: wordsToReview > 0 ? `${wordsToReview} words` : 'All caught up!' },
   ];
 
   return (
@@ -179,41 +226,108 @@ function QuickActions() {
   );
 }
 
-// Level Card - Sales Report Style
-function LevelCard({ currentLevel }: { currentLevel: string }) {
+// Recent Tasks Card - Using Activity Components with Real Data
+function RecentTasksCard({ tasks, isLoading }: { tasks: any[], isLoading: boolean }) {
+  // Helper function to format timestamp
+  const formatTimeAgo = (timestamp: number) => {
+    const now = Date.now();
+    const diff = now - timestamp;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+
+    if (days > 0) return `${days} day${days > 1 ? 's' : ''} ago`;
+    if (hours > 0) return `${hours} hour${hours > 1 ? 's' : ''} ago`;
+    return 'Just now';
+  };
+
+  // Helper function to get status icon and color
+  const getTaskIcon = (status: string) => {
+    switch (status) {
+      case 'completed':
+        return { icon: <span className="text-white text-xs">✓</span>, color: 'bg-emerald-500' };
+      case 'assigned':
+        return { icon: <span className="text-white text-xs">📝</span>, color: 'bg-amber-500' };
+      case 'draft':
+        return { icon: <span className="text-white text-xs">📖</span>, color: 'bg-violet-500' };
+      default:
+        return { icon: <span className="text-white text-xs">📄</span>, color: 'bg-gray-500' };
+    }
+  };
+
+  // Helper function to get category color
+  const getCategoryColor = (category: string) => {
+    const categoryColors: Record<string, string> = {
+      essay: 'blue',
+      letter: 'green',
+      email: 'green',
+      story: 'pink',
+      article: 'pink',
+      report: 'amber',
+      review: 'amber',
+      other: 'gray',
+    };
+    return categoryColors[category] || 'gray';
+  };
+
+  // Helper function to format due date
+  const getDueInfo = (dueDate: number, status: string) => {
+    if (status === 'completed') return 'Completed';
+
+    const now = Date.now();
+    const diff = dueDate - now;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    if (days < 0) return 'Overdue';
+    if (days === 0) return 'Due today';
+    if (days === 1) return 'Due tomorrow';
+    return `Due in ${days} days`;
+  };
+
+  // Convert tasks to ActivityItem format
+  const activities: ActivityItem[] = tasks.map(task => {
+    const { icon, color } = getTaskIcon(task.status);
+    return {
+      id: task.taskId,
+      icon,
+      iconColor: color,
+      title: task.title,
+      description: getDueInfo(task.dueDate, task.status),
+      timestamp: formatTimeAgo(task.createdAt || Date.now()),
+      tags: [
+        { label: task.category.charAt(0).toUpperCase() + task.category.slice(1), color: getCategoryColor(task.category) },
+        { label: task.level, color: 'purple' },
+      ],
+    };
+  });
+
   return (
-    <div className="bg-white border border-gray-200 p-6">
-      <p className="text-violet-600 text-lg font-bold uppercase mb-4">Your Level</p>
-
-      {/* Stats with Dividers */}
-      <div className="flex justify-between pb-4 mb-4 border-b border-gray-200">
-        <div className="flex-1 border-r border-gray-200 pr-3">
-          <p className="text-xs text-gray-500 mb-1">Current</p>
-          <p className="text-xl font-bold">{currentLevel}</p>
-        </div>
-        <div className="flex-1 px-3 border-r border-gray-200">
-          <p className="text-xs text-gray-500 mb-1">Words</p>
-          <p className="text-xl font-bold">342</p>
-        </div>
-        <div className="flex-1 pl-3">
-          <p className="text-xs text-gray-500 mb-1">Next</p>
-          <p className="text-xl font-bold">B2</p>
-        </div>
+    <div className="bg-white border border-gray-200">
+      <div className="p-6 border-b border-gray-200">
+        <p className="text-violet-600 text-lg font-bold uppercase">Recent Tasks</p>
+        <p className="text-sm text-gray-500 mt-1">Your latest writing assignments</p>
       </div>
-
-      {/* Progress Bar with Text Overlay */}
-      <div className="relative mb-3">
-        <div className="bg-gray-200 h-4">
-          <div className="bg-violet-600 h-full" style={{ width: '65%' }} />
-        </div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-xs font-bold text-white">65%</span>
-        </div>
+      <div className="p-6">
+        {isLoading ? (
+          <div className="flex items-center justify-center py-8">
+            <div className="inline-block h-6 w-6 animate-spin rounded-full border-4 border-solid border-violet-600 border-r-transparent"></div>
+          </div>
+        ) : activities.length > 0 ? (
+          <ActivityTimeline items={activities} showConnector={true} />
+        ) : (
+          <div className="text-center py-8">
+            <p className="text-gray-500 text-sm">No tasks assigned yet</p>
+            <p className="text-gray-400 text-xs mt-1">Check back later for new assignments</p>
+          </div>
+        )}
       </div>
-
-      <p className="text-sm text-gray-500">
-        {CEFRLevelInfo[currentLevel as keyof typeof CEFRLevelInfo].description}
-      </p>
+      <div className="px-6 pb-6">
+        <button
+          onClick={() => window.location.href = '/dashboard/tasks'}
+          className="w-full border border-gray-900 py-2 text-sm font-bold uppercase hover:bg-gray-900 hover:text-white transition"
+        >
+          View All Tasks →
+        </button>
+      </div>
     </div>
   );
 }

@@ -3,6 +3,9 @@
 import { Navbar } from '@/components/ui/Navbar';
 import { MegaDropdown } from '@/components/ui/MegaDropdown';
 import Link from 'next/link';
+import { useSession } from 'next-auth/react';
+import { db } from '@/lib/firebase';
+import { doc, updateDoc } from 'firebase/firestore';
 
 export default function DashboardLayout({
   children,
@@ -23,6 +26,25 @@ export default function DashboardLayout({
 }
 
 function DashboardNavbar() {
+  const { data: session } = useSession();
+
+  const handleRoleSwitch = async (newRole: 'STUDENT' | 'TEACHER') => {
+    if (!session?.user?.email) return;
+
+    try {
+      const userRef = doc(db, 'users', session.user.email);
+      await updateDoc(userRef, {
+        role: newRole,
+        updatedAt: Date.now(),
+      });
+
+      // Refresh session and redirect to appropriate dashboard
+      window.location.href = newRole === 'STUDENT' ? '/dashboard/student' : '/dashboard/teacher';
+    } catch (error) {
+      console.error('Error switching role:', error);
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 py-3 lg:py-4">
       <div className="container mx-auto px-6">
@@ -41,6 +63,7 @@ function DashboardNavbar() {
             <MegaDropdown
               trigger="Student"
               icon="📚"
+              onNavigate={() => handleRoleSwitch('STUDENT')}
               highlight={{
                 badge: 'Learning Dashboard',
                 title: 'Track Your Progress!',
@@ -80,6 +103,7 @@ function DashboardNavbar() {
             <MegaDropdown
               trigger="Teacher"
               icon="👨‍🏫"
+              onNavigate={() => handleRoleSwitch('TEACHER')}
               highlight={{
                 badge: 'Teacher Dashboard',
                 title: 'Manage Your Students!',
@@ -99,7 +123,7 @@ function DashboardNavbar() {
                 {
                   title: 'Planning',
                   items: [
-                    { label: 'Tasks', href: '/dashboard/tasks', badge: 'New' },
+                    { label: 'Tasks', href: '/dashboard/tasks' },
                     { label: 'Schedule', href: '/dashboard/schedule' },
                     { label: 'Issues', href: '/dashboard/issue' },
                     { label: 'Calendar', href: '/dashboard/calendar' },

@@ -1,64 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-
-export interface TaskMember {
-  id: string;
-  name: string;
-  avatar: string;
-}
-
-export interface Task {
-  id: string;
-  title: string;
-  status: 'pending' | 'in-progress' | 'completed';
-  priority: 'low' | 'medium' | 'high';
-  dueDate: string;
-  completed?: boolean;
-}
-
-export interface TaskGroup {
-  id: string;
-  title: string;
-  tasks: Task[];
-}
-
-interface TaskBoardProps {
-  title?: string;
-  groups: TaskGroup[];
-  members?: TaskMember[];
-  onAddTask?: (groupId: string, task: Omit<Task, 'id'>) => void;
-  onToggleTask?: (groupId: string, taskId: string) => void;
-  onAddMember?: () => void;
-  showMembers?: boolean;
-  showAddTask?: boolean;
-  maxVisibleMembers?: number;
-  className?: string;
-}
-
-const statusColors = {
-  'pending': 'bg-amber-200 text-gray-900',
-  'in-progress': 'bg-sky-200 text-gray-900',
-  'completed': 'bg-emerald-200 text-gray-900',
-};
-
-const priorityColors = {
-  'low': 'bg-purple-200 text-gray-900',
-  'medium': 'bg-orange-200 text-gray-900',
-  'high': 'bg-red-200 text-gray-900',
-};
-
-const statusLabels = {
-  'pending': 'Pending',
-  'in-progress': 'In Progress',
-  'completed': 'Completed',
-};
-
-const priorityLabels = {
-  'low': 'Low',
-  'medium': 'Medium',
-  'high': 'High',
-};
+import { ConfirmDialog } from '../Dialog';
+import { Dropdown } from './Dropdown';
+import { DatePicker } from './DatePicker';
+import { AssigneeSelector } from './AssigneeSelector';
+import { Task, TaskBoardProps } from './types';
+import { statusColors, statusLabels, priorityColors, priorityLabels, statusOptions, priorityOptions } from './constants';
 
 export function TaskBoard({
   title = 'Tasks',
@@ -66,6 +14,8 @@ export function TaskBoard({
   members = [],
   onAddTask,
   onToggleTask,
+  onDeleteTask,
+  onUpdateTask,
   onAddMember,
   showMembers = true,
   showAddTask = true,
@@ -74,6 +24,17 @@ export function TaskBoard({
 }: TaskBoardProps) {
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
   const [newTaskInputs, setNewTaskInputs] = useState<Record<string, boolean>>({});
+  const [newTaskData, setNewTaskData] = useState<Record<string, {
+    title: string;
+    status: Task['status'];
+    priority: Task['priority'];
+    dueDate: string;
+    assignees: string[];
+  }>>({});
+  const [hoveredTaskId, setHoveredTaskId] = useState<string | null>(null);
+  const [deleteConfirm, setDeleteConfirm] = useState<{ groupId: string; taskId: string; taskTitle: string } | null>(null);
+  const [editingTaskId, setEditingTaskId] = useState<string | null>(null);
+  const [editingTitle, setEditingTitle] = useState<string>('');
 
   const toggleGroup = (groupId: string) => {
     setExpandedGroups(prev => ({ ...prev, [groupId]: !prev[groupId] }));
@@ -81,10 +42,88 @@ export function TaskBoard({
 
   const showNewTaskInput = (groupId: string) => {
     setNewTaskInputs(prev => ({ ...prev, [groupId]: true }));
+    setNewTaskData(prev => ({
+      ...prev,
+      [groupId]: {
+        title: '',
+        status: 'pending',
+        priority: 'medium',
+        dueDate: '',
+        assignees: [],
+      }
+    }));
   };
 
   const hideNewTaskInput = (groupId: string) => {
     setNewTaskInputs(prev => ({ ...prev, [groupId]: false }));
+    setNewTaskData(prev => {
+      const newData = { ...prev };
+      delete newData[groupId];
+      return newData;
+    });
+  };
+
+  const updateNewTaskField = <K extends keyof typeof newTaskData[string]>(
+    groupId: string,
+    field: K,
+    value: typeof newTaskData[string][K]
+  ) => {
+    setNewTaskData(prev => ({
+      ...prev,
+      [groupId]: {
+        ...prev[groupId],
+        [field]: value,
+      }
+    }));
+  };
+
+  const handleCreateTask = (groupId: string) => {
+    const taskData = newTaskData[groupId];
+    if (taskData && taskData.title.trim()) {
+      onAddTask?.(groupId, {
+        title: taskData.title,
+        status: taskData.status,
+        priority: taskData.priority,
+        dueDate: taskData.dueDate,
+        assignees: taskData.assignees,
+        completed: false,
+      });
+      hideNewTaskInput(groupId);
+    }
+  };
+
+  const handleDeleteClick = (groupId: string, taskId: string, taskTitle: string) => {
+    setDeleteConfirm({ groupId, taskId, taskTitle });
+  };
+
+  const handleConfirmDelete = () => {
+    if (deleteConfirm) {
+      onDeleteTask?.(deleteConfirm.groupId, deleteConfirm.taskId);
+      setDeleteConfirm(null);
+    }
+  };
+
+  const handleTitleClick = (groupId: string, taskId: string, currentTitle: string) => {
+    setEditingTaskId(taskId);
+    setEditingTitle(currentTitle);
+  };
+
+  const handleTitleBlur = (groupId: string, taskId: string) => {
+    if (editingTitle.trim() && editingTitle !== '') {
+      onUpdateTask?.(groupId, taskId, { title: editingTitle });
+    }
+    setEditingTaskId(null);
+    setEditingTitle('');
+  };
+
+  const handleTitleKeyDown = (e: React.KeyboardEvent, groupId: string, taskId: string) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      handleTitleBlur(groupId, taskId);
+    } else if (e.key === 'Escape') {
+      setEditingTaskId(null);
+      setEditingTitle('');
+    }
   };
 
   const visibleMembers = members.slice(0, maxVisibleMembers);
@@ -168,7 +207,9 @@ export function TaskBoard({
                       {group.tasks.map((task) => (
                         <tr
                           key={task.id}
-                          className="hover:bg-gray-50/30 transition-colors"
+                          className="hover:bg-gray-50/30 transition-colors group"
+                          onMouseEnter={() => setHoveredTaskId(task.id)}
+                          onMouseLeave={() => setHoveredTaskId(null)}
                         >
                           {/* Drag Handle */}
                           <td className="w-[40px] px-6 py-4 text-lg text-gray-400">
@@ -199,9 +240,24 @@ export function TaskBoard({
 
                           {/* Title */}
                           <td className="w-[500px] px-6 py-4">
-                            <span className={`font-bold text-gray-900 ${task.completed ? 'line-through opacity-50' : ''}`}>
-                              {task.title}
-                            </span>
+                            {editingTaskId === task.id ? (
+                              <input
+                                type="text"
+                                value={editingTitle}
+                                onChange={(e) => setEditingTitle(e.target.value)}
+                                onBlur={() => handleTitleBlur(group.id, task.id)}
+                                onKeyDown={(e) => handleTitleKeyDown(e, group.id, task.id)}
+                                className="font-bold text-gray-900 w-full bg-transparent outline-none border-0 p-0"
+                                autoFocus
+                              />
+                            ) : (
+                              <span
+                                onClick={() => handleTitleClick(group.id, task.id, task.title)}
+                                className={`font-bold text-gray-900 cursor-text ${task.completed ? 'line-through opacity-50' : ''}`}
+                              >
+                                {task.title}
+                              </span>
+                            )}
                           </td>
 
                           {/* Status */}
@@ -226,7 +282,20 @@ export function TaskBoard({
                           </td>
 
                           {/* Actions */}
-                          <td className="px-6 py-4 text-gray-400">-</td>
+                          <td className="px-6 py-4 text-right">
+                            <button
+                              onClick={() => handleDeleteClick(group.id, task.id, task.title)}
+                              className={`inline-flex items-center gap-1 bg-red-600 hover:bg-red-700 text-white h-10 rounded-xl px-3 py-2 text-sm font-bold transition-all ${
+                                hoveredTaskId === task.id ? 'opacity-100' : 'opacity-0'
+                              }`}
+                              title="Delete task"
+                            >
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                              </svg>
+                              <span>Delete</span>
+                            </button>
+                          </td>
                         </tr>
                       ))}
                     </tbody>
@@ -250,62 +319,59 @@ export function TaskBoard({
               )}
 
               {/* New Task Input Form */}
-              {newTaskInputs[group.id] && (
-                <div className="mt-4 border border-gray-200 rounded-lg overflow-hidden transition-shadow duration-150">
+              {newTaskInputs[group.id] && newTaskData[group.id] && (
+                <div className="mt-4 border border-gray-200 rounded-lg transition-shadow duration-150">
                   <table className="w-full">
                     <tbody>
                       <tr>
                         <td className="w-[66px]"></td>
-                        <td className="w-[40px] px-6 py-4 text-2xl text-gray-400">
+                        <td className="w-[40px] px-6 py-4 text-2xl text-gray-400 overflow-visible">
                           <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
                             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2l4 -4" />
                           </svg>
                         </td>
-                        <td className="w-[500px] px-6 py-4">
+                        <td className="w-[500px] px-6 py-4 overflow-visible">
                           <input
                             type="text"
                             className="outline-0 font-semibold w-full bg-transparent text-gray-900 placeholder-gray-400"
                             placeholder="Enter task name"
+                            value={newTaskData[group.id].title}
+                            onChange={(e) => updateNewTaskField(group.id, 'title', e.target.value)}
                             autoFocus
                           />
                         </td>
-                        <td className="w-[150px] px-6 py-4">
-                          <div className="flex items-center gap-1 cursor-pointer font-semibold text-gray-600 hover:text-gray-900">
-                            <span>Status</span>
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6l6 -6" />
-                            </svg>
-                          </div>
+                        <td className="w-[150px] px-6 py-4 overflow-visible relative">
+                          <Dropdown
+                            value={newTaskData[group.id].status}
+                            options={statusOptions}
+                            onChange={(value) => updateNewTaskField(group.id, 'status', value as Task['status'])}
+                            placeholder="Status"
+                          />
                         </td>
-                        <td className="w-[150px] px-6 py-4">
-                          <div className="flex items-center gap-1 cursor-pointer font-semibold text-gray-600 hover:text-gray-900">
-                            <span>Priority</span>
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6l6 -6" />
-                            </svg>
-                          </div>
+                        <td className="w-[150px] px-6 py-4 overflow-visible relative">
+                          <Dropdown
+                            value={newTaskData[group.id].priority}
+                            options={priorityOptions}
+                            onChange={(value) => updateNewTaskField(group.id, 'priority', value as Task['priority'])}
+                            placeholder="Priority"
+                          />
                         </td>
-                        <td className="w-[150px] px-6 py-4">
-                          <div className="flex items-center gap-2 cursor-pointer relative font-semibold text-gray-600 hover:text-gray-900">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" />
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M16 3v4M8 3v4M4 11h16M11 15h1M12 15v3" />
-                            </svg>
-                            <span>Due date</span>
-                          </div>
+                        <td className="w-[150px] px-6 py-4 overflow-visible relative">
+                          <DatePicker
+                            value={newTaskData[group.id].dueDate}
+                            onChange={(date) => updateNewTaskField(group.id, 'dueDate', date)}
+                          />
                         </td>
-                        <td className="px-6 py-4">
+                        <td className="px-6 py-4 overflow-visible relative">
                           <div className="flex items-center justify-between gap-2">
-                            <div className="flex items-center gap-2 cursor-pointer font-semibold text-gray-600 hover:text-gray-900">
-                              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                              </svg>
-                              <span>Assignee</span>
-                            </div>
+                            <AssigneeSelector
+                              members={members}
+                              selectedIds={newTaskData[group.id].assignees}
+                              onChange={(ids) => updateNewTaskField(group.id, 'assignees', ids)}
+                            />
                             <button
-                              onClick={() => hideNewTaskInput(group.id)}
+                              onClick={() => handleCreateTask(group.id)}
                               className="inline-flex items-center bg-piku-purple-dark hover:bg-piku-purple-dark/90 text-white h-10 rounded-xl px-3 py-2 text-sm font-bold transition-colors"
                             >
                               Create
@@ -321,6 +387,18 @@ export function TaskBoard({
           ))}
         </div>
       </div>
+
+      {/* Delete Confirmation Dialog */}
+      <ConfirmDialog
+        open={deleteConfirm !== null}
+        onClose={() => setDeleteConfirm(null)}
+        onConfirm={handleConfirmDelete}
+        title="Delete Task"
+        message={`Are you sure you want to delete "${deleteConfirm?.taskTitle}"? This action cannot be undone.`}
+        confirmText="Delete"
+        cancelText="Cancel"
+        variant="danger"
+      />
     </div>
   );
 }

@@ -29,9 +29,10 @@ interface MegaDropdownProps {
   highlight?: HighlightSection;
   columns: DropdownColumn[];
   icon?: string;
+  onNavigate?: () => void;
 }
 
-export function MegaDropdown({ trigger, highlight, columns, icon }: MegaDropdownProps) {
+export function MegaDropdown({ trigger, highlight, columns, icon, onNavigate }: MegaDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -88,6 +89,7 @@ export function MegaDropdown({ trigger, highlight, columns, icon }: MegaDropdown
                     </div>
                     <Link
                       href={highlight.buttonHref}
+                      onClick={() => onNavigate?.()}
                       className="inline-block bg-piku-purple-dark text-white text-sm font-semibold px-7 py-3 rounded-xl hover:bg-piku-cyan-accent hover:text-gray-900 transition-colors duration-300 text-center shadow-sm"
                     >
                       {highlight.buttonText}
