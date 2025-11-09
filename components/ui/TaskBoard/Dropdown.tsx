@@ -35,10 +35,16 @@ export function Dropdown({ value, options, onChange, placeholder = 'Select' }: D
     <div className="relative" ref={dropdownRef}>
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1 cursor-pointer font-semibold text-gray-600 hover:text-gray-900"
+        className="flex items-center gap-1 cursor-pointer"
       >
-        <span>{selectedOption?.label || placeholder}</span>
-        <svg className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+        {selectedOption ? (
+          <span className={`inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold border border-gray-100 whitespace-nowrap ${selectedOption.color}`}>
+            {selectedOption.label}
+          </span>
+        ) : (
+          <span className="font-semibold text-gray-600">{placeholder}</span>
+        )}
+        <svg className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''} text-gray-400`} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6l6 -6" />
         </svg>
       </div>
@@ -56,7 +62,7 @@ export function Dropdown({ value, options, onChange, placeholder = 'Select' }: D
                 value === option.value ? 'bg-gray-100' : ''
               }`}
             >
-              <span className={`inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold border border-gray-100 ${option.color}`}>
+              <span className={`inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold border border-gray-100 whitespace-nowrap ${option.color}`}>
                 {option.label}
               </span>
             </button>

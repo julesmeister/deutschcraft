@@ -170,8 +170,15 @@ export function useCreateWritingTask() {
       assignedStudents,
       minWords,
       maxWords,
+      minParagraphs,
+      maxParagraphs,
       totalPoints,
       estimatedDuration,
+      tone,
+      perspective,
+      requireIntroduction,
+      requireConclusion,
+      requireExamples,
     }: {
       teacherId: string; // Teacher's email
       batchId: string;
@@ -185,11 +192,16 @@ export function useCreateWritingTask() {
       assignedStudents: string[]; // Array of student emails
       minWords?: number;
       maxWords?: number;
+      minParagraphs?: number;
+      maxParagraphs?: number;
       totalPoints?: number;
       estimatedDuration?: number;
+      tone?: WritingTask['tone'];
+      perspective?: WritingTask['perspective'];
+      requireIntroduction?: boolean;
+      requireConclusion?: boolean;
+      requireExamples?: boolean;
     }) => {
-      console.log('[useCreateWritingTask] Creating task with params:', arguments[0]);
-
       const taskId = `TASK_${Date.now()}`;
       const taskRef = doc(db, 'tasks', taskId);
 
@@ -211,29 +223,27 @@ export function useCreateWritingTask() {
         completedStudents: [],
         minWords: minWords || 0,
         maxWords: maxWords || 0,
+        minParagraphs,
+        maxParagraphs,
         requiredVocabulary: [],
         totalPoints: totalPoints || 0,
+        tone,
+        perspective,
+        requireIntroduction,
+        requireConclusion,
+        requireExamples,
         createdAt: Date.now(),
         updatedAt: Date.now(),
       };
 
-      console.log('[useCreateWritingTask] Task object:', task);
-      console.log('[useCreateWritingTask] Writing to Firestore:', taskId);
-
       await setDoc(taskRef, task);
-
-      console.log('[useCreateWritingTask] Task created successfully');
 
       return task;
     },
     onSuccess: (_, variables) => {
-      console.log('[useCreateWritingTask] onSuccess - Invalidating queries');
       queryClient.invalidateQueries({ queryKey: ['tasks', 'teacher', variables.teacherId] });
       queryClient.invalidateQueries({ queryKey: ['tasks', 'batch', variables.batchId] });
       queryClient.invalidateQueries({ queryKey: ['tasks'] });
-    },
-    onError: (error) => {
-      console.error('[useCreateWritingTask] Error creating task:', error);
     },
   });
 }

@@ -15,20 +15,11 @@ export default function TasksPage() {
   const { session } = useFirebaseAuth();
   const toast = useToast();
 
-  console.log('[TasksPage] Session:', session);
-  console.log('[TasksPage] Session email:', session?.user?.email);
-
   // Fetch current user from Firestore to get accurate role
   const { student: currentUser, isLoading: isLoadingUser, isError: isUserError } = useCurrentStudent(session?.user?.email || null);
 
-  console.log('[TasksPage] useCurrentStudent result:', { currentUser, isLoadingUser, isUserError });
-
   // Get role from Firestore user data (handles both 'STUDENT' and 'student')
   const userRole = currentUser?.role?.toUpperCase() as 'STUDENT' | 'TEACHER' | undefined;
-
-  console.log('[TasksPage] Session user:', session?.user);
-  console.log('[TasksPage] Firestore user:', currentUser);
-  console.log('[TasksPage] User role:', userRole);
 
   // NEW STRUCTURE: Email is the user ID
   const currentTeacherId = userRole === 'TEACHER' ? session?.user?.email : undefined;
@@ -219,10 +210,7 @@ export default function TasksPage() {
   };
 
   const handleAddTask = (groupId: string, task: Omit<Task, 'id'>) => {
-    console.log('[handleAddTask] Called with:', { groupId, task, currentTeacherId, selectedBatch });
-
     if (!currentTeacherId || !selectedBatch) {
-      console.error('[handleAddTask] Missing required data:', { currentTeacherId, selectedBatch });
       return;
     }
 
@@ -235,49 +223,44 @@ export default function TasksPage() {
       'other': 'other',
     };
 
-    // Convert UI status to WritingTask status
-    const statusMap: Record<string, any> = {
-      'pending': 'draft',
-      'in-progress': 'assigned',
-      'completed': 'completed',
-    };
-
     const taskData = {
       teacherId: currentTeacherId,
       batchId: selectedBatch.batchId,
       title: task.title,
-      instructions: task.title, // Using title as instructions for now
+      instructions: (task as any).instructions || task.title,
       category: categoryMap[groupId] || 'other',
       level: selectedBatch.currentLevel,
       priority: task.priority,
       dueDate: new Date(task.dueDate).getTime(),
       assignedStudents: task.assignees || [],
+      // Optional criteria fields
+      minWords: (task as any).minWords,
+      maxWords: (task as any).maxWords,
+      minParagraphs: (task as any).minParagraphs,
+      maxParagraphs: (task as any).maxParagraphs,
+      totalPoints: (task as any).totalPoints,
+      tone: (task as any).tone,
+      perspective: (task as any).perspective,
+      requireIntroduction: (task as any).requireIntroduction,
+      requireConclusion: (task as any).requireConclusion,
+      requireExamples: (task as any).requireExamples,
     };
-
-    console.log('[handleAddTask] Creating task with data:', taskData);
 
     createTaskMutation.mutate(taskData, {
       onSuccess: () => {
-        console.log('[handleAddTask] Task created successfully');
-        console.log('[handleAddTask] Calling toast.success');
         toast.success('Task created successfully!');
-        console.log('[handleAddTask] Toast called');
       },
       onError: (error) => {
-        console.error('[handleAddTask] Error creating task:', error);
-        console.log('[handleAddTask] Calling toast.error');
         toast.error('Failed to create task. Please try again.');
       },
     });
   };
 
   const handleAddMember = () => {
-    console.log('Add member clicked');
     // TODO: Open member selector to assign students to tasks
   };
 
   const handleCreateBatch = () => {
-    console.log('Create batch clicked');
     // TODO: Open create batch dialog
   };
 
@@ -325,13 +308,6 @@ export default function TasksPage() {
           </div>
         ) : (
           <>
-            {console.log('[TasksPage] Rendering TaskBoard with:', {
-              userRole,
-              isTeacher: userRole === 'TEACHER',
-              showAddTask: userRole === 'TEACHER',
-              hasOnAddTask: !!handleAddTask,
-              selectedBatch,
-            })}
             <TaskBoard
               title={
                 userRole === 'TEACHER'

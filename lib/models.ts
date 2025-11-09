@@ -161,8 +161,17 @@ export interface WritingTask {
   // Requirements
   minWords?: number;
   maxWords?: number;
+  minParagraphs?: number;
+  maxParagraphs?: number;
   requiredVocabulary?: string[];
   totalPoints?: number;
+
+  // Writing criteria (optional)
+  requireIntroduction?: boolean;
+  requireConclusion?: boolean;
+  requireExamples?: boolean;
+  tone?: 'formell' | 'informell' | 'sachlich' | 'persönlich' | 'offiziell'; // German writing tones
+  perspective?: 'first-person' | 'second-person' | 'third-person';
 
   createdAt: number;
   updatedAt: number;
