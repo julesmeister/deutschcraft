@@ -1,5 +1,6 @@
 import { SlimTable, SlimTableRenderers } from '@/components/ui/SlimTable';
 import { Menu, MenuItem } from '@/components/ui/dropdown';
+import { useRouter } from 'next/navigation';
 
 interface StudentTableProps {
   students: Array<{
@@ -46,7 +47,12 @@ export function StudentTable({
   setCurrentPage,
   pageSize,
 }: StudentTableProps) {
+  const router = useRouter();
   const totalPages = Math.ceil(allStudents.length / pageSize);
+
+  const handleRowClick = (row: { id: string }) => {
+    router.push(`/dashboard/teacher/students/${row.id}`);
+  };
 
   return (
     <div className="bg-white border border-gray-200">
@@ -166,6 +172,7 @@ export function StudentTable({
           onPageChange: setCurrentPage,
         }}
         showViewAll={false}
+        onRowClick={handleRowClick}
       />
     </div>
   );
