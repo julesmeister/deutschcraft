@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 import { SettingsSidebar, SettingsMenuItem } from '@/components/ui/settings/SettingsSidebar';
-import { SettingsFormField } from '@/components/ui/settings/SettingsFormField';
-import { ProfileImageUpload } from '@/components/ui/settings/ProfileImageUpload';
-import { PhoneNumberInput } from '@/components/ui/settings/PhoneNumberInput';
+import { ProfileTab } from '@/components/ui/settings/ProfileTab';
+import { SecurityTab } from '@/components/ui/settings/SecurityTab';
+import { NotificationTab } from '@/components/ui/settings/NotificationTab';
+import { BillingTab } from '@/components/ui/settings/BillingTab';
+import { IntegrationTab } from '@/components/ui/settings/IntegrationTab';
 
 type SettingsTab = 'profile' | 'security' | 'notification' | 'billing' | 'integration';
 
@@ -181,170 +183,24 @@ export default function SettingsPage() {
 
               {/* Profile Tab */}
               {activeTab === 'profile' && (
-                <>
-                  <h2 className="text-xl font-bold text-gray-900 mb-8">Personal information</h2>
-                  <form onSubmit={handleSubmit}>
-                    {/* Profile Image Upload */}
-                    <ProfileImageUpload
-                      currentImage="https://ui-avatars.com/api/?name=Angelina+Gotelli&background=667eea&color=fff&size=180"
-                      userName={`${formData.firstName} ${formData.lastName}`}
-                      onUpload={(file) => console.log('Upload file:', file)}
-                      onRemove={() => console.log('Remove image')}
-                    />
-
-                    {/* Name Fields */}
-                    <div className="grid md:grid-cols-2 gap-4 mb-6">
-                      <SettingsFormField
-                        label="First name"
-                        value={formData.firstName}
-                        placeholder="First Name"
-                        name="firstName"
-                        onChange={(value) =>
-                          setFormData({ ...formData, firstName: value })
-                        }
-                      />
-                      <SettingsFormField
-                        label="Last name"
-                        value={formData.lastName}
-                        placeholder="Last Name"
-                        name="lastName"
-                        onChange={(value) =>
-                          setFormData({ ...formData, lastName: value })
-                        }
-                      />
-                    </div>
-
-                    {/* Email */}
-                    <SettingsFormField
-                      label="Email"
-                      type="email"
-                      value={formData.email}
-                      placeholder="Email"
-                      name="email"
-                      onChange={(value) => setFormData({ ...formData, email: value })}
-                    />
-
-                    {/* Phone Number */}
-                    <PhoneNumberInput
-                      value={formData.phoneNumber}
-                      dialCode={formData.dialCode}
-                      onChange={(value) =>
-                        setFormData({ ...formData, phoneNumber: value })
-                      }
-                      onDialCodeChange={(dialCode) =>
-                        setFormData({ ...formData, dialCode })
-                      }
-                    />
-
-                    {/* Address Information */}
-                    <h2 className="text-xl font-bold text-gray-900 mb-6 mt-8">
-                      Address information
-                    </h2>
-
-                    <SettingsFormField
-                      label="Country"
-                      value={formData.country}
-                      placeholder="Country"
-                      name="country"
-                      onChange={(value) => setFormData({ ...formData, country: value })}
-                    />
-
-                    <SettingsFormField
-                      label="Address"
-                      value={formData.address}
-                      placeholder="Address"
-                      name="address"
-                      onChange={(value) => setFormData({ ...formData, address: value })}
-                    />
-
-                    <div className="grid md:grid-cols-2 gap-4 mb-6">
-                      <SettingsFormField
-                        label="City"
-                        value={formData.city}
-                        placeholder="City"
-                        name="city"
-                        onChange={(value) => setFormData({ ...formData, city: value })}
-                      />
-                      <SettingsFormField
-                        label="Postal Code"
-                        value={formData.postalCode}
-                        placeholder="Postal Code"
-                        name="postalCode"
-                        onChange={(value) =>
-                          setFormData({ ...formData, postalCode: value })
-                        }
-                      />
-                    </div>
-
-                    {/* Submit Button */}
-                    <div className="flex justify-end">
-                      <button
-                        type="submit"
-                        className="px-5 py-3 h-12 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-500 transition-colors"
-                      >
-                        Save
-                      </button>
-                    </div>
-                  </form>
-                </>
+                <ProfileTab
+                  formData={formData}
+                  onFormDataChange={setFormData}
+                  onSubmit={handleSubmit}
+                />
               )}
 
               {/* Security Tab */}
-              {activeTab === 'security' && (
-                <>
-                  <h2 className="text-xl font-bold text-gray-900 mb-8">Security settings</h2>
-                  <div className="space-y-6">
-                    <SettingsFormField
-                      label="Current Password"
-                      type="password"
-                      placeholder="Enter current password"
-                    />
-                    <SettingsFormField
-                      label="New Password"
-                      type="password"
-                      placeholder="Enter new password"
-                    />
-                    <SettingsFormField
-                      label="Confirm New Password"
-                      type="password"
-                      placeholder="Confirm new password"
-                    />
-                    <div className="flex justify-end">
-                      <button className="px-5 py-3 h-12 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">
-                        Update Password
-                      </button>
-                    </div>
-                  </div>
-                </>
-              )}
+              {activeTab === 'security' && <SecurityTab />}
 
               {/* Notification Tab */}
-              {activeTab === 'notification' && (
-                <>
-                  <h2 className="text-xl font-bold text-gray-900 mb-8">
-                    Notification preferences
-                  </h2>
-                  <div className="text-gray-600">
-                    Notification settings coming soon...
-                  </div>
-                </>
-              )}
+              {activeTab === 'notification' && <NotificationTab />}
 
               {/* Billing Tab */}
-              {activeTab === 'billing' && (
-                <>
-                  <h2 className="text-xl font-bold text-gray-900 mb-8">Billing information</h2>
-                  <div className="text-gray-600">Billing settings coming soon...</div>
-                </>
-              )}
+              {activeTab === 'billing' && <BillingTab />}
 
               {/* Integration Tab */}
-              {activeTab === 'integration' && (
-                <>
-                  <h2 className="text-xl font-bold text-gray-900 mb-8">Integrations</h2>
-                  <div className="text-gray-600">Integration settings coming soon...</div>
-                </>
-              )}
+              {activeTab === 'integration' && <IntegrationTab />}
             </div>
           </div>
         </div>
