@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/Button';
+import { TabBar } from '@/components/ui/TabBar';
 
 interface SessionSummaryProps {
   stats: {
@@ -54,78 +55,38 @@ export function SessionSummary({
         </div>
       </div>
 
-      {/* Detailed Breakdown */}
-      <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 mb-6">
+      {/* Detailed Breakdown using TabBar */}
+      <div className="mb-6">
         <h3 className="text-lg font-bold text-gray-900 mb-4">Review Breakdown</h3>
-        <div className="space-y-3">
-          {/* Forgotten */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-4 h-4 rounded-full bg-red-500"></div>
-              <span className="font-semibold text-gray-700">Forgotten (Need Review)</span>
-            </div>
-            <span className="text-2xl font-black text-red-600">{stats.again}</span>
-          </div>
-
-          {/* Progress bar */}
-          <div className="w-full bg-gray-100 rounded-full h-2">
-            <div
-              className="bg-red-500 h-2 rounded-full"
-              style={{ width: `${totalReviewed > 0 ? (stats.again / totalReviewed) * 100 : 0}%` }}
-            />
-          </div>
-
-          {/* Hard */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-4 h-4 rounded-full bg-amber-500"></div>
-              <span className="font-semibold text-gray-700">Hard (Difficult)</span>
-            </div>
-            <span className="text-2xl font-black text-amber-600">{stats.hard}</span>
-          </div>
-
-          {/* Progress bar */}
-          <div className="w-full bg-gray-100 rounded-full h-2">
-            <div
-              className="bg-amber-500 h-2 rounded-full"
-              style={{ width: `${totalReviewed > 0 ? (stats.hard / totalReviewed) * 100 : 0}%` }}
-            />
-          </div>
-
-          {/* Good */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-4 h-4 rounded-full bg-blue-500"></div>
-              <span className="font-semibold text-gray-700">Good (Correct)</span>
-            </div>
-            <span className="text-2xl font-black text-blue-600">{stats.good}</span>
-          </div>
-
-          {/* Progress bar */}
-          <div className="w-full bg-gray-100 rounded-full h-2">
-            <div
-              className="bg-blue-500 h-2 rounded-full"
-              style={{ width: `${totalReviewed > 0 ? (stats.good / totalReviewed) * 100 : 0}%` }}
-            />
-          </div>
-
-          {/* Easy */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="w-4 h-4 rounded-full bg-emerald-500"></div>
-              <span className="font-semibold text-gray-700">Easy (Mastered)</span>
-            </div>
-            <span className="text-2xl font-black text-emerald-600">{stats.easy}</span>
-          </div>
-
-          {/* Progress bar */}
-          <div className="w-full bg-gray-100 rounded-full h-2">
-            <div
-              className="bg-emerald-500 h-2 rounded-full"
-              style={{ width: `${totalReviewed > 0 ? (stats.easy / totalReviewed) * 100 : 0}%` }}
-            />
-          </div>
-        </div>
+        <TabBar
+          variant="stats"
+          tabs={[
+            {
+              id: 'again',
+              label: 'Forgotten',
+              icon: <div className="w-4 h-4 rounded-full bg-red-500"></div>,
+              value: stats.again,
+            },
+            {
+              id: 'hard',
+              label: 'Hard',
+              icon: <div className="w-4 h-4 rounded-full bg-amber-500"></div>,
+              value: stats.hard,
+            },
+            {
+              id: 'good',
+              label: 'Good',
+              icon: <div className="w-4 h-4 rounded-full bg-blue-500"></div>,
+              value: stats.good,
+            },
+            {
+              id: 'easy',
+              label: 'Easy',
+              icon: <div className="w-4 h-4 rounded-full bg-emerald-500"></div>,
+              value: stats.easy,
+            },
+          ]}
+        />
       </div>
 
       {/* Additional Info */}
