@@ -37,6 +37,16 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
   const [showSummary, setShowSummary] = useState(false);
   const [sessionStartTime] = useState(Date.now());
 
+  // Log session status on mount
+  useEffect(() => {
+    console.log('🎴 [useFlashcardSession] Session initialized:', {
+      hasSession: !!session,
+      userEmail: session?.user?.email,
+      flashcardsCount: flashcards.length,
+      timestamp: new Date().toISOString(),
+    });
+  }, [session, flashcards.length]);
+
   const currentCard = flashcards[currentIndex];
   const progress = ((currentIndex + 1) / flashcards.length) * 100;
   const isLastCard = currentIndex === flashcards.length - 1;
@@ -114,7 +124,21 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
     });
 
     // Save review to Firestore if user is logged in
-    if (session?.user?.email && currentCard.wordId) {
+    console.log('🎴 [handleDifficulty] Attempting to save review:', {
+      hasSession: !!session,
+      hasEmail: !!session?.user?.email,
+      email: session?.user?.email,
+      cardId: currentCard.id,
+      hasWordId: !!currentCard.wordId,
+      wordId: currentCard.wordId,
+      difficulty,
+    });
+
+    if (!session?.user?.email) {
+      console.warn('⚠️ [handleDifficulty] Cannot save: No user email');
+    } else if (!currentCard.wordId) {
+      console.warn('⚠️ [handleDifficulty] Cannot save: No wordId on card:', currentCard);
+    } else {
       try {
         await saveReview(
           session.user.email,
@@ -123,7 +147,7 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
           difficulty
         );
       } catch (error) {
-        console.error('Failed to save review:', error);
+        console.error('❌ [handleDifficulty] Failed to save review:', error);
         // Continue anyway - don't block user flow
       }
     }
@@ -148,16 +172,26 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
     const correctCount = finalStats.good + finalStats.easy;
     const incorrectCount = finalStats.again + finalStats.hard;
 
+    console.log('🎴 [handleSessionComplete] Session ending:', {
+      hasSession: !!session,
+      hasEmail: !!session?.user?.email,
+      email: session?.user?.email,
+      finalStats,
+      totalReviewed,
+      correctCount,
+      incorrectCount,
+      timeSpentSeconds: timeSpent,
+      timeSpentMinutes: Math.ceil(timeSpent / 60),
+      timestamp: new Date().toISOString(),
+    });
+
     // Save daily progress
-    if (session?.user?.email) {
+    if (!session?.user?.email) {
+      console.error('❌ [handleSessionComplete] Cannot save: No user session found');
+      toast.addToast('Error: Not logged in. Progress not saved.', 'error');
+    } else {
       try {
-        console.log('Saving daily progress:', {
-          userId: session.user.email,
-          cardsReviewed: totalReviewed,
-          timeSpent: Math.ceil(timeSpent / 60),
-          correctCount,
-          incorrectCount,
-        });
+        console.log('🟢 [handleSessionComplete] Calling saveDailyProgress...');
 
         await saveDailyProgress(session.user.email, {
           cardsReviewed: totalReviewed,
@@ -166,12 +200,11 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
           incorrectCount,
         });
 
-        console.log('Daily progress saved successfully!');
+        console.log('✅ [handleSessionComplete] Daily progress saved successfully!');
       } catch (error) {
-        console.error('Failed to save daily progress:', error);
+        console.error('❌ [handleSessionComplete] Failed to save daily progress:', error);
+        toast.addToast('Failed to save progress. Please check your connection.', 'error');
       }
-    } else {
-      console.warn('No user session found, cannot save progress');
     }
 
     // Show summary

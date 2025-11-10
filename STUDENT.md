@@ -5,6 +5,193 @@ This document maps the complete data flow for student statistics, flashcard prog
 
 ---
 
+## 🐛 DEBUGGING GUIDE - Stats Not Updating
+
+### Recent Enhancements (2025-01-11)
+
+I've added comprehensive logging and error handling to debug why stats aren't updating. Here's what was implemented:
+
+#### 1. Enhanced Logging System
+
+All critical operations now have color-coded console logs with emojis:
+
+- 🔵 `[saveReview]` - Individual card review saves to `flashcard-progress` collection
+- 🟢 `[saveDailyProgress]` - Daily progress saves to `progress` collection
+- 🎴 `[useFlashcardSession]` - Session state and completion
+- 📊 `[useStudyStats]` - Real-time stats calculation
+
+#### 2. Real-Time Firestore Listeners
+
+**CHANGED**: `useStudyStats()` now uses `onSnapshot()` instead of `getDocs()`
+
+**Why**: Stats now update automatically when Firestore data changes, without needing manual refresh.
+
+**Location**: `lib/hooks/useFlashcards.ts:151-279`
+
+#### 3. Toast Notifications
+
+- ✅ Success toast after daily progress saves
+- ❌ Error toasts for: missing user session, Firestore write failures, network issues
+
+#### 4. Input Validation
+
+Both save functions now validate:
+- User email must be defined
+- Flashcard ID must be defined
+- Clear error messages if validation fails
+
+### How to Debug Stats Issues
+
+#### Step 1: Open Browser Console
+
+1. Open flashcards page: `/dashboard/student/flashcards`
+2. Open browser DevTools (F12)
+3. Go to Console tab
+4. Filter for these prefixes: `🎴`, `🔵`, `🟢`, `📊`
+
+#### Step 2: Start Practice Session
+
+You should see:
+```
+🎴 [useFlashcardSession] Session initialized: {
+  hasSession: true,
+  userEmail: "your-email@example.com",
+  flashcardsCount: 20,
+  timestamp: "2025-01-11T..."
+}
+
+📊 [useStudyStats] Setting up real-time listeners for userId: your-email@example.com
+📊 [useStudyStats] Creating listener for flashcard-progress collection
+📊 [useStudyStats] Creating listener for progress collection
+```
+
+**If `hasSession: false` or `userEmail: undefined`**: User authentication failed - check Firebase Auth
+
+#### Step 3: Rate Card Difficulty (Press 1, 2, 3, or 4)
+
+You should see:
+```
+🎴 [handleDifficulty] Attempting to save review: {
+  hasSession: true,
+  hasEmail: true,
+  email: "your-email@example.com",
+  cardId: "a1-werden",
+  hasWordId: true,
+  wordId: "werden",
+  difficulty: "good"
+}
+
+🔵 [saveReview] Starting save: {
+  userId: "your-email@example.com",
+  flashcardId: "a1-werden",
+  wordId: "werden",
+  difficulty: "good",
+  timestamp: "2025-01-11T..."
+}
+
+🔵 [saveReview] Progress ID: your-email@example.com_a1-werden
+🔵 [saveReview] Existing progress: { exists: false, currentProgress: null }
+🔵 [saveReview] New SRS data: { repetitions: 1, easeFactor: 2.5, interval: 1, ... }
+🔵 [saveReview] Creating new document
+✅ [saveReview] Save successful!
+```
+
+**Common Issues**:
+- ⚠️ `Cannot save: No user email` → Check `useFirebaseAuth()` hook
+- ⚠️ `Cannot save: No wordId on card` → Check flashcard JSON files have `wordId` field
+- ❌ `Error: Missing or insufficient permissions` → Check Firestore rules
+
+#### Step 4: Complete Session
+
+After rating the last card:
+```
+🎴 [handleSessionComplete] Session ending: {
+  hasSession: true,
+  hasEmail: true,
+  email: "your-email@example.com",
+  finalStats: { again: 2, hard: 3, good: 10, easy: 5 },
+  totalReviewed: 20,
+  correctCount: 15,
+  incorrectCount: 5,
+  timeSpentSeconds: 180,
+  timeSpentMinutes: 3
+}
+
+🟢 [handleSessionComplete] Calling saveDailyProgress...
+🟢 [saveDailyProgress] Starting save: {
+  userId: "your-email@example.com",
+  stats: { cardsReviewed: 20, timeSpent: 3, correctCount: 15, incorrectCount: 5 }
+}
+
+🟢 [saveDailyProgress] Progress ID: PROG_20250111_your-email@example.com
+🟢 [saveDailyProgress] Collection path: progress
+🟢 [saveDailyProgress] Existing document: { exists: false, data: null }
+🟢 [saveDailyProgress] Creating new document with data: { ... }
+✅ [saveDailyProgress] Create successful!
+```
+
+**Toast notification**: "Progress saved successfully!" (green)
+
+#### Step 5: Verify Stats Update
+
+You should immediately see:
+```
+📊 [useStudyStats] Flashcard progress updated: { docsCount: 20, timestamp: "..." }
+📊 [useStudyStats] Calculated from flashcard-progress: {
+  totalCards: 20,
+  cardsLearned: 5,
+  totalCorrect: 15,
+  totalIncorrect: 5,
+  totalAttempts: 20,
+  accuracy: 75
+}
+
+📊 [useStudyStats] Study progress updated: { docsCount: 1, timestamp: "..." }
+📊 [useStudyStats] Study data: [{ date: "2025-01-11", cardsReviewed: 20, ... }]
+📊 [useStudyStats] Final stats: {
+  totalCards: 20,
+  cardsLearned: 5,
+  streak: 1,
+  accuracy: 75
+}
+```
+
+The stats cards on the flashcards page should update automatically (no refresh needed).
+
+#### Step 6: Verify in Firebase Console
+
+1. Go to Firebase Console → Firestore Database
+2. Check `flashcard-progress` collection:
+   - Should have documents with IDs like: `your-email@example.com_a1-werden`
+   - Each document should have: `masteryLevel`, `repetitions`, `interval`, `correctCount`, `incorrectCount`
+
+3. Check `progress` collection:
+   - Should have documents with IDs like: `PROG_20250111_your-email@example.com`
+   - Each document should have: `cardsReviewed`, `wordsCorrect`, `wordsIncorrect`, `timeSpent`
+
+### Common Failure Scenarios
+
+| Symptom | Cause | Solution |
+|---------|-------|----------|
+| No console logs at all | Code not deployed | Run `npm run dev` and refresh |
+| `hasSession: false` | Auth not initialized | Wait 2 seconds after page load |
+| `Cannot save: No user email` | User not logged in | Check Firebase Auth configuration |
+| `Cannot save: No wordId` | Missing field in flashcard | Run `npx tsx scripts/parse-remnote.ts` |
+| `Missing or insufficient permissions` | Firestore rules issue | Check `firestore.rules` file |
+| Stats show 0 after session | No documents in Firestore | Check Firebase Console for actual documents |
+| Stats don't update immediately | Real-time listener not set up | Check for `📊` logs showing listener creation |
+
+### Expected Behavior After Fix
+
+✅ **When rating a card**: Toast notification shows difficulty rating
+✅ **When finishing session**: "Progress saved successfully!" toast appears
+✅ **Stats display**: Updates immediately without page refresh
+✅ **Cards Learned**: Increments when mastery level reaches 70%
+✅ **Day Streak**: Increases by 1 when studying on consecutive days
+✅ **Accuracy**: Shows correct percentage based on good/easy vs again/hard ratings
+
+---
+
 ## Data Models
 
 ### 1. User Model (`lib/models/user.ts`)

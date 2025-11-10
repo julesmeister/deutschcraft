@@ -13,6 +13,7 @@ import {
   getDoc,
   orderBy,
   limit,
+  onSnapshot,
 } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import {
@@ -149,25 +150,36 @@ export function useStudyStats(userId?: string, refreshKey?: number) {
 
   useEffect(() => {
     if (!userId) {
+      console.log('📊 [useStudyStats] No userId provided');
       setIsLoading(false);
       return;
     }
 
-    const fetchStats = async () => {
-      try {
-        setIsLoading(true);
-        setIsError(false);
+    console.log('📊 [useStudyStats] Setting up real-time listeners for userId:', userId);
 
-        // Get flashcard progress for this user
-        const progressRef = collection(db, 'flashcard-progress');
-        const progressQuery = query(
-          progressRef,
-          where('userId', '==', userId)
-        );
-        const progressSnapshot = await getDocs(progressQuery);
+    setIsLoading(true);
+    setIsError(false);
+
+    // Set up real-time listener for flashcard progress
+    const progressRef = collection(db, 'flashcard-progress');
+    const progressQuery = query(
+      progressRef,
+      where('userId', '==', userId)
+    );
+
+    console.log('📊 [useStudyStats] Creating listener for flashcard-progress collection');
+
+    const unsubscribeProgress = onSnapshot(
+      progressQuery,
+      (progressSnapshot) => {
+        console.log('📊 [useStudyStats] Flashcard progress updated:', {
+          docsCount: progressSnapshot.docs.length,
+          timestamp: new Date().toISOString(),
+        });
+
         const progressData = progressSnapshot.docs.map(doc => doc.data()) as FlashcardProgress[];
 
-        // Calculate stats
+        // Calculate stats from flashcard progress
         const totalCards = progressData.length;
         const cardsLearned = progressData.filter(p => p.masteryLevel >= 70).length;
 
@@ -176,18 +188,16 @@ export function useStudyStats(userId?: string, refreshKey?: number) {
         const totalAttempts = totalCorrect + totalIncorrect;
         const accuracy = totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 100;
 
-        console.log('Study stats calculated:', {
-          userId,
+        console.log('📊 [useStudyStats] Calculated from flashcard-progress:', {
           totalCards,
           cardsLearned,
           totalCorrect,
           totalIncorrect,
           totalAttempts,
           accuracy,
-          progressDataLength: progressData.length,
         });
 
-        // Get recent study progress for streak calculation
+        // Set up listener for study progress (for streak calculation)
         const studyProgressRef = collection(db, 'progress');
         const studyQuery = query(
           studyProgressRef,
@@ -195,43 +205,77 @@ export function useStudyStats(userId?: string, refreshKey?: number) {
           orderBy('date', 'desc'),
           limit(30)
         );
-        const studySnapshot = await getDocs(studyQuery);
-        const studyData = studySnapshot.docs.map(doc => doc.data()) as StudyProgress[];
 
-        // Calculate streak (consecutive days with activity)
-        let streak = 0;
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
+        console.log('📊 [useStudyStats] Creating listener for progress collection');
 
-        for (let i = 0; i < studyData.length; i++) {
-          const progressDate = new Date(studyData[i].date);
-          progressDate.setHours(0, 0, 0, 0);
+        const unsubscribeStudy = onSnapshot(
+          studyQuery,
+          (studySnapshot) => {
+            console.log('📊 [useStudyStats] Study progress updated:', {
+              docsCount: studySnapshot.docs.length,
+              timestamp: new Date().toISOString(),
+            });
 
-          const expectedDate = new Date(today);
-          expectedDate.setDate(today.getDate() - i);
+            const studyData = studySnapshot.docs.map(doc => doc.data()) as StudyProgress[];
 
-          if (progressDate.getTime() === expectedDate.getTime()) {
-            streak++;
-          } else {
-            break;
+            console.log('📊 [useStudyStats] Study data:', studyData);
+
+            // Calculate streak (consecutive days with activity)
+            let streak = 0;
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            for (let i = 0; i < studyData.length; i++) {
+              const progressDate = new Date(studyData[i].date);
+              progressDate.setHours(0, 0, 0, 0);
+
+              const expectedDate = new Date(today);
+              expectedDate.setDate(today.getDate() - i);
+
+              if (progressDate.getTime() === expectedDate.getTime()) {
+                streak++;
+              } else {
+                break;
+              }
+            }
+
+            console.log('📊 [useStudyStats] Final stats:', {
+              totalCards,
+              cardsLearned,
+              streak,
+              accuracy,
+            });
+
+            setStats({
+              totalCards,
+              cardsLearned,
+              streak,
+              accuracy,
+            });
+            setIsLoading(false);
+          },
+          (error) => {
+            console.error('❌ [useStudyStats] Error in study progress listener:', error);
+            setIsError(true);
+            setIsLoading(false);
           }
-        }
+        );
 
-        setStats({
-          totalCards,
-          cardsLearned,
-          streak,
-          accuracy,
-        });
-      } catch (error) {
-        console.error('Error fetching study stats:', error);
+        // Store the study listener unsubscribe function
+        return () => unsubscribeStudy();
+      },
+      (error) => {
+        console.error('❌ [useStudyStats] Error in flashcard progress listener:', error);
         setIsError(true);
-      } finally {
         setIsLoading(false);
       }
-    };
+    );
 
-    fetchStats();
+    // Cleanup function
+    return () => {
+      console.log('📊 [useStudyStats] Cleaning up listeners');
+      unsubscribeProgress();
+    };
   }, [userId, refreshKey]);
 
   return { stats, isLoading, isError };
