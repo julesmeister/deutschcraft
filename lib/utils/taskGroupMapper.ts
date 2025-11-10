@@ -8,6 +8,18 @@ interface WritingTask {
   dueDate: number;
   category: string;
   assignedStudents: string[];
+  // Optional writing criteria
+  instructions?: string;
+  minWords?: number;
+  maxWords?: number;
+  minParagraphs?: number;
+  maxParagraphs?: number;
+  totalPoints?: number;
+  tone?: 'formell' | 'informell' | 'sachlich' | 'persönlich' | 'offiziell';
+  perspective?: 'first-person' | 'second-person' | 'third-person';
+  requireIntroduction?: boolean;
+  requireConclusion?: boolean;
+  requireExamples?: boolean;
 }
 
 /**
@@ -38,6 +50,18 @@ export function mapTasksToGroups(writingTasks: WritingTask[]): TaskGroup[] {
     dueDate: formatDueDate(task.dueDate),
     completed: task.status === 'completed',
     assignees: task.assignedStudents,
+    // Pass through optional writing criteria
+    instructions: task.instructions,
+    minWords: task.minWords,
+    maxWords: task.maxWords,
+    minParagraphs: task.minParagraphs,
+    maxParagraphs: task.maxParagraphs,
+    totalPoints: task.totalPoints,
+    tone: task.tone,
+    perspective: task.perspective,
+    requireIntroduction: task.requireIntroduction,
+    requireConclusion: task.requireConclusion,
+    requireExamples: task.requireExamples,
   });
 
   return [
