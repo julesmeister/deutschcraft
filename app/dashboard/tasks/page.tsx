@@ -10,6 +10,7 @@ import { useTeacherBatchTasks, useCreateWritingTask, useUpdateWritingTask, useDe
 import { useCurrentStudent } from '@/lib/hooks/useUsers';
 import { Batch } from '@/lib/models';
 import { useToast } from '@/components/ui/toast';
+import { mapTasksToGroups, mapGroupIdToCategory } from '@/lib/utils/taskGroupMapper';
 
 export default function TasksPage() {
   const { session } = useFirebaseAuth();
@@ -78,84 +79,8 @@ export default function TasksPage() {
   const updateTaskMutation = useUpdateWritingTask();
   const deleteTaskMutation = useDeleteWritingTask();
 
-  // Group tasks by category - ALWAYS show all groups, even if empty
-  const taskGroups: TaskGroup[] = [
-    {
-      id: 'essay',
-      title: 'Essays',
-      tasks: writingTasks
-        .filter(task => task.category === 'essay')
-        .map(task => ({
-          id: task.taskId,
-          title: task.title,
-          status: task.status === 'assigned' ? 'in-progress' : task.status === 'completed' ? 'completed' : 'pending',
-          priority: task.priority,
-          dueDate: new Date(task.dueDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
-          completed: task.status === 'completed',
-          assignees: task.assignedStudents,
-        })),
-    },
-    {
-      id: 'letter',
-      title: 'Letters & Emails',
-      tasks: writingTasks
-        .filter(task => task.category === 'letter' || task.category === 'email')
-        .map(task => ({
-          id: task.taskId,
-          title: task.title,
-          status: task.status === 'assigned' ? 'in-progress' : task.status === 'completed' ? 'completed' : 'pending',
-          priority: task.priority,
-          dueDate: new Date(task.dueDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
-          completed: task.status === 'completed',
-          assignees: task.assignedStudents,
-        })),
-    },
-    {
-      id: 'story',
-      title: 'Creative Writing',
-      tasks: writingTasks
-        .filter(task => task.category === 'story' || task.category === 'article')
-        .map(task => ({
-          id: task.taskId,
-          title: task.title,
-          status: task.status === 'assigned' ? 'in-progress' : task.status === 'completed' ? 'completed' : 'pending',
-          priority: task.priority,
-          dueDate: new Date(task.dueDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
-          completed: task.status === 'completed',
-          assignees: task.assignedStudents,
-        })),
-    },
-    {
-      id: 'report',
-      title: 'Reports & Reviews',
-      tasks: writingTasks
-        .filter(task => task.category === 'report' || task.category === 'review')
-        .map(task => ({
-          id: task.taskId,
-          title: task.title,
-          status: task.status === 'assigned' ? 'in-progress' : task.status === 'completed' ? 'completed' : 'pending',
-          priority: task.priority,
-          dueDate: new Date(task.dueDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
-          completed: task.status === 'completed',
-          assignees: task.assignedStudents,
-        })),
-    },
-    {
-      id: 'other',
-      title: 'Other Tasks',
-      tasks: writingTasks
-        .filter(task => !['essay', 'letter', 'email', 'story', 'article', 'report', 'review'].includes(task.category))
-        .map(task => ({
-          id: task.taskId,
-          title: task.title,
-          status: task.status === 'assigned' ? 'in-progress' : task.status === 'completed' ? 'completed' : 'pending',
-          priority: task.priority,
-          dueDate: new Date(task.dueDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
-          completed: task.status === 'completed',
-          assignees: task.assignedStudents,
-        })),
-    },
-  ];
+  // Group tasks by category using mapper utility
+  const taskGroups: TaskGroup[] = mapTasksToGroups(writingTasks);
 
   const handleToggleTask = (groupId: string, taskId: string) => {
     const task = writingTasks.find(t => t.taskId === taskId);
@@ -214,21 +139,12 @@ export default function TasksPage() {
       return;
     }
 
-    // Map group ID to category
-    const categoryMap: Record<string, any> = {
-      'essay': 'essay',
-      'letter': 'letter',
-      'story': 'story',
-      'report': 'report',
-      'other': 'other',
-    };
-
     const taskData = {
       teacherId: currentTeacherId,
       batchId: selectedBatch.batchId,
       title: task.title,
       instructions: (task as any).instructions || task.title,
-      category: categoryMap[groupId] || 'other',
+      category: mapGroupIdToCategory(groupId),
       level: selectedBatch.currentLevel,
       priority: task.priority,
       dueDate: new Date(task.dueDate).getTime(),
