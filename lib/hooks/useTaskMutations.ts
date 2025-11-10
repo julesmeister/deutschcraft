@@ -64,6 +64,7 @@ export function useCreateWritingTask() {
       const taskId = `TASK_${Date.now()}`;
       const taskRef = doc(db, 'tasks', taskId);
 
+      // Build task object and remove undefined values (Firestore doesn't accept undefined)
       const task: WritingTask = {
         taskId,
         batchId,
@@ -82,15 +83,15 @@ export function useCreateWritingTask() {
         completedStudents: [],
         minWords: minWords || 0,
         maxWords: maxWords || 0,
-        minParagraphs,
-        maxParagraphs,
+        minParagraphs: minParagraphs ?? null,
+        maxParagraphs: maxParagraphs ?? null,
         requiredVocabulary: [],
         totalPoints: totalPoints || 0,
-        tone,
-        perspective,
-        requireIntroduction,
-        requireConclusion,
-        requireExamples,
+        tone: tone ?? null,
+        perspective: perspective ?? null,
+        requireIntroduction: requireIntroduction ?? false,
+        requireConclusion: requireConclusion ?? false,
+        requireExamples: requireExamples ?? false,
         createdAt: Date.now(),
         updatedAt: Date.now(),
       };

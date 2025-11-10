@@ -167,6 +167,8 @@ export default function TasksPage() {
         toast.success('Task created successfully!');
       },
       onError: (error) => {
+        console.error('❌ Task creation failed:', error);
+        console.error('Task data that failed:', taskData);
         toast.error('Failed to create task. Please try again.');
       },
     });
