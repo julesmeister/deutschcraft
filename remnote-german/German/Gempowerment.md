@@ -1,0 +1,387 @@
+- Plurals
+    - **Plural forms & patterns** 
+    - Whereas in English, plurals are typically formed by adding **-s **or **-es** to a word, German has a number of different ways to designate plurals. In fact, it is useful to note that very few German nouns form their plural using an -**s** suffix.
+    - **-** or **¨**
+        - Nearly all masculine and neuter nouns that end in **-er**, **-en**, **-el**, -**chen**, -**lein** & collective neuter nouns beginning with **Ge**- have plurals that are identical to their singular forms or that simply add an umlaut.
+        - **der Spanier > **{{**die Spanier**}}{{ }} 
+            - **der Wagen > **{{**die Wagen**}}{{ }} 
+            - **das Brötchen > **{{**die Brötchen**}}{{ }} 
+        - **das Mittel > die Mittel**
+            - **der Gürtel > **{{**die Gürtel**}}{{ }} 
+            - **der Apfel > **{{**die Äpfel**}}{{ }} 
+        - **der Vater > **{{**die Väter**}}{{ }} 
+            - **der Boden** > {{**die Böden**}} 
+            - **das Gebirge > **{{**die Gebirge**}} 
+        - BUT: **der Muskel > **{{**die Muskeln**}}**      der Bauer > **{{**die Bauern**}} 
+    - **-e** or **-¨e**
+        - Approximately 89% of masculine words, 74% of neuter words, and 25% of feminine words have the plural form -**e** or **-¨e**. Feminine nouns with the plural **-e **always take the umlaut. Masculine nouns often take the umlaut, but not always. Neuter nouns that have the plural -**e** rarely take the umlaut.
+        - **die Gans > **{{**die Gänse**}} 
+            - **die Kraft > **{{**die Kräfte**}} 
+            - **die Maus > **{{**Mäuse**}} 
+        - **der Koch > **{{**die Köche**}} 
+            - **der Fluss > **{{**die Flüsse**}} 
+            - **der Tag > **{{**die Tage**}} 
+        - **das Dokument > **{{**die Dokumente**}} 
+            - **das Gespräch, **{{**die Gespräche**}} 
+            - **das Pferd > **{{**die Pferde**}} 
+        - NOTE: Nouns ending in -**nis** add another -**s** before the -**e** suffix in the plural form: **die Erkenntnis > die Erkenntnis****se**.
+    - -(**n**)**en**
+        - All feminine nouns ending in -**ei**, -**heit**, -**keit**, -**schaft**, -**ung** have the plural suffix or -**en**. Feminine nouns ending in -**in** add -**nen** in the plural form. These never add an umlaut.
+        - **die Bäckerei > **{{**die Bäckereien**}} 
+            - **die Krankheit > **{{**die Krankheiten**}} 
+            - **die Ähnlichkeit > **{{**die Ähnlichkeiten**}} 
+        - **die Leidenschaft > **{{**die Leidenschaften**}} 
+            - **die Forschung > **{{**die Forschungen**}} 
+            - **die Lehrerin > **{{**die Lehrerinnen**}} 
+    - **-n**
+        - Nearly all masculine and feminine nouns ending in -**e** and a handful of neuter nouns ending in **-e** add** -n** in the plural form. Most feminine nouns ending in **-el** or -**er** have the plural suffix **-n**. These never add an umlaut.
+        - **der Name > **{{**die Namen**}} 
+            - **die Blume > **{{**die Blumen**}} 
+            - **die Frage > **{{**die Fragen**}} 
+        - **das Auge > **{{**die Augen**}} 
+            - **die Feder > **{{**die Federn**}} 
+            - **die **[Schachtel]()** > **{{**die Schachteln**}} 
+        - BUT: **die Tochter > **{{**die Töchter**}}**    der Käse > **{{**die Käse**}} 
+        - NOTE: 73% of all feminine nouns take** -n** or **-en** in their plural form.
+    - **-er** or **-¨er**
+        - Approximately 21% of neuter nouns, including those that end in -**tum**, have the plural suffix -**er** or -**¨er**. A handful of masculine nouns (2%) also share this form. These always add an umlaut wherever possible.
+        - **das Bild > **{{**die Bilder**}} 
+            - **das Kind > **{{**die Kinder**}} 
+            - **das Gesicht > **{{**die Gesichter**}} 
+        - **das Haus > **{{**die Häuser**}} 
+            - **das Bad > **{{**die Bäder**}} 
+            - **das Dorf > **{{**die Dörfer**}} 
+        - **das Eigentum > **{{**die Eigentümer**}} 
+            - **der Mund > **{{**die Münder**}} 
+            - **der Wald > **{{**die Wälder**}} 
+    - **-s**
+        - The **-s **plural suffix is added to 1) nouns derived from English, French, and Dutch, 2) abbreviations used as nouns, 3) names of people, and 4) nouns that end in an unstressed vowel. These never add an umlaut.
+        - **der Park > **{{**die Parks**}} 
+            - **das Menü > **{{**die Menüs**}} 
+            - **die DVD > **{{**die DVDs**}} 
+        - **der Lkw > **{{**die Lkws**}} 
+            - **der Ami > **{{**die Amis**}} 
+            - **der Schmidt > **{{**die Schmidts**}} 
+        - **der Oma > **{{**die Omas**}} 
+            - **die Kamera > **{{**die Kameras**}} 
+            - **das Video > **{{**die Videos**}} 
+    - Variations on these forms and alternatives apply to a few foreign-derived words, particularly those of Greek and Latin origin:
+    - Most words ending in -**um** change their ending to -**en** in the plural. Words ending in **-os**, -**us**, -**is** or -**a** may also take the plural form **-en**. Other Greek-, Latin-, and Italian-derived words, typically specialized words from fields such as music, medicine, law, and linguistics, maintain their foreign plurals:
+    - **das Datum > **{{**die Daten**}} 
+        - **das Studium > **{{**die Studien**}} 
+        - **das Museum > **{{**die Museen**}} 
+    - **die Villa > **{{**die Villen**}} 
+        - NRK, Villen und vornehme Adressen.
+        - **der Rhythmus > **{{**die Rhythmen**}} 
+        - **das Epos > **{{**die Epen**}} 
+    - **die Praxis > **{{**die Praxen**}} 
+        - **der Modus > **{{**die Modi**}} 
+        - **der Numerus > **{{**die Numeri**}} 
+    - **der Genus > **{{**die Genera**}} 
+        - **das Tempus > **{{**die Tempora**}} 
+        - **das Lexikon > **{{**die Lexika**}} 
+    - 
+    - 
+- TeKaMoLo
+    - ![](https://remnote-user-data.s3.amazonaws.com/KuO7cAzwlzXDrdn_lOlX200V6Ww7b8re1WiJ447fFUrWIeOF_-dKdeiIIh1Yim8_doNpBx6bjPw6TAlGo8ZPYLWAM_oPst-6b6F0QhH3XlzewU4ECY00tbk9horWnSyw.png) 
+- Präpositionen 
+    - ![](https://remnote-user-data.s3.amazonaws.com/8LHYQdzoPbqDBmHZc5ophtjyilJNK8lTl1e6WDd6nniKWfER5SFBtlqgLF3CozgjD2iQ3JzUJuXNsusfhZzOWRTLWm9m-EgCS64tvryalmaEiOcTDkxQvDLcriB1_Xcu.jpeg) 
+- Imperativ
+    - Sie↔Geben Sie bitte das Buch.
+    - Du↔Gib mir bitte das Buch. / Bereite sich später vor
+        - no subject 
+    - Ihr↔Gebt mir bitte das Buch.
+- Deklination
+    - ![](https://remnote-user-data.s3.amazonaws.com/D7yI6rCWpqhRDY9HqGFznsH8dCE2YWnkQNLn48c6fsAjxAox-Dj_glXeNjwq-etcJB6-qi64vU2PhPkR-tL6Qv1iRhOgjXTeS5GfMLL0oY5LYtwgye5IFQTXQ_Y4t_1W.webp) 
+    - ![](https://remnote-user-data.s3.amazonaws.com/I8D_6N8WlPcmvwon-oMA_L0iYeMtQXwYsjv5llEy5XL4hF9uV-_dj7BNI4DCnZDXZ3M8xFfy67qIXEwU43yaMybkbY6hCkAWzWLhIJDwXMpQrW4i-fP6AnBLoQ5Lxl1-.png) 
+- Gender
+    - -ant | Praktikant, Diamant >>>
+        - gender:>maskulin
+    - -ent | Student, Produzent >>>
+        - gender:>maskulin
+    - -er | Pfeffer, Klempner >>>
+        - gender:>maskulin
+    - -ich | Teppich, Pfirisch >>>
+        - gender:>maskulin
+    - -ismus | Optimismus, Magnetismus >>>
+        - gender:>maskulin
+    - -ist | Polizist >>>
+        - gender:>maskulin
+    - -ast | Ballast, Kontrast >>>
+        - gender:>maskulin
+    - -or | Motor >>>
+        - gender:>maskulin
+    - -ling | Frühling, Liebling >>>
+        - gender:>maskulin
+    - -ant | Elefant >>>
+        - gender:>maskulin
+    - -us | Primus, Zirkus >>>
+        - gender:>maskulin
+    - -ig | Honig >>>
+        - gender:>maskulin
+    - -en | Hafen, Garten >>>
+        - gender:>maskulin
+    - -e | Biene, Straße >>>
+        - gender:>feminin
+    - -ie | Philosophie >>>
+        - gender:>feminin
+    - -ion | Portion, Religion, Situation >>>
+        - gender:>feminin
+    - -keit | Möglichkeit >>>
+        - gender:>feminin
+    - -heit | Reinheit, Gesundheit >>>
+        - gender:>feminin
+    - -tät | Realität >>>
+        - gender:>feminin
+    - -ik | Panik >>>
+        - gender:>feminin
+    - -ei | Brauerei >>>
+        - gender:>feminin
+    - -schaft | Freundschaft, Mannschaft >>>
+        - gender:>feminin
+    - -ung | Spaltung, Planung >>>
+        - gender:>feminin
+    - -ur | Kultur >>>
+        - gender:>feminin
+    - -lein | Kindlein >>>
+        - gender:>neutrum
+    - -chen | Mädchen >>>
+        - gender:>neutrum
+    - -ma | Prisma, Koma, Schema
+        - gender:>neutrum
+    - -nis | Zeugnis
+        - gender:>neutrum
+    - -ment | Dokument, Experiment >>>
+        - gender:>neutrum
+    - -tum | Eigentum >>>
+        - gender:>neutrum
+    - -um | Museum >>>
+        - gender:>neutrum
+    - verben | Laufen, Kauen, Sehen
+        - gender:>neutrum
+    - 
+- Zu Infinitive
+    - 
+    - 
+- Compound Conjunctions
+    - Entweder ... oder::Either ... or
+        - Wir können {{entweder}} Heute ins Kino gehen {{oder}} wir werden morgen gehen.
+    - Weder ... noch::Neither ... nor
+        - Es ist {{weder}} eine nette Stadt, {{noch}} sind die Einwohner besonders freundlich.
+    - Sowohl ... als auch::both ... and also
+        - Er kann {{sowohl}} die Prüfung bestehen, {{als auch}} gleichzeitig arbeiten.
+    - Nicht nur ... sondern auch::Not only ... but also
+        - Die Krankenschwester muss {{nicht nur}} den hoch Blutdruck ihres Patienten, {{sondern auch}} ihren Blutzucker messen.
+    - Einerseits ... andererseits::On one hand ... on the other hand
+        - {{Einerseits}} wurde ich gern zur Party gehen, {{andererseits}} bin ich [erschöpft]() . 
+    - Zwar ... aber::yes / true / indeed / in fact ... but
+        - {{Zwar}} trinkt sie Kaffee dreimal pro Tag, {{aber}} nicht genug Wasser.
+        - Although he is still young, he is already quite experienced.
+            - Zwar ist er noch jung, aber er ist schon recht erfahren.
+    - Bald ... bald / Mal ... mal::Sometimes ... sometimes
+        - {{Mal}} ist ihr Hund sehr ruhig, {{mal}} ist er sehr aggressiv.
+        - {{Bald}} regnet es, {{bald}} scheint die Sonne.
+    - Teils ... teils::Partly ... partly / some
+        - Der Film war teils sehr schön, teils etwas langweilig.
+    - Je ... desto / umso::the ... the
+        - {{Je}} früher ich aufwache, {{desto}} mehr Arbeit kann ich [erledigen]().
+        - {{Je}} kälter das Wetter wird, {{desto}} mehr Kleidung trage ich.
+        - {{Je}} mehr ich lese, {{umso}} klüger werde ich.
+    - Genauso...wie::just as
+        - Er ist {{genauso}} alt {{wie}} Sven.
+- Subordinating Conjunctions
+    - Nebensatz der Zeit
+        - Wenn::when / if (recurring situation)
+        - Immer wenn::whenever
+        - Als::when (past)
+        - Wann::when (question)
+        - --------------------- Portal ---------------------
+            - German
+        - Solange::as long as
+            - Solange es ihr Spaß macht, wird sie weiterhin hart arbeiten.
+        - Bevor::before
+            - formal;;Ehe
+                - Ah, ehe ich es vergesse.→Ah, before I forget.
+            - {{Bevor}} Thomas kam, war die Party echt cool.
+                - mit Aktion;;Bevor
+            - Ich werde dich sehen, {{vor}} dem Film anfängt.
+            - mit nur Nomen;;Vor
+        - Nachdem::after
+            - {{Nachdem}} ich Frühstück aß, ging ich zur Arbeit.
+                - mit Aktion;;Nachdem
+            - {{Nach}} dem Frühstück, ging zur Arbeit.
+                - mit nur Nomen;;Nach
+        - Sobald / Sowie::as soon as
+        - Sofern::provided that
+        - Sooft::As often as
+        - Soviel::As much as
+        - Soweit::in so far as / {{to the extent}} / as far as
+            - verb→{{ kicker }}
+            - As far as I can tell, the work has gone well.
+                - Soweit ich es [beurteilen]() kann, ist die Arbeit gut [ausgefallen](../German/Verbs/fallen/ausfallen.md).
+            - **Soweit** war alles in Ordnung.   
+        - Bis::until / {{by the time}}
+        - Seitdem::ever since
+            - **Seitdem** war er ein [Ekel ]().
+        - Seither↔since then
+            - **Seither** ist so viel passiert.   
+        - Indem::in which / by
+            - verb→kicker
+            - application;;by ...ing
+            - Der Student der Deutsches misslingt, indem die Prüfung nicht vorbereitet.
+    - Kausaler Nebensatz
+        - Weil↔Because
+            - Da;;<since
+                - verb→kicker
+    - Konditionaler Nebensatz
+        - Wenn::if (hypothetical situation)
+        - Falls::in case
+    - Konsekutiver Nebensatz
+        - Sodass::so that / that's why
+            - Das Quiz war [verwirrend](), sodäß die Studenten schlechte Noten bekommen.
+            - Der Arzt wir die Operation [durchführen]() , sodäß er das Leben des Patienten retten kann.
+        - Dass::that
+            - can be omitted
+            - Einstein glaubt, Gott ist nicht existent.
+                - Einstein glaubt, {{ dass }}God nicht existent ist.
+    - Konzessiver Nebensatz
+        - Obwohl / Obgleich / Obschon::although
+            - verb→kicker
+            - Although she is smart, she had a bad attitude.
+                - {{ Obwohl }}sie klug ist, hat sie eine schlechte [Einstellung]().
+        - Sonst::otherwise
+            - verb→magnet
+    - Finalsatz / Absichtssatz
+        - Damit::so that
+            - Ich spare Geld, damit ich den Deutschkurs bezahlen kann.
+            - Die [Fledermäuse]()  benutzen [Ultraschall]() , damit sie ihre Lebensmittel finden können.
+            - subject→subject is different from the main clause
+        - Um ... zu::in order to
+            - subject→subject is the same from the main clause
+        - Als ob::As if
+    - Fragensatz als Nebensatz
+        - Ob::if / whether
+            - Erik fragt, ob der Leherer die Antwort weißt.
+            - Ich weiß nicht, ob das richtig ist.
+        - Was
+        - Wo
+        - Wer
+        - Wie
+        - Wann
+        - Warum
+        - Wenn
+        - Weshalb::for what reason
+            - Weshalb er jede Hilfe braucht.→Which is why he needs all the help he can get.
+            - Weshalb hat sie das getan?→Why did she do that?
+    - 
+- Andere Präposition
+    - Entsprechend / gemäß
+        - bedeutung;;according to / corresponding to / in accordance with
+        - fall;;dativ
+        - Sie werden ihn entsprechend betören.↔You will bewitch him accordingly.
+        - Ich will meinen Anweisungen **gemäß** anfangen.↔I want to start according to my instructions.
+    - Nebst
+        - bedeutung;;with / along with
+        - fall;;dativ
+    - Wider
+        - bedeutung;;against / contrary to
+        - fall;;akkusativ
+        - Sie musste wider Willen lächeln.↔She had to smile against her will.
+- Genitive Propositions
+    - Ausserhalb::on the outside
+        - Das Rauchen hat nur außerhalb vom Firmengelände.
+            - {{Außerhalb des Firmengelände}} hat das Rauchen nur erlaubt.
+        - Mein Freund wohnt außerhalb von Großstadt.
+            - {{Außerhalb der Großstadt }}wohnt mein Freund.
+        - Verwahre dieses Medikament außerhalb der [Reichweite ]() von Kindern.  
+    - Innerhalb::within / on the inside of
+        - {{Innerhalb der}} 300 Metern zur Schule wohne ich.
+        - Ich wohne innerhalb von 300 Metern zur Schule.
+    - Anstatt/Statt::instead of
+        - alternativ;;Anstelle / an Stelle / {{stattdessen}} 
+            - Ich könnte den Bus nehmen, werde aber stattdessen zu Fuß gehen.  
+        - Anstatt beeindruckt zu sein, lachten die Männer.→Instead of being impressed, the men laughed.
+    - Trotz::despite, inspite of
+        - Wir sind trotz des Regen Spaziergang gegangen.
+        - trotzdem↔nevertheless
+            - Die Frage war eigenartig, aber ich beantwortete sie trotzdem.→The question was odd, but I answered it nevertheless.  
+        - Trotz der Regen sind wir einen Spaziergang gegangen.
+        - trotz alledem↔despite all that
+            - Und doch hat er trotz alledem Ihre Schwester geheiratet.→And yet, despite all this, he married your sister.
+    - Während::during / while / whereas
+        - During the concert, he wants to sleep.
+        - {{Während des Konzerts }}hat er geschlafen.→During the concert, he wants to sleep.
+    - Wegen / Aufgrund / Infolge::{{due to}} / because of
+        - {{Aufgrund der Hitzewelle}} bleiben wir Heute Abend zu Hause.→Because of the heatwave, we are staying at home tonight.
+        - synonym→züruckführen
+            - Die Zerstörung der Dörfer ist nicht auf den Krieg zurückzuführen.  
+        - Because of the heatwave, we are staying at home tonight.
+    - Am Anfang / zu Beginn::at the beginning of / at the start of
+    - Angesicht::consider / in view of / in light of / in the face of
+        - Vergeblich, wertlos im Angesicht des Todes.→In vain, worthless in the face of death.
+    - Anhand::by means of / on the basis of
+        - Anhand der Beispiele des Lehrers konnten die Schüler die Grammatik besser
+        - Der Lehrer erklärte die Übung anhand eines Beispiels.  
+    - Anlässlich::In the occasion / in celebration of
+        - Isaac Bell kommt heute Abend anlässlich des [Banketts]() in die Lodge.→Isaac Bell is coming to the Lodge tonight for the banquet.
+    - Bezüglich / Hinsichtlich::concerning / regarding / in respect of / with regards to / in regards to / in terms of
+        - alternativ (akkusativ);;In Bezug Auf / In Hinblick Auf
+        - Bezüglich seines Charakters und so.→In terms of his character and stuff.
+        - Hinsichtlich des Mordes sind wir aus dem Schneider.→With regard to the murder, we are off the hook.
+        - Haben Sie noch Fragen bezüglich der Versicherung?
+    - Dank::owing to / thanks to
+        - verdanken↔to owe sb. sth.
+    - Diesseits::on this side of
+        - {{Diesseits des Flusses}} soll ein neuer [Stadtteil]() gebaut werden.
+        - Auf dieser Seite des Flusses soll ein neuer Stadtteil gebaut werden.
+    - Jenseits::beyond / on the other side
+        - His best time so far was beyond 10 seconds.
+            - Seine Bestzeit lag [bisher]() {{jenseits der 10 Sekunden}}.
+    - Im Zuge::in the course of
+        - Im Zuge der aktuellen Situation sollten wir das Haus verkaufen.
+    - Inmitten::in the middle of / amidst
+        - Inmitten der Dunkelheit schwebte ihr Sohn.→Amidst the darkness, her son glided.
+    - Kraft / Vermöge::by virtue of / by means of
+        - {{Kraft}} des Gesetzes [steht](../German/Verbs/stehen/zustehen.md) ihm eine [Rente]() zu.→By virtue of the law, he is entitled to a pension.
+        - He made a suggestion that would enable us to better organize our work.
+        - Er machte einen Vorschlag, {{vermöge}} dessen wir unsere Arbeit besser [einrichten](../German/Verbs/einrichten.md) können.→He made a suggestion that would enable us to better organize our work.
+        - By virtue of the law, he is entitled to a pension.
+        - Vermöge der gleichen brillanten Logik hat sich jeder Leichnam in der Nähe seiner Garderobe auffinden zu lassen.→By the same brilliant logic, every corpse has to be found near its dressing room.
+    - Längs::along
+        - {{Längs}} der Straße standen Apfelbäume→Apple trees stood along the road
+        - Apple trees stood along the road
+    - Laut::according to
+        - **Laut** **des** Co-**Autors** **der** Studie kann man in jedem Staat bereits ein Jahr nach **der** Legalisierung einen deutlichen Rückgang **der** Todesfälle sehen.   
+    - Mangels::for lack / in the absence of
+        - noun→der Mangel ← shortage / lack
+            - An Gelegenheiten besteht kein Mangel.  
+        - For lack of a valid reason he was sharply reprimanded.
+        - {{Mangels}} eines [triftigen]() Grundes wurde er scharf [gerügt]().→For lack of a valid reason he was sharply reprimanded.
+    - mithilfe / mit Hilfe / mittels;;with the aid of / by means of / by use of
+        - Mithilfe des MI5, wenn es nötig sein sollte.
+    - Seitens / von seitens::on the part of / on behalf of
+        - abbreviation;;i.A. ← {{im Auftrag}} von
+        - Ist sonst noch etwas seitens der Polizei geschehen?
+    - Unterhalb::below / beneath / on the bottom side of
+        - Unterhalb des Halses war nichts.
+    - Oberhalb::above / upperside of
+        - Oberhalb des Bunkers tobte ein Schneesturm.
+    - Ungeachtet::regardless of / irrespective of
+        - Ihre Eltern haben sie ungeachtet ihrer Entscheidung unterstützt.  
+    - Unweit::near / not far from
+        - Sie ritten unweit des Rheins.
+    - Zugunsten / zu Gunsten::for the benefit of / in favor of / for the sake of
+        - adjektiv→günstige ← {{favourable}} 
+            - Der neue Zollsatz hat günstige Bedingungen für Importeure geschaffen.
+        - Eine Sammlung zugunsten/zu Gunsten der Erdbebenopfer.→A collection in favor of/for the earthquake victims
+        - Alle texte sind zugunsten der Übersichtlichkeit kurz gefasst.→For the sake of clarity, all texts are kept short.  
+    - Zwecks::for the purpose of
+        - noun→der Zweck ← {{purpose}} 
+            - [Aliases]()
+                1. der Zweck
+            - Was ist ihr Zweck?  
+        - **Zwecks** der [Übergabe](../German/Verbs/geben/%C3%BCbergeben/noun.md) von Bandit, fügte sie eilig hinzu.→For the purpose of handing over Bandit, she hastily added.
+    - Binnen::with in
+        - Binnen Sekunden war alles vorbei.→Within seconds, it was all over.
+- 
+- 

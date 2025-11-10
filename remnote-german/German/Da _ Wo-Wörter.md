@@ -1,0 +1,110 @@
+- Wo
+    - woanders↔somewhere else
+        - Wünschst du dir manchmal, woanders zu leben?
+    - worüber↔about what
+        - Worüber freust du dich?
+    - wodurch↔through what
+        - [Aliases]()
+            1. Wodurch
+        - Und die [Undichtigkeit]()? Wodurch ist die [entstanden](../German/Verbs/entstehen.md)?
+        - And the leak? How did it come about?
+    - worum↔around what / about what
+        - Worum geht es in dem Buch? 
+    - woraus↔out of what
+        - Woraus hast du das geschlossen?
+        - What did you deduce that from?
+    - womit↔with what
+        - Womit kann ich Ihnen noch helfen? 
+    - wonach↔after what
+        - Wonach [sehnst](../German/Verbs/sich%20sehnen.md) du dich?
+        - What are you yearning for?
+        - Er wußte, wonach er suchte.
+        - He knew what he was looking for.
+    - wofür↔for what
+        - Das ist es, wofür wir leben.
+        - This is what we live for. 
+    - wovon↔from what
+        - Wovon ich so wenig weiß. 
+        - What I know so little about. 
+        - Wovon handelt dieses Buch?→What is this book about?
+        - 17
+    - wogegen↔against what
+        - Das ist es, wogegen ich in Wirklichkeit bin. 
+        - This is what I am really against. 
+    - worin↔in what
+        - Worin sehen Sie einen Zufall. 
+        - In what do you see a coincidence. 
+    - worunter↔under what
+        - Damals litt ich unter Arthritis, worunter ich heute [übrigens](../German/Adverbs/Manner/%C3%BCbrigens.md) noch immer leide.
+        - I suffered from arthritis then, which, by the way, I still have today. 
+    - woneben↔next to what
+        - Woneben soll ich den Stuhl stellen? 
+    - wohinter↔behind what
+        - Wohinter man sich versteckt.
+        - Where to hide behind. 
+    - worauf↔on what
+        - Worauf ich mich am meisten freue ist die kühle Bergluft. 
+        - What I’m looking forward to most is the crisp air in the mountains. 
+    - wobei↔by what
+        - Wobei hast du dich verletzt? 
+    - womit↔with what
+        - Womit hat Thomas sein Bier aufgemacht? 
+        - Womit meine Omi immer die Möhrensuppe gewürzt hat. 
+- Da
+    - darüber↔about that
+        - Er sprach mit mir darüber.
+        - He talked to me about it.
+    - dadurch↔through that / through it
+        - Dadurch helfen Sie ihr nicht. 
+        - You are not helping her by doing this. 
+    - darum↔around that / around it
+        - Ich bin froh darum.
+        - I'm happy about it.
+    - daraus↔out of that / out of it
+        - Aber es wurde nichts daraus.
+        - But nothing came of it. 
+    - damit↔with that / with it
+        - Das hat damit zu tun. 
+        - It has to do with it. 
+    - danach↔after that / after it
+        - Aber danach war mir nicht. 
+        - But after that I didn't feel like it. 
+    - dafür↔for that / for it
+        - Ich bin zu alt dafür.
+        - I am too old for that. 
+    - davon↔from that / from it
+        - Ich riet Jerry davon ab.
+        - I advised Jerry against it. 
+    - davor↔prior to that
+        - Ich weiß nicht, was davor geschah.↔I do not know what happened prior to that.  
+    - dagegen↔against that / against it
+        - Dagegen kam ich nicht an.↔I couldn't do anything about that. 
+        - I couldn't do anything about that. 
+    - darin↔in that / in it / in there / at that / therein
+        - [Aliases]()
+            1. Darin
+        - Er war ein Experte darin.
+        - He was an expert at it. 
+    - darunter↔under that / by this
+        - Ihr Vater litt sehr darunter.
+        - Her father suffered a lot from it. 
+    - daneben↔next to that / next to it / besides / in addition
+        - Daneben gab es nur noch Peter.
+        - Next to that there was only Peter. 
+        - Er ist Schriftsteller, aber arbeitet daneben als Dozent.→He is an author, but he also works as a lecturer.
+    - dahinter↔behind that / behind it
+        - Der Raum dahinter war leer. 
+        - The room beyond was empty. 
+    - darauf↔on that / on it
+        - Du hast mein Wort darauf. 
+        - You have my word on it. 
+        - Bald darauf↔soon after
+    - dazu↔to it / to that
+        - Dies ist der Weg dazu. 
+        - This is the way to do it. 
+    - dabei←{{at the same time}} / {{in the process of}} / {{about to}} / {{be there}} 
+        - synonym→kurz davor 
+        - Ich war dabei, zu ertrinken.↔I was about to drown.
+        - Dabei gab es die Risse.↔In the process, there were the cracks.
+        - Ihr Mann wird dabei sein.↔Your husband will be there.
+        - Ich kann Gitarre spielen und dabei singen.  

@@ -1,0 +1,83 @@
+- **Plural forms & patterns** 
+- Whereas in English, plurals are typically formed by adding **-s **or **-es** to a word, German has a number of different ways to designate plurals. In fact, it is useful to note that very few German nouns form their plural using an -**s** suffix.
+- **-** or **¨**
+    - Nearly all masculine and neuter nouns that end in **-er**, **-en**, **-el**, -**chen**, -**lein** & collective neuter nouns beginning with **Ge**- have plurals that are identical to their singular forms or that simply add an umlaut.
+    - **der Spanier > **{{**die Spanier**}}{{ }} 
+        - **der Wagen > **{{**die Wagen**}}{{ }} 
+        - **das Brötchen > **{{**die Brötchen**}}{{ }} 
+    - **das Mittel > die Mittel**
+        - **der Gürtel > **{{**die Gürtel**}}{{ }} 
+        - **der Apfel > **{{**die Äpfel**}}{{ }} 
+    - **der Vater > **{{**die Väter**}}{{ }} 
+        - **der Boden** > {{**die Böden**}} 
+        - **das Gebirge > **{{**die Gebirge**}} 
+    - BUT: **der Muskel > **{{**die Muskeln**}}**      der Bauer > **{{**die Bauern**}} 
+- **-e** or **-¨e**
+    - Approximately 89% of masculine words, 74% of neuter words, and 25% of feminine words have the plural form -**e** or **-¨e**. Feminine nouns with the plural **-e **always take the umlaut. Masculine nouns often take the umlaut, but not always. Neuter nouns that have the plural -**e** rarely take the umlaut.
+    - **die Gans > **{{**die Gänse**}} 
+        - **die Kraft > **{{**die Kräfte**}} 
+        - **die Maus > **{{**Mäuse**}} 
+    - **der Koch > **{{**die Köche**}} 
+        - **der Fluss > **{{**die Flüsse**}} 
+        - **der Tag > **{{**die Tage**}} 
+    - **das Dokument > **{{**die Dokumente**}} 
+        - **das Gespräch, **{{**die Gespräche**}} 
+        - **das Pferd > **{{**die Pferde**}} 
+    - NOTE: Nouns ending in -**nis** add another -**s** before the -**e** suffix in the plural form: **die Erkenntnis > die Erkenntnis****se**.
+- -(**n**)**en**
+    - All feminine nouns ending in -**ei**, -**heit**, -**keit**, -**schaft**, -**ung** have the plural suffix or -**en**. Feminine nouns ending in -**in** add -**nen** in the plural form. These never add an umlaut.
+    - **die Bäckerei > **{{**die Bäckereien**}} 
+        - **die Krankheit > **{{**die Krankheiten**}} 
+        - **die Ähnlichkeit > **{{**die Ähnlichkeiten**}} 
+    - **die Leidenschaft > **{{**die Leidenschaften**}} 
+        - **die Forschung > **{{**die Forschungen**}} 
+        - **die Lehrerin > **{{**die Lehrerinnen**}} 
+- **-n**
+    - Nearly all masculine and feminine nouns ending in -**e** and a handful of neuter nouns ending in **-e** add** -n** in the plural form. Most feminine nouns ending in **-el** or -**er** have the plural suffix **-n**. These never add an umlaut.
+    - **der Name > **{{**die Namen**}} 
+        - **die Blume > **{{**die Blumen**}} 
+        - **die Frage > **{{**die Fragen**}} 
+    - **das Auge > **{{**die Augen**}} 
+        - **die Feder > **{{**die Federn**}} 
+        - **die **[Schachtel]()** > **{{**die Schachteln**}} 
+    - BUT: **die Tochter > **{{**die Töchter**}}**    der Käse > **{{**die Käse**}} 
+    - NOTE: 73% of all feminine nouns take** -n** or **-en** in their plural form.
+- **-er** or **-¨er**
+    - Approximately 21% of neuter nouns, including those that end in -**tum**, have the plural suffix -**er** or -**¨er**. A handful of masculine nouns (2%) also share this form. These always add an umlaut wherever possible.
+    - **das Bild > **{{**die Bilder**}} 
+        - **das Kind > **{{**die Kinder**}} 
+        - **das Gesicht > **{{**die Gesichter**}} 
+    - **das Haus > **{{**die Häuser**}} 
+        - **das Bad > **{{**die Bäder**}} 
+        - **das Dorf > **{{**die Dörfer**}} 
+    - **das Eigentum > **{{**die Eigentümer**}} 
+        - **der Mund > **{{**die Münder**}} 
+        - **der Wald > **{{**die Wälder**}} 
+- **-s**
+    - The **-s **plural suffix is added to 1) nouns derived from English, French, and Dutch, 2) abbreviations used as nouns, 3) names of people, and 4) nouns that end in an unstressed vowel. These never add an umlaut.
+    - **der Park > **{{**die Parks**}} 
+        - **das Menü > **{{**die Menüs**}} 
+        - **die DVD > **{{**die DVDs**}} 
+    - **der Lkw > **{{**die Lkws**}} 
+        - **der Ami > **{{**die Amis**}} 
+        - **der Schmidt > **{{**die Schmidts**}} 
+    - **der Oma > **{{**die Omas**}} 
+        - **die Kamera > **{{**die Kameras**}} 
+        - **das Video > **{{**die Videos**}} 
+- Variations on these forms and alternatives apply to a few foreign-derived words, particularly those of Greek and Latin origin:
+- Most words ending in -**um** change their ending to -**en** in the plural. Words ending in **-os**, -**us**, -**is** or -**a** may also take the plural form **-en**. Other Greek-, Latin-, and Italian-derived words, typically specialized words from fields such as music, medicine, law, and linguistics, maintain their foreign plurals:
+- **das Datum > **{{**die Daten**}} 
+    - **das Studium > **{{**die Studien**}} 
+    - **das Museum > **{{**die Museen**}} 
+- **die Villa > **{{**die Villen**}} 
+    - NRK, Villen und vornehme Adressen.
+    - **der Rhythmus > **{{**die Rhythmen**}} 
+    - **das Epos > **{{**die Epen**}} 
+- **die Praxis > **{{**die Praxen**}} 
+    - **der Modus > **{{**die Modi**}} 
+    - **der Numerus > **{{**die Numeri**}} 
+- **der Genus > **{{**die Genera**}} 
+    - **das Tempus > **{{**die Tempora**}} 
+    - **das Lexikon > **{{**die Lexika**}} 
+- 
+- 

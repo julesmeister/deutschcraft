@@ -1,0 +1,150 @@
+- Kontinent  #[[lokale präposition]] 
+    - [woher]();;aus + D 
+        - Sie kommen aus Europa.
+    - [wo]();;in + D 
+        - Sie leben in Europa.
+    - [wohin]();;nach + D
+        - Sie fahren nach Europa.
+- Land ohne Artikel #[[lokale präposition]] 
+    - [woher]();;aus + D
+        - Ich komme aus Italien
+    - [wo]();;in + D
+        - Ich bin zur Zeit in Italien.
+    - [wohin]();;nach + D
+        - Ich fahre nach Italien.
+- Land mit Artikel #[[lokale präposition]] 
+    - [woher]();;aus + D
+        - Sie kommt aus der Schweiz.
+    - [wo]();;in + D
+        - Sie wohnt in der Schweiz.
+    - [wohin]();;in + A
+        - Sie fährt in die Schweiz.
+- Insel (gruppe)  #[[lokale präposition]] 
+    - [woher]();;von + D
+        - Er kommt von den Balearen.
+    - [wo]();;auf + D
+        - Er arbeitet auf den Balearen.
+    - [wohin]();;auf + A
+        - Er fährt auf die Balearen.
+- Landschaft / Gebirge  #[[lokale präposition]] 
+    - [woher]();;aus + D
+        - Sie kommt aus dem Schwarzwald.
+    - [wo]();;in + D 
+        - Sie ist im Schwarzwald.
+    - [wohin]();;in + A
+        - Sie fährt in den Schwarzwald.
+- Berg  #[[lokale präposition]] 
+    - [woher]();;von + D
+        - Er kommt gerade von der Zugspitze.
+    - [wo]();;auf + D
+        - Er arbeitet auf der Zugspitze.
+    - [wohin]();;auf + A
+        - Er fährt mit der Bahn auf die Zugspitze.
+- Meer / Fluss / See / Strand / Ufer  #[[lokale präposition]] 
+    - [woher]();;von + D 
+        - Ich komme vom Bodensee.
+        - Ich komme vom Strand
+    - [wo]();;an + D 
+        - Ich lebe in Frankfürt am Main.
+        - Ich warte am Ufer auf dich.
+    - [wohin]();;an + A
+        - Ich fahre an die Ostsee.
+        - Ich fahre nach Heidelberg.
+- Stadt #[[lokale präposition]] 
+    - [woher]();;aus + D
+        - Ich komme aus Heidelberg.
+    - [wo]();;in + D / bei + D / an + D 
+        - Ich lebe in Hanau. Hanau liegt bei Frankfurt am Main.
+    - [wohin]();;nach + D
+        - Ich fahre nach Heidelberg.
+- Gebäude  #[[lokale präposition]] 
+    - [woher]();;aus + D 
+        - Sie kommt gerade aus der Kirche.
+    - [wo]();;in + D 
+        - Sie wartet in der Kirche auf mich.
+    - [wohin]();;in + A
+        - Sie geht in die Kirche
+- Geschäft #[[lokale präposition]] 
+    - [woher]();;aus + D 
+        - Sie kommen gerade aus dem Kaufhaus.
+    - [wo]();;in + D 
+        - Brot kaufen sie immer in der Bäckerei.
+    - [wohin]();;zu + D
+        - Sie gehen oft zu IKEA.
+- Bank / Post  #[[lokale präposition]] 
+    - [woher]();;aus + D 
+        - Sie kommen gerade aus der Bank.
+    - [wo]();;in + D / auf + D 
+        - Sie können in der / auf der Bank Geld wechseln.
+    - [wohin]();;zu + D / auf + A
+        - Sie gehen zur Bank.
+        - Sie gehen auf die Bank.
+- Arbeitsplatz  #[[lokale präposition]] 
+    - [woher]();;von + D 
+        - Er kommt von Siemens.
+    - [wo]();;bei + D 
+        - Er arbeitet jetzt bei Infineon.
+    - [wohin]();;zu + D
+        - Er geht nächstes Jahr zu T-Mobil.
+- Zu Hause  #[[lokale präposition]] 
+    - [woher]();;von + D 
+        - Wir kommen von zu Hause.
+    - [wo]();;zu + D 
+        - Wir sind zu Hause.
+    - [wohin]();;nach + D
+        - Wir fahren nach Hause.
+- Straße  #[[lokale präposition]] 
+    - [woher]();;aus + D 
+        - Sie kommt aus der Bahnhofstraße.
+    - [wo]();;in + D 
+        - Sie ist in der Bahnhofstraße.
+    - [wohin]();;in + A
+        - Sie läuft in die Bahnhofstraße.
+- Platz (in der Stadt) #[[lokale präposition]] 
+    - [woher]();;von + D 
+        - Der Bus kommt vom Markplatz.
+    - [wo]();;an + D 
+        - Der Bus hält am Markplatz.
+    - [wohin]();;zu + D / über + A / durch + A
+        - Der Bus fährt zum Markplatz.
+        - Sie geht über den Platz.
+        - Sie geht durch den Platz.
+- Richtung  #[[lokale präposition]] 
+    - [woher]();;von + D
+        - Er kommt von Rechts
+    - [wo]() 
+    - [wohin]();;nach + D 
+        - Er fährt nach links.
+- Person  #[[lokale präposition]] 
+    - [woher]();;von + D 
+        - Ich komme von meinen Eltern.
+    - [wo]();;bei + D 
+        - Ich wohne bei meiner Schwester.
+    - [wohin]();;zu + D
+        - Ich fahre zu meinen Kindern.
+- Position im Raum (Regal) #[[lokale präposition]] 
+    - [woher]();;aus + D 
+        - Holst du die Zeitung aus dem Regal.
+    - [wo]();;in + D 
+        - Die Zeitung liegt im Regal.
+    - [wohin]();;in + A
+        - Legst du die Zeitung ins Regal?
+- Position im Raum (Stuhl) #[[lokale präposition]] 
+    - [woher]();;von + D
+        - Das Kind springt vom Stuhl.
+    - [wo]();;auf + D
+        - Das Kind steht auf dem Stuhl.
+    - [wohin]();;auf + A
+        - Das Kind steigt auf den Stuhl.
+- Position im Raum (Wand) #[[lokale präposition]] 
+    - [woher]();;von + D
+        - Sie nimmt den Kalender.
+    - [wo]();;an + D
+        - Der Kalendar hängt an der Wand.
+    - [wohin]();;an + A
+        - Sie hängt den Kalender an die Wand.
+- Verkehrsmittel
+    - woher→aus + D
+        - Ich steige aus dem Auto aus.
+    - wohin→in + A
+        - Ich steige in das Auto ein.

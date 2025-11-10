@@ -1,0 +1,25 @@
+- Entweder ... oder::Either ... or
+    - Wir können {{entweder}} Heute ins Kino gehen {{oder}} wir werden morgen gehen.
+- Weder ... noch::Neither ... nor
+    - Es ist {{weder}} eine nette Stadt, {{noch}} sind die Einwohner besonders freundlich.
+- Sowohl ... als auch::both ... and also
+    - Er kann {{sowohl}} die Prüfung bestehen, {{als auch}} gleichzeitig arbeiten.
+- Nicht nur ... sondern auch::Not only ... but also
+    - Die Krankenschwester muss {{nicht nur}} den hoch Blutdruck ihres Patienten, {{sondern auch}} ihren Blutzucker messen.
+- Einerseits ... andererseits::On one hand ... on the other hand
+    - {{Einerseits}} wurde ich gern zur Party gehen, {{andererseits}} bin ich [erschöpft]() . 
+- Zwar ... aber::yes / true / indeed / in fact ... but
+    - {{Zwar}} trinkt sie Kaffee dreimal pro Tag, {{aber}} nicht genug Wasser.
+    - Although he is still young, he is already quite experienced.
+        - Zwar ist er noch jung, aber er ist schon recht erfahren.
+- Bald ... bald / Mal ... mal::Sometimes ... sometimes
+    - {{Mal}} ist ihr Hund sehr ruhig, {{mal}} ist er sehr aggressiv.
+    - {{Bald}} regnet es, {{bald}} scheint die Sonne.
+- Teils ... teils::Partly ... partly / some
+    - Der Film war teils sehr schön, teils etwas langweilig.
+- Je ... desto / umso::the ... the
+    - {{Je}} früher ich aufwache, {{desto}} mehr Arbeit kann ich [erledigen]().
+    - {{Je}} kälter das Wetter wird, {{desto}} mehr Kleidung trage ich.
+    - {{Je}} mehr ich lese, {{umso}} klüger werde ich.
+- Genauso...wie::just as
+    - Er ist {{genauso}} alt {{wie}} Sven.

@@ -1,0 +1,95 @@
+- Ausserhalb::on the outside
+    - Das Rauchen hat nur außerhalb vom Firmengelände.
+        - {{Außerhalb des Firmengelände}} hat das Rauchen nur erlaubt.
+    - Mein Freund wohnt außerhalb von Großstadt.
+        - {{Außerhalb der Großstadt }}wohnt mein Freund.
+    - Verwahre dieses Medikament außerhalb der [Reichweite ]() von Kindern.  
+- Innerhalb::within / on the inside of
+    - {{Innerhalb der}} 300 Metern zur Schule wohne ich.
+    - Ich wohne innerhalb von 300 Metern zur Schule.
+- Anstatt/Statt::instead of
+    - alternativ;;Anstelle / an Stelle / {{stattdessen}} 
+        - Ich könnte den Bus nehmen, werde aber stattdessen zu Fuß gehen.  
+    - Anstatt beeindruckt zu sein, lachten die Männer.→Instead of being impressed, the men laughed.
+- Trotz::despite, inspite of
+    - Wir sind trotz des Regen Spaziergang gegangen.
+    - trotzdem↔nevertheless
+        - Die Frage war eigenartig, aber ich beantwortete sie trotzdem.→The question was odd, but I answered it nevertheless.  
+    - Trotz der Regen sind wir einen Spaziergang gegangen.
+    - trotz alledem↔despite all that
+        - Und doch hat er trotz alledem Ihre Schwester geheiratet.→And yet, despite all this, he married your sister.
+- Während::during / while / whereas
+    - During the concert, he wants to sleep.
+    - {{Während des Konzerts }}hat er geschlafen.→During the concert, he wants to sleep.
+- Wegen / Aufgrund / Infolge::{{due to}} / because of
+    - {{Aufgrund der Hitzewelle}} bleiben wir Heute Abend zu Hause.→Because of the heatwave, we are staying at home tonight.
+    - synonym→züruckführen
+        - Die Zerstörung der Dörfer ist nicht auf den Krieg zurückzuführen.  
+    - Because of the heatwave, we are staying at home tonight.
+- Am Anfang / zu Beginn::at the beginning of / at the start of
+- Angesicht::consider / in view of / in light of / in the face of
+    - Vergeblich, wertlos im Angesicht des Todes.→In vain, worthless in the face of death.
+- Anhand::by means of / on the basis of
+    - Anhand der Beispiele des Lehrers konnten die Schüler die Grammatik besser
+    - Der Lehrer erklärte die Übung anhand eines Beispiels.  
+- Anlässlich::In the occasion / in celebration of
+    - Isaac Bell kommt heute Abend anlässlich des [Banketts]() in die Lodge.→Isaac Bell is coming to the Lodge tonight for the banquet.
+- Bezüglich / Hinsichtlich::concerning / regarding / in respect of / with regards to / in regards to / in terms of
+    - alternativ (akkusativ);;In Bezug Auf / In Hinblick Auf
+    - Bezüglich seines Charakters und so.→In terms of his character and stuff.
+    - Hinsichtlich des Mordes sind wir aus dem Schneider.→With regard to the murder, we are off the hook.
+    - Haben Sie noch Fragen bezüglich der Versicherung?
+- Dank::owing to / thanks to
+    - verdanken↔to owe sb. sth.
+- Diesseits::on this side of
+    - {{Diesseits des Flusses}} soll ein neuer [Stadtteil]() gebaut werden.
+    - Auf dieser Seite des Flusses soll ein neuer Stadtteil gebaut werden.
+- Jenseits::beyond / on the other side
+    - His best time so far was beyond 10 seconds.
+        - Seine Bestzeit lag [bisher]() {{jenseits der 10 Sekunden}}.
+- Im Zuge::in the course of
+    - Im Zuge der aktuellen Situation sollten wir das Haus verkaufen.
+- Inmitten::in the middle of / amidst
+    - Inmitten der Dunkelheit schwebte ihr Sohn.→Amidst the darkness, her son glided.
+- Kraft / Vermöge::by virtue of / by means of
+    - {{Kraft}} des Gesetzes [steht](../../German/Verbs/stehen/zustehen.md) ihm eine [Rente]() zu.→By virtue of the law, he is entitled to a pension.
+    - He made a suggestion that would enable us to better organize our work.
+    - Er machte einen Vorschlag, {{vermöge}} dessen wir unsere Arbeit besser [einrichten](../../German/Verbs/einrichten.md) können.→He made a suggestion that would enable us to better organize our work.
+    - By virtue of the law, he is entitled to a pension.
+    - Vermöge der gleichen brillanten Logik hat sich jeder Leichnam in der Nähe seiner Garderobe auffinden zu lassen.→By the same brilliant logic, every corpse has to be found near its dressing room.
+- Längs::along
+    - {{Längs}} der Straße standen Apfelbäume→Apple trees stood along the road
+    - Apple trees stood along the road
+- Laut::according to
+    - **Laut** **des** Co-**Autors** **der** Studie kann man in jedem Staat bereits ein Jahr nach **der** Legalisierung einen deutlichen Rückgang **der** Todesfälle sehen.   
+- Mangels::for lack / in the absence of
+    - noun→der Mangel ← shortage / lack
+        - An Gelegenheiten besteht kein Mangel.  
+    - For lack of a valid reason he was sharply reprimanded.
+    - {{Mangels}} eines [triftigen]() Grundes wurde er scharf [gerügt]().→For lack of a valid reason he was sharply reprimanded.
+- mithilfe / mit Hilfe / mittels;;with the aid of / by means of / by use of
+    - Mithilfe des MI5, wenn es nötig sein sollte.
+- Seitens / von seitens::on the part of / on behalf of
+    - abbreviation;;i.A. ← {{im Auftrag}} von
+    - Ist sonst noch etwas seitens der Polizei geschehen?
+- Unterhalb::below / beneath / on the bottom side of
+    - Unterhalb des Halses war nichts.
+- Oberhalb::above / upperside of
+    - Oberhalb des Bunkers tobte ein Schneesturm.
+- Ungeachtet::regardless of / irrespective of
+    - Ihre Eltern haben sie ungeachtet ihrer Entscheidung unterstützt.  
+- Unweit::near / not far from
+    - Sie ritten unweit des Rheins.
+- Zugunsten / zu Gunsten::for the benefit of / in favor of / for the sake of
+    - adjektiv→günstige ← {{favourable}} 
+        - Der neue Zollsatz hat günstige Bedingungen für Importeure geschaffen.
+    - Eine Sammlung zugunsten/zu Gunsten der Erdbebenopfer.→A collection in favor of/for the earthquake victims
+    - Alle texte sind zugunsten der Übersichtlichkeit kurz gefasst.→For the sake of clarity, all texts are kept short.  
+- Zwecks::for the purpose of
+    - noun→der Zweck ← {{purpose}} 
+        - [Aliases]()
+            1. der Zweck
+        - Was ist ihr Zweck?  
+    - **Zwecks** der [Übergabe](../../German/Verbs/geben/%C3%BCbergeben/noun.md) von Bandit, fügte sie eilig hinzu.→For the purpose of handing over Bandit, she hastily added.
+- Binnen::with in
+    - Binnen Sekunden war alles vorbei.→Within seconds, it was all over.

@@ -1,0 +1,84 @@
+- Nebensatz der Zeit
+    - Wenn::when / if (recurring situation)
+    - Immer wenn::whenever
+    - Als::when (past)
+    - Wann::when (question)
+    - --------------------- Portal ---------------------
+        - German
+    - Solange::as long as
+        - Solange es ihr Spaß macht, wird sie weiterhin hart arbeiten.
+    - Bevor::before
+        - formal;;Ehe
+            - Ah, ehe ich es vergesse.→Ah, before I forget.
+        - {{Bevor}} Thomas kam, war die Party echt cool.
+            - mit Aktion;;Bevor
+        - Ich werde dich sehen, {{vor}} dem Film anfängt.
+        - mit nur Nomen;;Vor
+    - Nachdem::after
+        - {{Nachdem}} ich Frühstück aß, ging ich zur Arbeit.
+            - mit Aktion;;Nachdem
+        - {{Nach}} dem Frühstück, ging zur Arbeit.
+            - mit nur Nomen;;Nach
+    - Sobald / Sowie::as soon as
+    - Sofern::provided that
+    - Sooft::As often as
+    - Soviel::As much as
+    - Soweit::in so far as / {{to the extent}} / as far as
+        - verb→{{ kicker }}
+        - As far as I can tell, the work has gone well.
+            - Soweit ich es [beurteilen]() kann, ist die Arbeit gut [ausgefallen](../../German/Verbs/fallen/ausfallen.md).
+        - **Soweit** war alles in Ordnung.   
+    - Bis::until / {{by the time}}
+    - Seitdem::ever since
+        - **Seitdem** war er ein [Ekel ]().
+    - Seither↔since then
+        - **Seither** ist so viel passiert.   
+    - Indem::in which / by
+        - verb→kicker
+        - application;;by ...ing
+        - Der Student der Deutsches misslingt, indem die Prüfung nicht vorbereitet.
+- Kausaler Nebensatz
+    - Weil↔Because
+        - Da;;<since
+            - verb→kicker
+- Konditionaler Nebensatz
+    - Wenn::if (hypothetical situation)
+    - Falls::in case
+- Konsekutiver Nebensatz
+    - Sodass::so that / that's why
+        - Das Quiz war [verwirrend](), sodäß die Studenten schlechte Noten bekommen.
+        - Der Arzt wir die Operation [durchführen]() , sodäß er das Leben des Patienten retten kann.
+    - Dass::that
+        - can be omitted
+        - Einstein glaubt, Gott ist nicht existent.
+            - Einstein glaubt, {{ dass }}God nicht existent ist.
+- Konzessiver Nebensatz
+    - Obwohl / Obgleich / Obschon::although
+        - verb→kicker
+        - Although she is smart, she had a bad attitude.
+            - {{ Obwohl }}sie klug ist, hat sie eine schlechte [Einstellung]().
+    - Sonst::otherwise
+        - verb→magnet
+- Finalsatz / Absichtssatz
+    - Damit::so that
+        - Ich spare Geld, damit ich den Deutschkurs bezahlen kann.
+        - Die [Fledermäuse]()  benutzen [Ultraschall]() , damit sie ihre Lebensmittel finden können.
+        - subject→subject is different from the main clause
+    - Um ... zu::in order to
+        - subject→subject is the same from the main clause
+    - Als ob::As if
+- Fragensatz als Nebensatz
+    - Ob::if / whether
+        - Erik fragt, ob der Leherer die Antwort weißt.
+        - Ich weiß nicht, ob das richtig ist.
+    - Was
+    - Wo
+    - Wer
+    - Wie
+    - Wann
+    - Warum
+    - Wenn
+    - Weshalb::for what reason
+        - Weshalb er jede Hilfe braucht.→Which is why he needs all the help he can get.
+        - Weshalb hat sie das getan?→Why did she do that?
+- 

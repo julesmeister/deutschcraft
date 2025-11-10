@@ -1,0 +1,12 @@
+- Entsprechend / gemäß
+    - bedeutung;;according to / corresponding to / in accordance with
+    - fall;;dativ
+    - Sie werden ihn entsprechend betören.↔You will bewitch him accordingly.
+    - Ich will meinen Anweisungen **gemäß** anfangen.↔I want to start according to my instructions.
+- Nebst
+    - bedeutung;;with / along with
+    - fall;;dativ
+- Wider
+    - bedeutung;;against / contrary to
+    - fall;;akkusativ
+    - Sie musste wider Willen lächeln.↔She had to smile against her will.

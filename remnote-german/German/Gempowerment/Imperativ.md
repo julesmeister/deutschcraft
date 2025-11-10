@@ -1,0 +1,4 @@
+- Sie↔Geben Sie bitte das Buch.
+- Du↔Gib mir bitte das Buch. / Bereite sich später vor
+    - no subject 
+- Ihr↔Gebt mir bitte das Buch.

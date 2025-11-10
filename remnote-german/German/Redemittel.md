@@ -1,0 +1,70 @@
+- Ich vermute↔I assume
+- Ich bezweifle↔I doubt
+- Ich schließe aus↔I exclude
+- Ich behaupte↔I claim
+    - Ich behaupte nicht, dass es so ist.→I'm not suggesting that it is.
+- Ich gebe zu↔I admit
+- Ich stimme zu↔I agree
+- Na schön, aber↔Fine, but
+- Dass kann sein, aber↔Maybe, but
+- Einverstanden, aber↔Agreed but
+- Mann muss betonen, dass↔It must be stressed that
+- Zu guter Letzt↔On top of that
+- Ich überlege mir↔I consider
+    - preposition→nach
+- eigentlich schon↔actually, it is
+- früher als erwartet↔ahead of time
+- um so mehr↔all the more
+    - Er ging ans Fenster, um so mehr sehen zu können↔He went to the window so he could see more
+- abgesehen davon↔apart from that / except for
+    - Abgesehen von mir, hoffe ich.
+    - Abgesehen davon hatte er recht.
+- was mich betrifft↔as far as I'm concerned
+- was mich anbetrifft↔as for me
+- auf den ersten Blick↔at first sight
+- Kommen Sie zur Sache!↔Come to the point!
+- Macht nichts↔Doesn't matter
+- Hören Sie nicht hin↔Don't pay any attention
+    - gegenteil→Bitte sei aufmerksam!
+- für immer↔for good
+- Wie Sie wollen!↔Have it your own way!
+- Woher soll ich das wissen?↔How am I expected to know that?
+- Wie können Sie es wagen?↔How dare you?
+- Beeilen Sie sich!↔Hurry up!
+- Ich kann mir das gut vorstellen↔I can well imagine
+- Ich darf wohl sagen↔I dare say
+- Ich habe keinen blassen Schimmer↔I don't have a clue
+- Ich habe nichts dagegen↔I don't mind
+- Ich gebe auf↔I give up
+- Das wußte ich schon die ganze Zeit
+- Darf ich mal vorbei?↔may I pass by?
+- Ich schaue mich nur um↔I'm just looking around
+- Ich bin am Ende↔I am finished
+- Das ist kein Grund zum Trübsal blasen!↔That is no reason to mope
+- ![](https://remnote-user-data.s3.amazonaws.com/bczq_P3MKSlltZmIP9ALHF3OjIcLBGNhV02R7YlT5fjtjXM1LeUki7MLIMMjg66UpmRG_XZ0bl9tSX5hPe78UcrQzD4OMMN5EjRt7jjbwccXFP0pO9p99WKU8EpBBV4F.png) 
+- Nur damit Ihr wisst↔Just so you know
+- to a great extent↔in hohem Grad/Maße  
+- to my knowledge↔meines Wissens  
+    - Meines Wissens verhält sich das anders, ist das so. 
+- to my delight↔zu meiner Freude 
+- Ich verstehe nur Bahnhof↔I don't get a thing
+- Entspann dich!↔You need to relax!
+- Ja, ich bin dabei↔Yes, I'm down!
+- Die Nase voll haben↔Tired of something
+- Bock haben↔*have appetite for something
+    - präposition→auf
+    - Ich habe Bock auf essen.
+- Einen Augenblick, bitte!↔Can you wait a minute
+- Stimmt so↔keep the change
+- Der Zug ist schon abgefahren↔you missed your chance
+- Sozusagen↔so to say
+- Offen gesagt↔frankly speaking
+- Ehrlich gesagt↔to be honest
+- Es versteht sich von selbst
+- In der Tat↔in fact
+- Soweit ich weiß↔as far as I know
+- Bitte sag mir Bescheid↔Please let me know
+- Jedem einzelnen↔each and everyone
+- in wenigen Augenblicken↔in a few moments 
+- Es macht mir Mut↔It makes me cringe 
+- kurz davor↔about to / on the brink 

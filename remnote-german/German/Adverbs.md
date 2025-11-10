@@ -1,0 +1,462 @@
+- Degree
+    - allmählich / schrittweise↔gradually
+        - Ich bemerke eine allmähliche Verbesserung meiner französischen Aussprache.  
+    - allzu↔all too / far too
+        - Es war nicht allzu schlimm.
+    - ausreichend↔ample / sufficient / adequate
+        - gegenteil→mangelhaft ← {{inadequate}} 
+            - ungenügend↔insufficient
+        - Es gibt ausreichend Parkplätze.
+    - {{ausschlaggebend}} / {{entscheidend}}→{{crucial}} 
+        - Meine Reisen haben eine ausschlaggebende Rolle in meinem Leben gespielt.  
+        - Die Qualität der Ausbildung ist hierbei absolut entscheidend.  
+    - außerdem↔also / moreover
+        - **Außerdem** roch es nicht gut.   
+    - äußerst / überaus↔extremely
+        - Er lief äußerst schnell und gewann das Rennen.  
+    - at least↔mindestens / wenigstens / zumindest / jedenfalls / immerhin
+        - Wir brauchen mindestens fünf Leute für das Projekt.  
+    - beinahe↔almost
+        - **Beinahe** so alt wie ich.   
+    - bestens↔perfectly
+        - Bei mir ist alles **bestens**.   
+        - Ja, ich höre Sie **bestens**.  
+    - bloß↔solely / merely
+        - Der Streit [beruht](../German/Verbs/beruhen.md) bloß auf einem Missverständnis.  
+    - drastisch↔drastic
+        - Das ist ein wenig zu drastisch.→That's a little too drastic.
+    - enorm↔enormously
+        - adjektiv→enorme
+    - erheblich / weitaus↔considerably
+        - Wir sind jetzt beide erheblich älter.
+        - Leider war das Projekt weitaus weniger erfolgreich als erwartet. 
+    - erstmals↔for the first time
+        - Gestern stand sie erstmals auf der [Bühne ]().  
+    - gewisse↔certain / particular
+        - Es gibt da gewisse [Hinweise]().
+    - größtenteils↔mostly
+    - gründlich↔thoroughly
+        - Trotzdem tat sie alles gründlich.
+    - grundsätzlich↔basically
+        - synonym→im Grunde genommen 
+        - adjektiv→grundlegende ← basic / fundamental
+            - Die Partei braucht eine grundlegende Reform.  
+        - Die Meinungsfreiheit ist ein grundsätzliches Menschenrecht.  
+    - höchst↔highly
+        - Das war alles höchst [eigenartig ]().→It was all most peculiar.
+    - höchstens↔at most
+        - Da kann ich höchstens raten.→The best I can do is guess.
+    - jedenfalls↔in any case
+        - Wir werden jedenfalls da sein.  
+    - massiv↔greatly
+    - maßgeblich↔significantly
+        - adjektiv→erhebliche ← substantial / significant
+            - Die Erderwärmung wird erhebliche Konsequenzen haben.  
+        - Der Vertrag enthält alle maßgeblichen [Vereinbarungen]().  
+    - maximal↔maximum
+    - präzise / konkret / genau↔precisely
+        - adjektiv→gezielt ←targeted | focused
+        - Ich kann die Skalierung der Maschine präzise einstellen.  
+    - reichlich↔plenty of
+        - Meine Pflanzen bekommen reichlich Sonne auf dem Fensterbrett.  
+    - rundum↔all around / completely
+        - Sie fühlte sich rundum akzeptiert.
+    - sorgfältig↔meticulously / thoroughly / carefully / mindfully
+        - Wir müssen die Kosten sorgfältig berechnen. 
+    - speziell↔specifically / particular
+        - Speziell dieses Öl ist giftig.
+        - synonym;;besonders : particularly | nämlich
+            - Die Burnout-Gefährdung ist in sozialen Berufen besonders hoch.  
+    - stetig↔steadily
+        - Ihre Kundenzahl stieg langsam, aber stetig an.  
+    - vorwiegend↔predominantly / mainly
+        - Deshalb arbeite ich auch **vorwiegend** allein.   
+    - zusätzlich↔additional
+        - Zusätzlich erhalten Sie einen Rabatt auf Ihre nächste Buchung.  
+- Time
+    - vorerst↔for the time being / for now
+        - Bei dem starken Regen sollten wir vorerst drinnen bleiben.  
+    - anschließend↔afterwards / subsequent
+        - Anschließend ging es sofort los.   
+    - bislang↔so far / previously
+        - adjektiv→vorherige
+            - Ich brauche das **vorherige** Bild.   
+    - damals↔at the time
+        - adjektiv→damalige
+        - Damals war es nur einer.↔At that time, there was only one.
+    - dauerhaft↔permanently
+        - Wir brauchen eine dauerhafte Lösung, nicht nur eine vorübergehende.  
+    - demnächst↔soon, shortly
+        - Konzerttermine werden demnächst hier bekannt gegeben.
+    - derzeit / momentan / zurzeit↔current / present
+        - adjektiv→derzeitige | {{aktuelle}} 
+            - Im Zuge der aktuellen Situation sollten wir das Haus verkaufen.
+  
+    - diesmal↔this time
+        - Er reiste diesmal nicht mit dem Auto, sondern per Zug.  
+    - dringlich↔urgently
+        - adjektiv→dringende
+            - Es besteht dringender [Bedarf ]() an einem neuen [Ansatz ](), mit diesem Problem zurechtzukommen.  
+        - Die Nachricht war kurz und **dringlich**.   
+    - ehestmöglich↔as soon as possible
+        - Er hat sofort veranlasst, dass der Aushang zum ehestmöglichen Zeitpunkt entfernt wird.↔He had immediately arranged for the notice to be removed as soon as possible.
+    - einst↔once / at one time
+        - Unser Haus war einst eine Bäckerei.  
+    - endgültig / endlich↔finally / in the end
+        - Mein endgültiges Ziel ist es, ein berühmter Schauspieler zu werden.  
+    - ewig↔forever
+        - Er schwor seiner Frau ewige Treue als sie heirateten.  
+    - frisch↔newly / fresh / crisp
+        - Er bot mir eine Kostprobe seines frisch gemachten Kuchens an.  
+    - gelegentlich↔occasionally
+        - Gelegentlich, ja, räumte er ein.→Occasionally, yes, he acknowledged.
+    - hindurch↔throughout / through it
+        - Pitt sah als erster **hindurch**→Pitt saw through first 
+    - {{inzwischen}} | {{mittlerweile}} | {{unterdessen}} | {{zwischenzeit}}→meanwhile | in the meantime | interim
+        - mittlerweile↔meanwhile / in the meantime
+        - unterdessen↔meanwhile / in the meantime
+        - zwischenzeit↔interim 
+    - irgendwann↔at some point
+        - **Irgendwann** tat er es auch.→At some point, he did, too.  
+    - jemals↔ever
+        - Falls es jemals so weit ist.↔If it ever gets that far.
+    - kommende↔upcoming
+        - Unser Manager legte die Ziele für das kommende Jahr fest.  
+    - künftig↔in future / henceforth
+        - adjektiv→zukünftige
+        - Die neue Bestimmung soll künftig für alle Mitglieder gelten.  
+    - kurzfristig↔for a short time
+        - Die aktuelle Situation kann kurzfristig nicht geändert werden.  
+    - lange↔for a long time
+        - Jon sah sie **lange** an.↔Jon looked at her for a long time
+    - langfristig↔long-term / in the long run / over the long term
+        - Eine gute Ausbildung macht sich langfristig bezahlt.  
+    - letztendlich↔eventually
+        - Letztendlich fand er seine Schlüssel in seiner Tasche.  
+    - nachher↔afterwards
+        - Wir sehen uns dann **nachher**.   
+    - neulich↔the other day
+    - nun↔now
+        - **Nun** ist es aber gut.   
+    - öfters / häufig↔frequently / often
+        - Ich habe sie **öfters** gesehen.  
+    - rasch↔quickly
+        - **Rasch** [hob](../German/Verbs/heben.md) er einen Fuß.   
+    - rechtzeitig↔in time
+        - Wir werden Sie rechtzeitig informieren.
+    - seit kurzem↔as of late
+        - In meinem Rasen wachsen seit kurzem verstärkt champignonähnliche Pilze.
+    - selten↔rare / seldom
+        - Ich sehe meine Schwester selten, da sie weit weg wohnt.  
+    - sogleich / unmittelbar↔immediately / instantly
+    - unlängst / neuerdings↔recently / lately
+    - im Voraus / im Vorfeld↔in advance
+        - noun:>der Einzug : {{advance}} 
+    - zeitgleich↔simultaneously
+    - vorzeitig↔early
+        - Vorzeitig entlassen, wegen [Lungenentzündung ](), sagt sie.
+    - weiterhin↔for the future
+        - Wir hoffen {{auf}} eine weiterhin gute Zusammenarbeit.
+    - zeitweise / vorübergehend↔temporarily / from time to time
+        - adjektiv;;wechselnde   
+        - Wir brauchen eine dauerhafte Lösung, keine vorübergehende.  
+        - Der Tunnel musste vorübergehend gesperrt werden.  
+    - zugleich / zeitgleich / gleichzeitig↔at the same time
+    - zunächst↔for the time being / initially
+        - Zunächst wollte sie Astronautin werden, studierte aber dann Medizin.  
+    - zuvor↔previously
+        - Die zuvor verwendete Version war besser.→The version used before was better.
+- Location
+    - auseinander↔apart
+        - Es ist einfach, das Bett auseinander zu nehmen.  
+    - auswärts↔out of town
+        - Ich reise oft geschäftlich und arbeite auswärts.  
+    - benachbarten↔neighboring
+        - Der Manager besucht häufig Niederlassungen in benachbarten Ländern.  
+    - drin↔inside
+        - synonym→hinein
+        - Es ist heiß hier **drin**.  
+    - hierher↔here
+        - Viele Touristen kommen hierher, vor allem im Sommer.  
+    - hinauf↔up / upwards
+        - Er sah hinauf zum [Thron ]().
+    - hinab↔down 
+        - synonym;;nieder 
+            - auf und nieder↔up and down
+            - Er stieß die [Klinke ]() nieder.
+            - Leslie Carron blickte immer wieder auf die beiden Hefte nieder. : Leslie Carron kept looking down at the two notebooks
+            - 
+            - 
+    - hinweg↔across / away
+    - nebeneinander↔side by side
+        - Ich stellte die Teller nebeneinander auf den Tisch.  
+        - Viele Boote lagen [dicht ]() nebeneinander am Ufer.  
+    - nirgendwo / nirgends↔nowhere
+        - Hier kann man ja nirgends parken.
+    - quer↔across / crosswise
+        - Ich faltete das Papier quer, nicht längs.  
+    - rüber↔over there 
+    - voraus↔ahead / advance
+    - voran / vorn↔ahead / forward
+        - adjektiv→vordere
+            - Die Spieler auf den vorderen Positionen nennt man Stürmer.  
+        - Sie [nickte](../German/Verbs/nicken.md) und ging voran.↔She nodded and went ahead.
+        - [Letztlich](Adverbs/Manner/schlie%C3%9Flich/Letztlich.md) hatte Ralf die Nase knapp vorn.  
+- Manner
+    - abschließend↔finally / afterall / in conclusion
+        - Nun wissen Sie es also, Miss, sagte er abschließend.→So now you know, miss, he said in conclusion.
+    - allerdings↔however
+        - **Allerdings** war es sehr knapp.↔However, it was very close.
+    - allerlei↔all kinds
+    - --------------------- Portal ---------------------
+        - German
+    - anmutig↔gracefully
+        - Die Tänzerin bewegte anmutig die Arme.  
+    - anonym↔anonymous
+    - anwesend↔present / here
+        - noun→Anwesenheit : {{presence}} 
+        - Alle Familienmitglieder sind anwesend.
+    - auffällig↔noticeable / conspicuous / strikingly / ostentatious / flamboyant / flashy
+        - Ich bemerkte das knallgelbe, auffällige Auto sofort.→I noticed the bright yellow, showy car immediately.  
+    - aufwendig↔elaborately
+    - außergewöhnlich↔exceptionally
+    - außerordentlich↔extraordinarily
+    - ausführlich↔detailed / comprehensive
+        - adjektiv→umfangreiche ← comprehensive, extensive
+        - We should set aside this regulation.  
+    - ausgerechnet↔of all people
+        - andere bedeutung→calculated
+        - Ausgerechnet du sagst mir so was.→You, of all people, are telling me this. 
+        - 
+    - bemerkbar↔noticeable / notable
+    - bereits↔already
+    - definitiv↔definitely
+    - dementsprechend↔accordingly
+        - noun→der Einklang ← accordance / harmony
+            - Alles ist im Einklang mit den gesetzlichen Regelungen.  
+    - demnach↔accordingly / therefore
+        - Demnach war also alles natürlich.↔Accordingly, everything was natural.
+    - derselben↔same
+    - ebenfalls↔likewise / as well
+        - Wenn weitere Spesen [anfallen](../German/Verbs/fallen/anfallen.md), dann übernehme ich die ebenfalls.
+    - eindrucksvoll↔impressive / spectacular
+    - empfindlich↔sensitively
+    - entgegen↔contrary to
+        - Feuchte Schwaden schlugen ihnen entgegen : Damp vapors were hitting them
+    - erforderlich↔required
+        - Gute Fähigkeiten in Marketing und PR sind erforderlich. 
+    - erhältlich↔available / obtainable
+    - erkennbar↔apparent
+        - Einige [Auswirkungen ]() der Veränderungen sind bereits erkennbar.
+    - fachlich↔professionally / technically
+    - fällig↔due
+        - Die Stromrechnung war Ende August **fällig**.  
+    - folglich↔therefore / thus / consequently
+        - Ich habe nichts gegessen und folglich bin ich hungrig.  
+        - Ich habe viel gearbeitet und brauche folglich etwas Ruhe.  
+    - fraglich↔questionable
+    - friedlich↔peaceful
+        - Im Urlaub bin ich **friedlich**.  
+    - geradezu↔nothing short
+        - Sie sprühte geradezu {{vor}} Zorn.→She was just bubbling over with anger.
+    - gewissermaßen↔in a way / to an extent / in a sense
+        - Ich habe viel über das Weltall gelesen, also bin ich gewissermaßen ein Experte.  
+    - gleichermaßen↔equally / likewise
+        - Die Vereinbarung verpflichtet alle Parteien gleichermaßen.→The agreement binds all parties equally.  
+    - gleichmäßig↔evenly / even / steady
+        - Der [Kleber ]() sollte gleichmäßig auf der Fläche verteilt werden.→The glue should be evenly spread on the surface.  
+        - Ich habe die [Fahnen]() gleichmäßig um das Feld verteilt.→I spaced the flags evenly around the field.  
+    - hautnah↔firsthand / close
+        - Ich durfte sie im Irak hautnah erleben.→I was able to experience it firsthand in Iraq.
+    - identisch↔identical
+        - Die Form ist nahezu identisch.
+    - im gegenzug↔in return
+        - Ich half meiner Schwester, ohne etwas im Gegenzug zu erwarten.  
+    - heil↔safely
+        - Es schien alles heil zu sein.→Everything seemed to be in one piece.
+    - heimlich↔secretly
+        - Heimlich war ich stolz auf Volker.
+        - adjektiv;;verschwiegene
+            - [Aliases]()
+                1. verschwiegene
+            - Kochen ist meine verschwiegene [Leidenschaft ]().  
+    - hiermit↔hereby / herewith
+        - Ich erkläre Sie hiermit zu Mann und Frau.→I hereby pronounce you husband and wife.  
+    - hierfür↔on this
+        - Hierfür gab es nur eine Erklärung.   
+        - Hierfür haben sie viel Geld ausgegeben.  
+    - hierzu↔concerning this / to this / for this purpose
+        - Hierzu hatte Drizzt keinen [Einwand ]().
+        - Hierzu möchte ich nichts mehr sagen.  
+    - hingegen↔on the other hand / whereas
+        - Ich liebe Pizza; meine Schwester hingegen mag lieber Pasta.  
+    - insofern↔in this respect
+        - Insofern hatte Tom ganz recht.
+    - jeweils / beziehungsweise↔respectively
+        - Jeweils im [Abstand ]() von fünf Tagen.
+        - Mein Sohn und meine Tochter sind drei bzw. fünf Jahre alt.
+    - kaum / knapp↔barely / nearly
+        - Es war knapp halb vier.
+    - keinesfalls↔under no circumstances / not at all / never ever
+        - Das würde ich keinesfalls sagen.
+    - keineswegs↔by no means
+        - Das war keineswegs der Fall.→This was not the case at all.
+    - kontinuierlich↔continuously
+        - Das Unternehmen verzeichnete einen kontinuierlichen Gewinnanstieg.→The company recorded a continuous rise in profits.  
+    - kritisch↔critically
+        - Alfie sah sie **kritisch** an.   
+    - kurzerhand↔without further ado
+        - Kurzerhand schicke ich ihr eine SMS.  
+    - lediglich↔only / simply
+        - Die Pressemitteilungen in diesem Abschnitt dienen lediglich als Referenz.  
+    - liebevoll↔lovingly | comfortably
+        - Die Mutter streichelt ihrem Sohn Liebevoll über den Rücken.  
+    - locker↔casual / easy
+        - Er lacht laut und locker.→He laughs loudly and easily.
+    - möglich↔possible
+        - gegenteil→{{ausgeschlossen}} : impossible 
+    - nachhaltig↔sustainably / lastingly / strongly / deeply
+        - adjektiv→nachhaltige : {{sustainable}} 
+        - Das Grollen des Vulkans erinnerte sie nachhaltig daran, warum sie hier waren.
+        - Ökologie und Gesellschaft sind [Säulen]() einer [nachhaltig](Adverbs/Manner/nachhaltig.md)en Entwicklung.  
+    - nachträglich↔subsequently / later / afterwards
+        - adjektiv→spätere
+            - Spätere Anmeldungen können nicht berücksichtigt werden.  
+        - Sie hatte nachträglich ein schlechtes Gewissen.
+    - nebenan↔next door
+        - Ein [Zaun ]() trennt meinen Garten vom Garten nebenan.  
+    - notfalls↔if necessary
+        - abbreviation;;ggf. ← {{gegebenenfalls}} 
+            - Bitte überprüfen Sie alle informationen und machen ggf. Korrekturen.  
+        - Notfalls nehme ich mir ein Taxi.
+    - nutzbringend↔beneficially
+        - Kenntnisse auffrischen und nutzbringend anwenden.
+    - offenbar↔apparently / obviously
+        - adjektiv→offensichtliche ← obvious
+        - [Darin](../German/Da%20_%20Wo-W%C3%B6rter/Da/darin.md) ist er offenbar gut.
+    - öffentlich↔publicly
+        - adjektiv→öffentliche
+            - In vielen öffentlichen Verkehrsmitteln kann man heute schon das Fahrrad mitnehmen.
+    - ohnehin / sowieso↔anyway
+    - parat | bereit↔ready
+        - Er spät dran, aber wie immer hat er eine [Ausrede ]() parat.→He is late, but as always he has an excuse.
+        - Die Katze kauerte nieder, zum Sprung bereit.  
+    - prinzipiell↔on principle
+        - noun→der Grundsatz {{-e}} ← tenet / policy / principle
+            - Die wichtigsten Grundsätze unseres Unternehmens finden Sie in diesem Dokument.  
+    - quasi↔practically / so to speak
+        - Wir sind quasi die Polizei.
+    - rechtswidrig↔illegally / unlawfully
+        - Chung hat ein Gutachten darüber angefordert, ob Ihre [Anfrage](../German/Liste%20der%20Verben%20mit%20Pr%C3%A4positionen/Dativ/Fragen/die%20Anfrage.md) als solche rechtswidrig ist.→Chung has requested an expert opinion on whether your request is illegal as such.
+    - reibungslos↔smoothly
+        - Wir können einen reibungslosen und zuverlässigen Service garantieren.  
+    - reiflich↔careful
+        - Das verlangt reifliche Überlegung. 
+    - regelrecht↔really / downright / literally
+        - Ich bin regelrecht [entsetzt](../German/Verbs/entsetzen.md). 
+        - Man konnte es regelrecht sehen.
+    - sachlich↔objectively
+        - Sie ist recht sachlich und rational.  
+    - samt↔including, together with
+        - Er [baumelte]() samt Frau und Tochter.→He dangled along with his wife and daughter.
+    - scheinbar / erkennbar↔apparently / seemingly
+    - schonend↔gently / carefully 
+        - synonym→[behutsam]() 
+        - Auf die [behutsamste]() [Weise ]() und so schonend wie möglich.
+    - schließlich↔ultimately / finally / in the end / lastly / after all
+        - Der alte Computer wurde schließlich ersetzt.  
+        - Letztlich↔ultimately
+    - separat↔separately
+        - Ich kenne unterwegs eine Gaststätte; wir essen separat.
+    - sichtbar / sichtlich / einsehbar↔visible
+    - soeben↔just / only just
+        - Die Bar hatte soeben geöffnet.
+    - sogar↔even
+        - Diese Rose ist sogar noch schöner.  
+    - somit↔thus
+    - sonstige↔other
+    - sowas↔like this / like that 
+        - Um Gottes willen, nicht sowas.→For God's sake, not that.
+    - spielerisch↔playfully
+    - spürbar↔noticeable / perceptible
+    - ständig↔closely / constantly
+        - synonym;;konsequent
+            - Die Schneiders leben seit 2 Jahren konsequent ohne Plastikprodukte.  
+    - tatsächlich↔actually / indeed
+    - tödlich↔deadly
+    - traditionell↔traditionally
+    - übersichtlich↔clearly
+        - Die Webseite hat ein übersichtliches Layout.  
+        - Er stellte alle [Werte]() des Versuchs in einer übersichtlichen Tabelle dar.  
+    - üblich↔customary / common / usual
+        - noun→der Brauch ← custom
+            - [Aliases]()
+                1. Brauch
+        - Ist dieser Gebrauch in Indien üblich? 
+    - übrigens↔by the way / incidentally
+        - im übrigen↔as a matter of fact
+    - umsonst↔for nothing / for free
+        - Ich mache das umsonst und [verlange](../German/Verbs/verlangen.md) kein [Entgelt ]().→I am doing it for free and not asking for a fee.  
+    - unbedingt↔necessarily / strictly
+        - 
+        - Es ist unbedingt notwendig, sich die Hände mit Seife zu waschen.→It is absolutely necessary to wash hands with soap.  
+    - unberührt↔unaffectedly / impassively
+        - Ich weiß nicht, [erwiderte](../German/Verbs/erwidern.md) er unberührt.
+    - unerlässlich↔indispensable / essential
+        - adjektiv→wesentlich ← essential / considerably
+            - Diese Uhr ist wesentlich teurer als [jene]().  
+        - Heute ist das nicht mehr so unerlässlich.
+    - unerträglich↔unbearable / unbearably
+        - Die Hitze war unerträglich, also ging ich zum Pool. 
+
+    - unerwartet↔unexpectedly
+    - ungewiss↔uncertain / unknown
+        - noun→Unsicherheit
+            - Das letzte Jahr war eine Zeit der wirtschaftlichen Unsicherheit.  
+        - Der Ausgang der Wahl ist ungewiss.→The outcome of the election is uncertain.  
+    - durchaus / unter allen Umständen↔by all means
+    - überhaupt↔in general | in the first place | anyway
+        - Überhaupt war ihre Arbeit von hoher Qualität.→In general, her work was of high quality.
+        - Was will er überhaupt von mir?→What does he want from me, anyway?
+        - Sie fragte sich, warum sie überhaupt zugestimmt hatte.→She asked herself why she had agreed in the first place.
+    - unter anderem↔among other things
+    - unverzüglich↔immediately / without delay
+    - vergeblich↔in vain
+        - synonym;;[umsonst](Adverbs/Manner/umsonst.md) 
+            - Seine [Anstrengungen]() waren umsonst.  
+    - vermeintlich↔supposedly
+    - zugunsten↔for the sake of
+    - vertraulich↔confidential
+        - Wir müssen alle vertraulichen Informationen geheim halten.  
+    - verzweifelt↔desperately
+        - noun→die Verzweiflung ← {{despair}} 
+            - Es mischen sich Emotionen der Wut, Trauer und Verzweiflung.  
+        - Er klang verzweifelt, also beschloss ich, ihm zu helfen.  
+    - {{vielmehr}} / {{eher}}→rather
+        - Die Wände sind nicht weiß, sie sind vielmehr beige.  
+        - Das neue Kleid, das ich mir gekauft habe, ist eher schlicht.  
+    - vor allem↔above all / especially / primarily
+        - Viele Touristen kommen hierher, vor allem im Sommer.→Lots of tourists come here, especially in summer.  
+        - Vor allem brauchen wir kompetente Mitarbeiter.  
+    - vorrangig↔mainly / primarily
+        - Dieser Bereich dient vorrangig wechselnden Ausstellungen.→This area is primarily used for temporary exhibitions.
+    - vorsichtig↔careful / cautious
+    - wiederum↔on the other hand / in turn
+        - Und er **wiederum** rief mich an.
+    - wörtlich↔literally
+    - zudem↔in addition / furthermore / besides
+        - Zudem ist sie auch so arbeitsam.
+    - zufällig↔by accident / randomly
+    - zugänglich↔open / accessible
+    - --------------------- Portal ---------------------
+        - German
+    - zuständigen↔relevant / appropriate / responsible
+        - synonym→angebracht
+        - adjektiv→angemessene / angebracht
+            - Kinder müssen beim Radfahren angemessene Schutzkleidung tragen.  
+            - Auf eine [zeitnahe]() und angemessene Rückmeldung
+        - Ich muss zum zuständigen Amt für Visumanträge.
+        - Das zuständige Finanzamt hilft Ihnen gerne weiter.
+    - zutiefst↔deeply
+    - zwangsläufig↔inevitably
+    - zweifellos↔undoubtedly

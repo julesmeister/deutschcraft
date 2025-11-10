@@ -1,0 +1,322 @@
+- Akkusativ
+    - Achten
+        - sich;;nein
+        - Bitten achten Sie {{auf}} den Verkehr.
+    - Anmelden
+        - sich;;ja
+        - Du musst dich morgen {{ für }} den Kurs anmelden.
+    - Antworten
+        - sich;;nein
+        - Bitte antworten Sie {{ auf }} meine Frage.
+    - Ärgern
+        - sich;;ja
+        - Manchmal ärgere ich {{ mich über }} dich.
+    - Aufpassen
+        - sich;;nein
+        - Lars muss {{ auf }} seinen kleinen Bruder aufpassen.
+    - Beteiligen
+        - [Aliases]()
+            1. sich beteiligen
+        - sich→ja
+        - Kris beteiligt sich {{an}} Aktionen gegen Plastiktüten.
+    - Bewerben
+        - sich;;ja
+        - Frau Kalbach {{ bewirbt sich um}}  die Stelle.
+    - Bitten
+        - sich;;nein
+        - Sophia asks her friend for a tip.
+            - Sophia bittet ihre Freundin {{ um }} einen Tipp.
+    - Denken
+        - sich;;nein
+        - Ich habe den ganzen Tag {{ an }} dich gedacht.
+        - präteritum;;Er dachte
+        - perfekt;;Er hat gedacht
+    - Diskutieren
+        - sich;;nein
+        - Sie diskutieren immer {{ über }} das gleiche Problem.
+    - Entschuldigen
+        - sich;;ja
+        - Pedro entschuldigt {{ sich für }} seinen Fehler.
+        - Ich muss {{mich bei}} dir entschuldigen.
+    - Erinnern
+        - sich;;ja
+        - Ich kann mich nicht {{an}} den Film erinnern.
+    - Freuen↔to look happy
+        - sich;;ja
+        - präteritum→Er freute sich
+        - perfekt→Er hat sich gefreut
+        - Franziska freut {{ sich über}} ihren Erfolg.
+        - Die Kinder freuen {{ sich auf }} Weihnachten.
+        - sich erfreut↔to be pleased / to be delighted / to be glad
+            - noun→das Vergnügen ← pleasure
+                - Der Reiseführer erzählte mit offensichtlichem Vergnügen von seinen Abenteuern.  
+            - adjektiv→erfreulich ← {{pleasing}} 
+                - Das Resultat der [Umfrage ]() ist erfreulich.
+    - Gewöhnen
+        - sich;;ja
+        - Ich habe {{mich an}} das deutsche Essen gewöhnt.
+        - bedeutung;;to accustom
+    - Glaube
+        - sich;;nein
+        - Ich glaube {{an}} Gott.
+    - Informieren
+        - sich;;ja
+        - Ich möchte {{ mich über }} den Kurs informieren.
+    - Investieren
+        - sich;;nein
+        - Die EU investiert viel Geld {{in}} die [Landwirtschaft]() .
+    - Interessieren
+        - sich;;ja
+        - Er interessiert {{ sich für }} Architektur.
+    - Kämpfen
+        - sich;;nein
+        - Momo kämpft {{gegen}} die "grauen Herren".
+    - Konzentrieren
+        - sich;;ja
+        - Die Medien konzentrieren {{ sich auf }} den Autoverkehr.
+    - Kümmern
+        - sich;;ja
+        - Wir kümmern {{ uns um }} Ihre Probleme.
+    - Lust
+        - sich→nein
+        - {{Darauf}} habe ich auch Lust.
+    - Nachdenken
+        - sich;;nein
+        - Ich denke {{ über }} den Deutschkurs nach.
+    - Reagieren
+        - sich;;nein
+        - Wir müssen schnell {{ auf }} seine Frage reagieren.
+    - Schämen
+        - sich;;ja
+        - Die Mutter schämt {{ sich für }} ihr Kind.
+        - bedeutung;;<to be ashamed of.
+    - Sprechen
+        - sich;;nein
+        - Katrin und Jan sprechen {{über}} ihr Kind.
+    - Stimmen↔to vote for
+        - Sie **stimmen** {{für}}: DIE GRÜNEN.
+    - Streiten
+        - sich;;nein
+        - Wir streiten oft {{ über }} Kleinigkeiten.
+        - bedeutung;;<to argue
+        - präteritum;;Er stritt
+        - perfekt;;Er hat gestritten
+        - umstreiten↔controversial / contentious / debatable / disputed
+            - Die Schlussfolgerungen des Wissenschaftlers waren umstritten.  
+    - Teilen::to share / to divide
+        - sich;;nein
+        - All parents share concern for their children.
+            - Alle Eltern teilen die Sorge {{um}} ihre Kinder.
+        - I divided the cake into four portions.
+            - Ich habe den Kuchen {{in}} vier Portionen geteilt.
+        - verteilen↔to distribute #verben
+            - Meine Schwester verteilt Flyer, um etwas Taschengeld zu verdienen. 
+            - [präteritum]();;Er verteilte
+            - [perfekt]();;Er hat verteilt
+        - aufteilen↔to split [goods/money] #verben
+            - [präteritum]();;Er teilte auf
+            - [perfekt]();;Er hat aufgeteilt
+            - Wir werden den Bauernhof verkaufen und den [Erlös]() aufteilen.
+        - mitteilen↔to communicate  #verben
+            - [präteritum]();;Er teilte mit 
+            - [perfekt]();;Er hat mitgeteilt
+                - Der Termin wird Ihnen rechtzeitig schriftlich mitgeteilt.
+        - unterteilen↔to divide 
+    - Trauern
+        - sich;;nein
+        - noun→das Trauer→{{grief}}
+            - Er kam ziemlich schnell über seine Trauer hinweg.→He got over his sorrow pretty quickly.
+ 
+        - Lukas trauert {{ um }} seinen Vater.
+        - bedeutung;;<to mourn
+    - Verlieben
+        - sich;;ja
+        - Nadin hat {{ sich in }} einen großen Mann verliebt.
+    - Verstoßen
+        - noun→der Verstoß
+        - sich;;nein
+        - Man sollte nicht {{ gegen }} diese Regel verstoßen.
+        - bedeutung;;<to sin against sth.
+    - Vorbereiten
+        - sich;;ja
+        - Wir müssen {{uns auf}} den Test vorbereiten!
+    - Warten
+        - sich;;nein
+        - Fabian wartet {{ auf }} seinen Vater.
+    - Wenden
+        - sich;;ja
+        - Bei Problemen wenden Sie {{ sich an }} Ihren Chef. 
+        - bedeutung;;to turn to [sb.] / to turn
+            - An wen wendet man sich im Notfall? 
+            - Bitte wenden↔Turn the page, please. 
+    - Zugreifen↔to access sth.
+        - sich→nein
+        - Wir müssen so rasch wie möglich zugreifen.→We need to access as soon as possible. 
+        - Nur die Manager sind berechtigt, {{auf}} diese Informationen zuzugreifen. 
+    - Züstandig sein
+        - sich;;nein
+        - Der Europäische [Gerichtshof]() ist {{ für }} das europäische Rechtssystem zuständig.
+    - 
+    - Freuen
+        - sich;;ja
+- 
+- Dativ
+    - Auskommen→get along
+        - [Aliases]()
+            1. auskommen
+        - Oma kommt gut {{ mit }} Frau Müller aus.
+        - sich;;nein
+        - Ich hoffe, dass ich gut mit meinen neuen Kollegen auskommen werde.  
+    - Auslassen:<{{to take sth. out on sb./sth.}} / {{to omit / to skip / to ignore}} #verben
+        - sich;;nein
+        - [präteritum]();;Er ließ aus
+        - [perfekt]();;Er hat ausgelassen
+        - Die Kunden lassen ihre schlechte Laune {{ an }} mir aus.
+        - Er ließ das Kapitel aus und machte mit dem nächsten weiter.  
+        - [perfekt]();;Er hat ausgelassen
+        - [präteritum]();;Er ließ aus
+    - Beitragen::to contribute #verben
+        - [präteritum]();;Er trug bei
+            - Harkle und Bella trugen ihren Teil zu dem Spaß bei.
+        - [perfekt]();;Er hat beigetragen
+            - Ein wenig habe ich doch auch dazu beigetragen, daß Sie den schwierigen Fall lösen konnten
+        - sich;;nein
+        - International Lebensmitteltransporte tragen {{ zum }} [Klimawandel]() bei.
+    - Beschäftigen→to deal with sb./sth. / to occupy oneself
+        - noun→Beschäftigung ← {{employment}} 
+        - adjektiv→beschäftig → busy
+        - bedeutung;;to deal with sb./sth.
+        - sich;;ja
+        - Wir beschäftigen uns heute {{mit}} dem Thema "Medien".
+        - Du musst dich nur für eine Stunde beschäftigen, während ich weg bin.  
+    - Beschweren↔to complain
+        - [Aliases]()
+            1. beschweren
+        - sich→ja
+        - Ich beschwerte mich {{beim}} [Ober ]() {{über}} ein Haar in meinem Essen.  
+    - Besprechen↔to talk sth. over with sb.
+        - noun→die Rede ← talk
+        - sich;;nein
+        - präteritum;;Er besprach
+        - perfekt;;Er hat besprochen
+        - George bespricht das Problem {{ mit }} seiner Frau.
+        - Das sollten wir in Ruhe **besprechen**.   
+    - Bestehen↔to pass
+        - gegenteil→durchfallen
+            - Ich habe meine Prüfung durchgefallen.
+            - Ich machte die Prüfung trotz meiner Angst, durchzufallen.
+        - auf↔to insist
+            - Lukas bestand darauf, für das Essen zu zahlen.
+            - Tom bestand darauf, dass ich mich ihm anschlösse.
+            - Sie bestand darauf, dass ich die Rechnung für das Abendessen bezahlte.
+        - aus↔to consist of sth.
+            - synonym→enthalten / beinhalten
+            - sich;;nein
+            - Der Test besteht {{ aus }} zwei einfachen Aufgaben.
+            - Jedes [Lebewesen ]() besteht aus mindestens einer Zelle.  
+        - präteritum;;Er bestand
+        - perfekt;;Er hat bestanden
+        - Wenn wir unseren B2 Test bestehen, veranstalte ich eine Party.
+    - Ekeln↔to disgust
+        - noun→[Ekel ]() 
+        - sich;;ja
+        - adjektiv→ekelhaft
+        - Manche Menschen ekeln {{sich vor}} einer Spinne.
+    - Fragen
+        - sich;;nein
+        - präpositions→nach / an 
+            - nach +→dativ 
+            - an +→akkusativ 
+        - die Anfrage↔request / inquiry / enquiry / query
+            - [Aliases]()
+                1. Anfrage
+            - Das Büro ist den ganzen Tag für Anfragen geöffnet.  
+            - Sie ist für die Anfragen der Kunden zuständig.  
+            - Weitere Informationen sind auf Anfrage erhältlich.  
+        - Der Tourist fragt {{ nach }} dem Weg.
+        - Ich frage {{an}} dich.
+        - Frau Kulagin fragt Herrn Melzer.
+    - Führen (mit)↔to conduct sth. with somebody
+        - sich;;nein
+        - Wir haben ein Interview {{ mit }} einem Lehrer geführt.
+    - Führen (zum)↔to lead on to
+        - sich;;nein
+        - Routine kann {{ zum }} [Scheitern]() einer Beziehung führen.
+    - Gehören
+        - sich;;nein
+        - Dresden gehört {{zum}} [Bundesland]() Sachsen.
+    - Gratulieren
+        - sich;;nein
+        - Wir gratulieren dir {{ zu }} deinem neuen Job!
+    - Klarkommen↔to come to terms with sth.
+        - sich;;nein
+        - Ich komme {{mit}} dieser Übung nicht klar.
+    - Leiden
+        - sich;;nein
+        - {{ Unter }} dem hohen [Energieverbrauch]() leidet auch die Umwelt.
+    - Mischen
+        - sich;;nein
+        - Man mischt Mehl {{ mit }} Eiern und Zucker.
+    - Passen
+        - sich;;nein
+        - Die grüne Hose passt nicht {{zum}} rosa Hemd.
+    - Schützen
+        - sich;;nein
+        - Die Jacke schützt {{ vor }} dem Regen.
+    - Schmecken:>to taste / to savor
+        - sich;;nein
+        - Die Suppe schmeckt {{nach}} Salz.
+    - Stammen::to come from / to originate
+        - sich→nein
+        - Das Geld stammte {{von}} Privatpersonen.
+    - Traümen
+        - sich;;nein
+        - preposition [of]→von
+        - Ich traüme {{von}} einer Weltreise.
+            - 
+    - Treffen
+        - sich;;ja
+        - Heute treffen wir {{ uns mit}} guten Freunden.
+    - Trennen↔to separate from sb.
+        - sich;;ja
+        - Maria hat {{ sich von }} ihrem Freund getrennt.
+        - bedeutung;;to separate from sb.
+    - Verabreden
+        - sich;;ja
+        - Wann verabreden wir uns endlich {{ mit }} deinem Freund?
+    - Verbinden
+        - sich;;nein
+        - Können Sie mich bitte {{mit}} dem Sekretariat verbinden?
+    - Verbeugen↔to bow
+        - sich→ja
+        - Als er den Raum verließ, verbeugte er sich {{vor}} mir.  
+    - Verloben↔to betroth sb.
+        - sich;;ja
+        - Heute hat sich Jens {{ mit }} seiner Freundin verlobt.
+    - Verstehen↔to get along with sb.
+        - sich;;ja
+        - synonym→[auskommen](Liste%20der%20Verben%20mit%20Pr%C3%A4positionen/Dativ/Auskommen.md) 
+            - Ich hoffe, dass ich gut mit meinen neuen Kollegen auskommen werde.  
+        - präteritum;;Er verstand
+        - perfekt;;Er hat verstanden
+        - Verstehst du dich gut {{ mit }} deinen Kollegen?
+    - Warnen
+        - sich;;nein
+        - Der deutsche Wetterdienst warnt {{ vor }} einem Sturm.
+    - Zerbrechen↔to fall apart
+        - sich;;nein
+        - preposition [because of]→an
+        - präteritum;;Er zerbrach
+        - perfekt;;Er hat zerbrochen
+        - Manche Beziehungen zerbrechen {{ an }} der Routine.
+    - Zusammenarbeiten
+        - sich;;nein
+        - Die Eltern sollten {{mit}} den Lehrern zusammenarbeiten.
+    - 
+    - 
+    - 
+    - 
+- 
+- 
+- 
+- 

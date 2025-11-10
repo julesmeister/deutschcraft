@@ -1,0 +1,65 @@
+- -ant | Praktikant, Diamant >>>
+    - gender:>maskulin
+- -ent | Student, Produzent >>>
+    - gender:>maskulin
+- -er | Pfeffer, Klempner >>>
+    - gender:>maskulin
+- -ich | Teppich, Pfirisch >>>
+    - gender:>maskulin
+- -ismus | Optimismus, Magnetismus >>>
+    - gender:>maskulin
+- -ist | Polizist >>>
+    - gender:>maskulin
+- -ast | Ballast, Kontrast >>>
+    - gender:>maskulin
+- -or | Motor >>>
+    - gender:>maskulin
+- -ling | Frühling, Liebling >>>
+    - gender:>maskulin
+- -ant | Elefant >>>
+    - gender:>maskulin
+- -us | Primus, Zirkus >>>
+    - gender:>maskulin
+- -ig | Honig >>>
+    - gender:>maskulin
+- -en | Hafen, Garten >>>
+    - gender:>maskulin
+- -e | Biene, Straße >>>
+    - gender:>feminin
+- -ie | Philosophie >>>
+    - gender:>feminin
+- -ion | Portion, Religion, Situation >>>
+    - gender:>feminin
+- -keit | Möglichkeit >>>
+    - gender:>feminin
+- -heit | Reinheit, Gesundheit >>>
+    - gender:>feminin
+- -tät | Realität >>>
+    - gender:>feminin
+- -ik | Panik >>>
+    - gender:>feminin
+- -ei | Brauerei >>>
+    - gender:>feminin
+- -schaft | Freundschaft, Mannschaft >>>
+    - gender:>feminin
+- -ung | Spaltung, Planung >>>
+    - gender:>feminin
+- -ur | Kultur >>>
+    - gender:>feminin
+- -lein | Kindlein >>>
+    - gender:>neutrum
+- -chen | Mädchen >>>
+    - gender:>neutrum
+- -ma | Prisma, Koma, Schema
+    - gender:>neutrum
+- -nis | Zeugnis
+    - gender:>neutrum
+- -ment | Dokument, Experiment >>>
+    - gender:>neutrum
+- -tum | Eigentum >>>
+    - gender:>neutrum
+- -um | Museum >>>
+    - gender:>neutrum
+- verben | Laufen, Kauen, Sehen
+    - gender:>neutrum
+- 

@@ -15,6 +15,7 @@ import {
 } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { FlashcardProgress } from '@/lib/models';
+import { useToast } from '@/components/ui/toast';
 
 type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy';
 
@@ -108,6 +109,7 @@ function calculateSRSData(
 export function useFlashcardMutations() {
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const { showToast } = useToast();
 
   /**
    * Save a flashcard review
@@ -122,9 +124,33 @@ export function useFlashcardMutations() {
       setIsSaving(true);
       setError(null);
 
+      // Validate inputs
+      if (!userId) {
+        const errorMsg = 'Cannot save review: userId is undefined';
+        console.error(errorMsg);
+        showToast('Error: User not logged in', 'error');
+        throw new Error(errorMsg);
+      }
+      if (!flashcardId) {
+        const errorMsg = 'Cannot save review: flashcardId is undefined';
+        console.error(errorMsg);
+        showToast('Error: Invalid flashcard', 'error');
+        throw new Error(errorMsg);
+      }
+
+      console.log('🔵 [saveReview] Starting save:', {
+        userId,
+        flashcardId,
+        wordId,
+        difficulty,
+        timestamp: new Date().toISOString(),
+      });
+
       // Generate progress ID
       const progressId = `${userId}_${flashcardId}`;
       const progressRef = doc(db, 'flashcard-progress', progressId);
+
+      console.log('🔵 [saveReview] Progress ID:', progressId);
 
       // Get existing progress
       const progressDoc = await getDoc(progressRef);
@@ -132,8 +158,21 @@ export function useFlashcardMutations() {
         ? (progressDoc.data() as FlashcardProgress)
         : null;
 
+      console.log('🔵 [saveReview] Existing progress:', {
+        exists: progressDoc.exists(),
+        currentProgress: currentProgress
+          ? {
+              repetitions: currentProgress.repetitions,
+              masteryLevel: currentProgress.masteryLevel,
+              interval: currentProgress.interval,
+            }
+          : null,
+      });
+
       // Calculate new SRS data
       const srsData = calculateSRSData(currentProgress, difficulty);
+
+      console.log('🔵 [saveReview] New SRS data:', srsData);
 
       // Prepare update data
       const updateData: Partial<FlashcardProgress> = {
@@ -160,18 +199,28 @@ export function useFlashcardMutations() {
 
       // Create or update document
       if (progressDoc.exists()) {
+        console.log('🔵 [saveReview] Updating existing document');
         await updateDoc(progressRef, updateData as any);
       } else {
+        console.log('🔵 [saveReview] Creating new document');
         await setDoc(progressRef, {
           ...updateData,
           createdAt: Date.now(),
         });
       }
 
+      console.log('✅ [saveReview] Save successful!');
       return srsData;
     } catch (err) {
-      console.error('Error saving flashcard review:', err);
-      setError(err instanceof Error ? err.message : 'Failed to save review');
+      const errorMessage = err instanceof Error ? err.message : 'Failed to save review';
+      console.error('❌ [saveReview] Error:', {
+        error: err,
+        message: errorMessage,
+        userId,
+        flashcardId,
+      });
+      setError(errorMessage);
+      showToast(`Failed to save review: ${errorMessage}`, 'error');
       throw err;
     } finally {
       setIsSaving(false);

@@ -1,0 +1,13 @@
+- gleich/direkt hinter↔right behind
+- gleich/direkt vor↔right before
+- gleich/direkt neben↔right beside
+- gleich links↔just to the left
+- gleich rechts↔just to the right
+- ganz unten↔right at the bottom
+- ganz oben↔right at the top
+- ganz am Ende↔right at the end
+- ganz am Beginn/Anfang↔right from the start
+- schon über 30 Jahre↔more than 30 years already
+- schon seit einem Jahr↔for a year now
+- schon seit zwei Monaten↔for two months now
+- 

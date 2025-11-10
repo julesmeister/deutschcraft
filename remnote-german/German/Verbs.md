@@ -1,0 +1,3042 @@
+- abbestellen↔to discontinue #verben
+    - synonym→einstellen
+        - Die Firma stellte die Produktion des Shampoos ein.  
+    - [präteritum]();;Er bestellte ab
+    - [perfekt]();;Er hat abbestellt
+    - Ich möchte den Newsletter abbestellen.  
+- abbiegen↔to turn
+    - noun→die Kurve
+    - An der nächsten Kreuzung musst du rechts abbiegen 
+    - präteritum→Er bog ab
+    - perfekt→Er ist abgebogen
+        - Sie musste irgendwo abgebogen sein.
+    - umdrehen↔to turn around #verben
+        - noun→die Kurve
+        - [präteritum]();;Er drehte um
+        - [perfekt]();;Er hat umgedreht
+        - Ich drehe die Würstchen um, damit sie nicht anbrennen.→I turn the sausages over so they don't burn.
+- abkommen↔to deviate / to stray #verben
+    - synonym→abweichen
+    - [präteritum]();;Er kam ab
+    - [perfekt]();;Er ist abgekommen
+        - Wir sind gestern von diesem Pfad abgekommen.→We got off this path yesterday. 
+    - das Abkommen↔convention / arrangement / treaty
+        - synonym→[Vereinbarung]() 
+- abheben↔to withdraw #verben
+    - noun→Ausstieg ← {{withdrawal}} 
+        - Planen Sie einen vorzeitigen Ausstieg?::Do you plan an early exit? 
+    - [präteritum]();;Er hob ab
+    - [perfekt]();;Er hat abgehoben
+    - Ich möchte gern 300 Euro von meinem Konto abheben. 
+- abhören↔to wiretap / to monitor
+    - passive präsens;;Viele Menschen werden von dem Geheimdienst abgehört.
+    - Die Polizei hörte die Telefongespräche des Verdächtigen ab.  
+- ablegen↔{{to drop}} / {{to file}} / {{to put down}} / {{to discard}} / {{to put out of reach}}  #verben
+    - [präteritum]();;Er legte ab 
+    - synonym→[streichen](Verbs/streichen.md) ← to discard
+    - [perfekt]();;Er hat abgelegt
+        - Das Spiel ist zu Ende, wenn ein Spieler alle Karten abgelegt hat. 
+    - to drop←Mit der Maus kann ich Dateien einfach ziehen und ablegen.
+        - I can easily drag and drop files with the mouse.  
+    - to file←Die Sekretärin legte alle notwendigen Dokumente ab.←The secretary filed all necessary documents.  
+        - synonym→abheften ← to file
+            - Diese Dokumente können Sie nun in diesem Ordner abheften.→You can now file these documents in this folder.
+    - to put down←Er legte seinen Mantel und Regenschirm ab.←He put down his coat and umbrella.  
+    - to discard←Den Nachnamen werde ich sowieso **ablegen**, sobald die Scheidung durch ist.←I'll discard the last name anyway as soon as the divorce is finalized.  
+    - to put out of reach←Ich habe die Medikamente außer Reichweite der Kinder abgelegt.  
+        - synonym;;[abhalten](Verbs/halten/abhalten.md)
+- ablehnen↔to reject / to refuse / to decline #verben
+    - synonym→zurückweisen ← {{to reject}} | [verweigern](Verbs/verweigern.md) 
+        - Du willst ein Geschenk Gottes zurückweisen?
+    - noun→die Ablehnung
+        - Florian fragte sie nicht, weil er Angst vor einer Ablehnung hatte. 
+    - [präteritum]();;Er lehnte ab
+    - [perfekt]();;Er hat abgelehnt
+    - Ich kann es nicht **ablehnen**.   
+- abrechnen↔to charge / to invoice / to bill
+    - noun→[Rechnung ]() 
+    - synonym→berechnen / abbuchen
+        - Wir müssen die Kosten sorgfältig berechnen.  
+        - Es wird kein [Aufpreis ]() berechnet.  
+        - Die Gebühr buchen wir automatisch ab.
+    - Would you like to settle your bill now?
+    - präsens→Darf ich abrechnen? → Would you like to settle your bill now?
+- abreißen↔to depart / to leave
+    - präteritum;;Er riss ab
+    - perfekt;;Er hat abgerissen
+- absagen↔to cancel
+    - noun→Absage
+- agieren↔to act [to take a role/to perform a role as an actor] / to operate  #verben
+    - [präteritum]();;Er agierte 
+    - [perfekt]();;Er hat agiert
+    - Diese Unternehmen agieren auch als mächtige Agenten des Wandels.  
+- aktualisieren↔to upgrade
+- akzeptieren↔to accept
+    - Wir akzeptieren Bargeld, [gängige ]() Kreditkarten und einige digitale [Währungen]().
+- anbraten↔to brown / to sauté (cooking term)
+    - präteritum;;Er briet an
+    - perfekt;;Er hat angebraten
+- andeuten↔to imply / to hint #verben
+    - noun→der [Hinweis]() / die [Anregung]() 
+    - [präteritum]();;Er deutete an
+        - Mein Chef deutete an, dass ich bald befördert werden könnte. 
+    - [perfekt]();;Er hat angedeutet
+    - Sie deutete eine große Überraschung an.
+  
+- anfangen
+    - Am Montag fange ich {{mit}} meinem neuen Job an.
+    - perfekt;;Er hat angefangen
+- angreifen↔to attack #verben
+    - [präteritum]();;Er griff an
+    - [perfekt]();;Er hat angegriffen
+        - Sie wurden **angegriffen** und mussten sich zurückziehen. 
+    - Sie werden uns heute angreifen.
+- sich anhören↔to listen carefully / {{to sound}} 
+    - Es mag sich seltsam anhören, aber es stimmt.
+    - Das hört sich gut an.  
+    - perfekt;;Ich habe mir den [Vortrag]() angehört.
+    - lauschen↔to eavesdrop #verben
+        - [präteritum]();;Er lauschte
+        - [perfekt]();;Er hat gelauscht
+- anklagen↔to bring charges against sb. / to accuse sb. #verben
+    - die Anklage | {{Vorwurf}}↔accusation  
+        - Ich mache ihm keinen Vorwurf.  
+    - der Beschuldigte↔accused
+    - [präteritum]();;Er klagte an
+    - [perfekt]();;Er hat angeklagt
+        - Er ist wegen Körperverletzung angeklagt. 
+    - Ihnen drohte eine Flut {{von}} Anklagen.→They were threatened with a flood of indictments.
+- anlegen #verben
+    - [präteritum]();;Er legte an
+    - synonym→[anwenden](Verbs/anwenden.md) / [erstellen](Verbs/stellen/erstellen.md) 
+        - Mit dieser Software kann man ein Flussdiagramm [erstellen](Verbs/stellen/erstellen.md).  
+    - [perfekt]();;Er hat angelegt
+        - Was hast du mit dem Geld gemacht? – Wir haben es angelegt! 
+    - to invest←Wir haben beschlossen, einen größeren Teil unserer Einnahmen anzulegen.  
+    - to apply←Die Krankenschwester reinigte die Wunde und legte einen Verband an.   
+    - to create←Er musste einen Account anlegen, um die Website zu nutzen.  
+    - to land / to dock←Morgen wird ein Kreuzfahrtschiff im Hafen anlegen.  
+    - 
+- anpassen↔to adjust / to adapt / to customize #verben
+    - Er paßte sich den Umständen an. 
+    - [präteritum]();;Er paßte an
+    - [perfekt]();;Er hat angepaßt
+- sich anschnallen↔to buckle up / to belt up / to fasten  #verben
+    - Jetzt setz dich hin und schnall dich an! 
+    - [präteritum]();;Er schnallte sich an 
+    - [perfekt]();;Er hat sich angeschnallt
+        - Ich habe am Beifahrersitz Platz genommen und mich angeschnallt. 
+- ansprechen↔to address / to respond #verben
+    - Ich weiß nicht einmal, wie ich Sie ansprechen soll
+    - [präteritum]();;Er sprach an
+        - Er sprach sie an, als sie neben ihm saß
+    - [perfekt]();;Er hat angesprochen
+        - Selbstverständlich werden auch private Probleme angesprochen. 
+- antreten↔to compete #verben
+    - der Konkurrent {{-en}}↔competitor
+        - Das sind direkte Konkurrenten von uns!
+    - der Wettbewerb↔competition
+        - Die [Ergebnisse ]() des Wettbewerbs werden [in wenigen Augenblicken](../German/Redemittel/in%20wenigen%20Augenblicken.md) bekanntgegeben.  
+    - [präteritum]();;Er trat an
+    - [perfekt]();;Er hat angetreten
+- anwenden↔to apply / to utilize / to use #verben
+    - [präteritum]();;Er wandte an 
+    - [perfekt]();;Er hat angewandt 
+        - Heute habe ich mein theoretisches Wissen tatsächlich angewandt.
+    - Kenntnisse auffrischen und nutzbringend anwenden.
+    - beantragen↔to apply [paperwork] #verben
+        - [präteritum]();;Er beantragte 
+        - [perfekt]();;Er hat beantragt
+            - Die Kfz-Zulassung muss innerhalb einer Woche beantragt werden.  
+- anzünden↔to light
+    - präteritum→Er zündete an.
+    - synonym→anmachen ← to light sth.
+        - Luisa macht das Licht in der Küche an. 
+    - perfekt→Er hat angezündet.
+- aufführen↔to list #verben
+    - synonym→auflisten
+    - [präteritum]();;Er führte auf
+    - [perfekt]();;Er hat aufgeführt
+- aufhaben↔to open / to have on / to wear sth. #verben
+    - noun→das Öffnen
+        - Helfe mir beim Öffnen der Flasche.  
+    - [präteritum]();;Er hatte auf
+        - Als wir deine Tür aufhatten, sagtest du, du kämst selber zurecht→When we opened your door, you said you could manage by yourself. 
+    - [perfekt]();;Er hat aufgehabt
+        - Wenn ich eine Brille aufgehabt hätte↔If I had worn glasses
+    - Wie lange hat der Supermarkt am Samstag auf?
+- aufholen↔to catch up  #verben
+    - synonym→[mithalten](Verbs/halten/mithalten.md) 
+    - [präteritum]();;Er holte auf
+    - [perfekt]();;Er hat aufgeholt 
+    - Der Läufer konnte aufholen und das Rennen schließlich gewinnen.→The runner was able to catch up and eventually win the race.  
+- aufpassen↔to take care of sth./sb. #verben
+    - Meine Mutter passt auf meine Kinder auf, wenn ich arbeite.
+    - [präteritum]();;Er passte auf
+    - [perfekt]();;Er hat aufgepasst
+- aufstellen:<{{to establish}} / {{to set}} / {{to arrange}}  / {{to put up}} / {{to setup}} / {{to line up}} / {{to embattle}}   #verben
+    - to set←Sie haben einen neuen Rekord für den längsten Kuss aufgestellt. 
+    - to put up←Vielleicht könnten wir einen Baum aufstellen oder so.
+    - to establish←Wir müssen Regeln für unser Team aufstellen.
+    - to line up←Ich stellte die Figuren in einer [Reihe ]() auf. 
+    - [präteritum]();;Er stellte auf
+    - [perfekt]();;Er hat aufgestellt
+    - synonym→{{sich etablieren / }}[einrichten](Verbs/einrichten.md){{ }}
+    - [perfekt]();;Er hat aufgestellt
+        - Tom Jackson hat einen neuen Weltrekord aufgestellt.
+    - [präteritum]();;Er stellte auf
+- ausdrucken↔to print out #verben
+    - [präteritum]();;Er druckte aus
+    - [perfekt]();;Er hat ausgedruckt
+        - Ich habe mir die E-mail ausgedruckt. 
+        - Die Fragen sind auf einem separaten Blatt ausgedruckt.
+    - Die Sekretärin druckte zwei Exemplare des Berichts aus.→The secretary printed out two copies of the report.  
+- --------------------- Portal ---------------------
+    - German
+- ausführen↔to execute / to carry out #verben
+    - noun→die Ausführung ← {{version}}  | {{design}} 
+    - [präteritum]();;Er führte aus
+    - [perfekt]();;Er hat ausgeführt
+        - Sämtliche Arbeiten werden von ihm persönlich ausgeführt.
+    - Er würde seine [Befehle]() ausführen.→He would carry out his orders.
+- ausgleichen↔to balance [to even up] / to make up for / to compensate / to settle account #verben
+    - noun→das Gleichgewicht→{{balance / equilibrium}} 
+    - [präteritum]();;Er glich aus
+    - [perfekt]();;Er hat ausgeglichen
+        - In der zweiten Halbzeit spielten sie relativ ausgeglichen. 
+    - Sie gleicht ihre Arbeitsbelastung durch lange Wochenenden aus.→She balances her workload with long weekends.
+    - Die niedrigen Steuern gleichen das reduzierte Einkommen aus.  
+- aushelfen↔to help out #verben
+    - Ich brauche jemanden, der im Geschaft aushilf. 
+    - [präteritum]();;Er half aus
+    - [perfekt]();;Er hat ausgeholfen
+- auskennen↔to know
+    - Ein Freund von mir kennt sich {{mit}} Computern sehr gut aus? 
+    - präteritum→Er kannte aus
+    - perfekt→Er hat ausgekannt
+- auslesen↔to read out / to finish reading
+    - präteritum→Er las aus
+    - perfekt→Er hat ausgelesen
+    - Ich [schätze](Verbs/sch%C3%A4tzen.md), wenn er kein [Geständnis ]() [kriegt](Verbs/kriegen.md), wird er wohl ihre Erinnerungen **auslesen**. 
+- auspressen↔to squeeze #verben
+    - synonym→[ausdrücken](Verbs/dr%C3%BCcken/ausdr%C3%BCcken.md) / [kneifen](Verbs/kneifen.md) 
+    - [präteritum]();;Er preßte aus
+    - [perfekt]();;Er hat ausgepresst
+    - Einfach nur diese Kerne auspressen, mit aller Kraft, nichts drin lassen von dem Zeug.→Just squeeze those kernels, with all your might, leaving none of that stuff in.
+- auspusten↔to blow out
+    - [präteritum]();;Er pustete aus
+    - [perfekt]();;Teresa hat alle zwölf Kerzen {{auf}} ihrer Geburtstagsorte ausgepustet.
+    - perfekt→Teresa hat alle zwölf Kerzen {{auf}} ihrer Geburtstagsorte ausgepustet.
+    - präteritum→Er pustete aus
+- ausrüsten↔to equip  #verben
+    - noun→die Ausrüstung ← equipment / gear
+        - Wir verbrachten den Nachmittag mit der Reinigung unserer Ausrüstung.  
+    - [präteritum]();;Er rüstete aus 
+    - [perfekt]();;Er hat ausgerüstet 
+        - Wir haben uns mit Pistolen ausgerüstet.
+    - ausstatten↔to equip [in decorative aspect]  #verben
+        - [präteritum]();;Er stattete aus 
+        - [perfekt]();;Er hat ausgestattet
+- ausscheiden↔to drop out / to eliminate / to resign #verben
+    - synonym→beheben⇒to eliminate
+        - Wir werden das Problem so schnell wie möglich beheben.  
+    - [präteritum]();;Er schied aus
+        - Unser Team schied bereits in der Vorrunde aus. 
+    - [perfekt]();;Er hat ausgeschieden
+        - Ich bin letztes Jahr aus der Kampagne ausgeschieden.  
+        - Madrid war bereits in der ersten Runde ausgeschieden.  
+    - synonym→beseitigen→to eliminate
+    - Sie musste wegen einer Verletzung aus dem Rennen ausscheiden.  
+- aussuchen↔to pick out / to choose #verben
+    - [präteritum]();;Er suchte aus
+    - [perfekt]();;Er hat ausgesucht
+        - Ich habe mir ein neues Kleid ausgesucht.
+- austragen↔to hold [event usually sport] / to stage  #verben
+    - [präteritum]();;Er trug aus
+    - [perfekt]();;Er hat ausgetragen
+        - Das Finale wird am Sonntag ausgetragen.
+    - Das Volleyballspiel wird in einer Sporthalle ausgetragen.  
+- auswählen↔to choose #verben
+    - [präteritum]();;Er wählte aus
+        - Die Studenten wählten einen Vertreter aus ihrer Klassu zu. 
+    - [perfekt]();;Er hat ausgewählt
+- ausweichen↔to dodge
+    - Sie konnte dem Radfahrer ausweichen.
+- bauen↔to build / to construct
+    - anbauen↔to grow sth. / to cultivate sth. / to raise crops / to extend a house
+        - synonym→anpflanzen / pflanzen
+            - Alle halfen zusammen, um das [Getreide ]() anzupflanzen.
+    - abbauen→to dismantle sth. / {{to destroy sth.}} / {{to remove [stress,tension,anxiety]}} / {{to relieve sth.}} / {{to reduce sth. }}/ {{to cut sth. }}/ {{to mine}} 
+        - Abbau↔dismantling 
+        - perfekt→In China werden täglich etwa zehn Millionen Tonnen Kohle abgebaut. 
+        - Meditation kann helfen, [Spannung ]() abzubauen.  
+    - aufbauen #verben
+        - to put up / to form←Der Berater half mir, mein eigenes Unternehmen aufzubauen.  
+        - to structure←Es ist wichtig, einen [Aufsatz ]() klar aufzubauen. 
+        - to arrange←Ich baute meinen Lebenslauf tabellarisch auf.  
+        - to build up←Ich baue meine Muskeln auf und werde stärker.
+        - to establish←Er hat in kürzester Zeit ein erfolgreiches Unternehmen aufgebaut.  
+        - to set up←Wir werden einen Stand aufbauen, um unser Obst zu verkaufen.  
+        - [präteritum]();;Sie baute auf
+        - [perfekt]();;Die Stände werden ab fünf Uhr aufgebaut
+            - The stands are set up from five o'clock.
+    - einbauen↔to install / to incorporate / to put sth. into sth. #verben
+        - [präteritum]();;Er baute ein
+        - [perfekt]();;Er hat eingebaut 
+    - erbauen↔to build
+- beachten↔to observe / to respect  #verben
+    - [präteritum]();;Er beachtete 
+    - [perfekt]();;Er hat beachtet 
+    - Bitte beachten Sie die Vorschriften.↔Please observe the rules.  
+- bearbeiten↔to process / to edit #verben
+    - [präteritum]();;Er bearbeitete
+    - [perfekt]();;Er hat bearbeitet
+        - Alle Aufträge werden schnell und sorgfältig bearbeitet. 
+- sich bedanken↔to thank you
+    - Ich bedanke mich {{bei}} meinem Bruder {{für}} das Geschenk.
+- bedauern↔to regret / to commisserate #verben
+    - [präteritum]();;Er bedauerte
+    - synonym→bereuen
+        - [Aliases]()
+            1. bereuen
+        - Sie bereuen es also nicht?→So you have no regrets?
+    - [perfekt]();;Er hat bedauert
+- bedenken↔to consider #verben
+    - adjektiv→betrachtet 
+    - [präteritum]();;Er bedachte
+    - [perfekt]();;Er hat bedacht
+    - Was ist bei einem Schulwechsel zu bedenken?→What to consider when changing schools?
+- bedrohen↔to threaten  #verben
+    - [präteritum]();;Er bedrohte 
+    - [perfekt]();;Er hat bedroht
+- befreien↔to set free 
+- begegnen↔to meet #verben
+    - [präteritum]();;Er begegnete
+    - [perfekt]();;Er ist begegnet
+        - Ich bin meiner Ex-Freundin täglich auf dem Weg zum Bahnhof begegnet. 
+- begehren↔to desire  #verben
+    - [präteritum]();;Er begehrte 
+        - Das war eigentlich alles, was ich zu wissen begehrte.
+    - [perfekt]();;Er hat begehrt 
+        - Was ihr Herz begehrt. 
+    - Sie war alles, was unsere Herzen begehren konnten.
+- begeistern↔to inspire / to delight #verben
+    - [präteritum]();;Er begeisterte
+    - [perfekt]();;Er hat begeistert
+- begleichen↔to settle #verben
+    - synonym→sich niederlassen | schlichten
+        - Sie wollte sich mit ihm in der Nähe von Nürnberg niederlassen.  
+        - Die Polizei musste eingreifen, um den Streit zu schlichten.  
+    - [präteritum]();;Er beglich
+    - [perfekt]();;Er hat beglichen
+    - Die [Rechnung ]() aus [eigener]() Tasche begleichen
+- begreifen↔to grasp / to understand / to realize #verben
+    - Es fällt uns schwer, diese Entscheidung zu begreifen. 
+    - [präteritum]();;Er begriff
+    - [perfekt]();;Er hat begriffen
+    - Sie kann komplexe Probleme begreifen und sie schnell lösen.  
+    - Er begreift den Fehler, den er gemacht hat.  
+    - Ich begriff endlich, was mein Lehrer meinte.  
+- begrüßen↔to welcome #verben
+    - [präteritum]();;Er begrüßte
+        - Der Geschäftsführer begrüßte die neuen Mitarbeiter. 
+    - [perfekt]();;Er hat begrüßt
+- behaupten↔to claim #verben
+    - noun→die Behauptung
+        - bedeutung;;statement / claim / allegation
+            - Alle Behauptungen gegen den Angeklagten waren falsch.  
+    - Der Angeklagte behauptet, unschuldig zu sein.
+    - [präteritum]();;Er behauptete
+    - [perfekt]();;Er hat behauptet
+- beinhalten↔to involve / to contain  #verben
+    - adjektiv→inbegriffen→included / inclusive
+        - Im Preis sind alle [Leistungen]() inbegriffen.→The price is inclusive of all services.  
+    - [präteritum]();;Er beinhaltete 
+    - [perfekt]();;Er hat beinhaltet 
+- --------------------- Portal ---------------------
+    - German
+- belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben
+    - beweisen↔to prove / to demonstrate
+        - Er hat Mut, Kraft und Engagement **bewiesen**.
+    - bestätigen↔to confirm / to verify / to acknowledge / to validate
+        - bekräftigen↔to confirm / to reinforce / to affirm
+            - Sie bekräftigte, sie habe den Hund gut versorgt.  
+    - berücksichtigen↔to consider / take into account
+        - noun→der Betracht ← consideration / considering
+            - Was brauchen Sie, bevor Sie eine Investition in Betracht ziehen?  
+        - Wir haben nicht berücksichtigt, dass der Zug schon um 6 Uhr kommt.
+    - [perfekt]();;Er hat belegt
+        - Ist diese [Aussage ]() durch wissenschaftliche Studien belegt?
+    - sich bewähren / nachweisen↔to prove
+        - adjektiv→bewährte
+            - Unsere Ventile arbeiten auf die herkömmliche, bewährte Art.→Our valves operate in the conventional, proven way.
+        - der Nachweis↔{{verification}} | {{proof}} 
+            - synonym→Überprüfung ← {{verification}} | {{review}} 
+                - Können Sie heute eine abschließende Überprüfung dieses Dokuments vornehmen?  
+            - Den Nachweis [bekommen ]() Sie von Ihrem Arbeitgeber.  
+        - adverb→nachweislich ← demonstrable / verifiable
+        - Du solltest dich erst bewähren.
+        - Die Wissenschaftler wiesen die Wirksamkeit dieses Medikaments nach.  
+    - [präteritum]();;Er belegte
+        - Er belegte einen Tanzkurs.
+    - Die Arbeitsgruppe belegte den Seminarraum für einige Stunden.  
+    - Unsere Ergebnisse belegen die Hypothesen.  
+    - Wissenschaftliche Fakten belegen meine These.  
+    - **Belegen** Sie den kleinen Konferenzraum.  
+    - Wir könnten zum Beispiel einen Golfkurs belegen.
+- beleidigen←to insult / to offend / to slander #verben
+    - [präteritum]();;Er beleidigte
+    - [perfekt]();;Er hat beleidigt
+- belohnen↔to reward #verben
+    - noun→Belohnung : {{reward}} 
+    - [präteritum]();;Er belohnte
+        - Meine Mutter belohnte mich für meine Hilfe mit 100 Euro 
+    - [perfekt]();;Er hat belohnt
+    - Ich werde dich belohnen für diese Nacht.→I will reward you for this night.
+- sich bemühen↔to endeavor / to attempt / to strive #verben
+    - Ich muss mich bemühen, das Ziel des Projektes zu erreichen.  
+    - [präteritum]();;Er bemühte sich
+    - [perfekt]();;Er hat sich bemüht
+- benachrichtigen↔to notify  #verben
+    - [präteritum]();;Er benachrichtigte 
+    - [perfekt]();;Er hat benachrichtigt
+    - Du wirst Tom benachrichtigen, nicht wahr?  
+- beschleunigen↔to accelerate / to speed up  #verben
+    - [präteritum]();;Er beschleunigte 
+    - [perfekt]();;Er hat beschleunigt 
+    - Wir müssen Mitarbeiter anwerben, um das Projekt zu beschleunigen.  
+- beschließen↔to resolve / to conclude / to decide
+    - noun→Schlussfolgerung / {{Feststellung}} ← conclusion / {{realization}} 
+    - präteritum;;Er **beschloss** Arzt zu werden.
+    - perfekt;;Er hat beschlossen
+- beschränken↔to limit / to restrict / to confine / to constrain  #verben
+    - [präteritum]();;Er beschränkte 
+    - [perfekt]();;Er hat beschränkt
+    - Bevor Manet dieses Bild malte, waren seine weiblichen [Akte]() auf Göttinnen beschränkt.  
+- besetzen↔to occupy sth. / to cast a role / to staff; to fill a position #verben
+    - [perfekt]();;Er hat besetzt
+    - [präteritum]();;Er besetzte
+    - Die [Umkleidekabine]() ist besetzt. 
+    - [perfekt]();;Er hat besetzt
+- --------------------- Portal ---------------------
+    - German
+- bestaunen↔to gaze 
+- bestrafen↔to punish #verben
+    - [präteritum]();;Er bestrafte
+    - [perfekt]();;Er hat bestraft
+        - Mein Vater wurde wegen Diebstahls mit drei Monaten Gefängnis bestraft. 
+    - Es geht immer ums Bestrafen.↔It's always about punishing
+- --------------------- Portal ---------------------
+    - German
+- betragen↔to add up to / to amount to sth. / to account for
+    - präteritum;;Es betrug
+        - Die [Ausgaben]() **betrugen** insgesamt 200.000 Yen. 
+    - perfekt;;Die [Ausgaben]() haben insgesamt 200.000 Yen betragen.
+- betreten↔to enter #verben
+    - Nachdem alles vorbereitet war, betraten die Gäste den Speisesaal. 
+    - [präteritum]();;Er betrat
+    - [perfekt]();;Er hat betreten
+    - eintreten↔to enter / to step in
+- betreiben↔to operate / to conduct th. / to power #verben
+    - noun→der Betreiber
+    - der Betrieb↔firm / establishment / company
+        - Manche Betriebe bieten Kinderbetreuung für Mitarbeiter an.  
+    - [präteritum]();;Er betrieb
+    - [perfekt]();;Er hat betrieben
+        - Der Motor wird von einer Batterie betrieben
+    - Ich bin die Inhaberin und betreibe das Geschäft selbst.  
+- backen↔to bake
+    - präteritum;;Er backte / Er {{buk}}
+    - perfekt;;Er hat gebacken
+- bedeuten↔to mean
+    - präteritum→Er bedeutete
+    - perfekt→Er hat bedeutet
+    - Was bedeuten diese [Begriffe ]()?  
+- beeindrucken↔to impress
+    - perfekt;;Der Chef war {{von}} meiner [Leistung]() beeindruckt.
+- beginnen
+    - präteritum;;Er begann
+    - perfekt;;Er hat begonnen
+- begleiten↔to accompany #verben
+    - noun→der Begleiter | die Begleitung
+    - [präteritum]();;Er begleitete
+        - Meine Freundin begleitete mich auf meiner Reise. 
+    - [perfekt]();;Er hat begleitet
+- sich beklagen↔to complain #verben
+    - [präteritum]();;Er beklagte sich
+        - Ich beklagte mich beim Kellner über das kalte Essen.
+    - [perfekt]();;Er hat sich beklagt
+        - Ich habe mich nicht beklagt. Ich habe bloß gefragt. 
+    - Hör auf, dich zu **beklagen.** 
+- benennen↔to designate / to appoint / to call / to address
+    - präteritum;;Er benannte seinen Sohn {{nach}} meinem Großvater.
+    - perfekt;;Wir haben meinen Sohn nach meinem Großvater **benannt**.
+- benötigen↔to need #verben
+    - noun→Bedürfnisse→needs / necessities
+    - Wir benötigen etwas Hilfe dabei, diese [Kisten]() zu [bewegen](Verbs/bewegen.md).
+        - 
+    - [präteritum]();;Er benötigte
+    - [perfekt]();;Er hat benötigt.
+- beraten↔to advise / to counsel
+    - der Berater→consultant
+    - präsens;;Er berät
+    - präteritum;;Er beriet
+    - perfekt;;Er hat beraten
+    - präteritum;;Er beriet
+- bergen↔to secure / to salvage / to contain / to rescue  #verben
+    - [präteritum]();;Er barg 
+        - Die [Küstenwache ]() barg die Mannschaft von dem havarierten Schiff.→The coastguard rescued the crew from the wrecked ship.  
+    - [perfekt]();;Er hat geborgen
+        - Die Katze liegt wohlbehütet und geborgen im [Schoß ]() des Mädchens.
+    - Unsere Rettungshunde bergen jedes Jahr viele Verletzte.  
+- beruhen↔to rest on sth. / to depend on sth. / to be based on sth. #verben
+    - synonym→basieren
+        - Der Roman basiert auf wahren [Begebenheiten]().→The novel is based on true events.
+    - [Aliases]()
+        1. beruht
+    - --------------------- Portal ---------------------
+        - German
+    - [präteritum]();;Er beruhte
+    - [perfekt]();;Er hat beruht
+    - Ihre Argumentation beruhte nicht {{auf}} Fakten.
+- beschreiben
+    - präteritum;;Er beschrieb
+    - perfekt;;Er hat beschrieben
+- betreffen↔to concern / to affect / to relate to sth. / to pertain to #verben
+    - to affect←Keine Angst, dieses Verbotsschild betrifft uns nicht. 
+    - to pertain to←Die Informationen betreffen das [obengenannte ]() [Thema ]().   
+    - synonym;;[angehen](Verbs/gehen/angehen.md) 
+        - Wir sollten diese Herausforderungen angehen.
+    - [präteritum]();;Es betraf
+    - [perfekt]();;Es hat betroffen
+- betreuen↔to supervise / to guide / to mentor #verben
+    - [präteritum]();;Er betreute
+    - [perfekt]();;Er hat betreut
+        - Jede Kindergartengruppe wird von zwei Erzieherinnen betreut. 
+- betrügen↔to cheat
+    - der Betrug↔Fraud
+    - synonym→schwindeln 
+    - Mein Bruder betrügt nie, wenn wir Karten spielen.
+    - präteritum→Er betrog
+    - perfekt→Er hat betrogen
+- bewältigen↔to cope with #Verbs #verben
+    - [präteritum]();;Er bewältigte
+    - synonym→zurechtkommen #Verbs
+        - Es gelang ihm schnell, mit der neuen Situation zurechtzukommen.→He quickly managed to cope with the new situation.  
+    - [perfekt]();;Er hat bewältigt
+- bewahren↔to preserve / to retain sth. / to conserve / to keep #verben
+    - noun→die Erhaltung⇒preservation
+    - Ich bewahre Tassen und [Schüsseln]() im Schrank auf.
+    - [präteritum]();;Er bewahrte
+    - [perfekt]();;Er hat bewahrt
+- bewegen↔to persuade / to move #verben
+    - adjektiv→bewegend : moved / touched 
+    - [präteritum]()
+        - persuaded→Er bewog
+            - Ich habe keine Ahnung, welcher Instinkt mich dazu bewog.→I have no idea what instinct led me to do this.
+        - moved→Er bewegte
+            - Etwas bewegte sich vor ihm.
+    - [perfekt]()
+        - persuaded→Er hat bewogen
+            - Und was hat Sie dazu bewogen, zurückzukehren?→And what made you decide to return?
+        - moved→Er hat bewegt
+            - Ich weiß, was dich bewegt.→I know what moves you.
+    - to move: Er bewegt sich nicht mehr.
+    - rücken↔to move  #verben
+        - [präteritum]();;Er rückte 
+        - [perfekt]();;Er hat gerückt
+        - Rücke den Stuhl näher an den Tisch.  
+- sich bewerben
+    - noun→der Bewerber
+    - präteritum;;Er bewarb sich
+    - perfekt;;Er hat sich beworben
+- bewundern↔to admire #verben
+    - Ich bewundere deinen [Ehrgeiz]().
+    - [präteritum]();;Er bewunderte
+    - [perfekt]();;Er hat bewundert
+    - noun→der Bewunderer
+- bevorzugen↔to prefer #verben
+    - synonym→[vorziehen](Verbs/ziehen/vorziehen.md) 
+        - Ich würde es sogar vorziehen.
+    - [präteritum]();;Er bevorzugte
+    - [perfekt]();;Er hat bevorzugt
+    - Ich mag Weißwein, aber ich bevorzuge Rotwein.
+- biegen↔to bend  #verben
+    - [präteritum]();;Er bog
+    - [perfekt]();;Er hat gebogen 
+    - Die Stöcke dürft ihr nicht zu stark biegen, sonst brechen sie.
+- bieten↔to provide
+    - noun→der Anbieter ← provider
+        - 58 Prozent der Verbraucher wechseln den Anbieter nicht.
+    - synonym→verschaffen | spenden
+        - Blumen können Gefühle vermitteln und spenden Trost, wenn Worte fehlen. 
+    - präteritum;;Er bot
+    - perfekt;;Er hat geboten
+    - anbieten↔to provide / to offer / to supply
+        - das Angebot←offer / proposition / quotation / proposal
+        - das Sonderangebot↔special offer
+            - Gibt es heute Sonderangebote?  
+        - das Stellenangebot↔job offer
+- bilden↔to form
+    - Sie nimmt die Kinder an die Hand und bildet einen Kreis.  
+- bitten↔to request
+    - synonym→[anfordern](Verbs/fordern/anfordern.md) 
+    - präposition→um
+    - perfekt;;Er hat gebeten
+        - Sie hätten {{um}} Schutz gebeten.→They would have asked for protection.
+    - präteritum;;Tom **bat** {{um}} einen freien Tag.
+    - Sie **bitten** mich um Hilfe.   
+- bleiben↔to stay / to remain 
+    - präteritum;;Er blieb
+        - Wir blieben bei unserem [ursprünglichem]() Plan.  
+        - Tom blieb zeit seines Lebens alleinstehend.  
+    - perfekt;;Er ist geblieben
+- bohren↔to drill #verben
+    - [präteritum]();;Er bohrte
+    - [perfekt]();;Er hat gebohrt
+        - Ich habe ein Loch in die Wand gebohrt, um ein Regal anzubringen. 
+- bremsen→to inhibit / to slow down / to brake
+    - gegenteil;;Gas geben
+        - bedeutung;;to accelerate
+        - perfekt;;Auf der Autobahn hat er richtig Gas gegeben
+    - präteritum→Er bremste
+        - Er bremste den Waagen gerade noch vor der roten [Ampel]().
+    - perfekt→Er hat gebremst
+- brechen↔to break / to burst / to snap
+    - präsens;;Er bricht
+    - präteritum;;Er brach
+- brennen↔to burn / to be on fire
+    - präteritum;;Es brannte
+    - perfekt;;Es hat gebrannt
+    - Brennen Sie das Haus [synonym](../German/Adverbs/Location/hinab/synonym.md).→Burn down the house.
+- bringen
+    - gegenteil;;holen
+    - präteritum;;Er brachte
+    - perfekt;;Er hat gebracht
+    - beibringen↔to teach  #verben
+        - [präteritum]();;Er brachte bei 
+        - [perfekt]();;Er hat beigebracht 
+            - Du hast mir so vieles beigebracht.  
+- decken↔to blanket / to cover
+    - noun→Deckel ← {{cover}} 
+        - Legen sie doch einfach den Deckel auf den Topf!  
+    - perfekt→Er hat gedeckt
+    - bedecken↔to cover / to cloak / to coat with paint
+        - Ich bedeckte den Vogelkäfig mit einer Decke.→I covered up the birdcage with a blanket.  
+    - präteritum→Er deckte
+    - abdecken↔to cover / to conceal / to mask #verben
+        - [präteritum]();;Er deckte ab 
+        - [perfekt]();;Er hat abgedeckt 
+            - Der Schaden war durch die Versicherung abgedeckt.  
+        - Wir haben die Gartenmöbel abgedeckt, damit sie nicht nass werden.→We covered the garden furniture so that it would not get wet.  
+- dehnen↔to stretch (stretching) #verben
+    - Mann sollte die Muskeln vor und nach dem Training dehnen. 
+    - [präteritum]();;Er dehnte
+    - [perfekt]();;Er hat gedehnt
+- --------------------- Portal ---------------------
+    - German
+- dienen↔to serve some kind of master or purpose / to function #verben
+    - falls→dativ
+    - [präteritum]();;Er diente
+    - [perfekt]();;Er hat gedient
+        - Er hat in der Luftwaffe gedient. 
+    - Er dient seinem Land.
+    - Dieses Gerät dient {{zur}} [Stromversorgung ]().  
+    - bedienen↔to serve sb. / to operate sth. / to handle
+        - falls→akkusativ
+        - Der Bauarbeiter bedient den [Bagger]()
+        - Wie bedient man diesen Computer? 
+        - sich bedienen↔to help oneself / to employ sth. / to make use of sth.
+            - Bitte bedienen Sie sich selbst.
+- drängen↔to urge sb. / to push/shove sb. #verben
+    - Die Zeit drängt, ich muss etwas unternehmen, aber was? 
+    - [präteritum]();;Er drängte
+    - [perfekt]();;Er hat gedrängt
+- drehen↔to spin / to twist / to shoot / to film #verben
+    - [präteritum]();;Er drehte
+    - [perfekt]();;Er hat gedreht
+        - Schau mal, hier wird gerade ein Film gedreht. 
+    - Der Regisseur entschied sich, die Szene draußen zu drehen.  
+    - In diesem Spiel muss man das Glücksrad drehen.→In this game one has to spin the wheel of fortune.  
+    - aufdrehen↔to turn on [gas/faucet]
+        - Vielleicht sollte ich doch gehen und das Gas aufdrehen.
+    - zudrehen↔to turn off [gas/faucet] #verben
+        - [präteritum]()  Er drehte zu
+        - 
+        - Man kann die Wahrheit nicht auf- und zudrehen wie einen Wasserhahn
+        - [perfekt]();;Er hat es zugedreht
+- drücken↔to press / to push
+    - ausdrücken↔to squeeze / to express / to phrase
+        - synonym→[auspressen](Verbs/auspressen.md) 
+        - adverb→ausdrücklich ← {{explicity | specifically}} 
+        - Ich kann es nicht besser ausdrücken.→I can't put it any better than that.
+    - zerdrücken↔to crumple / to crush / to pulp
+        - Es schien, als würde er den Kugelschreiber in seiner Hand zerdrücken.
+        - Ich zerdrückte eine Banane für mein Baby.  
+- durchziehen↔to pull off / to swipe [credit card] / to follow through on. with sth. / to see sth. through #verben
+    - [präteritum]();;Er zog durch 
+        - Er zog seine Kreditkarte durch, um die Zahlung [abzuschließen]().→He swiped his credit card to complete the payment.
+        - Die Vereinsmitglieder zogen ihre Entscheidung durch.→The club members saw their decision through.  
+    - [perfekt]();;Er hat durchgezogen
+    - Sie musste das alleine durchziehen.
+- dürfen
+    - präsens;;Er darf
+    - präteritum;;Er durfte
+    - perfekt;;Er hat gedurft
+- ehren↔to honor
+    - Euer Ehren↔your honor 
+- sich eignen↔to qualify / to suit / to be suitable #verben
+    - adjektiv→geeignete
+    - synonym→qualifizieren
+    - [präteritum]();;Er eignete sich
+        - Ich eignete mich perfekt für die Rolle.
+    - [perfekt]();;Er hat sich geeignet
+        - Ist diese Therapie für mich geeignet? 
+    - Sie eignen sich nicht zum Verkauf.→They are not suitable for sale.
+- sich einbilden↔to imagine 
+- einbringen↔to introduce / to contribute #verben
+    - noun→der Einstieg→{{Introduction}} 
+        - Dieser [Lehrgang ]() ermöglicht den Einstieg in die Logistik.  
+    - synonym→[einführen](Verbs/einf%C3%BChren.md)
+    - Vor der Wahl will er noch ein neues Gesetz einbringen.
+    - [präteritum]();;Er brachte ein
+    - [perfekt]();;Er hat eingebracht
+- einfügen↔to insert / to paste / to include / to fit in #verben
+    - gegenteil;;[abschreiben](Verbs/schreiben/abschreiben.md) 
+    - [präteritum]();;Er fügte ein
+    - [perfekt]();;Er hat eingefügt
+        - Ich habe deinen Text auf Seite 3 eingefügt.
+    - Ich glaube nicht, dass ich mich in deine Welt **einfügen** könnte.   
+- einfallen↔to come to mind / to come up [thought] #verben
+    - [präteritum]();;Er fiel ein
+    - [perfekt]();;Er hat eingefallen
+    - Es muß uns etwas einfallen.↔We have to come up with something.
+- einführen↔to launch / to introduce / to initiate #verben
+    - synonym→[einbringen](Verbs/einbringen.md) | [einleiten](Verbs/einleiten.md) 
+    - [präteritum]();;Er führte ein
+        - Unsere Firma führte letztes Jahr zwei neue Produkte ein.  
+        - Die Firma führte ein neues Kommunikationssystem ein.  
+    - [perfekt]();;Er hat eingeführt
+        - Der Buddhismus wurde 538 in Japan eingeführt. 
+    - Wir sollten Veränderungen einführen, und werden das auch bald tun.  
+    - Wir werden nächstes Jahr eine neue Regelung einführen.  
+- einsehen↔to accept a realization / to view #verben
+    - [präteritum]();;Er sah ein 
+        - Er sah ein, dass er einen Fehler gemacht hatte.  
+    - noun→das Einsehen ← {{change of heart}} | {{mercy}} 
+        - Das Schicksal hatte ein Einsehen.
+    - [perfekt]();;Er hat eingesehen 
+        - Der Spielplan kann auf der Homepage des Vereins eingesehen werden.
+    - Ich sehe jetzt ein, dass ich einen Fehler gemacht habe.  
+- sich entspannen↔to chill out #verben
+    - [perfekt]();;Er hat sich entspannt
+    - adjektiv→entspannte ← {{relaxed}} 
+        - Leisten Sie uns in entspannter Atmosphäre im Foyer Gesellschaft.→Join us in the relaxed atmosphere of the foyer.
+    - noun→die Entspannung
+    - [präteritum]();;Er entspannte sich
+        - Wir entspannten uns den ganzen Tag am Strand. 
+- einladen
+    - präsens;;Er lädt ein
+    - präteritum;;Er lud ein
+    - perfekt;;Er hat eingeladen
+        - Tom war traurig, weil er der Einzige war, der nicht zum Fest eingeladen wurde.  
+- einleiten↔to initiate  #verben
+    - noun→die Einleitung → introduction
+    - [perfekt]();;Er hat eingeleitet
+        - Ich habe ein [Gerichtsverfahren ]() gegen ihn eingeleitet. 
+    - [präteritum]();;Er leitete ein 
+    - Der Mediator leitete die Diskussion zwischen den zwei Parteien ein.  
+- sich einmischen↔to interfere #verben
+    - synonym;;eingreifen 
+    - Ich mische mich nie in die privaten Angelegenheiten anderer Personen ein.
+    - [präteritum]();;Er mischte sich ein
+    - [perfekt]();;Er hat sich eingemischt
+- einreichen↔to submit / to file #verben
+    - [präteritum]();;Er reichte ein
+    - [perfekt]();;Er hat eingereicht
+        - Haben Sie Ihre [Klage ]() schon eingereicht?  
+- einrichten↔to establish / to organize / to furnish #verben
+    - synonym→{{sich etablieren / }}[aufstellen](Verbs/aufstellen.md){{ / feststellen}} 
+    - [präteritum]();;Er richtete ein
+    - [perfekt]();;Er hat eingerichtet
+        - Unsere Zimmer sind modern und liebevoll eingerichtet. 
+- einstufen↔to rank / to grade / to classify / to categorize / to rate #verben
+    - [präteritum]();;Er stufte ein
+    - [perfekt]();;Er hat eingestuft
+- einweihen↔to inaugurate / to induct / to dedicate / {{to fill sb. in with information}}  #verben
+    - noun→die Einweihung ← inaguration
+        - Die offizielle Einweihung fand am Freitag statt.  
+    - [perfekt]();;Er hat eingeweiht
+        - Der neue Kinderspielplatz ist eingeweiht!
+    - [präteritum]();;Er weihte ein
+    - Also hatte er ihn in das Geheimnis **einweihen** müssen.   
+- einzahlen↔to deposit
+    - noun→Anzahlung→deposit | Kaution→deposit of rent
+    - gegenteil→[abheben](Verbs/abheben.md)
+    - präsens;;Sie zahlt jeden Monat ihr [Trinkgeld]() {{auf}} ihr Konto ein.
+- empfinden↔to feel / to sense / to perceive
+    - präsens;;Er empfindet
+    - präteritum;;Er empfand
+    - perfekt;;Er hat empfunden
+- entfernen↔to remove #verben
+    - synonyms→abnehmen / abbauen
+    - [präteritum]();;Er entfernte
+    - [perfekt]();;Es hat entfernt
+- entlassen↔to release / to dismiss / to fire #verben
+    - noun→die Entlassung→ {{dismissal}} / {{discharge}} 
+        - Zum Zeitpunkt seiner Entlassung aus dem Krankenhaus war er völlig genesen.  
+        - Nach ihrer Entlassung fand sie schnell einen besseren Job.  
+    - [präteritum]();;Er entließ
+    - [perfekt]();;Er hat entlassen
+    - Er wurde bis zu seiner [Verhandlung ]() gegen Kaution entlassen.→He was released on bail until his trial.  
+- entziffern↔to decipher 
+- sich engagieren↔to campaign / to be committed
+    - adjektiv→begangen→committed
+        - Er ist begangen. 
+    - präsens;;Ich engagiere mich {{für}} den Umweltschutz.
+    - noun→Zusage→{{commitment}}
+        - Ich warte auf dein **Zusage** bevorich einen Tisch reserviere.
+- entscheiden↔to decide
+    - präsens;;Er entscheidet
+    - präteritum;;Er entschied
+    - perfekt;;Er hat entschieden
+- entsprechen↔to correspond / to match / to conform / to satisfy #verben
+    - [präteritum]();;Er entsprach
+    - [perfekt]();;Er hat entsprochen 
+    - Die Wohnung entspricht meinen Vorstellungen.  
+    - Sie entsprechen allen [Angaben]() meines [Auftrags ]().→They correspond to all the specifications of my order.
+- entsetzen↔to horrify | to shock | to appall #Stub #verben
+    - [Aliases]()
+        1. entsetzt
+    - synonym→erschreckt 
+    - [präteritum]();;Er entsetzte
+    - [perfekt]();;Er hat entsetzt
+    - Seine schlechten Tischmanieren entsetzten sie.  
+    - Ihre unhöflichen Manieren entsetzen mich.  
+- entstehen↔to emerge / to arise / to originate / {{to occur}} / to happen
+    - [Aliases]()
+        1. entstanden
+    - synonym→[vorkommen](Verbs/vorkommen.md) 
+    - präteritum;;Es entstand
+    - Was ist die oberste Priorität bei **entstehenden** Problemen?→What is the top priority for problems that arise?
+    - perfekt;;Es ist entstanden
+        - Und die [Undichtigkeit]()? [Wodurch](../German/Da%20_%20Wo-W%C3%B6rter/Wo/wodurch.md) ist die entstanden?→And the leakage? How did this occur?
+- entkommen↔to escape / to get away from sb. #verben
+    - [präteritum]();;Er entkam
+        - Nach dem Krieg entkam er.
+    - [perfekt]();;Der [Adler]() ist entkommen
+- entziehen↔to deprive / to revoke / to escape #verben
+    - [präteritum]();;Er entzog 
+        - Die Behörden entzogen dem Restaurant die [Betriebserlaubnis ]().  
+    - [perfekt]();;Er hat entzogen 
+        - Dem Hersteller wurde das Zertifikat entzogen.   
+    - Dieser [Pflicht ]() kann ich mich nicht entziehen.
+    - Sie versuchte, sie ihm zu **entziehen**.→She tried to take it away from him.
+- erben↔to inhreit #verben
+    - Tom erbte ein großes [Vermögen ](). 
+    - [präteritum]();;Er erbte
+    - [perfekt]();;Er hat geerbt
+- erfahren↔to find out / to experience
+    - präsens;;Sie wollte mehr {{über}} das Projekt erfahren.
+    - präteritum;;Der Künstler erfuhr [Heftig]() Kritik, bevor er erfolgreich wurde.
+    - perfekt;;Ich habe heute erfahren.
+- erfassen↔to collect / to capture / to record / to gather #verben
+    - [präteritum]();;Er erfaßte
+    - [perfekt]();;Er hat erfasst
+        - Welche meiner [Daten]() werden eigentlich vonGoogle erfasst? 
+    - verzeichnen↔to record / to register / to note down / to list  #verben
+        - [präteritum]();;Er verzeichnete 
+            - Das Unternehmen verzeichnete einen kontinuierlichen Gewinnanstieg.  
+        - [perfekt]();;Er hat verzeichnet 
+        - Die Website verzeichnet immer mehr Visits.  
+    - Die Buchhaltung erfasst alle Transaktionen.
+    - Die Projektgruppe erfasste Daten und wertete sie aus.
+- erfolgen↔to take place  #verben
+    - noun→der Erfolg ← success / achievement 
+    - [präteritum]();;Es erfolgte
+    - [perfekt]();;Es hat erfolgt
+    - Eine Volkszählung sollte alle 10 Jahre erfolgen.  
+- erhoffen↔to anticipate / to hope / to wish for  #verben
+    - [präteritum]();;Er erhoffte 
+    - [perfekt]();;Er hat erhofft
+        - Sie konnten wie erhofft ihren [Heimsieg ]() erzielen.  
+- sich erholen←{{to rest}} / {{to recover}} / {{to improve}} / {{to recoup}}  #verben
+    - synonym→sich ausruhen | [sich entspannen](Verbs/sich%20entspannen.md) 
+        - Das Pferd ruht sich im [Stall ]() aus.  
+    - [präteritum]();;Er erholte sich
+    - [perfekt]();;Er hat sich erholt
+- erkennen↔to recognize / to realize / to identify / to tell the difference
+    - präteritum;;Er erkannte
+    - perfekt;;Er hat erkannt
+        - An seinen roten Haaren habe ich ihn sofort erkannt. 
+- erkunden↔to explore 
+    - Es war ein Abenteuer, diesen abgelegenen Berg zu erkunden.
+    - etw. bestaunen↔to marvel at sth. 
+- erlauben↔to allow #verben
+    - noun→die Erlaubnis ← permission
+    - synonym→[ermöglichen](Verbs/erm%C3%B6glichen.md) 
+    - gegenteil→[verweigern](Verbs/verweigern.md) 
+    - Ihre Eltern urlauben ihr nicht, dass sie bei ihrem Freund übernachtet.
+    - [präteritum]();;Er erlaubte
+    - [perfekt]();;Er hat erlaubt
+- erleben↔to experience #verben
+    - [präteritum]();;Er erlebte
+    - [perfekt]();;Er hat erlebt
+        - Hast du schon mal erlebt, dass der Bus zu früh abfährt?
+- --------------------- Portal ---------------------
+    - erledigen #Verb #verben
+- erleichtern↔to facilitate #verben
+    - noun→die Erleichterung ← {{relief}} 
+    - Die Verwendung von Computern kann das Erlernen einer Sprache erleichtern. 
+    - [perfekt]();;Er hat erleichtert
+    - [präteritum]();;Er erleichterte
+- ermöglichen↔to enable  #verben
+    - [präteritum]();;Er ermöglichte 
+    - [perfekt]()  Er hat ermöglicht
+- erneuern↔to renew / to regenerate #verben
+    - die Erneuerung↔renovation / restoration
+    - [präteritum]();;Er erneuerte
+        - Die Stadt erneuerte fast wöchentlich irgendwo einen Bereich.
+    - [perfekt]();;Er hat erneuert
+    - errichten↔to build / to put up #verben
+        - synonym→erbauen
+        - noun→die Errichtung ← construction / development
+            - Der Platz wird für die Errichtung der neuen Schule benötigt.  
+        - [perfekt]();;Er hat errichtet
+        - [präteritum]();;Er errichtete
+- ernten↔to pick sth. [apple,potatoes,cotton] / to harvest / to reap  #verben
+    - [präteritum]();;Er erntete 
+    - [perfekt]();;Er hat geerntet 
+    - pflücken↔to pluck [flowers] / to pick / to gather [berries] / to harvest  #verben
+        - [präteritum]();;Er pflückte 
+            - Tom stieg auf die Leiter und pflückte einen Apfel vom Baum.  
+        - [perfekt]();;Er hat gepflückt 
+- erpressen↔to blackmail 
+- erröten↔to blush #verben
+    - [präteritum]();;Er errötete
+        - Tom errötete leicht und wechselte das Thema. 
+    - [perfekt]();;Er hat errötet
+- erscheinen↔to appear / to emerge / to publish
+    - herausgeben↔to publish / to release / to issue
+        - noun→der Herausgeber ← publisher
+            - [Aliases]()
+                1. Herausgeber
+        - synonym→[ausgeben](Verbs/geben/ausgeben.md) ⇒ to issue / publizieren ⇒ to publish
+    - Sein nächstes Buch wird im kommenden Jahr erscheinen. 
+    - präteritum;;Er erschien
+    - perfekt;;Er ist erschienen
+- erschrecken↔to scare #verben
+    - [präteritum]();;Er erschreckte
+    - [perfekt]();;Er hat erschreckt
+- ersetzen↔to replace / to substitute #verben
+    - noun→Ersatz
+    - [präteritum]();;Er ersetzte
+    - Die Milch kann durch Wasser ersetzt werden. 
+    - [perfekt]();;Er hat ersetzt
+- ersparen↔to save / to spare sb from sth #verben
+    - Er erspart mir echt viel Ärger.
+    - [präteritum]();;Er ersparte 
+    - [perfekt]();;Er hat erspart
+- erstatten←{{to refund}} / {{to reimburse}} / {{to compensate}} #verben
+    - [präteritum]();;Er erstattete
+    - [perfekt]();;Er hat erstattet
+- erstaunen↔to amaze #verben
+    - adverb→erstaunlich ← {{surprising / remarkable }} 
+    - Der Schauspieler erstaunt den Regisseur mit seinem Talent. 
+    - [präteritum]();;Er erstaunte
+    - [perfekt]();;Er hat erstaunt
+- ersticken↔to choke / to suffocate / to smother #verben
+    - [präteritum]();;Er erstickte
+    - [perfekt]();;Er hat erstickt
+        - Sie [rang](Verbs/ringen.md) erstickt nach Luft.
+    - Das Baby erstickte fast an einem Bonbon.
+- ertragen↔to bear #verben
+    - Ich kann den Lärm der bellenden Hunde draußen nicht ertragen.
+    - [präteritum]();;Er ertrug
+    - [perfekt]();;Er hat ertragen
+- ertrinken↔to drown #verben
+    - [präteritum]();;Er ertrank
+    - [perfekt]();;Er ist ertrunken
+        - Ohne seine Hilfe wäre ich möglicherweise ertrunken. 
+    - Ich war [dabei](../German/Da%20_%20Wo-W%C3%B6rter/Da/dabei.md), zu ertrinken.
+- erwerben↔to acquire / to purchase sth. #verben
+    - noun→der Einkauf : purchase
+        - Ich habe den Einkauf bar bezahlt.  
+    - [präteritum]();;Er erwarb
+    - [perfekt]();;Er hat erworben
+        - Getränke können vor Ort erworben werden. 
+- erwidern↔to reply / to answer / to retun / to reciprocate / to respond  #verben
+    - [Aliases]()
+        1. erwiderte
+    - noun→die Rückmeldung 
+    - [präteritum]();;Er erwiderte
+    - [perfekt]();;Er hat erwidert
+    - Seine Gefühle wurden von ihr nicht erwidert.  
+- erwischen↔to catch sb. sth. / to chase down #verben
+    - [präteritum]();;Er erwischte
+    - [perfekt]();;Er hat erwischt
+        - Sie wurden mit den gestohlenen Waren erwischt
+    - Er muss sich beeilen, wenn er den Zug erwischen will.  
+    - fangen↔to catch / to capture / to trap  #verben
+        - adjektiv;;gefangen 
+        - [präteritum]();;Er fing 
+        - [perfekt]();;Er hat gefangen
+            - Ich habe meinem Hund einen Ball zugeworfen, und er hat ihn mit der Schnauze gefangen.  
+        - sich einfangen↔to catch sth. [fever, cold]  #verben
+            - [präteritum]();;Er fing sich eine Erkältung ein
+            - [perfekt]();;Er hat sich Malaria eingefangen 
+            - Alte Menschen fangen sich leicht eine Erkältung ein. 
+- erzählen↔to tell  #verben
+    - [präteritum]();;Er erzählte 
+    - [perfekt]();;Er hat erzählt
+        - Er hat mir viel {{von}} ihrem Urlaub erzählt.
+- erziehen↔to rear / to nurture / to educate / to discipline
+    - präteritum;;Er erzog
+    - perfekt;;Er hat erzogen
+- fahren
+    - noun→die Fahrt 
+    - präteritum;;Er fuhr
+    - perfekt;;Er ist gefahren
+    - überfahren↔to run over / to knock sb. down
+        - Er hat ein [Reh ]() überfahren.
+        - Das [scheue]() Reh lief weg, als wir näher kamen.
+- fallen  #verben
+    - [präteritum]();;Er fiel
+    - [perfekt]();;Er ist gefallen 
+    - anfallen←{{to incur}} / {{to attack}} / {{to arise}} 
+        - synonym→[angreifen](Verbs/angreifen.md)
+        - Wenn weitere Spesen anfallen, dann [übernehme](Verbs/nehmen/%C3%BCbernehmen.md) ich die [ebenfalls](../German/Adverbs/Manner/ebenfalls.md).
+        - Für einen Moment glaubte ich, er würde mich anfallen, doch dann erkannte er mich.→For a moment I thought he was going to attack me, but then he recognized me.
+    - verfallen↔to decay / to expire / to lapse / to deteriorate #verben
+        - adjektiv bedeutung→addicted
+            - Ich bin dir ganz einfach verfallen.
+        - [perfekt]();;Es ist fast ganz **verfallen**
+        - [präteritum]();;Es verfiel
+        - Der Hof war verfallen und unbewohnt.→The farm was dilapidated and uninhabited.
+    - auffallen↔to attrack sb. attention / to strike / to standout  #verben
+        - [präteritum]();;Er fiel auf
+            - Sein [eigenartiges]() Aussehen fiel mir sofort auf.↔His strange looks struck me immediately.  
+            - Ihr neuer Haarschnitt fiel ihrem Ehemann sofort auf.  
+        - [perfekt]();;Er hat aufgefallen 
+            - Ist Ihnen etwas [Merkwürdiges]() aufgefallen?↔Have you noticed anything strange?  
+                - 
+        - Weiße Buchstaben fallen {{vor}} einem schwarzen Hintergrund deutlich auf.→White letters stand out clearly against a black background.
+    - ausfallen #Verb #verben
+        - to fail←Während des Sturms ist die [Mobilfunkverbindung ]() ausgefallen.←During the storm, the mobile phone connection failed.  
+        - [präteritum]();;Es fiel aus
+        - to turn out←Unsere letzte Prüfung ist ziemlich gut ausgefallen.←Our last exam has turned out pretty well.  
+        - [perfekt]();;Er hat es ausgefallen
+        - to fall out←Ich fürchte, mein Haar wird ausfallen wie das meines Vaters.←I am afraid my hair will fall out like my father's.  
+        - to malfunction←Neulich ist unsere Alarmanlage ausgefallen.←Our alarm system malfunctioned the other day.  
+        - [bedeutung]();;to fail, to malfunction, to turn out, to skip
+        - to skip←Ich glaube, das lasse ich lieber **ausfallen**←I think I'd rather skip that.  
+        - adjektiv→ausgefallen ← {{unusual | fancy | eccentric}}  
+            - Marias Kleid ist sehr ausgefallen.
+            - Dieses Kleid hat ein ausgefallenes Design.  
+        - synonym→auslassen
+        - [Aliases]() >>1.
+            1. ausgefallen
+        - Ich lasse das Herbstsemester **ausfallen**   
+- fassen↔to seize / to conceive / to grasp / to hold [venue holds people] / to make / to catch
+    - Mir gelingt so recht zu fassen↔I manage to grasp so rightly
+    - Erst dann kann ich weitere Pläne fassen↔Only then can I make further plans 
+    - sich fassen↔to compose oneself 
+    - anfassen↔to touch
+        - noun→der Hauch→{{touch}} 
+        - präteritum→Er fasste an
+        - perfekt→Er hat angefasst
+        - berühren↔to touch / to come in contact with #verben
+            - [präteritum]();;Er berührte
+            - noun→die Berührung ← touch / contact
+                - Berührung mit den Augen und der Haut vermeiden.  
+            - [perfekt]();;Er hat berührt
+                - Er hat einen [wunden]() Punkt berührt.
+            - antonym→unberührt
+                - Ihr Bett lag [unberührt](../German/Adverbs/Manner/unber%C3%BChrt.md) da.
+            - Das Bett war nicht berührt.
+    - umfassen↔to encompass / to comprise / to contain / to involve / to cover / to embrace #verben
+        - adjektiv→umfassend ← {{broad / comprehensive}} 
+            - Wir müssen die Gründe für den Anstieg der Kosten umfassend betrachten.  
+        - Das Buch umfasst 300 Seiten. 
+        - [perfekt]();;Er hat umgefaßt
+        - [präteritum]();;Er fasste um
+    - verfassen↔to write / to author / to draft / to compose  #verben
+        - [präteritum]();;Er verfasste
+        - [perfekt]();;Er hat verfaßt 
+            - Aristophanes, der die Bibliothek zweihundert Jahre vor Christus leitete, hat sogar schon ein Wörterbuch verfaßt.
+        - Der Schüler verfasste ein [Gedicht ]().  
+- falten↔to fold / to wrinkle / to crease  #verben
+    - die Falte↔wrinkle / fold / crease
+        - [Aliases]()
+            1. Falten
+    - [präteritum]();;Er faltete
+        - Ich faltete das Papier quer, nicht längs.
+    - [perfekt]();;Er hat gefaltet 
+    - Er faltet die Hände wieder.→He folded his hands again.
+    - Barbara Kripnik seufzt schwer und **faltet** die Hände.   
+- fehlen↔to lack / to miss / to fail #verben
+    - [präteritum]();;Es fehlte mir
+    - [perfekt]();;Es hat mir gefehlt
+    - Es fehlt Tom {{an}} Disziplin.→Tom lacks discipline
+    - Mein Freund fehlt mir immer, wenn er fort ist.→I always miss my friend when he is away.  
+    - Mir fehlen gerade die Worte.→Words fail me right now.  
+    - Regel: subjekt→dativ
+    - Regel: akkusativ objekt→subjekt
+    - versagen↔to fail 
+- fernsehen
+    - präsens;;Er sieht fern
+    - präteritum;;Er sah fern
+    - perfekt;;Er hat ferngesehen
+- festlegen↔to determine / to schedule #verben
+    - synonym→bestimmen
+    - [präteritum]();;Er legte fast
+    - [perfekt]();;Er hat fastgelegt
+        - Die Details für die Feier werden heute festgelegt.
+    - Wir einigten uns über den Preis und legten einen Liefertermin fest.
+- flicken↔to patch
+- fliegen
+    - präteritum;;Er flog
+    - perfekt;;Er ist geflogen
+    - überfliegen↔to scan  #verben
+        - [präteritum]();;Er überflog 
+            - Rudi überflog den Papierkram.↔Rudi scanned the paperwork.
+        - [perfekt]();;Er hat überflogen 
+- fliehen↔to escape
+    - synonym→[entkommen](Verbs/entkommen.md)
+    - präteritum→Die Tiere flohen, als sie ein lautes Geräusch hörten.  
+        - The animals fled when they heard a loud noise.  
+    - perfekt→Er ist geflohen
+        - Der Verbrecher ist aus dem Gefängnis geflohen.
+    - Der Gefangene versuchte zu fliehen, scheiterte aber.→The prisoner tried to escape, but failed.  
+- fließen↔to flow / to pour
+    - präteritum;;Es floss
+    - perfekt;;Es ist geflossen
+- folgen↔to follow / to trail / to comply / to be obedient
+    - der Anhänger↔follower
+        - Seine [Lehre ]() hatte viele Anhänger.  
+- fordern↔to demand sth. from sb. / to claim sth. from sb. / to require sth. from sb.  #verben
+    - synonym→[verlangen](Verbs/verlangen.md) 
+    - [perfekt]();;Er hat gefordert 
+    - [präteritum]();;Er forderte 
+    - anfordern↔to request sth. / to solicit / to order sth. up / to make application for sth.  #verben
+        - noun→die Anforderung : {{requirement}} 
+        - synonym→[bitten](Verbs/bitten.md) 
+        - [präteritum]();;Er forderte an 
+        - [perfekt]();;Er hat angefordert 
+            - Wir haben die Hilfe der Regierung angefordert.  
+    - auffordern↔to summon / to prompt / to request #verben
+        - [präteritum]();;Er forderte auf
+            - Der Lehrer forderte die Schüler auf, pünktlich zu sein.  
+        - [perfekt]();;Er hat aufgefordert
+            - Jeder [Einzelne]() ist aufgefordert, etwas zu ändern. 
+        - Die Website forderte mich auf, ein neues Passwort einzugeben.  
+    - erfordern↔to require / to call for sth.
+        - synonym→vorschreiben → to dictate | to stipulate sth. | to require
+        - Besondere Situationen erfordern besondere Maßnahmen.  
+        - Cricket ist ein Spiel, das [Geschick ]() erfordert.  
+    - befördern↔to promote to a position / to transport / to ship / to forward sth.
+        - Ihre Abteilungsleiterin wollte sie befördern.
+        - Die Firma befördert Waren von China nach Europa.  
+    - überfordern↔to overwhelm / to overexert / to overstrain / to overcharge 
+        - Die Angelegenheit schien ihn deutlich zu überfordern.→The matter seemed to clearly overwhelm him.
+    - fördern↔to encourage / to foster / to enhance / to boost #verben
+        - adjektiv;;ermutigt
+            - Die Menge ermutigte den Spieler zu [schießen](Verbs/schie%C3%9Fen.md).  
+        - [präteritum]();;Er förderte 
+            - Der Wohltätigkeitsverein förderte Kinder mit Lernschwierigkeiten.  
+        - [Aliases]()
+            1. Förderung
+        - [perfekt]();;Er hat gefördert
+            - Die Kinder und Jugendlichen sollen gefördert und unterstützt werden!
+- fressen↔to eat like a pig / to devour
+    - präteritum;;Es fraß
+    - perfekt;;Es hat gefressen
+- frittieren↔to deep fry #verben
+    - [präteritum]();;Es frittierte
+    - [perfekt]();;Es hat frittiert
+- füllen↔to fill  #verben
+    - [präteritum]();;Er füllte 
+    - [perfekt]();;Er hat gefüllt
+        - Heike hat den Wasserkrug randvoll gefüllt.→Heike has filled the water jug to the brim.
+    - erfüllen↔to fulfill #verben
+        - synonym→[nachkommen](Verbs/werden%20gerecht/synonym.md) 
+            - Ich komme all meinen Pflichten bei der Arbeit nach.  
+        - Meine Eltern erfüllen mir den Wunsch nach Australien zu reisen.
+        - [perfekt]();;Er hat erfüllt
+        - [präteritum]();;Er erfüllte
+- --------------------- Portal ---------------------
+    - German
+- furzen↔to fart
+    - Mein Nachbar furzt immer auf dem Balkon. 
+- sich fürchten↔to be afraid
+    - präsens;;Ich fürchte mich {{vor}} dem Tod.
+    - noun→die Befürchtung ← fear
+        - Meine [schlimmsten]() Befürchtungen wurden bestätigt.  
+    - präteritum→Er fürchtete sich
+    - perfekt→Er hat sich gefürchtet
+    - Sie schien sich zu fürchten.→She seemed to be afraid.
+- garnieren↔to decorate  #verben
+    - synonym→dekorieren
+    - [präteritum]();;Er garnierte 
+        - Maria garnierte die Torte.
+    - [perfekt]();;Er hat garniert 
+- garen↔to cook #verben
+    - noun→das Garen
+    - [präteritum]();;Er garte
+    - [perfekt]();;Er hat gegart
+- geben
+    - Er gab die Kollektion im CD-Format aus.
+    - abgeben↔to provide / {{to emit}} / to submit / to deliver / {{to dispense}}  / to handover #verben
+        - synonym→[vorlegen](Verbs/vorlegen.md) / [einreichen](Verbs/einreichen.md) / [übergeben](Verbs/geben/%C3%BCbergeben.md) 
+        - [präteritum]();;Er gab ab
+            - Der Firmengründer gab die Leitung an seine Tochter ab.→The founder of the company handed over the management to his daughter. 
+            - 
+        - [perfekt]();;Er hat abgegeben
+            - Bisher wurden noch keine Kommentare abgegeben.
+        - Ich habe meinen [Antrag ]() gerade noch rechtzeitig abgegeben.  
+        - Die Lampe gibt ein warmes Licht ab.  
+    - angeben↔to state / to quote / to specify / to indicate #verben
+        - Die internationale [Versandkostenpauschale]() wird auf der [Rechnung ]() angegeben.
+        - to indicate←Wählen Sie einen Tarif und geben Sie Ihre Addresse an. 
+        - [präteritum]();;Er gab an
+        - [perfekt]();;Er hat angegeben
+    - aufgeben↔to give up
+        - synonym→[verzichten...auf](Verbs/verzichten/verzichten...auf.md) 
+        - Ich werde nicht nach einem Versuch aufgeben.→I will not give up after one attempt.  
+    - ausgeben↔to dispense / to spend / to issue
+        - synonym→[herausgeben](Verbs/erscheinen/herausgeben.md) 
+        - gegenteil;;[sparen](Verbs/sparen.md)
+        - präteritum→Er gab aus.
+        - perfekt→Er hat ausgegeben
+        - verbringen↔to spend
+            - Ich möchte meinen ganzen Sommer am Strand verbringen.
+            - präteritum;;Er verbrachte
+            - perfekt;;Er hat verbracht
+        - Die Firma gibt viel Geld {{für}} neue Maschinen aus.  
+        - Die Krankenschwestern gaben das Essen an die Patienten aus.  
+    - eingeben↔to type in
+        - Ich gab das Wort in die Suchmaschine ein und las die [Ergebnisse ]() durch.  
+    - ergeben↔to result in / to yield #verben
+        - noun→die Rendite ← return / yields / rate of return
+            - Unsere Aktionäre bekommen in der Regel eine hohe Rendite auf ihr Investment.
+        - [präteritum]();;Er ergab
+        - [perfekt]();;Er hat ergeben
+        - Seine Email ergibt keinen Sinn! 
+    - mitgeben↔to give away
+        - 
+        - Ich werde dir einen [fähigen]() [Verwalter ]() mitgeben.↔I will give you a capable administrator.
+    - nachgeben↔to give in / to yield / to induldge / to succumb to sth./sb. / to budge / to cave in
+        - Meine Eltern geben allen Wünschen meiner Schwester nach.→My parents give in to all my sister's wishes. 
+        - Ich konnte nicht [widerstehen](Verbs/stehen/widerstehen.md) und gab meiner Lust auf Schokolade nach.  
+        - Wir werden keinen Kompromiss finden, wenn keiner nachgibt.  
+        - Mein Sohn bettelte so lange, bis ich nachgab.  
+    - vergeben↔to forgive #verben
+        - [präteritum]();;Er vergab
+        - [perfekt]();;Er hat vergeben
+    - vorgeben↔to pretend #verben
+        - noun→die Vorgabe ← {{guideline}} 
+            - Welche Vorgaben gibt es für dieses Projekt?
+        - [präteritum]();;Er gab vor 
+            - Er machte, was ich ihm vorgab, aber kein bisschen mehr.→He did what I told him to do, but not a bit more. 
+        - [perfekt]();;Er hat vorgegeben 
+        - Wir sind, wer wir zu sein vorgeben.→We are who we pretend to be.
+    - weitergeben↔to pass sth. along / to transfer
+        - Wir können Ihre Daten an unsere Partnerunternehmen weitergeben. 
+    - wiedergeben↔to give back / to reproduce
+        - Sie will es dir nicht wiedergeben.
+        - Ich kann den Inhalt auswendig wiedergeben.→I can reproduce the content by heart.
+    - übergeben↔to handover #verben
+        - synonym→überreichen ← to hand over / to present
+        - noun→die Übergabe ← handing over
+            - [Aliases]()
+                1. Übergabe
+        - [präteritum]();;Er übergab
+        - [perfekt]();;Er hat übergeben
+        - sich übergeben↔to vomit
+            - Bei Mathe muss ich mich sofort übergeben, aber ins große Eimer Eins!→Math makes me want to throw up right away, but into the big bucket one!
+        - Also übergeben Sie ihn {{an}} uns.↔So hand it over to us.
+    - umgeben↔to surround #verben
+        - adjektiv→umliegende⇒{{surrounding}} 
+        - präposition→von
+        - [präteritum]();;Es umgab
+        - [perfekt]();;Es ist umgeben
+            - Das [Tal ]() ist {{von}} bewaldeten [Hügeln]() umgeben.→The valley is surrounded by wooded hills.
+        - Sie waren {{von}} Nebel umgeben.→They were surrounded by fog.
+    - zugeben↔to admit / to confess / to own up to sth. / to concede sth. / to add #verben
+        - synonym→[gestehen](Verbs/gestehen.md) | [hinzufügen](Verbs/hinzuf%C3%BCgen.md) 
+        - [präteritum]();;Er gab zu
+            - Der Verdächtige gab den Diebstahl zu.→The suspect admitted to the theft.
+            - --------------------- Portal ---------------------
+                - German
+        - [perfekt]();;Er hat zugegeben
+            - Josef hat die Tat nicht zugegeben und nichtsunterschrieben. 
+        - Ich muss zugeben, dass meine [Vermutung ]() falsch war.→I have to concede that my assumption was wrong.  
+        - Jetzt den Teig umrühren und dann die restlichen [Zutaten]() zugeben.  
+- gedeihen↔to thrive   #verben
+    - [präteritum]();;Er gedieh
+        - Hier wuchs und gedieh nichts mehr.↔Nothing grew and thrived here. 
+    - [perfekt]();;Er hat gedeiht
+        - Die Edeniten sind demokratisch, und ihre Kultur wächst und gedeiht.
+    - Er sagte uns allen, auch Doc, dass Doc zu [weichherzig]() sei, um als Wolf gedeihen zu können.
+- gefallen
+    - präteritum;;Es gefiel
+    - perfekt;;Es hat mir gefallen
+- gehen
+    - präteritum;;Er ging
+    - perfekt;;Er ist gegangen
+    - angehen↔to tackle / concern / to address
+        - synonym;;[betreffen](Verbs/betreffen.md) 
+        - Wir sollten diese Herausforderungen angehen.
+    - ausgehen
+        - noun→der Ausgang ← {{output or outcome}} | {{exit}} | {{ending}} 
+            - [Aliases]()
+                1. der Ausgang
+        - to run out←Ich kaufe immer mehr Milch, bevor sie ausgeht.  
+        - to run out←Das Licht ist ausgegangen.
+        - to emanate←Von der Küche geht ein [seltsamer Geruch  ]() aus.  
+        - to date←Ich möchte mit jemandem ausgehen, den ich mag.  
+        - to originate←Die ganze Diskussion geht von einem Missverständnis aus.←The whole discussion originates from a misunderstanding.  
+    - begehen↔to commit sth. [crime] / to perpetrate / {{to inspect}}  #verben
+        - 
+        - 
+        - [perfekt]();;Er hat begangen 
+            - Tom hat Straftaten begangen, aber er wurde nie verurteilt.→Tom committed crimes, but was never convicted.
+        - Wir wollten das Haus vor dem Kauf begehen.→We wanted to inspect the house before buying it.  
+        - [präteritum]();;Er beging 
+            - Dann **beging** ich einen Fehler↔Then I made a mistake.
+            - An diesem Abend **beging** ich einen Mord!↔That night, I committed murder.   
+            - Der Fahrer des Wagens **beging** Fahrerflucht.↔The driver of the car committed hit-and-run. 
+    - eingehen↔to be received  / to die / to pay attention #verben
+        - [präteritum]();;Es ging ein 
+        - [perfekt]();;Es ist eingegangen 
+            - Wieso ist deine E-Mail noch nicht eingegangen?  
+        - Ohne Wasser gehen alle [Lebewesen ]() nach einiger Zeit ein.
+        - Man hätte etwas mehr auf die Fahrgäste eingehen können.→You could have responded a little more to the passengers.
+    - nachgehen↔to keep track / to pursue / to follow up on something / to investigate / to haunt #verben
+        - synonym→[untersuchen](Verbs/kontrollieren/synonym.md) 
+        - [präteritum]();;Er ging nach 
+        - [perfekt]();;Er ist nachgegangen
+            - Ich bin der Sache ja **nachgegangen**.→I did follow up on it.
+        - Diesen mysteriösen [Hinweisen]() muss die Polizei nachgehen.→The police have to investigate these mysterious clues.
+    - zurückgehen↔to go back / to decline / to decrease
+        - synonym;;[stürzen](Verbs/st%C3%BCrzen.md) 
+        - Wir werden zu Fuß zurückgehen.→We will go back on foot.
+        - Die Rezession ist vorbei und die Arbeitslosigkeit geht zurück.→The recession is over and unemployment is declining.
+    - vorgehen↔to advance / to proceed  #verben
+        - {{das Vorgehen}} / {{die Vorgehensweise }}/ {{der Vorstoß}}→approach [way of handling sth.] | method | procedure
+            - Wenn Sie diese neue Vorgehensweise übernehmen, werden Sie Zeit sparen.→You will save time if you adopt this new procedure.
+            - Wir wagen einen neuen Vorstoß mit der Erziehung unseres Hundes.  
+        - der Vorgang→process | operation
+        - [präteritum]();;Er ging vor 
+        - [perfekt]();;Er ist vorgegangen 
+            - Behutsam, wir sind sehr behutsam **vorgegangen**.→Carefully, we proceeded very carefully.  
+            - Sie ist sehr [zielstrebig ]() vorgegangen.→She has been very determined in her approach.
+        - Nachdem sie die Einleitung geschrieben hatte, wusste sie nicht, wie sie weiter vorgehen sollte.  
+- gelingen↔to succeed / to manage / to work out #verben
+    - synonym→[klappen](Verbs/klappen.md) 
+    - [präteritum]();;Es gelang ihm 
+        - Endlich gelang es mir, den Motor zu starten.  
+    - [perfekt]();;Es ist ihm gelungen 
+        - Alle waren glücklich, weil das Projekt gut gelungen war.  
+- gelten↔to apply / to pertain #verben
+    - Die Regeln gelten für Alle! 
+    - [präteritum]();;Es galt
+    - [perfekt]();;Er hat gegolten
+- genehmigen↔to approve / to authorize
+    - synonym→zugelassen / berechtigen
+    - präteritum→Er genehmigte
+    - perfekt→Er hat genehmigt
+    - Sie können unseren Abflug genehmigen.
+- genesen↔to mend / to recover
+    - präteritum→Er genas.
+        - Er genas langsam, obwohl sein Bein nicht mehr richtig heilte.→He slowly recovered, although his leg did not heal properly.
+    - perfekt→Nach der Operation ist der Patient schnell genesen.
+- genießen↔to enjoy
+    - Sie liegen am Strand und genießen die Sonne. 
+    - präteritum;;Er genoss
+    - perfekt;;Er hat genossen
+- werden gerecht↔to satisfy
+    - synonym→nachkommen → {{to satisfy | to fullfill requirements}} 
+        - [Aliases]()
+            1. nachkommen
+        - Ich komme all meinen Pflichten bei der Arbeit nach.  
+        - Wir werden Ihrem Wunsch unverzüglich nachkommen.  
+    - Schulen versuchen diesen Anforderungen gerecht zu werden.  
+- geschehen↔to happen #verben
+    - [präteritum]();;Es geschah
+        - Der Unfall geschah, kurz nachdem wir in die Hauptstraße eingebogen waren.
+    - [perfekt]();;Es ist geschehen
+    - synonym:>sich ereignen  #verben
+        - [präteritum]();;Es ereignete sich
+            - Der Unfall ereignete sich in dieser [Weise ]().  
+        - [perfekt]();;Es hat sich ereignet
+        - Auf der A51 hat sich gestern ein Unfall ereignet.  
+    - 
+- gestalten↔to shape / to mould #verben
+    - noun→die Gestaltung⇒design / layout
+    - Wie möchten wir unsere Zukunft gestalten? 
+    - [präteritum]();;Er gestaltete
+    - [perfekt]();;Er hat gestaltet
+    - entwerfen↔to design / to draft
+        - adjektiv→konzeptiert 
+        - Dieses Vogelhaus wurde von einem berühmten Architekten entworfen.  
+- gestehen↔to confess #verben
+    - noun→das Bekenntnis → confession
+    - [perfekt]();;Er hat gestanden
+    - [präteritum]();;Er gestand
+        - Nachdem die Polizei den Dieb gefangen hatte, gestand er sofort. 
+    - Ich muss dir was **gestehen**.   
+- gewähren↔to grant / to warrant sth.  #verben
+    - Wann gewährt die [Fluggesellschaft ]() ihren Kunden einen Elite-Status?
+    - [präteritum]();;Er gewährte 
+    - [perfekt]();;Er hat gewährt 
+- gewährleisten↔to guarantee / to ensure
+    - Körperlich aktiv zu bleiben ist ein guter Weg, um Lebensqualität zu gewährleisten.  
+- gewinnen 
+    - präteritum;;Er gewann
+    - perfekt;;Er hat gewonnen
+- gießen↔to pour water
+    - präsens;;Er gießt
+    - präteritum;;Er goss
+    - perfekt;;Er hat gegossen
+- glühen↔to glow 
+- graben↔to dig #verben
+    - Ich benutzte eine große Schaufel, um ein tiefes Loch zu graben. 
+    - [präteritum]();;Er grub
+    - [perfekt]();;Er hat gegraben
+    - begraben↔to bury  #verben
+        - [präteritum]();;Er begrub 
+            - Ich verbrannte ihre [Leiche ]() und begrub die Asche.
+        - [perfekt]();;Er hat begraben
+            - Wir haben die Kiste im Garten begraben.   
+            - Wir haben die Kiste im Garten begraben.   
+- greifen↔to grab / to reach / to grasp / to grip  #verben
+    - [Aliases]()
+        1. griff
+    - noun→der Griff → handle | grip
+    - [präteritum]();;Er griff
+        - Ich griff nach der [Klinke ]().  
+        - Ich griff das [Seil ]() und hielt es fest.  
+    - [perfekt]();;Er hat gegriffen 
+    - Aber er konnte es nicht greifen.
+    - eingreifen↔to interfere / to intervene   #Noun #verben
+        - noun→der Eingriff : {{intrusion / intervention}} 
+            - Staatliche Eingriffe in die Wirtschaft können Situationen verändern.  
+        - synonym;;[sich einmischen](Verbs/sich%20einmischen.md) 
+        - [präteritum]();;Er griff ein 
+        - [perfekt]();;Er hat eingegriffen 
+            - Wieder hat die Allmacht eingegriffen.
+        - Die Polizei musste eingreifen, um den Streit zu schlichten.  
+    - ergreifen↔to take/seize [measure / opportunity / chance] / to come over [overcome] #verben
+        - adjektiv→ergriffen ← taken
+            - Die ergriffenen Maßnahmen waren erfolgreich.  
+        - [präteritum]();;Er ergriff
+        - [perfekt]();;Er hat ergriffen
+            - Es werden neue Maßnahmen ergriffen, um Verkehrsprobleme zu reduzieren.  
+            - Plötzlich wurden sie {{von}} Leidenschaft ergriffen.→They were suddenly overcome with passion.   
+    - zurückgreifen↔to fall back on
+        - Ihr könnt immer auf mich zurückgreifen wenn ihr Hilfe braucht!  
+- gründen↔to establish / to found / to launch
+    - begründen↔to justify /  to reason
+        - Die Entscheidung wird nicht begründet.  
+- halten↔to keep sth / to retain / to hold / to save / to last / to stop
+    - synonym→[aufheben](Verbs/heben/aufheben.md) → keep
+        - Du musst diesen [Beleg ]() gut aufheben.
+    - to keep←Sie halten einige Hühner in ihrem Garten.←They keep several hens in their garden.  
+    - präsens;;Er hält
+    - to hold←Ich hielt die Hand meines Sohnes, um die Straße zu überqueren.←I held my son's hand to cross the road.  
+    - präteritum;;Er hielt
+    - to stop←Er hielt an der roten Ampel.←He stopped at the red light.  
+    - to last←Ihr Lippenstift hält den ganzen Tag.←Her lipstick lasts the whole day.  
+    - to save←Der Torwart hielt den Elfmeter, und sein Team gewann das Spiel.←The goalkeeper saved the penalty, and his team won the game.  
+    - sich halten↔to stick
+        - Es ist wichtig, sich {{an}} die Regeln zu halten.  
+    - perfekt;;Er hat gehalten
+    - abhalten→{{to keep away from}} / {{to hold [meeting/rally]}} / {{to discourage}} / to deter #verben
+        - [präteritum]();;Er hielt ab
+        - [perfekt]();;Er hat abgehalten 
+            - Sie hatten eine Versammlung abgehalten.→They had held a meeting.
+        - Der Professor hält ein Seminar für fortgeschrittene Studierende ab.  
+        - Nichts kann uns davon abhalten, an der Demonstration teilzunehmen.  
+        - Ich wollte einen neuen Computer kaufen, aber der Preis hielt mich davon ab.  
+    - beibehalten↔to maintain  #verben
+        - adjektiv→betreut : maintained
+        - Können wir diesen [Vorsatz ]() bis zum Jahresende beibehalten?
+        - [präteritum]();;Er behielt bei 
+        - [perfekt]();;Er hat beibehielt 
+    - behalten↔to hang on to / to retain / to keep  #verben
+        - [präteritum]();;Er behielt 
+        - [perfekt]();;Er hat behalten
+        - Ich behalte immer etwas Geld in Reserve, nur für den Fall.  
+    - einhalten↔to comply / to adhere  #verben
+        - noun→die Einhaltung ← {{compliance}} 
+        - [präteritum]();;Er hielt ein
+            - Er hasste es, wenn jemand seine Verabredungen nicht einhielt.
+        - [perfekt]();;Er hat eingehalten 
+            - Wir mussten schwer arbeiten, um die Frist einzuhalten.→We had to work hard to meet the deadline.  
+            - Die Parteien müssen die Vertragsbedingungen einhalten.→The parties must adhere to the terms of the contract.  
+        - Er überprüfte den Kurs, den wir einhalten sollten.→He reviewed the course we were to follow.
+    - erhalten↔to receive  #verben
+        - [präteritum]();;Er erhielt
+            - Wir erhielten eine unmittelbare Antwort auf unseren Brief.  
+        - [perfekt]();;Er hat erhalten 
+    - mithalten↔to keep up  #verben
+        - [präteritum]();;Er hielt mit 
+        - synonym→[aufholen](Verbs/aufholen.md) 
+        - [perfekt]();;Er hat mitgehalten 
+        - Mein Freund rennt so schnell, dass ich mit ihm nie mithalten kann.  
+    - verhalten↔to restrain / to contain
+        - sich verhalten↔to behave / to conduct oneself
+            - Dumm hat sie sich verhalten.→She had acted stupidly.
+        - präteritum→Er verhielt
+        - perfekt→Er hat verhalten
+        - Sie klang verhalten und traurig.→She sounded restrained and sad.
+- handeln←{{to deal}} / {{to act}} / {{to trade}} #verben
+    - noun→das Handeln ← action
+        - Diese Situation erfordert sofortiges Handeln unsererseits.  
+    - synonym→[agieren](Verbs/agieren.md) 
+    - [perfekt]();;Er hat gehandelt
+    - [präteritum]();;Er handelte
+    - Dieses Produkt wird weltweit gehandelt.
+    - Wir müssen jetzt handeln, die [Lage ]() ist ernst.
+- hängen
+    - präteritum;;Es hing
+    - perfekt;;Es hat gehangen
+- heben↔to lift / to hoist / to raise
+    - [Aliases]()
+        1. hob
+    - perfekt;;Er hat gehoben
+    - präteritum;;Er hob
+        - Das Mädchen wollte etwas sagen, also hob sie ihre Hand.  
+    - Sie ist stark genug, um diese schweren Kisten zu heben.  
+    - aufheben↔to keep / to save / to set aside / to pick up / to cancel / to offset
+        - synonym→[halten](Verbs/halten.md) 
+        - to keep←Du musst diesen [Beleg ]() gut aufheben.
+        - to pick up←Ich hob den kleinen Vogel [behutsam]() auf.  
+        - Wir sollten diese Regelung aufheben.→We should set aside this regulation.  
+    - erheben↔to raise [glass] / to elevate / to uplift / to levy #verben
+        - [präteritum]();;Er erhob 
+        - [perfekt]();;Er hat erhoben
+            - Auf den Erwerb, bzw. die Inanspruchnahme, der meisten Güter und Dienstleistungen wird eine fünfprozentige Konsumsteuer erhoben.  
+        - sich erheben↔to rise / to rise up from seat / to get up from seat
+            - Tom und Maria erhoben sich von ihren Plätzen und gingen zur Tür.  
+- heißen
+    - präteritum;;Er hieß
+    - perfekt;;Er hat geheißen
+        - Vierter Stock, hat es geheißen.
+- helfen
+    - präteritum;;Er half
+- herausfinden↔figure out
+    - Ich will herausfinden, wie diese Kamera funktioniert.  
+- herrschen↔to reign / to dominate / to govern #verben
+    - Hier herrscht aber Chaos! Räumt bitte auf! 
+    - [präteritum]();;Er herrschte
+    - [perfekt]();;Er hat geherrscht
+    - beherrschen↔to master sth.
+        - Sie musste viele Jahre üben, um die Violine zu beherrschen.  
+        - sich beherrschen↔to control one's temper / to restrain oneself #verben
+            - [präteritum]();;Er beherrschte sich
+            - [perfekt]();;Er hat sich beherrscht
+            - Er musste [sich beherrschen](Verbs/herrschen/beherrschen/sich%20beherrschen.md), dass er in dem Meeting nicht die Nerven verlor.  
+- herunterladen↔to download #verben
+    - noun;;der Download 
+    - [präteritum]();;Er lud herunter
+    - gegenteil→hochladen
+        - Viele Menschen laden Fotos in soziale Netzwerke hoch.  
+    - [perfekt]();;Er hat heruntergeladen
+        - Ich habe die neue Software gestern heruntergeladen 
+- hinnehmen↔to accept / to surrender #verben
+    - [präteritum]();;Er nahm hin
+    - [perfekt]();;Er hat hingenommen
+    - Er muß uns hinnehmen, wie wir sind.
+- hinsetzen↔to seat #verben
+    - [präteritum]();;Er setzte hin
+        - Die Stewardess setzte die Passagiere vorne im Flugzeug hin. 
+    - [perfekt]();;Er hat hingesetzt
+- hinzufügen↔to add #verben
+    - synonym;;ergänzen
+        - Du hast schon alles gesagt, ich habe nichts zu ergänzen.  
+    - Füge nach und nach [_] hinzu↔Gradually add _ 
+    - [präteritum]();;Er fügte hinzu
+    - [perfekt]();;Er hat hinzugefügt
+    - Ich muss meiner [Bewerbung]() diese Dokumente hinzufügen.
+- hören
+    - aufhören↔to cease / to stop
+        - präsens;;Kinder, hört sofort mit dem Lärm auf!
+        - anhalten↔to stop #verben
+            - Drücken Sie auf Pause, um die Musik anzuhalten.
+            - [präteritum]();;Es hielt an
+            - [perfekt]();;Es hat angehalten
+    - angehören↔to be a member of / belong to
+        - She belongs to a new party.
+            - präsens;;Sie gehört der neuen Partei an.
+    - erhören↔to answer someone's prayers
+        - präsens;;Gott, erhöre unser [Gebet]() !
+        - Es ist so leicht, ihr [Flehen ]() zu erhören, nur um Ruhe zu haben
+    - gehören↔to belong
+        - perfekt;;Dieses Buch hat meinem Vater gehört.
+        - Ihm gehört ein kleiner [Anteil ]() der Firma.  
+    - verhören↔to question sb. / to interrogate / to examine
+        - präteritum passive;;Der [Häftling]() wurde studenlang verhört.
+        - Die Polizei verhörte einen Zeugen des [Verbrechens]().  
+    - zuhören↔to listen to so./sth. / to lend an ear
+        - Please listen to me!
+            - präsens;;Hören Sie mir bitte zu!
+- holen
+    - einholen↔to obtain / to get  #verben
+        - [präteritum]();;Er holte ein 
+        - [perfekt]();;Er hat eingeholt 
+        - Ich würde an deiner Stelle eine zweite Meinung einholen.→If I were you, I would get a second opinion.
+- impfen↔to vaccinate
+    - präteritum→Er impfte.
+    - perfekt→Er hat geimpft.
+- irren↔to wander / to stray / to be mistaken
+    - noun→die Irren : lunatics
+    - synonym→[abkommen](Verbs/abkommen.md) 
+    - Er irrte sich, aber der Fehler war nicht so schlimm.
+
+- jucken↔to itch
+    - Ach, verdammt, dieser [kratzige]() Pullover juckt mich.  
+    - präteritum→Er juckte
+    - perfekt→Er hat gejuckt
+- kalkulieren↔to calculate #verben
+    - [perfekt]();;Er hat  kalkuliert
+        - Er hat die Kosten für den Neubau der Brücke kalkuliert. 
+    - noun→die Berechnung→{{calculation}}
+    - rechnen;;<to calculate #verben
+        - [präteritum]();;Er rechnete
+        - [perfekt]();;Er hat gerechnet
+        - auf etw. rechnen↔to count on sth.
+            - Sie können auf mich **rechnen**.  
+        - mit etw. rechnen↔to expect sth. / to take something into account
+            - Damit hätte ich **rechnen** müssen.   
+    - [präteritum]();;Er kalkulierte
+- kennen
+    - präteritum;;Er kannte
+    - perfekt;;Er hat gekannt
+- klappen↔to work / to workout #verben
+    - Ich weiß noch nicht, ob der Termin klappt. 
+    - [präteritum]();;Er klappte
+    - [perfekt]();;Er hat geklappt
+- kleben↔to tape / to stick [sticky/stuck] #verben
+    - [präteritum]();;Er klebte
+    - [perfekt]();;Er hat geklebt
+        - Ich habe unser Bild an die Wand geklebt. 
+    - Seine Hand blieb am Glas kleben.→His hand remained stuck to the glass.
+    - haften↔to stick / to cling / to adhere / to grip  #verben
+        - noun→die Haftung ← {{liability}} 
+            - [Jegliche ]() Haftung ist [ausgeschlossen  ](Verbs/schlie%C3%9Fen/ausschlie%C3%9Fen/perfekt.md).↔Any liability is eliminated. 
+        - [präteritum]();;Er haftete 
+        - [perfekt]();;Er hat gehaftet
+        - haften...für↔to be liable for sth. / to be responsible for sb./sth.
+            - Der Kunde haftet nicht für Schäden, die während der Lieferung entstehen.
+- klingen
+    - präteritum;;Es klang
+    - perfekt;;Es hat geklungen
+    - Ich weiß, dass es seltsam klingt, aber es ist wahr.  
+- klolpfen  #verben
+    - [präteritum]();;Er klopfte
+    - [perfekt]();;Er hat geklopft
+- kneifen↔to pinch / to squeeze
+    - synonym→[auspressen](Verbs/auspressen.md) 
+- knüpfen↔to knot / to tie
+    - Dann weißt du, wie der Tillornische Knoten zu knüpfen ist?
+- kommen
+    - aufkommen→to pay cost / to come up (money)
+        - präsens→Wer kommt für sie auf? → {{Who pays for them?}} 
+        - Meine Versicherung wird für den [Schaden]() aufkommen.
+    - hinwegkommen↔to get over / to recover
+        - --------------------- Portal ---------------------
+            - German
+- können
+    - präteritum;;Er konnte
+    - perfekt;;Er hat gekonnt
+- kontrollieren←{{to check}} / {{to control}} / {{to examine }}  / {{to audit}} / {{to monitor}} / {{to supervise}} #verben
+    - noun→die Untersuchung ← {{investigation}} 
+    - [perfekt]();;Er hat kontrolliert
+        - Pflegefamilien werden [sorgfältig](../German/Adverbs/Degree/sorgf%C3%A4ltig.md) ausgewählt und kontrolliert.
+    - synonym→überwachen ← {{to monitor}} 
+        - Der Arzt überwacht den Herzschlag und den Blutdruck des Patienten.  
+    - synonym→untersuchen / überwachen
+        - [Aliases]()
+            1. untersuchen
+        - Ihre [Lebenszeichen ]() werden [ständig](../German/Adverbs/Manner/st%C3%A4ndig.md) überwacht. 
+    - [präteritum]();;Er kontrollierte
+- kriegen↔to get [receive] / to catch / to make war #verben
+    - [Aliases]()
+        1. kriegt
+    - schwer zu kriegen↔hard to get 
+    - synonym→empfangen
+    - [präteritum]();;Er kriegte 
+    - [perfekt]();;Er hat gekriegt 
+    - Ich [schätze](Verbs/sch%C3%A4tzen.md), wenn er kein [Geständnis ]() kriegt, wird er wohl ihre Erinnerungen **auslesen**.→I guess if he doesn't get a confession he'll probably read her memories.
+- sich kümmern↔to care of / to look after
+    - Wer kümmert {{sich um}} das Haus, während ihr im Urlaub seid?
+    - präteritum→Er kümmerte sich
+    - perfekt→Er hat sich gekümmert
+- kürzen↔to cut / to truncate / to trim #verben
+    - [präteritum]();;Er kürzte
+    - [perfekt]();;Er hat gekürzt
+        - Mein Text wurde leider von dem Redakteur gekürzt.
+- laden
+    - abladen↔to unload 
+- lassen
+    - präteritum;;Er ließ
+    - perfekt;;Er hat gelassen
+- laufen
+    - durchlaufen↔to pass through
+        - Alle Produkte müssen eine Qualitätskontrolle durchlaufen.  
+    - adjektiv→laufende
+        - Ich habe eine laufende Nase.  
+    - präteritum;;Er lief
+        - Ich lief in die Stadt.→I ran into town.
+    - perfekt;;Er ist gelaufen
+- lecken↔to lick  #verben
+    - [präteritum]();;Er leckte
+    - [perfekt]();;Er hat geleckt 
+    - Jemanden, der raucht, zu küssen ist so, wie an einem [Aschenbecher ]() zu lecken.  
+- leiden↔to suffer
+    - präteritum;;Er litt
+    - perfekt;;Er hat gelitten
+- leidtun↔to feel sorry for
+    - präsens;;Es tut ihr leid
+    - präteritum;;Es tat ihr leid
+    - perfekt;;Er hat ihr leidgetan
+- leihen↔to lend / to loan sb. sth.  #verben
+    - noun→das Darlehen : loan
+        - Tom lehnte es ab, mir ein Darlehen zu geben.→Tom refused to give me a loan. 
+        - Die Bank bot uns ein Darlehen mit einem variablen [Zinssatz ]().  
+    - [präteritum]();;Er lieh
+        - Die Bank lieh mir das Geld für den Kauf meines Autos.  
+    - [perfekt]();;Er hat geliehen
+    - ausleihen↔to borrow  #verben
+        - [präteritum]();;Er lieh aus
+        - [perfekt]();;Er hat ausgeliehen
+        - In dieser Bibliothek kann man zehn Bücher gleichzeitig ausleihen.  
+    - Die Bank lieh mir das Geld für den Kauf meines Autos.  
+- leisten↔to achieve / to accomplish / to afford #verben
+    - [präteritum]();;Er leistete
+    - [perfekt]();;Er hat geleistet
+        - Nick hat sich ein neues Auto geleistet. 
+    - synonym→erzielen
+- leiten↔to conduct sth. / to lead / to oversee sth. / to run manage lead sth.
+    - ableiten↔to derive / to deduce / to extrapolate sth. / to derivate
+        - Eine Menge englischer Wörter sind aus dem Lateinischen abgeleitet.  
+- lesen
+    - präteritum;;Er las
+    - durchlesen↔to read carefully 
+        - Ich versprach, den Bericht gründlich durchzulesen.
+- liefern←{{to deliver}} / {{to provide}} / {{to supply}} #verben
+    - [präteritum]();;Er lieferte
+    - noun→die Anlieferung ← {{delivery}} 
+        - Die Anlieferung kann nicht [erfolgen](Verbs/erfolgen.md). 
+        - die Postzustellung↔postal delivery
+            - Die Postzustellung in diesem Land ist nicht schnell.  
+    - [perfekt]();;Er hat geliefert
+    - Die neue Mitarbeiterin liefert Antworten und gibt [Anregungen]()
+- liegen↔to lie / to lay / to sit / to reside / to rest / to be situated 
+    - präteritum;;Er lag
+    - perfekt;;Er ist gelegen
+    - Eine [Schicht ]() [Laub ]() liegt auf dem [Bürgersteig ]().  
+    - unterliegen↔to succumb / to be subject to / to be governed by #verben
+        - die Unterlage↔Document / Pad or Support
+        - [präteritum]();;Er unterlag
+        - [perfekt]();;Er hat unterlegen
+        - Aufgrund der Wirtschaft unterliegt das Budget [Schwankungen]().  
+- loben↔to praise #verben
+    - noun→das Lob
+    - [präteritum]();;Er lobte
+        - Er lobte die effektive Zusammenarbeit aller Mitarbeiter. 
+    - [perfekt]();;Er hat gelobt
+- locken↔to lure / to entice / to attract #verben
+    - Bittere Erfahrungen haben mich gelehrt: Glück und Reichtum locken [Neider](). Leider!  
+- sich lohnen↔be worthwhile / be worth it / be profitable / pay off #verben
+    - [präteritum]();;Es lohnte sich
+    - [perfekt]();;Es hat sich gelohnt
+    - Es lohnt sich nicht 
+- losrennen↔to run off
+    - präteritum;;Er rannte los
+    - perfekt;;Er ist losgerannt
+- lösen↔to solve
+    - auflösen↔to dissolve / to dissipate / to disperse
+        - noun→das Auflösen ← {{disintegration}} 
+        - Die Sowjetunion wurde am 26. Dezember 1991 aufgelöst.  
+        - Er kann sich nicht in Luft **auflösen**.   
+    - auslösen↔to trigger / to cause / to provoke #verben
+        - [präteritum]();;Er löste aus
+        - [perfekt]();;Er hat ausgelöst
+            - Was glaubst du hat das ausgelöst?
+        - Viren können Krankheiten auslösen.→Viruses can trigger diseases.  
+        - wecken↔to arouse
+            - Seine ständigen Beleidigungen weckten ihren [Ärger ]().  
+- lügen↔to lie
+    - präteritum;;Er log
+    - perfekt;;Er hat gelogen
+- lutschen↔to suck on
+    - synonym→[stillen](Verbs/stillen.md) 
+    - am Daumen lutschen↔to suck thumb 
+- machen
+    - aufmachen↔to open
+        - Mach mir bitte die Tür auf.
+    - zumachen↔to close / to shut 
+        - Mach mir bitte die Tür zu.
+    - --------------------- Portal ---------------------
+        - German
+- markieren↔to highlight #verben
+    - [präteritum]();;Er markierte
+    - [perfekt]();;Er hat markiert
+        - Die wichtigen Passagen des Artikels habe ich mit einem Stift markiert. 
+- meinen↔to think / to mean / to say / to reckon  #verben
+    - noun→{{die}} Ansicht  | die Stellungnahme: {{opinion / view}} 
+        - Der Minister widersprach seiner eigenen Stellungnahme.  
+    - [präteritum]();;Er meinte 
+    - [perfekt]();;Er hat gemeint
+    - Mein Mann meint, dass wir ein neues Auto brauchen.
+  
+- merken↔to gradually notice / to realize / to feel
+    - to notice←Ich  ***merke,***  dass du schlechte Laune hast. 
+    - to feel←Ich habe deine Nervosität **gemerkt**. 
+    - to realize←Maja sitzt im Flugzeug und merkt, dass sie ihr Handy vergessen hat.   
+    - bemerken↔to suddenly notice / to quickly realize
+        - Ich habe nicht **bemerkt**, dass der Kellner zu viel berechnet hat. 
+        - When the hiker **noticed** the unicorn, it was already too late. 
+    - sich [dat.] merken↔to memorize / to remember #verben
+        - Ich muss {{mir}} bis morgen die Sätze merken. 
+        - **Merk **dir meine Worte!
+        - [präteritum]();;Er merkte sich
+        - [perfekt]();;Er hat sich gemerkt 
+- melden↔to report / to register
+    - noun→die Berichterstattung
+        - Die Nachrichtenagentur bietet Berichterstattung in mehreren Sprachen.→The news agency offers reporting in multiple languages.
+    - synonym;;{{berichten}} 
+        - Sie hatten berichtet, dass alles gut ging.  
+    - der Meldezettel↔registration form
+    - meldepflichtig↔subject to registration
+    - abmelden↔to log out #verben
+        - Als ich umzog, meldete ich meinen [Wohnsitz ]() von der Gemeinde ab.
+        - [präteritum]();;Er meldete ab
+        - [perfekt]();;Er hat abgemeldet
+    - anmelden↔to file
+        - noun→Anmeldung ← registration / application
+            - [Aliases]()
+                1. die Anmeldung
+        - Bedeutet dies, wir müssen [Konkurs ]() anmelden?  
+        - sich anmelden↔to sign up
+            - Sie können sich neuerdings auch online anmelden.  
+    - sich melden↔to answer
+        - Ich habe mehrmals versucht anzurufen, aber Nina meldete sich nicht.→I tried to call several times, but Nina did not answer.
+- mögen
+    - präteritum;;Er mochte
+    - perfekt;;Er hat gemocht
+- müssen
+    - präteritum;;Er musste
+    - perfekt;;Er hat gemusst
+- sich nähern↔to approach [time] / to come close [time]  #verben
+    - [präteritum]();;Er näherte sich
+    - [perfekt]();;Er hat sich genähert
+- nachfragen↔to clarify / to check up on sth. #verben
+    - synonym;;verdeutlichen : to clarify 
+        - Die Grafik hilft, den Zusammenhang zu verdeutlichen.  
+    - [präteritum]();;Er fragte nach
+    - [perfekt]();;Er hat nachgefragt
+    - klären↔to clarify / to resolve / to figure out #verben
+        - [präteritum]();;Es klärte
+        - [perfekt]();;Es ist geklärt
+            - Die Details sind noch nicht geklärt.
+        - Klären Sie mich bitte auf.→Please enlighten me.
+- nachfüllen↔to refill #verben
+    - Die Keksdose ist leer, du solltest mal wieder Plätzchen nachfüllen.
+    - [präteritum]();;Er füllte nach
+    - [perfekt]();;Er hat nachgefüllt
+- neigen↔to lean towards to / to tend to  #verben
+    - präposition→zu 
+    - [präteritum]();;Er neigte 
+    - [perfekt]();;Er hat geneigt
+    - Sie neigen nur dazu, zu spät zu kommen.→They just tend to be late.  
+- nehmen↔to take
+    - annehmen←to suppose⇒judge somebody in a certain way / {{to assume}} / to presume / {{to accept}} #verben
+        - noun→Annahme ← {{assumption}} 
+        - synonym→unterstellen : to insinuate 
+            - Die Studie unterstellt, dass die Preise steigen werden.
+        - [präteritum]();;Er nahm an
+        - [perfekt]();;Er hat angenommen
+            - Wie groß ist die Chance, dass die Reformen angenommen werden? 
+    - aufnehmen #verben
+        - to incorporate←Ich werde seine Idee in den Plan aufnehmen.←I will incorporate his idea into the plan.  
+        - noun→die Aufnahme → recording / intake [medicine] / absorption / admission
+            - Das Jahr der Aufnahme steht auf der CD-Hülle.  
+            - Für die Aufnahme an der Universität musste ich einen Test bestehen.  
+            - Tiefes Atmen erhöht die Aufnahme von Sauerstoff.  
+        - to pick up←Die Hunde versuchten, die [Fährte ]() aufzunehmen.←The dogs tried to pick up the scent.
+        - [präteritum]();;Er nahm auf
+            - Die Polizei nahm die Verfolgung auf und fasste den Verdächtigen.→The police took up pursuit and caught the suspect.  
+        - to include←Der [Verlag ]() hat mehr Details in die zweite Ausgabe aufgenommen.  
+        - to record←Ich habe die Sendung aufgenommen und mir später angeschaut.  
+        - to reach out←Möchten Sie gerne direkt Kontakt mit uns aufnehmen? 
+        - synonym→[einfügen](Verbs/einf%C3%BCgen.md) 
+        - [perfekt]();;Er hat aufgenommen
+    - einnehmen↔to capture
+        - Washingtons Armee hat Trenton eingenommen.  
+    - entnehmen↔to infer sth. from sth. / to take out (of) / to understand from somebody's behavior  #verben
+        - Ich entnehme Ihrem tweet: es gibt kleine & grosse Paradiese.
+        - [präteritum]();;Er entnahm 
+        - [perfekt]();;Er hat entnommen 
+    - festnehmen↔to detain / to arrest / to apprehend #verben
+        - synonym;;verhaften  #verben
+            - [präteritum]();;Er verhaftete 
+            - [perfekt]();;Er hat verhaftet
+                - Zum Erstaunen der ganzen Stadt, wurde der Bürgermeister verhaftet.  
+        - Die Cops würden kommen und mich **festnehmen**.  
+        - [präteritum]();;Er nahm fest
+        - [perfekt]();;Er hat festgenommen
+            - Der Täter wurde [ermittelt]() und festgenommen.→The perpetrator was identified and arrested.
+    - teilnehmen↔to participate
+        - synonym;;[sich beteiligen](../German/Liste%20der%20Verben%20mit%20Pr%C3%A4positionen/Akkusativ/Beteiligen.md) | [belegen](Verbs/belegen.md) 
+        - präposition→an
+        - Der Außenminister nahm an dem Gespräch teil.  
+    - vornehmen↔to undertake / to perform / to carry out #verben
+        - vornehme↔distinguished
+            - --------------------- Portal ---------------------
+                - German
+        - synonym;;[ausführen](Verbs/ausf%C3%BChren.md) / [durchführen]() 
+        - [präteritum]();;Er nahm vor
+        - [perfekt]();;Er hat vorgenommen
+            - Ich habe ein paar kleine Änderungen vorgenommen. 
+    - übernehmen↔to adopt / to assume / to take over⇒business, rule, ownership / to cover [cost]  #verben
+        - [präteritum]();;Er übernahm
+        - [Aliases]()
+            1. übernehme
+        - noun→{{Verabschiedung}} | {{Übernahme}} ← adoption / take over / acquisition
+            - Die Verabschiedung dieses Gesetzes löste großen Beifall aus.  
+        - [perfekt]();;Er hat übernommen
+            - Sämtliche Kosten werden übernommen.
+            - Maßnahmen werden von weisungsbefugten Körperschaften übernommen.→Measures are undertaken by authorising corporations.
+        - Das Hotel übernimmt keine Haftung für verlorene Gegenstände
+        - sich übernehmen↔to overestimate oneself / to bite more than one can swallow
+            - Das Schwein versucht mich zu übernehmen.→The pig is trying to take me over.
+- nennen↔to dub / to name / to mention
+    - präteritum;;Er nannte
+    - perfekt;;Er hat genannt
+    - ernennen↔to appoint  #verben
+        - [präteritum]();;Er ernnante 
+        - [perfekt]();;Er hat ernannt 
+            - Tom wurde zum Direktor ernannt.  
+- nerven↔to annoy
+    - präteritum→Er nervte
+    - perfekt→Er hat genervt
+- nicken↔to nod  #verben
+    - [Aliases]()
+        1. nickte
+    - [präteritum]();;Er nickte
+    - [perfekt]();;Er hat genickt 
+    - Sie nickte und ging [voran / vorn](../German/Adverbs/Location/voran%20_%20vorn.md).
+    - Sie antwortete mit einem Nicken.  
+- packen←{{to seize}} / {{to grab}} / {{to pack}} [Koffer] #verben
+    - [präteritum]();;Er packte
+    - [perfekt]();;Er hat gepackt
+    - einpacken↔to wrap up / to box / to pack in #verben
+        - Soll ich es Ihnen einpacken? 
+        - [präteritum]();;Er packte ein
+        - [perfekt]();;Er hat eingepackt
+    - auspacken↔to unpack / to come clean
+        - Sie hievte den schweren Koffer auf den Tisch, um ihn auszupacken.  
+        - Ich habe endlich ausgepackt und ihm die ganze Geschichte erzählt.  
+    - Die Polizei packte den [Verdächtigen](), als er weglaufen wollte.  
+- passen↔to match
+    - adjektiv→passende
+        - Sie trug ein grünes Kleid mit passenden Accessoires.  
+    - präteritum→Es passte zu
+        - 
+    - perfekt→Es hat gepasst
+- pfeifen↔to whistle
+    - präteritum;;Er pfiff
+    - perfekt;;Er hat gepfiffen
+- pinkeln↔to pee / to piss  #verben
+    - Ich muss schnell in den Wald pinkeln gehen.  
+    - [präteritum]();;Er pinkelte 
+        - Der Hund pinkelte auf den neuen Teppich.
+        - Ich pinkelte in meine Hose. 
+    - [perfekt]();;Er hat gepinkelt 
+- platzieren↔to place / to position  #verben
+    - [präteritum]();;Er platzierte 
+    - [perfekt]();;Er hat platziert 
+        - Das Brett wird zwischen den beiden Spielern platziert.  
+    - Ich platzierte den Sessel in der Nähe des Schreibtischs.→I positioned the armchair near the desk.  
+- popeln↔to pick nose  #verben
+    - [präteritum]();;Er popelte 
+    - [perfekt]();;Er hat gepopelt
+        - Mein EX hat immer gepopelt. 
+- prägen↔to coin / to shape / to characterize #verben
+    - [präteritum]();;Er prägte
+    - [perfekt]();;Er hat geprägt
+    - noun→das Merkmal / das Kennzeichen / die Eigenschaft→characteristic
+- prasseln↔to patter / to pelt / to crackle / to crepitate / to drum / to hail down  #verben
+    - [präteritum]();;Er prasselte 
+    - [perfekt]();;Er hat geprasselt
+    - Regen prasselt auf das Dach.→The rain is falling on the roof.
+- quietschen↔to squeak / to squeal
+- rächen↔to avenge 
+    - Der Ritter [schwor](Verbs/schw%C3%B6ren.md), den Tod des Königs zu rächen.
+- raten↔to guess / to advice
+    - noun;;die Beratung
+        - Diese Informationen [ersetzen](Verbs/ersetzen.md) keine Beratung.  
+    - präsens;;Er rät
+        - Mein Dämon rät mir, euch zu verschonen.→My demon advises me to spare you.
+    - präteritum;;Er riet
+    - perfekt;;Er hat geraten
+- rauschen↔to rustle / to murmur 
+- reichen←{{to suffice}} / {{to hand sth. to sb.}} #verben
+    - Das muss reichen [That'll have to do]
+    - [präteritum]();;Er reichte
+    - [perfekt]();;Er hat gereicht
+    - erreichen↔to achieve / to accomplish
+        - Ich würde nicht sagen, dass wir unser Ziel schon erreicht haben, aber wir sind ganz nahe dran.  
+- reiben←{{to grate}} / {{to rub}} / {{to grind}} #verben
+    - [präteritum]();;Er rieb
+        - Ich rieb etwas Käse für die Pizza. 
+    - [perfekt]();;Er hat gerieben
+- reinigen↔to clean #verben
+    - [präteritum]();;Er reinigte
+    - [perfekt]();;Er hat gereinigt
+- reiten↔to ride horse
+    - präteritum;;Er ritt
+    - perfekt;;Er ist geritten
+- restaurieren↔to restore 
+- richten↔to focus  #verben
+    - [präteritum]();;Er richtete 
+    - [perfekt]();;Er hat gerichtet 
+    - sich richten ... an↔to aim at
+        - Das Programm richtet sich speziell an junge Menschen.
+- riechen↔to smell
+    - präteritum;;Er roch
+    - duften↔to smell good #verben
+        - [präteritum]();;Er duftete 
+        - [perfekt]();;Er hat geduftet 
+        - Die Blume duftet wunderbar. 
+        - Die Blumen sind gelb und duften.  
+    - perfekt;;Er hat gerochen
+- ringen↔to struggle / to strive  #verben
+    - [Aliases]()
+        1. rang
+    - noun→der Rang → rank
+    - {{nach}} Luft ringend→gasping for air
+    - [präteritum]();;Er rang
+    - [perfekt]();;Er hat gerungen
+    - Bei dieser Firma musste sie nicht um Anerkennung ringen.  
+- rühren←{{to stir}} / {{to affect / to touch [emotionally]}} #verben
+    - synonym→[betreffen](Verbs/betreffen.md)
+        - Diese Regelung betrifft kleine Unternehmen nicht.   
+    - [präteritum]();;Er rührte
+    - [perfekt]();;Er hat gerührt
+        - Er war zu Tränen gerührt, als er die [Neuigkeiten ]() hörte.   
+        - He was moved to tears when he heard the news.
+        - 
+- rutschen↔to slip / to slide #verben
+    - [präteritum]();;Er rutschte
+        - Meine Brille rutschte mir langsam die Nase hinab. 
+    - [perfekt]();;Er ist gerutscht
+        - My heart is in my boots. 
+        - Das Herz ist mir in die Hose gerutscht. 
+- rülpsen↔to burp
+    - Mein Bruder rülpst ganz laut, während wir am Tisch sitzen. 
+- sanieren↔to renovate / to refurbish #verben
+    - [präteritum]();;Er sanierte
+    - [perfekt]();;Er hat saniert
+- schaffen↔to create / to accomplish #verben
+    - [präteritum]();;Er schuf 
+    - [perfekt]();;Er hat geschaffen
+        - Durch den [Zusammenschluss ]() der Firmen wurden mehr als 170 Arbeitsplätze geschaffen.  
+    - Wir müssen das schaffen!  
+- schalten↔to switch / to shift / to toggle  #verben
+    - [präteritum]();;Er schaltete
+    - noun→die Umstellung ← switch / transition / changeover
+        - Es wird eine schnelle Umstellung auf umweltfreundliche Technologien gefordert.  
+    - [perfekt]();;Er hat geschaltet
+    - abschalten↔to extinguish / to disconnect / to disable / to switch off / to shut down / to unwind
+        - Der Staubsaugerroboter schaltet automatisch ab.  
+        - Der Elektriker schaltete das Alarmsystem ab.  
+        - Er schaltete den Computer ab und verließ das Büro.  
+    - anschalten↔to turn on
+        - präteritum→Er schaltete an
+        - perfekt→Er hat angeschaltet
+        - Jedes Licht kann [einzeln ]() angeschaltet werden.  
+    - ausschalten↔to turn off
+        - präteritum→Er schaltete aus
+        - perfekt→Er hat ausgeschaltet
+        - Kannst du bitte die Musik ausschalten?  
+    - einschalten↔to switch on
+        - Ich habe das Licht eingeschaltet.  
+- schätzen↔to estimate / to appreciate / to guess #verben
+    - [Aliases]()
+        1. schätze
+    - noun→Schätzung → guess / estimation / estimate
+        - Nach meiner Schätzung werden die Arbeiten etwa drei Wochen dauern.  
+        - Ich wagte eine Schätzung des Unternehmensgewinns.  
+    - synonym→[raten](Verbs/raten.md) 
+    - [präteritum]();;Er schätzte
+    - [perfekt]();;Er hat geschätzt
+    - Fast jeder schätzt gutes Essen. 
+    - würdigen↔to appreciate / to dignify sb./sth. / to acknowledge / to honour / to esteem #verben
+        - synonym→einräumen ← to acknowledge
+        - [präteritum]();;Er würdigte 
+        - [perfekt]();;Er hat gewürdigt
+            - Tim wurde für sein Lebenswerk gewürdigt.  
+- scheinen←{{to seem}} / {{to shine / to glisten}}
+    - synonym→[wirken](Verbs/wirken.md)
+    - präteritum;;Er schien
+    - perfekt;;Er hat geschienen
+        - Ich meine, die Sonne hat **geschienen**.   
+    - Tom schien nicht [erpicht](), weiter auszuholen, und ich wollte ohnehin nicht alle [Einzelheiten]() hören.  
+    - glänzen↔to shine
+        - noun→der Glanz→{{brilliance}}
+        - adjektiv→glänzend 
+        - präteritum→Er glänzte
+            - Antons Augen glänzten, als er das Geschenk sah. 
+        - perfekt→Er hat geglänzt
+        - Auf Turnieren glänze ich nicht mehr, in der [Schlacht ]() tauge ich nichts mehr.→I no longer shine in tournaments, I'm no good in battle
+- schieben↔to shove / to thrust / to push
+    - präteritum;;Er schob
+    - perfekt;;Er hat geschoben
+- schießen↔to shoot / to dart
+    - präteritum;;Er schoss
+    - perfekt;;Er hat geschossen
+- schließen←{{to infer}} / {{to close; to shut}} / {{to conclude}} / {{to lock}}  #verben
+    - gegenteil→aufschließen : to unlock 
+    - [präteritum]();;Er schloss
+    - [perfekt]();;Er hat geschlossen
+    - Aus der [vorhandenen]() information kann ich bestimmte Dinge schließen.
+    - ausschließen↔to exclude / {{to rule out}}  #verben
+        - [präteritum]();;Er schloss aus
+        - [perfekt]();;Er hat ausgeschlossen
+            - [Aliases]()
+                1. ausgeschlossen  
+        - Ich würde es nicht ausschließen.→I would not rule it out.  
+    - anschließen↔to join
+        - Clara wollte sich ihr anschließen.→Clara wanted to join her.
+    - entschlossen↔adj. determined
+        - Er ist zu allem entschlossen.↔He is determined to do anything.
+    - erschließen↔to open up / to reveal / to discover  #verben
+        - noun→die Erschließung ← {{development}} / {{exploitation}} 
+            - Die Erschließung des neuen [Baugebietes]() dauerte mehrere Monate.  
+        - [präteritum]();;Er erschloß 
+        - [perfekt]();;Er hat erschloßen 
+            - Das neue Baugelände wurde erst letztes Jahr erschlossen.
+        - Entweder sie erschließen sich dem [Betrachter ]() oder nicht.→Either they reveal themselves to the viewer or not
+- schonen←to spare / to protect / to save #verben
+    - [präteritum]();;Er schonte
+    - [perfekt]();;Er hat geschont
+    - sich schonen↔to take it easy
+        - Nach seiner langen Krankheit muss Opa sich jetzt noch schonen. 
+        - gönnen↔to treat oneself 
+            - Vergiss nicht, dir ein wenig Ruhe nach deiner langen Reise zu gönnen.
+    - Sie bemühte sich, ihr feinstes Kleid zu schonen.
+    - Um die Umwelt zu schonen, fährt er Rad statt Auto. 
+- schmelzen↔to melt / to thaw / to liquify
+    - präteritum;;Es schmolz
+    - perfekt;;Es ist geschmolzen
+- schmieren↔to smudge / to lubricate / to butter
+    - Ich schmiere Butter {{aufs}} Brötchen.
+- schneiden
+    - präteritum→Er schnitt
+    - perfekt→Er hat geschnitten
+- schreiben
+    - präteritum;;Er schrieb
+    - perfekt;;Er hat geschrieben
+    - abschreiben↔to copy  #verben
+        - noun;;das Exemplar -e
+            - Die ersten Exemplare des Buches wurden verkauft.
+  
+        - [präteritum]();;Er schrieb ab 
+        - [perfekt]();;Er hat abgeschrieben
+        - Der Student schreibt in der Prüfung vom Nachbarn ab.
+    - sich aufschreiben↔to write down
+        - präteritum→Janina schrieb sich meine Telefonummer auf.
+        - perfekt→Er hat sich aufgeschrieben.
+        - Ich muß {{mir}} alles aufschreiben.→I have to write everything down.
+- schreien↔to shout / to scream
+    - gegenteil;;flüstern
+    - präteritum;;Er schrie
+    - perfekt;;Er hat geschrien
+- schütteln↔to shake  #verben
+    - [präteritum]();;Er schüttelte 
+    - [perfekt]();;Er hat geschüttelt 
+- schützen↔to protect #verben
+    - [präteritum]();;Er schützte
+    - Er schützt seine Augen mit einer dunklen Brille gegen die starke Sonne. 
+    - [perfekt]();;Er hat geschützt
+        - Diese Produkte sind [urheberrechtlich ]() geschützt.  
+- schweben↔to float
+    - Der Luftballon schwebte neben ihr in der Luft.
+- schweigen↔to silence / to keep still
+    - adjektiv→gelassen : calm / serene 
+        - Mein Yogalehrer wirkt immer gelassen und entspannt.
+    - präteritum;;Er schwieg
+        - Ich wollte mich nicht mit meinem Bruder streiten, also schwieg ich. 
+    - perfekt;;Er hat geschwiegen
+    - Er [zog](Verbs/ziehen/vorziehen.md) es vor zu schweigen.
+- schwimmen
+    - präteritum;;Er schwamm
+    - perfekt;;Er ist geschwommen
+- schwitzen↔to sweat #verben
+    - Manche Sportler schwitzen mehr als andere. 
+    - [präteritum]();;Er schwitzte
+    - [perfekt]();;Er hat geschwitzt
+- schwören↔to swear / to vow  #verben
+    - [Aliases]()
+        1. schwor
+    - [präteritum]();;Er schwor 
+    - [perfekt]();;Er hat geschworen 
+- senken↔to diminish / to reduce / to lower #verben
+    - 
+    - noun→der Einbruch ← slump | drop
+    - Die Zahl der Menschen ohne Beschäftigung sinkt weiter.
+    - synonym→reduzieren / verringern
+        - Ein Teppich würde das Echo im Büro verringern.  
+    - [präteritum]();;Er senkte
+    - [perfekt]();;Er hat gesenkt
+- setzen
+    - durchsetzen↔to implement / to enforce / to assert #verben
+        - noun→[durchführung]() 
+        - [präteritum]();;Er setzte durch 
+        - [perfekt]();;Er hat durchgesetzt
+        - Die Politiker möchten die Reform durchsetzen.
+- seufzen↔to sigh / to groan  #verben
+    - [präteritum]();;Er seufzte
+        - Seine Mutter seufzte {{vor}} Erleichterung.  
+    - [perfekt]();;Er hat geseufzt
+    - Ich hörte die Damen seufzen.
+- sich sehnen↔to crave / to yearn #verben
+    - noun→das Verlangen → yearning | longing
+        - [Aliases]()
+            1. das Verlangen
+        1. sehnst
+    - [präteritum]();;Er sehnte sich
+    - [perfekt]();;Er hat sich gesehnt
+    - Ich sehnte mich {{nach}} einem freien Tag.→I yearned for a day off.  
+- singen
+    - perfekt;;Er hat gesungen
+- sinken
+    - präteritum;;Es sank
+    - perfekt;;Es ist gesunken
+        - Der Titanic ist nach der Kollision mit einem Eisberg gesunken. 
+- sitzen
+    - präteritum;;Er saß
+    - perfekt;;Er hat gesessen
+- sorgen↔to care / to cater / to ensure #verben
+    - synonym→[ermöglichen](Verbs/erm%C3%B6glichen.md)→{{to ensure}}  
+    - sich sorgen↔to worry / to concern about
+        - noun→das Anliegen→{{concern}}
+            - Mein Anliegen ist das Geld.
+        - besorgt↔concerned / worried
+        - Du musst dich {{um}} mich nicht sorgen. 
+    - Eltern sorgen {{für}} ihre Kinder.
+    - [präteritum]();;Er sorgte
+        - Ein neuer Gastank muss von einem  installiert werden.
+    - [perfekt]();;Er hat gesorgt
+    - besorgen↔to go and get / to obtain / to get sb. sth.
+    - versorgen↔to supply / to look after
+        - synonym→[bereitstellen](Verbs/stellen/bereitstellen.md) 
+        - Sie versorgen dich mit Büchern→They will bring books to you 
+        - Meine Familie versorgt mich mit Nahrung und Geld.  
+    - 
+- sortieren↔to sort #verben
+    - Hilfst du mir, die [Schrauben]() in die [Schachteln]() zu sortieren? 
+    - [präteritum]();;Er sortierte
+    - [perfekt]();;Er hat sortiert
+- sparen↔to save (money)
+    - gegenteil;;ausgeben
+    - perfekt;;Wir haben 5000 Euro gespart. Jetzt kaufen wir uns ein Auto.
+    - Ich habe gespart, um mir diese Luxusunterkunft auf meiner Reise leisten zu können.   
+    - Seit wir das Haus isoliert haben, haben wir schon eine Menge Heizöl gespart.  
+    - speichern↔to save (file) #verben
+        - [präteritum]();;Er speicherte
+        - [perfekt]();;Es ist gespeichert
+            - Die Datei ist {{auf}} Ihrem Computer gespeichert.
+- spinnen←to yarn / {{to concoct}} / to be bunkers 
+    - präteritum;;Er spann
+    - perfekt;;Er hat gesponnen
+    - to spin←Maria spinnt [Wolle]()←Maria spins wool. 
+    - to be mental←Die Typen hier spinnen doch alle.←These guys are all nuts.
+- springen
+    - präteritum;;Er sprang
+    - perfekt;;Er ist gesprungen
+        - Er ist auf einen Zug **gesprungen**.   
+- spülen↔to rinse 
+- spüren↔to feel #verben
+    - [präteritum]();;Er spürte
+        - Er spürte die Kälte, als er aus der Tür trat. 
+    - [perfekt]();;Er hat gespürt
+    - Sie würde es kaum spüren.→She would hardly feel it.
+- stechen↔to sting / to stab / to jab / to prick / to thrust #verben
+    - [präteritum]();;Er stach
+    - [perfekt]();;Er hat gestochen
+- stecken↔to plug in / to insert #verben
+    - synonym→[einfügen](Verbs/einf%C3%BCgen.md) 
+    - Dein [Ladekabel]() steckt noch! Vergiss es nicht!
+    - [präteritum]();;Er steckte
+    - [perfekt]();;Er hat gesteckt
+- stehen↔to stand / to stuck [in traffic]
+    - widerstehen↔to resist  #verben
+        - [präteritum]();;Er widerstand 
+        - [perfekt]();;Bei seinem Sohn hat er der [Versuchung ]() widerstanden.
+            - With his son, he resisted the temptation.
+        - Ich habe eine Schwäche für Schokolade, ich kann einfach nicht widerstehen.→I have a weakness for chocolate, I just cannot resist it.  
+        - Grace steht jetzt im Stau.
+    - zustehen↔to be entitled to  #verben
+        - [Aliases]()
+            1. steht
+        - noun
+            - der Zustand↔{{condition | state | situation}} 
+                - synonym→[die Lage ]() 
+                - pl→die Verhältnisse ← circumstances / situation / conditions
+                    - Was sind die tatsächlichen Verhältnisse in dieser Stadt?→What are the actual conditions in this city?
+            - der Anspruch↔entitlement / claim
+                - Felix hat auch einen Anspruch auf seine Kinder.→Felix is entitled to see his children as well.
+                - Du hast keinen Anspruch mehr auf mich.→You no longer have any claim on me.
+        - [präteritum]();;Er stand zu
+        - [perfekt]();;Er hat zugestanden
+            - Selbst ein Privatleben hatte er ihm nicht zugestanden.→He had not even allowed him a private life.
+        - Ich habe ausgerechnet, daß mir zehn Tage zustehen.→I have calculated that I am entitled to ten days.
+- stehlen
+    - präteritum;;Er stahl
+    - perfekt;;Er hat gestohlen
+- steigen↔to rise / to increase / to climb / to board
+    - noun→Steigerung
+    - präteritum;;Er stieg
+    - synonym→zunehmen / erhöhen
+        - Er nimmt jeden Monat 1 Kilogramm zu. 
+    - perfekt;;Er ist gestiegen
+        - Die Zahl der Todesopfer des Orkans ist auf 200 gestiegen. 
+    -  steigen 
+    - Ich steige in die U-Bahn.
+    - einsteigen
+        - Ich steige {{in}} den Bus ein.
+    - aussteigen
+        - Ich steige {{aus}} dem Bus aus.
+    - umsteigen
+        - Ich steige {{ins}} Auto um.
+- stellen↔to put / to place / to lay 
+    - Tom wurden viele [Hindernisse]() in den Weg gestellt.  
+    - sich stellen↔to face / to confront / to surrender / to turn oneself in 
+        - Du solltest dich der Realität stellen.   
+    - abstellen↔to park [car, bike]  / to put down / to set aside / to turn off #verben
+        - synonym [park]→parken 
+        - [präteritum]();;Er stellte ab 
+            - Er stellte sein Auto in der Nähe des Hauses ab.→He parked his car close to the house.  
+            - Der Gärtner stellte den Eimer ab und sammelte die Blätter auf.→The gardener put down the bucket and picked up the leaves.  
+            - Ich stellte den Topf ab und öffnete die Tür.→I set the pot aside and opened the door.  
+        - [perfekt]();;Er hat abgestellt 
+            - Wo habe ich mein Fahrrad abgestellt?
+        - Ich wollte die Kiste auf der Veranda abstellen.→I was going to put the box on the porch.
+    - bereitstellen↔to supply / to provide / to allocate  #verben
+        - [präteritum]();;Er stellte bereit 
+        - [perfekt]();;Er hat bereitgestellt 
+            - Wer hat die Projektfinanzierung bereitgestellt?  
+        - Die Firma wird die Ausrüstung für das Projekt bereitstellen.  
+    - einstellen
+        - to set←Die Sprache kann als Standard eingestellt werden.←The language can be set as a default.  
+        - to adjust←Sie können mit dieser Taste die Lautstärke einstellen.←You can adjust the volume with this button.  
+            - adjektiv→verstellbar 
+                - [Aliases]()
+                    1. verstellbar
+        - to hire←Das Unternehmen stellte zusätzliches Personal ein.←The company hired some additional staff.  
+            - synonym→anstellen 
+        - to cease←Die Firma stellte die Produktion des Shampoos ein.←The company ceased the production of the shampoo. 
+    - erstellen↔to create #verben
+        - [präteritum]();;Er erstellte
+        - synonym→[schaffen](Verbs/schaffen.md) / [anlegen](Verbs/anlegen.md) 
+        - [perfekt]();;Er hat erstellt
+    - herstellen↔to produce #verben
+        - noun→die Fertigung→manufacturing / production
+        - Ich arbeite bei einer Firma, die Autos herstellt.
+        - [präteritum]();;Er stellte her
+        - [perfekt]();;Er hat hergestellt
+        - synonym→erzeugen
+            - Wir haben beschlossen, das Signal zu erzeugen.
+    - umstellen↔to shift / to organize / to transpose / to move / to reposition   #verben
+        - [präteritum]();;Er stellte um 
+        - noun→die Umstellung ← switch / transition / changeover
+        - [perfekt]();;Er hat umgestellt 
+            - Hast du das Sofa umgestellt? Es steht an einer anderen Stelle.
+        - Ich muss die Heizung auf Holz umstellen.
+- stillen↔to suckle / to breastfeed #verben
+    - im Stillen→in private
+    - [präteritum]();;Es stillte
+    - [perfekt]();;Es hat gestillt
+- stolpern↔to stumble
+    - präteritum;;Er stolperte
+    - perfekt;;Er ist gestolpert
+- stornieren↔to cancel
+    - präteritum→Er stornierte
+    - perfekt→Er hat storniert
+- stoßen↔to bump / to push / to kick / to butt #verben
+    - [präteritum]();;Er stieß
+        - Er stieß die Klinke nieder.
+    - [perfekt]();;Er hat gestoßen
+    - Die beiden Ziegen stießen sich mit ihren Hörnern.  
+    - anstoßen↔to toast
+        - Wir sollten {{auf}} Ihren Erfolg **anstoßen**.
+- stottern↔to stutter 
+- stöhnen←to groan / to moan #verben
+    - [präteritum]();;Er war es, der stöhnte.
+    - [perfekt]();;Er hat gestöhnt
+        - Thorn hätte beinah laut gestöhnt.
+    - Die Erde schien zu stöhnen.
+- strahlen↔to beam / to radiate #verben
+    - [präteritum]();;Es strahlte
+    - [perfekt]();;Er hat gestrahlt
+- streben↔to pursue / to seek / to aspire / to strive #verben
+    - [präteritum]();;Er strebte
+    - [perfekt]();;Er hat gestrebt
+    - Meine Schwester strebt da{{nach}}, ein besserer Mensch zu werden.  
+- streichen←{{to withdraw from sth.}} / {{to cancel}} / {{to cut out}} / {{to cross out}} / {{to sweep}}  / {{to discard}} 
+    - präteritum;;Er strich
+        - Die Stadtverwaltung strich die [Förderung](Verbs/fordern/f%C3%B6rdern.md) für das Projekt.→The city council withdrew funding for the project.  
+    - perfekt→Er hat gestrichen
+        - Überflüssige Kommentare wurden gestrichen.→Superfluous comments have been discarded.  
+    - Ich musste drei meiner Kurse streichen.→I had to drop three of my classes.  
+    - Ich benutzte ein Messer, um Butter auf mein Toastbrot zu streichen.→I used a knife to spread butter on my toast.  
+    - Der Plan wurde aus finanziellen Gründen gestrichen.→The plan was axed for budgetary reasons.  
+- --------------------- Portal ---------------------
+    - German
+- stürzen↔to nosedive #verben
+    - synonym;;[zurückgehen](Verbs/gehen/zur%C3%BCckgehen.md) 
+    - [präteritum]();;Er stürzte
+    - [perfekt]();;Er ist gestürzt
+- tadeln↔to rebuke / to blame
+    - Ich tadele niemals andere für meine Fehler.
+- tauschen↔to swap
+    - austauschen↔to replace broken
+    - eintauschen↔to trade in [trade bonus points for item]
+    - umtauschen↔to return something in the store / to exchange purchased item in the store #verben
+        - Nach Weihnachten wollen viele Leute ihre Geschenke umtauschen.
+        - [präteritum]();;Er tauschte um
+        - [perfekt]();;Er hat umgetauscht
+- --------------------- Portal ---------------------
+    - German
+- tippen↔to tip / to tap 
+- tragen↔to carry / to wear
+    - noun→der Träger
+    - präteritum;;Er trug
+    - perfekt→Er hat getragen
+    - eintragen↔to input / to enroll / to book  #verben
+        - [präteritum]();;Er trug ein 
+        - [perfekt]();;Er hat eingetragen
+            - Es kommt darauf an, ob sie bei der Gesundheitsbehörde eingetragen waren oder nicht.
+            - Ich habe die Ergebnisse der Diskussion in mein Notizbuch eingetragen.
+        - Der Rezeptionist trug die Namen der Gäste in den Computer ein.
+- treiben←{{to float}} / {{to compel sb.}} / {{to expend}} / {{to drift}} / {{to practice}} / {{to engage in sth.}}
+    - präteritum;;Er trieb
+        - Ohne einen Anker trieb das Boot auf dem See.→Without an anchor, the boat drifted on the lake.  
+    - perfekt;;Er hat getrieben
+    - Treibholz treibt auf dem See.→Driftwood is floating on the lake.  
+    - Er hat so viel überschüssige Energie, er sollte Sport treiben.  
+- toben↔to rage / to clamor / to rampage / to bluster #verben
+    - [präteritum]();;Er tobte
+    - [perfekt]();;Er hat getobt
+    - das Toben↔uproar
+- treten↔to step  #verben
+    - auftreten↔to appear   #verben
+        - noun→der Auftritt→gig / performance / show
+        - [präteritum]();;Er trat auf 
+        - [perfekt]();;Er hat aufgetreten 
+        - Mona wird heute Abend im Fernsehen auftreten.   
+    - [präteritum]();;Er trat
+    - [perfekt]();;Er ist getreten
+        - Ich bin auf etwas getreten 
+- tun
+    - präteritum;;Er tat
+    - perfekt;;Er hat getan
+- überfallen↔to raid / to ambush #verben
+    - [präteritum]();;Er überfiel
+    - [perfekt]();;Er hat überfallen
+        - Zwei maskierte Täter haben die Tankstelle überfallen und 2.000 Euro erbeutet. 
+    - Ja, ich überfalle Sie, das ist mir schon klar.→Yes, I'm ambushing you, I realize that already.
+- überleben↔to survive #verben
+    - [präteritum]();;Er überlebte
+    - [perfekt]();;Er hat überlebt
+    - opfern↔to survive 
+- übernachten↔to spend the night #verben
+    - [präteritum]();;Er übernachtete
+    - [perfekt]();;Er hat gestern bei einem Freund übernachtet.
+- überqueren↔to cross street or road
+    - Sie müssen die Straße überqueren.
+- überreden↔to persuade / to sway
+    - synonym→[überzeugen](Verbs/%C3%BCberzeugen.md) 
+    - Er hat mich überredet.
+- überschreiten↔to exceed / to transcend / to overspeed #verben
+    - Die Dauer der Tests wird drei Wochen nicht überschreiten.
+    - [präteritum]();;Er überschritt
+    - [perfekt]();;Er hat überschritten
+        - Sie haben die Höchstgeschwindigkeit überschritten. 
+    - übertreffen↔to exceed / to surpass / to beat  #verben
+        - Tom hat die Erwartungen übertroffen.
+        - [präteritum]();;Er übertraf 
+        - [perfekt]();;Er hat übertroffen 
+- übertragen↔to broadcast / to transmit #verben
+    - [präteritum]();;Er übertrug
+    - Die Sitzung! Von ENT live **übertragen**.   
+    - [perfekt]();;Er hat übertragen
+        - Das Konzert wird im Internet live übertragen. 
+    - synonym→ausstrahlen : to broadcast
+    - adjektiv→übertragbar⇒{{transferrable}} 
+        - Die Lizenz ist nicht übertragbar. 
+- übertreiben↔to boast / to exaggerate
+    - Ich würde sagen, daß Sie übertreiben.
+    - präteritum;;Er übertrieb
+    - perfekt;;Er hat übertrieben
+        - Es klingt ein bisschen übertrieben.→It sounds a bit over the top.
+- überwinden↔to overcome #verben
+    - [präteritum]();;Er überwand
+    - Ihr müsst die Probleme überwinden.  
+    - [perfekt]();;Er hat überwunden
+    - Mary konnte ihre Angst, auf Französisch zu kommunizieren, nicht überwinden. 
+- überzeugen↔to convince
+    - Er hat mich nicht überzeugt.
+- sich umhören↔to ask around
+    - Ich höre {{mich}} im Haus um, vielleicht hat jemand ein freies Zimmer für dich. 
+- umarmen↔to hug #verben
+    - [präteritum]();;Er umarmte
+        - Gisela und Leon umarmten sich zum Abschied. 
+    - [perfekt]();;Er hat umarmt
+- umgehen↔to circumvent / to bypass / to evade / to sidestep / about #verben
+    - noun→der Umgang : {{how to | acquaintance }} 
+    - [präteritum]();;Er ging es um
+    - [perfekt]();;Er hat es umgegangen
+    - mit jdm./etw. umgehen↔to handle / to deal / to interact 
+        - In der Schule lernen Kinder, wie man mit anderen Menschen umgehen soll.  
+        - Er kann gut mit den modernen Medien umgehen. 
+    - Es ist unmöglich, das offizielle System zu umgehen.  
+    - Er umging die Stadt, um Staus zu vermeiden.  
+- umkehren↔to reverse / to turn around #verben
+    - [präteritum]();;Er kehrte um
+        - Wir konnten nicht mehr weitergehen und kehrten um.  
+    - [perfekt]();;Er hat umgekehrt
+        - Die Firma hat einige ihrer Strategien umgekehrt, um Geld zu sparen.  
+    - Einige Male musste er umkehren.→A few times he had to turn back.
+- umrühren↔to stir #verben
+    - [präteritum]();;Er rührte um
+        - Sie rührte den Tee mit einem Löffel um.
+    - [perfekt]();;Er hat umgerührt
+    - Gelegentlich umrühren, bis der Zucker sich ganz aufgelöst hat.→Stir occasionally until the sugar has completely dissolved.
+- umwandeln↔to convert #verben
+    - [präteritum]();;Er wandelte um
+    - [perfekt]();;Er hat umgewandelt
+        - Wir haben unsere Gästezimmer in ein Büro umgewandelt. 
+    - Die Zellen wandeln Glukose {{in}} Energie um.→The cells convert glucose to energy.  
+- unterbrechen↔to interrupt
+    - präteritum;;Er unterbrach
+    - perfekt;;Er hat ihn unterbrochen
+    - Diesmal muß ich Sie **unterbrechen**.   
+- unterbringen↔to accomodate #verben
+    - noun→die Unterkunft
+        - Das alte Hotel wird jetzt als Unterkunft für Studenten genutzt.  
+    - [präteritum]();;Er brachte unter
+    - [perfekt]();;Er hat untergebracht
+        - Wo sind wir dieses Mal untergebracht? – Ich zeig es dir!→Where are we staying this time? - I'll show you!
+        - 
+    - Das Hotel kann bis zu 40 Personen unterbringen.  
+- sich unterhalten↔to have a chat
+    - präteritum;;Er unterhielt sich
+    - perfekt;;Er hat sich unterhalten
+- unterscheiden↔to distinguish #verben
+    - Die [Zwillinge]() sehen sich so ähnlich, dass es so gut wie unmöglich ist, den einen vom anderen zu unterscheiden.
+    - [präteritum]();;Er unterschied
+    - [perfekt]();;Er hat unterschieden
+- unterstreichen↔to underline / to underscore
+    - präteritum;;Er unterstrich
+    - perfekt;;Er hat unterstrichen
+- wehen↔to blow  #verben
+    - Der Wind weht aus Osten.
+    - [präteritum]();;Er wehte
+    - [perfekt]();;Er hat geweht 
+- veranstalten↔to stage / to host / to arrange / to organize #verben
+    - [präteritum]();;Er veranstaltete
+    - [perfekt]();;Er hat veranstaltet
+        - Die Ausstellung wurde von den Künstlern veranstaltet. 
+- verbessern↔to improve
+    - präteritum→Er verbesserte
+    - perfekt→Er hat verbessert
+- verbieten↔to forbid #verben
+    - synonym→untersagen
+        - Die Firma untersagt das Rauchen im gesamten Gebäude.  
+    - [präteritum]();;Er verbot
+    - Die Kunstgalerie verbietet das Fotografieren mit Blitzlicht. 
+    - [perfekt]();;Er hat verboten
+- verbinden←to connect / {{to combine}}
+    - präteritum;;Er verband
+    - perfekt;;Er hat verbunden
+        - Ist dieser Computer mit dem Internet verbunden?  
+    - verknüpfen↔to relate / to associate / to link / to connect / to interlink  #verben
+        - noun→der Zusammenhang ← connection / context
+            - Ich frage mich, ob da wohl ein Zusammenhang besteht.  
+        - adjektiv→zusammenhängende ← related / connected
+            - das Zusammenhänge↔correlation 
+            - Ich möchte noch über andere damit zusammenhängende Themen diskutieren.  
+        - [präteritum]();;Er verknüpfte 
+        - [perfekt]();;Er hat verknüpft
+        - Mehrere Datensätze können miteinander verknüpft werden.  
+- verbrauchen↔to consume
+    - sich verzehren←to consume [{{food}}] / {{to eat one's heart out}} #verben
+        - [präteritum]();;Er verzehrte sich
+        - [perfekt]();;Er hat sich verzehrt
+    - präteritum→Er verbrauchte
+    - perfekt→Er hat verbraucht
+- verbreiten↔to distribute [info/news] / to disseminate / to spread / to propagate  #verben
+    - [präteritum]();;Er verbreitete 
+    - [perfekt]();;Er hat verbreitet
+        - Dieser [Brauch](../German/Adverbs/Manner/%C3%BCblich/noun.md) ist in Bayern weit verbreitet.→This custom is widespread in Bavaria.
+- verderben↔to spoil [food/drink] #verben
+    - synonym→[verwöhnen](Verbs/verw%C3%B6hnen.md) 
+    - [präteritum]();;Er verdarb
+    - [perfekt]();;Er ist verdorben
+        - Die Milch riecht verdorben.  
+    - Fleisch sollte man im Kühlschrank aufheben, sonst kann es verderben. 
+- verdienen↔to deserve / to earn  #verben
+    - Ihr verdient euch gegenseitig/einander. 
+    - [präteritum]();;Er verdiente
+    - [perfekt]();;Er hat verdient
+- verdrängen↔to suppress / to repress / to drive out  #verben
+    - Er versuchte stets, seine Probleme zu verdrängen. 
+    - [präteritum]();;Er verdrängte 
+    - [perfekt]();;Er hat verdrängt 
+- vereinbaren::to arrange / to agree on sth.
+    - synonym→anordnen ← to arrange
+        - Ich ordne die Fotos in einer Reihe an.  
+        - In Barcelona sind die Straßen in einem Gittermuster angeordnet.  
+    - präsens→Die Parteien vereinbaren Folgendes.
+        - The parties agree as follows.
+    - perfekt;;Ich habe mit dem Mechaniker einen Termin vereinbart.
+    - Vereinbaren wir doch ein Geschäft.↔Let's make a deal.
+- verfolgen↔to pursue #verben
+    - [präteritum]();;Er verfolgte
+    - [perfekt]();;Er hat verfolgt
+- verfügen↔to have
+    - noun→die Verfügbarkeit → availability
+    - präteritum→Er verfügte
+    - perfekt→Er hat verfügt
+- vergehen↔to vanish / to wither / to decay
+    - perfekt;;Er ist vergangen
+- vergessen↔to forget
+    - präteritum;;Er vergaß
+    - perfekt;;Er hat vergessen
+- vergewaltigen↔to rape 
+- vergleichen↔to compare / to contrast
+    - präteritum;;Er verglich
+    - adverb→vergleichsweise ← comparatively
+    - perfekt;;Er hat verglichen
+- verhängen↔to impose 
+    - Trotzdem, verhängen Sie das [Kriegsrecht ]()
+
+- verhindern↔to prevent #verben
+    - noun→die Vorbeugung⇒{{prevention}} 
+    - synonym→vorbeugen
+        - Cremes können [Falten](Verbs/falten/die%20Falte.md) vorbeugen.→reams can prevent wrinkles.
+    - Der [Sicherheitsgurt]() verhindert schwere Verletzungen bei Unfällen.
+    - [präteritum]();;Er verhinderte
+    - [perfekt]();;Er hat verhindert
+- verkünden↔to announce / to declare / to proclaim #verben
+    - synonym;;bekanntgeben 
+        - Auch das werden wir morgen bekanntgeben.
+    - [präteritum]();;Er verkündete
+    - [perfekt]();;Er hat verkündet
+    - Immerhin scheint es zu verkünden, dass sie ihr [Geständnis ]() [bereuen](Verbs/bedauern/synonym.md).
+- verlassen::to leave / to abandon
+    - perfekt;;Er hat verlassen
+    - präteritum→Er verließ
+    - sich auf jdn. verlassen→to rely on sb.
+        - synonym→[auf etw. rechnen](Verbs/kalkulieren/rechnen/auf%20etw.%20rechnen.md) 
+        - präsens;;Sie können sich auf mich [Vollkommen]() verlassen.
+        - **Verlassen** Sie sich auf mich.   
+    - Häufig verlässt er seine Arbeitsstelle sehr spät.  
+- verlangen↔to demand / to request / to require / to claim / to ask / to charge  #verben
+    - [Aliases]()
+        1. verlange
+    - noun→[das Verlangen](Verbs/sich%20sehnen/noun.md) ← yearning | longing 
+        - Tom hat ein Verlangen nach Schokoladeneis.  
+    - synonym→[fordern](Verbs/fordern.md) 
+    - [präteritum]();;Er verlangte
+        - Sie verlangten, dass alle Exemplare des Buches zerstört wurden.  
+    - [perfekt]();;Er hat verlangt
+        - Das habe ich nie von Ihnen verlangt.→I never asked you to do that.
+    - Ich mache das [umsonst](../German/Adverbs/Manner/umsonst.md) und [verlange](Verbs/verlangen.md) kein [Entgelt ]().
+- verlängern↔to extend #verben
+    - Können wir den Urlaub nicht um ein paar Tage verlängern? 
+    - [präteritum]();;Er verlängerte
+    - [perfekt]();;Er hat verlängert
+    - ausbauen↔to expand / to extend #verben
+        - adjektiv→erweitert ← {{expanded}} | {{enhanced}} 
+            - Die Sammlung wird ständig aktualisiert und erweitert.  
+        - [perfekt]();;Er hat ausgebaut
+            - Wird Ihr Sportprogramm noch weiter ausgebaut? 
+        - [präteritum]();;Er baute aus
+        - Er möchte sein Netzwerk ausbauen, um eine Anstellung zu finden.→He wants to expand his network to find a job.  
+- verleihen←{{to lend}} / {{to award}} #verben
+    - Die Bibliothek verleiht Bücher {{an}} Studenten.
+    - [präteritum]();;Er verlieh
+    - [perfekt]();;Er hat verliehen
+- verlieren↔to lose
+    - präteritum;;Er verlor
+    - perfekt;;Er hat verloren
+        - Verdammt! Ich habe meine Schlüssel verloren! 
+    - [Laien ]() können hierbei leicht den Überblick verlieren.→Amateurs can easily lose track here.
+- vermeiden↔to avoid
+    - synonym→meiden
+    - präteritum→Er vermied
+    - Wir nahmen eine andere Straße, um Staus zu vermeiden.
+    - perfekt→Er hat vermieden
+- to miss
+    - vermissen↔to miss sb. / can't find sth.
+        - adjektiv→vermisst ← {{missing}} 
+        - Ich vermisse meine Brieftasche. 
+        - Ich vermisse meinen Freund immer, wenn er weg ist. 
+            - synonym→[fehlen](Verbs/fehlen.md) 
+    - verpassen↔to miss sth.
+        - Das ist ein Film, den man nicht verpassen sollte. 
+        - Sie verpasste den Ausflug, weil sie krank war.
+        - Wir haben uns um einige Minute verpasst. 
+    - versaümen↔to miss a chance or opportunity / to neglect
+        - noun→Fahrlässigkeit ← neglect
+            - Es kam aufgrund der Fahrlässigkeit des Fahrers zu dem Unfall.  
+        - Wir haben es versäumt, unsere Kunden über die Verspätung zu informieren. 
+    - verfehlen↔to miss a goal
+        - Der Golfspieler verfehlte das Loch und musste es noch einmal versuchen.
+        - Der Präsentation hat ihr Ziel verfehlt. 
+    - verschlafen↔to miss out on sth. / to oversleep
+        - präteritum;;Er verschlief
+        - perfekt;;Er hat verschlafen
+            - Sie hat verschlafen und ist zu spät ins Büro gekommen. 
+    - entgehen↔to miss out on sth. / to avoid / to escape #verben
+        - [präteritum]();;Es entging
+        - [perfekt]();;Es ist meiner Aufmerksamkeit nicht entgangen. [It has not escaped my attention.] 
+        - Wie hat uns das entgehen können?
+- vermitteln↔to convey / to impart  #verben
+    - [präteritum]();;Er vermittelte
+    - [perfekt]();;Er hat vermittelt 
+    - Jeder auf Twitter vermittelt ein falsches Bild. 
+    - Blumen können Gefühle vermitteln und spenden [Trost ](), wenn Worte fehlen.→Flowers can convey feelings and provide comfort when words fail.
+- verpügeln↔to batter / to beat 
+- verraten↔to betray #verben
+    - noun→der Verräter
+    - Er verriet uns, indem er dem Feind erzählte, wo wir waren. 
+    - [präteritum]();;Er verriet
+    - [perfekt]();;Er hat verraten
+    - trügen↔to deceive  #verben
+        - synonym→täuschen 
+            - Ich kann mich täuschen, aber ich bezweifle, daß der Schütze sich im Garten aufgehalten hat.→I may be wrong, but I doubt that the shooter was in the garden 
+        - [präteritum]();;Er trog 
+            - Seine Erinnerung trog ihn.
+        - [perfekt]();;Er hat getrogen 
+        - Ich hatte erwartet, er würde die Befehle geben - So konnte der Schein trügen.→I had expected him to give the orders - So appearances could be deceiving.
+- sein verrückt↔to be crazy about
+    - Ich bin verrückt {{nach}} Kleidung.
+- verschieben↔to postone / to delay / to move or shift / to relocate / to reschedule / to remit
+    - präsens;;Er verschiebt
+        - Warum, zum Teufel, verschiebt er schwarze Gelder?→Why the hell is he moving black money around?
+    - präteritum;;Er verschob
+    - perfekt;;Er hat verschoben
+    - Wir müssen unser Treffen {{auf}} Montag verschieben.→We will have to postpone our meeting until Monday.
+- verschreiben↔to prescribe #verben
+    - [präteritum]();;Er verschrieb
+    - [perfekt]();;Er hat verschrieben
+        - Mein Arzt hat mir einen Hustensaft verschrieben. 
+- verschwinden↔to disappear  #verben
+    - [präteritum]();;Er verschwand
+    - [perfekt]();;Er ist verschwunden 
+- versprechen↔to promise
+    - präsens;;Er verspricht
+    - adjektiv→vielversprechend ← promising
+        - [Aliases]()
+            1. vielversprechend
+    - präteritum;;Er versprach
+    - perfekt;;Er hat versprochen
+- --------------------- Portal ---------------------
+    - German
+- verstecken↔to hide
+    - Der Dieb versuchte, sich {{vor}} der Polizei zu verstecken.
+    - präteritum;;Er versteckte
+    - perfekt→Er hat versteckt
+- verteidigen↔to defend sb. sth. / to advocate #verben
+    - noun→Verteidigung : {{defence}} 
+        - Er spielte in der **Verteidigung**.  
+    - Tom verteidigte seine [Erkenntnisse]().
+    - [präteritum]();;Er verteidigte
+    - [perfekt]();;Er hat verteidigt
+- verteilen↔to distribute
+    - noun→Verteilung
+- vertreiben↔to dispel / to banish / to expel / to disperse / to distribute / to sell
+    - präteritum;;Er vertrieb
+    - perfekt;;Er hat vertrieben
+    - Unsere Firma vertreibt viele verschiedene Produkte.  
+    - Das Unternehmen vertreibt seine Produkte im Ausland.  
+    - Ich vertrieb negative Gedanken aus meinem Kopf.  
+- verursachen↔to cause / to bring about #verben
+    - [präteritum]();;Er verursachte
+    - [perfekt]();;Er hat verursacht
+        - Stress wird durch viele Faktoren verursacht. 
+        - Ein Verkehrsunfall hat uns viel Ärger verursacht.  
+    - synonym→bereiten⇒to cause sb. discomfort / to cause / to prepare
+        - Sie konnte ihnen Schmerzen bereiten.
+        - Es bereitet mir viel Freude, dass du mitkommst!
+    - Alle drei verursachen mir eine [Gänsehaut ]().
+- verschweigen↔to withhold info / to conceal
+    - Er hat mir seine Affäre verschwiegen.
+- verwandeln↔to transform  #verben
+    - [präteritum]();;Er verwandelte 
+    - [perfekt]();;Er hat verwandelt 
+        - Der Architekt hat das alte Lagerhaus in eine geräumige moderne Bar verwandelt.  
+- verweigern↔to refuse / to deny / to disallow #verben
+    - [präteritum]();;Er verweigerte
+    - synonym→[ablehnen](Verbs/ablehnen.md) 
+    - gegenteil→[erlauben](Verbs/erlauben.md) 
+    - bestreiten↔to deny / to dispute / to contest #verben
+        - [präteritum]();;Er bestritt
+        - [perfekt]();;Er hat bestritten
+        - Niemand bestreitet die [Tatsache ](), dass [Großzügigkeit ]() eine [Tugend ]() ist.
+    - [perfekt]();;Er hat verweigert
+        - Mir wurde der Service an der Bar verweigert. 
+    - Es war schwer, sich ihm zu **verweigern**.   
+- verwechseln↔to confuse #verben
+    - [präteritum]();;Er verwechselte
+        - Ich war so [durcheinander](), dass ich ein Telefon mit einem Taschenrechner verwechselte.→I was so confused that I mistook a phone for a calculator.
+    - [perfekt]();;Er hat verwechselt
+    - Zucker und Salz kann man leicht verwechseln.  
+- verweisen↔to refer to sb. #verben
+    - synonym→sich beziehen {{auf}} 
+        - Die meisten **beziehen** sich aber nur {{aufs}} Buch.→But most of them refer only to the book.
+    - [präteritum]();;Er verwies
+        - Ich verwies Mia {{an}} meine Freundin Tina, die alles reparieren kann.
+        - Tom verwies {{auf}} die Landkarte.  
+    - [perfekt]();;Er hat verwiesen
+- verwenden↔to use #verben
+    - noun→das Gebrauch
+    - synonym→einsetzen
+        - Wann müssen Autofahrer den Blinker einsetzen?
+    - [präteritum]();;Er verwendete
+    - [perfekt]();;Er hat verwendet
+        - Bor wird in vielen Reinigungsmitteln verwendet. 
+- verwirklichen↔to materialize / to achieve / to realize sth. [hopes and dreams]  #verben
+    - Ich beschloss, meinen Traum zu verwirklichen und ging ins Ausland.
+    - [präteritum]();;Er verwirklichte 
+    - [perfekt]();;Er hat verwirklicht 
+- verwöhnen↔to spoil / to pamper / to indulge  #verben
+    - [präteritum]();;Er verwöhnte
+    - [perfekt]();;Er hat verwöhnt 
+    - **Verwöhnen** lassen kannst du dich später.   
+- verzeihen↔to forgive #verben
+    - synonym→[vergeben](Verbs/geben/vergeben.md)
+    - Ich habe einen Fehler gemacht und hoffe, dass du mir verzeihst. 
+    - [präteritum]();;Er verzieh
+    - [perfekt]();;Er hat verziehen
+- verzichten↔to quit #verben
+    - [präteritum]();;Er verzichtete
+    - [perfekt]();;Er hat verzichtet
+    - verzichten...auf↔to forgo / to relinquish / to renounce / do without / to give up
+        - Er hätte darauf verzichten können.→He could have done without it.
+    - Zu verzichten ist ein Betrug an dir.→To quit is to cheat yourself.
+- vorhaben↔to plan #verben
+    - frage→Habt ihr am Wochenende etwas vor?
+    - [präteritum]();;Er hatte vor
+        - Chad-Zwei erklärte, was wir **vorhatten**.  
+    - [perfekt]();;Er hat vorgehabt
+- vorkommen↔to occur / to happen / to appear / to exist #verben
+    - noun→die [Begebenheit]() 
+    - [präteritum]();;Er kam vor
+    - [perfekt]();;Er ist vorgekommen
+        - So etwas ist mir noch nie vorgekommen!↔I have never encountered anything like this before!
+    - Das Vorkommen von heftigen Stürmen ist am Meer nicht ungewöhnlich.  
+- vorlegen↔to submit / to present #verben
+    - synonym→[abgeben](Verbs/geben/abgeben.md) / [einreichen](Verbs/einreichen.md)  / darstellen / {{überreichen}} 
+        - Das ist ein gutes Buch, das Zusammenhänge verständlich darstellt.→This is a good book that presents correlations in an understandable manner.
+    - [präteritum]();;Er legte vor
+    - [perfekt]();;Er hat vorgelegt
+        - Die Dokumente müssen in deutscher Übersetzung vorgelegt werden. 
+    - 
+- vorschlagen↔to suggest / to propose
+    - präsens;;Er schlägt vor
+    - präteritum;;Er schlug vor
+    - perfekt;;Er hat vorgeschlagen
+- wachsen↔to grow
+    - präsens;;Er wächst
+    - präteritum;;Er wuchs
+    - perfekt;;Er ist gewachsen
+    - Auf den Feldern rund um das Dorf wachsen [Gerste ]() und [Weizen ]().  
+- wagen↔to attempt / to dare #verben
+    - noun→der Versuch
+    - Wir wagen einen neuen Vorstoß mit der Erziehung unseres Hundes.
+    - [präteritum]();;Er wagte
+    - [perfekt]();;Er hat gewagt
+- wahrnehmen↔to perceive #verben
+    - noun→Wahrnehmung→percetion | Einschätzung→assessment / perception
+    - [präteritum]();;Er nahm wahr
+    - [perfekt]();;Er hat wahrgenommen
+        - Dieses Problem wird leider viel zu wenig wahrgenommen. 
+- sich wälzen↔to roll 
+- waschen
+    - präteritum;;Er wusch
+    - perfekt;;Er hat gewaschen
+- wehtun↔to hurt / to ache
+    - präteritum;;Es tat weh
+    - perfekt;;Es hat wehgetan
+- werben↔to advertise / to woo / to recruit
+    - präsens;;Er wirbt
+    - präteritum;;Er warb
+        - General Simms warb mich vor sechs Jahren an.→General Simms recruited me six years ago.
+    - perfekt;;Er hat geworben
+        - Wofür hatte dieser Slogan gleich wieder geworben?→What had this slogan advertised again?
+    - Ich glaube, dass du erst noch um sie werben musst.→I think you still have to woo them first.
+- werfen↔to throw / to toss
+    - synonym→schmeißen
+        - Er schmeißt den Ball gegen die Wand.  
+    - präsens;;Er wirf
+    - präteritum;;Er warf
+    - perfekt;;Er hat geworfen
+    - wegwerfen↔to throw away / to discard #verben
+        - synonym→[ablegen](Verbs/ablegen.md) / [streichen](Verbs/streichen.md) 
+        - gegenteil→rausholen 
+        - [präteritum]();;Er warf weg
+        - [perfekt]();;Er hat weggeworfen
+            - All das hast du **weggeworfen**.  
+        - Ich werde aufräumen und diesen ganzen Müll wegwerfen. 
+    - --------------------- Portal ---------------------
+        - German
+- wetten↔to bet  #verben
+    - noun→die Wette→wager
+    - [präteritum]();;Er wettete
+    - [perfekt]();;Er hat gewettet 
+- widersprechen↔to object / to disagree
+    - präsens;;Er widerspricht
+    - präteritum;;Er widersprach
+    - perfekt;;Er hat widergesprochen
+- widmen↔to devote / to dedicate #verben
+    - [präteritum]();;Er widmete
+    - [perfekt]();;Er hat gewidmet
+        - Er hat sich in letzter Zeit ganz seinem Studium gewidmet. 
+    - Die Autorin widmete das Buch ihren Kindern.  
+- wiederverwerten↔to recycle #verben
+    - --------------------- Portal ---------------------
+        - German
+    - Sie enthalten wertwolle Metalle, die man gut wiederverwerten kann.
+    - [präteritum]();;Er verwertete wieder
+    - [perfekt]();;Er hat wiederverwertet
+        - Der rostige Rumpf eines U-Boots wird wiederverwertet.
+- wiegen↔to weigh / to scale
+    - präteritum;;Er wog
+    - perfekt;;Er hat gewogen
+    - Der Verkäufer wiegt das Obst.
+- winken↔to wave / to beckon
+    - präteritum;;Er winkte
+    - perfekt;;Er hat gewunken / Er hat gewinkt
+- wirken↔to seem / to appear / to affect #verben
+    - synonym→[scheinen](Verbs/scheinen.md)
+    - [präteritum]();;Er wirkte
+        - Tom wirkte pessimistisch. 
+    - [perfekt]();;Er hat gewirkt
+- wissen↔to know
+    - präsens;;Er weiß
+    - noun→die Weisheit
+        - Logik ist der Anfang aller Weisheit, nicht das Ende.  
+    - perfekt;;Er hat gewusst
+    - präteritum;;Er wusste
+- wollen
+    - gewollt↔intended 
+- wringen↔to wring / piga [tagalog]  #verben
+    - [präteritum]();;Er wrang 
+    - [perfekt]();;Er hat gewrungen 
+- zanken↔to brawl / to bicker  
+- --------------------- Portal ---------------------
+    - German
+- zersprengen↔to burst / to disperse 
+- ziehen↔to pull / to drag / to tug
+    - gegenteil;;drücken
+    - präteritum;;Er zog
+    - perfekt;;Er hat gezogen
+    - abziehen↔to deduct / to subtract  #verben
+        - synonym→absetzen → to deduct
+        - [präteritum]();;Er zog ab 
+        - [perfekt]();;Er hat abgezogen 
+            - Rentenbeiträge werden von meinem Gehalt abgezogen.  
+            - Mein Arbeitgeber hat rechtswidrigen etwas von meinem Lohn abgezogen.
+        - Wenn man vier von zwölf abzieht, bekommt man acht.  
+    - anziehen #verben
+        - to attract←Nachts zieht Licht Insekten an.  
+        - [präteritum]();;Er zog an
+            - to put on←Sie zog ihr neues Kleid an.  
+            - to tighten←Der Automechaniker zog die Schrauben am Auspuff an.←The car mechanic tightened the bolts of the exhaust.  
+            - to attract←Der Jahrmarkt zog viele Besucher an.  
+        - [perfekt]();;Er hat angezogen
+        - anlocken↔to draw / to allure / to entice / to bait / to attract sb./sth  #verben
+            - [präteritum]();;Er lockte an 
+            - [perfekt]();;Er hat angelockt
+            - Der Fotografiewettbewerb lockt jedes Jahr tausende Teilnehmer an.
+    - zurückziehen↔to withdraw / to retract / to disinvest
+        - Er wollte sich langsam zurückziehen.
+    - hineinziehen↔to implicate sb. / to involve / to drag in #verben
+        - synonym;;verwickeln : {{to involve / to implicate}} 
+        - [präteritum]();;Er zog hinein
+        - [perfekt]();;Er hat hineingezogen
+            - Ich möchte nicht in diese peinliche Affäre hineingezogen werden 
+        - Ich will sie da nicht hineinziehen.
+        - Ich will dich nicht in diese Sache hineinziehen.
+    - nachvollziehen↔to be able to relate to sth. #verben
+        - noun→die Auffassung | Verständnis ← {{understanding / view}} 
+        - [präteritum]();;Er vollzog nach
+        - [perfekt]();;Er hat nachvollzogen
+        - Ich weiß, dass er wütend ist, und ich kann das gut nachvollziehen. 
+    - vorziehen↔to prefer  #verben
+        - noun→die Vorliebe → preference
+        - [Aliases]()
+            1. zog
+        - synonym→[bevorzugen](Verbs/bevorzugen.md) 
+        - [präteritum]();;Er zog vor 
+        - [perfekt]();;Er hat vorgezogen 
+        - Ich würde es sogar vorziehen.→I would even prefer it.
+        - Ich ziehe das [Letztere ]() dem [Ersteren]() vor.  
+- zittern↔to tremble / to quiver / to shiver / to jitter #verben
+    - [präteritum]();;Er zitterte
+    - [perfekt]();;Er hat gezittert
+- zögern↔to hesitate  #verben
+    - [präteritum]();;Er zögerte 
+    - [perfekt]();;Er hat gezögert 
+    - Er schoss ohne zu zögern.→He shot without hesitation. 
+- zubereiten↔to prepare
+    - synonym→[Vorbereiten](../German/Liste%20der%20Verben%20mit%20Pr%C3%A4positionen/Akkusativ/Vorbereiten.md) 
+    - präteritum→Er bereitete zu
+    - perfekt→Er hat zubereitet
+- zurückkehren↔to return #verben
+    - [präteritum]();;Er kehrte zurück
+    - [perfekt]();;Er ist zurückgekehrt
+- zusagen↔to agree / to confirm #verben
+    - [präteritum]();;Er sagte ... zu
+    - [perfekt]();;Er hat zugesagt
+    - Wir können nicht einfach so **zusagen**.   
+    - Thomas hat Marie zum Essen eingeladen und sie hat zugesagt.  
+- zusammengehören↔to belong together
+    - Diese drei Personen gehören zusammen. 
+- zuschneiden↔to cut to size / to tailor sth to sth  #verben
+    - [präteritum]();;Er schnitt zu 
+        - Der Tischler schnitt das Regal auf die gewünschte [Länge ]() zu.→The carpenter cut the shelf to the desired length.  
+    - noun→der Schneider ← tailor
+        - Tom ist Schneider.  
+        - maßgeschneidert↔custom-made 
+    - synonym→anpassen ← {{to tailor}} 
+        - Wir können unsere Lösungen jedem Bedarf anpassen.  
+    - [perfekt]();;Er hat zugeschnitten 
+        - Die Schubladen werden exakt {{auf}} Ihre Bedürfnisse zugeschnitten.
+    - Die Schulung wird {{auf}} die Bedürfnisse ihrer Zielgruppe zugeschnitten.→The training is tailored to the needs of its target audience.  
+- zustimmen↔to agree / to approve / {{to consent}}  #verben
+    - synonym→abstimmen | einverstanden
+        - Wir müssen noch einige Kleinigkeiten abstimmen.→We still have to agree on some small details.
+    - noun→Einverständnis ← {{approval | agreement}} 
+    - [präteritum]();;Er stimmte zu
+    - [perfekt]();;Er hat zugestimmt
+        - Trotzdem haben wir der Vereinbarung zugestimmt. 
+        - Der Manager hat den Änderungen endlich zugestimmt.  
+    - Ich stimme deiner [Aussage ]() voll und ganz zu.  
+    - Die ganze Gruppe muss zustimmen, bevor wir weitermachen.  
+- zwingen↔to force #verben
+    - noun→die Gewalt ←power / force / violence
+        - Die Polizei muss [hemmungslose ]() Gewalt verhindern.  
+    - [präteritum]();;Er zwang
+    - [perfekt]();;Er hat gezwungen
+        - Es wird niemand gezwungen mitzuspielen.

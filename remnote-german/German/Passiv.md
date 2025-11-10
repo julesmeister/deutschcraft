@@ -1,0 +1,34 @@
+- **Prasens**
+    - regel;;<Werden + PP II
+        - Das Haus wird gebaut.→The house is built.
+    - englisch;;is being
+- 
+- Präteritum
+    - english;;was being
+    - regel;;<Wurden + PP II
+        - Das Haus wurde gebaut.→The house was built.
+- 
+- Perfekt
+    - englisch;;has been
+    - regel;;<Sein + PP II + worden
+        - Daus Haus ist gebaut worden.→Daus house has been built.
+    - 
+- Plusquamperfekt
+    - regel;;<Waren + PP II + worden
+        - Das Haus war gebaut worden.→The house had been built. 
+    - englisch→has been
+- 
+- Modalverben
+    - englisch;;must be 
+    - regel;;<Modalverb + PP II + werden
+        - Das Haus muss gebaut werden.→The house must be built.
+- 
+- Futur I
+    - englisch;;will be
+    - regel;;<Werden + PP II + werden
+        - Das Haus wird gebaut werden.→The house will be built. 
+- 
+- I would like to be...↔Ich {{wäre}} gerne...
+- I would like to...↔Ich {{würde}} gerne...
+- What would have happened↔Was {{wäre}} passiert
+- What would happen...↔Was {{würde}} passieren 
