@@ -3,7 +3,7 @@
   "totalCards": 1026,
   "flashcards": [
     {
-      "id": "syllabus-b1-10818",
+      "id": "syllabus-b1-10844",
       "german": "interessant",
       "english": "interesting",
       "category": "Adjective Pairs",
@@ -23,7 +23,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10819",
+      "id": "syllabus-b1-10845",
       "german": "langweilig",
       "english": "boring",
       "category": "Adjective Pairs",
@@ -43,7 +43,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10820",
+      "id": "syllabus-b1-10846",
       "german": "einfach",
       "english": "easy / simple",
       "category": "Adjective Pairs",
@@ -63,7 +63,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10821",
+      "id": "syllabus-b1-10847",
       "german": "schwierig",
       "english": "difficult",
       "category": "Adjective Pairs",
@@ -83,7 +83,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10822",
+      "id": "syllabus-b1-10848",
       "german": "laut",
       "english": "loud",
       "category": "Adjective Pairs",
@@ -103,7 +103,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10823",
+      "id": "syllabus-b1-10849",
       "german": "leise",
       "english": "quiet",
       "category": "Adjective Pairs",
@@ -123,7 +123,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10824",
+      "id": "syllabus-b1-10850",
       "german": "hell",
       "english": "bright / light",
       "category": "Adjective Pairs",
@@ -143,7 +143,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10825",
+      "id": "syllabus-b1-10851",
       "german": "dunkel",
       "english": "dark",
       "category": "Adjective Pairs",
@@ -163,7 +163,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10826",
+      "id": "syllabus-b1-10852",
       "german": "nah",
       "english": "near / close",
       "category": "Adjective Pairs",
@@ -183,7 +183,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10827",
+      "id": "syllabus-b1-10853",
       "german": "weit",
       "english": "far",
       "category": "Adjective Pairs",
@@ -203,7 +203,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10828",
+      "id": "syllabus-b1-10854",
       "german": "dick",
       "english": "thick / fat",
       "category": "Adjective Pairs",
@@ -223,7 +223,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10829",
+      "id": "syllabus-b1-10855",
       "german": "dünn",
       "english": "thin",
       "category": "Adjective Pairs",
@@ -243,7 +243,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10830",
+      "id": "syllabus-b1-10856",
       "german": "breit",
       "english": "wide / broad",
       "category": "Adjective Pairs",
@@ -263,7 +263,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10831",
+      "id": "syllabus-b1-10857",
       "german": "eng",
       "english": "narrow / tight",
       "category": "Adjective Pairs",
@@ -283,7 +283,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10832",
+      "id": "syllabus-b1-10858",
       "german": "tief",
       "english": "deep",
       "category": "Adjective Pairs",
@@ -303,7 +303,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10833",
+      "id": "syllabus-b1-10859",
       "german": "flach",
       "english": "flat / shallow",
       "category": "Adjective Pairs",
@@ -323,7 +323,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10834",
+      "id": "syllabus-b1-10860",
       "german": "fleißig",
       "english": "diligent / hardworking",
       "category": "Adjectives",
@@ -343,7 +343,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10835",
+      "id": "syllabus-b1-10861",
       "german": "faul",
       "english": "lazy",
       "category": "Adjectives",
@@ -363,7 +363,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10836",
+      "id": "syllabus-b1-10862",
       "german": "pünktlich",
       "english": "punctual",
       "category": "Adjectives",
@@ -383,7 +383,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10837",
+      "id": "syllabus-b1-10863",
       "german": "verspätet",
       "english": "late / delayed",
       "category": "Adjectives",
@@ -403,7 +403,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10838",
+      "id": "syllabus-b1-10864",
       "german": "ordentlich",
       "english": "tidy / orderly",
       "category": "Adjectives",
@@ -423,7 +423,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10839",
+      "id": "syllabus-b1-10865",
       "german": "unordentlich",
       "english": "messy / untidy",
       "category": "Adjectives",
@@ -443,7 +443,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10840",
+      "id": "syllabus-b1-10866",
       "german": "zuverlässig",
       "english": "reliable",
       "category": "Adjectives",
@@ -463,7 +463,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10841",
+      "id": "syllabus-b1-10867",
       "german": "ehrlich",
       "english": "honest",
       "category": "Adjectives",
@@ -483,7 +483,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10842",
+      "id": "syllabus-b1-10868",
       "german": "unehrlich",
       "english": "dishonest",
       "category": "Adjectives",
@@ -503,7 +503,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10843",
+      "id": "syllabus-b1-10869",
       "german": "geduldig",
       "english": "patient",
       "category": "Adjectives",
@@ -523,7 +523,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10844",
+      "id": "syllabus-b1-10870",
       "german": "ungeduldig",
       "english": "impatient",
       "category": "Adjectives",
@@ -543,7 +543,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10845",
+      "id": "syllabus-b1-10871",
       "german": "stolz",
       "english": "proud",
       "category": "Adjectives",
@@ -563,7 +563,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10846",
+      "id": "syllabus-b1-10872",
       "german": "bescheiden",
       "english": "modest",
       "category": "Adjectives",
@@ -583,7 +583,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10847",
+      "id": "syllabus-b1-10873",
       "german": "mutig",
       "english": "brave / courageous",
       "category": "Adjectives",
@@ -603,7 +603,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10848",
+      "id": "syllabus-b1-10874",
       "german": "ängstlich",
       "english": "fearful / anxious",
       "category": "Adjectives",
@@ -623,7 +623,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10849",
+      "id": "syllabus-b1-10875",
       "german": "selbstbewusst",
       "english": "self-confident",
       "category": "Adjectives",
@@ -643,7 +643,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10850",
+      "id": "syllabus-b1-10876",
       "german": "schüchtern",
       "english": "shy",
       "category": "Adjectives",
@@ -663,7 +663,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10851",
+      "id": "syllabus-b1-10877",
       "german": "egoistisch",
       "english": "selfish",
       "category": "Adjectives",
@@ -683,7 +683,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10852",
+      "id": "syllabus-b1-10878",
       "german": "großzügig",
       "english": "generous",
       "category": "Adjectives",
@@ -703,7 +703,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10853",
+      "id": "syllabus-b1-10879",
       "german": "geizig",
       "english": "stingy / miserly",
       "category": "Adjectives",
@@ -723,7 +723,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10854",
+      "id": "syllabus-b1-10880",
       "german": "sympathisch",
       "english": "likeable / pleasant",
       "category": "Adjectives",
@@ -743,7 +743,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10855",
+      "id": "syllabus-b1-10881",
       "german": "unsympathisch",
       "english": "unlikeable / unpleasant",
       "category": "Adjectives",
@@ -763,7 +763,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10856",
+      "id": "syllabus-b1-10882",
       "german": "optimistisch",
       "english": "optimistic",
       "category": "Adjectives",
@@ -783,7 +783,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10857",
+      "id": "syllabus-b1-10883",
       "german": "pessimistisch",
       "english": "pessimistic",
       "category": "Adjectives",
@@ -803,7 +803,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10858",
+      "id": "syllabus-b1-10884",
       "german": "praktisch",
       "english": "practical",
       "category": "Adjectives",
@@ -823,7 +823,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10859",
+      "id": "syllabus-b1-10885",
       "german": "theoretisch",
       "english": "theoretical",
       "category": "Adjectives",
@@ -843,7 +843,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10860",
+      "id": "syllabus-b1-10886",
       "german": "kreativ",
       "english": "creative",
       "category": "Adjectives",
@@ -863,7 +863,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10861",
+      "id": "syllabus-b1-10887",
       "german": "typisch",
       "english": "typical",
       "category": "Adjectives",
@@ -883,7 +883,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10862",
+      "id": "syllabus-b1-10888",
       "german": "untypisch",
       "english": "atypical / unusual",
       "category": "Adjectives",
@@ -903,7 +903,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10863",
+      "id": "syllabus-b1-10889",
       "german": "ähnlich",
       "english": "similar",
       "category": "Adjectives",
@@ -923,7 +923,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10864",
+      "id": "syllabus-b1-10890",
       "german": "unterschiedlich",
       "english": "different",
       "category": "Adjectives",
@@ -943,7 +943,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10865",
+      "id": "syllabus-b1-10891",
       "german": "identisch",
       "english": "identical",
       "category": "Adjectives",
@@ -963,7 +963,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10866",
+      "id": "syllabus-b1-10892",
       "german": "notwendig",
       "english": "necessary",
       "category": "Adjectives",
@@ -983,7 +983,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10867",
+      "id": "syllabus-b1-10893",
       "german": "überflüssig",
       "english": "superfluous / unnecessary",
       "category": "Adjectives",
@@ -1003,7 +1003,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10868",
+      "id": "syllabus-b1-10894",
       "german": "ausreichend",
       "english": "sufficient",
       "category": "Adjectives",
@@ -1023,7 +1023,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10869",
+      "id": "syllabus-b1-10895",
       "german": "unzureichend",
       "english": "insufficient",
       "category": "Adjectives",
@@ -1043,7 +1043,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10870",
+      "id": "syllabus-b1-10896",
       "german": "geeignet",
       "english": "suitable",
       "category": "Adjectives",
@@ -1063,7 +1063,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10871",
+      "id": "syllabus-b1-10897",
       "german": "ungeeignet",
       "english": "unsuitable",
       "category": "Adjectives",
@@ -1083,7 +1083,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10872",
+      "id": "syllabus-b1-10898",
       "german": "angenehm",
       "english": "pleasant",
       "category": "Adjectives",
@@ -1103,7 +1103,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10873",
+      "id": "syllabus-b1-10899",
       "german": "unangenehm",
       "english": "unpleasant",
       "category": "Adjectives",
@@ -1123,7 +1123,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10874",
+      "id": "syllabus-b1-10900",
       "german": "bequem",
       "english": "comfortable",
       "category": "Adjectives",
@@ -1143,7 +1143,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10875",
+      "id": "syllabus-b1-10901",
       "german": "unbequem",
       "english": "uncomfortable",
       "category": "Adjectives",
@@ -1163,7 +1163,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10876",
+      "id": "syllabus-b1-10902",
       "german": "beliebt",
       "english": "popular",
       "category": "Adjectives",
@@ -1183,7 +1183,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10877",
+      "id": "syllabus-b1-10903",
       "german": "unbeliebt",
       "english": "unpopular",
       "category": "Adjectives",
@@ -1203,7 +1203,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10878",
+      "id": "syllabus-b1-10904",
       "german": "bekannt",
       "english": "well-known / famous",
       "category": "Adjectives",
@@ -1223,7 +1223,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10879",
+      "id": "syllabus-b1-10905",
       "german": "unbekannt",
       "english": "unknown",
       "category": "Adjectives",
@@ -1243,7 +1243,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10880",
+      "id": "syllabus-b1-10906",
       "german": "öffentlich",
       "english": "public",
       "category": "Adjectives",
@@ -1263,7 +1263,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10881",
+      "id": "syllabus-b1-10907",
       "german": "privat",
       "english": "private",
       "category": "Adjectives",
@@ -1283,7 +1283,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10882",
+      "id": "syllabus-b1-10908",
       "german": "aktuell",
       "english": "current / up-to-date",
       "category": "Adjectives",
@@ -1303,7 +1303,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10883",
+      "id": "syllabus-b1-10909",
       "german": "veraltet",
       "english": "outdated / obsolete",
       "category": "Adjectives",
@@ -1323,7 +1323,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10884",
+      "id": "syllabus-b1-10910",
       "german": "Termin",
       "english": "appointment",
       "category": "Business Work",
@@ -1343,7 +1343,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10885",
+      "id": "syllabus-b1-10911",
       "german": "Besprechung",
       "english": "meeting / discussion",
       "category": "Business Work",
@@ -1363,7 +1363,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10886",
+      "id": "syllabus-b1-10912",
       "german": "Vertrag",
       "english": "contract",
       "category": "Business Work",
@@ -1383,7 +1383,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10887",
+      "id": "syllabus-b1-10913",
       "german": "Gehalt",
       "english": "salary",
       "category": "Business Work",
@@ -1403,7 +1403,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10888",
+      "id": "syllabus-b1-10914",
       "german": "Bewerbung",
       "english": "application",
       "category": "Business Work",
@@ -1423,7 +1423,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10889",
+      "id": "syllabus-b1-10915",
       "german": "Lebenslauf",
       "english": "CV / resume",
       "category": "Business Work",
@@ -1443,7 +1443,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10890",
+      "id": "syllabus-b1-10916",
       "german": "Vorstellungsgespräch",
       "english": "job interview",
       "category": "Business Work",
@@ -1463,7 +1463,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10891",
+      "id": "syllabus-b1-10917",
       "german": "Kollege",
       "english": "colleague",
       "category": "Business Work",
@@ -1483,7 +1483,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10892",
+      "id": "syllabus-b1-10918",
       "german": "Chef",
       "english": "boss",
       "category": "Business Work",
@@ -1503,7 +1503,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10893",
+      "id": "syllabus-b1-10919",
       "german": "Angestellte",
       "english": "employee",
       "category": "Business Work",
@@ -1523,7 +1523,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10894",
+      "id": "syllabus-b1-10920",
       "german": "Abteilung",
       "english": "department",
       "category": "Business Work",
@@ -1543,7 +1543,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10895",
+      "id": "syllabus-b1-10921",
       "german": "Projekt",
       "english": "project",
       "category": "Business Work",
@@ -1563,7 +1563,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10896",
+      "id": "syllabus-b1-10922",
       "german": "Frist",
       "english": "deadline",
       "category": "Business Work",
@@ -1583,7 +1583,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10897",
+      "id": "syllabus-b1-10923",
       "german": "Überstunden",
       "english": "overtime",
       "category": "Business Work",
@@ -1603,7 +1603,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10898",
+      "id": "syllabus-b1-10924",
       "german": "Geschäftsreise",
       "english": "business trip",
       "category": "Business Work",
@@ -1623,7 +1623,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10899",
+      "id": "syllabus-b1-10925",
       "german": "Kündigung",
       "english": "resignation / termination",
       "category": "Business Work",
@@ -1643,7 +1643,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10900",
+      "id": "syllabus-b1-10926",
       "german": "Beförderung",
       "english": "promotion",
       "category": "Business Work",
@@ -1663,7 +1663,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10901",
+      "id": "syllabus-b1-10927",
       "german": "obwohl",
       "english": "although / even though",
       "category": "Conjunctions",
@@ -1683,7 +1683,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10902",
+      "id": "syllabus-b1-10928",
       "german": "während",
       "english": "while / during",
       "category": "Conjunctions",
@@ -1703,7 +1703,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10903",
+      "id": "syllabus-b1-10929",
       "german": "bevor",
       "english": "before",
       "category": "Conjunctions",
@@ -1723,7 +1723,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10904",
+      "id": "syllabus-b1-10930",
       "german": "nachdem",
       "english": "after",
       "category": "Conjunctions",
@@ -1743,7 +1743,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10905",
+      "id": "syllabus-b1-10931",
       "german": "sobald",
       "english": "as soon as",
       "category": "Conjunctions",
@@ -1763,7 +1763,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10906",
+      "id": "syllabus-b1-10932",
       "german": "solange",
       "english": "as long as",
       "category": "Conjunctions",
@@ -1783,7 +1783,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10907",
+      "id": "syllabus-b1-10933",
       "german": "falls",
       "english": "in case / if",
       "category": "Conjunctions",
@@ -1803,7 +1803,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10908",
+      "id": "syllabus-b1-10934",
       "german": "damit",
       "english": "so that / in order to",
       "category": "Conjunctions",
@@ -1823,7 +1823,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10909",
+      "id": "syllabus-b1-10935",
       "german": "trotzdem",
       "english": "nevertheless / anyway",
       "category": "Conjunctions",
@@ -1843,7 +1843,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10910",
+      "id": "syllabus-b1-10936",
       "german": "außerdem",
       "english": "besides / moreover",
       "category": "Conjunctions",
@@ -1863,7 +1863,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10911",
+      "id": "syllabus-b1-10937",
       "german": "entweder...oder",
       "english": "either...or",
       "category": "Conjunctions",
@@ -1883,7 +1883,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10912",
+      "id": "syllabus-b1-10938",
       "german": "weder...noch",
       "english": "neither...nor",
       "category": "Conjunctions",
@@ -1903,7 +1903,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10913",
+      "id": "syllabus-b1-10939",
       "german": "sowohl...als auch",
       "english": "both...and",
       "category": "Conjunctions",
@@ -1923,7 +1923,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10914",
+      "id": "syllabus-b1-10940",
       "german": "je...desto",
       "english": "the...the (comparative)",
       "category": "Conjunctions",
@@ -1943,7 +1943,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10915",
+      "id": "syllabus-b1-10941",
       "german": "als",
       "english": "when / as / than",
       "category": "Conjunctions",
@@ -1963,7 +1963,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10916",
+      "id": "syllabus-b1-10942",
       "german": "wenn",
       "english": "if / when",
       "category": "Conjunctions",
@@ -1983,7 +1983,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10917",
+      "id": "syllabus-b1-10943",
       "german": "da",
       "english": "since / because",
       "category": "Conjunctions",
@@ -2003,7 +2003,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10918",
+      "id": "syllabus-b1-10944",
       "german": "denn",
       "english": "because / for",
       "category": "Conjunctions",
@@ -2023,7 +2023,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10919",
+      "id": "syllabus-b1-10945",
       "german": "deshalb",
       "english": "therefore / that's why",
       "category": "Conjunctions",
@@ -2043,7 +2043,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10920",
+      "id": "syllabus-b1-10946",
       "german": "deswegen",
       "english": "for that reason",
       "category": "Conjunctions",
@@ -2063,7 +2063,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10921",
+      "id": "syllabus-b1-10947",
       "german": "darum",
       "english": "that's why / therefore",
       "category": "Conjunctions",
@@ -2083,7 +2083,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10922",
+      "id": "syllabus-b1-10948",
       "german": "dennoch",
       "english": "nevertheless / yet",
       "category": "Conjunctions",
@@ -2103,7 +2103,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10923",
+      "id": "syllabus-b1-10949",
       "german": "aufwachen",
       "english": "to wake up",
       "category": "Daily Routines",
@@ -2123,7 +2123,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10924",
+      "id": "syllabus-b1-10950",
       "german": "aufstehen",
       "english": "to get up",
       "category": "Daily Routines",
@@ -2143,7 +2143,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10925",
+      "id": "syllabus-b1-10951",
       "german": "sich waschen",
       "english": "to wash oneself",
       "category": "Daily Routines",
@@ -2163,7 +2163,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10926",
+      "id": "syllabus-b1-10952",
       "german": "duschen",
       "english": "to shower",
       "category": "Daily Routines",
@@ -2183,7 +2183,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10927",
+      "id": "syllabus-b1-10953",
       "german": "sich rasieren",
       "english": "to shave",
       "category": "Daily Routines",
@@ -2203,7 +2203,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10928",
+      "id": "syllabus-b1-10954",
       "german": "sich kämmen",
       "english": "to comb one's hair",
       "category": "Daily Routines",
@@ -2223,7 +2223,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10929",
+      "id": "syllabus-b1-10955",
       "german": "sich schminken",
       "english": "to put on makeup",
       "category": "Daily Routines",
@@ -2243,7 +2243,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10930",
+      "id": "syllabus-b1-10956",
       "german": "sich anziehen",
       "english": "to get dressed",
       "category": "Daily Routines",
@@ -2263,7 +2263,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10931",
+      "id": "syllabus-b1-10957",
       "german": "frühstücken",
       "english": "to have breakfast",
       "category": "Daily Routines",
@@ -2283,7 +2283,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10932",
+      "id": "syllabus-b1-10958",
       "german": "zur Arbeit gehen",
       "english": "to go to work",
       "category": "Daily Routines",
@@ -2303,7 +2303,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10933",
+      "id": "syllabus-b1-10959",
       "german": "zur Schule gehen",
       "english": "to go to school",
       "category": "Daily Routines",
@@ -2323,7 +2323,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10934",
+      "id": "syllabus-b1-10960",
       "german": "Mittagspause",
       "english": "lunch break",
       "category": "Daily Routines",
@@ -2343,7 +2343,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10935",
+      "id": "syllabus-b1-10961",
       "german": "zu Mittag essen",
       "english": "to have lunch",
       "category": "Daily Routines",
@@ -2363,7 +2363,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10936",
+      "id": "syllabus-b1-10962",
       "german": "Feierabend",
       "english": "end of work day",
       "category": "Daily Routines",
@@ -2383,7 +2383,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10937",
+      "id": "syllabus-b1-10963",
       "german": "nach Hause kommen",
       "english": "to come home",
       "category": "Daily Routines",
@@ -2403,7 +2403,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10938",
+      "id": "syllabus-b1-10964",
       "german": "einkaufen gehen",
       "english": "to go shopping",
       "category": "Daily Routines",
@@ -2423,7 +2423,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10939",
+      "id": "syllabus-b1-10965",
       "german": "kochen",
       "english": "to cook",
       "category": "Daily Routines",
@@ -2443,7 +2443,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10940",
+      "id": "syllabus-b1-10966",
       "german": "zu Abend essen",
       "english": "to have dinner",
       "category": "Daily Routines",
@@ -2463,7 +2463,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10941",
+      "id": "syllabus-b1-10967",
       "german": "abwaschen",
       "english": "to do the dishes",
       "category": "Daily Routines",
@@ -2483,7 +2483,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10942",
+      "id": "syllabus-b1-10968",
       "german": "aufräumen",
       "english": "to clean up / to tidy",
       "category": "Daily Routines",
@@ -2503,7 +2503,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10943",
+      "id": "syllabus-b1-10969",
       "german": "Hausaufgaben machen",
       "english": "to do homework",
       "category": "Daily Routines",
@@ -2523,7 +2523,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10944",
+      "id": "syllabus-b1-10970",
       "german": "fernsehen",
       "english": "to watch TV",
       "category": "Daily Routines",
@@ -2543,7 +2543,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10945",
+      "id": "syllabus-b1-10971",
       "german": "sich ausruhen",
       "english": "to rest / to relax",
       "category": "Daily Routines",
@@ -2563,7 +2563,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10946",
+      "id": "syllabus-b1-10972",
       "german": "sich umziehen",
       "english": "to change clothes",
       "category": "Daily Routines",
@@ -2583,7 +2583,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10947",
+      "id": "syllabus-b1-10973",
       "german": "sich ausziehen",
       "english": "to get undressed",
       "category": "Daily Routines",
@@ -2603,7 +2603,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10948",
+      "id": "syllabus-b1-10974",
       "german": "Zähne putzen",
       "english": "to brush teeth",
       "category": "Daily Routines",
@@ -2623,7 +2623,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10949",
+      "id": "syllabus-b1-10975",
       "german": "ins Bett gehen",
       "english": "to go to bed",
       "category": "Daily Routines",
@@ -2643,7 +2643,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10950",
+      "id": "syllabus-b1-10976",
       "german": "einschlafen",
       "english": "to fall asleep",
       "category": "Daily Routines",
@@ -2663,7 +2663,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10951",
+      "id": "syllabus-b1-10977",
       "german": "Wohnung",
       "english": "apartment",
       "category": "Housing",
@@ -2683,7 +2683,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10952",
+      "id": "syllabus-b1-10978",
       "german": "Miete",
       "english": "rent",
       "category": "Housing",
@@ -2703,7 +2703,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10953",
+      "id": "syllabus-b1-10979",
       "german": "Vermieter",
       "english": "landlord",
       "category": "Housing",
@@ -2723,7 +2723,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10954",
+      "id": "syllabus-b1-10980",
       "german": "Nachbar",
       "english": "neighbor",
       "category": "Housing",
@@ -2743,7 +2743,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10955",
+      "id": "syllabus-b1-10981",
       "german": "Erdgeschoss",
       "english": "ground floor",
       "category": "Housing",
@@ -2763,7 +2763,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10956",
+      "id": "syllabus-b1-10982",
       "german": "Stock",
       "english": "floor / story",
       "category": "Housing",
@@ -2783,7 +2783,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10957",
+      "id": "syllabus-b1-10983",
       "german": "Treppe",
       "english": "stairs",
       "category": "Housing",
@@ -2803,7 +2803,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10958",
+      "id": "syllabus-b1-10984",
       "german": "Aufzug",
       "english": "elevator",
       "category": "Housing",
@@ -2823,7 +2823,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10959",
+      "id": "syllabus-b1-10985",
       "german": "Balkon",
       "english": "balcony",
       "category": "Housing",
@@ -2843,7 +2843,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10960",
+      "id": "syllabus-b1-10986",
       "german": "Keller",
       "english": "basement / cellar",
       "category": "Housing",
@@ -2863,7 +2863,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10961",
+      "id": "syllabus-b1-10987",
       "german": "Dachboden",
       "english": "attic",
       "category": "Housing",
@@ -2883,7 +2883,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10962",
+      "id": "syllabus-b1-10988",
       "german": "Heizung",
       "english": "heating",
       "category": "Housing",
@@ -2903,7 +2903,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10963",
+      "id": "syllabus-b1-10989",
       "german": "Kaution",
       "english": "security deposit",
       "category": "Housing",
@@ -2923,7 +2923,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10964",
+      "id": "syllabus-b1-10990",
       "german": "Nebenkosten",
       "english": "additional costs / utilities",
       "category": "Housing",
@@ -2943,7 +2943,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10965",
+      "id": "syllabus-b1-10991",
       "german": "Möbel",
       "english": "furniture",
       "category": "Housing",
@@ -2963,7 +2963,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10966",
+      "id": "syllabus-b1-10992",
       "german": "Umzug",
       "english": "move / relocation",
       "category": "Housing",
@@ -2983,7 +2983,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10967",
+      "id": "syllabus-b1-10993",
       "german": "einziehen",
       "english": "to move in",
       "category": "Housing",
@@ -3003,7 +3003,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10968",
+      "id": "syllabus-b1-10994",
       "german": "backen",
       "english": "to bake (bäckt, backte/buk, gebacken)",
       "category": "Irregular Verbs",
@@ -3023,7 +3023,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10969",
+      "id": "syllabus-b1-10995",
       "german": "befehlen",
       "english": "to command (befiehlt, befahl, befohlen)",
       "category": "Irregular Verbs",
@@ -3043,7 +3043,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10970",
+      "id": "syllabus-b1-10996",
       "german": "beginnen",
       "english": "to begin (beginnt, begann, begonnen)",
       "category": "Irregular Verbs",
@@ -3063,7 +3063,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10971",
+      "id": "syllabus-b1-10997",
       "german": "beißen",
       "english": "to bite (beißt, biss, gebissen)",
       "category": "Irregular Verbs",
@@ -3083,7 +3083,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10972",
+      "id": "syllabus-b1-10998",
       "german": "betrügen",
       "english": "to deceive (betrügt, betrog, betrogen)",
       "category": "Irregular Verbs",
@@ -3103,7 +3103,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10973",
+      "id": "syllabus-b1-10999",
       "german": "biegen",
       "english": "to bend (biegt, bog, gebogen)",
       "category": "Irregular Verbs",
@@ -3123,7 +3123,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10974",
+      "id": "syllabus-b1-11000",
       "german": "bieten",
       "english": "to offer (bietet, bot, geboten)",
       "category": "Irregular Verbs",
@@ -3143,7 +3143,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10975",
+      "id": "syllabus-b1-11001",
       "german": "binden",
       "english": "to bind (bindet, band, gebunden)",
       "category": "Irregular Verbs",
@@ -3163,7 +3163,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10976",
+      "id": "syllabus-b1-11002",
       "german": "bitten",
       "english": "to ask/request (bittet, bat, gebeten)",
       "category": "Irregular Verbs",
@@ -3183,7 +3183,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10977",
+      "id": "syllabus-b1-11003",
       "german": "braten",
       "english": "to roast/fry (brät, briet, gebraten)",
       "category": "Irregular Verbs",
@@ -3203,7 +3203,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10978",
+      "id": "syllabus-b1-11004",
       "german": "empfehlen",
       "english": "to recommend (empfiehlt, empfahl, empfohlen)",
       "category": "Irregular Verbs",
@@ -3223,7 +3223,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10979",
+      "id": "syllabus-b1-11005",
       "german": "erschrecken",
       "english": "to frighten (erschrickt, erschrak, erschrocken)",
       "category": "Irregular Verbs",
@@ -3243,7 +3243,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10980",
+      "id": "syllabus-b1-11006",
       "german": "frieren",
       "english": "to freeze (friert, fror, gefroren)",
       "category": "Irregular Verbs",
@@ -3263,7 +3263,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10981",
+      "id": "syllabus-b1-11007",
       "german": "gießen",
       "english": "to pour (gießt, goss, gegossen)",
       "category": "Irregular Verbs",
@@ -3283,7 +3283,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10982",
+      "id": "syllabus-b1-11008",
       "german": "greifen",
       "english": "to grasp (greift, griff, gegriffen)",
       "category": "Irregular Verbs",
@@ -3303,7 +3303,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10983",
+      "id": "syllabus-b1-11009",
       "german": "heben",
       "english": "to lift (hebt, hob, gehoben)",
       "category": "Irregular Verbs",
@@ -3323,7 +3323,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10984",
+      "id": "syllabus-b1-11010",
       "german": "laden",
       "english": "to load (lädt, lud, geladen)",
       "category": "Irregular Verbs",
@@ -3343,7 +3343,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10985",
+      "id": "syllabus-b1-11011",
       "german": "leiden",
       "english": "to suffer (leidet, litt, gelitten)",
       "category": "Irregular Verbs",
@@ -3363,7 +3363,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10986",
+      "id": "syllabus-b1-11012",
       "german": "lügen",
       "english": "to lie/tell lies (lügt, log, gelogen)",
       "category": "Irregular Verbs",
@@ -3383,7 +3383,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10987",
+      "id": "syllabus-b1-11013",
       "german": "meiden",
       "english": "to avoid (meidet, mied, gemieden)",
       "category": "Irregular Verbs",
@@ -3403,7 +3403,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10988",
+      "id": "syllabus-b1-11014",
       "german": "pfeifen",
       "english": "to whistle (pfeift, pfiff, gepfiffen)",
       "category": "Irregular Verbs",
@@ -3423,7 +3423,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10989",
+      "id": "syllabus-b1-11015",
       "german": "reiben",
       "english": "to rub (reibt, rieb, gerieben)",
       "category": "Irregular Verbs",
@@ -3443,7 +3443,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10990",
+      "id": "syllabus-b1-11016",
       "german": "reißen",
       "english": "to tear (reißt, riss, gerissen)",
       "category": "Irregular Verbs",
@@ -3463,7 +3463,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10991",
+      "id": "syllabus-b1-11017",
       "german": "riechen",
       "english": "to smell (riecht, roch, gerochen)",
       "category": "Irregular Verbs",
@@ -3483,7 +3483,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10992",
+      "id": "syllabus-b1-11018",
       "german": "ringen",
       "english": "to wrestle (ringt, rang, gerungen)",
       "category": "Irregular Verbs",
@@ -3503,7 +3503,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10993",
+      "id": "syllabus-b1-11019",
       "german": "schließen",
       "english": "to close (schließt, schloss, geschlossen)",
       "category": "Irregular Verbs",
@@ -3523,7 +3523,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10994",
+      "id": "syllabus-b1-11020",
       "german": "schmelzen",
       "english": "to melt (schmilzt, schmolz, geschmolzen)",
       "category": "Irregular Verbs",
@@ -3543,7 +3543,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10995",
+      "id": "syllabus-b1-11021",
       "german": "schneiden",
       "english": "to cut (schneidet, schnitt, geschnitten)",
       "category": "Irregular Verbs",
@@ -3563,7 +3563,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10996",
+      "id": "syllabus-b1-11022",
       "german": "schweigen",
       "english": "to be silent (schweigt, schwieg, geschwiegen)",
       "category": "Irregular Verbs",
@@ -3583,7 +3583,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10997",
+      "id": "syllabus-b1-11023",
       "german": "schwören",
       "english": "to swear/vow (schwört, schwor, geschworen)",
       "category": "Irregular Verbs",
@@ -3603,7 +3603,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10998",
+      "id": "syllabus-b1-11024",
       "german": "Termin",
       "english": "appointment",
       "category": "Medical Health",
@@ -3623,7 +3623,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10999",
+      "id": "syllabus-b1-11025",
       "german": "Rezept",
       "english": "prescription",
       "category": "Medical Health",
@@ -3643,7 +3643,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11000",
+      "id": "syllabus-b1-11026",
       "german": "Apotheke",
       "english": "pharmacy",
       "category": "Medical Health",
@@ -3663,7 +3663,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11001",
+      "id": "syllabus-b1-11027",
       "german": "Medikament",
       "english": "medication / medicine",
       "category": "Medical Health",
@@ -3683,7 +3683,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11002",
+      "id": "syllabus-b1-11028",
       "german": "Schmerzen",
       "english": "pain / aches",
       "category": "Medical Health",
@@ -3703,7 +3703,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11003",
+      "id": "syllabus-b1-11029",
       "german": "Fieber",
       "english": "fever",
       "category": "Medical Health",
@@ -3723,7 +3723,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11004",
+      "id": "syllabus-b1-11030",
       "german": "Erkältung",
       "english": "cold",
       "category": "Medical Health",
@@ -3743,7 +3743,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11005",
+      "id": "syllabus-b1-11031",
       "german": "Grippe",
       "english": "flu / influenza",
       "category": "Medical Health",
@@ -3763,7 +3763,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11006",
+      "id": "syllabus-b1-11032",
       "german": "Husten",
       "english": "cough",
       "category": "Medical Health",
@@ -3783,7 +3783,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11007",
+      "id": "syllabus-b1-11033",
       "german": "Schnupfen",
       "english": "runny nose / cold",
       "category": "Medical Health",
@@ -3803,7 +3803,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11008",
+      "id": "syllabus-b1-11034",
       "german": "Verletzung",
       "english": "injury",
       "category": "Medical Health",
@@ -3823,7 +3823,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11009",
+      "id": "syllabus-b1-11035",
       "german": "Untersuchung",
       "english": "examination / checkup",
       "category": "Medical Health",
@@ -3843,7 +3843,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11010",
+      "id": "syllabus-b1-11036",
       "german": "Notfall",
       "english": "emergency",
       "category": "Medical Health",
@@ -3863,7 +3863,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11011",
+      "id": "syllabus-b1-11037",
       "german": "Krankenwagen",
       "english": "ambulance",
       "category": "Medical Health",
@@ -3883,7 +3883,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11012",
+      "id": "syllabus-b1-11038",
       "german": "Versicherung",
       "english": "insurance",
       "category": "Medical Health",
@@ -3903,7 +3903,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11013",
+      "id": "syllabus-b1-11039",
       "german": "Sprechstunde",
       "english": "consultation hours",
       "category": "Medical Health",
@@ -3923,7 +3923,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11014",
+      "id": "syllabus-b1-11040",
       "german": "Behandlung",
       "english": "treatment",
       "category": "Medical Health",
@@ -3943,7 +3943,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11015",
+      "id": "syllabus-b1-11041",
       "german": "legen",
       "english": "to lay / to put (flat)",
       "category": "Positional Verbs",
@@ -3963,7 +3963,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11016",
+      "id": "syllabus-b1-11042",
       "german": "liegen",
       "english": "to lie / to be lying",
       "category": "Positional Verbs",
@@ -3983,7 +3983,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11017",
+      "id": "syllabus-b1-11043",
       "german": "stellen",
       "english": "to place / to put (upright)",
       "category": "Positional Verbs",
@@ -4003,7 +4003,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11018",
+      "id": "syllabus-b1-11044",
       "german": "stehen",
       "english": "to stand / to be standing",
       "category": "Positional Verbs",
@@ -4023,7 +4023,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11019",
+      "id": "syllabus-b1-11045",
       "german": "setzen",
       "english": "to set / to place (seated position)",
       "category": "Positional Verbs",
@@ -4043,7 +4043,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11020",
+      "id": "syllabus-b1-11046",
       "german": "sitzen",
       "english": "to sit / to be sitting",
       "category": "Positional Verbs",
@@ -4063,7 +4063,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11021",
+      "id": "syllabus-b1-11047",
       "german": "hängen (transitiv)",
       "english": "to hang (transitive - with accusative)",
       "category": "Positional Verbs",
@@ -4083,7 +4083,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11022",
+      "id": "syllabus-b1-11048",
       "german": "hängen (intransitiv)",
       "english": "to hang / to be hanging (with dative)",
       "category": "Positional Verbs",
@@ -4103,7 +4103,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11023",
+      "id": "syllabus-b1-11049",
       "german": "stecken (transitiv)",
       "english": "to put / to stick (with accusative)",
       "category": "Positional Verbs",
@@ -4123,7 +4123,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11024",
+      "id": "syllabus-b1-11050",
       "german": "stecken (intransitiv)",
       "english": "to be stuck / to be located (with dative)",
       "category": "Positional Verbs",
@@ -4143,7 +4143,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11025",
+      "id": "syllabus-b1-11051",
       "german": "sich legen",
       "english": "to lie down",
       "category": "Positional Verbs",
@@ -4163,7 +4163,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11026",
+      "id": "syllabus-b1-11052",
       "german": "sich stellen",
       "english": "to stand (position oneself)",
       "category": "Positional Verbs",
@@ -4183,7 +4183,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11027",
+      "id": "syllabus-b1-11053",
       "german": "sich setzen",
       "english": "to sit down",
       "category": "Positional Verbs",
@@ -4203,7 +4203,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11028",
+      "id": "syllabus-b1-11054",
       "german": "sich hinlegen",
       "english": "to lie down",
       "category": "Positional Verbs",
@@ -4223,7 +4223,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11029",
+      "id": "syllabus-b1-11055",
       "german": "sich hinstellen",
       "english": "to stand up / to position oneself",
       "category": "Positional Verbs",
@@ -4243,7 +4243,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11030",
+      "id": "syllabus-b1-11056",
       "german": "sich hinsetzen",
       "english": "to sit down",
       "category": "Positional Verbs",
@@ -4263,7 +4263,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11031",
+      "id": "syllabus-b1-11057",
       "german": "auflegen",
       "english": "to put on / to hang up (phone)",
       "category": "Positional Verbs",
@@ -4283,7 +4283,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11032",
+      "id": "syllabus-b1-11058",
       "german": "aufliegen",
       "english": "to lie on / to rest on",
       "category": "Positional Verbs",
@@ -4303,7 +4303,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11033",
+      "id": "syllabus-b1-11059",
       "german": "aufstellen",
       "english": "to set up / to erect",
       "category": "Positional Verbs",
@@ -4323,7 +4323,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11034",
+      "id": "syllabus-b1-11060",
       "german": "aufstehen",
       "english": "to stand up / to get up",
       "category": "Positional Verbs",
@@ -4343,7 +4343,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11035",
+      "id": "syllabus-b1-11061",
       "german": "ablegen",
       "english": "to put down / to take off",
       "category": "Positional Verbs",
@@ -4363,7 +4363,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11036",
+      "id": "syllabus-b1-11062",
       "german": "abliegen",
       "english": "to be remote / to be far from",
       "category": "Positional Verbs",
@@ -4383,7 +4383,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11037",
+      "id": "syllabus-b1-11063",
       "german": "abstellen",
       "english": "to put down / to turn off",
       "category": "Positional Verbs",
@@ -4403,7 +4403,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11038",
+      "id": "syllabus-b1-11064",
       "german": "abstehen",
       "english": "to stick out / to protrude",
       "category": "Positional Verbs",
@@ -4423,7 +4423,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11039",
+      "id": "syllabus-b1-11065",
       "german": "hinlegen",
       "english": "to lay down / to put down",
       "category": "Positional Verbs",
@@ -4443,7 +4443,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11040",
+      "id": "syllabus-b1-11066",
       "german": "hinstellen",
       "english": "to put down / to place",
       "category": "Positional Verbs",
@@ -4463,7 +4463,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11041",
+      "id": "syllabus-b1-11067",
       "german": "hinsetzen",
       "english": "to seat / to sit someone down",
       "category": "Positional Verbs",
@@ -4483,7 +4483,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11042",
+      "id": "syllabus-b1-11068",
       "german": "vorlegen",
       "english": "to present / to submit",
       "category": "Positional Verbs",
@@ -4503,7 +4503,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11043",
+      "id": "syllabus-b1-11069",
       "german": "vorliegen",
       "english": "to be present / to exist",
       "category": "Positional Verbs",
@@ -4523,7 +4523,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11044",
+      "id": "syllabus-b1-11070",
       "german": "darstellen",
       "english": "to represent / to depict",
       "category": "Positional Verbs",
@@ -4543,7 +4543,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11045",
+      "id": "syllabus-b1-11071",
       "german": "ankommen",
       "english": "to arrive",
       "category": "Separable Verbs",
@@ -4563,7 +4563,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11046",
+      "id": "syllabus-b1-11072",
       "german": "anrufen",
       "english": "to call (on the phone)",
       "category": "Separable Verbs",
@@ -4583,7 +4583,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11047",
+      "id": "syllabus-b1-11073",
       "german": "anfangen",
       "english": "to begin / to start",
       "category": "Separable Verbs",
@@ -4603,7 +4603,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11048",
+      "id": "syllabus-b1-11074",
       "german": "aufstehen",
       "english": "to get up / to stand up",
       "category": "Separable Verbs",
@@ -4623,7 +4623,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11049",
+      "id": "syllabus-b1-11075",
       "german": "aufmachen",
       "english": "to open",
       "category": "Separable Verbs",
@@ -4643,7 +4643,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11050",
+      "id": "syllabus-b1-11076",
       "german": "aufhören",
       "english": "to stop / to cease",
       "category": "Separable Verbs",
@@ -4663,7 +4663,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11051",
+      "id": "syllabus-b1-11077",
       "german": "ausgehen",
       "english": "to go out",
       "category": "Separable Verbs",
@@ -4683,7 +4683,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11052",
+      "id": "syllabus-b1-11078",
       "german": "ausmachen",
       "english": "to turn off / to matter",
       "category": "Separable Verbs",
@@ -4703,7 +4703,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11053",
+      "id": "syllabus-b1-11079",
       "german": "aussehen",
       "english": "to look / to appear",
       "category": "Separable Verbs",
@@ -4723,7 +4723,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11054",
+      "id": "syllabus-b1-11080",
       "german": "einkaufen",
       "english": "to shop / to buy groceries",
       "category": "Separable Verbs",
@@ -4743,7 +4743,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11055",
+      "id": "syllabus-b1-11081",
       "german": "einladen",
       "english": "to invite",
       "category": "Separable Verbs",
@@ -4763,7 +4763,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11056",
+      "id": "syllabus-b1-11082",
       "german": "einsteigen",
       "english": "to get in / to board",
       "category": "Separable Verbs",
@@ -4783,7 +4783,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11057",
+      "id": "syllabus-b1-11083",
       "german": "mitkommen",
       "english": "to come along",
       "category": "Separable Verbs",
@@ -4803,7 +4803,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11058",
+      "id": "syllabus-b1-11084",
       "german": "mitmachen",
       "english": "to participate / to join in",
       "category": "Separable Verbs",
@@ -4823,7 +4823,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11059",
+      "id": "syllabus-b1-11085",
       "german": "mitnehmen",
       "english": "to take along",
       "category": "Separable Verbs",
@@ -4843,7 +4843,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11060",
+      "id": "syllabus-b1-11086",
       "german": "vorstellen",
       "english": "to introduce / to imagine",
       "category": "Separable Verbs",
@@ -4863,7 +4863,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11061",
+      "id": "syllabus-b1-11087",
       "german": "vorbereiten",
       "english": "to prepare",
       "category": "Separable Verbs",
@@ -4883,7 +4883,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11062",
+      "id": "syllabus-b1-11088",
       "german": "vorhaben",
       "english": "to intend / to plan",
       "category": "Separable Verbs",
@@ -4903,7 +4903,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11063",
+      "id": "syllabus-b1-11089",
       "german": "zumachen",
       "english": "to close",
       "category": "Separable Verbs",
@@ -4923,7 +4923,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11064",
+      "id": "syllabus-b1-11090",
       "german": "zunehmen",
       "english": "to gain weight / to increase",
       "category": "Separable Verbs",
@@ -4943,7 +4943,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11065",
+      "id": "syllabus-b1-11091",
       "german": "abholen",
       "english": "to pick up / to collect",
       "category": "Separable Verbs",
@@ -4963,7 +4963,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11066",
+      "id": "syllabus-b1-11092",
       "german": "abfahren",
       "english": "to depart / to leave",
       "category": "Separable Verbs",
@@ -4983,7 +4983,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11067",
+      "id": "syllabus-b1-11093",
       "german": "abnehmen",
       "english": "to lose weight / to decrease",
       "category": "Separable Verbs",
@@ -5003,7 +5003,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11068",
+      "id": "syllabus-b1-11094",
       "german": "fernsehen",
       "english": "to watch TV",
       "category": "Separable Verbs",
@@ -5023,7 +5023,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11069",
+      "id": "syllabus-b1-11095",
       "german": "zurückkommen",
       "english": "to come back / to return",
       "category": "Separable Verbs",
@@ -5043,7 +5043,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11070",
+      "id": "syllabus-b1-11096",
       "german": "zurückgeben",
       "english": "to give back / to return",
       "category": "Separable Verbs",
@@ -5063,7 +5063,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11071",
+      "id": "syllabus-b1-11097",
       "german": "weggehen",
       "english": "to go away / to leave",
       "category": "Separable Verbs",
@@ -5083,7 +5083,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11072",
+      "id": "syllabus-b1-11098",
       "german": "weitermachen",
       "english": "to continue / to carry on",
       "category": "Separable Verbs",
@@ -5103,7 +5103,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11073",
+      "id": "syllabus-b1-11099",
       "german": "umsteigen",
       "english": "to change (trains/buses)",
       "category": "Separable Verbs",
@@ -5123,7 +5123,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11074",
+      "id": "syllabus-b1-11100",
       "german": "umziehen",
       "english": "to move (residence) / to change clothes",
       "category": "Separable Verbs",
@@ -5143,7 +5143,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11075",
+      "id": "syllabus-b1-11101",
       "german": "werden zu",
       "english": "to turn into / to become",
       "category": "State Change Verbs",
@@ -5163,7 +5163,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11076",
+      "id": "syllabus-b1-11102",
       "german": "sich verwandeln in",
       "english": "to transform into",
       "category": "State Change Verbs",
@@ -5183,7 +5183,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11077",
+      "id": "syllabus-b1-11103",
       "german": "sich entwickeln",
       "english": "to develop / to evolve",
       "category": "State Change Verbs",
@@ -5203,7 +5203,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11078",
+      "id": "syllabus-b1-11104",
       "german": "sich verändern",
       "english": "to change",
       "category": "State Change Verbs",
@@ -5223,7 +5223,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11079",
+      "id": "syllabus-b1-11105",
       "german": "entstehen",
       "english": "to arise / to come into being",
       "category": "State Change Verbs",
@@ -5243,7 +5243,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11080",
+      "id": "syllabus-b1-11106",
       "german": "vergehen",
       "english": "to pass / to elapse",
       "category": "State Change Verbs",
@@ -5263,7 +5263,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11081",
+      "id": "syllabus-b1-11107",
       "german": "verschwinden",
       "english": "to disappear",
       "category": "State Change Verbs",
@@ -5283,7 +5283,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11082",
+      "id": "syllabus-b1-11108",
       "german": "erscheinen",
       "english": "to appear",
       "category": "State Change Verbs",
@@ -5303,7 +5303,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11083",
+      "id": "syllabus-b1-11109",
       "german": "auftauchen",
       "english": "to surface / to emerge",
       "category": "State Change Verbs",
@@ -5323,7 +5323,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11084",
+      "id": "syllabus-b1-11110",
       "german": "zunehmen",
       "english": "to increase / to gain weight",
       "category": "State Change Verbs",
@@ -5343,7 +5343,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11085",
+      "id": "syllabus-b1-11111",
       "german": "abnehmen",
       "english": "to decrease / to lose weight",
       "category": "State Change Verbs",
@@ -5363,7 +5363,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11086",
+      "id": "syllabus-b1-11112",
       "german": "ansteigen",
       "english": "to rise / to increase",
       "category": "State Change Verbs",
@@ -5383,7 +5383,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11087",
+      "id": "syllabus-b1-11113",
       "german": "sinken",
       "english": "to sink / to decrease",
       "category": "State Change Verbs",
@@ -5403,7 +5403,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11088",
+      "id": "syllabus-b1-11114",
       "german": "steigen",
       "english": "to rise / to climb",
       "category": "State Change Verbs",
@@ -5423,7 +5423,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11089",
+      "id": "syllabus-b1-11115",
       "german": "erwachen",
       "english": "to awaken",
       "category": "State Change Verbs",
@@ -5443,7 +5443,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11090",
+      "id": "syllabus-b1-11116",
       "german": "eintreten",
       "english": "to enter / to occur",
       "category": "State Change Verbs",
@@ -5463,7 +5463,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11091",
+      "id": "syllabus-b1-11117",
       "german": "ausbrechen",
       "english": "to break out / to erupt",
       "category": "State Change Verbs",
@@ -5483,7 +5483,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11092",
+      "id": "syllabus-b1-11118",
       "german": "sich verschlechtern",
       "english": "to worsen / to deteriorate",
       "category": "State Change Verbs",
@@ -5503,7 +5503,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11093",
+      "id": "syllabus-b1-11119",
       "german": "sich verbessern",
       "english": "to improve",
       "category": "State Change Verbs",
@@ -5523,7 +5523,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11094",
+      "id": "syllabus-b1-11120",
       "german": "sich erholen",
       "english": "to recover",
       "category": "State Change Verbs",
@@ -5543,7 +5543,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11095",
+      "id": "syllabus-b1-11121",
       "german": "erkranken",
       "english": "to fall ill / to become sick",
       "category": "State Change Verbs",
@@ -5563,7 +5563,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11096",
+      "id": "syllabus-b1-11122",
       "german": "gesunden",
       "english": "to recover / to get well",
       "category": "State Change Verbs",
@@ -5583,7 +5583,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11097",
+      "id": "syllabus-b1-11123",
       "german": "altern",
       "english": "to age",
       "category": "State Change Verbs",
@@ -5603,7 +5603,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11098",
+      "id": "syllabus-b1-11124",
       "german": "reifen",
       "english": "to mature / to ripen",
       "category": "State Change Verbs",
@@ -5623,7 +5623,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11099",
+      "id": "syllabus-b1-11125",
       "german": "wachsen",
       "english": "to grow",
       "category": "State Change Verbs",
@@ -5643,7 +5643,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11100",
+      "id": "syllabus-b1-11126",
       "german": "schrumpfen",
       "english": "to shrink",
       "category": "State Change Verbs",
@@ -5663,7 +5663,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11101",
+      "id": "syllabus-b1-11127",
       "german": "erröten",
       "english": "to blush",
       "category": "State Change Verbs",
@@ -5683,7 +5683,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11102",
+      "id": "syllabus-b1-11128",
       "german": "erblassen",
       "english": "to turn pale",
       "category": "State Change Verbs",
@@ -5703,7 +5703,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11103",
+      "id": "syllabus-b1-11129",
       "german": "erstarren",
       "english": "to freeze / to stiffen",
       "category": "State Change Verbs",
@@ -5723,7 +5723,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11104",
+      "id": "syllabus-b1-11130",
       "german": "aufblühen",
       "english": "to blossom / to flourish",
       "category": "State Change Verbs",
@@ -5743,7 +5743,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11105",
+      "id": "syllabus-b1-11131",
       "german": "warten auf + Akk",
       "english": "to wait for",
       "category": "Verbs With Prepositions",
@@ -5763,7 +5763,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11106",
+      "id": "syllabus-b1-11132",
       "german": "denken an + Akk",
       "english": "to think of/about",
       "category": "Verbs With Prepositions",
@@ -5783,7 +5783,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11107",
+      "id": "syllabus-b1-11133",
       "german": "sich freuen auf + Akk",
       "english": "to look forward to",
       "category": "Verbs With Prepositions",
@@ -5803,7 +5803,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11108",
+      "id": "syllabus-b1-11134",
       "german": "sich freuen über + Akk",
       "english": "to be happy about",
       "category": "Verbs With Prepositions",
@@ -5823,7 +5823,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11109",
+      "id": "syllabus-b1-11135",
       "german": "sich interessieren für + Akk",
       "english": "to be interested in",
       "category": "Verbs With Prepositions",
@@ -5843,7 +5843,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11110",
+      "id": "syllabus-b1-11136",
       "german": "sich kümmern um + Akk",
       "english": "to take care of",
       "category": "Verbs With Prepositions",
@@ -5863,7 +5863,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11111",
+      "id": "syllabus-b1-11137",
       "german": "sich erinnern an + Akk",
       "english": "to remember",
       "category": "Verbs With Prepositions",
@@ -5883,7 +5883,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11112",
+      "id": "syllabus-b1-11138",
       "german": "sich beschweren über + Akk",
       "english": "to complain about",
       "category": "Verbs With Prepositions",
@@ -5903,7 +5903,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11113",
+      "id": "syllabus-b1-11139",
       "german": "sich ärgern über + Akk",
       "english": "to be annoyed about",
       "category": "Verbs With Prepositions",
@@ -5923,7 +5923,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11114",
+      "id": "syllabus-b1-11140",
       "german": "sich freuen über + Akk",
       "english": "to be pleased about",
       "category": "Verbs With Prepositions",
@@ -5943,7 +5943,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11115",
+      "id": "syllabus-b1-11141",
       "german": "teilnehmen an + Dat",
       "english": "to participate in",
       "category": "Verbs With Prepositions",
@@ -5963,7 +5963,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11116",
+      "id": "syllabus-b1-11142",
       "german": "sprechen über + Akk",
       "english": "to talk about",
       "category": "Verbs With Prepositions",
@@ -5983,7 +5983,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11117",
+      "id": "syllabus-b1-11143",
       "german": "sprechen mit + Dat",
       "english": "to talk with",
       "category": "Verbs With Prepositions",
@@ -6003,7 +6003,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11118",
+      "id": "syllabus-b1-11144",
       "german": "fragen nach + Dat",
       "english": "to ask for/about",
       "category": "Verbs With Prepositions",
@@ -6023,7 +6023,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11119",
+      "id": "syllabus-b1-11145",
       "german": "suchen nach + Dat",
       "english": "to search for",
       "category": "Verbs With Prepositions",
@@ -6043,7 +6043,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11120",
+      "id": "syllabus-b1-11146",
       "german": "bitten um + Akk",
       "english": "to ask for/request",
       "category": "Verbs With Prepositions",
@@ -6063,7 +6063,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11121",
+      "id": "syllabus-b1-11147",
       "german": "sich bewerben um + Akk",
       "english": "to apply for",
       "category": "Verbs With Prepositions",
@@ -6083,7 +6083,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11122",
+      "id": "syllabus-b1-11148",
       "german": "sich vorbereiten auf + Akk",
       "english": "to prepare for",
       "category": "Verbs With Prepositions",
@@ -6103,7 +6103,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11123",
+      "id": "syllabus-b1-11149",
       "german": "beginnen mit + Dat",
       "english": "to begin with",
       "category": "Verbs With Prepositions",
@@ -6123,7 +6123,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11124",
+      "id": "syllabus-b1-11150",
       "german": "aufhören mit + Dat",
       "english": "to stop (doing)",
       "category": "Verbs With Prepositions",
@@ -6143,7 +6143,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11125",
+      "id": "syllabus-b1-11151",
       "german": "abhängen von + Dat",
       "english": "to depend on",
       "category": "Verbs With Prepositions",
@@ -6163,7 +6163,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11126",
+      "id": "syllabus-b1-11152",
       "german": "sich verlieben in + Akk",
       "english": "to fall in love with",
       "category": "Verbs With Prepositions",
@@ -6183,7 +6183,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11127",
+      "id": "syllabus-b1-11153",
       "german": "sich gewöhnen an + Akk",
       "english": "to get used to",
       "category": "Verbs With Prepositions",
@@ -6203,7 +6203,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11128",
+      "id": "syllabus-b1-11154",
       "german": "glauben an + Akk",
       "english": "to believe in",
       "category": "Verbs With Prepositions",
@@ -6223,7 +6223,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11129",
+      "id": "syllabus-b1-11155",
       "german": "hoffen auf + Akk",
       "english": "to hope for",
       "category": "Verbs With Prepositions",
@@ -6243,7 +6243,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11130",
+      "id": "syllabus-b1-11156",
       "german": "träumen von + Dat",
       "english": "to dream of/about",
       "category": "Verbs With Prepositions",
@@ -6263,7 +6263,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11131",
+      "id": "syllabus-b1-11157",
       "german": "sich entscheiden für + Akk",
       "english": "to decide on",
       "category": "Verbs With Prepositions",
@@ -6283,7 +6283,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11132",
+      "id": "syllabus-b1-11158",
       "german": "verzichten auf + Akk",
       "english": "to do without",
       "category": "Verbs With Prepositions",
@@ -6303,7 +6303,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11133",
+      "id": "syllabus-b1-11159",
       "german": "sich beschäftigen mit + Dat",
       "english": "to occupy oneself with",
       "category": "Verbs With Prepositions",
@@ -6323,7 +6323,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11134",
+      "id": "syllabus-b1-11160",
       "german": "sich konzentrieren auf + Akk",
       "english": "to concentrate on",
       "category": "Verbs With Prepositions",

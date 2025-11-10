@@ -1,6 +1,6 @@
 {
   "level": "A1",
-  "totalCards": 391,
+  "totalCards": 417,
   "flashcards": [
     {
       "id": "syllabus-a1-10000",
@@ -144,6 +144,26 @@
     },
     {
       "id": "syllabus-a1-10007",
+      "german": "hässlich",
+      "english": "ugly",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "hässlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10008",
       "german": "jung",
       "english": "young",
       "category": "Adjectives",
@@ -163,7 +183,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10008",
+      "id": "syllabus-a1-10009",
       "german": "schnell",
       "english": "fast",
       "category": "Adjectives",
@@ -183,7 +203,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10009",
+      "id": "syllabus-a1-10010",
       "german": "langsam",
       "english": "slow",
       "category": "Adjectives",
@@ -203,7 +223,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10010",
+      "id": "syllabus-a1-10011",
       "german": "lang",
       "english": "long",
       "category": "Adjectives",
@@ -223,7 +243,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10011",
+      "id": "syllabus-a1-10012",
       "german": "kurz",
       "english": "short",
       "category": "Adjectives",
@@ -243,7 +263,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10012",
+      "id": "syllabus-a1-10013",
       "german": "viel",
       "english": "much / many",
       "category": "Adjectives",
@@ -263,7 +283,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10013",
+      "id": "syllabus-a1-10014",
       "german": "wenig",
       "english": "little / few",
       "category": "Adjectives",
@@ -283,7 +303,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10014",
+      "id": "syllabus-a1-10015",
       "german": "teuer",
       "english": "expensive",
       "category": "Adjectives",
@@ -303,7 +323,507 @@
       }
     },
     {
-      "id": "syllabus-a1-10015",
+      "id": "syllabus-a1-10016",
+      "german": "billig",
+      "english": "cheap",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "billig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10017",
+      "german": "hoch",
+      "english": "high",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "hoch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10018",
+      "german": "niedrig",
+      "english": "low",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "niedrig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10019",
+      "german": "leicht",
+      "english": "light / easy",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "leicht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10020",
+      "german": "schwer",
+      "english": "heavy / difficult",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "schwer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10021",
+      "german": "einfach",
+      "english": "simple / easy",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "einfach"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10022",
+      "german": "richtig",
+      "english": "correct / right",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "richtig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10023",
+      "german": "falsch",
+      "english": "wrong / false",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "falsch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10024",
+      "german": "voll",
+      "english": "full",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "voll"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10025",
+      "german": "leer",
+      "english": "empty",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "leer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10026",
+      "german": "offen",
+      "english": "open",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "offen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10027",
+      "german": "geschlossen",
+      "english": "closed",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "geschlossen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10028",
+      "german": "frei",
+      "english": "free",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "frei"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10029",
+      "german": "besetzt",
+      "english": "occupied / taken",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "besetzt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10030",
+      "german": "früh",
+      "english": "early",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "früh"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10031",
+      "german": "spät",
+      "english": "late",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "spät"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10032",
+      "german": "nah",
+      "english": "near / close",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "nah"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10033",
+      "german": "weit",
+      "english": "far",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "weit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10034",
+      "german": "links",
+      "english": "left",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "links"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10035",
+      "german": "rechts",
+      "english": "right",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "rechts"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10036",
+      "german": "gerade",
+      "english": "straight",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "gerade"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10037",
+      "german": "rund",
+      "english": "round",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "rund"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10038",
+      "german": "eckig",
+      "english": "angular / square",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "eckig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10039",
+      "german": "weich",
+      "english": "soft",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "weich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10040",
+      "german": "hart",
+      "english": "hard",
+      "category": "Adjectives",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Adjectives",
+          "hart"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10041",
       "german": "Hund",
       "english": "dog",
       "category": "Animals",
@@ -323,7 +843,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10016",
+      "id": "syllabus-a1-10042",
       "german": "Katze",
       "english": "cat",
       "category": "Animals",
@@ -343,7 +863,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10017",
+      "id": "syllabus-a1-10043",
       "german": "Vogel",
       "english": "bird",
       "category": "Animals",
@@ -363,7 +883,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10018",
+      "id": "syllabus-a1-10044",
       "german": "Fisch",
       "english": "fish",
       "category": "Animals",
@@ -383,7 +903,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10019",
+      "id": "syllabus-a1-10045",
       "german": "Pferd",
       "english": "horse",
       "category": "Animals",
@@ -403,7 +923,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10020",
+      "id": "syllabus-a1-10046",
       "german": "Maus",
       "english": "mouse",
       "category": "Animals",
@@ -423,7 +943,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10021",
+      "id": "syllabus-a1-10047",
       "german": "Kuh",
       "english": "cow",
       "category": "Animals",
@@ -443,7 +963,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10022",
+      "id": "syllabus-a1-10048",
       "german": "Schwein",
       "english": "pig",
       "category": "Animals",
@@ -463,7 +983,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10023",
+      "id": "syllabus-a1-10049",
       "german": "Huhn",
       "english": "chicken",
       "category": "Animals",
@@ -483,7 +1003,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10024",
+      "id": "syllabus-a1-10050",
       "german": "Schaf",
       "english": "sheep",
       "category": "Animals",
@@ -503,7 +1023,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10025",
+      "id": "syllabus-a1-10051",
       "german": "Hase",
       "english": "rabbit / hare",
       "category": "Animals",
@@ -523,7 +1043,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10026",
+      "id": "syllabus-a1-10052",
       "german": "Ente",
       "english": "duck",
       "category": "Animals",
@@ -543,7 +1063,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10027",
+      "id": "syllabus-a1-10053",
       "german": "Bär",
       "english": "bear",
       "category": "Animals",
@@ -563,7 +1083,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10028",
+      "id": "syllabus-a1-10054",
       "german": "Löwe",
       "english": "lion",
       "category": "Animals",
@@ -583,7 +1103,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10029",
+      "id": "syllabus-a1-10055",
       "german": "Tier",
       "english": "animal",
       "category": "Animals",
@@ -603,7 +1123,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10030",
+      "id": "syllabus-a1-10056",
       "german": "Hose",
       "english": "pants",
       "category": "Clothing",
@@ -623,7 +1143,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10031",
+      "id": "syllabus-a1-10057",
       "german": "Hemd",
       "english": "shirt",
       "category": "Clothing",
@@ -643,7 +1163,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10032",
+      "id": "syllabus-a1-10058",
       "german": "Kleid",
       "english": "dress",
       "category": "Clothing",
@@ -663,7 +1183,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10033",
+      "id": "syllabus-a1-10059",
       "german": "Schuhe",
       "english": "shoes",
       "category": "Clothing",
@@ -683,7 +1203,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10034",
+      "id": "syllabus-a1-10060",
       "german": "Jacke",
       "english": "jacket",
       "category": "Clothing",
@@ -703,7 +1223,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10035",
+      "id": "syllabus-a1-10061",
       "german": "Rock",
       "english": "skirt",
       "category": "Clothing",
@@ -723,7 +1243,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10036",
+      "id": "syllabus-a1-10062",
       "german": "Pullover",
       "english": "sweater / pullover",
       "category": "Clothing",
@@ -743,7 +1263,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10037",
+      "id": "syllabus-a1-10063",
       "german": "T-Shirt",
       "english": "t-shirt",
       "category": "Clothing",
@@ -763,7 +1283,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10038",
+      "id": "syllabus-a1-10064",
       "german": "Mantel",
       "english": "coat",
       "category": "Clothing",
@@ -783,7 +1303,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10039",
+      "id": "syllabus-a1-10065",
       "german": "Mütze",
       "english": "cap / hat",
       "category": "Clothing",
@@ -803,7 +1323,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10040",
+      "id": "syllabus-a1-10066",
       "german": "Schal",
       "english": "scarf",
       "category": "Clothing",
@@ -823,7 +1343,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10041",
+      "id": "syllabus-a1-10067",
       "german": "Handschuhe",
       "english": "gloves",
       "category": "Clothing",
@@ -843,7 +1363,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10042",
+      "id": "syllabus-a1-10068",
       "german": "Socken",
       "english": "socks",
       "category": "Clothing",
@@ -863,7 +1383,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10043",
+      "id": "syllabus-a1-10069",
       "german": "Hut",
       "english": "hat",
       "category": "Clothing",
@@ -883,7 +1403,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10044",
+      "id": "syllabus-a1-10070",
       "german": "Gürtel",
       "english": "belt",
       "category": "Clothing",
@@ -903,7 +1423,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10045",
+      "id": "syllabus-a1-10071",
       "german": "rot",
       "english": "red",
       "category": "Colors",
@@ -923,7 +1443,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10046",
+      "id": "syllabus-a1-10072",
       "german": "blau",
       "english": "blue",
       "category": "Colors",
@@ -943,7 +1463,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10047",
+      "id": "syllabus-a1-10073",
       "german": "grün",
       "english": "green",
       "category": "Colors",
@@ -963,7 +1483,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10048",
+      "id": "syllabus-a1-10074",
       "german": "gelb",
       "english": "yellow",
       "category": "Colors",
@@ -983,7 +1503,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10049",
+      "id": "syllabus-a1-10075",
       "german": "schwarz",
       "english": "black",
       "category": "Colors",
@@ -1003,7 +1523,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10050",
+      "id": "syllabus-a1-10076",
       "german": "weiß",
       "english": "white",
       "category": "Colors",
@@ -1023,7 +1543,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10051",
+      "id": "syllabus-a1-10077",
       "german": "braun",
       "english": "brown",
       "category": "Colors",
@@ -1043,7 +1563,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10052",
+      "id": "syllabus-a1-10078",
       "german": "grau",
       "english": "gray",
       "category": "Colors",
@@ -1063,7 +1583,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10053",
+      "id": "syllabus-a1-10079",
       "german": "rosa",
       "english": "pink",
       "category": "Colors",
@@ -1083,7 +1603,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10054",
+      "id": "syllabus-a1-10080",
       "german": "lila",
       "english": "purple",
       "category": "Colors",
@@ -1103,7 +1623,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10055",
+      "id": "syllabus-a1-10081",
       "german": "orange",
       "english": "orange",
       "category": "Colors",
@@ -1123,7 +1643,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10056",
+      "id": "syllabus-a1-10082",
       "german": "dunkel",
       "english": "dark",
       "category": "Colors",
@@ -1143,7 +1663,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10057",
+      "id": "syllabus-a1-10083",
       "german": "hell",
       "english": "light / bright",
       "category": "Colors",
@@ -1163,7 +1683,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10058",
+      "id": "syllabus-a1-10084",
       "german": "bunt",
       "english": "colorful",
       "category": "Colors",
@@ -1183,7 +1703,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10059",
+      "id": "syllabus-a1-10085",
       "german": "Farbe",
       "english": "color",
       "category": "Colors",
@@ -1203,7 +1723,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10060",
+      "id": "syllabus-a1-10086",
       "german": "Deutschland",
       "english": "Germany",
       "category": "Countries",
@@ -1223,7 +1743,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10061",
+      "id": "syllabus-a1-10087",
       "german": "Österreich",
       "english": "Austria",
       "category": "Countries",
@@ -1243,7 +1763,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10062",
+      "id": "syllabus-a1-10088",
       "german": "Schweiz",
       "english": "Switzerland",
       "category": "Countries",
@@ -1263,7 +1783,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10063",
+      "id": "syllabus-a1-10089",
       "german": "Frankreich",
       "english": "France",
       "category": "Countries",
@@ -1283,7 +1803,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10064",
+      "id": "syllabus-a1-10090",
       "german": "Italien",
       "english": "Italy",
       "category": "Countries",
@@ -1303,7 +1823,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10065",
+      "id": "syllabus-a1-10091",
       "german": "Spanien",
       "english": "Spain",
       "category": "Countries",
@@ -1323,7 +1843,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10066",
+      "id": "syllabus-a1-10092",
       "german": "England",
       "english": "England",
       "category": "Countries",
@@ -1343,7 +1863,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10067",
+      "id": "syllabus-a1-10093",
       "german": "Amerika",
       "english": "America",
       "category": "Countries",
@@ -1363,7 +1883,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10068",
+      "id": "syllabus-a1-10094",
       "german": "Russland",
       "english": "Russia",
       "category": "Countries",
@@ -1383,7 +1903,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10069",
+      "id": "syllabus-a1-10095",
       "german": "China",
       "english": "China",
       "category": "Countries",
@@ -1403,7 +1923,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10070",
+      "id": "syllabus-a1-10096",
       "german": "Japan",
       "english": "Japan",
       "category": "Countries",
@@ -1423,7 +1943,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10071",
+      "id": "syllabus-a1-10097",
       "german": "Indien",
       "english": "India",
       "category": "Countries",
@@ -1443,7 +1963,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10072",
+      "id": "syllabus-a1-10098",
       "german": "Polen",
       "english": "Poland",
       "category": "Countries",
@@ -1463,7 +1983,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10073",
+      "id": "syllabus-a1-10099",
       "german": "deutsch",
       "english": "German (adjective)",
       "category": "Countries",
@@ -1483,7 +2003,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10074",
+      "id": "syllabus-a1-10100",
       "german": "englisch",
       "english": "English (adjective)",
       "category": "Countries",
@@ -1503,7 +2023,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10075",
+      "id": "syllabus-a1-10101",
       "german": "Mutter",
       "english": "mother",
       "category": "Family",
@@ -1523,7 +2043,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10076",
+      "id": "syllabus-a1-10102",
       "german": "Vater",
       "english": "father",
       "category": "Family",
@@ -1543,7 +2063,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10077",
+      "id": "syllabus-a1-10103",
       "german": "Bruder",
       "english": "brother",
       "category": "Family",
@@ -1563,7 +2083,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10078",
+      "id": "syllabus-a1-10104",
       "german": "Schwester",
       "english": "sister",
       "category": "Family",
@@ -1583,7 +2103,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10079",
+      "id": "syllabus-a1-10105",
       "german": "Kind",
       "english": "child",
       "category": "Family",
@@ -1603,7 +2123,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10080",
+      "id": "syllabus-a1-10106",
       "german": "Eltern",
       "english": "parents",
       "category": "Family",
@@ -1623,7 +2143,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10081",
+      "id": "syllabus-a1-10107",
       "german": "Familie",
       "english": "family",
       "category": "Family",
@@ -1643,7 +2163,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10082",
+      "id": "syllabus-a1-10108",
       "german": "Großmutter",
       "english": "grandmother",
       "category": "Family",
@@ -1663,7 +2183,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10083",
+      "id": "syllabus-a1-10109",
       "german": "Großvater",
       "english": "grandfather",
       "category": "Family",
@@ -1683,7 +2203,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10084",
+      "id": "syllabus-a1-10110",
       "german": "Oma",
       "english": "grandma",
       "category": "Family",
@@ -1703,7 +2223,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10085",
+      "id": "syllabus-a1-10111",
       "german": "Opa",
       "english": "grandpa",
       "category": "Family",
@@ -1723,7 +2243,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10086",
+      "id": "syllabus-a1-10112",
       "german": "Tante",
       "english": "aunt",
       "category": "Family",
@@ -1743,7 +2263,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10087",
+      "id": "syllabus-a1-10113",
       "german": "Onkel",
       "english": "uncle",
       "category": "Family",
@@ -1763,7 +2283,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10088",
+      "id": "syllabus-a1-10114",
       "german": "Cousin",
       "english": "cousin (male)",
       "category": "Family",
@@ -1783,7 +2303,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10089",
+      "id": "syllabus-a1-10115",
       "german": "Cousine",
       "english": "cousin (female)",
       "category": "Family",
@@ -1803,7 +2323,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10090",
+      "id": "syllabus-a1-10116",
       "german": "Brot",
       "english": "bread",
       "category": "Food Drinks",
@@ -1823,7 +2343,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10091",
+      "id": "syllabus-a1-10117",
       "german": "Brötchen",
       "english": "bread roll",
       "category": "Food Drinks",
@@ -1843,7 +2363,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10092",
+      "id": "syllabus-a1-10118",
       "german": "Wasser",
       "english": "water",
       "category": "Food Drinks",
@@ -1863,7 +2383,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10093",
+      "id": "syllabus-a1-10119",
       "german": "Kaffee",
       "english": "coffee",
       "category": "Food Drinks",
@@ -1883,7 +2403,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10094",
+      "id": "syllabus-a1-10120",
       "german": "Tee",
       "english": "tea",
       "category": "Food Drinks",
@@ -1903,7 +2423,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10095",
+      "id": "syllabus-a1-10121",
       "german": "Milch",
       "english": "milk",
       "category": "Food Drinks",
@@ -1923,7 +2443,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10096",
+      "id": "syllabus-a1-10122",
       "german": "Saft",
       "english": "juice",
       "category": "Food Drinks",
@@ -1943,7 +2463,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10097",
+      "id": "syllabus-a1-10123",
       "german": "Bier",
       "english": "beer",
       "category": "Food Drinks",
@@ -1963,7 +2483,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10098",
+      "id": "syllabus-a1-10124",
       "german": "Wein",
       "english": "wine",
       "category": "Food Drinks",
@@ -1983,7 +2503,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10099",
+      "id": "syllabus-a1-10125",
       "german": "Apfel",
       "english": "apple",
       "category": "Food Drinks",
@@ -2003,7 +2523,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10100",
+      "id": "syllabus-a1-10126",
       "german": "Käse",
       "english": "cheese",
       "category": "Food Drinks",
@@ -2023,7 +2543,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10101",
+      "id": "syllabus-a1-10127",
       "german": "Ei",
       "english": "egg",
       "category": "Food Drinks",
@@ -2043,7 +2563,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10102",
+      "id": "syllabus-a1-10128",
       "german": "Butter",
       "english": "butter",
       "category": "Food Drinks",
@@ -2063,7 +2583,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10103",
+      "id": "syllabus-a1-10129",
       "german": "Marmelade",
       "english": "jam",
       "category": "Food Drinks",
@@ -2083,7 +2603,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10104",
+      "id": "syllabus-a1-10130",
       "german": "Honig",
       "english": "honey",
       "category": "Food Drinks",
@@ -2103,7 +2623,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10105",
+      "id": "syllabus-a1-10131",
       "german": "Fleisch",
       "english": "meat",
       "category": "Food Drinks",
@@ -2123,7 +2643,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10106",
+      "id": "syllabus-a1-10132",
       "german": "Fisch",
       "english": "fish",
       "category": "Food Drinks",
@@ -2143,7 +2663,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10107",
+      "id": "syllabus-a1-10133",
       "german": "Hähnchen",
       "english": "chicken",
       "category": "Food Drinks",
@@ -2163,7 +2683,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10108",
+      "id": "syllabus-a1-10134",
       "german": "Wurst",
       "english": "sausage",
       "category": "Food Drinks",
@@ -2183,7 +2703,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10109",
+      "id": "syllabus-a1-10135",
       "german": "Schinken",
       "english": "ham",
       "category": "Food Drinks",
@@ -2203,7 +2723,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10110",
+      "id": "syllabus-a1-10136",
       "german": "Reis",
       "english": "rice",
       "category": "Food Drinks",
@@ -2223,7 +2743,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10111",
+      "id": "syllabus-a1-10137",
       "german": "Nudeln",
       "english": "noodles / pasta",
       "category": "Food Drinks",
@@ -2243,7 +2763,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10112",
+      "id": "syllabus-a1-10138",
       "german": "Kartoffel",
       "english": "potato",
       "category": "Food Drinks",
@@ -2263,7 +2783,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10113",
+      "id": "syllabus-a1-10139",
       "german": "Gemüse",
       "english": "vegetables",
       "category": "Food Drinks",
@@ -2283,7 +2803,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10114",
+      "id": "syllabus-a1-10140",
       "german": "Salat",
       "english": "salad / lettuce",
       "category": "Food Drinks",
@@ -2303,7 +2823,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10115",
+      "id": "syllabus-a1-10141",
       "german": "Suppe",
       "english": "soup",
       "category": "Food Drinks",
@@ -2323,7 +2843,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10116",
+      "id": "syllabus-a1-10142",
       "german": "Pizza",
       "english": "pizza",
       "category": "Food Drinks",
@@ -2343,7 +2863,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10117",
+      "id": "syllabus-a1-10143",
       "german": "Kuchen",
       "english": "cake",
       "category": "Food Drinks",
@@ -2363,7 +2883,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10118",
+      "id": "syllabus-a1-10144",
       "german": "Keks",
       "english": "cookie / biscuit",
       "category": "Food Drinks",
@@ -2383,7 +2903,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10119",
+      "id": "syllabus-a1-10145",
       "german": "Schokolade",
       "english": "chocolate",
       "category": "Food Drinks",
@@ -2403,7 +2923,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10120",
+      "id": "syllabus-a1-10146",
       "german": "Eis",
       "english": "ice cream",
       "category": "Food Drinks",
@@ -2423,7 +2943,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10121",
+      "id": "syllabus-a1-10147",
       "german": "Zucker",
       "english": "sugar",
       "category": "Food Drinks",
@@ -2443,7 +2963,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10122",
+      "id": "syllabus-a1-10148",
       "german": "Salz",
       "english": "salt",
       "category": "Food Drinks",
@@ -2463,7 +2983,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10123",
+      "id": "syllabus-a1-10149",
       "german": "Pfeffer",
       "english": "pepper",
       "category": "Food Drinks",
@@ -2483,7 +3003,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10124",
+      "id": "syllabus-a1-10150",
       "german": "Öl",
       "english": "oil",
       "category": "Food Drinks",
@@ -2503,7 +3023,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10125",
+      "id": "syllabus-a1-10151",
       "german": "Essig",
       "english": "vinegar",
       "category": "Food Drinks",
@@ -2523,7 +3043,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10126",
+      "id": "syllabus-a1-10152",
       "german": "Joghurt",
       "english": "yogurt",
       "category": "Food Drinks",
@@ -2543,7 +3063,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10127",
+      "id": "syllabus-a1-10153",
       "german": "Obst",
       "english": "fruit",
       "category": "Food Drinks",
@@ -2563,7 +3083,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10128",
+      "id": "syllabus-a1-10154",
       "german": "Frühstück",
       "english": "breakfast",
       "category": "Food Drinks",
@@ -2583,7 +3103,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10129",
+      "id": "syllabus-a1-10155",
       "german": "Mittagessen",
       "english": "lunch",
       "category": "Food Drinks",
@@ -2603,7 +3123,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10130",
+      "id": "syllabus-a1-10156",
       "german": "Abendessen",
       "english": "dinner",
       "category": "Food Drinks",
@@ -2623,7 +3143,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10131",
+      "id": "syllabus-a1-10157",
       "german": "Banane",
       "english": "banana",
       "category": "Fruits",
@@ -2643,7 +3163,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10132",
+      "id": "syllabus-a1-10158",
       "german": "Orange",
       "english": "orange",
       "category": "Fruits",
@@ -2663,7 +3183,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10133",
+      "id": "syllabus-a1-10159",
       "german": "Erdbeere",
       "english": "strawberry",
       "category": "Fruits",
@@ -2683,7 +3203,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10134",
+      "id": "syllabus-a1-10160",
       "german": "Traube",
       "english": "grape",
       "category": "Fruits",
@@ -2703,7 +3223,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10135",
+      "id": "syllabus-a1-10161",
       "german": "Birne",
       "english": "pear",
       "category": "Fruits",
@@ -2723,7 +3243,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10136",
+      "id": "syllabus-a1-10162",
       "german": "Kirsche",
       "english": "cherry",
       "category": "Fruits",
@@ -2743,7 +3263,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10137",
+      "id": "syllabus-a1-10163",
       "german": "Zitrone",
       "english": "lemon",
       "category": "Fruits",
@@ -2763,7 +3283,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10138",
+      "id": "syllabus-a1-10164",
       "german": "Pfirsich",
       "english": "peach",
       "category": "Fruits",
@@ -2783,7 +3303,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10139",
+      "id": "syllabus-a1-10165",
       "german": "Melone",
       "english": "melon",
       "category": "Fruits",
@@ -2803,7 +3323,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10140",
+      "id": "syllabus-a1-10166",
       "german": "Ananas",
       "english": "pineapple",
       "category": "Fruits",
@@ -2823,7 +3343,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10141",
+      "id": "syllabus-a1-10167",
       "german": "Kiwi",
       "english": "kiwi",
       "category": "Fruits",
@@ -2843,7 +3363,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10142",
+      "id": "syllabus-a1-10168",
       "german": "Mango",
       "english": "mango",
       "category": "Fruits",
@@ -2863,7 +3383,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10143",
+      "id": "syllabus-a1-10169",
       "german": "Himbeere",
       "english": "raspberry",
       "category": "Fruits",
@@ -2883,7 +3403,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10144",
+      "id": "syllabus-a1-10170",
       "german": "Blaubeere",
       "english": "blueberry",
       "category": "Fruits",
@@ -2903,7 +3423,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10145",
+      "id": "syllabus-a1-10171",
       "german": "Obst",
       "english": "fruit",
       "category": "Fruits",
@@ -2923,7 +3443,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10146",
+      "id": "syllabus-a1-10172",
       "german": "Hallo",
       "english": "Hello",
       "category": "Greetings",
@@ -2943,7 +3463,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10147",
+      "id": "syllabus-a1-10173",
       "german": "Guten Tag",
       "english": "Good day",
       "category": "Greetings",
@@ -2963,7 +3483,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10148",
+      "id": "syllabus-a1-10174",
       "german": "Guten Morgen",
       "english": "Good morning",
       "category": "Greetings",
@@ -2983,7 +3503,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10149",
+      "id": "syllabus-a1-10175",
       "german": "Guten Abend",
       "english": "Good evening",
       "category": "Greetings",
@@ -3003,7 +3523,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10150",
+      "id": "syllabus-a1-10176",
       "german": "Auf Wiedersehen",
       "english": "Goodbye",
       "category": "Greetings",
@@ -3023,7 +3543,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10151",
+      "id": "syllabus-a1-10177",
       "german": "Tschüss",
       "english": "Bye",
       "category": "Greetings",
@@ -3043,7 +3563,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10152",
+      "id": "syllabus-a1-10178",
       "german": "Danke",
       "english": "Thank you",
       "category": "Greetings",
@@ -3063,7 +3583,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10153",
+      "id": "syllabus-a1-10179",
       "german": "Bitte",
       "english": "Please / You're welcome",
       "category": "Greetings",
@@ -3083,7 +3603,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10154",
+      "id": "syllabus-a1-10180",
       "german": "Gute Nacht",
       "english": "Good night",
       "category": "Greetings",
@@ -3103,7 +3623,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10155",
+      "id": "syllabus-a1-10181",
       "german": "Entschuldigung",
       "english": "Excuse me / Sorry",
       "category": "Greetings",
@@ -3123,7 +3643,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10156",
+      "id": "syllabus-a1-10182",
       "german": "Ja",
       "english": "Yes",
       "category": "Greetings",
@@ -3143,7 +3663,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10157",
+      "id": "syllabus-a1-10183",
       "german": "Nein",
       "english": "No",
       "category": "Greetings",
@@ -3163,7 +3683,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10158",
+      "id": "syllabus-a1-10184",
       "german": "Wie geht's?",
       "english": "How are you?",
       "category": "Greetings",
@@ -3183,7 +3703,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10159",
+      "id": "syllabus-a1-10185",
       "german": "Gut",
       "english": "Good / Well",
       "category": "Greetings",
@@ -3203,7 +3723,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10160",
+      "id": "syllabus-a1-10186",
       "german": "Willkommen",
       "english": "Welcome",
       "category": "Greetings",
@@ -3223,7 +3743,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10161",
+      "id": "syllabus-a1-10187",
       "german": "Haus",
       "english": "house",
       "category": "Home",
@@ -3243,7 +3763,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10162",
+      "id": "syllabus-a1-10188",
       "german": "Zimmer",
       "english": "room",
       "category": "Home",
@@ -3263,7 +3783,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10163",
+      "id": "syllabus-a1-10189",
       "german": "Küche",
       "english": "kitchen",
       "category": "Home",
@@ -3283,7 +3803,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10164",
+      "id": "syllabus-a1-10190",
       "german": "Bad",
       "english": "bathroom",
       "category": "Home",
@@ -3303,7 +3823,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10165",
+      "id": "syllabus-a1-10191",
       "german": "Tisch",
       "english": "table",
       "category": "Home",
@@ -3323,7 +3843,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10166",
+      "id": "syllabus-a1-10192",
       "german": "Stuhl",
       "english": "chair",
       "category": "Home",
@@ -3343,7 +3863,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10167",
+      "id": "syllabus-a1-10193",
       "german": "Bett",
       "english": "bed",
       "category": "Home",
@@ -3363,7 +3883,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10168",
+      "id": "syllabus-a1-10194",
       "german": "Wohnzimmer",
       "english": "living room",
       "category": "Home",
@@ -3383,7 +3903,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10169",
+      "id": "syllabus-a1-10195",
       "german": "Schlafzimmer",
       "english": "bedroom",
       "category": "Home",
@@ -3403,7 +3923,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10170",
+      "id": "syllabus-a1-10196",
       "german": "Fenster",
       "english": "window",
       "category": "Home",
@@ -3423,7 +3943,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10171",
+      "id": "syllabus-a1-10197",
       "german": "Tür",
       "english": "door",
       "category": "Home",
@@ -3443,7 +3963,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10172",
+      "id": "syllabus-a1-10198",
       "german": "Sofa",
       "english": "sofa / couch",
       "category": "Home",
@@ -3463,7 +3983,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10173",
+      "id": "syllabus-a1-10199",
       "german": "Lampe",
       "english": "lamp",
       "category": "Home",
@@ -3483,7 +4003,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10174",
+      "id": "syllabus-a1-10200",
       "german": "Schrank",
       "english": "cupboard / wardrobe",
       "category": "Home",
@@ -3503,7 +4023,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10175",
+      "id": "syllabus-a1-10201",
       "german": "Spiegel",
       "english": "mirror",
       "category": "Home",
@@ -3523,7 +4043,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10176",
+      "id": "syllabus-a1-10202",
       "german": "sein",
       "english": "to be",
       "category": "Irregular Verbs",
@@ -3543,7 +4063,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10177",
+      "id": "syllabus-a1-10203",
       "german": "haben",
       "english": "to have",
       "category": "Irregular Verbs",
@@ -3563,7 +4083,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10178",
+      "id": "syllabus-a1-10204",
       "german": "werden",
       "english": "to become",
       "category": "Irregular Verbs",
@@ -3583,7 +4103,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10179",
+      "id": "syllabus-a1-10205",
       "german": "gehen",
       "english": "to go",
       "category": "Irregular Verbs",
@@ -3603,7 +4123,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10180",
+      "id": "syllabus-a1-10206",
       "german": "kommen",
       "english": "to come",
       "category": "Irregular Verbs",
@@ -3623,7 +4143,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10181",
+      "id": "syllabus-a1-10207",
       "german": "sehen",
       "english": "to see",
       "category": "Irregular Verbs",
@@ -3643,7 +4163,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10182",
+      "id": "syllabus-a1-10208",
       "german": "essen",
       "english": "to eat",
       "category": "Irregular Verbs",
@@ -3663,7 +4183,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10183",
+      "id": "syllabus-a1-10209",
       "german": "trinken",
       "english": "to drink",
       "category": "Irregular Verbs",
@@ -3683,7 +4203,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10184",
+      "id": "syllabus-a1-10210",
       "german": "schlafen",
       "english": "to sleep",
       "category": "Irregular Verbs",
@@ -3703,7 +4223,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10185",
+      "id": "syllabus-a1-10211",
       "german": "geben",
       "english": "to give",
       "category": "Irregular Verbs",
@@ -3723,7 +4243,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10186",
+      "id": "syllabus-a1-10212",
       "german": "nehmen",
       "english": "to take",
       "category": "Irregular Verbs",
@@ -3743,7 +4263,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10187",
+      "id": "syllabus-a1-10213",
       "german": "lesen",
       "english": "to read",
       "category": "Irregular Verbs",
@@ -3763,7 +4283,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10188",
+      "id": "syllabus-a1-10214",
       "german": "sprechen",
       "english": "to speak",
       "category": "Irregular Verbs",
@@ -3783,7 +4303,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10189",
+      "id": "syllabus-a1-10215",
       "german": "fahren",
       "english": "to drive / to go (by vehicle)",
       "category": "Irregular Verbs",
@@ -3803,7 +4323,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10190",
+      "id": "syllabus-a1-10216",
       "german": "laufen",
       "english": "to run / to walk",
       "category": "Irregular Verbs",
@@ -3823,7 +4343,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10191",
+      "id": "syllabus-a1-10217",
       "german": "schreiben",
       "english": "to write",
       "category": "Irregular Verbs",
@@ -3843,7 +4363,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10192",
+      "id": "syllabus-a1-10218",
       "german": "finden",
       "english": "to find",
       "category": "Irregular Verbs",
@@ -3863,7 +4383,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10193",
+      "id": "syllabus-a1-10219",
       "german": "tragen",
       "english": "to wear / to carry",
       "category": "Irregular Verbs",
@@ -3883,7 +4403,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10194",
+      "id": "syllabus-a1-10220",
       "german": "waschen",
       "english": "to wash",
       "category": "Irregular Verbs",
@@ -3903,7 +4423,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10195",
+      "id": "syllabus-a1-10221",
       "german": "helfen",
       "english": "to help",
       "category": "Irregular Verbs",
@@ -3923,7 +4443,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10196",
+      "id": "syllabus-a1-10222",
       "german": "bleiben",
       "english": "to stay / to remain",
       "category": "Irregular Verbs",
@@ -3943,7 +4463,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10197",
+      "id": "syllabus-a1-10223",
       "german": "stehen",
       "english": "to stand",
       "category": "Irregular Verbs",
@@ -3963,7 +4483,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10198",
+      "id": "syllabus-a1-10224",
       "german": "liegen",
       "english": "to lie / to be located",
       "category": "Irregular Verbs",
@@ -3983,7 +4503,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10199",
+      "id": "syllabus-a1-10225",
       "german": "sitzen",
       "english": "to sit",
       "category": "Irregular Verbs",
@@ -4003,7 +4523,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10200",
+      "id": "syllabus-a1-10226",
       "german": "fallen",
       "english": "to fall",
       "category": "Irregular Verbs",
@@ -4023,7 +4543,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10201",
+      "id": "syllabus-a1-10227",
       "german": "halten",
       "english": "to hold / to stop",
       "category": "Irregular Verbs",
@@ -4043,7 +4563,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10202",
+      "id": "syllabus-a1-10228",
       "german": "rufen",
       "english": "to call / to shout",
       "category": "Irregular Verbs",
@@ -4063,7 +4583,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10203",
+      "id": "syllabus-a1-10229",
       "german": "treffen",
       "english": "to meet",
       "category": "Irregular Verbs",
@@ -4083,7 +4603,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10204",
+      "id": "syllabus-a1-10230",
       "german": "vergessen",
       "english": "to forget",
       "category": "Irregular Verbs",
@@ -4103,7 +4623,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10205",
+      "id": "syllabus-a1-10231",
       "german": "verlieren",
       "english": "to lose",
       "category": "Irregular Verbs",
@@ -4123,7 +4643,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10206",
+      "id": "syllabus-a1-10232",
       "german": "können",
       "english": "can / to be able to",
       "category": "Modal Verbs",
@@ -4143,7 +4663,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10207",
+      "id": "syllabus-a1-10233",
       "german": "müssen",
       "english": "must / to have to",
       "category": "Modal Verbs",
@@ -4163,7 +4683,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10208",
+      "id": "syllabus-a1-10234",
       "german": "wollen",
       "english": "to want",
       "category": "Modal Verbs",
@@ -4183,7 +4703,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10209",
+      "id": "syllabus-a1-10235",
       "german": "mögen",
       "english": "to like",
       "category": "Modal Verbs",
@@ -4203,7 +4723,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10210",
+      "id": "syllabus-a1-10236",
       "german": "dürfen",
       "english": "may / to be allowed to",
       "category": "Modal Verbs",
@@ -4223,7 +4743,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10211",
+      "id": "syllabus-a1-10237",
       "german": "sollen",
       "english": "should / ought to",
       "category": "Modal Verbs",
@@ -4243,7 +4763,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10212",
+      "id": "syllabus-a1-10238",
       "german": "null",
       "english": "zero",
       "category": "Numbers",
@@ -4263,7 +4783,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10213",
+      "id": "syllabus-a1-10239",
       "german": "eins",
       "english": "one",
       "category": "Numbers",
@@ -4283,7 +4803,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10214",
+      "id": "syllabus-a1-10240",
       "german": "zwei",
       "english": "two",
       "category": "Numbers",
@@ -4303,7 +4823,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10215",
+      "id": "syllabus-a1-10241",
       "german": "drei",
       "english": "three",
       "category": "Numbers",
@@ -4323,7 +4843,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10216",
+      "id": "syllabus-a1-10242",
       "german": "vier",
       "english": "four",
       "category": "Numbers",
@@ -4343,7 +4863,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10217",
+      "id": "syllabus-a1-10243",
       "german": "fünf",
       "english": "five",
       "category": "Numbers",
@@ -4363,7 +4883,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10218",
+      "id": "syllabus-a1-10244",
       "german": "sechs",
       "english": "six",
       "category": "Numbers",
@@ -4383,7 +4903,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10219",
+      "id": "syllabus-a1-10245",
       "german": "sieben",
       "english": "seven",
       "category": "Numbers",
@@ -4403,7 +4923,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10220",
+      "id": "syllabus-a1-10246",
       "german": "acht",
       "english": "eight",
       "category": "Numbers",
@@ -4423,7 +4943,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10221",
+      "id": "syllabus-a1-10247",
       "german": "neun",
       "english": "nine",
       "category": "Numbers",
@@ -4443,7 +4963,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10222",
+      "id": "syllabus-a1-10248",
       "german": "zehn",
       "english": "ten",
       "category": "Numbers",
@@ -4463,7 +4983,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10223",
+      "id": "syllabus-a1-10249",
       "german": "elf",
       "english": "eleven",
       "category": "Numbers",
@@ -4483,7 +5003,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10224",
+      "id": "syllabus-a1-10250",
       "german": "zwölf",
       "english": "twelve",
       "category": "Numbers",
@@ -4503,7 +5023,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10225",
+      "id": "syllabus-a1-10251",
       "german": "zwanzig",
       "english": "twenty",
       "category": "Numbers",
@@ -4523,7 +5043,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10226",
+      "id": "syllabus-a1-10252",
       "german": "hundert",
       "english": "hundred",
       "category": "Numbers",
@@ -4543,7 +5063,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10227",
+      "id": "syllabus-a1-10253",
       "german": "sein",
       "english": "to be",
       "category": "Positional Verbs",
@@ -4563,7 +5083,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10228",
+      "id": "syllabus-a1-10254",
       "german": "stehen",
       "english": "to stand",
       "category": "Positional Verbs",
@@ -4583,7 +5103,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10229",
+      "id": "syllabus-a1-10255",
       "german": "sitzen",
       "english": "to sit",
       "category": "Positional Verbs",
@@ -4603,7 +5123,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10230",
+      "id": "syllabus-a1-10256",
       "german": "liegen",
       "english": "to lie / to be located",
       "category": "Positional Verbs",
@@ -4623,7 +5143,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10231",
+      "id": "syllabus-a1-10257",
       "german": "hängen",
       "english": "to hang",
       "category": "Positional Verbs",
@@ -4643,7 +5163,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10232",
+      "id": "syllabus-a1-10258",
       "german": "stecken",
       "english": "to be stuck / to be (in)",
       "category": "Positional Verbs",
@@ -4663,7 +5183,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10233",
+      "id": "syllabus-a1-10259",
       "german": "sich setzen",
       "english": "to sit down",
       "category": "Positional Verbs",
@@ -4683,7 +5203,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10234",
+      "id": "syllabus-a1-10260",
       "german": "sich stellen",
       "english": "to stand (oneself)",
       "category": "Positional Verbs",
@@ -4703,7 +5223,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10235",
+      "id": "syllabus-a1-10261",
       "german": "sich legen",
       "english": "to lie down",
       "category": "Positional Verbs",
@@ -4723,7 +5243,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10236",
+      "id": "syllabus-a1-10262",
       "german": "sich hinsetzen",
       "english": "to sit down",
       "category": "Positional Verbs",
@@ -4743,7 +5263,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10237",
+      "id": "syllabus-a1-10263",
       "german": "stellen",
       "english": "to put / to place (upright)",
       "category": "Positional Verbs",
@@ -4763,7 +5283,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10238",
+      "id": "syllabus-a1-10264",
       "german": "legen",
       "english": "to put / to lay (flat)",
       "category": "Positional Verbs",
@@ -4783,7 +5303,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10239",
+      "id": "syllabus-a1-10265",
       "german": "setzen",
       "english": "to put / to set",
       "category": "Positional Verbs",
@@ -4803,7 +5323,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10240",
+      "id": "syllabus-a1-10266",
       "german": "hängen",
       "english": "to hang (something)",
       "category": "Positional Verbs",
@@ -4823,7 +5343,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10241",
+      "id": "syllabus-a1-10267",
       "german": "stecken",
       "english": "to put / to stick",
       "category": "Positional Verbs",
@@ -4843,7 +5363,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10242",
+      "id": "syllabus-a1-10268",
       "german": "ich",
       "english": "I",
       "category": "Pronouns",
@@ -4863,7 +5383,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10243",
+      "id": "syllabus-a1-10269",
       "german": "du",
       "english": "you (informal)",
       "category": "Pronouns",
@@ -4883,7 +5403,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10244",
+      "id": "syllabus-a1-10270",
       "german": "er",
       "english": "he",
       "category": "Pronouns",
@@ -4903,7 +5423,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10245",
+      "id": "syllabus-a1-10271",
       "german": "sie",
       "english": "she / they",
       "category": "Pronouns",
@@ -4923,7 +5443,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10246",
+      "id": "syllabus-a1-10272",
       "german": "es",
       "english": "it",
       "category": "Pronouns",
@@ -4943,7 +5463,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10247",
+      "id": "syllabus-a1-10273",
       "german": "wir",
       "english": "we",
       "category": "Pronouns",
@@ -4963,7 +5483,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10248",
+      "id": "syllabus-a1-10274",
       "german": "ihr",
       "english": "you (plural informal)",
       "category": "Pronouns",
@@ -4983,7 +5503,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10249",
+      "id": "syllabus-a1-10275",
       "german": "Sie",
       "english": "you (formal)",
       "category": "Pronouns",
@@ -5003,7 +5523,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10250",
+      "id": "syllabus-a1-10276",
       "german": "mein",
       "english": "my",
       "category": "Pronouns",
@@ -5023,7 +5543,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10251",
+      "id": "syllabus-a1-10277",
       "german": "dein",
       "english": "your (informal)",
       "category": "Pronouns",
@@ -5043,7 +5563,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10252",
+      "id": "syllabus-a1-10278",
       "german": "sein",
       "english": "his / its",
       "category": "Pronouns",
@@ -5063,7 +5583,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10253",
+      "id": "syllabus-a1-10279",
       "german": "ihr",
       "english": "her / their",
       "category": "Pronouns",
@@ -5083,7 +5603,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10254",
+      "id": "syllabus-a1-10280",
       "german": "unser",
       "english": "our",
       "category": "Pronouns",
@@ -5103,7 +5623,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10255",
+      "id": "syllabus-a1-10281",
       "german": "euer",
       "english": "your (plural informal)",
       "category": "Pronouns",
@@ -5123,7 +5643,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10256",
+      "id": "syllabus-a1-10282",
       "german": "Ihr",
       "english": "your (formal)",
       "category": "Pronouns",
@@ -5143,7 +5663,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10257",
+      "id": "syllabus-a1-10283",
       "german": "wer",
       "english": "who",
       "category": "Question Words",
@@ -5163,7 +5683,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10258",
+      "id": "syllabus-a1-10284",
       "german": "was",
       "english": "what",
       "category": "Question Words",
@@ -5183,7 +5703,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10259",
+      "id": "syllabus-a1-10285",
       "german": "wo",
       "english": "where",
       "category": "Question Words",
@@ -5203,7 +5723,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10260",
+      "id": "syllabus-a1-10286",
       "german": "woher",
       "english": "where from",
       "category": "Question Words",
@@ -5223,7 +5743,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10261",
+      "id": "syllabus-a1-10287",
       "german": "wohin",
       "english": "where to",
       "category": "Question Words",
@@ -5243,7 +5763,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10262",
+      "id": "syllabus-a1-10288",
       "german": "wann",
       "english": "when",
       "category": "Question Words",
@@ -5263,7 +5783,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10263",
+      "id": "syllabus-a1-10289",
       "german": "wie",
       "english": "how",
       "category": "Question Words",
@@ -5283,7 +5803,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10264",
+      "id": "syllabus-a1-10290",
       "german": "warum",
       "english": "why",
       "category": "Question Words",
@@ -5303,7 +5823,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10265",
+      "id": "syllabus-a1-10291",
       "german": "wie viel",
       "english": "how much",
       "category": "Question Words",
@@ -5323,7 +5843,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10266",
+      "id": "syllabus-a1-10292",
       "german": "wie viele",
       "english": "how many",
       "category": "Question Words",
@@ -5343,7 +5863,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10267",
+      "id": "syllabus-a1-10293",
       "german": "welche",
       "english": "which",
       "category": "Question Words",
@@ -5363,7 +5883,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10268",
+      "id": "syllabus-a1-10294",
       "german": "wen",
       "english": "whom (accusative)",
       "category": "Question Words",
@@ -5383,7 +5903,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10269",
+      "id": "syllabus-a1-10295",
       "german": "wem",
       "english": "whom (dative)",
       "category": "Question Words",
@@ -5403,7 +5923,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10270",
+      "id": "syllabus-a1-10296",
       "german": "wessen",
       "english": "whose",
       "category": "Question Words",
@@ -5423,7 +5943,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10271",
+      "id": "syllabus-a1-10297",
       "german": "wie lange",
       "english": "how long",
       "category": "Question Words",
@@ -5443,7 +5963,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10272",
+      "id": "syllabus-a1-10298",
       "german": "wohnen",
       "english": "to live",
       "category": "Regular Verbs",
@@ -5463,7 +5983,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10273",
+      "id": "syllabus-a1-10299",
       "german": "lernen",
       "english": "to learn",
       "category": "Regular Verbs",
@@ -5483,7 +6003,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10274",
+      "id": "syllabus-a1-10300",
       "german": "spielen",
       "english": "to play",
       "category": "Regular Verbs",
@@ -5503,7 +6023,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10275",
+      "id": "syllabus-a1-10301",
       "german": "kaufen",
       "english": "to buy",
       "category": "Regular Verbs",
@@ -5523,7 +6043,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10276",
+      "id": "syllabus-a1-10302",
       "german": "brauchen",
       "english": "to need",
       "category": "Regular Verbs",
@@ -5543,7 +6063,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10277",
+      "id": "syllabus-a1-10303",
       "german": "suchen",
       "english": "to search / to look for",
       "category": "Regular Verbs",
@@ -5563,7 +6083,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10278",
+      "id": "syllabus-a1-10304",
       "german": "fragen",
       "english": "to ask",
       "category": "Regular Verbs",
@@ -5583,7 +6103,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10279",
+      "id": "syllabus-a1-10305",
       "german": "sagen",
       "english": "to say",
       "category": "Regular Verbs",
@@ -5603,7 +6123,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10280",
+      "id": "syllabus-a1-10306",
       "german": "hören",
       "english": "to hear / to listen",
       "category": "Regular Verbs",
@@ -5623,7 +6143,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10281",
+      "id": "syllabus-a1-10307",
       "german": "zeigen",
       "english": "to show",
       "category": "Regular Verbs",
@@ -5643,7 +6163,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10282",
+      "id": "syllabus-a1-10308",
       "german": "machen",
       "english": "to make / to do",
       "category": "Regular Verbs",
@@ -5663,7 +6183,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10283",
+      "id": "syllabus-a1-10309",
       "german": "kosten",
       "english": "to cost",
       "category": "Regular Verbs",
@@ -5683,7 +6203,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10284",
+      "id": "syllabus-a1-10310",
       "german": "glauben",
       "english": "to believe",
       "category": "Regular Verbs",
@@ -5703,7 +6223,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10285",
+      "id": "syllabus-a1-10311",
       "german": "lieben",
       "english": "to love",
       "category": "Regular Verbs",
@@ -5723,7 +6243,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10286",
+      "id": "syllabus-a1-10312",
       "german": "arbeiten",
       "english": "to work",
       "category": "Regular Verbs",
@@ -5743,7 +6263,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10287",
+      "id": "syllabus-a1-10313",
       "german": "antworten",
       "english": "to answer",
       "category": "Regular Verbs",
@@ -5763,7 +6283,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10288",
+      "id": "syllabus-a1-10314",
       "german": "öffnen",
       "english": "to open",
       "category": "Regular Verbs",
@@ -5783,7 +6303,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10289",
+      "id": "syllabus-a1-10315",
       "german": "warten",
       "english": "to wait",
       "category": "Regular Verbs",
@@ -5803,7 +6323,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10290",
+      "id": "syllabus-a1-10316",
       "german": "lachen",
       "english": "to laugh",
       "category": "Regular Verbs",
@@ -5823,7 +6343,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10291",
+      "id": "syllabus-a1-10317",
       "german": "weinen",
       "english": "to cry",
       "category": "Regular Verbs",
@@ -5843,7 +6363,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10292",
+      "id": "syllabus-a1-10318",
       "german": "rauchen",
       "english": "to smoke",
       "category": "Regular Verbs",
@@ -5863,7 +6383,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10293",
+      "id": "syllabus-a1-10319",
       "german": "tanzen",
       "english": "to dance",
       "category": "Regular Verbs",
@@ -5883,7 +6403,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10294",
+      "id": "syllabus-a1-10320",
       "german": "kochen",
       "english": "to cook",
       "category": "Regular Verbs",
@@ -5903,7 +6423,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10295",
+      "id": "syllabus-a1-10321",
       "german": "danken",
       "english": "to thank",
       "category": "Regular Verbs",
@@ -5923,7 +6443,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10296",
+      "id": "syllabus-a1-10322",
       "german": "grüßen",
       "english": "to greet",
       "category": "Regular Verbs",
@@ -5943,7 +6463,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10297",
+      "id": "syllabus-a1-10323",
       "german": "heißen",
       "english": "to be called",
       "category": "Regular Verbs",
@@ -5963,7 +6483,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10298",
+      "id": "syllabus-a1-10324",
       "german": "reisen",
       "english": "to travel",
       "category": "Regular Verbs",
@@ -5983,7 +6503,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10299",
+      "id": "syllabus-a1-10325",
       "german": "leben",
       "english": "to live / to be alive",
       "category": "Regular Verbs",
@@ -6003,7 +6523,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10300",
+      "id": "syllabus-a1-10326",
       "german": "zahlen",
       "english": "to pay",
       "category": "Regular Verbs",
@@ -6023,7 +6543,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10301",
+      "id": "syllabus-a1-10327",
       "german": "holen",
       "english": "to fetch / to get",
       "category": "Regular Verbs",
@@ -6043,7 +6563,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10302",
+      "id": "syllabus-a1-10328",
       "german": "werden",
       "english": "to become / to get",
       "category": "State Change Verbs",
@@ -6063,7 +6583,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10303",
+      "id": "syllabus-a1-10329",
       "german": "sein",
       "english": "to be",
       "category": "State Change Verbs",
@@ -6083,7 +6603,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10304",
+      "id": "syllabus-a1-10330",
       "german": "bleiben",
       "english": "to stay / to remain",
       "category": "State Change Verbs",
@@ -6103,7 +6623,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10305",
+      "id": "syllabus-a1-10331",
       "german": "kommen",
       "english": "to come",
       "category": "State Change Verbs",
@@ -6123,7 +6643,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10306",
+      "id": "syllabus-a1-10332",
       "german": "gehen",
       "english": "to go",
       "category": "State Change Verbs",
@@ -6143,7 +6663,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10307",
+      "id": "syllabus-a1-10333",
       "german": "ankommen",
       "english": "to arrive",
       "category": "State Change Verbs",
@@ -6163,7 +6683,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10308",
+      "id": "syllabus-a1-10334",
       "german": "weggehen",
       "english": "to leave / to go away",
       "category": "State Change Verbs",
@@ -6183,7 +6703,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10309",
+      "id": "syllabus-a1-10335",
       "german": "einschlafen",
       "english": "to fall asleep",
       "category": "State Change Verbs",
@@ -6203,7 +6723,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10310",
+      "id": "syllabus-a1-10336",
       "german": "aufwachen",
       "english": "to wake up",
       "category": "State Change Verbs",
@@ -6223,7 +6743,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10311",
+      "id": "syllabus-a1-10337",
       "german": "sterben",
       "english": "to die",
       "category": "State Change Verbs",
@@ -6243,7 +6763,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10312",
+      "id": "syllabus-a1-10338",
       "german": "wachsen",
       "english": "to grow",
       "category": "State Change Verbs",
@@ -6263,7 +6783,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10313",
+      "id": "syllabus-a1-10339",
       "german": "fallen",
       "english": "to fall",
       "category": "State Change Verbs",
@@ -6283,7 +6803,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10314",
+      "id": "syllabus-a1-10340",
       "german": "aufstehen",
       "english": "to get up / to stand up",
       "category": "State Change Verbs",
@@ -6303,7 +6823,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10315",
+      "id": "syllabus-a1-10341",
       "german": "sich setzen",
       "english": "to sit down",
       "category": "State Change Verbs",
@@ -6323,7 +6843,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10316",
+      "id": "syllabus-a1-10342",
       "german": "sich hinlegen",
       "english": "to lie down",
       "category": "State Change Verbs",
@@ -6343,7 +6863,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10317",
+      "id": "syllabus-a1-10343",
       "german": "Montag",
       "english": "Monday",
       "category": "Time",
@@ -6363,7 +6883,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10318",
+      "id": "syllabus-a1-10344",
       "german": "Dienstag",
       "english": "Tuesday",
       "category": "Time",
@@ -6383,7 +6903,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10319",
+      "id": "syllabus-a1-10345",
       "german": "Mittwoch",
       "english": "Wednesday",
       "category": "Time",
@@ -6403,7 +6923,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10320",
+      "id": "syllabus-a1-10346",
       "german": "Donnerstag",
       "english": "Thursday",
       "category": "Time",
@@ -6423,7 +6943,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10321",
+      "id": "syllabus-a1-10347",
       "german": "Freitag",
       "english": "Friday",
       "category": "Time",
@@ -6443,7 +6963,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10322",
+      "id": "syllabus-a1-10348",
       "german": "Samstag",
       "english": "Saturday",
       "category": "Time",
@@ -6463,7 +6983,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10323",
+      "id": "syllabus-a1-10349",
       "german": "Sonntag",
       "english": "Sunday",
       "category": "Time",
@@ -6483,7 +7003,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10324",
+      "id": "syllabus-a1-10350",
       "german": "heute",
       "english": "today",
       "category": "Time",
@@ -6503,7 +7023,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10325",
+      "id": "syllabus-a1-10351",
       "german": "morgen",
       "english": "tomorrow",
       "category": "Time",
@@ -6523,7 +7043,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10326",
+      "id": "syllabus-a1-10352",
       "german": "gestern",
       "english": "yesterday",
       "category": "Time",
@@ -6543,7 +7063,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10327",
+      "id": "syllabus-a1-10353",
       "german": "Woche",
       "english": "week",
       "category": "Time",
@@ -6563,7 +7083,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10328",
+      "id": "syllabus-a1-10354",
       "german": "Monat",
       "english": "month",
       "category": "Time",
@@ -6583,7 +7103,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10329",
+      "id": "syllabus-a1-10355",
       "german": "Jahr",
       "english": "year",
       "category": "Time",
@@ -6603,7 +7123,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10330",
+      "id": "syllabus-a1-10356",
       "german": "Tag",
       "english": "day",
       "category": "Time",
@@ -6623,7 +7143,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10331",
+      "id": "syllabus-a1-10357",
       "german": "Uhr",
       "english": "clock / o'clock",
       "category": "Time",
@@ -6643,7 +7163,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10332",
+      "id": "syllabus-a1-10358",
       "german": "Auto",
       "english": "car",
       "category": "Transportation",
@@ -6663,7 +7183,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10333",
+      "id": "syllabus-a1-10359",
       "german": "Bus",
       "english": "bus",
       "category": "Transportation",
@@ -6683,7 +7203,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10334",
+      "id": "syllabus-a1-10360",
       "german": "Zug",
       "english": "train",
       "category": "Transportation",
@@ -6703,7 +7223,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10335",
+      "id": "syllabus-a1-10361",
       "german": "Fahrrad",
       "english": "bicycle",
       "category": "Transportation",
@@ -6723,7 +7243,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10336",
+      "id": "syllabus-a1-10362",
       "german": "Flugzeug",
       "english": "airplane",
       "category": "Transportation",
@@ -6743,7 +7263,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10337",
+      "id": "syllabus-a1-10363",
       "german": "Taxi",
       "english": "taxi",
       "category": "Transportation",
@@ -6763,7 +7283,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10338",
+      "id": "syllabus-a1-10364",
       "german": "U-Bahn",
       "english": "subway / metro",
       "category": "Transportation",
@@ -6783,7 +7303,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10339",
+      "id": "syllabus-a1-10365",
       "german": "Straßenbahn",
       "english": "tram / streetcar",
       "category": "Transportation",
@@ -6803,7 +7323,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10340",
+      "id": "syllabus-a1-10366",
       "german": "Schiff",
       "english": "ship / boat",
       "category": "Transportation",
@@ -6823,7 +7343,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10341",
+      "id": "syllabus-a1-10367",
       "german": "Motorrad",
       "english": "motorcycle",
       "category": "Transportation",
@@ -6843,7 +7363,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10342",
+      "id": "syllabus-a1-10368",
       "german": "Bahnhof",
       "english": "train station",
       "category": "Transportation",
@@ -6863,7 +7383,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10343",
+      "id": "syllabus-a1-10369",
       "german": "Haltestelle",
       "english": "stop / station",
       "category": "Transportation",
@@ -6883,7 +7403,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10344",
+      "id": "syllabus-a1-10370",
       "german": "Straße",
       "english": "street / road",
       "category": "Transportation",
@@ -6903,7 +7423,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10345",
+      "id": "syllabus-a1-10371",
       "german": "fahren",
       "english": "to drive / to go (by vehicle)",
       "category": "Transportation",
@@ -6923,7 +7443,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10346",
+      "id": "syllabus-a1-10372",
       "german": "gehen",
       "english": "to go / to walk",
       "category": "Transportation",
@@ -6943,7 +7463,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10347",
+      "id": "syllabus-a1-10373",
       "german": "verstehen",
       "english": "to understand",
       "category": "Understanding Verbs",
@@ -6963,7 +7483,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10348",
+      "id": "syllabus-a1-10374",
       "german": "kennen",
       "english": "to know (a person/place)",
       "category": "Understanding Verbs",
@@ -6983,7 +7503,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10349",
+      "id": "syllabus-a1-10375",
       "german": "wissen",
       "english": "to know (a fact)",
       "category": "Understanding Verbs",
@@ -7003,7 +7523,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10350",
+      "id": "syllabus-a1-10376",
       "german": "denken",
       "english": "to think",
       "category": "Understanding Verbs",
@@ -7023,7 +7543,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10351",
+      "id": "syllabus-a1-10377",
       "german": "meinen",
       "english": "to mean / to think",
       "category": "Understanding Verbs",
@@ -7043,7 +7563,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10352",
+      "id": "syllabus-a1-10378",
       "german": "glauben",
       "english": "to believe",
       "category": "Understanding Verbs",
@@ -7063,7 +7583,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10353",
+      "id": "syllabus-a1-10379",
       "german": "vergessen",
       "english": "to forget",
       "category": "Understanding Verbs",
@@ -7083,7 +7603,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10354",
+      "id": "syllabus-a1-10380",
       "german": "erklären",
       "english": "to explain",
       "category": "Understanding Verbs",
@@ -7103,7 +7623,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10355",
+      "id": "syllabus-a1-10381",
       "german": "bedeuten",
       "english": "to mean",
       "category": "Understanding Verbs",
@@ -7123,7 +7643,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10356",
+      "id": "syllabus-a1-10382",
       "german": "interessieren",
       "english": "to interest",
       "category": "Understanding Verbs",
@@ -7143,7 +7663,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10357",
+      "id": "syllabus-a1-10383",
       "german": "Kartoffel",
       "english": "potato",
       "category": "Vegetables",
@@ -7163,7 +7683,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10358",
+      "id": "syllabus-a1-10384",
       "german": "Tomate",
       "english": "tomato",
       "category": "Vegetables",
@@ -7183,7 +7703,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10359",
+      "id": "syllabus-a1-10385",
       "german": "Gurke",
       "english": "cucumber",
       "category": "Vegetables",
@@ -7203,7 +7723,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10360",
+      "id": "syllabus-a1-10386",
       "german": "Salat",
       "english": "lettuce / salad",
       "category": "Vegetables",
@@ -7223,7 +7743,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10361",
+      "id": "syllabus-a1-10387",
       "german": "Karotte",
       "english": "carrot",
       "category": "Vegetables",
@@ -7243,7 +7763,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10362",
+      "id": "syllabus-a1-10388",
       "german": "Zwiebel",
       "english": "onion",
       "category": "Vegetables",
@@ -7263,7 +7783,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10363",
+      "id": "syllabus-a1-10389",
       "german": "Paprika",
       "english": "bell pepper",
       "category": "Vegetables",
@@ -7283,7 +7803,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10364",
+      "id": "syllabus-a1-10390",
       "german": "Pilz",
       "english": "mushroom",
       "category": "Vegetables",
@@ -7303,7 +7823,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10365",
+      "id": "syllabus-a1-10391",
       "german": "Kohl",
       "english": "cabbage",
       "category": "Vegetables",
@@ -7323,7 +7843,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10366",
+      "id": "syllabus-a1-10392",
       "german": "Spinat",
       "english": "spinach",
       "category": "Vegetables",
@@ -7343,7 +7863,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10367",
+      "id": "syllabus-a1-10393",
       "german": "Brokkoli",
       "english": "broccoli",
       "category": "Vegetables",
@@ -7363,7 +7883,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10368",
+      "id": "syllabus-a1-10394",
       "german": "Bohne",
       "english": "bean",
       "category": "Vegetables",
@@ -7383,7 +7903,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10369",
+      "id": "syllabus-a1-10395",
       "german": "Erbse",
       "english": "pea",
       "category": "Vegetables",
@@ -7403,7 +7923,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10370",
+      "id": "syllabus-a1-10396",
       "german": "Mais",
       "english": "corn",
       "category": "Vegetables",
@@ -7423,7 +7943,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10371",
+      "id": "syllabus-a1-10397",
       "german": "Gemüse",
       "english": "vegetable",
       "category": "Vegetables",
@@ -7443,7 +7963,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10372",
+      "id": "syllabus-a1-10398",
       "german": "Sonne",
       "english": "sun",
       "category": "Weather",
@@ -7463,7 +7983,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10373",
+      "id": "syllabus-a1-10399",
       "german": "Regen",
       "english": "rain",
       "category": "Weather",
@@ -7483,7 +8003,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10374",
+      "id": "syllabus-a1-10400",
       "german": "kalt",
       "english": "cold",
       "category": "Weather",
@@ -7503,7 +8023,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10375",
+      "id": "syllabus-a1-10401",
       "german": "warm",
       "english": "warm",
       "category": "Weather",
@@ -7523,7 +8043,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10376",
+      "id": "syllabus-a1-10402",
       "german": "Schnee",
       "english": "snow",
       "category": "Weather",
@@ -7543,7 +8063,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10377",
+      "id": "syllabus-a1-10403",
       "german": "Wind",
       "english": "wind",
       "category": "Weather",
@@ -7563,7 +8083,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10378",
+      "id": "syllabus-a1-10404",
       "german": "Wolke",
       "english": "cloud",
       "category": "Weather",
@@ -7583,7 +8103,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10379",
+      "id": "syllabus-a1-10405",
       "german": "Gewitter",
       "english": "thunderstorm",
       "category": "Weather",
@@ -7603,7 +8123,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10380",
+      "id": "syllabus-a1-10406",
       "german": "Wetter",
       "english": "weather",
       "category": "Weather",
@@ -7623,7 +8143,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10381",
+      "id": "syllabus-a1-10407",
       "german": "heiß",
       "english": "hot",
       "category": "Weather",
@@ -7643,7 +8163,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10382",
+      "id": "syllabus-a1-10408",
       "german": "kühl",
       "english": "cool",
       "category": "Weather",
@@ -7663,7 +8183,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10383",
+      "id": "syllabus-a1-10409",
       "german": "sonnig",
       "english": "sunny",
       "category": "Weather",
@@ -7683,7 +8203,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10384",
+      "id": "syllabus-a1-10410",
       "german": "bewölkt",
       "english": "cloudy",
       "category": "Weather",
@@ -7703,7 +8223,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10385",
+      "id": "syllabus-a1-10411",
       "german": "regnerisch",
       "english": "rainy",
       "category": "Weather",
@@ -7723,7 +8243,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10386",
+      "id": "syllabus-a1-10412",
       "german": "windig",
       "english": "windy",
       "category": "Weather",

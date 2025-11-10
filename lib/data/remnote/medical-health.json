@@ -1,6 +1,6 @@
 [
   {
-    "id": "syllabus-b1-10998",
+    "id": "syllabus-b1-11024",
     "german": "Termin",
     "english": "appointment",
     "category": "Medical Health",
@@ -20,7 +20,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10999",
+    "id": "syllabus-b1-11025",
     "german": "Rezept",
     "english": "prescription",
     "category": "Medical Health",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "id": "syllabus-b1-11000",
+    "id": "syllabus-b1-11026",
     "german": "Apotheke",
     "english": "pharmacy",
     "category": "Medical Health",
@@ -60,7 +60,7 @@
     }
   },
   {
-    "id": "syllabus-b1-11001",
+    "id": "syllabus-b1-11027",
     "german": "Medikament",
     "english": "medication / medicine",
     "category": "Medical Health",
@@ -80,7 +80,7 @@
     }
   },
   {
-    "id": "syllabus-b1-11002",
+    "id": "syllabus-b1-11028",
     "german": "Schmerzen",
     "english": "pain / aches",
     "category": "Medical Health",
@@ -100,7 +100,7 @@
     }
   },
   {
-    "id": "syllabus-b1-11003",
+    "id": "syllabus-b1-11029",
     "german": "Fieber",
     "english": "fever",
     "category": "Medical Health",
@@ -120,7 +120,7 @@
     }
   },
   {
-    "id": "syllabus-b1-11004",
+    "id": "syllabus-b1-11030",
     "german": "Erkältung",
     "english": "cold",
     "category": "Medical Health",
@@ -140,7 +140,7 @@
     }
   },
   {
-    "id": "syllabus-b1-11005",
+    "id": "syllabus-b1-11031",
     "german": "Grippe",
     "english": "flu / influenza",
     "category": "Medical Health",
@@ -160,7 +160,7 @@
     }
   },
   {
-    "id": "syllabus-b1-11006",
+    "id": "syllabus-b1-11032",
     "german": "Husten",
     "english": "cough",
     "category": "Medical Health",
@@ -180,7 +180,7 @@
     }
   },
   {
-    "id": "syllabus-b1-11007",
+    "id": "syllabus-b1-11033",
     "german": "Schnupfen",
     "english": "runny nose / cold",
     "category": "Medical Health",
@@ -200,7 +200,7 @@
     }
   },
   {
-    "id": "syllabus-b1-11008",
+    "id": "syllabus-b1-11034",
     "german": "Verletzung",
     "english": "injury",
     "category": "Medical Health",
@@ -220,7 +220,7 @@
     }
   },
   {
-    "id": "syllabus-b1-11009",
+    "id": "syllabus-b1-11035",
     "german": "Untersuchung",
     "english": "examination / checkup",
     "category": "Medical Health",
@@ -240,7 +240,7 @@
     }
   },
   {
-    "id": "syllabus-b1-11010",
+    "id": "syllabus-b1-11036",
     "german": "Notfall",
     "english": "emergency",
     "category": "Medical Health",
@@ -260,7 +260,7 @@
     }
   },
   {
-    "id": "syllabus-b1-11011",
+    "id": "syllabus-b1-11037",
     "german": "Krankenwagen",
     "english": "ambulance",
     "category": "Medical Health",
@@ -280,7 +280,7 @@
     }
   },
   {
-    "id": "syllabus-b1-11012",
+    "id": "syllabus-b1-11038",
     "german": "Versicherung",
     "english": "insurance",
     "category": "Medical Health",
@@ -300,7 +300,7 @@
     }
   },
   {
-    "id": "syllabus-b1-11013",
+    "id": "syllabus-b1-11039",
     "german": "Sprechstunde",
     "english": "consultation hours",
     "category": "Medical Health",
@@ -320,7 +320,7 @@
     }
   },
   {
-    "id": "syllabus-b1-11014",
+    "id": "syllabus-b1-11040",
     "german": "Behandlung",
     "english": "treatment",
     "category": "Medical Health",
