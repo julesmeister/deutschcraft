@@ -6,8 +6,9 @@ import { StatCard } from '@/components/ui/StatCard';
 import { StatGrid } from '@/components/ui/StatGrid';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useStudyStats } from '@/lib/hooks/useFlashcards';
-import { collection, query, where, getDocs, orderBy, limit } from 'firebase/firestore';
+import { collection, query, where, getDocs, orderBy, limit, doc, getDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
+import { User, getUserFullName } from '@/lib/models/user';
 
 interface StudentProfilePageProps {
   params: Promise<{ studentId: string }>;
@@ -17,7 +18,6 @@ interface StudentData {
   email: string;
   name: string;
   currentLevel: string;
-  studentId: string;
 }
 
 interface RecentSession {
@@ -43,29 +43,33 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
       try {
         setIsLoading(true);
 
-        // Fetch student data
-        const studentRef = collection(db, 'users');
-        const studentQuery = query(studentRef, where('email', '==', resolvedParams.studentId));
-        const studentSnapshot = await getDocs(studentQuery);
+        console.log('[StudentProfile] Loading student:', resolvedParams.studentId);
 
-        if (!studentSnapshot.empty) {
-          const studentDoc = studentSnapshot.docs[0];
+        // Fetch student data - email is the document ID
+        const studentDocRef = doc(db, 'users', resolvedParams.studentId);
+        const studentSnapshot = await getDoc(studentDocRef);
+
+        if (studentSnapshot.exists()) {
+          const userData = studentSnapshot.data() as User;
+          console.log('[StudentProfile] Student data loaded:', userData);
+
           setStudent({
-            email: studentDoc.data().email,
-            name: studentDoc.data().name || studentDoc.data().email,
-            currentLevel: studentDoc.data().currentLevel || 'A1',
-            studentId: studentDoc.id,
+            email: userData.email,
+            name: getUserFullName(userData),
+            currentLevel: userData.cefrLevel || 'A1',
           });
 
           // Fetch recent sessions
           const progressRef = collection(db, 'progress');
           const progressQuery = query(
             progressRef,
-            where('userId', '==', studentDoc.data().email),
+            where('userId', '==', userData.email),
             orderBy('date', 'desc'),
             limit(7)
           );
           const progressSnapshot = await getDocs(progressQuery);
+
+          console.log('[StudentProfile] Recent sessions count:', progressSnapshot.docs.length);
 
           const sessions: RecentSession[] = progressSnapshot.docs.map(doc => {
             const data = doc.data();
@@ -81,9 +85,11 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
           });
 
           setRecentSessions(sessions);
+        } else {
+          console.error('[StudentProfile] Student not found:', resolvedParams.studentId);
         }
       } catch (error) {
-        console.error('Error loading student data:', error);
+        console.error('[StudentProfile] Error loading student data:', error);
       } finally {
         setIsLoading(false);
       }
