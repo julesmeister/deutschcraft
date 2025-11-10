@@ -229,10 +229,10 @@ export function TaskBoard({
                             onMouseLeave={() => setHoveredTaskId(null)}
                           >
                             {/* Expand Button */}
-                            <td className="w-[40px] px-6 py-4 text-lg text-gray-400">
+                            <td className="w-[40px] px-6 py-4">
                               <button
                                 onClick={() => setExpandedTaskDetails(prev => ({ ...prev, [task.id]: !prev[task.id] }))}
-                                className="hover:text-gray-600 cursor-pointer transition-colors"
+                                className="text-gray-400 hover:text-gray-600 cursor-pointer pt-1 transition-colors"
                               >
                                 <svg
                                   className={`w-5 h-5 transition-transform ${expandedTaskDetails[task.id] ? 'rotate-90' : ''}`}
