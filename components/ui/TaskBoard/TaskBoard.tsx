@@ -6,6 +6,8 @@ import { Dropdown } from './Dropdown';
 import { DatePicker } from './DatePicker';
 import { AssigneeSelector } from './AssigneeSelector';
 import { Select } from '../Select';
+import { TaskRow } from './TaskRow';
+import { TaskDetailsRow } from './TaskDetailsRow';
 import { Task, TaskBoardProps } from './types';
 import { statusColors, statusLabels, priorityColors, priorityLabels, statusOptions, priorityOptions } from './constants';
 
@@ -223,187 +225,24 @@ export function TaskBoard({
                     <tbody className="divide-y divide-gray-200">
                       {group.tasks.map((task) => (
                         <React.Fragment key={task.id}>
-                          <tr
-                            className="hover:bg-gray-50/30 transition-colors group"
+                          <TaskRow
+                            task={task}
+                            groupId={group.id}
+                            isHovered={hoveredTaskId === task.id}
+                            isEditing={editingTaskId === task.id}
+                            editingTitle={editingTitle}
+                            isExpanded={expandedTaskDetails[task.id]}
                             onMouseEnter={() => setHoveredTaskId(task.id)}
                             onMouseLeave={() => setHoveredTaskId(null)}
-                          >
-                            {/* Expand Button */}
-                            <td className="w-[40px] px-6 py-4">
-                              <button
-                                onClick={() => setExpandedTaskDetails(prev => ({ ...prev, [task.id]: !prev[task.id] }))}
-                                className="text-gray-400 hover:text-gray-600 cursor-pointer pt-1 transition-colors"
-                              >
-                                <svg
-                                  className={`w-5 h-5 transition-transform ${expandedTaskDetails[task.id] ? 'rotate-90' : ''}`}
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeWidth={2}
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                                </svg>
-                              </button>
-                            </td>
-
-                          {/* Checkbox */}
-                          <td className="w-[40px] px-6 py-4">
-                            <button
-                              onClick={() => onToggleTask?.(group.id, task.id)}
-                              className="text-2xl cursor-pointer pt-1 hover:text-piku-purple-dark transition-colors"
-                            >
-                              {task.completed ? (
-                                <svg className="w-6 h-6 text-piku-purple-dark" fill="currentColor" viewBox="0 0 24 24">
-                                  <path d="M17 3.34a10 10 0 1 1 -14.995 8.984l-.005 -.324l.005 -.324a10 10 0 0 1 14.995 -8.336zm-1.293 5.953a1 1 0 0 0 -1.32 -.083l-.094 .083l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.403 1.403l.083 .094l2 2l.094 .083a1 1 0 0 0 1.226 0l.094 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" />
-                                </svg>
-                              ) : (
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-                                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2l4 -4" />
-                                </svg>
-                              )}
-                            </button>
-                          </td>
-
-                          {/* Title */}
-                          <td className="w-[500px] px-6 py-4">
-                            {editingTaskId === task.id ? (
-                              <input
-                                type="text"
-                                value={editingTitle}
-                                onChange={(e) => setEditingTitle(e.target.value)}
-                                onBlur={() => handleTitleBlur(group.id, task.id)}
-                                onKeyDown={(e) => handleTitleKeyDown(e, group.id, task.id)}
-                                className="font-bold text-gray-900 w-full bg-transparent outline-none border-0 p-0"
-                                autoFocus
-                              />
-                            ) : (
-                              <span
-                                onClick={() => handleTitleClick(group.id, task.id, task.title)}
-                                className={`font-bold text-gray-900 cursor-text ${task.completed ? 'line-through opacity-50' : ''}`}
-                              >
-                                {task.title}
-                              </span>
-                            )}
-                          </td>
-
-                          {/* Status */}
-                          <td className="w-[150px] px-6 py-4">
-                            <span className={`inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold border border-gray-100 whitespace-nowrap ${statusColors[task.status]}`}>
-                              {statusLabels[task.status]}
-                            </span>
-                          </td>
-
-                          {/* Priority */}
-                          <td className="w-[150px] px-6 py-4">
-                            <span className={`inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold border border-gray-100 whitespace-nowrap ${priorityColors[task.priority]}`}>
-                              {priorityLabels[task.priority]}
-                            </span>
-                          </td>
-
-                          {/* Due Date */}
-                          <td className="w-[200px] px-6 py-4">
-                            <span className="font-semibold text-gray-900 text-sm">
-                              {task.dueDate}
-                            </span>
-                          </td>
-
-                          {/* Actions */}
-                          <td className="px-6 py-4 text-right">
-                            <button
-                              onClick={() => handleDeleteClick(group.id, task.id, task.title)}
-                              className={`inline-flex items-center gap-1 bg-red-600 hover:bg-red-700 text-white h-10 rounded-xl px-3 py-2 text-sm font-bold transition-all ${
-                                hoveredTaskId === task.id ? 'opacity-100' : 'opacity-0'
-                              }`}
-                              title="Delete task"
-                            >
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                              </svg>
-                              <span>Delete</span>
-                            </button>
-                          </td>
-                        </tr>
-
-                        {/* Expandable Details Row */}
-                        {expandedTaskDetails[task.id] && (task as any).instructions && (
-                          <tr key={`${task.id}-details`} className="bg-gray-50">
-                            <td colSpan={7} className="px-6 py-4">
-                              <div className="ml-12">
-                                <h5 className="font-bold text-gray-900 mb-2">Instructions</h5>
-                                <p className="text-gray-700 mb-3">{(task as any).instructions}</p>
-
-                                <div className="grid grid-cols-4 gap-4 text-sm">
-                                  {((task as any).minWords || (task as any).maxWords) && (
-                                    <div>
-                                      <span className="font-semibold text-gray-600">Word Count: </span>
-                                      <span className="text-gray-900">
-                                        {(task as any).minWords && `Min ${(task as any).minWords}`}
-                                        {(task as any).minWords && (task as any).maxWords && ' - '}
-                                        {(task as any).maxWords && `Max ${(task as any).maxWords}`}
-                                      </span>
-                                    </div>
-                                  )}
-
-                                  {((task as any).minParagraphs || (task as any).maxParagraphs) && (
-                                    <div>
-                                      <span className="font-semibold text-gray-600">Paragraphs: </span>
-                                      <span className="text-gray-900">
-                                        {(task as any).minParagraphs && `Min ${(task as any).minParagraphs}`}
-                                        {(task as any).minParagraphs && (task as any).maxParagraphs && ' - '}
-                                        {(task as any).maxParagraphs && `Max ${(task as any).maxParagraphs}`}
-                                      </span>
-                                    </div>
-                                  )}
-
-                                  {(task as any).tone && (
-                                    <div>
-                                      <span className="font-semibold text-gray-600">Tone: </span>
-                                      <span className="text-gray-900 capitalize">{(task as any).tone}</span>
-                                    </div>
-                                  )}
-
-                                  {(task as any).perspective && (
-                                    <div>
-                                      <span className="font-semibold text-gray-600">Perspective: </span>
-                                      <span className="text-gray-900 capitalize">{(task as any).perspective}</span>
-                                    </div>
-                                  )}
-
-                                  {(task as any).totalPoints && (
-                                    <div>
-                                      <span className="font-semibold text-gray-600">Points: </span>
-                                      <span className="text-gray-900">{(task as any).totalPoints}</span>
-                                    </div>
-                                  )}
-                                </div>
-
-                                {((task as any).requireIntroduction || (task as any).requireConclusion || (task as any).requireExamples) && (
-                                  <div className="mt-3">
-                                    <span className="font-semibold text-gray-600 text-sm">Structure Requirements: </span>
-                                    <div className="flex gap-2 mt-1">
-                                      {(task as any).requireIntroduction && (
-                                        <span className="inline-flex items-center px-2 py-1 rounded-lg text-xs font-semibold bg-blue-100 text-blue-800">
-                                          Introduction Required
-                                        </span>
-                                      )}
-                                      {(task as any).requireConclusion && (
-                                        <span className="inline-flex items-center px-2 py-1 rounded-lg text-xs font-semibold bg-green-100 text-green-800">
-                                          Conclusion Required
-                                        </span>
-                                      )}
-                                      {(task as any).requireExamples && (
-                                        <span className="inline-flex items-center px-2 py-1 rounded-lg text-xs font-semibold bg-purple-100 text-purple-800">
-                                          Examples Required
-                                        </span>
-                                      )}
-                                    </div>
-                                  </div>
-                                )}
-                              </div>
-                            </td>
-                          </tr>
-                        )}
+                            onToggleExpand={() => setExpandedTaskDetails(prev => ({ ...prev, [task.id]: !prev[task.id] }))}
+                            onToggleTask={() => onToggleTask?.(group.id, task.id)}
+                            onTitleClick={() => handleTitleClick(group.id, task.id, task.title)}
+                            onTitleChange={setEditingTitle}
+                            onTitleBlur={() => handleTitleBlur(group.id, task.id)}
+                            onTitleKeyDown={(e) => handleTitleKeyDown(e, group.id, task.id)}
+                            onDelete={() => handleDeleteClick(group.id, task.id, task.title)}
+                          />
+                          {expandedTaskDetails[task.id] && <TaskDetailsRow task={task as any} />}
                         </React.Fragment>
                       ))}
                     </tbody>
