@@ -43,16 +43,34 @@ export function SessionSummary({
         <p className="text-gray-600">Great work! Here's how you did:</p>
       </div>
 
-      {/* Main Stats */}
-      <div className="grid grid-cols-2 gap-4 mb-6">
-        <div className="bg-blue-50 border-2 border-blue-200 rounded-2xl p-6 text-center">
-          <div className="text-4xl font-black text-blue-600 mb-2">{totalReviewed}</div>
-          <div className="text-sm font-semibold text-blue-700 uppercase">Cards Reviewed</div>
-        </div>
-        <div className="bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-6 text-center">
-          <div className="text-4xl font-black text-emerald-600 mb-2">{accuracy}%</div>
-          <div className="text-sm font-semibold text-emerald-700 uppercase">Accuracy</div>
-        </div>
+      {/* Main Stats using TabBar */}
+      <div className="mb-6">
+        <TabBar
+          variant="stats"
+          tabs={[
+            {
+              id: 'cards',
+              label: 'Cards Reviewed',
+              icon: (
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                  <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd" />
+                </svg>
+              ),
+              value: totalReviewed,
+            },
+            {
+              id: 'accuracy',
+              label: 'Accuracy',
+              icon: (
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+              ),
+              value: `${accuracy}%`,
+            },
+          ]}
+        />
       </div>
 
       {/* Detailed Breakdown using TabBar */}
