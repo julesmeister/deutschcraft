@@ -302,11 +302,42 @@ OPENAI_API_KEY=
 - Tailwind CSS for styling
 - Compositional component architecture
 
+## Code Quality Standards
+
+### File Size Guidelines
+
+**CRITICAL: Always aim for 300 lines or less per file**
+
+- ⚠️ **Target**: 300 lines maximum per component/file
+- 🚨 **Hard Limit**: 500 lines absolute maximum
+- ✅ **Action**: When files exceed 300 lines, refactor immediately
+
+**Refactoring Strategy:**
+1. Extract logical sections into separate components
+2. Move reusable logic into hooks or utilities
+3. Split complex forms into sub-components
+4. Create dedicated files for constants and types
+
+**Examples:**
+- TaskBoard.tsx: Split into TaskRow, TaskDetailsRow, NewTaskForm
+- Large forms: Extract field groups into sub-components
+- Long hooks: Split into smaller, focused hooks
+
+### Git Practices
+
+**Commit Guidelines:**
+- ✅ Stage specific files only (avoid `git add -A`)
+- ✅ Write descriptive commit messages
+- ✅ Group related changes together
+- ✅ Include co-authorship for AI-assisted commits
+
 ## Contributing
 
 When adding features:
-1. Follow existing component structure
-2. Use design tokens from `lib/design-system.ts`
-3. Add TypeScript types to `lib/models.ts`
-4. Test responsive design (mobile, tablet, desktop)
-5. Ensure animations are smooth (use `animation-delay-*` for staggering)
+1. **Keep files under 300 lines** - Split immediately if exceeded
+2. Follow existing component structure
+3. Use design tokens from `lib/design-system.ts`
+4. Add TypeScript types to `lib/models.ts`
+5. Test responsive design (mobile, tablet, desktop)
+6. Ensure animations are smooth (use `animation-delay-*` for staggering)
+7. Stage specific files for commits (no `git add -A`)
