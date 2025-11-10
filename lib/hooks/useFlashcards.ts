@@ -181,7 +181,10 @@ export function useStudyStats(userId?: string, refreshKey?: number) {
 
         // Calculate stats from flashcard progress
         const totalCards = progressData.length;
-        const cardsLearned = progressData.filter(p => p.masteryLevel >= 70).length;
+        // Cards Learned = cards that have been reviewed at least once (repetitions > 0)
+        const cardsLearned = progressData.filter(p => (p.repetitions || 0) > 0).length;
+        // Cards Mastered = cards with 70%+ mastery
+        const cardsMastered = progressData.filter(p => p.masteryLevel >= 70).length;
 
         const totalCorrect = progressData.reduce((sum, p) => sum + (p.correctCount || 0), 0);
         const totalIncorrect = progressData.reduce((sum, p) => sum + (p.incorrectCount || 0), 0);
@@ -231,19 +234,20 @@ export function useStudyStats(userId?: string, refreshKey?: number) {
               const dateString = studyData[i].date;
               console.log('📊 [useStudyStats] Processing date string:', dateString, 'type:', typeof dateString);
 
-              const progressDate = new Date(dateString);
-              progressDate.setHours(0, 0, 0, 0);
+              // Parse date string (format: "YYYY-MM-DD") and compare date parts only
+              const progressDateStr = dateString; // Already in YYYY-MM-DD format
 
               const expectedDate = new Date(today);
               expectedDate.setDate(today.getDate() - i);
+              const expectedDateStr = expectedDate.toISOString().split('T')[0];
 
               console.log('📊 [useStudyStats] Comparing:', {
-                progressDate: progressDate.toISOString(),
-                expectedDate: expectedDate.toISOString(),
-                match: progressDate.getTime() === expectedDate.getTime(),
+                progressDateStr,
+                expectedDateStr,
+                match: progressDateStr === expectedDateStr,
               });
 
-              if (progressDate.getTime() === expectedDate.getTime()) {
+              if (progressDateStr === expectedDateStr) {
                 streak++;
               } else {
                 break;
