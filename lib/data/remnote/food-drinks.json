@@ -21,6 +21,26 @@
   },
   {
     "id": "syllabus-a1-10091",
+    "german": "Brötchen",
+    "english": "bread roll",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Brötchen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10092",
     "german": "Wasser",
     "english": "water",
     "category": "Food Drinks",
@@ -40,7 +60,7 @@
     }
   },
   {
-    "id": "syllabus-a1-10092",
+    "id": "syllabus-a1-10093",
     "german": "Kaffee",
     "english": "coffee",
     "category": "Food Drinks",
@@ -60,7 +80,7 @@
     }
   },
   {
-    "id": "syllabus-a1-10093",
+    "id": "syllabus-a1-10094",
     "german": "Tee",
     "english": "tea",
     "category": "Food Drinks",
@@ -80,7 +100,7 @@
     }
   },
   {
-    "id": "syllabus-a1-10094",
+    "id": "syllabus-a1-10095",
     "german": "Milch",
     "english": "milk",
     "category": "Food Drinks",
@@ -100,7 +120,67 @@
     }
   },
   {
-    "id": "syllabus-a1-10095",
+    "id": "syllabus-a1-10096",
+    "german": "Saft",
+    "english": "juice",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Saft"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10097",
+    "german": "Bier",
+    "english": "beer",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Bier"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10098",
+    "german": "Wein",
+    "english": "wine",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Wein"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10099",
     "german": "Apfel",
     "english": "apple",
     "category": "Food Drinks",
@@ -120,7 +200,7 @@
     }
   },
   {
-    "id": "syllabus-a1-10096",
+    "id": "syllabus-a1-10100",
     "german": "Käse",
     "english": "cheese",
     "category": "Food Drinks",
@@ -140,7 +220,7 @@
     }
   },
   {
-    "id": "syllabus-a1-10097",
+    "id": "syllabus-a1-10101",
     "german": "Ei",
     "english": "egg",
     "category": "Food Drinks",
@@ -160,7 +240,7 @@
     }
   },
   {
-    "id": "syllabus-a1-10098",
+    "id": "syllabus-a1-10102",
     "german": "Butter",
     "english": "butter",
     "category": "Food Drinks",
@@ -180,7 +260,47 @@
     }
   },
   {
-    "id": "syllabus-a1-10099",
+    "id": "syllabus-a1-10103",
+    "german": "Marmelade",
+    "english": "jam",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Marmelade"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10104",
+    "german": "Honig",
+    "english": "honey",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Honig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10105",
     "german": "Fleisch",
     "english": "meat",
     "category": "Food Drinks",
@@ -200,7 +320,7 @@
     }
   },
   {
-    "id": "syllabus-a1-10100",
+    "id": "syllabus-a1-10106",
     "german": "Fisch",
     "english": "fish",
     "category": "Food Drinks",
@@ -220,7 +340,67 @@
     }
   },
   {
-    "id": "syllabus-a1-10101",
+    "id": "syllabus-a1-10107",
+    "german": "Hähnchen",
+    "english": "chicken",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Hähnchen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10108",
+    "german": "Wurst",
+    "english": "sausage",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Wurst"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10109",
+    "german": "Schinken",
+    "english": "ham",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Schinken"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10110",
     "german": "Reis",
     "english": "rice",
     "category": "Food Drinks",
@@ -240,7 +420,7 @@
     }
   },
   {
-    "id": "syllabus-a1-10102",
+    "id": "syllabus-a1-10111",
     "german": "Nudeln",
     "english": "noodles / pasta",
     "category": "Food Drinks",
@@ -260,7 +440,187 @@
     }
   },
   {
-    "id": "syllabus-a1-10103",
+    "id": "syllabus-a1-10112",
+    "german": "Kartoffel",
+    "english": "potato",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Kartoffel"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10113",
+    "german": "Gemüse",
+    "english": "vegetables",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Gemüse"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10114",
+    "german": "Salat",
+    "english": "salad / lettuce",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Salat"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10115",
+    "german": "Suppe",
+    "english": "soup",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Suppe"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10116",
+    "german": "Pizza",
+    "english": "pizza",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Pizza"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10117",
+    "german": "Kuchen",
+    "english": "cake",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Kuchen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10118",
+    "german": "Keks",
+    "english": "cookie / biscuit",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Keks"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10119",
+    "german": "Schokolade",
+    "english": "chocolate",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Schokolade"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10120",
+    "german": "Eis",
+    "english": "ice cream",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Eis"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10121",
     "german": "Zucker",
     "english": "sugar",
     "category": "Food Drinks",
@@ -280,7 +640,7 @@
     }
   },
   {
-    "id": "syllabus-a1-10104",
+    "id": "syllabus-a1-10122",
     "german": "Salz",
     "english": "salt",
     "category": "Food Drinks",
@@ -296,6 +656,166 @@
         "A1",
         "Food Drinks",
         "Salz"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10123",
+    "german": "Pfeffer",
+    "english": "pepper",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Pfeffer"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10124",
+    "german": "Öl",
+    "english": "oil",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Öl"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10125",
+    "german": "Essig",
+    "english": "vinegar",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Essig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10126",
+    "german": "Joghurt",
+    "english": "yogurt",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Joghurt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10127",
+    "german": "Obst",
+    "english": "fruit",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Obst"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10128",
+    "german": "Frühstück",
+    "english": "breakfast",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Frühstück"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10129",
+    "german": "Mittagessen",
+    "english": "lunch",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Mittagessen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10130",
+    "german": "Abendessen",
+    "english": "dinner",
+    "category": "Food Drinks",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Food Drinks",
+        "Abendessen"
       ]
     }
   }

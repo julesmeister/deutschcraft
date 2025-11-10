@@ -1,5 +1,5 @@
 {
-  "totalFlashcards": 2506,
+  "totalFlashcards": 2532,
   "totalCategories": 32,
   "categories": [
     "Richtung",
@@ -75,6 +75,10 @@
     {
       "category": "State Change Verbs",
       "count": 47
+    },
+    {
+      "category": "Food Drinks",
+      "count": 41
     },
     {
       "category": "Da / Wo-Wörter",
@@ -197,10 +201,6 @@
       "count": 15
     },
     {
-      "category": "Food Drinks",
-      "count": 15
-    },
-    {
       "category": "Fruits",
       "count": 15
     },
@@ -299,7 +299,7 @@
   ],
   "levelDistribution": {
     "A1": {
-      "count": 365,
+      "count": 391,
       "categories": {
         "Adjectives": 15,
         "Animals": 15,
@@ -307,7 +307,7 @@
         "Colors": 15,
         "Countries": 15,
         "Family": 15,
-        "Food Drinks": 15,
+        "Food Drinks": 41,
         "Fruits": 15,
         "Greetings": 15,
         "Home": 15,
@@ -411,8 +411,8 @@
     }
   },
   "sources": {
-    "syllabus": 792,
+    "syllabus": 818,
     "remnote": 972
   },
-  "generatedAt": "2025-11-10T20:33:09.444Z"
+  "generatedAt": "2025-11-10T20:35:01.127Z"
 }

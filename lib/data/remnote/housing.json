@@ -1,6 +1,6 @@
 [
   {
-    "id": "syllabus-b1-10925",
+    "id": "syllabus-b1-10951",
     "german": "Wohnung",
     "english": "apartment",
     "category": "Housing",
@@ -20,7 +20,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10926",
+    "id": "syllabus-b1-10952",
     "german": "Miete",
     "english": "rent",
     "category": "Housing",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10927",
+    "id": "syllabus-b1-10953",
     "german": "Vermieter",
     "english": "landlord",
     "category": "Housing",
@@ -60,7 +60,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10928",
+    "id": "syllabus-b1-10954",
     "german": "Nachbar",
     "english": "neighbor",
     "category": "Housing",
@@ -80,7 +80,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10929",
+    "id": "syllabus-b1-10955",
     "german": "Erdgeschoss",
     "english": "ground floor",
     "category": "Housing",
@@ -100,7 +100,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10930",
+    "id": "syllabus-b1-10956",
     "german": "Stock",
     "english": "floor / story",
     "category": "Housing",
@@ -120,7 +120,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10931",
+    "id": "syllabus-b1-10957",
     "german": "Treppe",
     "english": "stairs",
     "category": "Housing",
@@ -140,7 +140,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10932",
+    "id": "syllabus-b1-10958",
     "german": "Aufzug",
     "english": "elevator",
     "category": "Housing",
@@ -160,7 +160,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10933",
+    "id": "syllabus-b1-10959",
     "german": "Balkon",
     "english": "balcony",
     "category": "Housing",
@@ -180,7 +180,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10934",
+    "id": "syllabus-b1-10960",
     "german": "Keller",
     "english": "basement / cellar",
     "category": "Housing",
@@ -200,7 +200,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10935",
+    "id": "syllabus-b1-10961",
     "german": "Dachboden",
     "english": "attic",
     "category": "Housing",
@@ -220,7 +220,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10936",
+    "id": "syllabus-b1-10962",
     "german": "Heizung",
     "english": "heating",
     "category": "Housing",
@@ -240,7 +240,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10937",
+    "id": "syllabus-b1-10963",
     "german": "Kaution",
     "english": "security deposit",
     "category": "Housing",
@@ -260,7 +260,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10938",
+    "id": "syllabus-b1-10964",
     "german": "Nebenkosten",
     "english": "additional costs / utilities",
     "category": "Housing",
@@ -280,7 +280,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10939",
+    "id": "syllabus-b1-10965",
     "german": "Möbel",
     "english": "furniture",
     "category": "Housing",
@@ -300,7 +300,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10940",
+    "id": "syllabus-b1-10966",
     "german": "Umzug",
     "english": "move / relocation",
     "category": "Housing",
@@ -320,7 +320,7 @@
     }
   },
   {
-    "id": "syllabus-b1-10941",
+    "id": "syllabus-b1-10967",
     "german": "einziehen",
     "english": "to move in",
     "category": "Housing",
