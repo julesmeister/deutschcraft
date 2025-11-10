@@ -1,10 +1,12 @@
-// Export all chat components from a single entry point
-export { Chat } from './Chat';
-export { ChatMessage } from './ChatMessage';
-export { ChatInput } from './ChatInput';
+// Chat components exports
+export { ChatLayout } from './ChatLayout';
 export { ChatSidebar } from './ChatSidebar';
-export { Avatar } from './Avatar';
+export { ChatContactItem } from './ChatContactItem';
+export { ChatWindow } from './ChatWindow';
+export { ChatMessage } from './ChatMessage';
 
-// Export types
-export type { Message } from './ChatMessage';
-export type { ChatHistoryItem } from './ChatSidebar';
+export type { ChatLayoutProps } from './ChatLayout';
+export type { ChatSidebarProps } from './ChatSidebar';
+export type { ChatContactItemProps } from './ChatContactItem';
+export type { ChatWindowProps } from './ChatWindow';
+export type { ChatMessageProps } from './ChatMessage';
