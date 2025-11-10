@@ -43,10 +43,12 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
       try {
         setIsLoading(true);
 
-        console.log('[StudentProfile] Loading student:', resolvedParams.studentId);
+        // Decode the URL-encoded email
+        const studentEmail = decodeURIComponent(resolvedParams.studentId);
+        console.log('[StudentProfile] Loading student:', studentEmail);
 
         // Fetch student data - email is the document ID
-        const studentDocRef = doc(db, 'users', resolvedParams.studentId);
+        const studentDocRef = doc(db, 'users', studentEmail);
         const studentSnapshot = await getDoc(studentDocRef);
 
         if (studentSnapshot.exists()) {
@@ -86,7 +88,7 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
 
           setRecentSessions(sessions);
         } else {
-          console.error('[StudentProfile] Student not found:', resolvedParams.studentId);
+          console.error('[StudentProfile] Student not found:', studentEmail);
         }
       } catch (error) {
         console.error('[StudentProfile] Error loading student data:', error);
