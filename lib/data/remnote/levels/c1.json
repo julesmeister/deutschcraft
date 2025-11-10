@@ -3,7 +3,7 @@
   "totalCards": 69,
   "flashcards": [
     {
-      "id": "syllabus-c1-11501",
+      "id": "syllabus-c1-11548",
       "german": "Nachhaltigkeit",
       "english": "sustainability",
       "category": "Abstract Concepts",
@@ -23,7 +23,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11502",
+      "id": "syllabus-c1-11549",
       "german": "Bewusstsein",
       "english": "consciousness / awareness",
       "category": "Abstract Concepts",
@@ -43,7 +43,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11503",
+      "id": "syllabus-c1-11550",
       "german": "Herausforderung",
       "english": "challenge",
       "category": "Abstract Concepts",
@@ -63,7 +63,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11504",
+      "id": "syllabus-c1-11551",
       "german": "Verantwortung",
       "english": "responsibility",
       "category": "Abstract Concepts",
@@ -83,7 +83,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11505",
+      "id": "syllabus-c1-11552",
       "german": "Eigenverantwortung",
       "english": "personal responsibility",
       "category": "Abstract Concepts",
@@ -103,7 +103,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11506",
+      "id": "syllabus-c1-11553",
       "german": "Auseinandersetzung",
       "english": "confrontation / debate",
       "category": "Abstract Concepts",
@@ -123,7 +123,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11507",
+      "id": "syllabus-c1-11554",
       "german": "Gegebenheit",
       "english": "circumstance / condition",
       "category": "Abstract Concepts",
@@ -143,7 +143,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11508",
+      "id": "syllabus-c1-11555",
       "german": "Veränderung",
       "english": "change / transformation",
       "category": "Abstract Concepts",
@@ -163,7 +163,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11509",
+      "id": "syllabus-c1-11556",
       "german": "Entwicklung",
       "english": "development / evolution",
       "category": "Abstract Concepts",
@@ -183,7 +183,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11510",
+      "id": "syllabus-c1-11557",
       "german": "Zusammenhang",
       "english": "connection / context",
       "category": "Abstract Concepts",
@@ -203,7 +203,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11511",
+      "id": "syllabus-c1-11558",
       "german": "Wirtschaft",
       "english": "economy",
       "category": "Economics Finance",
@@ -223,7 +223,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11512",
+      "id": "syllabus-c1-11559",
       "german": "Konjunktur",
       "english": "economic situation / business cycle",
       "category": "Economics Finance",
@@ -243,7 +243,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11513",
+      "id": "syllabus-c1-11560",
       "german": "Inflation",
       "english": "inflation",
       "category": "Economics Finance",
@@ -263,7 +263,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11514",
+      "id": "syllabus-c1-11561",
       "german": "Rezession",
       "english": "recession",
       "category": "Economics Finance",
@@ -283,7 +283,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11515",
+      "id": "syllabus-c1-11562",
       "german": "Investition",
       "english": "investment",
       "category": "Economics Finance",
@@ -303,7 +303,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11516",
+      "id": "syllabus-c1-11563",
       "german": "Rendite",
       "english": "return / yield",
       "category": "Economics Finance",
@@ -323,7 +323,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11517",
+      "id": "syllabus-c1-11564",
       "german": "Verschuldung",
       "english": "debt / indebtedness",
       "category": "Economics Finance",
@@ -343,7 +343,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11518",
+      "id": "syllabus-c1-11565",
       "german": "Haushalt",
       "english": "budget / household",
       "category": "Economics Finance",
@@ -363,7 +363,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11519",
+      "id": "syllabus-c1-11566",
       "german": "Steuer",
       "english": "tax",
       "category": "Economics Finance",
@@ -383,7 +383,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11520",
+      "id": "syllabus-c1-11567",
       "german": "Umsatz",
       "english": "turnover / revenue",
       "category": "Economics Finance",
@@ -403,7 +403,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11521",
+      "id": "syllabus-c1-11568",
       "german": "Gewinn",
       "english": "profit / gain",
       "category": "Economics Finance",
@@ -423,7 +423,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11522",
+      "id": "syllabus-c1-11569",
       "german": "Verlust",
       "english": "loss",
       "category": "Economics Finance",
@@ -443,7 +443,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11523",
+      "id": "syllabus-c1-11570",
       "german": "Wettbewerb",
       "english": "competition",
       "category": "Economics Finance",
@@ -463,7 +463,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11524",
+      "id": "syllabus-c1-11571",
       "german": "Markt",
       "english": "market",
       "category": "Economics Finance",
@@ -483,7 +483,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11525",
+      "id": "syllabus-c1-11572",
       "german": "Angebot",
       "english": "supply / offer",
       "category": "Economics Finance",
@@ -503,7 +503,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11526",
+      "id": "syllabus-c1-11573",
       "german": "diesbezüglich",
       "english": "in this regard / concerning this",
       "category": "Formal Language",
@@ -523,7 +523,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11527",
+      "id": "syllabus-c1-11574",
       "german": "infolgedessen",
       "english": "consequently / as a result",
       "category": "Formal Language",
@@ -543,7 +543,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11528",
+      "id": "syllabus-c1-11575",
       "german": "nichtsdestotrotz",
       "english": "nevertheless / nonetheless",
       "category": "Formal Language",
@@ -563,7 +563,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11529",
+      "id": "syllabus-c1-11576",
       "german": "demzufolge",
       "english": "accordingly / therefore",
       "category": "Formal Language",
@@ -583,7 +583,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11530",
+      "id": "syllabus-c1-11577",
       "german": "gewissermaßen",
       "english": "in a way / to some extent",
       "category": "Formal Language",
@@ -603,7 +603,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11531",
+      "id": "syllabus-c1-11578",
       "german": "inwiefern",
       "english": "to what extent / in what way",
       "category": "Formal Language",
@@ -623,7 +623,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11532",
+      "id": "syllabus-c1-11579",
       "german": "insofern",
       "english": "insofar / to that extent",
       "category": "Formal Language",
@@ -643,7 +643,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11533",
+      "id": "syllabus-c1-11580",
       "german": "demnach",
       "english": "accordingly / thus",
       "category": "Formal Language",
@@ -663,7 +663,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11534",
+      "id": "syllabus-c1-11581",
       "german": "mithin",
       "english": "consequently / hence",
       "category": "Formal Language",
@@ -683,7 +683,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11535",
+      "id": "syllabus-c1-11582",
       "german": "folglich",
       "english": "consequently / therefore",
       "category": "Formal Language",
@@ -703,7 +703,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11536",
+      "id": "syllabus-c1-11583",
       "german": "Genehmigung",
       "english": "permit / authorization / approval",
       "category": "Legal Administrative",
@@ -723,7 +723,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11537",
+      "id": "syllabus-c1-11584",
       "german": "Vorschrift",
       "english": "regulation / rule / prescription",
       "category": "Legal Administrative",
@@ -743,7 +743,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11538",
+      "id": "syllabus-c1-11585",
       "german": "Rechtsanwalt",
       "english": "lawyer / attorney",
       "category": "Legal Administrative",
@@ -763,7 +763,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11539",
+      "id": "syllabus-c1-11586",
       "german": "Verfahren",
       "english": "procedure / proceedings / process",
       "category": "Legal Administrative",
@@ -783,7 +783,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11540",
+      "id": "syllabus-c1-11587",
       "german": "Anspruch",
       "english": "claim / entitlement / right",
       "category": "Legal Administrative",
@@ -803,7 +803,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11541",
+      "id": "syllabus-c1-11588",
       "german": "Behörde",
       "english": "authority / government agency",
       "category": "Legal Administrative",
@@ -823,7 +823,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11542",
+      "id": "syllabus-c1-11589",
       "german": "Bescheinigung",
       "english": "certificate / attestation",
       "category": "Legal Administrative",
@@ -843,7 +843,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11543",
+      "id": "syllabus-c1-11590",
       "german": "Antrag",
       "english": "application / request / motion",
       "category": "Legal Administrative",
@@ -863,7 +863,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11544",
+      "id": "syllabus-c1-11591",
       "german": "Klage",
       "english": "lawsuit / complaint / action",
       "category": "Legal Administrative",
@@ -883,7 +883,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11545",
+      "id": "syllabus-c1-11592",
       "german": "Urteil",
       "english": "judgment / verdict / sentence",
       "category": "Legal Administrative",
@@ -903,7 +903,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11546",
+      "id": "syllabus-c1-11593",
       "german": "Zeugnis",
       "english": "certificate / testimony / reference",
       "category": "Legal Administrative",
@@ -923,7 +923,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11547",
+      "id": "syllabus-c1-11594",
       "german": "Vollmacht",
       "english": "power of attorney / authorization",
       "category": "Legal Administrative",
@@ -943,7 +943,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11548",
+      "id": "syllabus-c1-11595",
       "german": "Verpflichtung",
       "english": "obligation / commitment / duty",
       "category": "Legal Administrative",
@@ -963,7 +963,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11549",
+      "id": "syllabus-c1-11596",
       "german": "Berechtigung",
       "english": "authorization / entitlement / right",
       "category": "Legal Administrative",
@@ -983,7 +983,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11550",
+      "id": "syllabus-c1-11597",
       "german": "Haftung",
       "english": "liability / responsibility",
       "category": "Legal Administrative",
@@ -1003,7 +1003,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11551",
+      "id": "syllabus-c1-11598",
       "german": "vereinbaren",
       "english": "to agree upon / to arrange",
       "category": "Professional Communication",
@@ -1023,7 +1023,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11552",
+      "id": "syllabus-c1-11599",
       "german": "verhandeln",
       "english": "to negotiate",
       "category": "Professional Communication",
@@ -1043,7 +1043,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11553",
+      "id": "syllabus-c1-11600",
       "german": "beraten",
       "english": "to advise / to consult",
       "category": "Professional Communication",
@@ -1063,7 +1063,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11554",
+      "id": "syllabus-c1-11601",
       "german": "koordinieren",
       "english": "to coordinate",
       "category": "Professional Communication",
@@ -1083,7 +1083,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11555",
+      "id": "syllabus-c1-11602",
       "german": "vermitteln",
       "english": "to mediate / to convey",
       "category": "Professional Communication",
@@ -1103,7 +1103,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11556",
+      "id": "syllabus-c1-11603",
       "german": "erörtern",
       "english": "to discuss / to debate",
       "category": "Professional Communication",
@@ -1123,7 +1123,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11557",
+      "id": "syllabus-c1-11604",
       "german": "beurteilen",
       "english": "to assess / to evaluate",
       "category": "Professional Communication",
@@ -1143,7 +1143,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11558",
+      "id": "syllabus-c1-11605",
       "german": "genehmigen",
       "english": "to approve / to authorize",
       "category": "Professional Communication",
@@ -1163,7 +1163,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11559",
+      "id": "syllabus-c1-11606",
       "german": "ablehnen",
       "english": "to reject / to decline",
       "category": "Professional Communication",
@@ -1183,7 +1183,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11560",
+      "id": "syllabus-c1-11607",
       "german": "zusichern",
       "english": "to assure / to guarantee",
       "category": "Professional Communication",
@@ -1203,7 +1203,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11561",
+      "id": "syllabus-c1-11608",
       "german": "verpflichten",
       "english": "to obligate / to commit",
       "category": "Professional Communication",
@@ -1223,7 +1223,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11562",
+      "id": "syllabus-c1-11609",
       "german": "gewährleisten",
       "english": "to ensure / to guarantee",
       "category": "Professional Communication",
@@ -1243,7 +1243,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11563",
+      "id": "syllabus-c1-11610",
       "german": "beanspruchen",
       "english": "to claim / to demand",
       "category": "Professional Communication",
@@ -1263,7 +1263,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11564",
+      "id": "syllabus-c1-11611",
       "german": "beantragen",
       "english": "to apply for / to request",
       "category": "Professional Communication",
@@ -1283,7 +1283,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11565",
+      "id": "syllabus-c1-11612",
       "german": "vorschlagen",
       "english": "to propose / to suggest",
       "category": "Professional Communication",
