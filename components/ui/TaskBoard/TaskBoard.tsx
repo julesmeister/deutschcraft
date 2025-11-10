@@ -2,14 +2,10 @@
 
 import React, { useState } from 'react';
 import { ConfirmDialog } from '../Dialog';
-import { Dropdown } from './Dropdown';
-import { DatePicker } from './DatePicker';
-import { AssigneeSelector } from './AssigneeSelector';
-import { Select } from '../Select';
 import { TaskRow } from './TaskRow';
 import { TaskDetailsRow } from './TaskDetailsRow';
+import { NewTaskForm } from './NewTaskForm';
 import { Task, TaskBoardProps } from './types';
-import { statusColors, statusLabels, priorityColors, priorityLabels, statusOptions, priorityOptions } from './constants';
 
 export function TaskBoard({
   title = 'Tasks',
@@ -267,231 +263,15 @@ export function TaskBoard({
 
               {/* New Task Input Form */}
               {newTaskInputs[group.id] && newTaskData[group.id] && (
-                <div className="mt-4 border border-gray-200 rounded-lg transition-shadow duration-150">
-                  <table className="w-full">
-                    <tbody>
-                      <tr>
-                        {/* Drag Handle Space */}
-                        <td className="w-[40px] px-6 py-4"></td>
-
-                        {/* Checkbox Space */}
-                        <td className="w-[40px] px-6 py-4 text-2xl text-gray-400 overflow-visible">
-                          <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2l4 -4" />
-                          </svg>
-                        </td>
-
-                        {/* Title */}
-                        <td className="w-[500px] px-6 py-4 overflow-visible">
-                          <input
-                            type="text"
-                            className="outline-0 font-semibold w-full bg-transparent text-gray-900 placeholder-gray-400"
-                            placeholder="Enter task name"
-                            value={newTaskData[group.id].title}
-                            onChange={(e) => updateNewTaskField(group.id, 'title', e.target.value)}
-                            autoFocus
-                          />
-                        </td>
-
-                        {/* Status */}
-                        <td className="w-[150px] px-6 py-4 overflow-visible relative">
-                          <Dropdown
-                            value={newTaskData[group.id].status}
-                            options={statusOptions}
-                            onChange={(value) => updateNewTaskField(group.id, 'status', value as Task['status'])}
-                            placeholder="Status"
-                          />
-                        </td>
-
-                        {/* Priority */}
-                        <td className="w-[150px] px-6 py-4 overflow-visible relative">
-                          <Dropdown
-                            value={newTaskData[group.id].priority}
-                            options={priorityOptions}
-                            onChange={(value) => updateNewTaskField(group.id, 'priority', value as Task['priority'])}
-                            placeholder="Priority"
-                          />
-                        </td>
-
-                        {/* Due Date */}
-                        <td className="w-[200px] px-6 py-4 overflow-visible relative">
-                          <DatePicker
-                            value={newTaskData[group.id].dueDate}
-                            onChange={(date) => updateNewTaskField(group.id, 'dueDate', date)}
-                          />
-                        </td>
-
-                        {/* Actions */}
-                        <td className="px-6 py-4 overflow-visible relative">
-                          <div className="flex items-center justify-end gap-2">
-                            <button
-                              onClick={() => setShowDetailsForm(prev => ({ ...prev, [group.id]: !prev[group.id] }))}
-                              className="inline-flex items-center gap-1 bg-gray-100 hover:bg-gray-200 text-gray-700 h-10 rounded-xl px-3 py-2 text-sm font-bold transition-colors"
-                            >
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14M5 12h14" />
-                              </svg>
-                              Details
-                            </button>
-                            <button
-                              onClick={() => hideNewTaskInput(group.id)}
-                              className="inline-flex items-center bg-gray-100 hover:bg-gray-200 text-gray-700 h-10 rounded-xl px-3 py-2 text-sm font-bold transition-colors"
-                            >
-                              Cancel
-                            </button>
-                            <button
-                              onClick={() => handleCreateTask(group.id)}
-                              className="inline-flex items-center bg-piku-purple-dark hover:bg-piku-purple-dark/90 text-white h-10 rounded-xl px-3 py-2 text-sm font-bold transition-colors"
-                            >
-                              Create
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                  {/* Expandable Details Section */}
-                  {showDetailsForm[group.id] && (
-                    <div className="border-t border-gray-200 bg-gray-50 p-6">
-                      <h4 className="font-bold text-gray-900 mb-4">Writing Criteria (Optional)</h4>
-
-                      <div className="grid grid-cols-3 gap-4 mb-4">
-                        {/* Instructions */}
-                        <div className="col-span-3">
-                          <label className="block text-sm font-semibold text-gray-700 mb-1">Instructions</label>
-                          <textarea
-                            className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm outline-none focus:border-piku-purple-dark focus:ring-1 focus:ring-piku-purple-dark"
-                            placeholder="Detailed instructions for the student..."
-                            rows={3}
-                            value={newTaskData[group.id].instructions || ''}
-                            onChange={(e) => updateNewTaskField(group.id, 'instructions', e.target.value)}
-                          />
-                        </div>
-
-                        {/* Word Count */}
-                        <div>
-                          <label className="block text-sm font-semibold text-gray-700 mb-1">Min Words</label>
-                          <input
-                            type="number"
-                            className="w-full h-12 bg-gray-100 border border-gray-200 rounded-xl px-3 py-2 font-semibold outline-none focus:border-piku-purple-dark focus:ring-2 focus:ring-piku-purple-dark focus:bg-white transition-all"
-                            placeholder="e.g. 100"
-                            value={newTaskData[group.id].minWords || ''}
-                            onChange={(e) => updateNewTaskField(group.id, 'minWords', parseInt(e.target.value) || undefined)}
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-sm font-semibold text-gray-700 mb-1">Max Words</label>
-                          <input
-                            type="number"
-                            className="w-full h-12 bg-gray-100 border border-gray-200 rounded-xl px-3 py-2 font-semibold outline-none focus:border-piku-purple-dark focus:ring-2 focus:ring-piku-purple-dark focus:bg-white transition-all"
-                            placeholder="e.g. 500"
-                            value={newTaskData[group.id].maxWords || ''}
-                            onChange={(e) => updateNewTaskField(group.id, 'maxWords', parseInt(e.target.value) || undefined)}
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-sm font-semibold text-gray-700 mb-1">Total Points</label>
-                          <input
-                            type="number"
-                            className="w-full h-12 bg-gray-100 border border-gray-200 rounded-xl px-3 py-2 font-semibold outline-none focus:border-piku-purple-dark focus:ring-2 focus:ring-piku-purple-dark focus:bg-white transition-all"
-                            placeholder="e.g. 100"
-                            value={newTaskData[group.id].totalPoints || ''}
-                            onChange={(e) => updateNewTaskField(group.id, 'totalPoints', parseInt(e.target.value) || undefined)}
-                          />
-                        </div>
-
-                        {/* Paragraph Count */}
-                        <div>
-                          <label className="block text-sm font-semibold text-gray-700 mb-1">Min Paragraphs</label>
-                          <input
-                            type="number"
-                            className="w-full h-12 bg-gray-100 border border-gray-200 rounded-xl px-3 py-2 font-semibold outline-none focus:border-piku-purple-dark focus:ring-2 focus:ring-piku-purple-dark focus:bg-white transition-all"
-                            placeholder="e.g. 3"
-                            value={newTaskData[group.id].minParagraphs || ''}
-                            onChange={(e) => updateNewTaskField(group.id, 'minParagraphs', parseInt(e.target.value) || undefined)}
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-sm font-semibold text-gray-700 mb-1">Max Paragraphs</label>
-                          <input
-                            type="number"
-                            className="w-full h-12 bg-gray-100 border border-gray-200 rounded-xl px-3 py-2 font-semibold outline-none focus:border-piku-purple-dark focus:ring-2 focus:ring-piku-purple-dark focus:bg-white transition-all"
-                            placeholder="e.g. 5"
-                            value={newTaskData[group.id].maxParagraphs || ''}
-                            onChange={(e) => updateNewTaskField(group.id, 'maxParagraphs', parseInt(e.target.value) || undefined)}
-                          />
-                        </div>
-
-                        {/* Tone */}
-                        <div>
-                          <label className="block text-sm font-semibold text-gray-700 mb-1">Schreibstil (Tone)</label>
-                          <Select
-                            options={[
-                              { value: '', label: 'Any' },
-                              { value: 'formell', label: 'Formell (Formal - Sie)' },
-                              { value: 'informell', label: 'Informell (Informal - du)' },
-                              { value: 'sachlich', label: 'Sachlich (Objective)' },
-                              { value: 'persönlich', label: 'Persönlich (Personal)' },
-                              { value: 'offiziell', label: 'Offiziell (Official)' },
-                            ]}
-                            value={newTaskData[group.id].tone || ''}
-                            onChange={(value) => updateNewTaskField(group.id, 'tone', value as any)}
-                            placeholder="Select tone..."
-                          />
-                        </div>
-
-                        {/* Perspective */}
-                        <div>
-                          <label className="block text-sm font-semibold text-gray-700 mb-1">Perspective</label>
-                          <Select
-                            options={[
-                              { value: '', label: 'Any' },
-                              { value: 'first-person', label: 'First Person (I/We - Ich/Wir)' },
-                              { value: 'second-person', label: 'Second Person (You - Du/Sie)' },
-                              { value: 'third-person', label: 'Third Person (He/She - Er/Sie)' },
-                            ]}
-                            value={newTaskData[group.id].perspective || ''}
-                            onChange={(value) => updateNewTaskField(group.id, 'perspective', value as any)}
-                            placeholder="Select perspective..."
-                          />
-                        </div>
-                      </div>
-
-                      {/* Checkboxes for structure requirements */}
-                      <div className="flex flex-wrap gap-4">
-                        <label className="flex items-center gap-2 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            className="w-4 h-4 rounded border-gray-300 text-piku-purple-dark focus:ring-piku-purple-dark"
-                            checked={newTaskData[group.id].requireIntroduction || false}
-                            onChange={(e) => updateNewTaskField(group.id, 'requireIntroduction', e.target.checked)}
-                          />
-                          <span className="text-sm font-medium text-gray-700">Require Introduction</span>
-                        </label>
-                        <label className="flex items-center gap-2 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            className="w-4 h-4 rounded border-gray-300 text-piku-purple-dark focus:ring-piku-purple-dark"
-                            checked={newTaskData[group.id].requireConclusion || false}
-                            onChange={(e) => updateNewTaskField(group.id, 'requireConclusion', e.target.checked)}
-                          />
-                          <span className="text-sm font-medium text-gray-700">Require Conclusion</span>
-                        </label>
-                        <label className="flex items-center gap-2 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            className="w-4 h-4 rounded border-gray-300 text-piku-purple-dark focus:ring-piku-purple-dark"
-                            checked={newTaskData[group.id].requireExamples || false}
-                            onChange={(e) => updateNewTaskField(group.id, 'requireExamples', e.target.checked)}
-                          />
-                          <span className="text-sm font-medium text-gray-700">Require Examples</span>
-                        </label>
-                      </div>
-                    </div>
-                  )}
-                </div>
+                <NewTaskForm
+                  groupId={group.id}
+                  taskData={newTaskData[group.id]}
+                  showDetailsForm={showDetailsForm[group.id] || false}
+                  onUpdateField={(field, value) => updateNewTaskField(group.id, field, value)}
+                  onToggleDetails={() => setShowDetailsForm(prev => ({ ...prev, [group.id]: !prev[group.id] }))}
+                  onCancel={() => hideNewTaskInput(group.id)}
+                  onCreate={() => handleCreateTask(group.id)}
+                />
               )}
             </div>
           ))}
