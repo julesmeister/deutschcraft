@@ -240,16 +240,39 @@ export function useFlashcardMutations() {
     }
   ) => {
     try {
+      // Validate inputs
+      if (!userId) {
+        const errorMsg = 'Cannot save daily progress: userId is undefined';
+        console.error(errorMsg);
+        showToast('Error: User not logged in', 'error');
+        throw new Error(errorMsg);
+      }
+
+      console.log('🟢 [saveDailyProgress] Starting save:', {
+        userId,
+        stats,
+        timestamp: new Date().toISOString(),
+      });
+
       // Format: PROG_YYYYMMDD_email
       const today = new Date().toISOString().split('T')[0].replace(/-/g, '');
       const progressId = `PROG_${today}_${userId}`;
       const progressRef = doc(db, 'progress', progressId);
 
+      console.log('🟢 [saveDailyProgress] Progress ID:', progressId);
+      console.log('🟢 [saveDailyProgress] Collection path:', 'progress');
+
       // Get existing progress for today
       const progressDoc = await getDoc(progressRef);
 
+      console.log('🟢 [saveDailyProgress] Existing document:', {
+        exists: progressDoc.exists(),
+        data: progressDoc.exists() ? progressDoc.data() : null,
+      });
+
       if (progressDoc.exists()) {
         // Update existing progress
+        console.log('🟢 [saveDailyProgress] Updating existing document with increments');
         await updateDoc(progressRef, {
           cardsReviewed: increment(stats.cardsReviewed),
           timeSpent: increment(stats.timeSpent),
@@ -257,8 +280,22 @@ export function useFlashcardMutations() {
           wordsIncorrect: increment(stats.incorrectCount),
           sessionsCompleted: increment(1),
         });
+        console.log('✅ [saveDailyProgress] Update successful!');
       } else {
         // Create new progress entry
+        console.log('🟢 [saveDailyProgress] Creating new document with data:', {
+          progressId,
+          userId,
+          date: new Date().toISOString().split('T')[0],
+          wordsStudied: stats.cardsReviewed,
+          wordsCorrect: stats.correctCount,
+          wordsIncorrect: stats.incorrectCount,
+          timeSpent: stats.timeSpent,
+          sessionsCompleted: 1,
+          cardsReviewed: stats.cardsReviewed,
+          sentencesCreated: 0,
+        });
+
         await setDoc(progressRef, {
           progressId,
           userId,
@@ -272,10 +309,20 @@ export function useFlashcardMutations() {
           sentencesCreated: 0,
           createdAt: Date.now(),
         });
+        console.log('✅ [saveDailyProgress] Create successful!');
       }
+
+      showToast('Progress saved successfully!', 'success');
     } catch (err) {
-      console.error('Error saving daily progress:', err);
-      setError(err instanceof Error ? err.message : 'Failed to save progress');
+      const errorMessage = err instanceof Error ? err.message : 'Failed to save progress';
+      console.error('❌ [saveDailyProgress] Error:', {
+        error: err,
+        message: errorMessage,
+        userId,
+        stats,
+      });
+      setError(errorMessage);
+      showToast(`Failed to save progress: ${errorMessage}`, 'error');
       throw err;
     }
   };
