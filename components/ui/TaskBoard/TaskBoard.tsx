@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { ConfirmDialog } from '../Dialog';
 import { Dropdown } from './Dropdown';
 import { DatePicker } from './DatePicker';
@@ -26,6 +26,7 @@ export function TaskBoard({
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
   const [newTaskInputs, setNewTaskInputs] = useState<Record<string, boolean>>({});
   const [showDetailsForm, setShowDetailsForm] = useState<Record<string, boolean>>({});
+  const [expandedTaskDetails, setExpandedTaskDetails] = useState<Record<string, boolean>>({});
   const [newTaskData, setNewTaskData] = useState<Record<string, {
     title: string;
     status: Task['status'];
@@ -101,7 +102,9 @@ export function TaskBoard({
         dueDate: taskData.dueDate,
         assignees: taskData.assignees,
         completed: false,
-      });
+        // Pass all optional fields
+        ...taskData,
+      } as any);
       hideNewTaskInput(groupId);
     }
   };
@@ -219,19 +222,29 @@ export function TaskBoard({
                   <table className="w-full min-w-full">
                     <tbody className="divide-y divide-gray-200">
                       {group.tasks.map((task) => (
-                        <tr
-                          key={task.id}
-                          className="hover:bg-gray-50/30 transition-colors group"
-                          onMouseEnter={() => setHoveredTaskId(task.id)}
-                          onMouseLeave={() => setHoveredTaskId(null)}
-                        >
-                          {/* Drag Handle */}
-                          <td className="w-[40px] px-6 py-4 text-lg text-gray-400">
-                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                              <path fillRule="evenodd" d="M0 0h24v24H0V0z" fill="none" />
-                              <path d="M11 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-2-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
-                            </svg>
-                          </td>
+                        <React.Fragment key={task.id}>
+                          <tr
+                            className="hover:bg-gray-50/30 transition-colors group"
+                            onMouseEnter={() => setHoveredTaskId(task.id)}
+                            onMouseLeave={() => setHoveredTaskId(null)}
+                          >
+                            {/* Expand Button */}
+                            <td className="w-[40px] px-6 py-4 text-lg text-gray-400">
+                              <button
+                                onClick={() => setExpandedTaskDetails(prev => ({ ...prev, [task.id]: !prev[task.id] }))}
+                                className="hover:text-gray-600 cursor-pointer transition-colors"
+                              >
+                                <svg
+                                  className={`w-5 h-5 transition-transform ${expandedTaskDetails[task.id] ? 'rotate-90' : ''}`}
+                                  fill="none"
+                                  stroke="currentColor"
+                                  strokeWidth={2}
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
+                              </button>
+                            </td>
 
                           {/* Checkbox */}
                           <td className="w-[40px] px-6 py-4">
@@ -311,6 +324,87 @@ export function TaskBoard({
                             </button>
                           </td>
                         </tr>
+
+                        {/* Expandable Details Row */}
+                        {expandedTaskDetails[task.id] && (task as any).instructions && (
+                          <tr key={`${task.id}-details`} className="bg-gray-50">
+                            <td colSpan={7} className="px-6 py-4">
+                              <div className="ml-12">
+                                <h5 className="font-bold text-gray-900 mb-2">Instructions</h5>
+                                <p className="text-gray-700 mb-3">{(task as any).instructions}</p>
+
+                                <div className="grid grid-cols-4 gap-4 text-sm">
+                                  {((task as any).minWords || (task as any).maxWords) && (
+                                    <div>
+                                      <span className="font-semibold text-gray-600">Word Count: </span>
+                                      <span className="text-gray-900">
+                                        {(task as any).minWords && `Min ${(task as any).minWords}`}
+                                        {(task as any).minWords && (task as any).maxWords && ' - '}
+                                        {(task as any).maxWords && `Max ${(task as any).maxWords}`}
+                                      </span>
+                                    </div>
+                                  )}
+
+                                  {((task as any).minParagraphs || (task as any).maxParagraphs) && (
+                                    <div>
+                                      <span className="font-semibold text-gray-600">Paragraphs: </span>
+                                      <span className="text-gray-900">
+                                        {(task as any).minParagraphs && `Min ${(task as any).minParagraphs}`}
+                                        {(task as any).minParagraphs && (task as any).maxParagraphs && ' - '}
+                                        {(task as any).maxParagraphs && `Max ${(task as any).maxParagraphs}`}
+                                      </span>
+                                    </div>
+                                  )}
+
+                                  {(task as any).tone && (
+                                    <div>
+                                      <span className="font-semibold text-gray-600">Tone: </span>
+                                      <span className="text-gray-900 capitalize">{(task as any).tone}</span>
+                                    </div>
+                                  )}
+
+                                  {(task as any).perspective && (
+                                    <div>
+                                      <span className="font-semibold text-gray-600">Perspective: </span>
+                                      <span className="text-gray-900 capitalize">{(task as any).perspective}</span>
+                                    </div>
+                                  )}
+
+                                  {(task as any).totalPoints && (
+                                    <div>
+                                      <span className="font-semibold text-gray-600">Points: </span>
+                                      <span className="text-gray-900">{(task as any).totalPoints}</span>
+                                    </div>
+                                  )}
+                                </div>
+
+                                {((task as any).requireIntroduction || (task as any).requireConclusion || (task as any).requireExamples) && (
+                                  <div className="mt-3">
+                                    <span className="font-semibold text-gray-600 text-sm">Structure Requirements: </span>
+                                    <div className="flex gap-2 mt-1">
+                                      {(task as any).requireIntroduction && (
+                                        <span className="inline-flex items-center px-2 py-1 rounded-lg text-xs font-semibold bg-blue-100 text-blue-800">
+                                          Introduction Required
+                                        </span>
+                                      )}
+                                      {(task as any).requireConclusion && (
+                                        <span className="inline-flex items-center px-2 py-1 rounded-lg text-xs font-semibold bg-green-100 text-green-800">
+                                          Conclusion Required
+                                        </span>
+                                      )}
+                                      {(task as any).requireExamples && (
+                                        <span className="inline-flex items-center px-2 py-1 rounded-lg text-xs font-semibold bg-purple-100 text-purple-800">
+                                          Examples Required
+                                        </span>
+                                      )}
+                                    </div>
+                                  </div>
+                                )}
+                              </div>
+                            </td>
+                          </tr>
+                        )}
+                        </React.Fragment>
                       ))}
                     </tbody>
                   </table>
