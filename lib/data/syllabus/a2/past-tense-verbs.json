@@ -1,0 +1,17 @@
+[
+  {"german": "war", "english": "was (sein - to be)"},
+  {"german": "hatte", "english": "had (haben - to have)"},
+  {"german": "ging", "english": "went (gehen - to go)"},
+  {"german": "kam", "english": "came (kommen - to come)"},
+  {"german": "sagte", "english": "said (sagen - to say)"},
+  {"german": "machte", "english": "did/made (machen - to do/make)"},
+  {"german": "wollte", "english": "wanted (wollen - to want)"},
+  {"german": "konnte", "english": "could (können - can)"},
+  {"german": "musste", "english": "had to (müssen - must)"},
+  {"german": "gab", "english": "gave (geben - to give)"},
+  {"german": "nahm", "english": "took (nehmen - to take)"},
+  {"german": "fand", "english": "found (finden - to find)"},
+  {"german": "blieb", "english": "stayed/remained (bleiben - to stay)"},
+  {"german": "stand", "english": "stood (stehen - to stand)"},
+  {"german": "lag", "english": "lay (liegen - to lie)"}
+]

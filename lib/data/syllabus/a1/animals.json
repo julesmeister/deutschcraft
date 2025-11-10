@@ -1,0 +1,17 @@
+[
+  {"german": "Hund", "english": "dog"},
+  {"german": "Katze", "english": "cat"},
+  {"german": "Vogel", "english": "bird"},
+  {"german": "Fisch", "english": "fish"},
+  {"german": "Pferd", "english": "horse"},
+  {"german": "Maus", "english": "mouse"},
+  {"german": "Kuh", "english": "cow"},
+  {"german": "Schwein", "english": "pig"},
+  {"german": "Huhn", "english": "chicken"},
+  {"german": "Schaf", "english": "sheep"},
+  {"german": "Hase", "english": "rabbit / hare"},
+  {"german": "Ente", "english": "duck"},
+  {"german": "Bär", "english": "bear"},
+  {"german": "Löwe", "english": "lion"},
+  {"german": "Tier", "english": "animal"}
+]

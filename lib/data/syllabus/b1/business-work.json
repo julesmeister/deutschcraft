@@ -1,0 +1,19 @@
+[
+  {"german": "Termin", "english": "appointment"},
+  {"german": "Besprechung", "english": "meeting / discussion"},
+  {"german": "Vertrag", "english": "contract"},
+  {"german": "Gehalt", "english": "salary"},
+  {"german": "Bewerbung", "english": "application"},
+  {"german": "Lebenslauf", "english": "CV / resume"},
+  {"german": "Vorstellungsgespräch", "english": "job interview"},
+  {"german": "Kollege", "english": "colleague"},
+  {"german": "Chef", "english": "boss"},
+  {"german": "Angestellte", "english": "employee"},
+  {"german": "Abteilung", "english": "department"},
+  {"german": "Projekt", "english": "project"},
+  {"german": "Frist", "english": "deadline"},
+  {"german": "Überstunden", "english": "overtime"},
+  {"german": "Geschäftsreise", "english": "business trip"},
+  {"german": "Kündigung", "english": "resignation / termination"},
+  {"german": "Beförderung", "english": "promotion"}
+]

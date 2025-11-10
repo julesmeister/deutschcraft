@@ -1,0 +1,602 @@
+[
+  {
+    "id": "syllabus-a1-10030",
+    "german": "sein",
+    "english": "to be",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "sein"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10031",
+    "german": "haben",
+    "english": "to have",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "haben"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10032",
+    "german": "machen",
+    "english": "to do / to make",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "machen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10033",
+    "german": "gehen",
+    "english": "to go",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "gehen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10034",
+    "german": "kommen",
+    "english": "to come",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "kommen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10035",
+    "german": "sehen",
+    "english": "to see",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "sehen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10036",
+    "german": "essen",
+    "english": "to eat",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "essen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10037",
+    "german": "trinken",
+    "english": "to drink",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "trinken"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10038",
+    "german": "wohnen",
+    "english": "to live",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "wohnen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10039",
+    "german": "heißen",
+    "english": "to be called",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "heißen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10040",
+    "german": "schlafen",
+    "english": "to sleep",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "schlafen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10041",
+    "german": "kaufen",
+    "english": "to buy",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "kaufen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10042",
+    "german": "kosten",
+    "english": "to cost",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "kosten"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10043",
+    "german": "brauchen",
+    "english": "to need",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "brauchen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10044",
+    "german": "mögen",
+    "english": "to like",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "mögen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10045",
+    "german": "wollen",
+    "english": "to want",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "wollen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10046",
+    "german": "lieben",
+    "english": "to love",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "lieben"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10047",
+    "german": "hören",
+    "english": "to hear / to listen",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "hören"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10048",
+    "german": "sagen",
+    "english": "to say",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "sagen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10049",
+    "german": "fragen",
+    "english": "to ask",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "fragen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10050",
+    "german": "antworten",
+    "english": "to answer",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "antworten"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10051",
+    "german": "suchen",
+    "english": "to search / to look for",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "suchen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10052",
+    "german": "finden",
+    "english": "to find",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "finden"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10053",
+    "german": "verstehen",
+    "english": "to understand",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "verstehen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10054",
+    "german": "kennen",
+    "english": "to know (a person/place)",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "kennen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10055",
+    "german": "wissen",
+    "english": "to know (a fact)",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "wissen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10056",
+    "german": "glauben",
+    "english": "to believe / to think",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "glauben"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10057",
+    "german": "denken",
+    "english": "to think",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "denken"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10058",
+    "german": "geben",
+    "english": "to give",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "geben"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10059",
+    "german": "nehmen",
+    "english": "to take",
+    "category": "Basic Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Basic Verbs",
+        "nehmen"
+      ]
+    }
+  }
+]

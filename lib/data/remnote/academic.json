@@ -1,0 +1,602 @@
+[
+  {
+    "id": "syllabus-b2-11009",
+    "german": "Forschung",
+    "english": "research",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Forschung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11010",
+    "german": "Theorie",
+    "english": "theory",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Theorie"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11011",
+    "german": "Hypothese",
+    "english": "hypothesis",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Hypothese"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11012",
+    "german": "Methode",
+    "english": "method",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Methode"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11013",
+    "german": "Ergebnis",
+    "english": "result",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Ergebnis"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11014",
+    "german": "Schlussfolgerung",
+    "english": "conclusion",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Schlussfolgerung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11015",
+    "german": "Analyse",
+    "english": "analysis",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Analyse"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11016",
+    "german": "Argument",
+    "english": "argument",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Argument"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11017",
+    "german": "These",
+    "english": "thesis",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "These"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11018",
+    "german": "Beweis",
+    "english": "proof / evidence",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Beweis"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11019",
+    "german": "Quelle",
+    "english": "source",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Quelle"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11020",
+    "german": "Literatur",
+    "english": "literature / references",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Literatur"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11021",
+    "german": "Dissertation",
+    "english": "dissertation / thesis",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Dissertation"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11022",
+    "german": "Abhandlung",
+    "english": "treatise / paper",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Abhandlung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11023",
+    "german": "Fachzeitschrift",
+    "english": "academic journal",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Fachzeitschrift"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11024",
+    "german": "Veröffentlichung",
+    "english": "publication",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Veröffentlichung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11025",
+    "german": "Studie",
+    "english": "study",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Studie"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11026",
+    "german": "Untersuchung",
+    "english": "investigation / examination",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Untersuchung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11027",
+    "german": "Experiment",
+    "english": "experiment",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Experiment"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11028",
+    "german": "Daten",
+    "english": "data",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Daten"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11029",
+    "german": "Statistik",
+    "english": "statistics",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Statistik"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11030",
+    "german": "Stichprobe",
+    "english": "sample",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Stichprobe"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11031",
+    "german": "Erhebung",
+    "english": "survey / data collection",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Erhebung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11032",
+    "german": "Auswertung",
+    "english": "evaluation / analysis",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Auswertung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11033",
+    "german": "Interpretation",
+    "english": "interpretation",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Interpretation"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11034",
+    "german": "Darstellung",
+    "english": "presentation / representation",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Darstellung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11035",
+    "german": "Vergleich",
+    "english": "comparison",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Vergleich"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11036",
+    "german": "Kritik",
+    "english": "criticism / critique",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Kritik"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11037",
+    "german": "Diskussion",
+    "english": "discussion",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Diskussion"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11038",
+    "german": "Zusammenfassung",
+    "english": "summary / abstract",
+    "category": "Academic",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Academic",
+        "Zusammenfassung"
+      ]
+    }
+  }
+]

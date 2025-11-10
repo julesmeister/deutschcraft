@@ -1,0 +1,302 @@
+[
+  {
+    "id": "syllabus-a2-10628",
+    "german": "Restaurant",
+    "english": "restaurant",
+    "category": "Restaurant",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Restaurant",
+        "Restaurant"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10629",
+    "german": "Speisekarte",
+    "english": "menu",
+    "category": "Restaurant",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Restaurant",
+        "Speisekarte"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10630",
+    "german": "Rechnung",
+    "english": "bill / check",
+    "category": "Restaurant",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Restaurant",
+        "Rechnung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10631",
+    "german": "Kellner",
+    "english": "waiter",
+    "category": "Restaurant",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Restaurant",
+        "Kellner"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10632",
+    "german": "Kellnerin",
+    "english": "waitress",
+    "category": "Restaurant",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Restaurant",
+        "Kellnerin"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10633",
+    "german": "bestellen",
+    "english": "to order",
+    "category": "Restaurant",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Restaurant",
+        "bestellen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10634",
+    "german": "schmecken",
+    "english": "to taste",
+    "category": "Restaurant",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Restaurant",
+        "schmecken"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10635",
+    "german": "Trinkgeld",
+    "english": "tip / gratuity",
+    "category": "Restaurant",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Restaurant",
+        "Trinkgeld"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10636",
+    "german": "Frühstück",
+    "english": "breakfast",
+    "category": "Restaurant",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Restaurant",
+        "Frühstück"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10637",
+    "german": "Mittagessen",
+    "english": "lunch",
+    "category": "Restaurant",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Restaurant",
+        "Mittagessen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10638",
+    "german": "Abendessen",
+    "english": "dinner",
+    "category": "Restaurant",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Restaurant",
+        "Abendessen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10639",
+    "german": "Vorspeise",
+    "english": "appetizer / starter",
+    "category": "Restaurant",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Restaurant",
+        "Vorspeise"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10640",
+    "german": "Hauptgericht",
+    "english": "main course",
+    "category": "Restaurant",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Restaurant",
+        "Hauptgericht"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10641",
+    "german": "Nachtisch",
+    "english": "dessert",
+    "category": "Restaurant",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Restaurant",
+        "Nachtisch"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10642",
+    "german": "Getränk",
+    "english": "drink / beverage",
+    "category": "Restaurant",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Restaurant",
+        "Getränk"
+      ]
+    }
+  }
+]

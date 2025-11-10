@@ -1,0 +1,19 @@
+[
+  {"german": "Sport", "english": "sport"},
+  {"german": "Musik", "english": "music"},
+  {"german": "lesen", "english": "to read"},
+  {"german": "schwimmen", "english": "to swim"},
+  {"german": "spielen", "english": "to play"},
+  {"german": "tanzen", "english": "to dance"},
+  {"german": "singen", "english": "to sing"},
+  {"german": "malen", "english": "to paint"},
+  {"german": "zeichnen", "english": "to draw"},
+  {"german": "fotografieren", "english": "to photograph"},
+  {"german": "Fußball", "english": "soccer / football"},
+  {"german": "Gitarre", "english": "guitar"},
+  {"german": "Klavier", "english": "piano"},
+  {"german": "kochen", "english": "to cook"},
+  {"german": "backen", "english": "to bake"},
+  {"german": "wandern", "english": "to hike"},
+  {"german": "reisen", "english": "to travel"}
+]

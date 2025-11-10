@@ -1,0 +1,342 @@
+[
+  {
+    "id": "syllabus-b1-10758",
+    "german": "Termin",
+    "english": "appointment",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Termin"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10759",
+    "german": "Besprechung",
+    "english": "meeting / discussion",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Besprechung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10760",
+    "german": "Vertrag",
+    "english": "contract",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Vertrag"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10761",
+    "german": "Gehalt",
+    "english": "salary",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Gehalt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10762",
+    "german": "Bewerbung",
+    "english": "application",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Bewerbung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10763",
+    "german": "Lebenslauf",
+    "english": "CV / resume",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Lebenslauf"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10764",
+    "german": "Vorstellungsgespräch",
+    "english": "job interview",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Vorstellungsgespräch"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10765",
+    "german": "Kollege",
+    "english": "colleague",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Kollege"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10766",
+    "german": "Chef",
+    "english": "boss",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Chef"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10767",
+    "german": "Angestellte",
+    "english": "employee",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Angestellte"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10768",
+    "german": "Abteilung",
+    "english": "department",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Abteilung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10769",
+    "german": "Projekt",
+    "english": "project",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Projekt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10770",
+    "german": "Frist",
+    "english": "deadline",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Frist"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10771",
+    "german": "Überstunden",
+    "english": "overtime",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Überstunden"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10772",
+    "german": "Geschäftsreise",
+    "english": "business trip",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Geschäftsreise"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10773",
+    "german": "Kündigung",
+    "english": "resignation / termination",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Kündigung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10774",
+    "german": "Beförderung",
+    "english": "promotion",
+    "category": "Business Work",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Business Work",
+        "Beförderung"
+      ]
+    }
+  }
+]

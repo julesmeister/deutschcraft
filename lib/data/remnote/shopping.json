@@ -1,0 +1,322 @@
+[
+  {
+    "id": "syllabus-a2-10658",
+    "german": "kaufen",
+    "english": "to buy",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "kaufen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10659",
+    "german": "bezahlen",
+    "english": "to pay",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "bezahlen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10660",
+    "german": "Euro",
+    "english": "euro",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "Euro"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10661",
+    "german": "teuer",
+    "english": "expensive",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "teuer"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10662",
+    "german": "billig",
+    "english": "cheap",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "billig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10663",
+    "german": "Preis",
+    "english": "price",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "Preis"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10664",
+    "german": "Geschäft",
+    "english": "shop / store",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "Geschäft"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10665",
+    "german": "Supermarkt",
+    "english": "supermarket",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "Supermarkt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10666",
+    "german": "Kasse",
+    "english": "cash register / checkout",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "Kasse"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10667",
+    "german": "Tüte",
+    "english": "bag",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "Tüte"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10668",
+    "german": "Tasche",
+    "english": "bag / purse",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "Tasche"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10669",
+    "german": "Größe",
+    "english": "size",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "Größe"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10670",
+    "german": "Farbe",
+    "english": "color",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "Farbe"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10671",
+    "german": "verkaufen",
+    "english": "to sell",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "verkaufen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10672",
+    "german": "kosten",
+    "english": "to cost",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "kosten"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10673",
+    "german": "Rabatt",
+    "english": "discount",
+    "category": "Shopping",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Shopping",
+        "Rabatt"
+      ]
+    }
+  }
+]

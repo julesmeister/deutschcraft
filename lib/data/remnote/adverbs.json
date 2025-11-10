@@ -1,0 +1,4175 @@
+[
+  {
+    "id": "remnote-13",
+    "german": "allmählich / schrittweise",
+    "english": "gradually",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 17,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "allmählich / schrittweise"
+      ]
+    }
+  },
+  {
+    "id": "remnote-14",
+    "german": "allzu",
+    "english": "all too / far too",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 19,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "allzu"
+      ]
+    }
+  },
+  {
+    "id": "remnote-15",
+    "german": "ausreichend",
+    "english": "ample / sufficient / adequate",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 21,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "ausreichend"
+      ]
+    }
+  },
+  {
+    "id": "remnote-16",
+    "german": "ungenügend",
+    "english": "insufficient",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Degree",
+      "ausreichend"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 23,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "ausreichend",
+        null,
+        "ungenügend"
+      ]
+    }
+  },
+  {
+    "id": "remnote-17",
+    "german": "außerdem",
+    "english": "also / moreover",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 28,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "außerdem"
+      ]
+    }
+  },
+  {
+    "id": "remnote-18",
+    "german": "äußerst / überaus",
+    "english": "extremely",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 30,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "äußerst / überaus"
+      ]
+    }
+  },
+  {
+    "id": "remnote-19",
+    "german": "at least",
+    "english": "mindestens / wenigstens / zumindest / jedenfalls / immerhin",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 32,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "at least"
+      ]
+    }
+  },
+  {
+    "id": "remnote-20",
+    "german": "beinahe",
+    "english": "almost",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 34,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "beinahe"
+      ]
+    }
+  },
+  {
+    "id": "remnote-21",
+    "german": "bestens",
+    "english": "perfectly",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 36,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "bestens"
+      ]
+    }
+  },
+  {
+    "id": "remnote-22",
+    "german": "bloß",
+    "english": "solely / merely",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 39,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "bloß"
+      ]
+    }
+  },
+  {
+    "id": "remnote-23",
+    "german": "drastisch",
+    "english": "drastic",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 41,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "drastisch"
+      ]
+    }
+  },
+  {
+    "id": "remnote-24",
+    "german": "enorm",
+    "english": "enormously",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 43,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "enorm"
+      ]
+    }
+  },
+  {
+    "id": "remnote-25",
+    "german": "erheblich / weitaus",
+    "english": "considerably",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 45,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "erheblich / weitaus"
+      ]
+    }
+  },
+  {
+    "id": "remnote-26",
+    "german": "erstmals",
+    "english": "for the first time",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 48,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "erstmals"
+      ]
+    }
+  },
+  {
+    "id": "remnote-27",
+    "german": "gewisse",
+    "english": "certain / particular",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 50,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "gewisse"
+      ]
+    }
+  },
+  {
+    "id": "remnote-28",
+    "german": "größtenteils",
+    "english": "mostly",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 52,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "größtenteils"
+      ]
+    }
+  },
+  {
+    "id": "remnote-29",
+    "german": "gründlich",
+    "english": "thoroughly",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 53,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "gründlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-30",
+    "german": "grundsätzlich",
+    "english": "basically",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 55,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "grundsätzlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-31",
+    "german": "höchst",
+    "english": "highly",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 60,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "höchst"
+      ]
+    }
+  },
+  {
+    "id": "remnote-32",
+    "german": "höchstens",
+    "english": "at most",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 62,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "höchstens"
+      ]
+    }
+  },
+  {
+    "id": "remnote-33",
+    "german": "jedenfalls",
+    "english": "in any case",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 64,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "jedenfalls"
+      ]
+    }
+  },
+  {
+    "id": "remnote-34",
+    "german": "massiv",
+    "english": "greatly",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 66,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "massiv"
+      ]
+    }
+  },
+  {
+    "id": "remnote-35",
+    "german": "maßgeblich",
+    "english": "significantly",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 67,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "maßgeblich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-36",
+    "german": "maximal",
+    "english": "maximum",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 71,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "maximal"
+      ]
+    }
+  },
+  {
+    "id": "remnote-37",
+    "german": "präzise / konkret / genau",
+    "english": "precisely",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 72,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "präzise / konkret / genau"
+      ]
+    }
+  },
+  {
+    "id": "remnote-38",
+    "german": "reichlich",
+    "english": "plenty of",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 75,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "reichlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-39",
+    "german": "rundum",
+    "english": "all around / completely",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 77,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "rundum"
+      ]
+    }
+  },
+  {
+    "id": "remnote-40",
+    "german": "sorgfältig",
+    "english": "meticulously / thoroughly / carefully / mindfully",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 79,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "sorgfältig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-41",
+    "german": "speziell",
+    "english": "specifically / particular",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 81,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "speziell"
+      ]
+    }
+  },
+  {
+    "id": "remnote-42",
+    "german": "stetig",
+    "english": "steadily",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 85,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "stetig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-43",
+    "german": "vorwiegend",
+    "english": "predominantly / mainly",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 87,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "vorwiegend"
+      ]
+    }
+  },
+  {
+    "id": "remnote-44",
+    "german": "zusätzlich",
+    "english": "additional",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Degree"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 89,
+      "hierarchy": [
+        "Adverbs",
+        "Degree",
+        "zusätzlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-45",
+    "german": "vorerst",
+    "english": "for the time being / for now",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 92,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "vorerst"
+      ]
+    }
+  },
+  {
+    "id": "remnote-46",
+    "german": "anschließend",
+    "english": "afterwards / subsequent",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 94,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "anschließend"
+      ]
+    }
+  },
+  {
+    "id": "remnote-47",
+    "german": "bislang",
+    "english": "so far / previously",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 96,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "bislang"
+      ]
+    }
+  },
+  {
+    "id": "remnote-48",
+    "german": "damals",
+    "english": "at the time",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 99,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "damals"
+      ]
+    }
+  },
+  {
+    "id": "remnote-49",
+    "german": "Damals war es nur einer.",
+    "english": "At that time, there was only one.",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time",
+      "damals"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 101,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "damals",
+        "Damals war es nur einer."
+      ]
+    }
+  },
+  {
+    "id": "remnote-50",
+    "german": "dauerhaft",
+    "english": "permanently",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 102,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "dauerhaft"
+      ]
+    }
+  },
+  {
+    "id": "remnote-51",
+    "german": "demnächst",
+    "english": "soon, shortly",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 104,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "demnächst"
+      ]
+    }
+  },
+  {
+    "id": "remnote-52",
+    "german": "derzeit / momentan / zurzeit",
+    "english": "current / present",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 106,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "derzeit / momentan / zurzeit"
+      ]
+    }
+  },
+  {
+    "id": "remnote-53",
+    "german": "diesmal",
+    "english": "this time",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 110,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "diesmal"
+      ]
+    }
+  },
+  {
+    "id": "remnote-54",
+    "german": "dringlich",
+    "english": "urgently",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 112,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "dringlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-55",
+    "german": "ehestmöglich",
+    "english": "as soon as possible",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 116,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "ehestmöglich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-56",
+    "german": "Er hat sofort veranlasst, dass der Aushang zum ehestmöglichen Zeitpunkt entfernt wird.",
+    "english": "He had immediately arranged for the notice to be removed as soon as possible.",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time",
+      "ehestmöglich"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 117,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "ehestmöglich",
+        "Er hat sofort veranlasst, dass der Aushang zum ehestmöglichen Zeitpunkt entfernt wird."
+      ]
+    }
+  },
+  {
+    "id": "remnote-57",
+    "german": "einst",
+    "english": "once / at one time",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 118,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "einst"
+      ]
+    }
+  },
+  {
+    "id": "remnote-58",
+    "german": "endgültig / endlich",
+    "english": "finally / in the end",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 120,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "endgültig / endlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-59",
+    "german": "ewig",
+    "english": "forever",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 122,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "ewig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-60",
+    "german": "frisch",
+    "english": "newly / fresh / crisp",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 124,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "frisch"
+      ]
+    }
+  },
+  {
+    "id": "remnote-61",
+    "german": "gelegentlich",
+    "english": "occasionally",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 126,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "gelegentlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-62",
+    "german": "hindurch",
+    "english": "throughout / through it",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 128,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "hindurch"
+      ]
+    }
+  },
+  {
+    "id": "remnote-63",
+    "german": "mittlerweile",
+    "english": "meanwhile / in the meantime",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time",
+      "hindurch"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 131,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "hindurch",
+        "mittlerweile"
+      ]
+    }
+  },
+  {
+    "id": "remnote-64",
+    "german": "unterdessen",
+    "english": "meanwhile / in the meantime",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time",
+      "hindurch"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 132,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "hindurch",
+        "unterdessen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-65",
+    "german": "zwischenzeit",
+    "english": "interim",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time",
+      "hindurch"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 133,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "hindurch",
+        "zwischenzeit"
+      ]
+    }
+  },
+  {
+    "id": "remnote-66",
+    "german": "irgendwann",
+    "english": "at some point",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 134,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "irgendwann"
+      ]
+    }
+  },
+  {
+    "id": "remnote-67",
+    "german": "jemals",
+    "english": "ever",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 136,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "jemals"
+      ]
+    }
+  },
+  {
+    "id": "remnote-68",
+    "german": "Falls es jemals so weit ist.",
+    "english": "If it ever gets that far.",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time",
+      "jemals"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 137,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "jemals",
+        "Falls es jemals so weit ist."
+      ]
+    }
+  },
+  {
+    "id": "remnote-69",
+    "german": "kommende",
+    "english": "upcoming",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 138,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "kommende"
+      ]
+    }
+  },
+  {
+    "id": "remnote-70",
+    "german": "künftig",
+    "english": "in future / henceforth",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 140,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "künftig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-71",
+    "german": "kurzfristig",
+    "english": "for a short time",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 143,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "kurzfristig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-72",
+    "german": "lange",
+    "english": "for a long time",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 145,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "lange"
+      ]
+    }
+  },
+  {
+    "id": "remnote-73",
+    "german": "Jon sah sie **lange** an.",
+    "english": "Jon looked at her for a long time",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time",
+      "lange"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 146,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "lange",
+        "Jon sah sie **lange** an."
+      ]
+    }
+  },
+  {
+    "id": "remnote-74",
+    "german": "langfristig",
+    "english": "long-term / in the long run / over the long term",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 147,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "langfristig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-75",
+    "german": "letztendlich",
+    "english": "eventually",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 149,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "letztendlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-76",
+    "german": "nachher",
+    "english": "afterwards",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 151,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "nachher"
+      ]
+    }
+  },
+  {
+    "id": "remnote-77",
+    "german": "neulich",
+    "english": "the other day",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 153,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "neulich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-78",
+    "german": "nun",
+    "english": "now",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 154,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "nun"
+      ]
+    }
+  },
+  {
+    "id": "remnote-79",
+    "german": "öfters / häufig",
+    "english": "frequently / often",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 156,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "öfters / häufig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-80",
+    "german": "rasch",
+    "english": "quickly",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 158,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "rasch"
+      ]
+    }
+  },
+  {
+    "id": "remnote-81",
+    "german": "rechtzeitig",
+    "english": "in time",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 160,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "rechtzeitig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-82",
+    "german": "seit kurzem",
+    "english": "as of late",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 162,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "seit kurzem"
+      ]
+    }
+  },
+  {
+    "id": "remnote-83",
+    "german": "selten",
+    "english": "rare / seldom",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 164,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "selten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-84",
+    "german": "sogleich / unmittelbar",
+    "english": "immediately / instantly",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 166,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "sogleich / unmittelbar"
+      ]
+    }
+  },
+  {
+    "id": "remnote-85",
+    "german": "unlängst / neuerdings",
+    "english": "recently / lately",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 167,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "unlängst / neuerdings"
+      ]
+    }
+  },
+  {
+    "id": "remnote-86",
+    "german": "im Voraus / im Vorfeld",
+    "english": "in advance",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 168,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "im Voraus / im Vorfeld"
+      ]
+    }
+  },
+  {
+    "id": "remnote-87",
+    "german": "zeitgleich",
+    "english": "simultaneously",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 170,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "zeitgleich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-88",
+    "german": "vorzeitig",
+    "english": "early",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 171,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "vorzeitig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-89",
+    "german": "weiterhin",
+    "english": "for the future",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 173,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "weiterhin"
+      ]
+    }
+  },
+  {
+    "id": "remnote-90",
+    "german": "zeitweise / vorübergehend",
+    "english": "temporarily / from time to time",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 175,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "zeitweise / vorübergehend"
+      ]
+    }
+  },
+  {
+    "id": "remnote-91",
+    "german": "zugleich / zeitgleich / gleichzeitig",
+    "english": "at the same time",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 179,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "zugleich / zeitgleich / gleichzeitig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-92",
+    "german": "zunächst",
+    "english": "for the time being / initially",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 180,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "zunächst"
+      ]
+    }
+  },
+  {
+    "id": "remnote-93",
+    "german": "zuvor",
+    "english": "previously",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Time"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 182,
+      "hierarchy": [
+        "Adverbs",
+        "Time",
+        "zuvor"
+      ]
+    }
+  },
+  {
+    "id": "remnote-94",
+    "german": "auseinander",
+    "english": "apart",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Location"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 185,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "auseinander"
+      ]
+    }
+  },
+  {
+    "id": "remnote-95",
+    "german": "auswärts",
+    "english": "out of town",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Location"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 187,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "auswärts"
+      ]
+    }
+  },
+  {
+    "id": "remnote-96",
+    "german": "benachbarten",
+    "english": "neighboring",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Location"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 189,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "benachbarten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-97",
+    "german": "drin",
+    "english": "inside",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Location"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 191,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "drin"
+      ]
+    }
+  },
+  {
+    "id": "remnote-98",
+    "german": "hierher",
+    "english": "here",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Location"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 194,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "hierher"
+      ]
+    }
+  },
+  {
+    "id": "remnote-99",
+    "german": "hinauf",
+    "english": "up / upwards",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Location"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 196,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "hinauf"
+      ]
+    }
+  },
+  {
+    "id": "remnote-100",
+    "german": "hinab",
+    "english": "down",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Location"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 198,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "hinab"
+      ]
+    }
+  },
+  {
+    "id": "remnote-101",
+    "german": "auf und nieder",
+    "english": "up and down",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Location",
+      "hinab",
+      "synonym;;nieder"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 200,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "hinab",
+        "synonym;;nieder",
+        "auf und nieder"
+      ]
+    }
+  },
+  {
+    "id": "remnote-102",
+    "german": "hinweg",
+    "english": "across / away",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Location"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 205,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "hinweg"
+      ]
+    }
+  },
+  {
+    "id": "remnote-103",
+    "german": "nebeneinander",
+    "english": "side by side",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Location"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 206,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "nebeneinander"
+      ]
+    }
+  },
+  {
+    "id": "remnote-104",
+    "german": "nirgendwo / nirgends",
+    "english": "nowhere",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Location"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 209,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "nirgendwo / nirgends"
+      ]
+    }
+  },
+  {
+    "id": "remnote-105",
+    "german": "quer",
+    "english": "across / crosswise",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Location"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 211,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "quer"
+      ]
+    }
+  },
+  {
+    "id": "remnote-106",
+    "german": "rüber",
+    "english": "over there",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Location"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 213,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "rüber"
+      ]
+    }
+  },
+  {
+    "id": "remnote-107",
+    "german": "voraus",
+    "english": "ahead / advance",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Location"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 214,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "voraus"
+      ]
+    }
+  },
+  {
+    "id": "remnote-108",
+    "german": "voran / vorn",
+    "english": "ahead / forward",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Location"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 215,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "voran / vorn"
+      ]
+    }
+  },
+  {
+    "id": "remnote-109",
+    "german": "Sie [nickte](German/Verbs/nicken.md) und ging voran.",
+    "english": "She nodded and went ahead.",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Location",
+      "voran / vorn"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 218,
+      "hierarchy": [
+        "Adverbs",
+        "Location",
+        "voran / vorn",
+        "Sie [nickte](German/Verbs/nicken.md) und ging voran."
+      ]
+    }
+  },
+  {
+    "id": "remnote-110",
+    "german": "abschließend",
+    "english": "finally / afterall / in conclusion",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 221,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "abschließend"
+      ]
+    }
+  },
+  {
+    "id": "remnote-111",
+    "german": "allerdings",
+    "english": "however",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 223,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "allerdings"
+      ]
+    }
+  },
+  {
+    "id": "remnote-112",
+    "german": "**Allerdings** war es sehr knapp.",
+    "english": "However, it was very close.",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner",
+      "allerdings"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 224,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "allerdings",
+        "**Allerdings** war es sehr knapp."
+      ]
+    }
+  },
+  {
+    "id": "remnote-113",
+    "german": "allerlei",
+    "english": "all kinds",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 225,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "allerlei"
+      ]
+    }
+  },
+  {
+    "id": "remnote-114",
+    "german": "anonym",
+    "english": "anonymous",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 229,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "anonym"
+      ]
+    }
+  },
+  {
+    "id": "remnote-115",
+    "german": "anwesend",
+    "english": "present / here",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 230,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "anwesend"
+      ]
+    }
+  },
+  {
+    "id": "remnote-116",
+    "german": "auffällig",
+    "english": "noticeable / conspicuous / strikingly / ostentatious / flamboyant / flashy",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 233,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "auffällig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-117",
+    "german": "aufwendig",
+    "english": "elaborately",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 235,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "aufwendig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-118",
+    "german": "außergewöhnlich",
+    "english": "exceptionally",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 236,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "außergewöhnlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-119",
+    "german": "außerordentlich",
+    "english": "extraordinarily",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 237,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "außerordentlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-120",
+    "german": "ausführlich",
+    "english": "detailed / comprehensive",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 238,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "ausführlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-121",
+    "german": "ausgerechnet",
+    "english": "of all people",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 241,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "ausgerechnet"
+      ]
+    }
+  },
+  {
+    "id": "remnote-122",
+    "german": "bemerkbar",
+    "english": "noticeable / notable",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 245,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "bemerkbar"
+      ]
+    }
+  },
+  {
+    "id": "remnote-123",
+    "german": "bereits",
+    "english": "already",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 246,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "bereits"
+      ]
+    }
+  },
+  {
+    "id": "remnote-124",
+    "german": "definitiv",
+    "english": "definitely",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 247,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "definitiv"
+      ]
+    }
+  },
+  {
+    "id": "remnote-125",
+    "german": "dementsprechend",
+    "english": "accordingly",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 248,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "dementsprechend"
+      ]
+    }
+  },
+  {
+    "id": "remnote-126",
+    "german": "demnach",
+    "english": "accordingly / therefore",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 251,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "demnach"
+      ]
+    }
+  },
+  {
+    "id": "remnote-127",
+    "german": "Demnach war also alles natürlich.",
+    "english": "Accordingly, everything was natural.",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner",
+      "demnach"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 252,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "demnach",
+        "Demnach war also alles natürlich."
+      ]
+    }
+  },
+  {
+    "id": "remnote-128",
+    "german": "derselben",
+    "english": "same",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 253,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "derselben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-129",
+    "german": "ebenfalls",
+    "english": "likewise / as well",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 254,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "ebenfalls"
+      ]
+    }
+  },
+  {
+    "id": "remnote-130",
+    "german": "eindrucksvoll",
+    "english": "impressive / spectacular",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 256,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "eindrucksvoll"
+      ]
+    }
+  },
+  {
+    "id": "remnote-131",
+    "german": "empfindlich",
+    "english": "sensitively",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 257,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "empfindlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-132",
+    "german": "entgegen",
+    "english": "contrary to",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 258,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "entgegen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-133",
+    "german": "erforderlich",
+    "english": "required",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 260,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "erforderlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-134",
+    "german": "erhältlich",
+    "english": "available / obtainable",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 262,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "erhältlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-135",
+    "german": "erkennbar",
+    "english": "apparent",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 263,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "erkennbar"
+      ]
+    }
+  },
+  {
+    "id": "remnote-136",
+    "german": "fachlich",
+    "english": "professionally / technically",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 265,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "fachlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-137",
+    "german": "fällig",
+    "english": "due",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 266,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "fällig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-138",
+    "german": "folglich",
+    "english": "therefore / thus / consequently",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 268,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "folglich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-139",
+    "german": "fraglich",
+    "english": "questionable",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 271,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "fraglich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-140",
+    "german": "friedlich",
+    "english": "peaceful",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 272,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "friedlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-141",
+    "german": "geradezu",
+    "english": "nothing short",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 274,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "geradezu"
+      ]
+    }
+  },
+  {
+    "id": "remnote-142",
+    "german": "gewissermaßen",
+    "english": "in a way / to an extent / in a sense",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 276,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "gewissermaßen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-143",
+    "german": "gleichermaßen",
+    "english": "equally / likewise",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 278,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "gleichermaßen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-144",
+    "german": "gleichmäßig",
+    "english": "evenly / even / steady",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 280,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "gleichmäßig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-145",
+    "german": "hautnah",
+    "english": "firsthand / close",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 283,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "hautnah"
+      ]
+    }
+  },
+  {
+    "id": "remnote-146",
+    "german": "identisch",
+    "english": "identical",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 285,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "identisch"
+      ]
+    }
+  },
+  {
+    "id": "remnote-147",
+    "german": "im gegenzug",
+    "english": "in return",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 287,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "im gegenzug"
+      ]
+    }
+  },
+  {
+    "id": "remnote-148",
+    "german": "heil",
+    "english": "safely",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 289,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "heil"
+      ]
+    }
+  },
+  {
+    "id": "remnote-149",
+    "german": "heimlich",
+    "english": "secretly",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 291,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "heimlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-150",
+    "german": "hiermit",
+    "english": "hereby / herewith",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 297,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "hiermit"
+      ]
+    }
+  },
+  {
+    "id": "remnote-151",
+    "german": "hierfür",
+    "english": "on this",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 299,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "hierfür"
+      ]
+    }
+  },
+  {
+    "id": "remnote-152",
+    "german": "hierzu",
+    "english": "concerning this / to this / for this purpose",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 302,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "hierzu"
+      ]
+    }
+  },
+  {
+    "id": "remnote-153",
+    "german": "hingegen",
+    "english": "on the other hand / whereas",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 305,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "hingegen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-154",
+    "german": "insofern",
+    "english": "in this respect",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 307,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "insofern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-155",
+    "german": "jeweils / beziehungsweise",
+    "english": "respectively",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 309,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "jeweils / beziehungsweise"
+      ]
+    }
+  },
+  {
+    "id": "remnote-156",
+    "german": "kaum / knapp",
+    "english": "barely / nearly",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 312,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "kaum / knapp"
+      ]
+    }
+  },
+  {
+    "id": "remnote-157",
+    "german": "keinesfalls",
+    "english": "under no circumstances / not at all / never ever",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 314,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "keinesfalls"
+      ]
+    }
+  },
+  {
+    "id": "remnote-158",
+    "german": "keineswegs",
+    "english": "by no means",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 316,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "keineswegs"
+      ]
+    }
+  },
+  {
+    "id": "remnote-159",
+    "german": "kontinuierlich",
+    "english": "continuously",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 318,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "kontinuierlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-160",
+    "german": "kritisch",
+    "english": "critically",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 320,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "kritisch"
+      ]
+    }
+  },
+  {
+    "id": "remnote-161",
+    "german": "kurzerhand",
+    "english": "without further ado",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 322,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "kurzerhand"
+      ]
+    }
+  },
+  {
+    "id": "remnote-162",
+    "german": "lediglich",
+    "english": "only / simply",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 324,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "lediglich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-163",
+    "german": "liebevoll",
+    "english": "lovingly | comfortably",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 326,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "liebevoll"
+      ]
+    }
+  },
+  {
+    "id": "remnote-164",
+    "german": "locker",
+    "english": "casual / easy",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 328,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "locker"
+      ]
+    }
+  },
+  {
+    "id": "remnote-165",
+    "german": "möglich",
+    "english": "possible",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 330,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "möglich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-166",
+    "german": "nachhaltig",
+    "english": "sustainably / lastingly / strongly / deeply",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 332,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "nachhaltig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-167",
+    "german": "nachträglich",
+    "english": "subsequently / later / afterwards",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 336,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "nachträglich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-168",
+    "german": "nebenan",
+    "english": "next door",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 340,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "nebenan"
+      ]
+    }
+  },
+  {
+    "id": "remnote-169",
+    "german": "notfalls",
+    "english": "if necessary",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 342,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "notfalls"
+      ]
+    }
+  },
+  {
+    "id": "remnote-170",
+    "german": "nutzbringend",
+    "english": "beneficially",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 346,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "nutzbringend"
+      ]
+    }
+  },
+  {
+    "id": "remnote-171",
+    "german": "offenbar",
+    "english": "apparently / obviously",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 348,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "offenbar"
+      ]
+    }
+  },
+  {
+    "id": "remnote-172",
+    "german": "öffentlich",
+    "english": "publicly",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 351,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "öffentlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-173",
+    "german": "ohnehin / sowieso",
+    "english": "anyway",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 354,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "ohnehin / sowieso"
+      ]
+    }
+  },
+  {
+    "id": "remnote-174",
+    "german": "parat | bereit",
+    "english": "ready",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 355,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "parat | bereit"
+      ]
+    }
+  },
+  {
+    "id": "remnote-175",
+    "german": "prinzipiell",
+    "english": "on principle",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 358,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "prinzipiell"
+      ]
+    }
+  },
+  {
+    "id": "remnote-176",
+    "german": "quasi",
+    "english": "practically / so to speak",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 361,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "quasi"
+      ]
+    }
+  },
+  {
+    "id": "remnote-177",
+    "german": "rechtswidrig",
+    "english": "illegally / unlawfully",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 363,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "rechtswidrig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-178",
+    "german": "reibungslos",
+    "english": "smoothly",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 365,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "reibungslos"
+      ]
+    }
+  },
+  {
+    "id": "remnote-179",
+    "german": "reiflich",
+    "english": "careful",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 367,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "reiflich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-180",
+    "german": "regelrecht",
+    "english": "really / downright / literally",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 369,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "regelrecht"
+      ]
+    }
+  },
+  {
+    "id": "remnote-181",
+    "german": "sachlich",
+    "english": "objectively",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 372,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "sachlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-182",
+    "german": "samt",
+    "english": "including, together with",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 374,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "samt"
+      ]
+    }
+  },
+  {
+    "id": "remnote-183",
+    "german": "scheinbar / erkennbar",
+    "english": "apparently / seemingly",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 376,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "scheinbar / erkennbar"
+      ]
+    }
+  },
+  {
+    "id": "remnote-184",
+    "german": "schonend",
+    "english": "gently / carefully",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 377,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "schonend"
+      ]
+    }
+  },
+  {
+    "id": "remnote-185",
+    "german": "schließlich",
+    "english": "ultimately / finally / in the end / lastly / after all",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 380,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "schließlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-186",
+    "german": "Letztlich",
+    "english": "ultimately",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner",
+      "schließlich"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 382,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "schließlich",
+        "Letztlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-187",
+    "german": "separat",
+    "english": "separately",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 383,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "separat"
+      ]
+    }
+  },
+  {
+    "id": "remnote-188",
+    "german": "sichtbar / sichtlich / einsehbar",
+    "english": "visible",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 385,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "sichtbar / sichtlich / einsehbar"
+      ]
+    }
+  },
+  {
+    "id": "remnote-189",
+    "german": "soeben",
+    "english": "just / only just",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 386,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "soeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-190",
+    "german": "sogar",
+    "english": "even",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 388,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "sogar"
+      ]
+    }
+  },
+  {
+    "id": "remnote-191",
+    "german": "somit",
+    "english": "thus",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 390,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "somit"
+      ]
+    }
+  },
+  {
+    "id": "remnote-192",
+    "german": "sonstige",
+    "english": "other",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 391,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "sonstige"
+      ]
+    }
+  },
+  {
+    "id": "remnote-193",
+    "german": "sowas",
+    "english": "like this / like that",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 392,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "sowas"
+      ]
+    }
+  },
+  {
+    "id": "remnote-194",
+    "german": "spielerisch",
+    "english": "playfully",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 394,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "spielerisch"
+      ]
+    }
+  },
+  {
+    "id": "remnote-195",
+    "german": "spürbar",
+    "english": "noticeable / perceptible",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 395,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "spürbar"
+      ]
+    }
+  },
+  {
+    "id": "remnote-196",
+    "german": "ständig",
+    "english": "closely / constantly",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 396,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "ständig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-197",
+    "german": "tatsächlich",
+    "english": "actually / indeed",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 399,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "tatsächlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-198",
+    "german": "tödlich",
+    "english": "deadly",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 400,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "tödlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-199",
+    "german": "traditionell",
+    "english": "traditionally",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 401,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "traditionell"
+      ]
+    }
+  },
+  {
+    "id": "remnote-200",
+    "german": "übersichtlich",
+    "english": "clearly",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 402,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "übersichtlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-201",
+    "german": "üblich",
+    "english": "customary / common / usual",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 405,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "üblich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-202",
+    "german": "übrigens",
+    "english": "by the way / incidentally",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 410,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "übrigens"
+      ]
+    }
+  },
+  {
+    "id": "remnote-203",
+    "german": "im übrigen",
+    "english": "as a matter of fact",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner",
+      "übrigens"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 411,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "übrigens",
+        "im übrigen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-204",
+    "german": "umsonst",
+    "english": "for nothing / for free",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 412,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "umsonst"
+      ]
+    }
+  },
+  {
+    "id": "remnote-205",
+    "german": "unbedingt",
+    "english": "necessarily / strictly",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 414,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "unbedingt"
+      ]
+    }
+  },
+  {
+    "id": "remnote-206",
+    "german": "unberührt",
+    "english": "unaffectedly / impassively",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 417,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "unberührt"
+      ]
+    }
+  },
+  {
+    "id": "remnote-207",
+    "german": "unerlässlich",
+    "english": "indispensable / essential",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 419,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "unerlässlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-208",
+    "german": "unerträglich",
+    "english": "unbearable / unbearably",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 423,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "unerträglich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-209",
+    "german": "unerwartet",
+    "english": "unexpectedly",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 426,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "unerwartet"
+      ]
+    }
+  },
+  {
+    "id": "remnote-210",
+    "german": "ungewiss",
+    "english": "uncertain / unknown",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 427,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "ungewiss"
+      ]
+    }
+  },
+  {
+    "id": "remnote-211",
+    "german": "durchaus / unter allen Umständen",
+    "english": "by all means",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 431,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "durchaus / unter allen Umständen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-212",
+    "german": "überhaupt",
+    "english": "in general | in the first place | anyway",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 432,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "überhaupt"
+      ]
+    }
+  },
+  {
+    "id": "remnote-213",
+    "german": "unter anderem",
+    "english": "among other things",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 436,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "unter anderem"
+      ]
+    }
+  },
+  {
+    "id": "remnote-214",
+    "german": "unverzüglich",
+    "english": "immediately / without delay",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 437,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "unverzüglich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-215",
+    "german": "vergeblich",
+    "english": "in vain",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 438,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "vergeblich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-216",
+    "german": "vermeintlich",
+    "english": "supposedly",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 441,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "vermeintlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-217",
+    "german": "zugunsten",
+    "english": "for the sake of",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 442,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "zugunsten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-218",
+    "german": "vertraulich",
+    "english": "confidential",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 443,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "vertraulich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-219",
+    "german": "verzweifelt",
+    "english": "desperately",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 445,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "verzweifelt"
+      ]
+    }
+  },
+  {
+    "id": "remnote-220",
+    "german": "vor allem",
+    "english": "above all / especially / primarily",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 452,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "vor allem"
+      ]
+    }
+  },
+  {
+    "id": "remnote-221",
+    "german": "vorrangig",
+    "english": "mainly / primarily",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 455,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "vorrangig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-222",
+    "german": "vorsichtig",
+    "english": "careful / cautious",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 457,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "vorsichtig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-223",
+    "german": "wiederum",
+    "english": "on the other hand / in turn",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 458,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "wiederum"
+      ]
+    }
+  },
+  {
+    "id": "remnote-224",
+    "german": "wörtlich",
+    "english": "literally",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 460,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "wörtlich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-225",
+    "german": "zudem",
+    "english": "in addition / furthermore / besides",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 461,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "zudem"
+      ]
+    }
+  },
+  {
+    "id": "remnote-226",
+    "german": "zufällig",
+    "english": "by accident / randomly",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 463,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "zufällig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-227",
+    "german": "zugänglich",
+    "english": "open / accessible",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 464,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "zugänglich"
+      ]
+    }
+  },
+  {
+    "id": "remnote-228",
+    "german": "zutiefst",
+    "english": "deeply",
+    "category": "Adverbs",
+    "level": "B1",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 473,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "zutiefst"
+      ]
+    }
+  },
+  {
+    "id": "remnote-229",
+    "german": "zwangsläufig",
+    "english": "inevitably",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 474,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "zwangsläufig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-230",
+    "german": "zweifellos",
+    "english": "undoubtedly",
+    "category": "Adverbs",
+    "level": "B2",
+    "tags": [
+      "Manner"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 475,
+      "hierarchy": [
+        "Adverbs",
+        "Manner",
+        "zweifellos"
+      ]
+    }
+  }
+]

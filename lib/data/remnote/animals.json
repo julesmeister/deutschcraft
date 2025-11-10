@@ -1,0 +1,302 @@
+[
+  {
+    "id": "syllabus-a1-10015",
+    "german": "Hund",
+    "english": "dog",
+    "category": "Animals",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Animals",
+        "Hund"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10016",
+    "german": "Katze",
+    "english": "cat",
+    "category": "Animals",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Animals",
+        "Katze"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10017",
+    "german": "Vogel",
+    "english": "bird",
+    "category": "Animals",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Animals",
+        "Vogel"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10018",
+    "german": "Fisch",
+    "english": "fish",
+    "category": "Animals",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Animals",
+        "Fisch"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10019",
+    "german": "Pferd",
+    "english": "horse",
+    "category": "Animals",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Animals",
+        "Pferd"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10020",
+    "german": "Maus",
+    "english": "mouse",
+    "category": "Animals",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Animals",
+        "Maus"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10021",
+    "german": "Kuh",
+    "english": "cow",
+    "category": "Animals",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Animals",
+        "Kuh"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10022",
+    "german": "Schwein",
+    "english": "pig",
+    "category": "Animals",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Animals",
+        "Schwein"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10023",
+    "german": "Huhn",
+    "english": "chicken",
+    "category": "Animals",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Animals",
+        "Huhn"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10024",
+    "german": "Schaf",
+    "english": "sheep",
+    "category": "Animals",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Animals",
+        "Schaf"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10025",
+    "german": "Hase",
+    "english": "rabbit / hare",
+    "category": "Animals",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Animals",
+        "Hase"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10026",
+    "german": "Ente",
+    "english": "duck",
+    "category": "Animals",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Animals",
+        "Ente"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10027",
+    "german": "Bär",
+    "english": "bear",
+    "category": "Animals",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Animals",
+        "Bär"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10028",
+    "german": "Löwe",
+    "english": "lion",
+    "category": "Animals",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Animals",
+        "Löwe"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10029",
+    "german": "Tier",
+    "english": "animal",
+    "category": "Animals",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Animals",
+        "Tier"
+      ]
+    }
+  }
+]

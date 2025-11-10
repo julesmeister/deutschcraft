@@ -1,0 +1,19 @@
+[
+  {"german": "Schule", "english": "school"},
+  {"german": "lernen", "english": "to learn"},
+  {"german": "studieren", "english": "to study"},
+  {"german": "Prüfung", "english": "exam"},
+  {"german": "Buch", "english": "book"},
+  {"german": "Universität", "english": "university"},
+  {"german": "Lehrer", "english": "teacher"},
+  {"german": "Schüler", "english": "student / pupil"},
+  {"german": "Klasse", "english": "class"},
+  {"german": "Hausaufgabe", "english": "homework"},
+  {"german": "Stift", "english": "pen"},
+  {"german": "Bleistift", "english": "pencil"},
+  {"german": "Heft", "english": "notebook"},
+  {"german": "Tafel", "english": "blackboard / whiteboard"},
+  {"german": "Note", "english": "grade / mark"},
+  {"german": "Seminar", "english": "seminar"},
+  {"german": "Vorlesung", "english": "lecture"}
+]

@@ -1,0 +1,17 @@
+[
+  {"german": "Haus", "english": "house"},
+  {"german": "Zimmer", "english": "room"},
+  {"german": "Küche", "english": "kitchen"},
+  {"german": "Bad", "english": "bathroom"},
+  {"german": "Tisch", "english": "table"},
+  {"german": "Stuhl", "english": "chair"},
+  {"german": "Bett", "english": "bed"},
+  {"german": "Wohnzimmer", "english": "living room"},
+  {"german": "Schlafzimmer", "english": "bedroom"},
+  {"german": "Fenster", "english": "window"},
+  {"german": "Tür", "english": "door"},
+  {"german": "Sofa", "english": "sofa / couch"},
+  {"german": "Lampe", "english": "lamp"},
+  {"german": "Schrank", "english": "cupboard / wardrobe"},
+  {"german": "Spiegel", "english": "mirror"}
+]

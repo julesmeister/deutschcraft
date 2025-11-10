@@ -1,0 +1,342 @@
+[
+  {
+    "id": "syllabus-a2-10446",
+    "german": "Sport",
+    "english": "sport",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "Sport"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10447",
+    "german": "Musik",
+    "english": "music",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "Musik"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10448",
+    "german": "lesen",
+    "english": "to read",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "lesen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10449",
+    "german": "schwimmen",
+    "english": "to swim",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "schwimmen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10450",
+    "german": "spielen",
+    "english": "to play",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "spielen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10451",
+    "german": "tanzen",
+    "english": "to dance",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "tanzen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10452",
+    "german": "singen",
+    "english": "to sing",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "singen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10453",
+    "german": "malen",
+    "english": "to paint",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "malen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10454",
+    "german": "zeichnen",
+    "english": "to draw",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "zeichnen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10455",
+    "german": "fotografieren",
+    "english": "to photograph",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "fotografieren"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10456",
+    "german": "Fußball",
+    "english": "soccer / football",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "Fußball"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10457",
+    "german": "Gitarre",
+    "english": "guitar",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "Gitarre"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10458",
+    "german": "Klavier",
+    "english": "piano",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "Klavier"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10459",
+    "german": "kochen",
+    "english": "to cook",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "kochen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10460",
+    "german": "backen",
+    "english": "to bake",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "backen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10461",
+    "german": "wandern",
+    "english": "to hike",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "wandern"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10462",
+    "german": "reisen",
+    "english": "to travel",
+    "category": "Hobbies",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Hobbies",
+        "reisen"
+      ]
+    }
+  }
+]

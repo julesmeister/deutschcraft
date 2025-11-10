@@ -1,0 +1,18 @@
+[
+  {"german": "interessant", "english": "interesting"},
+  {"german": "langweilig", "english": "boring"},
+  {"german": "einfach", "english": "easy / simple"},
+  {"german": "schwierig", "english": "difficult"},
+  {"german": "laut", "english": "loud"},
+  {"german": "leise", "english": "quiet"},
+  {"german": "hell", "english": "bright / light"},
+  {"german": "dunkel", "english": "dark"},
+  {"german": "nah", "english": "near / close"},
+  {"german": "weit", "english": "far"},
+  {"german": "dick", "english": "thick / fat"},
+  {"german": "dünn", "english": "thin"},
+  {"german": "breit", "english": "wide / broad"},
+  {"german": "eng", "english": "narrow / tight"},
+  {"german": "tief", "english": "deep"},
+  {"german": "flach", "english": "flat / shallow"}
+]

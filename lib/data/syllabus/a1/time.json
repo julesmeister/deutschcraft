@@ -1,0 +1,17 @@
+[
+  {"german": "Montag", "english": "Monday"},
+  {"german": "Dienstag", "english": "Tuesday"},
+  {"german": "Mittwoch", "english": "Wednesday"},
+  {"german": "Donnerstag", "english": "Thursday"},
+  {"german": "Freitag", "english": "Friday"},
+  {"german": "Samstag", "english": "Saturday"},
+  {"german": "Sonntag", "english": "Sunday"},
+  {"german": "heute", "english": "today"},
+  {"german": "morgen", "english": "tomorrow"},
+  {"german": "gestern", "english": "yesterday"},
+  {"german": "Woche", "english": "week"},
+  {"german": "Monat", "english": "month"},
+  {"german": "Jahr", "english": "year"},
+  {"german": "Tag", "english": "day"},
+  {"german": "Uhr", "english": "clock / o'clock"}
+]

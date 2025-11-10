@@ -1,0 +1,17 @@
+[
+  {"german": "Hallo", "english": "Hello"},
+  {"german": "Guten Tag", "english": "Good day"},
+  {"german": "Guten Morgen", "english": "Good morning"},
+  {"german": "Guten Abend", "english": "Good evening"},
+  {"german": "Auf Wiedersehen", "english": "Goodbye"},
+  {"german": "Tschüss", "english": "Bye"},
+  {"german": "Danke", "english": "Thank you"},
+  {"german": "Bitte", "english": "Please / You're welcome"},
+  {"german": "Gute Nacht", "english": "Good night"},
+  {"german": "Entschuldigung", "english": "Excuse me / Sorry"},
+  {"german": "Ja", "english": "Yes"},
+  {"german": "Nein", "english": "No"},
+  {"german": "Wie geht's?", "english": "How are you?"},
+  {"german": "Gut", "english": "Good / Well"},
+  {"german": "Willkommen", "english": "Welcome"}
+]

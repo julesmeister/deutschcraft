@@ -1,0 +1,302 @@
+[
+  {
+    "id": "syllabus-a1-10331",
+    "german": "Kartoffel",
+    "english": "potato",
+    "category": "Vegetables",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Vegetables",
+        "Kartoffel"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10332",
+    "german": "Tomate",
+    "english": "tomato",
+    "category": "Vegetables",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Vegetables",
+        "Tomate"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10333",
+    "german": "Gurke",
+    "english": "cucumber",
+    "category": "Vegetables",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Vegetables",
+        "Gurke"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10334",
+    "german": "Salat",
+    "english": "lettuce / salad",
+    "category": "Vegetables",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Vegetables",
+        "Salat"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10335",
+    "german": "Karotte",
+    "english": "carrot",
+    "category": "Vegetables",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Vegetables",
+        "Karotte"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10336",
+    "german": "Zwiebel",
+    "english": "onion",
+    "category": "Vegetables",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Vegetables",
+        "Zwiebel"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10337",
+    "german": "Paprika",
+    "english": "bell pepper",
+    "category": "Vegetables",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Vegetables",
+        "Paprika"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10338",
+    "german": "Pilz",
+    "english": "mushroom",
+    "category": "Vegetables",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Vegetables",
+        "Pilz"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10339",
+    "german": "Kohl",
+    "english": "cabbage",
+    "category": "Vegetables",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Vegetables",
+        "Kohl"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10340",
+    "german": "Spinat",
+    "english": "spinach",
+    "category": "Vegetables",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Vegetables",
+        "Spinat"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10341",
+    "german": "Brokkoli",
+    "english": "broccoli",
+    "category": "Vegetables",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Vegetables",
+        "Brokkoli"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10342",
+    "german": "Bohne",
+    "english": "bean",
+    "category": "Vegetables",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Vegetables",
+        "Bohne"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10343",
+    "german": "Erbse",
+    "english": "pea",
+    "category": "Vegetables",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Vegetables",
+        "Erbse"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10344",
+    "german": "Mais",
+    "english": "corn",
+    "category": "Vegetables",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Vegetables",
+        "Mais"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10345",
+    "german": "Gemüse",
+    "english": "vegetable",
+    "category": "Vegetables",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Vegetables",
+        "Gemüse"
+      ]
+    }
+  }
+]

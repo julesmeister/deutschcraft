@@ -1,0 +1,17 @@
+[
+  {"german": "Sonne", "english": "sun"},
+  {"german": "Regen", "english": "rain"},
+  {"german": "kalt", "english": "cold"},
+  {"german": "warm", "english": "warm"},
+  {"german": "Schnee", "english": "snow"},
+  {"german": "Wind", "english": "wind"},
+  {"german": "Wolke", "english": "cloud"},
+  {"german": "Gewitter", "english": "thunderstorm"},
+  {"german": "Wetter", "english": "weather"},
+  {"german": "heiß", "english": "hot"},
+  {"german": "kühl", "english": "cool"},
+  {"german": "sonnig", "english": "sunny"},
+  {"german": "bewölkt", "english": "cloudy"},
+  {"german": "regnerisch", "english": "rainy"},
+  {"german": "windig", "english": "windy"}
+]

@@ -1,0 +1,17 @@
+[
+  {"german": "Brot", "english": "bread"},
+  {"german": "Wasser", "english": "water"},
+  {"german": "Kaffee", "english": "coffee"},
+  {"german": "Tee", "english": "tea"},
+  {"german": "Milch", "english": "milk"},
+  {"german": "Apfel", "english": "apple"},
+  {"german": "Käse", "english": "cheese"},
+  {"german": "Ei", "english": "egg"},
+  {"german": "Butter", "english": "butter"},
+  {"german": "Fleisch", "english": "meat"},
+  {"german": "Fisch", "english": "fish"},
+  {"german": "Reis", "english": "rice"},
+  {"german": "Nudeln", "english": "noodles / pasta"},
+  {"german": "Zucker", "english": "sugar"},
+  {"german": "Salz", "english": "salt"}
+]

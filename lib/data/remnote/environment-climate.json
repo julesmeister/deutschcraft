@@ -1,0 +1,602 @@
+[
+  {
+    "id": "syllabus-b2-11069",
+    "german": "Klimawandel",
+    "english": "climate change",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Klimawandel"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11070",
+    "german": "Erderwärmung",
+    "english": "global warming",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Erderwärmung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11071",
+    "german": "Umweltverschmutzung",
+    "english": "environmental pollution",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Umweltverschmutzung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11072",
+    "german": "erneuerbare Energie",
+    "english": "renewable energy",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "erneuerbare Energie"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11073",
+    "german": "Treibhausgas",
+    "english": "greenhouse gas",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Treibhausgas"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11074",
+    "german": "Recycling",
+    "english": "recycling",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Recycling"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11075",
+    "german": "Müll",
+    "english": "garbage / waste / trash",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Müll"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11076",
+    "german": "Abfall",
+    "english": "waste / refuse",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Abfall"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11077",
+    "german": "Naturschutz",
+    "english": "nature conservation",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Naturschutz"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11078",
+    "german": "Artenvielfalt",
+    "english": "biodiversity",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Artenvielfalt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11079",
+    "german": "Ökosystem",
+    "english": "ecosystem",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Ökosystem"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11080",
+    "german": "nachhaltig",
+    "english": "sustainable",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "nachhaltig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11081",
+    "german": "Umweltbewusstsein",
+    "english": "environmental awareness",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Umweltbewusstsein"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11082",
+    "german": "Ressourcen",
+    "english": "resources",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Ressourcen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11083",
+    "german": "Energieverbrauch",
+    "english": "energy consumption",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Energieverbrauch"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11084",
+    "german": "CO2-Ausstoß",
+    "english": "CO2 emissions",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "CO2-Ausstoß"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11085",
+    "german": "Luftverschmutzung",
+    "english": "air pollution",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Luftverschmutzung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11086",
+    "german": "Wasserverschmutzung",
+    "english": "water pollution",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Wasserverschmutzung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11087",
+    "german": "Bodenverschmutzung",
+    "english": "soil pollution",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Bodenverschmutzung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11088",
+    "german": "Abholzung",
+    "english": "deforestation",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Abholzung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11089",
+    "german": "Wiederaufforstung",
+    "english": "reforestation",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Wiederaufforstung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11090",
+    "german": "aussterben",
+    "english": "to become extinct",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "aussterben"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11091",
+    "german": "gefährdet",
+    "english": "endangered",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "gefährdet"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11092",
+    "german": "Mülltrennung",
+    "english": "waste separation",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Mülltrennung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11093",
+    "german": "Kompost",
+    "english": "compost",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Kompost"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11094",
+    "german": "Solarenergie",
+    "english": "solar energy",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Solarenergie"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11095",
+    "german": "Windenergie",
+    "english": "wind energy",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Windenergie"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11096",
+    "german": "Wasserkraft",
+    "english": "hydropower",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Wasserkraft"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11097",
+    "german": "Atomkraft",
+    "english": "nuclear power",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "Atomkraft"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11098",
+    "german": "fossile Brennstoffe",
+    "english": "fossil fuels",
+    "category": "Environment Climate",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Environment Climate",
+        "fossile Brennstoffe"
+      ]
+    }
+  }
+]

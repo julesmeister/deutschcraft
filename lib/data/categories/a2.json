@@ -1,0 +1,165 @@
+{
+  "level": "A2",
+  "categories": [
+    {
+      "id": "work-jobs",
+      "name": "Work & Professions",
+      "icon": "💼",
+      "description": "Arzt, Lehrer, Ingenieur, Büro, Firma, jobs and workplace",
+      "examples": ["Arzt", "Lehrer", "Ingenieur", "Krankenschwester", "Verkäufer", "Büro"],
+      "priority": 1
+    },
+    {
+      "id": "workplace-activities",
+      "name": "Workplace Activities",
+      "icon": "📊",
+      "description": "arbeiten, Kollege, Chef, Projekt, work-related activities",
+      "examples": ["arbeiten", "Kollege", "Chef", "Meeting", "Projekt", "Aufgabe"],
+      "priority": 2
+    },
+    {
+      "id": "travel-planning",
+      "name": "Travel & Planning",
+      "icon": "✈️",
+      "description": "Flughafen, Bahnhof, Ticket, Urlaub, Hotel, travel essentials",
+      "examples": ["Flughafen", "Bahnhof", "Ticket", "Urlaub", "Hotel", "Reise"],
+      "priority": 3
+    },
+    {
+      "id": "directions-advanced",
+      "name": "Directions & Navigation",
+      "icon": "🧭",
+      "description": "Asking and giving directions, Stadt, Straße, Platz",
+      "examples": ["Stadt", "Straße", "Platz", "Ecke", "Kreuzung", "Haltestelle"],
+      "priority": 4
+    },
+    {
+      "id": "health-body",
+      "name": "Health & Medical",
+      "icon": "🏥",
+      "description": "Kopf, Arm, Bein, Arzt, Krankenhaus, krank, Schmerzen",
+      "examples": ["Kopf", "Bauch", "Rücken", "Arzt", "Krankenhaus", "krank", "Schmerzen"],
+      "priority": 5
+    },
+    {
+      "id": "illnesses-symptoms",
+      "name": "Illnesses & Symptoms",
+      "icon": "🤒",
+      "description": "Fieber, Erkältung, Husten, Schnupfen, common ailments",
+      "examples": ["Fieber", "Erkältung", "Husten", "Schnupfen", "Kopfschmerzen", "Grippe"],
+      "priority": 6
+    },
+    {
+      "id": "hobbies-free-time",
+      "name": "Hobbies & Leisure",
+      "icon": "🎮",
+      "description": "Sport, Musik, lesen, schwimmen, Hobby, Freizeit",
+      "examples": ["Sport", "Musik", "lesen", "schwimmen", "Hobby", "Fußball", "Tennis"],
+      "priority": 7
+    },
+    {
+      "id": "sports-activities",
+      "name": "Sports & Physical Activities",
+      "icon": "⚽",
+      "description": "Fußball, Tennis, laufen, Fitnessstudio, sports terms",
+      "examples": ["Fußball", "Tennis", "laufen", "Fitnessstudio", "trainieren", "Mannschaft"],
+      "priority": 8
+    },
+    {
+      "id": "technology",
+      "name": "Technology & Devices",
+      "icon": "💻",
+      "description": "Computer, Handy, Internet, E-Mail, App, technology basics",
+      "examples": ["Computer", "Handy", "Smartphone", "Internet", "E-Mail", "App"],
+      "priority": 9
+    },
+    {
+      "id": "social-media",
+      "name": "Social Media & Communication",
+      "icon": "📱",
+      "description": "SMS, chatten, posten, Facebook, Instagram, online communication",
+      "examples": ["SMS", "chatten", "posten", "Nachricht", "Foto", "teilen"],
+      "priority": 10
+    },
+    {
+      "id": "shopping-money",
+      "name": "Shopping & Money",
+      "icon": "🛍️",
+      "description": "kaufen, verkaufen, bezahlen, Euro, teuer, billig",
+      "examples": ["kaufen", "verkaufen", "bezahlen", "Euro", "Cent", "Kreditkarte"],
+      "priority": 11
+    },
+    {
+      "id": "stores-shopping",
+      "name": "Stores & Shopping Places",
+      "icon": "🏬",
+      "description": "Supermarkt, Geschäft, Bäckerei, Apotheke, types of stores",
+      "examples": ["Supermarkt", "Geschäft", "Bäckerei", "Metzgerei", "Apotheke", "Markt"],
+      "priority": 12
+    },
+    {
+      "id": "time-expressions",
+      "name": "Time Expressions",
+      "icon": "⏰",
+      "description": "gestern, heute, morgen, vorgestern, übermorgen, später",
+      "examples": ["gestern", "heute", "morgen", "vorgestern", "übermorgen", "bald"],
+      "priority": 13
+    },
+    {
+      "id": "education",
+      "name": "School & Education",
+      "icon": "📚",
+      "description": "Schule, Universität, Student, lernen, Prüfung, studieren",
+      "examples": ["Schule", "Universität", "Student", "lernen", "Prüfung", "Unterricht"],
+      "priority": 14
+    },
+    {
+      "id": "school-subjects",
+      "name": "School Subjects",
+      "icon": "📖",
+      "description": "Mathematik, Deutsch, Englisch, Geschichte, school subjects",
+      "examples": ["Mathematik", "Deutsch", "Englisch", "Geschichte", "Biologie", "Physik"],
+      "priority": 15
+    },
+    {
+      "id": "nature-animals",
+      "name": "Nature & Animals",
+      "icon": "🌳",
+      "description": "Baum, Blume, Park, See, Berg, Hund, Katze",
+      "examples": ["Baum", "Blume", "Park", "See", "Berg", "Wald", "Hund", "Katze"],
+      "priority": 16
+    },
+    {
+      "id": "pets-animals",
+      "name": "Pets & Common Animals",
+      "icon": "🐕",
+      "description": "Hund, Katze, Vogel, Fisch, Pferd, domestic animals",
+      "examples": ["Hund", "Katze", "Vogel", "Fisch", "Pferd", "Kaninchen"],
+      "priority": 17
+    },
+    {
+      "id": "emotions",
+      "name": "Feelings & Emotions",
+      "icon": "😊",
+      "description": "glücklich, traurig, müde, wütend, ängstlich, emotional states",
+      "examples": ["glücklich", "traurig", "müde", "wütend", "ängstlich", "froh"],
+      "priority": 18
+    },
+    {
+      "id": "personality",
+      "name": "Personality & Character",
+      "icon": "👤",
+      "description": "freundlich, nett, lustig, ernst, personality traits",
+      "examples": ["freundlich", "nett", "lustig", "ernst", "höflich", "sympathisch"],
+      "priority": 19
+    },
+    {
+      "id": "restaurant-dining",
+      "name": "Restaurant & Dining",
+      "icon": "🍴",
+      "description": "Restaurant, Kellner, Speisekarte, bestellen, Rechnung",
+      "examples": ["Restaurant", "Kellner", "Speisekarte", "bestellen", "Rechnung", "Trinkgeld"],
+      "priority": 20
+    }
+  ]
+}

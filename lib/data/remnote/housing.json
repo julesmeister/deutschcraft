@@ -1,0 +1,342 @@
+[
+  {
+    "id": "syllabus-b1-10825",
+    "german": "Wohnung",
+    "english": "apartment",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Wohnung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10826",
+    "german": "Miete",
+    "english": "rent",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Miete"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10827",
+    "german": "Vermieter",
+    "english": "landlord",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Vermieter"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10828",
+    "german": "Nachbar",
+    "english": "neighbor",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Nachbar"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10829",
+    "german": "Erdgeschoss",
+    "english": "ground floor",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Erdgeschoss"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10830",
+    "german": "Stock",
+    "english": "floor / story",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Stock"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10831",
+    "german": "Treppe",
+    "english": "stairs",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Treppe"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10832",
+    "german": "Aufzug",
+    "english": "elevator",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Aufzug"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10833",
+    "german": "Balkon",
+    "english": "balcony",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Balkon"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10834",
+    "german": "Keller",
+    "english": "basement / cellar",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Keller"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10835",
+    "german": "Dachboden",
+    "english": "attic",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Dachboden"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10836",
+    "german": "Heizung",
+    "english": "heating",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Heizung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10837",
+    "german": "Kaution",
+    "english": "security deposit",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Kaution"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10838",
+    "german": "Nebenkosten",
+    "english": "additional costs / utilities",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Nebenkosten"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10839",
+    "german": "Möbel",
+    "english": "furniture",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Möbel"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10840",
+    "german": "Umzug",
+    "english": "move / relocation",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "Umzug"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10841",
+    "german": "einziehen",
+    "english": "to move in",
+    "category": "Housing",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Housing",
+        "einziehen"
+      ]
+    }
+  }
+]

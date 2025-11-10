@@ -1,0 +1,302 @@
+[
+  {
+    "id": "syllabus-a1-10045",
+    "german": "rot",
+    "english": "red",
+    "category": "Colors",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Colors",
+        "rot"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10046",
+    "german": "blau",
+    "english": "blue",
+    "category": "Colors",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Colors",
+        "blau"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10047",
+    "german": "grün",
+    "english": "green",
+    "category": "Colors",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Colors",
+        "grün"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10048",
+    "german": "gelb",
+    "english": "yellow",
+    "category": "Colors",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Colors",
+        "gelb"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10049",
+    "german": "schwarz",
+    "english": "black",
+    "category": "Colors",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Colors",
+        "schwarz"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10050",
+    "german": "weiß",
+    "english": "white",
+    "category": "Colors",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Colors",
+        "weiß"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10051",
+    "german": "braun",
+    "english": "brown",
+    "category": "Colors",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Colors",
+        "braun"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10052",
+    "german": "grau",
+    "english": "gray",
+    "category": "Colors",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Colors",
+        "grau"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10053",
+    "german": "rosa",
+    "english": "pink",
+    "category": "Colors",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Colors",
+        "rosa"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10054",
+    "german": "lila",
+    "english": "purple",
+    "category": "Colors",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Colors",
+        "lila"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10055",
+    "german": "orange",
+    "english": "orange",
+    "category": "Colors",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Colors",
+        "orange"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10056",
+    "german": "dunkel",
+    "english": "dark",
+    "category": "Colors",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Colors",
+        "dunkel"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10057",
+    "german": "hell",
+    "english": "light / bright",
+    "category": "Colors",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Colors",
+        "hell"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10058",
+    "german": "bunt",
+    "english": "colorful",
+    "category": "Colors",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Colors",
+        "bunt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10059",
+    "german": "Farbe",
+    "english": "color",
+    "category": "Colors",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Colors",
+        "Farbe"
+      ]
+    }
+  }
+]

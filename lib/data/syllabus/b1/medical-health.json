@@ -1,0 +1,19 @@
+[
+  {"german": "Termin", "english": "appointment"},
+  {"german": "Rezept", "english": "prescription"},
+  {"german": "Apotheke", "english": "pharmacy"},
+  {"german": "Medikament", "english": "medication / medicine"},
+  {"german": "Schmerzen", "english": "pain / aches"},
+  {"german": "Fieber", "english": "fever"},
+  {"german": "Erkältung", "english": "cold"},
+  {"german": "Grippe", "english": "flu / influenza"},
+  {"german": "Husten", "english": "cough"},
+  {"german": "Schnupfen", "english": "runny nose / cold"},
+  {"german": "Verletzung", "english": "injury"},
+  {"german": "Untersuchung", "english": "examination / checkup"},
+  {"german": "Notfall", "english": "emergency"},
+  {"german": "Krankenwagen", "english": "ambulance"},
+  {"german": "Versicherung", "english": "insurance"},
+  {"german": "Sprechstunde", "english": "consultation hours"},
+  {"german": "Behandlung", "english": "treatment"}
+]

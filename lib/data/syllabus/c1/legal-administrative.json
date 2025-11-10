@@ -1,0 +1,17 @@
+[
+  {"german": "Genehmigung", "english": "permit / authorization / approval"},
+  {"german": "Vorschrift", "english": "regulation / rule / prescription"},
+  {"german": "Rechtsanwalt", "english": "lawyer / attorney"},
+  {"german": "Verfahren", "english": "procedure / proceedings / process"},
+  {"german": "Anspruch", "english": "claim / entitlement / right"},
+  {"german": "Behörde", "english": "authority / government agency"},
+  {"german": "Bescheinigung", "english": "certificate / attestation"},
+  {"german": "Antrag", "english": "application / request / motion"},
+  {"german": "Klage", "english": "lawsuit / complaint / action"},
+  {"german": "Urteil", "english": "judgment / verdict / sentence"},
+  {"german": "Zeugnis", "english": "certificate / testimony / reference"},
+  {"german": "Vollmacht", "english": "power of attorney / authorization"},
+  {"german": "Verpflichtung", "english": "obligation / commitment / duty"},
+  {"german": "Berechtigung", "english": "authorization / entitlement / right"},
+  {"german": "Haftung", "english": "liability / responsibility"}
+]

@@ -1,0 +1,21 @@
+[
+  {"german": "Kopf", "english": "head"},
+  {"german": "Arm", "english": "arm"},
+  {"german": "Bein", "english": "leg"},
+  {"german": "Hand", "english": "hand"},
+  {"german": "Krankenhaus", "english": "hospital"},
+  {"german": "Auge", "english": "eye"},
+  {"german": "Ohr", "english": "ear"},
+  {"german": "Nase", "english": "nose"},
+  {"german": "Mund", "english": "mouth"},
+  {"german": "Fuß", "english": "foot"},
+  {"german": "Finger", "english": "finger"},
+  {"german": "Rücken", "english": "back"},
+  {"german": "Bauch", "english": "stomach / belly"},
+  {"german": "Herz", "english": "heart"},
+  {"german": "krank", "english": "sick / ill"},
+  {"german": "gesund", "english": "healthy"},
+  {"german": "Schmerz", "english": "pain"},
+  {"german": "Arzt", "english": "doctor"},
+  {"german": "Medikament", "english": "medicine / medication"}
+]

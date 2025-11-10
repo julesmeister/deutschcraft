@@ -1,0 +1,17 @@
+[
+  {"german": "sehen", "english": "to see"},
+  {"german": "schauen", "english": "to look"},
+  {"german": "beobachten", "english": "to observe / to watch"},
+  {"german": "hören", "english": "to hear / to listen"},
+  {"german": "zuhören", "english": "to listen (attentively)"},
+  {"german": "fühlen", "english": "to feel"},
+  {"german": "spüren", "english": "to sense / to feel"},
+  {"german": "riechen", "english": "to smell"},
+  {"german": "schmecken", "english": "to taste"},
+  {"german": "merken", "english": "to notice"},
+  {"german": "erkennen", "english": "to recognize"},
+  {"german": "bemerken", "english": "to notice / to observe"},
+  {"german": "wahrnehmen", "english": "to perceive"},
+  {"german": "betrachten", "english": "to view / to consider"},
+  {"german": "prüfen", "english": "to check / to examine"}
+]

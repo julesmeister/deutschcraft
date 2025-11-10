@@ -1,0 +1,1743 @@
+[
+  {
+    "id": "remnote-432",
+    "german": "bedienen",
+    "english": "to serve sb. / to operate sth. / to handle",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1800,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        null,
+        "bedienen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-433",
+    "german": "sich bedienen",
+    "english": "to help oneself / to employ sth. / to make use of sth.",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "bedienen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1804,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        null,
+        "bedienen",
+        "sich bedienen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-434",
+    "german": "drängen",
+    "english": "to urge sb. / to push/shove sb. #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1806,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "drängen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-435",
+    "german": "drehen",
+    "english": "to spin / to twist / to shoot / to film #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1810,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "drehen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-436",
+    "german": "aufdrehen",
+    "english": "to turn on [gas/faucet]",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "drehen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1816,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "drehen",
+        "aufdrehen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-437",
+    "german": "zudrehen",
+    "english": "to turn off [gas/faucet] #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "drehen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1818,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "drehen",
+        "zudrehen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-438",
+    "german": "drücken",
+    "english": "to press / to push",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1823,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "drücken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-439",
+    "german": "ausdrücken",
+    "english": "to squeeze / to express / to phrase",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "drücken"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1824,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "drücken",
+        "ausdrücken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-440",
+    "german": "zerdrücken",
+    "english": "to crumple / to crush / to pulp",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "drücken"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1828,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "drücken",
+        "zerdrücken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-441",
+    "german": "durchziehen",
+    "english": "to pull off / to swipe [credit card] / to follow through on. with sth. / to see sth. through #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1831,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "durchziehen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-442",
+    "german": "ehren",
+    "english": "to honor",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1841,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "ehren"
+      ]
+    }
+  },
+  {
+    "id": "remnote-443",
+    "german": "Euer Ehren",
+    "english": "your honor",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "ehren"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1842,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "ehren",
+        "Euer Ehren"
+      ]
+    }
+  },
+  {
+    "id": "remnote-444",
+    "german": "sich eignen",
+    "english": "to qualify / to suit / to be suitable #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1843,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "sich eignen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-445",
+    "german": "sich einbilden",
+    "english": "to imagine",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1851,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "sich einbilden"
+      ]
+    }
+  },
+  {
+    "id": "remnote-446",
+    "german": "einbringen",
+    "english": "to introduce / to contribute #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1852,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "einbringen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-447",
+    "german": "einfügen",
+    "english": "to insert / to paste / to include / to fit in #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1859,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "einfügen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-448",
+    "german": "einfallen",
+    "english": "to come to mind / to come up [thought] #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1865,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "einfallen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-449",
+    "german": "Es muß uns etwas einfallen.",
+    "english": "We have to come up with something.",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "einfallen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1868,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "einfallen",
+        "Es muß uns etwas einfallen."
+      ]
+    }
+  },
+  {
+    "id": "remnote-450",
+    "german": "einführen",
+    "english": "to launch / to introduce / to initiate #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1869,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "einführen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-451",
+    "german": "einsehen",
+    "english": "to accept a realization / to view #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1878,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "einsehen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-452",
+    "german": "sich entspannen",
+    "english": "to chill out #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1886,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "sich entspannen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-453",
+    "german": "einleiten",
+    "english": "to initiate  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1898,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "einleiten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-454",
+    "german": "sich einmischen",
+    "english": "to interfere #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1904,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "sich einmischen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-455",
+    "german": "einreichen",
+    "english": "to submit / to file #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1909,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "einreichen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-456",
+    "german": "einrichten",
+    "english": "to establish / to organize / to furnish #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1913,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "einrichten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-457",
+    "german": "einstufen",
+    "english": "to rank / to grade / to classify / to categorize / to rate #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1918,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "einstufen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-458",
+    "german": "einweihen",
+    "english": "to inaugurate / to induct / to dedicate / {{to fill sb. in with information}}  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1921,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "einweihen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-459",
+    "german": "einzahlen",
+    "english": "to deposit",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1928,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "einzahlen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-460",
+    "german": "empfinden",
+    "english": "to feel / to sense / to perceive",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1932,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "empfinden"
+      ]
+    }
+  },
+  {
+    "id": "remnote-461",
+    "german": "entfernen",
+    "english": "to remove #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1936,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "entfernen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-462",
+    "german": "entlassen",
+    "english": "to release / to dismiss / to fire #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1940,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "entlassen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-463",
+    "german": "entziffern",
+    "english": "to decipher",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1947,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "entziffern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-464",
+    "german": "sich engagieren",
+    "english": "to campaign / to be committed",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1948,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "sich engagieren"
+      ]
+    }
+  },
+  {
+    "id": "remnote-465",
+    "german": "entscheiden",
+    "english": "to decide",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1954,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "entscheiden"
+      ]
+    }
+  },
+  {
+    "id": "remnote-466",
+    "german": "entsprechen",
+    "english": "to correspond / to match / to conform / to satisfy #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1958,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "entsprechen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-467",
+    "german": "entsetzen",
+    "english": "to horrify | to shock | to appall #Stub #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1963,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "entsetzen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-468",
+    "german": "entstehen",
+    "english": "to emerge / to arise / to originate / {{to occur}} / to happen",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1971,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "entstehen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-469",
+    "german": "entkommen",
+    "english": "to escape / to get away from sb. #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1979,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "entkommen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-470",
+    "german": "entziehen",
+    "english": "to deprive / to revoke / to escape #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1983,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "entziehen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-471",
+    "german": "erben",
+    "english": "to inhreit #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1990,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-472",
+    "german": "erfahren",
+    "english": "to find out / to experience",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1994,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erfahren"
+      ]
+    }
+  },
+  {
+    "id": "remnote-473",
+    "german": "erfassen",
+    "english": "to collect / to capture / to record / to gather #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1998,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erfassen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-474",
+    "german": "verzeichnen",
+    "english": "to record / to register / to note down / to list  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "erfassen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2002,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erfassen",
+        "verzeichnen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-475",
+    "german": "erfolgen",
+    "english": "to take place  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2009,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erfolgen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-476",
+    "german": "erhoffen",
+    "english": "to anticipate / to hope / to wish for  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2014,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erhoffen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-477",
+    "german": "erkennen",
+    "english": "to recognize / to realize / to identify / to tell the difference",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2023,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erkennen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-478",
+    "german": "erkunden",
+    "english": "to explore",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2027,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erkunden"
+      ]
+    }
+  },
+  {
+    "id": "remnote-479",
+    "german": "etw. bestaunen",
+    "english": "to marvel at sth.",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "erkunden"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2029,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erkunden",
+        "etw. bestaunen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-480",
+    "german": "erlauben",
+    "english": "to allow #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2030,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erlauben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-481",
+    "german": "erleben",
+    "english": "to experience #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2037,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erleben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-482",
+    "german": "erleichtern",
+    "english": "to facilitate #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2043,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erleichtern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-483",
+    "german": "ermöglichen",
+    "english": "to enable  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2048,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "ermöglichen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-484",
+    "german": "erneuern",
+    "english": "to renew / to regenerate #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2051,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erneuern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-485",
+    "german": "die Erneuerung",
+    "english": "renovation / restoration",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "erneuern"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2052,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erneuern",
+        "die Erneuerung"
+      ]
+    }
+  },
+  {
+    "id": "remnote-486",
+    "german": "errichten",
+    "english": "to build / to put up #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "erneuern"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2056,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erneuern",
+        "errichten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-487",
+    "german": "ernten",
+    "english": "to pick sth. [apple,potatoes,cotton] / to harvest / to reap  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2062,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "ernten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-488",
+    "german": "pflücken",
+    "english": "to pluck [flowers] / to pick / to gather [berries] / to harvest  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "ernten"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2065,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "ernten",
+        "pflücken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-489",
+    "german": "erpressen",
+    "english": "to blackmail",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2069,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erpressen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-490",
+    "german": "erröten",
+    "english": "to blush #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2070,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erröten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-491",
+    "german": "erscheinen",
+    "english": "to appear / to emerge / to publish",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2074,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erscheinen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-492",
+    "german": "herausgeben",
+    "english": "to publish / to release / to issue",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "erscheinen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2075,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erscheinen",
+        "herausgeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-493",
+    "german": "erschrecken",
+    "english": "to scare #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2083,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erschrecken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-494",
+    "german": "ersetzen",
+    "english": "to replace / to substitute #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2086,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "ersetzen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-495",
+    "german": "ersparen",
+    "english": "to save / to spare sb from sth #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2091,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "ersparen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-496",
+    "german": "erstaunen",
+    "english": "to amaze #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2098,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erstaunen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-497",
+    "german": "ersticken",
+    "english": "to choke / to suffocate / to smother #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2103,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "ersticken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-498",
+    "german": "ertragen",
+    "english": "to bear #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2108,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "ertragen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-499",
+    "german": "ertrinken",
+    "english": "to drown #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2112,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "ertrinken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-500",
+    "german": "erwerben",
+    "english": "to acquire / to purchase sth. #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2117,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erwerben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-501",
+    "german": "erwidern",
+    "english": "to reply / to answer / to retun / to reciprocate / to respond  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2123,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erwidern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-502",
+    "german": "erwischen",
+    "english": "to catch sb. sth. / to chase down #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2130,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erwischen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-503",
+    "german": "fangen",
+    "english": "to catch / to capture / to trap  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "erwischen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2135,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erwischen",
+        "fangen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-504",
+    "german": "sich einfangen",
+    "english": "to catch sth. [fever, cold]  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "erwischen",
+      "fangen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2140,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erwischen",
+        "fangen",
+        "sich einfangen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-505",
+    "german": "erzählen",
+    "english": "to tell  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2144,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erzählen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-506",
+    "german": "erziehen",
+    "english": "to rear / to nurture / to educate / to discipline",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2148,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "erziehen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-507",
+    "german": "überfahren",
+    "english": "to run over / to knock sb. down",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fahren"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2155,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fahren",
+        "überfahren"
+      ]
+    }
+  },
+  {
+    "id": "remnote-508",
+    "german": "verfallen",
+    "english": "to decay / to expire / to lapse / to deteriorate #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fallen  #verben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2165,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fallen  #verben",
+        "verfallen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-509",
+    "german": "auffallen",
+    "english": "to attrack sb. attention / to strike / to standout  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fallen  #verben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2171,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fallen  #verben",
+        "auffallen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-510",
+    "german": "Sein [eigenartiges]() Aussehen fiel mir sofort auf.",
+    "english": "His strange looks struck me immediately.",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fallen  #verben",
+      "auffallen",
+      "[präteritum]();;Er fiel auf"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2173,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fallen  #verben",
+        "auffallen",
+        "[präteritum]();;Er fiel auf",
+        "Sein [eigenartiges]() Aussehen fiel mir sofort auf."
+      ]
+    }
+  },
+  {
+    "id": "remnote-511",
+    "german": "Ist Ihnen etwas [Merkwürdiges]() aufgefallen?",
+    "english": "Have you noticed anything strange?",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fallen  #verben",
+      "auffallen",
+      "[perfekt]();;Er hat aufgefallen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2176,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fallen  #verben",
+        "auffallen",
+        "[perfekt]();;Er hat aufgefallen",
+        "Ist Ihnen etwas [Merkwürdiges]() aufgefallen?"
+      ]
+    }
+  },
+  {
+    "id": "remnote-512",
+    "german": "fassen",
+    "english": "to seize / to conceive / to grasp / to hold [venue holds people] / to make / to catch",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2195,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fassen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-513",
+    "german": "Mir gelingt so recht zu fassen",
+    "english": "I manage to grasp so rightly",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fassen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2196,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fassen",
+        "Mir gelingt so recht zu fassen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-514",
+    "german": "Erst dann kann ich weitere Pläne fassen",
+    "english": "Only then can I make further plans",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fassen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2197,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fassen",
+        "Erst dann kann ich weitere Pläne fassen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-515",
+    "german": "sich fassen",
+    "english": "to compose oneself",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fassen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2198,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fassen",
+        "sich fassen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-516",
+    "german": "anfassen",
+    "english": "to touch",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fassen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2199,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fassen",
+        "anfassen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-517",
+    "german": "berühren",
+    "english": "to touch / to come in contact with #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fassen",
+      "anfassen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2203,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fassen",
+        "anfassen",
+        "berühren"
+      ]
+    }
+  },
+  {
+    "id": "remnote-518",
+    "german": "umfassen",
+    "english": "to encompass / to comprise / to contain / to involve / to cover / to embrace #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fassen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2212,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fassen",
+        "umfassen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-519",
+    "german": "verfassen",
+    "english": "to write / to author / to draft / to compose  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fassen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2218,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fassen",
+        "verfassen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-520",
+    "german": "falten",
+    "english": "to fold / to wrinkle / to crease  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2223,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "falten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-521",
+    "german": "die Falte",
+    "english": "wrinkle / fold / crease",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "falten"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2224,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "falten",
+        "die Falte"
+      ]
+    }
+  },
+  {
+    "id": "remnote-522",
+    "german": "fehlen",
+    "english": "to lack / to miss / to fail #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2232,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fehlen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-523",
+    "german": "versagen",
+    "english": "to fail",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fehlen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2240,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fehlen",
+        "versagen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-524",
+    "german": "festlegen",
+    "english": "to determine / to schedule #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2245,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "festlegen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-525",
+    "german": "flicken",
+    "english": "to patch",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2251,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "flicken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-526",
+    "german": "überfliegen",
+    "english": "to scan  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fliegen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2255,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fliegen",
+        "überfliegen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-527",
+    "german": "Rudi überflog den Papierkram.",
+    "english": "Rudi scanned the paperwork.",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fliegen",
+      "überfliegen",
+      "[präteritum]();;Er überflog"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2257,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fliegen",
+        "überfliegen",
+        "[präteritum]();;Er überflog",
+        "Rudi überflog den Papierkram."
+      ]
+    }
+  },
+  {
+    "id": "remnote-528",
+    "german": "fliehen",
+    "english": "to escape",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2259,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fliehen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-529",
+    "german": "fließen",
+    "english": "to flow / to pour",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2266,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fließen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-530",
+    "german": "folgen",
+    "english": "to follow / to trail / to comply / to be obedient",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2269,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "folgen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-531",
+    "german": "der Anhänger",
+    "english": "follower",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "folgen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2270,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "folgen",
+        "der Anhänger"
+      ]
+    }
+  },
+  {
+    "id": "remnote-532",
+    "german": "fordern",
+    "english": "to demand sth. from sb. / to claim sth. from sb. / to require sth. from sb.  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2272,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fordern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-533",
+    "german": "anfordern",
+    "english": "to request sth. / to solicit / to order sth. up / to make application for sth.  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fordern"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2276,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fordern",
+        "anfordern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-534",
+    "german": "auffordern",
+    "english": "to summon / to prompt / to request #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fordern"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2282,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fordern",
+        "auffordern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-535",
+    "german": "erfordern",
+    "english": "to require / to call for sth.",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fordern"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2288,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fordern",
+        "erfordern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-536",
+    "german": "befördern",
+    "english": "to promote to a position / to transport / to ship / to forward sth.",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fordern"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2292,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fordern",
+        "befördern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-537",
+    "german": "überfordern",
+    "english": "to overwhelm / to overexert / to overstrain / to overcharge",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fordern"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2295,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fordern",
+        "überfordern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-538",
+    "german": "fördern",
+    "english": "to encourage / to foster / to enhance / to boost #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "fordern"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2297,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fordern",
+        "fördern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-539",
+    "german": "fressen",
+    "english": "to eat like a pig / to devour",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2306,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "fressen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-540",
+    "german": "frittieren",
+    "english": "to deep fry #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2309,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "frittieren"
+      ]
+    }
+  },
+  {
+    "id": "remnote-541",
+    "german": "füllen",
+    "english": "to fill  #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2312,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "füllen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-542",
+    "german": "erfüllen",
+    "english": "to fulfill #verben",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "tags": [
+      "füllen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2316,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen",
+        "füllen",
+        "erfüllen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-543",
+    "german": "- Avoided infinite recursion --     - furzen",
+    "english": "to fart",
+    "category": "- Avoided infinite recursion --     - dienen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2323,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen"
+      ]
+    }
+  }
+]

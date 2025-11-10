@@ -1,0 +1,47 @@
+[
+  {
+    "id": "remnote-230",
+    "german": "zutiefst",
+    "english": "deeply",
+    "category": "- Avoided infinite recursion --         - zuständigen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 473,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - zuständigen",
+        null,
+        "zutiefst"
+      ]
+    }
+  },
+  {
+    "id": "remnote-231",
+    "german": "zwangsläufig",
+    "english": "inevitably",
+    "category": "- Avoided infinite recursion --         - zuständigen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 474,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - zuständigen",
+        null,
+        "zwangsläufig"
+      ]
+    }
+  },
+  {
+    "id": "remnote-232",
+    "german": "zweifellos",
+    "english": "undoubtedly",
+    "category": "- Avoided infinite recursion --         - zuständigen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 475,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - zuständigen",
+        null,
+        "zweifellos"
+      ]
+    }
+  }
+]

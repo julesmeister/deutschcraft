@@ -1,0 +1,18 @@
+[
+  {"german": "Computer", "english": "computer"},
+  {"german": "Handy", "english": "mobile phone"},
+  {"german": "Internet", "english": "internet"},
+  {"german": "E-Mail", "english": "email"},
+  {"german": "Laptop", "english": "laptop"},
+  {"german": "Tablet", "english": "tablet"},
+  {"german": "Tastatur", "english": "keyboard"},
+  {"german": "Maus", "english": "mouse"},
+  {"german": "Bildschirm", "english": "screen / monitor"},
+  {"german": "Website", "english": "website"},
+  {"german": "App", "english": "app"},
+  {"german": "Passwort", "english": "password"},
+  {"german": "Drucker", "english": "printer"},
+  {"german": "Datei", "english": "file"},
+  {"german": "speichern", "english": "to save"},
+  {"german": "herunterladen", "english": "to download"}
+]

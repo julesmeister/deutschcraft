@@ -1,0 +1,17 @@
+[
+  {"german": "Wirtschaft", "english": "economy"},
+  {"german": "Konjunktur", "english": "economic situation / business cycle"},
+  {"german": "Inflation", "english": "inflation"},
+  {"german": "Rezession", "english": "recession"},
+  {"german": "Investition", "english": "investment"},
+  {"german": "Rendite", "english": "return / yield"},
+  {"german": "Verschuldung", "english": "debt / indebtedness"},
+  {"german": "Haushalt", "english": "budget / household"},
+  {"german": "Steuer", "english": "tax"},
+  {"german": "Umsatz", "english": "turnover / revenue"},
+  {"german": "Gewinn", "english": "profit / gain"},
+  {"german": "Verlust", "english": "loss"},
+  {"german": "Wettbewerb", "english": "competition"},
+  {"german": "Markt", "english": "market"},
+  {"german": "Angebot", "english": "supply / offer"}
+]

@@ -1,0 +1,17 @@
+[
+  {"german": "Hose", "english": "pants"},
+  {"german": "Hemd", "english": "shirt"},
+  {"german": "Kleid", "english": "dress"},
+  {"german": "Schuhe", "english": "shoes"},
+  {"german": "Jacke", "english": "jacket"},
+  {"german": "Rock", "english": "skirt"},
+  {"german": "Pullover", "english": "sweater / pullover"},
+  {"german": "T-Shirt", "english": "t-shirt"},
+  {"german": "Mantel", "english": "coat"},
+  {"german": "Mütze", "english": "cap / hat"},
+  {"german": "Schal", "english": "scarf"},
+  {"german": "Handschuhe", "english": "gloves"},
+  {"german": "Socken", "english": "socks"},
+  {"german": "Hut", "english": "hat"},
+  {"german": "Gürtel", "english": "belt"}
+]

@@ -1,0 +1,17 @@
+[
+  {"german": "beginnen", "english": "to begin"},
+  {"german": "enden", "english": "to end"},
+  {"german": "öffnen", "english": "to open"},
+  {"german": "schließen", "english": "to close"},
+  {"german": "legen", "english": "to lay / to put"},
+  {"german": "stellen", "english": "to place / to put (upright)"},
+  {"german": "hängen", "english": "to hang"},
+  {"german": "setzen", "english": "to set / to place"},
+  {"german": "stecken", "english": "to put / to stick"},
+  {"german": "werfen", "english": "to throw"},
+  {"german": "ziehen", "english": "to pull"},
+  {"german": "drücken", "english": "to push / to press"},
+  {"german": "drehen", "english": "to turn / to rotate"},
+  {"german": "bewegen", "english": "to move"},
+  {"german": "ändern", "english": "to change"}
+]

@@ -1,0 +1,165 @@
+{
+  "level": "B1",
+  "categories": [
+    {
+      "id": "media-news",
+      "name": "Media & News",
+      "icon": "📰",
+      "description": "Zeitung, Nachrichten, berichten, Artikel, Journalist, Presse",
+      "examples": ["Zeitung", "Nachrichten", "Bericht", "Artikel", "Journalist", "Presse"],
+      "priority": 1
+    },
+    {
+      "id": "journalism-reporting",
+      "name": "Journalism & Reporting",
+      "icon": "🎙️",
+      "description": "Interview, Schlagzeile, Quelle, Redakteur, journalism terms",
+      "examples": ["Interview", "Schlagzeile", "Quelle", "Redakteur", "Auflage", "Medium"],
+      "priority": 2
+    },
+    {
+      "id": "politics-society",
+      "name": "Politics & Government",
+      "icon": "🏛️",
+      "description": "Regierung, Wahl, Politik, Bürger, Partei, Demokratie",
+      "examples": ["Regierung", "Wahl", "Politik", "Bürger", "Partei", "Demokratie"],
+      "priority": 3
+    },
+    {
+      "id": "civic-life",
+      "name": "Civic Life & Rights",
+      "icon": "🗳️",
+      "description": "Recht, Pflicht, Stimme, Gesetz, civic responsibilities",
+      "examples": ["Recht", "Pflicht", "Stimme", "wählen", "Abstimmung", "Verfassung"],
+      "priority": 4
+    },
+    {
+      "id": "culture-arts",
+      "name": "Culture & Arts",
+      "icon": "🎭",
+      "description": "Kunst, Museum, Theater, Ausstellung, Konzert, Galerie",
+      "examples": ["Kunst", "Museum", "Theater", "Ausstellung", "Konzert", "Galerie"],
+      "priority": 5
+    },
+    {
+      "id": "music-performance",
+      "name": "Music & Performance",
+      "icon": "🎵",
+      "description": "Orchester, Komponist, Oper, Bühne, musical terms",
+      "examples": ["Orchester", "Komponist", "Oper", "Bühne", "Sänger", "Instrument"],
+      "priority": 6
+    },
+    {
+      "id": "environment",
+      "name": "Environment & Climate",
+      "icon": "🌍",
+      "description": "Umwelt, Klima, Klimawandel, recyceln, Energie, Naturschutz",
+      "examples": ["Umwelt", "Klima", "Klimawandel", "recyceln", "Energie", "Verschmutzung"],
+      "priority": 7
+    },
+    {
+      "id": "sustainability",
+      "name": "Sustainability & Green Living",
+      "icon": "♻️",
+      "description": "nachhaltig, erneuerbar, Müll, Ressourcen, eco-friendly terms",
+      "examples": ["nachhaltig", "erneuerbar", "Müll", "Ressourcen", "Abfall", "Plastik"],
+      "priority": 8
+    },
+    {
+      "id": "business-economy",
+      "name": "Business & Economy",
+      "icon": "💰",
+      "description": "Wirtschaft, Unternehmen, Markt, Kunde, Angebot, Nachfrage",
+      "examples": ["Wirtschaft", "Unternehmen", "Markt", "Kunde", "Angebot", "Nachfrage"],
+      "priority": 9
+    },
+    {
+      "id": "finance-banking",
+      "name": "Finance & Banking",
+      "icon": "🏦",
+      "description": "Bank, Konto, Kredit, Zinsen, Investition, financial terms",
+      "examples": ["Bank", "Konto", "Kredit", "Zinsen", "Investition", "Aktie"],
+      "priority": 10
+    },
+    {
+      "id": "abstract-concepts",
+      "name": "Abstract Concepts",
+      "icon": "💭",
+      "description": "Meinung, Erfahrung, Möglichkeit, Problem, Lösung, Idee",
+      "examples": ["Meinung", "Erfahrung", "Möglichkeit", "Problem", "Lösung", "Idee"],
+      "priority": 11
+    },
+    {
+      "id": "opinions-arguments",
+      "name": "Opinions & Arguments",
+      "icon": "🗨️",
+      "description": "Argument, Diskussion, überzeugen, Standpunkt, debate vocabulary",
+      "examples": ["Argument", "Diskussion", "überzeugen", "Standpunkt", "behaupten", "kritisieren"],
+      "priority": 12
+    },
+    {
+      "id": "legal-administrative",
+      "name": "Legal & Administrative",
+      "icon": "⚖️",
+      "description": "Vertrag, Gesetz, Behörde, Formular, Antrag, Gericht",
+      "examples": ["Vertrag", "Gesetz", "Behörde", "Formular", "Antrag", "Gericht"],
+      "priority": 13
+    },
+    {
+      "id": "bureaucracy",
+      "name": "Bureaucracy & Documentation",
+      "icon": "📋",
+      "description": "Anmeldung, Bescheinigung, Dokument, Nachweis, official documents",
+      "examples": ["Anmeldung", "Bescheinigung", "Dokument", "Nachweis", "Unterschrift", "Stempel"],
+      "priority": 14
+    },
+    {
+      "id": "idioms-expressions",
+      "name": "Idioms & Expressions",
+      "icon": "💬",
+      "description": "in Ordnung, Bescheid sagen, sich Sorgen machen, common phrases",
+      "examples": ["in Ordnung", "Bescheid sagen", "sich Sorgen machen", "Recht haben", "es geht"],
+      "priority": 15
+    },
+    {
+      "id": "colloquial-phrases",
+      "name": "Colloquial Phrases",
+      "icon": "🗣️",
+      "description": "Ich meine, eigentlich, irgendwie, everyday conversational phrases",
+      "examples": ["Ich meine", "eigentlich", "irgendwie", "sozusagen", "halt", "eben"],
+      "priority": 16
+    },
+    {
+      "id": "technical",
+      "name": "Technical Vocabulary",
+      "icon": "🔧",
+      "description": "Gerät, Funktion, System, Prozess, Anwendung, Programm",
+      "examples": ["Gerät", "Funktion", "System", "Prozess", "Anwendung", "Programm"],
+      "priority": 17
+    },
+    {
+      "id": "digital-technology",
+      "name": "Digital Technology",
+      "icon": "💾",
+      "description": "Software, Hardware, Daten, Server, Cloud, digital terms",
+      "examples": ["Software", "Hardware", "Daten", "Server", "Cloud", "Download"],
+      "priority": 18
+    },
+    {
+      "id": "social-issues",
+      "name": "Social Issues",
+      "icon": "🤝",
+      "description": "Bildung, Gesundheit, Arbeitslosigkeit, Integration, Gleichberechtigung",
+      "examples": ["Bildung", "Gesundheit", "Arbeitslosigkeit", "Integration", "Armut", "Gleichberechtigung"],
+      "priority": 19
+    },
+    {
+      "id": "relationships-society",
+      "name": "Relationships & Society",
+      "icon": "👥",
+      "description": "Gemeinschaft, Beziehung, Vertrauen, Toleranz, social connections",
+      "examples": ["Gemeinschaft", "Beziehung", "Vertrauen", "Toleranz", "Respekt", "Solidarität"],
+      "priority": 20
+    }
+  ]
+}

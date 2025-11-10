@@ -1,0 +1,439 @@
+[
+  {
+    "id": "remnote-875",
+    "german": "verteidigen",
+    "english": "to defend sb. sth. / to advocate #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3906,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "verteidigen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-876",
+    "german": "verteilen",
+    "english": "to distribute",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3912,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "verteilen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-877",
+    "german": "vertreiben",
+    "english": "to dispel / to banish / to expel / to disperse / to distribute / to sell",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3914,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "vertreiben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-878",
+    "german": "verursachen",
+    "english": "to cause / to bring about #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3920,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "verursachen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-879",
+    "german": "verschweigen",
+    "english": "to withhold info / to conceal",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3929,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "verschweigen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-880",
+    "german": "verwandeln",
+    "english": "to transform  #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3931,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "verwandeln"
+      ]
+    }
+  },
+  {
+    "id": "remnote-881",
+    "german": "verweigern",
+    "english": "to refuse / to deny / to disallow #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3935,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "verweigern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-882",
+    "german": "bestreiten",
+    "english": "to deny / to dispute / to contest #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "tags": [
+      "verweigern"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3939,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "verweigern",
+        "bestreiten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-883",
+    "german": "verwechseln",
+    "english": "to confuse #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3946,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "verwechseln"
+      ]
+    }
+  },
+  {
+    "id": "remnote-884",
+    "german": "verweisen",
+    "english": "to refer to sb. #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3951,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "verweisen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-885",
+    "german": "verwenden",
+    "english": "to use #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3958,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "verwenden"
+      ]
+    }
+  },
+  {
+    "id": "remnote-886",
+    "german": "verwirklichen",
+    "english": "to materialize / to achieve / to realize sth. [hopes and dreams]  #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3965,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "verwirklichen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-887",
+    "german": "verwöhnen",
+    "english": "to spoil / to pamper / to indulge  #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3969,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "verwöhnen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-888",
+    "german": "verzeihen",
+    "english": "to forgive #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3973,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "verzeihen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-889",
+    "german": "verzichten",
+    "english": "to quit #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3978,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "verzichten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-890",
+    "german": "verzichten...auf",
+    "english": "to forgo / to relinquish / to renounce / do without / to give up",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "tags": [
+      "verzichten"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3981,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "verzichten",
+        "verzichten...auf"
+      ]
+    }
+  },
+  {
+    "id": "remnote-891",
+    "german": "vorhaben",
+    "english": "to plan #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3984,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "vorhaben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-892",
+    "german": "vorkommen",
+    "english": "to occur / to happen / to appear / to exist #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3989,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "vorkommen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-893",
+    "german": "So etwas ist mir noch nie vorgekommen!",
+    "english": "I have never encountered anything like this before!",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "tags": [
+      "vorkommen",
+      "[perfekt]();;Er ist vorgekommen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3993,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "vorkommen",
+        "[perfekt]();;Er ist vorgekommen",
+        "So etwas ist mir noch nie vorgekommen!"
+      ]
+    }
+  },
+  {
+    "id": "remnote-894",
+    "german": "vorlegen",
+    "english": "to submit / to present #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3995,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "vorlegen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-895",
+    "german": "vorschlagen",
+    "english": "to suggest / to propose",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4002,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "vorschlagen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-896",
+    "german": "wachsen",
+    "english": "to grow",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4006,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "wachsen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-897",
+    "german": "wagen",
+    "english": "to attempt / to dare #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4011,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "wagen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-898",
+    "german": "wahrnehmen",
+    "english": "to perceive #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4016,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "wahrnehmen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-899",
+    "german": "sich wälzen",
+    "english": "to roll",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4021,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "sich wälzen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-900",
+    "german": "wehtun",
+    "english": "to hurt / to ache",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4025,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "wehtun"
+      ]
+    }
+  },
+  {
+    "id": "remnote-901",
+    "german": "werben",
+    "english": "to advertise / to woo / to recruit",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4028,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "werben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-902",
+    "german": "werfen",
+    "english": "to throw / to toss",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4035,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "werfen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-903",
+    "german": "wegwerfen",
+    "english": "to throw away / to discard #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "tags": [
+      "werfen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4041,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - verstecken",
+        "werfen",
+        "wegwerfen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-904",
+    "german": "- Avoided infinite recursion --     - wetten",
+    "english": "to bet  #verben",
+    "category": "- Avoided infinite recursion --     - verstecken",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4049,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - wetten"
+      ]
+    }
+  }
+]

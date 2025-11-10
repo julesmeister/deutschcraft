@@ -1,0 +1,457 @@
+{
+  "categories": {
+    "A1": [
+      {
+        "id": "greetings-introductions",
+        "name": "Greetings & Introductions",
+        "icon": "👋",
+        "description": "Guten Tag, Hallo, introducing yourself and others",
+        "priority": 1
+      },
+      {
+        "id": "numbers-time",
+        "name": "Numbers & Time",
+        "icon": "🕐",
+        "description": "Numbers 1-100, days, months, time expressions",
+        "priority": 2
+      },
+      {
+        "id": "family",
+        "name": "Family & People",
+        "icon": "👨‍👩‍👧‍👦",
+        "description": "Mutter, Vater, Schwester, Bruder, family members",
+        "priority": 3
+      },
+      {
+        "id": "house-rooms",
+        "name": "House & Rooms",
+        "icon": "🏠",
+        "description": "Haus, Zimmer, Küche, Bad, rooms and furniture",
+        "priority": 4
+      },
+      {
+        "id": "food-drinks",
+        "name": "Food & Drinks",
+        "icon": "🍽️",
+        "description": "Brot, Wasser, Kaffee, Apfel, basic foods and drinks",
+        "priority": 5
+      },
+      {
+        "id": "colors-shapes",
+        "name": "Colors & Shapes",
+        "icon": "🎨",
+        "description": "rot, blau, grün, gelb, basic colors and shapes",
+        "priority": 6
+      },
+      {
+        "id": "weather",
+        "name": "Weather",
+        "icon": "☀️",
+        "description": "Sonne, Regen, kalt, warm, weather expressions",
+        "priority": 7
+      },
+      {
+        "id": "clothing",
+        "name": "Clothing",
+        "icon": "👔",
+        "description": "Hose, Hemd, Kleid, Schuhe, basic clothing items",
+        "priority": 8
+      },
+      {
+        "id": "shopping",
+        "name": "Shopping",
+        "icon": "🛍️",
+        "description": "kaufen, bezahlen, Euro, prices and shopping basics",
+        "priority": 9
+      },
+      {
+        "id": "transport",
+        "name": "Transport",
+        "icon": "🚗",
+        "description": "Bus, Zug, Auto, basic transportation vocabulary",
+        "priority": 10
+      },
+      {
+        "id": "common-verbs",
+        "name": "Common Verbs",
+        "icon": "🏃",
+        "description": "sein, haben, gehen, kommen, machen - essential verbs",
+        "priority": 11
+      },
+      {
+        "id": "daily-life",
+        "name": "Daily Life",
+        "icon": "⏰",
+        "description": "Daily routines, simple plans, expressing likes/dislikes",
+        "priority": 12
+      }
+    ],
+    "A2": [
+      {
+        "id": "work-jobs",
+        "name": "Work & Jobs",
+        "icon": "💼",
+        "description": "Arzt, Lehrer, Büro, Firma - professions and workplace",
+        "priority": 1
+      },
+      {
+        "id": "travel",
+        "name": "Travel & Transportation",
+        "icon": "✈️",
+        "description": "Zug, Flughafen, Bahnhof, Ticket, Urlaub, booking and tickets",
+        "priority": 2
+      },
+      {
+        "id": "health-body",
+        "name": "Health & Body",
+        "icon": "🏥",
+        "description": "Kopf, Arm, Bein, Arzt, Krankenhaus, health complaints",
+        "priority": 3
+      },
+      {
+        "id": "hobbies-free-time",
+        "name": "Hobbies & Free Time",
+        "icon": "🎮",
+        "description": "Sport, Musik, lesen, schwimmen, leisure activities",
+        "priority": 4
+      },
+      {
+        "id": "technology",
+        "name": "Technology & Media",
+        "icon": "💻",
+        "description": "Computer, Handy, Internet, E-Mail, social media",
+        "priority": 5
+      },
+      {
+        "id": "shopping-money",
+        "name": "Shopping & Money",
+        "icon": "🛍️",
+        "description": "kaufen, bezahlen, Euro, teuer, billig, money and prices",
+        "priority": 6
+      },
+      {
+        "id": "time-expressions",
+        "name": "Time Expressions",
+        "icon": "⏰",
+        "description": "gestern, heute, morgen, später, time references",
+        "priority": 7
+      },
+      {
+        "id": "education",
+        "name": "School & Education",
+        "icon": "📚",
+        "description": "Schule, Student, lernen, Prüfung, educational terms",
+        "priority": 8
+      },
+      {
+        "id": "nature-animals",
+        "name": "Nature & Environment",
+        "icon": "🌳",
+        "description": "Baum, Blume, Park, See, animals and environment",
+        "priority": 9
+      },
+      {
+        "id": "emotions",
+        "name": "Feelings & Emotions",
+        "icon": "😊",
+        "description": "glücklich, traurig, müde, wütend, emotional states",
+        "priority": 10
+      }
+    ],
+    "B1": [
+      {
+        "id": "media-news",
+        "name": "Media & News",
+        "icon": "📰",
+        "description": "Zeitung, Nachrichten, berichten, Artikel - media vocabulary",
+        "priority": 1
+      },
+      {
+        "id": "politics-society",
+        "name": "Politics & Society",
+        "icon": "🏛️",
+        "description": "Regierung, Wahl, Politik, Bürger, government and civic life",
+        "priority": 2
+      },
+      {
+        "id": "culture-arts",
+        "name": "Culture & Arts",
+        "icon": "🎭",
+        "description": "Kunst, Museum, Theater, Ausstellung, cultural activities",
+        "priority": 3
+      },
+      {
+        "id": "environment",
+        "name": "Environment & Sustainability",
+        "icon": "🌍",
+        "description": "Umwelt, Klima, recyceln, Energie, environmental issues",
+        "priority": 4
+      },
+      {
+        "id": "business-economy",
+        "name": "Economy & Business",
+        "icon": "💰",
+        "description": "Wirtschaft, Unternehmen, Markt, Kunde, business terms",
+        "priority": 5
+      },
+      {
+        "id": "abstract-concepts",
+        "name": "Abstract Concepts",
+        "icon": "💭",
+        "description": "Meinung, Erfahrung, Möglichkeit, Problem, abstract ideas",
+        "priority": 6
+      },
+      {
+        "id": "legal-administrative",
+        "name": "Legal & Administrative",
+        "icon": "⚖️",
+        "description": "Vertrag, Gesetz, Behörde, Formular, legal vocabulary",
+        "priority": 7
+      },
+      {
+        "id": "idioms-expressions",
+        "name": "Idioms & Expressions",
+        "icon": "💬",
+        "description": "in Ordnung, Bescheid sagen, sich Sorgen machen - common phrases",
+        "priority": 8
+      },
+      {
+        "id": "technical",
+        "name": "Technical Vocabulary",
+        "icon": "🔧",
+        "description": "Gerät, Funktion, System, Prozess, technical terms",
+        "priority": 9
+      },
+      {
+        "id": "social-issues",
+        "name": "Social Issues",
+        "icon": "🤝",
+        "description": "Bildung, Gesundheit, Arbeitslosigkeit, Integration, societal topics",
+        "priority": 10
+      }
+    ],
+    "B2": [
+      {
+        "id": "academic-language",
+        "name": "Academic Language",
+        "icon": "🎓",
+        "description": "Hypothese, These, Argumentation, Fazit - scholarly vocabulary",
+        "priority": 1
+      },
+      {
+        "id": "scientific-technical",
+        "name": "Scientific & Technical",
+        "icon": "🔬",
+        "description": "Forschung, Entwicklung, Methode, Analyse, research terms",
+        "priority": 2
+      },
+      {
+        "id": "advanced-business",
+        "name": "Advanced Business",
+        "icon": "💼",
+        "description": "Strategie, Konkurrenz, Gewinn, Verlust, business strategy",
+        "priority": 3
+      },
+      {
+        "id": "philosophy-ethics",
+        "name": "Philosophy & Ethics",
+        "icon": "🤔",
+        "description": "Moral, Ethik, Wert, Prinzip, philosophical concepts",
+        "priority": 4
+      },
+      {
+        "id": "literature",
+        "name": "Literature & Literary Devices",
+        "icon": "📖",
+        "description": "Roman, Metapher, Stil, Interpretation, literary analysis",
+        "priority": 5
+      },
+      {
+        "id": "psychology-sociology",
+        "name": "Psychology & Sociology",
+        "icon": "🧠",
+        "description": "Verhalten, Gesellschaft, Einstellung, Identität, social sciences",
+        "priority": 6
+      },
+      {
+        "id": "global-issues",
+        "name": "Global Issues",
+        "icon": "🌍",
+        "description": "Globalisierung, Migration, Konflikt, Entwicklung, world topics",
+        "priority": 7
+      },
+      {
+        "id": "specialized-professional",
+        "name": "Specialized Professional",
+        "icon": "💡",
+        "description": "Field-specific terminology, professional jargon",
+        "priority": 8
+      },
+      {
+        "id": "regional-stylistic",
+        "name": "Regional & Stylistic",
+        "icon": "🎨",
+        "description": "Regional variations, stylistic differences, registers",
+        "priority": 9
+      },
+      {
+        "id": "nuanced-abstract",
+        "name": "Nuanced Abstract Ideas",
+        "icon": "✨",
+        "description": "Complex abstract expressions, subtle distinctions",
+        "priority": 10
+      }
+    ],
+    "C1": [
+      {
+        "id": "specialized-fields",
+        "name": "Specialized Fields",
+        "icon": "🎓",
+        "description": "Domain-specific terminology, specialized vocabulary",
+        "priority": 1
+      },
+      {
+        "id": "abstract-concepts",
+        "name": "Abstract Concepts",
+        "icon": "💡",
+        "description": "Complex abstract ideas, theoretical concepts",
+        "priority": 2
+      },
+      {
+        "id": "literary-language",
+        "name": "Literary Language",
+        "icon": "📖",
+        "description": "Literary devices, stylistic features, advanced writing",
+        "priority": 3
+      },
+      {
+        "id": "advanced-politics",
+        "name": "Advanced Politics",
+        "icon": "🏛️",
+        "description": "Political systems, governance, policy analysis",
+        "priority": 4
+      },
+      {
+        "id": "legal-terminology",
+        "name": "Legal Terminology",
+        "icon": "⚖️",
+        "description": "Legal concepts, judiciary system, law terminology",
+        "priority": 5
+      },
+      {
+        "id": "medical-science",
+        "name": "Medical Science",
+        "icon": "⚕️",
+        "description": "Medical terminology, healthcare systems, diagnoses",
+        "priority": 6
+      },
+      {
+        "id": "advanced-technology",
+        "name": "Advanced Technology",
+        "icon": "🔬",
+        "description": "Tech innovations, AI, digital transformation",
+        "priority": 7
+      },
+      {
+        "id": "linguistics-language",
+        "name": "Linguistics & Language",
+        "icon": "🔤",
+        "description": "Language structure, linguistic concepts, grammar",
+        "priority": 8
+      },
+      {
+        "id": "critical-analysis",
+        "name": "Critical Analysis",
+        "icon": "🔍",
+        "description": "Analytical vocabulary, critique, evaluation",
+        "priority": 9
+      },
+      {
+        "id": "sophisticated-expression",
+        "name": "Sophisticated Expression",
+        "icon": "✨",
+        "description": "Nuanced expressions, subtle distinctions, idioms",
+        "priority": 10
+      }
+    ],
+    "C2": [
+      {
+        "id": "idiomatic-expressions",
+        "name": "Idiomatic Expressions",
+        "icon": "🎭",
+        "description": "Advanced idioms, colloquialisms, cultural references",
+        "priority": 1
+      },
+      {
+        "id": "register-style",
+        "name": "Register & Style",
+        "icon": "🎨",
+        "description": "Formal/informal registers, stylistic variations",
+        "priority": 2
+      },
+      {
+        "id": "specialized-academic",
+        "name": "Specialized Academic",
+        "icon": "🎓",
+        "description": "Highly technical academic vocabulary, research",
+        "priority": 3
+      },
+      {
+        "id": "nuanced-meanings",
+        "name": "Nuanced Meanings",
+        "icon": "🔬",
+        "description": "Subtle semantic distinctions, connotations",
+        "priority": 4
+      },
+      {
+        "id": "cultural-references",
+        "name": "Cultural References",
+        "icon": "🌍",
+        "description": "Cultural allusions, historical references, context",
+        "priority": 5
+      },
+      {
+        "id": "advanced-rhetoric",
+        "name": "Advanced Rhetoric",
+        "icon": "🗣️",
+        "description": "Rhetorical devices, persuasive language, eloquence",
+        "priority": 6
+      },
+      {
+        "id": "professional-jargon",
+        "name": "Professional Jargon",
+        "icon": "💼",
+        "description": "Industry-specific terms, professional vernacular",
+        "priority": 7
+      },
+      {
+        "id": "archaic-formal",
+        "name": "Archaic & Formal",
+        "icon": "📜",
+        "description": "Archaic terms, highly formal language, classical",
+        "priority": 8
+      },
+      {
+        "id": "wordplay-creativity",
+        "name": "Wordplay & Creativity",
+        "icon": "🎪",
+        "description": "Puns, wordplay, creative language use",
+        "priority": 9
+      },
+      {
+        "id": "expert-discourse",
+        "name": "Expert Discourse",
+        "icon": "🏆",
+        "description": "Expert-level discourse, sophisticated argumentation",
+        "priority": 10
+      }
+    ]
+  },
+  "metadata": {
+    "version": "2.0.0",
+    "lastUpdated": "2025-11-10",
+    "description": "Vocabulary categories organized by CEFR level, aligned with syllabusData.ts",
+    "totalCategories": 62,
+    "note": "Categories now include German vocabulary examples matching the syllabus"
+  }
+}

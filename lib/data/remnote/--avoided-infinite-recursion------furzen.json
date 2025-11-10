@@ -1,0 +1,394 @@
+[
+  {
+    "id": "remnote-544",
+    "german": "sich fürchten",
+    "english": "to be afraid",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2325,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "sich fürchten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-545",
+    "german": "garnieren",
+    "english": "to decorate  #verben",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2332,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "garnieren"
+      ]
+    }
+  },
+  {
+    "id": "remnote-546",
+    "german": "garen",
+    "english": "to cook #verben",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2337,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "garen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-547",
+    "german": "abgeben",
+    "english": "to provide / {{to emit}} / to submit / to deliver / {{to dispense}}  / to handover #verben",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2343,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "abgeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-548",
+    "german": "angeben",
+    "english": "to state / to quote / to specify / to indicate #verben",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2352,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "angeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-549",
+    "german": "aufgeben",
+    "english": "to give up",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2357,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "aufgeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-550",
+    "german": "ausgeben",
+    "english": "to dispense / to spend / to issue",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2360,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "ausgeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-551",
+    "german": "verbringen",
+    "english": "to spend",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben",
+      "ausgeben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2365,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "ausgeben",
+        "verbringen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-552",
+    "german": "eingeben",
+    "english": "to type in",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2371,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "eingeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-553",
+    "german": "ergeben",
+    "english": "to result in / to yield #verben",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2373,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "ergeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-554",
+    "german": "mitgeben",
+    "english": "to give away",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2379,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "mitgeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-555",
+    "german": "Ich werde dir einen [fähigen]() [Verwalter ]() mitgeben.",
+    "english": "I will give you a capable administrator.",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben",
+      "mitgeben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2381,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "mitgeben",
+        "Ich werde dir einen [fähigen]() [Verwalter ]() mitgeben."
+      ]
+    }
+  },
+  {
+    "id": "remnote-556",
+    "german": "nachgeben",
+    "english": "to give in / to yield / to induldge / to succumb to sth./sb. / to budge / to cave in",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2382,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "nachgeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-557",
+    "german": "vergeben",
+    "english": "to forgive #verben",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2387,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "vergeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-558",
+    "german": "vorgeben",
+    "english": "to pretend #verben",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2390,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "vorgeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-559",
+    "german": "weitergeben",
+    "english": "to pass sth. along / to transfer",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2397,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "weitergeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-560",
+    "german": "wiedergeben",
+    "english": "to give back / to reproduce",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2399,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "wiedergeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-561",
+    "german": "übergeben",
+    "english": "to handover #verben",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2402,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "übergeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-562",
+    "german": "sich übergeben",
+    "english": "to vomit",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben",
+      "übergeben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2409,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "übergeben",
+        "sich übergeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-563",
+    "german": "Also übergeben Sie ihn {{an}} uns.",
+    "english": "So hand it over to us.",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben",
+      "übergeben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2411,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "übergeben",
+        "Also übergeben Sie ihn {{an}} uns."
+      ]
+    }
+  },
+  {
+    "id": "remnote-564",
+    "german": "umgeben",
+    "english": "to surround #verben",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2412,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "umgeben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-565",
+    "german": "zugeben",
+    "english": "to admit / to confess / to own up to sth. / to concede sth. / to add #verben",
+    "category": "- Avoided infinite recursion --     - furzen",
+    "tags": [
+      "geben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2419,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - furzen",
+        "geben",
+        "zugeben"
+      ]
+    }
+  }
+]

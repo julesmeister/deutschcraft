@@ -1,0 +1,18 @@
+[
+  {"german": "Büro", "english": "office"},
+  {"german": "Firma", "english": "company"},
+  {"german": "Arbeit", "english": "work"},
+  {"german": "arbeiten", "english": "to work"},
+  {"german": "Kollege", "english": "colleague"},
+  {"german": "Chef", "english": "boss"},
+  {"german": "Mitarbeiter", "english": "employee / coworker"},
+  {"german": "Gehalt", "english": "salary"},
+  {"german": "Vertrag", "english": "contract"},
+  {"german": "Besprechung", "english": "meeting"},
+  {"german": "Projekt", "english": "project"},
+  {"german": "Aufgabe", "english": "task / assignment"},
+  {"german": "Termin", "english": "appointment"},
+  {"german": "Pause", "english": "break"},
+  {"german": "Urlaub", "english": "vacation / leave"},
+  {"german": "Schreibtisch", "english": "desk"}
+]

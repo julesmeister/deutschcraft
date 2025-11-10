@@ -1,0 +1,302 @@
+[
+  {
+    "id": "syllabus-a1-10075",
+    "german": "Mutter",
+    "english": "mother",
+    "category": "Family",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Family",
+        "Mutter"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10076",
+    "german": "Vater",
+    "english": "father",
+    "category": "Family",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Family",
+        "Vater"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10077",
+    "german": "Bruder",
+    "english": "brother",
+    "category": "Family",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Family",
+        "Bruder"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10078",
+    "german": "Schwester",
+    "english": "sister",
+    "category": "Family",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Family",
+        "Schwester"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10079",
+    "german": "Kind",
+    "english": "child",
+    "category": "Family",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Family",
+        "Kind"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10080",
+    "german": "Eltern",
+    "english": "parents",
+    "category": "Family",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Family",
+        "Eltern"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10081",
+    "german": "Familie",
+    "english": "family",
+    "category": "Family",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Family",
+        "Familie"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10082",
+    "german": "Großmutter",
+    "english": "grandmother",
+    "category": "Family",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Family",
+        "Großmutter"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10083",
+    "german": "Großvater",
+    "english": "grandfather",
+    "category": "Family",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Family",
+        "Großvater"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10084",
+    "german": "Oma",
+    "english": "grandma",
+    "category": "Family",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Family",
+        "Oma"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10085",
+    "german": "Opa",
+    "english": "grandpa",
+    "category": "Family",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Family",
+        "Opa"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10086",
+    "german": "Tante",
+    "english": "aunt",
+    "category": "Family",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Family",
+        "Tante"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10087",
+    "german": "Onkel",
+    "english": "uncle",
+    "category": "Family",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Family",
+        "Onkel"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10088",
+    "german": "Cousin",
+    "english": "cousin (male)",
+    "category": "Family",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Family",
+        "Cousin"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10089",
+    "german": "Cousine",
+    "english": "cousin (female)",
+    "category": "Family",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Family",
+        "Cousine"
+      ]
+    }
+  }
+]

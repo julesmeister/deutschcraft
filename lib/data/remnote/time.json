@@ -1,0 +1,302 @@
+[
+  {
+    "id": "syllabus-a1-10291",
+    "german": "Montag",
+    "english": "Monday",
+    "category": "Time",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Time",
+        "Montag"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10292",
+    "german": "Dienstag",
+    "english": "Tuesday",
+    "category": "Time",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Time",
+        "Dienstag"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10293",
+    "german": "Mittwoch",
+    "english": "Wednesday",
+    "category": "Time",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Time",
+        "Mittwoch"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10294",
+    "german": "Donnerstag",
+    "english": "Thursday",
+    "category": "Time",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Time",
+        "Donnerstag"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10295",
+    "german": "Freitag",
+    "english": "Friday",
+    "category": "Time",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Time",
+        "Freitag"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10296",
+    "german": "Samstag",
+    "english": "Saturday",
+    "category": "Time",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Time",
+        "Samstag"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10297",
+    "german": "Sonntag",
+    "english": "Sunday",
+    "category": "Time",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Time",
+        "Sonntag"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10298",
+    "german": "heute",
+    "english": "today",
+    "category": "Time",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Time",
+        "heute"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10299",
+    "german": "morgen",
+    "english": "tomorrow",
+    "category": "Time",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Time",
+        "morgen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10300",
+    "german": "gestern",
+    "english": "yesterday",
+    "category": "Time",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Time",
+        "gestern"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10301",
+    "german": "Woche",
+    "english": "week",
+    "category": "Time",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Time",
+        "Woche"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10302",
+    "german": "Monat",
+    "english": "month",
+    "category": "Time",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Time",
+        "Monat"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10303",
+    "german": "Jahr",
+    "english": "year",
+    "category": "Time",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Time",
+        "Jahr"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10304",
+    "german": "Tag",
+    "english": "day",
+    "category": "Time",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Time",
+        "Tag"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10305",
+    "german": "Uhr",
+    "english": "clock / o'clock",
+    "category": "Time",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Time",
+        "Uhr"
+      ]
+    }
+  }
+]

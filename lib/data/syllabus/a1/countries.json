@@ -1,0 +1,17 @@
+[
+  {"german": "Deutschland", "english": "Germany"},
+  {"german": "Österreich", "english": "Austria"},
+  {"german": "Schweiz", "english": "Switzerland"},
+  {"german": "Frankreich", "english": "France"},
+  {"german": "Italien", "english": "Italy"},
+  {"german": "Spanien", "english": "Spain"},
+  {"german": "England", "english": "England"},
+  {"german": "Amerika", "english": "America"},
+  {"german": "Russland", "english": "Russia"},
+  {"german": "China", "english": "China"},
+  {"german": "Japan", "english": "Japan"},
+  {"german": "Indien", "english": "India"},
+  {"german": "Polen", "english": "Poland"},
+  {"german": "deutsch", "english": "German (adjective)"},
+  {"german": "englisch", "english": "English (adjective)"}
+]

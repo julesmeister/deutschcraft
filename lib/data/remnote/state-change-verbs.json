@@ -1,0 +1,932 @@
+[
+  {
+    "id": "syllabus-a1-10276",
+    "german": "werden",
+    "english": "to become / to get",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "State Change Verbs",
+        "werden"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10277",
+    "german": "sein",
+    "english": "to be",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "State Change Verbs",
+        "sein"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10278",
+    "german": "bleiben",
+    "english": "to stay / to remain",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "State Change Verbs",
+        "bleiben"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10279",
+    "german": "kommen",
+    "english": "to come",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "State Change Verbs",
+        "kommen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10280",
+    "german": "gehen",
+    "english": "to go",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "State Change Verbs",
+        "gehen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10281",
+    "german": "ankommen",
+    "english": "to arrive",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "State Change Verbs",
+        "ankommen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10282",
+    "german": "weggehen",
+    "english": "to leave / to go away",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "State Change Verbs",
+        "weggehen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10283",
+    "german": "einschlafen",
+    "english": "to fall asleep",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "State Change Verbs",
+        "einschlafen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10284",
+    "german": "aufwachen",
+    "english": "to wake up",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "State Change Verbs",
+        "aufwachen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10285",
+    "german": "sterben",
+    "english": "to die",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "State Change Verbs",
+        "sterben"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10286",
+    "german": "wachsen",
+    "english": "to grow",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "State Change Verbs",
+        "wachsen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10287",
+    "german": "fallen",
+    "english": "to fall",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "State Change Verbs",
+        "fallen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10288",
+    "german": "aufstehen",
+    "english": "to get up / to stand up",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "State Change Verbs",
+        "aufstehen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10289",
+    "german": "sich setzen",
+    "english": "to sit down",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "State Change Verbs",
+        "sich setzen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10290",
+    "german": "sich hinlegen",
+    "english": "to lie down",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "State Change Verbs",
+        "sich hinlegen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10949",
+    "german": "werden zu",
+    "english": "to turn into / to become",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "werden zu"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10950",
+    "german": "sich verwandeln in",
+    "english": "to transform into",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "sich verwandeln in"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10951",
+    "german": "sich entwickeln",
+    "english": "to develop / to evolve",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "sich entwickeln"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10952",
+    "german": "sich verändern",
+    "english": "to change",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "sich verändern"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10953",
+    "german": "entstehen",
+    "english": "to arise / to come into being",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "entstehen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10954",
+    "german": "vergehen",
+    "english": "to pass / to elapse",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "vergehen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10955",
+    "german": "verschwinden",
+    "english": "to disappear",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "verschwinden"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10956",
+    "german": "erscheinen",
+    "english": "to appear",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "erscheinen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10957",
+    "german": "auftauchen",
+    "english": "to surface / to emerge",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "auftauchen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10958",
+    "german": "zunehmen",
+    "english": "to increase / to gain weight",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "zunehmen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10959",
+    "german": "abnehmen",
+    "english": "to decrease / to lose weight",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "abnehmen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10960",
+    "german": "ansteigen",
+    "english": "to rise / to increase",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "ansteigen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10961",
+    "german": "sinken",
+    "english": "to sink / to decrease",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "sinken"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10962",
+    "german": "steigen",
+    "english": "to rise / to climb",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "steigen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10963",
+    "german": "erwachen",
+    "english": "to awaken",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "erwachen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10964",
+    "german": "eintreten",
+    "english": "to enter / to occur",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "eintreten"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10965",
+    "german": "ausbrechen",
+    "english": "to break out / to erupt",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "ausbrechen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10966",
+    "german": "sich verschlechtern",
+    "english": "to worsen / to deteriorate",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "sich verschlechtern"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10967",
+    "german": "sich verbessern",
+    "english": "to improve",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "sich verbessern"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10968",
+    "german": "sich erholen",
+    "english": "to recover",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "sich erholen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10969",
+    "german": "erkranken",
+    "english": "to fall ill / to become sick",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "erkranken"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10970",
+    "german": "gesunden",
+    "english": "to recover / to get well",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "gesunden"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10971",
+    "german": "altern",
+    "english": "to age",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "altern"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10972",
+    "german": "reifen",
+    "english": "to mature / to ripen",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "reifen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10973",
+    "german": "wachsen",
+    "english": "to grow",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "wachsen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10974",
+    "german": "schrumpfen",
+    "english": "to shrink",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "schrumpfen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10975",
+    "german": "erröten",
+    "english": "to blush",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "erröten"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10976",
+    "german": "erblassen",
+    "english": "to turn pale",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "erblassen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10977",
+    "german": "erstarren",
+    "english": "to freeze / to stiffen",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "erstarren"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10978",
+    "german": "aufblühen",
+    "english": "to blossom / to flourish",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "State Change Verbs",
+        "aufblühen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-408",
+    "german": "bleiben",
+    "english": "to stay / to remain",
+    "category": "State Change Verbs",
+    "level": "A1",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1745,
+      "hierarchy": [
+        "Verbs",
+        "bleiben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-882",
+    "german": "wirken",
+    "english": "to seem / to appear / to affect #verben",
+    "category": "State Change Verbs",
+    "level": "B1",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4075,
+      "hierarchy": [
+        "Verbs",
+        "wirken"
+      ]
+    }
+  }
+]

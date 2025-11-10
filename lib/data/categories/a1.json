@@ -1,0 +1,165 @@
+{
+  "level": "A1",
+  "categories": [
+    {
+      "id": "greetings-introductions",
+      "name": "Greetings & Introductions",
+      "icon": "👋",
+      "description": "Guten Tag, Hallo, Auf Wiedersehen, introducing yourself",
+      "examples": ["Hallo", "Guten Tag", "Tschüss", "Auf Wiedersehen", "Guten Morgen"],
+      "priority": 1
+    },
+    {
+      "id": "personal-info",
+      "name": "Personal Information",
+      "icon": "📝",
+      "description": "Name, age, address, nationality, basic personal details",
+      "examples": ["Name", "Alter", "Adresse", "Nationalität", "Telefonnummer"],
+      "priority": 2
+    },
+    {
+      "id": "numbers-counting",
+      "name": "Numbers & Counting",
+      "icon": "🔢",
+      "description": "Numbers 1-100, prices, quantities, counting",
+      "examples": ["eins", "zwei", "drei", "zehn", "zwanzig", "hundert"],
+      "priority": 3
+    },
+    {
+      "id": "time-dates",
+      "name": "Time & Dates",
+      "icon": "🕐",
+      "description": "Days, months, time expressions, heute, morgen",
+      "examples": ["Montag", "Januar", "heute", "morgen", "Uhr", "Woche"],
+      "priority": 4
+    },
+    {
+      "id": "family",
+      "name": "Family Members",
+      "icon": "👨‍👩‍👧‍👦",
+      "description": "Mutter, Vater, Schwester, Bruder, family relationships",
+      "examples": ["Mutter", "Vater", "Schwester", "Bruder", "Oma", "Opa"],
+      "priority": 5
+    },
+    {
+      "id": "house-rooms",
+      "name": "House & Rooms",
+      "icon": "🏠",
+      "description": "Haus, Zimmer, Küche, Bad, rooms and parts of house",
+      "examples": ["Haus", "Wohnung", "Zimmer", "Küche", "Bad", "Schlafzimmer"],
+      "priority": 6
+    },
+    {
+      "id": "furniture",
+      "name": "Furniture & Objects",
+      "icon": "🛋️",
+      "description": "Tisch, Stuhl, Bett, common household furniture",
+      "examples": ["Tisch", "Stuhl", "Bett", "Sofa", "Schrank", "Lampe"],
+      "priority": 7
+    },
+    {
+      "id": "food-drinks",
+      "name": "Food & Drinks",
+      "icon": "🍽️",
+      "description": "Brot, Wasser, Kaffee, Apfel, basic foods and beverages",
+      "examples": ["Brot", "Wasser", "Kaffee", "Milch", "Apfel", "Käse"],
+      "priority": 8
+    },
+    {
+      "id": "meals-eating",
+      "name": "Meals & Eating",
+      "icon": "🍴",
+      "description": "Frühstück, Mittagessen, essen, trinken, meal times",
+      "examples": ["Frühstück", "Mittagessen", "Abendessen", "essen", "trinken"],
+      "priority": 9
+    },
+    {
+      "id": "colors-shapes",
+      "name": "Colors & Shapes",
+      "icon": "🎨",
+      "description": "rot, blau, grün, gelb, basic colors and shapes",
+      "examples": ["rot", "blau", "grün", "gelb", "schwarz", "weiß"],
+      "priority": 10
+    },
+    {
+      "id": "weather",
+      "name": "Weather & Seasons",
+      "icon": "☀️",
+      "description": "Sonne, Regen, kalt, warm, weather and seasons",
+      "examples": ["Sonne", "Regen", "Schnee", "kalt", "warm", "Sommer", "Winter"],
+      "priority": 11
+    },
+    {
+      "id": "clothing-basic",
+      "name": "Clothing Basics",
+      "icon": "👔",
+      "description": "Hose, Hemd, Kleid, Schuhe, basic clothing items",
+      "examples": ["Hose", "Hemd", "Kleid", "Schuhe", "Jacke", "T-Shirt"],
+      "priority": 12
+    },
+    {
+      "id": "body-parts",
+      "name": "Body Parts",
+      "icon": "💪",
+      "description": "Kopf, Hand, Fuß, basic body parts",
+      "examples": ["Kopf", "Auge", "Nase", "Mund", "Hand", "Fuß"],
+      "priority": 13
+    },
+    {
+      "id": "shopping-basics",
+      "name": "Shopping Basics",
+      "icon": "🛍️",
+      "description": "kaufen, bezahlen, Euro, kosten, basic shopping",
+      "examples": ["kaufen", "bezahlen", "kosten", "Euro", "Preis", "Geld"],
+      "priority": 14
+    },
+    {
+      "id": "transport",
+      "name": "Transportation",
+      "icon": "🚗",
+      "description": "Bus, Zug, Auto, Fahrrad, basic transportation",
+      "examples": ["Bus", "Zug", "Auto", "Fahrrad", "Straßenbahn", "U-Bahn"],
+      "priority": 15
+    },
+    {
+      "id": "directions-locations",
+      "name": "Directions & Locations",
+      "icon": "🗺️",
+      "description": "links, rechts, hier, dort, basic directions",
+      "examples": ["links", "rechts", "geradeaus", "hier", "dort", "wo"],
+      "priority": 16
+    },
+    {
+      "id": "common-verbs",
+      "name": "Common Verbs",
+      "icon": "🏃",
+      "description": "sein, haben, gehen, kommen, machen, essential verbs",
+      "examples": ["sein", "haben", "gehen", "kommen", "machen", "sagen"],
+      "priority": 17
+    },
+    {
+      "id": "daily-activities",
+      "name": "Daily Activities",
+      "icon": "⏰",
+      "description": "schlafen, essen, arbeiten, lernen, daily routines",
+      "examples": ["schlafen", "aufstehen", "essen", "arbeiten", "lernen", "spielen"],
+      "priority": 18
+    },
+    {
+      "id": "adjectives-basic",
+      "name": "Basic Adjectives",
+      "icon": "✨",
+      "description": "groß, klein, gut, schlecht, basic descriptive words",
+      "examples": ["groß", "klein", "gut", "schlecht", "schön", "alt", "neu"],
+      "priority": 19
+    },
+    {
+      "id": "question-words",
+      "name": "Question Words",
+      "icon": "❓",
+      "description": "wer, was, wo, wann, wie, warum, basic questions",
+      "examples": ["wer", "was", "wo", "wann", "wie", "warum", "welche"],
+      "priority": 20
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+[
+  {
+    "id": "remnote-374",
+    "german": "beweisen",
+    "english": "to prove / to demonstrate",
+    "category": "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1518,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+        null,
+        "beweisen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-375",
+    "german": "bestätigen",
+    "english": "to confirm / to verify / to acknowledge / to validate",
+    "category": "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1520,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+        null,
+        "bestätigen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-376",
+    "german": "bekräftigen",
+    "english": "to confirm / to reinforce / to affirm",
+    "category": "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+    "tags": [
+      "bestätigen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1521,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+        null,
+        "bestätigen",
+        "bekräftigen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-377",
+    "german": "berücksichtigen",
+    "english": "to consider / take into account",
+    "category": "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1523,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+        null,
+        "berücksichtigen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-378",
+    "german": "sich bewähren / nachweisen",
+    "english": "to prove",
+    "category": "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1529,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+        null,
+        "sich bewähren / nachweisen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-379",
+    "german": "der Nachweis",
+    "english": "{{verification}} | {{proof}}",
+    "category": "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+    "tags": [
+      "sich bewähren / nachweisen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1532,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+        null,
+        "sich bewähren / nachweisen",
+        "der Nachweis"
+      ]
+    }
+  },
+  {
+    "id": "remnote-380",
+    "german": "belohnen",
+    "english": "to reward #verben",
+    "category": "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1549,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+        "belohnen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-381",
+    "german": "sich bemühen",
+    "english": "to endeavor / to attempt / to strive #verben",
+    "category": "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1555,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+        "sich bemühen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-382",
+    "german": "benachrichtigen",
+    "english": "to notify  #verben",
+    "category": "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1559,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+        "benachrichtigen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-383",
+    "german": "beschleunigen",
+    "english": "to accelerate / to speed up  #verben",
+    "category": "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1563,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+        "beschleunigen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-384",
+    "german": "beschließen",
+    "english": "to resolve / to conclude / to decide",
+    "category": "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1567,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+        "beschließen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-385",
+    "german": "beschränken",
+    "english": "to limit / to restrict / to confine / to constrain  #verben",
+    "category": "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1571,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+        "beschränken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-386",
+    "german": "besetzen",
+    "english": "to occupy sth. / to cast a role / to staff; to fill a position #verben",
+    "category": "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1575,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+        "besetzen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-387",
+    "german": "- Avoided infinite recursion --     - bestaunen",
+    "english": "to gaze",
+    "category": "- Avoided infinite recursion --     - belegen←{{to prove}} / {{to occupy}} / {{to attend}} / {{to verify}} / {{to confirm}}  #verben",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1581,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - bestaunen"
+      ]
+    }
+  }
+]

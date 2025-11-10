@@ -1,0 +1,17 @@
+[
+  {"german": "Kartoffel", "english": "potato"},
+  {"german": "Tomate", "english": "tomato"},
+  {"german": "Gurke", "english": "cucumber"},
+  {"german": "Salat", "english": "lettuce / salad"},
+  {"german": "Karotte", "english": "carrot"},
+  {"german": "Zwiebel", "english": "onion"},
+  {"german": "Paprika", "english": "bell pepper"},
+  {"german": "Pilz", "english": "mushroom"},
+  {"german": "Kohl", "english": "cabbage"},
+  {"german": "Spinat", "english": "spinach"},
+  {"german": "Brokkoli", "english": "broccoli"},
+  {"german": "Bohne", "english": "bean"},
+  {"german": "Erbse", "english": "pea"},
+  {"german": "Mais", "english": "corn"},
+  {"german": "Gemüse", "english": "vegetable"}
+]

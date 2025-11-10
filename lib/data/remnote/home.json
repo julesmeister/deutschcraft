@@ -1,0 +1,302 @@
+[
+  {
+    "id": "syllabus-a1-10135",
+    "german": "Haus",
+    "english": "house",
+    "category": "Home",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Home",
+        "Haus"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10136",
+    "german": "Zimmer",
+    "english": "room",
+    "category": "Home",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Home",
+        "Zimmer"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10137",
+    "german": "Küche",
+    "english": "kitchen",
+    "category": "Home",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Home",
+        "Küche"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10138",
+    "german": "Bad",
+    "english": "bathroom",
+    "category": "Home",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Home",
+        "Bad"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10139",
+    "german": "Tisch",
+    "english": "table",
+    "category": "Home",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Home",
+        "Tisch"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10140",
+    "german": "Stuhl",
+    "english": "chair",
+    "category": "Home",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Home",
+        "Stuhl"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10141",
+    "german": "Bett",
+    "english": "bed",
+    "category": "Home",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Home",
+        "Bett"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10142",
+    "german": "Wohnzimmer",
+    "english": "living room",
+    "category": "Home",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Home",
+        "Wohnzimmer"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10143",
+    "german": "Schlafzimmer",
+    "english": "bedroom",
+    "category": "Home",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Home",
+        "Schlafzimmer"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10144",
+    "german": "Fenster",
+    "english": "window",
+    "category": "Home",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Home",
+        "Fenster"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10145",
+    "german": "Tür",
+    "english": "door",
+    "category": "Home",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Home",
+        "Tür"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10146",
+    "german": "Sofa",
+    "english": "sofa / couch",
+    "category": "Home",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Home",
+        "Sofa"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10147",
+    "german": "Lampe",
+    "english": "lamp",
+    "category": "Home",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Home",
+        "Lampe"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10148",
+    "german": "Schrank",
+    "english": "cupboard / wardrobe",
+    "category": "Home",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Home",
+        "Schrank"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10149",
+    "german": "Spiegel",
+    "english": "mirror",
+    "category": "Home",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Home",
+        "Spiegel"
+      ]
+    }
+  }
+]

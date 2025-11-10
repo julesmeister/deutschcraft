@@ -1,0 +1,157 @@
+[
+  {
+    "id": "remnote-995",
+    "german": "Seither",
+    "english": "since then",
+    "category": "- Avoided infinite recursion --             - Solange::as long as",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4485,
+      "hierarchy": [
+        "- Avoided infinite recursion --             - Solange::as long as",
+        null,
+        null,
+        "Seither"
+      ]
+    }
+  },
+  {
+    "id": "remnote-996",
+    "german": "Weil",
+    "english": "Because",
+    "category": "- Avoided infinite recursion --             - Solange::as long as",
+    "tags": [
+      "Kausaler Nebensatz"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4492,
+      "hierarchy": [
+        "- Avoided infinite recursion --             - Solange::as long as",
+        null,
+        "Kausaler Nebensatz",
+        "Weil"
+      ]
+    }
+  },
+  {
+    "id": "remnote-997",
+    "german": "Sie werden ihn entsprechend betören.",
+    "english": "You will bewitch him accordingly.",
+    "category": "- Avoided infinite recursion --             - Solange::as long as",
+    "tags": [
+      "Andere Präposition",
+      "Entsprechend / gemäß"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4540,
+      "hierarchy": [
+        "- Avoided infinite recursion --             - Solange::as long as",
+        "Andere Präposition",
+        "Entsprechend / gemäß",
+        "Sie werden ihn entsprechend betören."
+      ]
+    }
+  },
+  {
+    "id": "remnote-998",
+    "german": "Ich will meinen Anweisungen **gemäß** anfangen.",
+    "english": "I want to start according to my instructions.",
+    "category": "- Avoided infinite recursion --             - Solange::as long as",
+    "tags": [
+      "Andere Präposition",
+      "Entsprechend / gemäß"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4541,
+      "hierarchy": [
+        "- Avoided infinite recursion --             - Solange::as long as",
+        "Andere Präposition",
+        "Entsprechend / gemäß",
+        "Ich will meinen Anweisungen **gemäß** anfangen."
+      ]
+    }
+  },
+  {
+    "id": "remnote-999",
+    "german": "Sie musste wider Willen lächeln.",
+    "english": "She had to smile against her will.",
+    "category": "- Avoided infinite recursion --             - Solange::as long as",
+    "tags": [
+      "Andere Präposition",
+      "Wider"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4548,
+      "hierarchy": [
+        "- Avoided infinite recursion --             - Solange::as long as",
+        "Andere Präposition",
+        "Wider",
+        "Sie musste wider Willen lächeln."
+      ]
+    }
+  },
+  {
+    "id": "remnote-1000",
+    "german": "trotzdem",
+    "english": "nevertheless",
+    "category": "- Avoided infinite recursion --             - Solange::as long as",
+    "tags": [
+      "Genitive Propositions",
+      "Trotz::despite, inspite of"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4565,
+      "hierarchy": [
+        "- Avoided infinite recursion --             - Solange::as long as",
+        "Genitive Propositions",
+        "Trotz::despite, inspite of",
+        "trotzdem"
+      ]
+    }
+  },
+  {
+    "id": "remnote-1001",
+    "german": "trotz alledem",
+    "english": "despite all that",
+    "category": "- Avoided infinite recursion --             - Solange::as long as",
+    "tags": [
+      "Genitive Propositions",
+      "Trotz::despite, inspite of"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4568,
+      "hierarchy": [
+        "- Avoided infinite recursion --             - Solange::as long as",
+        "Genitive Propositions",
+        "Trotz::despite, inspite of",
+        "trotz alledem"
+      ]
+    }
+  },
+  {
+    "id": "remnote-1002",
+    "german": "verdanken",
+    "english": "to owe sb. sth.",
+    "category": "- Avoided infinite recursion --             - Solange::as long as",
+    "tags": [
+      "Genitive Propositions",
+      "Dank::owing to / thanks to"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4592,
+      "hierarchy": [
+        "- Avoided infinite recursion --             - Solange::as long as",
+        "Genitive Propositions",
+        "Dank::owing to / thanks to",
+        "verdanken"
+      ]
+    }
+  }
+]

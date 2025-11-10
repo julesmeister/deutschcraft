@@ -1,0 +1,415 @@
+[
+  {
+    "id": "remnote-405",
+    "german": "betreffen",
+    "english": "to concern / to affect / to relate to sth. / to pertain to #verben",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1661,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "betreffen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-406",
+    "german": "betreuen",
+    "english": "to supervise / to guide / to mentor #verben",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1668,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "betreuen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-407",
+    "german": "betrügen",
+    "english": "to cheat",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1672,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "betrügen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-408",
+    "german": "der Betrug",
+    "english": "Fraud",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "tags": [
+      "betrügen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1673,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "betrügen",
+        "der Betrug"
+      ]
+    }
+  },
+  {
+    "id": "remnote-409",
+    "german": "bewältigen",
+    "english": "to cope with #Verbs #verben",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1678,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "bewältigen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-410",
+    "german": "bewahren",
+    "english": "to preserve / to retain sth. / to conserve / to keep #verben",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1683,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "bewahren"
+      ]
+    }
+  },
+  {
+    "id": "remnote-411",
+    "german": "bewegen",
+    "english": "to persuade / to move #verben",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1688,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "bewegen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-412",
+    "german": "rücken",
+    "english": "to move  #verben",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "tags": [
+      "bewegen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1701,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "bewegen",
+        "rücken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-413",
+    "german": "bewundern",
+    "english": "to admire #verben",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1709,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "bewundern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-414",
+    "german": "bevorzugen",
+    "english": "to prefer #verben",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1714,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "bevorzugen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-415",
+    "german": "biegen",
+    "english": "to bend  #verben",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1720,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "biegen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-416",
+    "german": "bieten",
+    "english": "to provide",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1724,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "bieten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-417",
+    "german": "anbieten",
+    "english": "to provide / to offer / to supply",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "tags": [
+      "bieten"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1731,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "bieten",
+        "anbieten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-418",
+    "german": "das Sonderangebot",
+    "english": "special offer",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "tags": [
+      "bieten",
+      "anbieten"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1733,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "bieten",
+        "anbieten",
+        "das Sonderangebot"
+      ]
+    }
+  },
+  {
+    "id": "remnote-419",
+    "german": "das Stellenangebot",
+    "english": "job offer",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "tags": [
+      "bieten",
+      "anbieten"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1735,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "bieten",
+        "anbieten",
+        "das Stellenangebot"
+      ]
+    }
+  },
+  {
+    "id": "remnote-420",
+    "german": "bilden",
+    "english": "to form",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1736,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "bilden"
+      ]
+    }
+  },
+  {
+    "id": "remnote-421",
+    "german": "bitten",
+    "english": "to request",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1738,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "bitten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-422",
+    "german": "bleiben",
+    "english": "to stay / to remain",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1745,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "bleiben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-423",
+    "german": "bohren",
+    "english": "to drill #verben",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1750,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "bohren"
+      ]
+    }
+  },
+  {
+    "id": "remnote-424",
+    "german": "brechen",
+    "english": "to break / to burst / to snap",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1761,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "brechen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-425",
+    "german": "brennen",
+    "english": "to burn / to be on fire",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1764,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "brennen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-426",
+    "german": "beibringen",
+    "english": "to teach  #verben",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "tags": [
+      "bringen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1772,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "bringen",
+        "beibringen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-427",
+    "german": "decken",
+    "english": "to blanket / to cover",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1776,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "decken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-428",
+    "german": "bedecken",
+    "english": "to cover / to cloak / to coat with paint",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "tags": [
+      "decken"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1780,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "decken",
+        "bedecken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-429",
+    "german": "abdecken",
+    "english": "to cover / to conceal / to mask #verben",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "tags": [
+      "decken"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1783,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "decken",
+        "abdecken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-430",
+    "german": "dehnen",
+    "english": "to stretch (stretching) #verben",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1788,
+      "hierarchy": [
+        "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+        "dehnen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-431",
+    "german": "- Avoided infinite recursion --     - dienen",
+    "english": "to serve some kind of master or purpose / to function #verben",
+    "category": "- Avoided infinite recursion --         - [präteritum]();;Er beruhte",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1793,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - dienen"
+      ]
+    }
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {"german": "können", "english": "can / to be able to"},
+  {"german": "müssen", "english": "must / to have to"},
+  {"german": "wollen", "english": "to want"},
+  {"german": "dürfen", "english": "may / to be allowed to"},
+  {"german": "sollen", "english": "should / to be supposed to"},
+  {"german": "mögen", "english": "to like"},
+  {"german": "möchten", "english": "would like to"},
+  {"german": "brauchen", "english": "to need"},
+  {"german": "lassen", "english": "to let / to leave"},
+  {"german": "werden", "english": "will / to become"},
+  {"german": "darf nicht", "english": "must not / not allowed to"},
+  {"german": "muss nicht", "english": "don't have to"},
+  {"german": "kann nicht", "english": "cannot / unable to"},
+  {"german": "will nicht", "english": "don't want to"},
+  {"german": "soll nicht", "english": "should not"}
+]

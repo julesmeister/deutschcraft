@@ -1,0 +1,18 @@
+[
+  {"german": "kaufen", "english": "to buy"},
+  {"german": "bezahlen", "english": "to pay"},
+  {"german": "Euro", "english": "euro"},
+  {"german": "teuer", "english": "expensive"},
+  {"german": "billig", "english": "cheap"},
+  {"german": "Preis", "english": "price"},
+  {"german": "Geschäft", "english": "shop / store"},
+  {"german": "Supermarkt", "english": "supermarket"},
+  {"german": "Kasse", "english": "cash register / checkout"},
+  {"german": "Tüte", "english": "bag"},
+  {"german": "Tasche", "english": "bag / purse"},
+  {"german": "Größe", "english": "size"},
+  {"german": "Farbe", "english": "color"},
+  {"german": "verkaufen", "english": "to sell"},
+  {"german": "kosten", "english": "to cost"},
+  {"german": "Rabatt", "english": "discount"}
+]

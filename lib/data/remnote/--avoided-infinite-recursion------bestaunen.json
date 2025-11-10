@@ -1,0 +1,47 @@
+[
+  {
+    "id": "remnote-388",
+    "german": "bestrafen",
+    "english": "to punish #verben",
+    "category": "- Avoided infinite recursion --     - bestaunen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1582,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - bestaunen",
+        "bestrafen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-389",
+    "german": "Es geht immer ums Bestrafen.",
+    "english": "It's always about punishing",
+    "category": "- Avoided infinite recursion --     - bestaunen",
+    "tags": [
+      "bestrafen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1586,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - bestaunen",
+        "bestrafen",
+        "Es geht immer ums Bestrafen."
+      ]
+    }
+  },
+  {
+    "id": "remnote-390",
+    "german": "- Avoided infinite recursion --     - betragen",
+    "english": "to add up to / to amount to sth. / to account for",
+    "category": "- Avoided infinite recursion --     - bestaunen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 1588,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - betragen"
+      ]
+    }
+  }
+]

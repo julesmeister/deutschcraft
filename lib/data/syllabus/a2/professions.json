@@ -1,0 +1,18 @@
+[
+  {"german": "Arzt", "english": "doctor"},
+  {"german": "Lehrer", "english": "teacher"},
+  {"german": "Student", "english": "student"},
+  {"german": "Koch", "english": "cook"},
+  {"german": "Verkäufer", "english": "seller"},
+  {"german": "Ingenieur", "english": "engineer"},
+  {"german": "Krankenschwester", "english": "nurse"},
+  {"german": "Polizist", "english": "police officer"},
+  {"german": "Anwalt", "english": "lawyer"},
+  {"german": "Friseur", "english": "hairdresser"},
+  {"german": "Mechaniker", "english": "mechanic"},
+  {"german": "Bauer", "english": "farmer"},
+  {"german": "Pilot", "english": "pilot"},
+  {"german": "Kellner", "english": "waiter"},
+  {"german": "Musiker", "english": "musician"},
+  {"german": "Künstler", "english": "artist"}
+]

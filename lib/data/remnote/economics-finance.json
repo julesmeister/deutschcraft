@@ -1,0 +1,302 @@
+[
+  {
+    "id": "syllabus-c1-11299",
+    "german": "Wirtschaft",
+    "english": "economy",
+    "category": "Economics Finance",
+    "level": "C1",
+    "tags": [
+      "syllabus",
+      "C1"
+    ],
+    "_meta": {
+      "source": "Syllabus C1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "C1",
+        "Economics Finance",
+        "Wirtschaft"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-c1-11300",
+    "german": "Konjunktur",
+    "english": "economic situation / business cycle",
+    "category": "Economics Finance",
+    "level": "C1",
+    "tags": [
+      "syllabus",
+      "C1"
+    ],
+    "_meta": {
+      "source": "Syllabus C1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "C1",
+        "Economics Finance",
+        "Konjunktur"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-c1-11301",
+    "german": "Inflation",
+    "english": "inflation",
+    "category": "Economics Finance",
+    "level": "C1",
+    "tags": [
+      "syllabus",
+      "C1"
+    ],
+    "_meta": {
+      "source": "Syllabus C1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "C1",
+        "Economics Finance",
+        "Inflation"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-c1-11302",
+    "german": "Rezession",
+    "english": "recession",
+    "category": "Economics Finance",
+    "level": "C1",
+    "tags": [
+      "syllabus",
+      "C1"
+    ],
+    "_meta": {
+      "source": "Syllabus C1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "C1",
+        "Economics Finance",
+        "Rezession"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-c1-11303",
+    "german": "Investition",
+    "english": "investment",
+    "category": "Economics Finance",
+    "level": "C1",
+    "tags": [
+      "syllabus",
+      "C1"
+    ],
+    "_meta": {
+      "source": "Syllabus C1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "C1",
+        "Economics Finance",
+        "Investition"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-c1-11304",
+    "german": "Rendite",
+    "english": "return / yield",
+    "category": "Economics Finance",
+    "level": "C1",
+    "tags": [
+      "syllabus",
+      "C1"
+    ],
+    "_meta": {
+      "source": "Syllabus C1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "C1",
+        "Economics Finance",
+        "Rendite"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-c1-11305",
+    "german": "Verschuldung",
+    "english": "debt / indebtedness",
+    "category": "Economics Finance",
+    "level": "C1",
+    "tags": [
+      "syllabus",
+      "C1"
+    ],
+    "_meta": {
+      "source": "Syllabus C1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "C1",
+        "Economics Finance",
+        "Verschuldung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-c1-11306",
+    "german": "Haushalt",
+    "english": "budget / household",
+    "category": "Economics Finance",
+    "level": "C1",
+    "tags": [
+      "syllabus",
+      "C1"
+    ],
+    "_meta": {
+      "source": "Syllabus C1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "C1",
+        "Economics Finance",
+        "Haushalt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-c1-11307",
+    "german": "Steuer",
+    "english": "tax",
+    "category": "Economics Finance",
+    "level": "C1",
+    "tags": [
+      "syllabus",
+      "C1"
+    ],
+    "_meta": {
+      "source": "Syllabus C1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "C1",
+        "Economics Finance",
+        "Steuer"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-c1-11308",
+    "german": "Umsatz",
+    "english": "turnover / revenue",
+    "category": "Economics Finance",
+    "level": "C1",
+    "tags": [
+      "syllabus",
+      "C1"
+    ],
+    "_meta": {
+      "source": "Syllabus C1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "C1",
+        "Economics Finance",
+        "Umsatz"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-c1-11309",
+    "german": "Gewinn",
+    "english": "profit / gain",
+    "category": "Economics Finance",
+    "level": "C1",
+    "tags": [
+      "syllabus",
+      "C1"
+    ],
+    "_meta": {
+      "source": "Syllabus C1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "C1",
+        "Economics Finance",
+        "Gewinn"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-c1-11310",
+    "german": "Verlust",
+    "english": "loss",
+    "category": "Economics Finance",
+    "level": "C1",
+    "tags": [
+      "syllabus",
+      "C1"
+    ],
+    "_meta": {
+      "source": "Syllabus C1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "C1",
+        "Economics Finance",
+        "Verlust"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-c1-11311",
+    "german": "Wettbewerb",
+    "english": "competition",
+    "category": "Economics Finance",
+    "level": "C1",
+    "tags": [
+      "syllabus",
+      "C1"
+    ],
+    "_meta": {
+      "source": "Syllabus C1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "C1",
+        "Economics Finance",
+        "Wettbewerb"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-c1-11312",
+    "german": "Markt",
+    "english": "market",
+    "category": "Economics Finance",
+    "level": "C1",
+    "tags": [
+      "syllabus",
+      "C1"
+    ],
+    "_meta": {
+      "source": "Syllabus C1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "C1",
+        "Economics Finance",
+        "Markt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-c1-11313",
+    "german": "Angebot",
+    "english": "supply / offer",
+    "category": "Economics Finance",
+    "level": "C1",
+    "tags": [
+      "syllabus",
+      "C1"
+    ],
+    "_meta": {
+      "source": "Syllabus C1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "C1",
+        "Economics Finance",
+        "Angebot"
+      ]
+    }
+  }
+]

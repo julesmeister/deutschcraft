@@ -1,0 +1,17 @@
+[
+  {"german": "rot", "english": "red"},
+  {"german": "blau", "english": "blue"},
+  {"german": "grün", "english": "green"},
+  {"german": "gelb", "english": "yellow"},
+  {"german": "schwarz", "english": "black"},
+  {"german": "weiß", "english": "white"},
+  {"german": "braun", "english": "brown"},
+  {"german": "grau", "english": "gray"},
+  {"german": "rosa", "english": "pink"},
+  {"german": "lila", "english": "purple"},
+  {"german": "orange", "english": "orange"},
+  {"german": "dunkel", "english": "dark"},
+  {"german": "hell", "english": "light / bright"},
+  {"german": "bunt", "english": "colorful"},
+  {"german": "Farbe", "english": "color"}
+]

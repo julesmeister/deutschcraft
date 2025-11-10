@@ -1,0 +1,125 @@
+{
+  "level": "C1",
+  "categories": [
+    {
+      "id": "specialized-fields",
+      "name": "Specialized Academic Fields",
+      "icon": "🎓",
+      "description": "Fachrichtung, Disziplin, Lehrstuhl, Promotion, academic specialization",
+      "examples": ["Fachrichtung", "Disziplin", "Lehrstuhl", "Promotion", "Habilitation", "Dissertation"],
+      "priority": 1
+    },
+    {
+      "id": "abstract-concepts",
+      "name": "Complex Abstract Concepts",
+      "icon": "💡",
+      "description": "Abstraktion, Paradigma, Konzeption, Determinismus, advanced abstractions",
+      "examples": ["Abstraktion", "Paradigma", "Konzeption", "Determinismus", "Relativismus", "Absolutismus"],
+      "priority": 2
+    },
+    {
+      "id": "literary-language",
+      "name": "Literary Language & Style",
+      "icon": "📖",
+      "description": "Stilmittel, Eloquenz, Prosa, Lyrik, Epik, literary sophistication",
+      "examples": ["Stilmittel", "Eloquenz", "Prosa", "Lyrik", "Epik", "Dramatik"],
+      "priority": 3
+    },
+    {
+      "id": "advanced-politics",
+      "name": "Advanced Political Science",
+      "icon": "🏛️",
+      "description": "Staatsform, Verfassung, Legislative, Exekutive, Judikative",
+      "examples": ["Staatsform", "Verfassung", "Legislative", "Exekutive", "Judikative", "Gewaltenteilung"],
+      "priority": 4
+    },
+    {
+      "id": "legal-terminology",
+      "name": "Advanced Legal Terminology",
+      "icon": "⚖️",
+      "description": "Rechtsprechung, Verordnung, Satzung, Novelle, complex legal terms",
+      "examples": ["Rechtsprechung", "Verordnung", "Satzung", "Novelle", "Präzedenzfall", "Grundsatzurteil"],
+      "priority": 5
+    },
+    {
+      "id": "medical-science",
+      "name": "Medical Science & Healthcare",
+      "icon": "⚕️",
+      "description": "Diagnose, Therapie, Symptomatik, Pathologie, medical terminology",
+      "examples": ["Diagnose", "Therapie", "Symptomatik", "Pathologie", "Ätiologie", "Prognose"],
+      "priority": 6
+    },
+    {
+      "id": "advanced-technology",
+      "name": "Advanced Technology & AI",
+      "icon": "🤖",
+      "description": "Algorithmus, künstliche Intelligenz, Automatisierung, Digitalisierung",
+      "examples": ["Algorithmus", "künstliche Intelligenz", "Automatisierung", "Digitalisierung", "Blockchain", "Quantencomputing"],
+      "priority": 7
+    },
+    {
+      "id": "linguistics-language",
+      "name": "Linguistics & Language Science",
+      "icon": "🔤",
+      "description": "Phonetik, Syntax, Semantik, Pragmatik, Morphologie",
+      "examples": ["Phonetik", "Syntax", "Semantik", "Pragmatik", "Morphologie", "Phonologie"],
+      "priority": 8
+    },
+    {
+      "id": "critical-analysis",
+      "name": "Critical Analysis & Theory",
+      "icon": "🔍",
+      "description": "Hermeneutik, Dekonstruktion, Diskursanalyse, Interpretation",
+      "examples": ["Hermeneutik", "Dekonstruktion", "Diskursanalyse", "Interpretation", "Exegese", "Kontextualisierung"],
+      "priority": 9
+    },
+    {
+      "id": "sophisticated-expression",
+      "name": "Sophisticated Expression",
+      "icon": "✨",
+      "description": "Distinktion, Ambiguität, Konnotation, Implikation, nuanced language",
+      "examples": ["Distinktion", "Ambiguität", "Konnotation", "Implikation", "Subtext", "Untertöne"],
+      "priority": 10
+    },
+    {
+      "id": "economics-finance",
+      "name": "Advanced Economics & Finance",
+      "icon": "💹",
+      "description": "Konjunktur, Inflation, Deflation, Rezession, Boom, economic cycles",
+      "examples": ["Konjunktur", "Inflation", "Deflation", "Rezession", "Boom", "Volatilität"],
+      "priority": 11
+    },
+    {
+      "id": "philosophy-epistemology",
+      "name": "Philosophy & Epistemology",
+      "icon": "🤔",
+      "description": "Erkenntnistheorie, Ontologie, Metaphysik, Phänomenologie",
+      "examples": ["Erkenntnistheorie", "Ontologie", "Metaphysik", "Phänomenologie", "Existentialismus", "Empirismus"],
+      "priority": 12
+    },
+    {
+      "id": "cultural-studies",
+      "name": "Cultural Studies & Theory",
+      "icon": "🎭",
+      "description": "Kulturwissenschaft, Postmoderne, Rezeption, Kanon, cultural analysis",
+      "examples": ["Kulturwissenschaft", "Postmoderne", "Rezeption", "Kanon", "Intertextualität", "Diskurs"],
+      "priority": 13
+    },
+    {
+      "id": "historical-methodology",
+      "name": "Historical Methodology",
+      "icon": "📜",
+      "description": "Historiographie, Quellenkritik, Chronologie, Epochen, historical terms",
+      "examples": ["Historiographie", "Quellenkritik", "Chronologie", "Epochen", "Periodisierung", "Narrativ"],
+      "priority": 14
+    },
+    {
+      "id": "environmental-science",
+      "name": "Environmental Science",
+      "icon": "🌿",
+      "description": "Ökologie, Biodiversität, Ökosystem, Emission, environmental terms",
+      "examples": ["Ökologie", "Biodiversität", "Ökosystem", "Emission", "Treibhausgas", "Kohlenstoff"],
+      "priority": 15
+    }
+  ]
+}

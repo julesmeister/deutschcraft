@@ -1,0 +1,17 @@
+[
+  {"german": "Restaurant", "english": "restaurant"},
+  {"german": "Speisekarte", "english": "menu"},
+  {"german": "Rechnung", "english": "bill / check"},
+  {"german": "Kellner", "english": "waiter"},
+  {"german": "Kellnerin", "english": "waitress"},
+  {"german": "bestellen", "english": "to order"},
+  {"german": "schmecken", "english": "to taste"},
+  {"german": "Trinkgeld", "english": "tip / gratuity"},
+  {"german": "Frühstück", "english": "breakfast"},
+  {"german": "Mittagessen", "english": "lunch"},
+  {"german": "Abendessen", "english": "dinner"},
+  {"german": "Vorspeise", "english": "appetizer / starter"},
+  {"german": "Hauptgericht", "english": "main course"},
+  {"german": "Nachtisch", "english": "dessert"},
+  {"german": "Getränk", "english": "drink / beverage"}
+]

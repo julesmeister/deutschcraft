@@ -1,0 +1,415 @@
+{
+  "totalFlashcards": 2346,
+  "totalCategories": 32,
+  "categories": [
+    "Richtung",
+    "Adverbs",
+    "Da / Wo-Wörter",
+    "Liste der Verben mit Präpositionen",
+    "Verbs",
+    "Redemittel",
+    "Gempowerment",
+    "Greetings",
+    "Pronouns",
+    "Basic Verbs",
+    "Family",
+    "Numbers",
+    "Colors",
+    "Food & Drinks",
+    "Home",
+    "Clothing",
+    "Time",
+    "Weather",
+    "Transportation",
+    "Professions",
+    "Workplace",
+    "Travel",
+    "Body & Health",
+    "Hobbies",
+    "Technology",
+    "Shopping",
+    "Time Expressions",
+    "Education",
+    "Nature",
+    "Feelings",
+    "Modal Verbs",
+    "Common Verbs"
+  ],
+  "categoryCounts": [
+    {
+      "category": "Intermediate Verbs",
+      "count": 476
+    },
+    {
+      "category": "Adverbs",
+      "count": 218
+    },
+    {
+      "category": "Separable Verbs",
+      "count": 212
+    },
+    {
+      "category": "Redemittel",
+      "count": 120
+    },
+    {
+      "category": "Irregular Verbs",
+      "count": 92
+    },
+    {
+      "category": "Verbs With Prepositions",
+      "count": 90
+    },
+    {
+      "category": "Reflexive Verbs",
+      "count": 51
+    },
+    {
+      "category": "Positional Verbs",
+      "count": 49
+    },
+    {
+      "category": "State Change Verbs",
+      "count": 47
+    },
+    {
+      "category": "Da / Wo-Wörter",
+      "count": 39
+    },
+    {
+      "category": "Regular Verbs",
+      "count": 31
+    },
+    {
+      "category": "Academic",
+      "count": 30
+    },
+    {
+      "category": "Emotions Character",
+      "count": 30
+    },
+    {
+      "category": "Environment Climate",
+      "count": 30
+    },
+    {
+      "category": "Idioms",
+      "count": 30
+    },
+    {
+      "category": "Politics Society",
+      "count": 30
+    },
+    {
+      "category": "Daily Routines",
+      "count": 28
+    },
+    {
+      "category": "Nature",
+      "count": 24
+    },
+    {
+      "category": "Conjunctions",
+      "count": 22
+    },
+    {
+      "category": "Modal Verbs",
+      "count": 21
+    },
+    {
+      "category": "Time Expressions",
+      "count": 20
+    },
+    {
+      "category": "Body Health",
+      "count": 19
+    },
+    {
+      "category": "Feelings",
+      "count": 19
+    },
+    {
+      "category": "Education",
+      "count": 17
+    },
+    {
+      "category": "Hobbies",
+      "count": 17
+    },
+    {
+      "category": "Business Work",
+      "count": 17
+    },
+    {
+      "category": "Housing",
+      "count": 17
+    },
+    {
+      "category": "Medical Health",
+      "count": 17
+    },
+    {
+      "category": "Professions",
+      "count": 16
+    },
+    {
+      "category": "Shopping",
+      "count": 16
+    },
+    {
+      "category": "Technology",
+      "count": 16
+    },
+    {
+      "category": "Travel",
+      "count": 16
+    },
+    {
+      "category": "Workplace",
+      "count": 16
+    },
+    {
+      "category": "Adjective Pairs",
+      "count": 16
+    },
+    {
+      "category": "Adjectives",
+      "count": 15
+    },
+    {
+      "category": "Animals",
+      "count": 15
+    },
+    {
+      "category": "Clothing",
+      "count": 15
+    },
+    {
+      "category": "Colors",
+      "count": 15
+    },
+    {
+      "category": "Countries",
+      "count": 15
+    },
+    {
+      "category": "Family",
+      "count": 15
+    },
+    {
+      "category": "Food Drinks",
+      "count": 15
+    },
+    {
+      "category": "Fruits",
+      "count": 15
+    },
+    {
+      "category": "Greetings",
+      "count": 15
+    },
+    {
+      "category": "Home",
+      "count": 15
+    },
+    {
+      "category": "Numbers",
+      "count": 15
+    },
+    {
+      "category": "Pronouns",
+      "count": 15
+    },
+    {
+      "category": "Question Words",
+      "count": 15
+    },
+    {
+      "category": "Time",
+      "count": 15
+    },
+    {
+      "category": "Transportation",
+      "count": 15
+    },
+    {
+      "category": "Vegetables",
+      "count": 15
+    },
+    {
+      "category": "Weather",
+      "count": 15
+    },
+    {
+      "category": "Action Verbs",
+      "count": 15
+    },
+    {
+      "category": "Communication Verbs",
+      "count": 15
+    },
+    {
+      "category": "Past Tense Verbs",
+      "count": 15
+    },
+    {
+      "category": "Perception Verbs",
+      "count": 15
+    },
+    {
+      "category": "Restaurant",
+      "count": 15
+    },
+    {
+      "category": "Economics Finance",
+      "count": 15
+    },
+    {
+      "category": "Legal Administrative",
+      "count": 15
+    },
+    {
+      "category": "Professional Communication",
+      "count": 15
+    },
+    {
+      "category": "Philosophical Concepts",
+      "count": 12
+    },
+    {
+      "category": "Richtung",
+      "count": 12
+    },
+    {
+      "category": "Understanding Verbs",
+      "count": 10
+    },
+    {
+      "category": "Abstract Concepts",
+      "count": 10
+    },
+    {
+      "category": "Formal Language",
+      "count": 10
+    },
+    {
+      "category": "Literary Language",
+      "count": 8
+    }
+  ],
+  "levelDistribution": {
+    "A1": {
+      "count": 365,
+      "categories": {
+        "Adjectives": 15,
+        "Animals": 15,
+        "Clothing": 15,
+        "Colors": 15,
+        "Countries": 15,
+        "Family": 15,
+        "Food Drinks": 15,
+        "Fruits": 15,
+        "Greetings": 15,
+        "Home": 15,
+        "Irregular Verbs": 30,
+        "Modal Verbs": 6,
+        "Numbers": 15,
+        "Positional Verbs": 17,
+        "Pronouns": 15,
+        "Question Words": 15,
+        "Regular Verbs": 31,
+        "State Change Verbs": 16,
+        "Time": 15,
+        "Transportation": 15,
+        "Understanding Verbs": 10,
+        "Vegetables": 15,
+        "Weather": 15
+      }
+    },
+    "A2": {
+      "count": 383,
+      "categories": {
+        "Action Verbs": 15,
+        "Body Health": 19,
+        "Communication Verbs": 15,
+        "Education": 17,
+        "Feelings": 19,
+        "Hobbies": 17,
+        "Irregular Verbs": 31,
+        "Modal Verbs": 15,
+        "Nature": 24,
+        "Past Tense Verbs": 15,
+        "Perception Verbs": 15,
+        "Professions": 16,
+        "Redemittel": 51,
+        "Restaurant": 15,
+        "Separable Verbs": 15,
+        "Shopping": 16,
+        "Technology": 16,
+        "Time Expressions": 20,
+        "Travel": 16,
+        "Workplace": 16
+      }
+    },
+    "B1": {
+      "count": 976,
+      "categories": {
+        "Adjective Pairs": 16,
+        "Business Work": 17,
+        "Conjunctions": 22,
+        "Daily Routines": 28,
+        "Housing": 17,
+        "Irregular Verbs": 31,
+        "Medical Health": 17,
+        "Positional Verbs": 32,
+        "Separable Verbs": 165,
+        "State Change Verbs": 31,
+        "Verbs With Prepositions": 40,
+        "Richtung": 12,
+        "Adverbs": 118,
+        "Da / Wo-Wörter": 39,
+        "Intermediate Verbs": 358,
+        "Redemittel": 33
+      }
+    },
+    "B2": {
+      "count": 533,
+      "categories": {
+        "Academic": 30,
+        "Emotions Character": 30,
+        "Environment Climate": 30,
+        "Idioms": 30,
+        "Politics Society": 30,
+        "Reflexive Verbs": 51,
+        "Separable Verbs": 32,
+        "Verbs With Prepositions": 50,
+        "Adverbs": 100,
+        "Intermediate Verbs": 118,
+        "Redemittel": 32
+      }
+    },
+    "C1": {
+      "count": 69,
+      "categories": {
+        "Abstract Concepts": 10,
+        "Economics Finance": 15,
+        "Formal Language": 10,
+        "Legal Administrative": 15,
+        "Professional Communication": 15,
+        "Redemittel": 4
+      }
+    },
+    "C2": {
+      "count": 20,
+      "categories": {
+        "Literary Language": 8,
+        "Philosophical Concepts": 12
+      }
+    }
+  },
+  "sources": {
+    "syllabus": 742,
+    "remnote": 972
+  },
+  "generatedAt": "2025-11-10T17:46:19.854Z"
+}

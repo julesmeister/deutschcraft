@@ -1,0 +1,342 @@
+[
+  {
+    "id": "syllabus-b1-10872",
+    "german": "Termin",
+    "english": "appointment",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Termin"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10873",
+    "german": "Rezept",
+    "english": "prescription",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Rezept"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10874",
+    "german": "Apotheke",
+    "english": "pharmacy",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Apotheke"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10875",
+    "german": "Medikament",
+    "english": "medication / medicine",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Medikament"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10876",
+    "german": "Schmerzen",
+    "english": "pain / aches",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Schmerzen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10877",
+    "german": "Fieber",
+    "english": "fever",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Fieber"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10878",
+    "german": "Erkältung",
+    "english": "cold",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Erkältung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10879",
+    "german": "Grippe",
+    "english": "flu / influenza",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Grippe"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10880",
+    "german": "Husten",
+    "english": "cough",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Husten"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10881",
+    "german": "Schnupfen",
+    "english": "runny nose / cold",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Schnupfen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10882",
+    "german": "Verletzung",
+    "english": "injury",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Verletzung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10883",
+    "german": "Untersuchung",
+    "english": "examination / checkup",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Untersuchung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10884",
+    "german": "Notfall",
+    "english": "emergency",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Notfall"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10885",
+    "german": "Krankenwagen",
+    "english": "ambulance",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Krankenwagen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10886",
+    "german": "Versicherung",
+    "english": "insurance",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Versicherung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10887",
+    "german": "Sprechstunde",
+    "english": "consultation hours",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Sprechstunde"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b1-10888",
+    "german": "Behandlung",
+    "english": "treatment",
+    "category": "Medical Health",
+    "level": "B1",
+    "tags": [
+      "syllabus",
+      "B1"
+    ],
+    "_meta": {
+      "source": "Syllabus B1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B1",
+        "Medical Health",
+        "Behandlung"
+      ]
+    }
+  }
+]

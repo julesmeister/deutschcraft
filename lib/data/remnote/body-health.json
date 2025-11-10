@@ -1,0 +1,382 @@
+[
+  {
+    "id": "syllabus-a2-10376",
+    "german": "Kopf",
+    "english": "head",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Kopf"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10377",
+    "german": "Arm",
+    "english": "arm",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Arm"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10378",
+    "german": "Bein",
+    "english": "leg",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Bein"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10379",
+    "german": "Hand",
+    "english": "hand",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Hand"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10380",
+    "german": "Krankenhaus",
+    "english": "hospital",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Krankenhaus"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10381",
+    "german": "Auge",
+    "english": "eye",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Auge"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10382",
+    "german": "Ohr",
+    "english": "ear",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Ohr"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10383",
+    "german": "Nase",
+    "english": "nose",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Nase"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10384",
+    "german": "Mund",
+    "english": "mouth",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Mund"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10385",
+    "german": "Fuß",
+    "english": "foot",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Fuß"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10386",
+    "german": "Finger",
+    "english": "finger",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Finger"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10387",
+    "german": "Rücken",
+    "english": "back",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Rücken"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10388",
+    "german": "Bauch",
+    "english": "stomach / belly",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Bauch"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10389",
+    "german": "Herz",
+    "english": "heart",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Herz"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10390",
+    "german": "krank",
+    "english": "sick / ill",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "krank"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10391",
+    "german": "gesund",
+    "english": "healthy",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "gesund"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10392",
+    "german": "Schmerz",
+    "english": "pain",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Schmerz"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10393",
+    "german": "Arzt",
+    "english": "doctor",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Arzt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10394",
+    "german": "Medikament",
+    "english": "medicine / medication",
+    "category": "Body Health",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Body Health",
+        "Medikament"
+      ]
+    }
+  }
+]

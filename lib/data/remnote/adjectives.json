@@ -1,0 +1,302 @@
+[
+  {
+    "id": "syllabus-a1-10000",
+    "german": "groß",
+    "english": "big / tall",
+    "category": "Adjectives",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Adjectives",
+        "groß"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10001",
+    "german": "klein",
+    "english": "small",
+    "category": "Adjectives",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Adjectives",
+        "klein"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10002",
+    "german": "neu",
+    "english": "new",
+    "category": "Adjectives",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Adjectives",
+        "neu"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10003",
+    "german": "alt",
+    "english": "old",
+    "category": "Adjectives",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Adjectives",
+        "alt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10004",
+    "german": "gut",
+    "english": "good",
+    "category": "Adjectives",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Adjectives",
+        "gut"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10005",
+    "german": "schlecht",
+    "english": "bad",
+    "category": "Adjectives",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Adjectives",
+        "schlecht"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10006",
+    "german": "schön",
+    "english": "beautiful",
+    "category": "Adjectives",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Adjectives",
+        "schön"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10007",
+    "german": "jung",
+    "english": "young",
+    "category": "Adjectives",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Adjectives",
+        "jung"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10008",
+    "german": "schnell",
+    "english": "fast",
+    "category": "Adjectives",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Adjectives",
+        "schnell"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10009",
+    "german": "langsam",
+    "english": "slow",
+    "category": "Adjectives",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Adjectives",
+        "langsam"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10010",
+    "german": "lang",
+    "english": "long",
+    "category": "Adjectives",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Adjectives",
+        "lang"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10011",
+    "german": "kurz",
+    "english": "short",
+    "category": "Adjectives",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Adjectives",
+        "kurz"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10012",
+    "german": "viel",
+    "english": "much / many",
+    "category": "Adjectives",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Adjectives",
+        "viel"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10013",
+    "german": "wenig",
+    "english": "little / few",
+    "category": "Adjectives",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Adjectives",
+        "wenig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10014",
+    "german": "teuer",
+    "english": "expensive",
+    "category": "Adjectives",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Adjectives",
+        "teuer"
+      ]
+    }
+  }
+]

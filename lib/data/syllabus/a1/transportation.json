@@ -1,0 +1,17 @@
+[
+  {"german": "Auto", "english": "car"},
+  {"german": "Bus", "english": "bus"},
+  {"german": "Zug", "english": "train"},
+  {"german": "Fahrrad", "english": "bicycle"},
+  {"german": "Flugzeug", "english": "airplane"},
+  {"german": "Taxi", "english": "taxi"},
+  {"german": "U-Bahn", "english": "subway / metro"},
+  {"german": "Straßenbahn", "english": "tram / streetcar"},
+  {"german": "Schiff", "english": "ship / boat"},
+  {"german": "Motorrad", "english": "motorcycle"},
+  {"german": "Bahnhof", "english": "train station"},
+  {"german": "Haltestelle", "english": "stop / station"},
+  {"german": "Straße", "english": "street / road"},
+  {"german": "fahren", "english": "to drive / to go (by vehicle)"},
+  {"german": "gehen", "english": "to go / to walk"}
+]

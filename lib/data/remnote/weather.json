@@ -1,0 +1,302 @@
+[
+  {
+    "id": "syllabus-a1-10346",
+    "german": "Sonne",
+    "english": "sun",
+    "category": "Weather",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Weather",
+        "Sonne"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10347",
+    "german": "Regen",
+    "english": "rain",
+    "category": "Weather",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Weather",
+        "Regen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10348",
+    "german": "kalt",
+    "english": "cold",
+    "category": "Weather",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Weather",
+        "kalt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10349",
+    "german": "warm",
+    "english": "warm",
+    "category": "Weather",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Weather",
+        "warm"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10350",
+    "german": "Schnee",
+    "english": "snow",
+    "category": "Weather",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Weather",
+        "Schnee"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10351",
+    "german": "Wind",
+    "english": "wind",
+    "category": "Weather",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Weather",
+        "Wind"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10352",
+    "german": "Wolke",
+    "english": "cloud",
+    "category": "Weather",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Weather",
+        "Wolke"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10353",
+    "german": "Gewitter",
+    "english": "thunderstorm",
+    "category": "Weather",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Weather",
+        "Gewitter"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10354",
+    "german": "Wetter",
+    "english": "weather",
+    "category": "Weather",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Weather",
+        "Wetter"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10355",
+    "german": "heiß",
+    "english": "hot",
+    "category": "Weather",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Weather",
+        "heiß"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10356",
+    "german": "kühl",
+    "english": "cool",
+    "category": "Weather",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Weather",
+        "kühl"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10357",
+    "german": "sonnig",
+    "english": "sunny",
+    "category": "Weather",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Weather",
+        "sonnig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10358",
+    "german": "bewölkt",
+    "english": "cloudy",
+    "category": "Weather",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Weather",
+        "bewölkt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10359",
+    "german": "regnerisch",
+    "english": "rainy",
+    "category": "Weather",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Weather",
+        "regnerisch"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10360",
+    "german": "windig",
+    "english": "windy",
+    "category": "Weather",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Weather",
+        "windig"
+      ]
+    }
+  }
+]

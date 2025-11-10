@@ -1,0 +1,272 @@
+[
+  {
+    "id": "remnote-916",
+    "german": "ziehen",
+    "english": "to pull / to drag / to tug",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4094,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "ziehen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-917",
+    "german": "abziehen",
+    "english": "to deduct / to subtract  #verben",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "tags": [
+      "ziehen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4098,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "ziehen",
+        "abziehen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-918",
+    "german": "anlocken",
+    "english": "to draw / to allure / to entice / to bait / to attract sb./sth  #verben",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "tags": [
+      "ziehen",
+      "anziehen #verben"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4112,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "ziehen",
+        "anziehen #verben",
+        "anlocken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-919",
+    "german": "zurückziehen",
+    "english": "to withdraw / to retract / to disinvest",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "tags": [
+      "ziehen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4116,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "ziehen",
+        "zurückziehen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-920",
+    "german": "hineinziehen",
+    "english": "to implicate sb. / to involve / to drag in #verben",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "tags": [
+      "ziehen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4118,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "ziehen",
+        "hineinziehen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-921",
+    "german": "nachvollziehen",
+    "english": "to be able to relate to sth. #verben",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "tags": [
+      "ziehen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4125,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "ziehen",
+        "nachvollziehen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-922",
+    "german": "vorziehen",
+    "english": "to prefer  #verben",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "tags": [
+      "ziehen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4130,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "ziehen",
+        "vorziehen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-923",
+    "german": "zittern",
+    "english": "to tremble / to quiver / to shiver / to jitter #verben",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4139,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "zittern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-924",
+    "german": "zögern",
+    "english": "to hesitate  #verben",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4142,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "zögern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-925",
+    "german": "zubereiten",
+    "english": "to prepare",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4146,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "zubereiten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-926",
+    "german": "zurückkehren",
+    "english": "to return #verben",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4150,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "zurückkehren"
+      ]
+    }
+  },
+  {
+    "id": "remnote-927",
+    "german": "zusagen",
+    "english": "to agree / to confirm #verben",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4153,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "zusagen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-928",
+    "german": "zusammengehören",
+    "english": "to belong together",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4158,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "zusammengehören"
+      ]
+    }
+  },
+  {
+    "id": "remnote-929",
+    "german": "zuschneiden",
+    "english": "to cut to size / to tailor sth to sth  #verben",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4160,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "zuschneiden"
+      ]
+    }
+  },
+  {
+    "id": "remnote-930",
+    "german": "maßgeschneidert",
+    "english": "custom-made",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "tags": [
+      "zuschneiden",
+      "noun→der Schneider ← tailor"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4165,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "zuschneiden",
+        "noun→der Schneider ← tailor",
+        "maßgeschneidert"
+      ]
+    }
+  },
+  {
+    "id": "remnote-931",
+    "german": "zustimmen",
+    "english": "to agree / to approve / {{to consent}}  #verben",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4171,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "zustimmen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-932",
+    "german": "zwingen",
+    "english": "to force #verben",
+    "category": "- Avoided infinite recursion --     - zersprengen",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4181,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - zersprengen",
+        "zwingen"
+      ]
+    }
+  }
+]

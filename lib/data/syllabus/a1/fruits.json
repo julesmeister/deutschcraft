@@ -1,0 +1,17 @@
+[
+  {"german": "Banane", "english": "banana"},
+  {"german": "Orange", "english": "orange"},
+  {"german": "Erdbeere", "english": "strawberry"},
+  {"german": "Traube", "english": "grape"},
+  {"german": "Birne", "english": "pear"},
+  {"german": "Kirsche", "english": "cherry"},
+  {"german": "Zitrone", "english": "lemon"},
+  {"german": "Pfirsich", "english": "peach"},
+  {"german": "Melone", "english": "melon"},
+  {"german": "Ananas", "english": "pineapple"},
+  {"german": "Kiwi", "english": "kiwi"},
+  {"german": "Mango", "english": "mango"},
+  {"german": "Himbeere", "english": "raspberry"},
+  {"german": "Blaubeere", "english": "blueberry"},
+  {"german": "Obst", "english": "fruit"}
+]

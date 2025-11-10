@@ -1,0 +1,125 @@
+{
+  "level": "C2",
+  "categories": [
+    {
+      "id": "idiomatic-expressions",
+      "name": "Idiomatic Expressions & Sayings",
+      "icon": "🎭",
+      "description": "Redewendung, Sprichwort, idiomatische Wendung, fixed expressions",
+      "examples": ["Redewendung", "Sprichwort", "idiomatische Wendung", "geflügeltes Wort", "stehende Wendung"],
+      "priority": 1
+    },
+    {
+      "id": "register-style",
+      "name": "Register & Stylistic Mastery",
+      "icon": "🎨",
+      "description": "Stilebene, Sprachregister, gehobene Sprache, Stilistik",
+      "examples": ["Stilebene", "Sprachregister", "gehobene Sprache", "Bildungssprache", "Alltagssprache", "Amtssprache"],
+      "priority": 2
+    },
+    {
+      "id": "specialized-academic",
+      "name": "Highly Specialized Academic",
+      "icon": "🎓",
+      "description": "Terminus technicus, Nomenklatur, Fachterminologie, scholarly precision",
+      "examples": ["Terminus technicus", "Nomenklatur", "Fachterminologie", "Fachidiom", "Fachwortschatz"],
+      "priority": 3
+    },
+    {
+      "id": "nuanced-meanings",
+      "name": "Nuanced Semantic Distinctions",
+      "icon": "🔬",
+      "description": "Bedeutungsnuance, Konnotation, Denotation, Implikatur",
+      "examples": ["Bedeutungsnuance", "Konnotation", "Denotation", "Implikatur", "Präsupposition", "Semantik"],
+      "priority": 4
+    },
+    {
+      "id": "cultural-references",
+      "name": "Cultural & Historical References",
+      "icon": "🌍",
+      "description": "Anspielung, Zitat, Anspielungsreichtum, kulturelle Referenz",
+      "examples": ["Anspielung", "Zitat", "Anspielungsreichtum", "kulturelle Referenz", "Allusion", "Intertextualität"],
+      "priority": 5
+    },
+    {
+      "id": "advanced-rhetoric",
+      "name": "Advanced Rhetorical Devices",
+      "icon": "🗣️",
+      "description": "Rhetorische Figur, Stilfigur, Trope, Hyperbel, Litotes",
+      "examples": ["Rhetorische Figur", "Stilfigur", "Trope", "Hyperbel", "Litotes", "Euphemismus"],
+      "priority": 6
+    },
+    {
+      "id": "professional-jargon",
+      "name": "Professional Jargon & Vernacular",
+      "icon": "💼",
+      "description": "Berufsjargon, Branchensprache, Insidersprache, specialized slang",
+      "examples": ["Berufsjargon", "Branchensprache", "Insidersprache", "Fachjargon", "Standessprache"],
+      "priority": 7
+    },
+    {
+      "id": "archaic-formal",
+      "name": "Archaic & Highly Formal Language",
+      "icon": "📜",
+      "description": "Archaismus, veraltete Ausdrücke, gehobene Sprache, classical German",
+      "examples": ["Archaismus", "veraltete Ausdrücke", "gehobene Sprache", "Papierdeutsch", "Kanzleisprache"],
+      "priority": 8
+    },
+    {
+      "id": "wordplay-creativity",
+      "name": "Wordplay & Creative Language",
+      "icon": "🎪",
+      "description": "Wortspiel, Neologismus, Okkasionalismus, Paronomasie",
+      "examples": ["Wortspiel", "Neologismus", "Okkasionalismus", "Paronomasie", "Kalauer", "Sprachspiel"],
+      "priority": 9
+    },
+    {
+      "id": "expert-discourse",
+      "name": "Expert-Level Discourse",
+      "icon": "🏆",
+      "description": "Fachdiskurs, Metasprache, Metadiskurs, expert-level communication",
+      "examples": ["Fachdiskurs", "Metasprache", "Metadiskurs", "Fachkommunikation", "Wissenschaftskommunikation"],
+      "priority": 10
+    },
+    {
+      "id": "poetic-literary",
+      "name": "Poetic & Literary Devices",
+      "icon": "✍️",
+      "description": "Metaphorik, Allegorie, Symbolik, Poetik, Versmaß",
+      "examples": ["Metaphorik", "Allegorie", "Symbolik", "Poetik", "Versmaß", "Rhythmus"],
+      "priority": 11
+    },
+    {
+      "id": "philosophical-discourse",
+      "name": "Philosophical Discourse",
+      "icon": "💭",
+      "description": "Existenz, Substanz, Transzendenz, Immanenz, philosophical precision",
+      "examples": ["Existenz", "Substanz", "Transzendenz", "Immanenz", "Dialektik", "Aporie"],
+      "priority": 12
+    },
+    {
+      "id": "legal-precision",
+      "name": "Legal Precision & Formulation",
+      "icon": "⚖️",
+      "description": "Rechtsprechung, Tatbestand, Rechtsfolge, legal exactness",
+      "examples": ["Rechtsprechung", "Tatbestand", "Rechtsfolge", "Subsumtion", "Auslegung", "Analogie"],
+      "priority": 13
+    },
+    {
+      "id": "linguistic-theory",
+      "name": "Linguistic Theory",
+      "icon": "🔤",
+      "description": "Sprachtheorie, Generative Grammatik, Transformationsgrammatik",
+      "examples": ["Sprachtheorie", "Generative Grammatik", "Transformationsgrammatik", "Sprachphilosophie", "Semiotik"],
+      "priority": 14
+    },
+    {
+      "id": "native-mastery",
+      "name": "Native-Level Mastery",
+      "icon": "🌟",
+      "description": "Muttersprachliche Kompetenz, idiomatische Perfektion, native fluency",
+      "examples": ["Sprachgefühl", "idiomatische Sicherheit", "Sprachbeherrschung", "Eloquenz", "Gewandtheit"],
+      "priority": 15
+    }
+  ]
+}

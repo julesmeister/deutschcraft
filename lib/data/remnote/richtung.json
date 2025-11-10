@@ -1,0 +1,182 @@
+[
+  {
+    "id": "remnote-1",
+    "german": "gleich/direkt hinter",
+    "english": "right behind",
+    "category": "Richtung",
+    "level": "B1",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2,
+      "hierarchy": [
+        "Richtung",
+        "gleich/direkt hinter"
+      ]
+    }
+  },
+  {
+    "id": "remnote-2",
+    "german": "gleich/direkt vor",
+    "english": "right before",
+    "category": "Richtung",
+    "level": "B1",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 3,
+      "hierarchy": [
+        "Richtung",
+        "gleich/direkt vor"
+      ]
+    }
+  },
+  {
+    "id": "remnote-3",
+    "german": "gleich/direkt neben",
+    "english": "right beside",
+    "category": "Richtung",
+    "level": "B1",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 4,
+      "hierarchy": [
+        "Richtung",
+        "gleich/direkt neben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-4",
+    "german": "gleich links",
+    "english": "just to the left",
+    "category": "Richtung",
+    "level": "B1",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 5,
+      "hierarchy": [
+        "Richtung",
+        "gleich links"
+      ]
+    }
+  },
+  {
+    "id": "remnote-5",
+    "german": "gleich rechts",
+    "english": "just to the right",
+    "category": "Richtung",
+    "level": "B1",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 6,
+      "hierarchy": [
+        "Richtung",
+        "gleich rechts"
+      ]
+    }
+  },
+  {
+    "id": "remnote-6",
+    "german": "ganz unten",
+    "english": "right at the bottom",
+    "category": "Richtung",
+    "level": "B1",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 7,
+      "hierarchy": [
+        "Richtung",
+        "ganz unten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-7",
+    "german": "ganz oben",
+    "english": "right at the top",
+    "category": "Richtung",
+    "level": "B1",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 8,
+      "hierarchy": [
+        "Richtung",
+        "ganz oben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-8",
+    "german": "ganz am Ende",
+    "english": "right at the end",
+    "category": "Richtung",
+    "level": "B1",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 9,
+      "hierarchy": [
+        "Richtung",
+        "ganz am Ende"
+      ]
+    }
+  },
+  {
+    "id": "remnote-9",
+    "german": "ganz am Beginn/Anfang",
+    "english": "right from the start",
+    "category": "Richtung",
+    "level": "B1",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 10,
+      "hierarchy": [
+        "Richtung",
+        "ganz am Beginn/Anfang"
+      ]
+    }
+  },
+  {
+    "id": "remnote-10",
+    "german": "schon über 30 Jahre",
+    "english": "more than 30 years already",
+    "category": "Richtung",
+    "level": "B1",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 11,
+      "hierarchy": [
+        "Richtung",
+        "schon über 30 Jahre"
+      ]
+    }
+  },
+  {
+    "id": "remnote-11",
+    "german": "schon seit einem Jahr",
+    "english": "for a year now",
+    "category": "Richtung",
+    "level": "B1",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 12,
+      "hierarchy": [
+        "Richtung",
+        "schon seit einem Jahr"
+      ]
+    }
+  },
+  {
+    "id": "remnote-12",
+    "german": "schon seit zwei Monaten",
+    "english": "for two months now",
+    "category": "Richtung",
+    "level": "B1",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 13,
+      "hierarchy": [
+        "Richtung",
+        "schon seit zwei Monaten"
+      ]
+    }
+  }
+]

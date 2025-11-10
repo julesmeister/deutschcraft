@@ -1,0 +1,17 @@
+[
+  {"german": "groß", "english": "big / tall"},
+  {"german": "klein", "english": "small"},
+  {"german": "neu", "english": "new"},
+  {"german": "alt", "english": "old"},
+  {"german": "gut", "english": "good"},
+  {"german": "schlecht", "english": "bad"},
+  {"german": "schön", "english": "beautiful"},
+  {"german": "jung", "english": "young"},
+  {"german": "schnell", "english": "fast"},
+  {"german": "langsam", "english": "slow"},
+  {"german": "lang", "english": "long"},
+  {"german": "kurz", "english": "short"},
+  {"german": "viel", "english": "much / many"},
+  {"german": "wenig", "english": "little / few"},
+  {"german": "teuer", "english": "expensive"}
+]

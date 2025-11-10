@@ -1,0 +1,422 @@
+[
+  {
+    "id": "syllabus-a1-10180",
+    "german": "können",
+    "english": "can / to be able to",
+    "category": "Modal Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Modal Verbs",
+        "können"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10181",
+    "german": "müssen",
+    "english": "must / to have to",
+    "category": "Modal Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Modal Verbs",
+        "müssen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10182",
+    "german": "wollen",
+    "english": "to want",
+    "category": "Modal Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Modal Verbs",
+        "wollen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10183",
+    "german": "mögen",
+    "english": "to like",
+    "category": "Modal Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Modal Verbs",
+        "mögen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10184",
+    "german": "dürfen",
+    "english": "may / to be allowed to",
+    "category": "Modal Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Modal Verbs",
+        "dürfen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10185",
+    "german": "sollen",
+    "english": "should / ought to",
+    "category": "Modal Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Modal Verbs",
+        "sollen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10493",
+    "german": "können",
+    "english": "can / to be able to",
+    "category": "Modal Verbs",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Modal Verbs",
+        "können"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10494",
+    "german": "müssen",
+    "english": "must / to have to",
+    "category": "Modal Verbs",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Modal Verbs",
+        "müssen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10495",
+    "german": "wollen",
+    "english": "to want",
+    "category": "Modal Verbs",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Modal Verbs",
+        "wollen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10496",
+    "german": "dürfen",
+    "english": "may / to be allowed to",
+    "category": "Modal Verbs",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Modal Verbs",
+        "dürfen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10497",
+    "german": "sollen",
+    "english": "should / to be supposed to",
+    "category": "Modal Verbs",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Modal Verbs",
+        "sollen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10498",
+    "german": "mögen",
+    "english": "to like",
+    "category": "Modal Verbs",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Modal Verbs",
+        "mögen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10499",
+    "german": "möchten",
+    "english": "would like to",
+    "category": "Modal Verbs",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Modal Verbs",
+        "möchten"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10500",
+    "german": "brauchen",
+    "english": "to need",
+    "category": "Modal Verbs",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Modal Verbs",
+        "brauchen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10501",
+    "german": "lassen",
+    "english": "to let / to leave",
+    "category": "Modal Verbs",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Modal Verbs",
+        "lassen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10502",
+    "german": "werden",
+    "english": "will / to become",
+    "category": "Modal Verbs",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Modal Verbs",
+        "werden"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10503",
+    "german": "darf nicht",
+    "english": "must not / not allowed to",
+    "category": "Modal Verbs",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Modal Verbs",
+        "darf nicht"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10504",
+    "german": "muss nicht",
+    "english": "don't have to",
+    "category": "Modal Verbs",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Modal Verbs",
+        "muss nicht"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10505",
+    "german": "kann nicht",
+    "english": "cannot / unable to",
+    "category": "Modal Verbs",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Modal Verbs",
+        "kann nicht"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10506",
+    "german": "will nicht",
+    "english": "don't want to",
+    "category": "Modal Verbs",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Modal Verbs",
+        "will nicht"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10507",
+    "german": "soll nicht",
+    "english": "should not",
+    "category": "Modal Verbs",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Modal Verbs",
+        "soll nicht"
+      ]
+    }
+  }
+]

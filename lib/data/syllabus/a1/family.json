@@ -1,0 +1,17 @@
+[
+  {"german": "Mutter", "english": "mother"},
+  {"german": "Vater", "english": "father"},
+  {"german": "Bruder", "english": "brother"},
+  {"german": "Schwester", "english": "sister"},
+  {"german": "Kind", "english": "child"},
+  {"german": "Eltern", "english": "parents"},
+  {"german": "Familie", "english": "family"},
+  {"german": "Großmutter", "english": "grandmother"},
+  {"german": "Großvater", "english": "grandfather"},
+  {"german": "Oma", "english": "grandma"},
+  {"german": "Opa", "english": "grandpa"},
+  {"german": "Tante", "english": "aunt"},
+  {"german": "Onkel", "english": "uncle"},
+  {"german": "Cousin", "english": "cousin (male)"},
+  {"german": "Cousine", "english": "cousin (female)"}
+]

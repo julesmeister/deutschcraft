@@ -1,0 +1,18 @@
+[
+  {"german": "Urlaub", "english": "vacation"},
+  {"german": "Flughafen", "english": "airport"},
+  {"german": "Ticket", "english": "ticket"},
+  {"german": "Hotel", "english": "hotel"},
+  {"german": "Strand", "english": "beach"},
+  {"german": "Bahnhof", "english": "train station"},
+  {"german": "Zug", "english": "train"},
+  {"german": "Flugzeug", "english": "airplane"},
+  {"german": "Bus", "english": "bus"},
+  {"german": "Koffer", "english": "suitcase"},
+  {"german": "Gepäck", "english": "luggage / baggage"},
+  {"german": "Reise", "english": "journey / trip"},
+  {"german": "Abfahrt", "english": "departure"},
+  {"german": "Ankunft", "english": "arrival"},
+  {"german": "Reservierung", "english": "reservation"},
+  {"german": "Pass", "english": "passport"}
+]

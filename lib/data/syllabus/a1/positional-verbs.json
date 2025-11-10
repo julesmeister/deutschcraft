@@ -1,0 +1,17 @@
+[
+  {"german": "sein", "english": "to be"},
+  {"german": "stehen", "english": "to stand"},
+  {"german": "sitzen", "english": "to sit"},
+  {"german": "liegen", "english": "to lie / to be located"},
+  {"german": "hängen", "english": "to hang"},
+  {"german": "stecken", "english": "to be stuck / to be (in)"},
+  {"german": "sich setzen", "english": "to sit down"},
+  {"german": "sich stellen", "english": "to stand (oneself)"},
+  {"german": "sich legen", "english": "to lie down"},
+  {"german": "sich hinsetzen", "english": "to sit down"},
+  {"german": "stellen", "english": "to put / to place (upright)"},
+  {"german": "legen", "english": "to put / to lay (flat)"},
+  {"german": "setzen", "english": "to put / to set"},
+  {"german": "hängen", "english": "to hang (something)"},
+  {"german": "stecken", "english": "to put / to stick"}
+]

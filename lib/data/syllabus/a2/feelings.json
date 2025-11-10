@@ -1,0 +1,21 @@
+[
+  {"german": "glücklich", "english": "happy"},
+  {"german": "traurig", "english": "sad"},
+  {"german": "müde", "english": "tired"},
+  {"german": "wütend", "english": "angry"},
+  {"german": "aufgeregt", "english": "excited"},
+  {"german": "nervös", "english": "nervous"},
+  {"german": "zufrieden", "english": "satisfied / content"},
+  {"german": "enttäuscht", "english": "disappointed"},
+  {"german": "überrascht", "english": "surprised"},
+  {"german": "ängstlich", "english": "anxious / afraid"},
+  {"german": "stolz", "english": "proud"},
+  {"german": "eifersüchtig", "english": "jealous"},
+  {"german": "gelangweilt", "english": "bored"},
+  {"german": "verwirrt", "english": "confused"},
+  {"german": "hoffnungsvoll", "english": "hopeful"},
+  {"german": "einsam", "english": "lonely"},
+  {"german": "entspannt", "english": "relaxed"},
+  {"german": "gestresst", "english": "stressed"},
+  {"german": "begeistert", "english": "enthusiastic"}
+]

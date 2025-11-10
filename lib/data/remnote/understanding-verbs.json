@@ -1,0 +1,202 @@
+[
+  {
+    "id": "syllabus-a1-10321",
+    "german": "verstehen",
+    "english": "to understand",
+    "category": "Understanding Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Understanding Verbs",
+        "verstehen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10322",
+    "german": "kennen",
+    "english": "to know (a person/place)",
+    "category": "Understanding Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Understanding Verbs",
+        "kennen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10323",
+    "german": "wissen",
+    "english": "to know (a fact)",
+    "category": "Understanding Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Understanding Verbs",
+        "wissen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10324",
+    "german": "denken",
+    "english": "to think",
+    "category": "Understanding Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Understanding Verbs",
+        "denken"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10325",
+    "german": "meinen",
+    "english": "to mean / to think",
+    "category": "Understanding Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Understanding Verbs",
+        "meinen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10326",
+    "german": "glauben",
+    "english": "to believe",
+    "category": "Understanding Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Understanding Verbs",
+        "glauben"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10327",
+    "german": "vergessen",
+    "english": "to forget",
+    "category": "Understanding Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Understanding Verbs",
+        "vergessen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10328",
+    "german": "erklären",
+    "english": "to explain",
+    "category": "Understanding Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Understanding Verbs",
+        "erklären"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10329",
+    "german": "bedeuten",
+    "english": "to mean",
+    "category": "Understanding Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Understanding Verbs",
+        "bedeuten"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a1-10330",
+    "german": "interessieren",
+    "english": "to interest",
+    "category": "Understanding Verbs",
+    "level": "A1",
+    "tags": [
+      "syllabus",
+      "A1"
+    ],
+    "_meta": {
+      "source": "Syllabus A1",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A1",
+        "Understanding Verbs",
+        "interessieren"
+      ]
+    }
+  }
+]

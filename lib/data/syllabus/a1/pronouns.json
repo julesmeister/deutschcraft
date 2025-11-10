@@ -1,0 +1,17 @@
+[
+  {"german": "ich", "english": "I"},
+  {"german": "du", "english": "you (informal)"},
+  {"german": "er", "english": "he"},
+  {"german": "sie", "english": "she / they"},
+  {"german": "es", "english": "it"},
+  {"german": "wir", "english": "we"},
+  {"german": "ihr", "english": "you (plural informal)"},
+  {"german": "Sie", "english": "you (formal)"},
+  {"german": "mein", "english": "my"},
+  {"german": "dein", "english": "your (informal)"},
+  {"german": "sein", "english": "his / its"},
+  {"german": "ihr", "english": "her / their"},
+  {"german": "unser", "english": "our"},
+  {"german": "euer", "english": "your (plural informal)"},
+  {"german": "Ihr", "english": "your (formal)"}
+]

@@ -1,0 +1,22 @@
+[
+  {"german": "gestern", "english": "yesterday"},
+  {"german": "heute", "english": "today"},
+  {"german": "morgen", "english": "tomorrow"},
+  {"german": "jetzt", "english": "now"},
+  {"german": "später", "english": "later"},
+  {"german": "früher", "english": "earlier / before"},
+  {"german": "bald", "english": "soon"},
+  {"german": "oft", "english": "often"},
+  {"german": "manchmal", "english": "sometimes"},
+  {"german": "immer", "english": "always"},
+  {"german": "nie", "english": "never"},
+  {"german": "selten", "english": "rarely / seldom"},
+  {"german": "jeden Tag", "english": "every day"},
+  {"german": "vorgestern", "english": "the day before yesterday"},
+  {"german": "übermorgen", "english": "the day after tomorrow"},
+  {"german": "letzte Woche", "english": "last week"},
+  {"german": "nächste Woche", "english": "next week"},
+  {"german": "dieses Jahr", "english": "this year"},
+  {"german": "letztes Jahr", "english": "last year"},
+  {"german": "nächstes Jahr", "english": "next year"}
+]

@@ -1,0 +1,529 @@
+[
+  {
+    "id": "remnote-643",
+    "german": "kriegen",
+    "english": "to get [receive] / to catch / to make war #verben",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2817,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "kriegen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-644",
+    "german": "schwer zu kriegen",
+    "english": "hard to get",
+    "category": "- Avoided infinite recursion --     - können",
+    "tags": [
+      "kriegen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2820,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "kriegen",
+        "schwer zu kriegen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-645",
+    "german": "sich kümmern",
+    "english": "to care of / to look after",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2825,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "sich kümmern"
+      ]
+    }
+  },
+  {
+    "id": "remnote-646",
+    "german": "kürzen",
+    "english": "to cut / to truncate / to trim #verben",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2829,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "kürzen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-647",
+    "german": "abladen",
+    "english": "to unload",
+    "category": "- Avoided infinite recursion --     - können",
+    "tags": [
+      "laden"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2834,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "laden",
+        "abladen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-648",
+    "german": "durchlaufen",
+    "english": "to pass through",
+    "category": "- Avoided infinite recursion --     - können",
+    "tags": [
+      "laufen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2839,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "laufen",
+        "durchlaufen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-649",
+    "german": "lecken",
+    "english": "to lick  #verben",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2846,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "lecken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-650",
+    "german": "leiden",
+    "english": "to suffer",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2850,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "leiden"
+      ]
+    }
+  },
+  {
+    "id": "remnote-651",
+    "german": "leidtun",
+    "english": "to feel sorry for",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2853,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "leidtun"
+      ]
+    }
+  },
+  {
+    "id": "remnote-652",
+    "german": "leihen",
+    "english": "to lend / to loan sb. sth.  #verben",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2857,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "leihen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-653",
+    "german": "ausleihen",
+    "english": "to borrow  #verben",
+    "category": "- Avoided infinite recursion --     - können",
+    "tags": [
+      "leihen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2864,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "leihen",
+        "ausleihen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-654",
+    "german": "leisten",
+    "english": "to achieve / to accomplish / to afford #verben",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2869,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "leisten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-655",
+    "german": "leiten",
+    "english": "to conduct sth. / to lead / to oversee sth. / to run manage lead sth.",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2874,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "leiten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-656",
+    "german": "ableiten",
+    "english": "to derive / to deduce / to extrapolate sth. / to derivate",
+    "category": "- Avoided infinite recursion --     - können",
+    "tags": [
+      "leiten"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2875,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "leiten",
+        "ableiten"
+      ]
+    }
+  },
+  {
+    "id": "remnote-657",
+    "german": "durchlesen",
+    "english": "to read carefully",
+    "category": "- Avoided infinite recursion --     - können",
+    "tags": [
+      "lesen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2879,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "lesen",
+        "durchlesen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-658",
+    "german": "die Postzustellung",
+    "english": "postal delivery",
+    "category": "- Avoided infinite recursion --     - können",
+    "tags": [
+      "liefern←{{to deliver}} / {{to provide}} / {{to supply}} #verben",
+      "noun→die Anlieferung ← {{delivery}}"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2885,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "liefern←{{to deliver}} / {{to provide}} / {{to supply}} #verben",
+        "noun→die Anlieferung ← {{delivery}}",
+        "die Postzustellung"
+      ]
+    }
+  },
+  {
+    "id": "remnote-659",
+    "german": "liegen",
+    "english": "to lie / to lay / to sit / to reside / to rest / to be situated",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2889,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "liegen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-660",
+    "german": "unterliegen",
+    "english": "to succumb / to be subject to / to be governed by #verben",
+    "category": "- Avoided infinite recursion --     - können",
+    "tags": [
+      "liegen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2893,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "liegen",
+        "unterliegen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-661",
+    "german": "die Unterlage",
+    "english": "Document / Pad or Support",
+    "category": "- Avoided infinite recursion --     - können",
+    "tags": [
+      "liegen",
+      "unterliegen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2894,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "liegen",
+        "unterliegen",
+        "die Unterlage"
+      ]
+    }
+  },
+  {
+    "id": "remnote-662",
+    "german": "loben",
+    "english": "to praise #verben",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2898,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "loben"
+      ]
+    }
+  },
+  {
+    "id": "remnote-663",
+    "german": "locken",
+    "english": "to lure / to entice / to attract #verben",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2903,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "locken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-664",
+    "german": "sich lohnen",
+    "english": "be worthwhile / be worth it / be profitable / pay off #verben",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2905,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "sich lohnen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-665",
+    "german": "losrennen",
+    "english": "to run off",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2909,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "losrennen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-666",
+    "german": "lösen",
+    "english": "to solve",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2912,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "lösen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-667",
+    "german": "auflösen",
+    "english": "to dissolve / to dissipate / to disperse",
+    "category": "- Avoided infinite recursion --     - können",
+    "tags": [
+      "lösen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2913,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "lösen",
+        "auflösen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-668",
+    "german": "auslösen",
+    "english": "to trigger / to cause / to provoke #verben",
+    "category": "- Avoided infinite recursion --     - können",
+    "tags": [
+      "lösen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2917,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "lösen",
+        "auslösen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-669",
+    "german": "wecken",
+    "english": "to arouse",
+    "category": "- Avoided infinite recursion --     - können",
+    "tags": [
+      "lösen",
+      "auslösen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2922,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "lösen",
+        "auslösen",
+        "wecken"
+      ]
+    }
+  },
+  {
+    "id": "remnote-670",
+    "german": "lügen",
+    "english": "to lie",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2924,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "lügen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-671",
+    "german": "lutschen",
+    "english": "to suck on",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2927,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "lutschen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-672",
+    "german": "am Daumen lutschen",
+    "english": "to suck thumb",
+    "category": "- Avoided infinite recursion --     - können",
+    "tags": [
+      "lutschen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2929,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "lutschen",
+        "am Daumen lutschen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-673",
+    "german": "aufmachen",
+    "english": "to open",
+    "category": "- Avoided infinite recursion --     - können",
+    "tags": [
+      "machen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2931,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "machen",
+        "aufmachen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-674",
+    "german": "zumachen",
+    "english": "to close / to shut",
+    "category": "- Avoided infinite recursion --     - können",
+    "tags": [
+      "machen"
+    ],
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2933,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - können",
+        "machen",
+        "zumachen"
+      ]
+    }
+  },
+  {
+    "id": "remnote-675",
+    "german": "- Avoided infinite recursion --     - markieren",
+    "english": "to highlight #verben",
+    "category": "- Avoided infinite recursion --     - können",
+    "_meta": {
+      "source": "RemNote German.md",
+      "lineNumber": 2936,
+      "hierarchy": [
+        "- Avoided infinite recursion --     - markieren"
+      ]
+    }
+  }
+]

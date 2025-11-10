@@ -1,0 +1,17 @@
+[
+  {"german": "null", "english": "zero"},
+  {"german": "eins", "english": "one"},
+  {"german": "zwei", "english": "two"},
+  {"german": "drei", "english": "three"},
+  {"german": "vier", "english": "four"},
+  {"german": "fünf", "english": "five"},
+  {"german": "sechs", "english": "six"},
+  {"german": "sieben", "english": "seven"},
+  {"german": "acht", "english": "eight"},
+  {"german": "neun", "english": "nine"},
+  {"german": "zehn", "english": "ten"},
+  {"german": "elf", "english": "eleven"},
+  {"german": "zwölf", "english": "twelve"},
+  {"german": "zwanzig", "english": "twenty"},
+  {"german": "hundert", "english": "hundred"}
+]

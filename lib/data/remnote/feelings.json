@@ -1,0 +1,382 @@
+[
+  {
+    "id": "syllabus-a2-10427",
+    "german": "glücklich",
+    "english": "happy",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "glücklich"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10428",
+    "german": "traurig",
+    "english": "sad",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "traurig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10429",
+    "german": "müde",
+    "english": "tired",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "müde"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10430",
+    "german": "wütend",
+    "english": "angry",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "wütend"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10431",
+    "german": "aufgeregt",
+    "english": "excited",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "aufgeregt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10432",
+    "german": "nervös",
+    "english": "nervous",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "nervös"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10433",
+    "german": "zufrieden",
+    "english": "satisfied / content",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "zufrieden"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10434",
+    "german": "enttäuscht",
+    "english": "disappointed",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "enttäuscht"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10435",
+    "german": "überrascht",
+    "english": "surprised",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "überrascht"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10436",
+    "german": "ängstlich",
+    "english": "anxious / afraid",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "ängstlich"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10437",
+    "german": "stolz",
+    "english": "proud",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "stolz"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10438",
+    "german": "eifersüchtig",
+    "english": "jealous",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "eifersüchtig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10439",
+    "german": "gelangweilt",
+    "english": "bored",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "gelangweilt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10440",
+    "german": "verwirrt",
+    "english": "confused",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "verwirrt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10441",
+    "german": "hoffnungsvoll",
+    "english": "hopeful",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "hoffnungsvoll"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10442",
+    "german": "einsam",
+    "english": "lonely",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "einsam"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10443",
+    "german": "entspannt",
+    "english": "relaxed",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "entspannt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10444",
+    "german": "gestresst",
+    "english": "stressed",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "gestresst"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-a2-10445",
+    "german": "begeistert",
+    "english": "enthusiastic",
+    "category": "Feelings",
+    "level": "A2",
+    "tags": [
+      "syllabus",
+      "A2"
+    ],
+    "_meta": {
+      "source": "Syllabus A2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "A2",
+        "Feelings",
+        "begeistert"
+      ]
+    }
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {"german": "wer", "english": "who"},
+  {"german": "was", "english": "what"},
+  {"german": "wo", "english": "where"},
+  {"german": "woher", "english": "where from"},
+  {"german": "wohin", "english": "where to"},
+  {"german": "wann", "english": "when"},
+  {"german": "wie", "english": "how"},
+  {"german": "warum", "english": "why"},
+  {"german": "wie viel", "english": "how much"},
+  {"german": "wie viele", "english": "how many"},
+  {"german": "welche", "english": "which"},
+  {"german": "wen", "english": "whom (accusative)"},
+  {"german": "wem", "english": "whom (dative)"},
+  {"german": "wessen", "english": "whose"},
+  {"german": "wie lange", "english": "how long"}
+]

@@ -1,0 +1,602 @@
+[
+  {
+    "id": "syllabus-b2-11039",
+    "german": "begeistert",
+    "english": "enthusiastic / thrilled",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "begeistert"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11040",
+    "german": "enttäuscht",
+    "english": "disappointed",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "enttäuscht"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11041",
+    "german": "erleichtert",
+    "english": "relieved",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "erleichtert"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11042",
+    "german": "besorgt",
+    "english": "worried / concerned",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "besorgt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11043",
+    "german": "hoffnungsvoll",
+    "english": "hopeful",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "hoffnungsvoll"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11044",
+    "german": "verzweifelt",
+    "english": "desperate",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "verzweifelt"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11045",
+    "german": "zufrieden",
+    "english": "satisfied / content",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "zufrieden"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11046",
+    "german": "stolz",
+    "english": "proud",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "stolz"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11047",
+    "german": "neidisch",
+    "english": "envious / jealous",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "neidisch"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11048",
+    "german": "dankbar",
+    "english": "grateful / thankful",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "dankbar"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11049",
+    "german": "mutig",
+    "english": "brave / courageous",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "mutig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11050",
+    "german": "geduldig",
+    "english": "patient",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "geduldig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11051",
+    "german": "ehrgeizig",
+    "english": "ambitious",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "ehrgeizig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11052",
+    "german": "fleißig",
+    "english": "diligent / hardworking",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "fleißig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11053",
+    "german": "faul",
+    "english": "lazy",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "faul"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11054",
+    "german": "zuverlässig",
+    "english": "reliable / dependable",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "zuverlässig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11055",
+    "german": "gewissenhaft",
+    "english": "conscientious",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "gewissenhaft"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11056",
+    "german": "nachlässig",
+    "english": "negligent / careless",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "nachlässig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11057",
+    "german": "bescheiden",
+    "english": "modest / humble",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "bescheiden"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11058",
+    "german": "arrogant",
+    "english": "arrogant",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "arrogant"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11059",
+    "german": "großzügig",
+    "english": "generous",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "großzügig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11060",
+    "german": "geizig",
+    "english": "stingy / miserly",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "geizig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11061",
+    "german": "höflich",
+    "english": "polite / courteous",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "höflich"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11062",
+    "german": "unhöflich",
+    "english": "impolite / rude",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "unhöflich"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11063",
+    "german": "vernünftig",
+    "english": "reasonable / sensible",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "vernünftig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11064",
+    "german": "unvernünftig",
+    "english": "unreasonable",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "unvernünftig"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11065",
+    "german": "spontan",
+    "english": "spontaneous",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "spontan"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11066",
+    "german": "zurückhaltend",
+    "english": "reserved / restrained",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "zurückhaltend"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11067",
+    "german": "aufgeschlossen",
+    "english": "open-minded",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "aufgeschlossen"
+      ]
+    }
+  },
+  {
+    "id": "syllabus-b2-11068",
+    "german": "stur",
+    "english": "stubborn / obstinate",
+    "category": "Emotions Character",
+    "level": "B2",
+    "tags": [
+      "syllabus",
+      "B2"
+    ],
+    "_meta": {
+      "source": "Syllabus B2",
+      "lineNumber": 0,
+      "hierarchy": [
+        "B2",
+        "Emotions Character",
+        "stur"
+      ]
+    }
+  }
+]

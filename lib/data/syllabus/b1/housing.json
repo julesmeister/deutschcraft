@@ -1,0 +1,19 @@
+[
+  {"german": "Wohnung", "english": "apartment"},
+  {"german": "Miete", "english": "rent"},
+  {"german": "Vermieter", "english": "landlord"},
+  {"german": "Nachbar", "english": "neighbor"},
+  {"german": "Erdgeschoss", "english": "ground floor"},
+  {"german": "Stock", "english": "floor / story"},
+  {"german": "Treppe", "english": "stairs"},
+  {"german": "Aufzug", "english": "elevator"},
+  {"german": "Balkon", "english": "balcony"},
+  {"german": "Keller", "english": "basement / cellar"},
+  {"german": "Dachboden", "english": "attic"},
+  {"german": "Heizung", "english": "heating"},
+  {"german": "Kaution", "english": "security deposit"},
+  {"german": "Nebenkosten", "english": "additional costs / utilities"},
+  {"german": "Möbel", "english": "furniture"},
+  {"german": "Umzug", "english": "move / relocation"},
+  {"german": "einziehen", "english": "to move in"}
+]

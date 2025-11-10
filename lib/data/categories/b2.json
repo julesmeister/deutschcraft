@@ -1,0 +1,165 @@
+{
+  "level": "B2",
+  "categories": [
+    {
+      "id": "academic-language",
+      "name": "Academic Language",
+      "icon": "🎓",
+      "description": "Hypothese, These, Argumentation, Fazit, Forschung, Studie",
+      "examples": ["Hypothese", "These", "Argumentation", "Fazit", "Forschung", "Studie"],
+      "priority": 1
+    },
+    {
+      "id": "research-methodology",
+      "name": "Research & Methodology",
+      "icon": "🔬",
+      "description": "Methode, Analyse, Experiment, Ergebnis, Daten, Befund",
+      "examples": ["Methode", "Analyse", "Experiment", "Ergebnis", "Daten", "Befund"],
+      "priority": 2
+    },
+    {
+      "id": "scientific-technical",
+      "name": "Scientific & Technical Terms",
+      "icon": "🧪",
+      "description": "Forschung, Entwicklung, Innovation, Technologie, Verfahren",
+      "examples": ["Forschung", "Entwicklung", "Innovation", "Technologie", "Verfahren", "Wissenschaft"],
+      "priority": 3
+    },
+    {
+      "id": "mathematics-logic",
+      "name": "Mathematics & Logic",
+      "icon": "📐",
+      "description": "Gleichung, Formel, Beweis, Variable, Logik, mathematical terms",
+      "examples": ["Gleichung", "Formel", "Beweis", "Variable", "Logik", "Theorem"],
+      "priority": 4
+    },
+    {
+      "id": "advanced-business",
+      "name": "Advanced Business",
+      "icon": "💼",
+      "description": "Strategie, Konkurrenz, Gewinn, Verlust, Umsatz, Fusion",
+      "examples": ["Strategie", "Konkurrenz", "Gewinn", "Verlust", "Umsatz", "Fusion"],
+      "priority": 5
+    },
+    {
+      "id": "management-leadership",
+      "name": "Management & Leadership",
+      "icon": "👔",
+      "description": "Führung, Leitung, Verwaltung, Entscheidung, Verantwortung",
+      "examples": ["Führung", "Leitung", "Verwaltung", "Entscheidung", "Verantwortung", "Delegation"],
+      "priority": 6
+    },
+    {
+      "id": "philosophy-ethics",
+      "name": "Philosophy & Ethics",
+      "icon": "🤔",
+      "description": "Moral, Ethik, Wert, Prinzip, Tugend, Gewissen",
+      "examples": ["Moral", "Ethik", "Wert", "Prinzip", "Tugend", "Gewissen"],
+      "priority": 7
+    },
+    {
+      "id": "logic-reasoning",
+      "name": "Logic & Reasoning",
+      "icon": "🧠",
+      "description": "Schlussfolgerung, Prämisse, Konsequenz, Deduktion, logical terms",
+      "examples": ["Schlussfolgerung", "Prämisse", "Konsequenz", "Deduktion", "Induktion", "Analogie"],
+      "priority": 8
+    },
+    {
+      "id": "literature",
+      "name": "Literature & Literary Analysis",
+      "icon": "📖",
+      "description": "Roman, Metapher, Stil, Interpretation, Erzähler, Handlung",
+      "examples": ["Roman", "Metapher", "Stil", "Interpretation", "Erzähler", "Handlung"],
+      "priority": 9
+    },
+    {
+      "id": "literary-devices",
+      "name": "Literary Devices & Techniques",
+      "icon": "✍️",
+      "description": "Symbol, Ironie, Allegorie, Perspektive, literary techniques",
+      "examples": ["Symbol", "Ironie", "Allegorie", "Perspektive", "Motiv", "Satire"],
+      "priority": 10
+    },
+    {
+      "id": "psychology-sociology",
+      "name": "Psychology & Sociology",
+      "icon": "🧠",
+      "description": "Verhalten, Gesellschaft, Einstellung, Identität, Persönlichkeit",
+      "examples": ["Verhalten", "Gesellschaft", "Einstellung", "Identität", "Persönlichkeit", "Bewusstsein"],
+      "priority": 11
+    },
+    {
+      "id": "mental-cognitive",
+      "name": "Mental & Cognitive Processes",
+      "icon": "💭",
+      "description": "Wahrnehmung, Erkenntnis, Gedächtnis, Emotion, Motivation",
+      "examples": ["Wahrnehmung", "Erkenntnis", "Gedächtnis", "Emotion", "Motivation", "Intelligenz"],
+      "priority": 12
+    },
+    {
+      "id": "global-issues",
+      "name": "Global Issues & Politics",
+      "icon": "🌍",
+      "description": "Globalisierung, Migration, Konflikt, Entwicklung, Nachhaltigkeit",
+      "examples": ["Globalisierung", "Migration", "Konflikt", "Entwicklung", "Nachhaltigkeit", "Diplomatie"],
+      "priority": 13
+    },
+    {
+      "id": "international-relations",
+      "name": "International Relations",
+      "icon": "🌐",
+      "description": "Außenpolitik, Vertrag, Bündnis, Sanktion, international affairs",
+      "examples": ["Außenpolitik", "Vertrag", "Bündnis", "Sanktion", "Vereinbarung", "Allianz"],
+      "priority": 14
+    },
+    {
+      "id": "specialized-professional",
+      "name": "Specialized Professional",
+      "icon": "💡",
+      "description": "Fachbegriff, Expertise, Kompetenz, Qualifikation, professional terms",
+      "examples": ["Fachbegriff", "Expertise", "Kompetenz", "Qualifikation", "Spezialisierung", "Zertifikat"],
+      "priority": 15
+    },
+    {
+      "id": "law-jurisprudence",
+      "name": "Law & Jurisprudence",
+      "icon": "⚖️",
+      "description": "Rechtsprechung, Urteil, Klage, Paragraph, Instanz, legal system",
+      "examples": ["Rechtsprechung", "Urteil", "Klage", "Paragraph", "Instanz", "Berufung"],
+      "priority": 16
+    },
+    {
+      "id": "regional-stylistic",
+      "name": "Regional & Stylistic Variations",
+      "icon": "🎨",
+      "description": "Dialekt, Umgangssprache, Register, Stilebene, language registers",
+      "examples": ["Dialekt", "Umgangssprache", "Register", "Stilebene", "Hochsprache", "Fachsprache"],
+      "priority": 17
+    },
+    {
+      "id": "discourse-rhetoric",
+      "name": "Discourse & Rhetoric",
+      "icon": "🗣️",
+      "description": "Rhetorik, Diskurs, Argumentation, Überzeugung, rhetorical devices",
+      "examples": ["Rhetorik", "Diskurs", "Argumentation", "Überzeugung", "Eloquenz", "Polemik"],
+      "priority": 18
+    },
+    {
+      "id": "nuanced-abstract",
+      "name": "Nuanced Abstract Ideas",
+      "icon": "✨",
+      "description": "Ambivalenz, Paradox, Komplexität, Nuance, subtle concepts",
+      "examples": ["Ambivalenz", "Paradox", "Komplexität", "Nuance", "Dialektik", "Synthese"],
+      "priority": 19
+    },
+    {
+      "id": "critical-analysis",
+      "name": "Critical Analysis & Evaluation",
+      "icon": "🔍",
+      "description": "Kritik, Bewertung, Beurteilung, Reflexion, analytical vocabulary",
+      "examples": ["Kritik", "Bewertung", "Beurteilung", "Reflexion", "Einschätzung", "Würdigung"],
+      "priority": 20
+    }
+  ]
+}
