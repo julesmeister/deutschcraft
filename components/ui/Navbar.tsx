@@ -88,6 +88,177 @@ export function Navbar({
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-10">
+            {/* Student Dropdown */}
+            <MegaDropdown
+              trigger="For Students"
+              icon="🎓"
+              highlight={{
+                badge: "Start Learning",
+                title: "Master German with AI-Powered Flashcards",
+                description: "Track your progress from A1 to C2, maintain learning streaks, and achieve fluency faster.",
+                buttonText: "Get Started Free",
+                buttonHref: "/dashboard/student"
+              }}
+              columns={[
+                {
+                  title: "Learning",
+                  items: [
+                    {
+                      label: "Flashcards",
+                      href: "/dashboard/student/flashcards",
+                      icon: "🎴",
+                      description: "Practice with AI-generated cards"
+                    },
+                    {
+                      label: "Progress",
+                      href: "/dashboard/student/progress",
+                      icon: "📊",
+                      description: "Track your learning journey"
+                    },
+                    {
+                      label: "Assignments",
+                      href: "/dashboard/student/assignments",
+                      icon: "📝",
+                      description: "Complete teacher tasks"
+                    }
+                  ]
+                },
+                {
+                  title: "Resources",
+                  items: [
+                    {
+                      label: "Vocabulary",
+                      href: "/dashboard/student/vocabulary",
+                      icon: "📚",
+                      description: "Your saved words"
+                    },
+                    {
+                      label: "Grammar",
+                      href: "/dashboard/student/grammar",
+                      icon: "✏️",
+                      description: "Rules and examples",
+                      badge: "New"
+                    },
+                    {
+                      label: "Pronunciation",
+                      href: "/dashboard/student/pronunciation",
+                      icon: "🔊",
+                      description: "Audio practice"
+                    }
+                  ]
+                },
+                {
+                  title: "Community",
+                  items: [
+                    {
+                      label: "Leaderboard",
+                      href: "/dashboard/student/leaderboard",
+                      icon: "🏆",
+                      description: "Compare your progress"
+                    },
+                    {
+                      label: "Achievements",
+                      href: "/dashboard/student/achievements",
+                      icon: "⭐",
+                      description: "Unlock badges"
+                    },
+                    {
+                      label: "Study Groups",
+                      href: "/dashboard/student/groups",
+                      icon: "👥",
+                      description: "Learn together"
+                    }
+                  ]
+                }
+              ]}
+            />
+
+            {/* Teacher Dropdown */}
+            <MegaDropdown
+              trigger="For Teachers"
+              icon="👨‍🏫"
+              highlight={{
+                badge: "Manage Classes",
+                title: "Empower Your Students with Smart Tools",
+                description: "Create assignments, track student progress, and provide personalized feedback at scale.",
+                buttonText: "Access Teacher Dashboard",
+                buttonHref: "/dashboard/teacher"
+              }}
+              columns={[
+                {
+                  title: "Management",
+                  items: [
+                    {
+                      label: "Students",
+                      href: "/dashboard/teacher/students",
+                      icon: "👨‍🎓",
+                      description: "Manage your classes"
+                    },
+                    {
+                      label: "Assignments",
+                      href: "/dashboard/teacher/assignments",
+                      icon: "📋",
+                      description: "Create and review tasks"
+                    },
+                    {
+                      label: "Analytics",
+                      href: "/dashboard/teacher/analytics",
+                      icon: "📈",
+                      description: "Track class performance"
+                    }
+                  ]
+                },
+                {
+                  title: "Content",
+                  items: [
+                    {
+                      label: "Flashcard Sets",
+                      href: "/dashboard/teacher/flashcards",
+                      icon: "🗂️",
+                      description: "Create custom decks"
+                    },
+                    {
+                      label: "Exercises",
+                      href: "/dashboard/teacher/exercises",
+                      icon: "✍️",
+                      description: "Build practice materials"
+                    },
+                    {
+                      label: "Resources",
+                      href: "/dashboard/teacher/resources",
+                      icon: "📚",
+                      description: "Share learning materials"
+                    }
+                  ]
+                },
+                {
+                  title: "Tools",
+                  items: [
+                    {
+                      label: "AI Assistant",
+                      href: "/dashboard/teacher/ai",
+                      icon: "🤖",
+                      description: "Generate content instantly",
+                      badge: "Beta"
+                    },
+                    {
+                      label: "Grading",
+                      href: "/dashboard/teacher/grading",
+                      icon: "✅",
+                      description: "Automated feedback"
+                    },
+                    {
+                      label: "Reports",
+                      href: "/dashboard/teacher/reports",
+                      icon: "📄",
+                      description: "Export student data"
+                    }
+                  ]
+                }
+              ]}
+            />
+
+            {/* Other Nav Items */}
             {navItems.map((item) => (
               <Link
                 key={item.name}

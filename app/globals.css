@@ -101,6 +101,20 @@
   }
 }
 
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(20);
+    opacity: 0;
+  }
+}
+
 /* Animation classes */
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out;
@@ -120,6 +134,10 @@
 
 .animate-slide-in-right {
   animation: slideInRight 0.6s ease-out;
+}
+
+.animate-ripple {
+  animation: ripple 0.6s ease-out;
 }
 
 /* Staggered animation delays */
