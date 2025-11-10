@@ -75,7 +75,7 @@ function DashboardNavbar() {
                 {
                   title: 'Practice',
                   items: [
-                    { label: 'Flashcards', href: '/dashboard/practice' },
+                    { label: 'Flashcards', href: '/dashboard/student/flashcards' },
                     { label: 'Writing', href: '/dashboard/writing' },
                     { label: 'Review', href: '/dashboard/review' },
                   ],
