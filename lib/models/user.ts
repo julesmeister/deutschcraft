@@ -45,6 +45,14 @@ export interface User {
   notificationsEnabled?: boolean;
   soundEnabled?: boolean;
 
+  // Flashcard settings
+  flashcardSettings?: {
+    cardsPerSession: number; // -1 means unlimited
+    autoPlayAudio: boolean;
+    showExamples: boolean;
+    randomizeOrder: boolean;
+  };
+
   // Teacher-specific fields (only if role === 'TEACHER')
   totalStudents?: number; // Computed
   activeBatches?: number; // Computed

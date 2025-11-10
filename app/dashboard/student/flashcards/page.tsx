@@ -1,316 +1,322 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { StatCardSimple } from '@/components/ui/StatCardSimple';
+import { FileCard, FileGrid, FileSection } from '@/components/ui/FileCard';
+import { FlashcardPractice } from '@/components/flashcards/FlashcardPractice';
+import { ToastProvider } from '@/components/ui/toast';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Card } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
+import { useStudyStats } from '@/lib/hooks/useFlashcards';
+import { useRemNoteCategories, useRemNoteTotalCards } from '@/lib/hooks/useRemNoteCategories';
+import { useFlashcardSettings } from '@/lib/hooks/useFlashcardSettings';
+import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
 
-// Mock flashcard data (will be replaced with real data from Firebase)
-const MOCK_FLASHCARDS = [
-  {
-    id: '1',
-    question: 'What is the German word for "hello"?',
-    correctAnswer: 'Hallo',
-    wrongAnswers: ['Gut', 'Danke', 'Tschüss'],
-    type: 'multiple-choice' as const,
-    level: 'A1' as const,
-  },
-  {
-    id: '2',
-    question: 'Translate: "Good morning"',
-    correctAnswer: 'Guten Morgen',
-    wrongAnswers: ['Guten Tag', 'Gute Nacht', 'Guten Abend'],
-    type: 'multiple-choice' as const,
-    level: 'A1' as const,
-  },
-  {
-    id: '3',
-    question: 'What does "Danke" mean?',
-    correctAnswer: 'Thank you',
-    wrongAnswers: ['Please', 'Sorry', 'Yes'],
-    type: 'multiple-choice' as const,
-    level: 'A1' as const,
-  },
-  {
-    id: '4',
-    question: 'How do you say "water" in German?',
-    correctAnswer: 'Wasser',
-    wrongAnswers: ['Brot', 'Milch', 'Kaffee'],
-    type: 'multiple-choice' as const,
-    level: 'A1' as const,
-  },
-  {
-    id: '5',
-    question: 'Translate: "I am learning German"',
-    correctAnswer: 'Ich lerne Deutsch',
-    wrongAnswers: ['Ich spreche Deutsch', 'Ich verstehe Deutsch', 'Ich mag Deutsch'],
-    type: 'multiple-choice' as const,
-    level: 'A2' as const,
-  },
-];
+// Import level data
+import a1Data from '@/lib/data/remnote/levels/a1.json';
+import a2Data from '@/lib/data/remnote/levels/a2.json';
+import b1Data from '@/lib/data/remnote/levels/b1.json';
+import b2Data from '@/lib/data/remnote/levels/b2.json';
+import c1Data from '@/lib/data/remnote/levels/c1.json';
+import c2Data from '@/lib/data/remnote/levels/c2.json';
 
-export default function FlashcardsPage() {
+const levelDataMap = {
+  [CEFRLevel.A1]: a1Data,
+  [CEFRLevel.A2]: a2Data,
+  [CEFRLevel.B1]: b1Data,
+  [CEFRLevel.B2]: b2Data,
+  [CEFRLevel.C1]: c1Data,
+  [CEFRLevel.C2]: c2Data,
+};
+
+export default function FlashcardsLandingPage() {
+  const router = useRouter();
   const { session } = useFirebaseAuth();
-  const [currentCardIndex, setCurrentCardIndex] = useState(0);
-  const [isFlipped, setIsFlipped] = useState(false);
-  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-  const [correctCount, setCorrectCount] = useState(0);
-  const [incorrectCount, setIncorrectCount] = useState(0);
-  const [showResult, setShowResult] = useState(false);
-  const [mode, setMode] = useState<'practice' | 'complete'>('practice');
+  const [selectedLevel, setSelectedLevel] = useState<CEFRLevel>(CEFRLevel.A1);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [practiceFlashcards, setPracticeFlashcards] = useState<any[]>([]);
+  const [statsRefreshKey, setStatsRefreshKey] = useState(0);
 
-  const currentCard = MOCK_FLASHCARDS[currentCardIndex];
-  const allAnswers = currentCard ? [...currentCard.wrongAnswers, currentCard.correctAnswer].sort(() => Math.random() - 0.5) : [];
-  const progress = ((currentCardIndex + 1) / MOCK_FLASHCARDS.length) * 100;
+  // Fetch real data from Firestore (with refresh key to force re-fetch after session)
+  const { stats, isLoading: statsLoading } = useStudyStats(session?.user?.email || undefined, statsRefreshKey);
 
-  const handleAnswerSelect = (answer: string) => {
-    if (showResult) return; // Prevent changing answer after submission
+  // Get RemNote categories for selected level
+  const { categories, isLoading: categoriesLoading } = useRemNoteCategories(selectedLevel);
+  const totalRemNoteCards = useRemNoteTotalCards(selectedLevel);
 
-    setSelectedAnswer(answer);
-    setShowResult(true);
+  // Get flashcard settings
+  const { settings } = useFlashcardSettings();
 
-    const isCorrect = answer === currentCard.correctAnswer;
-    if (isCorrect) {
-      setCorrectCount(prev => prev + 1);
-    } else {
-      setIncorrectCount(prev => prev + 1);
+  const handleCategoryClick = (categoryId: string, categoryName: string) => {
+    // Get flashcards for this category and level
+    const levelData = levelDataMap[selectedLevel];
+    let categoryFlashcards = levelData.flashcards.filter(
+      (card: any) => card.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') === categoryId
+    ).map((card: any) => ({
+      ...card,
+      wordId: card.id, // Use flashcard id as wordId for now
+    }));
+
+    // Apply settings
+    categoryFlashcards = applyFlashcardSettings(categoryFlashcards);
+
+    setPracticeFlashcards(categoryFlashcards);
+    setSelectedCategory(categoryName);
+  };
+
+  const handleBackToCategories = () => {
+    setSelectedCategory(null);
+    setPracticeFlashcards([]);
+    // Refresh stats after completing session
+    setStatsRefreshKey(prev => prev + 1);
+  };
+
+  const handleStartPractice = () => {
+    // Get all flashcards for the selected level
+    const levelData = levelDataMap[selectedLevel];
+    let flashcardsWithWordId = levelData.flashcards.map((card: any) => ({
+      ...card,
+      wordId: card.id, // Use flashcard id as wordId for now
+    }));
+
+    // Apply settings
+    flashcardsWithWordId = applyFlashcardSettings(flashcardsWithWordId);
+
+    setPracticeFlashcards(flashcardsWithWordId);
+    setSelectedCategory('All Categories');
+  };
+
+  // Apply flashcard settings to flashcard array
+  const applyFlashcardSettings = (flashcards: any[]) => {
+    let processedCards = [...flashcards];
+
+    // Apply randomize order
+    if (settings.randomizeOrder) {
+      processedCards = processedCards.sort(() => Math.random() - 0.5);
     }
-  };
 
-  const handleNext = () => {
-    if (currentCardIndex < MOCK_FLASHCARDS.length - 1) {
-      setCurrentCardIndex(prev => prev + 1);
-      setSelectedAnswer(null);
-      setShowResult(false);
-      setIsFlipped(false);
-    } else {
-      setMode('complete');
+    // Apply cards per session limit
+    if (settings.cardsPerSession !== -1 && settings.cardsPerSession > 0) {
+      processedCards = processedCards.slice(0, settings.cardsPerSession);
     }
+
+    return processedCards;
   };
-
-  const handleRestart = () => {
-    setCurrentCardIndex(0);
-    setSelectedAnswer(null);
-    setShowResult(false);
-    setIsFlipped(false);
-    setCorrectCount(0);
-    setIncorrectCount(0);
-    setMode('practice');
-  };
-
-  if (mode === 'complete') {
-    const accuracyRate = Math.round((correctCount / MOCK_FLASHCARDS.length) * 100);
-
-    return (
-      <div className="p-6 space-y-6">
-        <div className="flex items-center justify-between">
-          <h1 className="text-3xl font-black text-gray-900">Practice Complete! 🎉</h1>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="max-w-2xl mx-auto"
-        >
-          <Card className="p-12 text-center space-y-8">
-            <div className="text-8xl mb-4">
-              {accuracyRate >= 80 ? '🏆' : accuracyRate >= 60 ? '👏' : '📚'}
-            </div>
-
-            <div>
-              <h2 className="text-4xl font-black text-gray-900 mb-2">{accuracyRate}% Accuracy</h2>
-              <p className="text-gray-600">
-                {accuracyRate >= 80 ? 'Excellent work!' : accuracyRate >= 60 ? 'Good job! Keep practicing.' : 'Keep going! Practice makes perfect.'}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-3 gap-6 pt-6 border-t">
-              <div>
-                <div className="text-3xl font-black text-gray-900">{MOCK_FLASHCARDS.length}</div>
-                <div className="text-sm text-gray-500 mt-1">Total Cards</div>
-              </div>
-              <div>
-                <div className="text-3xl font-black text-emerald-600">{correctCount}</div>
-                <div className="text-sm text-gray-500 mt-1">Correct</div>
-              </div>
-              <div>
-                <div className="text-3xl font-black text-red-600">{incorrectCount}</div>
-                <div className="text-sm text-gray-500 mt-1">Incorrect</div>
-              </div>
-            </div>
-
-            <div className="flex gap-4 pt-6">
-              <Button onClick={handleRestart} className="flex-1">
-                Practice Again
-              </Button>
-              <Button onClick={() => window.location.href = '/dashboard/student'} variant="outline" className="flex-1">
-                Back to Dashboard
-              </Button>
-            </div>
-          </Card>
-        </motion.div>
-      </div>
-    );
-  }
 
   return (
-    <div className="p-6 space-y-6">
-      {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-black text-gray-900">Flashcard Practice</h1>
-          <p className="text-gray-500">Master German vocabulary with spaced repetition</p>
-        </div>
-        <div className="text-right">
-          <div className="text-2xl font-black text-gray-900">
-            {currentCardIndex + 1} / {MOCK_FLASHCARDS.length}
-          </div>
-          <div className="text-sm text-gray-500">Cards completed</div>
-        </div>
-      </div>
-
-      {/* Progress Bar */}
-      <div className="bg-gray-200 h-2 rounded-full overflow-hidden">
-        <motion.div
-          className="h-full bg-gradient-to-r from-piku-purple-dark to-piku-cyan"
-          initial={{ width: 0 }}
-          animate={{ width: `${progress}%` }}
-          transition={{ duration: 0.5 }}
-        />
-      </div>
-
-      {/* Score Display */}
-      <div className="flex gap-4 justify-center">
-        <div className="flex items-center gap-2 bg-emerald-50 px-4 py-2 rounded-lg border border-emerald-200">
-          <span className="text-2xl">✅</span>
-          <div>
-            <div className="text-xl font-black text-emerald-600">{correctCount}</div>
-            <div className="text-xs text-emerald-700">Correct</div>
+    <ToastProvider>
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <div className="border-b border-gray-200">
+          <div className="container mx-auto px-6 py-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <h1 className="text-3xl font-black text-gray-900">Flashcards 📚</h1>
+                <p className="text-gray-600 mt-1">Master German vocabulary with spaced repetition</p>
+              </div>
+              <button
+                onClick={handleStartPractice}
+                className="cursor-pointer whitespace-nowrap content-center font-bold transition-all duration-150 ease-in-out h-12 rounded-xl bg-blue-500 px-5 py-2 text-white hover:bg-blue-600"
+              >
+                Start Practice
+              </button>
+            </div>
           </div>
         </div>
-        <div className="flex items-center gap-2 bg-red-50 px-4 py-2 rounded-lg border border-red-200">
-          <span className="text-2xl">❌</span>
-          <div>
-            <div className="text-xl font-black text-red-600">{incorrectCount}</div>
-            <div className="text-xs text-red-700">Incorrect</div>
+
+      {/* Main Content */}
+      <div className="container mx-auto px-6 py-8">
+        {/* Show Flashcard Practice if category is selected */}
+        {selectedCategory ? (
+          <FlashcardPractice
+            flashcards={practiceFlashcards}
+            categoryName={selectedCategory}
+            level={selectedLevel}
+            onBack={handleBackToCategories}
+            showExamples={settings.showExamples}
+          />
+        ) : (
+          <>
+            {/* Loading State */}
+            {statsLoading ? (
+          <div className="flex items-center justify-center py-12">
+            <div className="text-center">
+              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-piku-purple-dark"></div>
+              <p className="mt-2 text-gray-600">Loading your stats...</p>
+            </div>
           </div>
-        </div>
-      </div>
+        ) : (
+          <>
+            {/* Stats Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+              <StatCardSimple
+                label="Available Cards"
+                value={totalRemNoteCards}
+                icon="📚"
+                bgColor="bg-blue-100"
+                iconBgColor="bg-blue-500"
+              />
+              <StatCardSimple
+                label="Cards Learned"
+                value={stats.cardsLearned}
+                icon="✅"
+                bgColor="bg-emerald-100"
+                iconBgColor="bg-emerald-500"
+              />
+              <StatCardSimple
+                label="Day Streak"
+                value={stats.streak}
+                icon="🔥"
+                bgColor="bg-amber-100"
+                iconBgColor="bg-amber-500"
+              />
+              <StatCardSimple
+                label="Accuracy"
+                value={`${stats.accuracy}%`}
+                icon="🎯"
+                bgColor="bg-purple-100"
+                iconBgColor="bg-purple-500"
+              />
+            </div>
+          </>
+        )}
 
-      {/* Flashcard */}
-      <div className="max-w-3xl mx-auto">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentCardIndex}
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.3 }}
-          >
-            <Card className="p-8 md:p-12">
-              {/* Level Badge */}
-              <div className="mb-6">
-                <span className="inline-flex items-center gap-2 bg-piku-purple-light/30 text-piku-purple-dark px-4 py-2 rounded-full text-sm font-bold">
-                  <span>🎯</span>
-                  Level {currentCard.level}
-                </span>
-              </div>
+        {/* Level Selector - Split Button Style */}
+        <div className="mb-8">
+          <div className="flex w-full gap-1">
+            {Object.values(CEFRLevel).map((level, index) => {
+              const info = CEFRLevelInfo[level];
+              const isSelected = selectedLevel === level;
+              const isFirst = index === 0;
+              const isLast = index === Object.values(CEFRLevel).length - 1;
 
-              {/* Question */}
-              <div className="mb-8">
-                <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">
-                  {currentCard.question}
-                </h2>
-              </div>
+              // Determine border radius based on position
+              let borderRadius = '';
+              if (isFirst) {
+                borderRadius = 'rounded-l-[20px] rounded-r-[5px]';
+              } else if (isLast) {
+                borderRadius = 'rounded-l-[5px] rounded-r-[20px]';
+              } else {
+                borderRadius = 'rounded-[5px]';
+              }
 
-              {/* Answer Options */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {allAnswers.map((answer, index) => {
-                  const isSelected = selectedAnswer === answer;
-                  const isCorrect = answer === currentCard.correctAnswer;
-                  const showCorrect = showResult && isCorrect;
-                  const showIncorrect = showResult && isSelected && !isCorrect;
+              // Color scheme similar to stat cards
+              let bgColor = 'bg-blue-100';
+              let iconBgColor = 'bg-blue-500';
+              let textColor = 'text-blue-900';
+              let hoverColor = 'hover:bg-blue-200';
 
-                  return (
-                    <motion.button
-                      key={index}
-                      onClick={() => handleAnswerSelect(answer)}
-                      disabled={showResult}
-                      whileHover={{ scale: showResult ? 1 : 1.02 }}
-                      whileTap={{ scale: showResult ? 1 : 0.98 }}
-                      className={`p-6 rounded-xl border-2 transition-all text-left ${
-                        showCorrect
-                          ? 'bg-emerald-50 border-emerald-500'
-                          : showIncorrect
-                          ? 'bg-red-50 border-red-500'
-                          : isSelected
-                          ? 'bg-piku-purple-light/30 border-piku-purple-dark'
-                          : 'bg-white border-gray-200 hover:border-piku-purple-dark hover:bg-gray-50'
-                      } ${showResult ? 'cursor-not-allowed' : 'cursor-pointer'}`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="text-lg font-semibold text-gray-900">{answer}</span>
-                        {showCorrect && <span className="text-2xl">✅</span>}
-                        {showIncorrect && <span className="text-2xl">❌</span>}
-                      </div>
-                    </motion.button>
-                  );
-                })}
-              </div>
+              if (index === 0) { // A1
+                bgColor = 'bg-blue-100';
+                iconBgColor = 'bg-blue-500';
+                textColor = 'text-blue-900';
+                hoverColor = 'hover:bg-blue-200';
+              } else if (index === 1) { // A2
+                bgColor = 'bg-emerald-100';
+                iconBgColor = 'bg-emerald-500';
+                textColor = 'text-emerald-900';
+                hoverColor = 'hover:bg-emerald-200';
+              } else if (index === 2) { // B1
+                bgColor = 'bg-amber-100';
+                iconBgColor = 'bg-amber-500';
+                textColor = 'text-amber-900';
+                hoverColor = 'hover:bg-amber-200';
+              } else if (index === 3) { // B2
+                bgColor = 'bg-purple-100';
+                iconBgColor = 'bg-purple-500';
+                textColor = 'text-purple-900';
+                hoverColor = 'hover:bg-purple-200';
+              } else if (index === 4) { // C1
+                bgColor = 'bg-pink-100';
+                iconBgColor = 'bg-pink-500';
+                textColor = 'text-pink-900';
+                hoverColor = 'hover:bg-pink-200';
+              } else { // C2
+                bgColor = 'bg-indigo-100';
+                iconBgColor = 'bg-indigo-500';
+                textColor = 'text-indigo-900';
+                hoverColor = 'hover:bg-indigo-200';
+              }
 
-              {/* Result Feedback */}
-              {showResult && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="mt-8"
+              return (
+                <button
+                  key={level}
+                  onClick={() => setSelectedLevel(level)}
+                  className={`
+                    flex-1 px-4 py-4 transition-all duration-200
+                    ${borderRadius}
+                    ${isSelected
+                      ? `${iconBgColor} text-white`
+                      : `${bgColor} ${textColor} ${hoverColor}`
+                    }
+                  `}
                 >
-                  <div
-                    className={`p-6 rounded-xl ${
-                      selectedAnswer === currentCard.correctAnswer
-                        ? 'bg-emerald-50 border border-emerald-200'
-                        : 'bg-red-50 border border-red-200'
-                    }`}
-                  >
-                    <div className="flex items-start gap-4">
-                      <div className="text-3xl">
-                        {selectedAnswer === currentCard.correctAnswer ? '🎉' : '💡'}
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-black text-lg mb-2">
-                          {selectedAnswer === currentCard.correctAnswer
-                            ? 'Correct!'
-                            : 'Not quite!'}
-                        </h3>
-                        {selectedAnswer !== currentCard.correctAnswer && (
-                          <p className="text-gray-700">
-                            The correct answer is: <span className="font-bold">{currentCard.correctAnswer}</span>
-                          </p>
-                        )}
-                      </div>
-                    </div>
+                  <div className="text-2xl font-black mb-1">{level}</div>
+                  <div className={`text-xs font-medium whitespace-nowrap ${isSelected ? 'text-white opacity-90' : 'opacity-70'}`}>
+                    {info.name}
                   </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
 
-                  <div className="mt-6 flex justify-end">
-                    <Button onClick={handleNext} size="lg">
-                      {currentCardIndex < MOCK_FLASHCARDS.length - 1 ? 'Next Card' : 'Finish'}
-                      <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </Button>
-                  </div>
-                </motion.div>
-              )}
-            </Card>
-          </motion.div>
-        </AnimatePresence>
-      </div>
+        {/* Vocabulary Categories */}
+        <FileSection title={`${selectedLevel} Vocabulary Categories`}>
+          {categoriesLoading ? (
+            <div className="flex items-center justify-center py-12">
+              <div className="text-center">
+                <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-piku-purple-dark"></div>
+                <p className="mt-2 text-gray-600">Loading categories...</p>
+              </div>
+            </div>
+          ) : categories.length === 0 ? (
+            <div className="text-center py-12 bg-white border border-gray-200 rounded-2xl">
+              <div className="text-6xl mb-4">📝</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">No vocabulary yet</h3>
+              <p className="text-gray-600">
+                Vocabulary categories will appear here once you start learning
+              </p>
+            </div>
+          ) : (
+            <FileGrid>
+              {categories.map((category) => (
+                <FileCard
+                  key={category.id}
+                  icon={
+                    <div className="text-4xl">{category.icon}</div>
+                  }
+                  name={category.name}
+                  size={`${category.cardCount} cards`}
+                  onClick={() => handleCategoryClick(category.id, category.name)}
+                  onMenuClick={() => console.log('Menu:', category.name)}
+                />
+              ))}
+            </FileGrid>
+          )}
+        </FileSection>
 
-      {/* Keyboard Shortcuts Hint */}
-      <div className="text-center text-sm text-gray-400">
-        Tip: You can use number keys 1-4 to select answers quickly
+        {/* Quick Actions */}
+        <div className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h3 className="text-xl font-bold text-neutral-900 mb-2">Ready to practice?</h3>
+              <p className="text-sm text-neutral-600">
+                Start a flashcard session with all vocabulary or choose a specific category
+              </p>
+            </div>
+            <button
+              onClick={handleStartPractice}
+              className="cursor-pointer whitespace-nowrap content-center font-bold transition-all duration-150 ease-in-out h-12 rounded-xl bg-blue-500 px-6 py-2 text-white hover:bg-blue-600"
+            >
+              Start Practice Session
+            </button>
+          </div>
+        </div>
+          </>
+        )}
       </div>
-    </div>
+      </div>
+    </ToastProvider>
   );
 }

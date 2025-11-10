@@ -18,6 +18,7 @@ export interface TaskGroup {
   id: string;
   title: string;
   tasks: Task[];
+  color?: string;
 }
 
 export interface TaskBoardProps {
@@ -31,6 +32,11 @@ export interface TaskBoardProps {
   onAddMember?: () => void;
   showMembers?: boolean;
   showAddTask?: boolean;
+  showDelete?: boolean;
+  showExpandArrow?: boolean;
+  showStatus?: boolean;
+  showPriority?: boolean;
+  showDueDate?: boolean;
   maxVisibleMembers?: number;
   className?: string;
 }

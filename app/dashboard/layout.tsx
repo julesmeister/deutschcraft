@@ -85,7 +85,7 @@ function DashboardNavbar() {
                   items: [
                     { label: 'Statistics', href: '/dashboard/progress' },
                     { label: 'Achievements', href: '/dashboard/achievements', badge: 'New' },
-                    { label: 'Streak', href: '/dashboard/streak' },
+                    { label: 'Syllabus', href: '/dashboard/student/syllabus' },
                   ],
                 },
                 {

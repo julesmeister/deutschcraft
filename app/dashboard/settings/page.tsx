@@ -5,10 +5,10 @@ import { SettingsSidebar, SettingsMenuItem } from '@/components/ui/settings/Sett
 import { ProfileTab } from '@/components/ui/settings/ProfileTab';
 import { SecurityTab } from '@/components/ui/settings/SecurityTab';
 import { NotificationTab } from '@/components/ui/settings/NotificationTab';
-import { BillingTab } from '@/components/ui/settings/BillingTab';
+import { FlashcardSettingsTab } from '@/components/ui/settings/FlashcardSettingsTab';
 import { IntegrationTab } from '@/components/ui/settings/IntegrationTab';
 
-type SettingsTab = 'profile' | 'security' | 'notification' | 'billing' | 'integration';
+type SettingsTab = 'profile' | 'security' | 'notification' | 'flashcards' | 'integration';
 
 export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState<SettingsTab>('profile');
@@ -91,8 +91,8 @@ export default function SettingsPage() {
       onClick: () => setActiveTab('notification'),
     },
     {
-      id: 'billing',
-      label: 'Billing',
+      id: 'flashcards',
+      label: 'Flashcards',
       icon: (
         <svg
           stroke="currentColor"
@@ -104,14 +104,14 @@ export default function SettingsPage() {
           height="1em"
           width="1em"
         >
-          <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-          <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
-          <path d="M14 11h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5"></path>
-          <path d="M12 17v1m0 -8v1"></path>
+          <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+          <path d="M7 21h10"></path>
+          <path d="M9 18v3"></path>
+          <path d="M15 18v3"></path>
         </svg>
       ),
-      active: activeTab === 'billing',
-      onClick: () => setActiveTab('billing'),
+      active: activeTab === 'flashcards',
+      onClick: () => setActiveTab('flashcards'),
     },
     {
       id: 'integration',
@@ -196,8 +196,8 @@ export default function SettingsPage() {
               {/* Notification Tab */}
               {activeTab === 'notification' && <NotificationTab />}
 
-              {/* Billing Tab */}
-              {activeTab === 'billing' && <BillingTab />}
+              {/* Flashcard Settings Tab */}
+              {activeTab === 'flashcards' && <FlashcardSettingsTab />}
 
               {/* Integration Tab */}
               {activeTab === 'integration' && <IntegrationTab />}

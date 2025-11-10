@@ -18,6 +18,11 @@ export function TaskBoard({
   onAddMember,
   showMembers = true,
   showAddTask = true,
+  showDelete = true,
+  showExpandArrow = true,
+  showStatus = true,
+  showPriority = true,
+  showDueDate = true,
   maxVisibleMembers = 4,
   className = '',
 }: TaskBoardProps) {
@@ -202,15 +207,23 @@ export function TaskBoard({
             <div key={group.id}>
               {/* Group Header */}
               <div className="flex items-center gap-2 mb-4">
-                <button
-                  onClick={() => toggleGroup(group.id)}
-                  className="text-lg cursor-pointer text-gray-600 hover:text-gray-900"
-                >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path fillRule="evenodd" d="M0 0h24v24H0V0z" fill="none" />
-                    <path d="M11 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-2-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
-                  </svg>
-                </button>
+                {showExpandArrow && (
+                  <button
+                    onClick={() => toggleGroup(group.id)}
+                    className="text-lg cursor-pointer text-gray-600 hover:text-gray-900"
+                  >
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path fillRule="evenodd" d="M0 0h24v24H0V0z" fill="none" />
+                      <path d="M11 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm-2-8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 4c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+                    </svg>
+                  </button>
+                )}
+                {group.color && (
+                  <div
+                    className="w-1 h-6 rounded-full"
+                    style={{ backgroundColor: group.color }}
+                  />
+                )}
                 <h4 className="text-xl font-bold text-gray-900">{group.title}</h4>
               </div>
 
@@ -228,6 +241,11 @@ export function TaskBoard({
                             isEditing={editingTaskId === task.id}
                             editingTitle={editingTitle}
                             isExpanded={expandedTaskDetails[task.id]}
+                            showDelete={showDelete}
+                            showExpandArrow={showExpandArrow}
+                            showStatus={showStatus}
+                            showPriority={showPriority}
+                            showDueDate={showDueDate}
                             onMouseEnter={() => setHoveredTaskId(task.id)}
                             onMouseLeave={() => setHoveredTaskId(null)}
                             onToggleExpand={() => setExpandedTaskDetails(prev => ({ ...prev, [task.id]: !prev[task.id] }))}

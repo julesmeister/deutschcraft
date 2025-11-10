@@ -1,9 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(powershell -Command \"Get-Content ''C:\\Users\\User\\Downloads\\zeroheight - The Design System Platform for Teams Who Scale.html'' | Select-String -Pattern ''opacity-0|translate-y|transition-'' | Select-Object -First 30\")",
-      "Bash(powershell -Command \"Get-Content ''C:\\Users\\User\\Downloads\\zeroheight - The Design System Platform for Teams Who Scale.html'' | Select-String -Pattern ''pointer-events'' | Select-Object -First 20\")",
-      "Bash(git add:*)"
+      "Bash(python3:*)",
+      "Bash(powershell -Command \"Get-Content lib/data/remnote/levels/a1.json | Select-String -Pattern ''\"\"Verbs\"\"'' -Context 2,2\")",
+      "Bash(powershell -Command \"$json = Get-Content lib/data/remnote/levels/a1.json | ConvertFrom-Json; ($json.flashcards | Where-Object {$_category -eq ''Verbs''}).Count\")",
+      "Bash(npx tsx:*)",
+      "Bash(powershell -Command \"Get-Content lib/data/remnote/levels/a1.json | Select-String -Pattern ''bleiben|liegen|stehen|wissen'' -Context 0,1 | Select-Object -First 8\")",
+      "Bash(powershell -Command \"$json = Get-Content lib/data/remnote/levels/a1.json -Raw | ConvertFrom-Json; $json.flashcards | Where-Object {$_german -in @(''bleiben'',''liegen'',''stehen'',''wissen'')} | Select-Object german,category\")",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
