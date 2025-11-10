@@ -225,12 +225,23 @@ export function useStudyStats(userId?: string, refreshKey?: number) {
             const today = new Date();
             today.setHours(0, 0, 0, 0);
 
+            console.log('📊 [useStudyStats] Streak calculation - today:', today.toISOString());
+
             for (let i = 0; i < studyData.length; i++) {
-              const progressDate = new Date(studyData[i].date);
+              const dateString = studyData[i].date;
+              console.log('📊 [useStudyStats] Processing date string:', dateString, 'type:', typeof dateString);
+
+              const progressDate = new Date(dateString);
               progressDate.setHours(0, 0, 0, 0);
 
               const expectedDate = new Date(today);
               expectedDate.setDate(today.getDate() - i);
+
+              console.log('📊 [useStudyStats] Comparing:', {
+                progressDate: progressDate.toISOString(),
+                expectedDate: expectedDate.toISOString(),
+                match: progressDate.getTime() === expectedDate.getTime(),
+              });
 
               if (progressDate.getTime() === expectedDate.getTime()) {
                 streak++;
@@ -238,6 +249,8 @@ export function useStudyStats(userId?: string, refreshKey?: number) {
                 break;
               }
             }
+
+            console.log('📊 [useStudyStats] Calculated streak:', streak);
 
             console.log('📊 [useStudyStats] Final stats:', {
               totalCards,
