@@ -9,6 +9,7 @@ import { LevelDistribution } from '@/components/dashboard/LevelDistribution';
 import { TopPerformers } from '@/components/dashboard/TopPerformers';
 import { QuickActions } from '@/components/dashboard/QuickActions';
 import { StudentTable } from '@/components/dashboard/StudentTable';
+import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CEFRLevel } from '@/lib/models';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useTeacherDashboard } from '@/lib/hooks/useTeacherDashboard';
@@ -84,23 +85,18 @@ export default function TeacherDashboard() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="border-b border-gray-200">
-        <div className="container mx-auto px-6 py-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-3xl font-black text-gray-900">Teacher Dashboard 👨‍🏫</h1>
-              <p className="text-gray-600 mt-1">Monitor and manage your students' progress</p>
-            </div>
-            <BatchSelector
-              batches={dashboard.batches}
-              selectedBatch={dashboard.selectedBatch}
-              onSelectBatch={dashboard.setSelectedBatch}
-              onCreateBatch={() => dashboard.setIsCreateBatchOpen(true)}
-            />
-          </div>
-        </div>
-      </div>
+      <DashboardHeader
+        title="Teacher Dashboard 👨‍🏫"
+        subtitle="Monitor and manage your students' progress"
+        actions={
+          <BatchSelector
+            batches={dashboard.batches}
+            selectedBatch={dashboard.selectedBatch}
+            onSelectBatch={dashboard.setSelectedBatch}
+            onCreateBatch={() => dashboard.setIsCreateBatchOpen(true)}
+          />
+        }
+      />
 
       {/* Main Content */}
       <div className="container mx-auto px-6 py-8">

@@ -6,6 +6,7 @@ import { StatCard } from '@/components/ui/StatCard';
 import { StatGrid } from '@/components/ui/StatGrid';
 import { TabBar, TabItem } from '@/components/ui/TabBar';
 import { ActivityTimeline, ActivityItem } from '@/components/ui/activity/ActivityTimeline';
+import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useStudyStats } from '@/lib/hooks/useFlashcards';
 import { collection, query, where, getDocs, orderBy, limit, doc, getDoc } from 'firebase/firestore';
@@ -138,31 +139,18 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="border-b border-gray-200 bg-white">
-        <div className="container mx-auto px-6 py-6">
-          <button
-            onClick={() => router.push('/dashboard/teacher')}
-            className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 transition-colors"
-          >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            Back to Dashboard
-          </button>
-
-          <div className="flex items-center gap-4">
-            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-piku-purple to-piku-cyan flex items-center justify-center text-3xl font-black text-white">
-              {(student.name || student.email || '?').charAt(0).toUpperCase()}
-            </div>
-            <div>
-              <h1 className="text-3xl font-black text-gray-900">{student.name || 'Unknown Student'}</h1>
-              <p className="text-gray-600 mt-1">Current Level: <span className="font-bold text-piku-purple">{student.currentLevel}</span></p>
-              <p className="text-sm text-gray-500">{student.email}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <DashboardHeader
+        title={student.name || 'Unknown Student'}
+        subtitle={`Current Level: ${student.currentLevel}`}
+        backButton={{
+          label: 'Back to Dashboard',
+          onClick: () => router.push('/dashboard/teacher'),
+        }}
+        avatar={{
+          initial: (student.name || student.email || '?').charAt(0).toUpperCase(),
+          subtitle: student.email,
+        }}
+      />
 
       {/* Main Content */}
       <div className="container mx-auto px-6 py-8">

@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { StatCardSimple } from '@/components/ui/StatCardSimple';
 import { FileCard, FileGrid, FileSection } from '@/components/ui/FileCard';
 import { FlashcardPractice } from '@/components/flashcards/FlashcardPractice';
+import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { ToastProvider } from '@/components/ui/toast';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useStudyStats } from '@/lib/hooks/useFlashcards';
@@ -106,23 +107,18 @@ export default function FlashcardsLandingPage() {
   return (
     <ToastProvider>
       <div className="min-h-screen bg-gray-50">
-        {/* Header */}
-        <div className="border-b border-gray-200">
-          <div className="container mx-auto px-6 py-6">
-            <div className="flex items-center justify-between">
-              <div>
-                <h1 className="text-3xl font-black text-gray-900">Flashcards 📚</h1>
-                <p className="text-gray-600 mt-1">Master German vocabulary with spaced repetition</p>
-              </div>
-              <button
-                onClick={handleStartPractice}
-                className="cursor-pointer whitespace-nowrap content-center font-bold transition-all duration-150 ease-in-out h-12 rounded-xl bg-blue-500 px-5 py-2 text-white hover:bg-blue-600"
-              >
-                Start Practice
-              </button>
-            </div>
-          </div>
-        </div>
+        <DashboardHeader
+          title="Flashcards 📚"
+          subtitle="Master German vocabulary with spaced repetition"
+          actions={
+            <button
+              onClick={handleStartPractice}
+              className="cursor-pointer whitespace-nowrap content-center font-bold transition-all duration-150 ease-in-out h-12 rounded-xl bg-blue-500 px-5 py-2 text-white hover:bg-blue-600"
+            >
+              Start Practice
+            </button>
+          }
+        />
 
       {/* Main Content */}
       <div className="container mx-auto px-6 py-8">

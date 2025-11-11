@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { TaskBoard, TaskGroup } from '@/components/ui/TaskBoard';
 import { Select, SelectOption } from '@/components/ui/Select';
+import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
 import { getSyllabusForLevel } from '@/lib/data/syllabusData';
 
@@ -145,43 +146,34 @@ export default function SyllabusPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="border-b border-gray-200">
-        <div className="container mx-auto px-6 py-6">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div>
-              <h1 className="text-3xl font-black text-gray-900">
-                German Language Syllabus 📋
-              </h1>
-              <p className="text-gray-600 mt-1">
-                Comprehensive curriculum from beginner to upper-intermediate levels
-              </p>
+      <DashboardHeader
+        title="German Language Syllabus 📋"
+        subtitle="Comprehensive curriculum from beginner to upper-intermediate levels"
+        actions={
+          <div className="flex flex-col sm:flex-row gap-4">
+            {/* Level Selector */}
+            <div className="w-full sm:w-64">
+              <label className="block text-xs font-semibold text-gray-700 mb-1">CEFR Level</label>
+              <Select
+                value={selectedLevel}
+                onChange={(value) => setSelectedLevel(value as CEFRLevel)}
+                options={cefrOptions}
+                placeholder="Select CEFR Level"
+              />
             </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              {/* Level Selector */}
-              <div className="w-full sm:w-64">
-                <label className="block text-xs font-semibold text-gray-700 mb-1">CEFR Level</label>
-                <Select
-                  value={selectedLevel}
-                  onChange={(value) => setSelectedLevel(value as CEFRLevel)}
-                  options={cefrOptions}
-                  placeholder="Select CEFR Level"
-                />
-              </div>
-              {/* Study Intensity Selector */}
-              <div className="w-full sm:w-72">
-                <label className="block text-xs font-semibold text-gray-700 mb-1">Study Intensity</label>
-                <Select
-                  value={String(hoursPerDay)}
-                  onChange={(value) => setHoursPerDay(Number(value))}
-                  options={intensityOptions}
-                  placeholder="Select study hours"
-                />
-              </div>
+            {/* Study Intensity Selector */}
+            <div className="w-full sm:w-72">
+              <label className="block text-xs font-semibold text-gray-700 mb-1">Study Intensity</label>
+              <Select
+                value={String(hoursPerDay)}
+                onChange={(value) => setHoursPerDay(Number(value))}
+                options={intensityOptions}
+                placeholder="Select study hours"
+              />
             </div>
           </div>
-        </div>
-      </div>
+        }
+      />
 
       {/* Level Info */}
       <div className="container mx-auto px-6 py-6">

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { TaskBoard, TaskGroup, TaskMember, Task } from '@/components/ui/TaskBoard';
 import { BatchSelector } from '@/components/ui/BatchSelector';
+import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useActiveBatches } from '@/lib/hooks/useBatches';
 import { useAllStudentsNested } from '@/lib/hooks/useUsers';
@@ -184,36 +185,28 @@ export default function TasksPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="border-b border-gray-200">
-        <div className="container mx-auto px-6 py-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-3xl font-black text-gray-900">
-                Writing Tasks 📝
-              </h1>
-              <p className="text-gray-600 mt-1">
-                {userRole === 'TEACHER' ? (
-                  selectedBatch
-                    ? `Manage writing assignments for ${selectedBatch.name}`
-                    : 'Manage and track all your writing tasks'
-                ) : (
-                  'View and complete your writing assignments'
-                )}
-              </p>
-            </div>
-            {/* BatchSelector only visible to teachers */}
-            {userRole === 'TEACHER' && (
-              <BatchSelector
-                batches={batches}
-                selectedBatch={selectedBatch}
-                onSelectBatch={setSelectedBatch}
-                onCreateBatch={handleCreateBatch}
-              />
-            )}
-          </div>
-        </div>
-      </div>
+      <DashboardHeader
+        title="Writing Tasks 📝"
+        subtitle={
+          userRole === 'TEACHER' ? (
+            selectedBatch
+              ? `Manage writing assignments for ${selectedBatch.name}`
+              : 'Manage and track all your writing tasks'
+          ) : (
+            'View and complete your writing assignments'
+          )
+        }
+        actions={
+          userRole === 'TEACHER' ? (
+            <BatchSelector
+              batches={batches}
+              selectedBatch={selectedBatch}
+              onSelectBatch={setSelectedBatch}
+              onCreateBatch={handleCreateBatch}
+            />
+          ) : undefined
+        }
+      />
 
       {/* Main Content */}
       <div className="container mx-auto px-6 py-8">

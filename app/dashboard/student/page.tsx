@@ -13,6 +13,7 @@ import { WeeklyProgressChart } from '@/components/dashboard/WeeklyProgressChart'
 import { StudentQuickActions } from '@/components/dashboard/StudentQuickActions';
 import { DailyGoalCard } from '@/components/dashboard/DailyGoalCard';
 import { StudentRecentTasksCard } from '@/components/dashboard/StudentRecentTasksCard';
+import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { useEffect, useState } from 'react';
 import { db } from '@/lib/firebase';
 import { doc, getDoc } from 'firebase/firestore';
@@ -97,36 +98,36 @@ export default function StudentDashboard() {
   ];
 
   return (
-    <div className="p-6 space-y-6">
-      {/* Header */}
-      <div>
-        <h1 className="text-3xl font-black text-gray-900 mb-1">
-          Welcome back, {userName.split(' ')[0]}!
-        </h1>
-        <p className="text-gray-500">Continue your German learning journey</p>
-      </div>
+    <div className="min-h-screen bg-gray-50">
+      <DashboardHeader
+        title={`Welcome back, ${userName.split(' ')[0]}!`}
+        subtitle="Continue your German learning journey"
+      />
 
-      {/* Stats Grid - Slim Style (NO rounded corners) */}
-      <div className="bg-white overflow-hidden border border-gray-200">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-x divide-y sm:divide-y-0 divide-gray-200">
-          {stats.map((stat, index) => (
-            <StudentStatsCard key={index} {...stat} />
-          ))}
-        </div>
-      </div>
-
-      {/* Content Grid */}
-      <div className="grid lg:grid-cols-3 gap-6">
-        {/* Main Column */}
-        <div className="lg:col-span-2 space-y-6">
-          <WeeklyProgressChart weeklyData={weeklyData} totalWords={totalWords} />
-          <StudentQuickActions cardsReady={cardsReady} wordsToReview={wordsToReview} />
+      {/* Main Content */}
+      <div className="container mx-auto px-6 py-8 space-y-6">
+        {/* Stats Grid - Slim Style (NO rounded corners) */}
+        <div className="bg-white overflow-hidden border border-gray-200">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-x divide-y sm:divide-y-0 divide-gray-200">
+            {stats.map((stat, index) => (
+              <StudentStatsCard key={index} {...stat} />
+            ))}
+          </div>
         </div>
 
-        {/* Sidebar */}
-        <div className="space-y-6">
-          <StudentRecentTasksCard tasks={recentTasks} isLoading={isLoadingTasks} />
-          <DailyGoalCard current={todayProgress} target={student.dailyGoal || 25} />
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-3 gap-6">
+          {/* Main Column */}
+          <div className="lg:col-span-2 space-y-6">
+            <WeeklyProgressChart weeklyData={weeklyData} totalWords={totalWords} />
+            <StudentQuickActions cardsReady={cardsReady} wordsToReview={wordsToReview} />
+          </div>
+
+          {/* Sidebar */}
+          <div className="space-y-6">
+            <StudentRecentTasksCard tasks={recentTasks} isLoading={isLoadingTasks} />
+            <DailyGoalCard current={todayProgress} target={student.dailyGoal || 25} />
+          </div>
         </div>
       </div>
     </div>
