@@ -109,7 +109,7 @@ function calculateSRSData(
 export function useFlashcardMutations() {
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const { showToast } = useToast();
+  const toast = useToast();
 
   /**
    * Save a flashcard review
@@ -312,7 +312,7 @@ export function useFlashcardMutations() {
         console.log('✅ [saveDailyProgress] Create successful!');
       }
 
-      showToast('Progress saved successfully!', 'success');
+      // Success - no toast needed, handled by session complete
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to save progress';
       console.error('❌ [saveDailyProgress] Error:', {
@@ -322,8 +322,7 @@ export function useFlashcardMutations() {
         stats,
       });
       setError(errorMessage);
-      showToast(`Failed to save progress: ${errorMessage}`, 'error');
-      throw err;
+      // Don't throw - let the session complete handle errors
     }
   };
 

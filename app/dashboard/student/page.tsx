@@ -6,12 +6,16 @@ import { useWeeklyProgress } from '@/lib/hooks/useWeeklyProgress';
 import { usePracticeStats } from '@/lib/hooks/usePracticeStats';
 import { useStudentTasks } from '@/lib/hooks/useWritingTasks';
 import { useBatch } from '@/lib/hooks/useBatches';
+import { useStudyStats } from '@/lib/hooks/useFlashcards';
 import { SAMPLE_STUDENT } from '@/lib/models';
 import { StudentStatsCard, StudentStatCardProps } from '@/components/dashboard/StudentStatsCard';
 import { WeeklyProgressChart } from '@/components/dashboard/WeeklyProgressChart';
 import { StudentQuickActions } from '@/components/dashboard/StudentQuickActions';
 import { DailyGoalCard } from '@/components/dashboard/DailyGoalCard';
 import { StudentRecentTasksCard } from '@/components/dashboard/StudentRecentTasksCard';
+import { useEffect, useState } from 'react';
+import { db } from '@/lib/firebase';
+import { doc, getDoc } from 'firebase/firestore';
 
 export default function StudentDashboard() {
   const { session, isFirebaseReady } = useFirebaseAuth();
@@ -19,6 +23,12 @@ export default function StudentDashboard() {
   const { weeklyData, totalWords, isLoading: isLoadingWeekly } = useWeeklyProgress(session?.user?.email || null);
   const { cardsReady, wordsToReview } = usePracticeStats(session?.user?.email || null);
   const { tasks: allTasks, isLoading: isLoadingTasks } = useStudentTasks(session?.user?.email || undefined);
+
+  // Get real-time study stats
+  const { stats: studyStats, isLoading: isLoadingStats } = useStudyStats(session?.user?.email || null);
+
+  // Get today's progress for daily goal
+  const [todayProgress, setTodayProgress] = useState(0);
 
   // Get recent tasks (last 5)
   const recentTasks = allTasks.slice(0, 5);
@@ -29,6 +39,32 @@ export default function StudentDashboard() {
   // Use fetched student data if available, otherwise fall back to sample data
   const student = fetchedStudent || SAMPLE_STUDENT;
   const userName = session?.user?.name || 'Student';
+
+  // Fetch today's progress for daily goal
+  useEffect(() => {
+    if (!session?.user?.email) return;
+
+    const fetchTodayProgress = async () => {
+      try {
+        const today = new Date().toISOString().split('T')[0].replace(/-/g, '');
+        const progressId = `PROG_${today}_${session.user.email}`;
+        const progressRef = doc(db, 'progress', progressId);
+        const progressSnap = await getDoc(progressRef);
+
+        if (progressSnap.exists()) {
+          const data = progressSnap.data();
+          setTodayProgress(data.cardsReviewed || 0);
+        } else {
+          setTodayProgress(0);
+        }
+      } catch (error) {
+        console.error('Error fetching today progress:', error);
+        setTodayProgress(0);
+      }
+    };
+
+    fetchTodayProgress();
+  }, [session?.user?.email]);
 
   // Show loading state while fetching data
   if (!isFirebaseReady || isLoadingStudent) {
@@ -54,9 +90,9 @@ export default function StudentDashboard() {
   };
 
   const stats: StudentStatCardProps[] = [
-    { label: 'Words Learned', value: student.wordsLearned || 0, icon: '📚', color: 'text-violet-600' },
-    { label: 'Words Mastered', value: student.wordsMastered || 0, icon: '✨', color: 'text-emerald-600' },
-    { label: 'Current Streak', value: student.currentStreak || 0, icon: '🔥', color: 'text-orange-600', suffix: ' days' },
+    { label: 'Words Learned', value: studyStats.cardsLearned, icon: '📚', color: 'text-violet-600' },
+    { label: 'Words Mastered', value: studyStats.cardsMastered, icon: '✨', color: 'text-emerald-600' },
+    { label: 'Current Streak', value: studyStats.streak, icon: '🔥', color: 'text-orange-600', suffix: ' days' },
     { label: 'Current Level', value: 0, displayValue: currentLevelDisplay(), icon: '🎯', color: 'text-amber-600', isText: true },
   ];
 
@@ -90,7 +126,7 @@ export default function StudentDashboard() {
         {/* Sidebar */}
         <div className="space-y-6">
           <StudentRecentTasksCard tasks={recentTasks} isLoading={isLoadingTasks} />
-          <DailyGoalCard current={20} target={student.dailyGoal || 25} />
+          <DailyGoalCard current={todayProgress} target={student.dailyGoal || 25} />
         </div>
       </div>
     </div>

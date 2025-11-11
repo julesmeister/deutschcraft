@@ -26,12 +26,12 @@ export function Button({
   const baseClasses = 'font-bold transition-all duration-300 inline-flex items-center justify-center hover:scale-105 active:scale-95';
 
   const variantClasses = {
-    primary: 'bg-piku-purple-dark text-white hover:shadow-lg',
+    primary: 'bg-gray-900 text-white hover:bg-gray-800',
     secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200',
-    outline: 'border-2 border-piku-purple-dark text-piku-purple-dark hover:bg-piku-purple-dark hover:text-white',
+    outline: 'border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white',
     ghost: 'text-gray-700 hover:bg-gray-100',
     gradient: 'bg-gradient-to-r from-piku-purple-dark to-piku-cyan text-white hover:shadow-xl',
-    purple: 'bg-gradient-to-br from-piku-purple-light to-piku-purple-dark text-white hover:shadow-lg',
+    purple: 'bg-piku-purple-dark text-white hover:bg-piku-purple-dark/90',
     cyan: 'bg-gradient-to-br from-piku-cyan to-piku-blue text-white hover:shadow-lg',
   };
 

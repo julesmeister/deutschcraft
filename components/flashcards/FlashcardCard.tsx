@@ -25,7 +25,7 @@ export function FlashcardCard({ card, isFlipped, onFlip, showExamples = true }: 
       >
         {/* Front side - German */}
         <div
-          className={`absolute inset-0 flex items-center justify-center p-12 transition-all duration-500 ${
+          className={`absolute inset-0 flex items-center justify-center p-12 transition-all duration-200 ${
             isFlipped ? 'opacity-0 rotate-y-180' : 'opacity-100'
           }`}
         >
@@ -44,7 +44,7 @@ export function FlashcardCard({ card, isFlipped, onFlip, showExamples = true }: 
 
         {/* Back side - English */}
         <div
-          className={`absolute inset-0 flex items-center justify-center p-12 transition-all duration-500 ${
+          className={`absolute inset-0 flex items-center justify-center p-12 transition-all duration-200 ${
             isFlipped ? 'opacity-100' : 'opacity-0 rotate-y-180'
           }`}
         >

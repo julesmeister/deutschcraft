@@ -111,10 +111,10 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
 
     // Show toast based on difficulty
     const toastMessages = {
-      again: { message: 'Will review again soon', variant: 'error' as const, duration: 1500 },
-      hard: { message: 'Keep practicing!', variant: 'warning' as const, duration: 1500 },
-      good: { message: 'Good recall! 👍', variant: 'success' as const, duration: 1500 },
-      easy: { message: 'Perfect! Mastered! 🌟', variant: 'success' as const, duration: 1500 },
+      again: { message: 'Will review again soon', variant: 'error' as const, duration: 800 },
+      hard: { message: 'Keep practicing!', variant: 'warning' as const, duration: 800 },
+      good: { message: 'Good recall! 👍', variant: 'success' as const, duration: 800 },
+      easy: { message: 'Perfect! Mastered! 🌟', variant: 'success' as const, duration: 800 },
     };
 
     const toastConfig = toastMessages[difficulty];

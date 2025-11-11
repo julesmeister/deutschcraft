@@ -118,6 +118,7 @@ function DashboardNavbar() {
                     { label: 'Students', href: '/dashboard/teacher' },
                     { label: 'Analytics', href: '/dashboard/analytics' },
                     { label: 'Assignments', href: '/dashboard/assignments' },
+                    { label: 'Course Pricing', href: '/dashboard/teacher/pricing' },
                   ],
                 },
                 {

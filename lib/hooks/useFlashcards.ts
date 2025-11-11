@@ -142,6 +142,7 @@ export function useStudyStats(userId?: string, refreshKey?: number) {
   const [stats, setStats] = useState({
     totalCards: 0,
     cardsLearned: 0,
+    cardsMastered: 0,
     streak: 0,
     accuracy: 0,
   });
@@ -194,6 +195,7 @@ export function useStudyStats(userId?: string, refreshKey?: number) {
         console.log('📊 [useStudyStats] Calculated from flashcard-progress:', {
           totalCards,
           cardsLearned,
+          cardsMastered,
           totalCorrect,
           totalIncorrect,
           totalAttempts,
@@ -259,6 +261,7 @@ export function useStudyStats(userId?: string, refreshKey?: number) {
             console.log('📊 [useStudyStats] Final stats:', {
               totalCards,
               cardsLearned,
+              cardsMastered,
               streak,
               accuracy,
             });
@@ -266,6 +269,7 @@ export function useStudyStats(userId?: string, refreshKey?: number) {
             setStats({
               totalCards,
               cardsLearned,
+              cardsMastered,
               streak,
               accuracy,
             });
