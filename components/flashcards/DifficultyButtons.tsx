@@ -1,5 +1,8 @@
 'use client';
 
+import { SplitButtonGroup, SplitButtonOption } from '@/components/ui/SplitButtonGroup';
+import { useState } from 'react';
+
 type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy';
 
 interface DifficultyButtonsProps {
@@ -13,38 +16,64 @@ export function DifficultyButtons({
   onDifficulty,
   onShowAnswer
 }: DifficultyButtonsProps) {
+  // Track selected difficulty for visual feedback (resets on each card)
+  const [selectedDifficulty, setSelectedDifficulty] = useState<string>('');
+
+  const difficultyOptions: SplitButtonOption[] = [
+    {
+      value: 'again',
+      label: (
+        <div>
+          <div className="text-base font-black">Forgotten</div>
+          <div className="text-xs opacity-70 mt-0.5">Press 1</div>
+        </div>
+      ),
+    },
+    {
+      value: 'hard',
+      label: (
+        <div>
+          <div className="text-base font-black">Hard</div>
+          <div className="text-xs opacity-70 mt-0.5">Press 2</div>
+        </div>
+      ),
+    },
+    {
+      value: 'good',
+      label: (
+        <div>
+          <div className="text-base font-black">Good</div>
+          <div className="text-xs opacity-70 mt-0.5">Press 3</div>
+        </div>
+      ),
+    },
+    {
+      value: 'easy',
+      label: (
+        <div>
+          <div className="text-base font-black">Easy</div>
+          <div className="text-xs opacity-70 mt-0.5">Press 4</div>
+        </div>
+      ),
+    },
+  ];
+
+  const handleDifficultySelect = (value: string) => {
+    setSelectedDifficulty(value);
+    onDifficulty(value as DifficultyLevel);
+    // Reset selection after a brief moment for visual feedback
+    setTimeout(() => setSelectedDifficulty(''), 300);
+  };
+
   if (isFlipped) {
     return (
-      <div className="grid grid-cols-4 gap-3">
-        <button
-          onClick={() => onDifficulty('again')}
-          className="bg-red-500 hover:bg-red-600 text-white rounded-xl p-4 text-center transition-all hover:scale-105 active:scale-95"
-        >
-          <div className="text-lg font-black">Forgotten</div>
-          <div className="text-xs opacity-90 mt-1">Press 1</div>
-        </button>
-        <button
-          onClick={() => onDifficulty('hard')}
-          className="bg-amber-500 hover:bg-amber-600 text-white rounded-xl p-4 text-center transition-all hover:scale-105 active:scale-95"
-        >
-          <div className="text-lg font-black">Hard</div>
-          <div className="text-xs opacity-90 mt-1">Press 2</div>
-        </button>
-        <button
-          onClick={() => onDifficulty('good')}
-          className="bg-blue-500 hover:bg-blue-600 text-white rounded-xl p-4 text-center transition-all hover:scale-105 active:scale-95"
-        >
-          <div className="text-lg font-black">Good</div>
-          <div className="text-xs opacity-90 mt-1">Press 3</div>
-        </button>
-        <button
-          onClick={() => onDifficulty('easy')}
-          className="bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl p-4 text-center transition-all hover:scale-105 active:scale-95"
-        >
-          <div className="text-lg font-black">Easy</div>
-          <div className="text-xs opacity-90 mt-1">Press 4</div>
-        </button>
-      </div>
+      <SplitButtonGroup
+        options={difficultyOptions}
+        value={selectedDifficulty}
+        onChange={handleDifficultySelect}
+        colorScheme="teal"
+        size="lg"
+      />
     );
   }
 
