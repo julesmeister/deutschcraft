@@ -4,6 +4,8 @@ import { use, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { StatCard } from '@/components/ui/StatCard';
 import { StatGrid } from '@/components/ui/StatGrid';
+import { TabBar, TabItem } from '@/components/ui/TabBar';
+import { ActivityTimeline, ActivityItem } from '@/components/ui/activity/ActivityTimeline';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useStudyStats } from '@/lib/hooks/useFlashcards';
 import { collection, query, where, getDocs, orderBy, limit, doc, getDoc } from 'firebase/firestore';
@@ -36,7 +38,7 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
   const [isLoading, setIsLoading] = useState(true);
 
   // Get student's study stats
-  const stats = useStudyStats(student?.email);
+  const { stats } = useStudyStats(student?.email);
 
   useEffect(() => {
     async function loadStudentData() {
@@ -55,9 +57,12 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
           const userData = studentSnapshot.data() as User;
           console.log('[StudentProfile] Student data loaded:', userData);
 
+          // Handle both formats: {name: "Full Name"} OR {firstName: "First", lastName: "Last"}
+          const displayName = (userData as any).name || getUserFullName(userData);
+
           setStudent({
             email: userData.email,
-            name: getUserFullName(userData),
+            name: displayName,
             currentLevel: userData.cefrLevel || 'A1',
           });
 
@@ -148,10 +153,10 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
 
           <div className="flex items-center gap-4">
             <div className="w-20 h-20 rounded-full bg-gradient-to-br from-piku-purple to-piku-cyan flex items-center justify-center text-3xl font-black text-white">
-              {student.name.charAt(0).toUpperCase()}
+              {(student.name || student.email || '?').charAt(0).toUpperCase()}
             </div>
             <div>
-              <h1 className="text-3xl font-black text-gray-900">{student.name}</h1>
+              <h1 className="text-3xl font-black text-gray-900">{student.name || 'Unknown Student'}</h1>
               <p className="text-gray-600 mt-1">Current Level: <span className="font-bold text-piku-purple">{student.currentLevel}</span></p>
               <p className="text-sm text-gray-500">{student.email}</p>
             </div>
@@ -206,112 +211,96 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
               <p className="text-sm mt-2">This student hasn't practiced yet</p>
             </div>
           ) : (
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-gray-200">
-                    <th className="text-left py-3 px-4 font-bold text-gray-700 text-sm uppercase">Date</th>
-                    <th className="text-center py-3 px-4 font-bold text-gray-700 text-sm uppercase">Cards Reviewed</th>
-                    <th className="text-center py-3 px-4 font-bold text-gray-700 text-sm uppercase">Accuracy</th>
-                    <th className="text-center py-3 px-4 font-bold text-gray-700 text-sm uppercase">Time Spent</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {recentSessions.map((session, index) => (
-                    <tr key={index} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                      <td className="py-3 px-4 text-gray-900 font-semibold">
-                        {new Date(
-                          session.date.slice(0, 4) + '-' +
-                          session.date.slice(4, 6) + '-' +
-                          session.date.slice(6, 8)
-                        ).toLocaleDateString('en-US', {
-                          month: 'short',
-                          day: 'numeric',
-                          year: 'numeric'
-                        })}
-                      </td>
-                      <td className="py-3 px-4 text-center text-gray-700">
-                        {session.cardsReviewed}
-                      </td>
-                      <td className="py-3 px-4 text-center">
-                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-bold ${
-                          session.accuracy >= 80
-                            ? 'bg-green-100 text-green-800'
-                            : session.accuracy >= 60
-                            ? 'bg-yellow-100 text-yellow-800'
-                            : 'bg-red-100 text-red-800'
-                        }`}>
-                          {session.accuracy}%
-                        </span>
-                      </td>
-                      <td className="py-3 px-4 text-center text-gray-700">
-                        {session.timeSpent} min
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            <ActivityTimeline
+              items={recentSessions.map((session, index) => {
+                const accuracyColor = session.accuracy >= 80 ? 'green' : session.accuracy >= 60 ? 'amber' : 'red';
+
+                return {
+                  id: `session-${index}`,
+                  icon: <span className="text-white text-sm">📚</span>,
+                  iconColor: 'bg-piku-purple',
+                  title: new Date(
+                    session.date.slice(0, 4) + '-' +
+                    session.date.slice(4, 6) + '-' +
+                    session.date.slice(6, 8)
+                  ).toLocaleDateString('en-US', {
+                    weekday: 'short',
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric'
+                  }),
+                  description: `Reviewed ${session.cardsReviewed} cards in ${session.timeSpent} minutes`,
+                  tags: [
+                    {
+                      label: `${session.accuracy}% Accuracy`,
+                      color: accuracyColor,
+                      icon: session.accuracy >= 80 ? '✓' : undefined,
+                    },
+                    {
+                      label: `${session.cardsReviewed} cards`,
+                      color: 'blue',
+                    },
+                    {
+                      label: `${session.timeSpent} min`,
+                      color: 'gray',
+                    },
+                  ],
+                } as ActivityItem;
+              })}
+              showConnector={true}
+            />
           )}
         </div>
 
         {/* Learning Progress Section */}
-        <div className="mt-8 bg-white border border-gray-200 rounded-2xl p-6">
-          <h2 className="text-2xl font-black text-gray-900 mb-4">Learning Progress Breakdown</h2>
+        <div className="mt-8">
+          <h2 className="text-2xl font-black text-gray-900 mb-6">Learning Progress</h2>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="text-lg font-bold text-gray-700 mb-3">Mastery Distribution</h3>
-              <div className="space-y-3">
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-sm font-semibold text-gray-600">Mastered (70-100%)</span>
-                    <span className="text-sm font-bold text-green-600">{stats.cardsLearned} cards</span>
-                  </div>
-                  <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-green-500 rounded-full transition-all duration-500"
-                      style={{ width: `${stats.totalCards > 0 ? (stats.cardsLearned / stats.totalCards) * 100 : 0}%` }}
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-sm font-semibold text-gray-600">In Progress (0-69%)</span>
-                    <span className="text-sm font-bold text-blue-600">{stats.totalCards - stats.cardsLearned} cards</span>
-                  </div>
-                  <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-blue-500 rounded-full transition-all duration-500"
-                      style={{ width: `${stats.totalCards > 0 ? ((stats.totalCards - stats.cardsLearned) / stats.totalCards) * 100 : 0}%` }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-bold text-gray-700 mb-3">Study Consistency</h3>
-              <div className="space-y-4">
-                <div className="flex items-center justify-between p-4 bg-gradient-to-r from-piku-orange to-piku-gold rounded-xl">
-                  <div>
-                    <p className="text-sm font-semibold text-gray-700">Current Streak</p>
-                    <p className="text-3xl font-black text-gray-900">{stats.streak} days</p>
-                  </div>
-                  <div className="text-5xl">🔥</div>
-                </div>
-
-                <div className="flex items-center justify-between p-4 bg-gradient-to-r from-piku-cyan to-piku-mint rounded-xl">
-                  <div>
-                    <p className="text-sm font-semibold text-gray-700">Overall Accuracy</p>
-                    <p className="text-3xl font-black text-gray-900">{stats.accuracy}%</p>
-                  </div>
-                  <div className="text-5xl">🎯</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <TabBar
+            variant="stats"
+            tabs={[
+              {
+                id: 'total',
+                label: 'Total Cards',
+                icon: (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                ),
+                value: stats.totalCards.toLocaleString(),
+              },
+              {
+                id: 'mastered',
+                label: 'Cards Mastered',
+                icon: (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+                value: stats.cardsLearned.toLocaleString(),
+              },
+              {
+                id: 'streak',
+                label: 'Day Streak',
+                icon: (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                  </svg>
+                ),
+                value: `${stats.streak} days`,
+              },
+              {
+                id: 'accuracy',
+                label: 'Accuracy Rate',
+                icon: (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                ),
+                value: `${stats.accuracy}%`,
+              },
+            ]}
+          />
         </div>
       </div>
     </div>

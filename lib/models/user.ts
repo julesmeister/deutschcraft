@@ -104,7 +104,10 @@ export interface BatchLevelHistory {
  * Get user's full name
  */
 export function getUserFullName(user: User): string {
-  return `${user.firstName} ${user.lastName}`;
+  const firstName = user.firstName || '';
+  const lastName = user.lastName || '';
+  const fullName = `${firstName} ${lastName}`.trim();
+  return fullName || user.email || 'Unknown User';
 }
 
 /**
