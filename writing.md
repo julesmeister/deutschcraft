@@ -25,10 +25,11 @@
    - Firestore integration
 
 ### ⚠️ What's Missing (Needs Implementation)
-1. **Teacher Grading Interface** - UI exists but needs full wiring
+1. ~~**Teacher Grading Interface**~~ - ✅ **COMPLETE** (Full grading panel with reusable components)
 2. **Peer Review Assignment System** - No teacher UI to assign pairs
 3. ~~**Progress Service Integration**~~ - ✅ **COMPLETE** (stats auto-update on submission)
 4. **Exercise Seeding** - Exercises not yet in Firestore database (currently using local data)
+5. ~~**Teacher Writing Dashboard**~~ - ✅ **COMPLETE** (Student names, status tracking, grading navigation)
 
 ### ❌ What's NOT Being Built
 - **NO AI Feedback** - Intentional exclusion (manual review only)
@@ -212,9 +213,16 @@ Stats cards auto-update on dashboard
 ### React Components
 - `components/writing/WritingHistory.tsx` - Submission history list
 - `components/writing/WritingFeedback.tsx` - Detailed feedback display (legacy AI feedback)
-- `components/writing/TeacherWritingView.tsx` - Teacher grading interface
-- `components/writing/RevisionHistory.tsx` - **NEW** Timeline of all edits using ActivityTimeline
-- `components/writing/PeerReviewPanel.tsx` - **NEW** Student peer review interface
+- `components/writing/TeacherGradingPanel.tsx` - Teacher grading interface (refactored 2025-01-13)
+- `components/writing/RevisionHistory.tsx` - Timeline of all edits using ActivityTimeline
+- `components/writing/PeerReviewPanel.tsx` - Student peer review interface
+
+### Grading Components (Reusable)
+- `components/writing/grading/GradingInput.tsx` - Borderless input fields
+- `components/writing/grading/GradingTextarea.tsx` - Borderless textarea with configurable rows
+- `components/writing/grading/ScoreSlider.tsx` - Color-coded score sliders
+- `components/writing/grading/GradingSection.tsx` - Section wrappers with title/subtitle
+- `components/writing/grading/AssessmentCheckbox.tsx` - Styled checkboxes with labels
 
 ### UI Components (Used)
 - `components/ui/activity/ActivityTimeline.tsx` - Timeline visualization for revision history
@@ -516,9 +524,24 @@ Student can restore previous versions
 
 ## Teacher Features
 
+### Teacher Writing Dashboard ✅
+**File**: `app/dashboard/teacher/writing/page.tsx`
+
+Features implemented (2025-01-13):
+- ✅ View all student submissions with filtering (submitted/reviewed/all)
+- ✅ Display student names (not emails) - parses Firestore 'name' field
+- ✅ Search by student name, email, or exercise title
+- ✅ Filter by exercise type (creative, translation, email, letter)
+- ✅ Status dropdown with inline editing capabilities
+- ✅ Borderless gray input styling for table filters
+- ✅ Real-time stats (pending review, reviewed this week, avg response time)
+- ✅ Pagination support with 10 items per page
+- ✅ Direct navigation to grading page by clicking rows
+- ✅ Clean, modern UI with SlimTable component
+
 ### Viewing Student Submissions
 
-Teachers can view all submissions via `TeacherWritingView` component:
+Teachers can view all submissions via the teacher writing dashboard:
 
 ```typescript
 // Example usage
@@ -693,6 +716,10 @@ npm run dev
 - ✅ Data organization optimized (split by CEFR level into separate files)
 - ✅ Creative writing data extracted to external file
 - ✅ Navigation links verified and working
+- ✅ **Teacher Grading Panel** - Refactored into 5 reusable components (2025-01-13)
+- ✅ **Teacher Writing Dashboard** - Student name display, borderless inputs, status dropdown (2025-01-13)
+- ✅ **User Service** - Fixed name parsing from Firestore 'name' field (2025-01-13)
+- ✅ **Code Cleanup** - Removed 60+ console.log statements across codebase (2025-01-13)
 
 ### Recent Changes (2025-01-11)
 
