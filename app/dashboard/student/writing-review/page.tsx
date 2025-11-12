@@ -5,9 +5,12 @@ import { useRouter } from 'next/navigation';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { Badge } from '@/components/ui/Badge';
+import { Card } from '@/components/ui/Card';
+import { EmptyState } from '@/components/ui/EmptyState';
+import { StatCardSimple } from '@/components/ui/StatCardSimple';
+import { Input } from '@/components/ui/Input';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useStudentSubmissions } from '@/lib/hooks/useWritingExercises';
-import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
 import { WritingExerciseType } from '@/lib/models/writing';
 import { TRANSLATION_EXERCISES } from '@/lib/data/translations';
@@ -20,12 +23,11 @@ type FilterType = 'all' | 'reviewed' | 'high-score' | 'needs-improvement';
 export default function WritingReviewPage() {
   const router = useRouter();
   const { session } = useFirebaseAuth();
-  const [selectedLevel, setSelectedLevel] = useState<CEFRLevel | 'all'>('all');
   const [filterType, setFilterType] = useState<FilterType>('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   // Fetch all submissions for current user
-  const { data: submissions = [], isLoading } = useStudentSubmissions(session?.user?.email);
+  const { data: submissions = [], isLoading } = useStudentSubmissions(session?.user?.email ?? undefined);
 
   // Helper to get exercise title
   const getExerciseTitle = (exerciseId: string, exerciseType: WritingExerciseType): string => {
@@ -48,11 +50,6 @@ export default function WritingReviewPage() {
   // Filter submissions
   const filteredSubmissions = useMemo(() => {
     return submissions.filter(submission => {
-      // Filter by level
-      if (selectedLevel !== 'all' && submission.level !== selectedLevel) {
-        return false;
-      }
-
       // Filter by status/score
       if (filterType === 'reviewed' && submission.status !== 'reviewed') {
         return false;
@@ -76,7 +73,7 @@ export default function WritingReviewPage() {
 
       return true;
     });
-  }, [submissions, selectedLevel, filterType, searchQuery]);
+  }, [submissions, filterType, searchQuery]);
 
   // Calculate stats
   const stats = useMemo(() => {
@@ -108,69 +105,35 @@ export default function WritingReviewPage() {
         }}
       />
 
-      <div className="container mx-auto px-6 py-8 space-y-8">
+      <div className="container mx-auto px-6 py-8 space-y-6">
         {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="bg-white border border-gray-200 rounded-xl p-6">
-            <div className="text-sm text-gray-500 uppercase font-semibold mb-2">Reviewed</div>
-            <div className="text-4xl font-black text-green-600 mb-2">{stats.reviewed}</div>
-            <div className="text-xs text-gray-600">Submissions graded</div>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-xl p-6">
-            <div className="text-sm text-gray-500 uppercase font-semibold mb-2">High Scores</div>
-            <div className="text-4xl font-black text-blue-600 mb-2">{stats.highScore}</div>
-            <div className="text-xs text-gray-600">Score 80% or higher</div>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-xl p-6">
-            <div className="text-sm text-gray-500 uppercase font-semibold mb-2">Needs Work</div>
-            <div className="text-4xl font-black text-orange-600 mb-2">{stats.needsWork}</div>
-            <div className="text-xs text-gray-600">Score below 70%</div>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-xl p-6">
-            <div className="text-sm text-gray-500 uppercase font-semibold mb-2">Avg Score</div>
-            <div className="text-4xl font-black text-purple-600 mb-2">{stats.avgScore}%</div>
-            <div className="text-xs text-gray-600">Overall average</div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <StatCardSimple
+            label="Reviewed"
+            value={stats.reviewed.toString()}
+            color="green"
+          />
+          <StatCardSimple
+            label="High Scores"
+            value={stats.highScore.toString()}
+            color="blue"
+          />
+          <StatCardSimple
+            label="Needs Work"
+            value={stats.needsWork.toString()}
+            color="orange"
+          />
+          <StatCardSimple
+            label="Avg Score"
+            value={`${stats.avgScore}%`}
+            color="purple"
+          />
         </div>
 
         {/* Filters */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6 space-y-4">
-          {/* Level Selector */}
-          <div className="flex items-center gap-4 flex-wrap">
-            <span className="text-sm font-semibold text-gray-700">Level:</span>
-            <div className="flex gap-2 flex-wrap">
-              <button
-                onClick={() => setSelectedLevel('all')}
-                className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                  selectedLevel === 'all'
-                    ? 'bg-gray-900 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                All Levels
-              </button>
-              {Object.values(CEFRLevel).map(level => (
-                <button
-                  key={level}
-                  onClick={() => setSelectedLevel(level)}
-                  className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                    selectedLevel === level
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  {CEFRLevelInfo[level].displayName}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Filter Buttons */}
-          <div className="flex items-center gap-4 flex-wrap">
-            <span className="text-sm font-semibold text-gray-700">Filter:</span>
+        <Card className="p-6">
+          <div className="space-y-4">
+            {/* Filter Buttons */}
             <div className="flex gap-2 flex-wrap">
               <button
                 onClick={() => setFilterType('all')}
@@ -213,47 +176,42 @@ export default function WritingReviewPage() {
                 Needs Work ({stats.needsWork})
               </button>
             </div>
-          </div>
 
-          {/* Search */}
-          <div className="relative">
-            <input
+            {/* Search */}
+            <Input
               type="text"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
               placeholder="Search exercises, content, or feedback..."
-              className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              leftIcon={
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              }
             />
-            <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
           </div>
-        </div>
+        </Card>
 
         {/* Submissions List */}
         {filteredSubmissions.length === 0 ? (
-          <div className="text-center py-16 bg-white border border-gray-200 rounded-2xl">
-            <div className="text-6xl mb-4">✍️</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">No submissions found</h3>
-            <p className="text-gray-600 mb-6">
-              {filterType === 'all'
-                ? 'Start writing exercises to build your portfolio.'
-                : 'Try adjusting your filters to see more submissions.'}
-            </p>
-            <button
-              onClick={() => router.push('/dashboard/student/writing')}
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Go to Writing Hub
-            </button>
-          </div>
+          <EmptyState
+            icon="✍️"
+            title="No submissions found"
+            description={filterType === 'all'
+              ? 'Start writing exercises to build your portfolio.'
+              : 'Try adjusting your filters to see more submissions.'}
+            action={{
+              label: 'Go to Writing Hub',
+              onClick: () => router.push('/dashboard/student/writing')
+            }}
+          />
         ) : (
-          <div className="space-y-4">
+          <div className="space-y-3">
             {filteredSubmissions.map(submission => (
-              <div
+              <Card
                 key={submission.submissionId}
                 onClick={() => router.push(`/dashboard/student/writing/feedback/${submission.submissionId}`)}
-                className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow cursor-pointer"
+                className="p-6 hover:shadow-lg transition-shadow cursor-pointer"
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex-1">
@@ -314,7 +272,7 @@ export default function WritingReviewPage() {
                     {submission.content}
                   </div>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         )}

@@ -40,7 +40,7 @@ export default function FlashcardReviewPage() {
   const [isPracticing, setIsPracticing] = useState(false);
 
   // Fetch all flashcard reviews for current user
-  const { data: reviews = [], isLoading } = useFlashcardReviews(session?.user?.email);
+  const { data: reviews = [], isLoading } = useFlashcardReviews(session?.user?.email ?? undefined);
 
   // Get all flashcards from the selected level
   const allFlashcards = useMemo(() => {
