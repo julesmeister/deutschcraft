@@ -1,12 +1,12 @@
 /**
  * React Query mutation hooks for Writing Task management
  * NEW STRUCTURE: tasks/{taskId} - Top-level collection
+ * Uses taskService for database abstraction
  */
 
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { db } from '../firebase';
-import { doc, setDoc, updateDoc, deleteDoc } from 'firebase/firestore';
 import { WritingTask, CEFRLevel } from '../models';
+import { createTask, updateTask, assignTask, deleteTask } from '../services/taskService';
 
 /**
  * Create a new writing task
@@ -61,12 +61,8 @@ export function useCreateWritingTask() {
       requireConclusion?: boolean;
       requireExamples?: boolean;
     }) => {
-      const taskId = `TASK_${Date.now()}`;
-      const taskRef = doc(db, 'tasks', taskId);
-
-      // Build task object and remove undefined values (Firestore doesn't accept undefined)
-      const task: WritingTask = {
-        taskId,
+      // Build task object
+      const taskData: Omit<WritingTask, 'taskId'> = {
         batchId,
         teacherId,
         title,
@@ -96,9 +92,7 @@ export function useCreateWritingTask() {
         updatedAt: Date.now(),
       };
 
-      await setDoc(taskRef, task);
-
-      return task;
+      return await createTask(taskData);
     },
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['tasks', 'teacher', variables.teacherId] });
@@ -122,11 +116,7 @@ export function useUpdateWritingTask() {
       taskId: string;
       updates: Partial<WritingTask>;
     }) => {
-      const taskRef = doc(db, 'tasks', taskId);
-      await updateDoc(taskRef, {
-        ...updates,
-        updatedAt: Date.now(),
-      });
+      await updateTask(taskId, updates);
     },
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['task', variables.taskId] });
@@ -143,12 +133,7 @@ export function useAssignTask() {
 
   return useMutation({
     mutationFn: async ({ taskId }: { taskId: string }) => {
-      const taskRef = doc(db, 'tasks', taskId);
-      await updateDoc(taskRef, {
-        status: 'assigned',
-        assignedDate: Date.now(),
-        updatedAt: Date.now(),
-      });
+      await assignTask(taskId);
     },
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['task', variables.taskId] });
@@ -165,8 +150,7 @@ export function useDeleteWritingTask() {
 
   return useMutation({
     mutationFn: async ({ taskId }: { taskId: string }) => {
-      const taskRef = doc(db, 'tasks', taskId);
-      await deleteDoc(taskRef);
+      await deleteTask(taskId);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['tasks'] });

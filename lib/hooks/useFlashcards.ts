@@ -1,29 +1,26 @@
 /**
  * Flashcard Hooks
- * Real-time hooks for flashcards, vocabulary, and progress tracking
+ * Hooks for flashcards, vocabulary, and progress tracking
+ * Uses flashcardService for database abstraction
  */
 
 import { useEffect, useState } from 'react';
 import {
-  collection,
-  query,
-  where,
-  getDocs,
-  doc,
-  getDoc,
-  orderBy,
-  limit,
-  onSnapshot,
-} from 'firebase/firestore';
-import { db } from '@/lib/firebase';
-import {
   Flashcard,
   FlashcardProgress,
   VocabularyWord,
-  StudyProgress,
 } from '@/lib/models';
 import { CEFRLevel } from '@/lib/models/cefr';
 import { getCategoriesForLevel } from '@/lib/data/vocabulary-categories';
+import {
+  getFlashcardsByLevel,
+  getVocabularyWord,
+  getVocabularyByLevel,
+  getFlashcardProgress,
+} from '@/lib/services/flashcardService';
+
+// Export useStudyStats from separate file (uses React Query pattern)
+export { useStudyStats } from './useStudyStats';
 
 /**
  * Get flashcards by level and optional category
@@ -45,27 +42,16 @@ export function useFlashcards(level?: CEFRLevel, category?: string) {
         setIsLoading(true);
         setIsError(false);
 
-        const flashcardsRef = collection(db, 'flashcards');
-        let q = query(
-          flashcardsRef,
-          where('level', '==', level),
-          orderBy('createdAt', 'desc')
-        );
-
-        const snapshot = await getDocs(q);
-        const data = snapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data(),
-        })) as Flashcard[];
+        // Fetch flashcards using service layer
+        const data = await getFlashcardsByLevel(level);
 
         // Filter by category if provided
         let filtered = data;
         if (category) {
           // We'll need to join with vocabulary to filter by tags
           const vocabPromises = data.map(async (flashcard) => {
-            const vocabDoc = await getDoc(doc(db, 'vocabulary', flashcard.wordId));
-            if (vocabDoc.exists()) {
-              const vocabData = vocabDoc.data() as VocabularyWord;
+            const vocabData = await getVocabularyWord(flashcard.wordId);
+            if (vocabData) {
               return vocabData.tags?.includes(category) ? flashcard : null;
             }
             return null;
@@ -110,16 +96,8 @@ export function useFlashcardProgress(userId?: string) {
         setIsLoading(true);
         setIsError(false);
 
-        const progressRef = collection(db, 'flashcard-progress');
-        const q = query(
-          progressRef,
-          where('userId', '==', userId),
-          orderBy('updatedAt', 'desc')
-        );
-
-        const snapshot = await getDocs(q);
-        const data = snapshot.docs.map(doc => doc.data()) as FlashcardProgress[];
-
+        // Use flashcardService for database abstraction
+        const data = await getFlashcardProgress(userId);
         setProgress(data);
       } catch (error) {
         console.error('Error fetching flashcard progress:', error);
@@ -133,173 +111,6 @@ export function useFlashcardProgress(userId?: string) {
   }, [userId]);
 
   return { progress, isLoading, isError };
-}
-
-/**
- * Get student's study progress stats
- */
-export function useStudyStats(userId?: string, refreshKey?: number) {
-  const [stats, setStats] = useState({
-    totalCards: 0,
-    cardsLearned: 0,
-    cardsMastered: 0,
-    streak: 0,
-    accuracy: 0,
-  });
-  const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
-
-  useEffect(() => {
-    if (!userId) {
-      console.log('📊 [useStudyStats] No userId provided');
-      setIsLoading(false);
-      return;
-    }
-
-    console.log('📊 [useStudyStats] Setting up real-time listeners for userId:', userId);
-
-    setIsLoading(true);
-    setIsError(false);
-
-    // Set up real-time listener for flashcard progress
-    const progressRef = collection(db, 'flashcard-progress');
-    const progressQuery = query(
-      progressRef,
-      where('userId', '==', userId)
-    );
-
-    console.log('📊 [useStudyStats] Creating listener for flashcard-progress collection');
-
-    const unsubscribeProgress = onSnapshot(
-      progressQuery,
-      (progressSnapshot) => {
-        console.log('📊 [useStudyStats] Flashcard progress updated:', {
-          docsCount: progressSnapshot.docs.length,
-          timestamp: new Date().toISOString(),
-        });
-
-        const progressData = progressSnapshot.docs.map(doc => doc.data()) as FlashcardProgress[];
-
-        // Calculate stats from flashcard progress
-        const totalCards = progressData.length;
-        // Cards Learned = cards that have been reviewed at least once (repetitions > 0)
-        const cardsLearned = progressData.filter(p => (p.repetitions || 0) > 0).length;
-        // Cards Mastered = cards with 70%+ mastery
-        const cardsMastered = progressData.filter(p => p.masteryLevel >= 70).length;
-
-        const totalCorrect = progressData.reduce((sum, p) => sum + (p.correctCount || 0), 0);
-        const totalIncorrect = progressData.reduce((sum, p) => sum + (p.incorrectCount || 0), 0);
-        const totalAttempts = totalCorrect + totalIncorrect;
-        const accuracy = totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 100;
-
-        console.log('📊 [useStudyStats] Calculated from flashcard-progress:', {
-          totalCards,
-          cardsLearned,
-          cardsMastered,
-          totalCorrect,
-          totalIncorrect,
-          totalAttempts,
-          accuracy,
-        });
-
-        // Set up listener for study progress (for streak calculation)
-        const studyProgressRef = collection(db, 'progress');
-        const studyQuery = query(
-          studyProgressRef,
-          where('userId', '==', userId),
-          orderBy('date', 'desc'),
-          limit(30)
-        );
-
-        console.log('📊 [useStudyStats] Creating listener for progress collection');
-
-        const unsubscribeStudy = onSnapshot(
-          studyQuery,
-          (studySnapshot) => {
-            console.log('📊 [useStudyStats] Study progress updated:', {
-              docsCount: studySnapshot.docs.length,
-              timestamp: new Date().toISOString(),
-            });
-
-            const studyData = studySnapshot.docs.map(doc => doc.data()) as StudyProgress[];
-
-            console.log('📊 [useStudyStats] Study data:', studyData);
-
-            // Calculate streak (consecutive days with activity)
-            let streak = 0;
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
-
-            console.log('📊 [useStudyStats] Streak calculation - today:', today.toISOString());
-
-            for (let i = 0; i < studyData.length; i++) {
-              const dateString = studyData[i].date;
-              console.log('📊 [useStudyStats] Processing date string:', dateString, 'type:', typeof dateString);
-
-              // Parse date string (format: "YYYY-MM-DD") and compare date parts only
-              const progressDateStr = dateString; // Already in YYYY-MM-DD format
-
-              const expectedDate = new Date(today);
-              expectedDate.setDate(today.getDate() - i);
-              const expectedDateStr = expectedDate.toISOString().split('T')[0];
-
-              console.log('📊 [useStudyStats] Comparing:', {
-                progressDateStr,
-                expectedDateStr,
-                match: progressDateStr === expectedDateStr,
-              });
-
-              if (progressDateStr === expectedDateStr) {
-                streak++;
-              } else {
-                break;
-              }
-            }
-
-            console.log('📊 [useStudyStats] Calculated streak:', streak);
-
-            console.log('📊 [useStudyStats] Final stats:', {
-              totalCards,
-              cardsLearned,
-              cardsMastered,
-              streak,
-              accuracy,
-            });
-
-            setStats({
-              totalCards,
-              cardsLearned,
-              cardsMastered,
-              streak,
-              accuracy,
-            });
-            setIsLoading(false);
-          },
-          (error) => {
-            console.error('❌ [useStudyStats] Error in study progress listener:', error);
-            setIsError(true);
-            setIsLoading(false);
-          }
-        );
-
-        // Store the study listener unsubscribe function
-        return () => unsubscribeStudy();
-      },
-      (error) => {
-        console.error('❌ [useStudyStats] Error in flashcard progress listener:', error);
-        setIsError(true);
-        setIsLoading(false);
-      }
-    );
-
-    // Cleanup function
-    return () => {
-      console.log('📊 [useStudyStats] Cleaning up listeners');
-      unsubscribeProgress();
-    };
-  }, [userId, refreshKey]);
-
-  return { stats, isLoading, isError };
 }
 
 /**
@@ -331,11 +142,8 @@ export function useVocabularyCategories(level?: CEFRLevel) {
         // Get predefined categories for this level
         const predefinedCategories = getCategoriesForLevel(level);
 
-        // Get all vocabulary words to count actual cards
-        const vocabRef = collection(db, 'vocabulary');
-        const q = query(vocabRef, where('level', '==', level));
-        const snapshot = await getDocs(q);
-        const words = snapshot.docs.map(doc => doc.data()) as VocabularyWord[];
+        // Get all vocabulary words using service layer
+        const words = await getVocabularyByLevel(level);
 
         // Count words per category (tag)
         const categoryCountMap = new Map<string, number>();

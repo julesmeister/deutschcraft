@@ -15,7 +15,7 @@ export function QuickActions() {
         <ActionButton
           variant="purple"
           icon={<ActionButtonIcons.Analytics />}
-          onClick={() => console.log('View Analytics clicked')}
+          onClick={() => {}}
         >
           View Analytics
         </ActionButton>
@@ -23,7 +23,7 @@ export function QuickActions() {
         <ActionButton
           variant="cyan"
           icon={<ActionButtonIcons.Message />}
-          onClick={() => console.log('Message Students clicked')}
+          onClick={() => {}}
         >
           Message Students
         </ActionButton>
@@ -31,7 +31,7 @@ export function QuickActions() {
         <ActionButton
           variant="mint"
           icon={<ActionButtonIcons.Document />}
-          onClick={() => console.log('Create Assignment clicked')}
+          onClick={() => {}}
         >
           Create Assignment
         </ActionButton>

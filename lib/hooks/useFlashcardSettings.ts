@@ -4,9 +4,8 @@
  */
 
 import { useState, useEffect } from 'react';
-import { doc, getDoc, updateDoc } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
 import { useFirebaseAuth } from './useFirebaseAuth';
+import { getFlashcardSettings, updateFlashcardSettings } from '@/lib/services/userService';
 
 export interface FlashcardSettings {
   cardsPerSession: number;
@@ -28,7 +27,7 @@ export function useFlashcardSettings() {
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
 
-  // Load settings from Firestore
+  // Load settings using service layer
   useEffect(() => {
     const loadSettings = async () => {
       if (!session?.user?.email) {
@@ -37,14 +36,9 @@ export function useFlashcardSettings() {
       }
 
       try {
-        const userRef = doc(db, 'users', session.user.email);
-        const userDoc = await getDoc(userRef);
-
-        if (userDoc.exists()) {
-          const userData = userDoc.data();
-          if (userData.flashcardSettings) {
-            setSettings(userData.flashcardSettings);
-          }
+        const userSettings = await getFlashcardSettings(session.user.email);
+        if (userSettings) {
+          setSettings(userSettings);
         }
       } catch (error) {
         console.error('Error loading flashcard settings:', error);
@@ -56,8 +50,8 @@ export function useFlashcardSettings() {
     loadSettings();
   }, [session?.user?.email]);
 
-  // Save settings to Firestore
-  const updateSettings = async (newSettings: Partial<FlashcardSettings>) => {
+  // Save settings using service layer
+  const updateSettingsLocal = async (newSettings: Partial<FlashcardSettings>) => {
     if (!session?.user?.email) return;
 
     const updatedSettings = { ...settings, ...newSettings };
@@ -65,11 +59,7 @@ export function useFlashcardSettings() {
     setIsSaving(true);
 
     try {
-      const userRef = doc(db, 'users', session.user.email);
-      await updateDoc(userRef, {
-        flashcardSettings: updatedSettings,
-        updatedAt: Date.now(),
-      });
+      await updateFlashcardSettings(session.user.email, updatedSettings);
     } catch (error) {
       console.error('Error saving flashcard settings:', error);
       // Revert on error
@@ -83,6 +73,6 @@ export function useFlashcardSettings() {
     settings,
     isLoading,
     isSaving,
-    updateSettings,
+    updateSettings: updateSettingsLocal,
   };
 }

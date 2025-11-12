@@ -1,13 +1,13 @@
 /**
  * React Query hooks for fetching Writing Task data
  * NEW STRUCTURE: tasks/{taskId} - Top-level collection
+ * Uses taskService for database abstraction
  */
 
 import { useQuery } from '@tanstack/react-query';
-import { db } from '../firebase';
-import { collection, getDocs, doc, query, where, getDoc } from 'firebase/firestore';
 import { cacheTimes } from '../queryClient';
 import { WritingTask } from '../models';
+import { getTasksByBatch, getTasksByTeacherAndBatch, getTasksByStudent, getTask } from '../services/taskService';
 
 /**
  * Fetch all writing tasks for a specific batch
@@ -18,17 +18,7 @@ export function useBatchWritingTasks(batchId: string | undefined) {
     queryKey: ['tasks', 'batch', batchId],
     queryFn: async () => {
       if (!batchId) return [];
-
-      const tasksRef = collection(db, 'tasks');
-      const q = query(tasksRef, where('batchId', '==', batchId));
-      const snapshot = await getDocs(q);
-
-      const tasks: WritingTask[] = snapshot.docs.map(doc => ({
-        taskId: doc.id,
-        ...doc.data(),
-      } as WritingTask));
-
-      return tasks;
+      return await getTasksByBatch(batchId);
     },
     enabled: !!batchId,
     staleTime: cacheTimes.writingTasks,
@@ -52,21 +42,7 @@ export function useTeacherBatchTasks(teacherEmail: string | undefined, batchId: 
     queryKey: ['tasks', 'teacher', teacherEmail, batchId],
     queryFn: async () => {
       if (!teacherEmail || !batchId) return [];
-
-      const tasksRef = collection(db, 'tasks');
-      const q = query(
-        tasksRef,
-        where('teacherId', '==', teacherEmail),
-        where('batchId', '==', batchId)
-      );
-      const snapshot = await getDocs(q);
-
-      const tasks: WritingTask[] = snapshot.docs.map(doc => ({
-        taskId: doc.id,
-        ...doc.data(),
-      } as WritingTask));
-
-      return tasks;
+      return await getTasksByTeacherAndBatch(teacherEmail, batchId);
     },
     enabled: !!teacherEmail && !!batchId,
     staleTime: cacheTimes.writingTasks,
@@ -90,18 +66,7 @@ export function useStudentTasks(studentEmail: string | undefined) {
     queryKey: ['tasks', 'student', studentEmail],
     queryFn: async () => {
       if (!studentEmail) return [];
-
-      const tasksRef = collection(db, 'tasks');
-      const q = query(tasksRef, where('assignedStudents', 'array-contains', studentEmail));
-      const snapshot = await getDocs(q);
-
-      const tasks: WritingTask[] = snapshot.docs.map(doc => ({
-        taskId: doc.id,
-        ...doc.data(),
-      } as WritingTask));
-
-      // Sort by due date (most recent first)
-      return tasks.sort((a, b) => b.dueDate - a.dueDate);
+      return await getTasksByStudent(studentEmail);
     },
     enabled: !!studentEmail,
     staleTime: cacheTimes.writingTasks,
@@ -125,16 +90,7 @@ export function useTask(taskId: string | undefined) {
     queryKey: ['task', taskId],
     queryFn: async () => {
       if (!taskId) return null;
-
-      const taskRef = doc(db, 'tasks', taskId);
-      const taskDoc = await getDoc(taskRef);
-
-      if (!taskDoc.exists()) return null;
-
-      return {
-        taskId: taskDoc.id,
-        ...taskDoc.data(),
-      } as WritingTask;
+      return await getTask(taskId);
     },
     enabled: !!taskId,
     staleTime: cacheTimes.writingTasks,

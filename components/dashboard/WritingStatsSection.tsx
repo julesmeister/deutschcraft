@@ -3,8 +3,6 @@
  * Displays writing statistics for a student
  */
 
-import { StatCard } from '@/components/ui/StatCard';
-import { StatGrid } from '@/components/ui/StatGrid';
 import { TabBar } from '@/components/ui/TabBar';
 import { WritingStats } from '@/lib/models/writing';
 
@@ -15,36 +13,8 @@ interface WritingStatsSectionProps {
 export function WritingStatsSection({ writingStats }: WritingStatsSectionProps) {
   return (
     <>
-      {/* Stats Grid */}
-      <StatGrid>
-        <StatCard
-          icon="✍️"
-          label="Exercises Completed"
-          value={writingStats?.totalExercisesCompleted.toString() || '0'}
-          iconBgColor="bg-purple-100"
-        />
-        <StatCard
-          icon="📝"
-          label="Words Written"
-          value={writingStats?.totalWordsWritten.toLocaleString() || '0'}
-          iconBgColor="bg-blue-100"
-        />
-        <StatCard
-          icon="⭐"
-          label="Average Score"
-          value={`${writingStats?.averageOverallScore || 0}%`}
-          iconBgColor="bg-amber-100"
-        />
-        <StatCard
-          icon="🔥"
-          label="Writing Streak"
-          value={writingStats?.currentStreak.toString() || '0'}
-          iconBgColor="bg-red-100"
-        />
-      </StatGrid>
-
-      {/* Progress TabBar */}
-      <div className="mt-8">
+      {/* Learning Progress TabBar */}
+      <div>
         <h2 className="text-2xl font-black text-gray-900 mb-6">Learning Progress</h2>
         <TabBar
           variant="stats"

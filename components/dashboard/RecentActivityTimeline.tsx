@@ -3,7 +3,9 @@
  * Displays recent flashcard sessions or writing submissions in a timeline
  */
 
+import { useState, useEffect } from 'react';
 import { ActivityTimeline, ActivityItem } from '@/components/ui/activity/ActivityTimeline';
+import { Pagination } from '@/components/ui/Pagination';
 import { WritingSubmission } from '@/lib/models/writing';
 
 interface RecentSession {
@@ -17,15 +19,44 @@ interface RecentActivityTimelineProps {
   activeTab: 'flashcards' | 'writing';
   recentSessions: RecentSession[];
   writingSubmissions: WritingSubmission[];
+  currentPage?: number;
+  onPageChange?: (page: number) => void;
+  isLoading?: boolean;
+  hasMore?: boolean;
+  itemsPerPage?: number;
 }
 
 export function RecentActivityTimeline({
   activeTab,
   recentSessions,
   writingSubmissions,
+  currentPage: externalCurrentPage,
+  onPageChange: externalOnPageChange,
+  isLoading = false,
+  hasMore = true,
+  itemsPerPage = 8,
 }: RecentActivityTimelineProps) {
+  const [internalCurrentPage, setInternalCurrentPage] = useState(1);
+
+  // Use external pagination if provided, otherwise use internal
+  const currentPage = externalCurrentPage || internalCurrentPage;
+  const onPageChange = externalOnPageChange || setInternalCurrentPage;
+
+  // Reset to page 1 when switching tabs
+  useEffect(() => {
+    onPageChange(1);
+  }, [activeTab]);
   if (activeTab === 'flashcards') {
-    if (recentSessions.length === 0) {
+    if (isLoading && recentSessions.length === 0) {
+      return (
+        <div className="text-center py-12 text-gray-500">
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-piku-purple"></div>
+          <p className="mt-4 text-gray-600 font-semibold">Loading sessions...</p>
+        </div>
+      );
+    }
+
+    if (!isLoading && recentSessions.length === 0) {
       return (
         <div className="text-center py-12 text-gray-500">
           <div className="text-6xl mb-4">📭</div>
@@ -36,19 +67,23 @@ export function RecentActivityTimeline({
     }
 
     return (
-      <ActivityTimeline
-        items={recentSessions.map((session, index) => {
+      <>
+        <ActivityTimeline
+          items={recentSessions.map((session, index) => {
           const accuracyColor = session.accuracy >= 80 ? 'green' : session.accuracy >= 60 ? 'amber' : 'red';
+
+          // Parse date - handle both YYYY-MM-DD and YYYYMMDD formats
+          let dateStr = session.date;
+          if (dateStr.length === 8 && !dateStr.includes('-')) {
+            // YYYYMMDD format
+            dateStr = dateStr.slice(0, 4) + '-' + dateStr.slice(4, 6) + '-' + dateStr.slice(6, 8);
+          }
 
           return {
             id: `session-${index}`,
             icon: <span className="text-white text-sm">📚</span>,
             iconColor: 'bg-piku-purple',
-            title: new Date(
-              session.date.slice(0, 4) + '-' +
-              session.date.slice(4, 6) + '-' +
-              session.date.slice(6, 8)
-            ).toLocaleDateString('en-US', {
+            title: new Date(dateStr).toLocaleDateString('en-US', {
               weekday: 'short',
               month: 'short',
               day: 'numeric',
@@ -73,7 +108,16 @@ export function RecentActivityTimeline({
           } as ActivityItem;
         })}
         showConnector={true}
+        showPagination={false}
       />
+
+      {/* Pagination - For server-side, show many pages assuming more data */}
+      <Pagination
+        currentPage={currentPage}
+        totalPages={hasMore ? currentPage + 5 : currentPage}
+        onPageChange={onPageChange}
+      />
+      </>
     );
   }
 
@@ -88,9 +132,16 @@ export function RecentActivityTimeline({
     );
   }
 
+  // Calculate pagination for writing
+  const totalPagesWriting = Math.ceil(writingSubmissions.length / itemsPerPage);
+  const startIndexWriting = (currentPage - 1) * itemsPerPage;
+  const endIndexWriting = startIndexWriting + itemsPerPage;
+  const paginatedSubmissions = writingSubmissions.slice(startIndexWriting, endIndexWriting);
+
   return (
-    <ActivityTimeline
-      items={writingSubmissions.slice(0, 10).map((submission) => {
+    <>
+      <ActivityTimeline
+        items={paginatedSubmissions.map((submission) => {
         const statusColor =
           submission.status === 'submitted' ? 'blue' :
           submission.status === 'reviewed' ? 'green' :
@@ -132,6 +183,15 @@ export function RecentActivityTimeline({
         } as ActivityItem;
       })}
       showConnector={true}
+      showPagination={false}
     />
+
+    {/* Pagination */}
+    <Pagination
+      currentPage={currentPage}
+      totalPages={totalPagesWriting}
+      onPageChange={onPageChange}
+    />
+    </>
   );
 }

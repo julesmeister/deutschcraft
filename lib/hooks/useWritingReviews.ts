@@ -1,21 +1,20 @@
 /**
  * React Query hooks for Writing Reviews
  * Handles peer reviews and teacher reviews
+ * Uses writingService for database abstraction
  */
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import {
-  collection,
-  query,
-  where,
-  getDocs,
-  doc,
-  addDoc,
-  updateDoc,
-  orderBy,
-  limit,
-} from 'firebase/firestore';
-import { db } from '@/lib/firebase';
+  getPeerReviews,
+  getAssignedPeerReviews,
+  createPeerReview,
+  updatePeerReview,
+  getTeacherReview,
+  getTeacherReviews,
+  createTeacherReview,
+  updateTeacherReview,
+} from '@/lib/services/writingService';
 
 // ============================================================================
 // PEER REVIEW HOOKS
@@ -29,19 +28,7 @@ export function usePeerReviews(submissionId?: string) {
     queryKey: ['peer-reviews', submissionId],
     queryFn: async () => {
       if (!submissionId) return [];
-
-      const reviewsRef = collection(db, 'peer-reviews');
-      const q = query(
-        reviewsRef,
-        where('submissionId', '==', submissionId),
-        orderBy('createdAt', 'desc')
-      );
-
-      const snapshot = await getDocs(q);
-      return snapshot.docs.map(doc => ({
-        ...doc.data(),
-        reviewId: doc.id,
-      })) as any[]; // Type cast to avoid inference issues
+      return await getPeerReviews(submissionId);
     },
     enabled: !!submissionId,
   });
@@ -55,19 +42,7 @@ export function useAssignedPeerReviews(reviewerId?: string) {
     queryKey: ['assigned-peer-reviews', reviewerId],
     queryFn: async () => {
       if (!reviewerId) return [];
-
-      const reviewsRef = collection(db, 'peer-reviews');
-      const q = query(
-        reviewsRef,
-        where('reviewerId', '==', reviewerId),
-        orderBy('createdAt', 'desc')
-      );
-
-      const snapshot = await getDocs(q);
-      return snapshot.docs.map(doc => ({
-        ...doc.data(),
-        reviewId: doc.id,
-      }));
+      return await getAssignedPeerReviews(reviewerId);
     },
     enabled: !!reviewerId,
   });
@@ -81,17 +56,7 @@ export function useCreatePeerReview() {
 
   return useMutation({
     mutationFn: async (data: any) => {
-      const reviewsRef = collection(db, 'peer-reviews');
-      const now = Date.now();
-
-      const reviewData = {
-        ...data,
-        createdAt: now,
-        updatedAt: now,
-      };
-
-      const docRef = await addDoc(reviewsRef, reviewData);
-      return { reviewId: docRef.id, ...reviewData };
+      return await createPeerReview(data);
     },
     onSuccess: (data) => {
       queryClient.invalidateQueries({ queryKey: ['peer-reviews', data.submissionId] });
@@ -108,13 +73,7 @@ export function useUpdatePeerReview() {
 
   return useMutation({
     mutationFn: async ({ reviewId, updates }: { reviewId: string; updates: any }) => {
-      const reviewRef = doc(db, 'peer-reviews', reviewId);
-
-      await updateDoc(reviewRef, {
-        ...updates,
-        updatedAt: Date.now(),
-      });
-
+      await updatePeerReview(reviewId, updates);
       return { reviewId, updates };
     },
     onSuccess: (data) => {
@@ -136,21 +95,7 @@ export function useTeacherReview(submissionId?: string) {
     queryKey: ['teacher-review', submissionId],
     queryFn: async () => {
       if (!submissionId) return null;
-
-      const reviewsRef = collection(db, 'teacher-reviews');
-      const q = query(
-        reviewsRef,
-        where('submissionId', '==', submissionId),
-        limit(1)
-      );
-
-      const snapshot = await getDocs(q);
-      if (snapshot.empty) return null;
-
-      return {
-        ...snapshot.docs[0].data(),
-        reviewId: snapshot.docs[0].id,
-      } as any; // Type cast to avoid inference issues
+      return await getTeacherReview(submissionId);
     },
     enabled: !!submissionId,
   });
@@ -164,19 +109,7 @@ export function useTeacherReviews(teacherId?: string) {
     queryKey: ['teacher-reviews-by-teacher', teacherId],
     queryFn: async () => {
       if (!teacherId) return [];
-
-      const reviewsRef = collection(db, 'teacher-reviews');
-      const q = query(
-        reviewsRef,
-        where('teacherId', '==', teacherId),
-        orderBy('createdAt', 'desc')
-      );
-
-      const snapshot = await getDocs(q);
-      return snapshot.docs.map(doc => ({
-        ...doc.data(),
-        reviewId: doc.id,
-      }));
+      return await getTeacherReviews(teacherId);
     },
     enabled: !!teacherId,
   });
@@ -190,32 +123,7 @@ export function useCreateTeacherReview() {
 
   return useMutation({
     mutationFn: async (data: any) => {
-      const reviewsRef = collection(db, 'teacher-reviews');
-      const now = Date.now();
-
-      const reviewData = {
-        ...data,
-        createdAt: now,
-        updatedAt: now,
-      };
-
-      const docRef = await addDoc(reviewsRef, reviewData);
-
-      // Update submission status to 'reviewed' and add teacher feedback fields
-      const submissionRef = doc(db, 'writing-submissions', data.submissionId);
-      await updateDoc(submissionRef, {
-        status: 'reviewed',
-        teacherFeedback: {
-          grammarScore: data.grammarScore,
-          vocabularyScore: data.vocabularyScore,
-          coherenceScore: data.coherenceScore,
-          overallScore: data.overallScore,
-        },
-        teacherScore: data.overallScore,
-        updatedAt: now,
-      });
-
-      return { reviewId: docRef.id, ...reviewData };
+      return await createTeacherReview(data);
     },
     onSuccess: (data) => {
       queryClient.invalidateQueries({ queryKey: ['teacher-review', data.submissionId] });
@@ -236,13 +144,7 @@ export function useUpdateTeacherReview() {
 
   return useMutation({
     mutationFn: async ({ reviewId, updates }: { reviewId: string; updates: any }) => {
-      const reviewRef = doc(db, 'teacher-reviews', reviewId);
-
-      await updateDoc(reviewRef, {
-        ...updates,
-        updatedAt: Date.now(),
-      });
-
+      await updateTeacherReview(reviewId, updates);
       return { reviewId, updates };
     },
     onSuccess: () => {

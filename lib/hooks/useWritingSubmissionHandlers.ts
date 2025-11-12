@@ -3,8 +3,9 @@
  * Extracted from student writing page to reduce file size
  */
 
-import { useState } from 'react';
+import { useState, useOptimistic } from 'react';
 import { useRouter } from 'next/navigation';
+import { useQueryClient } from '@tanstack/react-query';
 import {
   useCreateWritingSubmission,
   useUpdateWritingSubmission,
@@ -15,6 +16,14 @@ import { updateDailyProgress, updateWritingStats } from '@/lib/services/writingP
 import { getNextAttemptNumber, hasDraftAttempt } from '@/lib/services/writingAttemptService';
 import { EmailTemplate } from '@/lib/data/emailTemplates';
 import { LetterTemplate } from '@/lib/data/letterTemplates';
+
+interface DialogState {
+  isOpen: boolean;
+  title: string;
+  message: string;
+  type: 'alert' | 'confirm';
+  onConfirm?: () => void;
+}
 
 interface UseWritingSubmissionHandlersProps {
   selectedLevel: CEFRLevel;
@@ -36,29 +45,57 @@ export function useWritingSubmissionHandlers({
   userEmail,
 }: UseWritingSubmissionHandlersProps) {
   const router = useRouter();
+  const queryClient = useQueryClient();
   const [isSaving, setIsSaving] = useState(false);
   const [currentDraftId, setCurrentDraftId] = useState<string | null>(null);
+  const [dialogState, setDialogState] = useState<DialogState>({
+    isOpen: false,
+    title: '',
+    message: '',
+    type: 'alert',
+  });
+
+  // Optimistic UI state for draft saving
+  const [optimisticSaveState, setOptimisticSaveState] = useOptimistic(
+    { saved: false, message: '', timestamp: 0 },
+    (state, newMessage: string) => ({
+      saved: true,
+      message: newMessage,
+      timestamp: Date.now()
+    })
+  );
 
   const createSubmission = useCreateWritingSubmission();
   const updateSubmission = useUpdateWritingSubmission();
 
+  const showDialog = (title: string, message: string, type: 'alert' | 'confirm' = 'alert', onConfirm?: () => void) => {
+    setDialogState({ isOpen: true, title, message, type, onConfirm });
+  };
+
+  const closeDialog = () => {
+    setDialogState({ isOpen: false, title: '', message: '', type: 'alert' });
+  };
+
   const handleSaveDraft = async () => {
     if (!userEmail) {
-      alert('You must be logged in to save a draft');
+      showDialog('Authentication Required', 'You must be logged in to save a draft');
       return;
     }
 
     if (!writingText.trim()) {
-      alert('Please write something before saving');
+      showDialog('Empty Content', 'Please write something before saving');
       return;
     }
 
     setIsSaving(true);
 
+    // Show optimistic feedback immediately
+    setOptimisticSaveState('Draft saved!');
+
     try {
       const currentExercise = selectedTranslation || selectedCreative || selectedEmail || selectedLetter;
       if (!currentExercise) {
-        alert('No exercise selected');
+        showDialog('No Exercise', 'No exercise selected');
         return;
       }
 
@@ -84,7 +121,7 @@ export function useWritingSubmissionHandlers({
             updatedAt: Date.now(),
           },
         });
-        alert('Draft updated successfully!');
+        showDialog('Draft Saved', 'Draft updated successfully!');
       } else {
         // Check if there's already a draft for this exercise
         const existingDraft = await hasDraftAttempt(userEmail, exerciseId);
@@ -101,7 +138,7 @@ export function useWritingSubmissionHandlers({
               updatedAt: Date.now(),
             },
           });
-          alert('Draft updated successfully!');
+          showDialog('Draft Saved', 'Draft updated successfully!');
         } else {
           // Create new draft (get next attempt number)
           const attemptNumber = await getNextAttemptNumber(userEmail, exerciseId);
@@ -122,12 +159,12 @@ export function useWritingSubmissionHandlers({
 
           const result = await createSubmission.mutateAsync(submissionData);
           setCurrentDraftId(result.submissionId);
-          alert(`Draft saved successfully! (Attempt ${attemptNumber})`);
+          showDialog('Draft Saved', `Draft saved successfully! (Attempt ${attemptNumber})`);
         }
       }
     } catch (error) {
       console.error('Error saving draft:', error);
-      alert('Failed to save draft. Please try again.');
+      showDialog('Save Failed', 'Failed to save draft. Please try again.');
     } finally {
       setIsSaving(false);
     }
@@ -135,12 +172,12 @@ export function useWritingSubmissionHandlers({
 
   const handleSubmit = async () => {
     if (!userEmail) {
-      alert('You must be logged in to submit');
+      showDialog('Authentication Required', 'You must be logged in to submit');
       return;
     }
 
     if (!writingText.trim()) {
-      alert('Please write your response before submitting.');
+      showDialog('Empty Content', 'Please write your response before submitting.');
       return;
     }
 
@@ -149,7 +186,8 @@ export function useWritingSubmissionHandlers({
     try {
       const currentExercise = selectedTranslation || selectedCreative || selectedEmail || selectedLetter;
       if (!currentExercise) {
-        alert('No exercise selected');
+        showDialog('No Exercise', 'No exercise selected');
+        setIsSaving(false);
         return;
       }
 
@@ -167,7 +205,7 @@ export function useWritingSubmissionHandlers({
       // Check min word count requirement (if exists)
       const minWords = (currentExercise as any).wordCountRange?.min || (currentExercise as any).minWords || 0;
       if (minWords > 0 && wordCount < minWords) {
-        alert(`Please write at least ${minWords} words. Current: ${wordCount} words.`);
+        showDialog('Insufficient Word Count', `Please write at least ${minWords} words. Current: ${wordCount} words.`);
         setIsSaving(false);
         return;
       }
@@ -242,8 +280,13 @@ export function useWritingSubmissionHandlers({
           updateDailyProgress(userEmail, finalSubmission),
           updateWritingStats(userEmail, finalSubmission),
         ]);
+
+        // Invalidate React Query cache to refresh stats display
+        queryClient.invalidateQueries({ queryKey: ['writing-stats', userEmail] });
+        queryClient.invalidateQueries({ queryKey: ['writing-progress', userEmail] });
+        queryClient.invalidateQueries({ queryKey: ['student-submissions', userEmail] });
       } catch (progressError) {
-        console.error('Failed to update progress stats:', progressError);
+        console.error('[useWritingSubmissionHandlers] Failed to update progress stats:', progressError);
         // Don't block navigation if stats update fails
       }
 
@@ -251,7 +294,7 @@ export function useWritingSubmissionHandlers({
       router.push(`/dashboard/student/writing/feedback/${submissionId}`);
     } catch (error) {
       console.error('Error submitting writing:', error);
-      alert('Failed to submit. Please try again.');
+      showDialog('Submission Failed', 'Failed to submit. Please try again.');
       setIsSaving(false);
     }
   };
@@ -266,5 +309,8 @@ export function useWritingSubmissionHandlers({
     handleSaveDraft,
     handleSubmit,
     resetDraftState,
+    dialogState,
+    closeDialog,
+    optimisticSaveState,
   };
 }

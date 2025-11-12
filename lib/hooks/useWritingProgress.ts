@@ -1,26 +1,21 @@
 /**
  * React Query hooks for Writing Progress and Stats
  * Handles progress tracking, statistics, and daily metrics
+ * Uses writingService for database abstraction
  */
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import {
-  collection,
-  query,
-  where,
-  getDocs,
-  doc,
-  getDoc,
-  updateDoc,
-  orderBy,
-  limit,
-} from 'firebase/firestore';
-import { db } from '@/lib/firebase';
 import {
   WritingProgress,
   WritingStats,
 } from '@/lib/models/writing';
 import { CEFRLevel } from '@/lib/models/cefr';
+import {
+  getWritingProgress,
+  getWritingStats,
+  updateWritingStats,
+  updateWritingProgress,
+} from '@/lib/services/writingService';
 
 // ============================================================================
 // QUERY HOOKS - Progress and Stats
@@ -34,17 +29,7 @@ export function useWritingProgress(userId?: string) {
     queryKey: ['writing-progress', userId],
     queryFn: async () => {
       if (!userId) return [];
-
-      const progressRef = collection(db, 'writing-progress');
-      const q = query(
-        progressRef,
-        where('userId', '==', userId),
-        orderBy('date', 'desc'),
-        limit(30)
-      );
-
-      const snapshot = await getDocs(q);
-      return snapshot.docs.map(doc => doc.data() as WritingProgress);
+      return await getWritingProgress(userId, 30);
     },
     enabled: !!userId,
   });
@@ -58,32 +43,7 @@ export function useWritingStats(userId?: string) {
     queryKey: ['writing-stats', userId],
     queryFn: async () => {
       if (!userId) return null;
-
-      const statsRef = doc(db, 'writing-stats', userId);
-      const statsSnap = await getDoc(statsRef);
-
-      if (!statsSnap.exists()) {
-        // Return default stats if none exist
-        return {
-          userId,
-          totalExercisesCompleted: 0,
-          totalTranslations: 0,
-          totalCreativeWritings: 0,
-          totalWordsWritten: 0,
-          totalTimeSpent: 0,
-          averageGrammarScore: 0,
-          averageVocabularyScore: 0,
-          averageCoherenceScore: 0,
-          averageOverallScore: 0,
-          exercisesByLevel: {} as Record<CEFRLevel, number>,
-          currentStreak: 0,
-          longestStreak: 0,
-          recentScores: [],
-          updatedAt: Date.now(),
-        } as WritingStats;
-      }
-
-      return statsSnap.data() as WritingStats;
+      return await getWritingStats(userId);
     },
     enabled: !!userId,
   });
@@ -107,13 +67,7 @@ export function useUpdateWritingStats() {
       userId: string;
       updates: Partial<WritingStats>;
     }) => {
-      const statsRef = doc(db, 'writing-stats', userId);
-
-      await updateDoc(statsRef, {
-        ...updates,
-        updatedAt: Date.now(),
-      });
-
+      await updateWritingStats(userId, updates);
       return { userId, updates };
     },
     onSuccess: (data) => {
@@ -130,13 +84,7 @@ export function useUpdateWritingProgress() {
 
   return useMutation({
     mutationFn: async (data: WritingProgress) => {
-      const progressRef = doc(db, 'writing-progress', data.progressId);
-
-      await updateDoc(progressRef, {
-        ...data,
-        updatedAt: Date.now(),
-      });
-
+      await updateWritingProgress(data.progressId, data);
       return data;
     },
     onSuccess: (data) => {

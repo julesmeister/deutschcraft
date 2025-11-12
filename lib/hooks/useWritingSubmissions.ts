@@ -1,23 +1,10 @@
 /**
  * React Query hooks for Writing Submissions
  * Query hooks for fetching and managing writing submissions
+ * Uses writingService for database abstraction
  */
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import {
-  collection,
-  query,
-  where,
-  getDocs,
-  doc,
-  getDoc,
-  addDoc,
-  updateDoc,
-  deleteDoc,
-  orderBy,
-  Timestamp,
-} from 'firebase/firestore';
-import { db } from '@/lib/firebase';
 import {
   TranslationExercise,
   CreativeWritingExercise,
@@ -25,6 +12,19 @@ import {
   WritingExerciseType,
 } from '@/lib/models/writing';
 import { CEFRLevel } from '@/lib/models/cefr';
+import {
+  getWritingExercises,
+  getWritingExercise,
+  getStudentSubmissions,
+  getWritingSubmission,
+  getExerciseSubmissions,
+  getAllWritingSubmissions,
+  getPendingWritingCount,
+  createWritingSubmission,
+  updateWritingSubmission,
+  submitWriting,
+  deleteWritingSubmission,
+} from '@/lib/services/writingService';
 
 // ============================================================================
 // QUERY HOOKS - Fetch Submissions
@@ -37,27 +37,7 @@ export function useWritingExercises(level: CEFRLevel, exerciseType?: WritingExer
   return useQuery({
     queryKey: ['writing-exercises', level, exerciseType],
     queryFn: async () => {
-      const exercisesRef = collection(db, 'writing-exercises');
-      let q = query(
-        exercisesRef,
-        where('level', '==', level),
-        orderBy('createdAt', 'desc')
-      );
-
-      if (exerciseType) {
-        q = query(
-          exercisesRef,
-          where('level', '==', level),
-          where('type', '==', exerciseType),
-          orderBy('createdAt', 'desc')
-        );
-      }
-
-      const snapshot = await getDocs(q);
-      return snapshot.docs.map(doc => ({
-        ...doc.data(),
-        exerciseId: doc.id,
-      })) as (TranslationExercise | CreativeWritingExercise)[];
+      return await getWritingExercises(level, exerciseType);
     },
   });
 }
@@ -70,16 +50,7 @@ export function useWritingExercise(exerciseId?: string) {
     queryKey: ['writing-exercise', exerciseId],
     queryFn: async () => {
       if (!exerciseId) return null;
-
-      const exerciseRef = doc(db, 'writing-exercises', exerciseId);
-      const exerciseSnap = await getDoc(exerciseRef);
-
-      if (!exerciseSnap.exists()) return null;
-
-      return {
-        ...exerciseSnap.data(),
-        exerciseId: exerciseSnap.id,
-      } as TranslationExercise | CreativeWritingExercise;
+      return await getWritingExercise(exerciseId);
     },
     enabled: !!exerciseId,
   });
@@ -93,28 +64,7 @@ export function useStudentSubmissions(userId?: string, exerciseType?: WritingExe
     queryKey: ['student-submissions', userId, exerciseType],
     queryFn: async () => {
       if (!userId) return [];
-
-      const submissionsRef = collection(db, 'writing-submissions');
-      let q = query(
-        submissionsRef,
-        where('userId', '==', userId),
-        orderBy('updatedAt', 'desc')
-      );
-
-      if (exerciseType) {
-        q = query(
-          submissionsRef,
-          where('userId', '==', userId),
-          where('exerciseType', '==', exerciseType),
-          orderBy('updatedAt', 'desc')
-        );
-      }
-
-      const snapshot = await getDocs(q);
-      return snapshot.docs.map(doc => ({
-        ...doc.data(),
-        submissionId: doc.id,
-      })) as WritingSubmission[];
+      return await getStudentSubmissions(userId, exerciseType);
     },
     enabled: !!userId,
   });
@@ -128,16 +78,7 @@ export function useWritingSubmission(submissionId?: string) {
     queryKey: ['writing-submission', submissionId],
     queryFn: async () => {
       if (!submissionId) return null;
-
-      const submissionRef = doc(db, 'writing-submissions', submissionId);
-      const submissionSnap = await getDoc(submissionRef);
-
-      if (!submissionSnap.exists()) return null;
-
-      return {
-        ...submissionSnap.data(),
-        submissionId: submissionSnap.id,
-      } as WritingSubmission;
+      return await getWritingSubmission(submissionId);
     },
     enabled: !!submissionId,
   });
@@ -151,19 +92,7 @@ export function useExerciseSubmissions(exerciseId?: string) {
     queryKey: ['exercise-submissions', exerciseId],
     queryFn: async () => {
       if (!exerciseId) return [];
-
-      const submissionsRef = collection(db, 'writing-submissions');
-      const q = query(
-        submissionsRef,
-        where('exerciseId', '==', exerciseId),
-        orderBy('submittedAt', 'desc')
-      );
-
-      const snapshot = await getDocs(q);
-      return snapshot.docs.map(doc => ({
-        ...doc.data(),
-        submissionId: doc.id,
-      })) as WritingSubmission[];
+      return await getExerciseSubmissions(exerciseId);
     },
     enabled: !!exerciseId,
   });
@@ -177,37 +106,7 @@ export function useAllWritingSubmissions(statusFilter?: 'submitted' | 'reviewed'
   return useQuery({
     queryKey: ['all-writing-submissions', statusFilter],
     queryFn: async () => {
-      const submissionsRef = collection(db, 'writing-submissions');
-
-      let q;
-      if (statusFilter === 'submitted') {
-        // Only show submissions awaiting review
-        q = query(
-          submissionsRef,
-          where('status', '==', 'submitted'),
-          orderBy('submittedAt', 'desc')
-        );
-      } else if (statusFilter === 'reviewed') {
-        // Only show reviewed submissions
-        q = query(
-          submissionsRef,
-          where('status', '==', 'reviewed'),
-          orderBy('updatedAt', 'desc')
-        );
-      } else {
-        // Show all submissions (submitted or reviewed, exclude drafts)
-        q = query(
-          submissionsRef,
-          where('status', 'in', ['submitted', 'reviewed']),
-          orderBy('updatedAt', 'desc')
-        );
-      }
-
-      const snapshot = await getDocs(q);
-      return snapshot.docs.map(doc => ({
-        ...doc.data(),
-        submissionId: doc.id,
-      })) as WritingSubmission[];
+      return await getAllWritingSubmissions(statusFilter);
     },
   });
 }
@@ -219,14 +118,7 @@ export function usePendingWritingCount() {
   return useQuery({
     queryKey: ['pending-writing-count'],
     queryFn: async () => {
-      const submissionsRef = collection(db, 'writing-submissions');
-      const q = query(
-        submissionsRef,
-        where('status', '==', 'submitted')
-      );
-
-      const snapshot = await getDocs(q);
-      return snapshot.size; // Just return count
+      return await getPendingWritingCount();
     },
   });
 }
@@ -243,18 +135,7 @@ export function useCreateWritingSubmission() {
 
   return useMutation({
     mutationFn: async (data: Omit<WritingSubmission, 'submissionId' | 'createdAt' | 'updatedAt' | 'version'>) => {
-      const submissionsRef = collection(db, 'writing-submissions');
-      const now = Date.now();
-
-      const submissionData: Omit<WritingSubmission, 'submissionId'> = {
-        ...data,
-        version: 1,
-        createdAt: now,
-        updatedAt: now,
-      };
-
-      const docRef = await addDoc(submissionsRef, submissionData);
-      return { submissionId: docRef.id, ...submissionData };
+      return await createWritingSubmission(data);
     },
     onSuccess: (data) => {
       queryClient.invalidateQueries({ queryKey: ['student-submissions', data.userId] });
@@ -277,13 +158,7 @@ export function useUpdateWritingSubmission() {
       submissionId: string;
       updates: Partial<WritingSubmission>;
     }) => {
-      const submissionRef = doc(db, 'writing-submissions', submissionId);
-
-      await updateDoc(submissionRef, {
-        ...updates,
-        updatedAt: Date.now(),
-      });
-
+      await updateWritingSubmission(submissionId, updates);
       return { submissionId, updates };
     },
     onSuccess: (data) => {
@@ -301,15 +176,7 @@ export function useSubmitWriting() {
 
   return useMutation({
     mutationFn: async (submissionId: string) => {
-      const submissionRef = doc(db, 'writing-submissions', submissionId);
-      const now = Date.now();
-
-      await updateDoc(submissionRef, {
-        status: 'submitted',
-        submittedAt: now,
-        updatedAt: now,
-      });
-
+      await submitWriting(submissionId);
       return submissionId;
     },
     onSuccess: (submissionId) => {
@@ -327,8 +194,7 @@ export function useDeleteWritingSubmission() {
 
   return useMutation({
     mutationFn: async (submissionId: string) => {
-      const submissionRef = doc(db, 'writing-submissions', submissionId);
-      await deleteDoc(submissionRef);
+      await deleteWritingSubmission(submissionId);
       return submissionId;
     },
     onSuccess: () => {

@@ -1,13 +1,13 @@
 /**
  * React Query hooks for Batch management
  * NEW STRUCTURE: batches/{batchId} - Top-level collection
+ * Uses batchService for database abstraction
  */
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { db } from '../firebase';
-import { collection, query, where, getDocs, doc, setDoc, updateDoc, deleteDoc, getDoc } from 'firebase/firestore';
-import { Batch, CEFRLevel, BatchLevelHistory } from '../models';
-import { queryKeys, cacheTimes } from '../queryClient';
+import { Batch, CEFRLevel } from '../models';
+import { cacheTimes } from '../queryClient';
+import { getBatchesByTeacher, getBatch, getBatchStudentCount, createBatch, updateBatch, updateBatchLevel, archiveBatch } from '../services/batchService';
 
 /**
  * Fetch all batches for a teacher
@@ -18,17 +18,7 @@ export function useTeacherBatches(teacherEmail: string | undefined) {
     queryKey: ['batches', 'teacher', teacherEmail],
     queryFn: async () => {
       if (!teacherEmail) return [];
-
-      const batchesRef = collection(db, 'batches');
-      const q = query(batchesRef, where('teacherId', '==', teacherEmail));
-      const snapshot = await getDocs(q);
-
-      const batches: Batch[] = snapshot.docs.map(doc => ({
-        batchId: doc.id,
-        ...doc.data(),
-      } as Batch));
-
-      return batches;
+      return await getBatchesByTeacher(teacherEmail);
     },
     enabled: !!teacherEmail,
     staleTime: cacheTimes.batches,
@@ -66,16 +56,7 @@ export function useBatch(batchId: string | undefined) {
     queryKey: ['batch', batchId],
     queryFn: async () => {
       if (!batchId) return null;
-
-      const batchRef = doc(db, 'batches', batchId);
-      const batchDoc = await getDoc(batchRef);
-
-      if (!batchDoc.exists()) return null;
-
-      return {
-        batchId: batchDoc.id,
-        ...batchDoc.data(),
-      } as Batch;
+      return await getBatch(batchId);
     },
     enabled: !!batchId,
     staleTime: cacheTimes.batches,
@@ -113,33 +94,14 @@ export function useCreateBatch() {
       startDate: number;
       endDate: number | null;
     }) => {
-      const batchId = `BATCH_${Date.now()}`;
-      const batchRef = doc(db, 'batches', batchId);
-
-      const batch: Batch = {
-        batchId,
+      return await createBatch({
         teacherId,
         name,
         description,
         currentLevel,
         startDate,
         endDate,
-        isActive: true,
-        studentCount: 0,
-        levelHistory: [
-          {
-            level: currentLevel,
-            startDate,
-            endDate: null,
-            modifiedBy: teacherId,
-          },
-        ],
-        createdAt: Date.now(),
-        updatedAt: Date.now(),
-      };
-
-      await setDoc(batchRef, batch);
-      return batch;
+      });
     },
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['batches', 'teacher', variables.teacherId] });
@@ -162,11 +124,7 @@ export function useUpdateBatch() {
       batchId: string;
       updates: Partial<Batch>;
     }) => {
-      const batchRef = doc(db, 'batches', batchId);
-      await updateDoc(batchRef, {
-        ...updates,
-        updatedAt: Date.now(),
-      });
+      await updateBatch(batchId, updates);
     },
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['batch', variables.batchId] });
@@ -193,39 +151,7 @@ export function useUpdateBatchLevel() {
       modifiedBy: string; // Teacher's email
       notes?: string;
     }) => {
-      const batchRef = doc(db, 'batches', batchId);
-      const batchDoc = await getDoc(batchRef);
-
-      if (!batchDoc.exists()) throw new Error('Batch not found');
-
-      const currentBatch = batchDoc.data() as Batch;
-      const now = Date.now();
-      const updatedLevelHistory = [...currentBatch.levelHistory];
-
-      // Close the current level period
-      if (updatedLevelHistory.length > 0) {
-        const lastIndex = updatedLevelHistory.length - 1;
-        updatedLevelHistory[lastIndex] = {
-          ...updatedLevelHistory[lastIndex],
-          endDate: now,
-        };
-      }
-
-      // Add new level to history
-      const newLevelEntry: BatchLevelHistory = {
-        level: newLevel,
-        startDate: now,
-        endDate: null,
-        modifiedBy,
-        notes,
-      };
-      updatedLevelHistory.push(newLevelEntry);
-
-      await updateDoc(batchRef, {
-        currentLevel: newLevel,
-        levelHistory: updatedLevelHistory,
-        updatedAt: now,
-      });
+      await updateBatchLevel(batchId, newLevel, modifiedBy, notes);
     },
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['batch', variables.batchId] });
@@ -243,12 +169,7 @@ export function useDeleteBatch() {
 
   return useMutation({
     mutationFn: async ({ batchId }: { batchId: string }) => {
-      const batchRef = doc(db, 'batches', batchId);
-      await updateDoc(batchRef, {
-        isActive: false,
-        endDate: Date.now(),
-        updatedAt: Date.now(),
-      });
+      await archiveBatch(batchId);
     },
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['batch', variables.batchId] });
@@ -266,16 +187,7 @@ export function useBatchStudentCount(batchId: string | undefined) {
     queryKey: ['batch-student-count', batchId],
     queryFn: async () => {
       if (!batchId) return 0;
-
-      const usersRef = collection(db, 'users');
-      const q = query(
-        usersRef,
-        where('batchId', '==', batchId),
-        where('role', '==', 'STUDENT')
-      );
-      const snapshot = await getDocs(q);
-
-      return snapshot.size;
+      return await getBatchStudentCount(batchId);
     },
     enabled: !!batchId,
     staleTime: 30000, // 30 seconds

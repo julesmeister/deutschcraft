@@ -1,0 +1,43 @@
+'use client';
+
+import { useQuery } from '@tanstack/react-query';
+import { cacheTimes } from '../queryClient';
+import { getStudyStats } from '../services/flashcardService';
+
+/**
+ * Fetches comprehensive study statistics for a user
+ * - Total cards, cards learned, cards mastered
+ * - Current study streak
+ * - Overall accuracy percentage
+ *
+ * Uses flashcardService for database abstraction
+ * Previously used real-time onSnapshot listeners, now uses React Query with 30-second stale time
+ */
+export function useStudyStats(userId: string | null | undefined, refreshKey?: number) {
+  const { data, isLoading, isError, error } = useQuery({
+    queryKey: ['studyStats', userId, refreshKey],
+    queryFn: async () => {
+      if (!userId) {
+        throw new Error('User ID is required');
+      }
+
+      return await getStudyStats(userId);
+    },
+    staleTime: cacheTimes.dashboardStats, // 1 minute
+    gcTime: cacheTimes.dashboardStats * 2,
+    enabled: !!userId,
+  });
+
+  return {
+    stats: data || {
+      totalCards: 0,
+      cardsLearned: 0,
+      cardsMastered: 0,
+      streak: 0,
+      accuracy: 0,
+    },
+    isLoading,
+    isError,
+    error: error as Error | null,
+  };
+}

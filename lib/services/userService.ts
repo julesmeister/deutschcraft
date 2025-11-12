@@ -237,7 +237,6 @@ export async function updateUserPhoto(email: string, photoURL: string | null): P
     // Check if user exists first
     const userDoc = await getDoc(userRef);
     if (!userDoc.exists()) {
-      console.log('[userService] User does not exist, skipping photo update');
       return;
     }
 

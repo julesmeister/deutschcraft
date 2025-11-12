@@ -5,8 +5,13 @@
  */
 
 import { useQuery } from '@tanstack/react-query';
-import { db } from '../firebase';
-import { collection, getDocs, doc, getDoc } from 'firebase/firestore';
+import {
+  getUser,
+  getTeacherStudents,
+  getBatchStudents,
+  getAllStudents,
+  getStudentsWithoutTeacher,
+} from '../services/userService';
 import { User } from '../models';
 import { cacheTimes } from '../queryClient';
 
@@ -19,27 +24,10 @@ export function useCurrentUser(email: string | null) {
     queryKey: ['user', email],
     queryFn: async () => {
       if (!email) {
-        console.log('[useCurrentUser] No email provided');
         return null;
       }
 
-      console.log('[useCurrentUser] Fetching user:', email);
-      const userRef = doc(db, 'users', email);
-      const userDoc = await getDoc(userRef);
-
-      console.log('[useCurrentUser] Document exists:', userDoc.exists());
-
-      if (!userDoc.exists()) {
-        console.log('[useCurrentUser] User document not found for:', email);
-        return null;
-      }
-
-      const userData = {
-        userId: userDoc.id,
-        ...userDoc.data(),
-      } as User;
-
-      console.log('[useCurrentUser] User data:', userData);
+      const userData = await getUser(email);
 
       return userData;
     },
@@ -77,21 +65,7 @@ export function useTeacherStudents(teacherEmail: string | undefined) {
     queryKey: ['students', 'teacher', teacherEmail],
     queryFn: async () => {
       if (!teacherEmail) return [];
-
-      const usersRef = collection(db, 'users');
-      const snapshot = await getDocs(usersRef);
-
-      const students: User[] = snapshot.docs
-        .map(doc => ({
-          userId: doc.id,
-          ...doc.data(),
-        } as User))
-        .filter(user => {
-          const role = (user.role || '').toUpperCase();
-          return role === 'STUDENT' && user.teacherId === teacherEmail;
-        });
-
-      return students;
+      return await getTeacherStudents(teacherEmail);
     },
     enabled: !!teacherEmail,
     staleTime: cacheTimes.students,
@@ -116,21 +90,7 @@ export function useBatchStudents(batchId: string | undefined) {
     queryKey: ['students', 'batch', batchId],
     queryFn: async () => {
       if (!batchId) return [];
-
-      const usersRef = collection(db, 'users');
-      const snapshot = await getDocs(usersRef);
-
-      const students: User[] = snapshot.docs
-        .map(doc => ({
-          userId: doc.id,
-          ...doc.data(),
-        } as User))
-        .filter(user => {
-          const role = (user.role || '').toUpperCase();
-          return role === 'STUDENT' && user.batchId === batchId;
-        });
-
-      return students;
+      return await getBatchStudents(batchId);
     },
     enabled: !!batchId,
     staleTime: cacheTimes.students,
@@ -154,19 +114,7 @@ export function useAllStudents() {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['students', 'all'],
     queryFn: async () => {
-      const usersRef = collection(db, 'users');
-      const snapshot = await getDocs(usersRef);
-
-      const students: User[] = snapshot.docs
-        .map(doc => ({
-          userId: doc.id,
-          ...doc.data(),
-        } as User))
-        .filter(user => {
-          const role = (user.role || '').toUpperCase();
-          return role === 'STUDENT';
-        });
-
+      const students = await getAllStudents();
       return students;
     },
     staleTime: cacheTimes.students,
@@ -195,42 +143,7 @@ export function useStudentsWithoutTeacher() {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['students', 'without-teacher'],
     queryFn: async () => {
-      console.log('[useStudentsWithoutTeacher] Starting query...');
-      const usersRef = collection(db, 'users');
-
-      // Fetch all users and filter client-side to handle case variations
-      const snapshot = await getDocs(usersRef);
-      console.log('[useStudentsWithoutTeacher] Total users found:', snapshot.size);
-
-      const students: User[] = snapshot.docs
-        .map(doc => ({
-          userId: doc.id,
-          ...doc.data(),
-        } as User))
-        .filter(user => {
-          const role = (user.role || '').toUpperCase();
-          const hasNoTeacher = user.teacherId === null || user.teacherId === undefined;
-
-          console.log('[useStudentsWithoutTeacher] Checking user:', {
-            email: user.email,
-            role: user.role,
-            roleUpper: role,
-            teacherId: user.teacherId,
-            hasNoTeacher,
-            matches: role === 'STUDENT' && hasNoTeacher,
-          });
-
-          return role === 'STUDENT' && hasNoTeacher;
-        });
-
-      console.log('[useStudentsWithoutTeacher] Filtered students:', students.length);
-      console.log('[useStudentsWithoutTeacher] Students:', students.map(s => ({
-        userId: s.userId,
-        email: s.email,
-        name: (s as any).name || `${s.firstName || ''} ${s.lastName || ''}`,
-        role: s.role,
-        teacherId: s.teacherId,
-      })));
+      const students = await getStudentsWithoutTeacher();
 
       return students;
     },

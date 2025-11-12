@@ -5,8 +5,7 @@
  */
 
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { db } from '../firebase';
-import { doc, setDoc, updateDoc } from 'firebase/firestore';
+import { upsertUser, updateUser, assignStudentToBatch } from '../services/userService';
 import { User } from '../models';
 
 /**
@@ -18,12 +17,7 @@ export function useUpsertUser() {
 
   return useMutation({
     mutationFn: async (user: Partial<User> & { email: string }) => {
-      const userRef = doc(db, 'users', user.email);
-      await setDoc(userRef, {
-        userId: user.email,
-        ...user,
-        updatedAt: Date.now(),
-      }, { merge: true });
+      await upsertUser(user);
     },
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['user', variables.email] });
@@ -46,11 +40,7 @@ export function useUpdateUser() {
       email: string;
       updates: Partial<User>;
     }) => {
-      const userRef = doc(db, 'users', email);
-      await updateDoc(userRef, {
-        ...updates,
-        updatedAt: Date.now(),
-      });
+      await updateUser(email, updates);
     },
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['user', variables.email] });
@@ -75,12 +65,7 @@ export function useAssignStudentToBatch() {
       batchId: string;
       teacherId: string;
     }) => {
-      const userRef = doc(db, 'users', studentEmail);
-      await updateDoc(userRef, {
-        batchId,
-        teacherId,
-        updatedAt: Date.now(),
-      });
+      await assignStudentToBatch(studentEmail, batchId, teacherId);
     },
     onSuccess: (_, variables) => {
       queryClient.invalidateQueries({ queryKey: ['user', variables.studentEmail] });

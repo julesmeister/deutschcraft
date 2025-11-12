@@ -37,15 +37,6 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
   const [showSummary, setShowSummary] = useState(false);
   const [sessionStartTime] = useState(Date.now());
 
-  // Log session status on mount
-  useEffect(() => {
-    console.log('🎴 [useFlashcardSession] Session initialized:', {
-      hasSession: !!session,
-      userEmail: session?.user?.email,
-      flashcardsCount: flashcards.length,
-      timestamp: new Date().toISOString(),
-    });
-  }, [session, flashcards.length]);
 
   const currentCard = flashcards[currentIndex];
   const progress = ((currentIndex + 1) / flashcards.length) * 100;
@@ -124,16 +115,6 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
     });
 
     // Save review to Firestore if user is logged in
-    console.log('🎴 [handleDifficulty] Attempting to save review:', {
-      hasSession: !!session,
-      hasEmail: !!session?.user?.email,
-      email: session?.user?.email,
-      cardId: currentCard.id,
-      hasWordId: !!currentCard.wordId,
-      wordId: currentCard.wordId,
-      difficulty,
-    });
-
     if (!session?.user?.email) {
       console.warn('⚠️ [handleDifficulty] Cannot save: No user email');
     } else if (!currentCard.wordId) {
@@ -169,21 +150,8 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
     // Calculate session stats
     const timeSpent = Math.floor((Date.now() - sessionStartTime) / 1000); // in seconds
     const totalReviewed = finalStats.again + finalStats.hard + finalStats.good + finalStats.easy;
-    const correctCount = finalStats.good + finalStats.easy;
-    const incorrectCount = finalStats.again + finalStats.hard;
-
-    console.log('🎴 [handleSessionComplete] Session ending:', {
-      hasSession: !!session,
-      hasEmail: !!session?.user?.email,
-      email: session?.user?.email,
-      finalStats,
-      totalReviewed,
-      correctCount,
-      incorrectCount,
-      timeSpentSeconds: timeSpent,
-      timeSpentMinutes: Math.ceil(timeSpent / 60),
-      timestamp: new Date().toISOString(),
-    });
+    const correctCount = finalStats.hard + finalStats.good + finalStats.easy; // hard/good/easy all count as correct
+    const incorrectCount = finalStats.again; // only "again" is incorrect (forgot the card)
 
     // Save daily progress
     if (!session?.user?.email) {
@@ -191,16 +159,12 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
       toast.addToast('Error: Not logged in. Progress not saved.', 'error');
     } else {
       try {
-        console.log('🟢 [handleSessionComplete] Calling saveDailyProgress...');
-
         await saveDailyProgress(session.user.email, {
           cardsReviewed: totalReviewed,
           timeSpent: Math.ceil(timeSpent / 60), // Convert to minutes
           correctCount,
           incorrectCount,
         });
-
-        console.log('✅ [handleSessionComplete] Daily progress saved successfully!');
       } catch (error) {
         console.error('❌ [handleSessionComplete] Failed to save daily progress:', error);
         toast.addToast('Failed to save progress. Please check your connection.', 'error');

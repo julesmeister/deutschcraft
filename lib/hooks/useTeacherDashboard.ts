@@ -85,7 +85,6 @@ export function useTeacherDashboard({
   const { data: paginatedStudents, totalPages, totalItems } = tableState.paginateData(studentsForTable);
 
   // Available members for selection
-  console.log('[useTeacherDashboard] studentsWithoutTeacher:', studentsWithoutTeacher.length, studentsWithoutTeacher);
   const availableMembers = studentsWithoutTeacher.map(student => {
     // Handle both formats: {name: "Full Name"} OR {firstName: "First", lastName: "Last"}
     const displayName = (student as any).name || `${student.firstName || ''} ${student.lastName || ''}`.trim() || student.email;
@@ -97,7 +96,6 @@ export function useTeacherDashboard({
       isSelected: studentManagement.selectedStudentIds.has(student.userId),
     };
   });
-  console.log('[useTeacherDashboard] availableMembers:', availableMembers.length, availableMembers);
 
   /**
    * Handle adding students to batch

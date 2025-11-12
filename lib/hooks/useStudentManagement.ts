@@ -5,8 +5,7 @@
 
 import { useState } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
-import { db } from '../firebase';
-import { doc, updateDoc } from 'firebase/firestore';
+import { assignStudentsToBatch, removeStudentFromTeacher } from '../services/studentService';
 import { queryKeys } from '../queryClient';
 import { User } from '../models';
 
@@ -60,11 +59,6 @@ export function useStudentManagement({
   const addStudentsToBatch = async () => {
     const selectedStudents = Array.from(selectedStudentIds);
 
-    console.log('[addStudentsToBatch] Selected student IDs:', selectedStudents);
-    console.log('[addStudentsToBatch] Available students:', studentsWithoutTeacher);
-    console.log('[addStudentsToBatch] Current teacher:', currentTeacherId);
-    console.log('[addStudentsToBatch] Selected batch:', selectedBatchId);
-
     if (selectedStudents.length === 0) {
       onError?.('Please select at least one student');
       return false;
@@ -84,40 +78,24 @@ export function useStudentManagement({
       setIsAddingStudents(true);
       onInfo?.(`Adding ${selectedStudents.length} student(s)...`);
 
-      // Update each selected student's teacherId and batchId
-      // NEW STRUCTURE: users/{email} - Direct update, no nested student_data
-      for (const studentId of selectedStudents) {
-        console.log('[addStudentsToBatch] Processing student ID:', studentId);
+      // Get student emails from selected IDs
+      const studentEmails = selectedStudents
+        .map(studentId => {
+          const student = studentsWithoutTeacher.find(s => s.userId === studentId);
+          if (!student) {
+            console.error('[addStudentsToBatch] Student not found for ID:', studentId);
+            return null;
+          }
+          return student.userId; // userId is email
+        })
+        .filter((email): email is string => email !== null);
 
-        // studentId is now userId (email), use it directly as document ID
-        const student = studentsWithoutTeacher.find(s => s.userId === studentId);
-
-        console.log('[addStudentsToBatch] Found student:', student);
-
-        if (student) {
-          // userId is email, document ID is email
-          const userRef = doc(db, 'users', student.userId);
-          console.log('[addStudentsToBatch] Updating document:', student.userId);
-
-          await updateDoc(userRef, {
-            teacherId: currentTeacherId,
-            batchId: selectedBatchId,
-            updatedAt: Date.now(),
-          });
-
-          console.log('[addStudentsToBatch] Successfully updated:', student.userId);
-        } else {
-          console.error('[addStudentsToBatch] Student not found for ID:', studentId);
-        }
-      }
-
-      console.log('[addStudentsToBatch] All updates complete. Invalidating queries...');
+      // Assign all students using service layer
+      await assignStudentsToBatch(studentEmails, currentTeacherId, selectedBatchId);
 
       // Refetch the students list
       await queryClient.invalidateQueries({ queryKey: queryKeys.allStudents() });
       await queryClient.invalidateQueries({ queryKey: queryKeys.studentsWithoutTeacher() });
-
-      console.log('[addStudentsToBatch] Queries invalidated successfully');
 
       onSuccess?.(`Successfully added ${selectedStudents.length} student(s)!`);
       clearSelection();
@@ -139,28 +117,15 @@ export function useStudentManagement({
       setIsRemovingStudent(true);
       onInfo?.('Removing student...');
 
-      console.log('[removeStudent] Removing student ID:', studentId);
-      console.log('[removeStudent] All students:', allStudents);
-
       // studentId is now userId (email)
       const student = allStudents.find(s => s.userId === studentId);
-      console.log('[removeStudent] Found student:', student);
 
       if (!student) {
         throw new Error('Student not found');
       }
 
-      // NEW STRUCTURE: Update user document directly (userId is email)
-      const userRef = doc(db, 'users', student.userId);
-      console.log('[removeStudent] Updating document:', student.userId);
-
-      await updateDoc(userRef, {
-        teacherId: null,
-        batchId: null,
-        updatedAt: Date.now(),
-      });
-
-      console.log('[removeStudent] Successfully removed student');
+      // Remove student using service layer
+      await removeStudentFromTeacher(student.userId);
 
       // Refetch the students list to update the UI
       await queryClient.invalidateQueries({ queryKey: queryKeys.allStudents() });

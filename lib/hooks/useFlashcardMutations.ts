@@ -4,18 +4,13 @@
  */
 
 import { useState } from 'react';
-import {
-  collection,
-  doc,
-  setDoc,
-  getDoc,
-  updateDoc,
-  serverTimestamp,
-  increment,
-} from 'firebase/firestore';
-import { db } from '@/lib/firebase';
 import { FlashcardProgress } from '@/lib/models';
 import { useToast } from '@/components/ui/toast';
+import {
+  getSingleFlashcardProgress,
+  saveFlashcardProgress,
+  saveDailyProgress,
+} from '@/lib/services/flashcardService';
 
 type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy';
 
@@ -138,41 +133,14 @@ export function useFlashcardMutations() {
         throw new Error(errorMsg);
       }
 
-      console.log('🔵 [saveReview] Starting save:', {
-        userId,
-        flashcardId,
-        wordId,
-        difficulty,
-        timestamp: new Date().toISOString(),
-      });
-
       // Generate progress ID
       const progressId = `${userId}_${flashcardId}`;
-      const progressRef = doc(db, 'flashcard-progress', progressId);
 
-      console.log('🔵 [saveReview] Progress ID:', progressId);
-
-      // Get existing progress
-      const progressDoc = await getDoc(progressRef);
-      const currentProgress = progressDoc.exists()
-        ? (progressDoc.data() as FlashcardProgress)
-        : null;
-
-      console.log('🔵 [saveReview] Existing progress:', {
-        exists: progressDoc.exists(),
-        currentProgress: currentProgress
-          ? {
-              repetitions: currentProgress.repetitions,
-              masteryLevel: currentProgress.masteryLevel,
-              interval: currentProgress.interval,
-            }
-          : null,
-      });
+      // Get existing progress using service layer
+      const currentProgress = await getSingleFlashcardProgress(userId, flashcardId);
 
       // Calculate new SRS data
       const srsData = calculateSRSData(currentProgress, difficulty);
-
-      console.log('🔵 [saveReview] New SRS data:', srsData);
 
       // Prepare update data
       const updateData: Partial<FlashcardProgress> = {
@@ -197,19 +165,9 @@ export function useFlashcardMutations() {
         updateData.incorrectCount = currentProgress?.incorrectCount || 0;
       }
 
-      // Create or update document
-      if (progressDoc.exists()) {
-        console.log('🔵 [saveReview] Updating existing document');
-        await updateDoc(progressRef, updateData as any);
-      } else {
-        console.log('🔵 [saveReview] Creating new document');
-        await setDoc(progressRef, {
-          ...updateData,
-          createdAt: Date.now(),
-        });
-      }
+      // Save using service layer
+      await saveFlashcardProgress(progressId, updateData);
 
-      console.log('✅ [saveReview] Save successful!');
       return srsData;
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to save review';
@@ -230,7 +188,7 @@ export function useFlashcardMutations() {
   /**
    * Save daily study progress
    */
-  const saveDailyProgress = async (
+  const saveDailyProgressLocal = async (
     userId: string,
     stats: {
       cardsReviewed: number;
@@ -248,69 +206,8 @@ export function useFlashcardMutations() {
         throw new Error(errorMsg);
       }
 
-      console.log('🟢 [saveDailyProgress] Starting save:', {
-        userId,
-        stats,
-        timestamp: new Date().toISOString(),
-      });
-
-      // Format: PROG_YYYYMMDD_email
-      const today = new Date().toISOString().split('T')[0].replace(/-/g, '');
-      const progressId = `PROG_${today}_${userId}`;
-      const progressRef = doc(db, 'progress', progressId);
-
-      console.log('🟢 [saveDailyProgress] Progress ID:', progressId);
-      console.log('🟢 [saveDailyProgress] Collection path:', 'progress');
-
-      // Get existing progress for today
-      const progressDoc = await getDoc(progressRef);
-
-      console.log('🟢 [saveDailyProgress] Existing document:', {
-        exists: progressDoc.exists(),
-        data: progressDoc.exists() ? progressDoc.data() : null,
-      });
-
-      if (progressDoc.exists()) {
-        // Update existing progress
-        console.log('🟢 [saveDailyProgress] Updating existing document with increments');
-        await updateDoc(progressRef, {
-          cardsReviewed: increment(stats.cardsReviewed),
-          timeSpent: increment(stats.timeSpent),
-          wordsCorrect: increment(stats.correctCount),
-          wordsIncorrect: increment(stats.incorrectCount),
-          sessionsCompleted: increment(1),
-        });
-        console.log('✅ [saveDailyProgress] Update successful!');
-      } else {
-        // Create new progress entry
-        console.log('🟢 [saveDailyProgress] Creating new document with data:', {
-          progressId,
-          userId,
-          date: new Date().toISOString().split('T')[0],
-          wordsStudied: stats.cardsReviewed,
-          wordsCorrect: stats.correctCount,
-          wordsIncorrect: stats.incorrectCount,
-          timeSpent: stats.timeSpent,
-          sessionsCompleted: 1,
-          cardsReviewed: stats.cardsReviewed,
-          sentencesCreated: 0,
-        });
-
-        await setDoc(progressRef, {
-          progressId,
-          userId,
-          date: new Date().toISOString().split('T')[0],
-          wordsStudied: stats.cardsReviewed,
-          wordsCorrect: stats.correctCount,
-          wordsIncorrect: stats.incorrectCount,
-          timeSpent: stats.timeSpent,
-          sessionsCompleted: 1,
-          cardsReviewed: stats.cardsReviewed,
-          sentencesCreated: 0,
-          createdAt: Date.now(),
-        });
-        console.log('✅ [saveDailyProgress] Create successful!');
-      }
+      // Save using service layer
+      await saveDailyProgress(userId, stats);
 
       // Success - no toast needed, handled by session complete
     } catch (err) {
@@ -328,7 +225,7 @@ export function useFlashcardMutations() {
 
   return {
     saveReview,
-    saveDailyProgress,
+    saveDailyProgress: saveDailyProgressLocal,
     isSaving,
     error,
   };

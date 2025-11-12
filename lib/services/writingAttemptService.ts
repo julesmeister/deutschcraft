@@ -42,6 +42,33 @@ export async function getUserExerciseAttempts(
   exerciseId: string
 ): Promise<WritingSubmission[]> {
   const submissionsRef = collection(db, 'writing-submissions');
+
+  // Try query WITHOUT orderBy first to see if that's the issue
+  const qWithoutOrder = query(
+    submissionsRef,
+    where('userId', '==', userId),
+    where('exerciseId', '==', exerciseId)
+  );
+
+  try {
+    const snapshotWithoutOrder = await getDocs(qWithoutOrder);
+
+    if (snapshotWithoutOrder.size > 0) {
+      const results = snapshotWithoutOrder.docs.map(doc => ({
+        ...doc.data(),
+        submissionId: doc.id,
+      })) as WritingSubmission[];
+
+      // Sort manually by attemptNumber
+      results.sort((a, b) => (a.attemptNumber || 0) - (b.attemptNumber || 0));
+
+      return results;
+    }
+  } catch (error) {
+    console.error('[writingAttemptService] Error with query:', error);
+  }
+
+  // Try original query with orderBy
   const q = query(
     submissionsRef,
     where('userId', '==', userId),
@@ -50,10 +77,13 @@ export async function getUserExerciseAttempts(
   );
 
   const snapshot = await getDocs(q);
-  return snapshot.docs.map(doc => ({
+
+  const results = snapshot.docs.map(doc => ({
     ...doc.data(),
     submissionId: doc.id,
   })) as WritingSubmission[];
+
+  return results;
 }
 
 /**

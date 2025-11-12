@@ -21,8 +21,6 @@ export function useFirebaseAuth() {
 
       if (session?.user) {
         // User is signed in with NextAuth
-        console.log('[useFirebaseAuth] User signed in with NextAuth:', session.user.email);
-
         try {
           // Get custom Firebase token from API
           const response = await fetch('/api/auth/firebase-token', {
@@ -37,7 +35,6 @@ export function useFirebaseAuth() {
 
           // Sign in to Firebase with custom token
           await signInWithCustomToken(auth, token);
-          console.log('[useFirebaseAuth] Signed in to Firebase successfully');
           setIsFirebaseReady(true);
 
           // Sync user's photo URL to Firestore if available
@@ -52,7 +49,6 @@ export function useFirebaseAuth() {
         // User is signed out
         if (auth.currentUser) {
           await signOut(auth);
-          console.log('[useFirebaseAuth] Signed out from Firebase');
         }
         setIsFirebaseReady(false);
       }

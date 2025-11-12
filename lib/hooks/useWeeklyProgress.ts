@@ -22,11 +22,7 @@ export function useWeeklyProgress(userId: string | null | undefined) {
         throw new Error('User ID is required');
       }
 
-      console.log('📊 [useWeeklyProgress] Fetching weekly progress for:', userId);
-
       const weeklyData = await getWeeklyProgress(userId);
-
-      console.log('📊 [useWeeklyProgress] Weekly summary:', weeklyData);
 
       return {
         dailyData: weeklyData.dailyData,

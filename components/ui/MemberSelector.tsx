@@ -36,24 +36,12 @@ export function MemberSelector({
 }: MemberSelectorProps) {
   const [searchQuery, setSearchQuery] = useState('');
 
-  console.log('[MemberSelector] Props received:', {
-    isOpen,
-    membersCount: members.length,
-    members,
-  });
-
   const filteredMembers = members.filter((member) =>
     member.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const selectedCount = members.filter((m) => m.isSelected).length;
   const availableCount = members.length;
-
-  console.log('[MemberSelector] Calculated:', {
-    filteredCount: filteredMembers.length,
-    selectedCount,
-    availableCount,
-  });
 
   const handleDone = () => {
     onDone?.();

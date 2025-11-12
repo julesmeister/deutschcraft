@@ -3,13 +3,12 @@
  * Displays flashcard statistics for a student
  */
 
-import { StatCard } from '@/components/ui/StatCard';
-import { StatGrid } from '@/components/ui/StatGrid';
 import { TabBar } from '@/components/ui/TabBar';
 
 interface StudyStats {
   totalCards: number;
   cardsLearned: number;
+  cardsMastered: number;
   streak: number;
   accuracy: number;
 }
@@ -21,36 +20,8 @@ interface FlashcardStatsSectionProps {
 export function FlashcardStatsSection({ stats }: FlashcardStatsSectionProps) {
   return (
     <>
-      {/* Stats Grid */}
-      <StatGrid>
-        <StatCard
-          icon="📚"
-          label="Total Cards"
-          value={stats.totalCards.toString()}
-          iconBgColor="bg-piku-purple-light"
-        />
-        <StatCard
-          icon="✅"
-          label="Cards Learned"
-          value={stats.cardsLearned.toString()}
-          iconBgColor="bg-piku-mint"
-        />
-        <StatCard
-          icon="🔥"
-          label="Day Streak"
-          value={stats.streak.toString()}
-          iconBgColor="bg-piku-orange"
-        />
-        <StatCard
-          icon="🎯"
-          label="Accuracy"
-          value={`${stats.accuracy}%`}
-          iconBgColor="bg-piku-cyan"
-        />
-      </StatGrid>
-
-      {/* Progress TabBar */}
-      <div className="mt-8">
+      {/* Learning Progress TabBar */}
+      <div>
         <h2 className="text-2xl font-black text-gray-900 mb-6">Learning Progress</h2>
         <TabBar
           variant="stats"
@@ -73,7 +44,7 @@ export function FlashcardStatsSection({ stats }: FlashcardStatsSectionProps) {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               ),
-              value: stats.cardsLearned.toLocaleString(),
+              value: stats.cardsMastered.toLocaleString(),
             },
             {
               id: 'streak',
