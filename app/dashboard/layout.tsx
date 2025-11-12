@@ -71,25 +71,23 @@ function DashboardNavbar() {
                 {
                   title: 'Practice',
                   items: [
-                    { label: 'Flashcards', href: '/dashboard/student/flashcards' },
-                    { label: 'Writing', href: '/dashboard/student/writing' },
-                    { label: 'Review', href: '/dashboard/review' },
+                    { label: 'Flashcards', href: '/dashboard/student/flashcards', icon: '📚', description: 'Practice vocabulary with spaced repetition' },
+                    { label: 'Writing', href: '/dashboard/student/writing', icon: '✍️', description: 'Complete writing exercises and tasks' },
                   ],
                 },
                 {
-                  title: 'Progress',
+                  title: 'Review',
                   items: [
-                    { label: 'Statistics', href: '/dashboard/progress' },
-                    { label: 'Achievements', href: '/dashboard/achievements', badge: 'New' },
-                    { label: 'Syllabus', href: '/dashboard/student/syllabus' },
+                    { label: 'Flashcard Review', href: '/dashboard/student/flashcard-review', icon: '🔄', description: 'Review cards you\'ve practiced' },
+                    { label: 'Writing Review', href: '/dashboard/student/writing-review', icon: '📚', description: 'View past submissions and feedback' },
                   ],
                 },
                 {
                   title: 'Resources',
                   items: [
-                    { label: 'Grammar Guide', href: '/resources/grammar' },
-                    { label: 'Vocabulary', href: '/resources/vocabulary' },
-                    { label: 'Help Center', href: '/help', external: true },
+                    { label: 'Statistics', href: '/dashboard/progress', icon: '📊', description: 'View detailed learning statistics' },
+                    { label: 'Syllabus', href: '/dashboard/student/syllabus', icon: '📋', description: 'Course structure and topics' },
+                    { label: 'Help Center', href: '/help', icon: '❓', description: 'Get help and support', external: true },
                   ],
                 },
               ]}
