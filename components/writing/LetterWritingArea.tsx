@@ -1,78 +1,124 @@
 /**
  * LetterWritingArea Component
- * Text area for writing letters with word count and formatting tips
+ * Uses reusable WritingWorkspace component
  */
 
+import { ReactNode } from 'react';
 import { LetterTemplate } from '@/lib/data/letterTemplates';
+import { WritingWorkspace } from './WritingWorkspace';
 
 interface LetterWritingAreaProps {
   template: LetterTemplate;
   content: string;
   wordCount: number;
   onChange: (content: string) => void;
+  attemptCount?: number;
+  attemptHistory?: ReactNode;
+  readOnly?: boolean;
+  viewingAttempt?: { attemptNumber: number; status: string };
 }
 
-export function LetterWritingArea({ template, content, wordCount, onChange }: LetterWritingAreaProps) {
-  return (
-    <>
-      {/* Writing Area */}
-      <div className="bg-white border border-gray-200 rounded-2xl p-6 mb-6">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-bold text-neutral-900">Your Letter</h3>
-          <span className={`text-sm font-medium ${
-            wordCount < template.minWords ? 'text-amber-600' : 'text-emerald-600'
-          }`}>
-            {wordCount} / {template.minWords}+ words
-          </span>
-        </div>
+export function LetterWritingArea({
+  template,
+  content,
+  wordCount,
+  onChange,
+  attemptCount,
+  attemptHistory,
+  readOnly,
+  viewingAttempt
+}: LetterWritingAreaProps) {
+  const topIndicator = (
+    <div className="text-sm font-medium">
+      <span className={wordCount < template.minWords ? 'text-amber-600' : 'text-emerald-600'}>
+        {wordCount}
+      </span>
+      <span className="text-gray-400 mx-1">/</span>
+      <span className="text-gray-500">{template.minWords}+ words</span>
+    </div>
+  );
 
-        <textarea
-          value={content}
-          onChange={(e) => onChange(e.target.value)}
-          placeholder={template.type === 'formal'
-            ? "Begin with the sender's address...\n\n[Your Address]\n[City, Postal Code]\n\n[Recipient's Address]\n[City, Postal Code]\n\n[Date]\n\nSehr geehrte Damen und Herren,\n\n..."
-            : "Begin your letter...\n\n[Date]\n\nLiebe/r [Name],\n\n..."
-          }
-          className="w-full h-[500px] p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 resize-none font-mono text-sm"
-          style={{ lineHeight: '1.8', whiteSpace: 'pre-wrap' }}
-        />
+  const instructions = (
+    <>
+      {/* Letter Template Info */}
+      <div className="mb-8">
+        <div className="flex items-center gap-3 mb-3">
+          <span className="text-2xl">{template.icon}</span>
+          <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">
+            {template.type === 'formal' ? 'Formal Letter' : 'Informal Letter'}
+          </h3>
+        </div>
+        <p className="text-base text-gray-900 leading-relaxed mb-4">
+          {template.scenario}
+        </p>
+        <div className="text-sm text-gray-600">
+          <span className="font-semibold">Format:</span> {template.format}
+        </div>
       </div>
 
-      {/* Format Tips */}
-      <div className={`border rounded-2xl p-5 ${
-        template.type === 'formal'
-          ? 'bg-blue-50 border-blue-200'
-          : 'bg-pink-50 border-pink-200'
-      }`}>
-        <h4 className={`text-sm font-bold mb-2 ${
-          template.type === 'formal' ? 'text-blue-900' : 'text-pink-900'
-        }`}>
-          💡 {template.type === 'formal' ? 'Formal' : 'Informal'} Letter Tips:
-        </h4>
-        <ul className={`space-y-1 text-sm ${
-          template.type === 'formal' ? 'text-blue-800' : 'text-pink-800'
-        }`}>
+      {/* Structure Guide */}
+      <div className="mb-6">
+        <h4 className="text-sm font-semibold text-gray-700 mb-3">📋 Required Structure</h4>
+        <ol className="space-y-2 text-sm text-gray-600 pl-5">
+          {template.structure.map((item, idx) => (
+            <li key={idx} className="list-decimal">{item}</li>
+          ))}
+        </ol>
+      </div>
+
+      {/* Key Phrases */}
+      {template.keyPhrases && template.keyPhrases.length > 0 && (
+        <div className="mb-6">
+          <h4 className="text-sm font-semibold text-gray-700 mb-3">💡 Key Phrases</h4>
+          <div className="flex flex-wrap gap-2">
+            {template.keyPhrases.map((phrase, idx) => (
+              <span key={idx} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
+                {phrase}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Letter Tips */}
+      <div className="pt-6 border-t border-gray-200">
+        <h4 className="text-sm font-semibold text-gray-700 mb-3">💡 Tips</h4>
+        <ul className="space-y-2 text-sm text-gray-600">
           {template.type === 'formal' ? (
             <>
-              <li>• Use complete address blocks (sender and recipient)</li>
+              <li>• Use complete address blocks</li>
               <li>• Include date and place</li>
-              <li>• Start with "Sehr geehrte Damen und Herren" or specific name</li>
-              <li>• Use formal language (Sie, not du)</li>
-              <li>• End with "Mit freundlichen Grüßen" or "Hochachtungsvoll"</li>
-              <li>• Sign with your full name</li>
+              <li>• Use formal language (Sie)</li>
+              <li>• End with "Mit freundlichen Grüßen"</li>
             </>
           ) : (
             <>
-              <li>• Start with a friendly greeting (Liebe/r, Hallo)</li>
-              <li>• Use informal language (du, not Sie)</li>
-              <li>• Share personal news and ask questions</li>
-              <li>• Use contractions and casual expressions</li>
-              <li>• End warmly (Liebe Grüße, Bis bald, Dein/e)</li>
+              <li>• Start with friendly greeting</li>
+              <li>• Use informal language (du)</li>
               <li>• Be natural and conversational</li>
+              <li>• End warmly (Liebe Grüße)</li>
             </>
           )}
         </ul>
       </div>
     </>
+  );
+
+  return (
+    <WritingWorkspace
+      value={content}
+      onChange={onChange}
+      placeholder={
+        template.type === 'formal'
+          ? "Begin with the sender's address...\n\n[Your Address]\n[City, Postal Code]\n\n[Recipient's Address]\n[City, Postal Code]\n\n[Date]\n\nSehr geehrte Damen und Herren,\n\n..."
+          : "Begin your letter...\n\n[Date]\n\nLiebe/r [Name],\n\n..."
+      }
+      topIndicator={topIndicator}
+      instructions={instructions}
+      attemptCount={attemptCount}
+      attemptHistory={attemptHistory}
+      readOnly={readOnly}
+      viewingAttempt={viewingAttempt}
+    />
   );
 }

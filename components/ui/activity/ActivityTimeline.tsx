@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 
 export interface ActivityItem {
   id: string;
@@ -21,23 +21,81 @@ interface ActivityTimelineProps {
   items: ActivityItem[];
   showConnector?: boolean;
   className?: string;
+  itemsPerPage?: number;
+  showPagination?: boolean;
 }
 
 export function ActivityTimeline({
   items,
   showConnector = true,
   className = '',
+  itemsPerPage = 10,
+  showPagination = true,
 }: ActivityTimelineProps) {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Calculate pagination
+  const totalPages = Math.ceil(items.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentItems = showPagination ? items.slice(startIndex, endIndex) : items;
+
   return (
-    <div className={`flex flex-col ${className}`}>
-      {items.map((item, index) => (
-        <ActivityTimelineItem
-          key={item.id}
-          item={item}
-          isLast={index === items.length - 1}
-          showConnector={showConnector}
-        />
-      ))}
+    <div className={className}>
+      <div className="flex flex-col">
+        {currentItems.map((item, index) => (
+          <ActivityTimelineItem
+            key={item.id}
+            item={item}
+            isLast={index === currentItems.length - 1}
+            showConnector={showConnector}
+          />
+        ))}
+      </div>
+
+      {/* Pagination */}
+      {showPagination && totalPages > 1 && (
+        <div className="flex items-center justify-between mt-6 pt-6 border-t border-gray-200">
+          <p className="text-sm text-gray-600">
+            Showing {startIndex + 1}–{Math.min(endIndex, items.length)} of {items.length}
+          </p>
+          <div className="flex gap-2">
+            <button
+              onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+              disabled={currentPage === 1}
+              className="px-3 py-1.5 text-sm font-semibold rounded-lg border transition
+                         border-gray-300 text-gray-700
+                         hover:bg-gray-50 hover:border-gray-400
+                         disabled:text-gray-400 disabled:border-gray-200 disabled:cursor-not-allowed disabled:hover:bg-transparent"
+            >
+              Previous
+            </button>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+              <button
+                key={page}
+                onClick={() => setCurrentPage(page)}
+                className={`px-3 py-1.5 text-sm font-semibold rounded-lg transition ${
+                  currentPage === page
+                    ? 'bg-piku-purple text-white border border-piku-purple'
+                    : 'border border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400'
+                }`}
+              >
+                {page}
+              </button>
+            ))}
+            <button
+              onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+              disabled={currentPage === totalPages}
+              className="px-3 py-1.5 text-sm font-semibold rounded-lg border transition
+                         border-gray-300 text-gray-700
+                         hover:bg-gray-50 hover:border-gray-400
+                         disabled:text-gray-400 disabled:border-gray-200 disabled:cursor-not-allowed disabled:hover:bg-transparent"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

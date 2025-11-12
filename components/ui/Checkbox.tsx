@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, forwardRef, ReactNode } from 'react';
+import { InputHTMLAttributes, ReactNode } from 'react';
 
 export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
   label?: ReactNode;
@@ -8,24 +8,22 @@ export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement
   checkboxClassName?: string;
   labelClassName?: string;
   color?: 'blue' | 'purple' | 'green' | 'red';
+  ref?: React.Ref<HTMLInputElement>;
 }
 
-export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
-  (
-    {
-      label,
-      error,
-      helperText,
-      containerClassName = '',
-      checkboxClassName = '',
-      labelClassName = '',
-      color = 'blue',
-      disabled,
-      className = '',
-      ...props
-    },
-    ref
-  ) => {
+export function Checkbox({
+  label,
+  error,
+  helperText,
+  containerClassName = '',
+  checkboxClassName = '',
+  labelClassName = '',
+  color = 'blue',
+  disabled,
+  className = '',
+  ref,
+  ...props
+}: CheckboxProps) {
     const colorClasses = {
       blue: 'text-blue-500',
       purple: 'text-purple-500',
@@ -73,7 +71,4 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         )}
       </div>
     );
-  }
-);
-
-Checkbox.displayName = 'Checkbox';
+}

@@ -1,9 +1,11 @@
 /**
  * EmailWritingForm Component
- * Email composition interface with To, Subject, and Body fields
+ * Uses reusable WritingWorkspace component
  */
 
+import { ReactNode } from 'react';
 import { EmailTemplate } from '@/lib/data/emailTemplates';
+import { WritingWorkspace, EmailField } from './WritingWorkspace';
 
 interface EmailContent {
   to: string;
@@ -16,79 +18,107 @@ interface EmailWritingFormProps {
   emailContent: EmailContent;
   wordCount: number;
   onChange: (content: EmailContent) => void;
+  attemptCount?: number;
+  attemptHistory?: ReactNode;
+  readOnly?: boolean;
+  viewingAttempt?: { attemptNumber: number; status: string };
 }
 
 export function EmailWritingForm({
   template,
   emailContent,
   wordCount,
-  onChange
+  onChange,
+  attemptCount,
+  attemptHistory,
+  readOnly,
+  viewingAttempt
 }: EmailWritingFormProps) {
-  return (
+  const topIndicator = (
+    <div className="text-sm font-medium">
+      <span className={wordCount < template.minWords ? 'text-amber-600' : 'text-emerald-600'}>
+        {wordCount}
+      </span>
+      <span className="text-gray-400 mx-1">/</span>
+      <span className="text-gray-500">{template.minWords}+ words</span>
+    </div>
+  );
+
+  const additionalFields = (
     <>
-      <div className="bg-white border border-gray-200 rounded-2xl p-6 mb-6">
-        <div className="space-y-4">
-          {/* To Field */}
-          <div>
-            <label className="block text-sm font-semibold text-neutral-700 mb-2">
-              To (An):
-            </label>
-            <input
-              type="text"
-              value={emailContent.to}
-              onChange={(e) => onChange({ ...emailContent, to: e.target.value })}
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Recipient name or title"
-            />
-          </div>
+      <EmailField
+        label="To (An)"
+        value={emailContent.to}
+        onChange={(value) => onChange({ ...emailContent, to: value })}
+        placeholder="Recipient name or title"
+      />
+      <EmailField
+        label="Subject (Betreff)"
+        value={emailContent.subject}
+        onChange={(value) => onChange({ ...emailContent, subject: value })}
+        placeholder="Email subject"
+      />
+    </>
+  );
 
-          {/* Subject Field */}
-          <div>
-            <label className="block text-sm font-semibold text-neutral-700 mb-2">
-              Subject (Betreff):
-            </label>
-            <input
-              type="text"
-              value={emailContent.subject}
-              onChange={(e) => onChange({ ...emailContent, subject: e.target.value })}
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Email subject"
-            />
-          </div>
+  const instructions = (
+    <>
+      {/* Email Context */}
+      <div className="mb-8">
+        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">✉️ Email Template</h3>
+        <p className="text-base text-gray-900 leading-relaxed mb-4">
+          {template.scenario}
+        </p>
 
-          {/* Body Field */}
+        <div className="flex flex-col gap-2 text-sm text-gray-600">
           <div>
-            <div className="flex items-center justify-between mb-2">
-              <label className="block text-sm font-semibold text-neutral-700">
-                Message (Nachricht):
-              </label>
-              <span className={`text-sm font-medium ${
-                wordCount < template.minWords ? 'text-amber-600' : 'text-emerald-600'
-              }`}>
-                {wordCount} / {template.minWords}+ words
-              </span>
-            </div>
-            <textarea
-              value={emailContent.body}
-              onChange={(e) => onChange({ ...emailContent, body: e.target.value })}
-              className="w-full h-96 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none font-sans"
-              placeholder="Start writing your email here..."
-              style={{ lineHeight: '1.8' }}
-            />
+            <span className="font-semibold">Recipient:</span> {template.recipient}
+          </div>
+          <div>
+            <span className="font-semibold">Subject:</span> {template.subject}
           </div>
         </div>
       </div>
 
-      {/* Tips */}
-      <div className="bg-blue-50 border border-blue-200 rounded-2xl p-5">
-        <h4 className="text-sm font-bold text-blue-900 mb-2">💡 Email Writing Tips:</h4>
-        <ul className="space-y-1 text-sm text-blue-800">
-          <li>• Use appropriate greetings and closings for the context</li>
+      {/* Key Phrases */}
+      {template.keyPhrases && template.keyPhrases.length > 0 && (
+        <div className="mb-6">
+          <h4 className="text-sm font-semibold text-gray-700 mb-3">🔑 Key Phrases</h4>
+          <div className="space-y-2">
+            {template.keyPhrases.map((phrase, idx) => (
+              <div key={idx} className="text-sm text-gray-700 bg-gray-50 px-3 py-2 rounded">
+                {phrase}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Email Writing Tips */}
+      <div className="pt-6 border-t border-gray-200">
+        <h4 className="text-sm font-semibold text-gray-700 mb-3">💡 Tips</h4>
+        <ul className="space-y-2 text-sm text-gray-600">
+          <li>• Use appropriate greetings and closings</li>
           <li>• Keep paragraphs short and focused</li>
-          <li>• Be clear and concise in your communication</li>
-          <li>• Proofread for grammar and spelling before submitting</li>
+          <li>• Be clear and concise</li>
+          <li>• Proofread before submitting</li>
         </ul>
       </div>
     </>
+  );
+
+  return (
+    <WritingWorkspace
+      value={emailContent.body}
+      onChange={(value) => onChange({ ...emailContent, body: value })}
+      placeholder="Start writing your email here..."
+      topIndicator={topIndicator}
+      additionalFields={additionalFields}
+      instructions={instructions}
+      attemptCount={attemptCount}
+      attemptHistory={attemptHistory}
+      readOnly={readOnly}
+      viewingAttempt={viewingAttempt}
+    />
   );
 }

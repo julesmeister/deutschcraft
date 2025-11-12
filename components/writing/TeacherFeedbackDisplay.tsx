@@ -3,7 +3,7 @@
  * Displays comprehensive teacher review with scores and feedback
  */
 
-import { ActivityCard } from '@/components/ui/activity/ActivityCard';
+import { ActivityTimeline, ActivityItem } from '@/components/ui/activity/ActivityTimeline';
 import { TeacherReview } from '@/lib/models/writing';
 
 interface TeacherFeedbackDisplayProps {
@@ -11,92 +11,106 @@ interface TeacherFeedbackDisplayProps {
 }
 
 export function TeacherFeedbackDisplay({ teacherReview }: TeacherFeedbackDisplayProps) {
+  const feedbackItems: ActivityItem[] = [
+    // Overall Score
+    {
+      id: 'overall-score',
+      icon: <span className="text-white text-xs">📊</span>,
+      iconColor: 'bg-blue-500',
+      title: 'Overall Score',
+      description: `${teacherReview.overallScore}% • Grammar: ${teacherReview.grammarScore}% • Vocabulary: ${teacherReview.vocabularyScore}% • Coherence: ${teacherReview.coherenceScore}%`,
+      tags: [
+        {
+          label: `${teacherReview.overallScore}%`,
+          color: teacherReview.overallScore >= 80 ? 'green' : teacherReview.overallScore >= 60 ? 'amber' : 'red',
+        },
+      ],
+    },
+    // Teacher's Comment
+    {
+      id: 'comment',
+      icon: <span className="text-white text-xs">💬</span>,
+      iconColor: 'bg-purple-500',
+      title: "Teacher's Comments",
+      description: teacherReview.overallComment,
+    },
+    // Strengths
+    ...(teacherReview.strengths && teacherReview.strengths.length > 0
+      ? [
+          {
+            id: 'strengths',
+            icon: <span className="text-white text-xs">✓</span>,
+            iconColor: 'bg-emerald-500',
+            title: 'Strengths',
+            description: 'What you did well',
+            metadata: (
+              <ul className="space-y-1 mt-2 text-xs text-gray-700">
+                {teacherReview.strengths?.map((strength, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="text-emerald-500 font-bold mt-0.5">•</span>
+                    <span>{strength}</span>
+                  </li>
+                ))}
+              </ul>
+            ),
+          } as ActivityItem,
+        ]
+      : []),
+    // Areas for Improvement
+    ...(teacherReview.areasForImprovement && teacherReview.areasForImprovement.length > 0
+      ? [
+          {
+            id: 'improvements',
+            icon: <span className="text-white text-xs">→</span>,
+            iconColor: 'bg-amber-500',
+            title: 'Areas for Improvement',
+            description: 'Focus on these next time',
+            metadata: (
+              <ul className="space-y-1 mt-2 text-xs text-gray-700">
+                {teacherReview.areasForImprovement?.map((area, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="text-amber-500 font-bold mt-0.5">•</span>
+                    <span>{area}</span>
+                  </li>
+                ))}
+              </ul>
+            ),
+          } as ActivityItem,
+        ]
+      : []),
+    // Revision Required
+    ...(teacherReview.requiresRevision
+      ? [
+          {
+            id: 'revision',
+            icon: <span className="text-white text-xs">⚠</span>,
+            iconColor: 'bg-red-500',
+            title: 'Revision Required',
+            description: teacherReview.revisionInstructions || 'Please revise and resubmit this work',
+            tags: [{ label: 'Action Required', color: 'red' }],
+          } as ActivityItem,
+        ]
+      : []),
+    // Meets Criteria
+    ...(teacherReview.meetsCriteria
+      ? [
+          {
+            id: 'criteria',
+            icon: <span className="text-white text-xs">✓</span>,
+            iconColor: 'bg-emerald-500',
+            title: 'Assessment Complete',
+            description: 'Meets all exercise criteria',
+            tags: [{ label: 'Approved', color: 'green' }],
+          } as ActivityItem,
+        ]
+      : []),
+  ];
+
   return (
-    <div className="space-y-6">
-      {/* Overall Score */}
-      <ActivityCard title="Overall Score">
-        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <div className="text-sm font-semibold text-neutral-700 mb-1">Your Score</div>
-              <div className="text-5xl font-black text-blue-600">{teacherReview.overallScore}%</div>
-            </div>
-            <div className="text-right space-y-2">
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-neutral-600">Grammar:</span>
-                <span className="font-bold text-emerald-600">{teacherReview.grammarScore}%</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-neutral-600">Vocabulary:</span>
-                <span className="font-bold text-purple-600">{teacherReview.vocabularyScore}%</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-neutral-600">Coherence:</span>
-                <span className="font-bold text-amber-600">{teacherReview.coherenceScore}%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </ActivityCard>
-
-      {/* Overall Comment */}
-      <ActivityCard title="Teacher's Comments">
-        <p className="text-neutral-700 leading-relaxed">{teacherReview.overallComment}</p>
-      </ActivityCard>
-
-      {/* Strengths */}
-      {teacherReview.strengths && teacherReview.strengths.length > 0 && (
-        <ActivityCard title="Strengths" subtitle="What you did well">
-          <ul className="space-y-2">
-            {teacherReview.strengths.map((strength, idx) => (
-              <li key={idx} className="flex items-start gap-2">
-                <span className="text-emerald-500 font-bold mt-0.5">✓</span>
-                <span className="text-neutral-700">{strength}</span>
-              </li>
-            ))}
-          </ul>
-        </ActivityCard>
-      )}
-
-      {/* Areas for Improvement */}
-      {teacherReview.areasForImprovement && teacherReview.areasForImprovement.length > 0 && (
-        <ActivityCard title="Areas for Improvement" subtitle="Focus on these next time">
-          <ul className="space-y-2">
-            {teacherReview.areasForImprovement.map((area, idx) => (
-              <li key={idx} className="flex items-start gap-2">
-                <span className="text-amber-500 font-bold mt-0.5">→</span>
-                <span className="text-neutral-700">{area}</span>
-              </li>
-            ))}
-          </ul>
-        </ActivityCard>
-      )}
-
-      {/* Revision Requirements */}
-      {teacherReview.requiresRevision && (
-        <ActivityCard title="Revision Required">
-          <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-            <p className="text-amber-900 font-semibold mb-2">
-              Please revise and resubmit this work
-            </p>
-            {teacherReview.revisionInstructions && (
-              <p className="text-amber-800 text-sm">{teacherReview.revisionInstructions}</p>
-            )}
-          </div>
-        </ActivityCard>
-      )}
-
-      {/* Meets Criteria Badge */}
-      {teacherReview.meetsCriteria && (
-        <ActivityCard title="Assessment">
-          <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4 text-center">
-            <div className="text-3xl mb-2">✓</div>
-            <p className="text-emerald-900 font-semibold">
-              Meets All Exercise Criteria
-            </p>
-          </div>
-        </ActivityCard>
-      )}
-    </div>
+    <ActivityTimeline
+      items={feedbackItems}
+      showConnector={true}
+      showPagination={false}
+    />
   );
 }

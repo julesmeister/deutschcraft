@@ -17,6 +17,7 @@ import { StudentRecentTasksCard } from '@/components/dashboard/StudentRecentTask
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { useEffect, useState } from 'react';
 import { getTodayProgress } from '@/lib/services/progressService';
+import { CatLoader } from '@/components/ui/CatLoader';
 
 export default function StudentDashboard() {
   const { session, isFirebaseReady } = useFirebaseAuth();
@@ -61,18 +62,9 @@ export default function StudentDashboard() {
     fetchTodayProgressData();
   }, [session?.user?.email]);
 
-  // Show loading state while fetching data
-  if (!isFirebaseReady || isLoadingStudent) {
-    return (
-      <div className="p-6 space-y-6">
-        <div className="flex items-center justify-center h-64">
-          <div className="text-center">
-            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-violet-600 border-r-transparent mb-4"></div>
-            <p className="text-gray-500">Loading your dashboard...</p>
-          </div>
-        </div>
-      </div>
-    );
+  // Show loading state while fetching data or authenticating
+  if (!isFirebaseReady || isLoadingStudent || !session) {
+    return <CatLoader message="Loading your dashboard..." size="lg" fullScreen />;
   }
 
   // Format the Current Level display with batch name
@@ -105,10 +97,28 @@ export default function StudentDashboard() {
       <div className="container mx-auto px-6 py-8 space-y-6">
         {/* Stats Grid - Slim Style (NO rounded corners) */}
         <div className="bg-white overflow-hidden border border-gray-200">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-x divide-y sm:divide-y-0 divide-gray-200">
-            {stats.map((stat, index) => (
-              <StudentStatsCard key={index} {...stat} />
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {stats.map((stat, index) => {
+              const isLastInRow = (index + 1) % 3 === 0; // Every 3rd item (index 2, 5)
+              const isFirstRow = index < 3; // Items 0, 1, 2
+              const isLastItem = index === stats.length - 1; // Last item overall
+              const isRightColInTwoCol = index % 2 === 1; // Right column in 2-col layout
+
+              return (
+                <div
+                  key={index}
+                  className={`
+                    ${!isLastItem ? 'border-b sm:border-b-0' : ''}
+                    ${!isRightColInTwoCol ? 'sm:border-r' : ''}
+                    ${!isLastInRow ? 'lg:border-r' : ''}
+                    ${isFirstRow ? 'lg:border-b' : ''}
+                    border-gray-200
+                  `}
+                >
+                  <StudentStatsCard {...stat} />
+                </div>
+              );
+            })}
           </div>
         </div>
 

@@ -1,36 +1,30 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
 import { TabBar, TabItem } from '@/components/ui/TabBar';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
+import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
+import { AlertDialog } from '@/components/ui/Dialog';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
 import { useWritingStats, useStudentSubmissions } from '@/lib/hooks/useWritingExercises';
 import { useWritingSubmissionHandlers } from '@/lib/hooks/useWritingSubmissionHandlers';
 import { useExerciseAttempts, useAttemptStats } from '@/lib/hooks/useWritingAttempts';
-import { WritingHistory } from '@/components/writing/WritingHistory';
 import { AttemptHistory } from '@/components/writing/AttemptHistory';
 import { AttemptStats } from '@/components/writing/AttemptStats';
-import { WritingTipsCard } from '@/components/writing/WritingTipsCard';
-import { TranslationExerciseSelector } from '@/components/writing/TranslationExerciseSelector';
-import { TranslationExerciseInfo } from '@/components/writing/TranslationExerciseInfo';
 import { TranslationWorkspace } from '@/components/writing/TranslationWorkspace';
-import { CreativeExerciseSelector } from '@/components/writing/CreativeExerciseSelector';
-import { CreativeWritingInstructions } from '@/components/writing/CreativeWritingInstructions';
 import { CreativeWritingArea } from '@/components/writing/CreativeWritingArea';
-import { EmailTemplateSelector } from '@/components/writing/EmailTemplateSelector';
 import { EmailTemplateInstructions } from '@/components/writing/EmailTemplateInstructions';
 import { EmailWritingForm } from '@/components/writing/EmailWritingForm';
-import { LetterTemplateSelector } from '@/components/writing/LetterTemplateSelector';
-import { LetterTemplateInstructions } from '@/components/writing/LetterTemplateInstructions';
 import { LetterWritingArea } from '@/components/writing/LetterWritingArea';
+import { WritingHub } from './WritingHub';
 import { TRANSLATION_EXERCISES } from '@/lib/data/translations';
 import { CREATIVE_EXERCISES } from '@/lib/data/creativeExercises';
 import { EMAIL_TEMPLATES, type EmailTemplate } from '@/lib/data/emailTemplates';
 import { LETTER_TEMPLATES, type LetterTemplate } from '@/lib/data/letterTemplates';
-import { TranslationExercise, CreativeWritingExercise } from '@/lib/models/writing';
+import { TranslationExercise, CreativeWritingExercise, WritingSubmission } from '@/lib/models/writing';
 
 type ExerciseType = 'translation' | 'creative' | 'email' | 'letters' | null;
 
@@ -46,13 +40,22 @@ export default function WritingExercisesPage() {
   const [selectedLetter, setSelectedLetter] = useState<LetterTemplate | null>(null);
   const [writingText, setWritingText] = useState('');
   const [emailContent, setEmailContent] = useState({ to: '', subject: '', body: '' });
+  const [viewingAttempt, setViewingAttempt] = useState<WritingSubmission | null>(null);
+  const [isPendingLevelChange, startTransition] = useTransition();
 
   // Calculate word count
   const wordCount = writingText.trim().split(/\s+/).filter(word => word.length > 0).length;
   const emailWordCount = emailContent.body.trim().split(/\s+/).filter(word => word.length > 0).length;
 
   // Fetch writing stats from Firebase
-  const { data: writingStats, isLoading: statsLoading } = useWritingStats(session?.user?.email || undefined);
+  const { data: writingStats, isLoading: statsLoading, error: statsError } = useWritingStats(session?.user?.email || undefined);
+
+  // Debug: Log stats
+  console.log('[Writing Page] Stats:', writingStats);
+  console.log('[Writing Page] Stats Loading:', statsLoading);
+  console.log('[Writing Page] Stats Error:', statsError);
+  console.log('[Writing Page] User email:', session?.user?.email);
+  console.log('[Writing Page] Stats keys:', writingStats ? Object.keys(writingStats) : 'null');
 
   // Fetch recent submissions
   const { data: submissions = [], isLoading: submissionsLoading } = useStudentSubmissions(session?.user?.email || undefined);
@@ -65,12 +68,22 @@ export default function WritingExercisesPage() {
        'templateId' in currentExercise ? (currentExercise as any).templateId : undefined)
     : undefined;
 
+  // Debug: Log exercise selection
+  console.log('[Writing Page] Current exercise:', currentExercise);
+  console.log('[Writing Page] Current exercise ID:', currentExerciseId);
+  console.log('[Writing Page] Exercise keys:', currentExercise ? Object.keys(currentExercise) : 'null');
+
   // Fetch attempts for current exercise (if one is selected)
-  const { data: attempts = [] } = useExerciseAttempts(session?.user?.email || undefined, currentExerciseId);
+  const { data: attempts = [], isLoading: attemptsLoading } = useExerciseAttempts(session?.user?.email || undefined, currentExerciseId);
   const { data: attemptStats } = useAttemptStats(session?.user?.email || undefined, currentExerciseId);
 
+  // Debug: Log attempts
+  console.log('[Writing Page] Attempts:', attempts);
+  console.log('[Writing Page] Attempts loading:', attemptsLoading);
+  console.log('[Writing Page] Attempt count:', attempts.length);
+
   // Submission handlers (save draft, submit, etc.)
-  const { isSaving, handleSaveDraft, handleSubmit, resetDraftState } = useWritingSubmissionHandlers({
+  const { isSaving, handleSaveDraft, handleSubmit, resetDraftState, dialogState, closeDialog, optimisticSaveState } = useWritingSubmissionHandlers({
     selectedLevel,
     selectedTranslation,
     selectedCreative,
@@ -147,6 +160,20 @@ export default function WritingExercisesPage() {
     router.push(`/dashboard/student/writing/feedback/${submissionId}`);
   };
 
+  const handleViewAttemptContent = (attempt: WritingSubmission) => {
+    setViewingAttempt(attempt);
+  };
+
+  const handleBackToCurrentDraft = () => {
+    setViewingAttempt(null);
+  };
+
+  const handleLevelChange = (newLevel: CEFRLevel) => {
+    startTransition(() => {
+      setSelectedLevel(newLevel);
+    });
+  };
+
   // Filter exercises by selected level
   const filteredTranslationExercises = TRANSLATION_EXERCISES.filter(ex => ex.level === selectedLevel);
   const filteredCreativeExercises = CREATIVE_EXERCISES.filter(ex => ex.level === selectedLevel);
@@ -176,272 +203,174 @@ export default function WritingExercisesPage() {
         actions={
           hasSelectedExercise && (
             <div className="flex gap-2">
-              <button
+              <ActionButton
                 onClick={handleSaveDraft}
                 disabled={isSaving || !writingText.trim()}
-                className="cursor-pointer whitespace-nowrap content-center font-medium transition-all duration-150 ease-in-out h-12 rounded-xl bg-gray-200 px-5 py-2 text-gray-700 hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                variant="cyan"
+                icon={<ActionButtonIcons.Document />}
+                className="min-w-[140px]"
               >
                 {isSaving ? 'Saving...' : 'Save Draft'}
-              </button>
-              <button
+              </ActionButton>
+              <ActionButton
                 onClick={handleSubmit}
                 disabled={isSaving || !writingText.trim()}
-                className="cursor-pointer whitespace-nowrap content-center font-bold transition-all duration-150 ease-in-out h-12 rounded-xl bg-blue-500 px-5 py-2 text-white hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                variant="purple"
+                icon={<ActionButtonIcons.Check />}
+                className="min-w-[200px]"
               >
                 {isSaving ? 'Submitting...' : 'Submit for Review'}
-              </button>
+              </ActionButton>
             </div>
           )
         }
       />
 
+      {/* Loading indicator for level transitions */}
+      {isPendingLevelChange && (
+        <div className="fixed top-20 right-6 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in-down">
+          <div className="flex items-center gap-2">
+            <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
+            <span className="font-medium">Updating exercises...</span>
+          </div>
+        </div>
+      )}
+
+      {/* Optimistic save feedback */}
+      {optimisticSaveState.saved && (
+        <div className="fixed bottom-6 right-6 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in-up">
+          <div className="flex items-center gap-2">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span className="font-medium">{optimisticSaveState.message}</span>
+          </div>
+        </div>
+      )}
+
       {/* Main Content */}
       <div className="container mx-auto px-6 py-8">
-        {/* Show attempt stats and history if exercise is selected and user has previous attempts */}
-        {currentExercise && attemptStats && attemptStats.totalAttempts > 0 && (
-          <div className="max-w-4xl mx-auto mb-6">
-            <AttemptStats {...attemptStats} />
-          </div>
-        )}
-
         {/* Show exercise workspace if an exercise is selected */}
         {selectedTranslation ? (
-          <div className="max-w-4xl mx-auto">
-            <TranslationExerciseInfo exercise={selectedTranslation} />
-            <TranslationWorkspace
-              exercise={selectedTranslation}
-              translationText={writingText}
-              onChange={setWritingText}
-            />
-            {/* Show attempt history below workspace */}
-            {attempts.length > 0 && (
-              <div className="mt-8">
-                <AttemptHistory
-                  attempts={attempts}
-                  onViewAttempt={handleViewSubmission}
-                  currentAttemptId={undefined}
-                />
-              </div>
-            )}
-          </div>
+          <TranslationWorkspace
+            exercise={selectedTranslation}
+            translationText={viewingAttempt ? viewingAttempt.content : writingText}
+            onChange={setWritingText}
+            attemptCount={attempts.length}
+            readOnly={!!viewingAttempt}
+            viewingAttempt={viewingAttempt ? {
+              attemptNumber: viewingAttempt.attemptNumber,
+              status: viewingAttempt.status
+            } : undefined}
+            onBackToCurrentDraft={viewingAttempt ? handleBackToCurrentDraft : undefined}
+            attemptHistory={
+              <AttemptHistory
+                attempts={attempts}
+                onViewAttempt={handleViewSubmission}
+                onViewContent={handleViewAttemptContent}
+                currentAttemptId={undefined}
+              />
+            }
+          />
         ) : selectedCreative ? (
-          <div className="max-w-4xl mx-auto">
-            <CreativeWritingInstructions exercise={selectedCreative} />
-            <CreativeWritingArea
-              exercise={selectedCreative}
-              content={writingText}
-              wordCount={wordCount}
-              onChange={setWritingText}
-            />
-            {/* Show attempt history below workspace */}
-            {attempts.length > 0 && (
-              <div className="mt-8">
-                <AttemptHistory
-                  attempts={attempts}
-                  onViewAttempt={handleViewSubmission}
-                  currentAttemptId={undefined}
-                />
-              </div>
-            )}
-          </div>
+          <CreativeWritingArea
+            exercise={selectedCreative}
+            content={viewingAttempt ? viewingAttempt.content : writingText}
+            wordCount={viewingAttempt ? viewingAttempt.wordCount : wordCount}
+            onChange={setWritingText}
+            attemptCount={attempts.length}
+            readOnly={!!viewingAttempt}
+            viewingAttempt={viewingAttempt ? {
+              attemptNumber: viewingAttempt.attemptNumber,
+              status: viewingAttempt.status
+            } : undefined}
+            attemptHistory={
+              <AttemptHistory
+                attempts={attempts}
+                onViewAttempt={handleViewSubmission}
+                onViewContent={handleViewAttemptContent}
+                currentAttemptId={undefined}
+              />
+            }
+          />
         ) : selectedEmail ? (
           <div className="max-w-4xl mx-auto">
             <EmailTemplateInstructions template={selectedEmail} />
             <EmailWritingForm
               template={selectedEmail}
-              emailContent={emailContent}
-              wordCount={emailWordCount}
+              emailContent={viewingAttempt ? { to: '', subject: '', body: viewingAttempt.content } : emailContent}
+              wordCount={viewingAttempt ? viewingAttempt.wordCount : emailWordCount}
               onChange={setEmailContent}
-            />
-            {/* Show attempt history below workspace */}
-            {attempts.length > 0 && (
-              <div className="mt-8">
+              attemptCount={attempts.length}
+              readOnly={!!viewingAttempt}
+              viewingAttempt={viewingAttempt ? {
+                attemptNumber: viewingAttempt.attemptNumber,
+                status: viewingAttempt.status
+              } : undefined}
+              attemptHistory={
                 <AttemptHistory
                   attempts={attempts}
                   onViewAttempt={handleViewSubmission}
+                  onViewContent={handleViewAttemptContent}
                   currentAttemptId={undefined}
                 />
-              </div>
-            )}
+              }
+            />
           </div>
         ) : selectedLetter ? (
-          <div className="max-w-4xl mx-auto">
-            <LetterTemplateInstructions template={selectedLetter} />
-            <LetterWritingArea
-              template={selectedLetter}
-              content={writingText}
-              wordCount={wordCount}
-              onChange={setWritingText}
-            />
-            {/* Show attempt history below workspace */}
-            {attempts.length > 0 && (
-              <div className="mt-8">
-                <AttemptHistory
-                  attempts={attempts}
-                  onViewAttempt={handleViewSubmission}
-                  currentAttemptId={undefined}
-                />
-              </div>
-            )}
-          </div>
+          <LetterWritingArea
+            template={selectedLetter}
+            content={viewingAttempt ? viewingAttempt.content : writingText}
+            wordCount={viewingAttempt ? viewingAttempt.wordCount : wordCount}
+            onChange={setWritingText}
+            attemptCount={attempts.length}
+            readOnly={!!viewingAttempt}
+            viewingAttempt={viewingAttempt ? {
+              attemptNumber: viewingAttempt.attemptNumber,
+              status: viewingAttempt.status
+            } : undefined}
+            attemptHistory={
+              <AttemptHistory
+                attempts={attempts}
+                onViewAttempt={handleViewSubmission}
+                onViewContent={handleViewAttemptContent}
+                currentAttemptId={undefined}
+              />
+            }
+          />
         ) : (
           /* Show Main Writing Hub */
-          <>
-            {/* Level Selector - Split Button Style */}
-            <div className="mb-8">
-              <CEFRLevelSelector
-                selectedLevel={selectedLevel}
-                onLevelChange={setSelectedLevel}
-                colorScheme="default"
-                showDescription={true}
-                size="sm"
-              />
-            </div>
-
-            {/* Stats - TabBar Style (like flashcard practice) */}
-            {statsLoading ? (
-              <div className="flex items-center justify-center py-12">
-                <div className="text-center">
-                  <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-                  <p className="mt-2 text-gray-600">Loading your stats...</p>
-                </div>
-              </div>
-            ) : (
-              <div className="mb-8">
-                <TabBar
-                  variant="stats"
-                  tabs={[
-                    {
-                      id: 'exercises',
-                      label: 'Total Exercises',
-                      icon: undefined,
-                      value: writingStats?.totalExercisesCompleted || 0,
-                    },
-                    {
-                      id: 'score',
-                      label: 'Average Score',
-                      icon: undefined,
-                      value: `${writingStats?.averageOverallScore || 0}%`,
-                    },
-                    {
-                      id: 'streak',
-                      label: 'Day Streak',
-                      icon: undefined,
-                      value: writingStats?.currentStreak || 0,
-                    },
-                    {
-                      id: 'words',
-                      label: 'Words Written',
-                      icon: undefined,
-                      value: (writingStats?.totalWordsWritten || 0).toLocaleString(),
-                    },
-                  ]}
-                />
-              </div>
-            )}
-
-            {/* Exercise Types - TabBar Style */}
-            <div className="mb-8">
-              <h2 className="text-lg font-bold text-neutral-900 mb-4">Choose Exercise Type</h2>
-              <TabBar
-                variant="tabs"
-                size="compact"
-                activeTabId={selectedExerciseType || undefined}
-                onTabChange={(tabId) => handleExerciseTypeSelect(tabId as ExerciseType)}
-                tabs={[
-                  {
-                    id: 'creative',
-                    label: 'Creative Writing',
-                    icon: null,
-                    value: filteredCreativeExercises.length,
-                  },
-                  {
-                    id: 'translation',
-                    label: 'Translation',
-                    icon: null,
-                    value: filteredTranslationExercises.length,
-                  },
-                  {
-                    id: 'email',
-                    label: 'Email Writing',
-                    icon: null,
-                    value: filteredEmailTemplates.length,
-                  },
-                  {
-                    id: 'letters',
-                    label: 'Letter Writing',
-                    icon: null,
-                    value: filteredLetterTemplates.length,
-                  },
-                ]}
-              />
-            </div>
-
-            {/* Show Exercise Selector Below When Type is Selected */}
-            {selectedExerciseType === 'translation' && (
-              <div className="mt-8">
-                <TranslationExerciseSelector
-                  exercises={filteredTranslationExercises}
-                  onSelect={handleTranslationSelect}
-                />
-              </div>
-            )}
-
-            {selectedExerciseType === 'creative' && (
-              <div className="mt-8">
-                <CreativeExerciseSelector
-                  exercises={filteredCreativeExercises}
-                  onSelect={handleCreativeSelect}
-                />
-              </div>
-            )}
-
-            {selectedExerciseType === 'email' && (
-              <div className="mt-8">
-                <EmailTemplateSelector
-                  templates={filteredEmailTemplates}
-                  onSelect={handleEmailSelect}
-                />
-              </div>
-            )}
-
-            {selectedExerciseType === 'letters' && (
-              <div className="mt-8">
-                <LetterTemplateSelector
-                  templates={filteredLetterTemplates}
-                  onSelect={handleLetterSelect}
-                />
-              </div>
-            )}
-
-            {/* Recent Activity / History */}
-            <div className="mt-8">
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-lg font-bold text-neutral-900">Recent Submissions</h2>
-                {submissions.length > 3 && (
-                  <button
-                    onClick={() => setShowHistory(!showHistory)}
-                    className="text-sm font-medium text-blue-600 hover:text-blue-700"
-                  >
-                    {showHistory ? 'Show Less' : 'View All'}
-                  </button>
-                )}
-              </div>
-
-              <WritingHistory
-                submissions={showHistory ? submissions : submissions.slice(0, 3)}
-                onViewSubmission={handleViewSubmission}
-                isLoading={submissionsLoading}
-              />
-            </div>
-
-            {/* Writing Tips */}
-            <div className="mt-8">
-              <WritingTipsCard />
-            </div>
-          </>
+          <WritingHub
+            selectedLevel={selectedLevel}
+            onLevelChange={handleLevelChange}
+            selectedExerciseType={selectedExerciseType}
+            onExerciseTypeSelect={handleExerciseTypeSelect}
+            writingStats={writingStats ?? undefined}
+            statsLoading={statsLoading}
+            submissions={submissions}
+            submissionsLoading={submissionsLoading}
+            showHistory={showHistory}
+            onToggleHistory={() => setShowHistory(!showHistory)}
+            onViewSubmission={handleViewSubmission}
+            filteredTranslationExercises={filteredTranslationExercises}
+            filteredCreativeExercises={filteredCreativeExercises}
+            filteredEmailTemplates={filteredEmailTemplates}
+            filteredLetterTemplates={filteredLetterTemplates}
+            onTranslationSelect={handleTranslationSelect}
+            onCreativeSelect={handleCreativeSelect}
+            onEmailSelect={handleEmailSelect}
+            onLetterSelect={handleLetterSelect}
+          />
         )}
       </div>
+
+      {/* Dialog for alerts and confirmations */}
+      <AlertDialog
+        open={dialogState.isOpen}
+        onClose={closeDialog}
+        title={dialogState.title}
+        message={dialogState.message}
+      />
     </div>
   );
 }

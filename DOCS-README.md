@@ -14,6 +14,15 @@ This project uses a modular documentation system for easy navigation and mainten
 | **[WRITING-UPDATES.md](./WRITING-UPDATES.md)** | 📢 Recent writing system changes | See latest peer review & revision tracking features |
 | **[CLAUDE.md](./CLAUDE.md)** | Project overview & design system | General development reference |
 
+### Database & Architecture
+
+| File | Purpose | For |
+|------|---------|-----|
+| **[DATABASE-ABSTRACTION-STATUS.md](./DATABASE-ABSTRACTION-STATUS.md)** | 🔍 Current abstraction audit | Developers migrating database code |
+| **[DATABASE_MIGRATION_GUIDE.md](./DATABASE_MIGRATION_GUIDE.md)** | 🔄 How to switch databases | Switching from Firestore to PostgreSQL/MongoDB |
+| **[PAGINATION-PATTERN.md](./PAGINATION-PATTERN.md)** | 📄 Server-side pagination guide | Implementing efficient data fetching |
+| **[lib/database/README.md](./lib/database/README.md)** | 🗄️ Database abstraction layer API | Using the abstraction layer |
+
 ---
 
 ## 🎯 Quick Navigation
@@ -37,6 +46,15 @@ This project uses a modular documentation system for easy navigation and mainten
 
 **Learn about the design system**
 → [CLAUDE.md - Design System](./CLAUDE.md#design-system)
+
+**Check database abstraction status**
+→ [DATABASE-ABSTRACTION-STATUS.md](./DATABASE-ABSTRACTION-STATUS.md)
+
+**Implement server-side pagination**
+→ [PAGINATION-PATTERN.md - Example Implementation](./PAGINATION-PATTERN.md#example-session-pagination)
+
+**Switch from Firestore to PostgreSQL**
+→ [DATABASE_MIGRATION_GUIDE.md](./DATABASE_MIGRATION_GUIDE.md)
 
 ---
 
@@ -64,13 +82,31 @@ STUDENT.md (Index)
 │   ├── Teacher Features
 │   └── Testing Checklist
 │
-└── CLAUDE.md
-    ├── Project Overview
-    ├── Design System (Colors, Typography, Animations)
-    ├── Data Models
-    ├── File Structure
-    ├── Tech Stack
-    └── Performance Optimizations
+├── CLAUDE.md
+│   ├── Project Overview
+│   ├── Design System (Colors, Typography, Animations)
+│   ├── Data Models
+│   ├── File Structure
+│   ├── Tech Stack
+│   └── Performance Optimizations
+│
+└── DATABASE & ARCHITECTURE
+    ├── DATABASE-ABSTRACTION-STATUS.md
+    │   ├── Architecture Layers
+    │   ├── Abstraction Status by Layer
+    │   ├── Missing Services (userService, studentService, etc.)
+    │   ├── Migration Priority List
+    │   └── Refactor Examples
+    │
+    ├── PAGINATION-PATTERN.md
+    │   ├── Service Layer Pattern
+    │   ├── Hook Layer Pattern
+    │   ├── Component Integration
+    │   ├── Database Migration Examples
+    │   └── Best Practices
+    │
+    └── DATABASE_MIGRATION_GUIDE.md
+        └── Switching Database Providers
 ```
 
 ---
@@ -81,8 +117,9 @@ When adding new features:
 
 1. **Flashcard-related** → Update [FLASHCARDS.md](./FLASHCARDS.md)
 2. **Writing-related** → Update [WRITING.md](./WRITING.md)
-3. **New major system** → Create new `{SYSTEM}.md` file, link from [STUDENT.md](./STUDENT.md)
-4. **Design changes** → Update [CLAUDE.md](./CLAUDE.md)
+3. **Database/Architecture changes** → Update [DATABASE-ABSTRACTION-STATUS.md](./DATABASE-ABSTRACTION-STATUS.md)
+4. **New major system** → Create new `{SYSTEM}.md` file, link from [STUDENT.md](./STUDENT.md)
+5. **Design changes** → Update [CLAUDE.md](./CLAUDE.md)
 
 ---
 
@@ -107,9 +144,11 @@ Each system documentation should include:
 
 1. Read [STUDENT.md](./STUDENT.md) - Get the big picture
 2. Read [CLAUDE.md](./CLAUDE.md) - Understand the project structure
-3. Pick your focus:
+3. Read [DATABASE-ABSTRACTION-STATUS.md](./DATABASE-ABSTRACTION-STATUS.md) - Understand database architecture
+4. Pick your focus:
    - Flashcards → [FLASHCARDS.md](./FLASHCARDS.md)
    - Writing → [WRITING.md](./WRITING.md)
+   - Database migration → [PAGINATION-PATTERN.md](./PAGINATION-PATTERN.md)
 
 **Working on a bug?**
 
@@ -121,10 +160,11 @@ Each system documentation should include:
 
 ## 📝 Version History
 
+- **v2.1** (2025-01-12) - Added database architecture documentation section
 - **v2.0** (2025-01-11) - Split documentation into modular files
 - **v1.0** (2025-01-11) - Single STUDENT.md file with all docs
 
 ---
 
 **Maintained by**: Development Team
-**Last Updated**: 2025-01-11
+**Last Updated**: 2025-01-12

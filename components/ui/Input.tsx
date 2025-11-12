@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, ReactNode, forwardRef, useState } from 'react';
+import { InputHTMLAttributes, ReactNode, useState } from 'react';
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -10,29 +10,27 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   onClear?: () => void;
   containerClassName?: string;
   wrapperClassName?: string;
+  ref?: React.Ref<HTMLInputElement>;
 }
 
-export const Input = forwardRef<HTMLInputElement, InputProps>(
-  (
-    {
-      label,
-      error,
-      helperText,
-      leftIcon,
-      rightIcon,
-      clearable = false,
-      onClear,
-      className = '',
-      containerClassName = '',
-      wrapperClassName = '',
-      value,
-      onChange,
-      disabled,
-      readOnly,
-      ...props
-    },
-    ref
-  ) => {
+export function Input({
+  label,
+  error,
+  helperText,
+  leftIcon,
+  rightIcon,
+  clearable = false,
+  onClear,
+  className = '',
+  containerClassName = '',
+  wrapperClassName = '',
+  value,
+  onChange,
+  disabled,
+  readOnly,
+  ref,
+  ...props
+}: InputProps) {
     const [isFocused, setIsFocused] = useState(false);
     const showClearButton = clearable && value && !disabled && !readOnly;
 
@@ -115,7 +113,4 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
         )}
       </div>
     );
-  }
-);
-
-Input.displayName = 'Input';
+}

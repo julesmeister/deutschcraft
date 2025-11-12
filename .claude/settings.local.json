@@ -28,7 +28,11 @@
       "Bash(timeout 180 npm run build:*)",
       "Bash(\"app/dashboard/student/writing/translation/page.tsx\")",
       "Bash(echo:*)",
-      "Bash(\"app/dashboard/student/writing/creative/page.tsx\")"
+      "Bash(\"app/dashboard/student/writing/creative/page.tsx\")",
+      "Bash(nul)",
+      "Bash(Select-String -Pattern \"(error|Error|ERROR)\" -Context 2,2)",
+      "WebSearch",
+      "Bash(.gitignore)"
     ],
     "deny": [],
     "ask": []

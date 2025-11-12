@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
 import { StatCardSimple } from '@/components/ui/StatCardSimple';
 import { FileCard, FileGrid, FileSection } from '@/components/ui/FileCard';
@@ -14,6 +14,7 @@ import { useStudyStats } from '@/lib/hooks/useFlashcards';
 import { useRemNoteCategories, useRemNoteTotalCards } from '@/lib/hooks/useRemNoteCategories';
 import { useFlashcardSettings } from '@/lib/hooks/useFlashcardSettings';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
+import { CatLoader } from '@/components/ui/CatLoader';
 
 // Import level data
 import a1Data from '@/lib/data/remnote/levels/a1.json';
@@ -39,6 +40,7 @@ export default function FlashcardsLandingPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [practiceFlashcards, setPracticeFlashcards] = useState<any[]>([]);
   const [statsRefreshKey, setStatsRefreshKey] = useState(0);
+  const [isPending, startTransition] = useTransition();
 
   // Fetch real data from Firestore (with refresh key to force re-fetch after session)
   const { stats, isLoading: statsLoading } = useStudyStats(session?.user?.email || undefined, statsRefreshKey);
@@ -60,11 +62,14 @@ export default function FlashcardsLandingPage() {
       wordId: card.id, // Use flashcard id as wordId for now
     }));
 
-    // Apply settings
+    // Apply settings (potentially heavy operation)
     categoryFlashcards = applyFlashcardSettings(categoryFlashcards);
 
-    setPracticeFlashcards(categoryFlashcards);
-    setSelectedCategory(categoryName);
+    // Use transition to keep UI responsive during state updates
+    startTransition(() => {
+      setPracticeFlashcards(categoryFlashcards);
+      setSelectedCategory(categoryName);
+    });
   };
 
   const handleBackToCategories = () => {
@@ -82,11 +87,14 @@ export default function FlashcardsLandingPage() {
       wordId: card.id, // Use flashcard id as wordId for now
     }));
 
-    // Apply settings
+    // Apply settings (potentially heavy operation)
     flashcardsWithWordId = applyFlashcardSettings(flashcardsWithWordId);
 
-    setPracticeFlashcards(flashcardsWithWordId);
-    setSelectedCategory('All Categories');
+    // Use transition to keep UI responsive during state updates
+    startTransition(() => {
+      setPracticeFlashcards(flashcardsWithWordId);
+      setSelectedCategory('All Categories');
+    });
   };
 
   // Apply flashcard settings to flashcard array
@@ -117,11 +125,22 @@ export default function FlashcardsLandingPage() {
               onClick={handleStartPractice}
               variant="purple"
               icon={<ActionButtonIcons.ArrowRight />}
+              disabled={isPending}
             >
-              Start Practice
+              {isPending ? 'Loading...' : 'Start Practice'}
             </ActionButton>
           }
         />
+
+      {/* Loading indicator for transitions */}
+      {isPending && (
+        <div className="fixed top-20 right-6 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in-down">
+          <div className="flex items-center gap-2">
+            <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
+            <span className="font-medium">Loading flashcards...</span>
+          </div>
+        </div>
+      )}
 
       {/* Main Content */}
       <div className="container mx-auto px-6 py-8">
@@ -149,12 +168,7 @@ export default function FlashcardsLandingPage() {
 
             {/* Loading State */}
             {statsLoading ? (
-          <div className="flex items-center justify-center py-12">
-            <div className="text-center">
-              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-piku-purple-dark"></div>
-              <p className="mt-2 text-gray-600">Loading your stats...</p>
-            </div>
-          </div>
+          <CatLoader message="Loading your stats..." size="md" />
         ) : (
           <>
             {/* Stats Grid */}
@@ -194,12 +208,7 @@ export default function FlashcardsLandingPage() {
         {/* Vocabulary Categories */}
         <FileSection title={`${selectedLevel} Vocabulary Categories`}>
           {categoriesLoading ? (
-            <div className="flex items-center justify-center py-12">
-              <div className="text-center">
-                <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-piku-purple-dark"></div>
-                <p className="mt-2 text-gray-600">Loading categories...</p>
-              </div>
-            </div>
+            <CatLoader message="Loading categories..." size="md" />
           ) : categories.length === 0 ? (
             <div className="text-center py-12 bg-white border border-gray-200 rounded-2xl">
               <div className="text-6xl mb-4">📝</div>

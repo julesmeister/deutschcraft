@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, forwardRef, ReactNode } from 'react';
+import { InputHTMLAttributes, ReactNode } from 'react';
 
 export interface ToggleProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'size'> {
   label?: ReactNode;
@@ -12,29 +12,27 @@ export interface ToggleProps extends Omit<InputHTMLAttributes<HTMLInputElement>,
   color?: 'blue' | 'purple' | 'green' | 'red';
   onText?: string;
   offText?: string;
+  ref?: React.Ref<HTMLInputElement>;
 }
 
-export const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
-  (
-    {
-      label,
-      labelPosition = 'right',
-      error,
-      helperText,
-      containerClassName = '',
-      toggleClassName = '',
-      labelClassName = '',
-      size = 'md',
-      color = 'blue',
-      onText,
-      offText,
-      disabled,
-      checked,
-      className = '',
-      ...props
-    },
-    ref
-  ) => {
+export function Toggle({
+  label,
+  labelPosition = 'right',
+  error,
+  helperText,
+  containerClassName = '',
+  toggleClassName = '',
+  labelClassName = '',
+  size = 'md',
+  color = 'blue',
+  onText,
+  offText,
+  disabled,
+  checked,
+  className = '',
+  ref,
+  ...props
+}: ToggleProps) {
     const colorClasses = {
       blue: 'bg-blue-500',
       purple: 'bg-purple-500',
@@ -113,7 +111,4 @@ export const Toggle = forwardRef<HTMLInputElement, ToggleProps>(
         )}
       </div>
     );
-  }
-);
-
-Toggle.displayName = 'Toggle';
+}

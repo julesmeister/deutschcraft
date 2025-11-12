@@ -4,8 +4,7 @@ import { Navbar } from '@/components/ui/Navbar';
 import { MegaDropdown } from '@/components/ui/MegaDropdown';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
-import { db } from '@/lib/firebase';
-import { doc, updateDoc } from 'firebase/firestore';
+import { updateUser } from '@/lib/services/userService';
 
 export default function DashboardLayout({
   children,
@@ -32,11 +31,8 @@ function DashboardNavbar() {
     if (!session?.user?.email) return;
 
     try {
-      const userRef = doc(db, 'users', session.user.email);
-      await updateDoc(userRef, {
-        role: newRole,
-        updatedAt: Date.now(),
-      });
+      // Update user role using service layer
+      await updateUser(session.user.email, { role: newRole });
 
       // Refresh session and redirect to appropriate dashboard
       window.location.href = newRole === 'STUDENT' ? '/dashboard/student' : '/dashboard/teacher';

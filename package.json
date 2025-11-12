@@ -9,9 +9,13 @@
     "lint": "next lint",
     "seed:students": "tsx scripts/seed-students.ts",
     "fix:student": "tsx scripts/fix-existing-student.ts",
-    "create:teacher": "tsx scripts/create-teacher.ts"
+    "create:teacher": "tsx scripts/create-teacher.ts",
+    "db:migrate": "tsx turso/migrate.ts",
+    "db:shell": "turso db shell testmanship-web-v2",
+    "db:status": "turso db show testmanship-web-v2"
   },
   "dependencies": {
+    "@libsql/client": "^0.15.15",
     "@next-auth/firebase-adapter": "^2.0.1",
     "@tanstack/react-query": "^5.90.7",
     "@tiptap/extension-placeholder": "^3.10.4",
@@ -19,6 +23,7 @@
     "@tiptap/starter-kit": "^3.10.4",
     "apexcharts": "^5.3.6",
     "date-fns": "^4.1.0",
+    "dotenv": "^17.2.3",
     "firebase": "^12.5.0",
     "firebase-admin": "^13.6.0",
     "framer-motion": "^12.0.0",

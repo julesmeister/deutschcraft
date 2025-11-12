@@ -9,8 +9,8 @@ import { RecentActivityTimeline } from '@/components/dashboard/RecentActivityTim
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useStudyStats } from '@/lib/hooks/useFlashcards';
 import { useWritingStats, useStudentSubmissions } from '@/lib/hooks/useWritingExercises';
-import { collection, query, where, getDocs, orderBy, limit, doc, getDoc } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
+import { useSessionPagination } from '@/lib/hooks/useSessionPagination';
+import { getUser } from '@/lib/services/userService';
 import { User, getUserFullName } from '@/lib/models/user';
 
 interface StudentProfilePageProps {
@@ -24,19 +24,11 @@ interface StudentData {
   photoURL?: string;
 }
 
-interface RecentSession {
-  date: string;
-  cardsReviewed: number;
-  accuracy: number;
-  timeSpent: number;
-}
-
 export default function StudentProfilePage({ params }: StudentProfilePageProps) {
   const resolvedParams = use(params);
   const router = useRouter();
   const { session } = useFirebaseAuth();
   const [student, setStudent] = useState<StudentData | null>(null);
-  const [recentSessions, setRecentSessions] = useState<RecentSession[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'flashcards' | 'writing'>('flashcards');
 
@@ -47,6 +39,9 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
   const { data: writingStats } = useWritingStats(student?.email);
   const { data: writingSubmissions = [] } = useStudentSubmissions(student?.email);
 
+  // Pagination for flashcard sessions
+  const sessionPagination = useSessionPagination(student?.email, 8);
+
   useEffect(() => {
     async function loadStudentData() {
       try {
@@ -55,13 +50,10 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
         // Decode the URL-encoded email
         const studentEmail = decodeURIComponent(resolvedParams.studentId);
 
-        // Fetch student data - email is the document ID
-        const studentDocRef = doc(db, 'users', studentEmail);
-        const studentSnapshot = await getDoc(studentDocRef);
+        // Fetch student data using service layer
+        const userData = await getUser(studentEmail);
 
-        if (studentSnapshot.exists()) {
-          const userData = studentSnapshot.data() as User;
-
+        if (userData) {
           // Handle both formats: {name: "Full Name"} OR {firstName: "First", lastName: "Last"}
           const displayName = (userData as any).name || getUserFullName(userData);
 
@@ -71,31 +63,6 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
             currentLevel: userData.cefrLevel || 'A1',
             photoURL: userData.photoURL,
           });
-
-          // Fetch recent sessions
-          const progressRef = collection(db, 'progress');
-          const progressQuery = query(
-            progressRef,
-            where('userId', '==', userData.email),
-            orderBy('date', 'desc'),
-            limit(7)
-          );
-          const progressSnapshot = await getDocs(progressQuery);
-
-          const sessions: RecentSession[] = progressSnapshot.docs.map(doc => {
-            const data = doc.data();
-            const total = (data.wordsCorrect || 0) + (data.wordsIncorrect || 0);
-            const accuracy = total > 0 ? Math.round((data.wordsCorrect / total) * 100) : 0;
-
-            return {
-              date: data.date || doc.id.replace('PROG_', '').slice(0, 8),
-              cardsReviewed: data.cardsReviewed || 0,
-              accuracy,
-              timeSpent: data.timeSpent || 0,
-            };
-          });
-
-          setRecentSessions(sessions);
         }
       } catch (error) {
         console.error('Error loading student data:', error);
@@ -108,6 +75,13 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
       loadStudentData();
     }
   }, [resolvedParams.studentId]);
+
+  // Fetch first page when student is loaded
+  useEffect(() => {
+    if (student?.email) {
+      sessionPagination.fetchPage(1);
+    }
+  }, [student?.email]);
 
   if (isLoading) {
     return (
@@ -182,12 +156,8 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
           </div>
         </div>
 
-        {/* Study Stats */}
+        {/* Stats Section */}
         <div className="mb-8">
-          <h2 className="text-2xl font-black text-gray-900 mb-4">
-            {activeTab === 'flashcards' ? 'Flashcard Statistics' : 'Writing Statistics'}
-          </h2>
-
           {activeTab === 'flashcards' ? (
             <FlashcardStatsSection stats={stats} />
           ) : (
@@ -203,8 +173,12 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
 
           <RecentActivityTimeline
             activeTab={activeTab}
-            recentSessions={recentSessions}
+            recentSessions={sessionPagination.sessions}
             writingSubmissions={writingSubmissions}
+            currentPage={sessionPagination.currentPage}
+            onPageChange={sessionPagination.goToPage}
+            isLoading={sessionPagination.isLoading}
+            hasMore={sessionPagination.hasMore}
           />
         </div>
       </div>

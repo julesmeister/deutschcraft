@@ -52,7 +52,7 @@ export function ActionButton({
         {children}
       </span>
       {icon && (
-        <span className={`relative z-10 ml-3 w-8 h-8 flex items-center justify-center rounded-full transition-all duration-400 ${iconBgClass}`}>
+        <span className={`relative z-10 ml-3 w-8 h-8 flex items-center justify-center rounded-full transition-all duration-400 group-hover:rotate-[360deg] ${iconBgClass}`}>
           {icon}
         </span>
       )}
