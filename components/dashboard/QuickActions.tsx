@@ -1,6 +1,9 @@
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
+import { useRouter } from 'next/navigation';
 
 export function QuickActions() {
+  const router = useRouter();
+
   return (
     <div className="bg-white border border-gray-200">
       <div className="px-4 py-3 border-b border-gray-200">
@@ -31,6 +34,14 @@ export function QuickActions() {
           onClick={() => console.log('Create Assignment clicked')}
         >
           Create Assignment
+        </ActionButton>
+
+        <ActionButton
+          variant="yellow"
+          icon={<ActionButtonIcons.Document />}
+          onClick={() => router.push('/dashboard/teacher/writing')}
+        >
+          Review Writing
         </ActionButton>
       </div>
     </div>

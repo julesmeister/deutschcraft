@@ -21,19 +21,19 @@ export interface SimpleUser {
   updatedAt: number;
 }
 
-export class FirestoreSimpleUserRepository extends FirestoreBaseRepository<SimpleUser> implements Partial<UserRepository> {
+export class FirestoreSimpleUserRepository extends FirestoreBaseRepository<SimpleUser> {
   constructor(db: Firestore) {
     super(db, 'users');
   }
 
-  async findByEmail(email: string): Promise<SimpleUser | null> {
+  async findByEmail(email: string): Promise<any> {
     return this.findOne({
       where: [{ field: 'email', operator: '==', value: email }],
       limit: 1,
     });
   }
 
-  async findByRole(role: 'STUDENT' | 'TEACHER'): Promise<SimpleUser[]> {
+  async findByRole(role: any): Promise<any[]> {
     const result = await this.findMany({
       where: [{ field: 'role', operator: '==', value: role }],
     });

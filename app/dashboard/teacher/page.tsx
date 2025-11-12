@@ -13,6 +13,7 @@ import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CEFRLevel } from '@/lib/models';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useTeacherDashboard } from '@/lib/hooks/useTeacherDashboard';
+import { usePendingWritingCount } from '@/lib/hooks/useWritingExercises';
 
 export default function TeacherDashboard() {
   // Sync NextAuth session with Firebase Auth
@@ -27,11 +28,14 @@ export default function TeacherDashboard() {
 
   // Use the custom hook to manage all dashboard logic
   const dashboard = useTeacherDashboard({
-    currentTeacherId,
+    currentTeacherId: currentTeacherId || undefined,
     onSuccess: (msg) => toast.success(msg),
     onError: (msg) => toast.error(msg),
     onInfo: (msg) => toast.info(msg, { duration: 1000 }),
   });
+
+  // Fetch pending writing submissions count
+  const { data: pendingWritingCount = 0 } = usePendingWritingCount();
 
   console.log('[TeacherDashboard] Dashboard data:', {
     currentTeacherId,
@@ -101,7 +105,7 @@ export default function TeacherDashboard() {
       {/* Main Content */}
       <div className="container mx-auto px-6 py-8">
         {/* Stats Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
           <StatsCard
             icon="👥"
             iconBgColor="bg-piku-purple-light"
@@ -126,6 +130,12 @@ export default function TeacherDashboard() {
             label="Completion Rate"
             value="0%"
           />
+          <StatsCard
+            icon="✍️"
+            iconBgColor="bg-blue-100"
+            label="Pending Reviews"
+            value={pendingWritingCount}
+          />
         </div>
 
         <div className="grid lg:grid-cols-3 gap-6">
@@ -138,8 +148,6 @@ export default function TeacherDashboard() {
               onAddStudent={() => dashboard.setIsAddStudentOpen(true)}
               onRemoveStudent={dashboard.handleRemoveStudent}
               isRemoving={dashboard.isRemovingStudent}
-              openMenuId={dashboard.openMenuId}
-              setOpenMenuId={dashboard.setOpenMenuId}
               currentPage={dashboard.currentPage}
               setCurrentPage={dashboard.setCurrentPage}
               pageSize={dashboard.pageSize}

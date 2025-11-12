@@ -27,7 +27,7 @@ interface NewTaskFormProps {
     requireExamples?: boolean;
   };
   showDetailsForm: boolean;
-  onUpdateField: <K extends keyof typeof taskData>(field: K, value: typeof taskData[K]) => void;
+  onUpdateField: (field: string, value: any) => void;
   onToggleDetails: () => void;
   onCancel: () => void;
   onCreate: () => void;

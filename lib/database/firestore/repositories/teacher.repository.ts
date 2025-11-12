@@ -33,7 +33,7 @@ export class FirestoreTeacherRepository extends FirestoreBaseRepository<Teacher>
     }
 
     return this.update(teacherId, {
-      totalStudents: teacher.totalStudents + increment,
+      totalStudents: (teacher.totalStudents || 0) + increment,
     });
   }
 }

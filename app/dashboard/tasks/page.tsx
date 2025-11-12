@@ -33,7 +33,7 @@ export default function TasksPage() {
 
   // Teacher-specific data
   const [selectedBatch, setSelectedBatch] = useState<Batch | null>(null);
-  const { batches } = useActiveBatches(currentTeacherId);
+  const { batches } = useActiveBatches(currentTeacherId || undefined);
 
   // Auto-select first batch (teachers only)
   useEffect(() => {
@@ -67,7 +67,7 @@ export default function TasksPage() {
 
   // Fetch writing tasks based on role
   const { tasks: teacherTasks, isLoading: teacherTasksLoading } = useTeacherBatchTasks(
-    currentTeacherId,
+    currentTeacherId || undefined,
     selectedBatch?.batchId
   );
 
@@ -145,7 +145,7 @@ export default function TasksPage() {
       batchId: selectedBatch.batchId,
       title: task.title,
       instructions: (task as any).instructions || task.title,
-      category: mapGroupIdToCategory(groupId),
+      category: mapGroupIdToCategory(groupId) as "email" | "essay" | "letter" | "story" | "article" | "report" | "review" | "other",
       level: selectedBatch.currentLevel,
       priority: task.priority,
       dueDate: new Date(task.dueDate).getTime(),

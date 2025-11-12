@@ -25,7 +25,7 @@ export function useAnimatedCounter({
   type = 'increment',
 }: UseAnimatedCounterProps): number {
   const [counter, setCounter] = useState(initialValue);
-  const intervalRef = useRef<NodeJS.Timeout>();
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   // Calculate optimal increment if not provided
   const calculatedIncrement = increment || Math.ceil(Math.abs(target - initialValue) / 50);
@@ -38,7 +38,7 @@ export function useAnimatedCounter({
         type === 'increment' ? prev >= target : prev <= target;
 
       if (reachedTarget) {
-        clearInterval(intervalRef.current);
+        if (intervalRef.current) clearInterval(intervalRef.current);
         return target;
       }
 
@@ -56,7 +56,7 @@ export function useAnimatedCounter({
   useEffect(() => {
     intervalRef.current = setInterval(updateCounter, interval);
     return () => {
-      clearInterval(intervalRef.current);
+      if (intervalRef.current) clearInterval(intervalRef.current);
     };
   }, [target, interval]);
 

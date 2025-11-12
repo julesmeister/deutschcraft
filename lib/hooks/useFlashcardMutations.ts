@@ -128,13 +128,13 @@ export function useFlashcardMutations() {
       if (!userId) {
         const errorMsg = 'Cannot save review: userId is undefined';
         console.error(errorMsg);
-        showToast('Error: User not logged in', 'error');
+        toast.error('Error: User not logged in');
         throw new Error(errorMsg);
       }
       if (!flashcardId) {
         const errorMsg = 'Cannot save review: flashcardId is undefined';
         console.error(errorMsg);
-        showToast('Error: Invalid flashcard', 'error');
+        toast.error('Error: Invalid flashcard');
         throw new Error(errorMsg);
       }
 
@@ -220,7 +220,7 @@ export function useFlashcardMutations() {
         flashcardId,
       });
       setError(errorMessage);
-      showToast(`Failed to save review: ${errorMessage}`, 'error');
+      toast.error(`Failed to save review: ${errorMessage}`);
       throw err;
     } finally {
       setIsSaving(false);
@@ -244,7 +244,7 @@ export function useFlashcardMutations() {
       if (!userId) {
         const errorMsg = 'Cannot save daily progress: userId is undefined';
         console.error(errorMsg);
-        showToast('Error: User not logged in', 'error');
+        toast.error('Error: User not logged in');
         throw new Error(errorMsg);
       }
 

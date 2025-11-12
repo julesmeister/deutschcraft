@@ -59,3 +59,21 @@ export {
   SAMPLE_TEACHER,
   SAMPLE_BATCH,
 } from './samples';
+
+// Writing Exercise Models
+export type {
+  WritingExerciseType,
+  TranslationExercise,
+  CreativeWritingExercise,
+  WritingPrompt,
+  WritingSubmission,
+  WritingFeedback,
+  GrammarError,
+  VocabularySuggestion,
+  WritingVersion,
+  TextChange,
+  PeerReview,
+  TeacherReview,
+  WritingProgress,
+  WritingStats,
+} from './writing';

@@ -7,6 +7,7 @@ import { usePracticeStats } from '@/lib/hooks/usePracticeStats';
 import { useStudentTasks } from '@/lib/hooks/useWritingTasks';
 import { useBatch } from '@/lib/hooks/useBatches';
 import { useStudyStats } from '@/lib/hooks/useFlashcards';
+import { useWritingStats } from '@/lib/hooks/useWritingExercises';
 import { SAMPLE_STUDENT } from '@/lib/models';
 import { StudentStatsCard, StudentStatCardProps } from '@/components/dashboard/StudentStatsCard';
 import { WeeklyProgressChart } from '@/components/dashboard/WeeklyProgressChart';
@@ -15,8 +16,7 @@ import { DailyGoalCard } from '@/components/dashboard/DailyGoalCard';
 import { StudentRecentTasksCard } from '@/components/dashboard/StudentRecentTasksCard';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { useEffect, useState } from 'react';
-import { db } from '@/lib/firebase';
-import { doc, getDoc } from 'firebase/firestore';
+import { getTodayProgress } from '@/lib/services/progressService';
 
 export default function StudentDashboard() {
   const { session, isFirebaseReady } = useFirebaseAuth();
@@ -26,7 +26,10 @@ export default function StudentDashboard() {
   const { tasks: allTasks, isLoading: isLoadingTasks } = useStudentTasks(session?.user?.email || undefined);
 
   // Get real-time study stats
-  const { stats: studyStats, isLoading: isLoadingStats } = useStudyStats(session?.user?.email || null);
+  const { stats: studyStats, isLoading: isLoadingStats } = useStudyStats(session?.user?.email || undefined);
+
+  // Get writing stats
+  const { data: writingStats, isLoading: isLoadingWriting } = useWritingStats(session?.user?.email || undefined);
 
   // Get today's progress for daily goal
   const [todayProgress, setTodayProgress] = useState(0);
@@ -45,26 +48,17 @@ export default function StudentDashboard() {
   useEffect(() => {
     if (!session?.user?.email) return;
 
-    const fetchTodayProgress = async () => {
+    const fetchTodayProgressData = async () => {
       try {
-        const today = new Date().toISOString().split('T')[0].replace(/-/g, '');
-        const progressId = `PROG_${today}_${session.user.email}`;
-        const progressRef = doc(db, 'progress', progressId);
-        const progressSnap = await getDoc(progressRef);
-
-        if (progressSnap.exists()) {
-          const data = progressSnap.data();
-          setTodayProgress(data.cardsReviewed || 0);
-        } else {
-          setTodayProgress(0);
-        }
+        const progress = await getTodayProgress(session.user!.email!);
+        setTodayProgress(progress.cardsReviewed);
       } catch (error) {
         console.error('Error fetching today progress:', error);
         setTodayProgress(0);
       }
     };
 
-    fetchTodayProgress();
+    fetchTodayProgressData();
   }, [session?.user?.email]);
 
   // Show loading state while fetching data
@@ -83,7 +77,8 @@ export default function StudentDashboard() {
 
   // Format the Current Level display with batch name
   const currentLevelDisplay = () => {
-    const level = session?.user?.cefrLevel || student.currentLevel || 'A1';
+    const studentData = (fetchedStudent as any) || SAMPLE_STUDENT;
+    const level = studentData.currentLevel || 'A1';
     if (batch && batch.name) {
       return `${level} • ${batch.name}`;
     }
@@ -93,6 +88,8 @@ export default function StudentDashboard() {
   const stats: StudentStatCardProps[] = [
     { label: 'Words Learned', value: studyStats.cardsLearned, icon: '📚', color: 'text-violet-600' },
     { label: 'Words Mastered', value: studyStats.cardsMastered, icon: '✨', color: 'text-emerald-600' },
+    { label: 'Writing Exercises', value: writingStats?.totalExercisesCompleted || 0, icon: '✍️', color: 'text-blue-600' },
+    { label: 'Words Written', value: writingStats?.totalWordsWritten || 0, icon: '📝', color: 'text-purple-600' },
     { label: 'Current Streak', value: studyStats.streak, icon: '🔥', color: 'text-orange-600', suffix: ' days' },
     { label: 'Current Level', value: 0, displayValue: currentLevelDisplay(), icon: '🎯', color: 'text-amber-600', isText: true },
   ];
@@ -120,7 +117,11 @@ export default function StudentDashboard() {
           {/* Main Column */}
           <div className="lg:col-span-2 space-y-6">
             <WeeklyProgressChart weeklyData={weeklyData} totalWords={totalWords} />
-            <StudentQuickActions cardsReady={cardsReady} wordsToReview={wordsToReview} />
+            <StudentQuickActions
+              cardsReady={cardsReady}
+              wordsToReview={wordsToReview}
+              writingExercises={writingStats?.totalExercisesCompleted || 0}
+            />
           </div>
 
           {/* Sidebar */}

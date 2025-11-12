@@ -1,194 +1,173 @@
-# Student Stats System - Quick Reference
+# Student Learning System - Documentation Index
 
-## 🐛 Debugging Stats Issues
-
-### Console Logging (Color-Coded)
-
-Filter browser console for these emojis:
-- 🔵 `[saveReview]` - Individual card saves
-- 🟢 `[saveDailyProgress]` - Daily stats saves
-- 🎴 `[useFlashcardSession]` - Session flow
-- 📊 `[useStudyStats]` - Stats calculation
-
-### Quick Debug Steps
-
-1. **Start practice** → Look for `🎴 Session initialized` with email
-2. **Rate a card (1-4)** → Look for `🔵 saveReview` logs and `✅ Save successful!`
-3. **Complete session** → Look for `🟢 saveDailyProgress` and `✅ Create successful!`
-4. **Check stats update** → Look for `📊 Final stats` with updated numbers
-
-### Common Issues
-
-| Symptom | Cause | Fix |
-|---------|-------|-----|
-| `hasSession: false` | Not logged in | Check Firebase Auth |
-| `Cannot save: No user email` | Auth failed | Wait 2s or check session |
-| `Cannot save: No wordId` | Missing field | Run `npx tsx scripts/parse-remnote.ts` |
-| `Missing permissions` | Firestore rules | Check `firestore.rules` |
-| Stats show 0 | No data in Firestore | Open Firebase Console |
-| No console logs | Code not running | Restart `npm run dev` |
-
-### Recent Changes (2025-01-11)
-
-✅ **Real-time listeners**: Stats auto-update when Firestore changes (no refresh needed)
-✅ **Toast notifications**: Success/error messages for all saves
-✅ **Input validation**: Checks for user email and flashcard ID before saving
-✅ **Comprehensive logging**: Every save operation logged to console
+Welcome to the Testmanship Web V2 student learning system documentation. This system includes two main learning modules:
 
 ---
 
-## Core Data Models
+## 📚 Documentation Files
 
-### FlashcardProgress (`flashcard-progress` collection)
-**Document ID**: `{userId}_{flashcardId}`
+### [FLASHCARDS.md](./FLASHCARDS.md)
+Complete documentation for the flashcard/vocabulary learning system:
+- Spaced Repetition System (SRS) using SuperMemo 2 algorithm
+- Real-time progress tracking
+- Daily stats and streaks
+- Debugging and troubleshooting guide
 
-Key fields:
-- `masteryLevel` (0-100): Based on SuperMemo 2 algorithm
-- `repetitions`: Times reviewed
-- `correctCount` / `incorrectCount`: Accuracy tracking
-- `interval`: Days until next review
-- `nextReviewDate`: Timestamp for SRS scheduling
-
-### DailyProgress (`progress` collection)
-**Document ID**: `PROG_YYYYMMDD_{email}` (e.g., `PROG_20250111_user@example.com`)
-
-Key fields:
-- `cardsReviewed`: Total cards today
-- `wordsCorrect` / `wordsIncorrect`: Accuracy counts
-- `timeSpent`: Minutes studied today
-- `sessionsCompleted`: Number of sessions today
+**Quick Links:**
+- [Debugging Stats Issues](./FLASHCARDS.md#debugging-stats-issues)
+- [Data Flow](./FLASHCARDS.md#critical-data-flow)
+- [SuperMemo 2 Algorithm](./FLASHCARDS.md#supermemo-2-algorithm-quick-reference)
+- [Testing Checklist](./FLASHCARDS.md#testing-checklist)
 
 ---
 
-## Critical Data Flow
+### [WRITING.md](./WRITING.md)
+Complete documentation for the writing exercises system:
+- 4 exercise types (Creative, Translation, Email, Letters)
+- **Teacher & Peer Review System** (manual feedback, not AI)
+- Revision history tracking with ActivityTimeline
+- Progress tracking and streaks
+- Text change tracking (word/phrase edits)
 
-### 1. Rate Card → Save Review
-**File**: `lib/hooks/useFlashcardSession.ts` → `lib/hooks/useFlashcardMutations.ts`
+**Quick Links:**
+- [Exercise Types](./WRITING.md#exercise-types)
+- [Review & Feedback System](./WRITING.md#review--feedback-system)
+- [Review Workflow](./WRITING.md#review-workflow)
+- [Teacher Features](./WRITING.md#teacher-features)
+- [Testing Checklist](./WRITING.md#testing-checklist)
 
-```
-User rates card (1-4)
-  ↓
-handleDifficulty() logs attempt
-  ↓
-saveReview() called with userId, flashcardId, wordId, difficulty
-  ↓
-Calculate SuperMemo 2 data (repetitions, interval, masteryLevel)
-  ↓
-Save to flashcard-progress/{userId}_{flashcardId}
-  ↓
-Log "✅ [saveReview] Save successful!"
-```
-
-### 2. Complete Session → Save Daily Stats
-**File**: `lib/hooks/useFlashcardSession.ts` → `lib/hooks/useFlashcardMutations.ts`
-
-```
-Last card rated
-  ↓
-handleSessionComplete() calculates totals
-  ↓
-saveDailyProgress() called with userId and stats
-  ↓
-Create/update document: PROG_YYYYMMDD_{email}
-  ↓
-Log "✅ [saveDailyProgress] Create successful!"
-  ↓
-Toast: "Progress saved successfully!"
-```
-
-### 3. Stats Display → Real-time Update
-**File**: `lib/hooks/useFlashcards.ts - useStudyStats()`
-
-```
-Page loads or data changes in Firestore
-  ↓
-onSnapshot() listener triggers (real-time)
-  ↓
-Query flashcard-progress: count cards, calculate mastery
-  ↓
-Query progress: calculate streak from consecutive days
-  ↓
-Update stats: { totalCards, cardsLearned, streak, accuracy }
-  ↓
-Stats cards update automatically (no refresh)
-```
+### [WRITING-UPDATES.md](./WRITING-UPDATES.md)
+📢 **Recent changes** to the writing system:
+- Teacher review system with grading
+- Peer review system (student-to-student)
+- Revision history with ActivityTimeline
+- Text change tracking
+- Complete implementation guide
 
 ---
 
-## Key Files
+## 🚀 Quick Start
 
-### Practice Flow
-- `app/dashboard/student/flashcards/page.tsx` - Landing page with stats
-- `components/flashcards/FlashcardPractice.tsx` - Practice UI
-- `lib/hooks/useFlashcardSession.ts` - Session logic
-- `lib/hooks/useFlashcardMutations.ts` - Firestore saves
-
-### Stats Calculation
-- `lib/hooks/useFlashcards.ts` - `useStudyStats()` hook with real-time listeners
-
-### Data Generation
-- `scripts/parse-remnote.ts` - Generates flashcard JSON from vocabulary files
-- `lib/data/syllabus/{level}/*.json` - Source vocabulary
-- `lib/data/remnote/levels/{level}.json` - Generated flashcards
-
-### Settings
-- `lib/hooks/useFlashcardSettings.ts` - User preferences
-- Saved to `users/{email}/flashcardSettings`
-
----
-
-## Firestore Collections
-
-| Collection | Document ID | Purpose |
-|------------|-------------|---------|
-| `users` | `{email}` | User profile & settings |
-| `flashcard-progress` | `{userId}_{flashcardId}` | Individual card SRS data |
-| `progress` | `PROG_YYYYMMDD_{email}` | Daily study stats |
-
-**Note**: `students` collection exists in models but is **NOT CURRENTLY USED**. Stats are calculated on-demand from `flashcard-progress` and `progress` collections.
-
----
-
-## SuperMemo 2 Algorithm (Quick Reference)
-
-| Difficulty | Effect |
-|------------|--------|
-| **Forgotten (1)** | Reset to 0 reps, review tomorrow |
-| **Hard (2)** | Small interval increase, lower ease |
-| **Good (3)** | Normal progression (1d → 6d → multiply by ease) |
-| **Easy (4)** | Fast progression, higher ease factor |
-
-**Mastery Levels**:
-- 0-19: New/Forgotten
-- 20-39: Learning (1-2 reps)
-- 40-69: Reviewing (3-5 reps)
-- 70-100: Mastered (6+ reps) ← **Counts as "Cards Learned"**
-
----
-
-## Testing Checklist
-
-Before deploying, verify:
-1. ✅ User can log in and session.user.email is defined
-2. ✅ Console shows 🎴, 🔵, 🟢, 📊 logs during practice
-3. ✅ Toast notifications appear after rating cards and completing session
-4. ✅ Firebase Console shows documents in `flashcard-progress` and `progress`
-5. ✅ Stats cards update automatically after session (no page refresh)
-6. ✅ Cards Learned increases when mastery reaches 70%
-7. ✅ Day Streak increments on consecutive days
-8. ✅ Accuracy shows correct percentage
-
----
-
-## Quick Fix Commands
-
+### For Flashcards
 ```bash
-# Restart dev server
+# Start the dev server
 npm run dev
 
-# Regenerate flashcard JSON files (if vocabulary added/changed)
-npx tsx scripts/parse-remnote.ts
+# Navigate to flashcards
+http://localhost:3000/dashboard/student/flashcards
 
-# Check Firestore data (open Firebase Console)
-# → Firestore Database → Browse collections
+# Check console for debugging (look for 🎴, 🔵, 🟢, 📊 emojis)
 ```
+
+### For Writing Exercises
+```bash
+# Start the dev server
+npm run dev
+
+# Navigate to writing exercises
+http://localhost:3000/dashboard/student/writing
+
+# Choose an exercise type: Creative, Translation, Email, or Letters
+```
+
+---
+
+## 📊 Firestore Collections Overview
+
+### Flashcards
+- `flashcard-progress/{userId}_{flashcardId}` - SRS data for each card
+- `progress/PROG_YYYYMMDD_{email}` - Daily study stats
+
+### Writing
+- `writing-submissions/{submissionId}` - Student writing submissions
+- `writing-progress/WPROG_YYYYMMDD_{email}` - Daily writing stats
+- `writing-stats/{email}` - Aggregate writing statistics
+- `peer-reviews/{reviewId}` - **NEW** Student peer reviews
+- `teacher-reviews/{reviewId}` - **NEW** Teacher feedback and grading
+
+### Shared
+- `users/{email}` - User profile and settings
+- `tasks/{taskId}` - Writing tasks assigned by teachers
+- `batches/{batchId}` - Class/batch information
+
+---
+
+## 🔧 Common Commands
+
+```bash
+# Development
+npm run dev              # Start dev server with Turbopack
+npm run build            # Production build
+npm run start            # Start production server
+
+# Flashcards
+npx tsx scripts/parse-remnote.ts  # Regenerate flashcard JSON
+
+# Database
+# Open Firebase Console → Firestore Database → Browse collections
+```
+
+---
+
+## 🐛 Debugging Quick Reference
+
+### Flashcards Issues
+See [FLASHCARDS.md - Common Issues](./FLASHCARDS.md#common-issues)
+
+Key debug emojis in console:
+- 🎴 Session flow
+- 🔵 Individual saves
+- 🟢 Daily progress saves
+- 📊 Stats calculation
+
+### Writing Issues
+See [WRITING.md - Common Issues](./WRITING.md#common-issues--fixes)
+
+Common problems:
+- Stats show 0 → No submissions yet (normal for new users)
+- Cannot submit → Check word count requirements
+- No feedback → AI system not implemented yet
+
+---
+
+## 📖 Additional Resources
+
+- [CLAUDE.md](./CLAUDE.md) - General project instructions and design system
+- [Firebase Console](https://console.firebase.google.com) - View Firestore data
+- [Next.js Docs](https://nextjs.org/docs) - Framework documentation
+
+---
+
+## 🎯 System Status
+
+### Flashcards System
+✅ **Production Ready**
+- SRS algorithm working
+- Real-time stats updates
+- Progress tracking
+- Streak calculation
+
+### Writing Exercises System
+✅ **Teacher & Peer Review Ready**
+- ✅ All UI components complete
+- ✅ Firebase hooks implemented
+- ✅ Progress tracking ready
+- ✅ Teacher review system designed
+- ✅ Peer review system designed
+- ✅ Revision history with ActivityTimeline
+- ⏳ Teacher grading UI pending
+- ⏳ Peer review assignment pending
+
+---
+
+## 💡 Need Help?
+
+1. **Flashcards not working?** → Check [FLASHCARDS.md](./FLASHCARDS.md)
+2. **Writing exercises questions?** → Check [WRITING.md](./WRITING.md)
+3. **Design system questions?** → Check [CLAUDE.md](./CLAUDE.md)
+4. **General Next.js issues?** → Restart dev server: `npm run dev`
+
+---
+
+**Last Updated**: 2025-01-11
+**Version**: 2.0 (Split documentation structure)

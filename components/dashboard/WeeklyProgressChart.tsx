@@ -34,7 +34,15 @@ export function WeeklyProgressChart({ weeklyData, totalWords }: WeeklyProgressCh
         show: false,
       },
       xaxis: {
-        show: false,
+        labels: {
+          show: false,
+        },
+        axisBorder: {
+          show: false,
+        },
+        axisTicks: {
+          show: false,
+        },
       },
       tooltip: {
         enabled: false,

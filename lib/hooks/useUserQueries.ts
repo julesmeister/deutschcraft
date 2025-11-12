@@ -227,7 +227,7 @@ export function useStudentsWithoutTeacher() {
       console.log('[useStudentsWithoutTeacher] Students:', students.map(s => ({
         userId: s.userId,
         email: s.email,
-        name: s.name || `${s.firstName || ''} ${s.lastName || ''}`,
+        name: (s as any).name || `${s.firstName || ''} ${s.lastName || ''}`,
         role: s.role,
         teacherId: s.teacherId,
       })));

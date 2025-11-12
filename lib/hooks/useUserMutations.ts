@@ -21,7 +21,6 @@ export function useUpsertUser() {
       const userRef = doc(db, 'users', user.email);
       await setDoc(userRef, {
         userId: user.email,
-        email: user.email,
         ...user,
         updatedAt: Date.now(),
       }, { merge: true });

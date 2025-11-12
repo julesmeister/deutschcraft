@@ -1,5 +1,5 @@
 import { SlimTable, SlimTableRenderers } from '@/components/ui/SlimTable';
-import { Menu, MenuItem } from '@/components/ui/dropdown';
+import { StudentActionsDropdown } from '@/components/ui/StudentActionsDropdown';
 import { useRouter } from 'next/navigation';
 
 interface StudentTableProps {
@@ -27,8 +27,6 @@ interface StudentTableProps {
   onAddStudent: () => void;
   onRemoveStudent: (studentId: string) => void;
   isRemoving: boolean;
-  openMenuId: string | null;
-  setOpenMenuId: (id: string | null) => void;
   currentPage: number;
   setCurrentPage: (page: number) => void;
   pageSize: number;
@@ -41,8 +39,6 @@ export function StudentTable({
   onAddStudent,
   onRemoveStudent,
   isRemoving,
-  openMenuId,
-  setOpenMenuId,
   currentPage,
   setCurrentPage,
   pageSize,
@@ -121,45 +117,11 @@ export function StudentTable({
             align: 'center',
             width: '120px',
             render: (_, row) => (
-              <div className="relative">
-                <button
-                  className="cursor-pointer select-none align-middle appearance-none outline-0 inline-flex relative p-1.5 rounded-full border-0 text-black/54 hover:bg-black/5 transition-colors"
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setOpenMenuId(openMenuId === row.id ? null : row.id);
-                  }}
-                >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
-                  </svg>
-                </button>
-                {openMenuId === row.id && (
-                  <div className="absolute right-0 bottom-full mb-1 bg-white shadow-lg z-50">
-                    <Menu compact className="min-w-[160px]">
-                      <MenuItem
-                        compact
-                        onClick={() => onRemoveStudent(row.id)}
-                        disabled={isRemoving}
-                        icon={
-                          isRemoving ? (
-                            <svg className="w-4 h-4 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
-                            </svg>
-                          ) : (
-                            <svg className="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                            </svg>
-                          )
-                        }
-                        className="text-red-600 hover:bg-red-50"
-                      >
-                        {isRemoving ? 'Removing...' : 'Remove Student'}
-                      </MenuItem>
-                    </Menu>
-                  </div>
-                )}
-              </div>
+              <StudentActionsDropdown
+                studentId={row.id}
+                onRemoveStudent={onRemoveStudent}
+                isRemoving={isRemoving}
+              />
             ),
           },
         ]}

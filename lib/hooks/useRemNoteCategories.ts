@@ -86,7 +86,6 @@ const categoryIcons: Record<string, string> = {
   'Education': '📚',
   'Nature': '🌳',
   'Feelings': '😊',
-  'Modal Verbs': '🔑',
   'Restaurant': '🍴',
   'Separable Verbs': '🔄',
   'Reflexive Verbs': '🪞',
@@ -96,7 +95,6 @@ const categoryIcons: Record<string, string> = {
   'Perception Verbs': '👁️',
 
   // B1 Syllabus categories
-  'Separable Verbs': '🔄',
   'Adjective Pairs': '⚖️',
   'Business Work': '💼',
   'Conjunctions': '🔗',

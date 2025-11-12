@@ -184,7 +184,7 @@ export default function SyllabusPage() {
             <div className="text-5xl">📚</div>
             <div className="flex-1">
               <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                {CEFRLevelInfo[selectedLevel].displayName} - {CEFRLevelInfo[selectedLevel].name}
+                {CEFRLevelInfo[selectedLevel].displayName}
               </h2>
               <p className="text-gray-600 mb-4">
                 {CEFRLevelInfo[selectedLevel].description}

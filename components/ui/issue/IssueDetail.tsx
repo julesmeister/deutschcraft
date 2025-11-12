@@ -132,7 +132,7 @@ export function IssueDetail({ issue, className = '' }: IssueDetailProps) {
               <IssueDetailField
                 key={key}
                 icon={field.icon}
-                label={field.label || key}
+                label={(field as any).label || key}
                 value={field.value}
                 onClick={field.onClick}
               />

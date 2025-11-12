@@ -45,8 +45,8 @@ export function mapTasksToGroups(writingTasks: WritingTask[]): TaskGroup[] {
   const mapTask = (task: WritingTask) => ({
     id: task.taskId,
     title: task.title,
-    status: mapTaskStatus(task.status),
-    priority: task.priority,
+    status: mapTaskStatus(task.status) as 'pending' | 'in-progress' | 'completed',
+    priority: task.priority as 'low' | 'medium' | 'high',
     dueDate: formatDueDate(task.dueDate),
     completed: task.status === 'completed',
     assignees: task.assignedStudents,

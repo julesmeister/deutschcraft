@@ -99,14 +99,8 @@ export function TaskBoard({
     const taskData = newTaskData[groupId];
     if (taskData && taskData.title.trim()) {
       onAddTask?.(groupId, {
-        title: taskData.title,
-        status: taskData.status,
-        priority: taskData.priority,
-        dueDate: taskData.dueDate,
-        assignees: taskData.assignees,
-        completed: false,
-        // Pass all optional fields
         ...taskData,
+        completed: false,
       } as any);
       hideNewTaskInput(groupId);
     }
@@ -285,7 +279,7 @@ export function TaskBoard({
                   groupId={group.id}
                   taskData={newTaskData[group.id]}
                   showDetailsForm={showDetailsForm[group.id] || false}
-                  onUpdateField={(field, value) => updateNewTaskField(group.id, field, value)}
+                  onUpdateField={(field, value) => updateNewTaskField(group.id, field as any, value)}
                   onToggleDetails={() => setShowDetailsForm(prev => ({ ...prev, [group.id]: !prev[group.id] }))}
                   onCancel={() => hideNewTaskInput(group.id)}
                   onCreate={() => handleCreateTask(group.id)}

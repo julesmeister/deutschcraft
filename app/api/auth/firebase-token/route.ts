@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
-import { authOptions } from '../[...nextauth]/route';
+import { authOptions } from '@/lib/auth';
 import { adminAuth } from '@/lib/firebase-admin';
 
 export async function POST(req: NextRequest) {
@@ -15,7 +15,8 @@ export async function POST(req: NextRequest) {
     }
 
     // Generate a custom token for this user
-    const userId = session.user.id || session.user.email!;
+    // Use email as the userId since that's what we're using throughout the app
+    const userId = session.user.email!;
     const customToken = await adminAuth.createCustomToken(userId);
 
     return NextResponse.json({ token: customToken });

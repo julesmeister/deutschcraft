@@ -231,5 +231,5 @@ export const breakpoints = {
 } as const;
 
 export type ColorPairing = keyof typeof colorPairings;
-export type BrandColor = keyof typeof colors.brand;
+export type BrandColor = keyof typeof colors.piku;
 export type PastelColor = keyof typeof colors.pastel;

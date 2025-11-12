@@ -2,8 +2,8 @@
  * Database Optimization - Main Export
  */
 
-export { BatchOptimizer, RequestCoalescer, batchOptimizer, requestCoalescer } from './batch-optimizer';
-export {
+export type { BatchOptimizer, RequestCoalescer, batchOptimizer, requestCoalescer } from './batch-optimizer';
+export type {
   ConnectionPool,
   PoolMonitor,
   DefaultPostgresPoolConfig,

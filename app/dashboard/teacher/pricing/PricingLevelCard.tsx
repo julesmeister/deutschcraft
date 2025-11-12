@@ -55,7 +55,7 @@ export function PricingLevelCard({
             <div>
               <div className="flex items-center gap-3">
                 <h2 className="text-2xl font-black text-gray-900">
-                  {levelInfo.displayName} - {levelInfo.name}
+                  {levelInfo.displayName}
                 </h2>
                 {isEditing && (
                   <span className="px-3 py-1 bg-piku-purple/10 text-piku-purple text-xs font-bold rounded-full">

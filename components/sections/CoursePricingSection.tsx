@@ -11,6 +11,7 @@ import {
 } from '@/lib/utils/pricingCalculator';
 import { getCoursePricing } from '@/lib/services/pricingService';
 import { SplitButtonGroup, type SplitButtonOption } from '@/components/ui/SplitButtonGroup';
+import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
 import { ScrollStagger, StaggerItem } from '@/components/animations/ScrollReveal';
 import { motion } from 'framer-motion';
 
@@ -41,12 +42,7 @@ export function CoursePricingSection() {
   const levelData = pricingData[selectedLevel];
   const features = getPricingFeatures(selectedLevel);
 
-  // Prepare options for SplitButtonGroup
-  const levelOptions: SplitButtonOption[] = Object.values(CEFRLevel).map((level) => ({
-    value: level,
-    label: level,
-  }));
-
+  // Prepare options for Study Intensity SplitButtonGroup
   const intensityOptions: SplitButtonOption[] = STUDY_INTENSITIES.map((intensity) => ({
     value: String(intensity.hoursPerDay),
     label: intensity.label,
@@ -88,11 +84,11 @@ export function CoursePricingSection() {
                 <label className="block text-sm font-bold text-gray-900 mb-3">
                   Select Your CEFR Level
                 </label>
-                <SplitButtonGroup
-                  options={levelOptions}
-                  value={selectedLevel}
-                  onChange={(value) => setSelectedLevel(value as CEFRLevel)}
-                  colorScheme="teal"
+                <CEFRLevelSelector
+                  selectedLevel={selectedLevel}
+                  onLevelChange={setSelectedLevel}
+                  colorScheme="cool"
+                  showDescription={false}
                   size="md"
                 />
               </div>
@@ -124,7 +120,7 @@ export function CoursePricingSection() {
                 <div>
                   <div className="text-sm font-semibold text-gray-600 mb-1">Your Course</div>
                   <div className="text-3xl font-black text-gray-900 mb-2">
-                    {levelInfo.displayName} - {levelInfo.name}
+                    {levelInfo.displayName}
                   </div>
                   <div className="text-gray-600 mb-4">{levelData.description}</div>
 

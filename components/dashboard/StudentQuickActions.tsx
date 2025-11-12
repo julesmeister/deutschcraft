@@ -10,9 +10,10 @@ interface QuickAction {
 interface StudentQuickActionsProps {
   cardsReady: number;
   wordsToReview: number;
+  writingExercises?: number;
 }
 
-export function StudentQuickActions({ cardsReady, wordsToReview }: StudentQuickActionsProps) {
+export function StudentQuickActions({ cardsReady, wordsToReview, writingExercises = 0 }: StudentQuickActionsProps) {
   const actions: QuickAction[] = [
     {
       icon: '📚',
@@ -23,8 +24,8 @@ export function StudentQuickActions({ cardsReady, wordsToReview }: StudentQuickA
     {
       icon: '✍️',
       label: 'Write',
-      count: 'AI-powered',
-      href: '/dashboard/writing'
+      count: writingExercises > 0 ? `${writingExercises} completed` : 'Start writing',
+      href: '/dashboard/student/writing'
     },
     {
       icon: '🔄',

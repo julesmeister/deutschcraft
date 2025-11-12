@@ -262,3 +262,13 @@
 .theme-btn-dark:hover::before {
   width: 100%;
 }
+
+/* Student Actions Dropdown - Red styling for remove action */
+.student-actions-dropdown .menu > .item {
+  color: #dc2626 !important;
+}
+
+.student-actions-dropdown .menu > .item:hover {
+  background-color: #fef2f2 !important;
+  color: #b91c1c !important;
+}
