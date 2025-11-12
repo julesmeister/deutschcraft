@@ -14,6 +14,7 @@ import { CEFRLevel } from '@/lib/models';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useTeacherDashboard } from '@/lib/hooks/useTeacherDashboard';
 import { usePendingWritingCount } from '@/lib/hooks/useWritingExercises';
+import { CatLoader } from '@/components/ui/CatLoader';
 
 export default function TeacherDashboard() {
   // Sync NextAuth session with Firebase Auth
@@ -37,25 +38,9 @@ export default function TeacherDashboard() {
   // Fetch pending writing submissions count
   const { data: pendingWritingCount = 0 } = usePendingWritingCount();
 
-  console.log('[TeacherDashboard] Dashboard data:', {
-    currentTeacherId,
-    isLoading: dashboard.isLoading,
-    isError: dashboard.isError,
-    availableMembersCount: dashboard.availableMembers.length,
-    availableMembers: dashboard.availableMembers,
-    isAddStudentOpen: dashboard.isAddStudentOpen,
-  });
-
   // Loading state
-  if (dashboard.isLoading) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-piku-purple"></div>
-          <p className="mt-4 text-gray-600 font-semibold">Loading dashboard...</p>
-        </div>
-      </div>
-    );
+  if (dashboard.isLoading || !session) {
+    return <CatLoader message="Loading dashboard..." size="lg" fullScreen />;
   }
 
   // Error state
