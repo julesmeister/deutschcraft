@@ -120,6 +120,10 @@ export default function FlashcardsLandingPage() {
         <DashboardHeader
           title="Flashcards 📚"
           subtitle="Master German vocabulary with spaced repetition"
+          backButton={{
+            label: 'Back to Dashboard',
+            onClick: () => router.push('/dashboard/student')
+          }}
           actions={
             <ActionButton
               onClick={handleStartPractice}

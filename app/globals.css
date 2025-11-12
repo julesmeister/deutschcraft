@@ -103,15 +103,36 @@
 
 @keyframes ripple {
   0% {
-    transform: translate(-50%, -50%) scale(0);
+    transform: scale(0);
     opacity: 0.6;
   }
   50% {
-    opacity: 0.4;
+    opacity: 0.3;
   }
   100% {
-    transform: translate(-50%, -50%) scale(20);
+    transform: scale(4);
     opacity: 0;
+  }
+}
+
+@keyframes rippleOverlay {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes point {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0.125em);
   }
 }
 
@@ -138,6 +159,14 @@
 
 .animate-ripple {
   animation: ripple 0.6s ease-out;
+}
+
+.animate-ripple-overlay {
+  animation: rippleOverlay 0.4s ease-out;
+}
+
+.animate-point {
+  animation: point 1.25s infinite alternate;
 }
 
 /* Staggered animation delays */

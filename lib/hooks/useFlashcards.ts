@@ -22,6 +22,33 @@ import {
 // Export useStudyStats from separate file (uses React Query pattern)
 export { useStudyStats } from './useStudyStats';
 
+import { useQuery } from '@tanstack/react-query';
+import { cacheTimes } from '../queryClient';
+
+/**
+ * Get all flashcard reviews/progress for a user
+ * Used for the flashcard review page
+ */
+export function useFlashcardReviews(userId: string | undefined) {
+  const { data, isLoading, isError, error } = useQuery({
+    queryKey: ['flashcard-reviews', userId],
+    queryFn: async () => {
+      if (!userId) return [];
+      return await getFlashcardProgress(userId);
+    },
+    enabled: !!userId,
+    staleTime: cacheTimes.progress,
+    gcTime: cacheTimes.progress * 2.5,
+  });
+
+  return {
+    data: data || [],
+    isLoading,
+    isError,
+    error: error as Error | null,
+  };
+}
+
 /**
  * Get flashcards by level and optional category
  */
