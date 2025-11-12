@@ -69,8 +69,8 @@ const CompactButtonDropdownComponent = ({
     if (isOpen && usePortal && buttonRef.current) {
       const rect = buttonRef.current.getBoundingClientRect();
       setPosition({
-        top: rect.bottom + window.scrollY + 8,
-        left: rect.left + window.scrollX,
+        top: rect.bottom + 4,
+        left: rect.left,
       });
     }
   }, [isOpen, usePortal]);
@@ -257,7 +257,7 @@ const CompactButtonDropdownComponent = ({
         type="button"
       >
         {icon && (
-          <span className="flex items-center justify-center w-8 h-8 -ml-2 bg-black/5 rounded-l">
+          <span className="flex items-center justify-center -ml-1">
             {icon}
           </span>
         )}
