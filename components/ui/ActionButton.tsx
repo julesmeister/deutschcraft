@@ -12,21 +12,21 @@ interface ActionButtonProps {
 }
 
 const variantStyles = {
-  purple: 'bg-piku-purple-dark text-white hover:bg-piku-cyan-accent hover:text-gray-900 group-hover:bg-gray-900 group-hover:text-white',
-  cyan: 'bg-piku-cyan text-gray-900 hover:bg-piku-purple-dark hover:text-white group-hover:bg-white group-hover:text-gray-900',
-  mint: 'bg-piku-mint text-gray-900 hover:bg-piku-purple-dark hover:text-white group-hover:bg-white group-hover:text-gray-900',
-  yellow: 'bg-piku-yellow-light text-gray-900 hover:bg-piku-purple-dark hover:text-white group-hover:bg-white group-hover:text-gray-900',
-  orange: 'bg-piku-orange text-white hover:bg-piku-cyan-accent hover:text-gray-900 group-hover:bg-gray-900 group-hover:text-white',
-  gold: 'bg-piku-gold text-gray-900 hover:bg-piku-purple-dark hover:text-white group-hover:bg-white group-hover:text-gray-900',
+  purple: 'bg-piku-purple-dark text-white hover:brightness-110 hover:shadow-lg',
+  cyan: 'bg-piku-cyan text-gray-900 hover:brightness-95 hover:shadow-lg',
+  mint: 'bg-piku-mint text-gray-900 hover:brightness-95 hover:shadow-lg',
+  yellow: 'bg-piku-yellow-light text-gray-900 hover:brightness-95 hover:shadow-lg',
+  orange: 'bg-piku-orange text-white hover:brightness-110 hover:shadow-lg',
+  gold: 'bg-piku-gold text-gray-900 hover:brightness-95 hover:shadow-lg',
 };
 
 const iconBgStyles = {
-  purple: 'bg-white/20',
-  cyan: 'bg-white/30',
-  mint: 'bg-white/30',
-  yellow: 'bg-white/30',
-  orange: 'bg-white/20',
-  gold: 'bg-white/30',
+  purple: 'bg-white/20 group-hover:bg-white/30',
+  cyan: 'bg-white/30 group-hover:bg-white/40',
+  mint: 'bg-white/30 group-hover:bg-white/40',
+  yellow: 'bg-white/30 group-hover:bg-white/40',
+  orange: 'bg-white/20 group-hover:bg-white/30',
+  gold: 'bg-white/30 group-hover:bg-white/40',
 };
 
 export function ActionButton({

@@ -2,13 +2,13 @@
 
 import { use, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { StatCard } from '@/components/ui/StatCard';
-import { StatGrid } from '@/components/ui/StatGrid';
-import { TabBar, TabItem } from '@/components/ui/TabBar';
-import { ActivityTimeline, ActivityItem } from '@/components/ui/activity/ActivityTimeline';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
+import { FlashcardStatsSection } from '@/components/dashboard/FlashcardStatsSection';
+import { WritingStatsSection } from '@/components/dashboard/WritingStatsSection';
+import { RecentActivityTimeline } from '@/components/dashboard/RecentActivityTimeline';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useStudyStats } from '@/lib/hooks/useFlashcards';
+import { useWritingStats, useStudentSubmissions } from '@/lib/hooks/useWritingExercises';
 import { collection, query, where, getDocs, orderBy, limit, doc, getDoc } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 import { User, getUserFullName } from '@/lib/models/user';
@@ -21,6 +21,7 @@ interface StudentData {
   email: string;
   name: string;
   currentLevel: string;
+  photoURL?: string;
 }
 
 interface RecentSession {
@@ -37,9 +38,14 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
   const [student, setStudent] = useState<StudentData | null>(null);
   const [recentSessions, setRecentSessions] = useState<RecentSession[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState<'flashcards' | 'writing'>('flashcards');
 
   // Get student's study stats
   const { stats } = useStudyStats(student?.email);
+
+  // Get student's writing stats
+  const { data: writingStats } = useWritingStats(student?.email);
+  const { data: writingSubmissions = [] } = useStudentSubmissions(student?.email);
 
   useEffect(() => {
     async function loadStudentData() {
@@ -48,7 +54,6 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
 
         // Decode the URL-encoded email
         const studentEmail = decodeURIComponent(resolvedParams.studentId);
-        console.log('[StudentProfile] Loading student:', studentEmail);
 
         // Fetch student data - email is the document ID
         const studentDocRef = doc(db, 'users', studentEmail);
@@ -56,7 +61,6 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
 
         if (studentSnapshot.exists()) {
           const userData = studentSnapshot.data() as User;
-          console.log('[StudentProfile] Student data loaded:', userData);
 
           // Handle both formats: {name: "Full Name"} OR {firstName: "First", lastName: "Last"}
           const displayName = (userData as any).name || getUserFullName(userData);
@@ -65,6 +69,7 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
             email: userData.email,
             name: displayName,
             currentLevel: userData.cefrLevel || 'A1',
+            photoURL: userData.photoURL,
           });
 
           // Fetch recent sessions
@@ -76,8 +81,6 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
             limit(7)
           );
           const progressSnapshot = await getDocs(progressQuery);
-
-          console.log('[StudentProfile] Recent sessions count:', progressSnapshot.docs.length);
 
           const sessions: RecentSession[] = progressSnapshot.docs.map(doc => {
             const data = doc.data();
@@ -93,11 +96,9 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
           });
 
           setRecentSessions(sessions);
-        } else {
-          console.error('[StudentProfile] Student not found:', studentEmail);
         }
       } catch (error) {
-        console.error('[StudentProfile] Error loading student data:', error);
+        console.error('Error loading student data:', error);
       } finally {
         setIsLoading(false);
       }
@@ -147,6 +148,7 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
           onClick: () => router.push('/dashboard/teacher'),
         }}
         avatar={{
+          src: student.photoURL,
           initial: (student.name || student.email || '?').charAt(0).toUpperCase(),
           subtitle: student.email,
         }}
@@ -154,140 +156,55 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
 
       {/* Main Content */}
       <div className="container mx-auto px-6 py-8">
-        {/* Study Stats */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-black text-gray-900 mb-4">Study Statistics</h2>
-          <StatGrid>
-            <StatCard
-              icon="📚"
-              label="Total Cards"
-              value={stats.totalCards.toString()}
-              iconBgColor="bg-piku-purple-light"
-            />
-            <StatCard
-              icon="✅"
-              label="Cards Learned"
-              value={stats.cardsLearned.toString()}
-              subtitle="Mastery ≥ 70%"
-              iconBgColor="bg-piku-mint"
-            />
-            <StatCard
-              icon="🔥"
-              label="Day Streak"
-              value={stats.streak.toString()}
-              subtitle="Consecutive days"
-              iconBgColor="bg-piku-orange"
-            />
-            <StatCard
-              icon="🎯"
-              label="Accuracy"
-              value={`${stats.accuracy}%`}
-              subtitle="Overall correctness"
-              iconBgColor="bg-piku-cyan"
-            />
-          </StatGrid>
+        {/* Activity Tabs */}
+        <div className="mb-6">
+          <div className="flex gap-2 border-b border-gray-200">
+            <button
+              onClick={() => setActiveTab('flashcards')}
+              className={`px-6 py-3 font-bold transition ${
+                activeTab === 'flashcards'
+                  ? 'text-blue-600 border-b-2 border-blue-600'
+                  : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              📚 Flashcards
+            </button>
+            <button
+              onClick={() => setActiveTab('writing')}
+              className={`px-6 py-3 font-bold transition ${
+                activeTab === 'writing'
+                  ? 'text-purple-600 border-b-2 border-purple-600'
+                  : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              ✍️ Writing
+            </button>
+          </div>
         </div>
 
-        {/* Recent Sessions */}
-        <div className="bg-white border border-gray-200 rounded-2xl p-6">
-          <h2 className="text-2xl font-black text-gray-900 mb-4">Recent Sessions</h2>
+        {/* Study Stats */}
+        <div className="mb-8">
+          <h2 className="text-2xl font-black text-gray-900 mb-4">
+            {activeTab === 'flashcards' ? 'Flashcard Statistics' : 'Writing Statistics'}
+          </h2>
 
-          {recentSessions.length === 0 ? (
-            <div className="text-center py-12 text-gray-500">
-              <div className="text-6xl mb-4">📭</div>
-              <p className="text-lg font-semibold">No recent sessions</p>
-              <p className="text-sm mt-2">This student hasn't practiced yet</p>
-            </div>
+          {activeTab === 'flashcards' ? (
+            <FlashcardStatsSection stats={stats} />
           ) : (
-            <ActivityTimeline
-              items={recentSessions.map((session, index) => {
-                const accuracyColor = session.accuracy >= 80 ? 'green' : session.accuracy >= 60 ? 'amber' : 'red';
-
-                return {
-                  id: `session-${index}`,
-                  icon: <span className="text-white text-sm">📚</span>,
-                  iconColor: 'bg-piku-purple',
-                  title: new Date(
-                    session.date.slice(0, 4) + '-' +
-                    session.date.slice(4, 6) + '-' +
-                    session.date.slice(6, 8)
-                  ).toLocaleDateString('en-US', {
-                    weekday: 'short',
-                    month: 'short',
-                    day: 'numeric',
-                    year: 'numeric'
-                  }),
-                  description: `Reviewed ${session.cardsReviewed} cards in ${session.timeSpent} minutes`,
-                  tags: [
-                    {
-                      label: `${session.accuracy}% Accuracy`,
-                      color: accuracyColor,
-                      icon: session.accuracy >= 80 ? '✓' : undefined,
-                    },
-                    {
-                      label: `${session.cardsReviewed} cards`,
-                      color: 'blue',
-                    },
-                    {
-                      label: `${session.timeSpent} min`,
-                      color: 'gray',
-                    },
-                  ],
-                } as ActivityItem;
-              })}
-              showConnector={true}
-            />
+            <WritingStatsSection writingStats={writingStats} />
           )}
         </div>
 
-        {/* Learning Progress Section */}
-        <div className="mt-8">
-          <h2 className="text-2xl font-black text-gray-900 mb-6">Learning Progress</h2>
+        {/* Recent Activity */}
+        <div className="bg-white border border-gray-200 rounded-2xl p-6">
+          <h2 className="text-2xl font-black text-gray-900 mb-4">
+            {activeTab === 'flashcards' ? 'Recent Flashcard Sessions' : 'Recent Writing Submissions'}
+          </h2>
 
-          <TabBar
-            variant="stats"
-            tabs={[
-              {
-                id: 'total',
-                label: 'Total Cards',
-                icon: (
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                  </svg>
-                ),
-                value: stats.totalCards.toLocaleString(),
-              },
-              {
-                id: 'mastered',
-                label: 'Cards Mastered',
-                icon: (
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ),
-                value: stats.cardsLearned.toLocaleString(),
-              },
-              {
-                id: 'streak',
-                label: 'Day Streak',
-                icon: (
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
-                  </svg>
-                ),
-                value: `${stats.streak} days`,
-              },
-              {
-                id: 'accuracy',
-                label: 'Accuracy Rate',
-                icon: (
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                ),
-                value: `${stats.accuracy}%`,
-              },
-            ]}
+          <RecentActivityTimeline
+            activeTab={activeTab}
+            recentSessions={recentSessions}
+            writingSubmissions={writingSubmissions}
           />
         </div>
       </div>

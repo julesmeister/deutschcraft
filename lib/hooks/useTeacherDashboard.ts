@@ -72,11 +72,11 @@ export function useTeacherDashboard({
     return {
       id: student.userId, // Using email as ID now
       name: displayName,
-      image: `https://ui-avatars.com/api/?name=${encodeURIComponent(displayName)}&background=667eea&color=fff`,
+      image: student.photoURL || `https://ui-avatars.com/api/?name=${encodeURIComponent(displayName)}&background=667eea&color=fff`,
       sold: student.wordsLearned || 0,
       gain: 0, // TODO: Calculate progress from last week
       level: student.cefrLevel || 'A1',
-      status: student.teacherId ? 'in-stock' : 'low-stock' as const,
+      status: (student.teacherId ? 'in-stock' : 'low-stock') as 'in-stock' | 'low-stock',
       statusText: student.teacherId ? 'Active learner' : 'No teacher assigned',
     };
   });
@@ -93,7 +93,7 @@ export function useTeacherDashboard({
     return {
       id: student.userId, // Using email as ID now
       name: displayName,
-      avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(displayName)}&background=667eea&color=fff`,
+      avatar: student.photoURL || `https://ui-avatars.com/api/?name=${encodeURIComponent(displayName)}&background=667eea&color=fff`,
       isSelected: studentManagement.selectedStudentIds.has(student.userId),
     };
   });

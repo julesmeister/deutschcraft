@@ -14,6 +14,7 @@ interface DashboardHeaderProps {
   };
   /** Optional avatar/profile section */
   avatar?: {
+    src?: string;
     initial: string;
     subtitle?: string;
   };
@@ -81,8 +82,16 @@ export function DashboardHeader({
           <div className="flex items-center gap-4">
             {/* Avatar (optional) */}
             {avatar && (
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-piku-purple to-piku-cyan flex items-center justify-center text-3xl font-black text-white">
-                {avatar.initial}
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-piku-purple to-piku-cyan flex items-center justify-center text-3xl font-black text-white overflow-hidden">
+                {avatar.src ? (
+                  <img
+                    src={avatar.src}
+                    alt={avatar.initial}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  avatar.initial
+                )}
               </div>
             )}
 

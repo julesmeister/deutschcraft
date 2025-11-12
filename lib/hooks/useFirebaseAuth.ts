@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { signInWithCustomToken, signOut } from 'firebase/auth';
 import { auth } from '../firebase';
+import { syncUserPhotoURL } from '../utils/syncUserPhoto';
 
 /**
  * Syncs NextAuth session with Firebase Auth
@@ -38,6 +39,11 @@ export function useFirebaseAuth() {
           await signInWithCustomToken(auth, token);
           console.log('[useFirebaseAuth] Signed in to Firebase successfully');
           setIsFirebaseReady(true);
+
+          // Sync user's photo URL to Firestore if available
+          if (session.user.email && session.user.image) {
+            await syncUserPhotoURL(session.user.email, session.user.image);
+          }
         } catch (error) {
           console.error('[useFirebaseAuth] Error signing in to Firebase:', error);
           setIsFirebaseReady(false);

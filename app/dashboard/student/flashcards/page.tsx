@@ -7,6 +7,8 @@ import { FileCard, FileGrid, FileSection } from '@/components/ui/FileCard';
 import { FlashcardPractice } from '@/components/flashcards/FlashcardPractice';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { ToastProvider } from '@/components/ui/toast';
+import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
+import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useStudyStats } from '@/lib/hooks/useFlashcards';
 import { useRemNoteCategories, useRemNoteTotalCards } from '@/lib/hooks/useRemNoteCategories';
@@ -111,12 +113,13 @@ export default function FlashcardsLandingPage() {
           title="Flashcards 📚"
           subtitle="Master German vocabulary with spaced repetition"
           actions={
-            <button
+            <ActionButton
               onClick={handleStartPractice}
-              className="cursor-pointer whitespace-nowrap content-center font-bold transition-all duration-150 ease-in-out h-12 rounded-xl bg-blue-500 px-5 py-2 text-white hover:bg-blue-600"
+              variant="purple"
+              icon={<ActionButtonIcons.ArrowRight />}
             >
               Start Practice
-            </button>
+            </ActionButton>
           }
         />
 
@@ -133,6 +136,17 @@ export default function FlashcardsLandingPage() {
           />
         ) : (
           <>
+            {/* Level Selector - Split Button Style */}
+            <div className="mb-8">
+              <CEFRLevelSelector
+                selectedLevel={selectedLevel}
+                onLevelChange={setSelectedLevel}
+                colorScheme="default"
+                showDescription={true}
+                size="sm"
+              />
+            </div>
+
             {/* Loading State */}
             {statsLoading ? (
           <div className="flex items-center justify-center py-12">
@@ -176,86 +190,6 @@ export default function FlashcardsLandingPage() {
             </div>
           </>
         )}
-
-        {/* Level Selector - Split Button Style */}
-        <div className="mb-8">
-          <div className="flex w-full gap-1">
-            {Object.values(CEFRLevel).map((level, index) => {
-              const info = CEFRLevelInfo[level];
-              const isSelected = selectedLevel === level;
-              const isFirst = index === 0;
-              const isLast = index === Object.values(CEFRLevel).length - 1;
-
-              // Determine border radius based on position
-              let borderRadius = '';
-              if (isFirst) {
-                borderRadius = 'rounded-l-[20px] rounded-r-[5px]';
-              } else if (isLast) {
-                borderRadius = 'rounded-l-[5px] rounded-r-[20px]';
-              } else {
-                borderRadius = 'rounded-[5px]';
-              }
-
-              // Color scheme similar to stat cards
-              let bgColor = 'bg-blue-100';
-              let iconBgColor = 'bg-blue-500';
-              let textColor = 'text-blue-900';
-              let hoverColor = 'hover:bg-blue-200';
-
-              if (index === 0) { // A1
-                bgColor = 'bg-blue-100';
-                iconBgColor = 'bg-blue-500';
-                textColor = 'text-blue-900';
-                hoverColor = 'hover:bg-blue-200';
-              } else if (index === 1) { // A2
-                bgColor = 'bg-emerald-100';
-                iconBgColor = 'bg-emerald-500';
-                textColor = 'text-emerald-900';
-                hoverColor = 'hover:bg-emerald-200';
-              } else if (index === 2) { // B1
-                bgColor = 'bg-amber-100';
-                iconBgColor = 'bg-amber-500';
-                textColor = 'text-amber-900';
-                hoverColor = 'hover:bg-amber-200';
-              } else if (index === 3) { // B2
-                bgColor = 'bg-purple-100';
-                iconBgColor = 'bg-purple-500';
-                textColor = 'text-purple-900';
-                hoverColor = 'hover:bg-purple-200';
-              } else if (index === 4) { // C1
-                bgColor = 'bg-pink-100';
-                iconBgColor = 'bg-pink-500';
-                textColor = 'text-pink-900';
-                hoverColor = 'hover:bg-pink-200';
-              } else { // C2
-                bgColor = 'bg-indigo-100';
-                iconBgColor = 'bg-indigo-500';
-                textColor = 'text-indigo-900';
-                hoverColor = 'hover:bg-indigo-200';
-              }
-
-              return (
-                <button
-                  key={level}
-                  onClick={() => setSelectedLevel(level)}
-                  className={`
-                    flex-1 px-4 py-4 transition-all duration-200
-                    ${borderRadius}
-                    ${isSelected
-                      ? `${iconBgColor} text-white`
-                      : `${bgColor} ${textColor} ${hoverColor}`
-                    }
-                  `}
-                >
-                  <div className="text-2xl font-black mb-1">{level}</div>
-                  <div className={`text-xs font-medium whitespace-nowrap ${isSelected ? 'text-white opacity-90' : 'opacity-70'}`}>
-                    {info.name}
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        </div>
 
         {/* Vocabulary Categories */}
         <FileSection title={`${selectedLevel} Vocabulary Categories`}>
@@ -301,12 +235,15 @@ export default function FlashcardsLandingPage() {
                 Start a flashcard session with all vocabulary or choose a specific category
               </p>
             </div>
-            <button
-              onClick={handleStartPractice}
-              className="cursor-pointer whitespace-nowrap content-center font-bold transition-all duration-150 ease-in-out h-12 rounded-xl bg-blue-500 px-6 py-2 text-white hover:bg-blue-600"
-            >
-              Start Practice Session
-            </button>
+            <div className="md:w-64">
+              <ActionButton
+                onClick={handleStartPractice}
+                variant="purple"
+                icon={<ActionButtonIcons.ArrowRight />}
+              >
+                Start Practice Session
+              </ActionButton>
+            </div>
           </div>
         </div>
           </>
