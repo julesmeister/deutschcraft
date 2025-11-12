@@ -6,12 +6,24 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useState, useMemo } from 'react';
-import { useAllWritingSubmissions } from '@/lib/hooks/useWritingExercises';
+import { useState, useMemo, useDeferredValue, useEffect } from 'react';
+import { useAllWritingSubmissions, useUpdateWritingSubmission } from '@/lib/hooks/useWritingExercises';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { TabBar } from '@/components/ui/TabBar';
+import { Card } from '@/components/ui/Card';
+import { Select } from '@/components/ui/Select';
+import { Badge } from '@/components/ui/Badge';
+import { EmptyState } from '@/components/ui/EmptyState';
+import { SlimTable, SlimTableRenderers } from '@/components/ui/SlimTable';
+import { CompactButtonDropdown, DropdownOption } from '@/components/ui/CompactButtonDropdown';
 import { WritingSubmission, WritingExerciseType } from '@/lib/models/writing';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
+import { useAllStudents } from '@/lib/hooks/useSimpleUsers';
+import { TRANSLATION_EXERCISES } from '@/lib/data/translations';
+import { CREATIVE_EXERCISES } from '@/lib/data/creativeExercises';
+import { EMAIL_TEMPLATES } from '@/lib/data/emailTemplates';
+import { LETTER_TEMPLATES } from '@/lib/data/letterTemplates';
+import { CatLoader } from '@/components/ui/CatLoader';
 
 type StatusFilter = 'all' | 'submitted' | 'reviewed';
 type ExerciseTypeFilter = WritingExerciseType | 'all';
@@ -22,9 +34,39 @@ export default function TeacherWritingDashboard() {
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('submitted');
   const [exerciseTypeFilter, setExerciseTypeFilter] = useState<ExerciseTypeFilter>('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const deferredQuery = useDeferredValue(searchQuery);
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 10;
 
   // Fetch submissions based on status filter
   const { data: submissions = [], isLoading } = useAllWritingSubmissions(statusFilter);
+
+  // Fetch students for name mapping (use the nested version that includes all fields)
+  const { students: allStudents } = useAllStudents();
+
+  // Mutation for updating submission status
+  const updateSubmissionMutation = useUpdateWritingSubmission();
+
+  // Helper function to get student name from userId
+  const getStudentName = (userId: string): string => {
+    // Try to match by id first
+    let student = allStudents.find(s => s.id === userId);
+
+    // If not found, try to match by email
+    if (!student) {
+      student = allStudents.find(s => s.email === userId);
+    }
+
+    if (student) {
+      // Handle both formats: {name: "Full Name"} OR {firstName: "First", lastName: "Last"}
+      const displayName = (student as any).name ||
+                          `${student.firstName || ''} ${student.lastName || ''}`.trim();
+      return displayName || student.email;
+    }
+
+    // Fallback to userId if student not found
+    return userId;
+  };
 
   // Calculate stats
   const stats = useMemo(() => {
@@ -67,26 +109,141 @@ export default function TeacherWritingDashboard() {
         return false;
       }
 
-      // Filter by search query (student email or exercise title)
-      if (searchQuery.trim()) {
-        const query = searchQuery.toLowerCase();
+      // Filter by search query (student name, email, or exercise title)
+      if (deferredQuery.trim()) {
+        const query = deferredQuery.toLowerCase();
         const matchesUser = submission.userId.toLowerCase().includes(query);
-        const matchesTitle = (submission as any).exerciseTitle?.toLowerCase().includes(query);
-        return matchesUser || matchesTitle;
+        const studentName = getStudentName(submission.userId).toLowerCase();
+        const matchesName = studentName.includes(query);
+        const exerciseTitle = getExerciseTitle(submission.exerciseId, submission.exerciseType);
+        const matchesTitle = exerciseTitle.toLowerCase().includes(query);
+        return matchesUser || matchesName || matchesTitle;
       }
 
       return true;
     });
-  }, [submissions, exerciseTypeFilter, searchQuery]);
+  }, [submissions, exerciseTypeFilter, deferredQuery, allStudents]);
+
+  // Pagination
+  const totalPages = Math.ceil(filteredSubmissions.length / pageSize);
+  const startIndex = (currentPage - 1) * pageSize;
+  const paginatedSubmissions = filteredSubmissions.slice(startIndex, startIndex + pageSize);
+  const isStale = searchQuery !== deferredQuery;
+
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    if (totalPages > 0 && currentPage > totalPages) {
+      setCurrentPage(1);
+    } else if (totalPages === 0 && currentPage !== 1) {
+      setCurrentPage(1);
+    }
+  }, [totalPages, currentPage]);
+
+  // Helper function to get exercise title from exerciseId
+  const getExerciseTitle = (exerciseId: string, exerciseType: WritingExerciseType): string => {
+    try {
+      switch (exerciseType) {
+        case 'translation': {
+          const exercise = TRANSLATION_EXERCISES.find(ex => ex.exerciseId === exerciseId);
+          return exercise?.title || 'Translation Exercise';
+        }
+        case 'creative': {
+          const exercise = CREATIVE_EXERCISES.find(ex => ex.exerciseId === exerciseId);
+          return exercise?.title || 'Creative Writing';
+        }
+        case 'email': {
+          const template = EMAIL_TEMPLATES.find(t => t.id === exerciseId);
+          return template?.title || 'Email Exercise';
+        }
+        case 'formal-letter':
+        case 'informal-letter': {
+          const template = LETTER_TEMPLATES.find(t => t.id === exerciseId);
+          return template?.title || 'Letter Exercise';
+        }
+        default:
+          return 'Writing Exercise';
+      }
+    } catch (error) {
+      console.error('[getExerciseTitle] Error:', error);
+      return 'Writing Exercise';
+    }
+  };
+
+  // Helper functions
+  const getExerciseIcon = (exerciseType: WritingExerciseType) => {
+    switch (exerciseType) {
+      case 'creative':
+        return '✨';
+      case 'translation':
+        return '🔄';
+      case 'email':
+        return '✉️';
+      case 'formal-letter':
+      case 'informal-letter':
+        return '📨';
+      default:
+        return '📝';
+    }
+  };
+
+  const formatDate = (timestamp: number) => {
+    return new Date(timestamp).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric',
+    });
+  };
+
+  const getTimeSince = (timestamp: number) => {
+    const hours = Math.floor((Date.now() - timestamp) / (1000 * 60 * 60));
+    if (hours < 24) return `${hours}h ago`;
+    const days = Math.floor(hours / 24);
+    return `${days}d ago`;
+  };
+
+  // Transform submissions to table rows
+  const tableData = paginatedSubmissions.map(submission => ({
+    id: submission.submissionId,
+    exerciseType: submission.exerciseType,
+    exerciseTitle: getExerciseTitle(submission.exerciseId, submission.exerciseType),
+    userId: submission.userId,
+    studentName: getStudentName(submission.userId),
+    wordCount: submission.wordCount,
+    level: submission.level,
+    submittedAt: submission.submittedAt,
+    status: submission.status,
+    attemptNumber: submission.attemptNumber,
+    teacherScore: submission.teacherScore,
+    teacherFeedback: submission.teacherFeedback,
+  }));
+
+  const handleRowClick = (row: any) => {
+    router.push(`/dashboard/teacher/writing/grade/${row.id}`);
+  };
+
+  const handleStatusChange = async (submissionId: string, newStatus: string) => {
+    try {
+      await updateSubmissionMutation.mutateAsync({
+        submissionId,
+        updates: {
+          status: newStatus as 'draft' | 'submitted' | 'reviewed',
+        },
+      });
+    } catch (error) {
+      console.error('[handleStatusChange] Error:', error);
+    }
+  };
 
   if (!session?.user?.email) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center bg-white border border-gray-200 rounded-2xl p-8 max-w-md">
-          <div className="text-6xl mb-4">🔒</div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Authentication Required</h2>
-          <p className="text-gray-600">Please sign in to view student submissions.</p>
-        </div>
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+        <Card className="text-center max-w-md">
+          <EmptyState
+            icon="🔒"
+            title="Authentication Required"
+            description="Please sign in to view student submissions."
+          />
+        </Card>
       </div>
     );
   }
@@ -132,223 +289,215 @@ export default function TeacherWritingDashboard() {
           />
         </div>
 
-        {/* Filters */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6 mb-6">
-          <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wide mb-4">
-            Filters
-          </h3>
-          <div className="grid md:grid-cols-3 gap-4">
-            {/* Status Filter */}
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Status
-              </label>
-              <select
+        {/* Submissions List */}
+        <div className="bg-white border border-gray-200">
+          {/* Filters and Search - Compact Header */}
+          <div className="m-4 space-y-3">
+            <div className="flex items-center justify-between">
+              <h5 className="text-neutral-700 uppercase text-sm font-medium leading-snug">
+                Student Submissions ({filteredSubmissions.length})
+              </h5>
+            </div>
+
+            {/* Filters Row */}
+            <div className="grid grid-cols-2 gap-3 [&_>_div_>_div]:!bg-gray-50 [&_>_div_>_div]:!border-none [&_>_div_>_div]:!rounded-none [&_>_div_>_div:hover]:!bg-gray-100 [&_>_div_>_div[class*='ring']]:!bg-gray-100 [&_>_div_>_div[class*='ring']]:!ring-0">
+              <Select
                 value={statusFilter}
-                onChange={(e) => setStatusFilter(e.target.value as StatusFilter)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="submitted">Pending Review</option>
-                <option value="reviewed">Already Graded</option>
-                <option value="all">All Submissions</option>
-              </select>
-            </div>
-
-            {/* Exercise Type Filter */}
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Exercise Type
-              </label>
-              <select
+                onChange={(value) => setStatusFilter(value as StatusFilter)}
+                options={[
+                  { value: 'submitted', label: 'Pending Review' },
+                  { value: 'reviewed', label: 'Already Graded' },
+                  { value: 'all', label: 'All Submissions' },
+                ]}
+              />
+              <Select
                 value={exerciseTypeFilter}
-                onChange={(e) => setExerciseTypeFilter(e.target.value as ExerciseTypeFilter)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="all">All Types</option>
-                <option value="creative">Creative Writing</option>
-                <option value="translation">Translation</option>
-                <option value="email">Email</option>
-                <option value="letter">Letter</option>
-              </select>
-            </div>
-
-            {/* Search */}
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Search
-              </label>
-              <input
-                type="text"
-                placeholder="Student email or exercise..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onChange={(value) => setExerciseTypeFilter(value as ExerciseTypeFilter)}
+                options={[
+                  { value: 'all', label: 'All Types' },
+                  { value: 'creative', label: 'Creative Writing' },
+                  { value: 'translation', label: 'Translation' },
+                  { value: 'email', label: 'Email' },
+                  { value: 'letter', label: 'Letter' },
+                ]}
               />
             </div>
-          </div>
-        </div>
 
-        {/* Submissions List */}
-        <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
-          <div className="px-6 py-4 border-b border-gray-200">
-            <h3 className="text-base font-bold text-gray-900 uppercase tracking-wide">
-              Student Submissions ({filteredSubmissions.length})
-            </h3>
-          </div>
-
-          <div className="divide-y divide-gray-200">
-            {isLoading ? (
-              <div className="flex items-center justify-center py-12">
-                <div className="text-center">
-                  <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-                  <p className="mt-2 text-gray-600">Loading submissions...</p>
-                </div>
-              </div>
-            ) : filteredSubmissions.length === 0 ? (
-              <div className="text-center py-12 text-gray-500">
-                <div className="text-6xl mb-4">
-                  {statusFilter === 'submitted' ? '🎉' : '📝'}
-                </div>
-                <p className="font-semibold text-lg">
-                  {statusFilter === 'submitted'
-                    ? 'All caught up!'
-                    : 'No submissions found'}
-                </p>
-                <p className="text-sm mt-2">
-                  {statusFilter === 'submitted'
-                    ? "You've reviewed all pending submissions."
-                    : 'Try adjusting your filters or check back later.'}
-                </p>
-              </div>
-            ) : (
-              filteredSubmissions.map((submission) => (
-                <SubmissionCard
-                  key={submission.submissionId}
-                  submission={submission}
-                  onClick={() =>
-                    router.push(
-                      `/dashboard/teacher/writing/grade/${submission.submissionId}`
-                    )
-                  }
-                />
-              ))
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// ============================================================================
-// Submission Card Component
-// ============================================================================
-
-interface SubmissionCardProps {
-  submission: WritingSubmission;
-  onClick: () => void;
-}
-
-function SubmissionCard({ submission, onClick }: SubmissionCardProps) {
-  const isReviewed = submission.status === 'reviewed';
-  const hasTeacherFeedback = !!submission.teacherFeedback;
-
-  // Format date
-  const submissionDate = submission.submittedAt
-    ? new Date(submission.submittedAt).toLocaleDateString('en-US', {
-        month: 'short',
-        day: 'numeric',
-        year: 'numeric',
-      })
-    : 'Draft';
-
-  // Calculate time since submission
-  const getTimeSince = () => {
-    if (!submission.submittedAt) return null;
-    const hours = Math.floor((Date.now() - submission.submittedAt) / (1000 * 60 * 60));
-    if (hours < 24) return `${hours}h ago`;
-    const days = Math.floor(hours / 24);
-    return `${days}d ago`;
-  };
-
-  // Get exercise type icon
-  const getExerciseIcon = () => {
-    switch (submission.exerciseType) {
-      case 'creative':
-        return '✨';
-      case 'translation':
-        return '🔄';
-      case 'email':
-        return '✉️';
-      case 'formal-letter':
-      case 'informal-letter':
-        return '📨';
-      default:
-        return '📝';
-    }
-  };
-
-  return (
-    <button
-      onClick={onClick}
-      className="w-full p-6 hover:bg-gray-50 transition text-left group"
-    >
-      <div className="flex items-start justify-between gap-4">
-        {/* Left Side - Main Info */}
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-3 mb-2">
-            <span className="text-2xl">{getExerciseIcon()}</span>
-            <div className="flex-1 min-w-0">
-              <div className="font-bold text-gray-900 truncate group-hover:text-blue-600 transition">
-                {(submission as any).exerciseTitle || 'Untitled Exercise'}
-              </div>
-              <div className="text-sm text-gray-600">{submission.userId}</div>
-            </div>
-          </div>
-
-          {/* Meta Info */}
-          <div className="flex items-center gap-4 text-sm text-gray-600">
-            <span className="font-medium">{submission.wordCount} words</span>
-            <span>•</span>
-            <span className="uppercase text-xs font-bold">{submission.level}</span>
-            <span>•</span>
-            <span>{submissionDate}</span>
-            {getTimeSince() && (
-              <>
-                <span>•</span>
-                <span className="text-amber-600 font-medium">{getTimeSince()}</span>
-              </>
-            )}
-          </div>
-
-          {/* Attempt Info */}
-          {submission.attemptNumber && submission.attemptNumber > 1 && (
-            <div className="mt-2 inline-flex items-center gap-1 px-2 py-1 bg-blue-50 text-blue-700 rounded text-xs font-semibold">
-              🔄 Attempt #{submission.attemptNumber}
-            </div>
-          )}
-        </div>
-
-        {/* Right Side - Status Badge */}
-        <div className="flex-shrink-0">
-          {isReviewed ? (
-            <div className="flex flex-col items-end gap-2">
-              <div className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-bold">
-                ✓ Graded
-              </div>
-              {hasTeacherFeedback && submission.teacherScore && (
-                <div className="text-sm font-bold text-gray-900">
-                  {submission.teacherScore}/100
+            {/* Search Input */}
+            <div className="relative">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={e => setSearchQuery(e.target.value)}
+                placeholder="Search students or exercises..."
+                className="w-full px-4 py-2 pl-10 bg-gray-50 border-none focus:outline-none focus:bg-gray-100 transition-colors"
+              />
+              <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              {isStale && (
+                <div className="absolute right-3 top-1/2 -translate-y-1/2">
+                  <div className="animate-spin h-4 w-4 border-2 border-blue-500 border-t-transparent rounded-full" />
                 </div>
               )}
             </div>
-          ) : (
-            <div className="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-sm font-bold">
-              ⏳ Pending
+          </div>
+
+          {isLoading ? (
+            <div className="p-12">
+              <CatLoader message="Loading submissions..." size="lg" />
             </div>
+          ) : filteredSubmissions.length === 0 ? (
+            <div className="p-12">
+              <EmptyState
+                icon={statusFilter === 'submitted' ? '🎉' : '📝'}
+                title={statusFilter === 'submitted' ? 'All caught up!' : 'No submissions found'}
+                description={
+                  statusFilter === 'submitted'
+                    ? "You've reviewed all pending submissions."
+                    : 'Try adjusting your filters or check back later.'
+                }
+              />
+            </div>
+          ) : (
+            <SlimTable
+              title=""
+              columns={[
+                {
+                  key: 'exerciseType',
+                  label: ' ',
+                  width: '60px',
+                  render: (value) => (
+                    <span className="text-2xl">{getExerciseIcon(value)}</span>
+                  ),
+                },
+                {
+                  key: 'exerciseTitle',
+                  label: 'Exercise',
+                  render: (value, row) => (
+                    <div>
+                      <div className="font-bold text-gray-900 truncate hover:text-blue-600 transition">
+                        {value}
+                      </div>
+                      <div className="text-sm text-gray-600">{row.studentName}</div>
+                    </div>
+                  ),
+                },
+                {
+                  key: 'wordCount',
+                  label: 'Words',
+                  align: 'center',
+                  render: (value) => <p className="text-gray-500 text-xs text-center">{value}</p>,
+                },
+                {
+                  key: 'level',
+                  label: 'Level',
+                  align: 'center',
+                  render: (value) => (
+                    <span className="uppercase text-xs font-bold text-gray-600">{value}</span>
+                  ),
+                },
+                {
+                  key: 'submittedAt',
+                  label: 'Submitted',
+                  render: (value) => (
+                    <div className="text-sm text-gray-600">
+                      <div>{value ? formatDate(value) : 'Draft'}</div>
+                      {value && (
+                        <div className="text-amber-600 font-medium text-xs">
+                          {getTimeSince(value)}
+                        </div>
+                      )}
+                    </div>
+                  ),
+                },
+                {
+                  key: 'status',
+                  label: 'Status',
+                  align: 'center',
+                  width: '220px',
+                  render: (value, row) => {
+                    const statusOptions: DropdownOption[] = [
+                      {
+                        value: 'submitted',
+                        label: 'Pending Review',
+                        icon: <span className="text-sm">⏳</span>,
+                      },
+                      {
+                        value: 'reviewed',
+                        label: 'Graded',
+                        icon: <span className="text-sm">✓</span>,
+                      },
+                      {
+                        value: 'view',
+                        label: 'View Submission',
+                        icon: (
+                          <svg className="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                          </svg>
+                        ),
+                      },
+                    ];
+
+                    return (
+                      <div
+                        className="flex items-center justify-center gap-2"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {/* Status Dropdown */}
+                        <CompactButtonDropdown
+                          label={
+                            value === 'reviewed'
+                              ? `Graded${row.teacherScore ? ` ${row.teacherScore}` : ''}`
+                              : 'Pending'
+                          }
+                          icon={<span className="text-sm">{value === 'reviewed' ? '✓' : '⏳'}</span>}
+                          options={statusOptions}
+                          value={value}
+                          onChange={(selectedValue) => {
+                            if (selectedValue === 'view') {
+                              router.push(`/dashboard/teacher/writing/grade/${row.id}`);
+                            } else {
+                              handleStatusChange(row.id, selectedValue as string);
+                            }
+                          }}
+                          buttonClassName={`
+                            !text-xs !py-1 !px-2.5
+                            ${value === 'reviewed'
+                              ? '!bg-green-100 !text-green-700 hover:!bg-green-200'
+                              : '!bg-yellow-100 !text-yellow-700 hover:!bg-yellow-200'
+                            }
+                          `}
+                          usePortal={true}
+                        />
+
+                        {/* Attempt Badge */}
+                        {row.attemptNumber && row.attemptNumber > 1 && (
+                          <div className="inline-flex items-center gap-1 px-2 py-1 text-xs font-semibold bg-cyan-100 text-cyan-700 rounded">
+                            <span>🔄</span>
+                            <span>#{row.attemptNumber}</span>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  },
+                },
+              ]}
+              data={tableData}
+              onRowClick={handleRowClick}
+              pagination={{
+                currentPage,
+                totalPages,
+                pageSize,
+                totalItems: filteredSubmissions.length,
+                onPageChange: setCurrentPage,
+              }}
+              showViewAll={false}
+            />
           )}
         </div>
       </div>
-    </button>
+    </div>
   );
 }

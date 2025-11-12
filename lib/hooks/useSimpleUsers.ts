@@ -4,8 +4,7 @@
  */
 
 import { useQuery } from '@tanstack/react-query';
-import { db } from '../firebase';
-import { collection, query, where, getDocs, orderBy } from 'firebase/firestore';
+import { getAllStudents, getAllTeachers, getUser } from '../services/userService';
 import { queryKeys, cacheTimes } from '../queryClient';
 
 export interface SimpleUser {
@@ -39,20 +38,25 @@ export function useAllStudents() {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['users', 'students'],
     queryFn: async () => {
-      const usersRef = collection(db, 'users');
+      const users = await getAllStudents();
 
-      // Fetch all users first (without where clause to avoid index issues)
-      const snapshot = await getDocs(usersRef);
+      // Map to SimpleUser format
+      return users.map(user => {
+        // Handle both formats: single 'name' field or 'firstName'/'lastName'
+        const fullName = (user as any).name || '';
+        const [firstName = '', lastName = ''] = fullName ? fullName.split(' ') : [user.firstName || '', user.lastName || ''];
 
-      // Filter for students in memory
-      const students: SimpleUser[] = snapshot.docs
-        .map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        } as SimpleUser))
-        .filter((user) => user.role === 'STUDENT');
-
-      return students;
+        return {
+          id: user.userId,
+          email: user.email,
+          firstName: user.firstName || firstName,
+          lastName: user.lastName || lastName,
+          role: user.role,
+          cefrLevel: user.cefrLevel,
+          createdAt: user.createdAt || Date.now(),
+          updatedAt: user.updatedAt || Date.now(),
+        };
+      }) as SimpleUser[];
     },
     staleTime: cacheTimes.studentList,
     gcTime: cacheTimes.studentList * 2.5,
@@ -73,20 +77,24 @@ export function useAllTeachers() {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['users', 'teachers'],
     queryFn: async () => {
-      const usersRef = collection(db, 'users');
+      const users = await getAllTeachers();
+      // Map to SimpleUser format
+      return users.map(user => {
+        // Handle both formats: single 'name' field or 'firstName'/'lastName'
+        const fullName = (user as any).name || '';
+        const [firstName = '', lastName = ''] = fullName ? fullName.split(' ') : [user.firstName || '', user.lastName || ''];
 
-      // Fetch all users first
-      const snapshot = await getDocs(usersRef);
-
-      // Filter for teachers in memory
-      const teachers: SimpleUser[] = snapshot.docs
-        .map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        } as SimpleUser))
-        .filter((user) => user.role === 'TEACHER');
-
-      return teachers;
+        return {
+          id: user.userId,
+          email: user.email,
+          firstName: user.firstName || firstName,
+          lastName: user.lastName || lastName,
+          role: user.role,
+          cefrLevel: user.cefrLevel,
+          createdAt: user.createdAt || Date.now(),
+          updatedAt: user.updatedAt || Date.now(),
+        };
+      }) as SimpleUser[];
     },
     staleTime: cacheTimes.teacherProfile,
     gcTime: cacheTimes.teacherProfile * 2.5,
@@ -109,16 +117,23 @@ export function useUser(userId: string | undefined) {
     queryFn: async () => {
       if (!userId) return null;
 
-      const usersRef = collection(db, 'users');
-      const snapshot = await getDocs(usersRef);
+      const userData = await getUser(userId);
+      if (!userData) return null;
 
-      const userDoc = snapshot.docs.find(doc => doc.id === userId);
+      // Handle both formats: single 'name' field or 'firstName'/'lastName'
+      const fullName = (userData as any).name || '';
+      const [firstName = '', lastName = ''] = fullName ? fullName.split(' ') : [userData.firstName || '', userData.lastName || ''];
 
-      if (!userDoc) return null;
-
+      // Map to SimpleUser format
       return {
-        id: userDoc.id,
-        ...userDoc.data(),
+        id: userData.userId,
+        email: userData.email,
+        firstName: userData.firstName || firstName,
+        lastName: userData.lastName || lastName,
+        role: userData.role,
+        cefrLevel: userData.cefrLevel,
+        createdAt: userData.createdAt || Date.now(),
+        updatedAt: userData.updatedAt || Date.now(),
       } as SimpleUser;
     },
     staleTime: cacheTimes.user,
