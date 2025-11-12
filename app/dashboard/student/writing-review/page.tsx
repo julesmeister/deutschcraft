@@ -9,6 +9,7 @@ import { Card } from '@/components/ui/Card';
 import { EmptyState } from '@/components/ui/EmptyState';
 import { StatCardSimple } from '@/components/ui/StatCardSimple';
 import { Input } from '@/components/ui/Input';
+import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useStudentSubmissions } from '@/lib/hooks/useWritingExercises';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
@@ -200,10 +201,16 @@ export default function WritingReviewPage() {
             description={filterType === 'all'
               ? 'Start writing exercises to build your portfolio.'
               : 'Try adjusting your filters to see more submissions.'}
-            action={{
-              label: 'Go to Writing Hub',
-              onClick: () => router.push('/dashboard/student/writing')
-            }}
+            action={
+              <ActionButton
+                onClick={() => router.push('/dashboard/student/writing')}
+                variant="purple"
+                icon={<ActionButtonIcons.ArrowRight />}
+                className="max-w-xs mx-auto"
+              >
+                Go to Writing Hub
+              </ActionButton>
+            }
           />
         ) : (
           <div className="space-y-3">
