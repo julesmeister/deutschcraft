@@ -63,9 +63,17 @@ export function useVoiceChat({
       return;
     }
 
+    // Don't create multiple peer connections
+    if (peerRef.current && !peerRef.current.destroyed) {
+      console.log('[Voice] Peer already exists, skipping initialization');
+      return;
+    }
+
     const peerId = generatePeerId(userId, roomId);
     let reconnectAttempts = 0;
     const maxReconnectAttempts = 3;
+
+    console.log('[Voice] Initializing peer with ID:', peerId);
 
     try {
       const peer = new Peer(peerId, PEER_CONFIG);
@@ -79,6 +87,18 @@ export function useVoiceChat({
       });
 
       peer.on('error', (error) => {
+        console.error('[Voice] Peer error:', error);
+
+        // Handle "ID is taken" error - peer ID collision from previous session
+        if ((error as any).type === 'unavailable-id') {
+          console.warn('[Voice] Peer ID taken, destroying old connection...');
+          // Destroy this peer and let it reconnect with a fresh ID
+          if (peerRef.current && !peerRef.current.destroyed) {
+            peerRef.current.destroy();
+          }
+          return;
+        }
+
         // Prevent infinite reconnection loops
         if (reconnectAttempts >= maxReconnectAttempts) {
           setIsConnected(false);
