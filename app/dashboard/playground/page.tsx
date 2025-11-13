@@ -94,7 +94,6 @@ export default function PlaygroundPage() {
     userName,
     userEmail,
     userRole,
-    myPeerId,
     myParticipantId,
     currentRoom,
     isVoiceActive,

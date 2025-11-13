@@ -10,7 +10,6 @@ import {
   joinPlaygroundRoom,
   leavePlaygroundRoom,
   updateParticipantVoiceStatus,
-  updateParticipantPeerId,
   togglePublicWriting as toggleRoomPublicWriting,
   savePlaygroundWriting,
   toggleWritingVisibility,
@@ -23,7 +22,6 @@ interface UsePlaygroundHandlersProps {
   userName: string;
   userEmail: string;
   userRole: 'teacher' | 'student';
-  myPeerId: string | null;
   myParticipantId: string | null;
   currentRoom: PlaygroundRoom | null;
   isVoiceActive: boolean;
@@ -44,7 +42,6 @@ export function usePlaygroundHandlers({
   userName,
   userEmail,
   userRole,
-  myPeerId,
   myParticipantId,
   currentRoom,
   isVoiceActive,
@@ -78,7 +75,7 @@ export function usePlaygroundHandlers({
         userName,
         userEmail,
         userRole,
-        myPeerId || undefined
+        undefined // No peerId needed with native WebRTC
       );
       console.log('[Playground] Joined as participant:', participantId);
 
@@ -118,7 +115,7 @@ export function usePlaygroundHandlers({
         userName,
         userEmail,
         userRole,
-        myPeerId || undefined
+        undefined // No peerId needed with native WebRTC
       );
 
       console.log('[Playground] Joined as participant:', participantId);
@@ -224,10 +221,7 @@ export function usePlaygroundHandlers({
       // Update Firestore with voice active status
       await updateParticipantVoiceStatus(myParticipantId, true, false);
 
-      // Update peer ID if we have one
-      if (myPeerId) {
-        await updateParticipantPeerId(myParticipantId, myPeerId);
-      }
+      // Note: Native WebRTC doesn't need peer ID updates
     } catch (error) {
       console.error('[Voice] Failed to start voice:', error);
       setDialogState({
