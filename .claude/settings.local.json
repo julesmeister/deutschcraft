@@ -34,7 +34,10 @@
       "WebSearch",
       "Bash(.gitignore)",
       "Bash(git reset:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "Bash(tree:*)",
+      "Bash(Select-String -Pattern \"error|Error|ERROR|warning|Warning|compiled|Compiled\")",
+      "Bash(Select-Object -First 50)"
     ],
     "deny": [],
     "ask": []
