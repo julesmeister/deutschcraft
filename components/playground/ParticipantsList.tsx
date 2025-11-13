@@ -2,10 +2,13 @@
 
 import { useEffect, useState, useRef } from 'react';
 import type { PlaygroundParticipant } from '@/lib/models/playground';
+import { updateParticipantVoiceStatus } from '@/lib/services/playgroundService';
 
 interface ParticipantsListProps {
   participants: PlaygroundParticipant[];
   voiceStreams?: Map<string, MediaStream>; // Map of userId -> MediaStream
+  currentUserRole?: 'teacher' | 'student';
+  currentUserId?: string;
 }
 
 interface ParticipantWithAudio extends PlaygroundParticipant {
@@ -13,7 +16,12 @@ interface ParticipantWithAudio extends PlaygroundParticipant {
   audioLevel: number;
 }
 
-export function ParticipantsList({ participants, voiceStreams }: ParticipantsListProps) {
+export function ParticipantsList({
+  participants,
+  voiceStreams,
+  currentUserRole = 'student',
+  currentUserId = ''
+}: ParticipantsListProps) {
   const [participantsWithAudio, setParticipantsWithAudio] = useState<ParticipantWithAudio[]>([]);
   const audioContextRef = useRef<AudioContext | null>(null);
   const analyzersRef = useRef<Map<string, AnalyserNode>>(new Map());
