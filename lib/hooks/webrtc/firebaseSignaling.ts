@@ -85,9 +85,9 @@ export function listenForSignals(
         return;
       }
 
-      // Skip old messages (more than 30 seconds old)
+      // Skip old messages (more than 10 seconds old for better freshness)
       const age = Date.now() - (signal.timestamp || 0);
-      if (age > 30000) {
+      if (age > 10000) {
         console.log('[Signaling] Skipping old message:', signal.type, 'age:', age, 'ms');
         return;
       }
