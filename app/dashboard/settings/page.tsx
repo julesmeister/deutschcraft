@@ -11,7 +11,7 @@ import { IntegrationTab } from '@/components/ui/settings/IntegrationTab';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useCurrentStudent } from '@/lib/hooks/useUsers';
-import { updateStudent } from '@/lib/services/userService';
+import { updateUser } from '@/lib/services/userService';
 
 type SettingsTab = 'profile' | 'security' | 'notification' | 'flashcards' | 'integration';
 
@@ -177,8 +177,8 @@ export default function SettingsPage() {
     setSaveMessage('');
 
     try {
-      // Update Firestore with new data
-      await updateStudent(currentUser.studentId, {
+      // Update Firestore with new data using email as identifier
+      await updateUser(formData.email, {
         firstName: formData.firstName,
         lastName: formData.lastName,
         phoneNumber: formData.phoneNumber,
