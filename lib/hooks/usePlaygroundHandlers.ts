@@ -257,13 +257,14 @@ export function usePlaygroundHandlers({
       console.log('[Handlers] Toggling mute, current state:', isMuted ? 'MUTED' : 'UNMUTED', 'participantId:', myParticipantId);
       const newMutedState = await toggleMute();
 
-      if (newMutedState !== false) {
-        console.log('[Handlers] toggleMute returned:', newMutedState);
+      // toggleMute returns false (unmuted) or true (muted), both are valid
+      if (typeof newMutedState === 'boolean') {
+        console.log('[Handlers] toggleMute returned:', newMutedState ? 'MUTED' : 'UNMUTED');
         console.log('[Handlers] Updating Firestore participant:', myParticipantId, 'mute status to:', newMutedState ? 'MUTED' : 'UNMUTED');
         await updateParticipantVoiceStatus(myParticipantId, isVoiceActive, newMutedState);
         console.log('[Handlers] ✅ Firestore updated successfully');
       } else {
-        console.error('[Handlers] toggleMute failed - returned false');
+        console.error('[Handlers] toggleMute failed - returned:', newMutedState);
       }
     } catch (error) {
       console.error('[Voice] Failed to toggle mute:', error);
