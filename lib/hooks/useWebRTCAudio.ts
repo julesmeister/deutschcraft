@@ -147,9 +147,10 @@ export function useWebRTCAudio({
   // Start voice (get microphone access)
   const startVoice = useCallback(async () => {
     try {
-      console.log('[WebRTC] Starting voice...');
+      console.log('[WebRTC] Starting voice...', { roomId, userId, userName });
 
       // Get microphone stream
+      console.log('[WebRTC] Requesting microphone access...');
       const stream = await navigator.mediaDevices.getUserMedia({
         audio: {
           echoCancellation: true,
@@ -159,6 +160,7 @@ export function useWebRTCAudio({
         },
         video: false,
       });
+      console.log('[WebRTC] Got microphone stream:', stream.id, 'tracks:', stream.getTracks().length);
 
       localStreamRef.current = stream;
       setIsVoiceActive(true);
@@ -167,14 +169,17 @@ export function useWebRTCAudio({
       // Make sure audio tracks are enabled
       stream.getAudioTracks().forEach((track) => {
         track.enabled = true;
+        console.log('[WebRTC] Enabled audio track:', track.label, track.id);
       });
 
       // Initialize audio context for monitoring
       if (!audioContextRef.current) {
         audioContextRef.current = new AudioContext();
+        console.log('[WebRTC] Audio context created');
       }
 
       // Register in Firebase RTDB for signaling
+      console.log('[WebRTC] Registering in Firebase RTDB...');
       try {
         const myParticipantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${sanitizedUserId}`);
         await set(myParticipantRef, {
@@ -183,16 +188,18 @@ export function useWebRTCAudio({
           isMuted: false,
           timestamp: Date.now(),
         });
-        console.log('[WebRTC] Registered in Firebase RTDB');
+        console.log('[WebRTC] ✅ Registered in Firebase RTDB successfully');
       } catch (dbError) {
-        console.error('[WebRTC] Failed to register in RTDB (database may not be enabled):', dbError);
-        // Continue anyway - voice will work locally even if signaling fails
+        console.error('[WebRTC] ❌ Failed to register in RTDB:', dbError);
+        throw dbError; // Rethrow to see the actual error
       }
 
-      console.log('[WebRTC] Voice started successfully, unmuted');
+      console.log('[WebRTC] ✅ Voice started successfully, unmuted');
     } catch (error) {
-      console.error('[WebRTC] Failed to start voice:', error);
+      console.error('[WebRTC] ❌ Failed to start voice:', error);
+      setIsVoiceActive(false);
       onError?.(error as Error);
+      throw error;
     }
   }, [roomId, userId, userName, sanitizedUserId, onError]);
 
@@ -449,13 +456,31 @@ export function useWebRTCAudio({
 
   // Connect to new participants
   useEffect(() => {
-    if (!isVoiceActive || participants.length === 0) return;
+    console.log('[WebRTC] Participant connection check:', {
+      isVoiceActive,
+      participantCount: participants.length,
+      participants: participants.map(p => ({ userId: p.userId, userName: p.userName })),
+    });
 
+    if (!isVoiceActive) {
+      console.log('[WebRTC] Voice not active, skipping peer connections');
+      return;
+    }
+
+    if (participants.length === 0) {
+      console.log('[WebRTC] No participants to connect to');
+      return;
+    }
+
+    console.log('[WebRTC] Attempting to connect to participants...');
     participants.forEach((participant) => {
       if (!peerConnectionsRef.current.has(participant.userId)) {
         // Initiate connection if our userId is lexicographically smaller
         const isInitiator = userId < participant.userId;
+        console.log('[WebRTC] Will connect to:', participant.userName, 'isInitiator:', isInitiator);
         createPeerConnection(participant.userId, participant.userName, isInitiator);
+      } else {
+        console.log('[WebRTC] Already connected to:', participant.userName);
       }
     });
   }, [participants, isVoiceActive, userId, createPeerConnection]);
