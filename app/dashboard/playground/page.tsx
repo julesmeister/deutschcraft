@@ -7,26 +7,14 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
-import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
-import { AlertDialog } from '@/components/ui/Dialog';
-import { VoicePanel } from '@/components/playground/VoicePanel';
-import { WritingBoard } from '@/components/playground/WritingBoard';
-import { ParticipantsList } from '@/components/playground/ParticipantsList';
+import { PlaygroundLobby } from '@/components/playground/PlaygroundLobby';
+import { PlaygroundRoom } from '@/components/playground/PlaygroundRoom';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useCurrentStudent } from '@/lib/hooks/useUsers';
 import { useVoiceChat } from '@/lib/hooks/useVoiceChat';
+import { usePlaygroundHandlers } from '@/lib/hooks/usePlaygroundHandlers';
 import { getUserInfo } from '@/lib/utils/userHelpers';
 import {
-  createPlaygroundRoom,
-  endPlaygroundRoom,
-  joinPlaygroundRoom,
-  leavePlaygroundRoom,
-  updateParticipantVoiceStatus,
-  updateParticipantPeerId,
-  togglePublicWriting as toggleRoomPublicWriting,
-  savePlaygroundWriting,
-  toggleWritingVisibility,
   subscribeToRoom,
   subscribeToParticipants,
   subscribeToWritings,
@@ -47,7 +35,6 @@ export default function PlaygroundPage() {
   const [participants, setParticipants] = useState<PlaygroundParticipant[]>([]);
   const [writings, setWritings] = useState<PlaygroundWriting[]>([]);
   const [myParticipantId, setMyParticipantId] = useState<string | null>(null);
-  const [isCreatingRoom, setIsCreatingRoom] = useState(false);
   const [dialogState, setDialogState] = useState({ isOpen: false, title: '', message: '' });
 
   // Fetch current user from Firestore to get accurate role
@@ -80,6 +67,50 @@ export default function PlaygroundPage() {
         message: error.message || 'Failed to connect voice chat',
       });
     },
+  });
+
+  // Load active rooms function
+  const loadActiveRooms = async () => {
+    try {
+      const rooms = await getActiveRooms();
+      setActiveRooms(rooms);
+    } catch (error) {
+      // Silent error handling
+    }
+  };
+
+  // Playground handlers hook
+  const {
+    isCreatingRoom,
+    handleCreateRoom,
+    handleJoinRoom,
+    handleLeaveRoom,
+    handleEndRoom,
+    handleToggleRoomPublicWriting,
+    handleSaveWriting,
+    handleToggleWritingVisibility,
+    handleStartVoice,
+    handleStopVoice,
+    handleToggleMute,
+  } = usePlaygroundHandlers({
+    userId,
+    userName,
+    userEmail,
+    userRole,
+    myPeerId,
+    myParticipantId,
+    currentRoom,
+    isVoiceActive,
+    isMuted,
+    setDialogState,
+    setMyParticipantId,
+    setCurrentRoom,
+    setParticipants,
+    setWritings,
+    stopVoice,
+    startVoice,
+    toggleMute,
+    loadActiveRooms,
   });
 
   // Load active rooms on mount
@@ -143,217 +174,6 @@ export default function PlaygroundPage() {
     });
   }, [participants, isVoiceActive, userId, connectToPeer]);
 
-  const loadActiveRooms = async () => {
-    try {
-      const rooms = await getActiveRooms();
-      setActiveRooms(rooms);
-    } catch (error) {
-      // Silent error handling
-    }
-  };
-
-  const handleCreateRoom = async () => {
-    if (!session?.user || isCreatingRoom) return;
-
-    setIsCreatingRoom(true);
-    try {
-      const roomTitle = `${userName}'s Room`;
-      console.log('[Playground] Creating room:', { userId, userName, roomTitle });
-      const roomId = await createPlaygroundRoom(userId, userName, roomTitle);
-      console.log('[Playground] Room created:', roomId);
-
-      console.log('[Playground] Joining created room as participant...');
-      const participantId = await joinPlaygroundRoom(
-        roomId,
-        userId,
-        userName,
-        userEmail,
-        userRole,
-        myPeerId || undefined
-      );
-      console.log('[Playground] Joined as participant:', participantId);
-
-      setMyParticipantId(participantId);
-
-      const rooms = await getActiveRooms();
-      const room = rooms.find((r) => r.roomId === roomId);
-
-      if (room) {
-        console.log('[Playground] Setting current room:', room);
-        setCurrentRoom(room);
-      }
-
-      setDialogState({
-        isOpen: true,
-        title: 'Room Created',
-        message: 'Your playground room has been created successfully!',
-      });
-    } catch (error) {
-      console.error('[Playground] Error creating room:', error);
-      setDialogState({
-        isOpen: true,
-        title: 'Error',
-        message: 'Failed to create room. Please try again.',
-      });
-    } finally {
-      setIsCreatingRoom(false);
-    }
-  };
-
-  const handleJoinRoom = async (room: PlaygroundRoom) => {
-    if (!session?.user) return;
-
-    try {
-      console.log('[Playground] Joining room:', room.roomId, { userId, userName, userEmail, userRole });
-      const participantId = await joinPlaygroundRoom(
-        room.roomId,
-        userId,
-        userName,
-        userEmail,
-        userRole,
-        myPeerId || undefined
-      );
-
-      console.log('[Playground] Joined as participant:', participantId);
-      setMyParticipantId(participantId);
-      setCurrentRoom(room);
-    } catch (error) {
-      console.error('[Playground] Error joining room:', error);
-      setDialogState({
-        isOpen: true,
-        title: 'Error',
-        message: 'Failed to join room. Please try again.',
-      });
-    }
-  };
-
-  const handleLeaveRoom = async () => {
-    if (!currentRoom || !myParticipantId) return;
-
-    try {
-      await leavePlaygroundRoom(myParticipantId, currentRoom.roomId);
-    } catch (error) {
-      // Silent error handling
-    } finally {
-      stopVoice();
-      setCurrentRoom(null);
-      setMyParticipantId(null);
-      setParticipants([]);
-      setWritings([]);
-      loadActiveRooms();
-    }
-  };
-
-  const handleEndRoom = async () => {
-    if (!currentRoom || userRole !== 'teacher') return;
-
-    const roomIdToEnd = currentRoom.roomId;
-    const participantIdToLeave = myParticipantId;
-
-    try {
-      // First cleanup local state immediately
-      stopVoice();
-      setCurrentRoom(null);
-      setMyParticipantId(null);
-      setParticipants([]);
-      setWritings([]);
-
-      // Then update Firestore
-      await endPlaygroundRoom(roomIdToEnd);
-
-      if (participantIdToLeave) {
-        await leavePlaygroundRoom(participantIdToLeave, roomIdToEnd);
-      }
-
-      loadActiveRooms();
-    } catch (error) {
-      // Silent error handling
-    }
-  };
-
-  const handleToggleRoomPublicWriting = async (isPublic: boolean) => {
-    if (!currentRoom) return;
-
-    try {
-      await toggleRoomPublicWriting(currentRoom.roomId, isPublic);
-    } catch (error) {
-      // Silent error handling
-    }
-  };
-
-  const handleSaveWriting = async (content: string) => {
-    if (!currentRoom) return;
-
-    try {
-      await savePlaygroundWriting(
-        currentRoom.roomId,
-        userId,
-        userName,
-        content,
-        false
-      );
-    } catch (error) {
-      throw error;
-    }
-  };
-
-  const handleToggleWritingVisibility = async (
-    writingId: string,
-    isPublic: boolean
-  ) => {
-    try {
-      await toggleWritingVisibility(writingId, isPublic);
-    } catch (error) {
-      // Silent error handling
-    }
-  };
-
-  // Wrapped voice handlers to update Firestore
-  const handleStartVoice = async () => {
-    if (!myParticipantId || !currentRoom) return;
-
-    try {
-      await startVoice();
-
-      // Update Firestore with voice active status
-      await updateParticipantVoiceStatus(myParticipantId, true, false);
-
-      // Update peer ID if we have one
-      if (myPeerId) {
-        await updateParticipantPeerId(myParticipantId, myPeerId);
-      }
-    } catch (error) {
-      console.error('[Voice] Failed to start voice:', error);
-      setDialogState({
-        isOpen: true,
-        title: 'Voice Error',
-        message: 'Failed to start voice. Please check microphone permissions.',
-      });
-    }
-  };
-
-  const handleStopVoice = async () => {
-    if (!myParticipantId) return;
-
-    try {
-      stopVoice();
-      await updateParticipantVoiceStatus(myParticipantId, false, false);
-    } catch (error) {
-      // Silent error
-    }
-  };
-
-  const handleToggleMute = async () => {
-    if (!myParticipantId) return;
-
-    try {
-      toggleMute();
-      await updateParticipantVoiceStatus(myParticipantId, isVoiceActive, !isMuted);
-    } catch (error) {
-      // Silent error
-    }
-  };
-
   const myWriting = writings.find((w) => w.userId === userId);
 
   if (!session?.user) {
@@ -375,156 +195,43 @@ export default function PlaygroundPage() {
   // Lobby view (no room joined)
   if (!currentRoom) {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <DashboardHeader
-          title="Playground"
-          subtitle="Collaborate with voice chat and writing exercises"
-          actions={
-            userRole === 'teacher' ? (
-              <ActionButton
-                onClick={handleCreateRoom}
-                disabled={isCreatingRoom}
-                variant="purple"
-                icon={<ActionButtonIcons.Plus />}
-              >
-                {isCreatingRoom ? 'Creating Room...' : 'Create New Room'}
-              </ActionButton>
-            ) : undefined
-          }
-        />
-
-        <div className="container mx-auto px-6 py-8">
-          {/* Active Rooms */}
-          <div className="space-y-4">
-            <h2 className="text-xl font-bold text-neutral-900">Active Rooms</h2>
-
-            {activeRooms.length === 0 ? (
-              <div className="bg-white border border-gray-200 p-8 text-center">
-                <p className="text-gray-500">No active rooms available</p>
-                {userRole === 'teacher' && (
-                  <p className="text-sm text-gray-400 mt-2">
-                    Create a room to get started
-                  </p>
-                )}
-              </div>
-            ) : (
-              <div className="space-y-3">
-                {activeRooms.map((room) => (
-                  <div
-                    key={room.roomId}
-                    className="bg-white border border-gray-200 p-4 flex items-center justify-between hover:border-blue-300 transition-colors"
-                  >
-                    <div>
-                      <h3 className="font-semibold text-neutral-900">
-                        {room.title}
-                      </h3>
-                      <p className="text-sm text-gray-600">
-                        Host: {room.hostName} • {room.participantCount}{' '}
-                        {room.participantCount === 1 ? 'participant' : 'participants'}
-                      </p>
-                    </div>
-                    <div className="w-40">
-                      <ActionButton
-                        onClick={() => handleJoinRoom(room)}
-                        variant="cyan"
-                        icon={<ActionButtonIcons.Play />}
-                      >
-                        Join Room
-                      </ActionButton>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        </div>
-
-        <AlertDialog
-          open={dialogState.isOpen}
-          onClose={() => setDialogState({ ...dialogState, isOpen: false })}
-          title={dialogState.title}
-          message={dialogState.message}
-        />
-      </div>
+      <PlaygroundLobby
+        activeRooms={activeRooms}
+        userRole={userRole}
+        isCreatingRoom={isCreatingRoom}
+        dialogState={dialogState}
+        onCreateRoom={handleCreateRoom}
+        onJoinRoom={handleJoinRoom}
+        onCloseDialog={() => setDialogState({ ...dialogState, isOpen: false })}
+      />
     );
   }
 
   // Room view (joined a room)
   return (
-    <div className="min-h-screen bg-gray-50">
-      <DashboardHeader
-        title={currentRoom.title}
-        subtitle={`${participants.length} ${
-          participants.length === 1 ? 'participant' : 'participants'
-        } • Host: ${currentRoom.hostName}`}
-        backButton={{
-          label: 'Leave Room',
-          onClick: handleLeaveRoom,
-        }}
-        actions={
-          userRole === 'teacher' && (
-            <ActionButton
-              onClick={handleEndRoom}
-              variant="red"
-              icon={<ActionButtonIcons.Close />}
-            >
-              End Room
-            </ActionButton>
-          )
-        }
-      />
-
-      <div className="container mx-auto px-6 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Left: Voice Panel */}
-          <div className="lg:col-span-1">
-            <VoicePanel
-              isVoiceActive={isVoiceActive}
-              isMuted={isMuted}
-              participants={voiceParticipants}
-              onStartVoice={handleStartVoice}
-              onStopVoice={handleStopVoice}
-              onToggleMute={handleToggleMute}
-            />
-
-            {/* Participants List */}
-            <div className="mt-6 bg-white border border-gray-200 p-4">
-              <h3 className="text-lg font-semibold text-neutral-900 mb-3">
-                Participants ({participants.length})
-              </h3>
-              <ParticipantsList
-                participants={participants}
-                voiceStreams={voiceStreams}
-                currentUserRole={userRole}
-                currentUserId={userId}
-              />
-            </div>
-          </div>
-
-          {/* Right: Writing Board */}
-          <div className="lg:col-span-2">
-            <WritingBoard
-              writings={writings}
-              currentUserId={userId}
-              currentUserRole={userRole}
-              myWriting={myWriting}
-              isRoomPublicWriting={currentRoom.isPublicWriting}
-              onSaveWriting={handleSaveWriting}
-              onToggleWritingVisibility={handleToggleWritingVisibility}
-              onToggleRoomPublicWriting={
-                userRole === 'teacher' ? handleToggleRoomPublicWriting : undefined
-              }
-            />
-          </div>
-        </div>
-      </div>
-
-      <AlertDialog
-        open={dialogState.isOpen}
-        onClose={() => setDialogState({ ...dialogState, isOpen: false })}
-        title={dialogState.title}
-        message={dialogState.message}
-      />
-    </div>
+    <PlaygroundRoom
+      currentRoom={currentRoom}
+      participants={participants}
+      writings={writings}
+      myWriting={myWriting}
+      userId={userId}
+      userRole={userRole}
+      isVoiceActive={isVoiceActive}
+      isMuted={isMuted}
+      voiceParticipants={voiceParticipants}
+      voiceStreams={voiceStreams}
+      dialogState={dialogState}
+      onLeaveRoom={handleLeaveRoom}
+      onEndRoom={handleEndRoom}
+      onStartVoice={handleStartVoice}
+      onStopVoice={handleStopVoice}
+      onToggleMute={handleToggleMute}
+      onSaveWriting={handleSaveWriting}
+      onToggleWritingVisibility={handleToggleWritingVisibility}
+      onToggleRoomPublicWriting={
+        userRole === 'teacher' ? handleToggleRoomPublicWriting : undefined
+      }
+      onCloseDialog={() => setDialogState({ ...dialogState, isOpen: false })}
+    />
   );
 }
