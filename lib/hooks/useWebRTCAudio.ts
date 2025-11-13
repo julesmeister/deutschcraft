@@ -182,7 +182,7 @@ export function useWebRTCAudio({
       console.error('[WebRTC] Failed to start voice:', error);
       onError?.(error as Error);
     }
-  }, [roomId, userId, userName, onError]);
+  }, [roomId, userId, userName, sanitizedUserId, onError]);
 
   // Stop voice
   const stopVoice = useCallback(async () => {
@@ -218,7 +218,7 @@ export function useWebRTCAudio({
     setAudioStreams(new Map());
 
     console.log('[WebRTC] Voice stopped');
-  }, [roomId, userId]);
+  }, [roomId, userId, sanitizedUserId]);
 
   // Toggle mute
   const toggleMute = useCallback(async () => {

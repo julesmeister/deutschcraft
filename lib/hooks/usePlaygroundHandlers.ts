@@ -216,12 +216,13 @@ export function usePlaygroundHandlers({
     if (!myParticipantId || !currentRoom) return;
 
     try {
+      console.log('[Handlers] Starting voice...');
       await startVoice();
 
       // Update Firestore with voice active status
+      console.log('[Handlers] Updating Firestore voice status to active');
       await updateParticipantVoiceStatus(myParticipantId, true, false);
-
-      // Note: Native WebRTC doesn't need peer ID updates
+      console.log('[Handlers] Voice started successfully');
     } catch (error) {
       console.error('[Voice] Failed to start voice:', error);
       setDialogState({
@@ -236,10 +237,13 @@ export function usePlaygroundHandlers({
     if (!myParticipantId) return;
 
     try {
-      stopVoice();
+      console.log('[Handlers] Stopping voice...');
+      await stopVoice();
+      console.log('[Handlers] Updating Firestore voice status to inactive');
       await updateParticipantVoiceStatus(myParticipantId, false, false);
+      console.log('[Handlers] Voice stopped successfully');
     } catch (error) {
-      // Silent error
+      console.error('[Voice] Failed to stop voice:', error);
     }
   };
 
@@ -247,10 +251,13 @@ export function usePlaygroundHandlers({
     if (!myParticipantId) return;
 
     try {
-      toggleMute();
+      console.log('[Handlers] Toggling mute...');
+      await toggleMute();
+      console.log('[Handlers] Updating Firestore mute status');
       await updateParticipantVoiceStatus(myParticipantId, isVoiceActive, !isMuted);
+      console.log('[Handlers] Mute toggled successfully');
     } catch (error) {
-      // Silent error
+      console.error('[Voice] Failed to toggle mute:', error);
     }
   };
 
