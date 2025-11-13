@@ -174,14 +174,20 @@ export function useWebRTCAudio({
         audioContextRef.current = new AudioContext();
       }
 
-      // Register in Firebase
-      const myParticipantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${sanitizedUserId}`);
-      await set(myParticipantRef, {
-        originalUserId: userId, // Store original for reference
-        userName,
-        isMuted: false,
-        timestamp: Date.now(),
-      });
+      // Register in Firebase RTDB for signaling
+      try {
+        const myParticipantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${sanitizedUserId}`);
+        await set(myParticipantRef, {
+          originalUserId: userId, // Store original for reference
+          userName,
+          isMuted: false,
+          timestamp: Date.now(),
+        });
+        console.log('[WebRTC] Registered in Firebase RTDB');
+      } catch (dbError) {
+        console.error('[WebRTC] Failed to register in RTDB (database may not be enabled):', dbError);
+        // Continue anyway - voice will work locally even if signaling fails
+      }
 
       console.log('[WebRTC] Voice started successfully, unmuted');
     } catch (error) {
