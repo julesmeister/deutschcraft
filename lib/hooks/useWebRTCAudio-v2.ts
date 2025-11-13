@@ -42,6 +42,7 @@ export function useWebRTCAudio({
   const previousRoomIdRef = useRef<string | null>(null);
   const signalUnsubscribeRef = useRef<(() => void) | null>(null);
   const participantsUnsubscribeRef = useRef<(() => void) | null>(null);
+  const isVoiceActiveRef = useRef<boolean>(false); // Track voice state in ref to avoid stale closures
 
   // Reset state when room changes
   useEffect(() => {
@@ -91,6 +92,7 @@ export function useWebRTCAudio({
     setIsMuted(false);
     setParticipants([]);
     setAudioStreams(new Map());
+    isVoiceActiveRef.current = false;
   }, []);
 
   // Create peer connection for a remote user
@@ -208,10 +210,10 @@ export function useWebRTCAudio({
             console.log('[WebRTC] Participant joined:', fromUserId);
             console.log('[WebRTC] Checking if should initiate connection...');
             console.log('[WebRTC] My userId:', userId, 'Other userId:', fromUserId, 'Compare:', userId < fromUserId);
-            console.log('[WebRTC] isVoiceActive:', isVoiceActive);
+            console.log('[WebRTC] isVoiceActive (ref):', isVoiceActiveRef.current);
 
             // Initiate connection if we're the "older" user (lexicographic order)
-            if (userId < fromUserId && isVoiceActive) {
+            if (userId < fromUserId && isVoiceActiveRef.current) {
               console.log('[WebRTC] ✅ I should initiate connection (userId is "smaller")');
               setTimeout(async () => {
                 const newPeer = peerConnectionsRef.current.get(fromUserId);
@@ -281,6 +283,7 @@ export function useWebRTCAudio({
       localStreamRef.current = stream;
       setIsVoiceActive(true);
       setIsMuted(false);
+      isVoiceActiveRef.current = true; // Update ref immediately
 
       // Enable audio tracks
       stream.getAudioTracks().forEach((track) => {
@@ -363,6 +366,7 @@ export function useWebRTCAudio({
     cleanup();
 
     console.log('[WebRTC] Voice stopped');
+    isVoiceActiveRef.current = false;
   }, [roomId, userId, cleanup]);
 
   // Toggle mute
