@@ -184,8 +184,15 @@ export function ParticipantsList({
               />
             )}
 
-            {/* Status indicator */}
-            <div className="relative z-10 flex items-center justify-center w-12 h-12">
+            {/* Microphone icon - clickable for teachers */}
+            <button
+              onClick={() => canMute && p.isVoiceActive && handleMuteParticipant(p.participantId, p.isMuted)}
+              disabled={!canMute || !p.isVoiceActive}
+              className={`relative z-10 flex items-center justify-center w-12 h-12 ${
+                canMute && p.isVoiceActive ? 'cursor-pointer hover:opacity-80' : 'cursor-default'
+              }`}
+              title={canMute && p.isVoiceActive ? (p.isMuted ? 'Click to unmute' : 'Click to mute') : ''}
+            >
               {p.isVoiceActive ? (
                 <div className="relative">
                   {/* Animated rings when talking */}
@@ -197,7 +204,13 @@ export function ParticipantsList({
                     </>
                   )}
                   {/* Microphone icon - larger with more padding */}
-                  <div className={`relative w-10 h-10 rounded-full flex items-center justify-center ${p.isTalking ? 'bg-green-600' : 'bg-green-500'}`}>
+                  <div className={`relative w-10 h-10 rounded-full flex items-center justify-center ${
+                    p.isMuted
+                      ? 'bg-red-600'
+                      : p.isTalking
+                        ? 'bg-green-600'
+                        : 'bg-green-500'
+                  }`}>
                     {p.isMuted ? (
                       <svg
                         className="w-5 h-5 text-white"
@@ -222,7 +235,7 @@ export function ParticipantsList({
               ) : (
                 <div className="w-3 h-3 rounded-full bg-gray-400" />
               )}
-            </div>
+            </button>
 
             {/* Name and role */}
             <div className="relative z-10 flex-1 min-w-0">
@@ -235,32 +248,18 @@ export function ParticipantsList({
             </div>
 
             {/* Talking indicator - pulsing dot */}
-            {p.isTalking && (
+            {p.isTalking && !p.isMuted && (
               <div className="relative z-10 flex items-center gap-1">
                 <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
                 <span className="text-xs font-medium text-green-700">Speaking</span>
               </div>
             )}
 
-            {/* Mute button for teachers */}
-            {canMute && p.isVoiceActive && (
-              <button
-                onClick={() => handleMuteParticipant(p.participantId, p.isMuted)}
-                className="relative z-10 p-2 hover:bg-gray-200 rounded-full transition-colors"
-                title={p.isMuted ? 'Unmute participant' : 'Mute participant'}
-              >
-                {p.isMuted ? (
-                  <svg className="w-4 h-4 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-14-14z" />
-                    <path d="M10 3a2 2 0 00-2 2v4a2 2 0 104 0V5a2 2 0 00-2-2z" />
-                  </svg>
-                ) : (
-                  <svg className="w-4 h-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 3a2 2 0 00-2 2v4a2 2 0 104 0V5a2 2 0 00-2-2z" />
-                    <path d="M16 8v1a6 6 0 01-12 0V8a1 1 0 112 0v1a4 4 0 008 0V8a1 1 0 112 0z" />
-                  </svg>
-                )}
-              </button>
+            {/* Muted indicator */}
+            {p.isMuted && p.isVoiceActive && (
+              <div className="relative z-10 flex items-center gap-1">
+                <span className="text-xs font-medium text-red-600">Muted</span>
+              </div>
             )}
           </div>
         );
