@@ -5,14 +5,14 @@
 
 'use client';
 
-import { useEffect, useRef } from 'react';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 
 interface VoiceParticipant {
-  peerId: string;
   userId: string;
   userName: string;
-  stream?: MediaStream;
+  isMuted?: boolean;
+  audioLevel?: number;
+  connectionQuality?: 'excellent' | 'good' | 'poor' | 'disconnected';
 }
 
 interface VoicePanelProps {
@@ -83,10 +83,22 @@ export function VoicePanel({
               </p>
               <div className="space-y-2">
                 {participants.map((participant) => (
-                  <VoiceParticipantItem
-                    key={participant.peerId}
-                    participant={participant}
-                  />
+                  <div
+                    key={participant.userId}
+                    className="flex items-center gap-2 p-2 bg-gray-50 rounded"
+                  >
+                    <div className="flex-1">
+                      <p className="text-sm font-medium text-gray-900">
+                        {participant.userName}
+                      </p>
+                      {participant.isMuted && (
+                        <p className="text-xs text-red-500">Muted</p>
+                      )}
+                    </div>
+                    <div className="text-xs text-gray-500">
+                      {participant.connectionQuality || 'connecting...'}
+                    </div>
+                  </div>
                 ))}
               </div>
             </>
@@ -99,69 +111,6 @@ export function VoicePanel({
         </div>
       )}
 
-    </div>
-  );
-}
-
-// Individual participant with audio element
-function VoiceParticipantItem({
-  participant,
-}: {
-  participant: VoiceParticipant;
-}) {
-  const audioRef = useRef<HTMLAudioElement>(null);
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio || !participant.stream) return;
-
-    // Set srcObject (modern approach, don't use URL.createObjectURL)
-    audio.srcObject = participant.stream;
-
-    // Set volume to maximum
-    audio.volume = 1.0;
-
-    // Ensure muted is false
-    audio.muted = false;
-
-    // Try to play with better error handling
-    const playPromise = audio.play();
-
-    if (playPromise !== undefined) {
-      playPromise
-        .then(() => {
-          console.log('[Voice] Audio playing for:', participant.userName);
-        })
-        .catch((err) => {
-          console.error('[Voice] Failed to play audio for', participant.userName, ':', err);
-          // Try to unmute and play again (some browsers require this)
-          audio.muted = false;
-          audio.play().catch(e => console.error('[Voice] Retry failed:', e));
-        });
-    }
-
-    return () => {
-      // Cleanup
-      if (audio.srcObject) {
-        audio.pause();
-        audio.srcObject = null;
-      }
-    };
-  }, [participant.stream, participant.userName]);
-
-  return (
-    <div className="flex items-center gap-2 p-2 bg-blue-50 border border-blue-200 rounded">
-      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-      <span className="text-sm font-medium text-neutral-800">
-        {participant.userName}
-      </span>
-      {/* Audio element with all necessary attributes */}
-      <audio
-        ref={audioRef}
-        autoPlay
-        playsInline
-        controls={false}
-      />
     </div>
   );
 }

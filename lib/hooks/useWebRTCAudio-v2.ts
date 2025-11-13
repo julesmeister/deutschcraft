@@ -206,18 +206,28 @@ export function useWebRTCAudio({
 
           case 'participant-joined':
             console.log('[WebRTC] Participant joined:', fromUserId);
+            console.log('[WebRTC] Checking if should initiate connection...');
+            console.log('[WebRTC] My userId:', userId, 'Other userId:', fromUserId, 'Compare:', userId < fromUserId);
+            console.log('[WebRTC] isVoiceActive:', isVoiceActive);
+
             // Initiate connection if we're the "older" user (lexicographic order)
             if (userId < fromUserId && isVoiceActive) {
+              console.log('[WebRTC] ✅ I should initiate connection (userId is "smaller")');
               setTimeout(async () => {
                 const newPeer = peerConnectionsRef.current.get(fromUserId);
                 if (!newPeer) {
+                  console.log('[WebRTC] Creating new peer and sending offer...');
                   const pc = createPeerConnection(fromUserId);
                   const offer = await pc.createOffer();
                   await pc.setLocalDescription(offer);
                   await sendOffer(roomId, userId, fromUserId, offer);
-                  console.log('[WebRTC] Sent offer to new participant:', fromUserId);
+                  console.log('[WebRTC] ✅ Sent offer to new participant:', fromUserId);
+                } else {
+                  console.log('[WebRTC] Peer connection already exists for:', fromUserId);
                 }
               }, Math.random() * 500); // Random delay to prevent collision
+            } else {
+              console.log('[WebRTC] ⏸️ Not initiating (will wait for offer from other user)');
             }
             break;
 
