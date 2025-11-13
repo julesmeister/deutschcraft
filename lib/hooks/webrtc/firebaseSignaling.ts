@@ -7,6 +7,11 @@
 import { ref as dbRef, onValue, set, push, query, orderByChild } from 'firebase/database';
 import { rtdb } from '@/lib/firebase';
 
+// Sanitize userId for Firebase paths (remove invalid characters)
+function sanitizeUserId(id: string): string {
+  return id.replace(/[.#$[\]@]/g, '_');
+}
+
 export interface SignalMessage {
   type: 'offer' | 'answer' | 'ice-candidate' | 'participant-joined' | 'participant-left';
   fromUserId: string;
@@ -91,7 +96,8 @@ export async function registerParticipant(
   isMuted: boolean
 ): Promise<void> {
   try {
-    const participantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${userId}`);
+    const sanitizedUserId = sanitizeUserId(userId);
+    const participantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${sanitizedUserId}`);
 
     await set(participantRef, {
       userId,
@@ -129,7 +135,8 @@ export async function unregisterParticipant(
       timestamp: Date.now(),
     });
 
-    const participantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${userId}`);
+    const sanitizedUserId = sanitizeUserId(userId);
+    const participantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${sanitizedUserId}`);
     await set(participantRef, null);
 
     console.log('[Signaling] Unregistered participant:', userId);
@@ -148,7 +155,8 @@ export async function updateMuteStatus(
   isMuted: boolean
 ): Promise<void> {
   try {
-    const participantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${userId}`);
+    const sanitizedUserId = sanitizeUserId(userId);
+    const participantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${sanitizedUserId}`);
 
     await set(participantRef, {
       userId,
@@ -172,6 +180,7 @@ export function listenForParticipants(
   onParticipantsChange: (participants: any[]) => void
 ): () => void {
   const participantsRef = dbRef(rtdb, `playground_voice/${roomId}/participants`);
+  const sanitizedMyUserId = sanitizeUserId(myUserId);
 
   const unsubscribe = onValue(participantsRef, (snapshot) => {
     const data = snapshot.val();
@@ -181,7 +190,7 @@ export function listenForParticipants(
     }
 
     const participants = Object.entries(data)
-      .filter(([id]) => id !== myUserId)
+      .filter(([id]) => id !== sanitizedMyUserId)
       .map(([id, info]: [string, any]) => ({
         userId: info.userId || id,
         userName: info.userName || 'Unknown',
