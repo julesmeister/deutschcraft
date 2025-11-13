@@ -4,7 +4,8 @@
  */
 
 import { useEffect, useRef, useState, useCallback } from 'react';
-import Peer, { MediaConnection } from 'peerjs';
+import type Peer from 'peerjs';
+import type { MediaConnection } from 'peerjs';
 import { PEER_CONFIG, generatePeerId, AUDIO_CONSTRAINTS } from '@/lib/config/peerjs';
 
 interface VoiceParticipant {
@@ -58,6 +59,19 @@ export function useVoiceChat({
 
   // Initialize PeerJS
   useEffect(() => {
+    // Only run in browser (not during SSR)
+    if (typeof window === 'undefined') {
+      console.log('[Voice] Skipping initialization - not in browser');
+      return;
+    }
+
+    // Check if browser supports WebRTC
+    if (!window.RTCPeerConnection) {
+      console.error('[Voice] Browser does not support WebRTC');
+      onError?.(new Error('Browser does not support WebRTC'));
+      return;
+    }
+
     // Don't initialize if no valid roomId
     if (!roomId || roomId.trim() === '') {
       return;
@@ -74,10 +88,16 @@ export function useVoiceChat({
     const maxReconnectAttempts = 3;
 
     console.log('[Voice] Initializing peer with ID:', peerId);
+    console.log('[Voice] WebRTC support:', {
+      RTCPeerConnection: !!window.RTCPeerConnection,
+      getUserMedia: !!(navigator.mediaDevices?.getUserMedia),
+    });
 
-    try {
-      const peer = new Peer(peerId, PEER_CONFIG);
-      peerRef.current = peer;
+    // Dynamically import PeerJS to ensure it only loads in the browser
+    import('peerjs').then(({ default: PeerJS }) => {
+      try {
+        const peer = new PeerJS(peerId, PEER_CONFIG);
+        peerRef.current = peer;
 
       peer.on('open', (id) => {
         console.log('[Voice] ✅ Peer connection opened. My peerId:', id);
@@ -144,14 +164,19 @@ export function useVoiceChat({
         }
       });
 
-      return () => {
-        if (peer && !peer.destroyed) {
-          peer.destroy();
-        }
-      };
-    } catch (error) {
-      onError?.(error as Error);
-    }
+        return () => {
+          if (peer && !peer.destroyed) {
+            peer.destroy();
+          }
+        };
+      } catch (error) {
+        console.error('[Voice] Error initializing peer:', error);
+        onError?.(error as Error);
+      }
+    }).catch((error) => {
+      console.error('[Voice] Failed to load PeerJS:', error);
+      onError?.(new Error('Failed to load PeerJS library'));
+    });
   }, [userId, roomId, onPeerConnected, onPeerDisconnected, onError]);
 
   // Start voice (get microphone access)
@@ -234,9 +259,18 @@ export function useVoiceChat({
         return;
       }
 
-      // Check if already connected to this peer
+      // Check if already connected to this peer (by peerId or userId)
       if (participantsRef.current.has(peerId)) {
         console.log('[Voice] Already connected to peer:', peerId);
+        return;
+      }
+
+      // Also check if we already have a connection to this userId (might be different peerId)
+      const alreadyConnectedToUser = Array.from(participantsRef.current.values()).some(
+        (p) => p.userId === targetUserId
+      );
+      if (alreadyConnectedToUser) {
+        console.log('[Voice] Already connected to user:', targetUserId, targetUserName);
         return;
       }
 

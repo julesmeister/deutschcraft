@@ -11,7 +11,7 @@ import { PlaygroundLobby } from '@/components/playground/PlaygroundLobby';
 import { PlaygroundRoom } from '@/components/playground/PlaygroundRoom';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useCurrentStudent } from '@/lib/hooks/useUsers';
-import { useVoiceChat } from '@/lib/hooks/useVoiceChat';
+import { useWebRTCAudio } from '@/lib/hooks/useWebRTCAudio';
 import { usePlaygroundHandlers } from '@/lib/hooks/usePlaygroundHandlers';
 import { getUserInfo } from '@/lib/utils/userHelpers';
 import {
@@ -19,7 +19,6 @@ import {
   subscribeToParticipants,
   subscribeToWritings,
   getActiveRooms,
-  updateParticipantPeerId,
   getRoomParticipants,
 } from '@/lib/services/playgroundService';
 import type {
@@ -45,23 +44,19 @@ export default function PlaygroundPage() {
   // Use centralized helper to get user info (prevents email display issues)
   const { userId, userName, userEmail, userRole } = getUserInfo(currentUser, session);
 
-  // Voice chat hook
+  // Voice chat hook (using native WebRTC)
   const {
-    myPeerId,
     isVoiceActive,
     isMuted,
-    participants: voiceParticipants,
-    voiceStreams,
+    participants: audioParticipants,
+    audioStreams,
     startVoice,
     stopVoice,
     toggleMute,
-    connectToPeer,
-  } = useVoiceChat({
+  } = useWebRTCAudio({
     userId,
     userName,
     roomId: currentRoom?.roomId || '',
-    onPeerConnected: (peerId, userName) => {},
-    onPeerDisconnected: (peerId) => {},
     onError: (error) => {
       setDialogState({
         isOpen: true,
@@ -190,50 +185,8 @@ export default function PlaygroundPage() {
     };
   }, [currentRoom?.roomId, userId, userRole]);
 
-  // Update peerId in Firestore when it becomes available
-  useEffect(() => {
-    if (myPeerId && myParticipantId && isVoiceActive) {
-      console.log('[Playground] Updating peerId in Firestore:', myPeerId);
-      updateParticipantPeerId(myParticipantId, myPeerId).catch(err => {
-        console.error('[Playground] Failed to update peerId:', err);
-      });
-    }
-  }, [myPeerId, myParticipantId, isVoiceActive]);
-
-  // Handle voice peer connections when participants change
-  // Note: We attempt connection to ALL peers with peerIds, regardless of voice status
-  // The voice streams will only be active when users enable their microphones
-  useEffect(() => {
-    if (participants.length === 0) {
-      console.log('[Playground] Not connecting - no participants');
-      return;
-    }
-
-    // Only initiate connections if WE have voice active (we need our stream to call)
-    if (!isVoiceActive) {
-      console.log('[Playground] Not connecting - my voice is not active (no stream to send)');
-      return;
-    }
-
-    console.log('[Playground] Checking participants for peer connections...');
-    participants.forEach((p) => {
-      console.log('[Playground] Participant:', p.userName, {
-        hasPeerId: !!p.peerId,
-        peerId: p.peerId,
-        isMe: p.userId === userId,
-        isVoiceActive: p.isVoiceActive,
-      });
-
-      // Connect to anyone with a peerId (not just those with voice active)
-      // They need to be able to receive our call even if their voice isn't on yet
-      if (p.peerId && p.userId !== userId) {
-        console.log('[Playground] ✅ Attempting connection to peer:', p.peerId, 'for user:', p.userName);
-        connectToPeer(p.peerId, p.userId, p.userName);
-      } else if (p.userId !== userId && !p.peerId) {
-        console.log('[Playground] ⏭️ Skipping', p.userName, '- no peerId yet');
-      }
-    });
-  }, [participants, isVoiceActive, userId, connectToPeer]);
+  // Note: Native WebRTC handles peer connections automatically
+  // No need for manual peerId management or connectToPeer calls
 
   const myWriting = writings.find((w) => w.userId === userId);
 
@@ -279,8 +232,8 @@ export default function PlaygroundPage() {
       userRole={userRole}
       isVoiceActive={isVoiceActive}
       isMuted={isMuted}
-      voiceParticipants={voiceParticipants}
-      voiceStreams={voiceStreams}
+      voiceParticipants={audioParticipants}
+      voiceStreams={audioStreams}
       dialogState={dialogState}
       onLeaveRoom={handleLeaveRoom}
       onEndRoom={handleEndRoom}

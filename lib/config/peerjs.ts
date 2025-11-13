@@ -27,7 +27,9 @@ export const PEER_CONFIG: PeerOptions = {
     iceServers: [
       { urls: 'stun:stun.l.google.com:19302' },
       { urls: 'stun:global.stun.twilio.com:3478' },
-    ]
+    ],
+    // Ensure we're using the standard WebRTC API
+    sdpSemantics: 'unified-plan',
   },
 
   debug: process.env.NODE_ENV === 'development' ? 1 : 0, // Reduced debug level
