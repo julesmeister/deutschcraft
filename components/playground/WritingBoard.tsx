@@ -34,10 +34,34 @@ export function WritingBoard({
   onToggleWritingVisibility,
   onToggleRoomPublicWriting,
 }: WritingBoardProps) {
-  const [content, setContent] = useState(myWriting?.content || '');
-  const [selectedWritingId, setSelectedWritingId] = useState<string | null>(
-    myWriting?.writingId || null
-  );
+  // For students, default to teacher/host writing. For teachers, default to own writing.
+  const getInitialWriting = () => {
+    if (currentUserRole === 'teacher') {
+      return {
+        writingId: myWriting?.writingId || null,
+        content: myWriting?.content || ''
+      };
+    }
+
+    // For students, find teacher/host writing
+    const teacherWriting = writings.find((w) => w.userId !== currentUserId);
+    if (teacherWriting) {
+      return {
+        writingId: teacherWriting.writingId,
+        content: teacherWriting.content
+      };
+    }
+
+    // Fallback to own writing if no teacher writing found
+    return {
+      writingId: myWriting?.writingId || null,
+      content: myWriting?.content || ''
+    };
+  };
+
+  const initialWriting = getInitialWriting();
+  const [content, setContent] = useState(initialWriting.content);
+  const [selectedWritingId, setSelectedWritingId] = useState<string | null>(initialWriting.writingId);
   const [lastSaved, setLastSaved] = useState<Date | null>(null);
   const [isSaving, setIsSaving] = useState(false);
   const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -111,7 +135,10 @@ export function WritingBoard({
   const visibleWritings = writings;
   const otherWritings = visibleWritings.filter((w) => w.userId !== currentUserId);
   const selectedWriting = visibleWritings.find((w) => w.writingId === selectedWritingId);
-  const isOwnWriting = selectedWritingId === (myWriting?.writingId || null);
+
+  // If no writing is selected, we're on "My Writing" tab
+  // Also check if selected writing belongs to current user
+  const isOwnWriting = !selectedWritingId || selectedWriting?.userId === currentUserId;
 
   // Teachers can edit any writing, students can only edit their own
   const canEdit = isOwnWriting || currentUserRole === 'teacher';
