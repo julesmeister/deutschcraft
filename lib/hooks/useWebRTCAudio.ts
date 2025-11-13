@@ -162,6 +162,12 @@ export function useWebRTCAudio({
 
       localStreamRef.current = stream;
       setIsVoiceActive(true);
+      setIsMuted(false); // Ensure we start unmuted
+
+      // Make sure audio tracks are enabled
+      stream.getAudioTracks().forEach((track) => {
+        track.enabled = true;
+      });
 
       // Initialize audio context for monitoring
       if (!audioContextRef.current) {
@@ -177,7 +183,7 @@ export function useWebRTCAudio({
         timestamp: Date.now(),
       });
 
-      console.log('[WebRTC] Voice started successfully');
+      console.log('[WebRTC] Voice started successfully, unmuted');
     } catch (error) {
       console.error('[WebRTC] Failed to start voice:', error);
       onError?.(error as Error);
@@ -224,19 +230,20 @@ export function useWebRTCAudio({
   const toggleMute = useCallback(async () => {
     if (!localStreamRef.current) {
       console.warn('[WebRTC] Cannot toggle mute - no local stream');
-      return;
+      return false;
     }
 
     const audioTracks = localStreamRef.current.getAudioTracks();
     if (audioTracks.length === 0) {
       console.warn('[WebRTC] Cannot toggle mute - no audio tracks');
-      return;
+      return false;
     }
 
     const newMutedState = !isMuted;
 
     audioTracks.forEach((track) => {
       track.enabled = !newMutedState;
+      console.log('[WebRTC] Track enabled:', track.enabled, 'track:', track.label);
     });
 
     setIsMuted(newMutedState);
@@ -250,7 +257,8 @@ export function useWebRTCAudio({
       timestamp: Date.now(),
     });
 
-    console.log('[WebRTC] Mute toggled:', newMutedState);
+    console.log('[WebRTC] Mute toggled:', newMutedState ? 'MUTED' : 'UNMUTED');
+    return newMutedState;
   }, [isMuted, roomId, userId, userName, sanitizedUserId]);
 
   // Create peer connection for a remote user
