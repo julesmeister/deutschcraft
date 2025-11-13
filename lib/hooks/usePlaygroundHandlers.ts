@@ -152,7 +152,7 @@ export function usePlaygroundHandlers({
   };
 
   const handleEndRoom = async () => {
-    if (!currentRoom || userRole !== 'teacher') return;
+    if (!currentRoom || userId !== currentRoom.hostId) return;
 
     const roomIdToEnd = currentRoom.roomId;
     const participantIdToLeave = myParticipantId;

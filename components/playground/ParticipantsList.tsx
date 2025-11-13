@@ -25,6 +25,7 @@ export function ParticipantsList({
   const [participantsWithAudio, setParticipantsWithAudio] = useState<ParticipantWithAudio[]>([]);
   const audioContextRef = useRef<AudioContext | null>(null);
   const analyzersRef = useRef<Map<string, AnalyserNode>>(new Map());
+  const audioElementsRef = useRef<Map<string, HTMLAudioElement>>(new Map());
 
   useEffect(() => {
     console.log('[Audio] voiceStreams Map size:', voiceStreams?.size, 'participants:', participants.length);
@@ -48,8 +49,38 @@ export function ParticipantsList({
 
     const audioContext = audioContextRef.current;
 
-    // Setup analyzers for each voice stream
+    // Setup analyzers and audio playback for each voice stream
     voiceStreams.forEach((stream, userId) => {
+      // Skip playing our own audio back to ourselves
+      if (userId === currentUserId) {
+        console.log('[Audio] Skipping audio playback for own stream:', userId);
+
+        // Still analyze our own stream for visualization
+        if (!analyzersRef.current.has(userId)) {
+          const analyser = audioContext.createAnalyser();
+          analyser.fftSize = 2048;
+          analyser.smoothingTimeConstant = 0.3;
+          const source = audioContext.createMediaStreamSource(stream);
+          source.connect(analyser);
+          analyzersRef.current.set(userId, analyser);
+          console.log('[Audio] Created analyser for own stream:', userId);
+        }
+        return;
+      }
+
+      // Create audio element for remote streams
+      if (!audioElementsRef.current.has(userId)) {
+        const audio = new Audio();
+        audio.srcObject = stream;
+        audio.autoplay = true;
+        audio.play().catch(err => {
+          console.error('[Audio] Failed to play audio for userId:', userId, err);
+        });
+        audioElementsRef.current.set(userId, audio);
+        console.log('[Audio] Created audio element for userId:', userId);
+      }
+
+      // Create analyzer for remote streams
       if (!analyzersRef.current.has(userId)) {
         const analyser = audioContext.createAnalyser();
         analyser.fftSize = 2048; // Larger FFT size for better accuracy
@@ -126,11 +157,20 @@ export function ParticipantsList({
   // Cleanup on unmount
   useEffect(() => {
     return () => {
+      // Stop all audio elements
+      audioElementsRef.current.forEach((audio) => {
+        audio.pause();
+        audio.srcObject = null;
+      });
+      audioElementsRef.current.clear();
+
+      // Disconnect all analyzers
       analyzersRef.current.forEach((analyser) => {
         analyser.disconnect();
       });
       analyzersRef.current.clear();
 
+      // Close audio context
       if (audioContextRef.current) {
         audioContextRef.current.close();
         audioContextRef.current = null;
@@ -242,9 +282,11 @@ export function ParticipantsList({
               <span className={`text-sm font-semibold ${p.isTalking ? 'text-green-900' : 'text-neutral-800'}`}>
                 {p.userName}
               </span>
-              <span className="ml-2 text-xs text-gray-500 uppercase tracking-wide">
-                {p.role}
-              </span>
+              {!p.isTalking && (
+                <span className="ml-2 text-xs text-gray-500 uppercase tracking-wide">
+                  {p.role}
+                </span>
+              )}
             </div>
 
             {/* Talking indicator - pulsing dot */}

@@ -79,6 +79,9 @@ export function PlaygroundRoom({
   onToggleRoomPublicWriting,
   onCloseDialog,
 }: PlaygroundRoomProps) {
+  // Only the host (room creator) can end the room
+  const isHost = userId === currentRoom.hostId;
+
   return (
     <div className="min-h-screen bg-gray-50">
       <DashboardHeader
@@ -91,7 +94,7 @@ export function PlaygroundRoom({
           onClick: onLeaveRoom,
         }}
         actions={
-          userRole === 'teacher' && (
+          isHost && (
             <ActionButton
               onClick={onEndRoom}
               variant="red"
