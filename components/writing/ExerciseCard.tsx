@@ -16,6 +16,7 @@ export interface ExerciseCardProps {
   footer?: ReactNode;
   onClick: () => void;
   className?: string;
+  isAttempted?: boolean;
 }
 
 export function getDifficultyBadgeClasses(difficulty: Difficulty): string {
@@ -36,15 +37,20 @@ export function ExerciseCard({
   difficulty,
   footer,
   onClick,
-  className = ''
+  className = '',
+  isAttempted = false
 }: ExerciseCardProps) {
   return (
     <div
       onClick={onClick}
       className={`
-        bg-white p-4 md:p-5 lg:p-6 flex flex-col gap-6 lg:gap-8
-        border border-gray-200
-        cursor-pointer transition-all duration-200 ease-out hover:shadow-lg hover:border-gray-300
+        p-4 md:p-5 lg:p-6 flex flex-col gap-6 lg:gap-8
+        border transition-all duration-200 ease-out hover:shadow-lg
+        cursor-pointer
+        ${isAttempted
+          ? 'bg-blue-50 border-blue-200 hover:border-blue-300'
+          : 'bg-white border-gray-200 hover:border-gray-300'
+        }
         ${className}
       `}
     >

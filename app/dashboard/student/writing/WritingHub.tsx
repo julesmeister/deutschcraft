@@ -69,6 +69,11 @@ export function WritingHub({
   onEmailSelect,
   onLetterSelect,
 }: WritingHubProps) {
+  // Create a Set of attempted exercise IDs from submissions
+  const attemptedExerciseIds = new Set(
+    submissions.map(submission => submission.exerciseId).filter((id): id is string => !!id)
+  );
+
   return (
     <>
       {/* Level Selector - Split Button Style */}
@@ -167,6 +172,7 @@ export function WritingHub({
           <TranslationExerciseSelector
             exercises={filteredTranslationExercises}
             onSelect={onTranslationSelect}
+            attemptedExerciseIds={attemptedExerciseIds}
           />
         </div>
       )}
@@ -176,6 +182,7 @@ export function WritingHub({
           <CreativeExerciseSelector
             exercises={filteredCreativeExercises}
             onSelect={onCreativeSelect}
+            attemptedExerciseIds={attemptedExerciseIds}
           />
         </div>
       )}
@@ -185,6 +192,7 @@ export function WritingHub({
           <EmailTemplateSelector
             templates={filteredEmailTemplates}
             onSelect={onEmailSelect}
+            attemptedExerciseIds={attemptedExerciseIds}
           />
         </div>
       )}
@@ -194,6 +202,7 @@ export function WritingHub({
           <LetterTemplateSelector
             templates={filteredLetterTemplates}
             onSelect={onLetterSelect}
+            attemptedExerciseIds={attemptedExerciseIds}
           />
         </div>
       )}
