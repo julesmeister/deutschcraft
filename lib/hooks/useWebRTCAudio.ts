@@ -55,6 +55,11 @@ interface PeerConnection {
 const MAX_RETRIES = 3;
 const RETRY_DELAY = 2000;
 
+// Sanitize userId for Firebase paths (remove invalid characters)
+function sanitizeUserId(id: string): string {
+  return id.replace(/[.#$[\]@]/g, '_');
+}
+
 export function useWebRTCAudio({
   roomId,
   userId,
@@ -71,6 +76,9 @@ export function useWebRTCAudio({
   const audioContextRef = useRef<AudioContext | null>(null);
   const analyserNodesRef = useRef<Map<string, AnalyserNode>>(new Map());
 
+  // Sanitized userId for Firebase paths
+  const sanitizedUserId = sanitizeUserId(userId);
+
   // Signaling: Listen for other participants
   useEffect(() => {
     if (!roomId || !userId) return;
@@ -83,9 +91,9 @@ export function useWebRTCAudio({
 
       const participantList: AudioParticipant[] = [];
       Object.entries(data).forEach(([id, info]: [string, any]) => {
-        if (id !== userId) {
+        if (id !== sanitizedUserId) {
           participantList.push({
-            userId: id,
+            userId: info.originalUserId || id, // Store original userId for display
             userName: info.userName || 'Unknown',
             isMuted: info.isMuted || false,
             audioLevel: 0,
@@ -98,7 +106,7 @@ export function useWebRTCAudio({
     });
 
     return () => unsubscribe();
-  }, [roomId, userId]);
+  }, [roomId, userId, sanitizedUserId]);
 
   // Start voice (get microphone access)
   const startVoice = useCallback(async () => {
@@ -125,8 +133,9 @@ export function useWebRTCAudio({
       }
 
       // Register in Firebase
-      const myParticipantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${userId}`);
+      const myParticipantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${sanitizedUserId}`);
       await set(myParticipantRef, {
+        originalUserId: userId, // Store original for reference
         userName,
         isMuted: false,
         timestamp: Date.now(),
@@ -166,7 +175,7 @@ export function useWebRTCAudio({
     }
 
     // Remove from Firebase
-    const myParticipantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${userId}`);
+    const myParticipantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${sanitizedUserId}`);
     await remove(myParticipantRef);
 
     setIsVoiceActive(false);
@@ -189,13 +198,14 @@ export function useWebRTCAudio({
     setIsMuted(newMutedState);
 
     // Update in Firebase
-    const myParticipantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${userId}`);
+    const myParticipantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${sanitizedUserId}`);
     await set(myParticipantRef, {
+      originalUserId: userId,
       userName,
       isMuted: newMutedState,
       timestamp: Date.now(),
     });
-  }, [isMuted, roomId, userId, userName]);
+  }, [isMuted, roomId, userId, userName, sanitizedUserId]);
 
   // Create peer connection for a remote user
   const createPeerConnection = useCallback(
@@ -204,6 +214,9 @@ export function useWebRTCAudio({
         console.log('[WebRTC] No local stream available');
         return;
       }
+
+      // Sanitize remote userId for Firebase paths
+      const sanitizedRemoteUserId = sanitizeUserId(remoteUserId);
 
       // Check if already connected
       if (peerConnectionsRef.current.has(remoteUserId)) {
@@ -240,7 +253,7 @@ export function useWebRTCAudio({
           if (event.candidate) {
             console.log('[WebRTC] Sending ICE candidate to:', remoteUserId);
             const candidateRef = push(
-              dbRef(rtdb, `playground_voice/${roomId}/signals/${remoteUserId}/from_${userId}/candidates`)
+              dbRef(rtdb, `playground_voice/${roomId}/signals/${sanitizedRemoteUserId}/from_${sanitizedUserId}/candidates`)
             );
             await set(candidateRef, {
               candidate: event.candidate.toJSON(),
@@ -302,7 +315,7 @@ export function useWebRTCAudio({
           // Send offer via Firebase
           const offerRef = dbRef(
             rtdb,
-            `playground_voice/${roomId}/signals/${remoteUserId}/from_${userId}/offer`
+            `playground_voice/${roomId}/signals/${sanitizedRemoteUserId}/from_${sanitizedUserId}/offer`
           );
           await set(offerRef, {
             type: offer.type,
@@ -314,7 +327,7 @@ export function useWebRTCAudio({
         }
 
         // Listen for incoming offer
-        const offerRef = dbRef(rtdb, `playground_voice/${roomId}/signals/${userId}/from_${remoteUserId}/offer`);
+        const offerRef = dbRef(rtdb, `playground_voice/${roomId}/signals/${sanitizedUserId}/from_${sanitizedRemoteUserId}/offer`);
         onValue(offerRef, async (snapshot) => {
           const data = snapshot.val();
           if (!data || !data.sdp) return;
@@ -328,7 +341,7 @@ export function useWebRTCAudio({
           // Send answer
           const answerRef = dbRef(
             rtdb,
-            `playground_voice/${roomId}/signals/${remoteUserId}/from_${userId}/answer`
+            `playground_voice/${roomId}/signals/${sanitizedRemoteUserId}/from_${sanitizedUserId}/answer`
           );
           await set(answerRef, {
             type: answer.type,
@@ -340,7 +353,7 @@ export function useWebRTCAudio({
         });
 
         // Listen for answer
-        const answerRef = dbRef(rtdb, `playground_voice/${roomId}/signals/${userId}/from_${remoteUserId}/answer`);
+        const answerRef = dbRef(rtdb, `playground_voice/${roomId}/signals/${sanitizedUserId}/from_${sanitizedRemoteUserId}/answer`);
         onValue(answerRef, async (snapshot) => {
           const data = snapshot.val();
           if (!data || !data.sdp) return;
@@ -352,7 +365,7 @@ export function useWebRTCAudio({
         // Listen for ICE candidates
         const candidatesRef = dbRef(
           rtdb,
-          `playground_voice/${roomId}/signals/${userId}/from_${remoteUserId}/candidates`
+          `playground_voice/${roomId}/signals/${sanitizedUserId}/from_${sanitizedRemoteUserId}/candidates`
         );
         onValue(candidatesRef, async (snapshot) => {
           const data = snapshot.val();
