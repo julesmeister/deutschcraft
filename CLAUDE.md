@@ -304,6 +304,36 @@ OPENAI_API_KEY=
 
 ## Code Quality Standards
 
+### User Display Name Best Practice
+
+**⚠️ CRITICAL: Always use the centralized user helper utility**
+
+To prevent the recurring issue of showing emails instead of names:
+
+```typescript
+import { getUserInfo } from '@/lib/utils/userHelpers';
+import { useCurrentStudent } from '@/lib/hooks/useUsers';
+
+const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
+const { userId, userName, userEmail, userRole } = getUserInfo(currentUser, session);
+```
+
+**Priority Order:**
+1. Firestore `user.name` (most reliable)
+2. Session `displayName` (from OAuth)
+3. Email address (fallback only)
+
+**❌ DON'T:**
+```typescript
+const userName = session?.user?.email; // Shows email
+const userName = session?.user?.displayName; // Might be undefined
+```
+
+**✅ DO:**
+```typescript
+const { userName } = getUserInfo(currentUser, session); // Always correct
+```
+
 ### File Size Guidelines
 
 **CRITICAL: Always aim for 300 lines or less per file**

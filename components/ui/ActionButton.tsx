@@ -6,7 +6,7 @@ interface ActionButtonProps {
   children: string;
   onClick?: () => void;
   icon?: ReactNode;
-  variant?: 'purple' | 'cyan' | 'mint' | 'yellow' | 'orange' | 'gold';
+  variant?: 'purple' | 'cyan' | 'mint' | 'yellow' | 'orange' | 'gold' | 'gray' | 'red';
   className?: string;
   disabled?: boolean;
 }
@@ -18,6 +18,8 @@ const variantStyles = {
   yellow: 'bg-piku-yellow-light text-gray-900 hover:brightness-95 hover:shadow-lg',
   orange: 'bg-piku-orange text-white hover:brightness-110 hover:shadow-lg',
   gold: 'bg-piku-gold text-gray-900 hover:brightness-95 hover:shadow-lg',
+  gray: 'bg-gray-500 text-white hover:bg-gray-600 hover:shadow-lg',
+  red: 'bg-red-500 text-white hover:bg-red-600 hover:shadow-lg',
 };
 
 const iconBgStyles = {
@@ -27,6 +29,8 @@ const iconBgStyles = {
   yellow: 'bg-white/30 group-hover:bg-white/40',
   orange: 'bg-white/20 group-hover:bg-white/30',
   gold: 'bg-white/30 group-hover:bg-white/40',
+  gray: 'bg-white/20 group-hover:bg-white/30',
+  red: 'bg-white/20 group-hover:bg-white/30',
 };
 
 export function ActionButton({
@@ -120,6 +124,32 @@ export const ActionButtonIcons = {
   X: () => (
     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  ),
+
+  Close: () => (
+    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+  ),
+
+  Play: () => (
+    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+  ),
+
+  Microphone: () => (
+    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+    </svg>
+  ),
+
+  Eye: () => (
+    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
     </svg>
   ),
 };

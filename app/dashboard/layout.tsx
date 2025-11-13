@@ -74,13 +74,14 @@ function DashboardNavbar() {
                     { label: 'Flashcards', href: '/dashboard/student/flashcards' },
                     { label: 'Writing', href: '/dashboard/student/writing' },
                     { label: 'Review', href: '/dashboard/student/writing-review' },
+                    { label: 'Playground', href: '/dashboard/playground' },
                   ],
                 },
                 {
                   title: 'Progress',
                   items: [
                     { label: 'Statistics', href: '/dashboard/progress' },
-                    { label: 'Achievements', href: '/dashboard/achievements', badge: 'New' },
+                    { label: 'Achievements', href: '/dashboard/achievements' },
                     { label: 'Syllabus', href: '/dashboard/student/syllabus' },
                   ],
                 },
@@ -115,6 +116,7 @@ function DashboardNavbar() {
                     { label: 'Analytics', href: '/dashboard/analytics' },
                     { label: 'Assignments', href: '/dashboard/assignments' },
                     { label: 'Course Pricing', href: '/dashboard/teacher/pricing' },
+                    { label: 'Playground', href: '/dashboard/playground' },
                   ],
                 },
                 {
@@ -122,7 +124,6 @@ function DashboardNavbar() {
                   items: [
                     { label: 'Tasks', href: '/dashboard/tasks' },
                     { label: 'Schedule', href: '/dashboard/schedule' },
-                    { label: 'Issues', href: '/dashboard/issue' },
                     { label: 'Calendar', href: '/dashboard/calendar' },
                     { label: 'Reports', href: '/dashboard/reports' },
                   ],

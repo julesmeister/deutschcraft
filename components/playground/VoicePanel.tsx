@@ -1,0 +1,123 @@
+/**
+ * VoicePanel Component
+ * Voice chat controls and participant list
+ */
+
+'use client';
+
+import { useEffect, useRef } from 'react';
+import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
+
+interface VoiceParticipant {
+  peerId: string;
+  userId: string;
+  userName: string;
+  stream?: MediaStream;
+}
+
+interface VoicePanelProps {
+  isVoiceActive: boolean;
+  isMuted: boolean;
+  participants: VoiceParticipant[];
+  onStartVoice: () => void;
+  onStopVoice: () => void;
+  onToggleMute: () => void;
+}
+
+export function VoicePanel({
+  isVoiceActive,
+  isMuted,
+  participants,
+  onStartVoice,
+  onStopVoice,
+  onToggleMute,
+}: VoicePanelProps) {
+  return (
+    <div className="bg-white border border-gray-200 p-4 space-y-4">
+      <div className="flex items-center justify-between">
+        <h3 className="text-lg font-semibold text-neutral-900">
+          Voice Chat {participants.length > 0 && `(${participants.length})`}
+        </h3>
+      </div>
+
+      {/* Voice Controls */}
+      <div className="flex gap-2">
+        {!isVoiceActive ? (
+          <ActionButton
+            onClick={onStartVoice}
+            variant="purple"
+            icon={<ActionButtonIcons.Microphone />}
+            className="flex-1"
+          >
+            Start Voice
+          </ActionButton>
+        ) : (
+          <>
+            <ActionButton
+              onClick={onToggleMute}
+              variant={isMuted ? 'gray' : 'cyan'}
+              icon={<ActionButtonIcons.Microphone />}
+              className="flex-1"
+            >
+              {isMuted ? 'Unmute' : 'Mute'}
+            </ActionButton>
+            <ActionButton
+              onClick={onStopVoice}
+              variant="red"
+              icon={<ActionButtonIcons.Close />}
+              className="flex-1"
+            >
+              Stop Voice
+            </ActionButton>
+          </>
+        )}
+      </div>
+
+      {/* Participants List */}
+      {isVoiceActive && participants.length > 0 && (
+        <div className="space-y-2">
+          <p className="text-sm font-medium text-gray-600">
+            Connected Participants:
+          </p>
+          <div className="space-y-2">
+            {participants.map((participant) => (
+              <VoiceParticipantItem
+                key={participant.peerId}
+                participant={participant}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
+    </div>
+  );
+}
+
+// Individual participant with audio element
+function VoiceParticipantItem({
+  participant,
+}: {
+  participant: VoiceParticipant;
+}) {
+  const audioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    if (audioRef.current && participant.stream) {
+      audioRef.current.srcObject = participant.stream;
+      audioRef.current.play().catch((err) => {
+        console.warn('[Voice] Failed to play audio:', err);
+      });
+    }
+  }, [participant.stream]);
+
+  return (
+    <div className="flex items-center gap-2 p-2 bg-blue-50 border border-blue-200 rounded">
+      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+      <span className="text-sm font-medium text-neutral-800">
+        {participant.userName}
+      </span>
+      <audio ref={audioRef} autoPlay />
+    </div>
+  );
+}
