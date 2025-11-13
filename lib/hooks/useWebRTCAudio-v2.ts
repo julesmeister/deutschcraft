@@ -313,6 +313,32 @@ export function useWebRTCAudio({
             console.log('[WebRTC] ⚠️ No other participants in room - waiting for someone to join');
           } else {
             console.log('[WebRTC] 👥 Found', participants.length, 'other participant(s)');
+
+            // Connect to existing participants who don't have connections yet
+            console.log('[WebRTC] Checking for participants to connect to...');
+            participants.forEach((participant) => {
+              const existingPeer = peerConnectionsRef.current.get(participant.userId);
+              if (!existingPeer) {
+                console.log('[WebRTC] No existing connection to:', participant.userName);
+                console.log('[WebRTC] Initiating connection check...');
+
+                // Use same logic as participant-joined
+                if (userId < participant.userId) {
+                  console.log('[WebRTC] ✅ I should initiate (userId is smaller)');
+                  setTimeout(async () => {
+                    const pc = createPeerConnection(participant.userId);
+                    const offer = await pc.createOffer();
+                    await pc.setLocalDescription(offer);
+                    await sendOffer(roomId, userId, participant.userId, offer);
+                    console.log('[WebRTC] ✅ Sent offer to existing participant:', participant.userName);
+                  }, Math.random() * 1000);
+                } else {
+                  console.log('[WebRTC] ⏸️ Waiting for offer from:', participant.userName);
+                }
+              } else {
+                console.log('[WebRTC] Already connected to:', participant.userName);
+              }
+            });
           }
         }
       );
