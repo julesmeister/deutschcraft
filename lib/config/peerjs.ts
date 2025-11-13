@@ -35,6 +35,7 @@ export const PEER_CONFIG: PeerOptions = {
 
 // Generate a unique peer ID for user
 // PeerJS requires alphanumeric IDs starting with a letter (no special chars like @ or .)
+// IMPORTANT: Must be deterministic (same userId + roomId = same peerId) for stable connections
 export function generatePeerId(userId: string, roomId: string): string {
   // Sanitize userId by removing special characters
   const sanitizedUserId = userId
@@ -47,13 +48,12 @@ export function generatePeerId(userId: string, roomId: string): string {
     .toLowerCase()
     .substring(0, 20);
 
-  const timestamp = Date.now().toString(36); // Base36 for shorter ID
-
   // Ensure ID starts with a letter (PeerJS requirement)
   const prefix = 'peer';
 
-  // Build ID parts, excluding empty strings
-  const parts = [prefix, sanitizedRoomId, sanitizedUserId, timestamp].filter(p => p);
+  // Build deterministic ID without timestamp
+  // Same user + room = same peerId for stable connections
+  const parts = [prefix, sanitizedRoomId, sanitizedUserId].filter(p => p);
 
   return parts.join('-');
 }

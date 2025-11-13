@@ -20,6 +20,7 @@ import {
   subscribeToWritings,
   getActiveRooms,
   updateParticipantPeerId,
+  getRoomParticipants,
 } from '@/lib/services/playgroundService';
 import type {
   PlaygroundRoom,
@@ -114,10 +115,35 @@ export default function PlaygroundPage() {
     loadActiveRooms,
   });
 
-  // Load active rooms on mount
+  // Load active rooms and restore session on mount
   useEffect(() => {
-    loadActiveRooms();
-  }, []);
+    const initializePlayground = async () => {
+      if (!userId) return;
+
+      try {
+        // Load all active rooms
+        const rooms = await getActiveRooms();
+        setActiveRooms(rooms);
+
+        // Check if user is already in a room (restore session after refresh)
+        for (const room of rooms) {
+          const roomParticipants = await getRoomParticipants(room.roomId);
+          const myParticipant = roomParticipants.find(p => p.userId === userId && !p.leftAt);
+
+          if (myParticipant) {
+            console.log('[Playground] Restoring session - user is in room:', room.title);
+            setCurrentRoom(room);
+            setMyParticipantId(myParticipant.participantId);
+            break; // User can only be in one room at a time
+          }
+        }
+      } catch (error) {
+        console.error('[Playground] Failed to initialize:', error);
+      }
+    };
+
+    initializePlayground();
+  }, [userId]);
 
   // Subscribe to current room
   useEffect(() => {

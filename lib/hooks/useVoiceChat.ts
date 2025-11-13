@@ -72,6 +72,7 @@ export function useVoiceChat({
       peerRef.current = peer;
 
       peer.on('open', (id) => {
+        console.log('[Voice] ✅ Peer connection opened. My peerId:', id);
         setMyPeerId(id);
         setIsConnected(true);
         reconnectAttempts = 0;
@@ -95,14 +96,16 @@ export function useVoiceChat({
 
       // Handle incoming calls
       peer.on('call', (call) => {
-        console.log('[Voice] Incoming call from:', call.peer);
+        console.log('[Voice] 📞 Incoming call from:', call.peer);
 
         if (myStreamRef.current) {
-          console.log('[Voice] Answering call with local stream');
+          console.log('[Voice] ✅ Answering call with local stream:', myStreamRef.current);
+          console.log('[Voice] Local stream tracks:', myStreamRef.current.getTracks());
           call.answer(myStreamRef.current);
 
           call.on('stream', (remoteStream) => {
-            console.log('[Voice] Received remote stream from:', call.peer, remoteStream);
+            console.log('[Voice] ✅ Received remote stream from incoming call:', call.peer, remoteStream);
+            console.log('[Voice] Remote stream tracks:', remoteStream.getTracks());
             addParticipant(call.peer, remoteStream, call);
             onPeerConnected?.(call.peer, 'Remote User');
           });
@@ -114,10 +117,10 @@ export function useVoiceChat({
           });
 
           call.on('error', (err) => {
-            console.error('[Voice] Call error from:', call.peer, err);
+            console.error('[Voice] ❌ Incoming call error from:', call.peer, err);
           });
         } else {
-          console.warn('[Voice] Cannot answer call - no local stream');
+          console.error('[Voice] ❌ Cannot answer call - no local stream. Call from:', call.peer);
         }
       });
 
@@ -135,8 +138,13 @@ export function useVoiceChat({
   const startVoice = useCallback(async () => {
     try {
       console.log('[Voice] Requesting microphone access...');
+      console.log('[Voice] Audio constraints:', AUDIO_CONSTRAINTS);
+
       const stream = await navigator.mediaDevices.getUserMedia(AUDIO_CONSTRAINTS);
-      console.log('[Voice] Got microphone stream:', stream, 'Tracks:', stream.getTracks());
+      console.log('[Voice] ✅ Got microphone stream:', stream);
+      console.log('[Voice] Stream ID:', stream.id);
+      console.log('[Voice] Stream tracks:', stream.getTracks());
+      console.log('[Voice] Audio tracks:', stream.getAudioTracks());
 
       myStreamRef.current = stream;
       setIsVoiceActive(true);
@@ -148,8 +156,12 @@ export function useVoiceChat({
         console.log('[Voice] Added own stream to voiceStreams. Total streams:', updated.size);
         return updated;
       });
+
+      console.log('[Voice] ✅ Voice started successfully');
     } catch (error) {
-      console.error('[Voice] Failed to get microphone:', error);
+      console.error('[Voice] ❌ Failed to get microphone:', error);
+      console.error('[Voice] Error name:', (error as Error).name);
+      console.error('[Voice] Error message:', (error as Error).message);
       onError?.(error as Error);
       throw error;
     }
@@ -209,28 +221,43 @@ export function useVoiceChat({
       }
 
       console.log('[Voice] Calling peer:', peerId, 'for user:', targetUserName);
-      const call = peerRef.current.call(peerId, myStreamRef.current);
-      if (!call) {
-        console.warn('[Voice] Failed to create call to:', peerId);
-        return;
+
+      try {
+        const call = peerRef.current.call(peerId, myStreamRef.current);
+        if (!call) {
+          console.error('[Voice] Failed to create call to:', peerId);
+          return;
+        }
+
+        console.log('[Voice] Call object created successfully:', call);
+
+        call.on('stream', (remoteStream) => {
+          console.log('[Voice] ✅ Received stream from outgoing call:', peerId, remoteStream);
+          console.log('[Voice] Stream tracks:', remoteStream.getTracks());
+          addParticipant(peerId, remoteStream, call, targetUserId, targetUserName);
+          onPeerConnected?.(peerId, targetUserName);
+        });
+
+        call.on('close', () => {
+          console.log('[Voice] Outgoing call closed:', peerId);
+          removeParticipant(peerId);
+          onPeerDisconnected?.(peerId);
+        });
+
+        call.on('error', (err) => {
+          console.error('[Voice] ❌ Outgoing call error:', peerId, err);
+          removeParticipant(peerId);
+        });
+
+        // Add a timeout to detect if stream never arrives
+        setTimeout(() => {
+          if (!participantsRef.current.has(peerId)) {
+            console.error('[Voice] ⚠️ Timeout: No stream received from', peerId, 'after 5 seconds');
+          }
+        }, 5000);
+      } catch (err) {
+        console.error('[Voice] ❌ Exception calling peer:', peerId, err);
       }
-
-      call.on('stream', (remoteStream) => {
-        console.log('[Voice] Received stream from outgoing call:', peerId, remoteStream);
-        addParticipant(peerId, remoteStream, call, targetUserId, targetUserName);
-        onPeerConnected?.(peerId, targetUserName);
-      });
-
-      call.on('close', () => {
-        console.log('[Voice] Outgoing call closed:', peerId);
-        removeParticipant(peerId);
-        onPeerDisconnected?.(peerId);
-      });
-
-      call.on('error', (err) => {
-        console.error('[Voice] Outgoing call error:', peerId, err);
-        removeParticipant(peerId);
-      });
     },
     [myPeerId, onPeerConnected, onPeerDisconnected]
   );
