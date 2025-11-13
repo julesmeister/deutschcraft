@@ -19,6 +19,7 @@ import {
   subscribeToParticipants,
   subscribeToWritings,
   getActiveRooms,
+  updateParticipantPeerId,
 } from '@/lib/services/playgroundService';
 import type {
   PlaygroundRoom,
@@ -163,12 +164,23 @@ export default function PlaygroundPage() {
     };
   }, [currentRoom?.roomId, userId, userRole]);
 
+  // Update peerId in Firestore when it becomes available
+  useEffect(() => {
+    if (myPeerId && myParticipantId && isVoiceActive) {
+      console.log('[Playground] Updating peerId in Firestore:', myPeerId);
+      updateParticipantPeerId(myParticipantId, myPeerId).catch(err => {
+        console.error('[Playground] Failed to update peerId:', err);
+      });
+    }
+  }, [myPeerId, myParticipantId, isVoiceActive]);
+
   // Handle voice peer connections when participants change
   useEffect(() => {
     if (!isVoiceActive || participants.length === 0) return;
 
     participants.forEach((p) => {
       if (p.peerId && p.userId !== userId && p.isVoiceActive) {
+        console.log('[Playground] Connecting to peer:', p.peerId, 'for user:', p.userName);
         connectToPeer(p.peerId, p.userId, p.userName);
       }
     });

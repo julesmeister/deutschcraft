@@ -202,6 +202,12 @@ export function useVoiceChat({
         return;
       }
 
+      // Check if already connected to this peer
+      if (participantsRef.current.has(peerId)) {
+        console.log('[Voice] Already connected to peer:', peerId);
+        return;
+      }
+
       console.log('[Voice] Calling peer:', peerId, 'for user:', targetUserName);
       const call = peerRef.current.call(peerId, myStreamRef.current);
       if (!call) {
