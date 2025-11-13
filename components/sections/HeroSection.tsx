@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#171417] pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#171417] pt-24 pb-12 md:pt-28 md:pb-16 lg:pt-20 lg:pb-20">
       {/* Vertical line grid pattern like Piku */}
       <div className="absolute inset-0 overflow-hidden opacity-[0.03]">
         {[...Array(12)].map((_, i) => (
@@ -16,15 +16,15 @@ export function HeroSection() {
         ))}
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Content */}
-          <div className="text-white space-y-8">
+          <div className="text-white space-y-6 md:space-y-8">
             <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white animate-fade-in-down">
               AI-Powered German Learning
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight animate-fade-in-up">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in-up">
               Learn{' '}
               <span className="text-piku-purple-dark">
                 German
@@ -32,7 +32,7 @@ export function HeroSection() {
               Together
             </h1>
 
-            <p className="text-xl md:text-2xl text-white/90 font-manrope animate-fade-in-up animation-delay-100">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-manrope animate-fade-in-up animation-delay-100">
               A unique approach to learning German with AI-powered flashcards, peer collaboration, and personalized teacher feedback.
             </p>
 
@@ -61,31 +61,31 @@ export function HeroSection() {
               </Link>
             </div>
 
-            {/* Stats Row - Piku exact style from hero stats */}
-            <div className="grid grid-cols-3 gap-6 pt-12 animate-fade-in-up animation-delay-300">
+            {/* Stats Row - Responsive for mobile */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 pt-8 md:pt-12 animate-fade-in-up animation-delay-300">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full border-2 border-piku-cyan-accent flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-piku-cyan-accent" fill="currentColor" viewBox="0 0 20 20">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-piku-cyan-accent flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-piku-cyan-accent" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-white">60x Faster Learning</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-white">60x Faster Learning</h3>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full border-2 border-piku-gold flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-piku-gold" fill="currentColor" viewBox="0 0 20 20">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-piku-gold flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-piku-gold" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-white">70% Better Retention</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-white">70% Better Retention</h3>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full border-2 border-piku-pink flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-piku-pink" fill="currentColor" viewBox="0 0 20 20">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-piku-pink flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-piku-pink" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold text-white">Save 4,000+ hours</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-white">Save 4,000+ hours</h3>
               </div>
             </div>
           </div>

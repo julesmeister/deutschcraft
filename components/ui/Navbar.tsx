@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { signIn, signOut, useSession } from 'next-auth/react';
+import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 
 interface NavItem {
   name: string;
@@ -64,13 +65,15 @@ export function Navbar({
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 py-3 lg:py-4">
-      <div className="container mx-auto px-6">
-        <div className={`flex items-center justify-between transition-all duration-500 py-3 px-8 rounded-full shadow-lg ${
-          dark
-            ? 'bg-gray-900 text-white'
-            : 'bg-white'
-        } ${isScrolled ? 'shadow-2xl' : 'shadow-lg'}`}>
+    <header className="fixed top-0 left-0 right-0 z-50 lg:py-3 lg:py-4">
+      <div className="lg:container lg:mx-auto lg:px-6">
+        {/* Mobile: Sticky bar, no floating, no curves, no shadow */}
+        {/* Desktop: Floating with rounded corners */}
+        <div className={`flex items-center justify-between transition-all duration-500
+          lg:py-3 lg:px-8 lg:rounded-full lg:shadow-lg
+          py-4 px-4
+          ${dark ? 'bg-gray-900 text-white' : 'bg-white'}
+          ${isScrolled ? 'lg:shadow-2xl' : 'lg:shadow-lg'}`}>
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
             <div className={`w-10 h-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ${
@@ -105,50 +108,28 @@ export function Navbar({
 
           {/* CTA Button */}
           {showAuthButton && (
-            <div className="hidden lg:flex items-center">
-              <button
+            <div className="hidden lg:flex items-center w-48">
+              <ActionButton
                 onClick={handleAuthClick}
                 disabled={status === 'loading'}
-                className="theme-btn group inline-flex items-center bg-piku-purple-dark text-white font-black text-[14px] py-1.5 pl-5 pr-1.5 rounded-full disabled:opacity-50"
+                variant="purple"
+                icon={<ActionButtonIcons.ArrowRight />}
               >
-                <span className="btn-text relative z-10 transition-colors duration-300">
-                  {getAuthButtonText()}
-                </span>
-                <span className="btn-icon relative z-10 ml-4 w-9 h-9 flex items-center justify-center bg-white text-piku-purple-dark rounded-full transition-all duration-400 group-hover:bg-piku-cyan-accent group-hover:text-[#171417]">
-                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </button>
+                {getAuthButtonText()}
+              </ActionButton>
             </div>
           )}
 
           {/* User Menu for Logged In Users */}
           {!showAuthButton && session && (
-            <div className="hidden lg:flex items-center">
-              <button
+            <div className="hidden lg:flex items-center w-40">
+              <ActionButton
                 onClick={() => signOut({ callbackUrl: '/' })}
-                className={`group inline-flex items-center font-black text-[14px] py-1.5 pl-5 pr-1.5 rounded-full ${
-                  dark
-                    ? 'theme-btn-dark bg-white text-gray-900'
-                    : 'theme-btn bg-piku-purple-dark text-white'
-                }`}
+                variant={dark ? 'gray' : 'purple'}
+                icon={<ActionButtonIcons.Logout />}
               >
-                <span className={`relative z-10 transition-colors duration-300 ${
-                  dark ? '' : 'btn-text'
-                }`}>
-                  Sign out
-                </span>
-                <span className={`relative z-10 ml-4 w-9 h-9 flex items-center justify-center rounded-full transition-all duration-400 ${
-                  dark
-                    ? 'bg-gray-900 text-white'
-                    : 'btn-icon bg-white text-piku-purple-dark group-hover:bg-piku-cyan-accent group-hover:text-[#171417]'
-                }`}>
-                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                  </svg>
-                </span>
-              </button>
+                Sign out
+              </ActionButton>
             </div>
           )}
 
@@ -185,38 +166,49 @@ export function Navbar({
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg animate-fade-in-down">
-            <nav className="flex flex-col space-y-4 px-4">
+          <div className="lg:hidden mt-0 py-4 bg-white border-t border-gray-200 animate-slide-down overflow-hidden">
+            <nav className="flex flex-col space-y-3 px-4">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-piku-purple-dark font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-gray-700 hover:text-piku-purple-dark font-bold py-2 text-base"
                 >
                   {item.name}
                 </Link>
               ))}
               {showAuthButton && (
                 <>
-                  <hr />
-                  <button
-                    onClick={handleAuthClick}
-                    disabled={status === 'loading'}
-                    className="px-6 py-3 bg-gradient-to-r from-piku-purple-dark to-piku-cyan text-white font-semibold rounded-xl text-center disabled:opacity-50"
-                  >
-                    {getAuthButtonText()}
-                  </button>
+                  <div className="pt-2">
+                    <ActionButton
+                      onClick={() => {
+                        handleAuthClick();
+                        setIsMobileMenuOpen(false);
+                      }}
+                      disabled={status === 'loading'}
+                      variant="purple"
+                      icon={<ActionButtonIcons.ArrowRight />}
+                    >
+                      {getAuthButtonText()}
+                    </ActionButton>
+                  </div>
                 </>
               )}
               {!showAuthButton && session && (
                 <>
-                  <hr />
-                  <button
-                    onClick={() => signOut({ callbackUrl: '/' })}
-                    className="px-6 py-3 bg-gray-100 text-gray-700 font-semibold rounded-xl text-center hover:bg-gray-200"
-                  >
-                    Sign out
-                  </button>
+                  <div className="pt-2">
+                    <ActionButton
+                      onClick={() => {
+                        signOut({ callbackUrl: '/' });
+                        setIsMobileMenuOpen(false);
+                      }}
+                      variant="gray"
+                      icon={<ActionButtonIcons.Logout />}
+                    >
+                      Sign out
+                    </ActionButton>
+                  </div>
                 </>
               )}
             </nav>

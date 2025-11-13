@@ -123,7 +123,7 @@ export {
   getWritingStats,
   updateWritingStats,
   updateWritingProgress,
-} from './writingService';
+} from './writing';
 
 // ============================================================================
 // PROGRESS SERVICE

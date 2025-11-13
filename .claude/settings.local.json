@@ -32,7 +32,9 @@
       "Bash(nul)",
       "Bash(Select-String -Pattern \"(error|Error|ERROR)\" -Context 2,2)",
       "WebSearch",
-      "Bash(.gitignore)"
+      "Bash(.gitignore)",
+      "Bash(git reset:*)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []
