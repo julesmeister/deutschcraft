@@ -23,6 +23,7 @@ export {
   joinPlaygroundRoom,
   leavePlaygroundRoom,
   updateParticipantVoiceStatus,
+  updateParticipantPeerId,
   getRoomParticipants,
 } from './participants';
 

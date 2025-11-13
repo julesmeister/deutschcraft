@@ -170,6 +170,16 @@ export async function updateParticipantVoiceStatus(
   });
 }
 
+export async function updateParticipantPeerId(
+  participantId: string,
+  peerId: string
+): Promise<void> {
+  const participantRef = doc(db, COLLECTIONS.PARTICIPANTS, participantId);
+  await updateDoc(participantRef, {
+    peerId,
+  });
+}
+
 export async function getRoomParticipants(
   roomId: string
 ): Promise<PlaygroundParticipant[]> {

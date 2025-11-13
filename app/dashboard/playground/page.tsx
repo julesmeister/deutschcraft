@@ -7,8 +7,6 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import { doc, updateDoc } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { AlertDialog } from '@/components/ui/Dialog';
@@ -25,6 +23,7 @@ import {
   joinPlaygroundRoom,
   leavePlaygroundRoom,
   updateParticipantVoiceStatus,
+  updateParticipantPeerId,
   togglePublicWriting as toggleRoomPublicWriting,
   savePlaygroundWriting,
   toggleWritingVisibility,
@@ -316,13 +315,12 @@ export default function PlaygroundPage() {
     try {
       await startVoice();
 
-      // Update Firestore with voice active status and current peer ID
+      // Update Firestore with voice active status
       await updateParticipantVoiceStatus(myParticipantId, true, false);
 
       // Update peer ID if we have one
       if (myPeerId) {
-        const participantRef = doc(db, 'playground_participants', myParticipantId);
-        await updateDoc(participantRef, { peerId: myPeerId });
+        await updateParticipantPeerId(myParticipantId, myPeerId);
       }
     } catch (error) {
       console.error('[Voice] Failed to start voice:', error);
