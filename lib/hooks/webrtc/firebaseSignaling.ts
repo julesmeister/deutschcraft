@@ -4,7 +4,7 @@
  * Uses broadcast-style signaling with proper candidate handling
  */
 
-import { ref as dbRef, onValue, set, push, query, orderByChild } from 'firebase/database';
+import { ref as dbRef, onValue, onChildAdded, set, push, query, orderByChild, limitToLast } from 'firebase/database';
 import { rtdb } from '@/lib/firebase';
 
 // Sanitize userId for Firebase paths (remove invalid characters)
@@ -45,8 +45,8 @@ export async function broadcastSignal(
 }
 
 /**
- * Listen for all signals in a room
- * Each client filters messages meant for them
+ * Listen for all signals in a room using onChildAdded
+ * Better for realtime updates - triggers immediately when new signal arrives
  */
 export function listenForSignals(
   roomId: string,
@@ -54,47 +54,39 @@ export function listenForSignals(
   onSignal: (signal: SignalMessage) => void
 ): () => void {
   const signalsRef = dbRef(rtdb, `playground_voice/${roomId}/signals`);
-  const signalsQuery = query(signalsRef, orderByChild('timestamp'));
 
-  const processedSignals = new Set<string>();
+  // Only listen to recent signals (last 50)
+  const signalsQuery = query(signalsRef, orderByChild('timestamp'), limitToLast(50));
 
-  const unsubscribe = onValue(signalsQuery, (snapshot) => {
-    const data = snapshot.val();
-    if (!data) {
-      console.log('[Signaling] No signals in room yet');
+  console.log('[Signaling] Setting up onChildAdded listener for room:', roomId);
+
+  // Use onChildAdded - triggers for each existing child AND each new child added
+  const unsubscribe = onChildAdded(signalsQuery, (snapshot) => {
+    const signal = snapshot.val() as SignalMessage;
+    if (!signal) return;
+
+    // Skip own messages
+    if (signal.fromUserId === myUserId) {
+      console.log('[Signaling] Skipping own message:', signal.type);
       return;
     }
 
-    console.log('[Signaling] Processing signals, total count:', Object.keys(data).length);
+    // Filter: only process if message is for me or broadcast
+    const isForMe = !signal.toUserId || signal.toUserId === myUserId;
+    if (!isForMe) {
+      console.log('[Signaling] Message not for me:', signal.type, 'toUserId:', signal.toUserId);
+      return;
+    }
 
-    Object.entries(data).forEach(([key, signal]: [string, any]) => {
-      // Skip already processed signals
-      if (processedSignals.has(key)) return;
-      processedSignals.add(key);
+    // Skip old messages (more than 10 seconds old)
+    const age = Date.now() - (signal.timestamp || 0);
+    if (age > 10000) {
+      console.log('[Signaling] Skipping old message:', signal.type, 'age:', age, 'ms');
+      return;
+    }
 
-      // Skip own messages
-      if (signal.fromUserId === myUserId) {
-        console.log('[Signaling] Skipping own message:', signal.type);
-        return;
-      }
-
-      // Filter: only process if message is for me or broadcast
-      const isForMe = !signal.toUserId || signal.toUserId === myUserId;
-      if (!isForMe) {
-        console.log('[Signaling] Message not for me:', signal.type, 'toUserId:', signal.toUserId);
-        return;
-      }
-
-      // Skip old messages (more than 10 seconds old for better freshness)
-      const age = Date.now() - (signal.timestamp || 0);
-      if (age > 10000) {
-        console.log('[Signaling] Skipping old message:', signal.type, 'age:', age, 'ms');
-        return;
-      }
-
-      console.log('[Signaling] ✅ Received:', signal.type, 'from:', signal.fromUserId);
-      onSignal(signal);
-    });
+    console.log('[Signaling] ✅ NEW SIGNAL:', signal.type, 'from:', signal.fromUserId);
+    onSignal(signal);
   });
 
   return unsubscribe;

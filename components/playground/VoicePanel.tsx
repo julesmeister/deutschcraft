@@ -73,41 +73,11 @@ export function VoicePanel({
         )}
       </div>
 
-      {/* Participants List or Waiting Message */}
-      {isVoiceActive && (
-        <div className="space-y-2">
-          {participants.length > 0 ? (
-            <>
-              <p className="text-sm font-medium text-gray-600">
-                Connected Participants:
-              </p>
-              <div className="space-y-2">
-                {participants.map((participant) => (
-                  <div
-                    key={participant.userId}
-                    className="flex items-center gap-2 p-2 bg-gray-50 rounded"
-                  >
-                    <div className="flex-1">
-                      <p className="text-sm font-medium text-gray-900">
-                        {participant.userName}
-                      </p>
-                      {participant.isMuted && (
-                        <p className="text-xs text-red-500">Muted</p>
-                      )}
-                    </div>
-                    <div className="text-xs text-gray-500">
-                      {participant.connectionQuality || 'connecting...'}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </>
-          ) : (
-            <div className="text-center py-4 text-sm text-gray-500 bg-gray-50 rounded">
-              <p className="font-medium">Waiting for others to join...</p>
-              <p className="text-xs mt-1">You need at least 2 people in the room to test voice chat</p>
-            </div>
-          )}
+      {/* Waiting Message when no participants */}
+      {isVoiceActive && participants.length === 0 && (
+        <div className="text-center py-4 text-sm text-gray-500 bg-gray-50 rounded">
+          <p className="font-medium">Waiting for others to join...</p>
+          <p className="text-xs mt-1">You need at least 2 people in the room to test voice chat</p>
         </div>
       )}
 
