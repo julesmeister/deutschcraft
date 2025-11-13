@@ -70,6 +70,19 @@ export async function savePlaygroundWriting(
   return docRef.id;
 }
 
+export async function updateWritingContent(
+  writingId: string,
+  content: string
+): Promise<void> {
+  const wordCount = content.trim().split(/\s+/).filter((w) => w.length > 0).length;
+  const writingRef = doc(db, COLLECTIONS.WRITINGS, writingId);
+  await updateDoc(writingRef, {
+    content,
+    wordCount,
+    lastUpdatedAt: serverTimestamp(),
+  });
+}
+
 export async function toggleWritingVisibility(
   writingId: string,
   isPublic: boolean

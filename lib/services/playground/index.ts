@@ -30,6 +30,7 @@ export {
 // Writing management
 export {
   savePlaygroundWriting,
+  updateWritingContent,
   toggleWritingVisibility,
   getRoomWritings,
 } from './writings';

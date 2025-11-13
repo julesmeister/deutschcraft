@@ -6,6 +6,7 @@
 interface WritingEditorProps {
   content: string;
   isOwnWriting: boolean;
+  canEdit: boolean;
   selectedWritingUserName?: string;
   isSaving: boolean;
   lastSaved: Date | null;
@@ -15,6 +16,7 @@ interface WritingEditorProps {
 export function WritingEditor({
   content,
   isOwnWriting,
+  canEdit,
   selectedWritingUserName,
   isSaving,
   lastSaved,
@@ -22,8 +24,8 @@ export function WritingEditor({
 }: WritingEditorProps) {
   return (
     <div className="flex-1 flex flex-col px-8 pt-6 pb-8">
-      {/* Status Bar - Only show auto-save for own writing */}
-      {isOwnWriting && (
+      {/* Status Bar - Show for own writing or when teacher is editing */}
+      {canEdit && (
         <div className="flex items-center justify-end mb-4 gap-3">
           {/* Auto-save indicator */}
           <div className="text-xs text-gray-500">
@@ -42,14 +44,16 @@ export function WritingEditor({
       <textarea
         value={content}
         onChange={(e) => onContentChange(e.target.value)}
-        disabled={!isOwnWriting}
+        disabled={!canEdit}
         placeholder={
           isOwnWriting
             ? 'Start writing in German...'
-            : `Viewing ${selectedWritingUserName}'s writing (read-only)`
+            : canEdit
+              ? `Editing ${selectedWritingUserName}'s writing...`
+              : `Viewing ${selectedWritingUserName}'s writing (read-only)`
         }
         className={`flex-1 w-full bg-transparent border-none outline-none resize-none text-2xl leading-relaxed ${
-          isOwnWriting
+          canEdit
             ? 'text-gray-900 placeholder-gray-400'
             : 'text-gray-700 cursor-default'
         }`}

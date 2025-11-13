@@ -7,6 +7,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import type { PlaygroundWriting } from '@/lib/models/playground';
+import { updateWritingContent } from '@/lib/services/playgroundService';
 import { WritingBoardHeader } from './WritingBoardHeader';
 import { WritingTabs } from './WritingTabs';
 import { WritingEditor } from './WritingEditor';
@@ -55,10 +56,16 @@ export function WritingBoard({
 
   // Auto-save effect - saves 1 second after user stops typing
   useEffect(() => {
-    // Only auto-save for own writing
-    if (selectedWritingId !== (myWriting?.writingId || null)) return;
+    const selectedWriting = writings.find((w) => w.writingId === selectedWritingId);
+    if (!selectedWriting) return;
+
+    // Check if content has changed
     if (!content.trim()) return;
-    if (content === myWriting?.content) return;
+    if (content === selectedWriting.content) return;
+
+    // Only auto-save if we can edit (own writing or teacher editing student)
+    const canEdit = selectedWriting.userId === currentUserId || currentUserRole === 'teacher';
+    if (!canEdit) return;
 
     // Clear existing timeout
     if (saveTimeoutRef.current) {
@@ -69,7 +76,14 @@ export function WritingBoard({
     saveTimeoutRef.current = setTimeout(async () => {
       setIsSaving(true);
       try {
-        await onSaveWriting(content);
+        // For own writing, use onSaveWriting
+        // For teacher editing student, use updateWritingContent
+        if (selectedWriting.userId === currentUserId) {
+          await onSaveWriting(content);
+        } else {
+          // Teacher editing student's writing
+          await updateWritingContent(selectedWriting.writingId, content);
+        }
         setLastSaved(new Date());
       } catch (error) {
         console.error('[WritingBoard] Auto-save failed:', error);
@@ -83,7 +97,7 @@ export function WritingBoard({
         clearTimeout(saveTimeoutRef.current);
       }
     };
-  }, [content, selectedWritingId, myWriting?.writingId, myWriting?.content, onSaveWriting]);
+  }, [content, selectedWritingId, writings, currentUserId, currentUserRole, onSaveWriting, onToggleWritingVisibility]);
 
   const handleTogglePublic = async (writingId: string, currentIsPublic: boolean) => {
     await onToggleWritingVisibility(writingId, !currentIsPublic);
@@ -98,6 +112,9 @@ export function WritingBoard({
   const otherWritings = visibleWritings.filter((w) => w.userId !== currentUserId);
   const selectedWriting = visibleWritings.find((w) => w.writingId === selectedWritingId);
   const isOwnWriting = selectedWritingId === (myWriting?.writingId || null);
+
+  // Teachers can edit any writing, students can only edit their own
+  const canEdit = isOwnWriting || currentUserRole === 'teacher';
 
   return (
     <div className="bg-white min-h-[600px] flex flex-col relative">
@@ -124,6 +141,7 @@ export function WritingBoard({
       <WritingEditor
         content={content}
         isOwnWriting={isOwnWriting}
+        canEdit={canEdit}
         selectedWritingUserName={selectedWriting?.userName}
         isSaving={isSaving}
         lastSaved={lastSaved}
