@@ -1,28 +1,56 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { SettingsSidebar, SettingsMenuItem } from '@/components/ui/settings/SettingsSidebar';
 import { ProfileTab } from '@/components/ui/settings/ProfileTab';
 import { SecurityTab } from '@/components/ui/settings/SecurityTab';
 import { NotificationTab } from '@/components/ui/settings/NotificationTab';
 import { FlashcardSettingsTab } from '@/components/ui/settings/FlashcardSettingsTab';
 import { IntegrationTab } from '@/components/ui/settings/IntegrationTab';
+import { CatLoader } from '@/components/ui/CatLoader';
+import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
+import { useCurrentStudent } from '@/lib/hooks/useUsers';
+import { updateStudent } from '@/lib/services/userService';
 
 type SettingsTab = 'profile' | 'security' | 'notification' | 'flashcards' | 'integration';
 
 export default function SettingsPage() {
+  const router = useRouter();
+  const { session, status } = useFirebaseAuth();
+  const { student: currentUser, isLoading } = useCurrentStudent(session?.user?.email || null);
+
   const [activeTab, setActiveTab] = useState<SettingsTab>('profile');
   const [formData, setFormData] = useState({
-    firstName: 'Angelina',
-    lastName: 'Gotelli',
-    email: 'carolyn_h@hotmail.com',
-    phoneNumber: '121231234',
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: '',
     dialCode: '+1',
-    country: 'US',
-    address: '123 Main St',
-    city: 'New York',
-    postalCode: '10001',
+    country: '',
+    address: '',
+    city: '',
+    postalCode: '',
   });
+  const [isSaving, setIsSaving] = useState(false);
+  const [saveMessage, setSaveMessage] = useState('');
+
+  // Load user data from Firestore
+  useEffect(() => {
+    if (currentUser) {
+      setFormData({
+        firstName: currentUser.firstName || '',
+        lastName: currentUser.lastName || '',
+        email: currentUser.email || session?.user?.email || '',
+        phoneNumber: (currentUser as any).phoneNumber || '',
+        dialCode: (currentUser as any).dialCode || '+1',
+        country: (currentUser as any).country || '',
+        address: (currentUser as any).address || '',
+        city: (currentUser as any).city || '',
+        postalCode: (currentUser as any).postalCode || '',
+      });
+    }
+  }, [currentUser, session]);
 
   const menuItems: SettingsMenuItem[] = [
     {
@@ -137,10 +165,52 @@ export default function SettingsPage() {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
+    if (!currentUser) {
+      setSaveMessage('Error: User not found');
+      return;
+    }
+
+    setIsSaving(true);
+    setSaveMessage('');
+
+    try {
+      // Update Firestore with new data
+      await updateStudent(currentUser.studentId, {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        phoneNumber: formData.phoneNumber,
+        dialCode: formData.dialCode,
+        country: formData.country,
+        address: formData.address,
+        city: formData.city,
+        postalCode: formData.postalCode,
+      } as any);
+
+      setSaveMessage('Settings saved successfully!');
+
+      // Clear message after 3 seconds
+      setTimeout(() => setSaveMessage(''), 3000);
+    } catch (error) {
+      console.error('[Settings] Failed to save:', error);
+      setSaveMessage('Failed to save settings. Please try again.');
+    } finally {
+      setIsSaving(false);
+    }
   };
+
+  // Show loading while fetching user data
+  if (status === 'loading' || isLoading) {
+    return <CatLoader fullScreen message="Loading settings..." />;
+  }
+
+  // Redirect if not authenticated
+  if (!session?.user) {
+    router.push('/');
+    return null;
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -149,6 +219,19 @@ export default function SettingsPage() {
         <div className="container mx-auto px-6 py-6">
           <h1 className="text-3xl font-black text-gray-900">Settings ⚙️</h1>
           <p className="text-gray-600 mt-1">Manage your account settings and preferences</p>
+
+          {/* Save Message */}
+          {saveMessage && (
+            <div
+              className={`mt-4 p-3 rounded-lg ${
+                saveMessage.includes('success')
+                  ? 'bg-green-100 text-green-800 border border-green-300'
+                  : 'bg-red-100 text-red-800 border border-red-300'
+              }`}
+            >
+              {saveMessage}
+            </div>
+          )}
         </div>
       </div>
 
@@ -187,6 +270,8 @@ export default function SettingsPage() {
                   formData={formData}
                   onFormDataChange={setFormData}
                   onSubmit={handleSubmit}
+                  isSaving={isSaving}
+                  userPhotoURL={session?.user?.image || currentUser?.photoURL || undefined}
                 />
               )}
 

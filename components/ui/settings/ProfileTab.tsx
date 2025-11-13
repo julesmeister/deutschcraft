@@ -18,16 +18,29 @@ interface ProfileTabProps {
   formData: ProfileFormData;
   onFormDataChange: (data: ProfileFormData) => void;
   onSubmit: (e: React.FormEvent) => void;
+  isSaving?: boolean;
+  userPhotoURL?: string;
 }
 
-export function ProfileTab({ formData, onFormDataChange, onSubmit }: ProfileTabProps) {
+export function ProfileTab({
+  formData,
+  onFormDataChange,
+  onSubmit,
+  isSaving = false,
+  userPhotoURL
+}: ProfileTabProps) {
   return (
     <>
       <h2 className="text-xl font-bold text-gray-900 mb-8">Personal information</h2>
       <form onSubmit={onSubmit}>
         {/* Profile Image Upload */}
         <ProfileImageUpload
-          currentImage="https://ui-avatars.com/api/?name=Angelina+Gotelli&background=667eea&color=fff&size=180"
+          currentImage={
+            userPhotoURL ||
+            `https://ui-avatars.com/api/?name=${encodeURIComponent(
+              `${formData.firstName} ${formData.lastName}`
+            )}&background=667eea&color=fff&size=180`
+          }
           userName={`${formData.firstName} ${formData.lastName}`}
           onUpload={(file) => console.log('Upload file:', file)}
           onRemove={() => console.log('Remove image')}
@@ -55,15 +68,22 @@ export function ProfileTab({ formData, onFormDataChange, onSubmit }: ProfileTabP
           />
         </div>
 
-        {/* Email */}
-        <SettingsFormField
-          label="Email"
-          type="email"
-          value={formData.email}
-          placeholder="Email"
-          name="email"
-          onChange={(value) => onFormDataChange({ ...formData, email: value })}
-        />
+        {/* Email - Read-only from Google OAuth */}
+        <div className="mb-6">
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Email
+          </label>
+          <input
+            type="email"
+            value={formData.email}
+            readOnly
+            disabled
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl bg-gray-100 text-gray-600 cursor-not-allowed"
+          />
+          <p className="text-xs text-gray-500 mt-1">
+            Email is managed by your Google account and cannot be changed here
+          </p>
+        </div>
 
         {/* Phone Number */}
         <PhoneNumberInput
@@ -121,9 +141,10 @@ export function ProfileTab({ formData, onFormDataChange, onSubmit }: ProfileTabP
         <div className="flex justify-end">
           <button
             type="submit"
-            className="px-5 py-3 h-12 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-500 transition-colors"
+            disabled={isSaving}
+            className="px-5 py-3 h-12 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-500 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
           >
-            Save
+            {isSaving ? 'Saving...' : 'Save'}
           </button>
         </div>
       </form>
