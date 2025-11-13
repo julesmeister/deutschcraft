@@ -149,6 +149,14 @@ export function useWebRTCAudio({
     try {
       console.log('[WebRTC] Starting voice...', { roomId, userId, userName });
 
+      if (!roomId) {
+        throw new Error('No room ID provided');
+      }
+
+      if (!userId) {
+        throw new Error('No user ID provided');
+      }
+
       // Get microphone stream
       console.log('[WebRTC] Requesting microphone access...');
       const stream = await navigator.mediaDevices.getUserMedia({
