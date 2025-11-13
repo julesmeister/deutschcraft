@@ -7,7 +7,7 @@ import { getAnalytics } from 'firebase/analytics';
 const firebaseConfig = {
   apiKey: "AIzaSyCgHR2yS9u_kX0YQU6FyfEAzJHZeenyWVw",
   authDomain: "testmanship-ac721.firebaseapp.com",
-  databaseURL: "https://testmanship-ac721-default-rtdb.firebaseio.com",
+  databaseURL: "https://testmanship-ac721-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "testmanship-ac721",
   storageBucket: "testmanship-ac721.firebasestorage.app",
   messagingSenderId: "221057021972",
