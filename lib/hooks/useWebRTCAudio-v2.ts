@@ -286,16 +286,28 @@ export function useWebRTCAudio({
       await registerParticipant(roomId, userId, userName, false);
 
       // Listen for signals
+      console.log('[WebRTC] Setting up signal listener for room:', roomId);
       signalUnsubscribeRef.current = listenForSignals(roomId, userId, handleSignal);
 
       // Listen for participants
+      console.log('[WebRTC] Setting up participant listener for room:', roomId);
       participantsUnsubscribeRef.current = listenForParticipants(
         roomId,
         userId,
-        setParticipants
+        (participants) => {
+          console.log('[WebRTC] Participants updated:', participants.length, participants);
+          setParticipants(participants);
+
+          // Log connection status
+          if (participants.length === 0) {
+            console.log('[WebRTC] ⚠️ No other participants in room - waiting for someone to join');
+          } else {
+            console.log('[WebRTC] 👥 Found', participants.length, 'other participant(s)');
+          }
+        }
       );
 
-      console.log('[WebRTC] ✅ Voice started successfully');
+      console.log('[WebRTC] ✅ Voice started successfully - waiting for other participants');
     } catch (error) {
       console.error('[WebRTC] ❌ Failed to start voice:', error);
       setIsVoiceActive(false);

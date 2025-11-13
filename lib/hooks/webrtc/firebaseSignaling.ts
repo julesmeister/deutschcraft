@@ -60,7 +60,12 @@ export function listenForSignals(
 
   const unsubscribe = onValue(signalsQuery, (snapshot) => {
     const data = snapshot.val();
-    if (!data) return;
+    if (!data) {
+      console.log('[Signaling] No signals in room yet');
+      return;
+    }
+
+    console.log('[Signaling] Processing signals, total count:', Object.keys(data).length);
 
     Object.entries(data).forEach(([key, signal]: [string, any]) => {
       // Skip already processed signals
@@ -68,17 +73,26 @@ export function listenForSignals(
       processedSignals.add(key);
 
       // Skip own messages
-      if (signal.fromUserId === myUserId) return;
+      if (signal.fromUserId === myUserId) {
+        console.log('[Signaling] Skipping own message:', signal.type);
+        return;
+      }
 
       // Filter: only process if message is for me or broadcast
       const isForMe = !signal.toUserId || signal.toUserId === myUserId;
-      if (!isForMe) return;
+      if (!isForMe) {
+        console.log('[Signaling] Message not for me:', signal.type, 'toUserId:', signal.toUserId);
+        return;
+      }
 
       // Skip old messages (more than 30 seconds old)
       const age = Date.now() - (signal.timestamp || 0);
-      if (age > 30000) return;
+      if (age > 30000) {
+        console.log('[Signaling] Skipping old message:', signal.type, 'age:', age, 'ms');
+        return;
+      }
 
-      console.log('[Signaling] Received:', signal.type, 'from:', signal.fromUserId);
+      console.log('[Signaling] ✅ Received:', signal.type, 'from:', signal.fromUserId);
       onSignal(signal);
     });
   });
