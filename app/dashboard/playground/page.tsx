@@ -14,6 +14,7 @@ import { useCurrentStudent } from '@/lib/hooks/useUsers';
 import { useWebRTCAudio } from '@/lib/hooks/useWebRTCAudio-v2';
 import { usePlaygroundHandlers } from '@/lib/hooks/usePlaygroundHandlers';
 import { getUserInfo } from '@/lib/utils/userHelpers';
+import { CatLoader } from '@/components/ui/CatLoader';
 import {
   subscribeToRoom,
   subscribeToParticipants,
@@ -39,7 +40,7 @@ export default function PlaygroundPage() {
   const [dialogState, setDialogState] = useState({ isOpen: false, title: '', message: '' });
 
   // Fetch current user from Firestore to get accurate role
-  const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
+  const { student: currentUser, loading: userLoading } = useCurrentStudent(session?.user?.email || null);
 
   // Use centralized helper to get user info (prevents email display issues)
   const { userId, userName, userEmail, userRole } = getUserInfo(currentUser, session);
@@ -189,7 +190,13 @@ export default function PlaygroundPage() {
 
   const myWriting = writings.find((w) => w.userId === userId);
 
-  if (!session?.user) {
+  // Show loading state while checking authentication and loading user data
+  if (!session || userLoading) {
+    return <CatLoader fullScreen message="Loading playground..." />;
+  }
+
+  // Not authenticated - redirect to login
+  if (!session.user) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
