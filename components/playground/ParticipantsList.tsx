@@ -165,7 +165,7 @@ export function ParticipantsList({ participants, voiceStreams }: ParticipantsLis
           )}
 
           {/* Status indicator */}
-          <div className="relative z-10 flex items-center justify-center w-8 h-8">
+          <div className="relative z-10 flex items-center justify-center w-12 h-12">
             {p.isVoiceActive ? (
               <div className="relative">
                 {/* Animated rings when talking */}
@@ -176,10 +176,10 @@ export function ParticipantsList({ participants, voiceStreams }: ParticipantsLis
                          style={{ animationDelay: '0.15s' }} />
                   </>
                 )}
-                {/* Microphone icon */}
-                <div className={`relative w-3 h-3 rounded-full ${p.isTalking ? 'bg-green-600' : 'bg-green-500'}`}>
+                {/* Microphone icon - larger with more padding */}
+                <div className={`relative w-10 h-10 rounded-full flex items-center justify-center ${p.isTalking ? 'bg-green-600' : 'bg-green-500'}`}>
                   <svg
-                    className="w-2 h-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white"
+                    className="w-5 h-5 text-white"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -189,7 +189,7 @@ export function ParticipantsList({ participants, voiceStreams }: ParticipantsLis
                 </div>
               </div>
             ) : (
-              <div className="w-2 h-2 rounded-full bg-gray-400" />
+              <div className="w-3 h-3 rounded-full bg-gray-400" />
             )}
           </div>
 
@@ -203,12 +203,14 @@ export function ParticipantsList({ participants, voiceStreams }: ParticipantsLis
             </span>
           </div>
 
-          {/* Talking indicator */}
+          {/* Talking indicator - rotated 90 degrees to horizontal */}
           {p.isTalking && (
-            <div className="relative z-10 flex gap-0.5">
-              <div className="w-1 bg-green-600 rounded-full animate-audio-bar-1" style={{ height: '12px' }} />
-              <div className="w-1 bg-green-600 rounded-full animate-audio-bar-2" style={{ height: '16px' }} />
-              <div className="w-1 bg-green-600 rounded-full animate-audio-bar-3" style={{ height: '12px' }} />
+            <div className="relative z-10 w-4 h-4">
+              <div className="flex flex-col gap-0.5 rotate-90 origin-center">
+                <div className="w-1 bg-green-600 rounded-full animate-audio-bar-1" style={{ height: '12px' }} />
+                <div className="w-1 bg-green-600 rounded-full animate-audio-bar-2" style={{ height: '16px' }} />
+                <div className="w-1 bg-green-600 rounded-full animate-audio-bar-3" style={{ height: '12px' }} />
+              </div>
             </div>
           )}
         </div>

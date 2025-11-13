@@ -23,17 +23,13 @@ export * from './taskService';
 export * from './batchService';
 export * from './pricingService';
 
-// Writing services - temporarily commented out due to export conflicts
-// Import these directly from their files if needed:
-// import { ... } from '@/lib/services/writingService';
-// import { ... } from '@/lib/services/progressService';
-// import { ... } from '@/lib/services/writingAttemptService';
-// import { ... } from '@/lib/services/writingProgressService';
+// Writing services - split into modular structure
+// Now organized in lib/services/writing/ directory
+export * from './writing';
 
-// export * from './writingService';
-// export * from './progressService';
-// export * from './writingAttemptService';
-// export * from './writingProgressService';
+// Playground services - split into modular structure
+// Now organized in lib/services/playground/ directory
+export * from './playground';
 
 /**
  * Helper function to check which database is being used
