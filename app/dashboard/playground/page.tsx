@@ -7,6 +7,8 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
+import { doc, updateDoc } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { AlertDialog } from '@/components/ui/Dialog';
@@ -22,6 +24,7 @@ import {
   endPlaygroundRoom,
   joinPlaygroundRoom,
   leavePlaygroundRoom,
+  updateParticipantVoiceStatus,
   togglePublicWriting as toggleRoomPublicWriting,
   savePlaygroundWriting,
   toggleWritingVisibility,
@@ -306,6 +309,53 @@ export default function PlaygroundPage() {
     }
   };
 
+  // Wrapped voice handlers to update Firestore
+  const handleStartVoice = async () => {
+    if (!myParticipantId || !currentRoom) return;
+
+    try {
+      await startVoice();
+
+      // Update Firestore with voice active status and current peer ID
+      await updateParticipantVoiceStatus(myParticipantId, true, false);
+
+      // Update peer ID if we have one
+      if (myPeerId) {
+        const participantRef = doc(db, 'playground_participants', myParticipantId);
+        await updateDoc(participantRef, { peerId: myPeerId });
+      }
+    } catch (error) {
+      console.error('[Voice] Failed to start voice:', error);
+      setDialogState({
+        isOpen: true,
+        title: 'Voice Error',
+        message: 'Failed to start voice. Please check microphone permissions.',
+      });
+    }
+  };
+
+  const handleStopVoice = async () => {
+    if (!myParticipantId) return;
+
+    try {
+      stopVoice();
+      await updateParticipantVoiceStatus(myParticipantId, false, false);
+    } catch (error) {
+      // Silent error
+    }
+  };
+
+  const handleToggleMute = async () => {
+    if (!myParticipantId) return;
+
+    try {
+      toggleMute();
+      await updateParticipantVoiceStatus(myParticipantId, isVoiceActive, !isMuted);
+    } catch (error) {
+      // Silent error
+    }
+  };
+
   const myWriting = writings.find((w) => w.userId === userId);
 
   if (!session?.user) {
@@ -434,9 +484,9 @@ export default function PlaygroundPage() {
               isVoiceActive={isVoiceActive}
               isMuted={isMuted}
               participants={voiceParticipants}
-              onStartVoice={startVoice}
-              onStopVoice={stopVoice}
-              onToggleMute={toggleMute}
+              onStartVoice={handleStartVoice}
+              onStopVoice={handleStopVoice}
+              onToggleMute={handleToggleMute}
             />
 
             {/* Participants List */}

@@ -95,18 +95,29 @@ export function useVoiceChat({
 
       // Handle incoming calls
       peer.on('call', (call) => {
+        console.log('[Voice] Incoming call from:', call.peer);
+
         if (myStreamRef.current) {
+          console.log('[Voice] Answering call with local stream');
           call.answer(myStreamRef.current);
 
           call.on('stream', (remoteStream) => {
+            console.log('[Voice] Received remote stream from:', call.peer, remoteStream);
             addParticipant(call.peer, remoteStream, call);
             onPeerConnected?.(call.peer, 'Remote User');
           });
 
           call.on('close', () => {
+            console.log('[Voice] Call closed from:', call.peer);
             removeParticipant(call.peer);
             onPeerDisconnected?.(call.peer);
           });
+
+          call.on('error', (err) => {
+            console.error('[Voice] Call error from:', call.peer, err);
+          });
+        } else {
+          console.warn('[Voice] Cannot answer call - no local stream');
         }
       });
 
@@ -123,7 +134,10 @@ export function useVoiceChat({
   // Start voice (get microphone access)
   const startVoice = useCallback(async () => {
     try {
+      console.log('[Voice] Requesting microphone access...');
       const stream = await navigator.mediaDevices.getUserMedia(AUDIO_CONSTRAINTS);
+      console.log('[Voice] Got microphone stream:', stream, 'Tracks:', stream.getTracks());
+
       myStreamRef.current = stream;
       setIsVoiceActive(true);
 
@@ -131,9 +145,11 @@ export function useVoiceChat({
       setVoiceStreams((prev) => {
         const updated = new Map(prev);
         updated.set(userId, stream);
+        console.log('[Voice] Added own stream to voiceStreams. Total streams:', updated.size);
         return updated;
       });
     } catch (error) {
+      console.error('[Voice] Failed to get microphone:', error);
       onError?.(error as Error);
       throw error;
     }
@@ -176,23 +192,37 @@ export function useVoiceChat({
   const connectToPeer = useCallback(
     (peerId: string, targetUserId: string, targetUserName: string) => {
       if (!peerRef.current || !myStreamRef.current || peerId === myPeerId) {
+        console.log('[Voice] Skipping connectToPeer:', {
+          hasPeer: !!peerRef.current,
+          hasStream: !!myStreamRef.current,
+          sameId: peerId === myPeerId,
+          peerId,
+          myPeerId,
+        });
         return;
       }
 
+      console.log('[Voice] Calling peer:', peerId, 'for user:', targetUserName);
       const call = peerRef.current.call(peerId, myStreamRef.current);
-      if (!call) return;
+      if (!call) {
+        console.warn('[Voice] Failed to create call to:', peerId);
+        return;
+      }
 
       call.on('stream', (remoteStream) => {
+        console.log('[Voice] Received stream from outgoing call:', peerId, remoteStream);
         addParticipant(peerId, remoteStream, call, targetUserId, targetUserName);
         onPeerConnected?.(peerId, targetUserName);
       });
 
       call.on('close', () => {
+        console.log('[Voice] Outgoing call closed:', peerId);
         removeParticipant(peerId);
         onPeerDisconnected?.(peerId);
       });
 
-      call.on('error', () => {
+      call.on('error', (err) => {
+        console.error('[Voice] Outgoing call error:', peerId, err);
         removeParticipant(peerId);
       });
     },
@@ -207,6 +237,8 @@ export function useVoiceChat({
     userId?: string,
     userName?: string
   ) => {
+    console.log('[Voice] Adding participant:', { peerId, userId, userName, stream });
+
     const participant: VoiceParticipant = {
       peerId,
       userId: userId || peerId,
@@ -223,6 +255,7 @@ export function useVoiceChat({
     setVoiceStreams((prev) => {
       const updated = new Map(prev);
       updated.set(userIdKey, stream);
+      console.log('[Voice] Updated voiceStreams. Total streams:', updated.size);
       return updated;
     });
   };

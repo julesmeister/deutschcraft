@@ -103,13 +103,42 @@ function VoiceParticipantItem({
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
-    if (audioRef.current && participant.stream) {
-      audioRef.current.srcObject = participant.stream;
-      audioRef.current.play().catch((err) => {
-        console.warn('[Voice] Failed to play audio:', err);
-      });
+    const audio = audioRef.current;
+    if (!audio || !participant.stream) return;
+
+    // Set srcObject (modern approach, don't use URL.createObjectURL)
+    audio.srcObject = participant.stream;
+
+    // Set volume to maximum
+    audio.volume = 1.0;
+
+    // Ensure muted is false
+    audio.muted = false;
+
+    // Try to play with better error handling
+    const playPromise = audio.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          console.log('[Voice] Audio playing for:', participant.userName);
+        })
+        .catch((err) => {
+          console.error('[Voice] Failed to play audio for', participant.userName, ':', err);
+          // Try to unmute and play again (some browsers require this)
+          audio.muted = false;
+          audio.play().catch(e => console.error('[Voice] Retry failed:', e));
+        });
     }
-  }, [participant.stream]);
+
+    return () => {
+      // Cleanup
+      if (audio.srcObject) {
+        audio.pause();
+        audio.srcObject = null;
+      }
+    };
+  }, [participant.stream, participant.userName]);
 
   return (
     <div className="flex items-center gap-2 p-2 bg-blue-50 border border-blue-200 rounded">
@@ -117,7 +146,13 @@ function VoiceParticipantItem({
       <span className="text-sm font-medium text-neutral-800">
         {participant.userName}
       </span>
-      <audio ref={audioRef} autoPlay />
+      {/* Audio element with all necessary attributes */}
+      <audio
+        ref={audioRef}
+        autoPlay
+        playsInline
+        controls={false}
+      />
     </div>
   );
 }
