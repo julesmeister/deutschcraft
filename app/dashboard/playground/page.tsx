@@ -497,6 +497,8 @@ export default function PlaygroundPage() {
               <ParticipantsList
                 participants={participants}
                 voiceStreams={voiceStreams}
+                currentUserRole={userRole}
+                currentUserId={userId}
               />
             </div>
           </div>
