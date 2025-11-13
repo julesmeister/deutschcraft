@@ -11,7 +11,7 @@ import { PlaygroundLobby } from '@/components/playground/PlaygroundLobby';
 import { PlaygroundRoom } from '@/components/playground/PlaygroundRoom';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useCurrentStudent } from '@/lib/hooks/useUsers';
-import { useWebRTCAudio } from '@/lib/hooks/useWebRTCAudio';
+import { useWebRTCAudio } from '@/lib/hooks/useWebRTCAudio-v2';
 import { usePlaygroundHandlers } from '@/lib/hooks/usePlaygroundHandlers';
 import { getUserInfo } from '@/lib/utils/userHelpers';
 import {

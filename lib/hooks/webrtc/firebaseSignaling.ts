@@ -1,0 +1,257 @@
+/**
+ * Firebase WebRTC Signaling (Best Practices)
+ * Based on official Firebase WebRTC codelab
+ * Uses broadcast-style signaling with proper candidate handling
+ */
+
+import { ref as dbRef, onValue, set, push, query, orderByChild } from 'firebase/database';
+import { rtdb } from '@/lib/firebase';
+
+export interface SignalMessage {
+  type: 'offer' | 'answer' | 'ice-candidate' | 'participant-joined' | 'participant-left';
+  fromUserId: string;
+  toUserId?: string; // undefined = broadcast to all
+  data?: any;
+  timestamp: number;
+}
+
+/**
+ * Broadcast a signal to all participants in a room
+ * Uses single channel path for all messages (Supabase-style)
+ */
+export async function broadcastSignal(
+  roomId: string,
+  message: SignalMessage
+): Promise<void> {
+  try {
+    const signalsRef = dbRef(rtdb, `playground_voice/${roomId}/signals`);
+    const newSignalRef = push(signalsRef);
+
+    await set(newSignalRef, {
+      ...message,
+      timestamp: Date.now(),
+    });
+
+    console.log('[Signaling] Broadcast:', message.type, 'from:', message.fromUserId, 'to:', message.toUserId || 'all');
+  } catch (error) {
+    console.error('[Signaling] Broadcast failed:', error);
+    throw error;
+  }
+}
+
+/**
+ * Listen for all signals in a room
+ * Each client filters messages meant for them
+ */
+export function listenForSignals(
+  roomId: string,
+  myUserId: string,
+  onSignal: (signal: SignalMessage) => void
+): () => void {
+  const signalsRef = dbRef(rtdb, `playground_voice/${roomId}/signals`);
+  const signalsQuery = query(signalsRef, orderByChild('timestamp'));
+
+  const processedSignals = new Set<string>();
+
+  const unsubscribe = onValue(signalsQuery, (snapshot) => {
+    const data = snapshot.val();
+    if (!data) return;
+
+    Object.entries(data).forEach(([key, signal]: [string, any]) => {
+      // Skip already processed signals
+      if (processedSignals.has(key)) return;
+      processedSignals.add(key);
+
+      // Skip own messages
+      if (signal.fromUserId === myUserId) return;
+
+      // Filter: only process if message is for me or broadcast
+      const isForMe = !signal.toUserId || signal.toUserId === myUserId;
+      if (!isForMe) return;
+
+      // Skip old messages (more than 30 seconds old)
+      const age = Date.now() - (signal.timestamp || 0);
+      if (age > 30000) return;
+
+      console.log('[Signaling] Received:', signal.type, 'from:', signal.fromUserId);
+      onSignal(signal);
+    });
+  });
+
+  return unsubscribe;
+}
+
+/**
+ * Register participant in room
+ */
+export async function registerParticipant(
+  roomId: string,
+  userId: string,
+  userName: string,
+  isMuted: boolean
+): Promise<void> {
+  try {
+    const participantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${userId}`);
+
+    await set(participantRef, {
+      userId,
+      userName,
+      isMuted,
+      timestamp: Date.now(),
+    });
+
+    console.log('[Signaling] Registered participant:', userName);
+
+    // Broadcast join announcement
+    await broadcastSignal(roomId, {
+      type: 'participant-joined',
+      fromUserId: userId,
+      timestamp: Date.now(),
+    });
+  } catch (error) {
+    console.error('[Signaling] Failed to register participant:', error);
+    throw error;
+  }
+}
+
+/**
+ * Unregister participant from room
+ */
+export async function unregisterParticipant(
+  roomId: string,
+  userId: string
+): Promise<void> {
+  try {
+    // Broadcast leave announcement first
+    await broadcastSignal(roomId, {
+      type: 'participant-left',
+      fromUserId: userId,
+      timestamp: Date.now(),
+    });
+
+    const participantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${userId}`);
+    await set(participantRef, null);
+
+    console.log('[Signaling] Unregistered participant:', userId);
+  } catch (error) {
+    console.error('[Signaling] Failed to unregister participant:', error);
+  }
+}
+
+/**
+ * Update participant mute status
+ */
+export async function updateMuteStatus(
+  roomId: string,
+  userId: string,
+  userName: string,
+  isMuted: boolean
+): Promise<void> {
+  try {
+    const participantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${userId}`);
+
+    await set(participantRef, {
+      userId,
+      userName,
+      isMuted,
+      timestamp: Date.now(),
+    });
+
+    console.log('[Signaling] Updated mute status:', userName, isMuted ? 'MUTED' : 'UNMUTED');
+  } catch (error) {
+    console.error('[Signaling] Failed to update mute status:', error);
+  }
+}
+
+/**
+ * Listen for participant changes
+ */
+export function listenForParticipants(
+  roomId: string,
+  myUserId: string,
+  onParticipantsChange: (participants: any[]) => void
+): () => void {
+  const participantsRef = dbRef(rtdb, `playground_voice/${roomId}/participants`);
+
+  const unsubscribe = onValue(participantsRef, (snapshot) => {
+    const data = snapshot.val();
+    if (!data) {
+      onParticipantsChange([]);
+      return;
+    }
+
+    const participants = Object.entries(data)
+      .filter(([id]) => id !== myUserId)
+      .map(([id, info]: [string, any]) => ({
+        userId: info.userId || id,
+        userName: info.userName || 'Unknown',
+        isMuted: info.isMuted || false,
+        audioLevel: 0,
+        connectionQuality: 'disconnected' as const,
+      }));
+
+    onParticipantsChange(participants);
+  });
+
+  return unsubscribe;
+}
+
+/**
+ * Send WebRTC offer to a specific peer
+ */
+export async function sendOffer(
+  roomId: string,
+  fromUserId: string,
+  toUserId: string,
+  offer: RTCSessionDescriptionInit
+): Promise<void> {
+  await broadcastSignal(roomId, {
+    type: 'offer',
+    fromUserId,
+    toUserId,
+    data: {
+      type: offer.type,
+      sdp: offer.sdp,
+    },
+    timestamp: Date.now(),
+  });
+}
+
+/**
+ * Send WebRTC answer to a specific peer
+ */
+export async function sendAnswer(
+  roomId: string,
+  fromUserId: string,
+  toUserId: string,
+  answer: RTCSessionDescriptionInit
+): Promise<void> {
+  await broadcastSignal(roomId, {
+    type: 'answer',
+    fromUserId,
+    toUserId,
+    data: {
+      type: answer.type,
+      sdp: answer.sdp,
+    },
+    timestamp: Date.now(),
+  });
+}
+
+/**
+ * Send ICE candidate to a specific peer
+ */
+export async function sendIceCandidate(
+  roomId: string,
+  fromUserId: string,
+  toUserId: string,
+  candidate: RTCIceCandidateInit
+): Promise<void> {
+  await broadcastSignal(roomId, {
+    type: 'ice-candidate',
+    fromUserId,
+    toUserId,
+    data: candidate,
+    timestamp: Date.now(),
+  });
+}
