@@ -6,15 +6,18 @@
 import { LetterTemplate } from '@/lib/data/letterTemplates';
 import { ExerciseGrid } from './ExerciseGrid';
 import { ExerciseCard } from './ExerciseCard';
+import { ExerciseFooter } from './ExerciseFooter';
 
 interface LetterTemplateSelectorProps {
   templates: LetterTemplate[];
   onSelect: (template: LetterTemplate) => void;
+  attemptedExerciseIds?: Set<string>;
 }
 
 export function LetterTemplateSelector({
   templates,
-  onSelect
+  onSelect,
+  attemptedExerciseIds
 }: LetterTemplateSelectorProps) {
   return (
     <ExerciseGrid
@@ -32,12 +35,18 @@ export function LetterTemplateSelector({
           title={template.title}
           difficulty={template.difficulty}
           onClick={() => onSelect(template)}
+          isAttempted={attemptedExerciseIds?.has(template.id)}
           description={
             <p className="text-sm text-neutral-600 line-clamp-2">
               {template.scenario}
             </p>
           }
-          footer={`Minimum ${template.minWords} words • ${template.type}`}
+          footer={
+            <ExerciseFooter
+              left={`${template.minWords}+ words`}
+              right={template.type}
+            />
+          }
         />
       ))}
     </ExerciseGrid>

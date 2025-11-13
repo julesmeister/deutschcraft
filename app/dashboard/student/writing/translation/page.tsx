@@ -9,7 +9,7 @@ import { TranslationExerciseSelector } from '@/components/writing/TranslationExe
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
 import { TranslationExercise } from '@/lib/models/writing';
-import { TRANSLATION_EXERCISES } from '@/lib/data/translations';
+import { TRANSLATION_EXERCISES } from '@/lib/data/translationExercises';
 
 function TranslationPracticeContent() {
   const router = useRouter();

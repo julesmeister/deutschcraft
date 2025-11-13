@@ -20,7 +20,7 @@ import { EmailTemplateInstructions } from '@/components/writing/EmailTemplateIns
 import { EmailWritingForm } from '@/components/writing/EmailWritingForm';
 import { LetterWritingArea } from '@/components/writing/LetterWritingArea';
 import { WritingHub } from './WritingHub';
-import { TRANSLATION_EXERCISES } from '@/lib/data/translations';
+import { TRANSLATION_EXERCISES } from '@/lib/data/translationExercises';
 import { CREATIVE_EXERCISES } from '@/lib/data/creativeExercises';
 import { EMAIL_TEMPLATES, type EmailTemplate } from '@/lib/data/emailTemplates';
 import { LETTER_TEMPLATES, type LetterTemplate } from '@/lib/data/letterTemplates';
