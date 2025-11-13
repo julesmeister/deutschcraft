@@ -137,15 +137,38 @@ export function useWebRTCAudio({
             return updated;
           });
 
-          // Play audio
+          // Play audio with Web Audio API for better reliability
+          console.log('[WebRTC] Setting up audio playback for:', remoteUserId);
+
+          // Method 1: HTML Audio Element
           const audio = new Audio();
           audio.srcObject = remoteStream;
           audio.autoplay = true;
-          audio.play().catch((err) => {
-            console.error('[WebRTC] Failed to play audio:', err);
+          audio.volume = 1.0;
+          audio.play().then(() => {
+            console.log('[WebRTC] ✅ Audio element playing from:', remoteUserId);
+          }).catch((err) => {
+            console.error('[WebRTC] Audio element failed:', err);
           });
 
-          console.log('[WebRTC] ✅ Playing audio from:', remoteUserId);
+          // Method 2: Web Audio API (more reliable)
+          try {
+            if (audioContextRef.current) {
+              const source = audioContextRef.current.createMediaStreamSource(remoteStream);
+              const gainNode = audioContextRef.current.createGain();
+              gainNode.gain.value = 1.0;
+
+              // Connect to destination (speakers)
+              source.connect(gainNode);
+              gainNode.connect(audioContextRef.current.destination);
+
+              console.log('[WebRTC] ✅ Web Audio API connected to destination for:', remoteUserId);
+            }
+          } catch (audioApiError) {
+            console.error('[WebRTC] Web Audio API setup failed:', audioApiError);
+          }
+
+          console.log('[WebRTC] ✅ Audio setup complete for:', remoteUserId);
         }
       };
 
