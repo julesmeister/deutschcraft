@@ -201,13 +201,36 @@ export default function PlaygroundPage() {
   }, [myPeerId, myParticipantId, isVoiceActive]);
 
   // Handle voice peer connections when participants change
+  // Note: We attempt connection to ALL peers with peerIds, regardless of voice status
+  // The voice streams will only be active when users enable their microphones
   useEffect(() => {
-    if (!isVoiceActive || participants.length === 0) return;
+    if (participants.length === 0) {
+      console.log('[Playground] Not connecting - no participants');
+      return;
+    }
 
+    // Only initiate connections if WE have voice active (we need our stream to call)
+    if (!isVoiceActive) {
+      console.log('[Playground] Not connecting - my voice is not active (no stream to send)');
+      return;
+    }
+
+    console.log('[Playground] Checking participants for peer connections...');
     participants.forEach((p) => {
-      if (p.peerId && p.userId !== userId && p.isVoiceActive) {
-        console.log('[Playground] Connecting to peer:', p.peerId, 'for user:', p.userName);
+      console.log('[Playground] Participant:', p.userName, {
+        hasPeerId: !!p.peerId,
+        peerId: p.peerId,
+        isMe: p.userId === userId,
+        isVoiceActive: p.isVoiceActive,
+      });
+
+      // Connect to anyone with a peerId (not just those with voice active)
+      // They need to be able to receive our call even if their voice isn't on yet
+      if (p.peerId && p.userId !== userId) {
+        console.log('[Playground] ✅ Attempting connection to peer:', p.peerId, 'for user:', p.userName);
         connectToPeer(p.peerId, p.userId, p.userName);
+      } else if (p.userId !== userId && !p.peerId) {
+        console.log('[Playground] ⏭️ Skipping', p.userName, '- no peerId yet');
       }
     });
   }, [participants, isVoiceActive, userId, connectToPeer]);

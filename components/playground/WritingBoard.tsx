@@ -37,6 +37,16 @@ export function WritingBoard({
   const [isSaving, setIsSaving] = useState(false);
   const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Update content when selected writing changes from Firestore (real-time sync)
+  useEffect(() => {
+    const selectedWriting = writings.find((w) => w.writingId === selectedWritingId);
+
+    // Only update if viewing someone else's writing (not our own to avoid interrupting typing)
+    if (selectedWriting && selectedWriting.userId !== currentUserId) {
+      setContent(selectedWriting.content);
+    }
+  }, [writings, selectedWritingId, currentUserId]);
+
   const wordCount = content.trim().split(/\s+/).filter((w) => w.length > 0).length;
 
   // Auto-save effect - saves 1 second after user stops typing
