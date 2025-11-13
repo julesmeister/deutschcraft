@@ -75,9 +75,45 @@ export function useWebRTCAudio({
   const peerConnectionsRef = useRef<Map<string, PeerConnection>>(new Map());
   const audioContextRef = useRef<AudioContext | null>(null);
   const analyserNodesRef = useRef<Map<string, AnalyserNode>>(new Map());
+  const previousRoomIdRef = useRef<string | null>(null);
 
   // Sanitized userId for Firebase paths
   const sanitizedUserId = sanitizeUserId(userId);
+
+  // Reset state when room changes
+  useEffect(() => {
+    if (previousRoomIdRef.current && previousRoomIdRef.current !== roomId) {
+      console.log('[WebRTC] Room changed, resetting voice state');
+
+      // Clean up previous room inline
+      if (localStreamRef.current) {
+        localStreamRef.current.getTracks().forEach((track) => track.stop());
+        localStreamRef.current = null;
+      }
+
+      // Close all peer connections
+      peerConnectionsRef.current.forEach((peer) => {
+        peer.pc.close();
+        if (peer.stream) {
+          peer.stream.getTracks().forEach((track) => track.stop());
+        }
+      });
+      peerConnectionsRef.current.clear();
+
+      // Clean up audio context
+      analyserNodesRef.current.clear();
+      if (audioContextRef.current) {
+        audioContextRef.current.close();
+        audioContextRef.current = null;
+      }
+
+      setIsVoiceActive(false);
+      setIsMuted(false);
+      setParticipants([]);
+      setAudioStreams(new Map());
+    }
+    previousRoomIdRef.current = roomId;
+  }, [roomId]);
 
   // Signaling: Listen for other participants
   useEffect(() => {
@@ -186,9 +222,17 @@ export function useWebRTCAudio({
 
   // Toggle mute
   const toggleMute = useCallback(async () => {
-    if (!localStreamRef.current) return;
+    if (!localStreamRef.current) {
+      console.warn('[WebRTC] Cannot toggle mute - no local stream');
+      return;
+    }
 
     const audioTracks = localStreamRef.current.getAudioTracks();
+    if (audioTracks.length === 0) {
+      console.warn('[WebRTC] Cannot toggle mute - no audio tracks');
+      return;
+    }
+
     const newMutedState = !isMuted;
 
     audioTracks.forEach((track) => {
@@ -205,6 +249,8 @@ export function useWebRTCAudio({
       isMuted: newMutedState,
       timestamp: Date.now(),
     });
+
+    console.log('[WebRTC] Mute toggled:', newMutedState);
   }, [isMuted, roomId, userId, userName, sanitizedUserId]);
 
   // Create peer connection for a remote user
@@ -400,12 +446,16 @@ export function useWebRTCAudio({
     });
   }, [participants, isVoiceActive, userId, createPeerConnection]);
 
-  // Cleanup on unmount
+  // Cleanup when roomId changes or on unmount
   useEffect(() => {
     return () => {
-      stopVoice();
+      // Cleanup when leaving room or component unmounts
+      if (localStreamRef.current) {
+        console.log('[WebRTC] Cleaning up on room change/unmount');
+        stopVoice();
+      }
     };
-  }, [stopVoice]);
+  }, [roomId, stopVoice]);
 
   return {
     isVoiceActive,
