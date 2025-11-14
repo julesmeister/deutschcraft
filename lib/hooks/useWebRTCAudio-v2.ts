@@ -431,12 +431,20 @@ export function useWebRTCAudio({
 
     audioTracks.forEach((track) => {
       track.enabled = !newMutedState;
+      console.log('[WebRTC] Track', track.id, 'enabled:', track.enabled, 'readyState:', track.readyState);
     });
 
     setIsMuted(newMutedState);
     await updateMuteStatus(roomId, userId, userName, newMutedState);
 
     console.log('[WebRTC] Mute toggled:', newMutedState ? 'MUTED' : 'UNMUTED');
+    console.log('[WebRTC] Local stream tracks after toggle:', localStreamRef.current.getTracks().map(t => ({
+      id: t.id,
+      kind: t.kind,
+      enabled: t.enabled,
+      readyState: t.readyState
+    })));
+
     return newMutedState;
   }, [isMuted, roomId, userId, userName]);
 
