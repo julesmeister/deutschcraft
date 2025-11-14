@@ -27,8 +27,6 @@ export function ParticipantsList({
   const [participantsWithAudio, setParticipantsWithAudio] = useState<ParticipantWithAudio[]>([]);
 
   useEffect(() => {
-    console.log('[Audio] voiceAnalysers Map size:', voiceAnalysers?.size, 'participants:', participants.length);
-
     if (!voiceAnalysers || voiceAnalysers.size === 0) {
       // No analysers available, just show participants without audio levels
       setParticipantsWithAudio(
@@ -53,9 +51,6 @@ export function ParticipantsList({
         const analyser = voiceAnalysers?.get(p.userId);
 
         if (!analyser || !p.isVoiceActive) {
-          if (frameCount % 60 === 0) {
-            console.log('[Audio] No analyser or voice inactive for:', p.userName, { hasAnalyser: !!analyser, isVoiceActive: p.isVoiceActive });
-          }
           return {
             ...p,
             isTalking: false,
@@ -79,11 +74,6 @@ export function ParticipantsList({
         // Lower threshold for better sensitivity
         const isTalking = audioLevel > 0.02;
 
-        // Log every 60 frames (about once per second)
-        if (frameCount % 60 === 0) {
-          console.log('[Audio] Level for', p.userName, ':', audioLevel.toFixed(4), 'isTalking:', isTalking);
-        }
-
         return {
           ...p,
           isTalking,
@@ -105,14 +95,6 @@ export function ParticipantsList({
       }
     };
   }, [participants, voiceStreams, voiceAnalysers]);
-
-  // Cleanup on unmount
-  useEffect(() => {
-    return () => {
-      // Note: All audio elements and analysers are now owned by the WebRTC hook
-      // and cleaned up there when connections close or voice stops
-    };
-  }, []);
 
   if (participants.length === 0) {
     return (
