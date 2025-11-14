@@ -1,0 +1,122 @@
+{
+  "level": "A1",
+  "formats": [
+    {
+      "id": "a1-informal-email",
+      "title": "Informal Email to a Friend",
+      "category": "Informal",
+      "description": "Writing a casual email to a friend or family member.",
+      "format": [
+        "Greeting: Hallo/Hi + Name, or Liebe/Lieber + Name,",
+        "Opening: Ask how they are doing",
+        "Main content: Share news, ask questions",
+        "Closing: Say goodbye warmly",
+        "Sign-off: Viele Grüße, Bis bald, Tschüss, etc."
+      ],
+      "phrases": [
+        "Hallo Maria! (Hi Maria!)",
+        "Wie geht es dir? (How are you?)",
+        "Mir geht es gut. (I'm doing well.)",
+        "Was machst du? (What are you doing?)",
+        "Schreib bald! (Write soon!)",
+        "Viele Grüße (Best regards)",
+        "Bis bald! (See you soon!)",
+        "Liebe Grüße (Kind regards)"
+      ],
+      "example": "Hallo Anna,\n\nwie geht es dir? Mir geht es gut!\n\nIch bin jetzt in Berlin. Die Stadt ist sehr schön. Wie ist das Wetter bei dir?\n\nSchreib bald!\nViele Grüße,\nMax"
+    },
+    {
+      "id": "a1-postcard",
+      "title": "Postcard",
+      "category": "Informal",
+      "description": "Writing a short postcard from vacation or a trip.",
+      "format": [
+        "Greeting: Liebe/Lieber + Name,",
+        "Opening: Brief greeting from location",
+        "Main content: Describe place, weather, activities (2-3 sentences)",
+        "Closing: Warm goodbye",
+        "Sign-off: Viele Grüße, Bis bald"
+      ],
+      "phrases": [
+        "Viele Grüße aus... (Greetings from...)",
+        "Das Wetter ist schön. (The weather is nice.)",
+        "Es ist sehr warm/kalt. (It's very warm/cold.)",
+        "Ich bin am Strand. (I'm at the beach.)",
+        "Die Stadt ist toll! (The city is great!)",
+        "Bis bald! (See you soon!)"
+      ],
+      "example": "Liebe Familie,\n\nviele Grüße aus München!\n\nDas Wetter ist super. Ich besuche viele Museen. Die Stadt ist sehr schön.\n\nBis bald!\nLisa"
+    },
+    {
+      "id": "a1-introduction-email",
+      "title": "Introduction Email",
+      "category": "Informal",
+      "description": "Introducing yourself to a new pen pal or language partner.",
+      "format": [
+        "Greeting: Hallo! or Liebe/Lieber + Name,",
+        "Introduction: State your name and where you're from",
+        "Personal info: Age, hobbies, interests",
+        "Questions: Ask about the other person",
+        "Closing: Express desire to hear back",
+        "Sign-off: Viele Grüße + your name"
+      ],
+      "phrases": [
+        "Ich heiße... (My name is...)",
+        "Ich bin... Jahre alt. (I am... years old.)",
+        "Ich komme aus... (I come from...)",
+        "Ich wohne in... (I live in...)",
+        "Meine Hobbys sind... (My hobbies are...)",
+        "Und du? (And you?)",
+        "Ich freue mich auf deine Antwort! (I look forward to your reply!)"
+      ],
+      "example": "Hallo!\n\nIch heiße Tom. Ich bin 25 Jahre alt und ich komme aus England. Ich wohne in London.\n\nMeine Hobbys sind Fußball und Musik. Ich lerne Deutsch.\n\nUnd du? Woher kommst du? Was sind deine Hobbys?\n\nIch freue mich auf deine Antwort!\nViele Grüße,\nTom"
+    },
+    {
+      "id": "a1-thank-you-note",
+      "title": "Simple Thank You Note",
+      "category": "Informal",
+      "description": "Thanking someone for a gift, invitation, or help.",
+      "format": [
+        "Greeting: Liebe/Lieber + Name,",
+        "Thank you: Express gratitude",
+        "Reason: Mention what you're thankful for",
+        "Additional comment: Say something positive",
+        "Closing: Warm goodbye",
+        "Sign-off: Danke nochmal, Viele Grüße"
+      ],
+      "phrases": [
+        "Vielen Dank für... (Thank you very much for...)",
+        "Danke für das Geschenk! (Thanks for the gift!)",
+        "Das ist sehr nett! (That's very nice!)",
+        "Ich freue mich sehr! (I'm very happy!)",
+        "Danke nochmal! (Thanks again!)",
+        "Bis bald! (See you soon!)"
+      ],
+      "example": "Liebe Oma,\n\nvielen Dank für das Geschenk! Das Buch ist sehr interessant. Ich lese es gern.\n\nDas ist sehr nett von dir!\n\nDanke nochmal und bis bald!\nViele Grüße,\nSophie"
+    },
+    {
+      "id": "a1-invitation",
+      "title": "Simple Invitation",
+      "category": "Informal",
+      "description": "Inviting someone to a party, meeting, or event.",
+      "format": [
+        "Greeting: Hallo/Liebe/Lieber + Name,",
+        "Invitation: State what you're inviting them to",
+        "Details: When and where",
+        "Question: Ask if they can come",
+        "Closing: Hope to see them",
+        "Sign-off: Bis bald, Viele Grüße"
+      ],
+      "phrases": [
+        "Ich lade dich ein! (I'm inviting you!)",
+        "Kommst du zu meiner Party? (Are you coming to my party?)",
+        "Wann: ... (When: ...)",
+        "Wo: ... (Where: ...)",
+        "Kannst du kommen? (Can you come?)",
+        "Ich hoffe, du kommst! (I hope you come!)",
+        "Bis dann! (See you then!)"
+      ],
+      "example": "Hallo Paul,\n\nich habe am Samstag eine Party. Kommst du?\n\nWann: Samstag, 19:00 Uhr\nWo: Meine Wohnung, Hauptstraße 12\n\nIch hoffe, du kommst!\n\nBis dann!\nJulia"
+    }
+  ]
+}

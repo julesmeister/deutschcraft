@@ -1,0 +1,243 @@
+{
+  "level": "B1",
+  "formats": [
+    {
+      "id": "b1-formal-job-application",
+      "title": "Formal Job Application Letter",
+      "category": "Formal",
+      "description": "Professional application letter for a qualified position with CV.",
+      "format": [
+        "Your address and contact info (top right)",
+        "Company address (left, below your info)",
+        "Date and place",
+        "Subject line: Bewerbung als [Position]",
+        "Greeting: Sehr geehrte Frau/Herr [Name],",
+        "Opening: Reference the job posting, express strong interest",
+        "Main body: Your qualifications, experience, skills (2-3 paragraphs)",
+        "Motivation: Why this company, what you can contribute",
+        "Closing: Reference to attachments, request for interview",
+        "Sign-off: Mit freundlichen Grüßen, Signature, Typed name",
+        "Attachments list: Anlagen: Lebenslauf, Zeugnisse, etc."
+      ],
+      "phrases": [
+        "mit großem Interesse habe ich Ihre Stellenanzeige gelesen... (I read your job posting with great interest...)",
+        "Derzeit arbeite ich als... (Currently I work as...)",
+        "Ich verfüge über... Jahre Berufserfahrung in... (I have... years of professional experience in...)",
+        "Zu meinen Stärken gehören... (My strengths include...)",
+        "Ich beherrsche... (I am proficient in...)",
+        "Ihre Firma interessiert mich besonders, weil... (I'm particularly interested in your company because...)",
+        "Über die Einladung zu einem persönlichen Gespräch würde ich mich sehr freuen. (I would be very pleased to receive an invitation for an interview.)",
+        "Anlagen: (Attachments:)"
+      ],
+      "example": "Bewerbung als Marketing Manager\n\nSehr geehrte Frau Schmidt,\n\nmit großem Interesse habe ich Ihre Stellenanzeige auf Ihrer Website gelesen. Die Position als Marketing Manager entspricht genau meinen beruflichen Vorstellungen und Qualifikationen.\n\nDerzeit arbeite ich als Marketing Specialist bei der Firma XYZ GmbH in München. In den letzten drei Jahren habe ich erfolgreich mehrere Kampagnen entwickelt und durchgeführt. Ich verfüge über fundierte Kenntnisse in digitalem Marketing, Social Media Management und Marktanalyse.\n\nIhre Firma interessiert mich besonders, weil Sie innovative Produkte entwickeln und international tätig sind. Mit meiner Erfahrung und meinem Engagement möchte ich zum Erfolg Ihres Teams beitragen.\n\nIm Anhang finden Sie meinen Lebenslauf und relevante Zeugnisse. Über die Einladung zu einem persönlichen Gespräch würde ich mich sehr freuen.\n\nMit freundlichen Grüßen,\nMichael Braun\n\nAnlagen:\n- Lebenslauf\n- Arbeitszeugnisse\n- Zertifikate"
+    },
+    {
+      "id": "b1-motivation-letter",
+      "title": "Motivation Letter (University/Scholarship)",
+      "category": "Formal",
+      "description": "Letter explaining your motivation for university admission or scholarship application.",
+      "format": [
+        "Your contact information",
+        "University/Organization address",
+        "Date",
+        "Subject: Motivationsschreiben für [Program/Scholarship]",
+        "Greeting: Sehr geehrte Damen und Herren,",
+        "Opening: State what you're applying for",
+        "Academic background: Your studies, achievements",
+        "Motivation: Why this program, your goals",
+        "Qualifications: Relevant skills, experiences",
+        "Future plans: Career goals, how this helps",
+        "Closing: Express gratitude, enthusiasm",
+        "Sign-off: Mit freundlichen Grüßen"
+      ],
+      "phrases": [
+        "Hiermit bewerbe ich mich um einen Studienplatz für... (I hereby apply for a place to study...)",
+        "Ich interessiere mich sehr für... (I am very interested in...)",
+        "Während meines Studiums habe ich... (During my studies I have...)",
+        "Besonders fasziniert mich... (I am particularly fascinated by...)",
+        "Mein Ziel ist es,... (My goal is to...)",
+        "Diese Erfahrung hat mich gelehrt,... (This experience taught me...)",
+        "Ich bin überzeugt, dass... (I am convinced that...)",
+        "Langfristig möchte ich... (In the long term I would like to...)"
+      ],
+      "example": "Betreff: Motivationsschreiben für den Master in Umweltwissenschaften\n\nSehr geehrte Damen und Herren,\n\nhiermit bewerbe ich mich um einen Studienplatz für den Masterstudiengang Umweltwissenschaften an Ihrer renommierten Universität.\n\nIch habe meinen Bachelor in Biologie an der Universität Hamburg abgeschlossen. Während meines Studiums habe ich mich intensiv mit Ökosystemen und Klimawandel beschäftigt. Besonders fasziniert mich die Forschung zu nachhaltigen Lösungen für Umweltprobleme.\n\nIhr Masterprogramm interessiert mich besonders wegen der starken Forschungsorientierung und der internationalen Perspektive. Ich möchte meine Kenntnisse vertiefen und an innovativen Projekten mitarbeiten.\n\nMein Ziel ist es, in der Umweltforschung zu arbeiten und zur Lösung globaler ökologischer Herausforderungen beizutragen. Ich bin überzeugt, dass Ihr Programm die ideale Grundlage dafür bietet.\n\nVielen Dank für Ihre Aufmerksamkeit. Ich freue mich auf Ihre positive Rückmeldung.\n\nMit freundlichen Grüßen,\nJulia Hoffmann"
+    },
+    {
+      "id": "b1-formal-complaint-detailed",
+      "title": "Detailed Formal Complaint",
+      "category": "Formal",
+      "description": "Comprehensive complaint letter about service, contract dispute, or serious issue.",
+      "format": [
+        "Your address and contact",
+        "Company/Organization address",
+        "Date",
+        "Subject: Beschwerde bezüglich [Issue] + Reference number",
+        "Greeting: Sehr geehrte Damen und Herren,",
+        "Opening: State the problem clearly and seriously",
+        "Background: Detailed description with dates, facts, evidence",
+        "Impact: Explain consequences, inconvenience",
+        "Demand: Clear statement of what you expect (compensation, solution)",
+        "Deadline: Set reasonable deadline for response",
+        "Closing: State next steps if not resolved",
+        "Sign-off: Mit freundlichen Grüßen"
+      ],
+      "phrases": [
+        "Ich muss mich leider über... beschweren. (I unfortunately must complain about...)",
+        "Trotz mehrfacher Versuche... (Despite multiple attempts...)",
+        "Dies ist bereits das [x]. Mal, dass... (This is already the [x]th time that...)",
+        "Dadurch ist mir ein Schaden von... entstanden. (This has caused me damages of...)",
+        "Ich fordere Sie auf,... (I demand that you...)",
+        "Bitte bestätigen Sie mir bis zum [Datum]... (Please confirm to me by [date]...)",
+        "Sollte bis dahin keine Lösung erfolgen, sehe ich mich gezwungen... (If no solution is reached by then, I will be forced to...)",
+        "Ich behalte mir rechtliche Schritte vor. (I reserve the right to take legal action.)"
+      ],
+      "example": "Betreff: Beschwerde bezüglich defekter Waschmaschine - Kundennummer 789456\n\nSehr geehrte Damen und Herren,\n\nich muss mich leider über die mangelhaften Leistungen Ihres Service-Teams beschwern.\n\nAm 5. Februar 2024 habe ich bei Ihnen eine Waschmaschine (Modell XL-2000) für 899 Euro gekauft. Bereits nach zwei Wochen funktionierte das Gerät nicht mehr. Am 20. Februar habe ich Ihren Kundendienst kontaktiert. Trotz mehrfacher Anrufe und E-Mails hat sich bis heute niemand bei mir gemeldet.\n\nDurch den Ausfall der Waschmaschine entstehen mir zusätzliche Kosten, da ich einen Waschsalon nutzen muss. Außerdem habe ich bereits mehrere Stunden mit vergeblichen Kontaktversuchen verbracht.\n\nIch fordere Sie auf, die Waschmaschine unverzüglich zu reparieren oder durch ein neues Gerät zu ersetzen. Alternativ erwarte ich eine vollständige Rückerstattung des Kaufpreises.\n\nBitte bestätigen Sie mir bis zum 15. März eine Lösung. Sollte bis dahin keine zufriedenstellende Antwort erfolgen, sehe ich mich gezwungen, rechtliche Schritte einzuleiten.\n\nMit freundlichen Grüßen,\nThomas Schneider"
+    },
+    {
+      "id": "b1-formal-request-letter",
+      "title": "Formal Request Letter",
+      "category": "Formal",
+      "description": "Requesting official documents, permissions, or administrative actions.",
+      "format": [
+        "Your contact details",
+        "Authority/Organization address",
+        "Date and location",
+        "Subject: Antrag auf [what you're requesting]",
+        "Greeting: Sehr geehrte Damen und Herren,",
+        "Opening: Clearly state your request",
+        "Background: Explain why you need this",
+        "Details: Provide necessary information, reference numbers",
+        "Closing: Thank them, express urgency if needed",
+        "Sign-off: Mit freundlichen Grüßen",
+        "Attachments: List supporting documents"
+      ],
+      "phrases": [
+        "Hiermit beantrage ich... (I hereby request...)",
+        "Ich benötige... für... (I need... for...)",
+        "Ich bitte um... (I ask for...)",
+        "Könnten Sie mir bitte... ausstellen? (Could you please issue me...?)",
+        "Ich füge die erforderlichen Unterlagen bei. (I am enclosing the required documents.)",
+        "Ich wäre Ihnen dankbar, wenn... (I would be grateful if...)",
+        "Für Rückfragen stehe ich gerne zur Verfügung. (I am happy to answer any questions.)"
+      ],
+      "example": "Betreff: Antrag auf Verlängerung des Aufenthaltstitels\n\nSehr geehrte Damen und Herren,\n\nhiermit beantrage ich die Verlängerung meines Aufenthaltstitels für weitere zwei Jahre.\n\nMein aktueller Aufenthaltstitel läuft am 30. April 2024 ab. Ich studiere derzeit im vierten Semester Informatik an der TU Berlin und benötige die Verlängerung, um mein Studium abzuschließen.\n\nIch füge die erforderlichen Unterlagen bei:\n- Gültiger Reisepass\n- Aktuelle Immatrikulationsbescheinigung\n- Nachweis über Krankenversicherung\n- Finanzierungsnachweis\n\nIch wäre Ihnen sehr dankbar, wenn Sie meinen Antrag zeitnah bearbeiten könnten, da mein derzeitiger Titel bald abläuft.\n\nFür Rückfragen stehe ich gerne zur Verfügung.\n\nMit freundlichen Grüßen,\nAna Rodriguez\n\nAnlagen: wie oben aufgeführt"
+    },
+    {
+      "id": "b1-opinion-article-letter",
+      "title": "Letter to Editor / Opinion Piece",
+      "category": "Semi-Formal",
+      "description": "Writing to a newspaper to express opinion on current issue.",
+      "format": [
+        "Subject: Leserbrief zu [article title/topic]",
+        "Greeting: Sehr geehrte Redaktion, / Sehr geehrte Damen und Herren,",
+        "Opening: Reference the article or issue",
+        "Your opinion: State your position clearly",
+        "Arguments: Support with reasons, examples (2-3 points)",
+        "Counter-argument: Address opposing view briefly",
+        "Conclusion: Summarize your stance",
+        "Closing: Thank them for publishing",
+        "Sign-off: Mit freundlichen Grüßen, Name, City"
+      ],
+      "phrases": [
+        "Mit Interesse habe ich Ihren Artikel über... gelesen. (I read your article about... with interest.)",
+        "Ich bin der Meinung, dass... (I am of the opinion that...)",
+        "Meiner Ansicht nach... (In my view...)",
+        "Einerseits..., andererseits... (On the one hand..., on the other hand...)",
+        "Man sollte nicht vergessen, dass... (One should not forget that...)",
+        "Es ist wichtig zu betonen, dass... (It is important to emphasize that...)",
+        "Zwar..., jedoch... (Although..., however...)",
+        "Zusammenfassend lässt sich sagen... (In summary, it can be said...)"
+      ],
+      "example": "Betreff: Leserbrief zu 'Fahrradwege in der Stadt'\n\nSehr geehrte Redaktion,\n\nmit großem Interesse habe ich Ihren Artikel über den Ausbau von Fahrradwegen in unserer Stadt gelesen.\n\nIch bin der Meinung, dass mehr Fahrradwege dringend notwendig sind. Erstens würde dies die Luftqualität in der Innenstadt verbessern. Zweitens würden weniger Autos die Straßen entlasten. Drittens ist Fahrradfahren gesund und umweltfreundlich.\n\nZwar argumentieren einige, dass Fahrradwege zu teuer sind. Jedoch zeigen Studien aus anderen Städten, dass die langfristigen Vorteile die Kosten überwiegen. Weniger Luftverschmutzung bedeutet geringere Gesundheitskosten.\n\nMeiner Ansicht nach sollte die Stadt mutig investieren und ein modernes Fahrradwegenetz aufbauen.\n\nVielen Dank für Ihre Aufmerksamkeit.\n\nMit freundlichen Grüßen,\nStefan Meyer\nBerlin"
+    },
+    {
+      "id": "b1-recommendation-letter",
+      "title": "Letter of Recommendation",
+      "category": "Formal",
+      "description": "Writing a reference letter for a colleague, student, or employee.",
+      "format": [
+        "Your position and organization",
+        "Date",
+        "Subject: Empfehlungsschreiben für [Person]",
+        "Greeting: Sehr geehrte Damen und Herren,",
+        "Opening: State your relationship to the person, how long you've known them",
+        "Qualifications: Describe their skills, work ethic, character",
+        "Specific examples: Concrete achievements or situations",
+        "Assessment: Overall evaluation",
+        "Recommendation: Strong endorsement",
+        "Closing: Offer to provide more information",
+        "Sign-off: Mit freundlichen Grüßen, Name, Title"
+      ],
+      "phrases": [
+        "Hiermit empfehle ich... (I hereby recommend...)",
+        "Ich kenne Frau/Herr... seit... (I have known Ms./Mr.... since...)",
+        "In dieser Zeit hat sie/er sich als... erwiesen. (During this time she/he has proven to be...)",
+        "Zu ihren/seinen besonderen Stärken zählen... (Among her/his particular strengths are...)",
+        "Sie/Er zeichnet sich durch... aus. (She/He is characterized by...)",
+        "Besonders hervorzuheben ist... (Particularly noteworthy is...)",
+        "Ich kann Frau/Herr... uneingeschränkt empfehlen. (I can recommend Ms./Mr.... without reservation.)",
+        "Für weitere Auskünfte stehe ich gerne zur Verfügung. (I am happy to provide further information.)"
+      ],
+      "example": "Betreff: Empfehlungsschreiben für Frau Lisa Wagner\n\nSehr geehrte Damen und Herren,\n\nhiermit empfehle ich Frau Lisa Wagner für eine Position in Ihrem Unternehmen.\n\nIch kenne Frau Wagner seit drei Jahren. Sie war als Projektkoordinatorin in meinem Team tätig. In dieser Zeit hat sie sich als äußerst kompetent, zuverlässig und engagiert erwiesen.\n\nZu ihren besonderen Stärken zählen exzellente Organisationsfähigkeiten und ausgezeichnete Kommunikation. Sie leitete erfolgreich mehrere komplexe Projekte und arbeitete hervorragend im Team. Besonders hervorzuheben ist ihre Fähigkeit, auch unter Zeitdruck qualitativ hochwertige Ergebnisse zu liefern.\n\nEin konkretes Beispiel: Frau Wagner organisierte eine internationale Konferenz mit 200 Teilnehmern. Trotz unvorhergesehener Schwierigkeiten verlief alles reibungslos dank ihrer professionellen Planung.\n\nIch kann Frau Wagner uneingeschränkt empfehlen. Jedes Unternehmen würde von ihren Fähigkeiten profitieren.\n\nFür weitere Auskünfte stehe ich gerne zur Verfügung.\n\nMit freundlichen Grüßen,\nDr. Martin Schulz\nAbteilungsleiter, ABC Consulting GmbH"
+    },
+    {
+      "id": "b1-notification-change-letter",
+      "title": "Notification of Change (Address, Contract)",
+      "category": "Formal",
+      "description": "Informing organizations about changes in personal circumstances.",
+      "format": [
+        "Your current contact information",
+        "Organization address",
+        "Date",
+        "Subject: Mitteilung über [type of change]",
+        "Greeting: Sehr geehrte Damen und Herren,",
+        "Opening: State what is changing",
+        "Details: Provide old and new information",
+        "Effective date: When change takes effect",
+        "Request: Ask for confirmation or updated documents",
+        "Closing: Thank them",
+        "Sign-off: Mit freundlichen Grüßen",
+        "Customer/Account number if applicable"
+      ],
+      "phrases": [
+        "Hiermit teile ich Ihnen mit, dass... (I hereby inform you that...)",
+        "Ab dem [Datum] ändert sich... (From [date] the following changes...)",
+        "Meine neue Adresse lautet... (My new address is...)",
+        "Bitte ändern Sie Ihre Unterlagen entsprechend. (Please update your records accordingly.)",
+        "Ich bitte um eine schriftliche Bestätigung. (I request written confirmation.)",
+        "Meine Kundennummer ist... (My customer number is...)"
+      ],
+      "example": "Betreff: Mitteilung über Adressänderung - Kundennummer 456789\n\nSehr geehrte Damen und Herren,\n\nhiermit teile ich Ihnen mit, dass sich meine Adresse ab dem 1. April 2024 ändert.\n\nAlte Adresse:\nMusterstraße 15\n10115 Berlin\n\nNeue Adresse:\nParkweg 42\n20095 Hamburg\n\nMeine Telefonnummer und E-Mail-Adresse bleiben unverändert.\n\nBitte ändern Sie Ihre Unterlagen entsprechend und senden Sie zukünftige Post an die neue Adresse. Ich bitte um eine schriftliche Bestätigung der Adressänderung.\n\nVielen Dank für Ihre Kooperation.\n\nMit freundlichen Grüßen,\nKlara Zimmermann\n\nKundennummer: 456789"
+    },
+    {
+      "id": "b1-business-proposal-letter",
+      "title": "Business Proposal Letter",
+      "category": "Business",
+      "description": "Proposing collaboration, partnership, or business opportunity.",
+      "format": [
+        "Your company letterhead",
+        "Recipient company address",
+        "Date",
+        "Subject: Vorschlag zur Zusammenarbeit / Geschäftsvorschlag",
+        "Greeting: Sehr geehrte Frau/Herr [Name],",
+        "Opening: Introduce yourself and company briefly",
+        "Proposal: Present your idea or opportunity",
+        "Benefits: Explain advantages for both parties",
+        "Details: Practical aspects, timeline, investment",
+        "Next steps: Suggest meeting or further discussion",
+        "Closing: Express enthusiasm",
+        "Sign-off: Mit freundlichen Grüßen, Name, Position"
+      ],
+      "phrases": [
+        "Wir möchten Ihnen eine interessante Geschäftsmöglichkeit vorstellen. (We would like to present an interesting business opportunity.)",
+        "Unser Unternehmen ist spezialisiert auf... (Our company specializes in...)",
+        "Wir schlagen vor,... (We propose...)",
+        "Dies würde beiden Seiten folgende Vorteile bringen... (This would bring the following advantages to both sides...)",
+        "Wir sind überzeugt, dass... (We are convinced that...)",
+        "Gerne würden wir die Details in einem persönlichen Gespräch erörtern. (We would be happy to discuss the details in a personal meeting.)",
+        "Wir freuen uns auf eine mögliche Zusammenarbeit. (We look forward to a possible collaboration.)"
+      ],
+      "example": "Betreff: Vorschlag zur Zusammenarbeit im Bereich digitales Marketing\n\nSehr geehrte Frau Becker,\n\nwir möchten Ihnen eine interessante Geschäftsmöglichkeit vorstellen.\n\nUnser Unternehmen, Digital Solutions GmbH, ist seit 10 Jahren auf digitales Marketing und Social Media Management spezialisiert. Wir haben erfolgreich über 100 Unternehmen dabei unterstützt, ihre Online-Präsenz zu verbessern.\n\nWir schlagen eine strategische Partnerschaft vor: Wir könnten unsere digitalen Marketing-Dienstleistungen Ihren Kunden anbieten, während Sie uns bei der technischen Website-Entwicklung unterstützen.\n\nDies würde beiden Seiten folgende Vorteile bringen:\n- Erweiterung des Dienstleistungsangebots\n- Zugang zu neuen Kundenkreisen\n- Gegenseitige Empfehlungen und Synergien\n\nWir sind überzeugt, dass unsere Kompetenzen sich ideal ergänzen. Gerne würden wir die Details in einem persönlichen Gespräch erörtern.\n\nWir freuen uns auf Ihre Rückmeldung und eine mögliche Zusammenarbeit.\n\nMit freundlichen Grüßen,\nAndreas Koch\nGeschäftsführer, Digital Solutions GmbH"
+    }
+  ]
+}

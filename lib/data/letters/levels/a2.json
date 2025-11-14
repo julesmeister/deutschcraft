@@ -1,0 +1,177 @@
+{
+  "level": "A2",
+  "formats": [
+    {
+      "id": "a2-formal-email-inquiry",
+      "title": "Formal Email - Inquiry",
+      "category": "Formal",
+      "description": "Writing a formal email to ask for information (hotel, course, product).",
+      "format": [
+        "Subject line: Clear and specific",
+        "Greeting: Sehr geehrte Damen und Herren, or Sehr geehrte/r Frau/Herr + Name,",
+        "Opening: State your purpose",
+        "Main content: Ask specific questions, provide necessary details",
+        "Closing: Thank them and express anticipation for reply",
+        "Sign-off: Mit freundlichen Grüßen, + Your full name"
+      ],
+      "phrases": [
+        "Sehr geehrte Damen und Herren, (Dear Sir/Madam,)",
+        "Ich schreibe Ihnen, weil... (I'm writing to you because...)",
+        "Ich möchte Informationen über... (I would like information about...)",
+        "Könnten Sie mir bitte sagen...? (Could you please tell me...?)",
+        "Ich hätte gerne gewusst... (I would like to know...)",
+        "Vielen Dank im Voraus. (Thank you in advance.)",
+        "Ich freue mich auf Ihre Antwort. (I look forward to your reply.)",
+        "Mit freundlichen Grüßen (Yours sincerely)"
+      ],
+      "example": "Betreff: Anfrage zu Deutschkurs\n\nSehr geehrte Damen und Herren,\n\nich möchte gerne Deutsch lernen und interessiere mich für Ihre Kurse.\n\nKönnten Sie mir bitte Informationen über die A2-Kurse geben? Wann beginnt der nächste Kurs? Wie viel kostet der Kurs?\n\nVielen Dank im Voraus.\nIch freue mich auf Ihre Antwort.\n\nMit freundlichen Grüßen,\nSarah Johnson"
+    },
+    {
+      "id": "a2-complaint-letter",
+      "title": "Simple Complaint Letter",
+      "category": "Formal",
+      "description": "Writing a polite complaint about a product or service.",
+      "format": [
+        "Greeting: Sehr geehrte Damen und Herren,",
+        "Opening: State the problem clearly",
+        "Details: Explain what happened (date, order number, etc.)",
+        "Request: Say what you want (refund, replacement, apology)",
+        "Closing: Polite but firm closing",
+        "Sign-off: Mit freundlichen Grüßen, + Your name"
+      ],
+      "phrases": [
+        "Ich habe ein Problem mit... (I have a problem with...)",
+        "Leider funktioniert... nicht. (Unfortunately... doesn't work.)",
+        "Am [Datum] habe ich... gekauft. (On [date] I bought...)",
+        "Das Produkt ist defekt. (The product is defective.)",
+        "Ich möchte eine Rückerstattung. (I would like a refund.)",
+        "Ich erwarte eine schnelle Antwort. (I expect a quick response.)",
+        "Bitte senden Sie mir... (Please send me...)"
+      ],
+      "example": "Betreff: Beschwerde - Bestellnummer 12345\n\nSehr geehrte Damen und Herren,\n\nam 15. März habe ich bei Ihnen ein Buch bestellt (Bestellnummer: 12345). Leider ist das Buch beschädigt angekommen.\n\nDas Buch hat mehrere zerrissene Seiten. Ich möchte gerne ein neues Buch oder eine Rückerstattung.\n\nBitte senden Sie mir eine Antwort bis zum 30. März.\n\nMit freundlichen Grüßen,\nMarkus Weber"
+    },
+    {
+      "id": "a2-job-application-email",
+      "title": "Simple Job Application Email",
+      "category": "Formal",
+      "description": "Applying for a simple job (internship, part-time, student job).",
+      "format": [
+        "Subject line: Bewerbung als [Position]",
+        "Greeting: Sehr geehrte Frau/Herr [Name],",
+        "Opening: State position you're applying for and where you saw it",
+        "About you: Brief background, qualifications, why you're interested",
+        "Closing: Mention attachments, express interest in interview",
+        "Sign-off: Mit freundlichen Grüßen, + Your name"
+      ],
+      "phrases": [
+        "Ich bewerbe mich für die Stelle als... (I'm applying for the position as...)",
+        "Ich habe Ihre Anzeige gelesen... (I read your advertisement...)",
+        "Ich bin... Jahre alt und studiere... (I am... years old and study...)",
+        "Ich habe Erfahrung in... (I have experience in...)",
+        "Ich spreche... (I speak...)",
+        "Im Anhang finden Sie... (Attached you will find...)",
+        "Ich freue mich auf ein Gespräch. (I look forward to an interview.)"
+      ],
+      "example": "Betreff: Bewerbung als Kellner\n\nSehr geehrte Frau Müller,\n\nich habe Ihre Anzeige im Internet gelesen. Ich möchte mich für die Stelle als Kellner bewerben.\n\nIch bin 22 Jahre alt und studiere in München. Ich habe schon in einem Café gearbeitet und spreche Deutsch und Englisch.\n\nIm Anhang finden Sie meinen Lebenslauf.\n\nIch freue mich auf ein Gespräch mit Ihnen.\n\nMit freundlichen Grüßen,\nPablo García"
+    },
+    {
+      "id": "a2-informal-advice-letter",
+      "title": "Informal Letter - Asking for Advice",
+      "category": "Informal",
+      "description": "Writing to a friend to ask for advice about a problem or decision.",
+      "format": [
+        "Greeting: Liebe/Lieber [Name],",
+        "Opening: Ask how they are, then mention you need advice",
+        "Problem: Explain your situation or problem",
+        "Question: Ask for their opinion or advice",
+        "Closing: Thank them and say goodbye",
+        "Sign-off: Liebe Grüße, Dein/Deine [Name]"
+      ],
+      "phrases": [
+        "Wie geht es dir? (How are you?)",
+        "Ich brauche deinen Rat. (I need your advice.)",
+        "Ich habe ein Problem... (I have a problem...)",
+        "Was meinst du? (What do you think?)",
+        "Was würdest du machen? (What would you do?)",
+        "Kannst du mir helfen? (Can you help me?)",
+        "Danke für deine Hilfe! (Thanks for your help!)",
+        "Schreib mir bald! (Write to me soon!)"
+      ],
+      "example": "Liebe Anna,\n\nwie geht es dir? Mir geht es gut, aber ich brauche deinen Rat.\n\nIch habe zwei Job-Angebote: Ein Praktikum in Berlin und eine Stelle in Hamburg. Beide sind interessant. In Berlin verdiene ich mehr, aber Hamburg ist näher bei meiner Familie.\n\nWas meinst du? Was würdest du machen?\n\nDanke für deine Hilfe!\nSchreib mir bald!\n\nLiebe Grüße,\nKlara"
+    },
+    {
+      "id": "a2-booking-confirmation-email",
+      "title": "Hotel/Booking Confirmation Request",
+      "category": "Formal",
+      "description": "Writing to confirm a hotel reservation or booking.",
+      "format": [
+        "Subject line: Buchungsbestätigung / Reservierung",
+        "Greeting: Sehr geehrte Damen und Herren,",
+        "Opening: State you want to book/confirm",
+        "Details: Dates, number of people, room type, special requests",
+        "Question: Ask for confirmation and additional info if needed",
+        "Closing: Thank them",
+        "Sign-off: Mit freundlichen Grüßen, + Name"
+      ],
+      "phrases": [
+        "Ich möchte ein Zimmer reservieren. (I would like to reserve a room.)",
+        "vom [Datum] bis [Datum] (from [date] to [date])",
+        "für [Anzahl] Personen (for [number] people)",
+        "Einzelzimmer / Doppelzimmer (single room / double room)",
+        "mit Frühstück (with breakfast)",
+        "Können Sie mir bitte bestätigen...? (Can you please confirm...?)",
+        "Wie viel kostet das Zimmer pro Nacht? (How much does the room cost per night?)"
+      ],
+      "example": "Betreff: Zimmerreservierung\n\nSehr geehrte Damen und Herren,\n\nich möchte ein Doppelzimmer in Ihrem Hotel reservieren.\n\nAnkunft: 10. Juni\nAbreise: 14. Juni\nPersonen: 2 Erwachsene\nZimmer: Doppelzimmer mit Frühstück\n\nKönnen Sie mir bitte die Reservierung bestätigen? Wie viel kostet das Zimmer pro Nacht?\n\nVielen Dank.\n\nMit freundlichen Grüßen,\nEmily Chen"
+    },
+    {
+      "id": "a2-apology-letter",
+      "title": "Informal Apology Letter",
+      "category": "Informal",
+      "description": "Writing to apologize to a friend or family member.",
+      "format": [
+        "Greeting: Liebe/Lieber [Name],",
+        "Opening: Apologize directly",
+        "Explanation: Explain what happened (brief)",
+        "Apology: Say sorry again and show you understand",
+        "Solution: Suggest how to make it better",
+        "Closing: Hope they forgive you",
+        "Sign-off: Entschuldigung nochmal, Liebe Grüße"
+      ],
+      "phrases": [
+        "Es tut mir wirklich leid! (I'm really sorry!)",
+        "Entschuldige bitte! (Please forgive me!)",
+        "Ich wollte nicht... (I didn't want to...)",
+        "Das war mein Fehler. (That was my mistake.)",
+        "Ich verstehe, dass du sauer bist. (I understand that you're upset.)",
+        "Können wir uns treffen? (Can we meet?)",
+        "Ich hoffe, du verzeihst mir. (I hope you forgive me.)"
+      ],
+      "example": "Lieber Max,\n\nes tut mir wirklich leid! Ich konnte gestern nicht zu deiner Party kommen.\n\nIch hatte vergessen, dass ich am Samstag arbeiten muss. Das war mein Fehler. Ich hätte früher Bescheid sagen sollen.\n\nKönnen wir uns nächste Woche treffen? Ich lade dich zum Essen ein!\n\nIch hoffe, du verzeihst mir.\n\nEntschuldigung nochmal!\nLiebe Grüße,\nLena"
+    },
+    {
+      "id": "a2-event-organization-email",
+      "title": "Organizing an Event (Email)",
+      "category": "Semi-Formal",
+      "description": "Writing to organize or coordinate an event with friends or colleagues.",
+      "format": [
+        "Greeting: Hallo zusammen, / Liebe Freunde,",
+        "Opening: Announce the event idea",
+        "Details: Date, time, place, what to bring",
+        "Questions: Ask for confirmation, suggestions",
+        "Closing: Express excitement",
+        "Sign-off: Bis bald, Viele Grüße"
+      ],
+      "phrases": [
+        "Hallo zusammen! (Hello everyone!)",
+        "Ich organisiere... (I'm organizing...)",
+        "Wir treffen uns am... (We're meeting on...)",
+        "Bringt bitte... mit. (Please bring...)",
+        "Wer kann kommen? (Who can come?)",
+        "Bitte gebt mir Bescheid! (Please let me know!)",
+        "Ich freue mich auf euch! (I'm looking forward to seeing you all!)"
+      ],
+      "example": "Betreff: Grillparty am Samstag\n\nHallo zusammen!\n\nIch organisiere eine Grillparty am Samstag, den 20. Juli.\n\nWann: 18:00 Uhr\nWo: Park am See\n\nBringt bitte Getränke und einen Salat mit. Ich kümmere mich um das Fleisch und den Grill.\n\nWer kann kommen? Bitte gebt mir bis Donnerstag Bescheid!\n\nIch freue mich auf euch!\n\nViele Grüße,\nTim"
+    }
+  ]
+}

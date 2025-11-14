@@ -1,0 +1,254 @@
+{
+  "level": "B2",
+  "formats": [
+    {
+      "id": "b2-academic-research-inquiry",
+      "title": "Academic Research Inquiry",
+      "category": "Academic",
+      "description": "Contacting professors or researchers for collaboration, supervision, or information.",
+      "format": [
+        "Subject: Clear, professional subject line",
+        "Greeting: Sehr geehrte Frau Professor / Sehr geehrter Herr Dr. [Name],",
+        "Opening: Brief introduction, how you found them",
+        "Purpose: State your research interest clearly",
+        "Background: Your academic credentials, relevant experience",
+        "Specific request: What you're asking for (supervision, collaboration, data)",
+        "Relevance: Why this person/institution specifically",
+        "Closing: Express appreciation for their time",
+        "Sign-off: Mit freundlichen Grüßen / Mit vorzüglicher Hochachtung",
+        "Signature: Academic title if applicable"
+      ],
+      "phrases": [
+        "Ich habe mit großem Interesse Ihre Publikation über... gelesen. (I read your publication on... with great interest.)",
+        "Derzeit promoviere ich im Bereich... (I am currently pursuing my doctorate in...)",
+        "Ich würde mich sehr freuen, wenn Sie meine Forschung betreuen würden. (I would be very pleased if you would supervise my research.)",
+        "Ihre Expertise in... wäre für mein Projekt äußerst wertvoll. (Your expertise in... would be extremely valuable for my project.)",
+        "Wären Sie bereit, mir ein kurzes Gespräch zu gewähren? (Would you be willing to grant me a brief conversation?)",
+        "Ich habe meine vorläufigen Forschungsergebnisse im Anhang beigefügt. (I have attached my preliminary research findings.)",
+        "Für weitere Informationen stehe ich gerne zur Verfügung. (I am happy to provide further information.)"
+      ],
+      "example": "Betreff: Anfrage zur Doktorarbeit im Bereich Künstliche Intelligenz\n\nSehr geehrte Frau Professor Müller,\n\nich habe mit großem Interesse Ihre kürzlich veröffentlichte Studie 'Ethische Aspekte maschinellen Lernens' gelesen. Ihre Forschung entspricht exakt meinen wissenschaftlichen Interessen.\n\nDerzeit promoviere ich im dritten Semester an der Universität München im Bereich Informatik. Mein Forschungsschwerpunkt liegt auf der Entwicklung transparenter KI-Algorithmen. Ich habe bereits zwei Papers zu diesem Thema auf internationalen Konferenzen präsentiert.\n\nIch möchte Sie fragen, ob Sie Interesse hätten, meine Dissertation zu betreuen oder zumindest als Zweitgutachterin zu fungieren. Ihre Expertise in KI-Ethik wäre für mein Projekt äußerst wertvoll. Mein Forschungsvorhaben befasst sich mit der Entwicklung interpretierbarer neuronaler Netze für medizinische Diagnosen.\n\nIch habe ein kurzes Exposé meines Forschungsvorhabens im Anhang beigefügt. Wären Sie bereit, mir ein kurzes Gespräch zu gewähren, um die Möglichkeit einer Zusammenarbeit zu besprechen?\n\nVielen Dank für Ihre Zeit und Aufmerksamkeit.\n\nMit vorzüglicher Hochachtung,\nDr. Alexander Weber\nDoktorand, Institut für Informatik\nUniversität München"
+    },
+    {
+      "id": "b2-grant-application-letter",
+      "title": "Grant/Funding Application Letter",
+      "category": "Academic",
+      "description": "Formal letter applying for research grants, scholarships, or project funding.",
+      "format": [
+        "Your institutional affiliation",
+        "Funding organization address",
+        "Date",
+        "Subject: Antrag auf Förderung / Stipendienantrag",
+        "Greeting: Sehr geehrte Damen und Herren,",
+        "Opening: State what funding you're applying for",
+        "Project description: Clear, concise summary of your project/research",
+        "Significance: Why this work matters, potential impact",
+        "Qualifications: Your ability to complete this project",
+        "Budget justification: How funds will be used (if applicable)",
+        "Timeline: Project duration and milestones",
+        "Closing: Express gratitude, mention attachments",
+        "Sign-off: Mit freundlichen Grüßen",
+        "Attachments: CV, project proposal, budget, references"
+      ],
+      "phrases": [
+        "Hiermit beantrage ich ein Forschungsstipendium in Höhe von... (I hereby apply for a research grant in the amount of...)",
+        "Mein Forschungsvorhaben befasst sich mit... (My research project deals with...)",
+        "Die Bedeutung dieses Projekts liegt darin, dass... (The significance of this project lies in the fact that...)",
+        "Ich verfüge über umfangreiche Erfahrung in... (I have extensive experience in...)",
+        "Die beantragten Mittel werden für... verwendet. (The requested funds will be used for...)",
+        "Das Projekt wird voraussichtlich... Monate dauern. (The project is expected to last... months.)",
+        "Im Anhang finden Sie mein ausführliches Forschungskonzept. (Attached you will find my detailed research proposal.)"
+      ],
+      "example": "Betreff: Antrag auf Forschungsförderung - Projekt 'Nachhaltige Stadtentwicklung'\n\nSehr geehrte Damen und Herren,\n\nhiermit beantrage ich eine Forschungsförderung in Höhe von 50.000 Euro für mein Projekt 'Nachhaltige Stadtentwicklung in mittelgroßen deutschen Städten'.\n\nMein Forschungsvorhaben befasst sich mit der Entwicklung innovativer Konzepte für klimaneutrale urbane Räume. Das Projekt untersucht, wie mittelgroße Städte (50.000-200.000 Einwohner) durch integrierte Mobilitäts-, Energie- und Grünraumplanung ihre CO2-Emissionen bis 2040 um 80% reduzieren können.\n\nDie Bedeutung dieses Projekts liegt darin, dass bisherige Forschung sich hauptsächlich auf Metropolen konzentriert hat. Mittelgroße Städte stellen jedoch 40% der deutschen Stadtbevölkerung dar und haben spezifische Herausforderungen und Potenziale.\n\nIch verfüge über umfangreiche Erfahrung in Stadtplanung und nachhaltiger Entwicklung. In den letzten fünf Jahren habe ich drei EU-geförderte Projekte erfolgreich geleitet und 12 wissenschaftliche Artikel in renommierten Fachzeitschriften publiziert.\n\nDie beantragten Mittel werden für Feldforschung in sechs Modellstädten, Datenanalyse, zwei wissenschaftliche Mitarbeiterstellen und Dissemination der Ergebnisse verwendet. Das Projekt wird voraussichtlich 24 Monate dauern.\n\nIm Anhang finden Sie mein ausführliches Forschungskonzept, detailliertes Budget, meinen Lebenslauf sowie Empfehlungsschreiben.\n\nIch danke Ihnen herzlich für die Prüfung meines Antrags.\n\nMit freundlichen Grüßen,\nProf. Dr. Sabine Krause\nInstitut für Geographie und Raumplanung\nUniversität Heidelberg"
+    },
+    {
+      "id": "b2-legal-formal-notice",
+      "title": "Legal Formal Notice (Abmahnung)",
+      "category": "Legal",
+      "description": "Formal warning letter regarding contractual violations or legal disputes.",
+      "format": [
+        "Your contact information or lawyer's letterhead",
+        "Recipient address",
+        "Date",
+        "Subject: Abmahnung / Formelle Aufforderung",
+        "Greeting: Sehr geehrte Damen und Herren, / Sehr geehrte/r Frau/Herr [Name],",
+        "Reference: Contract/agreement details, dates",
+        "Violation: Clear statement of what was violated",
+        "Evidence: Documentation of violation",
+        "Demand: Specific corrective action required",
+        "Deadline: Clear deadline for compliance",
+        "Consequences: Legal action if not resolved",
+        "Closing: Professional but firm",
+        "Sign-off: Mit freundlichen Grüßen / Hochachtungsvoll"
+      ],
+      "phrases": [
+        "In Bezug auf den Vertrag vom [Datum] müssen wir feststellen... (Regarding the contract dated [date], we must note...)",
+        "Sie haben gegen die Bestimmungen des Vertrags verstoßen. (You have violated the terms of the contract.)",
+        "Wir fordern Sie hiermit auf,... (We hereby demand that you...)",
+        "bis zum [Datum] die folgenden Maßnahmen zu ergreifen: (to take the following measures by [date]:)",
+        "Sollten Sie dieser Aufforderung nicht nachkommen,... (Should you fail to comply with this demand,...)",
+        "behalten wir uns vor, rechtliche Schritte einzuleiten. (we reserve the right to initiate legal proceedings.)",
+        "Diese Abmahnung erfolgt ohne Anerkennung einer Rechtspflicht. (This warning is issued without acknowledgment of legal obligation.)"
+      ],
+      "example": "Betreff: Abmahnung wegen Verletzung der Mietpflichten\n\nSehr geehrter Herr Schmidt,\n\nin Bezug auf den Mietvertrag vom 1. Januar 2023 für die Wohnung in der Hauptstraße 45, 10115 Berlin, müssen wir mehrere Vertragsverletzungen feststellen.\n\nSie haben in den letzten drei Monaten wiederholt gegen die Hausordnung verstoßen:\n\n1. Lärmbelästigung nach 22:00 Uhr an folgenden Daten: 15.10., 22.10., 5.11., 12.11.2024\n2. Unbefugte Untervermietung an dritte Personen seit August 2024\n3. Rückständige Mietzahlungen für Oktober und November 2024\n\nDiese Verstöße sind durch Lärmprotokolle der Nachbarn, Zeugenaussagen und unsere Buchführung dokumentiert.\n\nWir fordern Sie hiermit auf, bis zum 20. Dezember 2024 die folgenden Maßnahmen zu ergreifen:\n\n1. Beendigung der Lärmbelästigung und strikte Einhaltung der Hausordnung\n2. Beendigung der Untervermietung und Nachweis darüber\n3. Vollständige Zahlung der ausstehenden Miete (2.400 Euro)\n\nSollten Sie dieser Aufforderung nicht nachkommen, behalten wir uns vor, den Mietvertrag fristlos zu kündigen und rechtliche Schritte zur Räumung der Wohnung sowie zur Geltendmachung von Schadensersatzansprüchen einzuleiten.\n\nDiese Abmahnung erfolgt ohne Anerkennung einer Rechtspflicht.\n\nHochachtungsvoll,\nImmobilienverwaltung Müller GmbH\nRechtsanwalt Dr. Thomas Berg"
+    },
+    {
+      "id": "b2-resignation-letter-professional",
+      "title": "Professional Resignation Letter",
+      "category": "Business",
+      "description": "Formal resignation from employment with notice period.",
+      "format": [
+        "Your contact information",
+        "Company/HR department address",
+        "Date",
+        "Subject: Kündigung meines Arbeitsverhältnisses",
+        "Greeting: Sehr geehrte Frau/Herr [Name],",
+        "Opening: State your intention to resign clearly",
+        "Notice period: Reference contract and last working day",
+        "Reason (optional): Brief, professional explanation",
+        "Gratitude: Thank for opportunities and experience",
+        "Transition: Offer cooperation during handover",
+        "Documents: Request work certificate",
+        "Closing: Professional farewell",
+        "Sign-off: Mit freundlichen Grüßen",
+        "Signature"
+      ],
+      "phrases": [
+        "Hiermit kündige ich mein Arbeitsverhältnis... (I hereby resign from my employment...)",
+        "unter Einhaltung der vertraglich vereinbarten Kündigungsfrist von... (observing the contractually agreed notice period of...)",
+        "Mein letzter Arbeitstag wird somit der... sein. (My last working day will therefore be...)",
+        "Diese Entscheidung ist mir nicht leicht gefallen. (This decision was not easy for me.)",
+        "Ich möchte mich für die Zusammenarbeit und die Entwicklungsmöglichkeiten bedanken. (I would like to thank you for the collaboration and development opportunities.)",
+        "Ich stehe selbstverständlich für eine ordnungsgemäße Übergabe meiner Aufgaben zur Verfügung. (I am of course available for a proper handover of my duties.)",
+        "Ich bitte um Ausstellung eines qualifizierten Arbeitszeugnisses. (I request the issuance of a qualified employment reference.)"
+      ],
+      "example": "Betreff: Kündigung meines Arbeitsverhältnisses zum 31. März 2025\n\nSehr geehrte Frau Becker,\n\nhiermit kündige ich mein Arbeitsverhältnis als Senior Marketing Manager bei der XYZ GmbH ordentlich und fristgerecht zum nächstmöglichen Termin.\n\nUnter Einhaltung der vertraglich vereinbarten Kündigungsfrist von drei Monaten wird mein letzter Arbeitstag der 31. März 2025 sein.\n\nDiese Entscheidung ist mir nicht leicht gefallen. Nach reiflicher Überlegung habe ich mich jedoch dazu entschlossen, eine neue berufliche Herausforderung anzunehmen, die meiner langfristigen Karriereplanung besser entspricht.\n\nIch möchte mich herzlich für die vergangenen fünf Jahre bei XYZ bedanken. Die Zusammenarbeit mit Ihnen und dem gesamten Team war stets konstruktiv und bereichernd. Besonders die Möglichkeit, das internationale Marketing-Team aufzubauen, hat meine berufliche Entwicklung maßgeblich geprägt.\n\nSelbstverständlich stehe ich in den kommenden drei Monaten für eine ordnungsgemäße Übergabe meiner Projekte und Verantwortungsbereiche zur Verfügung. Ich werde alle laufenden Kampagnen dokumentieren und meine Nachfolgerin oder meinen Nachfolger umfassend einarbeiten.\n\nIch bitte Sie um Ausstellung eines qualifizierten Arbeitszeugnisses.\n\nFür die Zukunft wünsche ich Ihnen und dem Unternehmen weiterhin viel Erfolg.\n\nMit freundlichen Grüßen,\nStefanie Richter"
+    },
+    {
+      "id": "b2-sponsorship-proposal",
+      "title": "Sponsorship Proposal Letter",
+      "category": "Business",
+      "description": "Requesting corporate sponsorship for events, projects, or organizations.",
+      "format": [
+        "Your organization letterhead",
+        "Company address",
+        "Date",
+        "Subject: Sponsoring-Anfrage für [Event/Project]",
+        "Greeting: Sehr geehrte Frau/Herr [Name],",
+        "Opening: Introduce your organization and event/project",
+        "Event/Project details: What, when, where, audience",
+        "Alignment: Why this company is a good fit",
+        "Benefits: What sponsor receives (visibility, branding, access)",
+        "Sponsorship levels: Different packages if applicable",
+        "Call to action: Request meeting or decision",
+        "Closing: Express enthusiasm for partnership",
+        "Sign-off: Mit freundlichen Grüßen",
+        "Attachments: Sponsorship package details"
+      ],
+      "phrases": [
+        "Wir würden uns freuen, [Firma] als Sponsor für... zu gewinnen. (We would be pleased to win [company] as a sponsor for...)",
+        "Die Veranstaltung erreicht... Teilnehmer/Besucher. (The event reaches... participants/visitors.)",
+        "Ihre Zielgruppe entspricht genau unserem Publikum. (Your target group corresponds exactly to our audience.)",
+        "Als Sponsor erhalten Sie folgende Leistungen:... (As a sponsor, you receive the following benefits:...)",
+        "Wir bieten verschiedene Sponsoring-Pakete an:... (We offer various sponsorship packages:...)",
+        "Die Medienreichweite wird auf... geschätzt. (The media reach is estimated at...)",
+        "Gerne würden wir Ihnen unser Konzept persönlich vorstellen. (We would be happy to present our concept to you personally.)"
+      ],
+      "example": "Betreff: Sponsoring-Anfrage für Tech Conference Berlin 2025\n\nSehr geehrte Frau Hoffmann,\n\nwir würden uns sehr freuen, die Digital Innovation AG als Hauptsponsor für die Tech Conference Berlin 2025 zu gewinnen.\n\nDie Tech Conference ist Deutschlands führende Fachkonferenz für digitale Innovation und Technologie-Startups. Am 15.-17. Juni 2025 werden im Berliner Congress Center über 3.000 Teilnehmer, 150 Speaker und 80 Aussteller erwartet. Zu unserem Publikum zählen Entwickler, Tech-Unternehmer, Investoren und Entscheidungsträger aus der IT-Branche.\n\nIhre Zielgruppe entspricht genau unserem Publikum. Als führender Anbieter von Cloud-Lösungen würde Ihre Präsenz bei unserem Event perfekt passen. Zudem entspricht unser Fokus auf Innovation und Nachhaltigkeit Ihren Unternehmenswerten.\n\nAls Hauptsponsor erhalten Sie:\n- Prominent platziertes Logo auf allen Konferenzmaterialien\n- 20-minütiger Vortrag in der Haupthalle\n- Ausstellungsstand in Premium-Lage (40 m²)\n- Nennung in allen Pressemitteilungen und Social-Media-Kampagnen\n- 10 VIP-Tickets für Ihre Gäste\n- Zugang zur Teilnehmerdatenbank für Networking\n\nDie Medienreichweite wird auf über 500.000 Kontakte geschätzt (Website, Newsletter, Social Media, Presse).\n\nWir bieten das Hauptsponsoring-Paket für 50.000 Euro an. Gerne würden wir Ihnen unser detailliertes Sponsoring-Konzept in einem persönlichen Gespräch vorstellen.\n\nIm Anhang finden Sie unsere Sponsoring-Broschüre mit allen Details und Mediadaten der letzten Konferenz.\n\nWir freuen uns auf eine mögliche Partnerschaft!\n\nMit freundlichen Grüßen,\nMarkus Lehmann\nEvent Director\nTech Conference Berlin\n\nAnlage: Sponsoring-Broschüre 2025"
+    },
+    {
+      "id": "b2-press-release",
+      "title": "Press Release",
+      "category": "Business",
+      "description": "Official announcement for media distribution.",
+      "format": [
+        "Company letterhead with 'PRESSEMITTEILUNG' header",
+        "Date and location",
+        "Headline: Attention-grabbing, informative",
+        "Subheadline: Additional context",
+        "Lead paragraph: Who, what, when, where, why (most important info)",
+        "Body: Details, quotes, background information (2-3 paragraphs)",
+        "Quote: Statement from company representative",
+        "Company info: Boilerplate about the organization",
+        "Contact: Press contact person with email and phone",
+        "Footer: ### (indicates end of press release)"
+      ],
+      "phrases": [
+        "[Ort], [Datum] - [Firma] gibt bekannt... ([Location], [Date] - [Company] announces...)",
+        "Wie [Person/Position] erklärt: 'zitat'. (As [Person/Position] explains: 'quote'.)",
+        "'Wir freuen uns sehr, dass...' so [Name], [Position]. ('We are very pleased that...' says [Name], [Position].)",
+        "Diese Entwicklung markiert einen wichtigen Meilenstein... (This development marks an important milestone...)",
+        "Über [Firma]: [Company] ist ein führendes Unternehmen im Bereich... (About [Company]: [Company] is a leading company in the field of...)",
+        "Für weitere Informationen und Presseanfragen: (For further information and press inquiries:)",
+        "### (Ende der Pressemitteilung) (### End of press release)"
+      ],
+      "example": "PRESSEMITTEILUNG\n\nGreenTech Solutions eröffnet größtes Solarpark-Projekt in Brandenburg\nInvestition von 120 Millionen Euro schafft nachhaltige Energie für 50.000 Haushalte\n\nPotsdam, 15. November 2024 - GreenTech Solutions AG gibt heute den Start des größten Solarpark-Projekts in Brandenburg bekannt. Die Anlage in der Nähe von Cottbus wird auf einer Fläche von 200 Hektar entstehen und ab 2026 sauberen Strom für rund 50.000 Haushalte produzieren.\n\nDas Projekt mit einem Investitionsvolumen von 120 Millionen Euro markiert einen wichtigen Meilenstein in der Energiewende Brandenburgs. Die Anlage wird jährlich etwa 180 Gigawattstunden grünen Strom erzeugen und damit circa 90.000 Tonnen CO2-Emissionen einsparen.\n\n'Wir sind sehr stolz darauf, mit diesem Projekt einen signifikanten Beitrag zur nachhaltigen Energieversorgung Deutschlands zu leisten', so Dr. Michael Schwarz, CEO von GreenTech Solutions. 'Der Solarpark wird nicht nur saubere Energie liefern, sondern auch 150 Arbeitsplätze während der Bauphase und 20 dauerhafte Stellen schaffen.'\n\nDie Bauarbeiten beginnen im Frühjahr 2025. Das Projekt wurde in enger Zusammenarbeit mit der Gemeinde Cottbus und dem Land Brandenburg entwickelt. Es beinhaltet auch ökologische Ausgleichsmaßnahmen, darunter die Anlage von Blühstreifen für Insekten und Nistplätze für Vögel.\n\nÜber GreenTech Solutions AG:\nGreenTech Solutions ist ein führendes deutsches Unternehmen im Bereich erneuerbare Energien. Seit 2010 entwickelt, baut und betreibt das Unternehmen Solar- und Windkraftanlagen in ganz Europa. Mit über 500 Mitarbeitern und einem Portfolio von 50 Projekten trägt GreenTech Solutions maßgeblich zur Energiewende bei.\n\nFür Presseanfragen:\nSabine Weber\nLeiterin Unternehmenskommunikation\nGreenTech Solutions AG\nTel: +49 331 123456-78\nE-Mail: presse@greentech-solutions.de\n\n###"
+    },
+    {
+      "id": "b2-formal-appeal-letter",
+      "title": "Formal Appeal/Objection Letter",
+      "category": "Legal",
+      "description": "Appealing official decisions, grades, penalties, or administrative rulings.",
+      "format": [
+        "Your contact information",
+        "Authority/Institution address",
+        "Date",
+        "Subject: Widerspruch gegen [decision] vom [date]",
+        "Greeting: Sehr geehrte Damen und Herren,",
+        "Reference: Decision number, date received",
+        "Statement: Clear declaration of appeal",
+        "Grounds: Detailed reasons for objection (legal, factual, procedural)",
+        "Evidence: Supporting documents or arguments",
+        "Request: What you want changed",
+        "Deadline: Reference to legal deadline if applicable",
+        "Closing: Request for acknowledgment",
+        "Sign-off: Mit freundlichen Grüßen / Hochachtungsvoll",
+        "Attachments: Supporting documents"
+      ],
+      "phrases": [
+        "Hiermit lege ich fristgerecht Widerspruch ein gegen... (I hereby file a timely objection against...)",
+        "Ich bin mit der Entscheidung nicht einverstanden, weil... (I do not agree with the decision because...)",
+        "Die Entscheidung beruht auf fehlerhaften Tatsachen. (The decision is based on erroneous facts.)",
+        "Folgende Aspekte wurden nicht ausreichend berücksichtigt:... (The following aspects were not adequately considered:...)",
+        "Ich beantrage die vollständige Aufhebung des Bescheids. (I request the complete reversal of the ruling.)",
+        "Hilfsweise beantrage ich... (Alternatively, I request...)",
+        "Ich bitte um schriftliche Bestätigung des Eingangs meines Widerspruchs. (I request written confirmation of receipt of my objection.)",
+        "Ich behalte mir vor, weitere Beweismittel nachzureichen. (I reserve the right to submit additional evidence.)"
+      ],
+      "example": "Betreff: Widerspruch gegen Prüfungsbewertung vom 5. November 2024\nAktenzeichen: P-2024-8765\n\nSehr geehrte Damen und Herren,\n\nhiermit lege ich fristgerecht Widerspruch ein gegen die Bewertung meiner Masterarbeit im Fach Betriebswirtschaftslehre mit der Note 4,0 (ausreichend) vom 5. November 2024 (Aktenzeichen: P-2024-8765).\n\nIch bin mit dieser Bewertung nicht einverstanden, weil sie meiner Meinung nach weder meiner tatsächlichen Leistung noch den objektiven Bewertungskriterien entspricht.\n\nMeine Einwände im Einzelnen:\n\n1. Methodische Aspekte: Der Gutachter kritisiert meine empirische Methodik als 'unzureichend'. Tatsächlich habe ich die Methode der multiplen Regressionsanalyse angewandt, die in der Fachliteratur als Standardverfahren gilt und auch in meinem Methodenseminar so gelehrt wurde. Die Kritik ist sachlich nicht nachvollziehbar.\n\n2. Literaturauswahl: Es wird bemängelt, dass 'zu wenig aktuelle Literatur' verwendet wurde. Meine Arbeit umfasst jedoch 78 Quellen, davon 62 aus den letzten fünf Jahren, was den üblichen Standards entspricht.\n\n3. Vergleichbare Arbeiten: Zwei andere Masterarbeiten aus demselben Semester mit ähnlichem Aufbau und vergleichbarer Methodik wurden mit 2,0 bzw. 2,3 bewertet.\n\n4. Formale Mängel: Die im Gutachten erwähnten 'zahlreichen Formatierungsfehler' beschränken sich auf drei falsch nummerierte Fußnoten, was keine Abwertung um zwei Notenstufen rechtfertigt.\n\nIch beantrage die vollständige Neubewertung meiner Masterarbeit durch einen anderen Gutachter. Hilfsweise beantrage ich eine Verbesserung der Note auf mindestens 2,3.\n\nIm Anhang füge ich bei:\n- Kopie der Masterarbeit mit Markierungen der beanstandeten Stellen\n- Literaturverzeichnis mit Erscheinungsjahren\n- Methodenhandbuch aus meinem Seminar\n\nIch bitte um schriftliche Bestätigung des Eingangs meines Widerspruchs innerhalb von 14 Tagen. Ich behalte mir vor, weitere Beweismittel nachzureichen.\n\nHochachtungsvoll,\nLaura Schneider\nMatrikelnummer: 123456\n\nAnlagen: wie oben aufgeführt"
+    },
+    {
+      "id": "b2-contract-termination",
+      "title": "Contract Termination Letter",
+      "category": "Legal",
+      "description": "Formally terminating contracts (gym, internet, subscriptions, etc.).",
+      "format": [
+        "Your contact information and customer number",
+        "Company address",
+        "Date",
+        "Subject: Kündigung des Vertrags [contract type] - Kundennummer [number]",
+        "Greeting: Sehr geehrte Damen und Herren,",
+        "Declaration: Clear statement of termination",
+        "Contract details: Contract number, start date",
+        "Notice period: Reference to notice period",
+        "End date: Last day of contract",
+        "Reason (if required): Brief explanation if necessary",
+        "Confirmation request: Ask for written confirmation",
+        "Return of items: Mention if equipment needs to be returned",
+        "Closing: Professional",
+        "Sign-off: Mit freundlichen Grüßen",
+        "Signature"
+      ],
+      "phrases": [
+        "Hiermit kündige ich meinen Vertrag... (I hereby terminate my contract...)",
+        "fristgerecht zum nächstmöglichen Zeitpunkt. (with proper notice to the next possible date.)",
+        "Der Vertrag endet somit am... (The contract thus ends on...)",
+        "Hilfsweise kündige ich zum nächstmöglichen Termin. (Alternatively, I terminate to the next possible date.)",
+        "Ich bitte um schriftliche Bestätigung der Kündigung. (I request written confirmation of the termination.)",
+        "Bitte teilen Sie mir mit, ob und welche Geräte ich zurücksenden muss. (Please inform me whether and which devices I must return.)",
+        "Ich widerspreche einer automatischen Vertragsverlängerung. (I object to an automatic contract renewal.)"
+      ],
+      "example": "Betreff: Kündigung des Internet-Vertrags - Kundennummer 987654321\n\nSehr geehrte Damen und Herren,\n\nhiermit kündige ich meinen DSL-Internetvertrag (Tarif: Premium 100) mit der Kundennummer 987654321 ordentlich und fristgerecht.\n\nDer Vertrag wurde am 1. März 2022 abgeschlossen. Gemäß den Vertragsbedingungen beträgt die Kündigungsfrist bei einer Mindestvertragslaufzeit von 24 Monaten drei Monate zum Vertragsende.\n\nDa die Mindestvertragslaufzeit am 28. Februar 2024 endet, kündige ich den Vertrag zum 31. Mai 2024. Hilfsweise kündige ich zum nächstmöglichen Termin, sollte meine Fristberechnung nicht korrekt sein.\n\nIch bitte um schriftliche Bestätigung dieser Kündigung mit Angabe des genauen Vertragsendes. Bitte teilen Sie mir außerdem mit, ob und wann ich den Router zurücksenden muss und stellen Sie mir gegebenenfalls ein kostenloses Rücksendeetikett zur Verfügung.\n\nIch widerspreche ausdrücklich einer automatischen Vertragsverlängerung.\n\nVielen Dank für Ihre Zusammenarbeit.\n\nMit freundlichen Grüßen,\nFlorian Berg\n\nKundennummer: 987654321\nAdresse: Lindenstraße 23, 60311 Frankfurt am Main\nE-Mail: f.berg@email.de"
+    }
+  ]
+}
