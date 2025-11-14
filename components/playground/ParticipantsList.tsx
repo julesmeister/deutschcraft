@@ -25,13 +25,12 @@ export function ParticipantsList({
   currentUserId = ''
 }: ParticipantsListProps) {
   const [participantsWithAudio, setParticipantsWithAudio] = useState<ParticipantWithAudio[]>([]);
-  const audioElementsRef = useRef<Map<string, HTMLAudioElement>>(new Map());
 
   useEffect(() => {
-    console.log('[Audio] voiceStreams Map size:', voiceStreams?.size, 'participants:', participants.length);
+    console.log('[Audio] voiceAnalysers Map size:', voiceAnalysers?.size, 'participants:', participants.length);
 
-    if (!voiceStreams || voiceStreams.size === 0) {
-      // No voice streams, just show participants without audio levels
+    if (!voiceAnalysers || voiceAnalysers.size === 0) {
+      // No analysers available, just show participants without audio levels
       setParticipantsWithAudio(
         participants.map((p) => ({
           ...p,
@@ -42,55 +41,8 @@ export function ParticipantsList({
       return;
     }
 
-    // Create audio context if needed
-    if (!audioContextRef.current) {
-      audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
-    }
-
-    const audioContext = audioContextRef.current;
-
-    // Setup analyzers and audio playback for each voice stream
-    voiceStreams.forEach((stream, userId) => {
-      // Skip playing our own audio back to ourselves
-      if (userId === currentUserId) {
-        console.log('[Audio] Skipping audio playback for own stream:', userId);
-
-        // Still analyze our own stream for visualization
-        if (!analyzersRef.current.has(userId)) {
-          const analyser = audioContext.createAnalyser();
-          analyser.fftSize = 2048;
-          analyser.smoothingTimeConstant = 0.3;
-          const source = audioContext.createMediaStreamSource(stream);
-          source.connect(analyser);
-          analyzersRef.current.set(userId, analyser);
-          console.log('[Audio] Created analyser for own stream:', userId);
-        }
-        return;
-      }
-
-      // Create audio element for remote streams
-      if (!audioElementsRef.current.has(userId)) {
-        const audio = new Audio();
-        audio.srcObject = stream;
-        audio.autoplay = true;
-        audio.play().catch(err => {
-          console.error('[Audio] Failed to play audio for userId:', userId, err);
-        });
-        audioElementsRef.current.set(userId, audio);
-        console.log('[Audio] Created audio element for userId:', userId);
-      }
-
-      // Create analyzer for remote streams
-      if (!analyzersRef.current.has(userId)) {
-        const analyser = audioContext.createAnalyser();
-        analyser.fftSize = 2048; // Larger FFT size for better accuracy
-        analyser.smoothingTimeConstant = 0.3; // Smooth out the data
-        const source = audioContext.createMediaStreamSource(stream);
-        source.connect(analyser);
-        analyzersRef.current.set(userId, analyser);
-        console.log('[Audio] Created analyser for userId:', userId);
-      }
-    });
+    // Note: Audio playback and analyser creation now handled in WebRTC hook
+    // We just use the provided analysers to monitor audio levels
 
     let animationFrameId: number;
 
@@ -157,24 +109,8 @@ export function ParticipantsList({
   // Cleanup on unmount
   useEffect(() => {
     return () => {
-      // Stop all audio elements
-      audioElementsRef.current.forEach((audio) => {
-        audio.pause();
-        audio.srcObject = null;
-      });
-      audioElementsRef.current.clear();
-
-      // Disconnect all analyzers
-      analyzersRef.current.forEach((analyser) => {
-        analyser.disconnect();
-      });
-      analyzersRef.current.clear();
-
-      // Close audio context
-      if (audioContextRef.current) {
-        audioContextRef.current.close();
-        audioContextRef.current = null;
-      }
+      // Note: All audio elements and analysers are now owned by the WebRTC hook
+      // and cleaned up there when connections close or voice stops
     };
   }, []);
 
