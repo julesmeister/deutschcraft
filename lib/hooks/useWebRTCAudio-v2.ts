@@ -174,12 +174,34 @@ export function useWebRTCAudio({
 
       // Handle connection state
       pc.onconnectionstatechange = () => {
-        console.log('[WebRTC] Connection state with', remoteUserId, ':', pc.connectionState);
+        console.log('[WebRTC] ▶️ Connection state with', remoteUserId, ':', pc.connectionState);
+
+        if (pc.connectionState === 'connected') {
+          console.log('[WebRTC] ✅ CONNECTED to:', remoteUserId);
+        }
 
         if (pc.connectionState === 'failed' || pc.connectionState === 'disconnected') {
-          console.log('[WebRTC] Connection failed, cleaning up peer:', remoteUserId);
+          console.error('[WebRTC] ❌ Connection failed/disconnected:', remoteUserId);
           peerConnectionsRef.current.delete(remoteUserId);
         }
+      };
+
+      // Handle ICE connection state
+      pc.oniceconnectionstatechange = () => {
+        console.log('[WebRTC] 🧊 ICE state with', remoteUserId, ':', pc.iceConnectionState);
+
+        if (pc.iceConnectionState === 'connected' || pc.iceConnectionState === 'completed') {
+          console.log('[WebRTC] ✅ ICE CONNECTED to:', remoteUserId);
+        }
+
+        if (pc.iceConnectionState === 'failed') {
+          console.error('[WebRTC] ❌ ICE connection failed to:', remoteUserId);
+        }
+      };
+
+      // Handle ICE gathering state
+      pc.onicegatheringstatechange = () => {
+        console.log('[WebRTC] 🔍 ICE gathering state:', pc.iceGatheringState);
       };
 
       // Store connection
