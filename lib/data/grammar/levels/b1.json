@@ -1,0 +1,265 @@
+{
+  "level": "B1",
+  "rules": [
+    {
+      "id": "b1-subordinate-clauses",
+      "title": "Subordinate Clauses",
+      "category": "Sentence Structure",
+      "description": "Subordinate clauses are introduced by conjunctions like 'weil', 'dass', 'wenn'. The verb goes to the end.",
+      "examples": [
+        "Ich bleibe zu Hause, weil es regnet. (I'm staying home because it's raining.)",
+        "Er sagt, dass er müde ist. (He says that he is tired.)",
+        "Wenn du Zeit hast, rufe mich an. (If you have time, call me.)"
+      ],
+      "notes": "If the subordinate clause comes first, the main clause verb comes immediately after."
+    },
+    {
+      "id": "b1-genitive-case",
+      "title": "Genitive Case",
+      "category": "Cases",
+      "description": "The genitive case shows possession or relationships between nouns.",
+      "examples": [
+        "Das Auto des Mannes (The man's car)",
+        "Das Haus meiner Eltern (My parents' house)",
+        "Die Farbe des Himmels (The color of the sky)"
+      ],
+      "notes": "Articles: der→des, die→der, das→des, die(pl)→der. Masculine/neuter nouns add -(e)s."
+    },
+    {
+      "id": "b1-passive-voice",
+      "title": "Passive Voice",
+      "category": "Verb Conjugation",
+      "description": "The passive voice emphasizes the action rather than who performs it. Formed with werden + past participle.",
+      "examples": [
+        "Das Auto wird repariert. (The car is being repaired.)",
+        "Der Brief wurde geschrieben. (The letter was written.)",
+        "Das Haus wird gebaut. (The house is being built.)"
+      ],
+      "notes": "The agent can be introduced with 'von' + dative."
+    },
+    {
+      "id": "b1-konjunktiv-ii",
+      "title": "Konjunktiv II (Subjunctive)",
+      "category": "Verb Conjugation",
+      "description": "Used for hypothetical situations, polite requests, and wishes.",
+      "examples": [
+        "Ich würde gerne kommen. (I would like to come.)",
+        "Wenn ich Zeit hätte, würde ich helfen. (If I had time, I would help.)",
+        "Könntest du mir helfen? (Could you help me?)"
+      ],
+      "notes": "Often formed with würde + infinitive, except for common verbs like haben, sein, können."
+    },
+    {
+      "id": "b1-relative-clauses",
+      "title": "Relative Clauses",
+      "category": "Sentence Structure",
+      "description": "Relative clauses provide additional information about a noun. They use relative pronouns (der, die, das).",
+      "examples": [
+        "Der Mann, der dort steht, ist mein Lehrer. (The man who is standing there is my teacher.)",
+        "Das Buch, das ich lese, ist spannend. (The book that I'm reading is exciting.)",
+        "Die Frau, mit der ich spreche, ist nett. (The woman with whom I'm speaking is nice.)"
+      ],
+      "notes": "The verb goes to the end of the relative clause."
+    },
+    {
+      "id": "b1-preterite-tense",
+      "title": "Simple Past (Präteritum) - Regular Verbs",
+      "category": "Verb Conjugation",
+      "description": "The simple past is primarily used in written German. Regular verbs add -te to the stem.",
+      "examples": [
+        "ich lernte (I learned)",
+        "du machtest (you did)",
+        "er/sie/es sagte (he/she/it said)",
+        "wir spielten (we played)",
+        "sie arbeiteten (they worked)"
+      ],
+      "notes": "In spoken German, Perfekt is preferred. Präteritum is mainly used in formal writing and storytelling."
+    },
+    {
+      "id": "b1-preterite-irregular",
+      "title": "Simple Past - Irregular Verbs",
+      "category": "Verb Conjugation",
+      "description": "Irregular verbs change their stem vowel in the simple past and must be memorized.",
+      "examples": [
+        "gehen → ging (to go → went)",
+        "kommen → kam (to come → came)",
+        "sehen → sah (to see → saw)",
+        "nehmen → nahm (to take → took)",
+        "geben → gab (to give → gave)"
+      ],
+      "notes": "Modal verbs and common verbs like haben, sein are often used in Präteritum even in speech."
+    },
+    {
+      "id": "b1-infinitive-with-zu",
+      "title": "Infinitive with 'zu'",
+      "category": "Sentence Structure",
+      "description": "Many verbs and expressions require 'zu' before an infinitive.",
+      "examples": [
+        "Ich hoffe, dich bald zu sehen. (I hope to see you soon.)",
+        "Es ist wichtig, Deutsch zu lernen. (It is important to learn German.)",
+        "Ich habe keine Zeit, ins Kino zu gehen. (I have no time to go to the cinema.)",
+        "Sie versucht, pünktlich zu sein. (She tries to be punctual.)"
+      ],
+      "notes": "With separable verbs, 'zu' goes between prefix and verb: anzufangen, aufzustehen."
+    },
+    {
+      "id": "b1-genitive-prepositions",
+      "title": "Genitive Prepositions",
+      "category": "Prepositions",
+      "description": "Certain prepositions always require the genitive case.",
+      "examples": [
+        "während des Tages (during the day)",
+        "wegen des Wetters (because of the weather)",
+        "trotz der Kälte (despite the cold)",
+        "außerhalb der Stadt (outside the city)",
+        "innerhalb einer Woche (within a week)"
+      ],
+      "notes": "Common genitive prepositions: während, wegen, trotz, statt, außerhalb, innerhalb."
+    },
+    {
+      "id": "b1-adverbs-of-degree",
+      "title": "Adverbs of Degree",
+      "category": "Adverbs",
+      "description": "Adverbs that modify adjectives or other adverbs to show degree or intensity.",
+      "examples": [
+        "sehr gut (very good)",
+        "ziemlich müde (quite tired)",
+        "etwas kalt (somewhat cold)",
+        "besonders schön (especially beautiful)",
+        "völlig verrückt (completely crazy)",
+        "kaum sichtbar (barely visible)"
+      ],
+      "notes": "These adverbs come before the adjective/adverb they modify."
+    },
+    {
+      "id": "b1-compound-nouns",
+      "title": "Compound Nouns",
+      "category": "Word Formation",
+      "description": "German frequently combines words to create new nouns. The gender is determined by the last word.",
+      "examples": [
+        "das Haus + die Tür → die Haustür (front door)",
+        "der Apfel + der Saft → der Apfelsaft (apple juice)",
+        "die Arbeit + das Zimmer → das Arbeitszimmer (office/study)",
+        "die Hand + der Schuh → der Handschuh (glove)"
+      ],
+      "notes": "Sometimes a connecting element (-s-, -n-, -en-) is added between words."
+    },
+    {
+      "id": "b1-adjectival-nouns",
+      "title": "Adjectival Nouns",
+      "category": "Nouns",
+      "description": "Adjectives can be used as nouns and are capitalized. They still take adjective endings.",
+      "examples": [
+        "der/die Deutsche (the German person)",
+        "ein Deutscher (a German man)",
+        "eine Deutsche (a German woman)",
+        "etwas Schönes (something beautiful)",
+        "nichts Neues (nothing new)",
+        "alles Gute (all the best)"
+      ],
+      "notes": "These follow adjective declension rules depending on the article or lack thereof."
+    },
+    {
+      "id": "b1-indirect-questions",
+      "title": "Indirect Questions",
+      "category": "Sentence Structure",
+      "description": "Indirect questions are subordinate clauses introduced by question words or 'ob'. The verb goes to the end.",
+      "examples": [
+        "Ich weiß nicht, wo er wohnt. (I don't know where he lives.)",
+        "Sie fragt, ob du kommst. (She asks if you are coming.)",
+        "Er möchte wissen, wann der Zug fährt. (He wants to know when the train leaves.)",
+        "Kannst du mir sagen, wie spät es ist? (Can you tell me what time it is?)"
+      ],
+      "notes": "Use 'ob' for yes/no questions, question words (wer, was, wo, wann, etc.) for others."
+    },
+    {
+      "id": "b1-word-order-tekamolo",
+      "title": "Word Order: Time-Manner-Place (TeKaMoLo)",
+      "category": "Sentence Structure",
+      "description": "When multiple adverbial phrases occur, they follow the order: Time (Te), Cause (Ka), Manner (Mo), Place (Lo).",
+      "examples": [
+        "Ich fahre morgen (Te) mit dem Auto (Mo) nach Berlin (Lo). (I'm driving to Berlin tomorrow by car.)",
+        "Sie geht heute (Te) wegen der Arbeit (Ka) schnell (Mo) nach Hause (Lo). (She's going home quickly today because of work.)",
+        "Wir treffen uns am Montag (Te) im Café (Lo). (We're meeting on Monday at the café.)"
+      ],
+      "notes": "This is a guideline, not a strict rule. Context and emphasis can change the order."
+    },
+    {
+      "id": "b1-comparative-structures",
+      "title": "Comparative Structures (als/wie)",
+      "category": "Comparisons",
+      "description": "'Als' is used for inequality (more/less than), 'wie' for equality (as...as).",
+      "examples": [
+        "Er ist größer als ich. (He is taller than I.)",
+        "Sie läuft schneller als ihr Bruder. (She runs faster than her brother.)",
+        "Das Buch ist so interessant wie der Film. (The book is as interesting as the film.)",
+        "Ich bin genauso müde wie du. (I am just as tired as you.)"
+      ],
+      "notes": "Remember: 'als' for comparatives, 'wie' for equality."
+    },
+    {
+      "id": "b1-double-infinitive",
+      "title": "Double Infinitive Construction",
+      "category": "Verb Conjugation",
+      "description": "In perfect tense with modal verbs, use double infinitive instead of past participle.",
+      "examples": [
+        "Ich habe nicht kommen können. (I wasn't able to come.)",
+        "Er hat das Auto reparieren müssen. (He had to repair the car.)",
+        "Sie hat Deutsch lernen wollen. (She wanted to learn German.)",
+        "Wir haben lange warten müssen. (We had to wait a long time.)"
+      ],
+      "notes": "The modal verb appears as infinitive, not as past participle (gekonnt, gemusst, etc.)."
+    },
+    {
+      "id": "b1-n-declension",
+      "title": "N-Declension (Weak Masculine Nouns)",
+      "category": "Nouns",
+      "description": "Certain masculine nouns add -(e)n in all cases except nominative singular.",
+      "examples": [
+        "der Herr → des Herrn, dem Herrn, den Herrn",
+        "der Student → des Studenten, dem Studenten, den Studenten",
+        "Ich kenne den Studenten. (I know the student.)",
+        "Das Auto des Kollegen ist neu. (The colleague's car is new.)"
+      ],
+      "notes": "Common n-declension nouns: der Mensch, der Junge, der Nachbar, der Kunde, der Name."
+    },
+    {
+      "id": "b1-als-wenn-wann",
+      "title": "Distinguishing als, wenn, wann",
+      "category": "Conjunctions",
+      "description": "Three words meaning 'when', each used in different contexts.",
+      "examples": [
+        "als (when, one time in past): Als ich jung war, lebte ich in Berlin. (When I was young, I lived in Berlin.)",
+        "wenn (when, repeated/future): Wenn ich Zeit habe, lese ich gern. (When I have time, I like to read.)",
+        "wann (when, in questions): Wann kommst du? (When are you coming?)"
+      ],
+      "notes": "'Als' = one-time past event, 'wenn' = repeated/future actions, 'wann' = questions/indirect questions."
+    },
+    {
+      "id": "b1-lassen-construction",
+      "title": "Lassen + Infinitive",
+      "category": "Verb Conjugation",
+      "description": "'Lassen' with an infinitive expresses causing/allowing something or having something done.",
+      "examples": [
+        "Ich lasse mein Auto reparieren. (I'm having my car repaired.)",
+        "Sie lässt mich nicht gehen. (She doesn't let me go.)",
+        "Lass uns nach Hause gehen! (Let's go home!)",
+        "Er ließ den Brief übersetzen. (He had the letter translated.)"
+      ],
+      "notes": "Can mean 'to let/allow', 'to have something done', or 'to leave something in a state'."
+    },
+    {
+      "id": "b1-es-as-placeholder",
+      "title": "Placeholder 'es'",
+      "category": "Sentence Structure",
+      "description": "'Es' can occupy first position in a sentence, disappearing when another element moves to first position.",
+      "examples": [
+        "Es kommen viele Gäste. (Many guests are coming.)",
+        "Morgen kommen viele Gäste. (Tomorrow many guests are coming.)",
+        "Es gibt viele Probleme. (There are many problems.)",
+        "Es ist wichtig, pünktlich zu sein. (It is important to be punctual.)"
+      ],
+      "notes": "Not to be confused with 'es' as a pronoun. This 'es' has no meaning and just fills first position."
+    }
+  ]
+}

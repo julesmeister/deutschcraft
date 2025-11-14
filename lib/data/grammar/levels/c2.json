@@ -1,0 +1,277 @@
+{
+  "level": "C2",
+  "rules": [
+    {
+      "id": "c2-stylistic-devices",
+      "title": "Stylistic Devices (Stilmittel)",
+      "category": "Advanced Writing",
+      "description": "Literary and rhetorical devices used in formal and creative writing.",
+      "examples": [
+        "Metapher: Er ist ein Löwe im Kampf. (He is a lion in battle.)",
+        "Alliteration: Bei Wind und Wetter (In wind and weather)",
+        "Hyperbel: Ich habe es dir tausendmal gesagt! (I've told you a thousand times!)"
+      ],
+      "notes": "Understanding these enhances comprehension of literature and formal texts."
+    },
+    {
+      "id": "c2-register-formal-informal",
+      "title": "Register: Formal vs. Informal",
+      "category": "Pragmatics",
+      "description": "Mastering the appropriate level of formality for different contexts.",
+      "examples": [
+        "Formal: Ich möchte Sie bitten... (I would like to ask you...)",
+        "Informal: Kannst du mal... (Can you...)",
+        "Formal: Gestatten Sie mir... (Allow me...)",
+        "Informal: Darf ich... (May I...)"
+      ],
+      "notes": "C2 speakers can seamlessly switch between registers as situations demand."
+    },
+    {
+      "id": "c2-idiomatic-expressions",
+      "title": "Advanced Idiomatic Expressions",
+      "category": "Idioms",
+      "description": "Complex idioms and expressions that are deeply rooted in German culture.",
+      "examples": [
+        "Das ist ein zweischneidiges Schwert. (That's a double-edged sword.)",
+        "Da liegt der Hund begraben. (That's the crux of the matter.)",
+        "Ich verstehe nur Bahnhof. (It's all Greek to me.)"
+      ],
+      "notes": "Native-like fluency requires understanding and using idiomatic expressions naturally."
+    },
+    {
+      "id": "c2-literary-language",
+      "title": "Literary Language and Archaisms",
+      "category": "Advanced Writing",
+      "description": "Understanding and using elevated, poetic, or archaic language in literary contexts.",
+      "examples": [
+        "alsdann (then - archaic)",
+        "gar (quite/very - literary): gar nicht (not at all), gar wohl (very well)",
+        "jetzig (current - archaic) vs. modern 'jetzige'",
+        "ob (whether - in older texts can mean 'if')",
+        "weiland (formerly/once upon a time - archaic)"
+      ],
+      "notes": "Essential for reading classical literature and understanding historical texts."
+    },
+    {
+      "id": "c2-rhetorical-devices",
+      "title": "Advanced Rhetorical Devices",
+      "category": "Advanced Writing",
+      "description": "Sophisticated rhetorical techniques for persuasive and elegant communication.",
+      "examples": [
+        "Anapher: Ich kam, ich sah, ich siegte. (I came, I saw, I conquered.)",
+        "Chiasmus: Nicht weil es schwer ist, wagen wir es nicht, sondern weil wir es nicht wagen, ist es schwer.",
+        "Rhetorische Frage: Wer weiß das nicht? (Who doesn't know that?)",
+        "Parallelismus: Er spricht viel, aber er sagt wenig. (He speaks much, but says little.)",
+        "Antithese: Der Geist ist willig, aber das Fleisch ist schwach."
+      ],
+      "notes": "Used in formal speeches, academic writing, and literary analysis."
+    },
+    {
+      "id": "c2-regional-variations",
+      "title": "Regional Variations and Dialects",
+      "category": "Pragmatics",
+      "description": "Understanding major dialectal and regional differences in German-speaking areas.",
+      "examples": [
+        "Austrian: Jänner (January) vs. German: Januar",
+        "Swiss: parkieren (to park) vs. German: parken",
+        "Southern: Samstag vs. Northern: Sonnabend (Saturday)",
+        "Austrian: Erdäpfel vs. German: Kartoffeln (potatoes)",
+        "Bavarian/Austrian: heuer (this year) vs. Standard: dieses Jahr"
+      ],
+      "notes": "C2 speakers recognize and can adapt to regional varieties of German."
+    },
+    {
+      "id": "c2-irony-sarcasm",
+      "title": "Irony, Sarcasm, and Subtle Humor",
+      "category": "Pragmatics",
+      "description": "Understanding and producing ironic, sarcastic, and nuanced humorous statements.",
+      "examples": [
+        "Das hat ja super geklappt! (said when something failed - That went really well!)",
+        "Na, das kann ja heiter werden. (Oh, this is going to be fun. - said sarcastically)",
+        "Toll, einfach toll. (Great, just great. - often sarcastic)",
+        "Ach was! (Oh really! - can be genuine or sarcastic depending on context)"
+      ],
+      "notes": "Requires deep cultural and pragmatic knowledge. Context and intonation are crucial."
+    },
+    {
+      "id": "c2-semantic-subtleties",
+      "title": "Semantic Subtleties and Near-Synonyms",
+      "category": "Vocabulary",
+      "description": "Distinguishing between near-synonyms and understanding subtle semantic differences.",
+      "examples": [
+        "schauen vs. sehen vs. gucken vs. blicken (all mean 'to look/see' but with nuances)",
+        "Haus vs. Gebäude vs. Bau (house vs. building vs. construction)",
+        "reden vs. sprechen vs. sich unterhalten (to talk/speak with subtle differences)",
+        "Angst vs. Furcht (fear - Angst is more existential, Furcht more concrete)",
+        "Arbeit vs. Beruf vs. Tätigkeit (work/job/profession/activity)"
+      ],
+      "notes": "C2 level requires choosing the most appropriate word for precise communication."
+    },
+    {
+      "id": "c2-historical-grammar",
+      "title": "Historical Grammar Forms",
+      "category": "Advanced Writing",
+      "description": "Understanding older grammatical forms found in classical texts.",
+      "examples": [
+        "Genitiv with articles: des Vaters vs. old: Vaters (father's)",
+        "Dative -e ending: im Hause (in the house) vs. modern: im Haus",
+        "Older conjugations: du fragst vs. archaic: du fragest",
+        "Pronoun 'ihr' as formal address (before Sie): Habt ihr...?",
+        "Old subjunctive forms: er käme vs. older: er komme"
+      ],
+      "notes": "Important for reading texts from 18th-19th century German literature."
+    },
+    {
+      "id": "c2-wordplay-puns",
+      "title": "Wordplay and Puns",
+      "category": "Idioms",
+      "description": "Understanding and creating plays on words, double meanings, and puns.",
+      "examples": [
+        "Ich bin nicht ganz bei Trost. (I'm not quite with comfort = I'm not in my right mind)",
+        "Sie hat den Bogen raus. (She has the bow out = She's got the hang of it)",
+        "Das geht mir auf den Keks. (That goes on my cookie = That gets on my nerves)",
+        "Er hat einen Vogel. (He has a bird = He's crazy)"
+      ],
+      "notes": "Wordplay is culturally specific and requires deep linguistic and cultural knowledge."
+    },
+    {
+      "id": "c2-academic-discourse",
+      "title": "Academic Discourse Markers",
+      "category": "Advanced Writing",
+      "description": "Advanced expressions for structuring academic arguments and research.",
+      "examples": [
+        "diesbezüglich (in this regard)",
+        "hieraus folgt/ergibt sich (from this it follows)",
+        "daraus lässt sich schließen (from this one can conclude)",
+        "im Folgenden wird dargelegt (in the following it will be shown)",
+        "unter Berücksichtigung von (taking into account)",
+        "es sei darauf hingewiesen, dass (it should be pointed out that)"
+      ],
+      "notes": "Essential for academic writing, dissertations, and scholarly publications."
+    },
+    {
+      "id": "c2-legal-administrative-language",
+      "title": "Legal and Administrative Language",
+      "category": "Specialized Language",
+      "description": "Understanding specialized vocabulary and structures in legal and bureaucratic texts.",
+      "examples": [
+        "gemäß § (according to section)",
+        "laut Verordnung (according to regulation)",
+        "vorgenannter / besagter (aforementioned)",
+        "im Sinne des Gesetzes (within the meaning of the law)",
+        "unter Vorbehalt (subject to reservation)",
+        "kraft Gesetzes (by force of law)"
+      ],
+      "notes": "Necessary for understanding contracts, official documents, and legal texts."
+    },
+    {
+      "id": "c2-ellipsis-advanced",
+      "title": "Advanced Elliptical Constructions",
+      "category": "Sentence Structure",
+      "description": "Sophisticated use of ellipsis where elements are deliberately omitted for style or brevity.",
+      "examples": [
+        "Je schneller, desto besser. (The faster, the better - full: je schneller es ist, desto besser ist es)",
+        "Kommt Zeit, kommt Rat. (Time will tell - literally: comes time, comes advice)",
+        "Ende gut, alles gut. (All's well that ends well)",
+        "Was du heute kannst besorgen, (das) verschiebe nicht auf morgen."
+      ],
+      "notes": "Common in proverbs, maxims, and literary writing."
+    },
+    {
+      "id": "c2-poetic-language",
+      "title": "Poetic Language and Devices",
+      "category": "Advanced Writing",
+      "description": "Understanding and using poetic techniques in German literature.",
+      "examples": [
+        "Inversion for emphasis: Kam er doch noch! (He came after all!)",
+        "Enjambment (Zeilensprung): line breaks in poetry",
+        "Assonanz: repeated vowel sounds",
+        "Neologismus: creating new words for effect",
+        "Personifikation: Die Sonne lacht. (The sun laughs.)"
+      ],
+      "notes": "Essential for analyzing and appreciating German poetry and literature."
+    },
+    {
+      "id": "c2-false-friends-advanced",
+      "title": "Advanced False Friends and Cognates",
+      "category": "Vocabulary",
+      "description": "Understanding deceptive similarities between German and other languages.",
+      "examples": [
+        "Gift (poison) not gift (Geschenk)",
+        "aktuell (current) not actual (tatsächlich)",
+        "eventuell (possibly) not eventually (schließlich)",
+        "sensibel (sensitive) not sensible (vernünftig)",
+        "Gymnasium (academic high school) not gymnasium (Turnhalle)"
+      ],
+      "notes": "Important for avoiding common mistakes, especially for English speakers."
+    },
+    {
+      "id": "c2-euphemisms-taboos",
+      "title": "Euphemisms and Taboo Language",
+      "category": "Pragmatics",
+      "description": "Understanding indirect expressions and culturally sensitive topics.",
+      "examples": [
+        "entlassen (let go/fired) instead of 'gefeuert'",
+        "einschlafen (fall asleep - euphemism for dying)",
+        "die Notdurft verrichten (relieve oneself)",
+        "Lebensabend (evening of life - old age)",
+        "von uns gegangen (gone from us - died)"
+      ],
+      "notes": "Cultural awareness of what topics require indirect language in German culture."
+    },
+    {
+      "id": "c2-technical-precision",
+      "title": "Technical and Scientific Precision",
+      "category": "Specialized Language",
+      "description": "Precise use of technical terminology across different fields.",
+      "examples": [
+        "Medical: Myokardinfarkt vs. Herzinfarkt (myocardial infarction vs. heart attack)",
+        "Scientific: Hypothese vs. Theorie (hypothesis vs. theory - distinct meanings)",
+        "Technical: in Kraft treten (come into force/effect)",
+        "Philosophy: Sein vs. Dasein vs. Existenz (being/existence with nuanced differences)"
+      ],
+      "notes": "C2 speakers can navigate specialized terminology in various professional contexts."
+    },
+    {
+      "id": "c2-complex-metaphors",
+      "title": "Complex Metaphorical Language",
+      "category": "Idioms",
+      "description": "Extended and mixed metaphors in sophisticated discourse.",
+      "examples": [
+        "am seidenen Faden hängen (hang by a silken thread - be in a precarious situation)",
+        "jemanden auf den Arm nehmen (take someone on the arm - pull someone's leg)",
+        "die Katze aus dem Sack lassen (let the cat out of the bag)",
+        "in den sauren Apfel beißen (bite into the sour apple - bite the bullet)",
+        "das Kind mit dem Bade ausschütten (throw the baby out with the bathwater)"
+      ],
+      "notes": "Understanding metaphorical thinking in German culture and language."
+    },
+    {
+      "id": "c2-communicative-strategies",
+      "title": "Advanced Communicative Strategies",
+      "category": "Pragmatics",
+      "description": "Sophisticated strategies for negotiation, persuasion, and diplomacy.",
+      "examples": [
+        "Hedging: gewissermaßen, sozusagen, quasi (in a way, so to speak)",
+        "Diplomatic disagreement: Mit Verlaub, ich sehe das anders. (With respect, I see it differently.)",
+        "Softening: möglicherweise, unter Umständen (possibly, under circumstances)",
+        "Emphasizing: ausdrücklich, nachdrücklich (expressly, emphatically)"
+      ],
+      "notes": "Essential for professional communication, negotiations, and sensitive discussions."
+    },
+    {
+      "id": "c2-language-varieties",
+      "title": "Sociolects and Professional Jargon",
+      "category": "Specialized Language",
+      "description": "Understanding language variation by social group and profession.",
+      "examples": [
+        "Youth language: krass (awesome/intense), chillen (chill out)",
+        "Business jargon: Synergieeffekte (synergy effects), Kernkompetenz (core competency)",
+        "Medical: Anamnese (medical history), Differentialdiagnose (differential diagnosis)",
+        "IT: downloaden, Software-Update, Firewall",
+        "Sports: Eigentor (own goal - also metaphorically)"
+      ],
+      "notes": "C2 speakers can identify and use appropriate jargon for different professional contexts."
+    }
+  ]
+}

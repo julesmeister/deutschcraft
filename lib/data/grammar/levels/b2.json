@@ -1,0 +1,262 @@
+{
+  "level": "B2",
+  "rules": [
+    {
+      "id": "b2-partizip-i",
+      "title": "Partizip I (Present Participle)",
+      "category": "Participles",
+      "description": "Formed by adding '-d' to the infinitive. Used as an adjective or adverb.",
+      "examples": [
+        "das spielende Kind (the playing child)",
+        "die laufende Frau (the running woman)",
+        "ein wachsender Baum (a growing tree)"
+      ],
+      "notes": "When used as an adjective, it takes regular adjective endings."
+    },
+    {
+      "id": "b2-extended-adjective-constructions",
+      "title": "Extended Adjective Constructions",
+      "category": "Adjectives",
+      "description": "Complex adjectival phrases that come before the noun, common in formal German.",
+      "examples": [
+        "die im letzten Jahr veröffentlichte Studie (the study published last year)",
+        "der gestern angefangene Bericht (the report started yesterday)",
+        "das von vielen Experten empfohlene Buch (the book recommended by many experts)"
+      ],
+      "notes": "These constructions can be replaced with relative clauses in spoken German."
+    },
+    {
+      "id": "b2-nominalization",
+      "title": "Nominalization",
+      "category": "Word Formation",
+      "description": "Converting verbs and adjectives into nouns, a common feature in formal German.",
+      "examples": [
+        "laufen → das Laufen (to run → running)",
+        "schön → die Schönheit (beautiful → beauty)",
+        "freundlich → die Freundlichkeit (friendly → friendliness)"
+      ],
+      "notes": "Nominalized verbs are always neuter. Adjectives use suffixes like -heit, -keit, -ung."
+    },
+    {
+      "id": "b2-future-perfect",
+      "title": "Future Perfect (Futur II)",
+      "category": "Verb Conjugation",
+      "description": "Describes an action that will be completed by a certain time in the future.",
+      "examples": [
+        "Ich werde das Buch gelesen haben. (I will have read the book.)",
+        "Sie wird angekommen sein. (She will have arrived.)",
+        "Bis morgen werden wir fertig sein. (By tomorrow we will be finished.)"
+      ],
+      "notes": "Formed with werden + past participle + haben/sein."
+    },
+    {
+      "id": "b2-partizip-ii-as-adjective",
+      "title": "Partizip II (Past Participle) as Adjective",
+      "category": "Participles",
+      "description": "Past participles can function as adjectives with appropriate endings.",
+      "examples": [
+        "das gekochte Ei (the boiled egg)",
+        "die gelesenen Bücher (the read books)",
+        "ein geöffnetes Fenster (an opened window)",
+        "der reparierte Wagen (the repaired car)"
+      ],
+      "notes": "Shows a completed action. Takes regular adjective endings based on case, gender, and number."
+    },
+    {
+      "id": "b2-passive-with-modals",
+      "title": "Passive Voice with Modal Verbs",
+      "category": "Verb Conjugation",
+      "description": "Combining passive constructions with modal verbs to express necessity, possibility, etc.",
+      "examples": [
+        "Das Auto muss repariert werden. (The car must be repaired.)",
+        "Der Brief kann heute geschickt werden. (The letter can be sent today.)",
+        "Die Aufgabe soll bis morgen erledigt werden. (The task should be completed by tomorrow.)",
+        "Das Problem konnte gelöst werden. (The problem could be solved.)"
+      ],
+      "notes": "Structure: modal verb + past participle + werden. In perfect tense: modal + participle + worden + sein."
+    },
+    {
+      "id": "b2-subjunctive-for-wishes",
+      "title": "Konjunktiv II for Wishes and Regrets",
+      "category": "Verb Conjugation",
+      "description": "Expressing wishes, dreams, and regrets using Konjunktiv II.",
+      "examples": [
+        "Wenn ich doch reich wäre! (If only I were rich!)",
+        "Hätte ich das nur gewusst! (If only I had known that!)",
+        "Wäre ich doch zu Hause geblieben! (If only I had stayed home!)",
+        "Ich wünschte, ich könnte fliegen. (I wish I could fly.)"
+      ],
+      "notes": "Often uses 'wenn...doch' or 'nur' for emphasis. Past wishes use hätte/wäre + past participle."
+    },
+    {
+      "id": "b2-alternative-to-passive",
+      "title": "Alternatives to Passive Voice",
+      "category": "Sentence Structure",
+      "description": "Using 'man', 'sich lassen', or other constructions instead of passive.",
+      "examples": [
+        "Man spricht hier Deutsch. (German is spoken here.)",
+        "Das lässt sich leicht erklären. (That can be easily explained.)",
+        "Das Buch ist leicht zu lesen. (The book is easy to read.)",
+        "Der Text ist schwer zu verstehen. (The text is difficult to understand.)"
+      ],
+      "notes": "'Man' is common in speech, 'sich lassen' implies possibility, 'zu + infinitive' shows feasibility."
+    },
+    {
+      "id": "b2-word-formation-prefixes",
+      "title": "Word Formation with Prefixes",
+      "category": "Word Formation",
+      "description": "Using prefixes to change or intensify the meaning of verbs and adjectives.",
+      "examples": [
+        "ver-: kaufen → verkaufen (to sell), stehen → verstehen (to understand)",
+        "be-: kommen → bekommen (to receive), suchen → besuchen (to visit)",
+        "ent-: decken → entdecken (to discover), wickeln → entwickeln (to develop)",
+        "un-: möglich → unmöglich (impossible), glücklich → unglücklich (unhappy)"
+      ],
+      "notes": "Inseparable prefixes (be-, emp-, ent-, er-, ge-, miss-, ver-, zer-) have no 'ge-' in past participle."
+    },
+    {
+      "id": "b2-word-formation-suffixes",
+      "title": "Word Formation with Suffixes",
+      "category": "Word Formation",
+      "description": "Using suffixes to create nouns from verbs and adjectives.",
+      "examples": [
+        "-ung: bedeuten → die Bedeutung (meaning), wohnen → die Wohnung (apartment)",
+        "-heit/-keit: krank → die Krankheit (illness), möglich → die Möglichkeit (possibility)",
+        "-er: lehren → der Lehrer (teacher), arbeiten → der Arbeiter (worker)",
+        "-schaft: freund → die Freundschaft (friendship), wissen → die Wissenschaft (science)"
+      ],
+      "notes": "These suffixes determine the gender: -ung, -heit, -keit, -schaft are feminine; -er is masculine."
+    },
+    {
+      "id": "b2-expressing-purpose",
+      "title": "Expressing Purpose (um...zu, damit)",
+      "category": "Sentence Structure",
+      "description": "Using 'um...zu' or 'damit' to express the purpose or goal of an action.",
+      "examples": [
+        "Ich lerne Deutsch, um in Deutschland zu arbeiten. (I'm learning German in order to work in Germany.)",
+        "Sie geht früh ins Bett, um morgen fit zu sein. (She goes to bed early to be fit tomorrow.)",
+        "Ich rufe dich an, damit du Bescheid weißt. (I'm calling you so that you know.)",
+        "Er spricht langsam, damit alle ihn verstehen. (He speaks slowly so that everyone understands him.)"
+      ],
+      "notes": "Use 'um...zu' when subjects are the same. Use 'damit' when subjects differ."
+    },
+    {
+      "id": "b2-relative-pronouns-all-cases",
+      "title": "Relative Pronouns in All Cases",
+      "category": "Sentence Structure",
+      "description": "Using relative pronouns in nominative, accusative, dative, and genitive cases.",
+      "examples": [
+        "Nominative: Der Mann, der dort steht... (The man who stands there...)",
+        "Accusative: Das Buch, das ich lese... (The book that I'm reading...)",
+        "Dative: Die Frau, der ich helfe... (The woman whom I help...)",
+        "Genitive: Der Mann, dessen Auto rot ist... (The man whose car is red...)"
+      ],
+      "notes": "Relative pronouns match the gender/number of the antecedent but take the case from their role in the relative clause."
+    },
+    {
+      "id": "b2-conjunctional-adverbs",
+      "title": "Conjunctional Adverbs",
+      "category": "Sentence Structure",
+      "description": "Adverbs that connect sentences logically: deshalb, trotzdem, außerdem, etc.",
+      "examples": [
+        "Es regnet. Deshalb bleibe ich zu Hause. (It's raining. Therefore I'm staying home.)",
+        "Er ist müde. Trotzdem arbeitet er weiter. (He's tired. Nevertheless he continues working.)",
+        "Sie lernt Deutsch. Außerdem lernt sie Spanisch. (She's learning German. Additionally she's learning Spanish.)",
+        "Das Wetter ist schlecht. Dennoch gehen wir spazieren. (The weather is bad. Nevertheless we're going for a walk.)"
+      ],
+      "notes": "These cause verb-second word order. The adverb occupies position 1, verb in position 2."
+    },
+    {
+      "id": "b2-verbal-nouns-usage",
+      "title": "Verbal Nouns in Context",
+      "category": "Nouns",
+      "description": "Using nominalized infinitives in various grammatical contexts.",
+      "examples": [
+        "Das Rauchen ist hier verboten. (Smoking is forbidden here.)",
+        "Beim Lesen schlafe ich oft ein. (I often fall asleep while reading.)",
+        "Zum Kochen brauche ich Zeit. (I need time for cooking.)",
+        "Vor dem Essen waschen wir uns die Hände. (Before eating we wash our hands.)"
+      ],
+      "notes": "Always neuter (das). Can be used with prepositions: beim, zum, vor dem, nach dem."
+    },
+    {
+      "id": "b2-negation-strategies",
+      "title": "Advanced Negation Strategies",
+      "category": "Negation",
+      "description": "Various ways to negate beyond basic 'nicht' and 'kein'.",
+      "examples": [
+        "weder...noch: Ich habe weder Zeit noch Geld. (I have neither time nor money.)",
+        "keineswegs: Das ist keineswegs einfach. (That is by no means simple.)",
+        "kaum: Ich habe kaum geschlafen. (I barely slept.)",
+        "niemals: Das werde ich niemals tun. (I will never do that.)"
+      ],
+      "notes": "These provide nuanced ways to express different types and degrees of negation."
+    },
+    {
+      "id": "b2-es-constructions",
+      "title": "Fixed Expressions with 'es'",
+      "category": "Idioms",
+      "description": "Common idiomatic expressions and constructions using 'es'.",
+      "examples": [
+        "Es geht mir gut. (I'm doing well.)",
+        "Es tut mir leid. (I'm sorry.)",
+        "Es kommt darauf an. (It depends.)",
+        "Es gibt... (There is/are...)",
+        "Es handelt sich um... (It concerns/is about...)",
+        "Es fällt mir schwer/leicht. (It's difficult/easy for me.)"
+      ],
+      "notes": "These are fixed expressions where 'es' cannot be replaced or omitted."
+    },
+    {
+      "id": "b2-attributive-genitive",
+      "title": "Attributive Genitive",
+      "category": "Cases",
+      "description": "Using genitive to show possession and relationships, common in formal writing.",
+      "examples": [
+        "die Erfindung des Computers (the invention of the computer)",
+        "die Entwicklung der Technologie (the development of technology)",
+        "das Ende des Krieges (the end of the war)",
+        "die Hauptstadt Deutschlands (the capital of Germany)"
+      ],
+      "notes": "In speech, often replaced by 'von + dative'. Genitive is preferred in formal/written German."
+    },
+    {
+      "id": "b2-reported-speech-tense",
+      "title": "Tense in Reported Speech",
+      "category": "Verb Conjugation",
+      "description": "Maintaining or shifting tenses when reporting what someone said.",
+      "examples": [
+        "Direct: 'Ich bin müde.' → Indirect: Er sagte, er sei müde. (He said he was tired.)",
+        "Direct: 'Ich habe gegessen.' → Indirect: Sie sagte, sie habe gegessen. (She said she had eaten.)",
+        "Direct: 'Ich werde kommen.' → Indirect: Er sagte, er werde kommen. (He said he would come.)"
+      ],
+      "notes": "Uses Konjunktiv I in formal contexts. Tense relationship is maintained from original statement."
+    },
+    {
+      "id": "b2-concessive-clauses",
+      "title": "Concessive Clauses (obwohl, trotzdem)",
+      "category": "Sentence Structure",
+      "description": "Expressing contrast or unexpected outcomes.",
+      "examples": [
+        "Obwohl es regnet, gehe ich spazieren. (Although it's raining, I'm going for a walk.)",
+        "Trotz des Regens gehe ich spazieren. (Despite the rain, I'm going for a walk.)",
+        "Es regnet. Trotzdem gehe ich spazieren. (It's raining. Nevertheless I'm going for a walk.)",
+        "So müde ich auch bin, ich muss arbeiten. (However tired I am, I must work.)"
+      ],
+      "notes": "'Obwohl' is a subordinating conjunction (verb to end), 'trotzdem' is an adverb (verb second)."
+    },
+    {
+      "id": "b2-emphatic-structures",
+      "title": "Emphatic Structures",
+      "category": "Sentence Structure",
+      "description": "Using various structures to emphasize particular elements.",
+      "examples": [
+        "Das war es, was ich sagen wollte. (That was what I wanted to say.)",
+        "Er ist es, der mir geholfen hat. (He is the one who helped me.)",
+        "Gerade deshalb mache ich das. (That's exactly why I'm doing this.)",
+        "Ausgerechnet heute muss es regnen! (Of all days, it has to rain today!)"
+      ],
+      "notes": "Various particles and constructions can add emphasis: gerade, ausgerechnet, eben, doch."
+    }
+  ]
+}

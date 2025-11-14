@@ -80,16 +80,15 @@ function DashboardNavbar() {
                 {
                   title: 'Progress',
                   items: [
-                    { label: 'Statistics', href: '/dashboard/progress' },
-                    { label: 'Achievements', href: '/dashboard/achievements' },
+                    { label: 'Achievements', href: session?.user?.email ? `/dashboard/teacher/students/${encodeURIComponent(session.user.email)}` : '/dashboard/achievements' },
                     { label: 'Syllabus', href: '/dashboard/student/syllabus' },
                   ],
                 },
                 {
                   title: 'Resources',
                   items: [
-                    { label: 'Grammar Guide', href: '/resources/grammar' },
-                    { label: 'Vocabulary', href: '/resources/vocabulary' },
+                    { label: 'Grammar Guide', href: '/dashboard/student/grammar' },
+                    { label: 'Vocabulary', href: '/dashboard/student/vocabulary' },
                     { label: 'Help Center', href: '/help', external: true },
                   ],
                 },

@@ -1,0 +1,258 @@
+{
+  "level": "C1",
+  "rules": [
+    {
+      "id": "c1-konjunktiv-i",
+      "title": "Konjunktiv I (Reported Speech)",
+      "category": "Verb Conjugation",
+      "description": "Used primarily for indirect speech in formal contexts and journalism.",
+      "examples": [
+        "Er sagte, er sei müde. (He said he was tired.)",
+        "Sie behauptet, sie habe das nicht gewusst. (She claims she didn't know that.)",
+        "Der Minister erklärte, die Regierung werde neue Maßnahmen ergreifen. (The minister explained the government would take new measures.)"
+      ],
+      "notes": "If Konjunktiv I form is identical to indicative, use Konjunktiv II instead."
+    },
+    {
+      "id": "c1-modal-particles",
+      "title": "Modal Particles",
+      "category": "Particles",
+      "description": "Small words that add nuance and attitude to statements, very common in spoken German.",
+      "examples": [
+        "Das ist ja interessant! (That's interesting indeed!)",
+        "Komm doch mit! (Do come along!)",
+        "Das ist aber schön! (That's really nice!)",
+        "Was machst du denn hier? (What on earth are you doing here?)"
+      ],
+      "notes": "Modal particles are unstressed and difficult to translate directly."
+    },
+    {
+      "id": "c1-subjunctive-alternatives",
+      "title": "Alternatives to Subjunctive",
+      "category": "Sentence Structure",
+      "description": "Various constructions that can replace subjunctive forms in modern German.",
+      "examples": [
+        "Er soll krank sein. (He is supposedly sick.)",
+        "Sie will das gesagt haben. (She claims to have said that.)",
+        "Das dürfte schwierig sein. (That is likely to be difficult.)"
+      ],
+      "notes": "Using modal verbs + infinitive is increasingly common in place of Konjunktiv."
+    },
+    {
+      "id": "c1-extended-participial-constructions",
+      "title": "Extended Participial Constructions",
+      "category": "Participles",
+      "description": "Complex attributive constructions using present or past participles with modifiers, common in formal German.",
+      "examples": [
+        "die seit Jahren andauernde Krise (the crisis continuing for years)",
+        "der von allen respektierte Professor (the professor respected by all)",
+        "die in den letzten Monaten stark gestiegenen Preise (the prices that have risen sharply in recent months)",
+        "das unter großem Aufwand durchgeführte Experiment (the experiment carried out with great effort)"
+      ],
+      "notes": "These can usually be transformed into relative clauses in spoken German."
+    },
+    {
+      "id": "c1-functional-verb-constructions",
+      "title": "Functional Verb Constructions (Funktionsverbgefüge)",
+      "category": "Idioms",
+      "description": "Fixed combinations of a verb and noun that together express a single meaning, common in formal/official language.",
+      "examples": [
+        "eine Entscheidung treffen (to make a decision) instead of 'entscheiden'",
+        "in Betracht ziehen (to take into consideration) instead of 'betrachten'",
+        "zur Verfügung stellen (to make available) instead of 'verfügbar machen'",
+        "in Frage stellen (to question/challenge) instead of 'hinterfragen'",
+        "Kritik üben (to criticize) instead of 'kritisieren'"
+      ],
+      "notes": "These constructions are characteristic of bureaucratic and academic German."
+    },
+    {
+      "id": "c1-subjective-modals",
+      "title": "Subjective Use of Modal Verbs",
+      "category": "Verb Conjugation",
+      "description": "Modal verbs used to express assumptions, hearsay, or the speaker's evaluation rather than objective facts.",
+      "examples": [
+        "Sie muss krank sein. (She must be sick - assumption)",
+        "Er soll sehr reich sein. (He is said to be very rich - hearsay)",
+        "Das kann nicht stimmen. (That can't be right - speaker's judgment)",
+        "Er will nichts davon gewusst haben. (He claims not to have known anything about it)",
+        "Das dürfte das Ende sein. (That is probably the end - assumption)"
+      ],
+      "notes": "Distinguished from objective modals by context and meaning. Often about probability or reported information."
+    },
+    {
+      "id": "c1-conditional-sentences-advanced",
+      "title": "Advanced Conditional Sentences",
+      "category": "Sentence Structure",
+      "description": "Complex conditional structures including irrealis and mixed conditionals.",
+      "examples": [
+        "Hätte ich das gewusst, wäre ich nicht gekommen. (Had I known that, I wouldn't have come.)",
+        "Wenn ich mehr Zeit gehabt hätte, hätte ich es besser gemacht. (If I had had more time, I would have done it better.)",
+        "Sollte er kommen, sag ihm bitte Bescheid. (Should he come, please let him know.)",
+        "Wäre ich du, würde ich das nicht tun. (If I were you, I wouldn't do that.)"
+      ],
+      "notes": "C1 level requires mastery of all conditional types, including those without 'wenn'."
+    },
+    {
+      "id": "c1-nominalization-advanced",
+      "title": "Advanced Nominalization",
+      "category": "Word Formation",
+      "description": "Complex nominalization patterns in academic and formal writing.",
+      "examples": [
+        "die Inbetriebnahme (the putting into operation)",
+        "die Inanspruchnahme (the claiming/utilizing)",
+        "die Durchführung der Maßnahmen (the implementation of the measures)",
+        "zur Verbesserung der Situation (for the improvement of the situation)",
+        "bei der Entstehung von Problemen (in the emergence of problems)"
+      ],
+      "notes": "Heavy nominalization is typical of German bureaucratic and academic style."
+    },
+    {
+      "id": "c1-discourse-markers",
+      "title": "Discourse Markers and Connectors",
+      "category": "Sentence Structure",
+      "description": "Advanced connectors that structure complex arguments and texts.",
+      "examples": [
+        "allerdings (however/admittedly)",
+        "demzufolge / folglich (consequently)",
+        "insofern / inwiefern (insofar as / to what extent)",
+        "nichtsdestotrotz / nichtsdestoweniger (nevertheless)",
+        "einerseits...andererseits (on the one hand...on the other hand)",
+        "im Gegensatz zu / im Vergleich zu (in contrast to / in comparison to)"
+      ],
+      "notes": "Essential for coherent academic and formal writing at C1 level."
+    },
+    {
+      "id": "c1-prepositional-adverbs",
+      "title": "Prepositional Adverbs (da-/wo-compounds)",
+      "category": "Pronouns",
+      "description": "Using da- and wo- compounds to refer to things (not people).",
+      "examples": [
+        "Ich denke darüber nach. (I'm thinking about it.)",
+        "Worüber denkst du nach? (What are you thinking about?)",
+        "Er interessiert sich dafür. (He's interested in it.)",
+        "Wofür interessiert er sich? (What is he interested in?)",
+        "Damit bin ich nicht einverstanden. (I don't agree with that.)"
+      ],
+      "notes": "Cannot be used for people. For people, use preposition + pronoun: 'über ihn', not 'darüber'."
+    },
+    {
+      "id": "c1-passive-state-vs-process",
+      "title": "State Passive vs. Process Passive",
+      "category": "Verb Conjugation",
+      "description": "Distinguishing between Zustandspassiv (state) and Vorgangspassiv (process).",
+      "examples": [
+        "Process: Das Fenster wird geöffnet. (The window is being opened.)",
+        "State: Das Fenster ist geöffnet. (The window is open.)",
+        "Process: Der Brief wurde geschrieben. (The letter was written.)",
+        "State: Der Brief war geschrieben. (The letter was written - completed state)",
+        "Das Auto ist repariert. vs. Das Auto wird repariert."
+      ],
+      "notes": "Zustandspassiv uses sein + past participle (result), Vorgangspassiv uses werden + past participle (action)."
+    },
+    {
+      "id": "c1-subjunctive-past-perfect",
+      "title": "Konjunktiv II - Past Perfect",
+      "category": "Verb Conjugation",
+      "description": "Expressing hypothetical situations in the past.",
+      "examples": [
+        "Wenn ich das gewusst hätte, hätte ich anders gehandelt. (If I had known that, I would have acted differently.)",
+        "Wäre ich früher gekommen, hätte ich sie noch getroffen. (Had I come earlier, I would have still met her.)",
+        "Das hätte nicht passieren dürfen. (That shouldn't have been allowed to happen.)",
+        "Sie wäre gerne mitgekommen. (She would have liked to come along.)"
+      ],
+      "notes": "Formed with hätte/wäre + past participle. Essential for expressing regret and hypothetical past scenarios."
+    },
+    {
+      "id": "c1-anticipatory-es",
+      "title": "Anticipatory 'es' with Subordinate Clauses",
+      "category": "Sentence Structure",
+      "description": "Using 'es' to anticipate a following subordinate clause.",
+      "examples": [
+        "Ich finde es wichtig, dass wir darüber sprechen. (I find it important that we talk about it.)",
+        "Er hält es für notwendig, neue Regeln einzuführen. (He considers it necessary to introduce new rules.)",
+        "Sie hat es geschafft, den Termin einzuhalten. (She managed to meet the deadline.)",
+        "Wir schätzen es sehr, dass Sie gekommen sind. (We very much appreciate that you came.)"
+      ],
+      "notes": "'Es' anticipates the real subject (the subordinate clause or infinitive) that comes later."
+    },
+    {
+      "id": "c1-attributive-vs-predicative",
+      "title": "Attributive vs. Predicative Adjectives",
+      "category": "Adjectives",
+      "description": "Understanding when and why adjectives take different forms or meanings.",
+      "examples": [
+        "Predicative: Der Mann ist arm. (The man is poor.)",
+        "Attributive: Der arme Mann. (The poor man - unfortunate)",
+        "ein alter Freund (an old friend - long-time) vs. ein Freund ist alt (a friend is old - elderly)",
+        "eine große Frau (a tall woman) vs. Die Frau ist groß. (The woman is tall.)"
+      ],
+      "notes": "Some adjectives change meaning depending on position. Attributive adjectives require endings."
+    },
+    {
+      "id": "c1-genitive-constructions",
+      "title": "Advanced Genitive Constructions",
+      "category": "Cases",
+      "description": "Complex genitive structures in formal and academic German.",
+      "examples": [
+        "die Rolle der Medien in der Gesellschaft (the role of the media in society)",
+        "im Rahmen der Diskussion (within the framework of the discussion)",
+        "aufgrund dessen (on the basis of that)",
+        "angesichts der Tatsache (in view of the fact)",
+        "hinsichtlich der Frage (with regard to the question)"
+      ],
+      "notes": "Heavy genitive usage is characteristic of formal written German."
+    },
+    {
+      "id": "c1-register-switching",
+      "title": "Register Switching and Style",
+      "category": "Pragmatics",
+      "description": "Adapting language to different contexts: formal, informal, academic, colloquial.",
+      "examples": [
+        "Formal: Ich möchte Sie darauf aufmerksam machen... (I would like to draw your attention to...)",
+        "Informal: Hör mal, weißt du was? (Hey, you know what?)",
+        "Academic: Es lässt sich feststellen, dass... (It can be established that...)",
+        "Colloquial: Klar, kein Ding! (Sure, no problem!)"
+      ],
+      "notes": "C1 speakers must navigate different registers appropriately for different situations."
+    },
+    {
+      "id": "c1-nominal-style",
+      "title": "Nominal Style (Nominalstil)",
+      "category": "Writing Style",
+      "description": "The German preference for noun-heavy constructions in formal writing.",
+      "examples": [
+        "Verbal: nachdem er ankam → Nominal: nach seiner Ankunft (after his arrival)",
+        "Verbal: weil er versagte → Nominal: wegen seines Versagens (because of his failure)",
+        "Verbal: bevor man entscheidet → Nominal: vor der Entscheidung (before the decision)",
+        "die Durchführung der Untersuchung (the carrying out of the investigation)"
+      ],
+      "notes": "Nominal style is more concise and formal. Very common in bureaucratic and academic texts."
+    },
+    {
+      "id": "c1-complex-relative-clauses",
+      "title": "Complex Relative Clauses",
+      "category": "Sentence Structure",
+      "description": "Nested and interrupted relative clauses with prepositions.",
+      "examples": [
+        "Der Grund, aus dem er gekommen ist, ist unklar. (The reason for which he came is unclear.)",
+        "Die Art und Weise, in der sie arbeitet, ist beeindruckend. (The way in which she works is impressive.)",
+        "Menschen, deren Meinung ich respektiere, sagen das Gegenteil. (People whose opinion I respect say the opposite.)",
+        "Das Haus, in dem ich geboren wurde, steht noch. (The house in which I was born still stands.)"
+      ],
+      "notes": "Prepositions can come before the relative pronoun. 'Dessen/deren' for genitive relatives."
+    },
+    {
+      "id": "c1-particle-verbs-advanced",
+      "title": "Advanced Particle Verbs and Prefixes",
+      "category": "Word Formation",
+      "description": "Understanding subtle meaning changes with different prefixes.",
+      "examples": [
+        "verstehen (understand) vs. missverstehen (misunderstand) vs. entstehen (emerge)",
+        "erklären (explain) vs. verklären (transfigure) vs. aufklären (enlighten)",
+        "schätzen (estimate/value) vs. unterschätzen (underestimate) vs. abschätzen (assess)",
+        "bedenken (consider) vs. überdenken (reconsider) vs. nachdenken (think about)"
+      ],
+      "notes": "Prefixes can completely change verb meaning. Nuance matters at C1 level."
+    }
+  ]
+}

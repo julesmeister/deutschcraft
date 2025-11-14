@@ -1,0 +1,239 @@
+{
+  "level": "A2",
+  "rules": [
+    {
+      "id": "a2-perfect-tense",
+      "title": "Perfect Tense (Perfekt)",
+      "category": "Verb Conjugation",
+      "description": "The perfect tense is used to talk about past events. It's formed with haben/sein + past participle.",
+      "examples": [
+        "Ich habe gelernt. (I have learned.)",
+        "Sie ist gegangen. (She has gone.)",
+        "Wir haben gegessen. (We have eaten.)"
+      ],
+      "notes": "Most verbs use 'haben', but verbs of motion and state changes use 'sein'."
+    },
+    {
+      "id": "a2-dative-case",
+      "title": "Dative Case",
+      "category": "Cases",
+      "description": "The dative case is used for indirect objects and after certain prepositions.",
+      "examples": [
+        "Ich gebe dem Mann das Buch. (I give the man the book.)",
+        "Sie hilft der Frau. (She helps the woman.)",
+        "Er spricht mit dem Kind. (He speaks with the child.)"
+      ],
+      "notes": "Articles change: der→dem, die→der, das→dem, die(pl)→den(+n on noun)."
+    },
+    {
+      "id": "a2-modal-verbs",
+      "title": "Modal Verbs",
+      "category": "Verb Conjugation",
+      "description": "Modal verbs express ability, permission, necessity, etc. They require an infinitive at the end.",
+      "examples": [
+        "Ich kann schwimmen. (I can swim.)",
+        "Du musst lernen. (You must learn.)",
+        "Sie will schlafen. (She wants to sleep.)"
+      ],
+      "notes": "The six modal verbs are: können, müssen, dürfen, sollen, wollen, mögen."
+    },
+    {
+      "id": "a2-comparative-adjectives",
+      "title": "Comparative Adjectives",
+      "category": "Adjectives",
+      "description": "To form the comparative, add '-er' to the adjective and often add an umlaut.",
+      "examples": [
+        "groß → größer (big → bigger)",
+        "alt → älter (old → older)",
+        "schnell → schneller (fast → faster)"
+      ],
+      "notes": "Some adjectives are irregular, like 'gut → besser' and 'viel → mehr'."
+    },
+    {
+      "id": "a2-separable-verbs",
+      "title": "Separable Verbs",
+      "category": "Verb Conjugation",
+      "description": "Many German verbs have separable prefixes that go to the end of the clause.",
+      "examples": [
+        "aufstehen: Ich stehe um 7 Uhr auf. (I get up at 7 o'clock.)",
+        "einkaufen: Sie kauft im Supermarkt ein. (She shops at the supermarket.)",
+        "mitkommen: Kommst du mit? (Are you coming along?)"
+      ],
+      "notes": "In perfect tense, 'ge-' goes between prefix and stem: aufgestanden."
+    },
+    {
+      "id": "a2-two-way-prepositions",
+      "title": "Two-Way Prepositions (Wechselpräpositionen)",
+      "category": "Prepositions",
+      "description": "Nine prepositions can take either accusative (motion) or dative (location): an, auf, hinter, in, neben, über, unter, vor, zwischen.",
+      "examples": [
+        "in: Ich gehe in die Schule. (I go into the school. - accusative, motion)",
+        "in: Ich bin in der Schule. (I am in the school. - dative, location)",
+        "auf: Er stellt das Buch auf den Tisch. (He puts the book on the table. - accusative)",
+        "auf: Das Buch liegt auf dem Tisch. (The book lies on the table. - dative)",
+        "an: Sie geht an die Tafel. (She goes to the board. - accusative)",
+        "an: Die Lampe hängt an der Decke. (The lamp hangs on the ceiling. - dative)",
+        "über: Der Vogel fliegt über das Haus. (The bird flies over the house. - accusative)",
+        "über: Das Bild hängt über dem Sofa. (The picture hangs above the sofa. - dative)",
+        "unter: Die Katze läuft unter den Tisch. (The cat runs under the table. - accusative)",
+        "unter: Die Katze schläft unter dem Tisch. (The cat sleeps under the table. - dative)",
+        "vor: Er tritt vor die Tür. (He steps in front of the door. - accusative)",
+        "vor: Er steht vor der Tür. (He stands in front of the door. - dative)",
+        "hinter: Der Hund rennt hinter das Haus. (The dog runs behind the house. - accusative)",
+        "hinter: Der Garten ist hinter dem Haus. (The garden is behind the house. - dative)",
+        "neben: Sie setzt sich neben ihren Freund. (She sits down next to her friend. - accusative)",
+        "neben: Sie sitzt neben ihrem Freund. (She sits next to her friend. - dative)",
+        "zwischen: Er stellt die Vase zwischen die Bücher. (He places the vase between the books. - accusative)",
+        "zwischen: Die Vase steht zwischen den Büchern. (The vase stands between the books. - dative)"
+      ],
+      "notes": "Ask 'Wohin?' (where to?) for accusative (motion), 'Wo?' (where?) for dative (location). Motion verbs: gehen, stellen, legen, setzen, hängen. Location verbs: sein, stehen, liegen, sitzen, hängen."
+    },
+    {
+      "id": "a2-reflexive-verbs",
+      "title": "Reflexive Verbs",
+      "category": "Verb Conjugation",
+      "description": "Reflexive verbs use reflexive pronouns (mich, dich, sich, uns, euch, sich) to indicate the action reflects back on the subject.",
+      "examples": [
+        "Ich wasche mich. (I wash myself.)",
+        "Du freust dich. (You are happy.)",
+        "Wir treffen uns um 8 Uhr. (We meet at 8 o'clock.)",
+        "Sie interessiert sich für Musik. (She is interested in music.)"
+      ],
+      "notes": "Some verbs are always reflexive (sich freuen, sich interessieren), others can be reflexive or not."
+    },
+    {
+      "id": "a2-imperative",
+      "title": "Imperative (Commands)",
+      "category": "Verb Conjugation",
+      "description": "The imperative is used to give commands, instructions, or requests.",
+      "examples": [
+        "Komm! (Come! - du form)",
+        "Kommt! (Come! - ihr form)",
+        "Kommen Sie! (Come! - Sie form)",
+        "Sei ruhig! (Be quiet! - du form of sein)",
+        "Nehmen Sie Platz! (Take a seat! - formal)"
+      ],
+      "notes": "For du-imperative, drop the '-st' ending. For irregular verbs like 'sein', forms must be memorized."
+    },
+    {
+      "id": "a2-possessive-pronouns",
+      "title": "Possessive Pronouns",
+      "category": "Pronouns",
+      "description": "Possessive pronouns show ownership and change based on gender, case, and number.",
+      "examples": [
+        "mein Buch (my book - neuter nominative)",
+        "deine Tasche (your bag - feminine nominative)",
+        "sein Auto (his car - neuter nominative)",
+        "unsere Freunde (our friends - plural nominative)",
+        "Ich sehe deinen Bruder. (I see your brother. - masculine accusative)"
+      ],
+      "notes": "Possessive pronouns follow the same endings as 'ein': mein, dein, sein, ihr, unser, euer, ihr, Ihr."
+    },
+    {
+      "id": "a2-past-tense-sein-haben",
+      "title": "Simple Past - sein and haben",
+      "category": "Verb Conjugation",
+      "description": "The simple past (Präteritum) of 'sein' and 'haben' is commonly used in both written and spoken German.",
+      "examples": [
+        "Ich war gestern im Kino. (I was at the cinema yesterday.)",
+        "Du warst sehr nett. (You were very nice.)",
+        "Sie hatte viel Arbeit. (She had a lot of work.)",
+        "Wir hatten keine Zeit. (We had no time.)"
+      ],
+      "notes": "While other verbs prefer Perfekt in speech, 'sein' and 'haben' use Präteritum even in conversation."
+    },
+    {
+      "id": "a2-subordinating-conjunctions",
+      "title": "Subordinating Conjunctions",
+      "category": "Sentence Structure",
+      "description": "Conjunctions like 'weil' (because), 'wenn' (when/if), 'dass' (that), 'obwohl' (although) send the verb to the end of the clause.",
+      "examples": [
+        "Ich lerne Deutsch, weil es interessant ist. (I learn German because it is interesting.)",
+        "Er sagt, dass er müde ist. (He says that he is tired.)",
+        "Wenn du Zeit hast, können wir uns treffen. (If you have time, we can meet.)"
+      ],
+      "notes": "The conjugated verb goes to the end of the subordinate clause."
+    },
+    {
+      "id": "a2-coordinating-conjunctions",
+      "title": "Coordinating Conjunctions",
+      "category": "Sentence Structure",
+      "description": "Conjunctions like 'und' (and), 'aber' (but), 'oder' (or), 'denn' (because) connect clauses without changing word order.",
+      "examples": [
+        "Ich gehe nach Hause und ich esse. (I go home and I eat.)",
+        "Sie ist nett, aber manchmal laut. (She is nice, but sometimes loud.)",
+        "Willst du Kaffee oder Tee? (Do you want coffee or tea?)",
+        "Ich bleibe hier, denn es regnet. (I'm staying here because it's raining.)"
+      ],
+      "notes": "Unlike subordinating conjunctions, these don't affect verb position."
+    },
+    {
+      "id": "a2-superlative-adjectives",
+      "title": "Superlative Adjectives",
+      "category": "Adjectives",
+      "description": "The superlative is formed with 'am + adjective + -sten' or 'der/die/das + adjective + -ste'.",
+      "examples": [
+        "schnell → am schnellsten (fast → fastest)",
+        "groß → am größten (big → biggest)",
+        "Das ist das schönste Haus. (That is the most beautiful house.)",
+        "Er ist der klügste Student. (He is the smartest student.)"
+      ],
+      "notes": "Many adjectives with a, o, u add an umlaut. 'Gut' becomes 'am besten', 'viel' becomes 'am meisten'."
+    },
+    {
+      "id": "a2-time-expressions",
+      "title": "Time Expressions",
+      "category": "Time",
+      "description": "Common expressions for telling time and talking about when things happen.",
+      "examples": [
+        "Um wie viel Uhr? (At what time?)",
+        "Es ist 15 Uhr. / Es ist drei Uhr. (It is 3 o'clock.)",
+        "morgens (in the morning), nachmittags (in the afternoon), abends (in the evening)",
+        "heute (today), gestern (yesterday), morgen (tomorrow)",
+        "letzte Woche (last week), nächstes Jahr (next year)"
+      ],
+      "notes": "Germans commonly use 24-hour time format. Time expressions in accusative answer 'wann?'"
+    },
+    {
+      "id": "a2-dative-verbs",
+      "title": "Verbs with Dative",
+      "category": "Verb Conjugation",
+      "description": "Some verbs always take dative objects instead of accusative.",
+      "examples": [
+        "helfen: Ich helfe dir. (I help you.)",
+        "danken: Sie dankt ihm. (She thanks him.)",
+        "gefallen: Das Buch gefällt mir. (I like the book. / The book pleases me.)",
+        "gehören: Das Auto gehört meinem Vater. (The car belongs to my father.)",
+        "folgen: Der Hund folgt dem Kind. (The dog follows the child.)"
+      ],
+      "notes": "Common dative verbs: helfen, danken, gefallen, gehören, folgen, antworten, gratulieren, passen."
+    },
+    {
+      "id": "a2-adjective-endings",
+      "title": "Adjective Endings after 'der/die/das'",
+      "category": "Adjectives",
+      "description": "Adjectives that come before a noun take endings that change based on case, gender, and number.",
+      "examples": [
+        "der große Mann (the tall man - masc. nom.)",
+        "die schöne Frau (the beautiful woman - fem. nom.)",
+        "das kleine Kind (the small child - neut. nom.)",
+        "Ich sehe den großen Mann. (I see the tall man - masc. acc.)",
+        "mit dem kleinen Kind (with the small child - neut. dat.)"
+      ],
+      "notes": "After definite articles, adjectives take -e or -en endings. This is called 'weak declension'."
+    },
+    {
+      "id": "a2-future-tense",
+      "title": "Future Tense (Futur I)",
+      "category": "Verb Conjugation",
+      "description": "The future tense is formed with 'werden' + infinitive to express future events or assumptions.",
+      "examples": [
+        "Ich werde morgen kommen. (I will come tomorrow.)",
+        "Sie wird Deutsch lernen. (She will learn German.)",
+        "Wir werden nach Berlin fahren. (We will drive to Berlin.)",
+        "Er wird wohl zu Hause sein. (He is probably at home.)"
+      ],
+      "notes": "Present tense is often used for future with time context. Futur I can also express probability."
+    }
+  ]
+}

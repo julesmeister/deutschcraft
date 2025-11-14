@@ -1,0 +1,361 @@
+{
+  "level": "A1",
+  "rules": [
+    {
+      "id": "a1-articles-definite",
+      "title": "Definite Articles (der, die, das)",
+      "category": "Articles",
+      "description": "German has three definite articles that correspond to the three grammatical genders: masculine (der), feminine (die), and neuter (das).",
+      "examples": [
+        "der Mann (the man)",
+        "die Frau (the woman)",
+        "das Kind (the child)"
+      ],
+      "notes": "The article 'die' is also used for all plural nouns regardless of gender."
+    },
+    {
+      "id": "a1-articles-indefinite",
+      "title": "Indefinite Articles (ein, eine)",
+      "category": "Articles",
+      "description": "Indefinite articles are used for non-specific nouns. 'Ein' is used for masculine and neuter, 'eine' for feminine.",
+      "examples": [
+        "ein Mann (a man)",
+        "eine Frau (a woman)",
+        "ein Kind (a child)"
+      ],
+      "notes": "There is no plural form of the indefinite article in German."
+    },
+    {
+      "id": "a1-present-tense-regular",
+      "title": "Present Tense - Regular Verbs",
+      "category": "Verb Conjugation",
+      "description": "Regular verbs follow a predictable pattern in the present tense. Remove '-en' from the infinitive and add the appropriate ending.",
+      "examples": [
+        "ich lerne (I learn)",
+        "du lernst (you learn)",
+        "er/sie/es lernt (he/she/it learns)",
+        "wir lernen (we learn)",
+        "ihr lernt (you all learn)",
+        "sie/Sie lernen (they/you formal learn)"
+      ],
+      "notes": "The stem remains the same throughout all conjugations."
+    },
+    {
+      "id": "a1-present-tense-sein",
+      "title": "Present Tense - sein (to be)",
+      "category": "Verb Conjugation",
+      "description": "The verb 'sein' is irregular and must be memorized.",
+      "examples": [
+        "ich bin (I am)",
+        "du bist (you are)",
+        "er/sie/es ist (he/she/it is)",
+        "wir sind (we are)",
+        "ihr seid (you all are)",
+        "sie/Sie sind (they/you formal are)"
+      ],
+      "notes": "This is one of the most important verbs in German and is highly irregular."
+    },
+    {
+      "id": "a1-present-tense-haben",
+      "title": "Present Tense - haben (to have)",
+      "category": "Verb Conjugation",
+      "description": "The verb 'haben' is irregular in some forms.",
+      "examples": [
+        "ich habe (I have)",
+        "du hast (you have)",
+        "er/sie/es hat (he/she/it has)",
+        "wir haben (we have)",
+        "ihr habt (you all have)",
+        "sie/Sie haben (they/you formal have)"
+      ],
+      "notes": "Notice the irregular forms 'hast' and 'hat'."
+    },
+    {
+      "id": "a1-word-order-basic",
+      "title": "Basic Word Order (SVO)",
+      "category": "Sentence Structure",
+      "description": "In simple German sentences, the word order follows Subject-Verb-Object pattern.",
+      "examples": [
+        "Ich esse Pizza. (I eat pizza.)",
+        "Sie lernt Deutsch. (She learns German.)",
+        "Wir spielen Fußball. (We play football.)"
+      ],
+      "notes": "The verb is always in second position in a main clause."
+    },
+    {
+      "id": "a1-nominative-case",
+      "title": "Nominative Case",
+      "category": "Cases",
+      "description": "The nominative case is used for the subject of the sentence and after the verb 'sein'.",
+      "examples": [
+        "Der Mann ist groß. (The man is tall.)",
+        "Die Katze schläft. (The cat sleeps.)",
+        "Das Buch ist neu. (The book is new.)"
+      ],
+      "notes": "This is the 'default' case and the one you find in the dictionary."
+    },
+    {
+      "id": "a1-accusative-case",
+      "title": "Accusative Case",
+      "category": "Cases",
+      "description": "The accusative case is used for the direct object of the sentence. Only masculine articles change (der → den, ein → einen).",
+      "examples": [
+        "Ich sehe den Mann. (I see the man.)",
+        "Er hat einen Hund. (He has a dog.)",
+        "Sie kauft das Buch. (She buys the book.)"
+      ],
+      "notes": "Feminine, neuter, and plural articles remain the same as in nominative."
+    },
+    {
+      "id": "a1-personal-pronouns",
+      "title": "Personal Pronouns",
+      "category": "Pronouns",
+      "description": "German personal pronouns in nominative case.",
+      "examples": [
+        "ich (I)",
+        "du (you - informal singular)",
+        "er/sie/es (he/she/it)",
+        "wir (we)",
+        "ihr (you - informal plural)",
+        "sie/Sie (they/you formal)"
+      ],
+      "notes": "Note the capitalization of 'Sie' (formal you) even in the middle of sentences."
+    },
+    {
+      "id": "a1-numbers-1-20",
+      "title": "Numbers 1-20",
+      "category": "Numbers",
+      "description": "Basic numbers from one to twenty.",
+      "examples": [
+        "eins (1), zwei (2), drei (3)",
+        "zehn (10), elf (11), zwölf (12)",
+        "dreizehn (13), vierzehn (14), zwanzig (20)"
+      ],
+      "notes": "Numbers 13-19 follow the pattern: number + zehn (e.g., drei + zehn = dreizehn)."
+    },
+    {
+      "id": "a1-negation-nicht",
+      "title": "Negation with 'nicht'",
+      "category": "Negation",
+      "description": "'Nicht' is used to negate verbs, adjectives, or entire sentences.",
+      "examples": [
+        "Ich verstehe nicht. (I don't understand.)",
+        "Das ist nicht gut. (That is not good.)",
+        "Er kommt nicht. (He is not coming.)"
+      ],
+      "notes": "'Nicht' usually comes after the verb or at the end of the sentence."
+    },
+    {
+      "id": "a1-negation-kein",
+      "title": "Negation with 'kein'",
+      "category": "Negation",
+      "description": "'Kein' is used to negate nouns and replaces the indefinite article.",
+      "examples": [
+        "Ich habe kein Geld. (I have no money.)",
+        "Das ist keine gute Idee. (That is not a good idea.)",
+        "Sie hat keinen Hund. (She has no dog.)"
+      ],
+      "notes": "'Kein' follows the same declension pattern as 'ein'."
+    },
+    {
+      "id": "a1-questions-yes-no",
+      "title": "Yes/No Questions",
+      "category": "Questions",
+      "description": "To form yes/no questions, place the verb first, followed by the subject.",
+      "examples": [
+        "Kommst du? (Are you coming?)",
+        "Ist das dein Buch? (Is that your book?)",
+        "Hast du Zeit? (Do you have time?)",
+        "Lernt sie Deutsch? (Is she learning German?)"
+      ],
+      "notes": "The verb moves to first position. Answer with 'Ja' (yes) or 'Nein' (no)."
+    },
+    {
+      "id": "a1-questions-w-questions",
+      "title": "W-Questions (Question Words)",
+      "category": "Questions",
+      "description": "W-questions begin with a question word, followed by the verb.",
+      "examples": [
+        "Wer ist das? (Who is that?)",
+        "Was machst du? (What are you doing?)",
+        "Wo wohnst du? (Where do you live?)",
+        "Wann kommst du? (When are you coming?)",
+        "Wie heißt du? (What is your name?)",
+        "Warum lernst du Deutsch? (Why are you learning German?)"
+      ],
+      "notes": "Common question words: wer (who), was (what), wo (where), wann (when), wie (how), warum (why)."
+    },
+    {
+      "id": "a1-plural-formation",
+      "title": "Plural Formation",
+      "category": "Nouns",
+      "description": "German nouns form plurals in various ways. There are five main plural patterns.",
+      "examples": [
+        "der Tisch → die Tische (table/tables) - add -e",
+        "das Kind → die Kinder (child/children) - add -er",
+        "die Mutter → die Mütter (mother/mothers) - add umlaut",
+        "der Lehrer → die Lehrer (teacher/teachers) - no change",
+        "das Auto → die Autos (car/cars) - add -s"
+      ],
+      "notes": "Plural forms must be learned with each noun. All plural nouns use 'die' as the article."
+    },
+    {
+      "id": "a1-adjectives-basic",
+      "title": "Basic Adjectives (Predicative)",
+      "category": "Adjectives",
+      "description": "When adjectives come after the verb 'sein', they don't take endings.",
+      "examples": [
+        "Der Mann ist groß. (The man is tall.)",
+        "Die Frau ist nett. (The woman is nice.)",
+        "Das Haus ist klein. (The house is small.)",
+        "Die Kinder sind glücklich. (The children are happy.)"
+      ],
+      "notes": "This is the easiest way to use adjectives. No endings needed!"
+    },
+    {
+      "id": "a1-possessives-mein-dein",
+      "title": "Possessives: mein, dein",
+      "category": "Pronouns",
+      "description": "Basic possessive pronouns for 'my' and 'your' (informal).",
+      "examples": [
+        "mein Buch (my book - neuter)",
+        "meine Tasche (my bag - feminine)",
+        "dein Auto (your car - neuter)",
+        "deine Mutter (your mother - feminine)"
+      ],
+      "notes": "Possessives follow the same pattern as 'ein/eine'. 'Mein' for masculine/neuter, 'meine' for feminine."
+    },
+    {
+      "id": "a1-prepositions-in-aus",
+      "title": "Prepositions: in, aus",
+      "category": "Prepositions",
+      "description": "Basic prepositions for location and origin.",
+      "examples": [
+        "Ich wohne in Berlin. (I live in Berlin.)",
+        "Sie arbeitet in Deutschland. (She works in Germany.)",
+        "Er kommt aus Italien. (He comes from Italy.)",
+        "Wir kommen aus der Schweiz. (We come from Switzerland.)"
+      ],
+      "notes": "'In' indicates location, 'aus' indicates origin. Both take dative case (at A1, use them with place names)."
+    },
+    {
+      "id": "a1-time-days-week",
+      "title": "Days of the Week",
+      "category": "Time",
+      "description": "The seven days of the week in German.",
+      "examples": [
+        "Montag (Monday)",
+        "Dienstag (Tuesday)",
+        "Mittwoch (Wednesday)",
+        "Donnerstag (Thursday)",
+        "Freitag (Friday)",
+        "Samstag/Sonnabend (Saturday)",
+        "Sonntag (Sunday)"
+      ],
+      "notes": "All days are masculine (der Montag). Use 'am' for 'on': am Montag (on Monday)."
+    },
+    {
+      "id": "a1-time-months",
+      "title": "Months of the Year",
+      "category": "Time",
+      "description": "The twelve months in German.",
+      "examples": [
+        "Januar, Februar, März (January, February, March)",
+        "April, Mai, Juni (April, May, June)",
+        "Juli, August, September (July, August, September)",
+        "Oktober, November, Dezember (October, November, December)"
+      ],
+      "notes": "All months are masculine (der Januar). Use 'im' for 'in': im Mai (in May)."
+    },
+    {
+      "id": "a1-greetings",
+      "title": "Common Greetings",
+      "category": "Phrases",
+      "description": "Essential greetings and farewells for everyday situations.",
+      "examples": [
+        "Guten Morgen! (Good morning!)",
+        "Guten Tag! (Good day!/Hello!)",
+        "Guten Abend! (Good evening!)",
+        "Hallo! (Hello!)",
+        "Tschüss! (Bye!)",
+        "Auf Wiedersehen! (Goodbye!)",
+        "Wie geht's? (How are you?)"
+      ],
+      "notes": "Use 'Guten Morgen' until about 11 am, 'Guten Tag' during the day, 'Guten Abend' from about 6 pm."
+    },
+    {
+      "id": "a1-numbers-20-100",
+      "title": "Numbers 20-100",
+      "category": "Numbers",
+      "description": "Counting by tens and forming compound numbers.",
+      "examples": [
+        "zwanzig (20), dreißig (30), vierzig (40)",
+        "fünfzig (50), sechzig (60), siebzig (70)",
+        "achtzig (80), neunzig (90), hundert (100)",
+        "einundzwanzig (21), zweiunddreißig (32)",
+        "fünfundvierzig (45), siebenundneunzig (97)"
+      ],
+      "notes": "Compound numbers are written as one word, with the ones digit first: einundzwanzig (one-and-twenty)."
+    },
+    {
+      "id": "a1-telling-time-basic",
+      "title": "Telling Time (Basic)",
+      "category": "Time",
+      "description": "Basic time expressions for telling the hour.",
+      "examples": [
+        "Wie spät ist es? / Wie viel Uhr ist es? (What time is it?)",
+        "Es ist ein Uhr. (It's one o'clock.)",
+        "Es ist drei Uhr. (It's three o'clock.)",
+        "Es ist zehn Uhr. (It's ten o'clock.)",
+        "Es ist Mittag. (It's noon.)",
+        "Es ist Mitternacht. (It's midnight.)"
+      ],
+      "notes": "Use 'ein Uhr' for 1 o'clock. For other hours, use the number + Uhr."
+    },
+    {
+      "id": "a1-verb-moechten",
+      "title": "The Verb 'möchten' (would like)",
+      "category": "Verb Conjugation",
+      "description": "A polite way to express wishes and desires.",
+      "examples": [
+        "ich möchte (I would like)",
+        "du möchtest (you would like)",
+        "er/sie/es möchte (he/she/it would like)",
+        "wir möchten (we would like)",
+        "ihr möchtet (you all would like)",
+        "sie/Sie möchten (they/you formal would like)"
+      ],
+      "notes": "Very useful for ordering in restaurants or shopping: 'Ich möchte einen Kaffee.' (I would like a coffee.)"
+    },
+    {
+      "id": "a1-common-verbs",
+      "title": "Common Regular Verbs",
+      "category": "Verb Conjugation",
+      "description": "Essential regular verbs for daily conversation.",
+      "examples": [
+        "machen (to do/make), wohnen (to live)",
+        "kommen (to come), gehen (to go)",
+        "lernen (to learn), arbeiten (to work)",
+        "kaufen (to buy), kosten (to cost)",
+        "heißen (to be called), sagen (to say)",
+        "spielen (to play), essen (to eat)"
+      ],
+      "notes": "These verbs follow regular conjugation patterns. Practice with different subjects."
+    },
+    {
+      "id": "a1-courtesy-phrases",
+      "title": "Courtesy Phrases",
+      "category": "Phrases",
+      "description": "Polite expressions for daily interactions.",
+      "examples": [
+        "Bitte. (Please. / You're welcome.)",
+        "Danke. / Danke schön. (Thank you.)",
+        "Entschuldigung. (Excuse me. / Sorry.)",
+        "Wie bitte? (Pardon? / What did you say?)",
+        "Kein Problem. (No problem.)",
+        "Gern geschehen. (You're welcome.)"
+      ],
+      "notes": "'Bitte' is very versatile - it means both 'please' and 'you're welcome'."
+    }
+  ]
+}
