@@ -43,12 +43,12 @@ export async function savePlaygroundWriting(
   const existing = await getDocs(q);
 
   if (!existing.empty) {
-    // Update existing writing
+    // Update existing writing (preserve isPublic value)
     const writingRef = existing.docs[0].ref;
     await updateDoc(writingRef, {
       content,
       wordCount,
-      isPublic,
+      // Don't update isPublic here - it should only be changed via toggleWritingVisibility
       lastUpdatedAt: serverTimestamp(),
     });
     return existing.docs[0].id;

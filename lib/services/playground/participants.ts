@@ -23,7 +23,47 @@ import type { PlaygroundParticipant } from '@/lib/models/playground';
 const COLLECTIONS = {
   ROOMS: 'playground_rooms',
   PARTICIPANTS: 'playground_participants',
+  WRITINGS: 'playground_writings',
 };
+
+/**
+ * Ensures a writing document exists for a user in a room
+ * Creates one if it doesn't exist
+ */
+async function ensureUserWritingExists(
+  roomId: string,
+  userId: string,
+  userName: string,
+  role: 'teacher' | 'student'
+): Promise<void> {
+  // Check if writing already exists
+  const q = query(
+    collection(db, COLLECTIONS.WRITINGS),
+    where('roomId', '==', roomId),
+    where('userId', '==', userId)
+  );
+
+  const existing = await getDocs(q);
+  if (!existing.empty) {
+    // Writing already exists, no need to create
+    return;
+  }
+
+  // Create new empty writing document
+  // Teacher/host writings are public by default, student writings are private
+  const writingData = {
+    roomId,
+    userId,
+    userName,
+    content: '',
+    isPublic: role === 'teacher', // Teachers' writings are public by default
+    wordCount: 0,
+    createdAt: serverTimestamp(),
+    lastUpdatedAt: serverTimestamp(),
+  };
+
+  await addDoc(collection(db, COLLECTIONS.WRITINGS), writingData);
+}
 
 /**
  * Clean up old participant records that have already left
@@ -133,6 +173,9 @@ export async function joinPlaygroundRoom(
       participantCount: currentCount + 1,
     });
   }
+
+  // Auto-create writing document for this user if it doesn't exist
+  await ensureUserWritingExists(roomId, userId, userName, role);
 
   return docRef.id;
 }

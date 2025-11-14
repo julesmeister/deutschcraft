@@ -66,7 +66,35 @@ export async function createPlaygroundRoom(
   };
 
   const docRef = await addDoc(collection(db, COLLECTIONS.ROOMS), roomData);
-  return docRef.id;
+
+  // Auto-create host's writing document (public by default for teachers)
+  const roomId = docRef.id;
+  await createHostWriting(roomId, hostId, hostName);
+
+  return roomId;
+}
+
+/**
+ * Create the host's writing document when they create a room
+ * Host writings are always public so students can see them
+ */
+async function createHostWriting(
+  roomId: string,
+  hostId: string,
+  hostName: string
+): Promise<void> {
+  const writingData = {
+    roomId,
+    userId: hostId,
+    userName: hostName,
+    content: '',
+    isPublic: true, // Host writing is always public
+    wordCount: 0,
+    createdAt: serverTimestamp(),
+    lastUpdatedAt: serverTimestamp(),
+  };
+
+  await addDoc(collection(db, 'playground_writings'), writingData);
 }
 
 export async function endPlaygroundRoom(roomId: string): Promise<void> {

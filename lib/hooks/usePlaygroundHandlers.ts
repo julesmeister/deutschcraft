@@ -64,11 +64,8 @@ export function usePlaygroundHandlers({
     setIsCreatingRoom(true);
     try {
       const roomTitle = `${userName}'s Room`;
-      console.log('[Playground] Creating room:', { userId, userName, roomTitle });
       const roomId = await createPlaygroundRoom(userId, userName, roomTitle);
-      console.log('[Playground] Room created:', roomId);
 
-      console.log('[Playground] Joining created room as participant...');
       const participantId = await joinPlaygroundRoom(
         roomId,
         userId,
@@ -77,7 +74,6 @@ export function usePlaygroundHandlers({
         userRole,
         undefined // No peerId needed with native WebRTC
       );
-      console.log('[Playground] Joined as participant:', participantId);
 
       setMyParticipantId(participantId);
 
@@ -85,7 +81,6 @@ export function usePlaygroundHandlers({
       const room = rooms.find((r) => r.roomId === roomId);
 
       if (room) {
-        console.log('[Playground] Setting current room:', room);
         setCurrentRoom(room);
       }
 
@@ -108,7 +103,6 @@ export function usePlaygroundHandlers({
 
   const handleJoinRoom = async (room: PlaygroundRoom) => {
     try {
-      console.log('[Playground] Joining room:', room.roomId, { userId, userName, userEmail, userRole });
       const participantId = await joinPlaygroundRoom(
         room.roomId,
         userId,
@@ -118,7 +112,6 @@ export function usePlaygroundHandlers({
         undefined // No peerId needed with native WebRTC
       );
 
-      console.log('[Playground] Joined as participant:', participantId);
       setMyParticipantId(participantId);
       setCurrentRoom(room);
     } catch (error) {
@@ -216,13 +209,8 @@ export function usePlaygroundHandlers({
     if (!myParticipantId || !currentRoom) return;
 
     try {
-      console.log('[Handlers] Starting voice...');
       await startVoice();
-
-      // Update Firestore with voice active status
-      console.log('[Handlers] Updating Firestore voice status to active');
       await updateParticipantVoiceStatus(myParticipantId, true, false);
-      console.log('[Handlers] Voice started successfully');
     } catch (error) {
       console.error('[Voice] Failed to start voice:', error);
       setDialogState({
@@ -237,34 +225,21 @@ export function usePlaygroundHandlers({
     if (!myParticipantId) return;
 
     try {
-      console.log('[Handlers] Stopping voice...');
       await stopVoice();
-      console.log('[Handlers] Updating Firestore voice status to inactive');
       await updateParticipantVoiceStatus(myParticipantId, false, false);
-      console.log('[Handlers] Voice stopped successfully');
     } catch (error) {
       console.error('[Voice] Failed to stop voice:', error);
     }
   };
 
   const handleToggleMute = async () => {
-    if (!myParticipantId) {
-      console.error('[Handlers] Cannot toggle mute - no participantId');
-      return;
-    }
+    if (!myParticipantId) return;
 
     try {
-      console.log('[Handlers] Toggling mute, current state:', isMuted ? 'MUTED' : 'UNMUTED', 'participantId:', myParticipantId);
       const newMutedState = await toggleMute();
 
-      // toggleMute returns false (unmuted) or true (muted), both are valid
       if (typeof newMutedState === 'boolean') {
-        console.log('[Handlers] toggleMute returned:', newMutedState ? 'MUTED' : 'UNMUTED');
-        console.log('[Handlers] Updating Firestore participant:', myParticipantId, 'mute status to:', newMutedState ? 'MUTED' : 'UNMUTED');
         await updateParticipantVoiceStatus(myParticipantId, isVoiceActive, newMutedState);
-        console.log('[Handlers] ✅ Firestore updated successfully');
-      } else {
-        console.error('[Handlers] toggleMute failed - returned:', newMutedState);
       }
     } catch (error) {
       console.error('[Voice] Failed to toggle mute:', error);

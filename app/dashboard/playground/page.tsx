@@ -127,7 +127,6 @@ export default function PlaygroundPage() {
           const myParticipant = roomParticipants.find(p => p.userId === userId && !p.leftAt);
 
           if (myParticipant) {
-            console.log('[Playground] Restoring session - user is in room:', room.title);
             setCurrentRoom(room);
             setMyParticipantId(myParticipant.participantId);
             break; // User can only be in one room at a time
@@ -167,7 +166,6 @@ export default function PlaygroundPage() {
 
     const unsubParticipants = subscribeToParticipants(roomId, (parts) => {
       if (!isSubscriptionActive) return;
-      console.log('[Playground] Participants updated:', parts);
       setParticipants(parts);
     });
 

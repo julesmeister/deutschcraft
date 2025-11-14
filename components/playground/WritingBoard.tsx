@@ -19,6 +19,7 @@ interface WritingBoardProps {
   currentUserRole: 'teacher' | 'student';
   myWriting?: PlaygroundWriting;
   isRoomPublicWriting: boolean;
+  hostId: string; // Added to identify the host
   onSaveWriting: (content: string) => Promise<void>;
   onToggleWritingVisibility: (writingId: string, isPublic: boolean) => Promise<void>;
   onToggleRoomPublicWriting?: (isPublic: boolean) => Promise<void>;
@@ -30,6 +31,7 @@ export function WritingBoard({
   currentUserRole,
   myWriting,
   isRoomPublicWriting,
+  hostId,
   onSaveWriting,
   onToggleWritingVisibility,
   onToggleRoomPublicWriting,
@@ -43,7 +45,7 @@ export function WritingBoard({
       };
     }
 
-    // For students, find teacher/host writing
+    // For students, find teacher/host writing (the first writing that's not theirs)
     const teacherWriting = writings.find((w) => w.userId !== currentUserId);
     if (teacherWriting) {
       return {
@@ -59,9 +61,17 @@ export function WritingBoard({
     };
   };
 
-  const initialWriting = getInitialWriting();
-  const [content, setContent] = useState(initialWriting.content);
-  const [selectedWritingId, setSelectedWritingId] = useState<string | null>(initialWriting.writingId);
+  const [content, setContent] = useState('');
+  const [selectedWritingId, setSelectedWritingId] = useState<string | null>(null);
+
+  // Initialize after writings are loaded
+  useEffect(() => {
+    if (selectedWritingId === null && writings.length > 0) {
+      const initialWriting = getInitialWriting();
+      setSelectedWritingId(initialWriting.writingId);
+      setContent(initialWriting.content);
+    }
+  }, [writings, currentUserId, currentUserRole, myWriting]);
   const [lastSaved, setLastSaved] = useState<Date | null>(null);
   const [isSaving, setIsSaving] = useState(false);
   const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -159,7 +169,9 @@ export function WritingBoard({
           otherWritings={otherWritings}
           selectedWritingId={selectedWritingId}
           currentUserId={currentUserId}
+          currentUserRole={currentUserRole}
           isOwnWriting={isOwnWriting}
+          hostId={hostId}
           onSelectWriting={handleSelectWriting}
         />
       </div>

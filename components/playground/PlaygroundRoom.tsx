@@ -144,6 +144,7 @@ export function PlaygroundRoom({
               currentUserRole={userRole}
               myWriting={myWriting}
               isRoomPublicWriting={currentRoom.isPublicWriting}
+              hostId={currentRoom.hostId}
               onSaveWriting={onSaveWriting}
               onToggleWritingVisibility={onToggleWritingVisibility}
               onToggleRoomPublicWriting={

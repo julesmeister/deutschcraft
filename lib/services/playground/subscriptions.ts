@@ -97,13 +97,8 @@ export function subscribeToWritings(
       } as PlaygroundWriting;
     });
 
-    // Filter based on role
-    const filtered =
-      viewerRole === 'teacher'
-        ? writings
-        : writings.filter((w) => w.userId === viewerUserId || w.isPublic);
-
-    callback(filtered);
+    // All users see all writings (collaborative learning environment)
+    callback(writings);
   });
 }
 
