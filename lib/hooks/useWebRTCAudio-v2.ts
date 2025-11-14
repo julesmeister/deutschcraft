@@ -23,6 +23,9 @@ import type { AudioParticipant, UseWebRTCAudioOptions } from './webrtc/types';
 interface PeerConnection {
   pc: RTCPeerConnection;
   stream: MediaStream | null;
+  audioElement?: HTMLAudioElement;
+  gainNode?: GainNode;
+  source?: MediaStreamAudioSourceNode;
 }
 
 export function useWebRTCAudio({
@@ -66,6 +69,18 @@ export function useWebRTCAudio({
       peer.pc.close();
       if (peer.stream) {
         peer.stream.getTracks().forEach((track) => track.stop());
+      }
+      // Clean up audio elements
+      if (peer.audioElement) {
+        peer.audioElement.pause();
+        peer.audioElement.srcObject = null;
+      }
+      // Disconnect Web Audio API nodes
+      if (peer.source) {
+        peer.source.disconnect();
+      }
+      if (peer.gainNode) {
+        peer.gainNode.disconnect();
       }
     });
     peerConnectionsRef.current.clear();
@@ -127,9 +142,12 @@ export function useWebRTCAudio({
 
         if (remoteStream) {
           const peer = peerConnectionsRef.current.get(remoteUserId);
-          if (peer) {
-            peer.stream = remoteStream;
+          if (!peer) {
+            console.error('[WebRTC] Peer not found for:', remoteUserId);
+            return;
           }
+
+          peer.stream = remoteStream;
 
           setAudioStreams((prev) => {
             const updated = new Map(prev);
@@ -151,6 +169,9 @@ export function useWebRTCAudio({
             console.error('[WebRTC] Audio element failed:', err);
           });
 
+          // Store audio element reference to prevent garbage collection
+          peer.audioElement = audio;
+
           // Method 2: Web Audio API (more reliable)
           try {
             if (audioContextRef.current) {
@@ -161,6 +182,10 @@ export function useWebRTCAudio({
               // Connect to destination (speakers)
               source.connect(gainNode);
               gainNode.connect(audioContextRef.current.destination);
+
+              // Store references to prevent garbage collection
+              peer.source = source;
+              peer.gainNode = gainNode;
 
               console.log('[WebRTC] ✅ Web Audio API connected to destination for:', remoteUserId);
             }
@@ -429,6 +454,7 @@ export function useWebRTCAudio({
 
     const newMutedState = !isMuted;
 
+    // Toggle track enabled state
     audioTracks.forEach((track) => {
       track.enabled = !newMutedState;
       console.log('[WebRTC] Track', track.id, 'enabled:', track.enabled, 'readyState:', track.readyState);
@@ -444,6 +470,10 @@ export function useWebRTCAudio({
       enabled: t.enabled,
       readyState: t.readyState
     })));
+
+    // WebRTC Note: track.enabled changes are automatically propagated by browser
+    // Modern browsers handle this without renegotiation
+    // The track is still sent but with silence/black frames when disabled
 
     return newMutedState;
   }, [isMuted, roomId, userId, userName]);

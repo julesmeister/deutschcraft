@@ -73,11 +73,17 @@ export function VoicePanel({
         )}
       </div>
 
-      {/* Waiting Message when no participants */}
-      {isVoiceActive && participants.length === 0 && (
-        <div className="text-center py-4 text-sm text-gray-500 bg-gray-50 rounded">
-          <p className="font-medium">Waiting for others to join...</p>
-          <p className="text-xs mt-1">You need at least 2 people in the room to test voice chat</p>
+      {/* Info Message when voice is active */}
+      {isVoiceActive && (
+        <div className="text-center py-2 text-sm text-gray-500 bg-gray-50 rounded">
+          {participants.length === 0 ? (
+            <>
+              <p className="font-medium">Voice active - waiting for others</p>
+              <p className="text-xs mt-1">Others will be able to hear you when they join</p>
+            </>
+          ) : (
+            <p className="font-medium">{participants.length} {participants.length === 1 ? 'person' : 'people'} connected</p>
+          )}
         </div>
       )}
 
