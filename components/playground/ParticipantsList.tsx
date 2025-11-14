@@ -7,6 +7,7 @@ import { updateParticipantVoiceStatus } from '@/lib/services/playgroundService';
 interface ParticipantsListProps {
   participants: PlaygroundParticipant[];
   voiceStreams?: Map<string, MediaStream>; // Map of userId -> MediaStream
+  voiceAnalysers?: Map<string, AnalyserNode>; // Map of userId -> AnalyserNode (created in WebRTC hook)
   currentUserRole?: 'teacher' | 'student';
   currentUserId?: string;
 }
@@ -19,12 +20,11 @@ interface ParticipantWithAudio extends PlaygroundParticipant {
 export function ParticipantsList({
   participants,
   voiceStreams,
+  voiceAnalysers,
   currentUserRole = 'student',
   currentUserId = ''
 }: ParticipantsListProps) {
   const [participantsWithAudio, setParticipantsWithAudio] = useState<ParticipantWithAudio[]>([]);
-  const audioContextRef = useRef<AudioContext | null>(null);
-  const analyzersRef = useRef<Map<string, AnalyserNode>>(new Map());
   const audioElementsRef = useRef<Map<string, HTMLAudioElement>>(new Map());
 
   useEffect(() => {
@@ -98,7 +98,7 @@ export function ParticipantsList({
     let frameCount = 0;
     const checkAudioLevels = () => {
       const updated = participants.map((p) => {
-        const analyser = analyzersRef.current.get(p.userId);
+        const analyser = voiceAnalysers?.get(p.userId);
 
         if (!analyser || !p.isVoiceActive) {
           if (frameCount % 60 === 0) {
@@ -152,7 +152,7 @@ export function ParticipantsList({
         cancelAnimationFrame(animationFrameId);
       }
     };
-  }, [participants, voiceStreams]);
+  }, [participants, voiceStreams, voiceAnalysers]);
 
   // Cleanup on unmount
   useEffect(() => {

@@ -26,6 +26,7 @@ interface PeerConnection {
   audioElement?: HTMLAudioElement;
   gainNode?: GainNode;
   source?: MediaStreamAudioSourceNode;
+  analyser?: AnalyserNode;
 }
 
 export function useWebRTCAudio({
@@ -38,6 +39,7 @@ export function useWebRTCAudio({
   const [isMuted, setIsMuted] = useState(false);
   const [participants, setParticipants] = useState<AudioParticipant[]>([]);
   const [audioStreams, setAudioStreams] = useState<Map<string, MediaStream>>(new Map());
+  const [audioAnalysers, setAudioAnalysers] = useState<Map<string, AnalyserNode>>(new Map());
 
   const localStreamRef = useRef<MediaStream | null>(null);
   const peerConnectionsRef = useRef<Map<string, PeerConnection>>(new Map());
@@ -107,6 +109,7 @@ export function useWebRTCAudio({
     setIsMuted(false);
     setParticipants([]);
     setAudioStreams(new Map());
+    setAudioAnalysers(new Map());
     isVoiceActiveRef.current = false;
   }, []);
 
@@ -172,22 +175,36 @@ export function useWebRTCAudio({
           // Store audio element reference to prevent garbage collection
           peer.audioElement = audio;
 
-          // Method 2: Web Audio API (more reliable)
+          // Method 2: Web Audio API (more reliable + analyser for speaking detection)
           try {
             if (audioContextRef.current) {
               const source = audioContextRef.current.createMediaStreamSource(remoteStream);
+              const analyser = audioContextRef.current.createAnalyser();
               const gainNode = audioContextRef.current.createGain();
+
+              // Configure analyser for speech detection
+              analyser.fftSize = 512;
+              analyser.smoothingTimeConstant = 0.8;
               gainNode.gain.value = 1.0;
 
-              // Connect to destination (speakers)
-              source.connect(gainNode);
+              // Connect audio graph: source -> analyser -> gain -> destination (speakers)
+              source.connect(analyser);
+              analyser.connect(gainNode);
               gainNode.connect(audioContextRef.current.destination);
 
               // Store references to prevent garbage collection
               peer.source = source;
+              peer.analyser = analyser;
               peer.gainNode = gainNode;
 
-              console.log('[WebRTC] ✅ Web Audio API connected to destination for:', remoteUserId);
+              // Expose analyser for speaking detection
+              setAudioAnalysers((prev) => {
+                const updated = new Map(prev);
+                updated.set(remoteUserId, analyser);
+                return updated;
+              });
+
+              console.log('[WebRTC] ✅ Web Audio API with analyser connected for:', remoteUserId);
             }
           } catch (audioApiError) {
             console.error('[WebRTC] Web Audio API setup failed:', audioApiError);
@@ -314,6 +331,12 @@ export function useWebRTCAudio({
               peerConnectionsRef.current.delete(fromUserId);
 
               setAudioStreams((prev) => {
+                const updated = new Map(prev);
+                updated.delete(fromUserId);
+                return updated;
+              });
+
+              setAudioAnalysers((prev) => {
                 const updated = new Map(prev);
                 updated.delete(fromUserId);
                 return updated;
@@ -492,6 +515,7 @@ export function useWebRTCAudio({
     isMuted,
     participants,
     audioStreams,
+    audioAnalysers,
     startVoice,
     stopVoice,
     toggleMute,

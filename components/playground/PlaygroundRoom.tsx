@@ -37,6 +37,7 @@ interface PlaygroundRoomProps {
   isMuted: boolean;
   voiceParticipants: VoiceParticipant[];
   voiceStreams: Map<string, MediaStream>;
+  voiceAnalysers: Map<string, AnalyserNode>;
 
   // Dialog state
   dialogState: {
@@ -68,6 +69,7 @@ export function PlaygroundRoom({
   isMuted,
   voiceParticipants,
   voiceStreams,
+  voiceAnalysers,
   dialogState,
   onLeaveRoom,
   onEndRoom,
@@ -127,6 +129,7 @@ export function PlaygroundRoom({
               <ParticipantsList
                 participants={participants}
                 voiceStreams={voiceStreams}
+                voiceAnalysers={voiceAnalysers}
                 currentUserRole={userRole}
                 currentUserId={userId}
               />

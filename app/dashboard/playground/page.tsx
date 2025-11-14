@@ -51,6 +51,7 @@ export default function PlaygroundPage() {
     isMuted,
     participants: audioParticipants,
     audioStreams,
+    audioAnalysers,
     startVoice,
     stopVoice,
     toggleMute,
@@ -240,6 +241,7 @@ export default function PlaygroundPage() {
       isMuted={isMuted}
       voiceParticipants={audioParticipants}
       voiceStreams={audioStreams}
+      voiceAnalysers={audioAnalysers}
       dialogState={dialogState}
       onLeaveRoom={handleLeaveRoom}
       onEndRoom={handleEndRoom}
