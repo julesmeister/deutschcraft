@@ -48,23 +48,8 @@ export function HeroSection() {
       console.info('🚀 Navigating to dashboard...');
       console.info('Current path:', window.location.pathname);
 
-      try {
-        router.push('/dashboard');
-        console.info('✓ router.push called');
-
-        // Fallback: if router.push doesn't work after 2 seconds, force navigation
-        setTimeout(() => {
-          console.info('⏰ Timeout check - current path:', window.location.pathname);
-          if (window.location.pathname === '/') {
-            console.info('⚠️ Still on /, forcing navigation with window.location');
-            window.location.href = '/dashboard';
-          }
-        }, 2000);
-      } catch (error) {
-        console.error('❌ Navigation failed:', error);
-        console.info('🔄 Using window.location fallback');
-        window.location.href = '/dashboard';
-      }
+      // Use window.location.href directly since router.push has issues
+      window.location.href = '/dashboard';
     } else {
       console.info('🔐 No session, triggering Google sign-in...');
       // No session, trigger sign-in

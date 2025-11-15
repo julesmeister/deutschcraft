@@ -58,9 +58,9 @@ export function Navbar({
     } else if (session) {
       console.info('✅ Session found, navigating to dashboard');
       console.info('Current path:', window.location.pathname);
-      // User is signed in, redirect to dashboard using Next.js router
-      router.push('/dashboard');
-      console.info('✓ router.push(/dashboard) called');
+      // User is signed in, redirect to dashboard
+      window.location.href = '/dashboard';
+      console.info('✓ window.location.href set to /dashboard');
     } else {
       console.info('🔐 No session, triggering Google sign-in');
       // User is not signed in, trigger Google sign-in
