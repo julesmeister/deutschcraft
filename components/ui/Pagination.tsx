@@ -5,6 +5,7 @@ interface PaginationProps {
   totalPages: number;
   onPageChange: (page: number) => void;
   className?: string;
+  showPageNumbers?: boolean;
 }
 
 export function Pagination({
@@ -12,6 +13,7 @@ export function Pagination({
   totalPages,
   onPageChange,
   className = '',
+  showPageNumbers = true,
 }: PaginationProps) {
   // Always show pagination, even with 1 page
   const pages = totalPages < 1 ? 1 : totalPages;
@@ -44,7 +46,7 @@ export function Pagination({
         </button>
 
         {/* Page Numbers */}
-        {pageNumbers.map((page, index) => {
+        {showPageNumbers && pageNumbers.map((page, index) => {
           // On mobile, only show first 2, last 2, and ellipsis
           const isMobileVisible =
             index < 2 || // First 2 pages

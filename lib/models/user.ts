@@ -103,7 +103,13 @@ export interface BatchLevelHistory {
 /**
  * Get user's full name
  */
-export function getUserFullName(user: User): string {
+export function getUserFullName(user: User | any): string {
+  // Handle legacy 'name' field (from old data structure)
+  if ((user as any).name) {
+    return (user as any).name;
+  }
+
+  // Handle new firstName/lastName structure
   const firstName = user.firstName || '';
   const lastName = user.lastName || '';
   const fullName = `${firstName} ${lastName}`.trim();
