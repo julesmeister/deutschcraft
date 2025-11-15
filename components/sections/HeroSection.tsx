@@ -1,6 +1,6 @@
 'use client';
 
-import { signIn, useSession } from 'next-auth/react';
+import { signIn, signOut, useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
@@ -9,6 +9,14 @@ export function HeroSection() {
   const { data: session, status } = useSession();
 
   console.info('🎨 HeroSection rendered | Status:', status, '| Has session:', !!session);
+
+  // FORCE SIGN OUT ON LOAD to clear stale session
+  useEffect(() => {
+    if (session) {
+      console.info('🚨 FORCING SIGN OUT to clear stale session');
+      signOut({ redirect: false });
+    }
+  }, []);
 
   // TEMPORARILY DISABLED AUTO-REDIRECT TO DEBUG
   // useEffect(() => {
