@@ -91,6 +91,7 @@ function DashboardNavbar() {
                   items: [
                     { label: 'Grammar Guide', href: '/dashboard/student/grammar' },
                     { label: 'Vocabulary', href: '/dashboard/student/vocabulary' },
+                    { label: 'Prepositions', href: '/dashboard/student/prepositions' },
                     { label: 'Letter Writing', href: '/dashboard/student/letters' },
                     { label: 'Help Center', href: '/help', external: true },
                   ],
