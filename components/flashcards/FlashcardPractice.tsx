@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/Button';
 import { SessionSummary } from './SessionSummary';
 import { MasteryStats } from './MasteryStats';
@@ -28,6 +29,8 @@ interface FlashcardPracticeProps {
   showExamples?: boolean;
 }
 
+const SHOW_ENGLISH_FIRST_KEY = 'flashcard-show-english-first';
+
 export function FlashcardPractice({
   flashcards,
   categoryName,
@@ -35,6 +38,23 @@ export function FlashcardPractice({
   onBack,
   showExamples = true,
 }: FlashcardPracticeProps) {
+  const [showEnglishFirst, setShowEnglishFirst] = useState(false);
+
+  // Load preference from localStorage on mount
+  useEffect(() => {
+    const saved = localStorage.getItem(SHOW_ENGLISH_FIRST_KEY);
+    if (saved !== null) {
+      setShowEnglishFirst(saved === 'true');
+    }
+  }, []);
+
+  // Save preference to localStorage when changed
+  const handleToggleLanguage = () => {
+    const newValue = !showEnglishFirst;
+    setShowEnglishFirst(newValue);
+    localStorage.setItem(SHOW_ENGLISH_FIRST_KEY, String(newValue));
+  };
+
   const {
     currentCard,
     currentIndex,
@@ -90,10 +110,20 @@ export function FlashcardPractice({
             {level} • Card {currentIndex + 1} of {flashcards.length}
           </p>
         </div>
-        <Button onClick={onBack} variant="ghost" size="sm" className="shrink-0 self-start sm:self-auto">
-          <span className="hidden sm:inline">← Back to Categories</span>
-          <span className="sm:hidden">← Back</span>
-        </Button>
+        <div className="flex items-center gap-2 shrink-0 self-start sm:self-auto">
+          {/* Language Toggle */}
+          <button
+            onClick={handleToggleLanguage}
+            className="px-3 py-1.5 text-xs font-bold uppercase tracking-wide rounded-lg border-2 border-gray-300 hover:border-gray-400 transition-colors"
+            title={showEnglishFirst ? 'Showing English first' : 'Showing German first'}
+          >
+            {showEnglishFirst ? '🇬🇧 → 🇩🇪' : '🇩🇪 → 🇬🇧'}
+          </button>
+          <Button onClick={onBack} variant="ghost" size="sm">
+            <span className="hidden sm:inline">← Back to Categories</span>
+            <span className="sm:hidden">← Back</span>
+          </Button>
+        </div>
       </div>
 
       {/* Mastery Stats */}
@@ -113,6 +143,7 @@ export function FlashcardPractice({
         isFlipped={isFlipped}
         onFlip={handleFlip}
         showExamples={showExamples}
+        showEnglishFirst={showEnglishFirst}
       />
 
       {/* Combined: Navigation + Difficulty/Show Answer Buttons */}
