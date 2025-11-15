@@ -9,37 +9,37 @@ export function HeroSection() {
   const { data: session, status } = useSession();
 
   useEffect(() => {
-    console.log('[HeroSection] Session status:', status);
-    console.log('[HeroSection] Session data:', session);
-    console.log('[HeroSection] User email:', session?.user?.email);
+    console.info('[HeroSection] Session status:', status);
+    console.info('[HeroSection] Session data:', session);
+    console.info('[HeroSection] User email:', session?.user?.email);
   }, [session, status]);
 
   const handleStartLearning = async () => {
-    console.log('[HeroSection] Start Learning clicked');
-    console.log('[HeroSection] Current status:', status);
-    console.log('[HeroSection] Current session:', session);
-    console.log('[HeroSection] Current URL:', window.location.href);
-    console.log('[HeroSection] Environment:', process.env.NODE_ENV);
+    console.info('[HeroSection] ========== START LEARNING CLICKED ==========');
+    console.info('[HeroSection] Current status:', status);
+    console.info('[HeroSection] Current session:', session);
+    console.info('[HeroSection] Current URL:', window.location.href);
+    console.info('[HeroSection] Environment:', process.env.NODE_ENV);
 
     if (status === 'loading') {
-      console.log('[HeroSection] Session is loading, waiting...');
+      console.warn('[HeroSection] Session is loading, waiting...');
       return;
     }
 
     if (session) {
-      console.log('[HeroSection] User is logged in, redirecting to dashboard');
+      console.info('[HeroSection] User is logged in, redirecting to dashboard');
       router.push('/dashboard');
     } else {
-      console.log('[HeroSection] User not logged in, triggering Google sign-in');
-      console.log('[HeroSection] Calling signIn with provider: google');
-      console.log('[HeroSection] Callback URL: /dashboard');
+      console.info('[HeroSection] User not logged in, triggering Google sign-in');
+      console.info('[HeroSection] Calling signIn with provider: google');
+      console.info('[HeroSection] Callback URL:', window.location.origin + '/dashboard');
 
       try {
         const result = await signIn('google', {
           callbackUrl: window.location.origin + '/dashboard',
           redirect: true
         });
-        console.log('[HeroSection] Sign-in returned (should have redirected):', result);
+        console.info('[HeroSection] Sign-in returned (should have redirected):', result);
       } catch (error) {
         console.error('[HeroSection] Sign-in error:', error);
         console.error('[HeroSection] Error details:', {

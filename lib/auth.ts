@@ -19,10 +19,10 @@ export const authOptions: NextAuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     async signIn({ user, account, profile }) {
-      console.log('[Auth] signIn callback triggered');
-      console.log('[Auth] User:', { email: user.email, name: user.name, image: user.image });
-      console.log('[Auth] Account provider:', account?.provider);
-      console.log('[Auth] Profile:', profile);
+      console.info('[Auth] ========== SIGNIN CALLBACK TRIGGERED ==========');
+      console.info('[Auth] User:', { email: user.email, name: user.name, image: user.image });
+      console.info('[Auth] Account provider:', account?.provider);
+      console.info('[Auth] Profile:', profile);
 
       try {
         if (!user.email) {
@@ -30,10 +30,10 @@ export const authOptions: NextAuthOptions = {
           return false;
         }
 
-        console.log('[Auth] Updating user photo for:', user.email);
+        console.info('[Auth] Updating user photo for:', user.email);
         // Update user's photo URL using service layer
         await updateUserPhoto(user.email, user.image || null);
-        console.log('[Auth] User photo updated successfully');
+        console.info('[Auth] User photo updated successfully');
 
         return true;
       } catch (error) {
@@ -42,28 +42,28 @@ export const authOptions: NextAuthOptions = {
       }
     },
     async session({ session, token }) {
-      console.log('[Auth] session callback triggered');
-      console.log('[Auth] Session:', { email: session.user?.email, name: session.user?.name });
-      console.log('[Auth] Token:', token);
+      console.info('[Auth] session callback triggered');
+      console.info('[Auth] Session:', { email: session.user?.email, name: session.user?.name });
+      console.info('[Auth] Token:', token);
       // Email is used as the user ID throughout the app
       return session;
     },
     async redirect({ url, baseUrl }) {
-      console.log('[Auth] redirect callback triggered');
-      console.log('[Auth] URL:', url);
-      console.log('[Auth] Base URL:', baseUrl);
+      console.info('[Auth] ========== REDIRECT CALLBACK TRIGGERED ==========');
+      console.info('[Auth] URL:', url);
+      console.info('[Auth] Base URL:', baseUrl);
 
       // Allows relative callback URLs
       if (url.startsWith("/")) {
-        console.log('[Auth] Redirecting to relative URL:', `${baseUrl}${url}`);
+        console.info('[Auth] Redirecting to relative URL:', `${baseUrl}${url}`);
         return `${baseUrl}${url}`;
       }
       // Allows callback URLs on the same origin
       else if (new URL(url).origin === baseUrl) {
-        console.log('[Auth] Redirecting to same origin URL:', url);
+        console.info('[Auth] Redirecting to same origin URL:', url);
         return url;
       }
-      console.log('[Auth] Redirecting to base URL:', baseUrl);
+      console.info('[Auth] Redirecting to base URL:', baseUrl);
       return baseUrl;
     }
   },

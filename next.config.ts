@@ -10,7 +10,10 @@ const nextConfig: NextConfig = {
   },
   // Optimize bundle size
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    // Only remove console.log but keep console.error and console.warn
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn', 'info'],
+    } : false,
   },
   // Disable TypeScript errors during build
   typescript: {
