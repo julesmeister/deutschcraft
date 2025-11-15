@@ -1,7 +1,7 @@
 {
   "level": "A1",
   "category": "Family",
-  "totalCards": 15,
+  "totalCards": 30,
   "flashcards": [
     {
       "id": "syllabus-a1-10101",
@@ -300,6 +300,306 @@
           "A1",
           "Family",
           "Cousine"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10116",
+      "german": "Sohn",
+      "english": "son",
+      "category": "Family",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Family",
+          "Sohn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10117",
+      "german": "Tochter",
+      "english": "daughter",
+      "category": "Family",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Family",
+          "Tochter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10118",
+      "german": "Mama",
+      "english": "mom / mommy",
+      "category": "Family",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Family",
+          "Mama"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10119",
+      "german": "Papa",
+      "english": "dad / daddy",
+      "category": "Family",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Family",
+          "Papa"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10120",
+      "german": "Ehemann",
+      "english": "husband",
+      "category": "Family",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Family",
+          "Ehemann"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10121",
+      "german": "Ehefrau",
+      "english": "wife",
+      "category": "Family",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Family",
+          "Ehefrau"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10122",
+      "german": "Mann",
+      "english": "man / husband",
+      "category": "Family",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Family",
+          "Mann"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10123",
+      "german": "Frau",
+      "english": "woman / wife",
+      "category": "Family",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Family",
+          "Frau"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10124",
+      "german": "Großeltern",
+      "english": "grandparents",
+      "category": "Family",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Family",
+          "Großeltern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10125",
+      "german": "Geschwister",
+      "english": "siblings",
+      "category": "Family",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Family",
+          "Geschwister"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10126",
+      "german": "Kinder",
+      "english": "children",
+      "category": "Family",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Family",
+          "Kinder"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10127",
+      "german": "Baby",
+      "english": "baby",
+      "category": "Family",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Family",
+          "Baby"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10128",
+      "german": "Junge",
+      "english": "boy",
+      "category": "Family",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Family",
+          "Junge"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10129",
+      "german": "Mädchen",
+      "english": "girl",
+      "category": "Family",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Family",
+          "Mädchen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10130",
+      "german": "Enkel",
+      "english": "grandson",
+      "category": "Family",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Family",
+          "Enkel"
         ]
       }
     }
