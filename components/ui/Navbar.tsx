@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 
@@ -34,6 +35,7 @@ export function Navbar({
   onAuthClick,
   dark = false,
 }: NavbarProps) {
+  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { data: session, status } = useSession();
@@ -50,8 +52,8 @@ export function Navbar({
     if (onAuthClick) {
       onAuthClick();
     } else if (session) {
-      // User is signed in, redirect to dashboard
-      window.location.href = '/dashboard';
+      // User is signed in, redirect to dashboard using Next.js router
+      router.push('/dashboard');
     } else {
       // User is not signed in, trigger Google sign-in
       signIn('google', { callbackUrl: '/dashboard' });
