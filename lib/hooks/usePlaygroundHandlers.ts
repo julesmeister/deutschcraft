@@ -3,7 +3,7 @@
  * Encapsulates all handler functions for playground room management
  */
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import {
   createPlaygroundRoom,
   endPlaygroundRoom,
@@ -58,7 +58,7 @@ export function usePlaygroundHandlers({
 }: UsePlaygroundHandlersProps) {
   const [isCreatingRoom, setIsCreatingRoom] = useState(false);
 
-  const handleCreateRoom = async () => {
+  const handleCreateRoom = useCallback(async () => {
     if (isCreatingRoom) return;
 
     setIsCreatingRoom(true);
@@ -99,9 +99,9 @@ export function usePlaygroundHandlers({
     } finally {
       setIsCreatingRoom(false);
     }
-  };
+  }, [isCreatingRoom, userId, userName, userEmail, userRole, setMyParticipantId, setCurrentRoom, setDialogState]);
 
-  const handleJoinRoom = async (room: PlaygroundRoom) => {
+  const handleJoinRoom = useCallback(async (room: PlaygroundRoom) => {
     try {
       const participantId = await joinPlaygroundRoom(
         room.roomId,
@@ -122,15 +122,16 @@ export function usePlaygroundHandlers({
         message: 'Failed to join room. Please try again.',
       });
     }
-  };
+  }, [userId, userName, userEmail, userRole, setMyParticipantId, setCurrentRoom, setDialogState]);
 
-  const handleLeaveRoom = async () => {
+  const handleLeaveRoom = useCallback(async () => {
     if (!currentRoom || !myParticipantId) return;
 
     try {
       await leavePlaygroundRoom(myParticipantId, currentRoom.roomId);
     } catch (error) {
       // Silent error handling
+      console.error('[Playground] Failed to leave room:', error);
     } finally {
       stopVoice();
       setCurrentRoom(null);
@@ -139,9 +140,9 @@ export function usePlaygroundHandlers({
       setWritings([]);
       loadActiveRooms();
     }
-  };
+  }, [currentRoom, myParticipantId, stopVoice, setCurrentRoom, setMyParticipantId, setParticipants, setWritings, loadActiveRooms]);
 
-  const handleEndRoom = async () => {
+  const handleEndRoom = useCallback(async () => {
     if (!currentRoom || userId !== currentRoom.hostId) return;
 
     const roomIdToEnd = currentRoom.roomId;
@@ -165,20 +166,22 @@ export function usePlaygroundHandlers({
       loadActiveRooms();
     } catch (error) {
       // Silent error handling
+      console.error('[Playground] Failed to end room:', error);
     }
-  };
+  }, [currentRoom, userId, myParticipantId, stopVoice, setCurrentRoom, setMyParticipantId, setParticipants, setWritings, loadActiveRooms]);
 
-  const handleToggleRoomPublicWriting = async (isPublic: boolean) => {
+  const handleToggleRoomPublicWriting = useCallback(async (isPublic: boolean) => {
     if (!currentRoom) return;
 
     try {
       await toggleRoomPublicWriting(currentRoom.roomId, isPublic);
     } catch (error) {
       // Silent error handling
+      console.error('[Playground] Failed to toggle room public writing:', error);
     }
-  };
+  }, [currentRoom]);
 
-  const handleSaveWriting = async (content: string) => {
+  const handleSaveWriting = useCallback(async (content: string) => {
     if (!currentRoom) return;
 
     try {
@@ -192,9 +195,9 @@ export function usePlaygroundHandlers({
     } catch (error) {
       throw error;
     }
-  };
+  }, [currentRoom, userId, userName]);
 
-  const handleToggleWritingVisibility = async (
+  const handleToggleWritingVisibility = useCallback(async (
     writingId: string,
     isPublic: boolean
   ) => {
@@ -202,10 +205,11 @@ export function usePlaygroundHandlers({
       await toggleWritingVisibility(writingId, isPublic);
     } catch (error) {
       // Silent error handling
+      console.error('[Playground] Failed to toggle writing visibility:', error);
     }
-  };
+  }, []);
 
-  const handleStartVoice = async () => {
+  const handleStartVoice = useCallback(async () => {
     if (!myParticipantId || !currentRoom) return;
 
     try {
@@ -219,9 +223,9 @@ export function usePlaygroundHandlers({
         message: 'Failed to start voice. Please check microphone permissions.',
       });
     }
-  };
+  }, [myParticipantId, currentRoom, startVoice, setDialogState]);
 
-  const handleStopVoice = async () => {
+  const handleStopVoice = useCallback(async () => {
     if (!myParticipantId) return;
 
     try {
@@ -230,9 +234,9 @@ export function usePlaygroundHandlers({
     } catch (error) {
       console.error('[Voice] Failed to stop voice:', error);
     }
-  };
+  }, [myParticipantId, stopVoice]);
 
-  const handleToggleMute = async () => {
+  const handleToggleMute = useCallback(async () => {
     if (!myParticipantId) return;
 
     try {
@@ -244,7 +248,7 @@ export function usePlaygroundHandlers({
     } catch (error) {
       console.error('[Voice] Failed to toggle mute:', error);
     }
-  };
+  }, [myParticipantId, toggleMute, isVoiceActive]);
 
   return {
     isCreatingRoom,

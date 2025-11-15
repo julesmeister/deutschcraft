@@ -69,14 +69,15 @@ export default function PlaygroundPage() {
   });
 
   // Load active rooms function
-  const loadActiveRooms = async () => {
+  const loadActiveRooms = useCallback(async () => {
     try {
       const rooms = await getActiveRooms();
       setActiveRooms(rooms);
     } catch (error) {
       // Silent error handling
+      console.error('[Playground] Failed to load rooms:', error);
     }
-  };
+  }, []);
 
   // Playground handlers hook
   const {
@@ -182,7 +183,7 @@ export default function PlaygroundPage() {
       unsubParticipants();
       unsubWritings();
     };
-  }, [currentRoom?.roomId, userId, userRole]);
+  }, [currentRoom?.roomId, currentRoom?.status, userId, userRole, handleLeaveRoom]);
 
   // Note: Native WebRTC handles peer connections automatically
   // No need for manual peerId management or connectToPeer calls
