@@ -1,0 +1,347 @@
+{
+  "level": "A2",
+  "category": "Education",
+  "totalCards": 17,
+  "flashcards": [
+    {
+      "id": "syllabus-a2-10512",
+      "german": "Schule",
+      "english": "school",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Schule"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10513",
+      "german": "lernen",
+      "english": "to learn",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "lernen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10514",
+      "german": "studieren",
+      "english": "to study",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "studieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10515",
+      "german": "Prüfung",
+      "english": "exam",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Prüfung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10516",
+      "german": "Buch",
+      "english": "book",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Buch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10517",
+      "german": "Universität",
+      "english": "university",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Universität"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10518",
+      "german": "Lehrer",
+      "english": "teacher",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Lehrer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10519",
+      "german": "Schüler",
+      "english": "student / pupil",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Schüler"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10520",
+      "german": "Klasse",
+      "english": "class",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Klasse"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10521",
+      "german": "Hausaufgabe",
+      "english": "homework",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Hausaufgabe"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10522",
+      "german": "Stift",
+      "english": "pen",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Stift"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10523",
+      "german": "Bleistift",
+      "english": "pencil",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Bleistift"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10524",
+      "german": "Heft",
+      "english": "notebook",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Heft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10525",
+      "german": "Tafel",
+      "english": "blackboard / whiteboard",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Tafel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10526",
+      "german": "Note",
+      "english": "grade / mark",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Note"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10527",
+      "german": "Seminar",
+      "english": "seminar",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Seminar"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10528",
+      "german": "Vorlesung",
+      "english": "lecture",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Vorlesung"
+        ]
+      }
+    }
+  ]
+}

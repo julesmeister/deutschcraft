@@ -1,0 +1,71 @@
+{
+  "level": "C1",
+  "category": "Redemittel",
+  "totalCards": 4,
+  "flashcards": [
+    {
+      "id": "remnote-918",
+      "german": "Er ging ans Fenster, um so mehr sehen zu können",
+      "english": "He went to the window so he could see more",
+      "category": "Redemittel",
+      "level": "C1",
+      "tags": [
+        "um so mehr"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4205,
+        "hierarchy": [
+          "Redemittel",
+          "um so mehr",
+          "Er ging ans Fenster, um so mehr sehen zu können"
+        ]
+      }
+    },
+    {
+      "id": "remnote-931",
+      "german": "Ich kann mir das gut vorstellen",
+      "english": "I can well imagine",
+      "category": "Redemittel",
+      "level": "C1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4221,
+        "hierarchy": [
+          "Redemittel",
+          "Ich kann mir das gut vorstellen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-933",
+      "german": "Ich habe keinen blassen Schimmer",
+      "english": "I don't have a clue",
+      "category": "Redemittel",
+      "level": "C1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4223,
+        "hierarchy": [
+          "Redemittel",
+          "Ich habe keinen blassen Schimmer"
+        ]
+      }
+    },
+    {
+      "id": "remnote-939",
+      "german": "Das ist kein Grund zum Trübsal blasen!",
+      "english": "That is no reason to mope",
+      "category": "Redemittel",
+      "level": "C1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4230,
+        "hierarchy": [
+          "Redemittel",
+          "Das ist kein Grund zum Trübsal blasen!"
+        ]
+      }
+    }
+  ]
+}

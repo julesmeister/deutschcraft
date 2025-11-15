@@ -1,0 +1,307 @@
+{
+  "level": "C1",
+  "category": "Legal Administrative",
+  "totalCards": 15,
+  "flashcards": [
+    {
+      "id": "syllabus-c1-11583",
+      "german": "Genehmigung",
+      "english": "permit / authorization / approval",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Genehmigung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11584",
+      "german": "Vorschrift",
+      "english": "regulation / rule / prescription",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Vorschrift"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11585",
+      "german": "Rechtsanwalt",
+      "english": "lawyer / attorney",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Rechtsanwalt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11586",
+      "german": "Verfahren",
+      "english": "procedure / proceedings / process",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Verfahren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11587",
+      "german": "Anspruch",
+      "english": "claim / entitlement / right",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Anspruch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11588",
+      "german": "Behörde",
+      "english": "authority / government agency",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Behörde"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11589",
+      "german": "Bescheinigung",
+      "english": "certificate / attestation",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Bescheinigung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11590",
+      "german": "Antrag",
+      "english": "application / request / motion",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Antrag"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11591",
+      "german": "Klage",
+      "english": "lawsuit / complaint / action",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Klage"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11592",
+      "german": "Urteil",
+      "english": "judgment / verdict / sentence",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Urteil"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11593",
+      "german": "Zeugnis",
+      "english": "certificate / testimony / reference",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Zeugnis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11594",
+      "german": "Vollmacht",
+      "english": "power of attorney / authorization",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Vollmacht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11595",
+      "german": "Verpflichtung",
+      "english": "obligation / commitment / duty",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Verpflichtung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11596",
+      "german": "Berechtigung",
+      "english": "authorization / entitlement / right",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Berechtigung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11597",
+      "german": "Haftung",
+      "english": "liability / responsibility",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Haftung"
+        ]
+      }
+    }
+  ]
+}

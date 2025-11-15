@@ -1,0 +1,127 @@
+{
+  "level": "A2",
+  "totalCards": 473,
+  "totalCategories": 24,
+  "categories": [
+    {
+      "name": "Action Verbs",
+      "count": 15,
+      "file": "action-verbs.json"
+    },
+    {
+      "name": "Adjectives",
+      "count": 50,
+      "file": "adjectives.json"
+    },
+    {
+      "name": "Body Health",
+      "count": 19,
+      "file": "body-health.json"
+    },
+    {
+      "name": "Body Parts",
+      "count": 15,
+      "file": "body-parts.json"
+    },
+    {
+      "name": "Common Verbs",
+      "count": 7,
+      "file": "common-verbs.json"
+    },
+    {
+      "name": "Communication Verbs",
+      "count": 15,
+      "file": "communication-verbs.json"
+    },
+    {
+      "name": "Education",
+      "count": 17,
+      "file": "education.json"
+    },
+    {
+      "name": "Feelings",
+      "count": 19,
+      "file": "feelings.json"
+    },
+    {
+      "name": "Hobbies",
+      "count": 17,
+      "file": "hobbies.json"
+    },
+    {
+      "name": "Irregular Verbs",
+      "count": 31,
+      "file": "irregular-verbs.json"
+    },
+    {
+      "name": "Modal Verbs",
+      "count": 15,
+      "file": "modal-verbs.json"
+    },
+    {
+      "name": "Nature",
+      "count": 24,
+      "file": "nature.json"
+    },
+    {
+      "name": "Past Tense Verbs",
+      "count": 15,
+      "file": "past-tense-verbs.json"
+    },
+    {
+      "name": "Perception Verbs",
+      "count": 15,
+      "file": "perception-verbs.json"
+    },
+    {
+      "name": "Professions",
+      "count": 16,
+      "file": "professions.json"
+    },
+    {
+      "name": "Redemittel",
+      "count": 51,
+      "file": "redemittel.json"
+    },
+    {
+      "name": "Reflexive Verbs",
+      "count": 18,
+      "file": "reflexive-verbs.json"
+    },
+    {
+      "name": "Restaurant",
+      "count": 15,
+      "file": "restaurant.json"
+    },
+    {
+      "name": "Separable Verbs",
+      "count": 15,
+      "file": "separable-verbs.json"
+    },
+    {
+      "name": "Shopping",
+      "count": 16,
+      "file": "shopping.json"
+    },
+    {
+      "name": "Technology",
+      "count": 16,
+      "file": "technology.json"
+    },
+    {
+      "name": "Time Expressions",
+      "count": 20,
+      "file": "time-expressions.json"
+    },
+    {
+      "name": "Travel",
+      "count": 16,
+      "file": "travel.json"
+    },
+    {
+      "name": "Workplace",
+      "count": 16,
+      "file": "workplace.json"
+    }
+  ]
+}

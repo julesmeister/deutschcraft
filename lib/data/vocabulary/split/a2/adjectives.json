@@ -1,0 +1,1007 @@
+{
+  "level": "A2",
+  "category": "Adjectives",
+  "totalCards": 50,
+  "flashcards": [
+    {
+      "id": "syllabus-a2-10428",
+      "german": "laut",
+      "english": "loud",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "laut"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10429",
+      "german": "leise",
+      "english": "quiet",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "leise"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10430",
+      "german": "stark",
+      "english": "strong",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "stark"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10431",
+      "german": "schwach",
+      "english": "weak",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "schwach"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10432",
+      "german": "reich",
+      "english": "rich",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "reich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10433",
+      "german": "arm",
+      "english": "poor",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "arm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10434",
+      "german": "dick",
+      "english": "thick / fat",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "dick"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10435",
+      "german": "dünn",
+      "english": "thin",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "dünn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10436",
+      "german": "breit",
+      "english": "wide",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "breit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10437",
+      "german": "eng",
+      "english": "narrow / tight",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "eng"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10438",
+      "german": "hell",
+      "english": "bright / light",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "hell"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10439",
+      "german": "dunkel",
+      "english": "dark",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "dunkel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10440",
+      "german": "warm",
+      "english": "warm",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "warm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10441",
+      "german": "kalt",
+      "english": "cold",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "kalt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10442",
+      "german": "heiß",
+      "english": "hot",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "heiß"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10443",
+      "german": "kühl",
+      "english": "cool",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "kühl"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10444",
+      "german": "trocken",
+      "english": "dry",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "trocken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10445",
+      "german": "nass",
+      "english": "wet",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "nass"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10446",
+      "german": "sauber",
+      "english": "clean",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "sauber"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10447",
+      "german": "schmutzig",
+      "english": "dirty",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "schmutzig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10448",
+      "german": "gesund",
+      "english": "healthy",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "gesund"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10449",
+      "german": "krank",
+      "english": "sick",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "krank"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10450",
+      "german": "müde",
+      "english": "tired",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "müde"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10451",
+      "german": "wach",
+      "english": "awake",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "wach"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10452",
+      "german": "hungrig",
+      "english": "hungry",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "hungrig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10453",
+      "german": "durstig",
+      "english": "thirsty",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "durstig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10454",
+      "german": "glücklich",
+      "english": "happy",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "glücklich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10455",
+      "german": "traurig",
+      "english": "sad",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "traurig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10456",
+      "german": "nervös",
+      "english": "nervous",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "nervös"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10457",
+      "german": "ruhig",
+      "english": "calm",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "ruhig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10458",
+      "german": "freundlich",
+      "english": "friendly",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "freundlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10459",
+      "german": "höflich",
+      "english": "polite",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "höflich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10460",
+      "german": "unhöflich",
+      "english": "impolite",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "unhöflich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10461",
+      "german": "wichtig",
+      "english": "important",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "wichtig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10462",
+      "german": "unwichtig",
+      "english": "unimportant",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "unwichtig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10463",
+      "german": "möglich",
+      "english": "possible",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "möglich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10464",
+      "german": "unmöglich",
+      "english": "impossible",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "unmöglich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10465",
+      "german": "richtig",
+      "english": "correct / right",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "richtig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10466",
+      "german": "falsch",
+      "english": "wrong / false",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "falsch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10467",
+      "german": "einfach",
+      "english": "easy / simple",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "einfach"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10468",
+      "german": "schwierig",
+      "english": "difficult",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "schwierig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10469",
+      "german": "kompliziert",
+      "english": "complicated",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "kompliziert"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10470",
+      "german": "interessant",
+      "english": "interesting",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "interessant"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10471",
+      "german": "langweilig",
+      "english": "boring",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "langweilig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10472",
+      "german": "lustig",
+      "english": "funny",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "lustig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10473",
+      "german": "ernst",
+      "english": "serious",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "ernst"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10474",
+      "german": "gefährlich",
+      "english": "dangerous",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "gefährlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10475",
+      "german": "sicher",
+      "english": "safe / sure",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "sicher"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10476",
+      "german": "modern",
+      "english": "modern",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "modern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10477",
+      "german": "traditionell",
+      "english": "traditional",
+      "category": "Adjectives",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Adjectives",
+          "traditionell"
+        ]
+      }
+    }
+  ]
+}

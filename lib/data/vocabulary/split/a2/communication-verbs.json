@@ -1,0 +1,307 @@
+{
+  "level": "A2",
+  "category": "Communication Verbs",
+  "totalCards": 15,
+  "flashcards": [
+    {
+      "id": "syllabus-a2-10497",
+      "german": "erzählen",
+      "english": "to tell / to narrate",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "erzählen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10498",
+      "german": "beschreiben",
+      "english": "to describe",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "beschreiben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10499",
+      "german": "diskutieren",
+      "english": "to discuss",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "diskutieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10500",
+      "german": "antworten",
+      "english": "to answer",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "antworten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10501",
+      "german": "mitteilen",
+      "english": "to inform / to communicate",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "mitteilen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10502",
+      "german": "empfehlen",
+      "english": "to recommend",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "empfehlen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10503",
+      "german": "vorschlagen",
+      "english": "to suggest",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "vorschlagen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10504",
+      "german": "überzeugen",
+      "english": "to convince",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "überzeugen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10505",
+      "german": "versprechen",
+      "english": "to promise",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "versprechen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10506",
+      "german": "sich beschweren",
+      "english": "to complain",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "sich beschweren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10507",
+      "german": "gratulieren",
+      "english": "to congratulate",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "gratulieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10508",
+      "german": "sich bedanken",
+      "english": "to thank",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "sich bedanken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10509",
+      "german": "sich entschuldigen",
+      "english": "to apologize",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "sich entschuldigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10510",
+      "german": "berichten",
+      "english": "to report",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "berichten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10511",
+      "german": "warnen",
+      "english": "to warn",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "warnen"
+        ]
+      }
+    }
+  ]
+}

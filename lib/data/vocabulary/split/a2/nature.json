@@ -1,0 +1,487 @@
+{
+  "level": "A2",
+  "category": "Nature",
+  "totalCards": 24,
+  "flashcards": [
+    {
+      "id": "syllabus-a2-10610",
+      "german": "Baum",
+      "english": "tree",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Baum"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10611",
+      "german": "Blume",
+      "english": "flower",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Blume"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10612",
+      "german": "Park",
+      "english": "park",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Park"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10613",
+      "german": "See",
+      "english": "lake",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "See"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10614",
+      "german": "Wald",
+      "english": "forest",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Wald"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10615",
+      "german": "Berg",
+      "english": "mountain",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Berg"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10616",
+      "german": "Fluss",
+      "english": "river",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Fluss"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10617",
+      "german": "Meer",
+      "english": "sea / ocean",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Meer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10618",
+      "german": "Strand",
+      "english": "beach",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Strand"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10619",
+      "german": "Himmel",
+      "english": "sky",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Himmel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10620",
+      "german": "Sonne",
+      "english": "sun",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Sonne"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10621",
+      "german": "Mond",
+      "english": "moon",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Mond"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10622",
+      "german": "Stern",
+      "english": "star",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Stern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10623",
+      "german": "Wolke",
+      "english": "cloud",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Wolke"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10624",
+      "german": "Regen",
+      "english": "rain",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Regen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10625",
+      "german": "Schnee",
+      "english": "snow",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Schnee"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10626",
+      "german": "Wind",
+      "english": "wind",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Wind"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10627",
+      "german": "Tier",
+      "english": "animal",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Tier"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10628",
+      "german": "Vogel",
+      "english": "bird",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Vogel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10629",
+      "german": "Fisch",
+      "english": "fish",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Fisch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10630",
+      "german": "Insekt",
+      "english": "insect",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Insekt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10631",
+      "german": "Pflanze",
+      "english": "plant",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Pflanze"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10632",
+      "german": "Gras",
+      "english": "grass",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Gras"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10633",
+      "german": "Stein",
+      "english": "stone / rock",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Stein"
+        ]
+      }
+    }
+  ]
+}

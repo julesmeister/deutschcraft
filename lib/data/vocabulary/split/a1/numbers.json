@@ -1,0 +1,307 @@
+{
+  "level": "A1",
+  "category": "Numbers",
+  "totalCards": 15,
+  "flashcards": [
+    {
+      "id": "syllabus-a1-10238",
+      "german": "null",
+      "english": "zero",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "null"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10239",
+      "german": "eins",
+      "english": "one",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "eins"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10240",
+      "german": "zwei",
+      "english": "two",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "zwei"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10241",
+      "german": "drei",
+      "english": "three",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "drei"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10242",
+      "german": "vier",
+      "english": "four",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "vier"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10243",
+      "german": "fünf",
+      "english": "five",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "fünf"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10244",
+      "german": "sechs",
+      "english": "six",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "sechs"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10245",
+      "german": "sieben",
+      "english": "seven",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "sieben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10246",
+      "german": "acht",
+      "english": "eight",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "acht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10247",
+      "german": "neun",
+      "english": "nine",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "neun"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10248",
+      "german": "zehn",
+      "english": "ten",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "zehn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10249",
+      "german": "elf",
+      "english": "eleven",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "elf"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10250",
+      "german": "zwölf",
+      "english": "twelve",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "zwölf"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10251",
+      "german": "zwanzig",
+      "english": "twenty",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "zwanzig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10252",
+      "german": "hundert",
+      "english": "hundred",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "hundert"
+        ]
+      }
+    }
+  ]
+}

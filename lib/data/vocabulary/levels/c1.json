@@ -1,0 +1,2540 @@
+{
+  "level": "C1",
+  "totalCards": 124,
+  "flashcards": [
+    {
+      "id": "syllabus-c1-11548",
+      "german": "Nachhaltigkeit",
+      "english": "sustainability",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Nachhaltigkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11549",
+      "german": "Bewusstsein",
+      "english": "consciousness / awareness",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Bewusstsein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11550",
+      "german": "Herausforderung",
+      "english": "challenge",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Herausforderung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11551",
+      "german": "Verantwortung",
+      "english": "responsibility",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Verantwortung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11552",
+      "german": "Eigenverantwortung",
+      "english": "personal responsibility",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Eigenverantwortung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11553",
+      "german": "Auseinandersetzung",
+      "english": "confrontation / debate",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Auseinandersetzung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11554",
+      "german": "Gegebenheit",
+      "english": "circumstance / condition",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Gegebenheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11555",
+      "german": "Veränderung",
+      "english": "change / transformation",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Veränderung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11556",
+      "german": "Entwicklung",
+      "english": "development / evolution",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Entwicklung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11557",
+      "german": "Zusammenhang",
+      "english": "connection / context",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Zusammenhang"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-001",
+      "german": "die Nebenniere",
+      "english": "adrenal gland",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "endocrine-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "die Nebenniere"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-002",
+      "german": "die Hirnanhangdrüse",
+      "english": "pituitary gland",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "endocrine-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "die Hirnanhangdrüse"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-003",
+      "german": "der Hypothalamus",
+      "english": "hypothalamus",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "nervous-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "der Hypothalamus"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-004",
+      "german": "das Kleinhirn",
+      "english": "cerebellum",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "nervous-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "das Kleinhirn"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-005",
+      "german": "der Hirnstamm",
+      "english": "brain stem",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "nervous-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "der Hirnstamm"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-006",
+      "german": "die Großhirnrinde",
+      "english": "cerebral cortex",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "nervous-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "die Großhirnrinde"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-007",
+      "german": "der Kehlkopf",
+      "english": "larynx / voice box",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "respiratory-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "der Kehlkopf"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-008",
+      "german": "die Bronchie",
+      "english": "bronchus",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "respiratory-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "die Bronchie"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-009",
+      "german": "das Lungenbläschen",
+      "english": "alveolus",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "respiratory-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "das Lungenbläschen"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-010",
+      "german": "der Zwölffingerdarm",
+      "english": "duodenum",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "digestive-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "der Zwölffingerdarm"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-011",
+      "german": "der Blinddarm",
+      "english": "appendix",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "digestive-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "der Blinddarm"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-012",
+      "german": "die Harnröhre",
+      "english": "urethra",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "urinary-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "die Harnröhre"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-013",
+      "german": "der Harnleiter",
+      "english": "ureter",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "urinary-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "der Harnleiter"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-014",
+      "german": "die Schlagader",
+      "english": "aorta",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "cardiovascular-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "die Schlagader"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-015",
+      "german": "die Herzklappen",
+      "english": "heart valves",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "cardiovascular-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "die Herzklappen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11558",
+      "german": "Wirtschaft",
+      "english": "economy",
+      "category": "Economics Finance",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Economics Finance",
+          "Wirtschaft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11559",
+      "german": "Konjunktur",
+      "english": "economic situation / business cycle",
+      "category": "Economics Finance",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Economics Finance",
+          "Konjunktur"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11560",
+      "german": "Inflation",
+      "english": "inflation",
+      "category": "Economics Finance",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Economics Finance",
+          "Inflation"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11561",
+      "german": "Rezession",
+      "english": "recession",
+      "category": "Economics Finance",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Economics Finance",
+          "Rezession"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11562",
+      "german": "Investition",
+      "english": "investment",
+      "category": "Economics Finance",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Economics Finance",
+          "Investition"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11563",
+      "german": "Rendite",
+      "english": "return / yield",
+      "category": "Economics Finance",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Economics Finance",
+          "Rendite"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11564",
+      "german": "Verschuldung",
+      "english": "debt / indebtedness",
+      "category": "Economics Finance",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Economics Finance",
+          "Verschuldung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11565",
+      "german": "Haushalt",
+      "english": "budget / household",
+      "category": "Economics Finance",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Economics Finance",
+          "Haushalt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11566",
+      "german": "Steuer",
+      "english": "tax",
+      "category": "Economics Finance",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Economics Finance",
+          "Steuer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11567",
+      "german": "Umsatz",
+      "english": "turnover / revenue",
+      "category": "Economics Finance",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Economics Finance",
+          "Umsatz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11568",
+      "german": "Gewinn",
+      "english": "profit / gain",
+      "category": "Economics Finance",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Economics Finance",
+          "Gewinn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11569",
+      "german": "Verlust",
+      "english": "loss",
+      "category": "Economics Finance",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Economics Finance",
+          "Verlust"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11570",
+      "german": "Wettbewerb",
+      "english": "competition",
+      "category": "Economics Finance",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Economics Finance",
+          "Wettbewerb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11571",
+      "german": "Markt",
+      "english": "market",
+      "category": "Economics Finance",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Economics Finance",
+          "Markt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11572",
+      "german": "Angebot",
+      "english": "supply / offer",
+      "category": "Economics Finance",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Economics Finance",
+          "Angebot"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11573",
+      "german": "diesbezüglich",
+      "english": "in this regard / concerning this",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "diesbezüglich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11574",
+      "german": "infolgedessen",
+      "english": "consequently / as a result",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "infolgedessen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11575",
+      "german": "nichtsdestotrotz",
+      "english": "nevertheless / nonetheless",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "nichtsdestotrotz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11576",
+      "german": "demzufolge",
+      "english": "accordingly / therefore",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "demzufolge"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11577",
+      "german": "gewissermaßen",
+      "english": "in a way / to some extent",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "gewissermaßen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11578",
+      "german": "inwiefern",
+      "english": "to what extent / in what way",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "inwiefern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11579",
+      "german": "insofern",
+      "english": "insofar / to that extent",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "insofern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11580",
+      "german": "demnach",
+      "english": "accordingly / thus",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "demnach"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11581",
+      "german": "mithin",
+      "english": "consequently / hence",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "mithin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11582",
+      "german": "folglich",
+      "english": "consequently / therefore",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "folglich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11583",
+      "german": "Genehmigung",
+      "english": "permit / authorization / approval",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Genehmigung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11584",
+      "german": "Vorschrift",
+      "english": "regulation / rule / prescription",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Vorschrift"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11585",
+      "german": "Rechtsanwalt",
+      "english": "lawyer / attorney",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Rechtsanwalt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11586",
+      "german": "Verfahren",
+      "english": "procedure / proceedings / process",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Verfahren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11587",
+      "german": "Anspruch",
+      "english": "claim / entitlement / right",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Anspruch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11588",
+      "german": "Behörde",
+      "english": "authority / government agency",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Behörde"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11589",
+      "german": "Bescheinigung",
+      "english": "certificate / attestation",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Bescheinigung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11590",
+      "german": "Antrag",
+      "english": "application / request / motion",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Antrag"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11591",
+      "german": "Klage",
+      "english": "lawsuit / complaint / action",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Klage"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11592",
+      "german": "Urteil",
+      "english": "judgment / verdict / sentence",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Urteil"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11593",
+      "german": "Zeugnis",
+      "english": "certificate / testimony / reference",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Zeugnis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11594",
+      "german": "Vollmacht",
+      "english": "power of attorney / authorization",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Vollmacht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11595",
+      "german": "Verpflichtung",
+      "english": "obligation / commitment / duty",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Verpflichtung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11596",
+      "german": "Berechtigung",
+      "english": "authorization / entitlement / right",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Berechtigung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11597",
+      "german": "Haftung",
+      "english": "liability / responsibility",
+      "category": "Legal Administrative",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Legal Administrative",
+          "Haftung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11598",
+      "german": "vereinbaren",
+      "english": "to agree upon / to arrange",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "vereinbaren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11599",
+      "german": "verhandeln",
+      "english": "to negotiate",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "verhandeln"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11600",
+      "german": "beraten",
+      "english": "to advise / to consult",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "beraten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11601",
+      "german": "koordinieren",
+      "english": "to coordinate",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "koordinieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11602",
+      "german": "vermitteln",
+      "english": "to mediate / to convey",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "vermitteln"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11603",
+      "german": "erörtern",
+      "english": "to discuss / to debate",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "erörtern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11604",
+      "german": "beurteilen",
+      "english": "to assess / to evaluate",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "beurteilen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11605",
+      "german": "genehmigen",
+      "english": "to approve / to authorize",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "genehmigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11606",
+      "german": "ablehnen",
+      "english": "to reject / to decline",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "ablehnen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11607",
+      "german": "zusichern",
+      "english": "to assure / to guarantee",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "zusichern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11608",
+      "german": "verpflichten",
+      "english": "to obligate / to commit",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "verpflichten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11609",
+      "german": "gewährleisten",
+      "english": "to ensure / to guarantee",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "gewährleisten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11610",
+      "german": "beanspruchen",
+      "english": "to claim / to demand",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "beanspruchen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11611",
+      "german": "beantragen",
+      "english": "to apply for / to request",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "beantragen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11612",
+      "german": "vorschlagen",
+      "english": "to propose / to suggest",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "vorschlagen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-918",
+      "german": "Er ging ans Fenster, um so mehr sehen zu können",
+      "english": "He went to the window so he could see more",
+      "category": "Redemittel",
+      "level": "C1",
+      "tags": [
+        "um so mehr"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4205,
+        "hierarchy": [
+          "Redemittel",
+          "um so mehr",
+          "Er ging ans Fenster, um so mehr sehen zu können"
+        ]
+      }
+    },
+    {
+      "id": "remnote-931",
+      "german": "Ich kann mir das gut vorstellen",
+      "english": "I can well imagine",
+      "category": "Redemittel",
+      "level": "C1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4221,
+        "hierarchy": [
+          "Redemittel",
+          "Ich kann mir das gut vorstellen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-933",
+      "german": "Ich habe keinen blassen Schimmer",
+      "english": "I don't have a clue",
+      "category": "Redemittel",
+      "level": "C1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4223,
+        "hierarchy": [
+          "Redemittel",
+          "Ich habe keinen blassen Schimmer"
+        ]
+      }
+    },
+    {
+      "id": "remnote-939",
+      "german": "Das ist kein Grund zum Trübsal blasen!",
+      "english": "That is no reason to mope",
+      "category": "Redemittel",
+      "level": "C1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4230,
+        "hierarchy": [
+          "Redemittel",
+          "Das ist kein Grund zum Trübsal blasen!"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-001",
+      "german": "sich abzeichnen",
+      "english": "to emerge, to become apparent",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "emergence",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich abzeichnen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-002",
+      "german": "sich aufdrängen",
+      "english": "to impose oneself, to force oneself upon",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "imposition",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich aufdrängen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-003",
+      "german": "sich behaupten",
+      "english": "to assert oneself, to hold one's own",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "assertion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich behaupten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-004",
+      "german": "sich belaufen auf",
+      "english": "to amount to",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "quantification",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich belaufen auf"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-005",
+      "german": "sich einstellen auf",
+      "english": "to prepare for, to adjust to",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "preparation",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich einstellen auf"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-006",
+      "german": "sich entfalten",
+      "english": "to unfold, to develop",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "development",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich entfalten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-007",
+      "german": "sich entpuppen als",
+      "english": "to turn out to be, to reveal oneself as",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "revelation",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich entpuppen als"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-008",
+      "german": "sich erbarmen",
+      "english": "to have mercy on",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "mercy",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich erbarmen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-009",
+      "german": "sich ergeben",
+      "english": "to surrender, to result from",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "surrender",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich ergeben"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-010",
+      "german": "sich erkühnen",
+      "english": "to dare, to have the audacity",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "audacity",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich erkühnen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-011",
+      "german": "sich erstrecken",
+      "english": "to extend, to stretch",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "extension",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich erstrecken"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-012",
+      "german": "sich hervortun",
+      "english": "to distinguish oneself, to excel",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "excellence",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich hervortun"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-013",
+      "german": "sich hinwegsetz en über",
+      "english": "to disregard, to ignore",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "disregard",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich hinwegsetzen über"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-014",
+      "german": "sich profilieren",
+      "english": "to make a name for oneself",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "reputation",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich profilieren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-015",
+      "german": "sich rühmen",
+      "english": "to boast, to pride oneself on",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "boasting",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich rühmen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-016",
+      "german": "sich sträuben",
+      "english": "to resist, to balk at",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "resistance",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich sträuben"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-017",
+      "german": "sich verfangen",
+      "english": "to get caught, to become entangled",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "entanglement",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich verfangen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-018",
+      "german": "sich verkrümeln",
+      "english": "to slink away, to make oneself scarce",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "departure",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich verkrümeln"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-019",
+      "german": "sich verschärfen",
+      "english": "to intensify, to worsen",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "intensification",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich verschärfen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-020",
+      "german": "sich verschreiben",
+      "english": "to dedicate oneself to",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "dedication",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich verschreiben"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-021",
+      "german": "sich verselbständigen",
+      "english": "to become independent",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "independence",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich verselbständigen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-022",
+      "german": "sich verwirklichen",
+      "english": "to fulfill oneself, to realize one's potential",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "self-realization",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich verwirklichen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-023",
+      "german": "sich vollziehen",
+      "english": "to take place, to be carried out",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "occurrence",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich vollziehen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-024",
+      "german": "sich zieren",
+      "english": "to be coy, to act reluctant",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "reluctance",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich zieren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-025",
+      "german": "sich zurechtfinden",
+      "english": "to find one's way, to get oriented",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "orientation",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich zurechtfinden"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-026",
+      "german": "sich zusammenreißen",
+      "english": "to pull oneself together",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "self-control",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich zusammenreißen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-027",
+      "german": "sich ausnehmen",
+      "english": "to appear, to look (in a certain way)",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "appearance",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich ausnehmen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-028",
+      "german": "sich bewahrheiten",
+      "english": "to come true, to be confirmed",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "confirmation",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich bewahrheiten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-029",
+      "german": "sich einbürgern",
+      "english": "to become naturalized, to become established",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "naturalization",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich einbürgern"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-030",
+      "german": "sich etablieren",
+      "english": "to establish oneself",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "establishment",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich etablieren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-031",
+      "german": "sich herausbilden",
+      "english": "to develop, to emerge",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "formation",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich herausbilden"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-032",
+      "german": "sich herauskristallisieren",
+      "english": "to crystallize, to become clear",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "clarification",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich herauskristallisieren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-033",
+      "german": "sich manifestieren",
+      "english": "to manifest, to become evident",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "manifestation",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich manifestieren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-034",
+      "german": "sich profilieren",
+      "english": "to distinguish oneself, to make one's mark",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "distinction",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich profilieren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-035",
+      "german": "sich rekrutieren",
+      "english": "to be recruited from, to be drawn from",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "recruitment",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich rekrutieren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-036",
+      "german": "sich formieren",
+      "english": "to form, to organize",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "formation",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich formieren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-037",
+      "german": "sich konstituieren",
+      "english": "to constitute oneself, to be formed",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "constitution",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich konstituieren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-038",
+      "german": "sich abgrenzen",
+      "english": "to distinguish oneself from, to set oneself apart",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "differentiation",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich abgrenzen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-039",
+      "german": "sich distanzieren",
+      "english": "to distance oneself from",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "distancing",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich distanzieren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c1-040",
+      "german": "sich solidarisieren",
+      "english": "to show solidarity with",
+      "category": "Reflexive Verbs",
+      "level": "C1",
+      "tags": [
+        "reflexive",
+        "solidarity",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Reflexive Verbs",
+          "sich solidarisieren"
+        ]
+      }
+    }
+  ]
+}

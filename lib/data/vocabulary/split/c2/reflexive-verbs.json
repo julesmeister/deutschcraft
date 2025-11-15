@@ -1,0 +1,637 @@
+{
+  "level": "C2",
+  "category": "Reflexive Verbs",
+  "totalCards": 30,
+  "flashcards": [
+    {
+      "id": "reflexive-c2-001",
+      "german": "sich ermannen",
+      "english": "to pluck up courage, to summon one's strength",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich ermannen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-002",
+      "german": "sich erdreisten",
+      "english": "to have the audacity, to presume",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "formal",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich erdreisten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-003",
+      "german": "sich ereifern",
+      "english": "to get worked up, to become agitated",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich ereifern"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-004",
+      "german": "sich erkecken",
+      "english": "to dare, to venture",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "archaic",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich erkecken"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-005",
+      "german": "sich gebärden",
+      "english": "to behave, to act (in a certain manner)",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "formal",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich gebärden"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-006",
+      "german": "sich härmen",
+      "english": "to grieve, to pine",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich härmen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-007",
+      "german": "sich verzehren",
+      "english": "to pine away, to consume oneself",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verzehren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-008",
+      "german": "sich verausgaben",
+      "english": "to exhaust oneself, to overextend",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "formal",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verausgaben"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-009",
+      "german": "sich verbittern",
+      "english": "to become embittered",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "psychological",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verbittern"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-010",
+      "german": "sich verfestigen",
+      "english": "to solidify, to become fixed",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "abstract",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verfestigen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-011",
+      "german": "sich verflüchtigen",
+      "english": "to evaporate, to vanish",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "abstract",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verflüchtigen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-012",
+      "german": "sich verhärten",
+      "english": "to harden, to become obdurate",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "psychological",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verhärten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-013",
+      "german": "sich verkrampfen",
+      "english": "to tense up, to become cramped",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "physical",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verkrampfen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-014",
+      "german": "sich versinnbildlichen",
+      "english": "to be symbolized, to be embodied",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "abstract",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich versinnbildlichen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-015",
+      "german": "sich verstiegen haben",
+      "english": "to have overreached oneself",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verstiegen haben"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-016",
+      "german": "sich verwahren gegen",
+      "english": "to protest against, to object to",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "formal",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verwahren gegen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-017",
+      "german": "sich verwinden",
+      "english": "to come to terms with, to get over",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verwinden"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-018",
+      "german": "sich wappnen",
+      "english": "to arm oneself, to prepare oneself",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "formal",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich wappnen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-019",
+      "german": "sich windend",
+      "english": "to wriggle, to writhe",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "physical",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich windend"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-020",
+      "german": "sich zutragen",
+      "english": "to occur, to happen (literary)",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich zutragen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-021",
+      "german": "sich befleißigen",
+      "english": "to apply oneself to, to endeavor",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "archaic",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich befleißigen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-022",
+      "german": "sich brüsten",
+      "english": "to boast, to brag",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "formal",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich brüsten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-023",
+      "german": "sich dünken",
+      "english": "to seem to oneself, to fancy (archaic)",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "archaic",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich dünken"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-024",
+      "german": "sich gedulden",
+      "english": "to be patient, to wait patiently",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich gedulden"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-025",
+      "german": "sich hüten",
+      "english": "to beware, to guard against",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "caution",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich hüten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-026",
+      "german": "sich regen",
+      "english": "to stir, to move",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich regen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-027",
+      "german": "sich schicken",
+      "english": "to be fitting, to be proper",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "formal",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich schicken"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-028",
+      "german": "sich tummeln",
+      "english": "to romp about, to bustle",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "movement",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich tummeln"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-029",
+      "german": "sich vergewissern",
+      "english": "to make certain, to verify",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "verification",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich vergewissern"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-030",
+      "german": "sich vermessen",
+      "english": "to presume, to be presumptuous",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "presumption",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich vermessen"
+        ]
+      }
+    }
+  ]
+}

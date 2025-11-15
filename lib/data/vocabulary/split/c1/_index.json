@@ -1,0 +1,47 @@
+{
+  "level": "C1",
+  "totalCards": 124,
+  "totalCategories": 8,
+  "categories": [
+    {
+      "name": "Abstract Concepts",
+      "count": 10,
+      "file": "abstract-concepts.json"
+    },
+    {
+      "name": "Body Parts",
+      "count": 15,
+      "file": "body-parts.json"
+    },
+    {
+      "name": "Economics Finance",
+      "count": 15,
+      "file": "economics-finance.json"
+    },
+    {
+      "name": "Formal Language",
+      "count": 10,
+      "file": "formal-language.json"
+    },
+    {
+      "name": "Legal Administrative",
+      "count": 15,
+      "file": "legal-administrative.json"
+    },
+    {
+      "name": "Professional Communication",
+      "count": 15,
+      "file": "professional-communication.json"
+    },
+    {
+      "name": "Redemittel",
+      "count": 4,
+      "file": "redemittel.json"
+    },
+    {
+      "name": "Reflexive Verbs",
+      "count": 40,
+      "file": "reflexive-verbs.json"
+    }
+  ]
+}

@@ -1,0 +1,1272 @@
+{
+  "level": "B1",
+  "category": "Verbs With Prepositions",
+  "totalCards": 65,
+  "flashcards": [
+    {
+      "id": "syllabus-b1-11131",
+      "german": "warten auf + Akk",
+      "english": "to wait for",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "warten auf + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11132",
+      "german": "denken an + Akk",
+      "english": "to think of/about",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "denken an + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11133",
+      "german": "sich freuen auf + Akk",
+      "english": "to look forward to",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich freuen auf + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11134",
+      "german": "sich freuen über + Akk",
+      "english": "to be happy about",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich freuen über + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11135",
+      "german": "sich interessieren für + Akk",
+      "english": "to be interested in",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich interessieren für + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11136",
+      "german": "sich kümmern um + Akk",
+      "english": "to take care of",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich kümmern um + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11137",
+      "german": "sich erinnern an + Akk",
+      "english": "to remember",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich erinnern an + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11138",
+      "german": "sich beschweren über + Akk",
+      "english": "to complain about",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich beschweren über + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11139",
+      "german": "sich ärgern über + Akk",
+      "english": "to be annoyed about",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich ärgern über + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11140",
+      "german": "sich freuen über + Akk",
+      "english": "to be pleased about",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich freuen über + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11141",
+      "german": "teilnehmen an + Dat",
+      "english": "to participate in",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "teilnehmen an + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11142",
+      "german": "sprechen über + Akk",
+      "english": "to talk about",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sprechen über + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11143",
+      "german": "sprechen mit + Dat",
+      "english": "to talk with",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sprechen mit + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11144",
+      "german": "fragen nach + Dat",
+      "english": "to ask for/about",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "fragen nach + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11145",
+      "german": "suchen nach + Dat",
+      "english": "to search for",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "suchen nach + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11146",
+      "german": "bitten um + Akk",
+      "english": "to ask for/request",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "bitten um + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11147",
+      "german": "sich bewerben um + Akk",
+      "english": "to apply for",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich bewerben um + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11148",
+      "german": "sich vorbereiten auf + Akk",
+      "english": "to prepare for",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich vorbereiten auf + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11149",
+      "german": "beginnen mit + Dat",
+      "english": "to begin with",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "beginnen mit + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11150",
+      "german": "aufhören mit + Dat",
+      "english": "to stop (doing)",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "aufhören mit + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11151",
+      "german": "abhängen von + Dat",
+      "english": "to depend on",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "abhängen von + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11152",
+      "german": "sich verlieben in + Akk",
+      "english": "to fall in love with",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich verlieben in + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11153",
+      "german": "sich gewöhnen an + Akk",
+      "english": "to get used to",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich gewöhnen an + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11154",
+      "german": "glauben an + Akk",
+      "english": "to believe in",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "glauben an + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11155",
+      "german": "hoffen auf + Akk",
+      "english": "to hope for",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "hoffen auf + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11156",
+      "german": "träumen von + Dat",
+      "english": "to dream of/about",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "träumen von + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11157",
+      "german": "sich entscheiden für + Akk",
+      "english": "to decide on",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich entscheiden für + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11158",
+      "german": "verzichten auf + Akk",
+      "english": "to do without",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "verzichten auf + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11159",
+      "german": "sich beschäftigen mit + Dat",
+      "english": "to occupy oneself with",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich beschäftigen mit + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11160",
+      "german": "sich konzentrieren auf + Akk",
+      "english": "to concentrate on",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich konzentrieren auf + Akk"
+        ]
+      }
+    },
+    {
+      "id": "remnote-321",
+      "german": "beantragen",
+      "english": "to apply [paperwork] #verben",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "anwenden"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1308,
+        "hierarchy": [
+          "Verbs",
+          "anwenden",
+          "beantragen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-486",
+      "german": "fangen",
+      "english": "to catch / to capture / to trap  #verben",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "erwischen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2135,
+        "hierarchy": [
+          "Verbs",
+          "erwischen",
+          "fangen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-618",
+      "german": "haften...für",
+      "english": "to be liable for sth. / to be responsible for sb./sth.",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "kleben",
+        "haften"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2784,
+        "hierarchy": [
+          "Verbs",
+          "kleben",
+          "haften",
+          "haften...für"
+        ]
+      }
+    },
+    {
+      "id": "remnote-627",
+      "german": "durchlaufen",
+      "english": "to pass through",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "laufen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2839,
+        "hierarchy": [
+          "Verbs",
+          "laufen",
+          "durchlaufen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-707",
+      "german": "sanieren",
+      "english": "to renovate / to refurbish #verben",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3192,
+        "hierarchy": [
+          "Verbs",
+          "sanieren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-801",
+      "german": "umwandeln",
+      "english": "to convert #verben",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3670,
+        "hierarchy": [
+          "Verbs",
+          "umwandeln"
+        ]
+      }
+    },
+    {
+      "id": "remnote-828",
+      "german": "verlangen",
+      "english": "to demand / to request / to require / to claim / to ask / to charge  #verben",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3800,
+        "hierarchy": [
+          "Verbs",
+          "verlangen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-839",
+      "german": "vermitteln",
+      "english": "to convey / to impart  #verben",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3861,
+        "hierarchy": [
+          "Verbs",
+          "vermitteln"
+        ]
+      }
+    },
+    {
+      "id": "remnote-853",
+      "german": "verwandeln",
+      "english": "to transform  #verben",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3931,
+        "hierarchy": [
+          "Verbs",
+          "verwandeln"
+        ]
+      }
+    },
+    {
+      "id": "remnote-886",
+      "german": "zanken",
+      "english": "to brawl / to bicker",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4091,
+        "hierarchy": [
+          "Verbs",
+          "zanken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-270",
+      "german": "Freuen",
+      "english": "to look happy",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Akkusativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 847,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Akkusativ",
+          "Freuen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-271",
+      "german": "sich erfreut",
+      "english": "to be pleased / to be delighted / to be glad",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Akkusativ",
+        "Freuen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 853,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Akkusativ",
+          "Freuen",
+          "sich erfreut"
+        ]
+      }
+    },
+    {
+      "id": "remnote-272",
+      "german": "Stimmen",
+      "english": "to vote for",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Akkusativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 899,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Akkusativ",
+          "Stimmen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-273",
+      "german": "umstreiten",
+      "english": "controversial / contentious / debatable / disputed",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Akkusativ",
+        "Streiten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 907,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Akkusativ",
+          "Streiten",
+          "umstreiten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-274",
+      "german": "verteilen",
+      "english": "to distribute #verben",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Akkusativ",
+        "Teilen::to share / to divide"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 915,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Akkusativ",
+          "Teilen::to share / to divide",
+          "verteilen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-275",
+      "german": "aufteilen",
+      "english": "to split [goods/money] #verben",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Akkusativ",
+        "Teilen::to share / to divide"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 919,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Akkusativ",
+          "Teilen::to share / to divide",
+          "aufteilen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-276",
+      "german": "mitteilen",
+      "english": "to communicate  #verben",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Akkusativ",
+        "Teilen::to share / to divide"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 923,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Akkusativ",
+          "Teilen::to share / to divide",
+          "mitteilen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-277",
+      "german": "unterteilen",
+      "english": "to divide",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Akkusativ",
+        "Teilen::to share / to divide"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 927,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Akkusativ",
+          "Teilen::to share / to divide",
+          "unterteilen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-278",
+      "german": "Bitte wenden",
+      "english": "Turn the page, please.",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Akkusativ",
+        "Wenden",
+        "bedeutung;;to turn to [sb.] / to turn"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 954,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Akkusativ",
+          "Wenden",
+          "bedeutung;;to turn to [sb.] / to turn",
+          "Bitte wenden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-279",
+      "german": "Zugreifen",
+      "english": "to access sth.",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Akkusativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 955,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Akkusativ",
+          "Zugreifen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-280",
+      "german": "Beschweren",
+      "english": "to complain",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Dativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 995,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Dativ",
+          "Beschweren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-281",
+      "german": "Besprechen",
+      "english": "to talk sth. over with sb.",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Dativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1000,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Dativ",
+          "Besprechen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-282",
+      "german": "Bestehen",
+      "english": "to pass",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Dativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1007,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Dativ",
+          "Bestehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-283",
+      "german": "auf",
+      "english": "to insist",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Dativ",
+        "Bestehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1011,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Dativ",
+          "Bestehen",
+          "auf"
+        ]
+      }
+    },
+    {
+      "id": "remnote-284",
+      "german": "aus",
+      "english": "to consist of sth.",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Dativ",
+        "Bestehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1015,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Dativ",
+          "Bestehen",
+          "aus"
+        ]
+      }
+    },
+    {
+      "id": "remnote-285",
+      "german": "Ekeln",
+      "english": "to disgust",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Dativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1023,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Dativ",
+          "Ekeln"
+        ]
+      }
+    },
+    {
+      "id": "remnote-286",
+      "german": "die Anfrage",
+      "english": "request / inquiry / enquiry / query",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Dativ",
+        "Fragen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1033,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Dativ",
+          "Fragen",
+          "die Anfrage"
+        ]
+      }
+    },
+    {
+      "id": "remnote-287",
+      "german": "Führen (mit)",
+      "english": "to conduct sth. with somebody",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Dativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1042,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Dativ",
+          "Führen (mit)"
+        ]
+      }
+    },
+    {
+      "id": "remnote-288",
+      "german": "Führen (zum)",
+      "english": "to lead on to",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Dativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1045,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Dativ",
+          "Führen (zum)"
+        ]
+      }
+    },
+    {
+      "id": "remnote-289",
+      "german": "Klarkommen",
+      "english": "to come to terms with sth.",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Dativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1054,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Dativ",
+          "Klarkommen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-290",
+      "german": "Trennen",
+      "english": "to separate from sb.",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Dativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1083,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Dativ",
+          "Trennen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-291",
+      "german": "Verbeugen",
+      "english": "to bow",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Dativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1093,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Dativ",
+          "Verbeugen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-292",
+      "german": "Verloben",
+      "english": "to betroth sb.",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Dativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1096,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Dativ",
+          "Verloben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-293",
+      "german": "Verstehen",
+      "english": "to get along with sb.",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Dativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1099,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Dativ",
+          "Verstehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-294",
+      "german": "Zerbrechen",
+      "english": "to fall apart",
+      "category": "Liste der Verben mit Präpositionen",
+      "level": "B2",
+      "tags": [
+        "Dativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1109,
+        "hierarchy": [
+          "Liste der Verben mit Präpositionen",
+          "Dativ",
+          "Zerbrechen"
+        ]
+      }
+    }
+  ]
+}

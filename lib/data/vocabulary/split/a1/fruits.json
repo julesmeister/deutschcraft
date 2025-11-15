@@ -1,0 +1,307 @@
+{
+  "level": "A1",
+  "category": "Fruits",
+  "totalCards": 15,
+  "flashcards": [
+    {
+      "id": "syllabus-a1-10157",
+      "german": "Banane",
+      "english": "banana",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Banane"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10158",
+      "german": "Orange",
+      "english": "orange",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Orange"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10159",
+      "german": "Erdbeere",
+      "english": "strawberry",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Erdbeere"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10160",
+      "german": "Traube",
+      "english": "grape",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Traube"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10161",
+      "german": "Birne",
+      "english": "pear",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Birne"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10162",
+      "german": "Kirsche",
+      "english": "cherry",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Kirsche"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10163",
+      "german": "Zitrone",
+      "english": "lemon",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Zitrone"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10164",
+      "german": "Pfirsich",
+      "english": "peach",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Pfirsich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10165",
+      "german": "Melone",
+      "english": "melon",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Melone"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10166",
+      "german": "Ananas",
+      "english": "pineapple",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Ananas"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10167",
+      "german": "Kiwi",
+      "english": "kiwi",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Kiwi"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10168",
+      "german": "Mango",
+      "english": "mango",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Mango"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10169",
+      "german": "Himbeere",
+      "english": "raspberry",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Himbeere"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10170",
+      "german": "Blaubeere",
+      "english": "blueberry",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Blaubeere"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10171",
+      "german": "Obst",
+      "english": "fruit",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Obst"
+        ]
+      }
+    }
+  ]
+}

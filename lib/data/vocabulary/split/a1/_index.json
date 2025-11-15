@@ -1,0 +1,137 @@
+{
+  "level": "A1",
+  "totalCards": 475,
+  "totalCategories": 26,
+  "categories": [
+    {
+      "name": "Adjectives",
+      "count": 41,
+      "file": "adjectives.json"
+    },
+    {
+      "name": "Animals",
+      "count": 15,
+      "file": "animals.json"
+    },
+    {
+      "name": "Basic Verbs",
+      "count": 30,
+      "file": "basic-verbs.json"
+    },
+    {
+      "name": "Body Parts",
+      "count": 20,
+      "file": "body-parts.json"
+    },
+    {
+      "name": "Clothing",
+      "count": 15,
+      "file": "clothing.json"
+    },
+    {
+      "name": "Colors",
+      "count": 15,
+      "file": "colors.json"
+    },
+    {
+      "name": "Countries",
+      "count": 15,
+      "file": "countries.json"
+    },
+    {
+      "name": "Family",
+      "count": 15,
+      "file": "family.json"
+    },
+    {
+      "name": "Food Drinks",
+      "count": 41,
+      "file": "food-drinks.json"
+    },
+    {
+      "name": "Fruits",
+      "count": 15,
+      "file": "fruits.json"
+    },
+    {
+      "name": "Greetings",
+      "count": 15,
+      "file": "greetings.json"
+    },
+    {
+      "name": "Home",
+      "count": 15,
+      "file": "home.json"
+    },
+    {
+      "name": "Irregular Verbs",
+      "count": 30,
+      "file": "irregular-verbs.json"
+    },
+    {
+      "name": "Modal Verbs",
+      "count": 6,
+      "file": "modal-verbs.json"
+    },
+    {
+      "name": "Numbers",
+      "count": 15,
+      "file": "numbers.json"
+    },
+    {
+      "name": "Positional Verbs",
+      "count": 17,
+      "file": "positional-verbs.json"
+    },
+    {
+      "name": "Pronouns",
+      "count": 15,
+      "file": "pronouns.json"
+    },
+    {
+      "name": "Question Words",
+      "count": 15,
+      "file": "question-words.json"
+    },
+    {
+      "name": "Reflexive Verbs",
+      "count": 8,
+      "file": "reflexive-verbs.json"
+    },
+    {
+      "name": "Regular Verbs",
+      "count": 31,
+      "file": "regular-verbs.json"
+    },
+    {
+      "name": "State Change Verbs",
+      "count": 16,
+      "file": "state-change-verbs.json"
+    },
+    {
+      "name": "Time",
+      "count": 15,
+      "file": "time.json"
+    },
+    {
+      "name": "Transportation",
+      "count": 15,
+      "file": "transportation.json"
+    },
+    {
+      "name": "Understanding Verbs",
+      "count": 10,
+      "file": "understanding-verbs.json"
+    },
+    {
+      "name": "Vegetables",
+      "count": 15,
+      "file": "vegetables.json"
+    },
+    {
+      "name": "Weather",
+      "count": 15,
+      "file": "weather.json"
+    }
+  ]
+}

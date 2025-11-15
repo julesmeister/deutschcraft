@@ -1,0 +1,622 @@
+{
+  "level": "A1",
+  "category": "Regular Verbs",
+  "totalCards": 31,
+  "flashcards": [
+    {
+      "id": "remnote-883",
+      "german": "wissen",
+      "english": "to know",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4080,
+        "hierarchy": [
+          "Verbs",
+          "wissen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10298",
+      "german": "wohnen",
+      "english": "to live",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "wohnen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10299",
+      "german": "lernen",
+      "english": "to learn",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "lernen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10300",
+      "german": "spielen",
+      "english": "to play",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "spielen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10301",
+      "german": "kaufen",
+      "english": "to buy",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "kaufen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10302",
+      "german": "brauchen",
+      "english": "to need",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "brauchen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10303",
+      "german": "suchen",
+      "english": "to search / to look for",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "suchen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10304",
+      "german": "fragen",
+      "english": "to ask",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "fragen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10305",
+      "german": "sagen",
+      "english": "to say",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "sagen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10306",
+      "german": "hören",
+      "english": "to hear / to listen",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "hören"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10307",
+      "german": "zeigen",
+      "english": "to show",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "zeigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10308",
+      "german": "machen",
+      "english": "to make / to do",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "machen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10309",
+      "german": "kosten",
+      "english": "to cost",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "kosten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10310",
+      "german": "glauben",
+      "english": "to believe",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "glauben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10311",
+      "german": "lieben",
+      "english": "to love",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "lieben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10312",
+      "german": "arbeiten",
+      "english": "to work",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "arbeiten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10313",
+      "german": "antworten",
+      "english": "to answer",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "antworten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10314",
+      "german": "öffnen",
+      "english": "to open",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "öffnen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10315",
+      "german": "warten",
+      "english": "to wait",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "warten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10316",
+      "german": "lachen",
+      "english": "to laugh",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "lachen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10317",
+      "german": "weinen",
+      "english": "to cry",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "weinen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10318",
+      "german": "rauchen",
+      "english": "to smoke",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "rauchen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10319",
+      "german": "tanzen",
+      "english": "to dance",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "tanzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10320",
+      "german": "kochen",
+      "english": "to cook",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "kochen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10321",
+      "german": "danken",
+      "english": "to thank",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "danken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10322",
+      "german": "grüßen",
+      "english": "to greet",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "grüßen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10323",
+      "german": "heißen",
+      "english": "to be called",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "heißen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10324",
+      "german": "reisen",
+      "english": "to travel",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "reisen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10325",
+      "german": "leben",
+      "english": "to live / to be alive",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "leben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10326",
+      "german": "zahlen",
+      "english": "to pay",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "zahlen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10327",
+      "german": "holen",
+      "english": "to fetch / to get",
+      "category": "Regular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Regular Verbs",
+          "holen"
+        ]
+      }
+    }
+  ]
+}

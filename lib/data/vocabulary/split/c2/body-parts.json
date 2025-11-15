@@ -1,0 +1,337 @@
+{
+  "level": "C2",
+  "category": "Body Parts",
+  "totalCards": 15,
+  "flashcards": [
+    {
+      "id": "body-c2-001",
+      "german": "die Hirnhaut",
+      "english": "meninges / brain membrane",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "nervous-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "die Hirnhaut"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-002",
+      "german": "der Liquor",
+      "english": "cerebrospinal fluid",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "nervous-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "der Liquor"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-003",
+      "german": "das Striatum",
+      "english": "striatum",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "nervous-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "das Striatum"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-004",
+      "german": "der Hippocampus",
+      "english": "hippocampus",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "nervous-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "der Hippocampus"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-005",
+      "german": "die Amygdala",
+      "english": "amygdala",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "nervous-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "die Amygdala"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-006",
+      "german": "die Epiphyse",
+      "english": "pineal gland / epiphysis",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "endocrine-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "die Epiphyse"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-007",
+      "german": "die Zirbeldrüse",
+      "english": "pineal gland",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "endocrine-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "die Zirbeldrüse"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-008",
+      "german": "das Endokard",
+      "english": "endocardium",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "cardiovascular-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "das Endokard"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-009",
+      "german": "das Perikard",
+      "english": "pericardium",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "cardiovascular-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "das Perikard"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-010",
+      "german": "das Myokard",
+      "english": "myocardium / heart muscle",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "cardiovascular-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "das Myokard"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-011",
+      "german": "der Ösophagus",
+      "english": "esophagus (medical term)",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "digestive-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "der Ösophagus"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-012",
+      "german": "die Epiglottis",
+      "english": "epiglottis",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "respiratory-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "die Epiglottis"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-013",
+      "german": "die Glomeruli",
+      "english": "glomeruli (kidney filtration units)",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "urinary-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "die Glomeruli"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-014",
+      "german": "das Nephron",
+      "english": "nephron",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "urinary-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "das Nephron"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-015",
+      "german": "die Plazenta",
+      "english": "placenta",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "reproductive-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "die Plazenta"
+        ]
+      }
+    }
+  ]
+}

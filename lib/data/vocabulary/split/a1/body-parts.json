@@ -1,0 +1,427 @@
+{
+  "level": "A1",
+  "category": "Body Parts",
+  "totalCards": 20,
+  "flashcards": [
+    {
+      "id": "body-a1-001",
+      "german": "der Körper",
+      "english": "body",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "der Körper"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-002",
+      "german": "der Kopf",
+      "english": "head",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "der Kopf"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-003",
+      "german": "das Gesicht",
+      "english": "face",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "das Gesicht"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-004",
+      "german": "das Haar",
+      "english": "hair",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "das Haar"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-005",
+      "german": "das Auge",
+      "english": "eye",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "das Auge"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-006",
+      "german": "die Nase",
+      "english": "nose",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "die Nase"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-007",
+      "german": "der Mund",
+      "english": "mouth",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "der Mund"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-008",
+      "german": "das Ohr",
+      "english": "ear",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "das Ohr"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-009",
+      "german": "der Zahn",
+      "english": "tooth",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "der Zahn"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-010",
+      "german": "der Hals",
+      "english": "neck / throat",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "der Hals"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-011",
+      "german": "die Schulter",
+      "english": "shoulder",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "die Schulter"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-012",
+      "german": "der Arm",
+      "english": "arm",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "der Arm"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-013",
+      "german": "die Hand",
+      "english": "hand",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "die Hand"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-014",
+      "german": "der Finger",
+      "english": "finger",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "der Finger"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-015",
+      "german": "der Bauch",
+      "english": "stomach / belly",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "der Bauch"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-016",
+      "german": "der Rücken",
+      "english": "back",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "der Rücken"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-017",
+      "german": "das Bein",
+      "english": "leg",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "das Bein"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-018",
+      "german": "das Knie",
+      "english": "knee",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "das Knie"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-019",
+      "german": "der Fuß",
+      "english": "foot",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "der Fuß"
+        ]
+      }
+    },
+    {
+      "id": "body-a1-020",
+      "german": "die Zehe",
+      "english": "toe",
+      "category": "Body Parts",
+      "level": "A1",
+      "tags": [
+        "body",
+        "basic",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Body Parts",
+          "die Zehe"
+        ]
+      }
+    }
+  ]
+}

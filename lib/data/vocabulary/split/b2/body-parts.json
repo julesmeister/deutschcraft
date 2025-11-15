@@ -1,0 +1,447 @@
+{
+  "level": "B2",
+  "category": "Body Parts",
+  "totalCards": 20,
+  "flashcards": [
+    {
+      "id": "body-b2-001",
+      "german": "die Schilddrüse",
+      "english": "thyroid gland",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "glands",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Schilddrüse"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-002",
+      "german": "die Bauchspeicheldrüse",
+      "english": "pancreas",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "organs",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Bauchspeicheldrüse"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-003",
+      "german": "die Milz",
+      "english": "spleen",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "organs",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Milz"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-004",
+      "german": "die Gallenblase",
+      "english": "gallbladder",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "organs",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Gallenblase"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-005",
+      "german": "die Blase",
+      "english": "bladder",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "organs",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Blase"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-006",
+      "german": "die Gebärmutter",
+      "english": "uterus / womb",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "organs",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Gebärmutter"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-007",
+      "german": "die Netzhaut",
+      "english": "retina",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "eyes",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Netzhaut"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-008",
+      "german": "die Hornhaut",
+      "english": "cornea",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "eyes",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Hornhaut"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-009",
+      "german": "das Trommelfell",
+      "english": "eardrum",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "ears",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "das Trommelfell"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-010",
+      "german": "die Luftröhre",
+      "english": "windpipe / trachea",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "respiratory",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Luftröhre"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-011",
+      "german": "die Speiseröhre",
+      "english": "esophagus",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "digestive",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Speiseröhre"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-012",
+      "german": "das Zwerchfell",
+      "english": "diaphragm",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "respiratory",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "das Zwerchfell"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-013",
+      "german": "das Rückenmark",
+      "english": "spinal cord",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "nervous-system",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "das Rückenmark"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-014",
+      "german": "die Sehne",
+      "english": "tendon",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "musculoskeletal",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Sehne"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-015",
+      "german": "der Knorpel",
+      "english": "cartilage",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "musculoskeletal",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "der Knorpel"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-016",
+      "german": "das Band",
+      "english": "ligament",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "musculoskeletal",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "das Band"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-017",
+      "german": "die Arterie",
+      "english": "artery",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "circulatory",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Arterie"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-018",
+      "german": "die Vene",
+      "english": "vein",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "circulatory",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Vene"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-019",
+      "german": "die Kapillare",
+      "english": "capillary",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "circulatory",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Kapillare"
+        ]
+      }
+    },
+    {
+      "id": "body-b2-020",
+      "german": "das Knochenmark",
+      "english": "bone marrow",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "body",
+        "medical",
+        "skeleton",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "das Knochenmark"
+        ]
+      }
+    }
+  ]
+}

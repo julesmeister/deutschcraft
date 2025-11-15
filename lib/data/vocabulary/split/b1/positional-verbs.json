@@ -1,0 +1,637 @@
+{
+  "level": "B1",
+  "category": "Positional Verbs",
+  "totalCards": 32,
+  "flashcards": [
+    {
+      "id": "syllabus-b1-11041",
+      "german": "legen",
+      "english": "to lay / to put (flat)",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "legen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11042",
+      "german": "liegen",
+      "english": "to lie / to be lying",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "liegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11043",
+      "german": "stellen",
+      "english": "to place / to put (upright)",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "stellen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11044",
+      "german": "stehen",
+      "english": "to stand / to be standing",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "stehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11045",
+      "german": "setzen",
+      "english": "to set / to place (seated position)",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "setzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11046",
+      "german": "sitzen",
+      "english": "to sit / to be sitting",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sitzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11047",
+      "german": "hängen (transitiv)",
+      "english": "to hang (transitive - with accusative)",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "hängen (transitiv)"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11048",
+      "german": "hängen (intransitiv)",
+      "english": "to hang / to be hanging (with dative)",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "hängen (intransitiv)"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11049",
+      "german": "stecken (transitiv)",
+      "english": "to put / to stick (with accusative)",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "stecken (transitiv)"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11050",
+      "german": "stecken (intransitiv)",
+      "english": "to be stuck / to be located (with dative)",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "stecken (intransitiv)"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11051",
+      "german": "sich legen",
+      "english": "to lie down",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sich legen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11052",
+      "german": "sich stellen",
+      "english": "to stand (position oneself)",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sich stellen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11053",
+      "german": "sich setzen",
+      "english": "to sit down",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sich setzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11054",
+      "german": "sich hinlegen",
+      "english": "to lie down",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sich hinlegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11055",
+      "german": "sich hinstellen",
+      "english": "to stand up / to position oneself",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sich hinstellen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11056",
+      "german": "sich hinsetzen",
+      "english": "to sit down",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sich hinsetzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11057",
+      "german": "auflegen",
+      "english": "to put on / to hang up (phone)",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "auflegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11058",
+      "german": "aufliegen",
+      "english": "to lie on / to rest on",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "aufliegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11059",
+      "german": "aufstellen",
+      "english": "to set up / to erect",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "aufstellen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11060",
+      "german": "aufstehen",
+      "english": "to stand up / to get up",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "aufstehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11061",
+      "german": "ablegen",
+      "english": "to put down / to take off",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "ablegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11062",
+      "german": "abliegen",
+      "english": "to be remote / to be far from",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "abliegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11063",
+      "german": "abstellen",
+      "english": "to put down / to turn off",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "abstellen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11064",
+      "german": "abstehen",
+      "english": "to stick out / to protrude",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "abstehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11065",
+      "german": "hinlegen",
+      "english": "to lay down / to put down",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "hinlegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11066",
+      "german": "hinstellen",
+      "english": "to put down / to place",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "hinstellen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11067",
+      "german": "hinsetzen",
+      "english": "to seat / to sit someone down",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "hinsetzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11068",
+      "german": "vorlegen",
+      "english": "to present / to submit",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "vorlegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11069",
+      "german": "vorliegen",
+      "english": "to be present / to exist",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "vorliegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11070",
+      "german": "darstellen",
+      "english": "to represent / to depict",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "darstellen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-751",
+      "german": "stecken",
+      "english": "to plug in / to insert #verben",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3423,
+        "hierarchy": [
+          "Verbs",
+          "stecken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-757",
+      "german": "stellen",
+      "english": "to put / to place / to lay",
+      "category": "Positional Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3468,
+        "hierarchy": [
+          "Verbs",
+          "stellen"
+        ]
+      }
+    }
+  ]
+}

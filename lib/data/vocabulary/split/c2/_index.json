@@ -1,0 +1,27 @@
+{
+  "level": "C2",
+  "totalCards": 65,
+  "totalCategories": 4,
+  "categories": [
+    {
+      "name": "Body Parts",
+      "count": 15,
+      "file": "body-parts.json"
+    },
+    {
+      "name": "Literary Language",
+      "count": 8,
+      "file": "literary-language.json"
+    },
+    {
+      "name": "Philosophical Concepts",
+      "count": 12,
+      "file": "philosophical-concepts.json"
+    },
+    {
+      "name": "Reflexive Verbs",
+      "count": 30,
+      "file": "reflexive-verbs.json"
+    }
+  ]
+}

@@ -1,0 +1,407 @@
+{
+  "level": "A2",
+  "category": "Time Expressions",
+  "totalCards": 20,
+  "flashcards": [
+    {
+      "id": "syllabus-a2-10792",
+      "german": "gestern",
+      "english": "yesterday",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "gestern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10793",
+      "german": "heute",
+      "english": "today",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "heute"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10794",
+      "german": "morgen",
+      "english": "tomorrow",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "morgen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10795",
+      "german": "jetzt",
+      "english": "now",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "jetzt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10796",
+      "german": "später",
+      "english": "later",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "später"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10797",
+      "german": "früher",
+      "english": "earlier / before",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "früher"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10798",
+      "german": "bald",
+      "english": "soon",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "bald"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10799",
+      "german": "oft",
+      "english": "often",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "oft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10800",
+      "german": "manchmal",
+      "english": "sometimes",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "manchmal"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10801",
+      "german": "immer",
+      "english": "always",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "immer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10802",
+      "german": "nie",
+      "english": "never",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "nie"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10803",
+      "german": "selten",
+      "english": "rarely / seldom",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "selten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10804",
+      "german": "jeden Tag",
+      "english": "every day",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "jeden Tag"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10805",
+      "german": "vorgestern",
+      "english": "the day before yesterday",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "vorgestern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10806",
+      "german": "übermorgen",
+      "english": "the day after tomorrow",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "übermorgen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10807",
+      "german": "letzte Woche",
+      "english": "last week",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "letzte Woche"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10808",
+      "german": "nächste Woche",
+      "english": "next week",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "nächste Woche"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10809",
+      "german": "dieses Jahr",
+      "english": "this year",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "dieses Jahr"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10810",
+      "german": "letztes Jahr",
+      "english": "last year",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "letztes Jahr"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10811",
+      "german": "nächstes Jahr",
+      "english": "next year",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "nächstes Jahr"
+        ]
+      }
+    }
+  ]
+}

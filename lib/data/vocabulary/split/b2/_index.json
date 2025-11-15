@@ -1,0 +1,72 @@
+{
+  "level": "B2",
+  "totalCards": 680,
+  "totalCategories": 13,
+  "categories": [
+    {
+      "name": "Academic",
+      "count": 30,
+      "file": "academic.json"
+    },
+    {
+      "name": "Adjectives",
+      "count": 60,
+      "file": "adjectives.json"
+    },
+    {
+      "name": "Adverbs",
+      "count": 100,
+      "file": "adverbs.json"
+    },
+    {
+      "name": "Body Parts",
+      "count": 20,
+      "file": "body-parts.json"
+    },
+    {
+      "name": "Emotions Character",
+      "count": 30,
+      "file": "emotions-character.json"
+    },
+    {
+      "name": "Environment Climate",
+      "count": 30,
+      "file": "environment-climate.json"
+    },
+    {
+      "name": "Idioms",
+      "count": 77,
+      "file": "idioms.json"
+    },
+    {
+      "name": "Intermediate Verbs",
+      "count": 118,
+      "file": "intermediate-verbs.json"
+    },
+    {
+      "name": "Politics Society",
+      "count": 30,
+      "file": "politics-society.json"
+    },
+    {
+      "name": "Redemittel",
+      "count": 32,
+      "file": "redemittel.json"
+    },
+    {
+      "name": "Reflexive Verbs",
+      "count": 71,
+      "file": "reflexive-verbs.json"
+    },
+    {
+      "name": "Separable Verbs",
+      "count": 32,
+      "file": "separable-verbs.json"
+    },
+    {
+      "name": "Verbs With Prepositions",
+      "count": 50,
+      "file": "verbs-with-prepositions.json"
+    }
+  ]
+}

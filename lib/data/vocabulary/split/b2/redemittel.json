@@ -1,0 +1,505 @@
+{
+  "level": "B2",
+  "category": "Redemittel",
+  "totalCards": 32,
+  "flashcards": [
+    {
+      "id": "remnote-905",
+      "german": "Ich schließe aus",
+      "english": "I exclude",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4190,
+        "hierarchy": [
+          "Redemittel",
+          "Ich schließe aus"
+        ]
+      }
+    },
+    {
+      "id": "remnote-910",
+      "german": "Dass kann sein, aber",
+      "english": "Maybe, but",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4196,
+        "hierarchy": [
+          "Redemittel",
+          "Dass kann sein, aber"
+        ]
+      }
+    },
+    {
+      "id": "remnote-911",
+      "german": "Einverstanden, aber",
+      "english": "Agreed but",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4197,
+        "hierarchy": [
+          "Redemittel",
+          "Einverstanden, aber"
+        ]
+      }
+    },
+    {
+      "id": "remnote-912",
+      "german": "Mann muss betonen, dass",
+      "english": "It must be stressed that",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4198,
+        "hierarchy": [
+          "Redemittel",
+          "Mann muss betonen, dass"
+        ]
+      }
+    },
+    {
+      "id": "remnote-914",
+      "german": "Ich überlege mir",
+      "english": "I consider",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4200,
+        "hierarchy": [
+          "Redemittel",
+          "Ich überlege mir"
+        ]
+      }
+    },
+    {
+      "id": "remnote-915",
+      "german": "eigentlich schon",
+      "english": "actually, it is",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4202,
+        "hierarchy": [
+          "Redemittel",
+          "eigentlich schon"
+        ]
+      }
+    },
+    {
+      "id": "remnote-916",
+      "german": "früher als erwartet",
+      "english": "ahead of time",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4203,
+        "hierarchy": [
+          "Redemittel",
+          "früher als erwartet"
+        ]
+      }
+    },
+    {
+      "id": "remnote-920",
+      "german": "was mich betrifft",
+      "english": "as far as I'm concerned",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4209,
+        "hierarchy": [
+          "Redemittel",
+          "was mich betrifft"
+        ]
+      }
+    },
+    {
+      "id": "remnote-921",
+      "german": "was mich anbetrifft",
+      "english": "as for me",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4210,
+        "hierarchy": [
+          "Redemittel",
+          "was mich anbetrifft"
+        ]
+      }
+    },
+    {
+      "id": "remnote-922",
+      "german": "auf den ersten Blick",
+      "english": "at first sight",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4211,
+        "hierarchy": [
+          "Redemittel",
+          "auf den ersten Blick"
+        ]
+      }
+    },
+    {
+      "id": "remnote-923",
+      "german": "Kommen Sie zur Sache!",
+      "english": "Come to the point!",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4212,
+        "hierarchy": [
+          "Redemittel",
+          "Kommen Sie zur Sache!"
+        ]
+      }
+    },
+    {
+      "id": "remnote-925",
+      "german": "Hören Sie nicht hin",
+      "english": "Don't pay any attention",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4214,
+        "hierarchy": [
+          "Redemittel",
+          "Hören Sie nicht hin"
+        ]
+      }
+    },
+    {
+      "id": "remnote-928",
+      "german": "Woher soll ich das wissen?",
+      "english": "How am I expected to know that?",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4218,
+        "hierarchy": [
+          "Redemittel",
+          "Woher soll ich das wissen?"
+        ]
+      }
+    },
+    {
+      "id": "remnote-929",
+      "german": "Wie können Sie es wagen?",
+      "english": "How dare you?",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4219,
+        "hierarchy": [
+          "Redemittel",
+          "Wie können Sie es wagen?"
+        ]
+      }
+    },
+    {
+      "id": "remnote-930",
+      "german": "Beeilen Sie sich!",
+      "english": "Hurry up!",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4220,
+        "hierarchy": [
+          "Redemittel",
+          "Beeilen Sie sich!"
+        ]
+      }
+    },
+    {
+      "id": "remnote-932",
+      "german": "Ich darf wohl sagen",
+      "english": "I dare say",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4222,
+        "hierarchy": [
+          "Redemittel",
+          "Ich darf wohl sagen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-934",
+      "german": "Ich habe nichts dagegen",
+      "english": "I don't mind",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4224,
+        "hierarchy": [
+          "Redemittel",
+          "Ich habe nichts dagegen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-936",
+      "german": "Darf ich mal vorbei?",
+      "english": "may I pass by?",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4227,
+        "hierarchy": [
+          "Redemittel",
+          "Darf ich mal vorbei?"
+        ]
+      }
+    },
+    {
+      "id": "remnote-937",
+      "german": "Ich schaue mich nur um",
+      "english": "I'm just looking around",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4228,
+        "hierarchy": [
+          "Redemittel",
+          "Ich schaue mich nur um"
+        ]
+      }
+    },
+    {
+      "id": "remnote-940",
+      "german": "Nur damit Ihr wisst",
+      "english": "Just so you know",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4232,
+        "hierarchy": [
+          "Redemittel",
+          "Nur damit Ihr wisst"
+        ]
+      }
+    },
+    {
+      "id": "remnote-941",
+      "german": "to a great extent",
+      "english": "in hohem Grad/Maße",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4233,
+        "hierarchy": [
+          "Redemittel",
+          "to a great extent"
+        ]
+      }
+    },
+    {
+      "id": "remnote-944",
+      "german": "Ich verstehe nur Bahnhof",
+      "english": "I don't get a thing",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4237,
+        "hierarchy": [
+          "Redemittel",
+          "Ich verstehe nur Bahnhof"
+        ]
+      }
+    },
+    {
+      "id": "remnote-946",
+      "german": "Ja, ich bin dabei",
+      "english": "Yes, I'm down!",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4239,
+        "hierarchy": [
+          "Redemittel",
+          "Ja, ich bin dabei"
+        ]
+      }
+    },
+    {
+      "id": "remnote-947",
+      "german": "Die Nase voll haben",
+      "english": "Tired of something",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4240,
+        "hierarchy": [
+          "Redemittel",
+          "Die Nase voll haben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-949",
+      "german": "Einen Augenblick, bitte!",
+      "english": "Can you wait a minute",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4244,
+        "hierarchy": [
+          "Redemittel",
+          "Einen Augenblick, bitte!"
+        ]
+      }
+    },
+    {
+      "id": "remnote-951",
+      "german": "Der Zug ist schon abgefahren",
+      "english": "you missed your chance",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4246,
+        "hierarchy": [
+          "Redemittel",
+          "Der Zug ist schon abgefahren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-957",
+      "german": "Bitte sag mir Bescheid",
+      "english": "Please let me know",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4253,
+        "hierarchy": [
+          "Redemittel",
+          "Bitte sag mir Bescheid"
+        ]
+      }
+    },
+    {
+      "id": "remnote-959",
+      "german": "in wenigen Augenblicken",
+      "english": "in a few moments",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4255,
+        "hierarchy": [
+          "Redemittel",
+          "in wenigen Augenblicken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-960",
+      "german": "Es macht mir Mut",
+      "english": "It makes me cringe",
+      "category": "Redemittel",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4256,
+        "hierarchy": [
+          "Redemittel",
+          "Es macht mir Mut"
+        ]
+      }
+    },
+    {
+      "id": "remnote-967",
+      "german": "Sie werden ihn entsprechend betören.",
+      "english": "You will bewitch him accordingly.",
+      "category": "Redemittel",
+      "level": "B2",
+      "tags": [
+        "Andere Präposition",
+        "Entsprechend / gemäß"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4540,
+        "hierarchy": [
+          "Gempowerment",
+          "Andere Präposition",
+          "Entsprechend / gemäß",
+          "Sie werden ihn entsprechend betören."
+        ]
+      }
+    },
+    {
+      "id": "remnote-968",
+      "german": "Ich will meinen Anweisungen **gemäß** anfangen.",
+      "english": "I want to start according to my instructions.",
+      "category": "Redemittel",
+      "level": "B2",
+      "tags": [
+        "Andere Präposition",
+        "Entsprechend / gemäß"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4541,
+        "hierarchy": [
+          "Gempowerment",
+          "Andere Präposition",
+          "Entsprechend / gemäß",
+          "Ich will meinen Anweisungen **gemäß** anfangen."
+        ]
+      }
+    },
+    {
+      "id": "remnote-969",
+      "german": "Sie musste wider Willen lächeln.",
+      "english": "She had to smile against her will.",
+      "category": "Redemittel",
+      "level": "B2",
+      "tags": [
+        "Andere Präposition",
+        "Wider"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4548,
+        "hierarchy": [
+          "Gempowerment",
+          "Andere Präposition",
+          "Wider",
+          "Sie musste wider Willen lächeln."
+        ]
+      }
+    }
+  ]
+}

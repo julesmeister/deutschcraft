@@ -1,0 +1,637 @@
+{
+  "level": "B1",
+  "category": "Reflexive Verbs",
+  "totalCards": 30,
+  "flashcards": [
+    {
+      "id": "reflexive-b1-001",
+      "german": "sich bewerben",
+      "english": "to apply (for a job)",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "professional",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich bewerben"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-002",
+      "german": "sich entscheiden",
+      "english": "to decide",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "decision-making",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich entscheiden"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-003",
+      "german": "sich informieren",
+      "english": "to inform oneself",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "information",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich informieren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-004",
+      "german": "sich irren",
+      "english": "to be wrong, to make a mistake",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "mental-activities",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich irren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-005",
+      "german": "sich verhalten",
+      "english": "to behave",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "behavior",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich verhalten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-006",
+      "german": "sich gewöhnen",
+      "english": "to get used to",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "adaptation",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich gewöhnen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-007",
+      "german": "sich bemühen",
+      "english": "to try hard, to make an effort",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "effort",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich bemühen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-008",
+      "german": "sich beschäftigen",
+      "english": "to occupy oneself with",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "activities",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich beschäftigen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-009",
+      "german": "sich einigen",
+      "english": "to agree",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "agreement",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich einigen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-010",
+      "german": "sich entwickeln",
+      "english": "to develop",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "development",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich entwickeln"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-011",
+      "german": "sich ereignen",
+      "english": "to happen, to occur",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "events",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich ereignen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-012",
+      "german": "sich verständigen",
+      "english": "to communicate, to make oneself understood",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "communication",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich verständigen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-013",
+      "german": "sich weigern",
+      "english": "to refuse",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "refusal",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich weigern"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-014",
+      "german": "sich wenden",
+      "english": "to turn to (someone)",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "help-seeking",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich wenden"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-015",
+      "german": "sich ändern",
+      "english": "to change",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "change",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich ändern"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-016",
+      "german": "sich nähern",
+      "english": "to approach",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "movement",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich nähern"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-017",
+      "german": "sich schämen",
+      "english": "to be ashamed",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "emotions",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich schämen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-018",
+      "german": "sich sehnen",
+      "english": "to long for",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "emotions",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich sehnen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-019",
+      "german": "sich sorgen",
+      "english": "to worry",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "emotions",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich sorgen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-020",
+      "german": "sich täuschen",
+      "english": "to be mistaken",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "mental-activities",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich täuschen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-021",
+      "german": "sich verletzen",
+      "english": "to injure oneself",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "health",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich verletzen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-022",
+      "german": "sich verstecken",
+      "english": "to hide",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "actions",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich verstecken"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-023",
+      "german": "sich verteidigen",
+      "english": "to defend oneself",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "defense",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich verteidigen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-024",
+      "german": "sich anmelden",
+      "english": "to register, to sign up",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "administrative",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich anmelden"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-025",
+      "german": "sich abmelden",
+      "english": "to unregister, to log out",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "administrative",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich abmelden"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-026",
+      "german": "sich benehmen",
+      "english": "to behave",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "behavior",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich benehmen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-027",
+      "german": "sich engagieren",
+      "english": "to be committed, to get involved",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "commitment",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich engagieren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-028",
+      "german": "sich erhöhen",
+      "english": "to increase",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "change",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich erhöhen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-029",
+      "german": "sich verringern",
+      "english": "to decrease",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "change",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich verringern"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-b1-030",
+      "german": "sich lohnen",
+      "english": "to be worthwhile",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "value",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich lohnen"
+        ]
+      }
+    }
+  ]
+}

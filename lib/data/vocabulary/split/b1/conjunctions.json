@@ -1,0 +1,447 @@
+{
+  "level": "B1",
+  "category": "Conjunctions",
+  "totalCards": 22,
+  "flashcards": [
+    {
+      "id": "syllabus-b1-10927",
+      "german": "obwohl",
+      "english": "although / even though",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "obwohl"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10928",
+      "german": "während",
+      "english": "while / during",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "während"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10929",
+      "german": "bevor",
+      "english": "before",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "bevor"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10930",
+      "german": "nachdem",
+      "english": "after",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "nachdem"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10931",
+      "german": "sobald",
+      "english": "as soon as",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "sobald"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10932",
+      "german": "solange",
+      "english": "as long as",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "solange"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10933",
+      "german": "falls",
+      "english": "in case / if",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "falls"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10934",
+      "german": "damit",
+      "english": "so that / in order to",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "damit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10935",
+      "german": "trotzdem",
+      "english": "nevertheless / anyway",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "trotzdem"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10936",
+      "german": "außerdem",
+      "english": "besides / moreover",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "außerdem"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10937",
+      "german": "entweder...oder",
+      "english": "either...or",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "entweder...oder"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10938",
+      "german": "weder...noch",
+      "english": "neither...nor",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "weder...noch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10939",
+      "german": "sowohl...als auch",
+      "english": "both...and",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "sowohl...als auch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10940",
+      "german": "je...desto",
+      "english": "the...the (comparative)",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "je...desto"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10941",
+      "german": "als",
+      "english": "when / as / than",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "als"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10942",
+      "german": "wenn",
+      "english": "if / when",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "wenn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10943",
+      "german": "da",
+      "english": "since / because",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "da"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10944",
+      "german": "denn",
+      "english": "because / for",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "denn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10945",
+      "german": "deshalb",
+      "english": "therefore / that's why",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "deshalb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10946",
+      "german": "deswegen",
+      "english": "for that reason",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "deswegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10947",
+      "german": "darum",
+      "english": "that's why / therefore",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "darum"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10948",
+      "german": "dennoch",
+      "english": "nevertheless / yet",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "dennoch"
+        ]
+      }
+    }
+  ]
+}

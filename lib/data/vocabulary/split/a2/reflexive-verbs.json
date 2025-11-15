@@ -1,0 +1,385 @@
+{
+  "level": "A2",
+  "category": "Reflexive Verbs",
+  "totalCards": 18,
+  "flashcards": [
+    {
+      "id": "reflexive-a2-001",
+      "german": "sich interessieren",
+      "english": "to be interested in",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "interests",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich interessieren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-002",
+      "german": "sich erinnern",
+      "english": "to remember",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "mental-activities",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich erinnern"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-003",
+      "german": "sich treffen",
+      "english": "to meet",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "social",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich treffen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-004",
+      "german": "sich verabreden",
+      "english": "to make an appointment/date",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "social",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich verabreden"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-005",
+      "german": "sich unterhalten",
+      "english": "to converse, to talk",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "communication",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich unterhalten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-006",
+      "german": "sich kümmern",
+      "english": "to take care of",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "activities",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich kümmern"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-007",
+      "german": "sich konzentrieren",
+      "english": "to concentrate",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "mental-activities",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich konzentrieren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-008",
+      "german": "sich vorbereiten",
+      "english": "to prepare",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "activities",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich vorbereiten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-009",
+      "german": "sich verlaufen",
+      "english": "to get lost",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "movement",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich verlaufen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-010",
+      "german": "sich verlieben",
+      "english": "to fall in love",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "emotions",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich verlieben"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-011",
+      "german": "sich streiten",
+      "english": "to argue, to quarrel",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "social",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich streiten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-012",
+      "german": "sich ausziehen",
+      "english": "to undress",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "daily-routines",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich ausziehen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-013",
+      "german": "sich erholen",
+      "english": "to recover, to relax",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "health",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich erholen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-014",
+      "german": "sich erkälten",
+      "english": "to catch a cold",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "health",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich erkälten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-015",
+      "german": "sich wundern",
+      "english": "to be surprised",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "emotions",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich wundern"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-016",
+      "german": "sich fürchten",
+      "english": "to be afraid",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "emotions",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich fürchten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-017",
+      "german": "sich langweilen",
+      "english": "to be bored",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "emotions",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich langweilen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a2-018",
+      "german": "sich setzen",
+      "english": "to sit down",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "movement",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich setzen"
+        ]
+      }
+    }
+  ]
+}

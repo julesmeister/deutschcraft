@@ -1,0 +1,1547 @@
+{
+  "level": "B2",
+  "category": "Idioms",
+  "totalCards": 77,
+  "flashcards": [
+    {
+      "id": "syllabus-b2-11311",
+      "german": "Daumen drücken",
+      "english": "to keep fingers crossed",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "Daumen drücken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11312",
+      "german": "ins Schwarze treffen",
+      "english": "to hit the bull's eye",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "ins Schwarze treffen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11313",
+      "german": "die Nase voll haben",
+      "english": "to be fed up",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "die Nase voll haben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11314",
+      "german": "auf der Leitung stehen",
+      "english": "to be slow on the uptake",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "auf der Leitung stehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11315",
+      "german": "jemandem auf den Geist gehen",
+      "english": "to get on someone's nerves",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem auf den Geist gehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11316",
+      "german": "Schwein haben",
+      "english": "to be lucky",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "Schwein haben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11317",
+      "german": "die Katze im Sack kaufen",
+      "english": "to buy a pig in a poke",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "die Katze im Sack kaufen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11318",
+      "german": "vom Regen in die Traufe kommen",
+      "english": "out of the frying pan into the fire",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "vom Regen in die Traufe kommen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11319",
+      "german": "das Ei des Kolumbus",
+      "english": "the obvious solution",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "das Ei des Kolumbus"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11320",
+      "german": "Tomaten auf den Augen haben",
+      "english": "to be oblivious / not see the obvious",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "Tomaten auf den Augen haben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11321",
+      "german": "jemandem die Daumen drücken",
+      "english": "to wish someone luck",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem die Daumen drücken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11322",
+      "german": "auf Wolke sieben schweben",
+      "english": "to be on cloud nine",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "auf Wolke sieben schweben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11323",
+      "german": "zwei Fliegen mit einer Klappe schlagen",
+      "english": "to kill two birds with one stone",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "zwei Fliegen mit einer Klappe schlagen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11324",
+      "german": "das A und O",
+      "english": "the be-all and end-all",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "das A und O"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11325",
+      "german": "um den heißen Brei herumreden",
+      "english": "to beat around the bush",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "um den heißen Brei herumreden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11326",
+      "german": "jemandem einen Bären aufbinden",
+      "english": "to pull someone's leg",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem einen Bären aufbinden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11327",
+      "german": "die Kirche im Dorf lassen",
+      "english": "not to get carried away",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "die Kirche im Dorf lassen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11328",
+      "german": "den Nagel auf den Kopf treffen",
+      "english": "to hit the nail on the head",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "den Nagel auf den Kopf treffen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11329",
+      "german": "sich ins Zeug legen",
+      "english": "to put one's back into it",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "sich ins Zeug legen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11330",
+      "german": "jemandem auf die Nerven gehen",
+      "english": "to get on someone's nerves",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem auf die Nerven gehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11331",
+      "german": "etwas im Griff haben",
+      "english": "to have something under control",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "etwas im Griff haben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11332",
+      "german": "aus allen Wolken fallen",
+      "english": "to be thunderstruck",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "aus allen Wolken fallen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11333",
+      "german": "jemandem die Leviten lesen",
+      "english": "to read someone the riot act",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem die Leviten lesen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11334",
+      "german": "unter einer Decke stecken",
+      "english": "to be in cahoots",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "unter einer Decke stecken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11335",
+      "german": "jemandem Sand in die Augen streuen",
+      "english": "to pull the wool over someone's eyes",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem Sand in die Augen streuen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11336",
+      "german": "das Kind mit dem Bade ausschütten",
+      "english": "to throw the baby out with the bathwater",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "das Kind mit dem Bade ausschütten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11337",
+      "german": "wie Feuer und Wasser sein",
+      "english": "to be like oil and water",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "wie Feuer und Wasser sein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11338",
+      "german": "den Teufel an die Wand malen",
+      "english": "to tempt fate",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "den Teufel an die Wand malen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11339",
+      "german": "mit allen Wassern gewaschen sein",
+      "english": "to be a shrewd operator",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "mit allen Wassern gewaschen sein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11340",
+      "german": "die Flinte ins Korn werfen",
+      "english": "to throw in the towel",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "die Flinte ins Korn werfen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11341",
+      "german": "den Kopf in den Sand stecken",
+      "english": "to bury one's head in the sand",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "den Kopf in den Sand stecken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11342",
+      "german": "ein Auge zudrücken",
+      "english": "to turn a blind eye",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "ein Auge zudrücken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11343",
+      "german": "auf großem Fuß leben",
+      "english": "to live the high life",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "auf großem Fuß leben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11344",
+      "german": "jemandem Honig um den Mund schmieren",
+      "english": "to butter someone up",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem Honig um den Mund schmieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11345",
+      "german": "über den Berg sein",
+      "english": "to be over the worst",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "über den Berg sein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11346",
+      "german": "sich aufs hohe Ross setzen",
+      "english": "to get on one's high horse",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "sich aufs hohe Ross setzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11347",
+      "german": "das Handtuch werfen",
+      "english": "to throw in the towel",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "das Handtuch werfen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11348",
+      "german": "jemandem Steine in den Weg legen",
+      "english": "to put obstacles in someone's way",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem Steine in den Weg legen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11349",
+      "german": "die Spreu vom Weizen trennen",
+      "english": "to separate the wheat from the chaff",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "die Spreu vom Weizen trennen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11350",
+      "german": "etwas auf die lange Bank schieben",
+      "english": "to put something off / postpone",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "etwas auf die lange Bank schieben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11351",
+      "german": "kein Blatt vor den Mund nehmen",
+      "english": "not to mince words",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "kein Blatt vor den Mund nehmen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11352",
+      "german": "das Ruder herumreißen",
+      "english": "to turn the tide",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "das Ruder herumreißen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11353",
+      "german": "auf Nummer sicher gehen",
+      "english": "to play it safe",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "auf Nummer sicher gehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11354",
+      "german": "jemandem die Augen öffnen",
+      "english": "to open someone's eyes",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem die Augen öffnen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11355",
+      "german": "mit offenen Karten spielen",
+      "english": "to put one's cards on the table",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "mit offenen Karten spielen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11356",
+      "german": "jemandem die Hölle heiß machen",
+      "english": "to give someone hell",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem die Hölle heiß machen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11357",
+      "german": "sein Fett wegbekommen",
+      "english": "to get what's coming to you",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "sein Fett wegbekommen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11358",
+      "german": "wie ein Phönix aus der Asche",
+      "english": "like a phoenix from the ashes",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "wie ein Phönix aus der Asche"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11359",
+      "german": "auf Granit beißen",
+      "english": "to bang one's head against a brick wall",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "auf Granit beißen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11360",
+      "german": "jemandem einen Strich durch die Rechnung machen",
+      "english": "to throw a wrench in someone's plans",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem einen Strich durch die Rechnung machen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11361",
+      "german": "alle Hände voll zu tun haben",
+      "english": "to have one's hands full",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "alle Hände voll zu tun haben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11362",
+      "german": "das Zünglein an der Waage sein",
+      "english": "to tip the scales",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "das Zünglein an der Waage sein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11363",
+      "german": "aus dem Nähkästchen plaudern",
+      "english": "to spill the beans",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "aus dem Nähkästchen plaudern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11364",
+      "german": "jemanden zur Schnecke machen",
+      "english": "to tear someone to shreds",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemanden zur Schnecke machen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11365",
+      "german": "Öl ins Feuer gießen",
+      "english": "to add fuel to the fire",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "Öl ins Feuer gießen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11366",
+      "german": "in den sauren Apfel beißen",
+      "english": "to bite the bullet",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "in den sauren Apfel beißen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11367",
+      "german": "den Bock zum Gärtner machen",
+      "english": "to put the fox in charge of the henhouse",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "den Bock zum Gärtner machen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11368",
+      "german": "ein Brett vor dem Kopf haben",
+      "english": "to be thick / not get it",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "ein Brett vor dem Kopf haben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11369",
+      "german": "mit dem Feuer spielen",
+      "english": "to play with fire",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "mit dem Feuer spielen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11370",
+      "german": "die Zeche zahlen",
+      "english": "to foot the bill",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "die Zeche zahlen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11371",
+      "german": "die Fäden in der Hand halten",
+      "english": "to pull the strings",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "die Fäden in der Hand halten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11372",
+      "german": "jemandem das Wasser abgraben",
+      "english": "to steal someone's thunder",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem das Wasser abgraben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11373",
+      "german": "in die Röhre gucken",
+      "english": "to come away empty-handed",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "in die Röhre gucken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11374",
+      "german": "jemandem auf der Tasche liegen",
+      "english": "to live off someone",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem auf der Tasche liegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11375",
+      "german": "die Kastanien aus dem Feuer holen",
+      "english": "to pull someone's chestnuts out of the fire",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "die Kastanien aus dem Feuer holen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11376",
+      "german": "in Teufels Küche kommen",
+      "english": "to get into hot water",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "in Teufels Küche kommen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11377",
+      "german": "jemandem die Schau stehlen",
+      "english": "to steal the show",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem die Schau stehlen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11378",
+      "german": "auf keinen grünen Zweig kommen",
+      "english": "to get nowhere",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "auf keinen grünen Zweig kommen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11379",
+      "german": "den Rahm abschöpfen",
+      "english": "to cream off the profits",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "den Rahm abschöpfen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11380",
+      "german": "sich die Finger verbrennen",
+      "english": "to burn one's fingers",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "sich die Finger verbrennen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11381",
+      "german": "mit der Tür ins Haus fallen",
+      "english": "to blurt something out",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "mit der Tür ins Haus fallen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11382",
+      "german": "jemandem die Butter vom Brot nehmen",
+      "english": "to take the bread out of someone's mouth",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem die Butter vom Brot nehmen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11383",
+      "german": "die Rechnung ohne den Wirt machen",
+      "english": "to count one's chickens before they hatch",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "die Rechnung ohne den Wirt machen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11384",
+      "german": "alles in einen Topf werfen",
+      "english": "to lump everything together",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "alles in einen Topf werfen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11385",
+      "german": "die Katze aus dem Sack lassen",
+      "english": "to let the cat out of the bag",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "die Katze aus dem Sack lassen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11386",
+      "german": "jemandem den Kopf waschen",
+      "english": "to give someone a piece of one's mind",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "jemandem den Kopf waschen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11387",
+      "german": "sein Schäfchen ins Trockene bringen",
+      "english": "to feather one's nest",
+      "category": "Idioms",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Idioms",
+          "sein Schäfchen ins Trockene bringen"
+        ]
+      }
+    }
+  ]
+}

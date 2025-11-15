@@ -1,0 +1,327 @@
+{
+  "level": "B1",
+  "category": "Adjective Pairs",
+  "totalCards": 16,
+  "flashcards": [
+    {
+      "id": "syllabus-b1-10844",
+      "german": "interessant",
+      "english": "interesting",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "interessant"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10845",
+      "german": "langweilig",
+      "english": "boring",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "langweilig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10846",
+      "german": "einfach",
+      "english": "easy / simple",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "einfach"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10847",
+      "german": "schwierig",
+      "english": "difficult",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "schwierig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10848",
+      "german": "laut",
+      "english": "loud",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "laut"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10849",
+      "german": "leise",
+      "english": "quiet",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "leise"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10850",
+      "german": "hell",
+      "english": "bright / light",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "hell"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10851",
+      "german": "dunkel",
+      "english": "dark",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "dunkel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10852",
+      "german": "nah",
+      "english": "near / close",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "nah"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10853",
+      "german": "weit",
+      "english": "far",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "weit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10854",
+      "german": "dick",
+      "english": "thick / fat",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "dick"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10855",
+      "german": "dünn",
+      "english": "thin",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "dünn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10856",
+      "german": "breit",
+      "english": "wide / broad",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "breit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10857",
+      "german": "eng",
+      "english": "narrow / tight",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "eng"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10858",
+      "german": "tief",
+      "english": "deep",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "tief"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10859",
+      "german": "flach",
+      "english": "flat / shallow",
+      "category": "Adjective Pairs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjective Pairs",
+          "flach"
+        ]
+      }
+    }
+  ]
+}

@@ -5,13 +5,13 @@
 
 import { useState, useEffect } from 'react';
 import { CEFRLevel } from '@/lib/models/cefr';
-import remnoteStats from '@/lib/data/remnote/stats.json';
-import a1Data from '@/lib/data/remnote/levels/a1.json';
-import a2Data from '@/lib/data/remnote/levels/a2.json';
-import b1Data from '@/lib/data/remnote/levels/b1.json';
-import b2Data from '@/lib/data/remnote/levels/b2.json';
-import c1Data from '@/lib/data/remnote/levels/c1.json';
-import c2Data from '@/lib/data/remnote/levels/c2.json';
+import remnoteStats from '@/lib/data/vocabulary/stats.json';
+import a1Data from '@/lib/data/vocabulary/levels/a1.json';
+import a2Data from '@/lib/data/vocabulary/levels/a2.json';
+import b1Data from '@/lib/data/vocabulary/levels/b1.json';
+import b2Data from '@/lib/data/vocabulary/levels/b2.json';
+import c1Data from '@/lib/data/vocabulary/levels/c1.json';
+import c2Data from '@/lib/data/vocabulary/levels/c2.json';
 
 export interface RemNoteCategory {
   id: string;

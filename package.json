@@ -13,7 +13,15 @@
     "create:teacher": "tsx scripts/create-teacher.ts",
     "db:migrate": "tsx turso/migrate.ts",
     "db:shell": "turso db shell testmanship-web-v2",
-    "db:status": "turso db show testmanship-web-v2"
+    "db:status": "turso db show testmanship-web-v2",
+    "flashcards:split": "tsx scripts/split-flashcards.ts",
+    "flashcards:merge": "tsx scripts/merge-flashcards.ts",
+    "vocab:compare": "tsx scripts/compare-loose-vs-split.ts",
+    "vocab:merge-orphans": "tsx scripts/merge-orphaned-files.ts --execute",
+    "vocab:merge-orphans:dry-run": "tsx scripts/merge-orphaned-files.ts",
+    "vocab:audit": "tsx scripts/audit-vocabulary-structure.ts",
+    "vocab:migrate": "tsx scripts/cleanup-and-migrate-vocabulary.ts",
+    "vocab:migrate:dry-run": "tsx scripts/cleanup-and-migrate-vocabulary.ts --dry-run"
   },
   "dependencies": {
     "@libsql/client": "^0.15.15",

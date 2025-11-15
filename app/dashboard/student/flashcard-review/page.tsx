@@ -14,12 +14,12 @@ import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
 
 // Import level data
-import a1Data from '@/lib/data/remnote/levels/a1.json';
-import a2Data from '@/lib/data/remnote/levels/a2.json';
-import b1Data from '@/lib/data/remnote/levels/b1.json';
-import b2Data from '@/lib/data/remnote/levels/b2.json';
-import c1Data from '@/lib/data/remnote/levels/c1.json';
-import c2Data from '@/lib/data/remnote/levels/c2.json';
+import a1Data from '@/lib/data/vocabulary/levels/a1.json';
+import a2Data from '@/lib/data/vocabulary/levels/a2.json';
+import b1Data from '@/lib/data/vocabulary/levels/b1.json';
+import b2Data from '@/lib/data/vocabulary/levels/b2.json';
+import c1Data from '@/lib/data/vocabulary/levels/c1.json';
+import c2Data from '@/lib/data/vocabulary/levels/c2.json';
 
 const levelData: Record<CEFRLevel, any> = {
   [CEFRLevel.A1]: a1Data,

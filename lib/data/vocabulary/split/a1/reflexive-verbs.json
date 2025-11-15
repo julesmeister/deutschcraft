@@ -1,0 +1,175 @@
+{
+  "level": "A1",
+  "category": "Reflexive Verbs",
+  "totalCards": 8,
+  "flashcards": [
+    {
+      "id": "reflexive-a1-001",
+      "german": "sich freuen",
+      "english": "to be happy, to look forward to",
+      "category": "Reflexive Verbs",
+      "level": "A1",
+      "tags": [
+        "reflexive",
+        "emotions",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Reflexive Verbs",
+          "sich freuen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a1-002",
+      "german": "sich ärgern",
+      "english": "to be annoyed",
+      "category": "Reflexive Verbs",
+      "level": "A1",
+      "tags": [
+        "reflexive",
+        "emotions",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Reflexive Verbs",
+          "sich ärgern"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a1-003",
+      "german": "sich fühlen",
+      "english": "to feel",
+      "category": "Reflexive Verbs",
+      "level": "A1",
+      "tags": [
+        "reflexive",
+        "emotions",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Reflexive Verbs",
+          "sich fühlen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a1-004",
+      "german": "sich vorstellen",
+      "english": "to introduce oneself",
+      "category": "Reflexive Verbs",
+      "level": "A1",
+      "tags": [
+        "reflexive",
+        "communication",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Reflexive Verbs",
+          "sich vorstellen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a1-005",
+      "german": "sich beeilen",
+      "english": "to hurry",
+      "category": "Reflexive Verbs",
+      "level": "A1",
+      "tags": [
+        "reflexive",
+        "daily-routines",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Reflexive Verbs",
+          "sich beeilen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a1-006",
+      "german": "sich ausruhen",
+      "english": "to rest",
+      "category": "Reflexive Verbs",
+      "level": "A1",
+      "tags": [
+        "reflexive",
+        "daily-routines",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Reflexive Verbs",
+          "sich ausruhen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a1-007",
+      "german": "sich umziehen",
+      "english": "to change clothes",
+      "category": "Reflexive Verbs",
+      "level": "A1",
+      "tags": [
+        "reflexive",
+        "daily-routines",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Reflexive Verbs",
+          "sich umziehen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-a1-008",
+      "german": "sich duschen",
+      "english": "to shower",
+      "category": "Reflexive Verbs",
+      "level": "A1",
+      "tags": [
+        "reflexive",
+        "daily-routines",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Reflexive Verbs",
+          "sich duschen"
+        ]
+      }
+    }
+  ]
+}

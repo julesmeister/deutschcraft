@@ -1,0 +1,247 @@
+{
+  "level": "C2",
+  "category": "Philosophical Concepts",
+  "totalCards": 12,
+  "flashcards": [
+    {
+      "id": "syllabus-c2-11621",
+      "german": "Erkenntnis",
+      "english": "knowledge / cognition / insight",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Erkenntnis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11622",
+      "german": "Wahrheit",
+      "english": "truth",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Wahrheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11623",
+      "german": "Vernunft",
+      "english": "reason / rationality",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Vernunft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11624",
+      "german": "Dasein",
+      "english": "existence / being",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Dasein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11625",
+      "german": "Wesen",
+      "english": "essence / nature / being",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Wesen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11626",
+      "german": "Bewusstsein",
+      "english": "consciousness / awareness",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Bewusstsein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11627",
+      "german": "Freiheit",
+      "english": "freedom / liberty",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Freiheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11628",
+      "german": "Notwendigkeit",
+      "english": "necessity",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Notwendigkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11629",
+      "german": "Wirklichkeit",
+      "english": "reality / actuality",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Wirklichkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11630",
+      "german": "Erscheinung",
+      "english": "appearance / phenomenon",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Erscheinung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11631",
+      "german": "Bestimmung",
+      "english": "determination / destiny / purpose",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Bestimmung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11632",
+      "german": "Vergänglichkeit",
+      "english": "transience / impermanence",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Vergänglichkeit"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,337 @@
+{
+  "level": "C1",
+  "category": "Body Parts",
+  "totalCards": 15,
+  "flashcards": [
+    {
+      "id": "body-c1-001",
+      "german": "die Nebenniere",
+      "english": "adrenal gland",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "endocrine-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "die Nebenniere"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-002",
+      "german": "die Hirnanhangdrüse",
+      "english": "pituitary gland",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "endocrine-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "die Hirnanhangdrüse"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-003",
+      "german": "der Hypothalamus",
+      "english": "hypothalamus",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "nervous-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "der Hypothalamus"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-004",
+      "german": "das Kleinhirn",
+      "english": "cerebellum",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "nervous-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "das Kleinhirn"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-005",
+      "german": "der Hirnstamm",
+      "english": "brain stem",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "nervous-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "der Hirnstamm"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-006",
+      "german": "die Großhirnrinde",
+      "english": "cerebral cortex",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "nervous-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "die Großhirnrinde"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-007",
+      "german": "der Kehlkopf",
+      "english": "larynx / voice box",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "respiratory-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "der Kehlkopf"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-008",
+      "german": "die Bronchie",
+      "english": "bronchus",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "respiratory-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "die Bronchie"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-009",
+      "german": "das Lungenbläschen",
+      "english": "alveolus",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "respiratory-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "das Lungenbläschen"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-010",
+      "german": "der Zwölffingerdarm",
+      "english": "duodenum",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "digestive-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "der Zwölffingerdarm"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-011",
+      "german": "der Blinddarm",
+      "english": "appendix",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "digestive-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "der Blinddarm"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-012",
+      "german": "die Harnröhre",
+      "english": "urethra",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "urinary-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "die Harnröhre"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-013",
+      "german": "der Harnleiter",
+      "english": "ureter",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "urinary-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "der Harnleiter"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-014",
+      "german": "die Schlagader",
+      "english": "aorta",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "cardiovascular-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "die Schlagader"
+        ]
+      }
+    },
+    {
+      "id": "body-c1-015",
+      "german": "die Herzklappen",
+      "english": "heart valves",
+      "category": "Body Parts",
+      "level": "C1",
+      "tags": [
+        "body",
+        "specialized",
+        "cardiovascular-system",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Body Parts",
+          "die Herzklappen"
+        ]
+      }
+    }
+  ]
+}

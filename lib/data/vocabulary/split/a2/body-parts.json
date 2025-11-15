@@ -1,0 +1,322 @@
+{
+  "level": "A2",
+  "category": "Body Parts",
+  "totalCards": 15,
+  "flashcards": [
+    {
+      "id": "body-a2-001",
+      "german": "die Brust",
+      "english": "chest / breast",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "body",
+        "extended",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "die Brust"
+        ]
+      }
+    },
+    {
+      "id": "body-a2-002",
+      "german": "der Ellbogen",
+      "english": "elbow",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "body",
+        "extended",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "der Ellbogen"
+        ]
+      }
+    },
+    {
+      "id": "body-a2-003",
+      "german": "das Handgelenk",
+      "english": "wrist",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "body",
+        "extended",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "das Handgelenk"
+        ]
+      }
+    },
+    {
+      "id": "body-a2-004",
+      "german": "der Daumen",
+      "english": "thumb",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "body",
+        "extended",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "der Daumen"
+        ]
+      }
+    },
+    {
+      "id": "body-a2-005",
+      "german": "der Knöchel",
+      "english": "ankle",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "body",
+        "extended",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "der Knöchel"
+        ]
+      }
+    },
+    {
+      "id": "body-a2-006",
+      "german": "die Haut",
+      "english": "skin",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "body",
+        "extended",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "die Haut"
+        ]
+      }
+    },
+    {
+      "id": "body-a2-007",
+      "german": "der Knochen",
+      "english": "bone",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "body",
+        "extended",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "der Knochen"
+        ]
+      }
+    },
+    {
+      "id": "body-a2-008",
+      "german": "das Blut",
+      "english": "blood",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "body",
+        "extended",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "das Blut"
+        ]
+      }
+    },
+    {
+      "id": "body-a2-009",
+      "german": "die Zunge",
+      "english": "tongue",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "body",
+        "extended",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "die Zunge"
+        ]
+      }
+    },
+    {
+      "id": "body-a2-010",
+      "german": "die Lippe",
+      "english": "lip",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "body",
+        "extended",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "die Lippe"
+        ]
+      }
+    },
+    {
+      "id": "body-a2-011",
+      "german": "die Stirn",
+      "english": "forehead",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "body",
+        "extended",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "die Stirn"
+        ]
+      }
+    },
+    {
+      "id": "body-a2-012",
+      "german": "die Wange",
+      "english": "cheek",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "body",
+        "extended",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "die Wange"
+        ]
+      }
+    },
+    {
+      "id": "body-a2-013",
+      "german": "das Kinn",
+      "english": "chin",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "body",
+        "extended",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "das Kinn"
+        ]
+      }
+    },
+    {
+      "id": "body-a2-014",
+      "german": "die Augenbraue",
+      "english": "eyebrow",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "body",
+        "extended",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "die Augenbraue"
+        ]
+      }
+    },
+    {
+      "id": "body-a2-015",
+      "german": "die Wimper",
+      "english": "eyelash",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "body",
+        "extended",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "die Wimper"
+        ]
+      }
+    }
+  ]
+}

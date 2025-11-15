@@ -1,0 +1,607 @@
+{
+  "level": "A1",
+  "category": "Irregular Verbs",
+  "totalCards": 30,
+  "flashcards": [
+    {
+      "id": "syllabus-a1-10202",
+      "german": "sein",
+      "english": "to be",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "sein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10203",
+      "german": "haben",
+      "english": "to have",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "haben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10204",
+      "german": "werden",
+      "english": "to become",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "werden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10205",
+      "german": "gehen",
+      "english": "to go",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "gehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10206",
+      "german": "kommen",
+      "english": "to come",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "kommen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10207",
+      "german": "sehen",
+      "english": "to see",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "sehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10208",
+      "german": "essen",
+      "english": "to eat",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "essen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10209",
+      "german": "trinken",
+      "english": "to drink",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "trinken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10210",
+      "german": "schlafen",
+      "english": "to sleep",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "schlafen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10211",
+      "german": "geben",
+      "english": "to give",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "geben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10212",
+      "german": "nehmen",
+      "english": "to take",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "nehmen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10213",
+      "german": "lesen",
+      "english": "to read",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "lesen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10214",
+      "german": "sprechen",
+      "english": "to speak",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "sprechen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10215",
+      "german": "fahren",
+      "english": "to drive / to go (by vehicle)",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "fahren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10216",
+      "german": "laufen",
+      "english": "to run / to walk",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "laufen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10217",
+      "german": "schreiben",
+      "english": "to write",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "schreiben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10218",
+      "german": "finden",
+      "english": "to find",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "finden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10219",
+      "german": "tragen",
+      "english": "to wear / to carry",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "tragen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10220",
+      "german": "waschen",
+      "english": "to wash",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "waschen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10221",
+      "german": "helfen",
+      "english": "to help",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "helfen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10222",
+      "german": "bleiben",
+      "english": "to stay / to remain",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "bleiben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10223",
+      "german": "stehen",
+      "english": "to stand",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "stehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10224",
+      "german": "liegen",
+      "english": "to lie / to be located",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "liegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10225",
+      "german": "sitzen",
+      "english": "to sit",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "sitzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10226",
+      "german": "fallen",
+      "english": "to fall",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "fallen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10227",
+      "german": "halten",
+      "english": "to hold / to stop",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "halten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10228",
+      "german": "rufen",
+      "english": "to call / to shout",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "rufen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10229",
+      "german": "treffen",
+      "english": "to meet",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "treffen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10230",
+      "german": "vergessen",
+      "english": "to forget",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "vergessen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10231",
+      "german": "verlieren",
+      "english": "to lose",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Irregular Verbs",
+          "verlieren"
+        ]
+      }
+    }
+  ]
+}

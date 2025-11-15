@@ -1,0 +1,347 @@
+{
+  "level": "A2",
+  "category": "Hobbies",
+  "totalCards": 17,
+  "flashcards": [
+    {
+      "id": "syllabus-a2-10548",
+      "german": "Sport",
+      "english": "sport",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "Sport"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10549",
+      "german": "Musik",
+      "english": "music",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "Musik"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10550",
+      "german": "lesen",
+      "english": "to read",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "lesen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10551",
+      "german": "schwimmen",
+      "english": "to swim",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "schwimmen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10552",
+      "german": "spielen",
+      "english": "to play",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "spielen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10553",
+      "german": "tanzen",
+      "english": "to dance",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "tanzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10554",
+      "german": "singen",
+      "english": "to sing",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "singen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10555",
+      "german": "malen",
+      "english": "to paint",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "malen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10556",
+      "german": "zeichnen",
+      "english": "to draw",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "zeichnen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10557",
+      "german": "fotografieren",
+      "english": "to photograph",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "fotografieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10558",
+      "german": "Fußball",
+      "english": "soccer / football",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "Fußball"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10559",
+      "german": "Gitarre",
+      "english": "guitar",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "Gitarre"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10560",
+      "german": "Klavier",
+      "english": "piano",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "Klavier"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10561",
+      "german": "kochen",
+      "english": "to cook",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "kochen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10562",
+      "german": "backen",
+      "english": "to bake",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "backen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10563",
+      "german": "wandern",
+      "english": "to hike",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "wandern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10564",
+      "german": "reisen",
+      "english": "to travel",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "reisen"
+        ]
+      }
+    }
+  ]
+}

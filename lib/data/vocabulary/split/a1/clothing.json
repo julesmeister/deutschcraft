@@ -1,0 +1,307 @@
+{
+  "level": "A1",
+  "category": "Clothing",
+  "totalCards": 15,
+  "flashcards": [
+    {
+      "id": "syllabus-a1-10056",
+      "german": "Hose",
+      "english": "pants",
+      "category": "Clothing",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Clothing",
+          "Hose"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10057",
+      "german": "Hemd",
+      "english": "shirt",
+      "category": "Clothing",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Clothing",
+          "Hemd"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10058",
+      "german": "Kleid",
+      "english": "dress",
+      "category": "Clothing",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Clothing",
+          "Kleid"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10059",
+      "german": "Schuhe",
+      "english": "shoes",
+      "category": "Clothing",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Clothing",
+          "Schuhe"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10060",
+      "german": "Jacke",
+      "english": "jacket",
+      "category": "Clothing",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Clothing",
+          "Jacke"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10061",
+      "german": "Rock",
+      "english": "skirt",
+      "category": "Clothing",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Clothing",
+          "Rock"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10062",
+      "german": "Pullover",
+      "english": "sweater / pullover",
+      "category": "Clothing",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Clothing",
+          "Pullover"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10063",
+      "german": "T-Shirt",
+      "english": "t-shirt",
+      "category": "Clothing",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Clothing",
+          "T-Shirt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10064",
+      "german": "Mantel",
+      "english": "coat",
+      "category": "Clothing",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Clothing",
+          "Mantel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10065",
+      "german": "Mütze",
+      "english": "cap / hat",
+      "category": "Clothing",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Clothing",
+          "Mütze"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10066",
+      "german": "Schal",
+      "english": "scarf",
+      "category": "Clothing",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Clothing",
+          "Schal"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10067",
+      "german": "Handschuhe",
+      "english": "gloves",
+      "category": "Clothing",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Clothing",
+          "Handschuhe"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10068",
+      "german": "Socken",
+      "english": "socks",
+      "category": "Clothing",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Clothing",
+          "Socken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10069",
+      "german": "Hut",
+      "english": "hat",
+      "category": "Clothing",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Clothing",
+          "Hut"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10070",
+      "german": "Gürtel",
+      "english": "belt",
+      "category": "Clothing",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Clothing",
+          "Gürtel"
+        ]
+      }
+    }
+  ]
+}

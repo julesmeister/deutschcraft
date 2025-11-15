@@ -1,0 +1,307 @@
+{
+  "level": "A1",
+  "category": "Pronouns",
+  "totalCards": 15,
+  "flashcards": [
+    {
+      "id": "syllabus-a1-10268",
+      "german": "ich",
+      "english": "I",
+      "category": "Pronouns",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Pronouns",
+          "ich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10269",
+      "german": "du",
+      "english": "you (informal)",
+      "category": "Pronouns",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Pronouns",
+          "du"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10270",
+      "german": "er",
+      "english": "he",
+      "category": "Pronouns",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Pronouns",
+          "er"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10271",
+      "german": "sie",
+      "english": "she / they",
+      "category": "Pronouns",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Pronouns",
+          "sie"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10272",
+      "german": "es",
+      "english": "it",
+      "category": "Pronouns",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Pronouns",
+          "es"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10273",
+      "german": "wir",
+      "english": "we",
+      "category": "Pronouns",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Pronouns",
+          "wir"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10274",
+      "german": "ihr",
+      "english": "you (plural informal)",
+      "category": "Pronouns",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Pronouns",
+          "ihr"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10275",
+      "german": "Sie",
+      "english": "you (formal)",
+      "category": "Pronouns",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Pronouns",
+          "Sie"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10276",
+      "german": "mein",
+      "english": "my",
+      "category": "Pronouns",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Pronouns",
+          "mein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10277",
+      "german": "dein",
+      "english": "your (informal)",
+      "category": "Pronouns",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Pronouns",
+          "dein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10278",
+      "german": "sein",
+      "english": "his / its",
+      "category": "Pronouns",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Pronouns",
+          "sein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10279",
+      "german": "ihr",
+      "english": "her / their",
+      "category": "Pronouns",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Pronouns",
+          "ihr"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10280",
+      "german": "unser",
+      "english": "our",
+      "category": "Pronouns",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Pronouns",
+          "unser"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10281",
+      "german": "euer",
+      "english": "your (plural informal)",
+      "category": "Pronouns",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Pronouns",
+          "euer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10282",
+      "german": "Ihr",
+      "english": "your (formal)",
+      "category": "Pronouns",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Pronouns",
+          "Ihr"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "level": "A2",
+  "category": "Technology",
+  "totalCards": 16,
+  "flashcards": [
+    {
+      "id": "syllabus-a2-10776",
+      "german": "Computer",
+      "english": "computer",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Computer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10777",
+      "german": "Handy",
+      "english": "mobile phone",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Handy"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10778",
+      "german": "Internet",
+      "english": "internet",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Internet"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10779",
+      "german": "E-Mail",
+      "english": "email",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "E-Mail"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10780",
+      "german": "Laptop",
+      "english": "laptop",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Laptop"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10781",
+      "german": "Tablet",
+      "english": "tablet",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Tablet"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10782",
+      "german": "Tastatur",
+      "english": "keyboard",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Tastatur"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10783",
+      "german": "Maus",
+      "english": "mouse",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Maus"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10784",
+      "german": "Bildschirm",
+      "english": "screen / monitor",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Bildschirm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10785",
+      "german": "Website",
+      "english": "website",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Website"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10786",
+      "german": "App",
+      "english": "app",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "App"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10787",
+      "german": "Passwort",
+      "english": "password",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Passwort"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10788",
+      "german": "Drucker",
+      "english": "printer",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Drucker"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10789",
+      "german": "Datei",
+      "english": "file",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Datei"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10790",
+      "german": "speichern",
+      "english": "to save",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "speichern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10791",
+      "german": "herunterladen",
+      "english": "to download",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "herunterladen"
+        ]
+      }
+    }
+  ]
+}

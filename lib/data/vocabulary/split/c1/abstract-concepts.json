@@ -1,0 +1,207 @@
+{
+  "level": "C1",
+  "category": "Abstract Concepts",
+  "totalCards": 10,
+  "flashcards": [
+    {
+      "id": "syllabus-c1-11548",
+      "german": "Nachhaltigkeit",
+      "english": "sustainability",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Nachhaltigkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11549",
+      "german": "Bewusstsein",
+      "english": "consciousness / awareness",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Bewusstsein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11550",
+      "german": "Herausforderung",
+      "english": "challenge",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Herausforderung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11551",
+      "german": "Verantwortung",
+      "english": "responsibility",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Verantwortung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11552",
+      "german": "Eigenverantwortung",
+      "english": "personal responsibility",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Eigenverantwortung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11553",
+      "german": "Auseinandersetzung",
+      "english": "confrontation / debate",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Auseinandersetzung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11554",
+      "german": "Gegebenheit",
+      "english": "circumstance / condition",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Gegebenheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11555",
+      "german": "Veränderung",
+      "english": "change / transformation",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Veränderung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11556",
+      "german": "Entwicklung",
+      "english": "development / evolution",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Entwicklung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c1-11557",
+      "german": "Zusammenhang",
+      "english": "connection / context",
+      "category": "Abstract Concepts",
+      "level": "C1",
+      "tags": [
+        "syllabus",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Syllabus C1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Abstract Concepts",
+          "Zusammenhang"
+        ]
+      }
+    }
+  ]
+}

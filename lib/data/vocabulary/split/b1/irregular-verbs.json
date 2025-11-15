@@ -1,0 +1,622 @@
+{
+  "level": "B1",
+  "category": "Irregular Verbs",
+  "totalCards": 31,
+  "flashcards": [
+    {
+      "id": "syllabus-b1-10994",
+      "german": "backen",
+      "english": "to bake (bäckt, backte/buk, gebacken)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "backen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10995",
+      "german": "befehlen",
+      "english": "to command (befiehlt, befahl, befohlen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "befehlen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10996",
+      "german": "beginnen",
+      "english": "to begin (beginnt, begann, begonnen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "beginnen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10997",
+      "german": "beißen",
+      "english": "to bite (beißt, biss, gebissen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "beißen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10998",
+      "german": "betrügen",
+      "english": "to deceive (betrügt, betrog, betrogen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "betrügen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10999",
+      "german": "biegen",
+      "english": "to bend (biegt, bog, gebogen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "biegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11000",
+      "german": "bieten",
+      "english": "to offer (bietet, bot, geboten)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "bieten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11001",
+      "german": "binden",
+      "english": "to bind (bindet, band, gebunden)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "binden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11002",
+      "german": "bitten",
+      "english": "to ask/request (bittet, bat, gebeten)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "bitten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11003",
+      "german": "braten",
+      "english": "to roast/fry (brät, briet, gebraten)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "braten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11004",
+      "german": "empfehlen",
+      "english": "to recommend (empfiehlt, empfahl, empfohlen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "empfehlen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11005",
+      "german": "erschrecken",
+      "english": "to frighten (erschrickt, erschrak, erschrocken)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "erschrecken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11006",
+      "german": "frieren",
+      "english": "to freeze (friert, fror, gefroren)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "frieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11007",
+      "german": "gießen",
+      "english": "to pour (gießt, goss, gegossen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "gießen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11008",
+      "german": "greifen",
+      "english": "to grasp (greift, griff, gegriffen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "greifen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11009",
+      "german": "heben",
+      "english": "to lift (hebt, hob, gehoben)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "heben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11010",
+      "german": "laden",
+      "english": "to load (lädt, lud, geladen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "laden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11011",
+      "german": "leiden",
+      "english": "to suffer (leidet, litt, gelitten)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "leiden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11012",
+      "german": "lügen",
+      "english": "to lie/tell lies (lügt, log, gelogen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "lügen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11013",
+      "german": "meiden",
+      "english": "to avoid (meidet, mied, gemieden)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "meiden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11014",
+      "german": "pfeifen",
+      "english": "to whistle (pfeift, pfiff, gepfiffen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "pfeifen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11015",
+      "german": "reiben",
+      "english": "to rub (reibt, rieb, gerieben)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "reiben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11016",
+      "german": "reißen",
+      "english": "to tear (reißt, riss, gerissen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "reißen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11017",
+      "german": "riechen",
+      "english": "to smell (riecht, roch, gerochen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "riechen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11018",
+      "german": "ringen",
+      "english": "to wrestle (ringt, rang, gerungen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "ringen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11019",
+      "german": "schließen",
+      "english": "to close (schließt, schloss, geschlossen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "schließen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11020",
+      "german": "schmelzen",
+      "english": "to melt (schmilzt, schmolz, geschmolzen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "schmelzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11021",
+      "german": "schneiden",
+      "english": "to cut (schneidet, schnitt, geschnitten)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "schneiden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11022",
+      "german": "schweigen",
+      "english": "to be silent (schweigt, schwieg, geschwiegen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "schweigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11023",
+      "german": "schwören",
+      "english": "to swear/vow (schwört, schwor, geschworen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "schwören"
+        ]
+      }
+    },
+    {
+      "id": "remnote-777",
+      "german": "tragen",
+      "english": "to carry / to wear",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3566,
+        "hierarchy": [
+          "Verbs",
+          "tragen"
+        ]
+      }
+    }
+  ]
+}

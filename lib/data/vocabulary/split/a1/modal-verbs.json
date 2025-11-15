@@ -1,0 +1,127 @@
+{
+  "level": "A1",
+  "category": "Modal Verbs",
+  "totalCards": 6,
+  "flashcards": [
+    {
+      "id": "syllabus-a1-10232",
+      "german": "können",
+      "english": "can / to be able to",
+      "category": "Modal Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Modal Verbs",
+          "können"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10233",
+      "german": "müssen",
+      "english": "must / to have to",
+      "category": "Modal Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Modal Verbs",
+          "müssen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10234",
+      "german": "wollen",
+      "english": "to want",
+      "category": "Modal Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Modal Verbs",
+          "wollen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10235",
+      "german": "mögen",
+      "english": "to like",
+      "category": "Modal Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Modal Verbs",
+          "mögen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10236",
+      "german": "dürfen",
+      "english": "may / to be allowed to",
+      "category": "Modal Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Modal Verbs",
+          "dürfen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10237",
+      "german": "sollen",
+      "english": "should / ought to",
+      "category": "Modal Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Modal Verbs",
+          "sollen"
+        ]
+      }
+    }
+  ]
+}

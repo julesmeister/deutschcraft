@@ -1,0 +1,538 @@
+{
+  "level": "B1",
+  "category": "Redemittel",
+  "totalCards": 33,
+  "flashcards": [
+    {
+      "id": "remnote-903",
+      "german": "Ich vermute",
+      "english": "I assume",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4188,
+        "hierarchy": [
+          "Redemittel",
+          "Ich vermute"
+        ]
+      }
+    },
+    {
+      "id": "remnote-904",
+      "german": "Ich bezweifle",
+      "english": "I doubt",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4189,
+        "hierarchy": [
+          "Redemittel",
+          "Ich bezweifle"
+        ]
+      }
+    },
+    {
+      "id": "remnote-906",
+      "german": "Ich behaupte",
+      "english": "I claim",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4191,
+        "hierarchy": [
+          "Redemittel",
+          "Ich behaupte"
+        ]
+      }
+    },
+    {
+      "id": "remnote-907",
+      "german": "Ich gebe zu",
+      "english": "I admit",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4193,
+        "hierarchy": [
+          "Redemittel",
+          "Ich gebe zu"
+        ]
+      }
+    },
+    {
+      "id": "remnote-908",
+      "german": "Ich stimme zu",
+      "english": "I agree",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4194,
+        "hierarchy": [
+          "Redemittel",
+          "Ich stimme zu"
+        ]
+      }
+    },
+    {
+      "id": "remnote-909",
+      "german": "Na schön, aber",
+      "english": "Fine, but",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4195,
+        "hierarchy": [
+          "Redemittel",
+          "Na schön, aber"
+        ]
+      }
+    },
+    {
+      "id": "remnote-913",
+      "german": "Zu guter Letzt",
+      "english": "On top of that",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4199,
+        "hierarchy": [
+          "Redemittel",
+          "Zu guter Letzt"
+        ]
+      }
+    },
+    {
+      "id": "remnote-917",
+      "german": "um so mehr",
+      "english": "all the more",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4204,
+        "hierarchy": [
+          "Redemittel",
+          "um so mehr"
+        ]
+      }
+    },
+    {
+      "id": "remnote-919",
+      "german": "abgesehen davon",
+      "english": "apart from that / except for",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4206,
+        "hierarchy": [
+          "Redemittel",
+          "abgesehen davon"
+        ]
+      }
+    },
+    {
+      "id": "remnote-924",
+      "german": "Macht nichts",
+      "english": "Doesn't matter",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4213,
+        "hierarchy": [
+          "Redemittel",
+          "Macht nichts"
+        ]
+      }
+    },
+    {
+      "id": "remnote-926",
+      "german": "für immer",
+      "english": "for good",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4216,
+        "hierarchy": [
+          "Redemittel",
+          "für immer"
+        ]
+      }
+    },
+    {
+      "id": "remnote-927",
+      "german": "Wie Sie wollen!",
+      "english": "Have it your own way!",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4217,
+        "hierarchy": [
+          "Redemittel",
+          "Wie Sie wollen!"
+        ]
+      }
+    },
+    {
+      "id": "remnote-935",
+      "german": "Ich gebe auf",
+      "english": "I give up",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4225,
+        "hierarchy": [
+          "Redemittel",
+          "Ich gebe auf"
+        ]
+      }
+    },
+    {
+      "id": "remnote-938",
+      "german": "Ich bin am Ende",
+      "english": "I am finished",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4229,
+        "hierarchy": [
+          "Redemittel",
+          "Ich bin am Ende"
+        ]
+      }
+    },
+    {
+      "id": "remnote-942",
+      "german": "to my knowledge",
+      "english": "meines Wissens",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4234,
+        "hierarchy": [
+          "Redemittel",
+          "to my knowledge"
+        ]
+      }
+    },
+    {
+      "id": "remnote-943",
+      "german": "to my delight",
+      "english": "zu meiner Freude",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4236,
+        "hierarchy": [
+          "Redemittel",
+          "to my delight"
+        ]
+      }
+    },
+    {
+      "id": "remnote-945",
+      "german": "Entspann dich!",
+      "english": "You need to relax!",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4238,
+        "hierarchy": [
+          "Redemittel",
+          "Entspann dich!"
+        ]
+      }
+    },
+    {
+      "id": "remnote-948",
+      "german": "Bock haben",
+      "english": "*have appetite for something",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4241,
+        "hierarchy": [
+          "Redemittel",
+          "Bock haben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-950",
+      "german": "Stimmt so",
+      "english": "keep the change",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4245,
+        "hierarchy": [
+          "Redemittel",
+          "Stimmt so"
+        ]
+      }
+    },
+    {
+      "id": "remnote-952",
+      "german": "Sozusagen",
+      "english": "so to say",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4247,
+        "hierarchy": [
+          "Redemittel",
+          "Sozusagen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-953",
+      "german": "Offen gesagt",
+      "english": "frankly speaking",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4248,
+        "hierarchy": [
+          "Redemittel",
+          "Offen gesagt"
+        ]
+      }
+    },
+    {
+      "id": "remnote-954",
+      "german": "Ehrlich gesagt",
+      "english": "to be honest",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4249,
+        "hierarchy": [
+          "Redemittel",
+          "Ehrlich gesagt"
+        ]
+      }
+    },
+    {
+      "id": "remnote-955",
+      "german": "In der Tat",
+      "english": "in fact",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4251,
+        "hierarchy": [
+          "Redemittel",
+          "In der Tat"
+        ]
+      }
+    },
+    {
+      "id": "remnote-956",
+      "german": "Soweit ich weiß",
+      "english": "as far as I know",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4252,
+        "hierarchy": [
+          "Redemittel",
+          "Soweit ich weiß"
+        ]
+      }
+    },
+    {
+      "id": "remnote-958",
+      "german": "Jedem einzelnen",
+      "english": "each and everyone",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4254,
+        "hierarchy": [
+          "Redemittel",
+          "Jedem einzelnen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-961",
+      "german": "kurz davor",
+      "english": "about to / on the brink",
+      "category": "Redemittel",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4257,
+        "hierarchy": [
+          "Redemittel",
+          "kurz davor"
+        ]
+      }
+    },
+    {
+      "id": "remnote-962",
+      "german": "Sie",
+      "english": "Geben Sie bitte das Buch.",
+      "category": "Redemittel",
+      "level": "B1",
+      "tags": [
+        "Imperativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4350,
+        "hierarchy": [
+          "Gempowerment",
+          "Imperativ",
+          "Sie"
+        ]
+      }
+    },
+    {
+      "id": "remnote-963",
+      "german": "Du",
+      "english": "Gib mir bitte das Buch. / Bereite sich später vor",
+      "category": "Redemittel",
+      "level": "B1",
+      "tags": [
+        "Imperativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4351,
+        "hierarchy": [
+          "Gempowerment",
+          "Imperativ",
+          "Du"
+        ]
+      }
+    },
+    {
+      "id": "remnote-964",
+      "german": "Ihr",
+      "english": "Gebt mir bitte das Buch.",
+      "category": "Redemittel",
+      "level": "B1",
+      "tags": [
+        "Imperativ"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4353,
+        "hierarchy": [
+          "Gempowerment",
+          "Imperativ",
+          "Ihr"
+        ]
+      }
+    },
+    {
+      "id": "remnote-965",
+      "german": "Seither",
+      "english": "since then",
+      "category": "Redemittel",
+      "level": "B1",
+      "tags": [
+        "Subordinating Conjunctions",
+        "Nebensatz der Zeit"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4485,
+        "hierarchy": [
+          "Gempowerment",
+          "Subordinating Conjunctions",
+          "Nebensatz der Zeit",
+          "Seither"
+        ]
+      }
+    },
+    {
+      "id": "remnote-970",
+      "german": "trotzdem",
+      "english": "nevertheless",
+      "category": "Redemittel",
+      "level": "B1",
+      "tags": [
+        "Genitive Propositions",
+        "Trotz::despite, inspite of"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4565,
+        "hierarchy": [
+          "Gempowerment",
+          "Genitive Propositions",
+          "Trotz::despite, inspite of",
+          "trotzdem"
+        ]
+      }
+    },
+    {
+      "id": "remnote-971",
+      "german": "trotz alledem",
+      "english": "despite all that",
+      "category": "Redemittel",
+      "level": "B1",
+      "tags": [
+        "Genitive Propositions",
+        "Trotz::despite, inspite of"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4568,
+        "hierarchy": [
+          "Gempowerment",
+          "Genitive Propositions",
+          "Trotz::despite, inspite of",
+          "trotz alledem"
+        ]
+      }
+    },
+    {
+      "id": "remnote-972",
+      "german": "verdanken",
+      "english": "to owe sb. sth.",
+      "category": "Redemittel",
+      "level": "B1",
+      "tags": [
+        "Genitive Propositions",
+        "Dank::owing to / thanks to"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4592,
+        "hierarchy": [
+          "Gempowerment",
+          "Genitive Propositions",
+          "Dank::owing to / thanks to",
+          "verdanken"
+        ]
+      }
+    }
+  ]
+}

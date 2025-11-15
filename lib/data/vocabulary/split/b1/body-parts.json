@@ -1,0 +1,637 @@
+{
+  "level": "B1",
+  "category": "Body Parts",
+  "totalCards": 30,
+  "flashcards": [
+    {
+      "id": "body-b1-001",
+      "german": "das Herz",
+      "english": "heart",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "internal-organs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "das Herz"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-002",
+      "german": "die Lunge",
+      "english": "lung",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "internal-organs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die Lunge"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-003",
+      "german": "die Leber",
+      "english": "liver",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "internal-organs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die Leber"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-004",
+      "german": "die Niere",
+      "english": "kidney",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "internal-organs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die Niere"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-005",
+      "german": "der Magen",
+      "english": "stomach (organ)",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "internal-organs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "der Magen"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-006",
+      "german": "der Darm",
+      "english": "intestine",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "internal-organs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "der Darm"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-007",
+      "german": "das Gehirn",
+      "english": "brain",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "internal-organs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "das Gehirn"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-008",
+      "german": "der Muskel",
+      "english": "muscle",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "tissue",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "der Muskel"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-009",
+      "german": "der Nerv",
+      "english": "nerve",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "tissue",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "der Nerv"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-010",
+      "german": "die Ader",
+      "english": "vein / blood vessel",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "circulatory",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die Ader"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-011",
+      "german": "die Rippe",
+      "english": "rib",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "skeleton",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die Rippe"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-012",
+      "german": "die Wirbelsäule",
+      "english": "spine / backbone",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "skeleton",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die Wirbelsäule"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-013",
+      "german": "der Schädel",
+      "english": "skull",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "skeleton",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "der Schädel"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-014",
+      "german": "das Gelenk",
+      "english": "joint",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "skeleton",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "das Gelenk"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-015",
+      "german": "die Hüfte",
+      "english": "hip",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "skeleton",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die Hüfte"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-016",
+      "german": "die Taille",
+      "english": "waist",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "torso",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die Taille"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-017",
+      "german": "der Oberschenkel",
+      "english": "thigh",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "legs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "der Oberschenkel"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-018",
+      "german": "die Wade",
+      "english": "calf (leg)",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "legs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die Wade"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-019",
+      "german": "die Ferse",
+      "english": "heel",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "feet",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die Ferse"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-020",
+      "german": "die Fußsohle",
+      "english": "sole of foot",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "feet",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die Fußsohle"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-021",
+      "german": "der Oberarm",
+      "english": "upper arm",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "arms",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "der Oberarm"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-022",
+      "german": "der Unterarm",
+      "english": "forearm",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "arms",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "der Unterarm"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-023",
+      "german": "die Handfläche",
+      "english": "palm (of hand)",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "hands",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die Handfläche"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-024",
+      "german": "der Fingernagel",
+      "english": "fingernail",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "hands",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "der Fingernagel"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-025",
+      "german": "der Bart",
+      "english": "beard",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "facial-hair",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "der Bart"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-026",
+      "german": "der Schnurrbart",
+      "english": "mustache",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "facial-hair",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "der Schnurrbart"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-027",
+      "german": "die Pupille",
+      "english": "pupil (eye)",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "eyes",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die Pupille"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-028",
+      "german": "das Augenlid",
+      "english": "eyelid",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "eyes",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "das Augenlid"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-029",
+      "german": "die Kehle",
+      "english": "throat / gullet",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "throat",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die Kehle"
+        ]
+      }
+    },
+    {
+      "id": "body-b1-030",
+      "german": "der Gaumen",
+      "english": "palate",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "body",
+        "mouth",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "der Gaumen"
+        ]
+      }
+    }
+  ]
+}

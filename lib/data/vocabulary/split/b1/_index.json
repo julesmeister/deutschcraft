@@ -1,0 +1,112 @@
+{
+  "level": "B1",
+  "totalCards": 1376,
+  "totalCategories": 21,
+  "categories": [
+    {
+      "name": "Adjective Pairs",
+      "count": 16,
+      "file": "adjective-pairs.json"
+    },
+    {
+      "name": "Adjectives",
+      "count": 50,
+      "file": "adjectives.json"
+    },
+    {
+      "name": "Adverbs",
+      "count": 118,
+      "file": "adverbs.json"
+    },
+    {
+      "name": "Body Parts",
+      "count": 30,
+      "file": "body-parts.json"
+    },
+    {
+      "name": "Business Work",
+      "count": 17,
+      "file": "business-work.json"
+    },
+    {
+      "name": "Conjunctions",
+      "count": 22,
+      "file": "conjunctions.json"
+    },
+    {
+      "name": "Da / Wo-Wörter",
+      "count": 39,
+      "file": "da-wo-wrter.json"
+    },
+    {
+      "name": "Daily Routines",
+      "count": 28,
+      "file": "daily-routines.json"
+    },
+    {
+      "name": "Gempowerment",
+      "count": 11,
+      "file": "gempowerment.json"
+    },
+    {
+      "name": "Housing",
+      "count": 17,
+      "file": "housing.json"
+    },
+    {
+      "name": "Intermediate Verbs",
+      "count": 608,
+      "file": "intermediate-verbs.json"
+    },
+    {
+      "name": "Irregular Verbs",
+      "count": 31,
+      "file": "irregular-verbs.json"
+    },
+    {
+      "name": "Medical Health",
+      "count": 17,
+      "file": "medical-health.json"
+    },
+    {
+      "name": "Passive Voice",
+      "count": 4,
+      "file": "passive-voice.json"
+    },
+    {
+      "name": "Positional Verbs",
+      "count": 32,
+      "file": "positional-verbs.json"
+    },
+    {
+      "name": "Redemittel",
+      "count": 33,
+      "file": "redemittel.json"
+    },
+    {
+      "name": "Reflexive Verbs",
+      "count": 30,
+      "file": "reflexive-verbs.json"
+    },
+    {
+      "name": "Richtung",
+      "count": 12,
+      "file": "richtung.json"
+    },
+    {
+      "name": "Separable Verbs",
+      "count": 165,
+      "file": "separable-verbs.json"
+    },
+    {
+      "name": "State Change Verbs",
+      "count": 31,
+      "file": "state-change-verbs.json"
+    },
+    {
+      "name": "Verbs With Prepositions",
+      "count": 65,
+      "file": "verbs-with-prepositions.json"
+    }
+  ]
+}

@@ -1,0 +1,607 @@
+{
+  "level": "B2",
+  "category": "Politics Society",
+  "totalCards": 30,
+  "flashcards": [
+    {
+      "id": "syllabus-b2-11388",
+      "german": "Regierung",
+      "english": "government",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Regierung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11389",
+      "german": "Parlament",
+      "english": "parliament",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Parlament"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11390",
+      "german": "Wahl",
+      "english": "election",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Wahl"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11391",
+      "german": "Partei",
+      "english": "political party",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Partei"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11392",
+      "german": "Gesetz",
+      "english": "law",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Gesetz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11393",
+      "german": "Demokratie",
+      "english": "democracy",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Demokratie"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11394",
+      "german": "Bürger",
+      "english": "citizen",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Bürger"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11395",
+      "german": "Gesellschaft",
+      "english": "society",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Gesellschaft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11396",
+      "german": "Integration",
+      "english": "integration",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Integration"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11397",
+      "german": "Diskriminierung",
+      "english": "discrimination",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Diskriminierung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11398",
+      "german": "Gleichberechtigung",
+      "english": "equal rights",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Gleichberechtigung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11399",
+      "german": "Umweltschutz",
+      "english": "environmental protection",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Umweltschutz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11400",
+      "german": "Bundestag",
+      "english": "German Federal Parliament",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Bundestag"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11401",
+      "german": "Bundesrat",
+      "english": "Federal Council",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Bundesrat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11402",
+      "german": "Kanzler",
+      "english": "chancellor",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Kanzler"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11403",
+      "german": "Minister",
+      "english": "minister",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Minister"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11404",
+      "german": "Abgeordneter",
+      "english": "member of parliament",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Abgeordneter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11405",
+      "german": "Verfassung",
+      "english": "constitution",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Verfassung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11406",
+      "german": "Grundgesetz",
+      "english": "Basic Law (German constitution)",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Grundgesetz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11407",
+      "german": "Menschenrechte",
+      "english": "human rights",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Menschenrechte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11408",
+      "german": "Rechtsstaat",
+      "english": "constitutional state / rule of law",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Rechtsstaat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11409",
+      "german": "Wahlrecht",
+      "english": "voting right / suffrage",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Wahlrecht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11410",
+      "german": "Mehrheit",
+      "english": "majority",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Mehrheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11411",
+      "german": "Minderheit",
+      "english": "minority",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Minderheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11412",
+      "german": "Opposition",
+      "english": "opposition",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Opposition"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11413",
+      "german": "Koalition",
+      "english": "coalition",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Koalition"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11414",
+      "german": "Debatte",
+      "english": "debate",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Debatte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11415",
+      "german": "Abstimmung",
+      "english": "vote / ballot",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Abstimmung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11416",
+      "german": "Volksabstimmung",
+      "english": "referendum",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Volksabstimmung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11417",
+      "german": "Sozialpolitik",
+      "english": "social policy",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Sozialpolitik"
+        ]
+      }
+    }
+  ]
+}

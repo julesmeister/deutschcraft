@@ -1,0 +1,1007 @@
+{
+  "level": "B1",
+  "category": "Adjectives",
+  "totalCards": 50,
+  "flashcards": [
+    {
+      "id": "syllabus-b1-10860",
+      "german": "fleißig",
+      "english": "diligent / hardworking",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "fleißig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10861",
+      "german": "faul",
+      "english": "lazy",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "faul"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10862",
+      "german": "pünktlich",
+      "english": "punctual",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "pünktlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10863",
+      "german": "verspätet",
+      "english": "late / delayed",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "verspätet"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10864",
+      "german": "ordentlich",
+      "english": "tidy / orderly",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "ordentlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10865",
+      "german": "unordentlich",
+      "english": "messy / untidy",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unordentlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10866",
+      "german": "zuverlässig",
+      "english": "reliable",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "zuverlässig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10867",
+      "german": "ehrlich",
+      "english": "honest",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "ehrlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10868",
+      "german": "unehrlich",
+      "english": "dishonest",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unehrlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10869",
+      "german": "geduldig",
+      "english": "patient",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "geduldig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10870",
+      "german": "ungeduldig",
+      "english": "impatient",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "ungeduldig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10871",
+      "german": "stolz",
+      "english": "proud",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "stolz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10872",
+      "german": "bescheiden",
+      "english": "modest",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "bescheiden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10873",
+      "german": "mutig",
+      "english": "brave / courageous",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "mutig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10874",
+      "german": "ängstlich",
+      "english": "fearful / anxious",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "ängstlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10875",
+      "german": "selbstbewusst",
+      "english": "self-confident",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "selbstbewusst"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10876",
+      "german": "schüchtern",
+      "english": "shy",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "schüchtern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10877",
+      "german": "egoistisch",
+      "english": "selfish",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "egoistisch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10878",
+      "german": "großzügig",
+      "english": "generous",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "großzügig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10879",
+      "german": "geizig",
+      "english": "stingy / miserly",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "geizig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10880",
+      "german": "sympathisch",
+      "english": "likeable / pleasant",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "sympathisch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10881",
+      "german": "unsympathisch",
+      "english": "unlikeable / unpleasant",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unsympathisch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10882",
+      "german": "optimistisch",
+      "english": "optimistic",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "optimistisch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10883",
+      "german": "pessimistisch",
+      "english": "pessimistic",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "pessimistisch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10884",
+      "german": "praktisch",
+      "english": "practical",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "praktisch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10885",
+      "german": "theoretisch",
+      "english": "theoretical",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "theoretisch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10886",
+      "german": "kreativ",
+      "english": "creative",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "kreativ"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10887",
+      "german": "typisch",
+      "english": "typical",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "typisch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10888",
+      "german": "untypisch",
+      "english": "atypical / unusual",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "untypisch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10889",
+      "german": "ähnlich",
+      "english": "similar",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "ähnlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10890",
+      "german": "unterschiedlich",
+      "english": "different",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unterschiedlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10891",
+      "german": "identisch",
+      "english": "identical",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "identisch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10892",
+      "german": "notwendig",
+      "english": "necessary",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "notwendig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10893",
+      "german": "überflüssig",
+      "english": "superfluous / unnecessary",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "überflüssig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10894",
+      "german": "ausreichend",
+      "english": "sufficient",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "ausreichend"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10895",
+      "german": "unzureichend",
+      "english": "insufficient",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unzureichend"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10896",
+      "german": "geeignet",
+      "english": "suitable",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "geeignet"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10897",
+      "german": "ungeeignet",
+      "english": "unsuitable",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "ungeeignet"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10898",
+      "german": "angenehm",
+      "english": "pleasant",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "angenehm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10899",
+      "german": "unangenehm",
+      "english": "unpleasant",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unangenehm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10900",
+      "german": "bequem",
+      "english": "comfortable",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "bequem"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10901",
+      "german": "unbequem",
+      "english": "uncomfortable",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unbequem"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10902",
+      "german": "beliebt",
+      "english": "popular",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "beliebt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10903",
+      "german": "unbeliebt",
+      "english": "unpopular",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unbeliebt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10904",
+      "german": "bekannt",
+      "english": "well-known / famous",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "bekannt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10905",
+      "german": "unbekannt",
+      "english": "unknown",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unbekannt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10906",
+      "german": "öffentlich",
+      "english": "public",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "öffentlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10907",
+      "german": "privat",
+      "english": "private",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "privat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10908",
+      "german": "aktuell",
+      "english": "current / up-to-date",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "aktuell"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-10909",
+      "german": "veraltet",
+      "english": "outdated / obsolete",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "veraltet"
+        ]
+      }
+    }
+  ]
+}

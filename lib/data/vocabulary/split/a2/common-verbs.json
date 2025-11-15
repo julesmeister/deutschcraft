@@ -1,0 +1,147 @@
+{
+  "level": "A2",
+  "category": "Common Verbs",
+  "totalCards": 7,
+  "flashcards": [
+    {
+      "id": "syllabus-a2-10326",
+      "german": "nehmen",
+      "english": "to take",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "nehmen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10327",
+      "german": "geben",
+      "english": "to give",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "geben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10328",
+      "german": "bringen",
+      "english": "to bring",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "bringen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10329",
+      "german": "zeigen",
+      "english": "to show",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "zeigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10330",
+      "german": "helfen",
+      "english": "to help",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "helfen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10331",
+      "german": "schreiben",
+      "english": "to write",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "schreiben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10332",
+      "german": "sprechen",
+      "english": "to speak",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "sprechen"
+        ]
+      }
+    }
+  ]
+}

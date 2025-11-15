@@ -10,19 +10,19 @@ import { ToastProvider } from '@/components/ui/toast';
 import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { useStudyStats } from '@/lib/hooks/useFlashcards';
+import { useStudyStats, useFlashcardReviews } from '@/lib/hooks/useFlashcards';
 import { useRemNoteCategories, useRemNoteTotalCards } from '@/lib/hooks/useRemNoteCategories';
 import { useFlashcardSettings } from '@/lib/hooks/useFlashcardSettings';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
 import { CatLoader } from '@/components/ui/CatLoader';
 
 // Import level data
-import a1Data from '@/lib/data/remnote/levels/a1.json';
-import a2Data from '@/lib/data/remnote/levels/a2.json';
-import b1Data from '@/lib/data/remnote/levels/b1.json';
-import b2Data from '@/lib/data/remnote/levels/b2.json';
-import c1Data from '@/lib/data/remnote/levels/c1.json';
-import c2Data from '@/lib/data/remnote/levels/c2.json';
+import a1Data from '@/lib/data/vocabulary/levels/a1.json';
+import a2Data from '@/lib/data/vocabulary/levels/a2.json';
+import b1Data from '@/lib/data/vocabulary/levels/b1.json';
+import b2Data from '@/lib/data/vocabulary/levels/b2.json';
+import c1Data from '@/lib/data/vocabulary/levels/c1.json';
+import c2Data from '@/lib/data/vocabulary/levels/c2.json';
 
 const levelDataMap = {
   [CEFRLevel.A1]: a1Data,
@@ -51,6 +51,24 @@ export default function FlashcardsLandingPage() {
 
   // Get flashcard settings
   const { settings } = useFlashcardSettings();
+
+  // Fetch user's flashcard progress to identify attempted categories
+  const { data: flashcardReviews = [] } = useFlashcardReviews(session?.user?.email);
+
+  // Create a Set of attempted category IDs and count attempts per category
+  const attemptedCategories = new Set<string>();
+  const categoryAttemptCounts = new Map<string, number>();
+
+  flashcardReviews.forEach(review => {
+    // Find the flashcard in the level data to get its category
+    const levelData = levelDataMap[selectedLevel];
+    const flashcard = levelData.flashcards.find((card: any) => card.id === review.wordId || card.id === review.flashcardId);
+    if (flashcard) {
+      const categoryId = flashcard.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+      attemptedCategories.add(categoryId);
+      categoryAttemptCounts.set(categoryId, (categoryAttemptCounts.get(categoryId) || 0) + 1);
+    }
+  });
 
   const handleCategoryClick = (categoryId: string, categoryName: string) => {
     // Get flashcards for this category and level
@@ -120,19 +138,28 @@ export default function FlashcardsLandingPage() {
         <DashboardHeader
           title="Flashcards 📚"
           subtitle="Master German vocabulary with spaced repetition"
-          backButton={{
-            label: 'Back to Dashboard',
-            onClick: () => router.push('/dashboard/student')
-          }}
+          backButton={
+            selectedCategory
+              ? {
+                  label: 'Back to Categories',
+                  onClick: handleBackToCategories
+                }
+              : {
+                  label: 'Back to Dashboard',
+                  onClick: () => router.push('/dashboard/student')
+                }
+          }
           actions={
-            <ActionButton
-              onClick={handleStartPractice}
-              variant="purple"
-              icon={<ActionButtonIcons.ArrowRight />}
-              disabled={isPending}
-            >
-              {isPending ? 'Loading...' : 'Start Practice'}
-            </ActionButton>
+            !selectedCategory && (
+              <ActionButton
+                onClick={handleStartPractice}
+                variant="purple"
+                icon={<ActionButtonIcons.ArrowRight />}
+                disabled={isPending}
+              >
+                {isPending ? 'Loading...' : 'Start Practice'}
+              </ActionButton>
+            )
           }
         />
 
@@ -232,7 +259,8 @@ export default function FlashcardsLandingPage() {
                   name={category.name}
                   size={`${category.cardCount} cards`}
                   onClick={() => handleCategoryClick(category.id, category.name)}
-                  onMenuClick={() => console.log('Menu:', category.name)}
+                  isAttempted={attemptedCategories.has(category.id)}
+                  attemptCount={categoryAttemptCounts.get(category.id)}
                 />
               ))}
             </FileGrid>
