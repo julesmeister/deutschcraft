@@ -12,10 +12,15 @@ export default function DashboardPage() {
   const { user, isLoading: isLoadingUser } = useCurrentUser(session?.user?.email || null);
 
   useEffect(() => {
-    if (status === 'loading' || isLoadingUser) return;
+    if (status === 'loading') {
+      return;
+    }
+
+    if (isLoadingUser) {
+      return;
+    }
 
     if (!session) {
-      // Redirect to home if not authenticated
       router.push('/');
       return;
     }
@@ -24,7 +29,6 @@ export default function DashboardPage() {
     if (user?.role === 'TEACHER') {
       router.push('/dashboard/teacher');
     } else {
-      // Default to student dashboard (includes 'STUDENT' role and fallback)
       router.push('/dashboard/student');
     }
   }, [session, status, router, user, isLoadingUser]);

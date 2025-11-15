@@ -8,44 +8,55 @@ export function HeroSection() {
   const router = useRouter();
   const { data: session, status } = useSession();
 
-  useEffect(() => {
-    console.info('[HeroSection] Session status:', status);
-    console.info('[HeroSection] Session data:', session);
-    console.info('[HeroSection] User email:', session?.user?.email);
-  }, [session, status]);
+  // Session validation happens in handleStartLearning
 
   const handleStartLearning = async () => {
-    console.info('[HeroSection] ========== START LEARNING CLICKED ==========');
-    console.info('[HeroSection] Current status:', status);
-    console.info('[HeroSection] Current session:', session);
-    console.info('[HeroSection] Current URL:', window.location.href);
-    console.info('[HeroSection] Environment:', process.env.NODE_ENV);
-
     if (status === 'loading') {
-      console.warn('[HeroSection] Session is loading, waiting...');
       return;
     }
 
     if (session) {
-      console.info('[HeroSection] User is logged in, redirecting to dashboard');
-      router.push('/dashboard');
-    } else {
-      console.info('[HeroSection] User not logged in, triggering Google sign-in');
-      console.info('[HeroSection] Calling signIn with provider: google');
-      console.info('[HeroSection] Callback URL:', window.location.origin + '/dashboard');
+      // Validate session is not expired
+      const expiryDate = new Date(session.expires);
+      const now = new Date();
+      const isExpired = expiryDate < now;
 
+      if (isExpired) {
+        // Session expired, need to re-authenticate
+        try {
+          await signIn('google', {
+            callbackUrl: window.location.origin + '/dashboard',
+            redirect: true
+          });
+        } catch (error) {
+          console.error('[HeroSection] Re-authentication failed:', error);
+        }
+        return;
+      }
+
+      // Valid session, redirect to dashboard
       try {
-        const result = await signIn('google', {
+        router.push('/dashboard');
+
+        // Fallback: if router.push doesn't work after 2 seconds, force navigation
+        setTimeout(() => {
+          if (window.location.pathname === '/') {
+            window.location.href = '/dashboard';
+          }
+        }, 2000);
+      } catch (error) {
+        console.error('[HeroSection] Navigation failed:', error);
+        window.location.href = '/dashboard';
+      }
+    } else {
+      // No session, trigger sign-in
+      try {
+        await signIn('google', {
           callbackUrl: window.location.origin + '/dashboard',
           redirect: true
         });
-        console.info('[HeroSection] Sign-in returned (should have redirected):', result);
       } catch (error) {
-        console.error('[HeroSection] Sign-in error:', error);
-        console.error('[HeroSection] Error details:', {
-          message: error instanceof Error ? error.message : 'Unknown error',
-          stack: error instanceof Error ? error.stack : undefined
-        });
+        console.error('[HeroSection] Sign-in failed:', error);
       }
     }
   };
