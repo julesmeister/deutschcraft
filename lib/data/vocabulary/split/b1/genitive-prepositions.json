@@ -1,0 +1,333 @@
+{
+  "level": "B1",
+  "category": "Genitive Prepositions",
+  "totalCards": 15,
+  "flashcards": [
+    {
+      "id": "syllabus-b1-11450",
+      "german": "während + Gen",
+      "english": "during / while",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "time"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "während"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11451",
+      "german": "wegen + Gen",
+      "english": "because of / due to",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "reason"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "wegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11452",
+      "german": "trotz + Gen",
+      "english": "despite / in spite of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "contrast"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "trotz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11453",
+      "german": "statt/anstatt + Gen",
+      "english": "instead of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "statt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11454",
+      "german": "außerhalb + Gen",
+      "english": "outside of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "location"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "außerhalb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11455",
+      "german": "innerhalb + Gen",
+      "english": "inside / within",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "location",
+        "time"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "innerhalb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11456",
+      "german": "oberhalb + Gen",
+      "english": "above",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "location"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "oberhalb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11457",
+      "german": "unterhalb + Gen",
+      "english": "below / beneath",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "location"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "unterhalb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11458",
+      "german": "aufgrund + Gen",
+      "english": "on the basis of / due to",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "reason"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "aufgrund"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11459",
+      "german": "infolge + Gen",
+      "english": "as a result of / due to",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "reason"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "infolge"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11460",
+      "german": "laut + Gen",
+      "english": "according to",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "laut"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11461",
+      "german": "mittels + Gen",
+      "english": "by means of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "mittels"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11462",
+      "german": "anhand + Gen",
+      "english": "on the basis of / using",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "anhand"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11463",
+      "german": "mangels + Gen",
+      "english": "for lack of / due to lack of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "mangels"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11464",
+      "german": "bezüglich + Gen",
+      "english": "regarding / concerning",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "formal"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "bezüglich"
+        ]
+      }
+    }
+  ]
+}

@@ -42,7 +42,8 @@
       "Bash(move \"app/resources/vocabulary/page.tsx\" \"app/dashboard/student/vocabulary/page.tsx\")",
       "Bash(npm run vocab:compare:*)",
       "Bash(Select-String -Pattern \"(verbs\\.json|basic-verbs\\.json|gempowerment\\.json|passiv\\.json|common-verbs\\.json|liste-der)\" -Context 0,2)",
-      "Bash(npm run vocab:migrate:*)"
+      "Bash(npm run vocab:migrate:*)",
+      "Bash(node -e:*)"
     ],
     "deny": [],
     "ask": []

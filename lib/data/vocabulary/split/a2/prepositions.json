@@ -1,0 +1,593 @@
+{
+  "level": "A2",
+  "category": "Prepositions",
+  "totalCards": 24,
+  "flashcards": [
+    {
+      "id": "syllabus-a2-10600",
+      "german": "in + Dat/Akk",
+      "english": "in / into",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "in"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10601",
+      "german": "an + Dat/Akk",
+      "english": "at / on / to",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "an"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10602",
+      "german": "auf + Dat/Akk",
+      "english": "on / onto",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "auf"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10603",
+      "german": "über + Dat/Akk",
+      "english": "over / above / about",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "über"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10604",
+      "german": "unter + Dat/Akk",
+      "english": "under / below / among",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "unter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10605",
+      "german": "vor + Dat/Akk",
+      "english": "in front of / before / ago",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction",
+        "time"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "vor"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10606",
+      "german": "hinter + Dat/Akk",
+      "english": "behind",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "hinter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10607",
+      "german": "neben + Dat/Akk",
+      "english": "next to / beside",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "neben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10608",
+      "german": "zwischen + Dat/Akk",
+      "english": "between",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "zwischen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10609",
+      "german": "mit + Dat",
+      "english": "with",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "mit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10610",
+      "german": "nach + Dat",
+      "english": "after / to (direction)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only",
+        "time",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "nach"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10611",
+      "german": "bei + Dat",
+      "english": "at / near / with (at someone's place)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "bei"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10612",
+      "german": "von + Dat",
+      "english": "from / of / by",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "von"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10613",
+      "german": "zu + Dat",
+      "english": "to / towards",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "zu"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10614",
+      "german": "aus + Dat",
+      "english": "from / out of",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "aus"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10615",
+      "german": "seit + Dat",
+      "english": "since / for (time)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only",
+        "time"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "seit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10616",
+      "german": "gegenüber + Dat",
+      "english": "opposite / across from",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only",
+        "location"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "gegenüber"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10617",
+      "german": "für + Akk",
+      "english": "for",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "accusative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "für"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10618",
+      "german": "durch + Akk",
+      "english": "through",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "accusative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "durch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10619",
+      "german": "gegen + Akk",
+      "english": "against / around (time)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "accusative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "gegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10620",
+      "german": "ohne + Akk",
+      "english": "without",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "accusative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "ohne"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10621",
+      "german": "um + Akk",
+      "english": "around / at (time)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "accusative-only",
+        "time"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "um"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10622",
+      "german": "bis + Akk",
+      "english": "until / to",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "accusative-only",
+        "time"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "bis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10623",
+      "german": "entlang + Akk",
+      "english": "along",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "accusative-only",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "entlang"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10624",
+      "german": "ab + Dat",
+      "english": "from / starting from",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only",
+        "time"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "ab"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10625",
+      "german": "außer + Dat",
+      "english": "except / besides",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "außer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10626",
+      "german": "entgegen + Dat",
+      "english": "contrary to / against",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "entgegen"
+        ]
+      }
+    }
+  ]
+}
