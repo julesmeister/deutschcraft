@@ -115,6 +115,7 @@ function DashboardNavbar() {
                   title: 'Management',
                   items: [
                     { label: 'Students', href: '/dashboard/teacher' },
+                    { label: 'Writing Review', href: '/dashboard/teacher/writing' },
                     { label: 'Analytics', href: '/dashboard/analytics' },
                     { label: 'Assignments', href: '/dashboard/assignments' },
                     { label: 'Course Pricing', href: '/dashboard/teacher/pricing' },
@@ -226,6 +227,9 @@ function DashboardNavbar() {
                 <div className="ml-6 space-y-2">
                   <Link href="/dashboard/teacher" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Students
+                  </Link>
+                  <Link href="/dashboard/teacher/writing" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                    Writing Review
                   </Link>
                   <Link href="/dashboard/analytics" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Analytics

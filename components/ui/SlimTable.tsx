@@ -60,11 +60,53 @@ export function SlimTable({
   return (
     <div className="flex flex-col items-start">
       {title && (
-        <h5 className="text-neutral-700 uppercase text-sm font-medium leading-snug m-4">
+        <h5 className="text-neutral-700 uppercase text-sm font-medium leading-snug m-3 sm:m-4">
           {title}
         </h5>
       )}
-      <div className="w-full overflow-x-auto">
+
+      {/* Mobile List View - Border-only design */}
+      <div className="w-full md:hidden">
+        {data.length === 0 ? (
+          <div className="text-center py-8 text-gray-500 text-sm border-b border-neutral-200">
+            {emptyMessage}
+          </div>
+        ) : (
+          data.map((row, index) => (
+            <div
+              key={row.id}
+              className={`border-b border-neutral-200 px-3 py-3 ${
+                index === 0 ? 'border-t' : ''
+              } ${
+                onRowClick ? 'cursor-pointer active:bg-slate-50 transition-colors' : ''
+              }`}
+              onClick={() => onRowClick?.(row)}
+            >
+              <div className="space-y-2">
+                {columns.map((column) => {
+                  // Skip empty columns on mobile (no label or just whitespace)
+                  if (!column.label || column.label.trim() === '') return null;
+
+                  return (
+                    <div key={column.key} className="flex items-center gap-2 overflow-hidden">
+                      <span className="text-xs font-medium text-neutral-700 uppercase flex-shrink-0">
+                        {column.label}
+                      </span>
+                      <div className="flex-1 border-b border-dotted border-neutral-300 min-w-[20px]"></div>
+                      <div className="text-sm text-neutral-700 text-right flex-shrink-0">
+                        {column.render ? column.render(row[column.key], row) : row[column.key] || '-'}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))
+        )}
+      </div>
+
+      {/* Desktop Table View */}
+      <div className="hidden md:block w-full overflow-x-auto">
         <table className={`w-full border-spacing-0 ${tableClassName || ''}`} aria-label={ariaLabel}>
           {showHeader && (
             <thead className="bg-slate-100">
@@ -124,12 +166,20 @@ export function SlimTable({
 
       {/* Pagination */}
       {pagination && (
-        <div className="w-full flex items-center justify-between px-4 py-3 border-t border-gray-200">
-          <div className="flex items-center gap-2">
+        <div className="w-full flex items-center justify-between gap-3 px-3 sm:px-4 py-3 border-t border-gray-200">
+          {/* Desktop: Show results count */}
+          <div className="hidden sm:flex items-center gap-2">
             <p className="text-sm text-gray-600">
               Showing {((pagination.currentPage - 1) * pagination.pageSize) + 1} to{' '}
               {Math.min(pagination.currentPage * pagination.pageSize, pagination.totalItems)} of{' '}
               {pagination.totalItems} results
+            </p>
+          </div>
+
+          {/* Mobile: Show page info */}
+          <div className="sm:hidden flex items-center gap-2">
+            <p className="text-xs text-gray-600">
+              Page {pagination.currentPage} of {pagination.totalPages}
             </p>
           </div>
 
@@ -138,7 +188,7 @@ export function SlimTable({
             <button
               onClick={() => pagination.onPageChange(pagination.currentPage - 1)}
               disabled={pagination.currentPage === 1}
-              className="cursor-pointer select-none align-middle appearance-none outline-0 inline-flex items-center justify-center w-8 h-8 border-0 text-black/54 hover:bg-black/5 transition-colors disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent"
+              className="cursor-pointer select-none align-middle appearance-none outline-0 inline-flex items-center justify-center w-8 h-8 border-0 text-black/54 hover:bg-black/5 active:bg-black/10 transition-colors disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent"
               type="button"
               aria-label="Previous page"
             >
@@ -147,57 +197,59 @@ export function SlimTable({
               </svg>
             </button>
 
-            {/* Page Numbers */}
-            {Array.from({ length: pagination.totalPages }, (_, i) => i + 1).map((page) => {
-              // Show first page, last page, current page, and pages around current
-              const showPage =
-                page === 1 ||
-                page === pagination.totalPages ||
-                Math.abs(page - pagination.currentPage) <= 1;
+            {/* Desktop: Page Numbers */}
+            <div className="hidden sm:flex items-center gap-1">
+              {Array.from({ length: pagination.totalPages }, (_, i) => i + 1).map((page) => {
+                // Show first page, last page, current page, and pages around current
+                const showPage =
+                  page === 1 ||
+                  page === pagination.totalPages ||
+                  Math.abs(page - pagination.currentPage) <= 1;
 
-              // Show ellipsis
-              const showEllipsisBefore =
-                page === pagination.currentPage - 2 && pagination.currentPage > 3;
-              const showEllipsisAfter =
-                page === pagination.currentPage + 2 &&
-                pagination.currentPage < pagination.totalPages - 2;
+                // Show ellipsis
+                const showEllipsisBefore =
+                  page === pagination.currentPage - 2 && pagination.currentPage > 3;
+                const showEllipsisAfter =
+                  page === pagination.currentPage + 2 &&
+                  pagination.currentPage < pagination.totalPages - 2;
 
-              if (showEllipsisBefore || showEllipsisAfter) {
+                if (showEllipsisBefore || showEllipsisAfter) {
+                  return (
+                    <span
+                      key={`ellipsis-${page}`}
+                      className="inline-flex items-center justify-center w-8 h-8 text-sm text-gray-600"
+                    >
+                      ...
+                    </span>
+                  );
+                }
+
+                if (!showPage) return null;
+
                 return (
-                  <span
-                    key={`ellipsis-${page}`}
-                    className="inline-flex items-center justify-center w-8 h-8 text-sm text-gray-600"
+                  <button
+                    key={page}
+                    onClick={() => pagination.onPageChange(page)}
+                    className={`cursor-pointer select-none align-middle appearance-none outline-0 inline-flex items-center justify-center w-8 h-8 border-0 text-sm font-medium transition-colors ${
+                      page === pagination.currentPage
+                        ? 'bg-blue-700 text-white'
+                        : 'text-gray-700 hover:bg-black/5 active:bg-black/10'
+                    }`}
+                    type="button"
+                    aria-label={`Page ${page}`}
+                    aria-current={page === pagination.currentPage ? 'page' : undefined}
                   >
-                    ...
-                  </span>
+                    {page}
+                  </button>
                 );
-              }
-
-              if (!showPage) return null;
-
-              return (
-                <button
-                  key={page}
-                  onClick={() => pagination.onPageChange(page)}
-                  className={`cursor-pointer select-none align-middle appearance-none outline-0 inline-flex items-center justify-center w-8 h-8 border-0 text-sm font-medium transition-colors ${
-                    page === pagination.currentPage
-                      ? 'bg-blue-700 text-white'
-                      : 'text-gray-700 hover:bg-black/5'
-                  }`}
-                  type="button"
-                  aria-label={`Page ${page}`}
-                  aria-current={page === pagination.currentPage ? 'page' : undefined}
-                >
-                  {page}
-                </button>
-              );
-            })}
+              })}
+            </div>
 
             {/* Next Button */}
             <button
               onClick={() => pagination.onPageChange(pagination.currentPage + 1)}
               disabled={pagination.currentPage === pagination.totalPages}
-              className="cursor-pointer select-none align-middle appearance-none outline-0 inline-flex items-center justify-center w-8 h-8 border-0 text-black/54 hover:bg-black/5 transition-colors disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent"
+              className="cursor-pointer select-none align-middle appearance-none outline-0 inline-flex items-center justify-center w-8 h-8 border-0 text-black/54 hover:bg-black/5 active:bg-black/10 transition-colors disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent"
               type="button"
               aria-label="Next page"
             >
@@ -236,37 +288,38 @@ export const SlimTableRenderers = {
   Link: (text: string, href: string = '#!') => (
     <a
       href={href}
-      className="text-neutral-700 text-sm font-medium leading-relaxed no-underline block hover:text-blue-700 hover:underline transition-colors"
+      className="text-neutral-700 text-sm font-medium leading-relaxed no-underline md:block hover:text-blue-700 hover:underline transition-colors"
     >
       {text}
     </a>
   ),
 
   Status: (statusColor: string, text: string) => (
-    <div className="items-center flex">
-      <span className={`${statusColor} w-2 h-2 rounded-full`}></span>
-      <span className="text-gray-500 text-xs leading-relaxed ml-2">{text}</span>
+    <div className="items-center md:flex">
+      <span className={`${statusColor} w-2 h-2 rounded-full hidden md:inline-block`}></span>
+      <span className="text-gray-500 text-xs leading-relaxed md:ml-2">{text}</span>
     </div>
   ),
 
   Percentage: (value: number, showArrow: boolean = true) => {
     const isPositive = value > 0;
     return (
-      <span className={`inline-flex items-center ${isPositive ? 'text-green-700' : 'text-red-600'}`}>
+      <span className={`md:inline-flex md:items-center ${isPositive ? 'text-green-700' : 'text-red-600'}`}>
         {showArrow && (
           <>
             {isPositive ? (
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 hidden md:inline-block" fill="currentColor" viewBox="0 0 24 24">
                 <path d="m4 12 1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"></path>
               </svg>
             ) : (
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 hidden md:inline-block" fill="currentColor" viewBox="0 0 24 24">
                 <path d="m20 12-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"></path>
               </svg>
             )}
           </>
         )}
-        &nbsp;{Math.abs(value)}%&nbsp;
+        <span className="md:hidden">{Math.abs(value)}%</span>
+        <span className="hidden md:inline">&nbsp;{Math.abs(value)}%&nbsp;</span>
       </span>
     );
   },

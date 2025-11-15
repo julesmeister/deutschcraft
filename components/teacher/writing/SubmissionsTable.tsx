@@ -88,7 +88,7 @@ export function SubmissionsTable({
           label: ' ',
           width: '60px',
           render: (value) => (
-            <span className="text-2xl">{getExerciseIcon(value as WritingExerciseType)}</span>
+            <span className="text-2xl hidden md:inline">{getExerciseIcon(value as WritingExerciseType)}</span>
           ),
         },
         {
@@ -107,7 +107,7 @@ export function SubmissionsTable({
           key: 'wordCount',
           label: 'Words',
           align: 'center',
-          render: (value) => <p className="text-gray-500 text-xs text-center">{value}</p>,
+          render: (value) => <p className="text-gray-500 text-xs md:text-center">{value}</p>,
         },
         {
           key: 'level',
@@ -122,12 +122,13 @@ export function SubmissionsTable({
           label: 'Submitted',
           render: (value) => (
             <div className="text-sm text-gray-600">
-              <div>{value ? formatDate(value as number) : 'Draft'}</div>
+              <div className="hidden md:block">{value ? formatDate(value as number) : 'Draft'}</div>
               {value && (
                 <div className="text-amber-600 font-medium text-xs">
                   {getTimeSince(value as number)}
                 </div>
               )}
+              {!value && <div className="md:hidden text-xs">Draft</div>}
             </div>
           ),
         },
@@ -177,7 +178,7 @@ export function SubmissionsTable({
 
             return (
               <div
-                className="flex items-center justify-center gap-2"
+                className="flex items-center md:justify-center justify-end gap-2"
                 onClick={(e) => e.stopPropagation()}
               >
                 {/* Status Dropdown */}
@@ -187,8 +188,11 @@ export function SubmissionsTable({
                       ? `Graded${row.teacherScore ? ` ${row.teacherScore}` : ''}`
                       : 'Pending'
                   }
-                  icon={<span className="text-sm">{value === 'reviewed' ? '✓' : '⏳'}</span>}
-                  options={statusOptions}
+                  icon={<span className="text-sm hidden md:inline">{value === 'reviewed' ? '✓' : '⏳'}</span>}
+                  options={statusOptions.map(opt => ({
+                    ...opt,
+                    icon: <span className="hidden md:inline">{opt.icon}</span>
+                  }))}
                   value={value as string}
                   onChange={(selectedValue) => {
                     if (selectedValue === 'view') {
@@ -211,7 +215,7 @@ export function SubmissionsTable({
                 {/* Attempt Badge */}
                 {row.attemptNumber && row.attemptNumber > 1 && (
                   <div className="inline-flex items-center gap-1 px-2 py-1 text-xs font-semibold bg-cyan-100 text-cyan-700 rounded">
-                    <span>🔄</span>
+                    <span className="hidden md:inline">🔄</span>
                     <span>#{row.attemptNumber}</span>
                   </div>
                 )}
