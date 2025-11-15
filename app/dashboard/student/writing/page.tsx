@@ -1,19 +1,13 @@
 'use client';
 
-import { useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
-import { TabBar, TabItem } from '@/components/ui/TabBar';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
-import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { AlertDialog } from '@/components/ui/Dialog';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
-import { useWritingStats, useStudentSubmissions } from '@/lib/hooks/useWritingExercises';
-import { useWritingSubmissionHandlers } from '@/lib/hooks/useWritingSubmissionHandlers';
-import { useExerciseAttempts, useAttemptStats } from '@/lib/hooks/useWritingAttempts';
+import { useWritingExerciseState } from '@/lib/hooks/useWritingExerciseState';
+import { CEFRLevelInfo } from '@/lib/models/cefr';
 import { AttemptHistory } from '@/components/writing/AttemptHistory';
-import { AttemptStats } from '@/components/writing/AttemptStats';
 import { TranslationWorkspace } from '@/components/writing/TranslationWorkspace';
 import { CreativeWritingArea } from '@/components/writing/CreativeWritingArea';
 import { EmailTemplateInstructions } from '@/components/writing/EmailTemplateInstructions';
@@ -22,156 +16,56 @@ import { LetterWritingArea } from '@/components/writing/LetterWritingArea';
 import { WritingHub } from './WritingHub';
 import { TRANSLATION_EXERCISES } from '@/lib/data/translationExercises';
 import { CREATIVE_EXERCISES } from '@/lib/data/creativeExercises';
-import { EMAIL_TEMPLATES, type EmailTemplate } from '@/lib/data/emailTemplates';
-import { LETTER_TEMPLATES, type LetterTemplate } from '@/lib/data/letterTemplates';
-import { TranslationExercise, CreativeWritingExercise, WritingSubmission } from '@/lib/models/writing';
-
-type ExerciseType = 'translation' | 'creative' | 'email' | 'letters' | null;
+import { EMAIL_TEMPLATES } from '@/lib/data/emailTemplates';
+import { LETTER_TEMPLATES } from '@/lib/data/letterTemplates';
 
 export default function WritingExercisesPage() {
   const router = useRouter();
   const { session } = useFirebaseAuth();
-  const [selectedLevel, setSelectedLevel] = useState<CEFRLevel>(CEFRLevel.A1);
-  const [showHistory, setShowHistory] = useState(false);
-  const [selectedExerciseType, setSelectedExerciseType] = useState<ExerciseType>(null);
-  const [selectedTranslation, setSelectedTranslation] = useState<TranslationExercise | null>(null);
-  const [selectedCreative, setSelectedCreative] = useState<CreativeWritingExercise | null>(null);
-  const [selectedEmail, setSelectedEmail] = useState<EmailTemplate | null>(null);
-  const [selectedLetter, setSelectedLetter] = useState<LetterTemplate | null>(null);
-  const [writingText, setWritingText] = useState('');
-  const [emailContent, setEmailContent] = useState({ to: '', subject: '', body: '' });
-  const [viewingAttempt, setViewingAttempt] = useState<WritingSubmission | null>(null);
-  const [isPendingLevelChange, startTransition] = useTransition();
 
-  // Calculate word count
-  const wordCount = writingText.trim().split(/\s+/).filter(word => word.length > 0).length;
-  const emailWordCount = emailContent.body.trim().split(/\s+/).filter(word => word.length > 0).length;
-
-  // Fetch writing stats from Firebase
-  const { data: writingStats, isLoading: statsLoading, error: statsError } = useWritingStats(session?.user?.email || undefined);
-
-  // Debug: Log stats
-  console.log('[Writing Page] Stats:', writingStats);
-  console.log('[Writing Page] Stats Loading:', statsLoading);
-  console.log('[Writing Page] Stats Error:', statsError);
-  console.log('[Writing Page] User email:', session?.user?.email);
-  console.log('[Writing Page] Stats keys:', writingStats ? Object.keys(writingStats) : 'null');
-
-  // Fetch recent submissions
-  const { data: submissions = [], isLoading: submissionsLoading } = useStudentSubmissions(session?.user?.email || undefined);
-
-  // Get current exercise ID
-  const currentExercise = selectedTranslation || selectedCreative || selectedEmail || selectedLetter;
-  const currentExerciseId = currentExercise
-    ? ('exerciseId' in currentExercise ? currentExercise.exerciseId :
-       'id' in currentExercise ? currentExercise.id :
-       'templateId' in currentExercise ? (currentExercise as any).templateId : undefined)
-    : undefined;
-
-  // Debug: Log exercise selection
-  console.log('[Writing Page] Current exercise:', currentExercise);
-  console.log('[Writing Page] Current exercise ID:', currentExerciseId);
-  console.log('[Writing Page] Exercise keys:', currentExercise ? Object.keys(currentExercise) : 'null');
-
-  // Fetch attempts for current exercise (if one is selected)
-  const { data: attempts = [], isLoading: attemptsLoading } = useExerciseAttempts(session?.user?.email || undefined, currentExerciseId);
-  const { data: attemptStats } = useAttemptStats(session?.user?.email || undefined, currentExerciseId);
-
-  // Debug: Log attempts
-  console.log('[Writing Page] Attempts:', attempts);
-  console.log('[Writing Page] Attempts loading:', attemptsLoading);
-  console.log('[Writing Page] Attempt count:', attempts.length);
-
-  // Submission handlers (save draft, submit, etc.)
-  const { isSaving, handleSaveDraft, handleSubmit, resetDraftState, dialogState, closeDialog, optimisticSaveState } = useWritingSubmissionHandlers({
+  const {
     selectedLevel,
+    showHistory,
+    selectedExerciseType,
     selectedTranslation,
     selectedCreative,
     selectedEmail,
     selectedLetter,
     writingText,
-    userEmail: session?.user?.email || undefined,
-  });
-
-  const handleExerciseTypeSelect = (type: ExerciseType) => {
-    console.log('Exercise type selected:', type);
-    // Toggle: if the same type is clicked, deselect it
-    if (selectedExerciseType === type) {
-      setSelectedExerciseType(null);
-    } else {
-      setSelectedExerciseType(type);
-    }
-    setSelectedTranslation(null);
-    setSelectedCreative(null);
-    setSelectedEmail(null);
-    setSelectedLetter(null);
-    setWritingText('');
-    setEmailContent({ to: '', subject: '', body: '' });
-  };
-
-  const handleTranslationSelect = (exercise: TranslationExercise) => {
-    setSelectedTranslation(exercise);
-    setWritingText('');
-    setEmailContent({ to: '', subject: '', body: '' });
-    resetDraftState();
-  };
-
-  const handleCreativeSelect = (exercise: CreativeWritingExercise) => {
-    setSelectedCreative(exercise);
-    setWritingText('');
-    setEmailContent({ to: '', subject: '', body: '' });
-    resetDraftState();
-  };
-
-  const handleEmailSelect = (template: EmailTemplate) => {
-    setSelectedEmail(template);
-    setWritingText('');
-    setEmailContent({ to: template.recipient, subject: template.subject, body: '' });
-    resetDraftState();
-  };
-
-  const handleLetterSelect = (template: LetterTemplate) => {
-    setSelectedLetter(template);
-    setWritingText('');
-    setEmailContent({ to: '', subject: '', body: '' });
-    resetDraftState();
-  };
-
-  const handleBackToExerciseTypes = () => {
-    setSelectedExerciseType(null);
-    setSelectedTranslation(null);
-    setSelectedCreative(null);
-    setSelectedEmail(null);
-    setSelectedLetter(null);
-    setWritingText('');
-    setEmailContent({ to: '', subject: '', body: '' });
-  };
-
-  const handleBackToExerciseList = () => {
-    setSelectedTranslation(null);
-    setSelectedCreative(null);
-    setSelectedEmail(null);
-    setSelectedLetter(null);
-    setWritingText('');
-    setEmailContent({ to: '', subject: '', body: '' });
-  };
+    emailContent,
+    viewingAttempt,
+    isPendingLevelChange,
+    wordCount,
+    emailWordCount,
+    writingStats,
+    statsLoading,
+    submissions,
+    submissionsLoading,
+    currentExercise,
+    attempts,
+    isSaving,
+    handleSaveDraft,
+    handleSubmit,
+    dialogState,
+    closeDialog,
+    optimisticSaveState,
+    setWritingText,
+    setEmailContent,
+    handleExerciseTypeSelect,
+    handleTranslationSelect,
+    handleCreativeSelect,
+    handleEmailSelect,
+    handleLetterSelect,
+    handleBackToExerciseTypes,
+    handleBackToExerciseList,
+    handleViewAttemptContent,
+    handleBackToCurrentDraft,
+    handleLevelChange,
+    handleToggleHistory,
+  } = useWritingExerciseState({ userEmail: session?.user?.email });
 
   const handleViewSubmission = (submissionId: string) => {
     router.push(`/dashboard/student/writing/feedback/${submissionId}`);
-  };
-
-  const handleViewAttemptContent = (attempt: WritingSubmission) => {
-    setViewingAttempt(attempt);
-  };
-
-  const handleBackToCurrentDraft = () => {
-    setViewingAttempt(null);
-  };
-
-  const handleLevelChange = (newLevel: CEFRLevel) => {
-    startTransition(() => {
-      setSelectedLevel(newLevel);
-    });
   };
 
   // Filter exercises by selected level
@@ -180,7 +74,6 @@ export default function WritingExercisesPage() {
   const filteredEmailTemplates = EMAIL_TEMPLATES.filter(ex => ex.level === selectedLevel);
   const filteredLetterTemplates = LETTER_TEMPLATES.filter(ex => ex.level === selectedLevel);
 
-  // Check if an exercise is selected (currentExercise already defined above on line 56)
   const hasSelectedExercise = !!(selectedTranslation || selectedCreative || selectedEmail || selectedLetter);
 
   return (
@@ -250,7 +143,6 @@ export default function WritingExercisesPage() {
 
       {/* Main Content */}
       <div className="container mx-auto px-6 py-8">
-        {/* Show exercise workspace if an exercise is selected */}
         {selectedTranslation ? (
           <TranslationWorkspace
             exercise={selectedTranslation}
@@ -339,7 +231,6 @@ export default function WritingExercisesPage() {
             }
           />
         ) : (
-          /* Show Main Writing Hub */
           <WritingHub
             selectedLevel={selectedLevel}
             onLevelChange={handleLevelChange}
@@ -350,7 +241,7 @@ export default function WritingExercisesPage() {
             submissions={submissions}
             submissionsLoading={submissionsLoading}
             showHistory={showHistory}
-            onToggleHistory={() => setShowHistory(!showHistory)}
+            onToggleHistory={handleToggleHistory}
             onViewSubmission={handleViewSubmission}
             filteredTranslationExercises={filteredTranslationExercises}
             filteredCreativeExercises={filteredCreativeExercises}
