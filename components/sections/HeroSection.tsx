@@ -10,38 +10,37 @@ export function HeroSection() {
 
   console.info('🎨 HeroSection rendered | Status:', status, '| Has session:', !!session);
 
-  // Auto-redirect authenticated users to dashboard
-  useEffect(() => {
-    console.info('🏠 Homepage useEffect - Status:', status, '| Session:', !!session);
+  // TEMPORARILY DISABLED AUTO-REDIRECT TO DEBUG
+  // useEffect(() => {
+  //   console.info('🏠 Homepage useEffect - Status:', status, '| Session:', !!session);
 
-    if (status === 'loading') {
-      console.info('⏳ Still loading session...');
-      return;
-    }
+  //   if (status === 'loading') {
+  //     console.info('⏳ Still loading session...');
+  //     return;
+  //   }
 
-    if (session) {
-      // Validate session is not expired before redirecting
-      const expiryDate = new Date(session.expires);
-      const now = new Date();
-      const isExpired = expiryDate < now;
+  //   if (session) {
+  //     // Validate session is not expired before redirecting
+  //     const expiryDate = new Date(session.expires);
+  //     const now = new Date();
+  //     const isExpired = expiryDate < now;
 
-      console.info('Session check - Email:', session.user?.email, '| Expired:', isExpired);
+  //     console.info('Session check - Email:', session.user?.email, '| Expired:', isExpired);
 
-      if (!isExpired) {
-        console.info('🔄 Auto-redirecting authenticated user to dashboard');
-        window.location.href = '/dashboard';
-      } else {
-        console.warn('⚠️ Session is expired, not redirecting');
-      }
-    } else {
-      console.info('ℹ️ No session, staying on homepage');
-    }
-  }, [session, status]);
+  //     if (!isExpired) {
+  //       console.info('🔄 Auto-redirecting authenticated user to dashboard');
+  //       window.location.href = '/dashboard';
+  //     } else {
+  //       console.warn('⚠️ Session is expired, not redirecting');
+  //     }
+  //   } else {
+  //     console.info('ℹ️ No session, staying on homepage');
+  //   }
+  // }, [session, status]);
 
   // Session validation happens in handleStartLearning
 
   const handleStartLearning = async () => {
-    alert('🔵 BUTTON CLICKED!'); // DEBUG: Make it VERY obvious
     console.info('🔵 START LEARNING CLICKED');
     console.info('Status:', status, '| Session exists:', !!session);
 
