@@ -1,6 +1,6 @@
 {
   "level": "B1",
-  "totalCards": 1365,
+  "totalCards": 1453,
   "flashcards": [
     {
       "id": "syllabus-b1-10844",
@@ -6286,6 +6286,332 @@
           "B1",
           "Daily Routines",
           "einschlafen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11450",
+      "german": "während + Gen",
+      "english": "during / while",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "time"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "während"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11451",
+      "german": "wegen + Gen",
+      "english": "because of / due to",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "reason"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "wegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11452",
+      "german": "trotz + Gen",
+      "english": "despite / in spite of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "contrast"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "trotz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11453",
+      "german": "statt/anstatt + Gen",
+      "english": "instead of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "statt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11454",
+      "german": "außerhalb + Gen",
+      "english": "outside of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "location"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "außerhalb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11455",
+      "german": "innerhalb + Gen",
+      "english": "inside / within",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "location",
+        "time"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "innerhalb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11456",
+      "german": "oberhalb + Gen",
+      "english": "above",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "location"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "oberhalb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11457",
+      "german": "unterhalb + Gen",
+      "english": "below / beneath",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "location"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "unterhalb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11458",
+      "german": "aufgrund + Gen",
+      "english": "on the basis of / due to",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "reason"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "aufgrund"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11459",
+      "german": "infolge + Gen",
+      "english": "as a result of / due to",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "reason"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "infolge"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11460",
+      "german": "laut + Gen",
+      "english": "according to",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "laut"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11461",
+      "german": "mittels + Gen",
+      "english": "by means of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "mittels"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11462",
+      "german": "anhand + Gen",
+      "english": "on the basis of / using",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "anhand"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11463",
+      "german": "mangels + Gen",
+      "english": "for lack of / due to lack of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "mangels"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11464",
+      "german": "bezüglich + Gen",
+      "english": "regarding / concerning",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1",
+        "genitive",
+        "formal"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "bezüglich"
         ]
       }
     },
@@ -13027,503 +13353,6 @@
       }
     },
     {
-      "id": "remnote-270",
-      "german": "Freuen",
-      "english": "to look happy",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Akkusativ"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 847,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Akkusativ",
-          "Freuen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-271",
-      "german": "sich erfreut",
-      "english": "to be pleased / to be delighted / to be glad",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Akkusativ",
-        "Freuen"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 853,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Akkusativ",
-          "Freuen",
-          "sich erfreut"
-        ]
-      }
-    },
-    {
-      "id": "remnote-272",
-      "german": "Stimmen",
-      "english": "to vote for",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Akkusativ"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 899,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Akkusativ",
-          "Stimmen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-273",
-      "german": "umstreiten",
-      "english": "controversial / contentious / debatable / disputed",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Akkusativ",
-        "Streiten"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 907,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Akkusativ",
-          "Streiten",
-          "umstreiten"
-        ]
-      }
-    },
-    {
-      "id": "remnote-274",
-      "german": "verteilen",
-      "english": "to distribute #verben",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Akkusativ",
-        "Teilen::to share / to divide"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 915,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Akkusativ",
-          "Teilen::to share / to divide",
-          "verteilen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-275",
-      "german": "aufteilen",
-      "english": "to split [goods/money] #verben",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Akkusativ",
-        "Teilen::to share / to divide"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 919,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Akkusativ",
-          "Teilen::to share / to divide",
-          "aufteilen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-276",
-      "german": "mitteilen",
-      "english": "to communicate  #verben",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Akkusativ",
-        "Teilen::to share / to divide"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 923,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Akkusativ",
-          "Teilen::to share / to divide",
-          "mitteilen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-277",
-      "german": "unterteilen",
-      "english": "to divide",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Akkusativ",
-        "Teilen::to share / to divide"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 927,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Akkusativ",
-          "Teilen::to share / to divide",
-          "unterteilen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-278",
-      "german": "Bitte wenden",
-      "english": "Turn the page, please.",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Akkusativ",
-        "Wenden",
-        "bedeutung;;to turn to [sb.] / to turn"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 954,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Akkusativ",
-          "Wenden",
-          "bedeutung;;to turn to [sb.] / to turn",
-          "Bitte wenden"
-        ]
-      }
-    },
-    {
-      "id": "remnote-279",
-      "german": "Zugreifen",
-      "english": "to access sth.",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Akkusativ"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 955,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Akkusativ",
-          "Zugreifen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-280",
-      "german": "Beschweren",
-      "english": "to complain",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Dativ"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 995,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Dativ",
-          "Beschweren"
-        ]
-      }
-    },
-    {
-      "id": "remnote-281",
-      "german": "Besprechen",
-      "english": "to talk sth. over with sb.",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Dativ"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1000,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Dativ",
-          "Besprechen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-282",
-      "german": "Bestehen",
-      "english": "to pass",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Dativ"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1007,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Dativ",
-          "Bestehen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-283",
-      "german": "auf",
-      "english": "to insist",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Dativ",
-        "Bestehen"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1011,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Dativ",
-          "Bestehen",
-          "auf"
-        ]
-      }
-    },
-    {
-      "id": "remnote-284",
-      "german": "aus",
-      "english": "to consist of sth.",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Dativ",
-        "Bestehen"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1015,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Dativ",
-          "Bestehen",
-          "aus"
-        ]
-      }
-    },
-    {
-      "id": "remnote-285",
-      "german": "Ekeln",
-      "english": "to disgust",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Dativ"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1023,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Dativ",
-          "Ekeln"
-        ]
-      }
-    },
-    {
-      "id": "remnote-286",
-      "german": "die Anfrage",
-      "english": "request / inquiry / enquiry / query",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Dativ",
-        "Fragen"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1033,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Dativ",
-          "Fragen",
-          "die Anfrage"
-        ]
-      }
-    },
-    {
-      "id": "remnote-287",
-      "german": "Führen (mit)",
-      "english": "to conduct sth. with somebody",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Dativ"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1042,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Dativ",
-          "Führen (mit)"
-        ]
-      }
-    },
-    {
-      "id": "remnote-288",
-      "german": "Führen (zum)",
-      "english": "to lead on to",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Dativ"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1045,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Dativ",
-          "Führen (zum)"
-        ]
-      }
-    },
-    {
-      "id": "remnote-289",
-      "german": "Klarkommen",
-      "english": "to come to terms with sth.",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Dativ"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1054,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Dativ",
-          "Klarkommen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-290",
-      "german": "Trennen",
-      "english": "to separate from sb.",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Dativ"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1083,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Dativ",
-          "Trennen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-291",
-      "german": "Verbeugen",
-      "english": "to bow",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Dativ"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1093,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Dativ",
-          "Verbeugen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-292",
-      "german": "Verloben",
-      "english": "to betroth sb.",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Dativ"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1096,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Dativ",
-          "Verloben"
-        ]
-      }
-    },
-    {
-      "id": "remnote-293",
-      "german": "Verstehen",
-      "english": "to get along with sb.",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Dativ"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1099,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Dativ",
-          "Verstehen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-294",
-      "german": "Zerbrechen",
-      "english": "to fall apart",
-      "category": "Liste der Verben mit Präpositionen",
-      "level": "B2",
-      "tags": [
-        "Dativ"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1109,
-        "hierarchy": [
-          "Liste der Verben mit Präpositionen",
-          "Dativ",
-          "Zerbrechen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b1-11024",
       "german": "Termin",
       "english": "appointment",
@@ -13860,6 +13689,1466 @@
           "B1",
           "Medical Health",
           "Behandlung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11041",
+      "german": "Arzt",
+      "english": "doctor (male)",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Arzt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11042",
+      "german": "Ärztin",
+      "english": "doctor (female)",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Ärztin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11043",
+      "german": "Zahnarzt",
+      "english": "dentist (male)",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Zahnarzt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11044",
+      "german": "Zahnärztin",
+      "english": "dentist (female)",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Zahnärztin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11045",
+      "german": "Krankenschwester",
+      "english": "nurse (female)",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Krankenschwester"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11046",
+      "german": "Krankenpfleger",
+      "english": "nurse (male)",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Krankenpfleger"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11047",
+      "german": "Krankenhaus",
+      "english": "hospital",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Krankenhaus"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11048",
+      "german": "Klinik",
+      "english": "clinic",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Klinik"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11049",
+      "german": "Praxis",
+      "english": "practice / doctor's office",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Praxis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11050",
+      "german": "Notaufnahme",
+      "english": "emergency room / A&E",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Notaufnahme"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11051",
+      "german": "Operation",
+      "english": "operation / surgery",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Operation"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11052",
+      "german": "Diagnose",
+      "english": "diagnosis",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Diagnose"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11053",
+      "german": "Symptom",
+      "english": "symptom",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Symptom"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11054",
+      "german": "Krankheit",
+      "english": "illness / disease",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Krankheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11055",
+      "german": "Allergie",
+      "english": "allergy",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Allergie"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11056",
+      "german": "Infektion",
+      "english": "infection",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Infektion"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11057",
+      "german": "Entzündung",
+      "english": "inflammation",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Entzündung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11058",
+      "german": "Kopfschmerzen",
+      "english": "headache",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Kopfschmerzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11059",
+      "german": "Bauchschmerzen",
+      "english": "stomach ache",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Bauchschmerzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11060",
+      "german": "Zahnschmerzen",
+      "english": "toothache",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Zahnschmerzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11061",
+      "german": "Rückenschmerzen",
+      "english": "back pain",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Rückenschmerzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11062",
+      "german": "Halsschmerzen",
+      "english": "sore throat",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Halsschmerzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11063",
+      "german": "Durchfall",
+      "english": "diarrhea",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Durchfall"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11064",
+      "german": "Verstopfung",
+      "english": "constipation",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Verstopfung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11065",
+      "german": "Übelkeit",
+      "english": "nausea",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Übelkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11066",
+      "german": "Erbrechen",
+      "english": "vomiting",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Erbrechen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11067",
+      "german": "Schwindel",
+      "english": "dizziness",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Schwindel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11068",
+      "german": "Müdigkeit",
+      "english": "fatigue / tiredness",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Müdigkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11069",
+      "german": "Ausschlag",
+      "english": "rash",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Ausschlag"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11070",
+      "german": "Blutdruck",
+      "english": "blood pressure",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Blutdruck"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11071",
+      "german": "Puls",
+      "english": "pulse",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Puls"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11072",
+      "german": "Blutprobe",
+      "english": "blood sample / blood test",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Blutprobe"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11073",
+      "german": "Röntgen",
+      "english": "X-ray",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Röntgen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11074",
+      "german": "Ultraschall",
+      "english": "ultrasound",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Ultraschall"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11075",
+      "german": "Impfung",
+      "english": "vaccination",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Impfung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11076",
+      "german": "Spritze",
+      "english": "injection / syringe",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Spritze"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11077",
+      "german": "Tablette",
+      "english": "tablet / pill",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Tablette"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11078",
+      "german": "Kapsel",
+      "english": "capsule",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Kapsel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11079",
+      "german": "Salbe",
+      "english": "ointment / cream",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Salbe"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11080",
+      "german": "Tropfen",
+      "english": "drops",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Tropfen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11081",
+      "german": "Antibiotikum",
+      "english": "antibiotic",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Antibiotikum"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11082",
+      "german": "Schmerzmittel",
+      "english": "painkiller",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Schmerzmittel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11083",
+      "german": "Nebenwirkung",
+      "english": "side effect",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Nebenwirkung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11084",
+      "german": "Dosierung",
+      "english": "dosage",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Dosierung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11085",
+      "german": "Verband",
+      "english": "bandage / dressing",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Verband"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11086",
+      "german": "Pflaster",
+      "english": "plaster / band-aid",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Pflaster"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11087",
+      "german": "Gips",
+      "english": "cast / plaster",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Gips"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11088",
+      "german": "Krücke",
+      "english": "crutch",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Krücke"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11089",
+      "german": "Rollstuhl",
+      "english": "wheelchair",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Rollstuhl"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11090",
+      "german": "Brille",
+      "english": "glasses",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Brille"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11091",
+      "german": "Bruch",
+      "english": "fracture / break",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Bruch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11092",
+      "german": "Prellung",
+      "english": "bruise / contusion",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Prellung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11093",
+      "german": "Wunde",
+      "english": "wound",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Wunde"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11094",
+      "german": "Narbe",
+      "english": "scar",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Narbe"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11095",
+      "german": "Blutung",
+      "english": "bleeding",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Blutung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11096",
+      "german": "Schwellung",
+      "english": "swelling",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Schwellung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11097",
+      "german": "Atemnot",
+      "english": "shortness of breath",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Atemnot"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11098",
+      "german": "Bewusstlosigkeit",
+      "english": "unconsciousness",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Bewusstlosigkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11099",
+      "german": "Genesung",
+      "english": "recovery",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Genesung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11100",
+      "german": "Rehabilitation",
+      "english": "rehabilitation",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Rehabilitation"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11101",
+      "german": "Physiotherapie",
+      "english": "physiotherapy",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Physiotherapie"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11102",
+      "german": "Gesundheit",
+      "english": "health",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Gesundheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11103",
+      "german": "Vorsorge",
+      "english": "prevention / preventive care",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Vorsorge"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11104",
+      "german": "untersuchen",
+      "english": "to examine",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "untersuchen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11105",
+      "german": "behandeln",
+      "english": "to treat",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "behandeln"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11106",
+      "german": "verschreiben",
+      "english": "to prescribe",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "verschreiben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11107",
+      "german": "impfen",
+      "english": "to vaccinate",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "impfen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11108",
+      "german": "heilen",
+      "english": "to heal / to cure",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "heilen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11109",
+      "german": "leiden",
+      "english": "to suffer",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "leiden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11110",
+      "german": "sich erholen",
+      "english": "to recover",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "sich erholen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11111",
+      "german": "operieren",
+      "english": "to operate on",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "operieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11112",
+      "german": "röntgen",
+      "english": "to X-ray",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "röntgen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11113",
+      "german": "Patient",
+      "english": "patient (male)",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Patient"
         ]
       }
     },
@@ -23786,174 +25075,6 @@
       }
     },
     {
-      "id": "remnote-321",
-      "german": "beantragen",
-      "english": "to apply [paperwork] #verben",
-      "category": "Verbs With Prepositions",
-      "level": "B1",
-      "tags": [
-        "anwenden"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1308,
-        "hierarchy": [
-          "Verbs",
-          "anwenden",
-          "beantragen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-486",
-      "german": "fangen",
-      "english": "to catch / to capture / to trap  #verben",
-      "category": "Verbs With Prepositions",
-      "level": "B1",
-      "tags": [
-        "erwischen"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 2135,
-        "hierarchy": [
-          "Verbs",
-          "erwischen",
-          "fangen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-618",
-      "german": "haften...für",
-      "english": "to be liable for sth. / to be responsible for sb./sth.",
-      "category": "Verbs With Prepositions",
-      "level": "B1",
-      "tags": [
-        "kleben",
-        "haften"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 2784,
-        "hierarchy": [
-          "Verbs",
-          "kleben",
-          "haften",
-          "haften...für"
-        ]
-      }
-    },
-    {
-      "id": "remnote-627",
-      "german": "durchlaufen",
-      "english": "to pass through",
-      "category": "Verbs With Prepositions",
-      "level": "B1",
-      "tags": [
-        "laufen"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 2839,
-        "hierarchy": [
-          "Verbs",
-          "laufen",
-          "durchlaufen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-707",
-      "german": "sanieren",
-      "english": "to renovate / to refurbish #verben",
-      "category": "Verbs With Prepositions",
-      "level": "B1",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 3192,
-        "hierarchy": [
-          "Verbs",
-          "sanieren"
-        ]
-      }
-    },
-    {
-      "id": "remnote-801",
-      "german": "umwandeln",
-      "english": "to convert #verben",
-      "category": "Verbs With Prepositions",
-      "level": "B1",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 3670,
-        "hierarchy": [
-          "Verbs",
-          "umwandeln"
-        ]
-      }
-    },
-    {
-      "id": "remnote-828",
-      "german": "verlangen",
-      "english": "to demand / to request / to require / to claim / to ask / to charge  #verben",
-      "category": "Verbs With Prepositions",
-      "level": "B1",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 3800,
-        "hierarchy": [
-          "Verbs",
-          "verlangen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-839",
-      "german": "vermitteln",
-      "english": "to convey / to impart  #verben",
-      "category": "Verbs With Prepositions",
-      "level": "B1",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 3861,
-        "hierarchy": [
-          "Verbs",
-          "vermitteln"
-        ]
-      }
-    },
-    {
-      "id": "remnote-853",
-      "german": "verwandeln",
-      "english": "to transform  #verben",
-      "category": "Verbs With Prepositions",
-      "level": "B1",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 3931,
-        "hierarchy": [
-          "Verbs",
-          "verwandeln"
-        ]
-      }
-    },
-    {
-      "id": "remnote-886",
-      "german": "zanken",
-      "english": "to brawl / to bicker",
-      "category": "Verbs With Prepositions",
-      "level": "B1",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 4091,
-        "hierarchy": [
-          "Verbs",
-          "zanken"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b1-11131",
       "german": "warten auf + Akk",
       "english": "to wait for",
@@ -24550,6 +25671,706 @@
           "B1",
           "Verbs With Prepositions",
           "sich konzentrieren auf + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11161",
+      "german": "sich beziehen auf + Akk",
+      "english": "to refer to",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich beziehen auf + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11162",
+      "german": "sich handeln um + Akk",
+      "english": "to be about / to concern",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich handeln um + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11163",
+      "german": "sich wenden an + Akk",
+      "english": "to turn to / to contact",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich wenden an + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11164",
+      "german": "bestehen auf + Dat",
+      "english": "to insist on",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "bestehen auf + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11165",
+      "german": "leiden an + Dat",
+      "english": "to suffer from",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "leiden an + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11166",
+      "german": "sich wehren gegen + Akk",
+      "english": "to defend oneself against",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich wehren gegen + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11167",
+      "german": "sich unterhalten über + Akk",
+      "english": "to talk about",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich unterhalten über + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11168",
+      "german": "achten auf + Akk",
+      "english": "to pay attention to",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "achten auf + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11169",
+      "german": "reagieren auf + Akk",
+      "english": "to react to",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "reagieren auf + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11170",
+      "german": "kämpfen gegen + Akk",
+      "english": "to fight against",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "kämpfen gegen + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11171",
+      "german": "sich bemühen um + Akk",
+      "english": "to make an effort for",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich bemühen um + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11172",
+      "german": "zweifeln an + Dat",
+      "english": "to doubt",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "zweifeln an + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11173",
+      "german": "vergleichen mit + Dat",
+      "english": "to compare with",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "vergleichen mit + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11174",
+      "german": "sich streiten über + Akk",
+      "english": "to argue about",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich streiten über + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11175",
+      "german": "sich auseinandersetzen mit + Dat",
+      "english": "to deal with / to grapple with",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich auseinandersetzen mit + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11176",
+      "german": "protestieren gegen + Akk",
+      "english": "to protest against",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "protestieren gegen + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11177",
+      "german": "einladen zu + Dat",
+      "english": "to invite to",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "einladen zu + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11178",
+      "german": "gratulieren zu + Dat",
+      "english": "to congratulate on",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "gratulieren zu + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11179",
+      "german": "schützen vor + Dat",
+      "english": "to protect from",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "schützen vor + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11180",
+      "german": "warnen vor + Dat",
+      "english": "to warn about",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "warnen vor + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11181",
+      "german": "sich sorgen um + Akk",
+      "english": "to worry about",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich sorgen um + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11182",
+      "german": "gehören zu + Dat",
+      "english": "to belong to",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "gehören zu + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11183",
+      "german": "bestehen aus + Dat",
+      "english": "to consist of",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "bestehen aus + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11184",
+      "german": "sich einigen auf + Akk",
+      "english": "to agree on",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich einigen auf + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11185",
+      "german": "sich verlassen auf + Akk",
+      "english": "to rely on",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich verlassen auf + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11186",
+      "german": "antworten auf + Akk",
+      "english": "to answer / to respond to",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "antworten auf + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11187",
+      "german": "sich informieren über + Akk",
+      "english": "to inform oneself about",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich informieren über + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11188",
+      "german": "sich entschuldigen für + Akk",
+      "english": "to apologize for",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich entschuldigen für + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11189",
+      "german": "sich bedanken für + Akk",
+      "english": "to thank for",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich bedanken für + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11190",
+      "german": "danken für + Akk",
+      "english": "to thank for",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "danken für + Akk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11191",
+      "german": "sich trennen von + Dat",
+      "english": "to separate from",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich trennen von + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11192",
+      "german": "riechen nach + Dat",
+      "english": "to smell of",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "riechen nach + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11193",
+      "german": "schmecken nach + Dat",
+      "english": "to taste of",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "schmecken nach + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11194",
+      "german": "sich verstehen mit + Dat",
+      "english": "to get along with",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "sich verstehen mit + Dat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11195",
+      "german": "halten von + Dat",
+      "english": "to think of / to have an opinion about",
+      "category": "Verbs With Prepositions",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Verbs With Prepositions",
+          "halten von + Dat"
         ]
       }
     }

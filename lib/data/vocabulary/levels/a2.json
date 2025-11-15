@@ -1,6 +1,6 @@
 {
   "level": "A2",
-  "totalCards": 1001,
+  "totalCards": 1183,
   "flashcards": [
     {
       "id": "syllabus-a2-10413",
@@ -2779,6 +2779,1266 @@
     },
     {
       "id": "syllabus-a2-10529",
+      "german": "Lehrerin",
+      "english": "teacher (female)",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Lehrerin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10530",
+      "german": "Schülerin",
+      "english": "student / pupil (female)",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Schülerin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10531",
+      "german": "Student",
+      "english": "university student (male)",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Student"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10532",
+      "german": "Studentin",
+      "english": "university student (female)",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Studentin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10533",
+      "german": "Kindergarten",
+      "english": "kindergarten / preschool",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Kindergarten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10534",
+      "german": "Grundschule",
+      "english": "elementary school / primary school",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Grundschule"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10535",
+      "german": "Gymnasium",
+      "english": "grammar school / high school",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Gymnasium"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10536",
+      "german": "Hochschule",
+      "english": "college / higher education institution",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Hochschule"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10537",
+      "german": "Fach",
+      "english": "subject",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Fach"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10538",
+      "german": "Mathematik",
+      "english": "mathematics",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Mathematik"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10539",
+      "german": "Deutsch",
+      "english": "German (subject)",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Deutsch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10540",
+      "german": "Englisch",
+      "english": "English (subject)",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Englisch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10541",
+      "german": "Geschichte",
+      "english": "history",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Geschichte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10542",
+      "german": "Geografie",
+      "english": "geography",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Geografie"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10543",
+      "german": "Biologie",
+      "english": "biology",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Biologie"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10544",
+      "german": "Chemie",
+      "english": "chemistry",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Chemie"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10545",
+      "german": "Physik",
+      "english": "physics",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Physik"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10546",
+      "german": "Kunst",
+      "english": "art",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Kunst"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10547",
+      "german": "Musik",
+      "english": "music",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Musik"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10548",
+      "german": "Sport",
+      "english": "physical education / sports",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Sport"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10549",
+      "german": "Abschluss",
+      "english": "degree / graduation",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Abschluss"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10550",
+      "german": "Diplom",
+      "english": "diploma",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Diplom"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10551",
+      "german": "Zeugnis",
+      "english": "report card / certificate",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Zeugnis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10552",
+      "german": "Kurs",
+      "english": "course",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Kurs"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10553",
+      "german": "Unterricht",
+      "english": "lesson / class / instruction",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Unterricht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10554",
+      "german": "Pause",
+      "english": "break / recess",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Pause"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10555",
+      "german": "Ferien",
+      "english": "holidays / vacation",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Ferien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10556",
+      "german": "Stundenplan",
+      "english": "timetable / schedule",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Stundenplan"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10557",
+      "german": "Mensa",
+      "english": "cafeteria / canteen",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Mensa"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10558",
+      "german": "Bibliothek",
+      "english": "library",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Bibliothek"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10559",
+      "german": "Klassenzimmer",
+      "english": "classroom",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Klassenzimmer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10560",
+      "german": "Schultasche",
+      "english": "school bag",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Schultasche"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10561",
+      "german": "Rucksack",
+      "english": "backpack",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Rucksack"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10562",
+      "german": "Radiergummi",
+      "english": "eraser",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Radiergummi"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10563",
+      "german": "Lineal",
+      "english": "ruler",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Lineal"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10564",
+      "german": "Schere",
+      "english": "scissors",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Schere"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10565",
+      "german": "Kleber",
+      "english": "glue",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Kleber"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10566",
+      "german": "Spitzer",
+      "english": "pencil sharpener",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Spitzer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10567",
+      "german": "Wörterbuch",
+      "english": "dictionary",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Wörterbuch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10568",
+      "german": "Lehrbuch",
+      "english": "textbook",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Lehrbuch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10569",
+      "german": "Übung",
+      "english": "exercise / practice",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Übung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10570",
+      "german": "Aufgabe",
+      "english": "task / assignment",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Aufgabe"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10571",
+      "german": "Antwort",
+      "english": "answer",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Antwort"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10572",
+      "german": "Frage",
+      "english": "question",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Frage"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10573",
+      "german": "Fehler",
+      "english": "mistake / error",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Fehler"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10574",
+      "german": "unterrichten",
+      "english": "to teach",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "unterrichten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10575",
+      "german": "erklären",
+      "english": "to explain",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "erklären"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10576",
+      "german": "verstehen",
+      "english": "to understand",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "verstehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10577",
+      "german": "wiederholen",
+      "english": "to repeat / to review",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "wiederholen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10578",
+      "german": "üben",
+      "english": "to practice",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "üben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10579",
+      "german": "schreiben",
+      "english": "to write",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "schreiben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10580",
+      "german": "lesen",
+      "english": "to read",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "lesen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10581",
+      "german": "rechnen",
+      "english": "to calculate",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "rechnen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10582",
+      "german": "korrigieren",
+      "english": "to correct",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "korrigieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10583",
+      "german": "bestehen",
+      "english": "to pass (an exam)",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "bestehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10584",
+      "german": "durchfallen",
+      "english": "to fail (an exam)",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "durchfallen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10585",
+      "german": "absolvieren",
+      "english": "to complete / to graduate",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "absolvieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10586",
+      "german": "sich anmelden",
+      "english": "to register / to enroll",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "sich anmelden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10587",
+      "german": "teilnehmen",
+      "english": "to participate / to attend",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "teilnehmen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10588",
+      "german": "vorbereiten",
+      "english": "to prepare",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "vorbereiten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10589",
+      "german": "Professor",
+      "english": "professor",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Professor"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10590",
+      "german": "Professorin",
+      "english": "professor (female)",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Professorin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10591",
+      "german": "Rektor",
+      "english": "principal / headmaster",
+      "category": "Education",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Education",
+          "Rektor"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10529",
       "german": "glücklich",
       "english": "happy",
       "category": "Feelings",
@@ -3494,6 +4754,466 @@
           "A2",
           "Hobbies",
           "reisen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10565",
+      "german": "joggen",
+      "english": "to jog",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "joggen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10566",
+      "german": "Radfahren",
+      "english": "cycling",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "Radfahren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10567",
+      "german": "Tennis",
+      "english": "tennis",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "Tennis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10568",
+      "german": "Basketball",
+      "english": "basketball",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "Basketball"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10569",
+      "german": "Volleyball",
+      "english": "volleyball",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "Volleyball"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10570",
+      "german": "Yoga",
+      "english": "yoga",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "Yoga"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10571",
+      "german": "Fitness",
+      "english": "fitness",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "Fitness"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10572",
+      "german": "laufen",
+      "english": "to run",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "laufen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10573",
+      "german": "gärtnern",
+      "english": "to garden",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "gärtnern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10574",
+      "german": "basteln",
+      "english": "to do crafts / to tinker",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "basteln"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10575",
+      "german": "sammeln",
+      "english": "to collect",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "sammeln"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10576",
+      "german": "das Hobby",
+      "english": "the hobby",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "das Hobby"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10577",
+      "german": "die Freizeit",
+      "english": "free time / leisure time",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "die Freizeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10578",
+      "german": "das Kino",
+      "english": "the cinema",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "das Kino"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10579",
+      "german": "das Theater",
+      "english": "the theater",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "das Theater"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10580",
+      "german": "das Konzert",
+      "english": "the concert",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "das Konzert"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10581",
+      "german": "das Museum",
+      "english": "the museum",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "das Museum"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10582",
+      "german": "schreiben",
+      "english": "to write",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "schreiben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10583",
+      "german": "nähen",
+      "english": "to sew",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "nähen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10584",
+      "german": "stricken",
+      "english": "to knit",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "stricken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10585",
+      "german": "Schach spielen",
+      "english": "to play chess",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "Schach spielen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10586",
+      "german": "Karten spielen",
+      "english": "to play cards",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "Karten spielen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10587",
+      "german": "campen",
+      "english": "to camp",
+      "category": "Hobbies",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Hobbies",
+          "campen"
         ]
       }
     },
@@ -5489,6 +7209,592 @@
           "A2",
           "Perception Verbs",
           "prüfen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10600",
+      "german": "in + Dat/Akk",
+      "english": "in / into",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "in"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10601",
+      "german": "an + Dat/Akk",
+      "english": "at / on / to",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "an"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10602",
+      "german": "auf + Dat/Akk",
+      "english": "on / onto",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "auf"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10603",
+      "german": "über + Dat/Akk",
+      "english": "over / above / about",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "über"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10604",
+      "german": "unter + Dat/Akk",
+      "english": "under / below / among",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "unter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10605",
+      "german": "vor + Dat/Akk",
+      "english": "in front of / before / ago",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction",
+        "time"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "vor"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10606",
+      "german": "hinter + Dat/Akk",
+      "english": "behind",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "hinter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10607",
+      "german": "neben + Dat/Akk",
+      "english": "next to / beside",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "neben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10608",
+      "german": "zwischen + Dat/Akk",
+      "english": "between",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "location",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "zwischen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10609",
+      "german": "mit + Dat",
+      "english": "with",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "mit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10610",
+      "german": "nach + Dat",
+      "english": "after / to (direction)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only",
+        "time",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "nach"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10611",
+      "german": "bei + Dat",
+      "english": "at / near / with (at someone's place)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "bei"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10612",
+      "german": "von + Dat",
+      "english": "from / of / by",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "von"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10613",
+      "german": "zu + Dat",
+      "english": "to / towards",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "zu"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10614",
+      "german": "aus + Dat",
+      "english": "from / out of",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "aus"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10615",
+      "german": "seit + Dat",
+      "english": "since / for (time)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only",
+        "time"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "seit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10616",
+      "german": "gegenüber + Dat",
+      "english": "opposite / across from",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only",
+        "location"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "gegenüber"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10617",
+      "german": "für + Akk",
+      "english": "for",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "accusative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "für"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10618",
+      "german": "durch + Akk",
+      "english": "through",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "accusative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "durch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10619",
+      "german": "gegen + Akk",
+      "english": "against / around (time)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "accusative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "gegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10620",
+      "german": "ohne + Akk",
+      "english": "without",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "accusative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "ohne"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10621",
+      "german": "um + Akk",
+      "english": "around / at (time)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "accusative-only",
+        "time"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "um"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10622",
+      "german": "bis + Akk",
+      "english": "until / to",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "accusative-only",
+        "time"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "bis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10623",
+      "german": "entlang + Akk",
+      "english": "along",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "accusative-only",
+        "direction"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "entlang"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10624",
+      "german": "ab + Dat",
+      "english": "from / starting from",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only",
+        "time"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "ab"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10625",
+      "german": "außer + Dat",
+      "english": "except / besides",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "außer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10626",
+      "german": "entgegen + Dat",
+      "english": "contrary to / against",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2",
+        "dative-only"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "entgegen"
         ]
       }
     },
@@ -17188,6 +19494,1386 @@
           "A2",
           "Travel",
           "Pass"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10828",
+      "german": "Visum",
+      "english": "visa",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Visum"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10829",
+      "german": "Reiseführer",
+      "english": "travel guide / guidebook",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Reiseführer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10830",
+      "german": "Landkarte",
+      "english": "map",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Landkarte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10831",
+      "german": "Stadtplan",
+      "english": "city map",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Stadtplan"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10832",
+      "german": "Sehenswürdigkeit",
+      "english": "sight / attraction",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Sehenswürdigkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10833",
+      "german": "Museum",
+      "english": "museum",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Museum"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10834",
+      "german": "Schloss",
+      "english": "castle / palace",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Schloss"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10835",
+      "german": "Kirche",
+      "english": "church",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Kirche"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10836",
+      "german": "Dom",
+      "english": "cathedral",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Dom"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10837",
+      "german": "Denkmal",
+      "english": "monument / memorial",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Denkmal"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10838",
+      "german": "Ausflug",
+      "english": "excursion / day trip",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Ausflug"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10839",
+      "german": "Rundfahrt",
+      "english": "tour / sightseeing tour",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Rundfahrt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10840",
+      "german": "Führung",
+      "english": "guided tour",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Führung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10841",
+      "german": "Unterkunft",
+      "english": "accommodation",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Unterkunft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10842",
+      "german": "Pension",
+      "english": "guesthouse / bed and breakfast",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Pension"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10843",
+      "german": "Jugendherberge",
+      "english": "youth hostel",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Jugendherberge"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10844",
+      "german": "Campingplatz",
+      "english": "campsite / camping ground",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Campingplatz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10845",
+      "german": "Zimmer",
+      "english": "room",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Zimmer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10846",
+      "german": "Einzelzimmer",
+      "english": "single room",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Einzelzimmer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10847",
+      "german": "Doppelzimmer",
+      "english": "double room",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Doppelzimmer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10848",
+      "german": "Rezeption",
+      "english": "reception / front desk",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Rezeption"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10849",
+      "german": "Schlüssel",
+      "english": "key",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Schlüssel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10850",
+      "german": "Frühstück",
+      "english": "breakfast",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Frühstück"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10851",
+      "german": "Halbpension",
+      "english": "half board",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Halbpension"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10852",
+      "german": "Vollpension",
+      "english": "full board",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Vollpension"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10853",
+      "german": "Bordkarte",
+      "english": "boarding pass",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Bordkarte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10854",
+      "german": "Gate",
+      "english": "gate",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Gate"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10855",
+      "german": "Flug",
+      "english": "flight",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Flug"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10856",
+      "german": "Verspätung",
+      "english": "delay",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Verspätung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10857",
+      "german": "Gleis",
+      "english": "platform / track",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Gleis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10858",
+      "german": "Fahrkarte",
+      "english": "ticket (for train/bus)",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Fahrkarte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10859",
+      "german": "Fahrkartenschalter",
+      "english": "ticket counter",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Fahrkartenschalter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10860",
+      "german": "Fahrplan",
+      "english": "timetable / schedule",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Fahrplan"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10861",
+      "german": "Umsteigen",
+      "english": "transfer / change (trains)",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Umsteigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10862",
+      "german": "Verbindung",
+      "english": "connection",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Verbindung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10863",
+      "german": "Handgepäck",
+      "english": "hand luggage / carry-on",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Handgepäck"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10864",
+      "german": "Rucksack",
+      "english": "backpack",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Rucksack"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10865",
+      "german": "Tasche",
+      "english": "bag",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Tasche"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10866",
+      "german": "Zoll",
+      "english": "customs",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Zoll"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10867",
+      "german": "Grenze",
+      "english": "border",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Grenze"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10868",
+      "german": "Tourist",
+      "english": "tourist (male)",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Tourist"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10869",
+      "german": "Touristin",
+      "english": "tourist (female)",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Touristin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10870",
+      "german": "Reisender",
+      "english": "traveler (male)",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Reisender"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10871",
+      "german": "Reisende",
+      "english": "traveler (female)",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Reisende"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10872",
+      "german": "reisen",
+      "english": "to travel",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "reisen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10873",
+      "german": "fliegen",
+      "english": "to fly",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "fliegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10874",
+      "german": "abfliegen",
+      "english": "to depart / to take off",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "abfliegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10875",
+      "german": "ankommen",
+      "english": "to arrive",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "ankommen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10876",
+      "german": "abfahren",
+      "english": "to depart / to leave",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "abfahren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10877",
+      "german": "buchen",
+      "english": "to book",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "buchen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10878",
+      "german": "reservieren",
+      "english": "to reserve",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "reservieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10879",
+      "german": "packen",
+      "english": "to pack",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "packen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10880",
+      "german": "auspacken",
+      "english": "to unpack",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "auspacken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10881",
+      "german": "einchecken",
+      "english": "to check in",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "einchecken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10882",
+      "german": "auschecken",
+      "english": "to check out",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "auschecken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10883",
+      "german": "besichtigen",
+      "english": "to visit / to sightsee",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "besichtigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10884",
+      "german": "übernachten",
+      "english": "to stay overnight",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "übernachten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10885",
+      "german": "sich erholen",
+      "english": "to relax / to recover",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "sich erholen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10886",
+      "german": "wandern",
+      "english": "to hike",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "wandern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10887",
+      "german": "fotografieren",
+      "english": "to photograph / to take pictures",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "fotografieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10888",
+      "german": "sich verirren",
+      "english": "to get lost",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "sich verirren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10889",
+      "german": "Kamera",
+      "english": "camera",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Kamera"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10890",
+      "german": "Foto",
+      "english": "photo / picture",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Foto"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10891",
+      "german": "Souvenir",
+      "english": "souvenir",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Souvenir"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10892",
+      "german": "Postkarte",
+      "english": "postcard",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Postkarte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10893",
+      "german": "Reisebüro",
+      "english": "travel agency",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Reisebüro"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10894",
+      "german": "Touristeninformation",
+      "english": "tourist information",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Touristeninformation"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10895",
+      "german": "Ausland",
+      "english": "foreign country / abroad",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Ausland"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10896",
+      "german": "Inland",
+      "english": "domestic / inland",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Inland"
         ]
       }
     },

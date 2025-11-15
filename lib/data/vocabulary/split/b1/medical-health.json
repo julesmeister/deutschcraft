@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Medical Health",
-  "totalCards": 17,
+  "totalCards": 90,
   "flashcards": [
     {
       "id": "syllabus-b1-11024",
@@ -340,6 +340,1466 @@
           "B1",
           "Medical Health",
           "Behandlung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11041",
+      "german": "Arzt",
+      "english": "doctor (male)",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Arzt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11042",
+      "german": "Ärztin",
+      "english": "doctor (female)",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Ärztin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11043",
+      "german": "Zahnarzt",
+      "english": "dentist (male)",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Zahnarzt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11044",
+      "german": "Zahnärztin",
+      "english": "dentist (female)",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Zahnärztin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11045",
+      "german": "Krankenschwester",
+      "english": "nurse (female)",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Krankenschwester"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11046",
+      "german": "Krankenpfleger",
+      "english": "nurse (male)",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Krankenpfleger"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11047",
+      "german": "Krankenhaus",
+      "english": "hospital",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Krankenhaus"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11048",
+      "german": "Klinik",
+      "english": "clinic",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Klinik"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11049",
+      "german": "Praxis",
+      "english": "practice / doctor's office",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Praxis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11050",
+      "german": "Notaufnahme",
+      "english": "emergency room / A&E",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Notaufnahme"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11051",
+      "german": "Operation",
+      "english": "operation / surgery",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Operation"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11052",
+      "german": "Diagnose",
+      "english": "diagnosis",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Diagnose"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11053",
+      "german": "Symptom",
+      "english": "symptom",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Symptom"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11054",
+      "german": "Krankheit",
+      "english": "illness / disease",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Krankheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11055",
+      "german": "Allergie",
+      "english": "allergy",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Allergie"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11056",
+      "german": "Infektion",
+      "english": "infection",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Infektion"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11057",
+      "german": "Entzündung",
+      "english": "inflammation",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Entzündung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11058",
+      "german": "Kopfschmerzen",
+      "english": "headache",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Kopfschmerzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11059",
+      "german": "Bauchschmerzen",
+      "english": "stomach ache",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Bauchschmerzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11060",
+      "german": "Zahnschmerzen",
+      "english": "toothache",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Zahnschmerzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11061",
+      "german": "Rückenschmerzen",
+      "english": "back pain",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Rückenschmerzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11062",
+      "german": "Halsschmerzen",
+      "english": "sore throat",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Halsschmerzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11063",
+      "german": "Durchfall",
+      "english": "diarrhea",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Durchfall"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11064",
+      "german": "Verstopfung",
+      "english": "constipation",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Verstopfung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11065",
+      "german": "Übelkeit",
+      "english": "nausea",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Übelkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11066",
+      "german": "Erbrechen",
+      "english": "vomiting",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Erbrechen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11067",
+      "german": "Schwindel",
+      "english": "dizziness",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Schwindel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11068",
+      "german": "Müdigkeit",
+      "english": "fatigue / tiredness",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Müdigkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11069",
+      "german": "Ausschlag",
+      "english": "rash",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Ausschlag"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11070",
+      "german": "Blutdruck",
+      "english": "blood pressure",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Blutdruck"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11071",
+      "german": "Puls",
+      "english": "pulse",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Puls"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11072",
+      "german": "Blutprobe",
+      "english": "blood sample / blood test",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Blutprobe"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11073",
+      "german": "Röntgen",
+      "english": "X-ray",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Röntgen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11074",
+      "german": "Ultraschall",
+      "english": "ultrasound",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Ultraschall"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11075",
+      "german": "Impfung",
+      "english": "vaccination",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Impfung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11076",
+      "german": "Spritze",
+      "english": "injection / syringe",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Spritze"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11077",
+      "german": "Tablette",
+      "english": "tablet / pill",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Tablette"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11078",
+      "german": "Kapsel",
+      "english": "capsule",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Kapsel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11079",
+      "german": "Salbe",
+      "english": "ointment / cream",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Salbe"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11080",
+      "german": "Tropfen",
+      "english": "drops",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Tropfen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11081",
+      "german": "Antibiotikum",
+      "english": "antibiotic",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Antibiotikum"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11082",
+      "german": "Schmerzmittel",
+      "english": "painkiller",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Schmerzmittel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11083",
+      "german": "Nebenwirkung",
+      "english": "side effect",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Nebenwirkung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11084",
+      "german": "Dosierung",
+      "english": "dosage",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Dosierung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11085",
+      "german": "Verband",
+      "english": "bandage / dressing",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Verband"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11086",
+      "german": "Pflaster",
+      "english": "plaster / band-aid",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Pflaster"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11087",
+      "german": "Gips",
+      "english": "cast / plaster",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Gips"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11088",
+      "german": "Krücke",
+      "english": "crutch",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Krücke"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11089",
+      "german": "Rollstuhl",
+      "english": "wheelchair",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Rollstuhl"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11090",
+      "german": "Brille",
+      "english": "glasses",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Brille"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11091",
+      "german": "Bruch",
+      "english": "fracture / break",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Bruch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11092",
+      "german": "Prellung",
+      "english": "bruise / contusion",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Prellung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11093",
+      "german": "Wunde",
+      "english": "wound",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Wunde"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11094",
+      "german": "Narbe",
+      "english": "scar",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Narbe"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11095",
+      "german": "Blutung",
+      "english": "bleeding",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Blutung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11096",
+      "german": "Schwellung",
+      "english": "swelling",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Schwellung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11097",
+      "german": "Atemnot",
+      "english": "shortness of breath",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Atemnot"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11098",
+      "german": "Bewusstlosigkeit",
+      "english": "unconsciousness",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Bewusstlosigkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11099",
+      "german": "Genesung",
+      "english": "recovery",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Genesung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11100",
+      "german": "Rehabilitation",
+      "english": "rehabilitation",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Rehabilitation"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11101",
+      "german": "Physiotherapie",
+      "english": "physiotherapy",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Physiotherapie"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11102",
+      "german": "Gesundheit",
+      "english": "health",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Gesundheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11103",
+      "german": "Vorsorge",
+      "english": "prevention / preventive care",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Vorsorge"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11104",
+      "german": "untersuchen",
+      "english": "to examine",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "untersuchen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11105",
+      "german": "behandeln",
+      "english": "to treat",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "behandeln"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11106",
+      "german": "verschreiben",
+      "english": "to prescribe",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "verschreiben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11107",
+      "german": "impfen",
+      "english": "to vaccinate",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "impfen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11108",
+      "german": "heilen",
+      "english": "to heal / to cure",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "heilen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11109",
+      "german": "leiden",
+      "english": "to suffer",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "leiden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11110",
+      "german": "sich erholen",
+      "english": "to recover",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "sich erholen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11111",
+      "german": "operieren",
+      "english": "to operate on",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "operieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11112",
+      "german": "röntgen",
+      "english": "to X-ray",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "röntgen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b1-11113",
+      "german": "Patient",
+      "english": "patient (male)",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Syllabus B1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Medical Health",
+          "Patient"
         ]
       }
     }

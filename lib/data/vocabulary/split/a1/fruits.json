@@ -1,7 +1,7 @@
 {
   "level": "A1",
   "category": "Fruits",
-  "totalCards": 15,
+  "totalCards": 30,
   "flashcards": [
     {
       "id": "syllabus-a1-10157",
@@ -300,6 +300,306 @@
           "A1",
           "Fruits",
           "Obst"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10172",
+      "german": "Apfel",
+      "english": "apple",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Apfel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10173",
+      "german": "Aprikose",
+      "english": "apricot",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Aprikose"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10174",
+      "german": "Pflaume",
+      "english": "plum",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Pflaume"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10175",
+      "german": "Wassermelone",
+      "english": "watermelon",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Wassermelone"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10176",
+      "german": "Brombeere",
+      "english": "blackberry",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Brombeere"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10177",
+      "german": "Kokosnuss",
+      "english": "coconut",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Kokosnuss"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10178",
+      "german": "Mandarine",
+      "english": "tangerine / mandarin",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Mandarine"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10179",
+      "german": "Grapefruit",
+      "english": "grapefruit",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Grapefruit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10180",
+      "german": "Nektarine",
+      "english": "nectarine",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Nektarine"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10181",
+      "german": "Papaya",
+      "english": "papaya",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Papaya"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10182",
+      "german": "Feige",
+      "english": "fig",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Feige"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10183",
+      "german": "Dattel",
+      "english": "date",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Dattel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10184",
+      "german": "Avocado",
+      "english": "avocado",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Avocado"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10185",
+      "german": "Limette",
+      "english": "lime",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Limette"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10186",
+      "german": "Passionsfrucht",
+      "english": "passion fruit",
+      "category": "Fruits",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Fruits",
+          "Passionsfrucht"
         ]
       }
     }

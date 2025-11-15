@@ -1,7 +1,7 @@
 {
   "level": "A2",
   "category": "Travel",
-  "totalCards": 16,
+  "totalCards": 85,
   "flashcards": [
     {
       "id": "syllabus-a2-10812",
@@ -320,6 +320,1386 @@
           "A2",
           "Travel",
           "Pass"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10828",
+      "german": "Visum",
+      "english": "visa",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Visum"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10829",
+      "german": "Reiseführer",
+      "english": "travel guide / guidebook",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Reiseführer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10830",
+      "german": "Landkarte",
+      "english": "map",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Landkarte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10831",
+      "german": "Stadtplan",
+      "english": "city map",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Stadtplan"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10832",
+      "german": "Sehenswürdigkeit",
+      "english": "sight / attraction",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Sehenswürdigkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10833",
+      "german": "Museum",
+      "english": "museum",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Museum"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10834",
+      "german": "Schloss",
+      "english": "castle / palace",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Schloss"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10835",
+      "german": "Kirche",
+      "english": "church",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Kirche"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10836",
+      "german": "Dom",
+      "english": "cathedral",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Dom"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10837",
+      "german": "Denkmal",
+      "english": "monument / memorial",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Denkmal"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10838",
+      "german": "Ausflug",
+      "english": "excursion / day trip",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Ausflug"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10839",
+      "german": "Rundfahrt",
+      "english": "tour / sightseeing tour",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Rundfahrt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10840",
+      "german": "Führung",
+      "english": "guided tour",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Führung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10841",
+      "german": "Unterkunft",
+      "english": "accommodation",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Unterkunft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10842",
+      "german": "Pension",
+      "english": "guesthouse / bed and breakfast",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Pension"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10843",
+      "german": "Jugendherberge",
+      "english": "youth hostel",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Jugendherberge"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10844",
+      "german": "Campingplatz",
+      "english": "campsite / camping ground",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Campingplatz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10845",
+      "german": "Zimmer",
+      "english": "room",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Zimmer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10846",
+      "german": "Einzelzimmer",
+      "english": "single room",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Einzelzimmer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10847",
+      "german": "Doppelzimmer",
+      "english": "double room",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Doppelzimmer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10848",
+      "german": "Rezeption",
+      "english": "reception / front desk",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Rezeption"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10849",
+      "german": "Schlüssel",
+      "english": "key",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Schlüssel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10850",
+      "german": "Frühstück",
+      "english": "breakfast",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Frühstück"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10851",
+      "german": "Halbpension",
+      "english": "half board",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Halbpension"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10852",
+      "german": "Vollpension",
+      "english": "full board",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Vollpension"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10853",
+      "german": "Bordkarte",
+      "english": "boarding pass",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Bordkarte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10854",
+      "german": "Gate",
+      "english": "gate",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Gate"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10855",
+      "german": "Flug",
+      "english": "flight",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Flug"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10856",
+      "german": "Verspätung",
+      "english": "delay",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Verspätung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10857",
+      "german": "Gleis",
+      "english": "platform / track",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Gleis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10858",
+      "german": "Fahrkarte",
+      "english": "ticket (for train/bus)",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Fahrkarte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10859",
+      "german": "Fahrkartenschalter",
+      "english": "ticket counter",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Fahrkartenschalter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10860",
+      "german": "Fahrplan",
+      "english": "timetable / schedule",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Fahrplan"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10861",
+      "german": "Umsteigen",
+      "english": "transfer / change (trains)",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Umsteigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10862",
+      "german": "Verbindung",
+      "english": "connection",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Verbindung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10863",
+      "german": "Handgepäck",
+      "english": "hand luggage / carry-on",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Handgepäck"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10864",
+      "german": "Rucksack",
+      "english": "backpack",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Rucksack"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10865",
+      "german": "Tasche",
+      "english": "bag",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Tasche"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10866",
+      "german": "Zoll",
+      "english": "customs",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Zoll"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10867",
+      "german": "Grenze",
+      "english": "border",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Grenze"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10868",
+      "german": "Tourist",
+      "english": "tourist (male)",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Tourist"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10869",
+      "german": "Touristin",
+      "english": "tourist (female)",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Touristin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10870",
+      "german": "Reisender",
+      "english": "traveler (male)",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Reisender"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10871",
+      "german": "Reisende",
+      "english": "traveler (female)",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Reisende"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10872",
+      "german": "reisen",
+      "english": "to travel",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "reisen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10873",
+      "german": "fliegen",
+      "english": "to fly",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "fliegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10874",
+      "german": "abfliegen",
+      "english": "to depart / to take off",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "abfliegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10875",
+      "german": "ankommen",
+      "english": "to arrive",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "ankommen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10876",
+      "german": "abfahren",
+      "english": "to depart / to leave",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "abfahren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10877",
+      "german": "buchen",
+      "english": "to book",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "buchen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10878",
+      "german": "reservieren",
+      "english": "to reserve",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "reservieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10879",
+      "german": "packen",
+      "english": "to pack",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "packen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10880",
+      "german": "auspacken",
+      "english": "to unpack",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "auspacken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10881",
+      "german": "einchecken",
+      "english": "to check in",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "einchecken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10882",
+      "german": "auschecken",
+      "english": "to check out",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "auschecken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10883",
+      "german": "besichtigen",
+      "english": "to visit / to sightsee",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "besichtigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10884",
+      "german": "übernachten",
+      "english": "to stay overnight",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "übernachten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10885",
+      "german": "sich erholen",
+      "english": "to relax / to recover",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "sich erholen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10886",
+      "german": "wandern",
+      "english": "to hike",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "wandern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10887",
+      "german": "fotografieren",
+      "english": "to photograph / to take pictures",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "fotografieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10888",
+      "german": "sich verirren",
+      "english": "to get lost",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "sich verirren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10889",
+      "german": "Kamera",
+      "english": "camera",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Kamera"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10890",
+      "german": "Foto",
+      "english": "photo / picture",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Foto"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10891",
+      "german": "Souvenir",
+      "english": "souvenir",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Souvenir"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10892",
+      "german": "Postkarte",
+      "english": "postcard",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Postkarte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10893",
+      "german": "Reisebüro",
+      "english": "travel agency",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Reisebüro"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10894",
+      "german": "Touristeninformation",
+      "english": "tourist information",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Touristeninformation"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10895",
+      "german": "Ausland",
+      "english": "foreign country / abroad",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Ausland"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10896",
+      "german": "Inland",
+      "english": "domestic / inland",
+      "category": "Travel",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Travel",
+          "Inland"
         ]
       }
     }
