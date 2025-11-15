@@ -5,11 +5,11 @@ import Image from 'next/image';
 export function HowItWorksSection() {
   const features = [
     {
-      title: 'AI-Powered Flashcards',
-      description: 'Personalized learning with AI-generated practice questions tailored to your level. Smart spaced repetition algorithm optimizes your learning schedule for maximum retention.',
+      title: 'Comprehensive Flashcards',
+      description: 'Learn with thousands of curated vocabulary flashcards across all CEFR levels (A1-C2). Smart spaced repetition algorithm optimizes your learning schedule for maximum retention.',
       image: '/images/13.jpg',
       textColor: 'text-white',
-      icon: '🤖',
+      icon: '📚',
     },
     {
       title: 'Writing Evaluation',
@@ -46,8 +46,46 @@ export function HowItWorksSection() {
           </h2>
         </div>
 
-        {/* SEOZ-style expanding cards on hover */}
-        <div className="flex gap-2 h-[500px]">
+        {/* Mobile: Stacked cards */}
+        <div className="flex flex-col md:hidden gap-4">
+          {features.map((feature, i) => (
+            <div
+              key={i}
+              className="relative overflow-hidden rounded-2xl h-[280px]"
+              style={{ animationDelay: `${i * 100}ms` }}
+            >
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <Image
+                  src={feature.image}
+                  alt={feature.title}
+                  fill
+                  className="object-cover"
+                  sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-black/50" />
+              </div>
+
+              {/* Content */}
+              <div className="absolute inset-0 p-6 flex flex-col justify-end z-10">
+                <div className="text-5xl mb-4">
+                  {feature.icon}
+                </div>
+                <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4">
+                  <h4 className="text-lg font-black text-gray-900 mb-2">
+                    {feature.title}
+                  </h4>
+                  <p className="text-sm text-gray-800 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: Expanding cards on hover */}
+        <div className="hidden md:flex gap-2 h-[500px]">
           {features.map((feature, i) => (
             <div
               key={i}

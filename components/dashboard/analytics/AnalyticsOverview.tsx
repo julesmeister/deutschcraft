@@ -1,7 +1,6 @@
 'use client';
 
-import { StatGrid } from '@/components/ui/StatGrid';
-import { StatCard } from '@/components/ui/StatCard';
+import { StatGrid, StatItem } from '@/components/ui/StatGrid';
 
 interface AnalyticsOverviewProps {
   totalStudents: number;
@@ -22,35 +21,25 @@ export function AnalyticsOverview({
 
   return (
     <StatGrid title="Overview">
-      <StatCard
-        icon="👥"
-        iconBgColor="bg-blue-200"
+      <StatItem
         label="Total Students"
         value={totalStudents}
-        change={`${engagementRate}%`}
-        comparisonText="engagement rate"
-        isPositive={engagementRate > 50}
+        unit={`${engagementRate}% active`}
       />
-      <StatCard
-        icon="🔥"
-        iconBgColor="bg-orange-200"
+      <StatItem
         label="Active Students"
         value={activeStudents}
-        comparisonText="with current streaks"
+        unit="with streaks"
       />
-      <StatCard
-        icon="📚"
-        iconBgColor="bg-purple-200"
+      <StatItem
         label="Avg. Words Learned"
         value={Math.round(averageProgress)}
-        comparisonText="per student"
+        unit="per student"
       />
-      <StatCard
-        icon="🎴"
-        iconBgColor="bg-pink-200"
+      <StatItem
         label="Words Mastered"
         value={totalCardsMastered}
-        comparisonText="across all students"
+        unit="total"
       />
     </StatGrid>
   );

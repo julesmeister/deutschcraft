@@ -39,23 +39,12 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-200">
               <Link
                 href="/signup"
-                className="theme-btn theme-btn-light group inline-flex items-center bg-piku-purple-dark text-white font-black text-[15px] py-2 pl-8 pr-2 rounded-md"
+                className="theme-btn theme-btn-light group inline-flex items-center justify-between bg-piku-purple-dark text-white font-black text-[15px] py-2 pl-8 pr-2 rounded-md"
               >
-                <span className="btn-text relative z-10 transition-colors duration-300">Start your free trial</span>
-                <span className="btn-icon relative z-10 ml-8 w-12 h-12 flex items-center justify-center bg-white text-piku-purple-dark rounded-md transition-all duration-400 group-hover:bg-piku-cyan-accent group-hover:text-[#171417]">
+                <span className="btn-text relative z-10 transition-colors duration-300">Start Learning</span>
+                <span className="btn-icon relative z-10 ml-8 w-12 h-12 flex items-center justify-center bg-white text-piku-purple-dark rounded-md transition-all duration-400 group-hover:bg-piku-cyan-accent group-hover:text-[#171417] shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </Link>
-              <Link
-                href="#demo"
-                className="theme-btn theme-btn-light group inline-flex items-center bg-white text-gray-900 font-black text-[15px] py-2 pl-8 pr-2 rounded-md"
-              >
-                <span className="btn-text relative z-10 transition-colors duration-300">Watch Video</span>
-                <span className="btn-icon relative z-10 ml-8 w-12 h-12 flex items-center justify-center bg-piku-purple-dark text-white rounded-md transition-all duration-400 group-hover:bg-piku-cyan-accent group-hover:text-[#171417]">
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
                   </svg>
                 </span>
               </Link>
