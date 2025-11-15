@@ -1,6 +1,6 @@
 {
   "level": "A1",
-  "totalCards": 475,
+  "totalCards": 790,
   "flashcards": [
     {
       "id": "syllabus-a1-10000",
@@ -1123,7 +1123,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-sein-56",
+      "id": "syllabus-a1-10030",
       "german": "sein",
       "english": "to be",
       "category": "Basic Verbs",
@@ -1143,7 +1143,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-haben-57",
+      "id": "syllabus-a1-10031",
       "german": "haben",
       "english": "to have",
       "category": "Basic Verbs",
@@ -1163,7 +1163,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-machen-58",
+      "id": "syllabus-a1-10032",
       "german": "machen",
       "english": "to do / to make",
       "category": "Basic Verbs",
@@ -1183,7 +1183,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-gehen-59",
+      "id": "syllabus-a1-10033",
       "german": "gehen",
       "english": "to go",
       "category": "Basic Verbs",
@@ -1203,7 +1203,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-kommen-60",
+      "id": "syllabus-a1-10034",
       "german": "kommen",
       "english": "to come",
       "category": "Basic Verbs",
@@ -1223,7 +1223,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-sehen-61",
+      "id": "syllabus-a1-10035",
       "german": "sehen",
       "english": "to see",
       "category": "Basic Verbs",
@@ -1243,7 +1243,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-essen-62",
+      "id": "syllabus-a1-10036",
       "german": "essen",
       "english": "to eat",
       "category": "Basic Verbs",
@@ -1263,7 +1263,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-trinken-63",
+      "id": "syllabus-a1-10037",
       "german": "trinken",
       "english": "to drink",
       "category": "Basic Verbs",
@@ -1283,7 +1283,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-wohnen-64",
+      "id": "syllabus-a1-10038",
       "german": "wohnen",
       "english": "to live",
       "category": "Basic Verbs",
@@ -1303,7 +1303,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-hei-en-65",
+      "id": "syllabus-a1-10039",
       "german": "heißen",
       "english": "to be called",
       "category": "Basic Verbs",
@@ -1323,7 +1323,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-schlafen-66",
+      "id": "syllabus-a1-10040",
       "german": "schlafen",
       "english": "to sleep",
       "category": "Basic Verbs",
@@ -1343,7 +1343,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-kaufen-67",
+      "id": "syllabus-a1-10041",
       "german": "kaufen",
       "english": "to buy",
       "category": "Basic Verbs",
@@ -1363,7 +1363,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-kosten-68",
+      "id": "syllabus-a1-10042",
       "german": "kosten",
       "english": "to cost",
       "category": "Basic Verbs",
@@ -1383,7 +1383,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-brauchen-69",
+      "id": "syllabus-a1-10043",
       "german": "brauchen",
       "english": "to need",
       "category": "Basic Verbs",
@@ -1403,7 +1403,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-m-gen-70",
+      "id": "syllabus-a1-10044",
       "german": "mögen",
       "english": "to like",
       "category": "Basic Verbs",
@@ -1423,7 +1423,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-wollen-71",
+      "id": "syllabus-a1-10045",
       "german": "wollen",
       "english": "to want",
       "category": "Basic Verbs",
@@ -1443,7 +1443,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-lieben-72",
+      "id": "syllabus-a1-10046",
       "german": "lieben",
       "english": "to love",
       "category": "Basic Verbs",
@@ -1463,7 +1463,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-h-ren-73",
+      "id": "syllabus-a1-10047",
       "german": "hören",
       "english": "to hear / to listen",
       "category": "Basic Verbs",
@@ -1483,7 +1483,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-sagen-74",
+      "id": "syllabus-a1-10048",
       "german": "sagen",
       "english": "to say",
       "category": "Basic Verbs",
@@ -1503,7 +1503,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-fragen-75",
+      "id": "syllabus-a1-10049",
       "german": "fragen",
       "english": "to ask",
       "category": "Basic Verbs",
@@ -1523,7 +1523,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-antworten-76",
+      "id": "syllabus-a1-10050",
       "german": "antworten",
       "english": "to answer",
       "category": "Basic Verbs",
@@ -1543,7 +1543,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-suchen-77",
+      "id": "syllabus-a1-10051",
       "german": "suchen",
       "english": "to search / to look for",
       "category": "Basic Verbs",
@@ -1563,7 +1563,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-finden-78",
+      "id": "syllabus-a1-10052",
       "german": "finden",
       "english": "to find",
       "category": "Basic Verbs",
@@ -1583,7 +1583,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-verstehen-79",
+      "id": "syllabus-a1-10053",
       "german": "verstehen",
       "english": "to understand",
       "category": "Basic Verbs",
@@ -1603,7 +1603,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-kennen-80",
+      "id": "syllabus-a1-10054",
       "german": "kennen",
       "english": "to know (a person/place)",
       "category": "Basic Verbs",
@@ -1623,7 +1623,7 @@
       }
     },
     {
-      "id": "a1-basic-verbs-wissen-81",
+      "id": "syllabus-a1-10055",
       "german": "wissen",
       "english": "to know (a fact)",
       "category": "Basic Verbs",
@@ -2143,7 +2143,7 @@
       }
     },
     {
-      "id": "a1-clothing-hose-106",
+      "id": "syllabus-a1-10056",
       "german": "Hose",
       "english": "pants",
       "category": "Clothing",
@@ -2163,7 +2163,7 @@
       }
     },
     {
-      "id": "a1-clothing-hemd-107",
+      "id": "syllabus-a1-10057",
       "german": "Hemd",
       "english": "shirt",
       "category": "Clothing",
@@ -2183,7 +2183,7 @@
       }
     },
     {
-      "id": "a1-clothing-kleid-108",
+      "id": "syllabus-a1-10058",
       "german": "Kleid",
       "english": "dress",
       "category": "Clothing",
@@ -2203,7 +2203,7 @@
       }
     },
     {
-      "id": "a1-clothing-schuhe-109",
+      "id": "syllabus-a1-10059",
       "german": "Schuhe",
       "english": "shoes",
       "category": "Clothing",
@@ -3004,8 +3004,8 @@
     },
     {
       "id": "syllabus-a1-10099",
-      "german": "deutsch",
-      "english": "German (adjective)",
+      "german": "Griechenland",
+      "english": "Greece",
       "category": "Countries",
       "level": "A1",
       "tags": [
@@ -3018,14 +3018,14 @@
         "hierarchy": [
           "A1",
           "Countries",
-          "deutsch"
+          "Griechenland"
         ]
       }
     },
     {
       "id": "syllabus-a1-10100",
-      "german": "englisch",
-      "english": "English (adjective)",
+      "german": "Türkei",
+      "english": "Turkey",
       "category": "Countries",
       "level": "A1",
       "tags": [
@@ -3038,7 +3038,687 @@
         "hierarchy": [
           "A1",
           "Countries",
-          "englisch"
+          "Türkei"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10101",
+      "german": "Portugal",
+      "english": "Portugal",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Portugal"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10102",
+      "german": "Niederlande",
+      "english": "Netherlands",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Niederlande"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10103",
+      "german": "Belgien",
+      "english": "Belgium",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Belgien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10104",
+      "german": "Schweden",
+      "english": "Sweden",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Schweden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10105",
+      "german": "Norwegen",
+      "english": "Norway",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Norwegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10106",
+      "german": "Dänemark",
+      "english": "Denmark",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Dänemark"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10107",
+      "german": "Finnland",
+      "english": "Finland",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Finnland"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10108",
+      "german": "Irland",
+      "english": "Ireland",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Irland"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10109",
+      "german": "Schottland",
+      "english": "Scotland",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Schottland"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10110",
+      "german": "Tschechien",
+      "english": "Czech Republic",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Tschechien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10111",
+      "german": "Ungarn",
+      "english": "Hungary",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Ungarn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10112",
+      "german": "Rumänien",
+      "english": "Romania",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Rumänien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10113",
+      "german": "Bulgarien",
+      "english": "Bulgaria",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Bulgarien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10114",
+      "german": "Kroatien",
+      "english": "Croatia",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Kroatien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10115",
+      "german": "Serbien",
+      "english": "Serbia",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Serbien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10116",
+      "german": "Ukraine",
+      "english": "Ukraine",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Ukraine"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10117",
+      "german": "Kanada",
+      "english": "Canada",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Kanada"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10118",
+      "german": "Mexiko",
+      "english": "Mexico",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Mexiko"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10119",
+      "german": "Brasilien",
+      "english": "Brazil",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Brasilien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10120",
+      "german": "Argentinien",
+      "english": "Argentina",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Argentinien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10121",
+      "german": "Chile",
+      "english": "Chile",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Chile"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10122",
+      "german": "Australien",
+      "english": "Australia",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Australien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10123",
+      "german": "Neuseeland",
+      "english": "New Zealand",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Neuseeland"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10124",
+      "german": "Südafrika",
+      "english": "South Africa",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Südafrika"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10125",
+      "german": "Ägypten",
+      "english": "Egypt",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Ägypten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10126",
+      "german": "Marokko",
+      "english": "Morocco",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Marokko"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10127",
+      "german": "Saudi-Arabien",
+      "english": "Saudi Arabia",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Saudi-Arabien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10128",
+      "german": "Israel",
+      "english": "Israel",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Israel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10129",
+      "german": "Iran",
+      "english": "Iran",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Iran"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10130",
+      "german": "Südkorea",
+      "english": "South Korea",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Südkorea"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10131",
+      "german": "Thailand",
+      "english": "Thailand",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Thailand"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10132",
+      "german": "Vietnam",
+      "english": "Vietnam",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Vietnam"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10133",
+      "german": "Philippinen",
+      "english": "Philippines",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Philippinen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10134",
+      "german": "Indonesien",
+      "english": "Indonesia",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Indonesien"
         ]
       }
     },
@@ -6083,6 +6763,826 @@
       }
     },
     {
+      "id": "syllabus-a1-10253",
+      "german": "dreizehn",
+      "english": "thirteen",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "dreizehn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10254",
+      "german": "vierzehn",
+      "english": "fourteen",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "vierzehn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10255",
+      "german": "fünfzehn",
+      "english": "fifteen",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "fünfzehn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10256",
+      "german": "sechzehn",
+      "english": "sixteen",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "sechzehn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10257",
+      "german": "siebzehn",
+      "english": "seventeen",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "siebzehn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10258",
+      "german": "achtzehn",
+      "english": "eighteen",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "achtzehn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10259",
+      "german": "neunzehn",
+      "english": "nineteen",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "neunzehn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10260",
+      "german": "dreißig",
+      "english": "thirty",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "dreißig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10261",
+      "german": "vierzig",
+      "english": "forty",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "vierzig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10262",
+      "german": "fünfzig",
+      "english": "fifty",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "fünfzig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10263",
+      "german": "sechzig",
+      "english": "sixty",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "sechzig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10264",
+      "german": "siebzig",
+      "english": "seventy",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "siebzig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10265",
+      "german": "achtzig",
+      "english": "eighty",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "achtzig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10266",
+      "german": "neunzig",
+      "english": "ninety",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "neunzig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10267",
+      "german": "tausend",
+      "english": "thousand",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "tausend"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10268",
+      "german": "eine Million",
+      "english": "one million",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "eine Million"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10269",
+      "german": "eine Milliarde",
+      "english": "one billion",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "eine Milliarde"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10270",
+      "german": "eine Billion",
+      "english": "one trillion",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "eine Billion"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10271",
+      "german": "erste",
+      "english": "first",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "erste"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10272",
+      "german": "zweite",
+      "english": "second",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "zweite"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10273",
+      "german": "dritte",
+      "english": "third",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "dritte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10274",
+      "german": "vierte",
+      "english": "fourth",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "vierte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10275",
+      "german": "fünfte",
+      "english": "fifth",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "fünfte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10276",
+      "german": "sechste",
+      "english": "sixth",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "sechste"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10277",
+      "german": "siebte",
+      "english": "seventh",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "siebte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10278",
+      "german": "achte",
+      "english": "eighth",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "achte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10279",
+      "german": "neunte",
+      "english": "ninth",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "neunte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10280",
+      "german": "zehnte",
+      "english": "tenth",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "zehnte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10281",
+      "german": "elfte",
+      "english": "eleventh",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "elfte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10282",
+      "german": "zwölfte",
+      "english": "twelfth",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "zwölfte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10283",
+      "german": "zwanzigste",
+      "english": "twentieth",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "zwanzigste"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10284",
+      "german": "hundertste",
+      "english": "hundredth",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "hundertste"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10285",
+      "german": "halb",
+      "english": "half",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "halb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10286",
+      "german": "ein Drittel",
+      "english": "one third",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "ein Drittel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10287",
+      "german": "ein Viertel",
+      "english": "one quarter",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "ein Viertel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10288",
+      "german": "drei Viertel",
+      "english": "three quarters",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "drei Viertel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10289",
+      "german": "einmal",
+      "english": "once",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "einmal"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10290",
+      "german": "zweimal",
+      "english": "twice",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "zweimal"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10291",
+      "german": "dreimal",
+      "english": "three times",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "dreimal"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10292",
+      "german": "Prozent",
+      "english": "percent",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "Prozent"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10293",
+      "german": "Zahl",
+      "english": "number",
+      "category": "Numbers",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "Zahl"
+        ]
+      }
+    },
+    {
       "id": "remnote-638",
       "german": "liegen",
       "english": "to lie / to lay / to sit / to reside / to rest / to be situated",
@@ -8412,6 +9912,1626 @@
     },
     {
       "id": "syllabus-a1-10358",
+      "german": "Januar",
+      "english": "January",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Januar"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10359",
+      "german": "Februar",
+      "english": "February",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Februar"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10360",
+      "german": "März",
+      "english": "March",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "März"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10361",
+      "german": "April",
+      "english": "April",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "April"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10362",
+      "german": "Mai",
+      "english": "May",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Mai"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10363",
+      "german": "Juni",
+      "english": "June",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Juni"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10364",
+      "german": "Juli",
+      "english": "July",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Juli"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10365",
+      "german": "August",
+      "english": "August",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "August"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10366",
+      "german": "September",
+      "english": "September",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "September"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10367",
+      "german": "Oktober",
+      "english": "October",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Oktober"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10368",
+      "german": "November",
+      "english": "November",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "November"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10369",
+      "german": "Dezember",
+      "english": "December",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Dezember"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10370",
+      "german": "Frühling",
+      "english": "spring",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Frühling"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10371",
+      "german": "Sommer",
+      "english": "summer",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Sommer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10372",
+      "german": "Herbst",
+      "english": "autumn / fall",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Herbst"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10373",
+      "german": "Winter",
+      "english": "winter",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Winter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10374",
+      "german": "jetzt",
+      "english": "now",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "jetzt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10375",
+      "german": "später",
+      "english": "later",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "später"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10376",
+      "german": "früher",
+      "english": "earlier / formerly",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "früher"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10377",
+      "german": "bald",
+      "english": "soon",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "bald"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10378",
+      "german": "gleich",
+      "english": "right away / in a moment",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "gleich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10379",
+      "german": "sofort",
+      "english": "immediately",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "sofort"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10380",
+      "german": "immer",
+      "english": "always",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "immer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10381",
+      "german": "nie",
+      "english": "never",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "nie"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10382",
+      "german": "oft",
+      "english": "often",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "oft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10383",
+      "german": "manchmal",
+      "english": "sometimes",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "manchmal"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10384",
+      "german": "selten",
+      "english": "rarely / seldom",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "selten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10385",
+      "german": "täglich",
+      "english": "daily",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "täglich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10386",
+      "german": "wöchentlich",
+      "english": "weekly",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "wöchentlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10387",
+      "german": "monatlich",
+      "english": "monthly",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "monatlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10388",
+      "german": "jährlich",
+      "english": "yearly / annually",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "jährlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10389",
+      "german": "Morgen",
+      "english": "morning",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Morgen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10390",
+      "german": "Vormittag",
+      "english": "late morning / before noon",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Vormittag"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10391",
+      "german": "Mittag",
+      "english": "noon / midday",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Mittag"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10392",
+      "german": "Nachmittag",
+      "english": "afternoon",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Nachmittag"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10393",
+      "german": "Abend",
+      "english": "evening",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Abend"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10394",
+      "german": "Nacht",
+      "english": "night",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Nacht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10395",
+      "german": "Mitternacht",
+      "english": "midnight",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Mitternacht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10396",
+      "german": "Stunde",
+      "english": "hour",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Stunde"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10397",
+      "german": "Minute",
+      "english": "minute",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Minute"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10398",
+      "german": "Sekunde",
+      "english": "second",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Sekunde"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10399",
+      "german": "Viertel",
+      "english": "quarter (time)",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Viertel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10400",
+      "german": "halb",
+      "english": "half (time)",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "halb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10401",
+      "german": "Wochenende",
+      "english": "weekend",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Wochenende"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10402",
+      "german": "Wochentag",
+      "english": "weekday",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Wochentag"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10403",
+      "german": "Feiertag",
+      "english": "holiday / public holiday",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Feiertag"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10404",
+      "german": "Geburtstag",
+      "english": "birthday",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Geburtstag"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10405",
+      "german": "Datum",
+      "english": "date",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Datum"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10406",
+      "german": "Kalender",
+      "english": "calendar",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Kalender"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10407",
+      "german": "Zeitpunkt",
+      "english": "point in time",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Zeitpunkt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10408",
+      "german": "Zeitraum",
+      "english": "period / time span",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Zeitraum"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10409",
+      "german": "vorige Woche",
+      "english": "last week",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "vorige Woche"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10410",
+      "german": "nächste Woche",
+      "english": "next week",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "nächste Woche"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10411",
+      "german": "letztes Jahr",
+      "english": "last year",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "letztes Jahr"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10412",
+      "german": "nächstes Jahr",
+      "english": "next year",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "nächstes Jahr"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10413",
+      "german": "vorgestern",
+      "english": "day before yesterday",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "vorgestern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10414",
+      "german": "übermorgen",
+      "english": "day after tomorrow",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "übermorgen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10415",
+      "german": "heute Morgen",
+      "english": "this morning",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "heute Morgen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10416",
+      "german": "heute Abend",
+      "english": "this evening / tonight",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "heute Abend"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10417",
+      "german": "gestern Abend",
+      "english": "yesterday evening / last night",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "gestern Abend"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10418",
+      "german": "morgen früh",
+      "english": "tomorrow morning",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "morgen früh"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10419",
+      "german": "diese Woche",
+      "english": "this week",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "diese Woche"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10420",
+      "german": "diesen Monat",
+      "english": "this month",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "diesen Monat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10421",
+      "german": "dieses Jahr",
+      "english": "this year",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "dieses Jahr"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10422",
+      "german": "am Morgen",
+      "english": "in the morning",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "am Morgen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10423",
+      "german": "am Abend",
+      "english": "in the evening",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "am Abend"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10424",
+      "german": "in der Nacht",
+      "english": "at night / during the night",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "in der Nacht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10425",
+      "german": "um wie viel Uhr",
+      "english": "at what time",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "um wie viel Uhr"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10426",
+      "german": "Wie spät ist es?",
+      "english": "What time is it?",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Wie spät ist es?"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10427",
+      "german": "Es ist ein Uhr",
+      "english": "It's one o'clock",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Es ist ein Uhr"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10428",
+      "german": "Es ist zwei Uhr",
+      "english": "It's two o'clock",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Es ist zwei Uhr"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10429",
+      "german": "Es ist halb drei",
+      "english": "It's half past two / 2:30",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Es ist halb drei"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10430",
+      "german": "Es ist Viertel nach drei",
+      "english": "It's quarter past three / 3:15",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Es ist Viertel nach drei"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10431",
+      "german": "Es ist Viertel vor vier",
+      "english": "It's quarter to four / 3:45",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Es ist Viertel vor vier"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10432",
+      "german": "pünktlich",
+      "english": "on time / punctual",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "pünktlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10433",
+      "german": "zu spät",
+      "english": "too late / late",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "zu spät"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10434",
+      "german": "zu früh",
+      "english": "too early / early",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "zu früh"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10435",
+      "german": "rechtzeitig",
+      "english": "in time",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "rechtzeitig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10436",
+      "german": "Vergangenheit",
+      "english": "past",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Vergangenheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10437",
+      "german": "Gegenwart",
+      "english": "present",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Gegenwart"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10438",
+      "german": "Zukunft",
+      "english": "future",
+      "category": "Time",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Time",
+          "Zukunft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10358",
       "german": "Auto",
       "english": "car",
       "category": "Transportation",
@@ -8707,6 +11827,1566 @@
           "A1",
           "Transportation",
           "gehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10439",
+      "german": "Flughafen",
+      "english": "airport",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Flughafen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10440",
+      "german": "Hafen",
+      "english": "port / harbor",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Hafen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10441",
+      "german": "Parkplatz",
+      "english": "parking lot / parking space",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Parkplatz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10442",
+      "german": "Garage",
+      "english": "garage",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Garage"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10443",
+      "german": "Tankstelle",
+      "english": "gas station",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Tankstelle"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10444",
+      "german": "Brücke",
+      "english": "bridge",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Brücke"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10445",
+      "german": "Tunnel",
+      "english": "tunnel",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Tunnel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10446",
+      "german": "Kreuzung",
+      "english": "intersection / crossroads",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Kreuzung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10447",
+      "german": "Ampel",
+      "english": "traffic light",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Ampel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10448",
+      "german": "Verkehr",
+      "english": "traffic",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Verkehr"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10449",
+      "german": "Stau",
+      "english": "traffic jam",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Stau"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10450",
+      "german": "Autobahn",
+      "english": "highway / freeway",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Autobahn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10451",
+      "german": "Gehweg",
+      "english": "sidewalk / pavement",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Gehweg"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10452",
+      "german": "Radweg",
+      "english": "bike path / cycle lane",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Radweg"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10453",
+      "german": "Führerschein",
+      "english": "driver's license",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Führerschein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10454",
+      "german": "Ticket",
+      "english": "ticket",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Ticket"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10455",
+      "german": "Fahrkarte",
+      "english": "ticket (for travel)",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Fahrkarte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10456",
+      "german": "Fahrplan",
+      "english": "schedule / timetable",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Fahrplan"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10457",
+      "german": "Reise",
+      "english": "journey / trip",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Reise"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10458",
+      "german": "Gepäck",
+      "english": "luggage / baggage",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Gepäck"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10459",
+      "german": "Koffer",
+      "english": "suitcase",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Koffer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10460",
+      "german": "Rucksack",
+      "english": "backpack",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Rucksack"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10461",
+      "german": "Passagier",
+      "english": "passenger",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Passagier"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10462",
+      "german": "Fahrer",
+      "english": "driver",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Fahrer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10463",
+      "german": "Pilot",
+      "english": "pilot",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Pilot"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10464",
+      "german": "Motor",
+      "english": "engine / motor",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Motor"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10465",
+      "german": "Rad",
+      "english": "wheel",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Rad"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10466",
+      "german": "Reifen",
+      "english": "tire",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Reifen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10467",
+      "german": "Benzin",
+      "english": "gasoline / petrol",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Benzin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10468",
+      "german": "Diesel",
+      "english": "diesel",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Diesel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10469",
+      "german": "Tür",
+      "english": "door",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Tür"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10470",
+      "german": "Fenster",
+      "english": "window",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Fenster"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10471",
+      "german": "Sitz",
+      "english": "seat",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Sitz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10472",
+      "german": "Sitzplatz",
+      "english": "seat / seating place",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Sitzplatz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10473",
+      "german": "Gurt",
+      "english": "belt / seatbelt",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Gurt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10474",
+      "german": "Sicherheitsgurt",
+      "english": "seatbelt",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Sicherheitsgurt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10475",
+      "german": "Helm",
+      "english": "helmet",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Helm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10476",
+      "german": "LKW",
+      "english": "truck",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "LKW"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10477",
+      "german": "Lastwagen",
+      "english": "truck",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Lastwagen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10478",
+      "german": "Lieferwagen",
+      "english": "delivery van",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Lieferwagen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10479",
+      "german": "Roller",
+      "english": "scooter",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Roller"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10480",
+      "german": "E-Bike",
+      "english": "e-bike / electric bicycle",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "E-Bike"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10481",
+      "german": "Fähre",
+      "english": "ferry",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Fähre"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10482",
+      "german": "Boot",
+      "english": "boat",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Boot"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10483",
+      "german": "Hubschrauber",
+      "english": "helicopter",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Hubschrauber"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10484",
+      "german": "Gleis",
+      "english": "track / platform",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Gleis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10485",
+      "german": "Bahnsteig",
+      "english": "platform",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Bahnsteig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10486",
+      "german": "Abfahrt",
+      "english": "departure",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Abfahrt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10487",
+      "german": "Ankunft",
+      "english": "arrival",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Ankunft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10488",
+      "german": "Verspätung",
+      "english": "delay",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Verspätung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10489",
+      "german": "Umsteigen",
+      "english": "transfer / change (transportation)",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Umsteigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10490",
+      "german": "einsteigen",
+      "english": "to get in / to board",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "einsteigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10491",
+      "german": "aussteigen",
+      "english": "to get out / to exit",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "aussteigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10492",
+      "german": "abfahren",
+      "english": "to depart / to leave",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "abfahren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10493",
+      "german": "ankommen",
+      "english": "to arrive",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "ankommen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10494",
+      "german": "reisen",
+      "english": "to travel",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "reisen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10495",
+      "german": "fliegen",
+      "english": "to fly",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "fliegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10496",
+      "german": "laufen",
+      "english": "to run / to walk",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "laufen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10497",
+      "german": "rennen",
+      "english": "to run",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "rennen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10498",
+      "german": "parken",
+      "english": "to park",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "parken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10499",
+      "german": "tanken",
+      "english": "to refuel / to fill up",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "tanken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10500",
+      "german": "warten",
+      "english": "to wait",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "warten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10501",
+      "german": "verpassen",
+      "english": "to miss (a bus/train)",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "verpassen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10502",
+      "german": "bremsen",
+      "english": "to brake",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "bremsen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10503",
+      "german": "lenken",
+      "english": "to steer",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "lenken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10504",
+      "german": "biegen",
+      "english": "to turn",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "biegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10505",
+      "german": "links abbiegen",
+      "english": "to turn left",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "links abbiegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10506",
+      "german": "rechts abbiegen",
+      "english": "to turn right",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "rechts abbiegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10507",
+      "german": "geradeaus",
+      "english": "straight ahead",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "geradeaus"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10508",
+      "german": "schnell",
+      "english": "fast / quick",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "schnell"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10509",
+      "german": "langsam",
+      "english": "slow",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "langsam"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10510",
+      "german": "pünktlich",
+      "english": "on time / punctual",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "pünktlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10511",
+      "german": "zu Fuß",
+      "english": "on foot",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "zu Fuß"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10512",
+      "german": "mit dem Auto",
+      "english": "by car",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "mit dem Auto"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10513",
+      "german": "mit dem Bus",
+      "english": "by bus",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "mit dem Bus"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10514",
+      "german": "mit dem Zug",
+      "english": "by train",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "mit dem Zug"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10515",
+      "german": "mit dem Fahrrad",
+      "english": "by bicycle",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "mit dem Fahrrad"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10516",
+      "german": "mit dem Flugzeug",
+      "english": "by plane",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "mit dem Flugzeug"
         ]
       }
     },
@@ -9507,6 +14187,1626 @@
           "A1",
           "Weather",
           "windig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10517",
+      "german": "Blitz",
+      "english": "lightning",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Blitz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10518",
+      "german": "Donner",
+      "english": "thunder",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Donner"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10519",
+      "german": "Nebel",
+      "english": "fog",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Nebel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10520",
+      "german": "Hagel",
+      "english": "hail",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Hagel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10521",
+      "german": "Eis",
+      "english": "ice",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Eis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10522",
+      "german": "Frost",
+      "english": "frost",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Frost"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10523",
+      "german": "Tau",
+      "english": "dew",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Tau"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10524",
+      "german": "Regenbogen",
+      "english": "rainbow",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Regenbogen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10525",
+      "german": "Himmel",
+      "english": "sky",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Himmel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10526",
+      "german": "Luft",
+      "english": "air",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Luft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10527",
+      "german": "Sturm",
+      "english": "storm",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Sturm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10528",
+      "german": "Orkan",
+      "english": "hurricane",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Orkan"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10529",
+      "german": "Temperatur",
+      "english": "temperature",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Temperatur"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10530",
+      "german": "Grad",
+      "english": "degree",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Grad"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10531",
+      "german": "Celsius",
+      "english": "Celsius",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Celsius"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10532",
+      "german": "Klima",
+      "english": "climate",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Klima"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10533",
+      "german": "Jahreszeit",
+      "english": "season",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Jahreszeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10534",
+      "german": "Wettervorhersage",
+      "english": "weather forecast",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Wettervorhersage"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10535",
+      "german": "Wetterbericht",
+      "english": "weather report",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Wetterbericht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10536",
+      "german": "Regenschauer",
+      "english": "rain shower",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Regenschauer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10537",
+      "german": "Schneesturm",
+      "english": "snowstorm / blizzard",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Schneesturm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10538",
+      "german": "Schneeflocke",
+      "english": "snowflake",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Schneeflocke"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10539",
+      "german": "Regentropfen",
+      "english": "raindrop",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Regentropfen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10540",
+      "german": "Feuchtigkeit",
+      "english": "humidity / moisture",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Feuchtigkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10541",
+      "german": "Trockenheit",
+      "english": "drought / dryness",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Trockenheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10542",
+      "german": "Pfütze",
+      "english": "puddle",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Pfütze"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10543",
+      "german": "Regenschirm",
+      "english": "umbrella",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Regenschirm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10544",
+      "german": "Regenmantel",
+      "english": "raincoat",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Regenmantel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10545",
+      "german": "Regenjacke",
+      "english": "rain jacket",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Regenjacke"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10546",
+      "german": "Gummistiefel",
+      "english": "rain boots / rubber boots",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Gummistiefel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10547",
+      "german": "Sonnenbrille",
+      "english": "sunglasses",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Sonnenbrille"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10548",
+      "german": "Sonnencreme",
+      "english": "sunscreen / sun cream",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Sonnencreme"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10549",
+      "german": "Handschuhe",
+      "english": "gloves",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Handschuhe"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10550",
+      "german": "Schal",
+      "english": "scarf",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Schal"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10551",
+      "german": "Mütze",
+      "english": "cap / beanie",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Mütze"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10552",
+      "german": "Jacke",
+      "english": "jacket",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Jacke"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10553",
+      "german": "Mantel",
+      "english": "coat",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Mantel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10554",
+      "german": "regnen",
+      "english": "to rain",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "regnen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10555",
+      "german": "schneien",
+      "english": "to snow",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "schneien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10556",
+      "german": "hageln",
+      "english": "to hail",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "hageln"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10557",
+      "german": "donnern",
+      "english": "to thunder",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "donnern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10558",
+      "german": "blitzen",
+      "english": "to lightning / to flash",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "blitzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10559",
+      "german": "scheinen",
+      "english": "to shine",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "scheinen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10560",
+      "german": "wehen",
+      "english": "to blow (wind)",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "wehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10561",
+      "german": "frieren",
+      "english": "to freeze / to be cold",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "frieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10562",
+      "german": "schwitzen",
+      "english": "to sweat",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "schwitzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10563",
+      "german": "schmelzen",
+      "english": "to melt",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "schmelzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10564",
+      "german": "gefrieren",
+      "english": "to freeze (into ice)",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "gefrieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10565",
+      "german": "trocken",
+      "english": "dry",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "trocken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10566",
+      "german": "nass",
+      "english": "wet",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "nass"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10567",
+      "german": "feucht",
+      "english": "humid / damp",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "feucht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10568",
+      "german": "neblig",
+      "english": "foggy",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "neblig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10569",
+      "german": "stürmisch",
+      "english": "stormy",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "stürmisch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10570",
+      "german": "eisig",
+      "english": "icy / freezing",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "eisig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10571",
+      "german": "frostig",
+      "english": "frosty",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "frostig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10572",
+      "german": "mild",
+      "english": "mild",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "mild"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10573",
+      "german": "angenehm",
+      "english": "pleasant",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "angenehm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10574",
+      "german": "unangenehm",
+      "english": "unpleasant",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "unangenehm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10575",
+      "german": "schön",
+      "english": "nice / beautiful (weather)",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "schön"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10576",
+      "german": "schlecht",
+      "english": "bad (weather)",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "schlecht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10577",
+      "german": "herrlich",
+      "english": "wonderful / glorious",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "herrlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10578",
+      "german": "furchtbar",
+      "english": "terrible / awful",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "furchtbar"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10579",
+      "german": "wechselhaft",
+      "english": "changeable / variable",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "wechselhaft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10580",
+      "german": "beständig",
+      "english": "steady / stable",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "beständig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10581",
+      "german": "klar",
+      "english": "clear",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "klar"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10582",
+      "german": "heiter",
+      "english": "fair / bright",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "heiter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10583",
+      "german": "trüb",
+      "english": "dull / overcast",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "trüb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10584",
+      "german": "dunkel",
+      "english": "dark",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "dunkel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10585",
+      "german": "hell",
+      "english": "bright / light",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "hell"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10586",
+      "german": "schwül",
+      "english": "muggy / sultry",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "schwül"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10587",
+      "german": "drückend",
+      "english": "oppressive (heat)",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "drückend"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10588",
+      "german": "glatt",
+      "english": "slippery / icy (roads)",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "glatt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10589",
+      "german": "rutschig",
+      "english": "slippery",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "rutschig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10590",
+      "german": "Wie ist das Wetter?",
+      "english": "What's the weather like?",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Wie ist das Wetter?"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10591",
+      "german": "Es ist sonnig",
+      "english": "It's sunny",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Es ist sonnig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10592",
+      "german": "Es regnet",
+      "english": "It's raining",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Es regnet"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10593",
+      "german": "Es schneit",
+      "english": "It's snowing",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Es schneit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10594",
+      "german": "Es ist kalt",
+      "english": "It's cold",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Es ist kalt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10595",
+      "german": "Es ist warm",
+      "english": "It's warm",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Es ist warm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10596",
+      "german": "Es ist heiß",
+      "english": "It's hot",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Es ist heiß"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10597",
+      "german": "Es ist windig",
+      "english": "It's windy",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Es ist windig"
         ]
       }
     }
