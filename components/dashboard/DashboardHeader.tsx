@@ -62,14 +62,14 @@ export function DashboardHeader({
 }: DashboardHeaderProps) {
   return (
     <div className="border-b border-gray-200">
-      <div className="container mx-auto px-6 py-6">
+      <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6">
         {/* Back Button */}
         {backButton && (
           <button
             onClick={backButton.onClick}
-            className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-4 transition-colors"
+            className="inline-flex items-center text-gray-600 hover:text-gray-900 mb-3 sm:mb-4 transition-colors text-sm sm:text-base"
           >
-            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             {backButton.label}
@@ -77,12 +77,12 @@ export function DashboardHeader({
         )}
 
         {/* Header Content */}
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           {/* Left Side: Title/Avatar */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4">
             {/* Avatar (optional) */}
             {avatar && (
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-piku-purple to-piku-cyan flex items-center justify-center text-3xl font-black text-white overflow-hidden">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-piku-purple to-piku-cyan flex items-center justify-center text-xl sm:text-2xl md:text-3xl font-black text-white overflow-hidden flex-shrink-0">
                 {avatar.src ? (
                   <img
                     src={avatar.src}
@@ -96,21 +96,21 @@ export function DashboardHeader({
             )}
 
             {/* Title & Subtitle */}
-            <div>
-              <h1 className="text-3xl font-black text-gray-900">
+            <div className="min-w-0">
+              <h1 className="text-xl sm:text-2xl md:text-3xl font-black text-gray-900 truncate">
                 {title}
               </h1>
               {subtitle && (
-                <p className="text-gray-600 mt-1">{subtitle}</p>
+                <p className="text-sm sm:text-base text-gray-600 mt-0.5 sm:mt-1 line-clamp-2">{subtitle}</p>
               )}
               {avatar?.subtitle && (
-                <p className="text-sm text-gray-500">{avatar.subtitle}</p>
+                <p className="text-xs sm:text-sm text-gray-500 truncate">{avatar.subtitle}</p>
               )}
             </div>
           </div>
 
           {/* Right Side: Actions */}
-          {actions && <div>{actions}</div>}
+          {actions && <div className="flex-shrink-0 w-full sm:w-auto">{actions}</div>}
         </div>
       </div>
     </div>

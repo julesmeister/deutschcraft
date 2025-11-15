@@ -33,21 +33,21 @@ export function DashboardNav({ items, maxWidth = 'xl', className = '' }: Dashboa
 
   return (
     <div className={`bg-white border-b border-gray-200 ${className}`}>
-      <div className={`container mx-auto px-6 ${maxWidthClasses[maxWidth]}`}>
-        <nav className="flex gap-2 py-3">
+      <div className={`container mx-auto px-3 sm:px-4 lg:px-6 ${maxWidthClasses[maxWidth]}`}>
+        <nav className="flex gap-1 sm:gap-2 py-2 sm:py-3 overflow-x-auto hide-scrollbar">
           {items.map((item) => {
             const isActive = pathname.startsWith(item.href);
             return (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`flex items-center gap-2 px-4 py-2 font-bold text-sm transition-all duration-300 ${
+                className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 font-bold text-xs sm:text-sm whitespace-nowrap transition-all duration-300 ${
                   isActive
                     ? 'text-piku-purple-dark border-b-2 border-piku-purple-dark'
                     : 'text-gray-600 hover:text-piku-purple-dark'
                 }`}
               >
-                {item.icon && <span>{item.icon}</span>}
+                {item.icon && <span className="text-sm sm:text-base">{item.icon}</span>}
                 <span>{item.name}</span>
               </Link>
             );

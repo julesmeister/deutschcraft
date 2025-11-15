@@ -5,6 +5,7 @@ import { MegaDropdown } from '@/components/ui/MegaDropdown';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import { updateUser } from '@/lib/services/userService';
+import { useState } from 'react';
 
 export default function DashboardLayout({
   children,
@@ -26,6 +27,7 @@ export default function DashboardLayout({
 
 function DashboardNavbar() {
   const { data: session } = useSession();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleRoleSwitch = async (newRole: 'STUDENT' | 'TEACHER') => {
     if (!session?.user?.email) return;
@@ -42,15 +44,15 @@ function DashboardNavbar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 py-3 lg:py-4">
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between transition-all duration-500 bg-gray-900 text-white py-3 px-8 rounded-full shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 py-2 sm:py-3 lg:py-4">
+      <div className="container mx-auto px-3 sm:px-4 lg:px-6">
+        <div className="flex items-center justify-between transition-all duration-500 bg-gray-900 text-white py-2 sm:py-3 px-4 sm:px-6 lg:px-8 rounded-full shadow-lg">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span className="font-black text-xl text-gray-900">T</span>
+          <Link href="/" className="flex items-center space-x-1.5 sm:space-x-2 group">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <span className="font-black text-lg sm:text-xl text-gray-900">T</span>
             </div>
-            <span className="font-black text-xl text-white">Testmanship</span>
+            <span className="font-black text-base sm:text-lg lg:text-xl text-white">Testmanship</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -148,7 +150,7 @@ function DashboardNavbar() {
             </Link>
           </nav>
 
-          {/* Sign Out Button */}
+          {/* Desktop Sign Out Button */}
           <div className="hidden lg:flex items-center">
             <button
               onClick={() => import('next-auth/react').then(({ signOut }) => signOut({ callbackUrl: '/' }))}
@@ -164,7 +166,91 @@ function DashboardNavbar() {
               </span>
             </button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden w-9 h-9 flex items-center justify-center text-white hover:text-piku-cyan-accent transition-colors"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden mt-3 bg-gray-900 text-white rounded-2xl shadow-lg overflow-hidden animate-slide-down">
+            <div className="py-4 px-5 space-y-4">
+              {/* Student Section */}
+              <div>
+                <button
+                  onClick={() => handleRoleSwitch('STUDENT')}
+                  className="flex items-center gap-2 font-bold text-sm text-piku-cyan-accent mb-3"
+                >
+                  <span>📚</span>
+                  <span>Student Dashboard</span>
+                </button>
+                <div className="ml-6 space-y-2">
+                  <Link href="/dashboard/student/flashcards" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                    Flashcards
+                  </Link>
+                  <Link href="/dashboard/student/writing" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                    Writing
+                  </Link>
+                  <Link href="/dashboard/student/writing-review" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                    Review
+                  </Link>
+                  <Link href="/dashboard/student/vocabulary" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                    Vocabulary
+                  </Link>
+                </div>
+              </div>
+
+              {/* Teacher Section */}
+              <div className="pt-3 border-t border-gray-700">
+                <button
+                  onClick={() => handleRoleSwitch('TEACHER')}
+                  className="flex items-center gap-2 font-bold text-sm text-piku-purple mb-3"
+                >
+                  <span>👨‍🏫</span>
+                  <span>Teacher Dashboard</span>
+                </button>
+                <div className="ml-6 space-y-2">
+                  <Link href="/dashboard/teacher" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                    Students
+                  </Link>
+                  <Link href="/dashboard/analytics" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                    Analytics
+                  </Link>
+                  <Link href="/dashboard/tasks" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                    Tasks
+                  </Link>
+                </div>
+              </div>
+
+              {/* Settings & Sign Out */}
+              <div className="pt-3 border-t border-gray-700 space-y-2">
+                <Link href="/dashboard/settings" className="block font-bold text-sm text-white hover:text-piku-cyan-accent transition-colors">
+                  Settings
+                </Link>
+                <button
+                  onClick={() => import('next-auth/react').then(({ signOut }) => signOut({ callbackUrl: '/' }))}
+                  className="w-full text-left font-bold text-sm text-white hover:text-red-400 transition-colors"
+                >
+                  Sign out
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
