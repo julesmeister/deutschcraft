@@ -109,14 +109,24 @@ export function CoursePricingSection() {
                 <label className="block text-xs sm:text-sm font-bold text-gray-900 mb-2 md:mb-3">
                   Choose Study Intensity
                 </label>
-                {/* Desktop/Tablet - all 3 buttons in one row */}
-                <div className="hidden sm:block">
+                {/* Desktop - all 3 buttons in one row */}
+                <div className="hidden lg:block">
                   <SplitButtonGroup
                     options={intensityOptions}
                     value={String(hoursPerDay)}
                     onChange={(value) => setHoursPerDay(Number(value))}
                     colorScheme="teal"
                     size="md"
+                  />
+                </div>
+                {/* Tablet - smaller buttons in one row */}
+                <div className="hidden sm:block lg:hidden">
+                  <SplitButtonGroup
+                    options={intensityOptions}
+                    value={String(hoursPerDay)}
+                    onChange={(value) => setHoursPerDay(Number(value))}
+                    colorScheme="teal"
+                    size="sm"
                   />
                 </div>
                 {/* Mobile - vertical stacked buttons */}

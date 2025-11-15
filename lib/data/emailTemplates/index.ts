@@ -9,6 +9,8 @@ import { A1_EMAIL_TEMPLATES } from './A1';
 import { A2_EMAIL_TEMPLATES } from './A2';
 import { B1_EMAIL_TEMPLATES } from './B1';
 import { B2_EMAIL_TEMPLATES } from './B2';
+import { C1_EMAIL_TEMPLATES } from './C1';
+import { C2_EMAIL_TEMPLATES } from './C2';
 
 // Export types
 export type { EmailTemplate } from './types';
@@ -19,6 +21,8 @@ export const EMAIL_TEMPLATES: EmailTemplate[] = [
   ...A2_EMAIL_TEMPLATES,
   ...B1_EMAIL_TEMPLATES,
   ...B2_EMAIL_TEMPLATES,
+  ...C1_EMAIL_TEMPLATES,
+  ...C2_EMAIL_TEMPLATES,
 ];
 
 // Export templates by level
@@ -27,6 +31,8 @@ export {
   A2_EMAIL_TEMPLATES,
   B1_EMAIL_TEMPLATES,
   B2_EMAIL_TEMPLATES,
+  C1_EMAIL_TEMPLATES,
+  C2_EMAIL_TEMPLATES,
 };
 
 /**

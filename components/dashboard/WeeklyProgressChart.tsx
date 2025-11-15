@@ -1,4 +1,6 @@
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import { useSession } from 'next-auth/react';
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
@@ -8,8 +10,15 @@ interface WeeklyProgressChartProps {
 }
 
 export function WeeklyProgressChart({ weeklyData, totalWords }: WeeklyProgressChartProps) {
+  const { data: session } = useSession();
+
   // Generate a slightly varied secondary series for visual interest
   const secondarySeries = weeklyData.map(value => Math.floor(value * 0.6));
+
+  // Get achievements link (same logic as in dashboard layout)
+  const achievementsLink = session?.user?.email
+    ? `/dashboard/teacher/students/${encodeURIComponent(session.user.email)}`
+    : '/dashboard/achievements';
 
   // Exact Bitcoin Earnings config from Slim Dashboard 01
   const chartConfig = {
@@ -82,6 +91,16 @@ export function WeeklyProgressChart({ weeklyData, totalWords }: WeeklyProgressCh
         />
       </div>
 
+      {/* View Details Button - Top Right */}
+      <div className="absolute top-6 right-6 z-10">
+        <Link
+          href={achievementsLink}
+          className="border border-gray-900 px-4 py-2 text-sm font-bold uppercase hover:bg-gray-900 hover:text-white transition inline-block"
+        >
+          View Details →
+        </Link>
+      </div>
+
       {/* Content Overlay */}
       <div className="relative p-6 w-full md:w-2/3">
         <p className="text-5xl font-bold text-gray-900 mb-1">
@@ -92,9 +111,6 @@ export function WeeklyProgressChart({ weeklyData, totalWords }: WeeklyProgressCh
         <p className="text-sm text-gray-500 mb-4">
           You've learned {totalWords} words this week. Keep up the excellent work!
         </p>
-        <button className="border border-gray-900 px-4 py-2 text-sm font-bold uppercase hover:bg-gray-900 hover:text-white transition">
-          View Details →
-        </button>
       </div>
     </div>
   );

@@ -9,6 +9,8 @@ import { A1_TRANSLATION_EXERCISES } from './A1';
 import { A2_TRANSLATION_EXERCISES } from './A2';
 import { B1_TRANSLATION_EXERCISES } from './B1';
 import { B2_TRANSLATION_EXERCISES } from './B2';
+import { C1_TRANSLATION_EXERCISES } from './C1';
+import { C2_TRANSLATION_EXERCISES } from './C2';
 
 // Export types
 export type { TranslationExercise } from './types';
@@ -19,6 +21,8 @@ export const TRANSLATION_EXERCISES: TranslationExercise[] = [
   ...A2_TRANSLATION_EXERCISES,
   ...B1_TRANSLATION_EXERCISES,
   ...B2_TRANSLATION_EXERCISES,
+  ...C1_TRANSLATION_EXERCISES,
+  ...C2_TRANSLATION_EXERCISES,
 ];
 
 // Export exercises by level
@@ -27,6 +31,8 @@ export {
   A2_TRANSLATION_EXERCISES,
   B1_TRANSLATION_EXERCISES,
   B2_TRANSLATION_EXERCISES,
+  C1_TRANSLATION_EXERCISES,
+  C2_TRANSLATION_EXERCISES,
 };
 
 /**

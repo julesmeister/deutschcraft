@@ -10,6 +10,7 @@ import { A2_LETTER_TEMPLATES } from './A2';
 import { B1_LETTER_TEMPLATES } from './B1';
 import { B2_LETTER_TEMPLATES } from './B2';
 import { C1_LETTER_TEMPLATES } from './C1';
+import { C2_LETTER_TEMPLATES } from './C2';
 
 // Export types
 export type { LetterTemplate } from './types';
@@ -21,6 +22,7 @@ export const LETTER_TEMPLATES: LetterTemplate[] = [
   ...B1_LETTER_TEMPLATES,
   ...B2_LETTER_TEMPLATES,
   ...C1_LETTER_TEMPLATES,
+  ...C2_LETTER_TEMPLATES,
 ];
 
 // Export templates by level
@@ -30,6 +32,7 @@ export {
   B1_LETTER_TEMPLATES,
   B2_LETTER_TEMPLATES,
   C1_LETTER_TEMPLATES,
+  C2_LETTER_TEMPLATES,
 };
 
 /**
