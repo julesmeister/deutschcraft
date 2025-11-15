@@ -38,7 +38,8 @@
       "Bash(tree:*)",
       "Bash(Select-String -Pattern \"error|Error|ERROR|warning|Warning|compiled|Compiled\")",
       "Bash(Select-Object -First 50)",
-      "Bash(npm run lint)"
+      "Bash(npm run lint)",
+      "Bash(move \"app/resources/vocabulary/page.tsx\" \"app/dashboard/student/vocabulary/page.tsx\")"
     ],
     "deny": [],
     "ask": []

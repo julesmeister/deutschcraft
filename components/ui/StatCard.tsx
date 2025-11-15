@@ -27,22 +27,22 @@ export function StatCard({
   isPositive = true,
 }: StatCardProps) {
   return (
-    <div className="flex flex-col gap-2 border-b border-neutral-200 px-6 py-4 md:border-b-0 md:border-r [border-right-style:solid] [border-bottom-style:solid] last:border-r-0">
+    <div className="flex flex-col gap-1 border-b border-neutral-200 px-4 py-3 md:border-b-0 md:border-r [border-right-style:solid] [border-bottom-style:solid] last:border-r-0">
       {/* Icon */}
       <div
-        className={`flex max-h-12 min-h-12 max-w-12 min-w-12 items-center justify-center rounded-full ${iconBgColor} text-2xl leading-snug text-neutral-900`}
+        className={`flex max-h-10 min-h-10 max-w-10 min-w-10 items-center justify-center ${iconBgColor} text-xl leading-snug text-neutral-900`}
       >
         {icon}
       </div>
 
       {/* Content */}
-      <div className="mt-4">
-        <div className="mb-1 text-neutral-500 text-sm">{label}</div>
-        <h3 className="text-neutral-900 text-2xl font-bold leading-snug mb-1">
+      <div className="mt-2">
+        <div className="mb-0.5 text-neutral-500 text-xs">{label}</div>
+        <h3 className="text-neutral-900 text-xl font-bold leading-snug mb-0.5">
           {value}
         </h3>
         {change && (
-          <div className="inline-flex flex-wrap items-center gap-1 text-sm">
+          <div className="inline-flex flex-wrap items-center gap-1 text-xs">
             <span
               className={`flex items-center font-bold ${
                 isPositive ? 'text-emerald-500' : 'text-red-500'

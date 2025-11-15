@@ -227,6 +227,11 @@ function getCommunicationSkills(level: CEFRLevel): string[] {
         'Making simple plans',
         'Expressing likes and dislikes',
         'Asking for help',
+        '📝 Writing: Informal Email to a Friend',
+        '📝 Writing: Postcard',
+        '📝 Writing: Introduction Email',
+        '📝 Writing: Simple Thank You Note',
+        '📝 Writing: Simple Invitation',
       ];
     case CEFRLevel.A2:
       return [
@@ -240,6 +245,13 @@ function getCommunicationSkills(level: CEFRLevel): string[] {
         'Describing people and objects',
         'Telling simple stories',
         'Handling common service situations (bank, post office)',
+        '📝 Writing: Formal Email - Inquiry',
+        '📝 Writing: Simple Complaint Letter',
+        '📝 Writing: Simple Job Application Email',
+        '📝 Writing: Informal Letter - Asking for Advice',
+        '📝 Writing: Hotel/Booking Confirmation Request',
+        '📝 Writing: Informal Apology Letter',
+        '📝 Writing: Event Organization Email',
       ];
     case CEFRLevel.B1:
       return [
@@ -253,6 +265,14 @@ function getCommunicationSkills(level: CEFRLevel): string[] {
         'Reporting what others have said (indirect speech)',
         'Expressing wishes and regrets',
         'Understanding and using common idioms',
+        '📝 Writing: Formal Job Application Letter',
+        '📝 Writing: Motivation Letter (Erasmus/University)',
+        '📝 Writing: Detailed Complaint Letter',
+        '📝 Writing: Formal Request Letter',
+        '📝 Writing: Opinion Letter to Newspaper',
+        '📝 Writing: Letter of Recommendation',
+        '📝 Writing: Formal Notification of Change',
+        '📝 Writing: Simple Business Proposal',
       ];
     case CEFRLevel.B2:
       return [
@@ -266,6 +286,54 @@ function getCommunicationSkills(level: CEFRLevel): string[] {
         'Understanding news broadcasts and documentaries',
         'Using language flexibly for social and professional purposes',
         'Recognizing and using subtle linguistic nuances',
+        '📝 Writing: Academic Research Inquiry',
+        '📝 Writing: Grant Application Letter',
+        '📝 Writing: Legal Formal Notice (Abmahnung)',
+        '📝 Writing: Resignation Letter',
+        '📝 Writing: Sponsorship Proposal',
+        '📝 Writing: Press Release',
+        '📝 Writing: Formal Appeal (Widerspruch)',
+        '📝 Writing: Contract Termination Letter',
+      ];
+    case CEFRLevel.C1:
+      return [
+        'Understanding long, complex texts and recognizing implicit meaning',
+        'Expressing ideas fluently and spontaneously',
+        'Using language flexibly for social, academic, and professional purposes',
+        'Producing clear, well-structured, detailed text on complex subjects',
+        'Understanding and producing subtle distinctions in meaning',
+        'Participating effectively in academic and professional discourse',
+        'Analyzing and synthesizing complex information',
+        'Adapting register and style to different contexts',
+        'Understanding cultural and contextual nuances',
+        'Using advanced rhetorical devices effectively',
+        '📝 Writing: Academic Peer Review (Gutachten)',
+        '📝 Writing: Policy Brief / Position Paper',
+        '📝 Writing: Diplomatic Note (Verbalnote)',
+        '📝 Writing: Expert Testimony (Sachverständigengutachten)',
+        '📝 Writing: White Paper',
+        '📝 Writing: Arbitration Statement (Klageerw iderung)',
+        '📝 Writing: Memorandum of Understanding',
+      ];
+    case CEFRLevel.C2:
+      return [
+        'Understanding with ease virtually everything heard or read',
+        'Summarizing information from different sources',
+        'Expressing yourself spontaneously with precision',
+        'Distinguishing finer shades of meaning in complex situations',
+        'Producing clear, sophisticated, well-structured writing',
+        'Mastering all registers and styles',
+        'Understanding and producing highly specialized discourse',
+        'Demonstrating cultural and linguistic sophistication',
+        'Analyzing and critiquing at the highest level',
+        'Engaging in expert-level professional communication',
+        '📝 Writing: Constitutional Complaint (Verfassungsbeschwerde)',
+        '📝 Writing: Legislative Draft with Memorandum',
+        '📝 Writing: Academic Journal Editorial Decision',
+        '📝 Writing: M&A Letter of Intent',
+        '📝 Writing: International Arbitration Submission',
+        '📝 Writing: Literary Criticism Essay',
+        '📝 Writing: Philosophical Treatise',
       ];
     default:
       return [];
