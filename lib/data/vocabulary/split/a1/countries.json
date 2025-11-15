@@ -1,7 +1,7 @@
 {
   "level": "A1",
   "category": "Countries",
-  "totalCards": 15,
+  "totalCards": 49,
   "flashcards": [
     {
       "id": "syllabus-a1-10086",
@@ -265,8 +265,8 @@
     },
     {
       "id": "syllabus-a1-10099",
-      "german": "deutsch",
-      "english": "German (adjective)",
+      "german": "Griechenland",
+      "english": "Greece",
       "category": "Countries",
       "level": "A1",
       "tags": [
@@ -279,14 +279,14 @@
         "hierarchy": [
           "A1",
           "Countries",
-          "deutsch"
+          "Griechenland"
         ]
       }
     },
     {
       "id": "syllabus-a1-10100",
-      "german": "englisch",
-      "english": "English (adjective)",
+      "german": "Türkei",
+      "english": "Turkey",
       "category": "Countries",
       "level": "A1",
       "tags": [
@@ -299,7 +299,687 @@
         "hierarchy": [
           "A1",
           "Countries",
-          "englisch"
+          "Türkei"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10101",
+      "german": "Portugal",
+      "english": "Portugal",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Portugal"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10102",
+      "german": "Niederlande",
+      "english": "Netherlands",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Niederlande"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10103",
+      "german": "Belgien",
+      "english": "Belgium",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Belgien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10104",
+      "german": "Schweden",
+      "english": "Sweden",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Schweden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10105",
+      "german": "Norwegen",
+      "english": "Norway",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Norwegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10106",
+      "german": "Dänemark",
+      "english": "Denmark",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Dänemark"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10107",
+      "german": "Finnland",
+      "english": "Finland",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Finnland"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10108",
+      "german": "Irland",
+      "english": "Ireland",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Irland"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10109",
+      "german": "Schottland",
+      "english": "Scotland",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Schottland"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10110",
+      "german": "Tschechien",
+      "english": "Czech Republic",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Tschechien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10111",
+      "german": "Ungarn",
+      "english": "Hungary",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Ungarn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10112",
+      "german": "Rumänien",
+      "english": "Romania",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Rumänien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10113",
+      "german": "Bulgarien",
+      "english": "Bulgaria",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Bulgarien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10114",
+      "german": "Kroatien",
+      "english": "Croatia",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Kroatien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10115",
+      "german": "Serbien",
+      "english": "Serbia",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Serbien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10116",
+      "german": "Ukraine",
+      "english": "Ukraine",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Ukraine"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10117",
+      "german": "Kanada",
+      "english": "Canada",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Kanada"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10118",
+      "german": "Mexiko",
+      "english": "Mexico",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Mexiko"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10119",
+      "german": "Brasilien",
+      "english": "Brazil",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Brasilien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10120",
+      "german": "Argentinien",
+      "english": "Argentina",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Argentinien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10121",
+      "german": "Chile",
+      "english": "Chile",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Chile"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10122",
+      "german": "Australien",
+      "english": "Australia",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Australien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10123",
+      "german": "Neuseeland",
+      "english": "New Zealand",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Neuseeland"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10124",
+      "german": "Südafrika",
+      "english": "South Africa",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Südafrika"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10125",
+      "german": "Ägypten",
+      "english": "Egypt",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Ägypten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10126",
+      "german": "Marokko",
+      "english": "Morocco",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Marokko"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10127",
+      "german": "Saudi-Arabien",
+      "english": "Saudi Arabia",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Saudi-Arabien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10128",
+      "german": "Israel",
+      "english": "Israel",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Israel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10129",
+      "german": "Iran",
+      "english": "Iran",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Iran"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10130",
+      "german": "Südkorea",
+      "english": "South Korea",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Südkorea"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10131",
+      "german": "Thailand",
+      "english": "Thailand",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Thailand"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10132",
+      "german": "Vietnam",
+      "english": "Vietnam",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Vietnam"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10133",
+      "german": "Philippinen",
+      "english": "Philippines",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Philippinen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10134",
+      "german": "Indonesien",
+      "english": "Indonesia",
+      "category": "Countries",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Countries",
+          "Indonesien"
         ]
       }
     }
