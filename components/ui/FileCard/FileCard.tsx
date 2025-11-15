@@ -9,6 +9,8 @@ export interface FileCardProps {
   onClick?: () => void;
   onMenuClick?: () => void;
   className?: string;
+  isAttempted?: boolean;
+  attemptCount?: number;
 }
 
 /**
@@ -22,10 +24,16 @@ export function FileCard({
   onClick,
   onMenuClick,
   className = '',
+  isAttempted = false,
+  attemptCount,
 }: FileCardProps) {
   return (
     <div
-      className={`flex cursor-pointer items-center justify-between gap-y-2 gap-x-2 rounded-2xl border-solid border border-neutral-200 bg-white px-3.5 py-4 duration-150 ease-in-out hover:shadow-sm ${className}`}
+      className={`flex cursor-pointer items-center justify-between gap-y-2 gap-x-2 rounded-2xl border-solid border px-3.5 py-4 duration-150 ease-in-out hover:shadow-sm ${
+        isAttempted
+          ? 'bg-blue-50 border-blue-200 hover:border-blue-300'
+          : 'bg-white border-neutral-200'
+      } ${className}`}
       role="button"
       onClick={onClick}
     >
@@ -36,29 +44,12 @@ export function FileCard({
           <span className="text-xs leading-snug text-neutral-500">{size}</span>
         </div>
       </div>
-      {onMenuClick && (
-        <div role="menuitem" aria-expanded="false" aria-haspopup="menu">
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onMenuClick();
-            }}
-            className="cursor-pointer whitespace-nowrap content-center font-bold transition-all duration-150 ease-in-out active:[scale:0.98] inline-flex h-8 w-8 items-center justify-center rounded-[3.40282e38px] text-base leading-normal hover:text-blue-500"
-          >
-            <svg
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-4 fill-none stroke-current"
-            >
-              <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-              <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-              <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-            </svg>
-          </button>
+      {attemptCount !== undefined && attemptCount > 0 && (
+        <div className="flex items-center gap-1.5 bg-blue-100 text-blue-700 px-3 py-1.5 rounded-full">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span className="text-xs font-bold">{attemptCount}</span>
         </div>
       )}
     </div>

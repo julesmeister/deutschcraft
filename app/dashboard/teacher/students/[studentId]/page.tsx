@@ -6,6 +6,7 @@ import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { FlashcardStatsSection } from '@/components/dashboard/FlashcardStatsSection';
 import { WritingStatsSection } from '@/components/dashboard/WritingStatsSection';
 import { RecentActivityTimeline } from '@/components/dashboard/RecentActivityTimeline';
+import { CategoryProgressSection } from '@/components/dashboard/CategoryProgressSection';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useStudyStats } from '@/lib/hooks/useFlashcards';
 import { useWritingStats, useStudentSubmissions } from '@/lib/hooks/useWritingExercises';
@@ -164,6 +165,13 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
             <WritingStatsSection writingStats={writingStats} />
           )}
         </div>
+
+        {/* Category Progress (only for flashcards tab) */}
+        {activeTab === 'flashcards' && student?.email && (
+          <div className="mb-8">
+            <CategoryProgressSection userId={student.email} />
+          </div>
+        )}
 
         {/* Recent Activity */}
         <div className="bg-white border border-gray-200 rounded-2xl p-6">

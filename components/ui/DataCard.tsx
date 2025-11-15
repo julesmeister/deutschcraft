@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { ActionButton, ActionButtonIcons } from './ActionButton';
 
 interface DataCardProps {
   /** Large value/number at top */
@@ -62,14 +61,22 @@ export function DataCard({
         </p>
       )}
 
-      {/* Action Button - Normal state */}
-      <div className="mt-auto opacity-100 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
-        <ActionButton
-          variant={getButtonVariant()}
-          icon={<ActionButtonIcons.ArrowRight />}
-        >
-          {mastery !== undefined ? `${mastery}%` : 'Practice'}
-        </ActionButton>
+      {/* Action Button - Normal state (non-interactive display) */}
+      <div className="mt-auto opacity-100 group-hover:opacity-0 transition-opacity duration-300">
+        <div className={`w-full inline-flex items-center font-bold text-xs py-1.5 pl-3 pr-1.5 rounded-full ${
+          mastery !== undefined && mastery >= 70 ? 'bg-[#76FFCE] text-gray-900' :
+          mastery !== undefined && mastery >= 40 ? 'bg-[#FFD542] text-gray-900' :
+          'bg-[#753BBD] text-white'
+        }`}>
+          <span className="flex-1 text-left">
+            {mastery !== undefined ? `${mastery}%` : 'Practice'}
+          </span>
+          <span className="ml-2 w-6 h-6 flex items-center justify-center rounded-full bg-white/20">
+            <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </span>
+        </div>
       </div>
 
       {/* Action Button - Hover state (white) */}
