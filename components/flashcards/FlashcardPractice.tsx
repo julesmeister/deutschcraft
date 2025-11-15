@@ -81,17 +81,18 @@ export function FlashcardPractice({
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-black text-gray-900">{categoryName}</h2>
-          <p className="text-gray-600">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div className="min-w-0 flex-1">
+          <h2 className="text-xl sm:text-2xl font-black text-gray-900 truncate">{categoryName}</h2>
+          <p className="text-sm sm:text-base text-gray-600">
             {level} • Card {currentIndex + 1} of {flashcards.length}
           </p>
         </div>
-        <Button onClick={onBack} variant="ghost" size="sm">
-          ← Back to Categories
+        <Button onClick={onBack} variant="ghost" size="sm" className="shrink-0 self-start sm:self-auto">
+          <span className="hidden sm:inline">← Back to Categories</span>
+          <span className="sm:hidden">← Back</span>
         </Button>
       </div>
 
@@ -99,9 +100,9 @@ export function FlashcardPractice({
       <MasteryStats stats={masteryStats} />
 
       {/* Progress Bar */}
-      <div className="w-full bg-gray-200 rounded-full h-2">
+      <div className="w-full bg-gray-200 rounded-full h-1.5 sm:h-2">
         <div
-          className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+          className="bg-blue-500 h-1.5 sm:h-2 rounded-full transition-all duration-300"
           style={{ width: `${progress}%` }}
         />
       </div>
@@ -115,20 +116,21 @@ export function FlashcardPractice({
       />
 
       {/* Combined: Navigation + Difficulty/Show Answer Buttons */}
-      <div className="flex items-center gap-3">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
         {/* Previous Button */}
         <Button
           onClick={handlePrevious}
           disabled={currentIndex === 0}
           variant="secondary"
           size="sm"
-          className="shrink-0"
+          className="shrink-0 order-2 sm:order-1"
         >
-          ← Previous
+          <span className="hidden sm:inline">← Previous</span>
+          <span className="sm:hidden">← Prev</span>
         </Button>
 
         {/* Difficulty Buttons or Show Answer - Center Area */}
-        <div className="flex-1">
+        <div className="flex-1 order-1 sm:order-2">
           <DifficultyButtons
             isFlipped={isFlipped}
             onDifficulty={handleDifficulty}
@@ -142,9 +144,10 @@ export function FlashcardPractice({
           disabled={currentIndex === flashcards.length - 1}
           variant="secondary"
           size="sm"
-          className="shrink-0"
+          className="shrink-0 order-3"
         >
-          Next →
+          <span className="hidden sm:inline">Next →</span>
+          <span className="sm:hidden">Next →</span>
         </Button>
       </div>
 

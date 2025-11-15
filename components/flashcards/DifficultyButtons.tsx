@@ -24,8 +24,8 @@ export function DifficultyButtons({
       value: 'again',
       label: (
         <div>
-          <div className="text-base font-black">Forgotten</div>
-          <div className="text-xs opacity-70 mt-0.5">Press 1</div>
+          <div className="text-sm sm:text-base font-black">Forgotten</div>
+          <div className="text-[10px] sm:text-xs opacity-70 mt-0.5 hidden sm:block">Press 1</div>
         </div>
       ),
     },
@@ -33,8 +33,8 @@ export function DifficultyButtons({
       value: 'hard',
       label: (
         <div>
-          <div className="text-base font-black">Hard</div>
-          <div className="text-xs opacity-70 mt-0.5">Press 2</div>
+          <div className="text-sm sm:text-base font-black">Hard</div>
+          <div className="text-[10px] sm:text-xs opacity-70 mt-0.5 hidden sm:block">Press 2</div>
         </div>
       ),
     },
@@ -42,8 +42,8 @@ export function DifficultyButtons({
       value: 'good',
       label: (
         <div>
-          <div className="text-base font-black">Good</div>
-          <div className="text-xs opacity-70 mt-0.5">Press 3</div>
+          <div className="text-sm sm:text-base font-black">Good</div>
+          <div className="text-[10px] sm:text-xs opacity-70 mt-0.5 hidden sm:block">Press 3</div>
         </div>
       ),
     },
@@ -51,8 +51,8 @@ export function DifficultyButtons({
       value: 'easy',
       label: (
         <div>
-          <div className="text-base font-black">Easy</div>
-          <div className="text-xs opacity-70 mt-0.5">Press 4</div>
+          <div className="text-sm sm:text-base font-black">Easy</div>
+          <div className="text-[10px] sm:text-xs opacity-70 mt-0.5 hidden sm:block">Press 4</div>
         </div>
       ),
     },
@@ -81,9 +81,9 @@ export function DifficultyButtons({
     <div className="flex justify-center">
       <button
         onClick={onShowAnswer}
-        className="bg-gray-100 hover:bg-gray-200 text-gray-700 border border-gray-300 rounded-xl px-8 py-3 text-sm font-semibold transition-all hover:border-gray-400"
+        className="bg-gray-100 hover:bg-gray-200 active:bg-gray-300 text-gray-700 border border-gray-300 rounded-xl px-6 py-2.5 sm:px-8 sm:py-3 text-sm sm:text-base font-semibold transition-all hover:border-gray-400 w-full sm:w-auto"
       >
-        Show Answer <span className="text-xs opacity-60 ml-2">(Space/Enter)</span>
+        Show Answer <span className="text-xs opacity-60 ml-2 hidden sm:inline">(Space/Enter)</span>
       </button>
     </div>
   );

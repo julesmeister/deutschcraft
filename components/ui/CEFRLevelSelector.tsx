@@ -58,25 +58,25 @@ const COLOR_SCHEMES = {
   ],
 };
 
-// Size configurations
+// Size configurations with responsive variants
 const SIZE_CLASSES = {
   sm: {
-    padding: 'px-3 py-2',
-    fontSize: 'text-lg',
-    descSize: 'text-[10px]',
+    padding: 'px-2 py-1.5 sm:px-3 sm:py-2',
+    fontSize: 'text-sm sm:text-base md:text-lg',
+    descSize: 'text-[8px] sm:text-[9px] md:text-[10px]',
     gap: 'mb-0.5',
   },
   md: {
-    padding: 'px-4 py-3',
-    fontSize: 'text-xl',
-    descSize: 'text-xs',
-    gap: 'mb-1',
+    padding: 'px-2.5 py-2 sm:px-3 sm:py-2.5 md:px-4 md:py-3',
+    fontSize: 'text-base sm:text-lg md:text-xl',
+    descSize: 'text-[9px] sm:text-[10px] md:text-xs',
+    gap: 'mb-0.5 sm:mb-1',
   },
   lg: {
-    padding: 'px-4 py-4',
-    fontSize: 'text-2xl',
-    descSize: 'text-xs',
-    gap: 'mb-1',
+    padding: 'px-3 py-2.5 sm:px-4 sm:py-3 md:px-4 md:py-4',
+    fontSize: 'text-lg sm:text-xl md:text-2xl',
+    descSize: 'text-[10px] sm:text-xs',
+    gap: 'mb-0.5 sm:mb-1',
   },
 };
 
@@ -93,21 +93,21 @@ export function CEFRLevelSelector({
 
   return (
     <div className={className}>
-      <div className="flex w-full gap-1">
+      <div className="flex w-full gap-0.5 sm:gap-1">
         {Object.values(CEFRLevel).map((level, index) => {
           const info = CEFRLevelInfo[level];
           const isSelected = selectedLevel === level;
           const isFirst = index === 0;
           const isLast = index === Object.values(CEFRLevel).length - 1;
 
-          // Determine border radius based on position
+          // Determine border radius based on position with responsive sizes
           let borderRadius = '';
           if (isFirst) {
-            borderRadius = 'rounded-l-[20px] rounded-r-[5px]';
+            borderRadius = 'rounded-l-[12px] sm:rounded-l-[16px] md:rounded-l-[20px] rounded-r-[4px] sm:rounded-r-[5px]';
           } else if (isLast) {
-            borderRadius = 'rounded-l-[5px] rounded-r-[20px]';
+            borderRadius = 'rounded-l-[4px] sm:rounded-l-[5px] rounded-r-[12px] sm:rounded-r-[16px] md:rounded-r-[20px]';
           } else {
-            borderRadius = 'rounded-[5px]';
+            borderRadius = 'rounded-[4px] sm:rounded-[5px]';
           }
 
           // Get color scheme for this level
@@ -118,21 +118,22 @@ export function CEFRLevelSelector({
               key={level}
               onClick={() => onLevelChange(level)}
               className={`
-                flex-1 ${sizeConfig.padding} transition-all duration-200
+                flex-1 ${sizeConfig.padding} transition-all duration-200 active:scale-95
                 ${borderRadius}
                 ${
                   isSelected
-                    ? `${colorSet.icon} text-white`
+                    ? `${colorSet.icon} text-white shadow-sm`
                     : `${colorSet.bg} ${colorSet.text} ${colorSet.hover}`
                 }
+                min-w-0
               `}
             >
-              <div className={`${sizeConfig.fontSize} font-black ${showDescription ? sizeConfig.gap : ''}`}>{level}</div>
+              <div className={`${sizeConfig.fontSize} font-black ${showDescription ? sizeConfig.gap : ''} leading-tight`}>{level}</div>
               {showDescription && (
                 <div
-                  className={`${sizeConfig.descSize} font-medium whitespace-nowrap ${
+                  className={`${sizeConfig.descSize} font-medium ${
                     isSelected ? 'text-white opacity-90' : 'opacity-70'
-                  }`}
+                  } hidden sm:block leading-tight`}
                 >
                   {info.displayName}
                 </div>

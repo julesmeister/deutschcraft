@@ -53,7 +53,7 @@ export default function FlashcardsLandingPage() {
   const { settings } = useFlashcardSettings();
 
   // Fetch user's flashcard progress to identify attempted categories
-  const { data: flashcardReviews = [] } = useFlashcardReviews(session?.user?.email);
+  const { data: flashcardReviews = [], refetch: refetchReviews } = useFlashcardReviews(session?.user?.email);
 
   // Create a Set of attempted category IDs and count attempts per category
   const attemptedCategories = new Set<string>();
@@ -93,8 +93,9 @@ export default function FlashcardsLandingPage() {
   const handleBackToCategories = () => {
     setSelectedCategory(null);
     setPracticeFlashcards([]);
-    // Refresh stats after completing session
+    // Refresh stats and reviews after completing session
     setStatsRefreshKey(prev => prev + 1);
+    refetchReviews();
   };
 
   const handleStartPractice = () => {

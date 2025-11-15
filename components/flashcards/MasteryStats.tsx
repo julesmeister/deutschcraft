@@ -18,7 +18,7 @@ interface MasteryStatsProps {
 }
 
 export function MasteryStats({ stats }: MasteryStatsProps) {
-  const tabs: TabItem[] = [
+  const statItems = [
     {
       id: 'forgotten',
       label: 'Forgotten',
@@ -46,9 +46,36 @@ export function MasteryStats({ stats }: MasteryStatsProps) {
   ];
 
   return (
-    <TabBar
-      tabs={tabs}
-      variant="stats"
-    />
+    <>
+      {/* Mobile: 2x2 Grid */}
+      <div className="grid grid-cols-2 gap-2 sm:hidden">
+        {statItems.map((stat) => (
+          <div
+            key={stat.id}
+            className="flex flex-col gap-1 p-3 rounded-lg border border-gray-200 bg-white"
+          >
+            <div className="flex items-center gap-1.5">
+              <div className="h-3 w-3 shrink-0">
+                {stat.icon}
+              </div>
+              <p className="text-[10px] font-medium text-neutral-900 truncate">
+                {stat.label}
+              </p>
+            </div>
+            <p className="text-lg font-medium text-neutral-900 leading-tight">
+              {stat.value}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {/* Tablet/Desktop: Horizontal TabBar */}
+      <div className="hidden sm:block">
+        <TabBar
+          tabs={statItems}
+          variant="stats"
+        />
+      </div>
+    </>
   );
 }

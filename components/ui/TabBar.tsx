@@ -41,7 +41,7 @@ export function TabBar({ tabs, activeTabId, onTabChange, className = '', variant
                 onClick={() => onTabChange?.(tab.id)}
                 disabled={isStatsMode}
                 className={`
-                  flex ${isCompact ? 'flex-row justify-between items-center p-3 min-w-32' : 'flex-col justify-start items-stretch gap-1 p-5 min-w-40'}
+                  flex ${isCompact ? 'flex-row justify-between items-center p-2 sm:p-3 min-w-24 sm:min-w-32' : 'flex-col justify-start items-stretch gap-0.5 sm:gap-1 p-3 sm:p-4 md:p-5 min-w-20 sm:min-w-32 md:min-w-40'}
                   flex-1
                   ${isFirst ? 'border-r' : isLast ? 'border-l' : 'border-x'}
                   border-b
@@ -60,13 +60,13 @@ export function TabBar({ tabs, activeTabId, onTabChange, className = '', variant
                   /* Compact single-line layout */
                   <>
                     {/* Label only (no icon) */}
-                    <p className={`font-medium whitespace-nowrap text-sm ${
+                    <p className={`font-medium text-xs sm:text-sm truncate ${
                       isStatsMode ? 'text-neutral-900' : (isActive ? 'text-neutral-900' : 'text-zinc-500')
                     }`}>
                       {tab.label}
                     </p>
                     {/* Value on the right */}
-                    <p className="text-neutral-900 font-semibold text-sm">
+                    <p className="text-neutral-900 font-semibold text-xs sm:text-sm shrink-0">
                       {tab.value}
                     </p>
                   </>
@@ -74,21 +74,21 @@ export function TabBar({ tabs, activeTabId, onTabChange, className = '', variant
                   /* Default two-line layout with icon */
                   <>
                     {/* Label with Icon */}
-                    <div className={`flex justify-start items-center gap-2 ${
+                    <div className={`flex justify-start items-center gap-1 sm:gap-2 ${
                       isStatsMode ? 'text-neutral-900' : (isActive ? 'text-neutral-900' : 'text-zinc-500')
                     }`}>
                       {tab.icon && (
-                        <div className="h-4 w-4 min-w-4">
+                        <div className="h-3 w-3 sm:h-4 sm:w-4 min-w-3 sm:min-w-4 shrink-0">
                           {tab.icon}
                         </div>
                       )}
-                      <p className="text-sm font-medium leading-5 whitespace-nowrap">
+                      <p className="text-[10px] sm:text-xs md:text-sm font-medium leading-tight truncate">
                         {tab.label}
                       </p>
                     </div>
 
                     {/* Value */}
-                    <p className="text-neutral-900 tracking-[-0.8px] text-left text-2xl font-medium leading-8">
+                    <p className="text-neutral-900 tracking-[-0.4px] sm:tracking-[-0.6px] md:tracking-[-0.8px] text-left text-base sm:text-xl md:text-2xl font-medium leading-tight sm:leading-7 md:leading-8">
                       {tab.value}
                     </p>
                   </>

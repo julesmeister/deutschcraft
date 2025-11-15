@@ -30,7 +30,7 @@ import { cacheTimes } from '../queryClient';
  * Used for the flashcard review page
  */
 export function useFlashcardReviews(userId: string | undefined) {
-  const { data, isLoading, isError, error } = useQuery({
+  const { data, isLoading, isError, error, refetch } = useQuery({
     queryKey: ['flashcard-reviews', userId],
     queryFn: async () => {
       if (!userId) return [];
@@ -46,6 +46,7 @@ export function useFlashcardReviews(userId: string | undefined) {
     isLoading,
     isError,
     error: error as Error | null,
+    refetch,
   };
 }
 
