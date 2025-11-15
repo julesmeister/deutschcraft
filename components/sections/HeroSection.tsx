@@ -8,20 +8,30 @@ export function HeroSection() {
   const router = useRouter();
   const { data: session, status } = useSession();
 
+  console.info('🎨 HeroSection rendered | Status:', status, '| Has session:', !!session);
+
   // Session validation happens in handleStartLearning
 
   const handleStartLearning = async () => {
+    console.info('🔵 START LEARNING CLICKED');
+    console.info('Status:', status, '| Session exists:', !!session);
+
     if (status === 'loading') {
+      console.info('⏳ Session still loading...');
       return;
     }
 
     if (session) {
+      console.info('✅ Session found:', session.user?.email);
+
       // Validate session is not expired
       const expiryDate = new Date(session.expires);
       const now = new Date();
       const isExpired = expiryDate < now;
+      console.info('Session expired?', isExpired, '| Expires:', session.expires);
 
       if (isExpired) {
+        console.info('🔄 Session expired, re-authenticating...');
         // Session expired, need to re-authenticate
         try {
           await signIn('google', {
@@ -29,34 +39,43 @@ export function HeroSection() {
             redirect: true
           });
         } catch (error) {
-          console.error('[HeroSection] Re-authentication failed:', error);
+          console.error('❌ Re-authentication failed:', error);
         }
         return;
       }
 
       // Valid session, redirect to dashboard
+      console.info('🚀 Navigating to dashboard...');
+      console.info('Current path:', window.location.pathname);
+
       try {
         router.push('/dashboard');
+        console.info('✓ router.push called');
 
         // Fallback: if router.push doesn't work after 2 seconds, force navigation
         setTimeout(() => {
+          console.info('⏰ Timeout check - current path:', window.location.pathname);
           if (window.location.pathname === '/') {
+            console.info('⚠️ Still on /, forcing navigation with window.location');
             window.location.href = '/dashboard';
           }
         }, 2000);
       } catch (error) {
-        console.error('[HeroSection] Navigation failed:', error);
+        console.error('❌ Navigation failed:', error);
+        console.info('🔄 Using window.location fallback');
         window.location.href = '/dashboard';
       }
     } else {
+      console.info('🔐 No session, triggering Google sign-in...');
       // No session, trigger sign-in
       try {
         await signIn('google', {
           callbackUrl: window.location.origin + '/dashboard',
           redirect: true
         });
+        console.info('✓ signIn called');
       } catch (error) {
-        console.error('[HeroSection] Sign-in failed:', error);
+        console.error('❌ Sign-in failed:', error);
       }
     }
   };
