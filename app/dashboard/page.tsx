@@ -15,7 +15,7 @@ export default function DashboardPage() {
 
   useEffect(() => {
     console.info('📊 Dashboard useEffect triggered');
-    console.info('Status:', status, '| Loading user:', isLoadingUser, '| Session:', !!session, '| User:', user?.email);
+    console.info('Status:', status, '| Loading user:', isLoadingUser, '| Session:', !!session, '| User:', user?.email, '| User role:', user?.role);
 
     if (status === 'loading') {
       console.info('⏳ Waiting for session...');
@@ -28,20 +28,24 @@ export default function DashboardPage() {
     }
 
     if (!session) {
-      console.info('❌ No session, redirecting to home');
-      router.push('/');
+      console.error('❌ NO SESSION FOUND IN DASHBOARD! Redirecting to home');
+      console.info('Session object:', session);
+      console.info('Status:', status);
+      window.location.href = '/';
       return;
     }
+
+    console.info('✅ Session exists:', session.user?.email);
 
     // Redirect based on user role from Firestore
     if (user?.role === 'TEACHER') {
       console.info('👨‍🏫 Teacher detected, redirecting to /dashboard/teacher');
-      router.push('/dashboard/teacher');
+      window.location.href = '/dashboard/teacher';
     } else {
       console.info('👨‍🎓 Student detected (or default), redirecting to /dashboard/student');
-      router.push('/dashboard/student');
+      window.location.href = '/dashboard/student';
     }
-  }, [session, status, router, user, isLoadingUser]);
+  }, [session, status, user, isLoadingUser]);
 
   return <CatLoader fullScreen message="Loading dashboard..." />;
 }
