@@ -18,10 +18,6 @@ interface FlashcardCardProps {
 }
 
 export function FlashcardCard({ card, isFlipped, onFlip, showExamples = true, showEnglishFirst = false }: FlashcardCardProps) {
-  // Determine which side to show based on showEnglishFirst preference
-  const showFront = showEnglishFirst ? isFlipped : !isFlipped;
-  const showBack = showEnglishFirst ? !isFlipped : isFlipped;
-
   return (
     <Card padding="none" rounded="2xl" className="overflow-hidden">
       <div
@@ -31,7 +27,7 @@ export function FlashcardCard({ card, isFlipped, onFlip, showExamples = true, sh
         {/* Front side - German (or English if showEnglishFirst) */}
         <div
           className={`absolute inset-0 flex items-center justify-center p-12 transition-all duration-200 ${
-            showFront ? 'opacity-0 rotate-y-180' : 'opacity-100'
+            isFlipped ? 'opacity-0 rotate-y-180' : 'opacity-100'
           }`}
         >
           <div className="text-center">
@@ -50,7 +46,7 @@ export function FlashcardCard({ card, isFlipped, onFlip, showExamples = true, sh
         {/* Back side - English (or German if showEnglishFirst) */}
         <div
           className={`absolute inset-0 flex items-center justify-center p-12 transition-all duration-200 ${
-            showBack ? 'opacity-100' : 'opacity-0 rotate-y-180'
+            isFlipped ? 'opacity-100' : 'opacity-0 rotate-y-180'
           }`}
         >
           <div className="text-center">
