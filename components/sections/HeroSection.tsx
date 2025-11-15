@@ -1,8 +1,46 @@
 'use client';
 
-import Link from 'next/link';
+import { signIn, useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export function HeroSection() {
+  const router = useRouter();
+  const { data: session, status } = useSession();
+
+  useEffect(() => {
+    console.log('[HeroSection] Session status:', status);
+    console.log('[HeroSection] Session data:', session);
+    console.log('[HeroSection] User email:', session?.user?.email);
+  }, [session, status]);
+
+  const handleStartLearning = async () => {
+    console.log('[HeroSection] Start Learning clicked');
+    console.log('[HeroSection] Current status:', status);
+    console.log('[HeroSection] Current session:', session);
+
+    if (status === 'loading') {
+      console.log('[HeroSection] Session is loading, waiting...');
+      return;
+    }
+
+    if (session) {
+      console.log('[HeroSection] User is logged in, redirecting to dashboard');
+      router.push('/dashboard');
+    } else {
+      console.log('[HeroSection] User not logged in, triggering Google sign-in');
+      try {
+        const result = await signIn('google', {
+          callbackUrl: '/dashboard',
+          redirect: true
+        });
+        console.log('[HeroSection] Sign-in result:', result);
+      } catch (error) {
+        console.error('[HeroSection] Sign-in error:', error);
+      }
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#171417] pt-24 pb-12 md:pt-28 md:pb-16 lg:pt-20 lg:pb-20">
       {/* Vertical line grid pattern like Piku */}
@@ -37,17 +75,20 @@ export function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-200">
-              <Link
-                href="/signup"
-                className="theme-btn theme-btn-light group inline-flex items-center justify-between bg-piku-purple-dark text-white font-black text-[15px] py-2 pl-8 pr-2 rounded-md"
+              <button
+                onClick={handleStartLearning}
+                disabled={status === 'loading'}
+                className="theme-btn theme-btn-light group inline-flex items-center justify-between bg-piku-purple-dark text-white font-black text-[15px] py-2 pl-8 pr-2 rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <span className="btn-text relative z-10 transition-colors duration-300">Start Learning</span>
+                <span className="btn-text relative z-10 transition-colors duration-300">
+                  {status === 'loading' ? 'Loading...' : session ? 'Go to Dashboard' : 'Start Learning'}
+                </span>
                 <span className="btn-icon relative z-10 ml-8 w-12 h-12 flex items-center justify-center bg-white text-piku-purple-dark rounded-md transition-all duration-400 group-hover:bg-piku-cyan-accent group-hover:text-[#171417] shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                   </svg>
                 </span>
-              </Link>
+              </button>
             </div>
 
             {/* Stats Row - Responsive for mobile */}
