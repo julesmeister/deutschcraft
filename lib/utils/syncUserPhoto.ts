@@ -9,6 +9,6 @@ export async function syncUserPhotoURL(email: string, photoURL: string | null | 
     if (!email || !photoURL) return;
     await syncUserPhotoService(email, photoURL);
   } catch (error) {
-    console.error('[SyncPhoto] Error syncing photoURL:', error);
+    // Silent fail - expected for new users without Firestore documents
   }
 }

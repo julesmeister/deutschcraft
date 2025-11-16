@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import { updateUser } from '@/lib/services/userService';
 import { useState } from 'react';
+import { EnrollmentGuard } from '@/components/dashboard/EnrollmentGuard';
 
 export default function DashboardLayout({
   children,
@@ -17,9 +18,11 @@ export default function DashboardLayout({
       {/* Main navbar with dashboard items - Dark variant */}
       <DashboardNavbar />
 
-      {/* Main Content */}
+      {/* Main Content with Enrollment Protection */}
       <main className="pt-20">
-        {children}
+        <EnrollmentGuard>
+          {children}
+        </EnrollmentGuard>
       </main>
     </div>
   );
@@ -39,9 +42,12 @@ function DashboardNavbar() {
       // Refresh session and redirect to appropriate dashboard
       window.location.href = newRole === 'STUDENT' ? '/dashboard/student' : '/dashboard/teacher';
     } catch (error) {
-      console.error('Error switching role:', error);
+      // Error handling - silent fail
     }
   };
+
+  // Note: Menu items are always visible in navbar, but routes are protected by EnrollmentGuard
+  // Pending users will be redirected to /dashboard/settings when clicking protected links
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 py-2 sm:py-3 lg:py-4">
@@ -116,6 +122,7 @@ function DashboardNavbar() {
                   title: 'Management',
                   items: [
                     { label: 'Students', href: '/dashboard/teacher' },
+                    { label: 'Enrollments', href: '/dashboard/teacher/enrollments' },
                     { label: 'Writing Review', href: '/dashboard/teacher/writing' },
                     { label: 'Analytics', href: '/dashboard/analytics' },
                     { label: 'Assignments', href: '/dashboard/assignments' },
@@ -228,6 +235,9 @@ function DashboardNavbar() {
                 <div className="ml-6 space-y-2">
                   <Link href="/dashboard/teacher" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Students
+                  </Link>
+                  <Link href="/dashboard/teacher/enrollments" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                    Enrollments
                   </Link>
                   <Link href="/dashboard/teacher/writing" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Writing Review

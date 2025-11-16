@@ -1,214 +1,55 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { SettingsSidebar, SettingsMenuItem } from '@/components/ui/settings/SettingsSidebar';
+import { SettingsSidebar } from '@/components/ui/settings/SettingsSidebar';
 import { ProfileTab } from '@/components/ui/settings/ProfileTab';
 import { SecurityTab } from '@/components/ui/settings/SecurityTab';
 import { NotificationTab } from '@/components/ui/settings/NotificationTab';
 import { FlashcardSettingsTab } from '@/components/ui/settings/FlashcardSettingsTab';
 import { IntegrationTab } from '@/components/ui/settings/IntegrationTab';
+import { EnrollmentTab } from '@/components/ui/settings/EnrollmentTab';
+import { EnrollmentPendingTab } from '@/components/ui/settings/EnrollmentPendingTab';
 import { CatLoader } from '@/components/ui/CatLoader';
-import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { useCurrentStudent } from '@/lib/hooks/useUsers';
-import { updateUser } from '@/lib/services/userService';
-
-type SettingsTab = 'profile' | 'security' | 'notification' | 'flashcards' | 'integration';
+import { useSettingsData } from '@/lib/hooks/useSettingsData';
+import { useProfileForm } from '@/lib/hooks/useProfileForm';
+import { useEnrollmentForm } from '@/lib/hooks/useEnrollmentForm';
+import { getSettingsMenuItems } from '@/components/ui/settings/getSettingsMenuItems';
 
 export default function SettingsPage() {
-  const router = useRouter();
-  const { session, status } = useFirebaseAuth();
-  const { student: currentUser, isLoading } = useCurrentStudent(session?.user?.email || null);
+  const {
+    session,
+    status,
+    currentUser,
+    isLoading,
+    isPending,
+    activeTab,
+    setActiveTab,
+    saveMessage,
+    setSaveMessage,
+  } = useSettingsData();
 
-  const [activeTab, setActiveTab] = useState<SettingsTab>('profile');
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    dialCode: '+1',
-    country: '',
-    address: '',
-    city: '',
-    postalCode: '',
-  });
-  const [isSaving, setIsSaving] = useState(false);
-  const [saveMessage, setSaveMessage] = useState('');
+  const {
+    formData,
+    setFormData,
+    isSaving: profileSaving,
+    handleSubmit: handleProfileSubmit,
+  } = useProfileForm(currentUser, session);
 
-  // Load user data from Firestore
-  useEffect(() => {
-    if (currentUser) {
-      setFormData({
-        firstName: currentUser.firstName || '',
-        lastName: currentUser.lastName || '',
-        email: currentUser.email || session?.user?.email || '',
-        phoneNumber: (currentUser as any).phoneNumber || '',
-        dialCode: (currentUser as any).dialCode || '+1',
-        country: (currentUser as any).country || '',
-        address: (currentUser as any).address || '',
-        city: (currentUser as any).city || '',
-        postalCode: (currentUser as any).postalCode || '',
-      });
-    }
-  }, [currentUser, session]);
+  const {
+    isSaving: enrollmentSaving,
+    handleEnrollmentSubmit,
+    handleDeleteAccount,
+  } = useEnrollmentForm(session);
 
-  const menuItems: SettingsMenuItem[] = [
-    {
-      id: 'profile',
-      label: 'Profile',
-      icon: (
-        <svg
-          stroke="currentColor"
-          fill="none"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          height="1em"
-          width="1em"
-        >
-          <path d="M9 10a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
-          <path d="M6 21v-1a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v1"></path>
-          <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z"></path>
-        </svg>
-      ),
-      active: activeTab === 'profile',
-      onClick: () => setActiveTab('profile'),
-    },
-    {
-      id: 'security',
-      label: 'Security',
-      icon: (
-        <svg
-          stroke="currentColor"
-          fill="none"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          height="1em"
-          width="1em"
-        >
-          <path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z"></path>
-          <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
-          <path d="M8 11v-4a4 4 0 1 1 8 0v4"></path>
-        </svg>
-      ),
-      active: activeTab === 'security',
-      onClick: () => setActiveTab('security'),
-    },
-    {
-      id: 'notification',
-      label: 'Notification',
-      icon: (
-        <svg
-          stroke="currentColor"
-          fill="none"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          height="1em"
-          width="1em"
-        >
-          <path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"></path>
-          <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
-        </svg>
-      ),
-      active: activeTab === 'notification',
-      onClick: () => setActiveTab('notification'),
-    },
-    {
-      id: 'flashcards',
-      label: 'Flashcards',
-      icon: (
-        <svg
-          stroke="currentColor"
-          fill="none"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          height="1em"
-          width="1em"
-        >
-          <path d="M3 3m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
-          <path d="M7 21h10"></path>
-          <path d="M9 18v3"></path>
-          <path d="M15 18v3"></path>
-        </svg>
-      ),
-      active: activeTab === 'flashcards',
-      onClick: () => setActiveTab('flashcards'),
-    },
-    {
-      id: 'integration',
-      label: 'Integration',
-      icon: (
-        <svg
-          stroke="currentColor"
-          fill="none"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          height="1em"
-          width="1em"
-        >
-          <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"></path>
-          <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"></path>
-          <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
-        </svg>
-      ),
-      active: activeTab === 'integration',
-      onClick: () => setActiveTab('integration'),
-    },
-  ];
+  // Build menu items
+  const menuItems = getSettingsMenuItems(isPending, activeTab, setActiveTab);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!currentUser) {
-      setSaveMessage('Error: User not found');
-      return;
-    }
-
-    setIsSaving(true);
-    setSaveMessage('');
-
-    try {
-      // Update Firestore with new data using email as identifier
-      await updateUser(formData.email, {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        phoneNumber: formData.phoneNumber,
-        dialCode: formData.dialCode,
-        country: formData.country,
-        address: formData.address,
-        city: formData.city,
-        postalCode: formData.postalCode,
-      } as any);
-
-      setSaveMessage('Settings saved successfully!');
-
-      // Clear message after 3 seconds
-      setTimeout(() => setSaveMessage(''), 3000);
-    } catch (error) {
-      console.error('[Settings] Failed to save:', error);
-      setSaveMessage('Failed to save settings. Please try again.');
-    } finally {
-      setIsSaving(false);
-    }
-  };
-
-  // Show loading while fetching user data
+  // Show loading while fetching user data or if not authenticated
   if (status === 'loading' || isLoading) {
     return <CatLoader fullScreen message="Loading settings..." />;
   }
 
-  // Redirect if not authenticated
+  // If not authenticated, don't render anything (middleware will redirect)
   if (!session?.user) {
-    router.push('/');
     return null;
   }
 
@@ -264,28 +105,51 @@ export default function SettingsPage() {
                 </button>
               </div>
 
+              {/* Enrollment Tab - Only for pending users */}
+              {activeTab === 'enrollment' && isPending && (
+                <>
+                  {/* Show enrollment form for new users, pending status for submitted users */}
+                  {currentUser && currentUser.enrollmentStatus === 'pending' ? (
+                    <EnrollmentPendingTab user={currentUser} />
+                  ) : (
+                    <EnrollmentTab
+                      onSubmit={(data) =>
+                        handleEnrollmentSubmit(
+                          data,
+                          setSaveMessage,
+                          setSaveMessage,
+                          () => setActiveTab('enrollment')
+                        )
+                      }
+                      isSaving={enrollmentSaving}
+                    />
+                  )}
+                </>
+              )}
+
               {/* Profile Tab */}
               {activeTab === 'profile' && (
                 <ProfileTab
                   formData={formData}
                   onFormDataChange={setFormData}
-                  onSubmit={handleSubmit}
-                  isSaving={isSaving}
+                  onSubmit={(e) => handleProfileSubmit(e, setSaveMessage, setSaveMessage)}
+                  isSaving={profileSaving}
                   userPhotoURL={session?.user?.image || currentUser?.photoURL || undefined}
+                  onDeleteAccount={() => handleDeleteAccount(setSaveMessage)}
                 />
               )}
 
               {/* Security Tab */}
               {activeTab === 'security' && <SecurityTab />}
 
-              {/* Notification Tab */}
-              {activeTab === 'notification' && <NotificationTab />}
+              {/* Notification Tab - Only for approved users */}
+              {activeTab === 'notification' && !isPending && <NotificationTab />}
 
-              {/* Flashcard Settings Tab */}
-              {activeTab === 'flashcards' && <FlashcardSettingsTab />}
+              {/* Flashcard Settings Tab - Only for approved users */}
+              {activeTab === 'flashcards' && !isPending && <FlashcardSettingsTab />}
 
-              {/* Integration Tab */}
-              {activeTab === 'integration' && <IntegrationTab />}
+              {/* Integration Tab - Only for approved users */}
+              {activeTab === 'integration' && !isPending && <IntegrationTab />}
             </div>
           </div>
         </div>

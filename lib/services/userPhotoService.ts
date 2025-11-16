@@ -23,7 +23,7 @@ export async function getUserPhotoURL(email: string): Promise<string | null> {
 
     return null;
   } catch (error) {
-    console.error('[UserPhotoService] Error getting photoURL:', error);
+    // Silent fail - expected for new users without Firestore documents
     return null;
   }
 }
@@ -46,7 +46,7 @@ export async function updateUserPhotoURL(
       { merge: true }
     );
   } catch (error) {
-    console.error('[UserPhotoService] Error updating photoURL:', error);
+    // Silent fail - photo update is not critical
     throw error;
   }
 }
@@ -66,6 +66,6 @@ export async function syncUserPhotoURL(
       await updateUserPhotoURL(email, photoURL);
     }
   } catch (error) {
-    console.error('[UserPhotoService] Error syncing photoURL:', error);
+    // Silent fail - expected for new users without Firestore documents
   }
 }

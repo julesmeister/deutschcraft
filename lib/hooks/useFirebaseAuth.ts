@@ -38,8 +38,13 @@ export function useFirebaseAuth() {
           setIsFirebaseReady(true);
 
           // Sync user's photo URL to Firestore if available
+          // Silent fail - new users may not have Firestore documents yet
           if (session.user.email && session.user.image) {
-            await syncUserPhotoURL(session.user.email, session.user.image);
+            try {
+              await syncUserPhotoURL(session.user.email, session.user.image);
+            } catch (error) {
+              // Silent fail - photo sync is not critical
+            }
           }
         } catch (error) {
           console.error('[useFirebaseAuth] Error signing in to Firebase:', error);
