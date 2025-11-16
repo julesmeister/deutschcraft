@@ -59,7 +59,7 @@ export function ProfileImageUpload({
           )}
         </div>
 
-        {/* Upload/Remove Buttons */}
+        {/* Upload/Remove Buttons
         <div className="flex items-center gap-2">
           <label className="inline-flex items-center gap-1 px-3 py-2 h-10 bg-blue-600 text-white font-bold text-sm rounded-xl cursor-pointer hover:bg-blue-500 transition-colors">
             <svg
@@ -91,7 +91,7 @@ export function ProfileImageUpload({
           >
             Remove
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
