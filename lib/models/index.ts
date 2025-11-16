@@ -77,3 +77,10 @@ export type {
   WritingProgress,
   WritingStats,
 } from './writing';
+
+// Gantt Chart Models
+export type {
+  GanttTask,
+  GanttTaskCreateInput,
+  GanttTaskUpdateInput,
+} from './gantt';
