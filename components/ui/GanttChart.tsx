@@ -38,7 +38,30 @@ export function GanttChart({
   const [dragStart, setDragStart] = useState<DragState | null>(null);
   const [temporaryTasks, setTemporaryTasks] = useState<GanttChartTask[]>(tasks);
   const [rangeStartMonth, setRangeStartMonth] = useState<Date>(() => {
-    // Start from current month by default
+    // Find the earliest task date
+    const findEarliestDate = (taskList: GanttChartTask[]): Date | null => {
+      let earliest: Date | null = null;
+      taskList.forEach(task => {
+        if (!earliest || task.startDate < earliest) {
+          earliest = task.startDate;
+        }
+        if (task.children) {
+          const childEarliest = findEarliestDate(task.children);
+          if (childEarliest && (!earliest || childEarliest < earliest)) {
+            earliest = childEarliest;
+          }
+        }
+      });
+      return earliest;
+    };
+
+    const earliestTaskDate = findEarliestDate(tasks);
+    if (earliestTaskDate) {
+      // Start from the beginning of the month containing the earliest task
+      return new Date(earliestTaskDate.getFullYear(), earliestTaskDate.getMonth(), 1);
+    }
+
+    // Fallback to current month if no tasks
     const now = new Date();
     return new Date(now.getFullYear(), now.getMonth(), 1);
   });
@@ -88,13 +111,13 @@ export function GanttChart({
 
   const handlePreviousRange = () => {
     const newStart = new Date(rangeStartMonth);
-    newStart.setMonth(newStart.getMonth() - 3);
+    newStart.setMonth(newStart.getMonth() - 1);
     setRangeStartMonth(newStart);
   };
 
   const handleNextRange = () => {
     const newStart = new Date(rangeStartMonth);
-    newStart.setMonth(newStart.getMonth() + 3);
+    newStart.setMonth(newStart.getMonth() + 1);
     setRangeStartMonth(newStart);
   };
 
