@@ -71,8 +71,36 @@ export const generateDaysArray = (
  * Convert date to x position
  */
 export const dateToX = (date: Date, days: Date[], dayWidth: number): number => {
-  const dayIndex = days.findIndex(d => d.toDateString() === date.toDateString());
-  return dayIndex >= 0 ? dayIndex * dayWidth : 0;
+  if (days.length === 0) return 0;
+
+  // Find exact match first
+  const exactIndex = days.findIndex(d => d.toDateString() === date.toDateString());
+  if (exactIndex >= 0) return exactIndex * dayWidth;
+
+  // If date is before the range, return negative position
+  const firstDay = days[0];
+  if (date < firstDay) {
+    const diffTime = firstDay.getTime() - date.getTime();
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    return -diffDays * dayWidth;
+  }
+
+  // If date is after the range, return position beyond last day
+  const lastDay = days[days.length - 1];
+  if (date > lastDay) {
+    const diffTime = date.getTime() - lastDay.getTime();
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    return (days.length + diffDays) * dayWidth;
+  }
+
+  // Find the closest day in the range
+  for (let i = 0; i < days.length; i++) {
+    if (days[i] >= date) {
+      return i * dayWidth;
+    }
+  }
+
+  return days.length * dayWidth;
 };
 
 /**
@@ -83,9 +111,13 @@ export const getTaskWidth = (
   days: Date[],
   dayWidth: number
 ): number => {
-  const start = dateToX(task.startDate, days, dayWidth);
-  const end = dateToX(task.endDate, days, dayWidth);
-  return Math.max(end - start + dayWidth, dayWidth);
+  const startX = dateToX(task.startDate, days, dayWidth);
+  const endX = dateToX(task.endDate, days, dayWidth);
+
+  // Calculate width based on actual date difference
+  const width = endX - startX + dayWidth;
+
+  return Math.max(width, dayWidth);
 };
 
 /**
