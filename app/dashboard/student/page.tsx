@@ -18,10 +18,9 @@ import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { useEffect, useState } from 'react';
 import { getTodayProgress } from '@/lib/services/progressService';
 import { CatLoader } from '@/components/ui/CatLoader';
-
 export default function StudentDashboard() {
   const { session, isFirebaseReady } = useFirebaseAuth();
-  const { student: fetchedStudent, isLoading: isLoadingStudent } = useCurrentStudent(session?.user?.email || null);
+  const { student: fetchedStudent, isLoading: isLoadingStudent } = useCurrentStudent(session?.user?.email || null, isFirebaseReady);
   const { weeklyData, totalWords, isLoading: isLoadingWeekly } = useWeeklyProgress(session?.user?.email || null);
   const { cardsReady, wordsToReview } = usePracticeStats(session?.user?.email || null);
   const { tasks: allTasks, isLoading: isLoadingTasks } = useStudentTasks(session?.user?.email || undefined);

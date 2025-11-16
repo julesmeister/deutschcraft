@@ -1,51 +1,9 @@
 'use client';
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useSession } from 'next-auth/react';
-import { useCurrentUser } from '@/lib/hooks/useUsers';
 import { CatLoader } from '@/components/ui/CatLoader';
 
 export default function DashboardPage() {
-  const router = useRouter();
-  const { data: session, status } = useSession();
-  const { user, isLoading: isLoadingUser } = useCurrentUser(session?.user?.email || null);
-
-  console.info('📊 Dashboard page rendered | Status:', status, '| User loading:', isLoadingUser, '| User role:', user?.role);
-
-  useEffect(() => {
-    console.info('📊 Dashboard useEffect triggered');
-    console.info('Status:', status, '| Loading user:', isLoadingUser, '| Session:', !!session, '| User:', user?.email, '| User role:', user?.role);
-
-    if (status === 'loading') {
-      console.info('⏳ Waiting for session...');
-      return;
-    }
-
-    if (isLoadingUser) {
-      console.info('⏳ Waiting for user data from Firestore...');
-      return;
-    }
-
-    if (!session) {
-      console.error('❌ NO SESSION FOUND IN DASHBOARD! Redirecting to home');
-      console.info('Session object:', session);
-      console.info('Status:', status);
-      window.location.href = '/';
-      return;
-    }
-
-    console.info('✅ Session exists:', session.user?.email);
-
-    // Redirect based on user role from Firestore
-    if (user?.role === 'TEACHER') {
-      console.info('👨‍🏫 Teacher detected, redirecting to /dashboard/teacher');
-      window.location.href = '/dashboard/teacher';
-    } else {
-      console.info('👨‍🎓 Student detected (or default), redirecting to /dashboard/student');
-      window.location.href = '/dashboard/student';
-    }
-  }, [session, status, user, isLoadingUser]);
-
+  // Middleware handles all redirects based on user role
+  // This page just shows a loading state while middleware processes
   return <CatLoader fullScreen message="Loading dashboard..." />;
 }

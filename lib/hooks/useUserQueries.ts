@@ -19,7 +19,7 @@ import { cacheTimes } from '../queryClient';
  * Fetch current user by email
  * Direct document access: users/{email}
  */
-export function useCurrentUser(email: string | null) {
+export function useCurrentUser(email: string | null, isFirebaseReady: boolean = true) {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['user', email],
     queryFn: async () => {
@@ -27,11 +27,9 @@ export function useCurrentUser(email: string | null) {
         return null;
       }
 
-      const userData = await getUser(email);
-
-      return userData;
+      return await getUser(email);
     },
-    enabled: !!email,
+    enabled: !!email && isFirebaseReady, // Only run query when Firebase is ready
     staleTime: cacheTimes.student,
     gcTime: cacheTimes.student * 2.5,
   });
@@ -45,8 +43,8 @@ export function useCurrentUser(email: string | null) {
 }
 
 // Alias for backwards compatibility with student dashboard
-export function useCurrentStudent(email: string | null) {
-  const result = useCurrentUser(email);
+export function useCurrentStudent(email: string | null, isFirebaseReady: boolean = true) {
+  const result = useCurrentUser(email, isFirebaseReady);
   return {
     student: result.user,
     isLoading: result.isLoading,

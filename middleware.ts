@@ -1,38 +1,62 @@
 import { withAuth } from 'next-auth/middleware';
 import { NextResponse } from 'next/server';
+import type { NextRequestWithAuth } from 'next-auth/middleware';
 
 export default withAuth(
-  function middleware(req) {
-    console.info('🔐 [Middleware] Request to:', req.nextUrl.pathname);
+  function middleware(req: NextRequestWithAuth) {
+    const { pathname } = req.nextUrl;
+    const token = req.nextauth.token;
+
+    if (!token?.email) {
+      return NextResponse.redirect(new URL('/', req.url));
+    }
+
+    // Get user data from JWT token
+    const userRole = token.role as string | undefined;
+    const enrollmentStatus = token.enrollmentStatus as string | undefined;
+
+    // Check if user is pending approval
+    const isPending = !userRole || userRole === 'PENDING_APPROVAL' || enrollmentStatus === 'pending';
+
+    // Allow public access to syllabus page
+    if (pathname.startsWith('/dashboard/student/syllabus')) {
+      return NextResponse.next();
+    }
+
+    // Redirect logic based on path and user role
+    if (pathname.startsWith('/dashboard/student')) {
+      // Student dashboard - only for approved students
+      if (isPending || userRole !== 'STUDENT') {
+        return NextResponse.redirect(new URL('/dashboard/settings', req.url));
+      }
+    } else if (pathname.startsWith('/dashboard/teacher')) {
+      // Teacher dashboard - only for teachers
+      if (isPending || userRole !== 'TEACHER') {
+        return NextResponse.redirect(new URL('/dashboard/settings', req.url));
+      }
+    } else if (pathname === '/dashboard') {
+      // Main dashboard - redirect based on role
+      if (isPending) {
+        return NextResponse.redirect(new URL('/dashboard/settings', req.url));
+      } else if (userRole === 'TEACHER') {
+        return NextResponse.redirect(new URL('/dashboard/teacher', req.url));
+      } else if (userRole === 'STUDENT') {
+        return NextResponse.redirect(new URL('/dashboard/student', req.url));
+      }
+    }
+
     return NextResponse.next();
   },
   {
     callbacks: {
-      authorized: ({ req, token }) => {
-        const isAuthorized = !!token;
-        console.info('🔐 [Middleware] Checking auth for:', req.nextUrl.pathname);
-        console.info('🔐 [Middleware] Has token:', isAuthorized);
-        console.info('🔐 [Middleware] Token email:', token?.email);
-
-        // Allow public access to syllabus page
-        if (req.nextUrl.pathname.startsWith('/dashboard/student/syllabus')) {
-          console.info('✅ [Middleware] Allowing public access to syllabus');
-          return true;
-        }
-
-        // Require authentication for all other dashboard routes
-        if (!isAuthorized) {
-          console.error('❌ [Middleware] NOT AUTHORIZED - No token found!');
-        } else {
-          console.info('✅ [Middleware] AUTHORIZED - Token exists');
-        }
-
-        return isAuthorized;
+      authorized: ({ token }) => {
+        // User must be logged in
+        return !!token;
       },
     },
   }
 );
 
 export const config = {
-  matcher: '/dashboard/:path*',
+  matcher: ['/dashboard/:path*'],
 };

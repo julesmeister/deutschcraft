@@ -17,6 +17,7 @@ import {
   getDocs,
   setDoc,
   updateDoc,
+  deleteDoc,
   collection,
   query,
   where,
@@ -46,7 +47,7 @@ export async function getUser(email: string): Promise<User | null> {
       ...userDoc.data(),
     } as User;
   } catch (error) {
-    console.error('[userService] Error fetching user:', error);
+    
     throw error;
   }
 }
@@ -73,7 +74,7 @@ export async function getTeacherStudents(teacherEmail: string): Promise<User[]> 
 
     return students;
   } catch (error) {
-    console.error('[userService] Error fetching teacher students:', error);
+    
     throw error;
   }
 }
@@ -100,7 +101,7 @@ export async function getBatchStudents(batchId: string): Promise<User[]> {
 
     return students;
   } catch (error) {
-    console.error('[userService] Error fetching batch students:', error);
+    
     throw error;
   }
 }
@@ -126,7 +127,7 @@ export async function getAllStudents(): Promise<User[]> {
 
     return students;
   } catch (error) {
-    console.error('[userService] Error fetching all students:', error);
+    
     throw error;
   }
 }
@@ -152,7 +153,7 @@ export async function getAllTeachers(): Promise<User[]> {
 
     return teachers;
   } catch (error) {
-    console.error('[userService] Error fetching all teachers:', error);
+    
     throw error;
   }
 }
@@ -179,7 +180,26 @@ export async function getStudentsWithoutTeacher(): Promise<User[]> {
 
     return students;
   } catch (error) {
-    console.error('[userService] Error fetching students without teacher:', error);
+    
+    throw error;
+  }
+}
+
+/**
+ * Get all users (students, teachers, and pending)
+ * @returns Array of all users
+ */
+export async function getUsers(): Promise<User[]> {
+  try {
+    const usersRef = collection(db, 'users');
+    const snapshot = await getDocs(usersRef);
+
+    return snapshot.docs.map((doc) => ({
+      userId: doc.id,
+      ...doc.data(),
+    })) as User[];
+  } catch (error) {
+    
     throw error;
   }
 }
@@ -201,7 +221,6 @@ export async function upsertUser(user: Partial<User> & { email: string }): Promi
       updatedAt: Date.now(),
     }, { merge: true });
   } catch (error) {
-    console.error('[userService] Error upserting user:', error);
     throw error;
   }
 }
@@ -219,7 +238,6 @@ export async function updateUser(email: string, updates: Partial<User>): Promise
       updatedAt: Date.now(),
     });
   } catch (error) {
-    console.error('[userService] Error updating user:', error);
     throw error;
   }
 }
@@ -250,8 +268,7 @@ export async function updateUserPhoto(email: string, photoURL: string | null): P
       }, { merge: true });
     }
   } catch (error) {
-    console.error('[userService] Error updating user photo:', error);
-    throw error;
+    // Silent fail - photo update is not critical
   }
 }
 
@@ -279,7 +296,7 @@ export async function assignStudentToBatch(
 
     await updateDoc(userRef, updates);
   } catch (error) {
-    console.error('[userService] Error assigning student to batch:', error);
+    
     throw error;
   }
 }
@@ -294,7 +311,7 @@ export async function getFlashcardSettings(email: string): Promise<any | null> {
     const user = await getUser(email);
     return user?.flashcardSettings || null;
   } catch (error) {
-    console.error('[userService] Error getting flashcard settings:', error);
+    
     throw error;
   }
 }
@@ -312,7 +329,20 @@ export async function updateFlashcardSettings(email: string, settings: any): Pro
       updatedAt: Date.now(),
     });
   } catch (error) {
-    console.error('[userService] Error updating flashcard settings:', error);
+
+    throw error;
+  }
+}
+
+/**
+ * Delete a user account (only for unapproved users)
+ * @param email - User's email (document ID)
+ */
+export async function deleteUser(email: string): Promise<void> {
+  try {
+    const userRef = doc(db, 'users', email);
+    await deleteDoc(userRef);
+  } catch (error) {
     throw error;
   }
 }

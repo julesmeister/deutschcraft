@@ -1,6 +1,10 @@
+'use client';
+
+import { useState } from 'react';
 import { SettingsFormField } from './SettingsFormField';
 import { ProfileImageUpload } from './ProfileImageUpload';
 import { PhoneNumberInput } from './PhoneNumberInput';
+import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 
 interface ProfileFormData {
   firstName: string;
@@ -20,6 +24,7 @@ interface ProfileTabProps {
   onSubmit: (e: React.FormEvent) => void;
   isSaving?: boolean;
   userPhotoURL?: string;
+  onDeleteAccount?: () => void;
 }
 
 export function ProfileTab({
@@ -27,8 +32,11 @@ export function ProfileTab({
   onFormDataChange,
   onSubmit,
   isSaving = false,
-  userPhotoURL
+  userPhotoURL,
+  onDeleteAccount
 }: ProfileTabProps) {
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+
   return (
     <>
       <h2 className="text-xl font-bold text-gray-900 mb-8">Personal information</h2>
@@ -148,6 +156,55 @@ export function ProfileTab({
           </button>
         </div>
       </form>
+
+      {/* Delete Account Section */}
+      {onDeleteAccount && (
+        <div className="mt-8 pt-6 border-t border-gray-200">
+          <h3 className="text-lg font-bold text-gray-900 mb-3">Delete Account</h3>
+          <p className="text-sm text-gray-600 mb-4">
+            Permanently delete your account and all associated data. This action cannot be undone.
+          </p>
+
+          {!showDeleteConfirm ? (
+            <ActionButton
+              variant="red"
+              icon={<ActionButtonIcons.X />}
+              onClick={() => setShowDeleteConfirm(true)}
+            >
+              Delete My Account
+            </ActionButton>
+          ) : (
+            <div className="bg-red-50 border-2 border-red-300 rounded-xl p-6">
+              <div className="flex items-start gap-3 mb-4">
+                <span className="text-3xl">⚠️</span>
+                <div>
+                  <h4 className="font-bold text-red-900 mb-1">Are you absolutely sure?</h4>
+                  <p className="text-sm text-red-700 mb-2">
+                    This will permanently delete your account and all your data.
+                  </p>
+                  <p className="text-sm text-red-700">
+                    This action cannot be undone.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setShowDeleteConfirm(false)}
+                  className="flex-1 bg-white border-2 border-gray-300 text-gray-700 font-bold py-3 rounded-xl hover:bg-gray-50 transition-all duration-300"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={onDeleteAccount}
+                  className="flex-1 bg-red-600 text-white font-bold py-3 rounded-xl hover:bg-red-700 transition-all duration-300"
+                >
+                  Yes, Delete Account
+                </button>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </>
   );
 }

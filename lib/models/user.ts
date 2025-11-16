@@ -22,8 +22,17 @@ export interface User {
   // Basic Info
   firstName: string;
   lastName: string;
-  role: 'STUDENT' | 'TEACHER';
+  role: 'STUDENT' | 'TEACHER' | 'PENDING_APPROVAL';
   photoURL?: string;
+
+  // Enrollment fields (for PENDING_APPROVAL role)
+  enrollmentStatus?: 'pending' | 'approved' | 'rejected';
+  desiredCefrLevel?: CEFRLevel; // Requested CEFR level
+  gcashReferenceNumber?: string;
+  gcashAmount?: number;
+  enrollmentSubmittedAt?: number;
+  enrollmentReviewedAt?: number | null;
+  enrollmentReviewedBy?: string | null; // Teacher email
 
   // Student-specific fields (only if role === 'STUDENT')
   cefrLevel?: CEFRLevel;
@@ -137,6 +146,25 @@ export function isStudent(user: User): boolean {
  */
 export function isTeacher(user: User): boolean {
   return user.role === 'TEACHER';
+}
+
+/**
+ * Check if user is pending approval
+ * Users without a role field are considered pending (for backwards compatibility)
+ */
+export function isPendingApproval(user: User): boolean {
+  // If no role field exists, treat as pending approval (legacy users)
+  if (!user.role) {
+    return true;
+  }
+  return user.role === 'PENDING_APPROVAL' || user.enrollmentStatus === 'pending';
+}
+
+/**
+ * Check if user has completed enrollment
+ */
+export function hasCompletedEnrollment(user: User): boolean {
+  return !!(user.enrollmentStatus === 'approved' && user.role === 'STUDENT');
 }
 
 // Legacy exports for backwards compatibility

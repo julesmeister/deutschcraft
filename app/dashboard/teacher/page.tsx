@@ -15,7 +15,6 @@ import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useTeacherDashboard } from '@/lib/hooks/useTeacherDashboard';
 import { usePendingWritingCount } from '@/lib/hooks/useWritingExercises';
 import { CatLoader } from '@/components/ui/CatLoader';
-
 export default function TeacherDashboard() {
   // Sync NextAuth session with Firebase Auth
   const { session } = useFirebaseAuth();
