@@ -104,44 +104,45 @@ export function GanttTaskList({
                   </button>
                 )}
               </div>
-              {editingTaskId === task.id ? (
-                <div
-                  className="flex items-center gap-1 flex-1"
-                  style={{ paddingLeft: `${task.level * 12}px` }}
-                >
-                  <input
-                    type="text"
-                    value={editingValue}
-                    onChange={(e) => setEditingValue(e.target.value)}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter') {
-                        handleSaveEdit(task.id);
-                      } else if (e.key === 'Escape') {
-                        handleCancelEdit();
-                      }
-                    }}
-                    className={`flex-1 bg-transparent border-none outline-none ${task.children && task.children.length > 0 ? 'font-bold text-gray-900' : ''}`}
-                    autoFocus
-                  />
-                  <button
-                    onClick={() => handleSaveEdit(task.id)}
-                    className="p-0.5 text-gray-500 hover:text-green-600 hover:bg-green-50 rounded transition-colors"
-                    title="Save changes"
+              <div
+                className={`flex items-center flex-1 min-w-0`}
+                style={{ paddingLeft: `${task.level * 12}px` }}
+              >
+                {editingTaskId === task.id ? (
+                  <>
+                    <input
+                      type="text"
+                      value={editingValue}
+                      onChange={(e) => setEditingValue(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          handleSaveEdit(task.id);
+                        } else if (e.key === 'Escape') {
+                          handleCancelEdit();
+                        }
+                      }}
+                      className={`flex-1 min-w-0 bg-transparent border-none outline-none ${task.children && task.children.length > 0 ? 'font-bold text-gray-900' : ''}`}
+                      autoFocus
+                    />
+                    <button
+                      onClick={() => handleSaveEdit(task.id)}
+                      className="ml-1 p-1 text-green-600 hover:text-green-700 hover:bg-green-50 rounded transition-colors flex-shrink-0"
+                      title="Save changes"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    </button>
+                  </>
+                ) : (
+                  <div
+                    className={`truncate cursor-text ${task.children && task.children.length > 0 ? 'font-bold text-gray-900' : ''}`}
+                    onClick={() => onRenameTask && handleStartEdit(task.id, task.name)}
                   >
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                  </button>
-                </div>
-              ) : (
-                <div
-                  className={`truncate flex items-center cursor-text ${task.children && task.children.length > 0 ? 'font-bold text-gray-900' : ''}`}
-                  style={{ paddingLeft: `${task.level * 12}px` }}
-                  onClick={() => onRenameTask && handleStartEdit(task.id, task.name)}
-                >
-                  {task.name}
-                </div>
-              )}
+                    {task.name}
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Hover actions */}
