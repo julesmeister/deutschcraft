@@ -1,4 +1,5 @@
 import { SettingsFormField } from './SettingsFormField';
+import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 
 export function SecurityTab() {
   return (
@@ -21,9 +22,16 @@ export function SecurityTab() {
           placeholder="Confirm new password"
         />
         <div className="flex justify-end">
-          <button className="px-5 py-3 h-12 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-500 transition-colors">
-            Update Password
-          </button>
+          <div className="w-auto">
+            <ActionButton
+              variant="purple"
+              icon={<ActionButtonIcons.Check />}
+              className="!w-auto"
+              onClick={() => console.log('Update password')}
+            >
+              Update Password
+            </ActionButton>
+          </div>
         </div>
       </div>
     </>

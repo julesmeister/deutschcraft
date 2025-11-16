@@ -147,13 +147,20 @@ export function ProfileTab({
 
         {/* Submit Button */}
         <div className="flex justify-end">
-          <button
-            type="submit"
-            disabled={isSaving}
-            className="px-5 py-3 h-12 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-500 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
-          >
-            {isSaving ? 'Saving...' : 'Save'}
-          </button>
+          <div className="w-auto">
+            <ActionButton
+              variant="purple"
+              icon={<ActionButtonIcons.Check />}
+              disabled={isSaving}
+              className="!w-auto"
+              onClick={(e) => {
+                const form = (e.target as HTMLElement).closest('form');
+                form?.requestSubmit();
+              }}
+            >
+              {isSaving ? 'Saving...' : 'Save Changes'}
+            </ActionButton>
+          </div>
         </div>
       </form>
 
@@ -166,13 +173,16 @@ export function ProfileTab({
           </p>
 
           {!showDeleteConfirm ? (
-            <ActionButton
-              variant="red"
-              icon={<ActionButtonIcons.X />}
-              onClick={() => setShowDeleteConfirm(true)}
-            >
-              Delete My Account
-            </ActionButton>
+            <div className="w-auto">
+              <ActionButton
+                variant="red"
+                icon={<ActionButtonIcons.X />}
+                className="!w-auto"
+                onClick={() => setShowDeleteConfirm(true)}
+              >
+                Delete My Account
+              </ActionButton>
+            </div>
           ) : (
             <div className="bg-red-50 border-2 border-red-300 rounded-xl p-6">
               <div className="flex items-start gap-3 mb-4">

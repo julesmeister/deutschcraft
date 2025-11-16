@@ -288,7 +288,7 @@ export const SlimTableRenderers = {
   Link: (text: string, href: string = '#!') => (
     <a
       href={href}
-      className="text-neutral-700 text-sm font-medium leading-relaxed no-underline md:block hover:text-blue-700 hover:underline transition-colors"
+      className="text-neutral-700 text-sm font-medium leading-normal no-underline inline-flex items-center hover:text-blue-700 hover:underline transition-colors"
     >
       {text}
     </a>

@@ -126,7 +126,7 @@ function DashboardNavbar() {
                     { label: 'Writing Review', href: '/dashboard/teacher/writing' },
                     { label: 'Analytics', href: '/dashboard/analytics' },
                     { label: 'Assignments', href: '/dashboard/assignments' },
-                    { label: 'Course Pricing', href: '/dashboard/teacher/pricing' },
+                    
                     { label: 'Playground', href: '/dashboard/playground' },
                   ],
                 },
@@ -136,6 +136,7 @@ function DashboardNavbar() {
                     { label: 'Tasks', href: '/dashboard/tasks' },
                     { label: 'Schedule', href: '/dashboard/schedule' },
                     { label: 'Calendar', href: '/dashboard/calendar' },
+                    { label: 'Course Pricing', href: '/dashboard/teacher/pricing' },
                     { label: 'Reports', href: '/dashboard/reports' },
                     { label: 'Role Management', href: '/dashboard/teacher/roles' },
                   ],

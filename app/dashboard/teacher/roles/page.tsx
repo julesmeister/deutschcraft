@@ -246,7 +246,7 @@ export default function RoleManagementPage() {
                   key: 'name',
                   label: 'User',
                   render: (value, row) => (
-                    <div>
+                    <div className="flex flex-col justify-center">
                       <div className="flex items-center gap-2">
                         {SlimTableRenderers.Link(value)}
                         {row.isCurrentUser && (
