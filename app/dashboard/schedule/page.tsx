@@ -128,6 +128,21 @@ export default function SchedulePage() {
     setTasks(deleteTaskRecursive(tasks));
   };
 
+  const handleRenameTask = (taskId: string, newName: string) => {
+    const renameTaskRecursive = (taskList: GanttChartTask[]): GanttChartTask[] => {
+      return taskList.map(task => {
+        if (task.id === taskId) {
+          return { ...task, name: newName };
+        }
+        if (task.children) {
+          return { ...task, children: renameTaskRecursive(task.children) };
+        }
+        return task;
+      });
+    };
+    setTasks(renameTaskRecursive(tasks));
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -147,6 +162,7 @@ export default function SchedulePage() {
           onAddTask={handleAddTask}
           onAddSubTask={handleAddSubTask}
           onDeleteTask={handleDeleteTask}
+          onRenameTask={handleRenameTask}
         />
       </div>
     </div>

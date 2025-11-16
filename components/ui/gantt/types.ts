@@ -21,6 +21,7 @@ export interface GanttChartProps {
   onAddTask?: () => void; // Add top-level task
   onAddSubTask?: (parentTaskId: string) => void; // Add subtask to a parent
   onDeleteTask?: (taskId: string) => void; // Delete a task
+  onRenameTask?: (taskId: string, newName: string) => void; // Rename a task
   className?: string;
 }
 

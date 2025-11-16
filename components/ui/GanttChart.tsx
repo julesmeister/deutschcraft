@@ -28,6 +28,7 @@ export function GanttChart({
   onAddTask,
   onAddSubTask,
   onDeleteTask,
+  onRenameTask,
   className = '',
 }: GanttChartProps) {
   // State management
@@ -168,6 +169,7 @@ export function GanttChart({
             onToggleExpand={toggleExpand}
             onAddTask={onAddSubTask}
             onDeleteTask={onDeleteTask}
+            onRenameTask={onRenameTask}
           />
 
           {/* Timeline area */}
