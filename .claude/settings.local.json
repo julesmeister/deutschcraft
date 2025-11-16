@@ -47,7 +47,10 @@
       "Bash(/tmp/HeroSection_old.tsx)",
       "Bash(/tmp/auth_old.ts)",
       "Bash(/tmp/dashboard_old.tsx)",
-      "Bash(/tmp/Navbar_old.tsx)"
+      "Bash(/tmp/Navbar_old.tsx)",
+      "Bash(Select-String -Pattern \"(error|Error|ERROR|warning|Warning|compiled|Compiled)\")",
+      "Bash(firebase deploy:*)",
+      "Bash(timeout 5 npm run dev:*)"
     ],
     "deny": [],
     "ask": []
