@@ -4,7 +4,7 @@ import { MemberSelector } from '@/components/ui/MemberSelector';
 import { useToast } from '@/components/ui/toast';
 import { BatchSelector } from '@/components/ui/BatchSelector';
 import { BatchForm } from '@/components/ui/BatchForm';
-import { StatsCard } from '@/components/dashboard/StatsCard';
+import { TabBar } from '@/components/ui/TabBar';
 import { LevelDistribution } from '@/components/dashboard/LevelDistribution';
 import { TopPerformers } from '@/components/dashboard/TopPerformers';
 import { QuickActions } from '@/components/dashboard/QuickActions';
@@ -88,37 +88,42 @@ export default function TeacherDashboard() {
 
       {/* Main Content */}
       <div className="container mx-auto px-6 py-8">
-        {/* Stats Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
-          <StatsCard
-            icon="👥"
-            iconBgColor="bg-piku-purple-light"
-            label="Total Students"
-            value={dashboard.myStudents.length}
-          />
-          <StatsCard
-            icon="✅"
-            iconBgColor="bg-piku-mint"
-            label="Active Today"
-            value={dashboard.myStudents.length}
-          />
-          <StatsCard
-            icon="📈"
-            iconBgColor="bg-piku-cyan"
-            label="Avg. Progress"
-            value="0%"
-          />
-          <StatsCard
-            icon="🎯"
-            iconBgColor="bg-piku-yellow-light"
-            label="Completion Rate"
-            value="0%"
-          />
-          <StatsCard
-            icon="✍️"
-            iconBgColor="bg-blue-100"
-            label="Pending Reviews"
-            value={pendingWritingCount}
+        {/* Stats Overview */}
+        <div className="mb-8">
+          <TabBar
+            variant="stats"
+            tabs={[
+              {
+                id: 'total',
+                label: 'Total Students',
+                value: dashboard.myStudents.length,
+                icon: undefined,
+              },
+              {
+                id: 'active',
+                label: 'Active Today',
+                value: dashboard.myStudents.length,
+                icon: undefined,
+              },
+              {
+                id: 'progress',
+                label: 'Avg. Progress',
+                value: '0%',
+                icon: undefined,
+              },
+              {
+                id: 'completion',
+                label: 'Completion Rate',
+                value: '0%',
+                icon: undefined,
+              },
+              {
+                id: 'reviews',
+                label: 'Pending Reviews',
+                value: pendingWritingCount,
+                icon: undefined,
+              },
+            ]}
           />
         </div>
 

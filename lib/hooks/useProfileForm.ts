@@ -37,9 +37,13 @@ export function useProfileForm(currentUser: User | null, session: Session | null
   // Load user data from Firestore
   useEffect(() => {
     if (currentUser) {
+      // Handle both formats: single 'name' field from OAuth OR 'firstName'/'lastName' from enrollment
+      const userName = (currentUser as any).name || session?.user?.name || '';
+      const [firstNameFromName = '', lastNameFromName = ''] = userName ? userName.split(' ', 2) : ['', ''];
+
       setFormData({
-        firstName: currentUser.firstName || '',
-        lastName: currentUser.lastName || '',
+        firstName: currentUser.firstName || firstNameFromName || '',
+        lastName: currentUser.lastName || lastNameFromName || '',
         email: currentUser.email || session?.user?.email || '',
         phoneNumber: (currentUser as any).phoneNumber || '',
         dialCode: (currentUser as any).dialCode || '+1',

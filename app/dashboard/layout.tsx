@@ -137,6 +137,7 @@ function DashboardNavbar() {
                     { label: 'Schedule', href: '/dashboard/schedule' },
                     { label: 'Calendar', href: '/dashboard/calendar' },
                     { label: 'Reports', href: '/dashboard/reports' },
+                    { label: 'Role Management', href: '/dashboard/teacher/roles' },
                   ],
                 },
                 {

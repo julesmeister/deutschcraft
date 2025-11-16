@@ -25,8 +25,8 @@ export default withAuth(
 
     // Redirect logic based on path and user role
     if (pathname.startsWith('/dashboard/student')) {
-      // Student dashboard - only for approved students
-      if (isPending || userRole !== 'STUDENT') {
+      // Student dashboard - accessible by approved students OR teachers (admin access)
+      if (isPending || (userRole !== 'STUDENT' && userRole !== 'TEACHER')) {
         return NextResponse.redirect(new URL('/dashboard/settings', req.url));
       }
     } else if (pathname.startsWith('/dashboard/teacher')) {
