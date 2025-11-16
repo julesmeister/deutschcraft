@@ -77,6 +77,7 @@ export function GanttChart({
   };
 
   const handleMouseDown = (e: React.MouseEvent, taskId: string, task: any, side?: 'left' | 'right') => {
+    e.preventDefault();
     e.stopPropagation();
     if (side) {
       setResizingTask({ id: taskId, side });
@@ -142,8 +143,11 @@ export function GanttChart({
     setDragStart(null);
   };
 
+  // Check if currently dragging or resizing
+  const isDraggingOrResizing = draggingTask !== null || resizingTask !== null;
+
   return (
-    <div className={`bg-white border border-gray-200 ${className}`}>
+    <div className={`bg-white border border-gray-200 ${className} ${isDraggingOrResizing ? 'select-none' : ''}`}>
       <GanttHeader
         title={title}
         onScrollLeft={handleScrollLeft}
