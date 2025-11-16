@@ -4,30 +4,43 @@ interface GanttHeaderProps {
   title?: string;
   onScrollLeft: () => void;
   onScrollRight: () => void;
+  onAddTask?: () => void;
 }
 
-export function GanttHeader({ title, onScrollLeft, onScrollRight }: GanttHeaderProps) {
+export function GanttHeader({ title, onScrollLeft, onScrollRight, onAddTask }: GanttHeaderProps) {
   if (!title) return null;
 
   return (
-    <div className="px-5 py-4 flex items-center justify-between">
+    <div className="px-5 py-2.5 flex items-center justify-between border-b border-gray-200">
       <h4 className="text-xl font-bold text-gray-900">{title}</h4>
-      <div className="flex gap-2">
+      <div className="flex items-center divide-x divide-gray-200">
+        {onAddTask && (
+          <button
+            onClick={onAddTask}
+            className="px-3 py-1.5 flex items-center gap-1.5 text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+            aria-label="Add task"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+            <span className="text-sm font-medium">Add</span>
+          </button>
+        )}
         <button
           onClick={onScrollLeft}
-          className="p-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors"
+          className="px-3 py-1.5 text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors"
           aria-label="Scroll left"
         >
-          <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
         <button
           onClick={onScrollRight}
-          className="p-2 rounded-lg border border-gray-300 hover:bg-gray-100 transition-colors"
+          className="px-3 py-1.5 text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors"
           aria-label="Scroll right"
         >
-          <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
         </button>

@@ -25,6 +25,7 @@ export function GanttChart({
   rowHeight = 50,
   showWeekends = true,
   onTaskClick,
+  onAddTask,
   className = '',
 }: GanttChartProps) {
   // State management
@@ -152,9 +153,10 @@ export function GanttChart({
         title={title}
         onScrollLeft={handleScrollLeft}
         onScrollRight={handleScrollRight}
+        onAddTask={onAddTask}
       />
 
-      <div ref={scrollContainerRef} className="mt-4 min-h-[470px] overflow-auto custom-scrollbar">
+      <div ref={scrollContainerRef} className="min-h-[470px] overflow-auto custom-scrollbar">
         <div className="flex">
           {/* Task names column */}
           <GanttTaskList

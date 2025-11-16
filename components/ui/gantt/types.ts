@@ -18,6 +18,7 @@ export interface GanttChartProps {
   rowHeight?: number;
   showWeekends?: boolean;
   onTaskClick?: (task: GanttChartTask) => void;
+  onAddTask?: () => void;
   className?: string;
 }
 
