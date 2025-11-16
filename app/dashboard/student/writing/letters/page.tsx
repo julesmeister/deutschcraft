@@ -109,12 +109,14 @@ function LettersWritingContent() {
         }
       />
 
-      <div className="container mx-auto px-6 py-8">
+      <div className="container mx-auto px-0 md:px-6 py-0 md:py-8">
         {selectedTemplate ? (
           /* Letter Writing Interface */
-          <div className="max-w-4xl mx-auto">
-            <LetterTemplateInstructions template={selectedTemplate} />
-            <div className="mt-6">
+          <div className="lg:max-w-6xl mx-auto">
+            <div className="px-6 md:px-0 py-4 md:py-0">
+              <LetterTemplateInstructions template={selectedTemplate} />
+            </div>
+            <div className="mt-0 md:mt-6">
               <LetterWritingArea
                 template={selectedTemplate}
                 content={letterContent}
@@ -125,10 +127,12 @@ function LettersWritingContent() {
           </div>
         ) : (
           /* Template Selection */
-          <LetterTemplateSelector
-            templates={filteredTemplates}
-            onSelect={handleTemplateSelect}
-          />
+          <div className="px-6">
+            <LetterTemplateSelector
+              templates={filteredTemplates}
+              onSelect={handleTemplateSelect}
+            />
+          </div>
         )}
       </div>
     </div>

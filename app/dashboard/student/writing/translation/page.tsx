@@ -98,10 +98,12 @@ function TranslationPracticeContent() {
         }
       />
 
-      <div className="container mx-auto px-6 py-8">
+      <div className="container mx-auto px-0 md:px-6 py-0 md:py-8">
         {selectedExercise ? (
-          <div className="max-w-4xl mx-auto">
-            <TranslationExerciseInfo exercise={selectedExercise} />
+          <div className="lg:max-w-6xl mx-auto">
+            <div className="px-6 md:px-0 py-4 md:py-0">
+              <TranslationExerciseInfo exercise={selectedExercise} />
+            </div>
             <TranslationWorkspace
               exercise={selectedExercise}
               translationText={translationText}
@@ -109,10 +111,12 @@ function TranslationPracticeContent() {
             />
           </div>
         ) : (
-          <TranslationExerciseSelector
-            exercises={filteredExercises}
-            onSelect={handleExerciseSelect}
-          />
+          <div className="px-6">
+            <TranslationExerciseSelector
+              exercises={filteredExercises}
+              onSelect={handleExerciseSelect}
+            />
+          </div>
         )}
       </div>
     </div>

@@ -113,10 +113,12 @@ function CreativeWritingContent() {
         }
       />
 
-      <div className="container mx-auto px-6 py-8">
+      <div className="container mx-auto px-0 md:px-6 py-0 md:py-8">
         {selectedExercise ? (
-          <div className="max-w-4xl mx-auto">
-            <CreativeWritingInstructions exercise={selectedExercise} />
+          <div className="lg:max-w-6xl mx-auto">
+            <div className="px-6 md:px-0 py-4 md:py-0">
+              <CreativeWritingInstructions exercise={selectedExercise} />
+            </div>
             <CreativeWritingArea
               exercise={selectedExercise}
               content={writingContent}
@@ -125,8 +127,9 @@ function CreativeWritingContent() {
             />
           </div>
         ) : (
-          <CreativeExerciseSelector
-            exercises={filteredExercises}
+          <div className="px-6">
+            <CreativeExerciseSelector
+              exercises={filteredExercises}
             onSelect={handleExerciseSelect}
           />
         )}
