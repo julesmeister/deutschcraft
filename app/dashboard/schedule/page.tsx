@@ -88,6 +88,46 @@ export default function SchedulePage() {
     setTasks([...tasks, newTask]);
   };
 
+  const handleAddSubTask = (parentTaskId: string) => {
+    const addSubTaskRecursive = (taskList: GanttChartTask[]): GanttChartTask[] => {
+      return taskList.map(task => {
+        if (task.id === parentTaskId) {
+          const newSubTask: GanttChartTask = {
+            id: `subtask-${Date.now()}`,
+            name: 'New Subtask',
+            startDate: new Date(),
+            endDate: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000), // 3 days from now
+            progress: 0,
+            color: 'rgb(251, 113, 133)', // pink
+          };
+          return {
+            ...task,
+            children: [...(task.children || []), newSubTask],
+          };
+        }
+        if (task.children) {
+          return { ...task, children: addSubTaskRecursive(task.children) };
+        }
+        return task;
+      });
+    };
+    setTasks(addSubTaskRecursive(tasks));
+  };
+
+  const handleDeleteTask = (taskId: string) => {
+    const deleteTaskRecursive = (taskList: GanttChartTask[]): GanttChartTask[] => {
+      return taskList
+        .filter(task => task.id !== taskId)
+        .map(task => {
+          if (task.children) {
+            return { ...task, children: deleteTaskRecursive(task.children) };
+          }
+          return task;
+        });
+    };
+    setTasks(deleteTaskRecursive(tasks));
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -105,6 +145,8 @@ export default function SchedulePage() {
           tasks={tasks}
           onTaskClick={(task) => console.log('Task clicked:', task)}
           onAddTask={handleAddTask}
+          onAddSubTask={handleAddSubTask}
+          onDeleteTask={handleDeleteTask}
         />
       </div>
     </div>

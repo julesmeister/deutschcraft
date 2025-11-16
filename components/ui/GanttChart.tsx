@@ -26,6 +26,8 @@ export function GanttChart({
   showWeekends = true,
   onTaskClick,
   onAddTask,
+  onAddSubTask,
+  onDeleteTask,
   className = '',
 }: GanttChartProps) {
   // State management
@@ -164,6 +166,8 @@ export function GanttChart({
             expandedTasks={expandedTasks}
             rowHeight={rowHeight}
             onToggleExpand={toggleExpand}
+            onAddTask={onAddSubTask}
+            onDeleteTask={onDeleteTask}
           />
 
           {/* Timeline area */}

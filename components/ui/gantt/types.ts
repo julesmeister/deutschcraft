@@ -18,7 +18,9 @@ export interface GanttChartProps {
   rowHeight?: number;
   showWeekends?: boolean;
   onTaskClick?: (task: GanttChartTask) => void;
-  onAddTask?: () => void;
+  onAddTask?: () => void; // Add top-level task
+  onAddSubTask?: (parentTaskId: string) => void; // Add subtask to a parent
+  onDeleteTask?: (taskId: string) => void; // Delete a task
   className?: string;
 }
 
