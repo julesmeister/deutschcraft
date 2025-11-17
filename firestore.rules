@@ -1,4 +1,18 @@
 rules_version = '2';
+
+// ============================================================================
+// FIRESTORE INDEXES REQUIRED
+// ============================================================================
+// NOTE: Indexes are defined in firestore.indexes.json
+// Deploy with: firebase deploy --only firestore:indexes
+//
+// Required composite indexes:
+// 1. users: [role, userId] - for role management pagination
+// 2. users: [teacherId, batchId] - for teacher's students by batch
+// 3. users: [teacherId, role] - for teacher's students by role
+// 4. batches: [teacherId, isActive, startDate] - for active batches
+// ============================================================================
+
 service cloud.firestore {
   match /databases/{database}/documents {
 

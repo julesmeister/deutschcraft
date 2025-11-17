@@ -1,270 +1,30 @@
 /**
- * Writing Submissions Service
- * Handles CRUD operations for writing submissions
+ * Writing Submissions Service - Main Entry Point
+ * Re-exports all submission-related operations
+ *
+ * This file maintains backward compatibility while organizing
+ * code into smaller, focused modules
  */
 
-import { db } from '../../firebase';
-import {
-  collection,
-  doc,
-  getDoc,
-  getDocs,
-  addDoc,
-  updateDoc,
-  deleteDoc,
-  query,
-  where,
-  orderBy,
-} from 'firebase/firestore';
-import {
-  WritingSubmission,
-  WritingExerciseType,
-} from '../../models/writing';
+// Re-export query operations
+export {
+  getStudentSubmissions,
+  getWritingSubmission,
+  getExerciseSubmissions,
+  getAllWritingSubmissions,
+  getPendingWritingCount,
+} from './submissions-queries';
 
-// ============================================================================
-// WRITING SUBMISSIONS - READ OPERATIONS
-// ============================================================================
+// Re-export pagination operations
+export {
+  getWritingSubmissionsPaginated,
+  getWritingSubmissionsCount,
+} from './submissions-pagination';
 
-/**
- * Get student's submissions
- * @param userId - Student's user ID
- * @param exerciseType - Optional exercise type filter
- * @returns Array of submissions sorted by date
- */
-export async function getStudentSubmissions(
-  userId: string,
-  exerciseType?: WritingExerciseType
-): Promise<WritingSubmission[]> {
-  try {
-    const submissionsRef = collection(db, 'writing-submissions');
-    let q;
-
-    if (exerciseType) {
-      q = query(
-        submissionsRef,
-        where('userId', '==', userId),
-        where('exerciseType', '==', exerciseType),
-        orderBy('updatedAt', 'desc')
-      );
-    } else {
-      q = query(
-        submissionsRef,
-        where('userId', '==', userId),
-        orderBy('updatedAt', 'desc')
-      );
-    }
-
-    const snapshot = await getDocs(q);
-    return snapshot.docs.map(doc => ({
-      submissionId: doc.id,
-      ...doc.data(),
-    })) as WritingSubmission[];
-  } catch (error) {
-    console.error('[submissions] Error fetching student submissions:', error);
-    throw error;
-  }
-}
-
-/**
- * Get single submission by ID
- * @param submissionId - Submission ID
- * @returns Submission object or null
- */
-export async function getWritingSubmission(
-  submissionId: string
-): Promise<WritingSubmission | null> {
-  try {
-    const submissionRef = doc(db, 'writing-submissions', submissionId);
-    const submissionSnap = await getDoc(submissionRef);
-
-    if (!submissionSnap.exists()) return null;
-
-    return {
-      submissionId: submissionSnap.id,
-      ...submissionSnap.data(),
-    } as WritingSubmission;
-  } catch (error) {
-    console.error('[submissions] Error fetching writing submission:', error);
-    throw error;
-  }
-}
-
-/**
- * Get all student submissions for a specific exercise
- * @param exerciseId - Exercise ID
- * @returns Array of submissions sorted by submission date
- */
-export async function getExerciseSubmissions(
-  exerciseId: string
-): Promise<WritingSubmission[]> {
-  try {
-    const submissionsRef = collection(db, 'writing-submissions');
-    const q = query(
-      submissionsRef,
-      where('exerciseId', '==', exerciseId),
-      orderBy('submittedAt', 'desc')
-    );
-
-    const snapshot = await getDocs(q);
-    return snapshot.docs.map(doc => ({
-      submissionId: doc.id,
-      ...doc.data(),
-    })) as WritingSubmission[];
-  } catch (error) {
-    console.error('[submissions] Error fetching exercise submissions:', error);
-    throw error;
-  }
-}
-
-/**
- * Get all writing submissions (for teacher review)
- * @param statusFilter - Optional status filter ('submitted', 'reviewed', or 'all')
- * @returns Array of submissions
- */
-export async function getAllWritingSubmissions(
-  statusFilter?: 'submitted' | 'reviewed' | 'all'
-): Promise<WritingSubmission[]> {
-  try {
-    const submissionsRef = collection(db, 'writing-submissions');
-    let q;
-
-    if (statusFilter === 'submitted') {
-      q = query(
-        submissionsRef,
-        where('status', '==', 'submitted'),
-        orderBy('submittedAt', 'desc')
-      );
-    } else if (statusFilter === 'reviewed') {
-      q = query(
-        submissionsRef,
-        where('status', '==', 'reviewed'),
-        orderBy('updatedAt', 'desc')
-      );
-    } else {
-      q = query(
-        submissionsRef,
-        where('status', 'in', ['submitted', 'reviewed']),
-        orderBy('updatedAt', 'desc')
-      );
-    }
-
-    const snapshot = await getDocs(q);
-    return snapshot.docs.map(doc => ({
-      submissionId: doc.id,
-      ...doc.data(),
-    })) as WritingSubmission[];
-  } catch (error) {
-    console.error('[submissions] Error fetching all writing submissions:', error);
-    throw error;
-  }
-}
-
-/**
- * Get count of pending writing submissions
- * @returns Number of submissions awaiting review
- */
-export async function getPendingWritingCount(): Promise<number> {
-  try {
-    const submissionsRef = collection(db, 'writing-submissions');
-    const q = query(
-      submissionsRef,
-      where('status', '==', 'submitted')
-    );
-
-    const snapshot = await getDocs(q);
-    return snapshot.size;
-  } catch (error) {
-    console.error('[submissions] Error fetching pending writing count:', error);
-    throw error;
-  }
-}
-
-// ============================================================================
-// WRITING SUBMISSIONS - WRITE OPERATIONS
-// ============================================================================
-
-/**
- * Create a new writing submission
- * @param submissionData - Submission data without submissionId
- * @returns Created submission with generated ID
- */
-export async function createWritingSubmission(
-  submissionData: Omit<WritingSubmission, 'submissionId' | 'createdAt' | 'updatedAt' | 'version'>
-): Promise<WritingSubmission> {
-  try {
-    const submissionsRef = collection(db, 'writing-submissions');
-    const now = Date.now();
-
-    const submission = {
-      ...submissionData,
-      version: 1,
-      createdAt: now,
-      updatedAt: now,
-    };
-
-    const docRef = await addDoc(submissionsRef, submission);
-
-    return {
-      submissionId: docRef.id,
-      ...submission,
-    } as WritingSubmission;
-  } catch (error) {
-    console.error('[submissions] Error creating writing submission:', error);
-    throw error;
-  }
-}
-
-/**
- * Update a writing submission
- * @param submissionId - Submission ID
- * @param updates - Partial submission data to update
- */
-export async function updateWritingSubmission(
-  submissionId: string,
-  updates: Partial<WritingSubmission>
-): Promise<void> {
-  try {
-    const submissionRef = doc(db, 'writing-submissions', submissionId);
-    await updateDoc(submissionRef, {
-      ...updates,
-      updatedAt: Date.now(),
-    });
-  } catch (error) {
-    console.error('[submissions] Error updating writing submission:', error);
-    throw error;
-  }
-}
-
-/**
- * Submit a writing exercise (change status from draft to submitted)
- * @param submissionId - Submission ID
- */
-export async function submitWriting(submissionId: string): Promise<void> {
-  try {
-    const submissionRef = doc(db, 'writing-submissions', submissionId);
-    const now = Date.now();
-
-    await updateDoc(submissionRef, {
-      status: 'submitted',
-      submittedAt: now,
-      updatedAt: now,
-    });
-  } catch (error) {
-    console.error('[submissions] Error submitting writing:', error);
-    throw error;
-  }
-}
-
-/**
- * Delete a writing submission
- * @param submissionId - Submission ID
- */
-export async function deleteWritingSubmission(submissionId: string): Promise<void> {
-  try {
-    const submissionRef = doc(db, 'writing-submissions', submissionId);
-    await deleteDoc(submissionRef);
-  } catch (error) {
-    console.error('[submissions] Error deleting writing submission:', error);
-    throw error;
-  }
-}
+// Re-export mutation operations
+export {
+  createWritingSubmission,
+  updateWritingSubmission,
+  submitWriting,
+  deleteWritingSubmission,
+} from './submissions-mutations';

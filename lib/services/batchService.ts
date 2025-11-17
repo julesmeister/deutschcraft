@@ -30,7 +30,7 @@ import { Batch, CEFRLevel, BatchLevelHistory } from '../models';
 /**
  * Get all batches for a teacher
  * @param teacherEmail - Teacher's email
- * @returns Array of batches
+ * @returns Array of batches with updated student counts
  */
 export async function getBatchesByTeacher(teacherEmail: string): Promise<Batch[]> {
   try {
@@ -38,10 +38,23 @@ export async function getBatchesByTeacher(teacherEmail: string): Promise<Batch[]
     const q = query(batchesRef, where('teacherId', '==', teacherEmail));
     const snapshot = await getDocs(q);
 
-    return snapshot.docs.map(doc => ({
+    const batches = snapshot.docs.map(doc => ({
       batchId: doc.id,
       ...doc.data(),
     })) as Batch[];
+
+    // Calculate student count for each batch
+    const batchesWithCounts = await Promise.all(
+      batches.map(async (batch) => {
+        const studentCount = await getBatchStudentCount(batch.batchId);
+        return {
+          ...batch,
+          studentCount,
+        };
+      })
+    );
+
+    return batchesWithCounts;
   } catch (error) {
     console.error('[batchService] Error fetching batches by teacher:', error);
     throw error;

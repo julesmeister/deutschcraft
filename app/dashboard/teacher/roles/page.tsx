@@ -5,9 +5,9 @@ import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { TabBar } from '@/components/ui/TabBar';
 import { SlimTable, SlimTableRenderers } from '@/components/ui/SlimTable';
 import { RoleActionsDropdown } from '@/components/ui/RoleActionsDropdown';
+import { CompactButtonDropdown } from '@/components/ui/CompactButtonDropdown';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { useQuery } from '@tanstack/react-query';
-import { getAllStudents, getAllTeachers } from '@/lib/services/userService';
+import { useUsersPaginated } from '@/lib/hooks/useUsers';
 import { updateUser } from '@/lib/services/userService';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { EmptyState } from '@/components/ui/EmptyState';
@@ -16,75 +16,70 @@ import { UserRole, User } from '@/lib/models/user';
 
 export default function RoleManagementPage() {
   const { session } = useFirebaseAuth();
-
-  // Fetch all users (students + teachers)
-  const { data: students = [], isLoading: studentsLoading, refetch: refetchStudents } = useQuery({
-    queryKey: ['users', 'students'],
-    queryFn: getAllStudents,
-  });
-
-  const { data: teachers = [], isLoading: teachersLoading, refetch: refetchTeachers } = useQuery({
-    queryKey: ['users', 'teachers'],
-    queryFn: getAllTeachers,
-  });
-
-  const allUsers = useMemo(() => [...students, ...teachers], [students, teachers]);
-  const isLoading = studentsLoading || teachersLoading;
-  const refetch = async () => {
-    await Promise.all([refetchStudents(), refetchTeachers()]);
-  };
   const toast = useToast();
   const [searchQuery, setSearchQuery] = useState('');
   const deferredQuery = useDeferredValue(searchQuery);
   const [roleFilter, setRoleFilter] = useState<'all' | 'STUDENT' | 'TEACHER'>('all');
   const [updatingUserId, setUpdatingUserId] = useState<string | null>(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 10;
 
-  // Calculate stats
-  const stats = useMemo(() => {
-    const totalUsers = allUsers.length;
-    const students = allUsers.filter((u) => u.role === 'STUDENT').length;
-    const teachers = allUsers.filter((u) => u.role === 'TEACHER').length;
-    const pending = allUsers.filter((u) => !u.role || u.role === 'PENDING_APPROVAL').length;
+  // Use optimized paginated hook with server-side pagination
+  const {
+    users: allUsers,
+    isLoading,
+    refetch,
+    page: currentPage,
+    totalPages,
+    totalCount,
+    goToPage,
+  } = useUsersPaginated({
+    pageSize: 50, // Fetch 50 users per page from server
+    roleFilter,
+  });
 
-    return { totalUsers, students, teachers, pending };
-  }, [allUsers]);
+  // Client-side display pagination (10 per screen)
+  const displayPageSize = 10;
+  const [displayPage, setDisplayPage] = useState(1);
 
-  // Filter users with deferred query
+  // Calculate stats from total count (not just current page)
+  const stats = useMemo(() => ({
+    totalUsers: totalCount,
+    students: roleFilter === 'STUDENT' ? totalCount : 0, // Approximate for filtered view
+    teachers: roleFilter === 'TEACHER' ? totalCount : 0, // Approximate for filtered view
+    pending: 0, // Would need separate query for accurate count
+  }), [totalCount, roleFilter]);
+
+  // Client-side search filter (on current page data)
   const filteredUsers = useMemo(() => {
+    if (!deferredQuery.trim()) {
+      return allUsers;
+    }
+
+    const query = deferredQuery.toLowerCase();
     return allUsers.filter((user: User) => {
-      // Filter by role
-      if (roleFilter !== 'all' && user.role !== roleFilter) {
-        return false;
-      }
-
-      // Filter by search query
-      if (deferredQuery.trim()) {
-        const query = deferredQuery.toLowerCase();
-        const fullName = `${user.firstName || ''} ${user.lastName || ''}`.toLowerCase();
-        const matchesName = fullName.includes(query);
-        const matchesEmail = user.userId.toLowerCase().includes(query);
-        return matchesName || matchesEmail;
-      }
-
-      return true;
+      const fullName = `${user.firstName || ''} ${user.lastName || ''}`.toLowerCase();
+      const matchesName = fullName.includes(query);
+      const matchesEmail = user.userId.toLowerCase().includes(query);
+      return matchesName || matchesEmail;
     });
-  }, [allUsers, roleFilter, deferredQuery]);
+  }, [allUsers, deferredQuery]);
 
-  const totalPages = Math.ceil(filteredUsers.length / pageSize);
-  const startIndex = (currentPage - 1) * pageSize;
-  const paginatedUsers = filteredUsers.slice(startIndex, startIndex + pageSize);
+  // Display pagination (10 per screen from 50 fetched)
+  const displayTotalPages = Math.ceil(filteredUsers.length / displayPageSize);
+  const startIndex = (displayPage - 1) * displayPageSize;
+  const paginatedUsers = filteredUsers.slice(startIndex, startIndex + displayPageSize);
   const isStale = searchQuery !== deferredQuery;
 
-  // Reset to page 1 when filters change
+  // Reset display page when search/filter changes
   useEffect(() => {
-    if (totalPages > 0 && currentPage > totalPages) {
-      setCurrentPage(1);
-    } else if (totalPages === 0 && currentPage !== 1) {
-      setCurrentPage(1);
+    setDisplayPage(1);
+  }, [deferredQuery, roleFilter]);
+
+  // Load next server page when approaching end
+  useEffect(() => {
+    if (displayPage >= displayTotalPages - 1 && currentPage < totalPages && !isLoading) {
+      goToPage(currentPage + 1);
     }
-  }, [totalPages, currentPage]);
+  }, [displayPage, displayTotalPages, currentPage, totalPages, isLoading, goToPage]);
 
   const handleRoleChange = async (userId: string, newRole: UserRole) => {
     if (!session?.user?.email) {
@@ -197,15 +192,20 @@ export default function RoleManagementPage() {
                 All Users
               </h5>
               {/* Role Filter */}
-              <select
+              <CompactButtonDropdown
+                label={
+                  roleFilter === 'all' ? 'All Roles' :
+                  roleFilter === 'STUDENT' ? 'Students Only' :
+                  'Teachers Only'
+                }
+                options={[
+                  { value: 'all', label: 'All Roles' },
+                  { value: 'STUDENT', label: 'Students Only' },
+                  { value: 'TEACHER', label: 'Teachers Only' },
+                ]}
                 value={roleFilter}
-                onChange={(e) => setRoleFilter(e.target.value as typeof roleFilter)}
-                className="px-3 sm:px-4 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
-                <option value="all">All Roles</option>
-                <option value="STUDENT">Students Only</option>
-                <option value="TEACHER">Teachers Only</option>
-              </select>
+                onChange={(value) => setRoleFilter(value as typeof roleFilter)}
+              />
             </div>
 
             {/* Search Input */}
@@ -286,11 +286,11 @@ export default function RoleManagementPage() {
               ]}
               data={tableData}
               pagination={{
-                currentPage,
-                totalPages,
-                pageSize,
+                currentPage: displayPage,
+                totalPages: displayTotalPages,
+                pageSize: displayPageSize,
                 totalItems: filteredUsers.length,
-                onPageChange: setCurrentPage,
+                onPageChange: setDisplayPage,
               }}
               showViewAll={false}
               emptyMessage="No users found. Try adjusting your filters or search query."

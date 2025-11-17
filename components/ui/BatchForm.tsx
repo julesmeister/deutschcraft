@@ -86,6 +86,17 @@ export function BatchForm({
     setEndDate(getDefaultEndDate());
   };
 
+  // Format date for display
+  const formatDateForDisplay = (dateStr: string) => {
+    if (!dateStr) return '';
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
   return (
     <Dialog open={isOpen} onClose={onClose} size="md">
       <div className="-mt-6 -mx-6 -mb-6">
@@ -140,43 +151,61 @@ export function BatchForm({
               />
             </FormField>
 
-            {/* Two Column Layout for Desktop */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Current Level */}
-              <FormField>
-                <Label htmlFor="batch-level">Starting Level *</Label>
-                <Select
-                  options={levelOptions}
-                  value={currentLevel}
-                  onChange={(value) => setCurrentLevel(value as CEFRLevel)}
-                  placeholder="Select CEFR level..."
-                />
-              </FormField>
-
-              {/* Start Date */}
-              <FormField>
-                <Label htmlFor="batch-start-date">Start Date *</Label>
-                <Input
-                  id="batch-start-date"
-                  type="date"
-                  value={startDate}
-                  onChange={(e) => setStartDate(e.target.value)}
-                  required
-                />
-              </FormField>
-            </div>
-
-            {/* End Date - Full Width or in grid if preferred */}
+            {/* Current Level - Full Width */}
             <FormField>
-              <Label htmlFor="batch-end-date">End Date (Optional)</Label>
-              <Input
-                id="batch-end-date"
-                type="date"
-                value={endDate}
-                onChange={(e) => setEndDate(e.target.value)}
-                min={startDate}
+              <Label htmlFor="batch-level">Starting Level *</Label>
+              <Select
+                options={levelOptions}
+                value={currentLevel}
+                onChange={(value) => setCurrentLevel(value as CEFRLevel)}
+                placeholder="Select CEFR level..."
               />
             </FormField>
+
+            {/* Two Column Layout for Dates */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Start Date */}
+              <FormField>
+                <Label htmlFor="batch-start-date">Start *</Label>
+                <div className="relative">
+                  <input
+                    id="batch-start-date"
+                    type="date"
+                    value={startDate}
+                    onChange={(e) => setStartDate(e.target.value)}
+                    required
+                    className="w-full px-3 py-2 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-piku-purple focus:border-transparent transition-all duration-150 text-transparent"
+                    style={{
+                      colorScheme: 'light',
+                    }}
+                  />
+                  <div className="absolute inset-0 px-3 py-2 pointer-events-none flex items-center text-gray-900">
+                    {formatDateForDisplay(startDate)}
+                  </div>
+                </div>
+              </FormField>
+
+              {/* End Date */}
+              <FormField>
+                <Label htmlFor="batch-end-date">End (Optional)</Label>
+                <div className="relative">
+                  <input
+                    id="batch-end-date"
+                    type="date"
+                    value={endDate}
+                    onChange={(e) => setEndDate(e.target.value)}
+                    min={startDate}
+                    className="w-full px-3 py-2 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-piku-purple focus:border-transparent transition-all duration-150 text-transparent"
+                    style={{
+                      colorScheme: 'light',
+                    }}
+                  />
+                  <div className="absolute inset-0 px-3 py-2 pointer-events-none flex items-center text-gray-900">
+                    {endDate ? formatDateForDisplay(endDate) : <span className="text-gray-400">Optional</span>}
+                  </div>
+                </div>
+              </FormField>
+            </div>
 
           </form>
         </div>

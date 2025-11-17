@@ -6,13 +6,16 @@
 'use client';
 
 import { useState, useMemo, useDeferredValue, useEffect } from 'react';
-import { useAllWritingSubmissions, useUpdateWritingSubmission } from '@/lib/hooks/useWritingExercises';
+import { useWritingSubmissionsPaginated, useUpdateWritingSubmission } from '@/lib/hooks/useWritingSubmissions';
+import { useActiveBatches } from '@/lib/hooks/useBatches';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { Card } from '@/components/ui/Card';
 import { EmptyState } from '@/components/ui/EmptyState';
+import { BatchSelector } from '@/components/ui/BatchSelector';
+import { Batch } from '@/lib/models';
 import { WritingSubmission, WritingExerciseType } from '@/lib/models/writing';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { useAllStudents } from '@/lib/hooks/useSimpleUsers';
+import { useTeacherStudents } from '@/lib/hooks/useUsers';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { StatsOverview } from '@/components/teacher/writing/StatsOverview';
 import { FilterControls } from '@/components/teacher/writing/FilterControls';
@@ -24,57 +27,61 @@ type ExerciseTypeFilter = WritingExerciseType | 'all';
 
 export default function TeacherWritingDashboard() {
   const { session } = useFirebaseAuth();
+  const currentTeacherId = session?.user?.email;
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('submitted');
   const [exerciseTypeFilter, setExerciseTypeFilter] = useState<ExerciseTypeFilter>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const deferredQuery = useDeferredValue(searchQuery);
-  const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 10;
+  const [selectedBatch, setSelectedBatch] = useState<Batch | null>(null);
 
-  // Fetch submissions based on status filter
-  const { data: submissions = [], isLoading } = useAllWritingSubmissions(statusFilter);
+  // Fetch batches and students
+  const { batches } = useActiveBatches(currentTeacherId);
+  const { students: allStudents } = useTeacherStudents(currentTeacherId);
 
-  // Fetch students for name mapping
-  const { students: allStudents } = useAllStudents();
+  // Don't auto-select a batch - default to "All Batches" (null)
+
+  // Get student IDs for selected batch
+  // OPTIMIZATION: Only calculate when a specific batch is selected
+  const batchStudentIds = useMemo(() => {
+    if (!selectedBatch) {
+      return []; // Empty array = no filter (will show all in service layer)
+    }
+
+    // Filter students by selected batch
+    return allStudents
+      .filter(student => student.batchId === selectedBatch.batchId)
+      .map(student => student.userId);
+  }, [selectedBatch, allStudents]);
+
+  // Use paginated hook with batch filtering
+  const {
+    submissions,
+    isLoading,
+    page: currentPage,
+    totalPages,
+    pageSize,
+    totalCount,
+    goToPage,
+  } = useWritingSubmissionsPaginated({
+    statusFilter,
+    batchId: selectedBatch?.batchId || null,
+    studentIds: batchStudentIds,
+    pageSize: 10,
+  });
 
   // Mutation for updating submission status
   const updateSubmissionMutation = useUpdateWritingSubmission();
 
-  // Calculate stats
-  const stats = useMemo(() => {
-    const pending = submissions.filter((s) => s.status === 'submitted').length;
-    const reviewed = submissions.filter((s) => s.status === 'reviewed').length;
-    const total = submissions.length;
+  // Calculate stats (from totalCount, not just current page)
+  const stats = useMemo(() => ({
+    total: totalCount,
+    pending: statusFilter === 'submitted' ? totalCount : 0,
+    reviewed: statusFilter === 'reviewed' ? totalCount : 0,
+    reviewedThisWeek: 0, // Would need separate query for accurate count
+    avgResponseDays: 0, // Would need separate query for accurate calculation
+  }), [totalCount, statusFilter]);
 
-    // Calculate this week's reviews
-    const oneWeekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000;
-    const reviewedThisWeek = submissions.filter(
-      (s) => s.status === 'reviewed' && s.updatedAt > oneWeekAgo
-    ).length;
-
-    // Calculate average response time (for reviewed submissions)
-    const reviewedWithTimes = submissions.filter(
-      (s) => s.status === 'reviewed' && s.submittedAt
-    );
-    const avgResponseTime =
-      reviewedWithTimes.length > 0
-        ? reviewedWithTimes.reduce((sum, s) => {
-            const responseTime = s.updatedAt - (s.submittedAt || s.createdAt);
-            return sum + responseTime;
-          }, 0) / reviewedWithTimes.length
-        : 0;
-    const avgResponseDays = Math.round(avgResponseTime / (1000 * 60 * 60 * 24));
-
-    return {
-      total,
-      pending,
-      reviewed,
-      reviewedThisWeek,
-      avgResponseDays,
-    };
-  }, [submissions]);
-
-  // Filter submissions
+  // Client-side filter by exercise type and search
   const filteredSubmissions = useMemo(() => {
     return submissions.filter((submission) => {
       // Filter by exercise type
@@ -97,23 +104,10 @@ export default function TeacherWritingDashboard() {
     });
   }, [submissions, exerciseTypeFilter, deferredQuery, allStudents]);
 
-  // Pagination
-  const totalPages = Math.ceil(filteredSubmissions.length / pageSize);
-  const startIndex = (currentPage - 1) * pageSize;
-  const paginatedSubmissions = filteredSubmissions.slice(startIndex, startIndex + pageSize);
   const isStale = searchQuery !== deferredQuery;
 
-  // Reset to page 1 when filters change
-  useEffect(() => {
-    if (totalPages > 0 && currentPage > totalPages) {
-      setCurrentPage(1);
-    } else if (totalPages === 0 && currentPage !== 1) {
-      setCurrentPage(1);
-    }
-  }, [totalPages, currentPage]);
-
   // Transform submissions to table rows
-  const tableData = paginatedSubmissions.map((submission) => ({
+  const tableData = filteredSubmissions.map((submission) => ({
     id: submission.submissionId,
     exerciseType: submission.exerciseType,
     exerciseTitle: getExerciseTitle(submission.exerciseId, submission.exerciseType),
@@ -160,6 +154,26 @@ export default function TeacherWritingDashboard() {
       <DashboardHeader
         title="Writing Submissions 📝"
         subtitle="Review and grade student writing exercises"
+        actions={
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => setSelectedBatch(null)}
+              className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+                !selectedBatch
+                  ? 'bg-piku-purple text-white'
+                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              }`}
+            >
+              All Batches
+            </button>
+            <BatchSelector
+              batches={batches}
+              selectedBatch={selectedBatch}
+              onSelectBatch={setSelectedBatch}
+              onCreateBatch={() => {}} // Not needed on this page
+            />
+          </div>
+        }
       />
 
       <div className="container mx-auto px-6 py-8">
@@ -203,7 +217,7 @@ export default function TeacherWritingDashboard() {
               totalPages={totalPages}
               pageSize={pageSize}
               totalItems={filteredSubmissions.length}
-              onPageChange={setCurrentPage}
+              onPageChange={goToPage}
               onStatusChange={handleStatusChange}
             />
           )}

@@ -169,10 +169,20 @@ export default function SchedulePage() {
     });
   }, [batches.length, ganttTasks.length, JSON.stringify(batches.map(b => b.batchId)), JSON.stringify(ganttTasks.map(t => t.taskId))]); // Only update when IDs change
 
-  // Sync hierarchyTasks to local state
+  // Filter hierarchyTasks by selectedBatch
+  const filteredTasks = useMemo(() => {
+    if (selectedBatch) {
+      // Only show the selected batch
+      return hierarchyTasks.filter(task => task.id === selectedBatch.batchId);
+    }
+    // No batch selected, show all
+    return hierarchyTasks;
+  }, [hierarchyTasks, selectedBatch?.batchId]);
+
+  // Sync filtered tasks to local state
   useEffect(() => {
-    setTasks(hierarchyTasks);
-  }, [hierarchyTasks]);
+    setTasks(filteredTasks);
+  }, [filteredTasks]);
 
   // Handle creating a new batch
   const handleCreateBatch = async (data: {
