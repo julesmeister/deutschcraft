@@ -12,6 +12,8 @@ import { Batch } from '@/lib/models';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { getSyllabusForLevel } from '@/lib/data/syllabusData';
 import { CEFRLevel } from '@/lib/models/cefr';
+import { useGanttTasks, useCreateGanttTask, useUpdateGanttTask, useDeleteGanttTask } from '@/lib/hooks/useGanttTasks';
+import { GanttTask } from '@/lib/models/gantt';
 
 // Define color palette for batches
 const BATCH_COLORS = [
@@ -33,10 +35,17 @@ export default function SchedulePage() {
   const { batches, isLoading } = useActiveBatches(currentTeacherId);
   const createBatchMutation = useCreateBatch();
 
+  // Fetch gantt tasks
+  const { data: ganttTasks = [], isLoading: isLoadingTasks } = useGanttTasks(currentTeacherId);
+  const createGanttTaskMutation = useCreateGanttTask();
+  const updateGanttTaskMutation = useUpdateGanttTask();
+  const deleteGanttTaskMutation = useDeleteGanttTask();
+
   // Local state
   const [selectedBatch, setSelectedBatch] = useState<Batch | null>(null);
   const [isCreateBatchOpen, setIsCreateBatchOpen] = useState(false);
   const [tasks, setTasks] = useState<GanttChartTask[]>([]);
+  const [expandedBatches, setExpandedBatches] = useState<Set<string>>(new Set());
 
   // Auto-select first batch
   useEffect(() => {
@@ -95,18 +104,37 @@ export default function SchedulePage() {
     });
   };
 
-  // Convert batches to GanttChart tasks only when batches actually change
+  // Convert batches and gantt tasks to hierarchical structure
   useEffect(() => {
-    setTasks(prevTasks => {
-      // Create a map of existing tasks to preserve their children
-      const existingTasksMap = new Map(prevTasks.map(task => [task.id, task]));
+    // Build hierarchical structure from flat gantt tasks
+    const buildHierarchy = (): GanttChartTask[] => {
+      // Separate parent and child tasks
+      const parentTasks = ganttTasks.filter(t => !t.parentTaskId);
+      const childTasks = ganttTasks.filter(t => t.parentTaskId);
+
+      // Create a map of children by parentId
+      const childrenMap = new Map<string, GanttTask[]>();
+      childTasks.forEach(child => {
+        if (!child.parentTaskId) return;
+        if (!childrenMap.has(child.parentTaskId)) {
+          childrenMap.set(child.parentTaskId, []);
+        }
+        childrenMap.get(child.parentTaskId)!.push(child);
+      });
 
       return batches.map((batch, index) => {
         const batchColor = BATCH_COLORS[index % BATCH_COLORS.length];
 
-        // Preserve existing children if this batch already exists
-        const existingTask = existingTasksMap.get(batch.batchId);
-        const children = existingTask?.children || [];
+        // Get children for this batch from ganttTasks
+        const batchChildren = childrenMap.get(batch.batchId) || [];
+        const children: GanttChartTask[] = batchChildren.map(child => ({
+          id: child.taskId,
+          name: child.name,
+          startDate: new Date(child.startDate),
+          endDate: new Date(child.endDate),
+          progress: child.progress,
+          color: batchColor,
+        }));
 
         // Calculate parent dates based on children, or use batch dates as fallback
         const childrenDates = calculateParentDates(children);
@@ -123,8 +151,10 @@ export default function SchedulePage() {
           children,
         };
       });
-    });
-  }, [batches.length, JSON.stringify(batches.map(b => b.batchId))]); // Only update when batch IDs change
+    };
+
+    setTasks(buildHierarchy());
+  }, [batches, ganttTasks]); // Rebuild when batches or gantt tasks change
 
   // Handle creating a new batch
   const handleCreateBatch = async (data: {
@@ -153,84 +183,87 @@ export default function SchedulePage() {
     }
   };
 
-  // Not needed - batches are added via BatchForm
+  // Add curriculum item to the selected batch
   const handleAddTask = () => {
-    toast.info('Use the batch selector to create a new batch');
+    if (!selectedBatch) {
+      toast.info('Select a batch first to add curriculum items');
+      return;
+    }
+    // Expand the parent batch before adding
+    setExpandedBatches(prev => new Set([...prev, selectedBatch.batchId]));
+    handleAddSubTask(selectedBatch.batchId);
   };
 
   // Add subtask (curriculum item) to a batch
-  const handleAddSubTask = (parentTaskId: string) => {
-    const addSubTaskRecursive = (taskList: GanttChartTask[]): GanttChartTask[] => {
-      return taskList.map(task => {
-        if (task.id === parentTaskId) {
-          // Find the batch to get its level
-          const batch = batches.find(b => b.batchId === parentTaskId);
-          const defaultStartDate = new Date(task.startDate);
-          const defaultEndDate = new Date(defaultStartDate.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days
+  const handleAddSubTask = async (parentTaskId: string) => {
+    if (!currentTeacherId) return;
 
-          const newSubTask: GanttChartTask = {
-            id: `curriculum-${Date.now()}`,
-            name: 'New Curriculum Item', // User will rename this
-            startDate: defaultStartDate,
-            endDate: defaultEndDate,
-            progress: 0,
-            color: task.color,
-          };
+    try {
+      const batch = batches.find(b => b.batchId === parentTaskId);
+      const parentTask = tasks.find(t => t.id === parentTaskId);
+      if (!batch || !parentTask) return;
 
-          const updatedChildren = [...(task.children || []), newSubTask];
-          const childrenDates = calculateParentDates(updatedChildren);
+      const defaultStartDate = new Date(parentTask.startDate);
+      const defaultEndDate = new Date(defaultStartDate.getTime() + 7 * 24 * 60 * 60 * 1000); // 7 days
 
-          return {
-            ...task,
-            children: updatedChildren,
-            startDate: childrenDates?.startDate || task.startDate,
-            endDate: childrenDates?.endDate || task.endDate,
-          };
-        }
-        if (task.children) {
-          return { ...task, children: addSubTaskRecursive(task.children) };
-        }
-        return task;
+      // Calculate order index (last + 1)
+      const siblings = ganttTasks.filter(t => t.parentTaskId === parentTaskId);
+      const orderIndex = siblings.length;
+
+      await createGanttTaskMutation.mutateAsync({
+        name: 'New Curriculum Item',
+        startDate: defaultStartDate.getTime(),
+        endDate: defaultEndDate.getTime(),
+        progress: 0,
+        status: 'not-started',
+        color: parentTask.color,
+        parentTaskId,
+        orderIndex,
+        createdBy: currentTeacherId,
       });
-    };
-    setTasks(addSubTaskRecursive(tasks));
+
+      toast.success('Curriculum item added');
+    } catch (error) {
+      console.error('[Add Curriculum] Error:', error);
+      toast.error('Failed to add curriculum item');
+    }
   };
 
-  const handleDeleteTask = (taskId: string) => {
-    const deleteTaskRecursive = (taskList: GanttChartTask[]): GanttChartTask[] => {
-      return taskList
-        .filter(task => task.id !== taskId)
-        .map(task => {
-          if (task.children) {
-            const updatedChildren = deleteTaskRecursive(task.children);
-            const childrenDates = calculateParentDates(updatedChildren);
+  const handleDeleteTask = async (taskId: string) => {
+    // Don't allow deleting batches (parent tasks)
+    const isParent = tasks.some(t => t.id === taskId);
+    if (isParent) {
+      toast.error('Cannot delete batches from here. Use the batch selector.');
+      return;
+    }
 
-            return {
-              ...task,
-              children: updatedChildren,
-              startDate: childrenDates?.startDate || task.startDate,
-              endDate: childrenDates?.endDate || task.endDate,
-            };
-          }
-          return task;
-        });
-    };
-    setTasks(deleteTaskRecursive(tasks));
+    try {
+      await deleteGanttTaskMutation.mutateAsync({ taskId, deleteChildren: true });
+      toast.success('Curriculum item deleted');
+    } catch (error) {
+      console.error('[Delete Task] Error:', error);
+      toast.error('Failed to delete curriculum item');
+    }
   };
 
-  const handleRenameTask = (taskId: string, newName: string) => {
-    const renameTaskRecursive = (taskList: GanttChartTask[]): GanttChartTask[] => {
-      return taskList.map(task => {
-        if (task.id === taskId) {
-          return { ...task, name: newName };
-        }
-        if (task.children) {
-          return { ...task, children: renameTaskRecursive(task.children) };
-        }
-        return task;
+  const handleRenameTask = async (taskId: string, newName: string) => {
+    // Don't allow renaming batches
+    const isParent = tasks.some(t => t.id === taskId);
+    if (isParent) {
+      toast.error('Cannot rename batches from here. Use the batch selector.');
+      return;
+    }
+
+    try {
+      await updateGanttTaskMutation.mutateAsync({
+        taskId,
+        updates: { name: newName },
       });
-    };
-    setTasks(renameTaskRecursive(tasks));
+      toast.success('Curriculum item renamed');
+    } catch (error) {
+      console.error('[Rename Task] Error:', error);
+      toast.error('Failed to rename curriculum item');
+    }
   };
 
   // Function to get the CEFR level of a task's parent batch
@@ -247,7 +280,7 @@ export default function SchedulePage() {
   };
 
   // Loading state
-  if (isLoading || !session) {
+  if (isLoading || isLoadingTasks || !session) {
     return <CatLoader message="Loading schedule..." size="lg" fullScreen />;
   }
 
@@ -279,6 +312,8 @@ export default function SchedulePage() {
           onRenameTask={handleRenameTask}
           curriculumSuggestions={curriculumSuggestions}
           getTaskLevel={getTaskLevel}
+          expandedTasks={expandedBatches}
+          onExpandedChange={setExpandedBatches}
         />
       </div>
 

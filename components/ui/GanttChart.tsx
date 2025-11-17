@@ -31,10 +31,14 @@ export function GanttChart({
   onRenameTask,
   curriculumSuggestions = [],
   getTaskLevel,
+  expandedTasks: controlledExpandedTasks,
+  onExpandedChange,
   className = '',
 }: GanttChartProps) {
-  // State management
-  const [expandedTasks, setExpandedTasks] = useState<Set<string>>(() => getAllParentIds(tasks));
+  // State management - use controlled or internal state
+  const [internalExpandedTasks, setInternalExpandedTasks] = useState<Set<string>>(() => getAllParentIds(tasks));
+  const expandedTasks = controlledExpandedTasks ?? internalExpandedTasks;
+  const setExpandedTasks = onExpandedChange ?? setInternalExpandedTasks;
   const [draggingTask, setDraggingTask] = useState<string | null>(null);
   const [resizingTask, setResizingTask] = useState<ResizeState | null>(null);
   const [dragStart, setDragStart] = useState<DragState | null>(null);

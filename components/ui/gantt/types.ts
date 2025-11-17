@@ -24,6 +24,8 @@ export interface GanttChartProps {
   onRenameTask?: (taskId: string, newName: string) => void; // Rename a task
   curriculumSuggestions?: string[]; // Optional autocomplete suggestions for curriculum items
   getTaskLevel?: (taskId: string) => string | null; // Function to get the level of a task's parent
+  expandedTasks?: Set<string>; // Controlled expanded state
+  onExpandedChange?: (expanded: Set<string>) => void; // Callback when expanded state changes
   className?: string;
 }
 
