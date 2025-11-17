@@ -84,6 +84,13 @@ export function GanttTimelineGrid({
 
           return (
             <g key={task.id}>
+              {/* Clip path for text */}
+              <defs>
+                <clipPath id={`clip-${task.id}`}>
+                  <rect x={x + 10} y={y} width={Math.max(0, width - 20)} height={barHeight} rx="6" />
+                </clipPath>
+              </defs>
+
               {/* Background bar */}
               <rect
                 x={x}
@@ -116,6 +123,7 @@ export function GanttTimelineGrid({
                 className="text-sm font-medium"
                 textAnchor="middle"
                 dominantBaseline="central"
+                clipPath={`url(#clip-${task.id})`}
                 style={{ pointerEvents: 'none' }}
               >
                 {task.name}

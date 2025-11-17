@@ -29,6 +29,8 @@ export function GanttChart({
   onAddSubTask,
   onDeleteTask,
   onRenameTask,
+  curriculumSuggestions = [],
+  getTaskLevel,
   className = '',
 }: GanttChartProps) {
   // State management
@@ -212,6 +214,8 @@ export function GanttChart({
             onAddTask={onAddSubTask}
             onDeleteTask={onDeleteTask}
             onRenameTask={onRenameTask}
+            curriculumSuggestions={curriculumSuggestions}
+            getTaskLevel={getTaskLevel}
           />
 
           {/* Timeline area */}

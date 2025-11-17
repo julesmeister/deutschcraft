@@ -22,6 +22,8 @@ export interface GanttChartProps {
   onAddSubTask?: (parentTaskId: string) => void; // Add subtask to a parent
   onDeleteTask?: (taskId: string) => void; // Delete a task
   onRenameTask?: (taskId: string, newName: string) => void; // Rename a task
+  curriculumSuggestions?: string[]; // Optional autocomplete suggestions for curriculum items
+  getTaskLevel?: (taskId: string) => string | null; // Function to get the level of a task's parent
   className?: string;
 }
 
