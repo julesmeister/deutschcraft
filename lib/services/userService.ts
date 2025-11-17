@@ -18,9 +18,11 @@ import {
   setDoc,
   updateDoc,
   deleteDoc,
-  collection,
   query,
   where,
+  orderBy,
+  limit,
+  collection,
 } from 'firebase/firestore';
 import { User } from '../models';
 
@@ -135,7 +137,39 @@ export async function getAllStudents(): Promise<User[]> {
 
     return students;
   } catch (error) {
-    
+
+    throw error;
+  }
+}
+
+/**
+ * Get all non-teacher users (students and pending users)
+ * Optimized: Uses Firestore 'in' query to fetch only non-teachers
+ * @returns Array of all non-teacher User objects (limited to first 10 for performance)
+ */
+export async function getAllNonTeachers(): Promise<User[]> {
+  try {
+    const usersRef = collection(db, 'users');
+
+    // Firestore query: role IN ['STUDENT', 'PENDING_APPROVAL']
+    // This is more efficient than fetching all users and filtering client-side
+    const q = query(
+      usersRef,
+      where('role', 'in', ['STUDENT', 'PENDING_APPROVAL']),
+      orderBy('firstName', 'asc'),
+      limit(10) // Limit to 10 users for performance
+    );
+
+    const snapshot = await getDocs(q);
+
+    const users: User[] = snapshot.docs.map(doc => ({
+      userId: doc.id,
+      ...doc.data(),
+    } as User));
+
+    return users;
+  } catch (error) {
+    console.error('[userService] Error fetching non-teachers:', error);
     throw error;
   }
 }

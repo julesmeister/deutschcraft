@@ -97,6 +97,22 @@ export {
 } from './pricingService';
 
 // ============================================================================
+// TRANSACTION SERVICE
+// ============================================================================
+export {
+  createTransaction,
+  getTransaction,
+  getUserTransactions,
+  getPendingTransactions,
+  getAllTransactions,
+  getTransactionsPaginated,
+  getTransactionsCount,
+  updateTransaction,
+  verifyTransaction,
+  rejectTransaction,
+} from './transactionService';
+
+// ============================================================================
 // WRITING SERVICE (Advanced)
 // ============================================================================
 export {

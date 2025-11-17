@@ -12,7 +12,9 @@ import {
   getTeacherStudents,
   getBatchStudents,
   getAllStudents,
+  getAllNonTeachers,
   getStudentsWithoutTeacher,
+  getUsers,
   getUsersPaginated,
   getUserCount,
   getPendingEnrollmentsPaginated,
@@ -136,6 +138,56 @@ export function useAllStudents() {
 // Alias for backwards compatibility
 export function useAllStudentsNested() {
   return useAllStudents();
+}
+
+/**
+ * Fetch all non-teacher users (students and pending users)
+ * Useful for transaction management where you need to assign transactions to any user
+ */
+export function useAllNonTeachers() {
+  const { data, isLoading, isError, error } = useQuery({
+    queryKey: ['users', 'non-teachers'],
+    queryFn: async () => {
+      const users = await getAllNonTeachers();
+      return users;
+    },
+    staleTime: 5 * 60 * 1000, // 5 minutes - longer cache for user list
+    gcTime: 10 * 60 * 1000, // 10 minutes
+    refetchOnWindowFocus: false, // Don't refetch when window regains focus
+    refetchOnMount: false, // Don't refetch on component mount if data exists
+  });
+
+  return {
+    users: data || [],
+    isLoading,
+    isError,
+    error: error as Error | null,
+  };
+}
+
+/**
+ * Fetch ALL users (students, teachers, and pending)
+ * Useful for transaction user lookup where transaction could be from any user type
+ */
+export function useAllUsers() {
+  const { data, isLoading, isError, error } = useQuery({
+    queryKey: ['users', 'all'],
+    queryFn: async () => {
+      const users = await getUsers();
+      return users;
+    },
+    staleTime: 5 * 60 * 1000, // 5 minutes - longer cache for user list
+    gcTime: 10 * 60 * 1000, // 10 minutes
+    refetchOnWindowFocus: false, // Don't refetch when window regains focus
+    refetchOnMount: false, // Don't refetch on component mount if data exists
+  });
+
+  return {
+    users: data || [],
+    isLoading,
+    isError,
+    error: error as Error | null,
+  };
 }
 
 /**

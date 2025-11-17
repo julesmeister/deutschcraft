@@ -17,6 +17,8 @@ export {
   useBatchStudents,
   useAllStudents,
   useAllStudentsNested,
+  useAllNonTeachers,
+  useAllUsers,
   useStudentsWithoutTeacher,
   useUsersPaginated,
   usePendingEnrollmentsPaginated,
