@@ -30,8 +30,12 @@ export default withAuth(
         return NextResponse.redirect(new URL('/dashboard/settings', req.url));
       }
     } else if (pathname.startsWith('/dashboard/teacher')) {
-      // Teacher dashboard - only for teachers
-      if (isPending || userRole !== 'TEACHER') {
+      // Allow students to view their own detail page
+      const isOwnDetailPage = pathname.startsWith('/dashboard/teacher/students/') &&
+                              pathname.includes(encodeURIComponent(token.email));
+
+      // Teacher dashboard - only for teachers (except students viewing their own detail page)
+      if (isPending || (userRole !== 'TEACHER' && !isOwnDetailPage)) {
         return NextResponse.redirect(new URL('/dashboard/settings', req.url));
       }
     } else if (pathname === '/dashboard') {
