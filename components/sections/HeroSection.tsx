@@ -119,11 +119,11 @@ export function HeroSection() {
           {/* Left Content */}
           <div className="text-white space-y-6 md:space-y-8">
             <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white animate-fade-in-down">
-              AI-Powered German Learning
+              Collaborative German Learning
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in-up">
-              Learn{' '}
+              Master{' '}
               <span className="text-piku-purple-dark">
                 German
               </span>{' '}
@@ -131,7 +131,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-white/90 font-manrope animate-fade-in-up animation-delay-100">
-              A unique approach to learning German with AI-powered flashcards, peer collaboration, and personalized teacher feedback.
+              Practice German with spaced-repetition flashcards, comprehensive writing exercises, live voice sessions, and personalized teacher feedback.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-200">
@@ -159,7 +159,7 @@ export function HeroSection() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold text-white">60x Faster Learning</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-white">165+ Writing Exercises</h3>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-piku-gold flex items-center justify-center flex-shrink-0">
@@ -167,7 +167,7 @@ export function HeroSection() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold text-white">70% Better Retention</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-white">Live Voice Sessions</h3>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-piku-pink flex items-center justify-center flex-shrink-0">
@@ -175,7 +175,7 @@ export function HeroSection() {
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold text-white">Save 4,000+ hours</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-white">Teacher Feedback</h3>
               </div>
             </div>
           </div>
