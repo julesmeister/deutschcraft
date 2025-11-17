@@ -2,6 +2,8 @@ import { SlimTableColumn } from '@/components/ui/SlimTable';
 import { CompactButtonDropdown } from '@/components/ui/CompactButtonDropdown';
 import { User, getUserFullName } from '@/lib/models/user';
 import { CEFRLevel } from '@/lib/models/cefr';
+import { useState } from 'react';
+import { TransactionDialog } from '@/components/transactions/TransactionDialog';
 
 interface EnrollmentRow {
   id: string;
@@ -120,12 +122,37 @@ export function getEnrollmentColumns(config: ColumnsConfig): SlimTableColumn[] {
       key: 'payment',
       label: 'Payment',
       align: 'center',
-      render: (value: number, row: EnrollmentRow) => (
-        <div className="text-center">
-          <p className="font-bold text-gray-900">₱{value.toFixed(2)}</p>
-          <p className="text-xs text-gray-500 font-mono">{row.reference}</p>
-        </div>
-      ),
+      render: (value: number, row: EnrollmentRow) => {
+        const [showDialog, setShowDialog] = useState(false);
+
+        return (
+          <>
+            <div className="text-center">
+              <p className="font-bold text-gray-900">₱{value.toFixed(2)}</p>
+              {row.reference && (
+                <p className="text-xs text-gray-500 font-mono">{row.reference}</p>
+              )}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowDialog(true);
+                }}
+                className="mt-1 text-xs text-piku-purple hover:underline font-medium"
+              >
+                View Transactions
+              </button>
+            </div>
+
+            {showDialog && (
+              <TransactionDialog
+                user={row.user}
+                isOpen={showDialog}
+                onClose={() => setShowDialog(false)}
+              />
+            )}
+          </>
+        );
+      },
     },
     {
       key: 'signedUp',

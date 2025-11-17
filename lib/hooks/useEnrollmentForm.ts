@@ -5,6 +5,7 @@ import { Session } from 'next-auth';
 import { signOut } from 'next-auth/react';
 import { EnrollmentFormData } from '@/components/ui/settings/EnrollmentTab';
 import { updateUser } from '../services/userService';
+import { createTransaction } from '../services/transactionService';
 
 /**
  * Hook to manage enrollment form submission and account deletion
@@ -49,6 +50,17 @@ export function useEnrollmentForm(session: Session | null) {
         photoURL: session.user.image || null,
         createdAt: Date.now(),
         updatedAt: Date.now(),
+      });
+
+      // Create a transaction record for the payment
+      await createTransaction({
+        userId: session.user.email,
+        userEmail: session.user.email,
+        paymentMethod: 'gcash',
+        amount: amount,
+        referenceNumber: data.gcashReferenceNumber.trim(),
+        status: 'pending',
+        notes: `Enrollment payment - ${data.desiredCefrLevel} level`,
       });
 
       onSuccess('Enrollment submitted successfully! Your teacher will review it soon.');

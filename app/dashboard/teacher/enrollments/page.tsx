@@ -12,7 +12,7 @@ import { TabBar } from '@/components/ui/TabBar';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { getEnrollmentColumns } from './columns';
 import { useQueryClient } from '@tanstack/react-query';
-import { usePendingTransactions, useVerifyTransaction, useRejectTransaction } from '@/lib/hooks/useTransactions';
+import { useAllTransactions, useVerifyTransaction, useRejectTransaction } from '@/lib/hooks/useTransactions';
 import { Transaction } from '@/lib/models/transaction';
 import { AddTransactionDialog } from '@/components/transactions/AddTransactionDialog';
 import { getTransactionColumns } from './transactionColumns';
@@ -29,8 +29,8 @@ export default function EnrollmentApprovalsPage() {
   const [editingTransaction, setEditingTransaction] = useState<Transaction | undefined>(undefined);
   const [processingTransactionId, setProcessingTransactionId] = useState<string | null>(null);
 
-  // Get all transactions (not just pending)
-  const { data: allTransactions = [], isLoading: transactionsLoading } = usePendingTransactions();
+  // Get all transactions (pending, verified, rejected)
+  const { data: allTransactions = [], isLoading: transactionsLoading } = useAllTransactions();
   const verifyTransaction = useVerifyTransaction();
   const rejectTransaction = useRejectTransaction();
 
@@ -149,7 +149,7 @@ export default function EnrollmentApprovalsPage() {
       }
 
       // Invalidate queries to refresh data
-      queryClient.invalidateQueries({ queryKey: ['transactions', 'pending'] });
+      queryClient.invalidateQueries({ queryKey: ['transactions', 'all'] });
     } catch (error) {
       alert('Failed to update transaction status. Please try again.');
     } finally {

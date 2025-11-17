@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
 import { Select, SelectOption } from '@/components/ui/Select';
 import { SettingsFormField } from './SettingsFormField';
+import { AlertDialog } from '@/components/ui/Dialog';
 
 interface EnrollmentTabProps {
   onSubmit: (data: EnrollmentFormData) => void;
@@ -24,8 +25,8 @@ export function EnrollmentTab({ onSubmit, isSaving = false, onDeleteAccount }: E
     gcashAmount: '',
   });
 
-  const [error, setError] = useState<string | null>(null);
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [showValidationDialog, setShowValidationDialog] = useState(false);
+  const [validationMessage, setValidationMessage] = useState('');
 
   // CEFR Level options
   const cefrOptions: SelectOption[] = Object.values(CEFRLevel).map((level) => ({
@@ -35,17 +36,18 @@ export function EnrollmentTab({ onSubmit, isSaving = false, onDeleteAccount }: E
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setError(null);
 
     // Validation
     if (!formData.gcashReferenceNumber.trim()) {
-      setError('Please enter your GCash reference number');
+      setValidationMessage('Please enter your GCash reference number to proceed with enrollment.');
+      setShowValidationDialog(true);
       return;
     }
 
     const amount = parseFloat(formData.gcashAmount);
     if (isNaN(amount) || amount <= 0) {
-      setError('Please enter a valid payment amount');
+      setValidationMessage('Please enter a valid payment amount greater than zero.');
+      setShowValidationDialog(true);
       return;
     }
 
@@ -57,12 +59,14 @@ export function EnrollmentTab({ onSubmit, isSaving = false, onDeleteAccount }: E
       <h2 className="text-xl font-bold text-gray-900 mb-2">Student Enrollment</h2>
       <p className="text-gray-600 mb-8">Complete your enrollment to start learning German with Testmanship</p>
 
-      {/* Error Message */}
-      {error && (
-        <div className="mb-6 p-4 bg-red-50 border-l-4 border-red-500 rounded-lg">
-          <p className="text-red-700 font-semibold">{error}</p>
-        </div>
-      )}
+      {/* Validation Dialog */}
+      <AlertDialog
+        open={showValidationDialog}
+        onClose={() => setShowValidationDialog(false)}
+        title="Validation Error"
+        message={validationMessage}
+        buttonText="Got it"
+      />
 
       <form onSubmit={handleSubmit}>
         {/* CEFR Level Selection */}
