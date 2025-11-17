@@ -108,56 +108,57 @@ export default function SchedulePage() {
   };
 
   // Convert batches and gantt tasks to hierarchical structure
-  useEffect(() => {
+  const hierarchyTasks = useMemo(() => {
     // Build hierarchical structure from flat gantt tasks
-    const buildHierarchy = (): GanttChartTask[] => {
-      // Separate parent and child tasks
-      const parentTasks = ganttTasks.filter(t => !t.parentTaskId);
-      const childTasks = ganttTasks.filter(t => t.parentTaskId);
+    // Separate parent and child tasks
+    const parentTasks = ganttTasks.filter(t => !t.parentTaskId);
+    const childTasks = ganttTasks.filter(t => t.parentTaskId);
 
-      // Create a map of children by parentId
-      const childrenMap = new Map<string, GanttTask[]>();
-      childTasks.forEach(child => {
-        if (!child.parentTaskId) return;
-        if (!childrenMap.has(child.parentTaskId)) {
-          childrenMap.set(child.parentTaskId, []);
-        }
-        childrenMap.get(child.parentTaskId)!.push(child);
-      });
+    // Create a map of children by parentId
+    const childrenMap = new Map<string, GanttTask[]>();
+    childTasks.forEach(child => {
+      if (!child.parentTaskId) return;
+      if (!childrenMap.has(child.parentTaskId)) {
+        childrenMap.set(child.parentTaskId, []);
+      }
+      childrenMap.get(child.parentTaskId)!.push(child);
+    });
 
-      return batches.map((batch, index) => {
-        const batchColor = BATCH_COLORS[index % BATCH_COLORS.length];
+    return batches.map((batch, index) => {
+      const batchColor = BATCH_COLORS[index % BATCH_COLORS.length];
 
-        // Get children for this batch from ganttTasks
-        const batchChildren = childrenMap.get(batch.batchId) || [];
-        const children: GanttChartTask[] = batchChildren.map(child => ({
-          id: child.taskId,
-          name: child.name,
-          startDate: new Date(child.startDate),
-          endDate: new Date(child.endDate),
-          progress: child.progress,
-          color: batchColor,
-        }));
+      // Get children for this batch from ganttTasks
+      const batchChildren = childrenMap.get(batch.batchId) || [];
+      const children: GanttChartTask[] = batchChildren.map(child => ({
+        id: child.taskId,
+        name: child.name,
+        startDate: new Date(child.startDate),
+        endDate: new Date(child.endDate),
+        progress: child.progress,
+        color: batchColor,
+      }));
 
-        // Calculate parent dates based on children, or use batch dates as fallback
-        const childrenDates = calculateParentDates(children);
-        const startDate = childrenDates?.startDate || new Date(batch.startDate);
-        const endDate = childrenDates?.endDate || (batch.endDate ? new Date(batch.endDate) : new Date(startDate.getTime() + 90 * 24 * 60 * 60 * 1000));
+      // Calculate parent dates based on children, or use batch dates as fallback
+      const childrenDates = calculateParentDates(children);
+      const startDate = childrenDates?.startDate || new Date(batch.startDate);
+      const endDate = childrenDates?.endDate || (batch.endDate ? new Date(batch.endDate) : new Date(startDate.getTime() + 90 * 24 * 60 * 60 * 1000));
 
-        return {
-          id: batch.batchId,
-          name: batch.name,
-          startDate,
-          endDate,
-          progress: 0,
-          color: batchColor,
-          children,
-        };
-      });
-    };
+      return {
+        id: batch.batchId,
+        name: batch.name,
+        startDate,
+        endDate,
+        progress: 0,
+        color: batchColor,
+        children,
+      };
+    });
+  }, [batches.length, ganttTasks.length, JSON.stringify(batches.map(b => b.batchId)), JSON.stringify(ganttTasks.map(t => t.taskId))]); // Only update when IDs change
 
-    setTasks(buildHierarchy());
-  }, [batches, ganttTasks]); // Rebuild when batches or gantt tasks change
+  // Sync hierarchyTasks to local state
+  useEffect(() => {
+    setTasks(hierarchyTasks);
+  }, [hierarchyTasks]);
 
   // Handle creating a new batch
   const handleCreateBatch = async (data: {

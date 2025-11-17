@@ -72,10 +72,15 @@ export function GanttChart({
     return new Date(now.getFullYear(), now.getMonth(), 1);
   });
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const prevTasksRef = useRef<string>('');
 
-  // Update temporary tasks when props change
+  // Update temporary tasks when props change (only when task IDs actually change)
   useEffect(() => {
-    setTemporaryTasks(tasks);
+    const taskIds = JSON.stringify(tasks.map(t => ({ id: t.id, childCount: t.children?.length || 0 })));
+    if (taskIds !== prevTasksRef.current) {
+      prevTasksRef.current = taskIds;
+      setTemporaryTasks(tasks);
+    }
   }, [tasks]);
 
   // Calculate 3-month date range
