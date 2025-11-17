@@ -12,7 +12,7 @@ import { Batch } from '@/lib/models';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { getSyllabusForLevel } from '@/lib/data/syllabusData';
 import { CEFRLevel } from '@/lib/models/cefr';
-import { useGanttTasks, useCreateGanttTask, useUpdateGanttTask, useDeleteGanttTask } from '@/lib/hooks/useGanttTasks';
+import { useGanttTasks, useCreateGanttTask, useUpdateGanttTask, useDeleteGanttTask, useGanttEditPermission } from '@/lib/hooks/useGanttTasks';
 import { GanttTask } from '@/lib/models/gantt';
 
 // Define color palette for batches
@@ -40,6 +40,9 @@ export default function SchedulePage() {
   const createGanttTaskMutation = useCreateGanttTask();
   const updateGanttTaskMutation = useUpdateGanttTask();
   const deleteGanttTaskMutation = useDeleteGanttTask();
+
+  // Check edit permission
+  const { data: hasEditPermission = false, isLoading: isLoadingPermission } = useGanttEditPermission(currentTeacherId);
 
   // Local state
   const [selectedBatch, setSelectedBatch] = useState<Batch | null>(null);
@@ -185,6 +188,10 @@ export default function SchedulePage() {
 
   // Add curriculum item to the selected batch
   const handleAddTask = () => {
+    if (!hasEditPermission) {
+      toast.error('You do not have permission to edit the schedule');
+      return;
+    }
     if (!selectedBatch) {
       toast.info('Select a batch first to add curriculum items');
       return;
@@ -197,6 +204,10 @@ export default function SchedulePage() {
   // Add subtask (curriculum item) to a batch
   const handleAddSubTask = async (parentTaskId: string) => {
     if (!currentTeacherId) return;
+    if (!hasEditPermission) {
+      toast.error('You do not have permission to edit the schedule');
+      return;
+    }
 
     try {
       const batch = batches.find(b => b.batchId === parentTaskId);
@@ -230,6 +241,11 @@ export default function SchedulePage() {
   };
 
   const handleDeleteTask = async (taskId: string) => {
+    if (!hasEditPermission) {
+      toast.error('You do not have permission to edit the schedule');
+      return;
+    }
+
     // Don't allow deleting batches (parent tasks)
     const isParent = tasks.some(t => t.id === taskId);
     if (isParent) {
@@ -247,6 +263,11 @@ export default function SchedulePage() {
   };
 
   const handleRenameTask = async (taskId: string, newName: string) => {
+    if (!hasEditPermission) {
+      toast.error('You do not have permission to edit the schedule');
+      return;
+    }
+
     // Don't allow renaming batches
     const isParent = tasks.some(t => t.id === taskId);
     if (isParent) {
@@ -280,7 +301,7 @@ export default function SchedulePage() {
   };
 
   // Loading state
-  if (isLoading || isLoadingTasks || !session) {
+  if (isLoading || isLoadingTasks || isLoadingPermission || !session) {
     return <CatLoader message="Loading schedule..." size="lg" fullScreen />;
   }
 
@@ -306,10 +327,10 @@ export default function SchedulePage() {
           title="Schedule"
           tasks={tasks}
           onTaskClick={(task) => console.log('Task clicked:', task)}
-          onAddTask={handleAddTask}
-          onAddSubTask={handleAddSubTask}
-          onDeleteTask={handleDeleteTask}
-          onRenameTask={handleRenameTask}
+          onAddTask={hasEditPermission ? handleAddTask : undefined}
+          onAddSubTask={hasEditPermission ? handleAddSubTask : undefined}
+          onDeleteTask={hasEditPermission ? handleDeleteTask : undefined}
+          onRenameTask={hasEditPermission ? handleRenameTask : undefined}
           curriculumSuggestions={curriculumSuggestions}
           getTaskLevel={getTaskLevel}
           expandedTasks={expandedBatches}

@@ -10,6 +10,7 @@ import {
   updateGanttTask,
   deleteGanttTask,
   updateGanttTaskDates,
+  hasGanttEditPermission,
 } from '../services/ganttService';
 import { GanttTask, GanttTaskCreateInput, GanttTaskUpdateInput } from '../models/gantt';
 
@@ -99,5 +100,16 @@ export function useUpdateGanttTaskDates() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['gantt-tasks'] });
     },
+  });
+}
+
+/**
+ * Check if user has edit permission
+ */
+export function useGanttEditPermission(userId: string | null | undefined) {
+  return useQuery({
+    queryKey: ['gantt-edit-permission', userId],
+    queryFn: () => hasGanttEditPermission(userId!),
+    enabled: !!userId,
   });
 }

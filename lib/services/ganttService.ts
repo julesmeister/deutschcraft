@@ -139,3 +139,48 @@ export async function updateGanttTaskProgress(
 ): Promise<void> {
   await updateGanttTask(taskId, { progress });
 }
+
+/**
+ * Check if user has edit permission for gantt tasks
+ */
+export async function hasGanttEditPermission(userId: string): Promise<boolean> {
+  try {
+    // Check if user is a teacher or has explicit permission
+    const userDoc = await getDoc(doc(db, 'users', userId));
+    if (!userDoc.exists()) return false;
+
+    const userData = userDoc.data();
+    return userData.role === 'TEACHER' || userData.ganttEditPermission === true;
+  } catch (error) {
+    console.error('[ganttService] Error checking edit permission:', error);
+    return false;
+  }
+}
+
+/**
+ * Grant gantt edit permission to a user (teacher only)
+ */
+export async function grantGanttEditPermission(userId: string): Promise<void> {
+  try {
+    await updateDoc(doc(db, 'users', userId), {
+      ganttEditPermission: true,
+    });
+  } catch (error) {
+    console.error('[ganttService] Error granting edit permission:', error);
+    throw error;
+  }
+}
+
+/**
+ * Revoke gantt edit permission from a user
+ */
+export async function revokeGanttEditPermission(userId: string): Promise<void> {
+  try {
+    await updateDoc(doc(db, 'users', userId), {
+      ganttEditPermission: false,
+    });
+  } catch (error) {
+    console.error('[ganttService] Error revoking edit permission:', error);
+    throw error;
+  }
+}

@@ -90,6 +90,7 @@ function DashboardNavbar() {
                   items: [
                     { label: 'Achievements', href: session?.user?.email ? `/dashboard/teacher/students/${encodeURIComponent(session.user.email)}` : '/dashboard/achievements' },
                     { label: 'Syllabus', href: '/dashboard/student/syllabus' },
+                    { label: 'Schedule', href: '/dashboard/schedule' },
                   ],
                 },
                 {
