@@ -12,8 +12,10 @@ import { Batch } from '@/lib/models';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { getSyllabusForLevel } from '@/lib/data/syllabusData';
 import { CEFRLevel } from '@/lib/models/cefr';
-import { useGanttTasks, useCreateGanttTask, useUpdateGanttTask, useDeleteGanttTask, useGanttEditPermission } from '@/lib/hooks/useGanttTasks';
+import { useGanttTasks, useCreateGanttTask, useUpdateGanttTask, useDeleteGanttTask, useGanttEditPermission, useGanttPermissions, useGrantGanttPermission, useRevokeGanttPermission } from '@/lib/hooks/useGanttTasks';
 import { GanttTask } from '@/lib/models/gantt';
+import { GanttPermissionDialog } from '@/components/ui/gantt/GanttPermissionDialog';
+import { useCurrentStudent } from '@/lib/hooks/useUsers';
 
 // Define color palette for batches
 const BATCH_COLORS = [
@@ -44,9 +46,19 @@ export default function SchedulePage() {
   // Check edit permission
   const { data: hasEditPermission = false, isLoading: isLoadingPermission } = useGanttEditPermission(currentTeacherId);
 
+  // Check if current user is teacher
+  const { student: currentUser } = useCurrentStudent(currentTeacherId || null);
+  const isTeacher = currentUser?.role === 'TEACHER';
+
+  // Permission management
+  const { data: activePermissions = [] } = useGanttPermissions();
+  const grantPermissionMutation = useGrantGanttPermission();
+  const revokePermissionMutation = useRevokeGanttPermission();
+
   // Local state
   const [selectedBatch, setSelectedBatch] = useState<Batch | null>(null);
   const [isCreateBatchOpen, setIsCreateBatchOpen] = useState(false);
+  const [isPermissionDialogOpen, setIsPermissionDialogOpen] = useState(false);
   const [tasks, setTasks] = useState<GanttChartTask[]>([]);
   const [expandedBatches, setExpandedBatches] = useState<Set<string>>(new Set());
 
@@ -336,8 +348,25 @@ export default function SchedulePage() {
           getTaskLevel={getTaskLevel}
           expandedTasks={expandedBatches}
           onExpandedChange={setExpandedBatches}
+          onOpenPermissions={isTeacher ? () => setIsPermissionDialogOpen(true) : undefined}
+          showPermissions={isTeacher}
         />
       </div>
+
+      {/* Permission Management Dialog */}
+      <GanttPermissionDialog
+        isOpen={isPermissionDialogOpen}
+        onClose={() => setIsPermissionDialogOpen(false)}
+        onGrantPermission={async (userId, expiresAt) => {
+          await grantPermissionMutation.mutateAsync({ userId, expiresAt });
+          toast.success('Permission granted successfully');
+        }}
+        onRevokePermission={async (userId) => {
+          await revokePermissionMutation.mutateAsync(userId);
+          toast.success('Permission revoked successfully');
+        }}
+        currentPermissions={activePermissions}
+      />
 
       {/* Create Batch Dialog */}
       <BatchForm
