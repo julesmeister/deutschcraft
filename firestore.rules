@@ -278,6 +278,22 @@ service cloud.firestore {
       allow write: if isTeacher();
     }
 
+    // Gantt Tasks (Schedule/Curriculum)
+    match /gantt_tasks/{taskId} {
+      // Teachers can read/write all gantt tasks
+      allow read, write: if isTeacher();
+
+      // Students with permission can read/write (check expiration)
+      allow read, write: if isAuthenticated() &&
+                           exists(/databases/$(database)/documents/users/$(request.auth.token.email)) &&
+                           get(/databases/$(database)/documents/users/$(request.auth.token.email)).data.ganttEditPermission == true &&
+                           (get(/databases/$(database)/documents/users/$(request.auth.token.email)).data.ganttEditExpiresAt == null ||
+                            get(/databases/$(database)/documents/users/$(request.auth.token.email)).data.ganttEditExpiresAt > request.time.toMillis());
+
+      // All authenticated users can read (view-only for students without permission)
+      allow read: if isAuthenticated();
+    }
+
     // ============================================================================
     // ALLOW ALL FOR DEVELOPMENT (Comment out in production)
     // ============================================================================

@@ -33,6 +33,8 @@ export function GanttChart({
   getTaskLevel,
   expandedTasks: controlledExpandedTasks,
   onExpandedChange,
+  onOpenPermissions,
+  showPermissions = false,
   className = '',
 }: GanttChartProps) {
   // State management - use controlled or internal state
@@ -209,6 +211,8 @@ export function GanttChart({
         onPreviousRange={handlePreviousRange}
         onNextRange={handleNextRange}
         onAddTask={onAddTask}
+        onOpenPermissions={onOpenPermissions}
+        showPermissions={showPermissions}
         rangeLabel={formatRangeLabel()}
       />
 

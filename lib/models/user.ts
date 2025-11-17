@@ -66,6 +66,10 @@ export interface User {
   totalStudents?: number; // Computed
   activeBatches?: number; // Computed
 
+  // Permissions (can be granted to students temporarily)
+  ganttEditPermission?: boolean; // Can edit schedule/gantt chart
+  ganttEditExpiresAt?: number | null; // Timestamp when permission expires (null = permanent)
+
   // Common
   createdAt: number;
   updatedAt: number;

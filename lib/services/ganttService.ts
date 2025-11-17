@@ -150,7 +150,20 @@ export async function hasGanttEditPermission(userId: string): Promise<boolean> {
     if (!userDoc.exists()) return false;
 
     const userData = userDoc.data();
-    return userData.role === 'TEACHER' || userData.ganttEditPermission === true;
+
+    // Teachers always have permission
+    if (userData.role === 'TEACHER') return true;
+
+    // Check if permission exists and hasn't expired
+    if (userData.ganttEditPermission === true) {
+      const expiresAt = userData.ganttEditExpiresAt;
+      // If no expiration or hasn't expired yet
+      if (!expiresAt || expiresAt > Date.now()) {
+        return true;
+      }
+    }
+
+    return false;
   } catch (error) {
     console.error('[ganttService] Error checking edit permission:', error);
     return false;
@@ -160,10 +173,11 @@ export async function hasGanttEditPermission(userId: string): Promise<boolean> {
 /**
  * Grant gantt edit permission to a user (teacher only)
  */
-export async function grantGanttEditPermission(userId: string): Promise<void> {
+export async function grantGanttEditPermission(userId: string, expiresAt?: number): Promise<void> {
   try {
     await updateDoc(doc(db, 'users', userId), {
       ganttEditPermission: true,
+      ganttEditExpiresAt: expiresAt || null,
     });
   } catch (error) {
     console.error('[ganttService] Error granting edit permission:', error);
@@ -178,9 +192,31 @@ export async function revokeGanttEditPermission(userId: string): Promise<void> {
   try {
     await updateDoc(doc(db, 'users', userId), {
       ganttEditPermission: false,
+      ganttEditExpiresAt: null,
     });
   } catch (error) {
     console.error('[ganttService] Error revoking edit permission:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get all users with active gantt edit permissions
+ */
+export async function getUsersWithGanttPermission(): Promise<Array<{ userId: string; expiresAt: number }>> {
+  try {
+    const usersRef = collection(db, 'users');
+    const q = query(usersRef, where('ganttEditPermission', '==', true));
+    const snapshot = await getDocs(q);
+
+    return snapshot.docs
+      .map(doc => ({
+        userId: doc.id,
+        expiresAt: doc.data().ganttEditExpiresAt || Infinity,
+      }))
+      .filter(p => p.expiresAt > Date.now()); // Only active permissions
+  } catch (error) {
+    console.error('[ganttService] Error fetching permissions:', error);
     throw error;
   }
 }

@@ -11,6 +11,9 @@ import {
   deleteGanttTask,
   updateGanttTaskDates,
   hasGanttEditPermission,
+  grantGanttEditPermission,
+  revokeGanttEditPermission,
+  getUsersWithGanttPermission,
 } from '../services/ganttService';
 import { GanttTask, GanttTaskCreateInput, GanttTaskUpdateInput } from '../models/gantt';
 
@@ -111,5 +114,46 @@ export function useGanttEditPermission(userId: string | null | undefined) {
     queryKey: ['gantt-edit-permission', userId],
     queryFn: () => hasGanttEditPermission(userId!),
     enabled: !!userId,
+  });
+}
+
+/**
+ * Get all users with active permissions
+ */
+export function useGanttPermissions() {
+  return useQuery({
+    queryKey: ['gantt-permissions'],
+    queryFn: getUsersWithGanttPermission,
+  });
+}
+
+/**
+ * Grant permission to a user
+ */
+export function useGrantGanttPermission() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: ({ userId, expiresAt }: { userId: string; expiresAt?: number }) =>
+      grantGanttEditPermission(userId, expiresAt),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['gantt-permissions'] });
+      queryClient.invalidateQueries({ queryKey: ['gantt-edit-permission'] });
+    },
+  });
+}
+
+/**
+ * Revoke permission from a user
+ */
+export function useRevokeGanttPermission() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (userId: string) => revokeGanttEditPermission(userId),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['gantt-permissions'] });
+      queryClient.invalidateQueries({ queryKey: ['gantt-edit-permission'] });
+    },
   });
 }
