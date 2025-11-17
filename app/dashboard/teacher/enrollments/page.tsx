@@ -1,43 +1,38 @@
 'use client';
 
-import { useEffect, useState, useDeferredValue } from 'react';
+import { useMemo, useDeferredValue, useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { User, getUserFullName } from '@/lib/models/user';
-import { getUsers, updateUser } from '@/lib/services/userService';
-import { SlimTable, SlimTableRenderers } from '@/components/ui/SlimTable';
+import { CEFRLevel } from '@/lib/models/cefr';
+import { updateUser } from '@/lib/services/userService';
+import { usePendingEnrollmentsPaginated } from '@/lib/hooks/useUsers';
+import { SlimTable } from '@/components/ui/SlimTable';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { StatsCard } from '@/components/dashboard/StatsCard';
+import { getEnrollmentColumns } from './columns';
 import Link from 'next/link';
+import { useQueryClient } from '@tanstack/react-query';
 
 export default function EnrollmentApprovalsPage() {
   const { data: session } = useSession();
-  const [pendingEnrollments, setPendingEnrollments] = useState<User[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const queryClient = useQueryClient();
   const [processingId, setProcessingId] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const deferredQuery = useDeferredValue(searchQuery);
-  const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 10;
 
-  useEffect(() => {
-    loadPendingEnrollments();
-  }, []);
-
-  const loadPendingEnrollments = async () => {
-    setIsLoading(true);
-    try {
-      const allUsers = await getUsers();
-      // Get users who are pending approval OR who don't have a role yet (new users)
-      const pending = allUsers.filter(
-        (user) => user.role === 'PENDING_APPROVAL' || !user.role
-      );
-      setPendingEnrollments(pending);
-    } catch (error) {
-      console.error('Error loading enrollments:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  // Use optimized pagination hook
+  const {
+    users: pendingEnrollments,
+    isLoading,
+    page: currentPage,
+    totalPages,
+    pageSize,
+    totalCount,
+    goToPage,
+    refetch,
+  } = usePendingEnrollmentsPaginated({
+    pageSize: 10,
+  });
 
   const handleApprove = async (user: User) => {
     if (!session?.user?.email || !user.desiredCefrLevel) {
@@ -56,8 +51,10 @@ export default function EnrollmentApprovalsPage() {
         teacherId: session.user.email,
       });
 
-      // Remove from list
-      setPendingEnrollments((prev) => prev.filter((u) => u.userId !== user.userId));
+      // Invalidate queries to refresh data
+      queryClient.invalidateQueries({ queryKey: ['pending-enrollments-paginated'] });
+      queryClient.invalidateQueries({ queryKey: ['pending-enrollments-count'] });
+      queryClient.invalidateQueries({ queryKey: ['teacher-students'] });
     } catch (error) {
       alert('Failed to approve enrollment. Please try again.');
     } finally {
@@ -78,8 +75,9 @@ export default function EnrollmentApprovalsPage() {
         enrollmentReviewedBy: session.user.email,
       });
 
-      // Remove from list
-      setPendingEnrollments((prev) => prev.filter((u) => u.userId !== user.userId));
+      // Invalidate queries to refresh data
+      queryClient.invalidateQueries({ queryKey: ['pending-enrollments-paginated'] });
+      queryClient.invalidateQueries({ queryKey: ['pending-enrollments-count'] });
     } catch (error) {
       alert('Failed to reject enrollment. Please try again.');
     } finally {
@@ -87,19 +85,37 @@ export default function EnrollmentApprovalsPage() {
     }
   };
 
-  // Filter enrollments with deferred query
-  const filteredEnrollments = pendingEnrollments.filter((enrollment) =>
-    getUserFullName(enrollment).toLowerCase().includes(deferredQuery.toLowerCase()) ||
-    enrollment.email.toLowerCase().includes(deferredQuery.toLowerCase())
-  );
+  const handleUpdateLevel = async (user: User, level: CEFRLevel) => {
+    try {
+      await updateUser(user.email, {
+        desiredCefrLevel: level,
+        updatedAt: Date.now(),
+      });
 
-  const totalPages = Math.ceil(filteredEnrollments.length / pageSize);
-  const startIndex = (currentPage - 1) * pageSize;
-  const paginatedEnrollments = filteredEnrollments.slice(startIndex, startIndex + pageSize);
+      // Invalidate queries to refresh data
+      queryClient.invalidateQueries({ queryKey: ['pending-enrollments-paginated'] });
+    } catch (error) {
+      alert('Failed to update CEFR level. Please try again.');
+    }
+  };
+
+  // Filter enrollments with deferred query
+  const filteredEnrollments = useMemo(() => {
+    if (!deferredQuery.trim()) {
+      return pendingEnrollments;
+    }
+
+    const query = deferredQuery.toLowerCase();
+    return pendingEnrollments.filter((enrollment) =>
+      getUserFullName(enrollment).toLowerCase().includes(query) ||
+      enrollment.email.toLowerCase().includes(query)
+    );
+  }, [pendingEnrollments, deferredQuery]);
+
   const isStale = searchQuery !== deferredQuery;
 
   // Convert enrollments to table format
-  const tableData = paginatedEnrollments.map((enrollment) => {
+  const tableData = filteredEnrollments.map((enrollment) => {
     const hasSubmitted = enrollment.enrollmentStatus === 'pending';
     const submittedDate = enrollment.enrollmentSubmittedAt
       ? new Date(enrollment.enrollmentSubmittedAt).toLocaleDateString('en-US', {
@@ -110,15 +126,39 @@ export default function EnrollmentApprovalsPage() {
         })
       : 'Not submitted';
 
+    // Extract signup date
+    const signupDate = enrollment.createdAt
+      ? new Date(enrollment.createdAt).toLocaleDateString('en-US', {
+          month: 'short',
+          day: 'numeric',
+          year: 'numeric',
+        })
+      : 'Unknown';
+
+    // Extract image properly - debug logging
+    const userName = getUserFullName(enrollment);
+    console.log('[EnrollmentsPage] User:', enrollment.email, {
+      photoURL: enrollment.photoURL,
+      firstName: enrollment.firstName,
+      lastName: enrollment.lastName,
+      name: userName,
+    });
+
+    // Generate fallback avatar if no photoURL
+    const userImage = enrollment.photoURL
+      ? enrollment.photoURL
+      : `https://ui-avatars.com/api/?name=${encodeURIComponent(userName)}&background=random`;
+
     return {
       id: enrollment.userId,
-      image: enrollment.photoURL || '',
-      name: getUserFullName(enrollment),
+      image: userImage,
+      name: userName,
       email: enrollment.email,
       level: enrollment.desiredCefrLevel || 'N/A',
       payment: enrollment.gcashAmount || 0,
       reference: enrollment.gcashReferenceNumber || 'N/A',
       submitted: submittedDate,
+      signedUp: signupDate,
       status: hasSubmitted ? 'submitted' : 'new',
       statusText: hasSubmitted ? 'Form Submitted' : 'Just Signed Up',
       user: enrollment,
@@ -152,7 +192,7 @@ export default function EnrollmentApprovalsPage() {
             icon="📋"
             iconBgColor="bg-piku-purple-light"
             label="Total Pending"
-            value={pendingEnrollments.length}
+            value={totalCount}
           />
           <StatsCard
             icon="✅"
@@ -170,7 +210,7 @@ export default function EnrollmentApprovalsPage() {
             icon="⏱️"
             iconBgColor="bg-piku-cyan"
             label="Awaiting Review"
-            value={pendingEnrollments.length}
+            value={totalCount}
           />
         </div>
 
@@ -188,7 +228,7 @@ export default function EnrollmentApprovalsPage() {
         )}
 
         {/* Empty State */}
-        {!isLoading && pendingEnrollments.length === 0 && (
+        {!isLoading && totalCount === 0 && (
           <div className="bg-white border border-gray-200 rounded-2xl p-12 text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gray-100 rounded-full mb-4">
               <span className="text-4xl">✓</span>
@@ -199,7 +239,7 @@ export default function EnrollmentApprovalsPage() {
         )}
 
         {/* Enrollments Table */}
-        {!isLoading && pendingEnrollments.length > 0 && (
+        {!isLoading && totalCount > 0 && (
           <div className="bg-white border border-gray-200">
             {/* Title and Search */}
             <div className="m-3 sm:m-4 space-y-3">
@@ -208,7 +248,7 @@ export default function EnrollmentApprovalsPage() {
                   Pending Enrollments
                 </h5>
                 <button
-                  onClick={loadPendingEnrollments}
+                  onClick={() => refetch()}
                   className="group inline-flex items-center font-black text-[13px] sm:text-[14px] py-1.5 pl-4 sm:pl-5 pr-1.5 rounded-full bg-gray-900 text-white hover:bg-gray-800 active:bg-gray-700 transition-colors"
                 >
                   <span className="relative z-10 transition-colors duration-300">
@@ -244,93 +284,19 @@ export default function EnrollmentApprovalsPage() {
 
             <SlimTable
               title=""
-              columns={[
-                {
-                  key: 'image',
-                  label: ' ',
-                  width: '60px',
-                  render: (value, row) => SlimTableRenderers.Avatar(value, row.name),
-                },
-                {
-                  key: 'name',
-                  label: 'Student',
-                  render: (value, row) => (
-                    <div>
-                      <p className="font-bold text-gray-900">{value}</p>
-                      <p className="text-xs text-gray-500">{row.email}</p>
-                      {SlimTableRenderers.Status(
-                        row.status === 'submitted' ? 'bg-yellow-500' : 'bg-blue-500',
-                        row.statusText
-                      )}
-                    </div>
-                  ),
-                },
-                {
-                  key: 'level',
-                  label: 'Desired Level',
-                  align: 'center',
-                  render: (value) => (
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-piku-purple/10 text-piku-purple">
-                      {value}
-                    </span>
-                  ),
-                },
-                {
-                  key: 'payment',
-                  label: 'Payment',
-                  align: 'center',
-                  render: (value, row) => (
-                    <div className="text-center">
-                      <p className="font-bold text-gray-900">₱{value.toFixed(2)}</p>
-                      <p className="text-xs text-gray-500 font-mono">{row.reference}</p>
-                    </div>
-                  ),
-                },
-                {
-                  key: 'submitted',
-                  label: 'Submitted',
-                  align: 'center',
-                  render: (value) => <p className="text-xs text-gray-500">{value}</p>,
-                },
-                {
-                  key: 'actions',
-                  label: 'Actions',
-                  align: 'center',
-                  width: '180px',
-                  render: (_, row) => (
-                    <div className="flex gap-2 justify-center">
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleApprove(row.user);
-                        }}
-                        disabled={processingId === row.id || !row.user.desiredCefrLevel}
-                        className="px-3 py-1.5 bg-green-500 text-white text-xs font-bold rounded-lg hover:bg-green-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                        title={!row.user.desiredCefrLevel ? 'User must select CEFR level first' : 'Approve enrollment'}
-                      >
-                        {processingId === row.id ? '...' : '✓ Approve'}
-                      </button>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleReject(row.user);
-                        }}
-                        disabled={processingId === row.id}
-                        className="px-3 py-1.5 bg-red-500 text-white text-xs font-bold rounded-lg hover:bg-red-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                      >
-                        {processingId === row.id ? '...' : '✕ Reject'}
-                      </button>
-                    </div>
-                  ),
-                },
-              ]}
+              columns={getEnrollmentColumns({
+                processingId,
+                onUpdateLevel: handleUpdateLevel,
+                onApprove: handleApprove,
+                onReject: handleReject,
+              })}
               data={tableData}
               pagination={{
                 currentPage,
                 totalPages,
                 pageSize,
                 totalItems: filteredEnrollments.length,
-                onPageChange: setCurrentPage,
+                onPageChange: goToPage,
               }}
               showViewAll={false}
             />

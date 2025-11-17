@@ -24,6 +24,14 @@ import {
 } from 'firebase/firestore';
 import { User } from '../models';
 
+// Re-export pagination operations
+export {
+  getUsersPaginated,
+  getUserCount,
+  getPendingEnrollmentsPaginated,
+  getPendingEnrollmentsCount,
+} from './userPagination';
+
 // ============================================================================
 // READ OPERATIONS
 // ============================================================================
@@ -199,10 +207,11 @@ export async function getUsers(): Promise<User[]> {
       ...doc.data(),
     })) as User[];
   } catch (error) {
-    
+
     throw error;
   }
 }
+
 
 // ============================================================================
 // WRITE OPERATIONS

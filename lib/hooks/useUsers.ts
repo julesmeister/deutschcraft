@@ -18,6 +18,8 @@ export {
   useAllStudents,
   useAllStudentsNested,
   useStudentsWithoutTeacher,
+  useUsersPaginated,
+  usePendingEnrollmentsPaginated,
 } from './useUserQueries';
 
 // Re-export all mutation hooks
