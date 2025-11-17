@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo } from 'react';
+import { useRouter } from 'next/navigation';
 import { GanttChart, GanttChartTask } from '@/components/ui/GanttChart';
 import { BatchSelector } from '@/components/ui/BatchSelector';
 import { BatchForm } from '@/components/ui/BatchForm';
@@ -29,6 +30,7 @@ const BATCH_COLORS = [
 
 export default function SchedulePage() {
   // Auth and hooks
+  const router = useRouter();
   const { session } = useFirebaseAuth();
   const toast = useToast();
   const currentTeacherId = session?.user?.email;
@@ -330,6 +332,7 @@ export default function SchedulePage() {
             selectedBatch={selectedBatch}
             onSelectBatch={setSelectedBatch}
             onCreateBatch={() => setIsCreateBatchOpen(true)}
+            onManageBatches={() => router.push('/dashboard/batches')}
           />
         }
       />

@@ -34,6 +34,7 @@ export interface GanttChartProps {
 export interface FlatTask extends GanttChartTask {
   level: number;
   parentId?: string;
+  hasChildren?: boolean;
 }
 
 export interface DragState {

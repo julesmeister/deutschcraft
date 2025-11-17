@@ -50,7 +50,8 @@
       "Bash(/tmp/Navbar_old.tsx)",
       "Bash(Select-String -Pattern \"(error|Error|ERROR|warning|Warning|compiled|Compiled)\")",
       "Bash(firebase deploy:*)",
-      "Bash(timeout 5 npm run dev:*)"
+      "Bash(timeout 5 npm run dev:*)",
+      "Bash(\"C:\\Users\\User\\Documents\\testmanship-web-v2\\lib\\models\\task.ts\")"
     ],
     "deny": [],
     "ask": []

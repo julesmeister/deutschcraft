@@ -36,12 +36,14 @@ export const flattenTasks = (
 ): FlatTask[] => {
   const result: FlatTask[] = [];
   taskList.forEach((task, index) => {
+    const hasChildren = Boolean(task.children && task.children.length > 0);
     result.push({
       ...task,
       level,
-      color: task.color || defaultColors[index % defaultColors.length]
+      color: task.color || defaultColors[index % defaultColors.length],
+      hasChildren
     });
-    if (task.children && task.children.length > 0 && expandedTasks.has(task.id)) {
+    if (hasChildren && expandedTasks.has(task.id)) {
       result.push(...flattenTasks(task.children, expandedTasks, level + 1));
     }
   });

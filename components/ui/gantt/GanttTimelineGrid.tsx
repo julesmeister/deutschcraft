@@ -72,10 +72,49 @@ export function GanttTimelineGrid({
       {/* Task bars */}
       <g>
         {tasks.map((task, index) => {
-          const x = dateToX(task.startDate, days, dayWidth);
-          const width = getTaskWidth(task, days, dayWidth);
           const y = index * rowHeight + 10;
           const barHeight = 30;
+
+          // For parent tasks without children, show "Add children" indication
+          if (task.level === 0 && !task.hasChildren) {
+            return (
+              <g key={task.id}>
+                <rect
+                  x={20}
+                  y={y}
+                  width={200}
+                  height={barHeight}
+                  rx="6"
+                  ry="6"
+                  fill="transparent"
+                  stroke="#D1D5DB"
+                  strokeWidth="2"
+                  strokeDasharray="8,4"
+                  opacity="0.5"
+                />
+                <text
+                  x={120}
+                  y={y + barHeight / 2}
+                  fill="#9CA3AF"
+                  className="text-xs font-medium"
+                  textAnchor="middle"
+                  dominantBaseline="central"
+                  style={{ pointerEvents: 'none' }}
+                >
+                  + Add curriculum items
+                </text>
+              </g>
+            );
+          }
+
+          // Don't render bars for parent tasks with children
+          if (task.level === 0) {
+            return null;
+          }
+
+          // Render bars for child tasks (curriculum items)
+          const x = dateToX(task.startDate, days, dayWidth);
+          const width = getTaskWidth(task, days, dayWidth);
           const progressWidth = (width * task.progress) / 100;
 
           const textColor = getDarkerColor(task.color);

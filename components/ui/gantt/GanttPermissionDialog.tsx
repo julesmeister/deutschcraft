@@ -1,7 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { useSimpleUsers } from '@/lib/hooks/useSimpleUsers';
+import { useAllStudents } from '@/lib/hooks/useSimpleUsers';
+import { Select, SelectOption } from '@/components/ui/Select';
+import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 
 interface GanttPermissionDialogProps {
   isOpen: boolean;
@@ -11,11 +13,11 @@ interface GanttPermissionDialogProps {
   currentPermissions: Array<{ userId: string; expiresAt: number }>;
 }
 
-const DURATION_OPTIONS = [
-  { label: '12 hours', hours: 12 },
-  { label: '24 hours', hours: 24 },
-  { label: '72 hours', hours: 72 },
-  { label: '1 week', hours: 168 },
+const DURATION_OPTIONS: SelectOption[] = [
+  { value: '12', label: '12 hours' },
+  { value: '24', label: '24 hours' },
+  { value: '72', label: '72 hours' },
+  { value: '168', label: '1 week' },
 ];
 
 export function GanttPermissionDialog({
@@ -26,22 +28,27 @@ export function GanttPermissionDialog({
   currentPermissions,
 }: GanttPermissionDialogProps) {
   const [selectedUser, setSelectedUser] = useState<string>('');
-  const [selectedDuration, setSelectedDuration] = useState<number>(24);
+  const [selectedDuration, setSelectedDuration] = useState<string>('24');
   const [isLoading, setIsLoading] = useState(false);
 
   // Fetch all students
-  const { data: users = [] } = useSimpleUsers();
-  const students = users.filter(u => u.role === 'STUDENT');
+  const { students } = useAllStudents();
+
+  // Convert students to select options
+  const studentOptions: SelectOption[] = students.map((student) => ({
+    value: student.id,
+    label: `${student.firstName} ${student.lastName}`,
+  }));
 
   const handleGrant = async () => {
     if (!selectedUser) return;
 
     setIsLoading(true);
     try {
-      const expiresAt = Date.now() + selectedDuration * 60 * 60 * 1000;
+      const expiresAt = Date.now() + Number(selectedDuration) * 60 * 60 * 1000;
       await onGrantPermission(selectedUser, expiresAt);
       setSelectedUser('');
-      setSelectedDuration(24);
+      setSelectedDuration('24');
     } finally {
       setIsLoading(false);
     }
@@ -89,47 +96,39 @@ export function GanttPermissionDialog({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {/* Student Selector */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Student</label>
-                <select
+                <label className="block text-xs font-semibold text-gray-700 mb-1">Student</label>
+                <Select
                   value={selectedUser}
-                  onChange={(e) => setSelectedUser(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-piku-purple focus:border-transparent"
+                  onChange={setSelectedUser}
+                  options={studentOptions}
+                  placeholder="Select a student..."
                   disabled={isLoading}
-                >
-                  <option value="">Select a student...</option>
-                  {students.map((student) => (
-                    <option key={student.userId} value={student.userId}>
-                      {student.name || student.email}
-                    </option>
-                  ))}
-                </select>
+                />
               </div>
 
               {/* Duration Selector */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Duration</label>
-                <select
+                <label className="block text-xs font-semibold text-gray-700 mb-1">Duration</label>
+                <Select
                   value={selectedDuration}
-                  onChange={(e) => setSelectedDuration(Number(e.target.value))}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-piku-purple focus:border-transparent"
+                  onChange={setSelectedDuration}
+                  options={DURATION_OPTIONS}
+                  placeholder="Select duration..."
                   disabled={isLoading}
-                >
-                  {DURATION_OPTIONS.map((option) => (
-                    <option key={option.hours} value={option.hours}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
+                />
               </div>
             </div>
 
-            <button
-              onClick={handleGrant}
-              disabled={!selectedUser || isLoading}
-              className="mt-3 px-4 py-2 bg-piku-purple text-white font-bold rounded-lg hover:bg-opacity-90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isLoading ? 'Granting...' : 'Grant Permission'}
-            </button>
+            <div className="mt-4 max-w-xs">
+              <ActionButton
+                onClick={handleGrant}
+                disabled={!selectedUser || isLoading}
+                variant="purple"
+                icon={<ActionButtonIcons.Plus />}
+              >
+                {isLoading ? 'Granting...' : 'Grant Permission'}
+              </ActionButton>
+            </div>
           </div>
 
           {/* Active Permissions Section */}
@@ -142,7 +141,7 @@ export function GanttPermissionDialog({
             ) : (
               <div className="space-y-2">
                 {activePermissions.map((permission) => {
-                  const user = students.find(s => s.userId === permission.userId);
+                  const user = students.find(s => s.id === permission.userId);
                   const expiresIn = Math.max(0, permission.expiresAt - Date.now());
                   const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
                   const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
@@ -150,23 +149,26 @@ export function GanttPermissionDialog({
                   return (
                     <div
                       key={permission.userId}
-                      className="flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-200"
+                      className="flex items-center justify-between gap-3 p-3 bg-gray-50 rounded-lg border border-gray-200"
                     >
-                      <div>
+                      <div className="flex-1">
                         <div className="font-medium text-gray-900">
-                          {user?.name || user?.email || permission.userId}
+                          {user ? `${user.firstName} ${user.lastName}` : permission.userId}
                         </div>
                         <div className="text-sm text-gray-600">
                           Expires in: {hoursLeft}h {minutesLeft}m
                         </div>
                       </div>
-                      <button
-                        onClick={() => handleRevoke(permission.userId)}
-                        disabled={isLoading}
-                        className="px-3 py-1.5 text-sm text-red-600 hover:bg-red-50 rounded-lg transition-colors disabled:opacity-50"
-                      >
-                        Revoke
-                      </button>
+                      <div className="w-32">
+                        <ActionButton
+                          onClick={() => handleRevoke(permission.userId)}
+                          disabled={isLoading}
+                          variant="red"
+                          icon={<ActionButtonIcons.X />}
+                        >
+                          Revoke
+                        </ActionButton>
+                      </div>
                     </div>
                   );
                 })}
@@ -177,12 +179,15 @@ export function GanttPermissionDialog({
 
         {/* Footer */}
         <div className="px-6 py-4 border-t border-gray-200 flex justify-end">
-          <button
-            onClick={onClose}
-            className="px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-          >
-            Close
-          </button>
+          <div className="w-40">
+            <ActionButton
+              onClick={onClose}
+              variant="gray"
+              icon={<ActionButtonIcons.Close />}
+            >
+              Close
+            </ActionButton>
+          </div>
         </div>
       </div>
     </div>
