@@ -76,27 +76,62 @@ export interface Flashcard {
 }
 
 /**
- * Flashcard Progress Model
- * Path: flashcard-progress/{progressId}
- * Student's spaced repetition data
+ * Card State Types for SRS
+ */
+export type CardState = 'new' | 'learning' | 'review' | 'relearning' | 'lapsed';
+
+/**
+ * Flashcard Progress Model (Enhanced)
+ * Path: flashcard-reviews/{userId}_{wordId}
+ * Student's spaced repetition data with advanced tracking
  */
 export interface FlashcardProgress {
+  // Identity
   flashcardId: string;
   userId: string; // Student's email
   wordId: string; // Reference to vocabulary word
+  level?: string; // CEFR level (A1, A2, etc.)
+
+  // Card State (NEW!)
+  state: CardState;
 
   // SRS (Spaced Repetition System) data
   repetitions: number;
   easeFactor: number;
   interval: number; // days until next review
-  nextReviewDate: number;
+  nextReviewDate: number; // INDEXED for efficient queries
 
   // Performance
   correctCount: number;
   incorrectCount: number;
-  lastReviewDate?: number | null;
-  masteryLevel: number; // 0-100
+  consecutiveCorrect: number; // NEW! Track current streak
+  consecutiveIncorrect: number; // NEW! Detect struggling cards
+  lastReviewDate?: number | null; // INDEXED for decay calculations
+  masteryLevel: number; // 0-100 (with decay)
 
+  // Lapse Detection (NEW!)
+  lapseCount: number; // How many times card was forgotten
+  lastLapseDate?: number | null;
+
+  // Timestamps
+  firstSeenAt?: number; // When card was first encountered (NEW!)
   createdAt: number;
   updatedAt: number;
+}
+
+/**
+ * Review History Entry (Optional - for detailed analytics)
+ * Path: flashcard-review-history/{userId}_{wordId}_{timestamp}
+ */
+export interface FlashcardReviewHistory {
+  userId: string;
+  wordId: string;
+  flashcardId: string;
+  difficulty: 'again' | 'hard' | 'good' | 'easy';
+  responseTime?: number; // milliseconds (optional)
+  masteryBefore: number;
+  masteryAfter: number;
+  stateBefore: CardState;
+  stateAfter: CardState;
+  timestamp: number;
 }

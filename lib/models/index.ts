@@ -41,10 +41,12 @@ export type {
 
 // Progress Models
 export type {
+  CardState,
   StudyProgress,
   VocabularyWord,
   Flashcard,
   FlashcardProgress,
+  FlashcardReviewHistory,
 } from './progress';
 
 // Extended Types

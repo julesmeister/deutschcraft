@@ -1,18 +1,16 @@
 /**
- * Flashcards Service Module - Main Entry Point
+ * Turso Flashcards Service Module - Main Entry Point
  *
  * This file re-exports all flashcard-related services from their respective modules.
  * The service has been split into smaller files to maintain the 300-line guideline:
  *
- * - vocabulary.ts (95 lines) - Flashcard and vocabulary word operations
- * - progress.ts (203 lines) - Progress tracking and daily progress
- * - stats.ts (134 lines) - Practice and study statistics
+ * - vocabulary.ts (~110 lines) - Flashcard and vocabulary word operations
+ * - progress.ts (~320 lines) - Progress tracking and daily progress
  *
- * Total: 432 lines split into 3 focused modules (each under 300 lines)
+ * Total: ~430 lines split into 2 focused modules (each under or near 300 lines)
  *
  * This index maintains backward compatibility - all imports continue to work:
- * import { getFlashcardsByLevel, saveFlashcardProgress } from '@/lib/services/flashcardService';
- * import { getFlashcardsByLevel, saveFlashcardProgress } from '@/lib/services';
+ * import { getFlashcardsByLevel, saveFlashcardProgress } from '@/lib/services/turso/flashcardService';
  */
 
 // ============================================================================
@@ -39,12 +37,3 @@ export {
   saveFlashcardProgress,
   saveDailyProgress,
 } from './progress';
-
-// ============================================================================
-// RE-EXPORTS - Statistics Operations
-// ============================================================================
-
-export {
-  getPracticeStats,
-  getStudyStats,
-} from './stats';

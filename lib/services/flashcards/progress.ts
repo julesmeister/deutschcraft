@@ -24,6 +24,7 @@ import {
 import {
   FlashcardProgress,
   StudyProgress,
+  CardState,
 } from '../../models';
 
 // ============================================================================
@@ -97,6 +98,99 @@ export async function getStudyProgress(userId: string): Promise<StudyProgress[]>
     return snapshot.docs.map(doc => doc.data()) as StudyProgress[];
   } catch (error) {
     console.error('[flashcardService] Error fetching study progress:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get flashcard progress by card state
+ * @param userId - User's email
+ * @param state - Card state to filter by
+ * @param limit - Maximum number of cards to return
+ * @returns Array of flashcard progress objects
+ */
+export async function getFlashcardProgressByState(
+  userId: string,
+  state: CardState,
+  limit = 100
+): Promise<FlashcardProgress[]> {
+  try {
+    const progressRef = collection(db, 'flashcard-progress');
+    const q = query(
+      progressRef,
+      where('userId', '==', userId),
+      where('state', '==', state),
+      orderBy('nextReviewDate', 'asc'),
+      firestoreLimit(limit)
+    );
+
+    const snapshot = await getDocs(q);
+    return snapshot.docs.map(doc => doc.data()) as FlashcardProgress[];
+  } catch (error) {
+    console.error('[flashcardService] Error fetching flashcard progress by state:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get due flashcards for review
+ * @param userId - User's email
+ * @param limit - Maximum number of cards to return
+ * @returns Array of flashcard progress objects that are due for review
+ */
+export async function getDueFlashcards(
+  userId: string,
+  limit = 100
+): Promise<FlashcardProgress[]> {
+  try {
+    const now = Date.now();
+    const progressRef = collection(db, 'flashcard-progress');
+    const q = query(
+      progressRef,
+      where('userId', '==', userId),
+      where('nextReviewDate', '<=', now),
+      orderBy('nextReviewDate', 'asc'),
+      firestoreLimit(limit)
+    );
+
+    const snapshot = await getDocs(q);
+    return snapshot.docs.map(doc => doc.data()) as FlashcardProgress[];
+  } catch (error) {
+    console.error('[flashcardService] Error fetching due flashcards:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get struggling flashcards
+ * Uses multiple criteria to identify struggling cards
+ * @param userId - User's email
+ * @param limit - Maximum number of cards to return
+ * @returns Array of flashcard progress objects for struggling cards
+ */
+export async function getStrugglingFlashcards(
+  userId: string,
+  limit = 100
+): Promise<FlashcardProgress[]> {
+  try {
+    // Get all user progress and filter in-memory (since we need OR logic)
+    const allProgress = await getFlashcardProgress(userId);
+
+    // Filter for struggling cards
+    const struggling = allProgress.filter(progress =>
+      progress.masteryLevel < 40 ||
+      progress.consecutiveIncorrect >= 2 ||
+      progress.lapseCount >= 3 ||
+      progress.state === 'lapsed' ||
+      progress.state === 'relearning'
+    );
+
+    // Sort by mastery level (lowest first) and limit
+    return struggling
+      .sort((a, b) => a.masteryLevel - b.masteryLevel)
+      .slice(0, limit);
+  } catch (error) {
+    console.error('[flashcardService] Error fetching struggling flashcards:', error);
     throw error;
   }
 }

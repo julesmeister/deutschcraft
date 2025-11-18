@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CatLoader } from '@/components/ui/CatLoader';
-import { StatCardSimple } from '@/components/ui/StatCardSimple';
+import { TabBar, type TabItem } from '@/components/ui/TabBar';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { DataCard, DataCardGrid } from '@/components/ui/DataCard';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
@@ -30,7 +30,15 @@ const levelData: Record<CEFRLevel, any> = {
   [CEFRLevel.C2]: c2Data,
 };
 
-type FilterType = 'due-today' | 'struggling' | 'all-reviewed';
+type FilterType = 'due-today' | 'struggling' | 'new' | 'learning' | 'review' | 'lapsed' | 'all-reviewed';
+
+interface FlashcardData {
+  id?: string;
+  german: string;
+  english: string;
+  category: string;
+  examples?: string[];
+}
 
 export default function FlashcardReviewPage() {
   const router = useRouter();
@@ -45,7 +53,7 @@ export default function FlashcardReviewPage() {
   // Get all flashcards from the selected level
   const allFlashcards = useMemo(() => {
     const data = levelData[selectedLevel];
-    return (data.flashcards || []).map((card: any) => ({
+    return (data.flashcards || []).map((card: FlashcardData) => ({
       id: card.id || card.german,
       german: card.german,
       english: card.english,
@@ -59,7 +67,6 @@ export default function FlashcardReviewPage() {
   // Filter flashcards based on review data
   const filteredFlashcards = useMemo(() => {
     const now = Date.now();
-    const oneDayAgo = now - 24 * 60 * 60 * 1000;
 
     return allFlashcards.filter(card => {
       const review = reviews.find(r => r.flashcardId === card.id || r.wordId === card.wordId);
@@ -72,9 +79,26 @@ export default function FlashcardReviewPage() {
           return review.nextReviewDate <= now;
 
         case 'struggling':
-          // Cards with low mastery or marked as "again" recently
-          return review.masteryLevel < 50 ||
-                 (review.lastReviewDate > oneDayAgo && review.incorrectCount > review.correctCount);
+          // Enhanced struggling detection
+          return (
+            review.masteryLevel < 40 ||
+            review.consecutiveIncorrect >= 2 ||
+            review.lapseCount >= 3 ||
+            review.state === 'lapsed' ||
+            review.state === 'relearning'
+          );
+
+        case 'new':
+          return review.state === 'new';
+
+        case 'learning':
+          return review.state === 'learning';
+
+        case 'review':
+          return review.state === 'review';
+
+        case 'lapsed':
+          return review.state === 'lapsed' || review.state === 'relearning';
 
         case 'all-reviewed':
           // All cards that have been reviewed at least once
@@ -94,10 +118,20 @@ export default function FlashcardReviewPage() {
     });
 
     const dueToday = reviewedCards.filter(r => r.nextReviewDate <= now).length;
-    const struggling = reviewedCards.filter(r => r.masteryLevel < 50).length;
+    const struggling = reviewedCards.filter(r =>
+      r.masteryLevel < 40 ||
+      r.consecutiveIncorrect >= 2 ||
+      r.lapseCount >= 3 ||
+      r.state === 'lapsed' ||
+      r.state === 'relearning'
+    ).length;
+    const newCards = reviewedCards.filter(r => r.state === 'new').length;
+    const learning = reviewedCards.filter(r => r.state === 'learning').length;
+    const review = reviewedCards.filter(r => r.state === 'review').length;
+    const lapsed = reviewedCards.filter(r => r.state === 'lapsed' || r.state === 'relearning').length;
     const total = reviewedCards.length;
 
-    return { dueToday, struggling, total };
+    return { dueToday, struggling, newCards, learning, review, lapsed, total };
   }, [reviews, allFlashcards]);
 
   if (!session) {
@@ -114,7 +148,15 @@ export default function FlashcardReviewPage() {
       <div className="min-h-screen bg-gray-50">
         <DashboardHeader
           title="Flashcard Review"
-          subtitle={`${CEFRLevelInfo[selectedLevel].displayName} • ${filterType === 'due-today' ? 'Due Today' : filterType === 'struggling' ? 'Struggling Cards' : 'All Reviewed'}`}
+          subtitle={`${CEFRLevelInfo[selectedLevel].displayName} • ${
+            filterType === 'due-today' ? 'Due Today' :
+            filterType === 'struggling' ? 'Struggling Cards' :
+            filterType === 'new' ? 'New Cards' :
+            filterType === 'learning' ? 'Learning' :
+            filterType === 'review' ? 'Review' :
+            filterType === 'lapsed' ? 'Lapsed Cards' :
+            'All Reviewed'
+          }`}
           backButton={{
             label: 'Back to Review Dashboard',
             onClick: () => setIsPracticing(false)
@@ -123,7 +165,15 @@ export default function FlashcardReviewPage() {
         <div className="container mx-auto px-6 py-8">
           <FlashcardPractice
             flashcards={filteredFlashcards}
-            categoryName={filterType === 'due-today' ? 'Due Today' : filterType === 'struggling' ? 'Struggling Cards' : 'All Reviewed Cards'}
+            categoryName={
+              filterType === 'due-today' ? 'Due Today' :
+              filterType === 'struggling' ? 'Struggling Cards' :
+              filterType === 'new' ? 'New Cards' :
+              filterType === 'learning' ? 'Learning' :
+              filterType === 'review' ? 'Review' :
+              filterType === 'lapsed' ? 'Lapsed Cards' :
+              'All Reviewed Cards'
+            }
             level={selectedLevel}
             onBack={() => setIsPracticing(false)}
             showExamples={true}
@@ -156,34 +206,22 @@ export default function FlashcardReviewPage() {
           />
         </div>
 
-        {/* Stats Cards - Clickable Filters */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          <StatCardSimple
-            label="Due Today"
-            value={stats.dueToday}
-            icon="📅"
-            bgColor="bg-blue-100"
-            iconBgColor="bg-blue-500"
-            onClick={() => setFilterType('due-today')}
-            isActive={filterType === 'due-today'}
-          />
-          <StatCardSimple
-            label="Struggling"
-            value={stats.struggling}
-            icon="💪"
-            bgColor="bg-orange-100"
-            iconBgColor="bg-orange-500"
-            onClick={() => setFilterType('struggling')}
-            isActive={filterType === 'struggling'}
-          />
-          <StatCardSimple
-            label="Total Reviewed"
-            value={stats.total}
-            icon="✅"
-            bgColor="bg-emerald-100"
-            iconBgColor="bg-emerald-500"
-            onClick={() => setFilterType('all-reviewed')}
-            isActive={filterType === 'all-reviewed'}
+        {/* Stats Tabs - Compact Filters */}
+        <div className="mb-8">
+          <TabBar
+            tabs={[
+              { id: 'due-today', label: 'Due Today', icon: '📅', value: stats.dueToday },
+              { id: 'struggling', label: 'Struggling', icon: '💪', value: stats.struggling },
+              { id: 'new', label: 'New', icon: '🆕', value: stats.newCards },
+              { id: 'learning', label: 'Learning', icon: '📖', value: stats.learning },
+              { id: 'review', label: 'Review', icon: '🔄', value: stats.review },
+              { id: 'lapsed', label: 'Lapsed', icon: '⚠️', value: stats.lapsed },
+              { id: 'all-reviewed', label: 'All', icon: '✅', value: stats.total },
+            ]}
+            activeTabId={filterType}
+            onTabChange={(tabId) => setFilterType(tabId as FilterType)}
+            variant="tabs"
+            size="compact"
           />
         </div>
 
@@ -191,21 +229,30 @@ export default function FlashcardReviewPage() {
         {filteredFlashcards.length === 0 ? (
           <div className="text-center py-16 bg-white border border-gray-200 rounded-2xl">
             <div className="text-6xl mb-4">
-              {filterType === 'due-today' ? '🎉' : filterType === 'struggling' ? '💪' : '📚'}
+              {filterType === 'due-today' ? '🎉' :
+               filterType === 'struggling' ? '💪' :
+               filterType === 'new' ? '🆕' :
+               filterType === 'learning' ? '📖' :
+               filterType === 'review' ? '🔄' :
+               filterType === 'lapsed' ? '⚠️' : '📚'}
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">
-              {filterType === 'due-today'
-                ? 'All caught up!'
-                : filterType === 'struggling'
-                ? 'No struggling cards'
-                : 'No reviewed cards yet'}
+              {filterType === 'due-today' ? 'All caught up!' :
+               filterType === 'struggling' ? 'No struggling cards' :
+               filterType === 'new' ? 'No new cards' :
+               filterType === 'learning' ? 'No cards in learning' :
+               filterType === 'review' ? 'No cards in review' :
+               filterType === 'lapsed' ? 'No lapsed cards' :
+               'No reviewed cards yet'}
             </h3>
             <p className="text-gray-600 mb-6">
-              {filterType === 'due-today'
-                ? 'You have no cards due for review today. Great job!'
-                : filterType === 'struggling'
-                ? 'All your cards are doing well! Keep up the good work.'
-                : 'Start practicing flashcards to build your review collection.'}
+              {filterType === 'due-today' ? 'You have no cards due for review today. Great job!' :
+               filterType === 'struggling' ? 'All your cards are doing well! Keep up the good work.' :
+               filterType === 'new' ? 'All cards have been started. Begin practicing to see new cards.' :
+               filterType === 'learning' ? 'No cards are currently in the learning phase.' :
+               filterType === 'review' ? 'No cards have reached review stage yet. Keep practicing!' :
+               filterType === 'lapsed' ? 'Great! No cards have been forgotten recently.' :
+               'Start practicing flashcards to build your review collection.'}
             </p>
             <ActionButton
               onClick={() => router.push('/dashboard/student/flashcards')}
@@ -227,6 +274,10 @@ export default function FlashcardReviewPage() {
                   <p className="text-sm text-neutral-600">
                     {filterType === 'due-today' && 'These cards are due for review based on spaced repetition'}
                     {filterType === 'struggling' && 'Focus on these cards to improve your mastery level'}
+                    {filterType === 'new' && 'Brand new cards you haven\'t started yet'}
+                    {filterType === 'learning' && 'Cards in the initial learning phase'}
+                    {filterType === 'review' && 'Cards you\'ve mastered and are maintaining'}
+                    {filterType === 'lapsed' && 'Cards that need relearning after being forgotten'}
                     {filterType === 'all-reviewed' && 'All cards you\'ve practiced before are available'}
                   </p>
                 </div>
@@ -244,19 +295,20 @@ export default function FlashcardReviewPage() {
 
             {/* Card Preview - Data Cards */}
             <DataCardGrid>
-              {filteredFlashcards.slice(0, 6).map(card => {
+              {filteredFlashcards.slice(0, 6).map((card, index) => {
                 const review = reviews.find(r => r.flashcardId === card.id || r.wordId === card.wordId);
+                const masteryLevel = review?.masteryLevel ?? 0;
                 return (
                   <DataCard
-                    key={card.id}
+                    key={`${card.id}-${index}`}
                     value={card.german}
                     title={card.english}
                     description={card.category}
-                    mastery={review?.masteryLevel}
+                    mastery={masteryLevel}
                     onClick={() => setIsPracticing(true)}
                     accentColor={
-                      review?.masteryLevel >= 70 ? '#10b981' :
-                      review?.masteryLevel >= 40 ? '#f59e0b' :
+                      masteryLevel >= 70 ? '#10b981' :
+                      masteryLevel >= 40 ? '#f59e0b' :
                       '#6b7280'
                     }
                   />

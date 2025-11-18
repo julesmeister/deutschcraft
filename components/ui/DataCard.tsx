@@ -81,7 +81,7 @@ export function DataCard({
 
       {/* Action Button - Hover state (white) */}
       <div className="mt-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute bottom-4 left-4 right-4">
-        <button className="w-full inline-flex items-center font-bold text-xs py-1.5 pl-3 pr-1.5 rounded-full bg-white text-gray-900 transition-all duration-300 hover:bg-white/90">
+        <div className="w-full inline-flex items-center font-bold text-xs py-1.5 pl-3 pr-1.5 rounded-full bg-white text-gray-900 transition-all duration-300 hover:bg-white/90">
           <span className="flex-1 text-left">
             {mastery !== undefined ? `${mastery}% Mastery` : 'Practice'}
           </span>
@@ -90,7 +90,7 @@ export function DataCard({
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </span>
-        </button>
+        </div>
       </div>
     </button>
   );

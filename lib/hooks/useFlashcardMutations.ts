@@ -1,6 +1,7 @@
 /**
- * Flashcard Mutation Hooks
+ * Flashcard Mutation Hooks (Enhanced)
  * Hooks for saving flashcard reviews and updating progress
+ * Now uses improved SRS algorithm with card states and mastery decay
  */
 
 import { useState } from 'react';
@@ -11,92 +12,9 @@ import {
   saveFlashcardProgress,
   saveDailyProgress,
 } from '@/lib/services/flashcardService';
+import { calculateSRSData } from '@/lib/utils/srsAlgorithm';
 
 type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy';
-
-/**
- * SuperMemo 2 Algorithm
- * Calculate next review interval based on difficulty
- */
-function calculateSRSData(
-  currentProgress: FlashcardProgress | null,
-  difficulty: DifficultyLevel
-) {
-  // Default values for new cards
-  let repetitions = currentProgress?.repetitions || 0;
-  let easeFactor = currentProgress?.easeFactor || 2.5;
-  let interval = currentProgress?.interval || 0;
-
-  // SuperMemo 2 algorithm
-  switch (difficulty) {
-    case 'again':
-      // Forgot - reset progress
-      repetitions = 0;
-      interval = 1; // Review again tomorrow
-      easeFactor = Math.max(1.3, easeFactor - 0.2);
-      break;
-
-    case 'hard':
-      // Difficult - small increase
-      repetitions += 1;
-      interval = interval === 0 ? 1 : Math.round(interval * 1.2);
-      easeFactor = Math.max(1.3, easeFactor - 0.15);
-      break;
-
-    case 'good':
-      // Correct - normal increase
-      repetitions += 1;
-      if (repetitions === 1) {
-        interval = 1;
-      } else if (repetitions === 2) {
-        interval = 6;
-      } else {
-        interval = Math.round(interval * easeFactor);
-      }
-      break;
-
-    case 'easy':
-      // Very easy - large increase
-      repetitions += 1;
-      if (repetitions === 1) {
-        interval = 4;
-      } else if (repetitions === 2) {
-        interval = 10;
-      } else {
-        interval = Math.round(interval * easeFactor * 1.3);
-      }
-      easeFactor = Math.min(2.5, easeFactor + 0.15);
-      break;
-  }
-
-  // Calculate next review date
-  const nextReviewDate = Date.now() + interval * 24 * 60 * 60 * 1000;
-
-  // Calculate mastery level (0-100)
-  let masteryLevel = 0;
-  if (repetitions === 0) {
-    masteryLevel = 0;
-  } else if (repetitions === 1) {
-    masteryLevel = 20;
-  } else if (repetitions === 2) {
-    masteryLevel = 40;
-  } else if (repetitions <= 5) {
-    masteryLevel = 40 + (repetitions - 2) * 15;
-  } else {
-    masteryLevel = Math.min(100, 85 + (repetitions - 5) * 3);
-  }
-
-  // Adjust based on ease factor
-  masteryLevel = Math.min(100, Math.round(masteryLevel * (easeFactor / 2.5)));
-
-  return {
-    repetitions,
-    easeFactor,
-    interval,
-    nextReviewDate,
-    masteryLevel,
-  };
-}
 
 /**
  * Hook for saving flashcard reviews
@@ -139,20 +57,41 @@ export function useFlashcardMutations() {
       // Get existing progress using service layer
       const currentProgress = await getSingleFlashcardProgress(userId, flashcardId);
 
-      // Calculate new SRS data
-      const srsData = calculateSRSData(currentProgress, difficulty);
+      // Get current level from existing progress or use default
+      const currentLevel = currentProgress?.level;
 
-      // Prepare update data
+      // Calculate new SRS data with enhanced algorithm
+      const srsData = calculateSRSData(currentProgress, difficulty, currentLevel);
+
+      // Prepare update data with all enhanced fields
       const updateData: Partial<FlashcardProgress> = {
         flashcardId,
         userId,
         wordId,
+        level: srsData.level,
+
+        // Card State (NEW!)
+        state: srsData.state,
+
+        // SRS data
         repetitions: srsData.repetitions,
         easeFactor: srsData.easeFactor,
         interval: srsData.interval,
         nextReviewDate: srsData.nextReviewDate,
         masteryLevel: srsData.masteryLevel,
         lastReviewDate: Date.now(),
+
+        // Consecutive tracking (NEW!)
+        consecutiveCorrect: srsData.consecutiveCorrect,
+        consecutiveIncorrect: srsData.consecutiveIncorrect,
+
+        // Lapse tracking (NEW!)
+        lapseCount: srsData.lapseCount,
+        lastLapseDate: srsData.lastLapseDate,
+
+        // Initialize firstSeenAt if this is a new card
+        firstSeenAt: currentProgress?.firstSeenAt || Date.now(),
+
         updatedAt: Date.now(),
       };
 
