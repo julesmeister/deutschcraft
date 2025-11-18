@@ -29,7 +29,7 @@ export function TabBar({ tabs, activeTabId, onTabChange, className = '', variant
     <div className={`flex flex-1 flex-col rounded-lg border border-black/8 bg-white overflow-hidden ${className}`}>
       {/* Tab Navigation */}
       <div className="relative overflow-x-hidden overflow-y-hidden [container-type:inline-size] before:pointer-events-none before:absolute before:inset-0 before:shadow-sm before:content-['']">
-        <div className="flex flex-1 overflow-x-scroll [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div className="flex flex-1 flex-wrap sm:flex-nowrap sm:overflow-x-scroll [-ms-overflow-style:none] [scrollbar-width:none]">
           {tabs.map((tab, index) => {
             const isActive = tab.id === activeTabId;
             const isFirst = index === 0;
@@ -41,16 +41,13 @@ export function TabBar({ tabs, activeTabId, onTabChange, className = '', variant
                 onClick={() => onTabChange?.(tab.id)}
                 disabled={isStatsMode}
                 className={`
-                  flex ${isCompact ? 'flex-row justify-between items-center p-2 sm:p-3 min-w-24 sm:min-w-32' : 'flex-col justify-start items-stretch gap-0.5 sm:gap-1 p-3 sm:p-4 md:p-5 min-w-20 sm:min-w-32 md:min-w-40'}
-                  flex-1
-                  ${isFirst ? 'border-r' : isLast ? 'border-l' : 'border-x'}
-                  border-b
-                  ${isFirst ? 'rounded-tl-lg' : ''}
-                  ${isLast ? 'rounded-tr-lg' : ''}
+                  flex ${isCompact ? 'flex-row justify-between items-center p-2 sm:p-3 w-1/2 sm:w-auto sm:min-w-32' : 'flex-col justify-start items-stretch gap-0.5 sm:gap-1 p-3 sm:p-4 md:p-5 min-w-20 sm:min-w-32 md:min-w-40'}
+                  sm:flex-1
+                  border-r border-b
                   ${isStatsMode
                     ? 'border-gray-200 bg-white cursor-default'
                     : `cursor-pointer transition-colors ${isActive
-                      ? 'border-b-neutral-900 border-x-gray-200 bg-white'
+                      ? 'border-b-neutral-900 border-r-gray-200 bg-white'
                       : 'border-gray-200 bg-neutral-50 hover:bg-gray-100'
                     }`
                   }

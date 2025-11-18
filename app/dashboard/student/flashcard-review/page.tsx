@@ -9,6 +9,7 @@ import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { DataCard, DataCardGrid } from '@/components/ui/DataCard';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useFlashcardReviews } from '@/lib/hooks/useFlashcards';
+import { useFlashcardSettings } from '@/lib/hooks/useFlashcardSettings';
 import { FlashcardPractice } from '@/components/flashcards/FlashcardPractice';
 import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
@@ -48,7 +49,34 @@ export default function FlashcardReviewPage() {
   const [isPracticing, setIsPracticing] = useState(false);
 
   // Fetch all flashcard reviews for current user
-  const { data: reviews = [], isLoading } = useFlashcardReviews(session?.user?.email ?? undefined);
+  const { data: reviews = [], isLoading, refetch } = useFlashcardReviews(session?.user?.email ?? undefined);
+
+  // Get flashcard settings (for limiting cards per session)
+  const { settings } = useFlashcardSettings();
+
+  // Handle returning from practice mode
+  const handleExitPractice = () => {
+    setIsPracticing(false);
+    // Refetch reviews to update the dashboard with latest progress
+    refetch();
+  };
+
+  // Apply flashcard settings to limit cards per session
+  const applySessionLimits = (flashcards: any[]) => {
+    let processedCards = [...flashcards];
+
+    // Apply randomize order if enabled
+    if (settings.randomizeOrder) {
+      processedCards = processedCards.sort(() => Math.random() - 0.5);
+    }
+
+    // Apply cards per session limit (-1 means unlimited)
+    if (settings.cardsPerSession !== -1 && settings.cardsPerSession > 0) {
+      processedCards = processedCards.slice(0, settings.cardsPerSession);
+    }
+
+    return processedCards;
+  };
 
   // Get all flashcards from the selected level
   const allFlashcards = useMemo(() => {
@@ -64,14 +92,23 @@ export default function FlashcardReviewPage() {
     }));
   }, [selectedLevel]);
 
-  // Filter flashcards based on review data
+  // Filter flashcards based on review data and add mastery levels
   const filteredFlashcards = useMemo(() => {
     const now = Date.now();
 
-    return allFlashcards.filter(card => {
-      const review = reviews.find(r => r.flashcardId === card.id || r.wordId === card.wordId);
+    return allFlashcards
+      .map(card => {
+        const review = reviews.find(r => r.flashcardId === card.id || r.wordId === card.wordId);
+        // Add masteryLevel from review data
+        return {
+          ...card,
+          masteryLevel: review?.masteryLevel ?? 0,
+        };
+      })
+      .filter(card => {
+        const review = reviews.find(r => r.flashcardId === card.id || r.wordId === card.wordId);
 
-      if (!review) return false; // Only show reviewed cards
+        if (!review) return false; // Only show reviewed cards
 
       switch (filterType) {
         case 'due-today':
@@ -109,6 +146,11 @@ export default function FlashcardReviewPage() {
       }
     });
   }, [allFlashcards, reviews, filterType]);
+
+  // Apply session limits to filtered flashcards for practice
+  const cardsForPractice = useMemo(() => {
+    return applySessionLimits(filteredFlashcards);
+  }, [filteredFlashcards, settings.cardsPerSession, settings.randomizeOrder]);
 
   // Calculate stats
   const stats = useMemo(() => {
@@ -159,12 +201,12 @@ export default function FlashcardReviewPage() {
           }`}
           backButton={{
             label: 'Back to Review Dashboard',
-            onClick: () => setIsPracticing(false)
+            onClick: handleExitPractice
           }}
         />
         <div className="container mx-auto px-6 py-8">
           <FlashcardPractice
-            flashcards={filteredFlashcards}
+            flashcards={cardsForPractice}
             categoryName={
               filterType === 'due-today' ? 'Due Today' :
               filterType === 'struggling' ? 'Struggling Cards' :
@@ -175,7 +217,7 @@ export default function FlashcardReviewPage() {
               'All Reviewed Cards'
             }
             level={selectedLevel}
-            onBack={() => setIsPracticing(false)}
+            onBack={handleExitPractice}
             showExamples={true}
           />
         </div>
@@ -254,13 +296,17 @@ export default function FlashcardReviewPage() {
                filterType === 'lapsed' ? 'Great! No cards have been forgotten recently.' :
                'Start practicing flashcards to build your review collection.'}
             </p>
-            <ActionButton
-              onClick={() => router.push('/dashboard/student/flashcards')}
-              variant="purple"
-              icon={<ActionButtonIcons.ArrowRight />}
-            >
-              Go to Flashcards
-            </ActionButton>
+            <div className="flex justify-center">
+              <div className="w-fit">
+                <ActionButton
+                  onClick={() => router.push('/dashboard/student/flashcards')}
+                  variant="purple"
+                  icon={<ActionButtonIcons.ArrowRight />}
+                >
+                  Go to Flashcards
+                </ActionButton>
+              </div>
+            </div>
           </div>
         ) : (
           <>
@@ -269,7 +315,12 @@ export default function FlashcardReviewPage() {
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                   <h3 className="text-xl font-bold text-neutral-900 mb-2">
-                    {filteredFlashcards.length} Card{filteredFlashcards.length !== 1 ? 's' : ''} Ready for Review
+                    {cardsForPractice.length} Card{cardsForPractice.length !== 1 ? 's' : ''} Ready for Review
+                    {filteredFlashcards.length > cardsForPractice.length && (
+                      <span className="text-sm font-normal text-neutral-600 ml-2">
+                        ({filteredFlashcards.length} total)
+                      </span>
+                    )}
                   </h3>
                   <p className="text-sm text-neutral-600">
                     {filterType === 'due-today' && 'These cards are due for review based on spaced repetition'}
@@ -295,7 +346,7 @@ export default function FlashcardReviewPage() {
 
             {/* Card Preview - Data Cards */}
             <DataCardGrid>
-              {filteredFlashcards.slice(0, 6).map((card, index) => {
+              {cardsForPractice.slice(0, 6).map((card, index) => {
                 const review = reviews.find(r => r.flashcardId === card.id || r.wordId === card.wordId);
                 const masteryLevel = review?.masteryLevel ?? 0;
                 return (
@@ -315,9 +366,9 @@ export default function FlashcardReviewPage() {
                 );
               })}
             </DataCardGrid>
-            {filteredFlashcards.length > 6 && (
+            {cardsForPractice.length > 6 && (
               <div className="text-center mt-4 text-sm text-gray-500">
-                +{filteredFlashcards.length - 6} more cards available
+                +{cardsForPractice.length - 6} more cards in this session
               </div>
             )}
           </>

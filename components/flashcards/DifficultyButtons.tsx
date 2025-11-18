@@ -3,7 +3,7 @@
 import { SplitButtonGroup, SplitButtonOption } from '@/components/ui/SplitButtonGroup';
 import { useState } from 'react';
 
-type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy';
+type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy' | 'expert';
 
 interface DifficultyButtonsProps {
   isFlipped: boolean;
@@ -53,6 +53,15 @@ export function DifficultyButtons({
         <div>
           <div className="text-sm sm:text-base font-black">Easy</div>
           <div className="text-[10px] sm:text-xs opacity-70 mt-0.5 hidden sm:block">Press 4</div>
+        </div>
+      ),
+    },
+    {
+      value: 'expert',
+      label: (
+        <div>
+          <div className="text-sm sm:text-base font-black">Expert</div>
+          <div className="text-[10px] sm:text-xs opacity-70 mt-0.5 hidden sm:block">Press 5</div>
         </div>
       ),
     },

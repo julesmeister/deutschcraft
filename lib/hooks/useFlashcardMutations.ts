@@ -14,7 +14,7 @@ import {
 } from '@/lib/services/flashcardService';
 import { calculateSRSData } from '@/lib/utils/srsAlgorithm';
 
-type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy';
+type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy' | 'expert';
 
 /**
  * Hook for saving flashcard reviews
@@ -31,7 +31,8 @@ export function useFlashcardMutations() {
     userId: string,
     flashcardId: string,
     wordId: string,
-    difficulty: DifficultyLevel
+    difficulty: DifficultyLevel,
+    level?: string
   ) => {
     try {
       setIsSaving(true);
@@ -57,8 +58,8 @@ export function useFlashcardMutations() {
       // Get existing progress using service layer
       const currentProgress = await getSingleFlashcardProgress(userId, flashcardId);
 
-      // Get current level from existing progress or use default
-      const currentLevel = currentProgress?.level;
+      // Get current level from parameter, existing progress, or undefined
+      const currentLevel = level || currentProgress?.level;
 
       // Calculate new SRS data with enhanced algorithm
       const srsData = calculateSRSData(currentProgress, difficulty, currentLevel);

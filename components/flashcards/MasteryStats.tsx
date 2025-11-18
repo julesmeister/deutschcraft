@@ -6,6 +6,7 @@ import {
   HardIcon,
   GoodIcon,
   EasyIcon,
+  ExpertIcon,
 } from '@/components/ui/DifficultyIcons';
 
 interface MasteryStatsProps {
@@ -14,6 +15,7 @@ interface MasteryStatsProps {
     hard: number;
     good: number;
     easy: number;
+    expert: number;
   };
 }
 
@@ -42,6 +44,12 @@ export function MasteryStats({ stats }: MasteryStatsProps) {
       label: 'Easy',
       icon: <EasyIcon className="text-emerald-600" />,
       value: stats.easy,
+    },
+    {
+      id: 'expert',
+      label: 'Expert',
+      icon: <ExpertIcon className="text-purple-600" />,
+      value: stats.expert,
     },
   ];
 

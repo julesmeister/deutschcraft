@@ -9,6 +9,7 @@ interface SessionSummaryProps {
     hard: number;
     good: number;
     easy: number;
+    expert: number;
   };
   totalCards: number;
   timeSpent: number; // in seconds
@@ -23,9 +24,9 @@ export function SessionSummary({
   onReview,
   onFinish,
 }: SessionSummaryProps) {
-  const totalReviewed = stats.again + stats.hard + stats.good + stats.easy;
+  const totalReviewed = stats.again + stats.hard + stats.good + stats.easy + stats.expert;
   const accuracy = totalReviewed > 0
-    ? Math.round(((stats.good + stats.easy) / totalReviewed) * 100)
+    ? Math.round(((stats.good + stats.easy + stats.expert) / totalReviewed) * 100)
     : 0;
 
   const formatTime = (seconds: number) => {
@@ -102,6 +103,12 @@ export function SessionSummary({
               label: 'Easy',
               icon: <div className="w-4 h-4 rounded-full bg-emerald-500"></div>,
               value: stats.easy,
+            },
+            {
+              id: 'expert',
+              label: 'Expert',
+              icon: <div className="w-4 h-4 rounded-full bg-purple-500"></div>,
+              value: stats.expert,
             },
           ]}
         />

@@ -8,7 +8,7 @@ import { useFlashcardMutations } from './useFlashcardMutations';
 import { useFirebaseAuth } from './useFirebaseAuth';
 import { useToast } from '@/components/ui/toast';
 
-type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy';
+type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy' | 'expert';
 
 interface Flashcard {
   id: string;
@@ -28,17 +28,22 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [reviewedCards, setReviewedCards] = useState<Record<string, DifficultyLevel>>({});
+  const [cardMasteryLevels, setCardMasteryLevels] = useState<Record<string, number>>({});
   const [masteryStats, setMasteryStats] = useState({
     again: 0,
     hard: 0,
     good: 0,
     easy: 0,
+    expert: 0,
   });
   const [showSummary, setShowSummary] = useState(false);
   const [sessionStartTime] = useState(Date.now());
 
 
-  const currentCard = flashcards[currentIndex];
+  const currentCard = {
+    ...flashcards[currentIndex],
+    masteryLevel: cardMasteryLevels[flashcards[currentIndex]?.id] ?? flashcards[currentIndex]?.masteryLevel ?? 0,
+  };
   const progress = ((currentIndex + 1) / flashcards.length) * 100;
   const isLastCard = currentIndex === flashcards.length - 1;
 
@@ -71,6 +76,10 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
         case '4':
           e.preventDefault();
           if (isFlipped) handleDifficulty('easy');
+          break;
+        case '5':
+          e.preventDefault();
+          if (isFlipped) handleDifficulty('expert');
           break;
         case 'ArrowLeft':
           e.preventDefault();
@@ -106,6 +115,7 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
       hard: { message: 'Keep practicing!', variant: 'warning' as const, duration: 800 },
       good: { message: 'Good recall! 👍', variant: 'success' as const, duration: 800 },
       easy: { message: 'Perfect! Mastered! 🌟', variant: 'success' as const, duration: 800 },
+      expert: { message: '💯 Expert! Won\'t see this for a year!', variant: 'success' as const, duration: 1000 },
     };
 
     const toastConfig = toastMessages[difficulty];
@@ -121,12 +131,21 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
       console.warn('⚠️ [handleDifficulty] Cannot save: No wordId on card:', currentCard);
     } else {
       try {
-        await saveReview(
+        const srsResult = await saveReview(
           session.user.email,
           currentCard.id,
           currentCard.wordId,
-          difficulty
+          difficulty,
+          currentCard.level
         );
+
+        // Update mastery level for this card in state
+        if (srsResult) {
+          setCardMasteryLevels(prev => ({
+            ...prev,
+            [currentCard.id]: srsResult.masteryLevel,
+          }));
+        }
       } catch (error) {
         console.error('❌ [handleDifficulty] Failed to save review:', error);
         // Continue anyway - don't block user flow

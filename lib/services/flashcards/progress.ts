@@ -212,16 +212,21 @@ export async function saveFlashcardProgress(
     const progressRef = doc(db, 'flashcard-progress', progressId);
     const progressDoc = await getDoc(progressRef);
 
+    // Filter out undefined values (Firestore doesn't accept undefined)
+    const cleanData = Object.fromEntries(
+      Object.entries(progressData).filter(([_, value]) => value !== undefined)
+    );
+
     if (progressDoc.exists()) {
       // Update existing progress
       await updateDoc(progressRef, {
-        ...progressData,
+        ...cleanData,
         updatedAt: Date.now(),
       } as any);
     } else {
       // Create new progress
       await setDoc(progressRef, {
-        ...progressData,
+        ...cleanData,
         createdAt: Date.now(),
         updatedAt: Date.now(),
       });

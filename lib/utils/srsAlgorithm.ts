@@ -10,7 +10,7 @@
 
 import { FlashcardProgress, CardState } from '../models/progress';
 
-type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy';
+type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy' | 'expert';
 
 /**
  * Calculate mastery decay based on time overdue
@@ -170,10 +170,26 @@ export function calculateSRSData(
       }
       easeFactor = Math.min(2.5, easeFactor + 0.15);
       break;
+
+    case 'expert':
+      // Mastered - Very long interval, maximum ease
+      repetitions += 1;
+      // Set to maximum ease factor for this card
+      easeFactor = 2.5;
+      // Calculate a very long interval (at least 1 year)
+      if (newState === 'learning' || newState === 'relearning') {
+        // Skip directly to long interval
+        interval = 365;
+      } else {
+        // Multiply current interval by 3x, minimum 1 year
+        interval = Math.max(365, Math.round(interval * easeFactor * 3));
+      }
+      break;
   }
 
-  // Cap interval at reasonable max (6 months)
-  interval = Math.min(interval, 180);
+  // Cap interval at reasonable max (6 months for non-expert, 2 years for expert)
+  const maxInterval = difficulty === 'expert' ? 730 : 180;
+  interval = Math.min(interval, maxInterval);
 
   // Calculate next review date
   const nextReviewDate = now + interval * 24 * 60 * 60 * 1000;
@@ -184,6 +200,9 @@ export function calculateSRSData(
   if (difficulty === 'again') {
     // Forgotten: drop mastery significantly
     newMastery = Math.max(0, currentMastery - 30);
+  } else if (difficulty === 'expert') {
+    // Expert: Set to 100% mastery - card is fully mastered
+    newMastery = 100;
   } else {
     // Base mastery on repetitions and state
     if (newState === 'learning' || newState === 'new') {

@@ -75,10 +75,15 @@ export default function FlashcardsLandingPage() {
     const levelData = levelDataMap[selectedLevel];
     let categoryFlashcards = levelData.flashcards.filter(
       (card: any) => card.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') === categoryId
-    ).map((card: any) => ({
-      ...card,
-      wordId: card.id, // Use flashcard id as wordId for now
-    }));
+    ).map((card: any) => {
+      // Find progress for this card
+      const progress = flashcardReviews.find(r => r.flashcardId === card.id || r.wordId === card.id);
+      return {
+        ...card,
+        wordId: card.id, // Use flashcard id as wordId for now
+        masteryLevel: progress?.masteryLevel ?? 0, // Add mastery level from progress
+      };
+    });
 
     // Apply settings (potentially heavy operation)
     categoryFlashcards = applyFlashcardSettings(categoryFlashcards);
@@ -101,10 +106,15 @@ export default function FlashcardsLandingPage() {
   const handleStartPractice = () => {
     // Get all flashcards for the selected level
     const levelData = levelDataMap[selectedLevel];
-    let flashcardsWithWordId = levelData.flashcards.map((card: any) => ({
-      ...card,
-      wordId: card.id, // Use flashcard id as wordId for now
-    }));
+    let flashcardsWithWordId = levelData.flashcards.map((card: any) => {
+      // Find progress for this card
+      const progress = flashcardReviews.find(r => r.flashcardId === card.id || r.wordId === card.id);
+      return {
+        ...card,
+        wordId: card.id, // Use flashcard id as wordId for now
+        masteryLevel: progress?.masteryLevel ?? 0, // Add mastery level from progress
+      };
+    });
 
     // Apply settings (potentially heavy operation)
     flashcardsWithWordId = applyFlashcardSettings(flashcardsWithWordId);
