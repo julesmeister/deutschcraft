@@ -2439,7 +2439,7 @@
     },
     {
       "id": "syllabus-a2-10512",
-      "german": "die Schule",
+      "german": "Schule",
       "english": "school",
       "category": "Education",
       "level": "A2",
@@ -2499,7 +2499,7 @@
     },
     {
       "id": "syllabus-a2-10515",
-      "german": "die Prüfung",
+      "german": "Prüfung",
       "english": "exam",
       "category": "Education",
       "level": "A2",
@@ -2519,7 +2519,7 @@
     },
     {
       "id": "syllabus-a2-10516",
-      "german": "das Buch",
+      "german": "Buch",
       "english": "book",
       "category": "Education",
       "level": "A2",
@@ -2539,7 +2539,7 @@
     },
     {
       "id": "syllabus-a2-10517",
-      "german": "die Universität",
+      "german": "Universität",
       "english": "university",
       "category": "Education",
       "level": "A2",
@@ -2559,7 +2559,7 @@
     },
     {
       "id": "syllabus-a2-10518",
-      "german": "der Lehrer",
+      "german": "Lehrer",
       "english": "teacher",
       "category": "Education",
       "level": "A2",
@@ -2579,7 +2579,7 @@
     },
     {
       "id": "syllabus-a2-10519",
-      "german": "der Schüler",
+      "german": "Schüler",
       "english": "student / pupil",
       "category": "Education",
       "level": "A2",
@@ -2599,7 +2599,7 @@
     },
     {
       "id": "syllabus-a2-10520",
-      "german": "die Klasse",
+      "german": "Klasse",
       "english": "class",
       "category": "Education",
       "level": "A2",
@@ -2619,7 +2619,7 @@
     },
     {
       "id": "syllabus-a2-10521",
-      "german": "die Hausaufgabe",
+      "german": "Hausaufgabe",
       "english": "homework",
       "category": "Education",
       "level": "A2",
@@ -2639,7 +2639,7 @@
     },
     {
       "id": "syllabus-a2-10522",
-      "german": "der Stift",
+      "german": "Stift",
       "english": "pen",
       "category": "Education",
       "level": "A2",
@@ -2659,7 +2659,7 @@
     },
     {
       "id": "syllabus-a2-10523",
-      "german": "der Bleistift",
+      "german": "Bleistift",
       "english": "pencil",
       "category": "Education",
       "level": "A2",
@@ -2679,7 +2679,7 @@
     },
     {
       "id": "syllabus-a2-10524",
-      "german": "das Heft",
+      "german": "Heft",
       "english": "notebook",
       "category": "Education",
       "level": "A2",
@@ -2699,7 +2699,7 @@
     },
     {
       "id": "syllabus-a2-10525",
-      "german": "die Tafel",
+      "german": "Tafel",
       "english": "blackboard / whiteboard",
       "category": "Education",
       "level": "A2",
@@ -2719,7 +2719,7 @@
     },
     {
       "id": "syllabus-a2-10526",
-      "german": "die Note",
+      "german": "Note",
       "english": "grade / mark",
       "category": "Education",
       "level": "A2",
@@ -2739,7 +2739,7 @@
     },
     {
       "id": "syllabus-a2-10527",
-      "german": "das Seminar",
+      "german": "Seminar",
       "english": "seminar",
       "category": "Education",
       "level": "A2",
@@ -2759,7 +2759,7 @@
     },
     {
       "id": "syllabus-a2-10528",
-      "german": "die Vorlesung",
+      "german": "Vorlesung",
       "english": "lecture",
       "category": "Education",
       "level": "A2",
@@ -2779,7 +2779,7 @@
     },
     {
       "id": "syllabus-a2-10529",
-      "german": "die Lehrerin",
+      "german": "Lehrerin",
       "english": "teacher (female)",
       "category": "Education",
       "level": "A2",
@@ -2799,7 +2799,7 @@
     },
     {
       "id": "syllabus-a2-10530",
-      "german": "die Schülerin",
+      "german": "Schülerin",
       "english": "student / pupil (female)",
       "category": "Education",
       "level": "A2",
@@ -2819,7 +2819,7 @@
     },
     {
       "id": "syllabus-a2-10531",
-      "german": "der Student",
+      "german": "Student",
       "english": "university student (male)",
       "category": "Education",
       "level": "A2",
@@ -2839,7 +2839,7 @@
     },
     {
       "id": "syllabus-a2-10532",
-      "german": "die Studentin",
+      "german": "Studentin",
       "english": "university student (female)",
       "category": "Education",
       "level": "A2",
@@ -2859,7 +2859,7 @@
     },
     {
       "id": "syllabus-a2-10533",
-      "german": "der Kindergarten",
+      "german": "Kindergarten",
       "english": "kindergarten / preschool",
       "category": "Education",
       "level": "A2",
@@ -2879,7 +2879,7 @@
     },
     {
       "id": "syllabus-a2-10534",
-      "german": "die Grundschule",
+      "german": "Grundschule",
       "english": "elementary school / primary school",
       "category": "Education",
       "level": "A2",
@@ -2899,7 +2899,7 @@
     },
     {
       "id": "syllabus-a2-10535",
-      "german": "das Gymnasium",
+      "german": "Gymnasium",
       "english": "grammar school / high school",
       "category": "Education",
       "level": "A2",
@@ -2919,7 +2919,7 @@
     },
     {
       "id": "syllabus-a2-10536",
-      "german": "die Hochschule",
+      "german": "Hochschule",
       "english": "college / higher education institution",
       "category": "Education",
       "level": "A2",
@@ -2939,7 +2939,7 @@
     },
     {
       "id": "syllabus-a2-10537",
-      "german": "das Fach",
+      "german": "Fach",
       "english": "subject",
       "category": "Education",
       "level": "A2",
@@ -2959,7 +2959,7 @@
     },
     {
       "id": "syllabus-a2-10538",
-      "german": "die Mathematik",
+      "german": "Mathematik",
       "english": "mathematics",
       "category": "Education",
       "level": "A2",
@@ -2979,7 +2979,7 @@
     },
     {
       "id": "syllabus-a2-10539",
-      "german": "das Deutsch",
+      "german": "Deutsch",
       "english": "German (subject)",
       "category": "Education",
       "level": "A2",
@@ -2999,7 +2999,7 @@
     },
     {
       "id": "syllabus-a2-10540",
-      "german": "das Englisch",
+      "german": "Englisch",
       "english": "English (subject)",
       "category": "Education",
       "level": "A2",
@@ -3019,7 +3019,7 @@
     },
     {
       "id": "syllabus-a2-10541",
-      "german": "die Geschichte",
+      "german": "Geschichte",
       "english": "history",
       "category": "Education",
       "level": "A2",
@@ -3039,7 +3039,7 @@
     },
     {
       "id": "syllabus-a2-10542",
-      "german": "die Geografie",
+      "german": "Geografie",
       "english": "geography",
       "category": "Education",
       "level": "A2",
@@ -3059,7 +3059,7 @@
     },
     {
       "id": "syllabus-a2-10543",
-      "german": "die Biologie",
+      "german": "Biologie",
       "english": "biology",
       "category": "Education",
       "level": "A2",
@@ -3079,7 +3079,7 @@
     },
     {
       "id": "syllabus-a2-10544",
-      "german": "die Chemie",
+      "german": "Chemie",
       "english": "chemistry",
       "category": "Education",
       "level": "A2",
@@ -3099,7 +3099,7 @@
     },
     {
       "id": "syllabus-a2-10545",
-      "german": "die Physik",
+      "german": "Physik",
       "english": "physics",
       "category": "Education",
       "level": "A2",
@@ -3119,7 +3119,7 @@
     },
     {
       "id": "syllabus-a2-10546",
-      "german": "die Kunst",
+      "german": "Kunst",
       "english": "art",
       "category": "Education",
       "level": "A2",
@@ -3139,7 +3139,7 @@
     },
     {
       "id": "syllabus-a2-10547",
-      "german": "die Musik",
+      "german": "Musik",
       "english": "music",
       "category": "Education",
       "level": "A2",
@@ -3159,7 +3159,7 @@
     },
     {
       "id": "syllabus-a2-10548",
-      "german": "der Sport",
+      "german": "Sport",
       "english": "physical education / sports",
       "category": "Education",
       "level": "A2",
@@ -3179,7 +3179,7 @@
     },
     {
       "id": "syllabus-a2-10549",
-      "german": "der Abschluss",
+      "german": "Abschluss",
       "english": "degree / graduation",
       "category": "Education",
       "level": "A2",
@@ -3199,7 +3199,7 @@
     },
     {
       "id": "syllabus-a2-10550",
-      "german": "das Diplom",
+      "german": "Diplom",
       "english": "diploma",
       "category": "Education",
       "level": "A2",
@@ -3219,7 +3219,7 @@
     },
     {
       "id": "syllabus-a2-10551",
-      "german": "das Zeugnis",
+      "german": "Zeugnis",
       "english": "report card / certificate",
       "category": "Education",
       "level": "A2",
@@ -3239,7 +3239,7 @@
     },
     {
       "id": "syllabus-a2-10552",
-      "german": "der Kurs",
+      "german": "Kurs",
       "english": "course",
       "category": "Education",
       "level": "A2",
@@ -3259,7 +3259,7 @@
     },
     {
       "id": "syllabus-a2-10553",
-      "german": "der Unterricht",
+      "german": "Unterricht",
       "english": "lesson / class / instruction",
       "category": "Education",
       "level": "A2",
@@ -3279,7 +3279,7 @@
     },
     {
       "id": "syllabus-a2-10554",
-      "german": "die Pause",
+      "german": "Pause",
       "english": "break / recess",
       "category": "Education",
       "level": "A2",
@@ -3299,7 +3299,7 @@
     },
     {
       "id": "syllabus-a2-10555",
-      "german": "die Ferien",
+      "german": "Ferien",
       "english": "holidays / vacation",
       "category": "Education",
       "level": "A2",
@@ -3319,7 +3319,7 @@
     },
     {
       "id": "syllabus-a2-10556",
-      "german": "der Stundenplan",
+      "german": "Stundenplan",
       "english": "timetable / schedule",
       "category": "Education",
       "level": "A2",
@@ -3339,7 +3339,7 @@
     },
     {
       "id": "syllabus-a2-10557",
-      "german": "die Mensa",
+      "german": "Mensa",
       "english": "cafeteria / canteen",
       "category": "Education",
       "level": "A2",
@@ -3359,7 +3359,7 @@
     },
     {
       "id": "syllabus-a2-10558",
-      "german": "die Bibliothek",
+      "german": "Bibliothek",
       "english": "library",
       "category": "Education",
       "level": "A2",
@@ -3379,7 +3379,7 @@
     },
     {
       "id": "syllabus-a2-10559",
-      "german": "das Klassenzimmer",
+      "german": "Klassenzimmer",
       "english": "classroom",
       "category": "Education",
       "level": "A2",
@@ -3399,7 +3399,7 @@
     },
     {
       "id": "syllabus-a2-10560",
-      "german": "die Schultasche",
+      "german": "Schultasche",
       "english": "school bag",
       "category": "Education",
       "level": "A2",
@@ -3419,7 +3419,7 @@
     },
     {
       "id": "syllabus-a2-10561",
-      "german": "der Rucksack",
+      "german": "Rucksack",
       "english": "backpack",
       "category": "Education",
       "level": "A2",
@@ -3439,7 +3439,7 @@
     },
     {
       "id": "syllabus-a2-10562",
-      "german": "der Radiergummi",
+      "german": "Radiergummi",
       "english": "eraser",
       "category": "Education",
       "level": "A2",
@@ -3459,7 +3459,7 @@
     },
     {
       "id": "syllabus-a2-10563",
-      "german": "das Lineal",
+      "german": "Lineal",
       "english": "ruler",
       "category": "Education",
       "level": "A2",
@@ -3479,7 +3479,7 @@
     },
     {
       "id": "syllabus-a2-10564",
-      "german": "die Schere",
+      "german": "Schere",
       "english": "scissors",
       "category": "Education",
       "level": "A2",
@@ -3499,7 +3499,7 @@
     },
     {
       "id": "syllabus-a2-10565",
-      "german": "der Kleber",
+      "german": "Kleber",
       "english": "glue",
       "category": "Education",
       "level": "A2",
@@ -3519,7 +3519,7 @@
     },
     {
       "id": "syllabus-a2-10566",
-      "german": "der Spitzer",
+      "german": "Spitzer",
       "english": "pencil sharpener",
       "category": "Education",
       "level": "A2",
@@ -3539,7 +3539,7 @@
     },
     {
       "id": "syllabus-a2-10567",
-      "german": "das Wörterbuch",
+      "german": "Wörterbuch",
       "english": "dictionary",
       "category": "Education",
       "level": "A2",
@@ -3559,7 +3559,7 @@
     },
     {
       "id": "syllabus-a2-10568",
-      "german": "das Lehrbuch",
+      "german": "Lehrbuch",
       "english": "textbook",
       "category": "Education",
       "level": "A2",
@@ -3579,7 +3579,7 @@
     },
     {
       "id": "syllabus-a2-10569",
-      "german": "die Übung",
+      "german": "Übung",
       "english": "exercise / practice",
       "category": "Education",
       "level": "A2",
@@ -3599,7 +3599,7 @@
     },
     {
       "id": "syllabus-a2-10570",
-      "german": "die Aufgabe",
+      "german": "Aufgabe",
       "english": "task / assignment",
       "category": "Education",
       "level": "A2",
@@ -3619,7 +3619,7 @@
     },
     {
       "id": "syllabus-a2-10571",
-      "german": "die Antwort",
+      "german": "Antwort",
       "english": "answer",
       "category": "Education",
       "level": "A2",
@@ -3639,7 +3639,7 @@
     },
     {
       "id": "syllabus-a2-10572",
-      "german": "die Frage",
+      "german": "Frage",
       "english": "question",
       "category": "Education",
       "level": "A2",
@@ -3659,7 +3659,7 @@
     },
     {
       "id": "syllabus-a2-10573",
-      "german": "der Fehler",
+      "german": "Fehler",
       "english": "mistake / error",
       "category": "Education",
       "level": "A2",
@@ -3979,7 +3979,7 @@
     },
     {
       "id": "syllabus-a2-10589",
-      "german": "der Professor",
+      "german": "Professor",
       "english": "professor",
       "category": "Education",
       "level": "A2",
@@ -3999,7 +3999,7 @@
     },
     {
       "id": "syllabus-a2-10590",
-      "german": "die Professorin",
+      "german": "Professorin",
       "english": "professor (female)",
       "category": "Education",
       "level": "A2",
@@ -4019,7 +4019,7 @@
     },
     {
       "id": "syllabus-a2-10591",
-      "german": "der Rektor",
+      "german": "Rektor",
       "english": "principal / headmaster",
       "category": "Education",
       "level": "A2",
@@ -6134,7 +6134,7 @@
     },
     {
       "id": "syllabus-a2-10610",
-      "german": "der Baum",
+      "german": "Baum",
       "english": "tree",
       "category": "Nature",
       "level": "A2",
@@ -6154,7 +6154,7 @@
     },
     {
       "id": "syllabus-a2-10611",
-      "german": "die Blume",
+      "german": "Blume",
       "english": "flower",
       "category": "Nature",
       "level": "A2",
@@ -6174,7 +6174,7 @@
     },
     {
       "id": "syllabus-a2-10612",
-      "german": "der Park",
+      "german": "Park",
       "english": "park",
       "category": "Nature",
       "level": "A2",
@@ -6194,7 +6194,7 @@
     },
     {
       "id": "syllabus-a2-10613",
-      "german": "der See",
+      "german": "See",
       "english": "lake",
       "category": "Nature",
       "level": "A2",
@@ -6214,7 +6214,7 @@
     },
     {
       "id": "syllabus-a2-10614",
-      "german": "der Wald",
+      "german": "Wald",
       "english": "forest",
       "category": "Nature",
       "level": "A2",
@@ -6234,7 +6234,7 @@
     },
     {
       "id": "syllabus-a2-10615",
-      "german": "der Berg",
+      "german": "Berg",
       "english": "mountain",
       "category": "Nature",
       "level": "A2",
@@ -6254,7 +6254,7 @@
     },
     {
       "id": "syllabus-a2-10616",
-      "german": "der Fluss",
+      "german": "Fluss",
       "english": "river",
       "category": "Nature",
       "level": "A2",
@@ -6274,7 +6274,7 @@
     },
     {
       "id": "syllabus-a2-10617",
-      "german": "das Meer",
+      "german": "Meer",
       "english": "sea / ocean",
       "category": "Nature",
       "level": "A2",
@@ -6294,7 +6294,7 @@
     },
     {
       "id": "syllabus-a2-10618",
-      "german": "der Strand",
+      "german": "Strand",
       "english": "beach",
       "category": "Nature",
       "level": "A2",
@@ -6314,7 +6314,7 @@
     },
     {
       "id": "syllabus-a2-10619",
-      "german": "der Himmel",
+      "german": "Himmel",
       "english": "sky",
       "category": "Nature",
       "level": "A2",
@@ -6334,7 +6334,7 @@
     },
     {
       "id": "syllabus-a2-10620",
-      "german": "die Sonne",
+      "german": "Sonne",
       "english": "sun",
       "category": "Nature",
       "level": "A2",
@@ -6354,7 +6354,7 @@
     },
     {
       "id": "syllabus-a2-10621",
-      "german": "der Mond",
+      "german": "Mond",
       "english": "moon",
       "category": "Nature",
       "level": "A2",
@@ -6374,7 +6374,7 @@
     },
     {
       "id": "syllabus-a2-10622",
-      "german": "der Stern",
+      "german": "Stern",
       "english": "star",
       "category": "Nature",
       "level": "A2",
@@ -6394,7 +6394,7 @@
     },
     {
       "id": "syllabus-a2-10623",
-      "german": "die Wolke",
+      "german": "Wolke",
       "english": "cloud",
       "category": "Nature",
       "level": "A2",
@@ -6414,7 +6414,7 @@
     },
     {
       "id": "syllabus-a2-10624",
-      "german": "der Regen",
+      "german": "Regen",
       "english": "rain",
       "category": "Nature",
       "level": "A2",
@@ -6434,7 +6434,7 @@
     },
     {
       "id": "syllabus-a2-10625",
-      "german": "der Schnee",
+      "german": "Schnee",
       "english": "snow",
       "category": "Nature",
       "level": "A2",
@@ -6454,7 +6454,7 @@
     },
     {
       "id": "syllabus-a2-10626",
-      "german": "der Wind",
+      "german": "Wind",
       "english": "wind",
       "category": "Nature",
       "level": "A2",
@@ -6474,7 +6474,7 @@
     },
     {
       "id": "syllabus-a2-10627",
-      "german": "das Tier",
+      "german": "Tier",
       "english": "animal",
       "category": "Nature",
       "level": "A2",
@@ -6494,7 +6494,7 @@
     },
     {
       "id": "syllabus-a2-10628",
-      "german": "der Vogel",
+      "german": "Vogel",
       "english": "bird",
       "category": "Nature",
       "level": "A2",
@@ -6514,7 +6514,7 @@
     },
     {
       "id": "syllabus-a2-10629",
-      "german": "der Fisch",
+      "german": "Fisch",
       "english": "fish",
       "category": "Nature",
       "level": "A2",
@@ -6534,7 +6534,7 @@
     },
     {
       "id": "syllabus-a2-10630",
-      "german": "das Insekt",
+      "german": "Insekt",
       "english": "insect",
       "category": "Nature",
       "level": "A2",
@@ -6554,7 +6554,7 @@
     },
     {
       "id": "syllabus-a2-10631",
-      "german": "die Pflanze",
+      "german": "Pflanze",
       "english": "plant",
       "category": "Nature",
       "level": "A2",
@@ -6574,7 +6574,7 @@
     },
     {
       "id": "syllabus-a2-10632",
-      "german": "das Gras",
+      "german": "Gras",
       "english": "grass",
       "category": "Nature",
       "level": "A2",
@@ -6594,7 +6594,7 @@
     },
     {
       "id": "syllabus-a2-10633",
-      "german": "der Stein",
+      "german": "Stein",
       "english": "stone / rock",
       "category": "Nature",
       "level": "A2",
@@ -7800,7 +7800,7 @@
     },
     {
       "id": "syllabus-a2-10664",
-      "german": "der Arzt",
+      "german": "Arzt",
       "english": "doctor",
       "category": "Professions",
       "level": "A2",
@@ -7820,7 +7820,7 @@
     },
     {
       "id": "syllabus-a2-10665",
-      "german": "der Lehrer",
+      "german": "Lehrer",
       "english": "teacher",
       "category": "Professions",
       "level": "A2",
@@ -7840,7 +7840,7 @@
     },
     {
       "id": "syllabus-a2-10666",
-      "german": "der Student",
+      "german": "Student",
       "english": "student",
       "category": "Professions",
       "level": "A2",
@@ -7860,7 +7860,7 @@
     },
     {
       "id": "syllabus-a2-10667",
-      "german": "der Koch",
+      "german": "Koch",
       "english": "cook",
       "category": "Professions",
       "level": "A2",
@@ -7880,7 +7880,7 @@
     },
     {
       "id": "syllabus-a2-10668",
-      "german": "der Verkäufer",
+      "german": "Verkäufer",
       "english": "seller",
       "category": "Professions",
       "level": "A2",
@@ -7900,7 +7900,7 @@
     },
     {
       "id": "syllabus-a2-10669",
-      "german": "der Ingenieur",
+      "german": "Ingenieur",
       "english": "engineer",
       "category": "Professions",
       "level": "A2",
@@ -7920,7 +7920,7 @@
     },
     {
       "id": "syllabus-a2-10670",
-      "german": "die Krankenschwester",
+      "german": "Krankenschwester",
       "english": "nurse",
       "category": "Professions",
       "level": "A2",
@@ -7940,7 +7940,7 @@
     },
     {
       "id": "syllabus-a2-10671",
-      "german": "der Polizist",
+      "german": "Polizist",
       "english": "police officer",
       "category": "Professions",
       "level": "A2",
@@ -7960,7 +7960,7 @@
     },
     {
       "id": "syllabus-a2-10672",
-      "german": "der Anwalt",
+      "german": "Anwalt",
       "english": "lawyer",
       "category": "Professions",
       "level": "A2",
@@ -7980,7 +7980,7 @@
     },
     {
       "id": "syllabus-a2-10673",
-      "german": "der Friseur",
+      "german": "Friseur",
       "english": "hairdresser",
       "category": "Professions",
       "level": "A2",
@@ -8000,7 +8000,7 @@
     },
     {
       "id": "syllabus-a2-10674",
-      "german": "der Mechaniker",
+      "german": "Mechaniker",
       "english": "mechanic",
       "category": "Professions",
       "level": "A2",
@@ -8020,7 +8020,7 @@
     },
     {
       "id": "syllabus-a2-10675",
-      "german": "der Bauer",
+      "german": "Bauer",
       "english": "farmer",
       "category": "Professions",
       "level": "A2",
@@ -8040,7 +8040,7 @@
     },
     {
       "id": "syllabus-a2-10676",
-      "german": "der Pilot",
+      "german": "Pilot",
       "english": "pilot",
       "category": "Professions",
       "level": "A2",
@@ -8060,7 +8060,7 @@
     },
     {
       "id": "syllabus-a2-10677",
-      "german": "der Kellner",
+      "german": "Kellner",
       "english": "waiter",
       "category": "Professions",
       "level": "A2",
@@ -8080,7 +8080,7 @@
     },
     {
       "id": "syllabus-a2-10678",
-      "german": "der Musiker",
+      "german": "Musiker",
       "english": "musician",
       "category": "Professions",
       "level": "A2",
@@ -8100,7 +8100,7 @@
     },
     {
       "id": "syllabus-a2-10679",
-      "german": "der Künstler",
+      "german": "Künstler",
       "english": "artist",
       "category": "Professions",
       "level": "A2",
@@ -8120,7 +8120,7 @@
     },
     {
       "id": "syllabus-a2-10680",
-      "german": "die Ärztin",
+      "german": "Ärztin",
       "english": "doctor (female)",
       "category": "Professions",
       "level": "A2",
@@ -8140,7 +8140,7 @@
     },
     {
       "id": "syllabus-a2-10681",
-      "german": "der Zahnarzt",
+      "german": "Zahnarzt",
       "english": "dentist",
       "category": "Professions",
       "level": "A2",
@@ -8160,7 +8160,7 @@
     },
     {
       "id": "syllabus-a2-10682",
-      "german": "der Tierarzt",
+      "german": "Tierarzt",
       "english": "veterinarian",
       "category": "Professions",
       "level": "A2",
@@ -8180,7 +8180,7 @@
     },
     {
       "id": "syllabus-a2-10683",
-      "german": "der Chirurg",
+      "german": "Chirurg",
       "english": "surgeon",
       "category": "Professions",
       "level": "A2",
@@ -8200,7 +8200,7 @@
     },
     {
       "id": "syllabus-a2-10684",
-      "german": "der Krankenpfleger",
+      "german": "Krankenpfleger",
       "english": "nurse (male)",
       "category": "Professions",
       "level": "A2",
@@ -8220,7 +8220,7 @@
     },
     {
       "id": "syllabus-a2-10685",
-      "german": "der Apotheker",
+      "german": "Apotheker",
       "english": "pharmacist",
       "category": "Professions",
       "level": "A2",
@@ -8240,7 +8240,7 @@
     },
     {
       "id": "syllabus-a2-10686",
-      "german": "die Lehrerin",
+      "german": "Lehrerin",
       "english": "teacher (female)",
       "category": "Professions",
       "level": "A2",
@@ -8260,7 +8260,7 @@
     },
     {
       "id": "syllabus-a2-10687",
-      "german": "der Professor",
+      "german": "Professor",
       "english": "professor",
       "category": "Professions",
       "level": "A2",
@@ -8280,7 +8280,7 @@
     },
     {
       "id": "syllabus-a2-10688",
-      "german": "der Schüler",
+      "german": "Schüler",
       "english": "pupil/student",
       "category": "Professions",
       "level": "A2",
@@ -8300,7 +8300,7 @@
     },
     {
       "id": "syllabus-a2-10689",
-      "german": "der Erzieher",
+      "german": "Erzieher",
       "english": "educator/childcare worker",
       "category": "Professions",
       "level": "A2",
@@ -8320,7 +8320,7 @@
     },
     {
       "id": "syllabus-a2-10690",
-      "german": "der Architekt",
+      "german": "Architekt",
       "english": "architect",
       "category": "Professions",
       "level": "A2",
@@ -8340,7 +8340,7 @@
     },
     {
       "id": "syllabus-a2-10691",
-      "german": "der Programmierer",
+      "german": "Programmierer",
       "english": "programmer",
       "category": "Professions",
       "level": "A2",
@@ -8360,7 +8360,7 @@
     },
     {
       "id": "syllabus-a2-10692",
-      "german": "der IT-Spezialist",
+      "german": "IT-Spezialist",
       "english": "IT specialist",
       "category": "Professions",
       "level": "A2",
@@ -8380,7 +8380,7 @@
     },
     {
       "id": "syllabus-a2-10693",
-      "german": "der Informatiker",
+      "german": "Informatiker",
       "english": "computer scientist",
       "category": "Professions",
       "level": "A2",
@@ -8400,7 +8400,7 @@
     },
     {
       "id": "syllabus-a2-10694",
-      "german": "der Wissenschaftler",
+      "german": "Wissenschaftler",
       "english": "scientist",
       "category": "Professions",
       "level": "A2",
@@ -8420,7 +8420,7 @@
     },
     {
       "id": "syllabus-a2-10695",
-      "german": "der Forscher",
+      "german": "Forscher",
       "english": "researcher",
       "category": "Professions",
       "level": "A2",
@@ -8440,7 +8440,7 @@
     },
     {
       "id": "syllabus-a2-10696",
-      "german": "der Rechtsanwalt",
+      "german": "Rechtsanwalt",
       "english": "attorney",
       "category": "Professions",
       "level": "A2",
@@ -8460,7 +8460,7 @@
     },
     {
       "id": "syllabus-a2-10697",
-      "german": "der Richter",
+      "german": "Richter",
       "english": "judge",
       "category": "Professions",
       "level": "A2",
@@ -8480,7 +8480,7 @@
     },
     {
       "id": "syllabus-a2-10698",
-      "german": "der Notar",
+      "german": "Notar",
       "english": "notary",
       "category": "Professions",
       "level": "A2",
@@ -8500,7 +8500,7 @@
     },
     {
       "id": "syllabus-a2-10699",
-      "german": "der Feuerwehrmann",
+      "german": "Feuerwehrmann",
       "english": "firefighter",
       "category": "Professions",
       "level": "A2",
@@ -8520,7 +8520,7 @@
     },
     {
       "id": "syllabus-a2-10700",
-      "german": "der Soldat",
+      "german": "Soldat",
       "english": "soldier",
       "category": "Professions",
       "level": "A2",
@@ -8540,7 +8540,7 @@
     },
     {
       "id": "syllabus-a2-10701",
-      "german": "der Kassierer",
+      "german": "Kassierer",
       "english": "cashier",
       "category": "Professions",
       "level": "A2",
@@ -8560,7 +8560,7 @@
     },
     {
       "id": "syllabus-a2-10702",
-      "german": "der Einzelhändler",
+      "german": "Einzelhändler",
       "english": "retailer",
       "category": "Professions",
       "level": "A2",
@@ -8580,7 +8580,7 @@
     },
     {
       "id": "syllabus-a2-10703",
-      "german": "der Kaufmann",
+      "german": "Kaufmann",
       "english": "merchant/businessman",
       "category": "Professions",
       "level": "A2",
@@ -8600,7 +8600,7 @@
     },
     {
       "id": "syllabus-a2-10704",
-      "german": "der Geschäftsmann",
+      "german": "Geschäftsmann",
       "english": "businessman",
       "category": "Professions",
       "level": "A2",
@@ -8620,7 +8620,7 @@
     },
     {
       "id": "syllabus-a2-10705",
-      "german": "der Unternehmer",
+      "german": "Unternehmer",
       "english": "entrepreneur",
       "category": "Professions",
       "level": "A2",
@@ -8640,7 +8640,7 @@
     },
     {
       "id": "syllabus-a2-10706",
-      "german": "der Manager",
+      "german": "Manager",
       "english": "manager",
       "category": "Professions",
       "level": "A2",
@@ -8660,7 +8660,7 @@
     },
     {
       "id": "syllabus-a2-10707",
-      "german": "der Chef",
+      "german": "Chef",
       "english": "boss/chief",
       "category": "Professions",
       "level": "A2",
@@ -8680,7 +8680,7 @@
     },
     {
       "id": "syllabus-a2-10708",
-      "german": "der Direktor",
+      "german": "Direktor",
       "english": "director",
       "category": "Professions",
       "level": "A2",
@@ -8700,7 +8700,7 @@
     },
     {
       "id": "syllabus-a2-10709",
-      "german": "der Sekretär",
+      "german": "Sekretär",
       "english": "secretary",
       "category": "Professions",
       "level": "A2",
@@ -8720,7 +8720,7 @@
     },
     {
       "id": "syllabus-a2-10710",
-      "german": "der Assistent",
+      "german": "Assistent",
       "english": "assistant",
       "category": "Professions",
       "level": "A2",
@@ -8740,7 +8740,7 @@
     },
     {
       "id": "syllabus-a2-10711",
-      "german": "der Buchhalter",
+      "german": "Buchhalter",
       "english": "accountant",
       "category": "Professions",
       "level": "A2",
@@ -8760,7 +8760,7 @@
     },
     {
       "id": "syllabus-a2-10712",
-      "german": "der Banker",
+      "german": "Banker",
       "english": "banker",
       "category": "Professions",
       "level": "A2",
@@ -8780,7 +8780,7 @@
     },
     {
       "id": "syllabus-a2-10713",
-      "german": "der Finanzberater",
+      "german": "Finanzberater",
       "english": "financial advisor",
       "category": "Professions",
       "level": "A2",
@@ -8800,7 +8800,7 @@
     },
     {
       "id": "syllabus-a2-10714",
-      "german": "der Bäcker",
+      "german": "Bäcker",
       "english": "baker",
       "category": "Professions",
       "level": "A2",
@@ -8820,7 +8820,7 @@
     },
     {
       "id": "syllabus-a2-10715",
-      "german": "der Metzger",
+      "german": "Metzger",
       "english": "butcher",
       "category": "Professions",
       "level": "A2",
@@ -8840,7 +8840,7 @@
     },
     {
       "id": "syllabus-a2-10716",
-      "german": "die Kellnerin",
+      "german": "Kellnerin",
       "english": "waitress",
       "category": "Professions",
       "level": "A2",
@@ -8860,7 +8860,7 @@
     },
     {
       "id": "syllabus-a2-10717",
-      "german": "der Barkeeper",
+      "german": "Barkeeper",
       "english": "bartender",
       "category": "Professions",
       "level": "A2",
@@ -8880,7 +8880,7 @@
     },
     {
       "id": "syllabus-a2-10718",
-      "german": "der Kosmetiker",
+      "german": "Kosmetiker",
       "english": "beautician/cosmetologist",
       "category": "Professions",
       "level": "A2",
@@ -8900,7 +8900,7 @@
     },
     {
       "id": "syllabus-a2-10719",
-      "german": "der Masseur",
+      "german": "Masseur",
       "english": "massage therapist",
       "category": "Professions",
       "level": "A2",
@@ -8920,7 +8920,7 @@
     },
     {
       "id": "syllabus-a2-10720",
-      "german": "der Elektriker",
+      "german": "Elektriker",
       "english": "electrician",
       "category": "Professions",
       "level": "A2",
@@ -8940,7 +8940,7 @@
     },
     {
       "id": "syllabus-a2-10721",
-      "german": "der Klempner",
+      "german": "Klempner",
       "english": "plumber",
       "category": "Professions",
       "level": "A2",
@@ -8960,7 +8960,7 @@
     },
     {
       "id": "syllabus-a2-10722",
-      "german": "der Schreiner",
+      "german": "Schreiner",
       "english": "carpenter",
       "category": "Professions",
       "level": "A2",
@@ -8980,7 +8980,7 @@
     },
     {
       "id": "syllabus-a2-10723",
-      "german": "der Maler",
+      "german": "Maler",
       "english": "painter",
       "category": "Professions",
       "level": "A2",
@@ -9000,7 +9000,7 @@
     },
     {
       "id": "syllabus-a2-10724",
-      "german": "der Maurer",
+      "german": "Maurer",
       "english": "bricklayer/mason",
       "category": "Professions",
       "level": "A2",
@@ -9020,7 +9020,7 @@
     },
     {
       "id": "syllabus-a2-10725",
-      "german": "der Bauarbeiter",
+      "german": "Bauarbeiter",
       "english": "construction worker",
       "category": "Professions",
       "level": "A2",
@@ -9040,7 +9040,7 @@
     },
     {
       "id": "syllabus-a2-10726",
-      "german": "der Gärtner",
+      "german": "Gärtner",
       "english": "gardener",
       "category": "Professions",
       "level": "A2",
@@ -9060,7 +9060,7 @@
     },
     {
       "id": "syllabus-a2-10727",
-      "german": "der Landwirt",
+      "german": "Landwirt",
       "english": "farmer/agriculturist",
       "category": "Professions",
       "level": "A2",
@@ -9080,7 +9080,7 @@
     },
     {
       "id": "syllabus-a2-10728",
-      "german": "der Fischer",
+      "german": "Fischer",
       "english": "fisherman",
       "category": "Professions",
       "level": "A2",
@@ -9100,7 +9100,7 @@
     },
     {
       "id": "syllabus-a2-10729",
-      "german": "der Jäger",
+      "german": "Jäger",
       "english": "hunter",
       "category": "Professions",
       "level": "A2",
@@ -9120,7 +9120,7 @@
     },
     {
       "id": "syllabus-a2-10730",
-      "german": "der Flugbegleiter",
+      "german": "Flugbegleiter",
       "english": "flight attendant",
       "category": "Professions",
       "level": "A2",
@@ -9140,7 +9140,7 @@
     },
     {
       "id": "syllabus-a2-10731",
-      "german": "der Busfahrer",
+      "german": "Busfahrer",
       "english": "bus driver",
       "category": "Professions",
       "level": "A2",
@@ -9160,7 +9160,7 @@
     },
     {
       "id": "syllabus-a2-10732",
-      "german": "der Taxifahrer",
+      "german": "Taxifahrer",
       "english": "taxi driver",
       "category": "Professions",
       "level": "A2",
@@ -9180,7 +9180,7 @@
     },
     {
       "id": "syllabus-a2-10733",
-      "german": "der LKW-Fahrer",
+      "german": "LKW-Fahrer",
       "english": "truck driver",
       "category": "Professions",
       "level": "A2",
@@ -9200,7 +9200,7 @@
     },
     {
       "id": "syllabus-a2-10734",
-      "german": "der Lokführer",
+      "german": "Lokführer",
       "english": "train driver",
       "category": "Professions",
       "level": "A2",
@@ -9220,7 +9220,7 @@
     },
     {
       "id": "syllabus-a2-10735",
-      "german": "der Matrose",
+      "german": "Matrose",
       "english": "sailor",
       "category": "Professions",
       "level": "A2",
@@ -9240,7 +9240,7 @@
     },
     {
       "id": "syllabus-a2-10736",
-      "german": "der Kapitän",
+      "german": "Kapitän",
       "english": "captain",
       "category": "Professions",
       "level": "A2",
@@ -9260,7 +9260,7 @@
     },
     {
       "id": "syllabus-a2-10737",
-      "german": "der Journalist",
+      "german": "Journalist",
       "english": "journalist",
       "category": "Professions",
       "level": "A2",
@@ -9280,7 +9280,7 @@
     },
     {
       "id": "syllabus-a2-10738",
-      "german": "der Reporter",
+      "german": "Reporter",
       "english": "reporter",
       "category": "Professions",
       "level": "A2",
@@ -9300,7 +9300,7 @@
     },
     {
       "id": "syllabus-a2-10739",
-      "german": "der Redakteur",
+      "german": "Redakteur",
       "english": "editor",
       "category": "Professions",
       "level": "A2",
@@ -9320,7 +9320,7 @@
     },
     {
       "id": "syllabus-a2-10740",
-      "german": "der Autor",
+      "german": "Autor",
       "english": "author",
       "category": "Professions",
       "level": "A2",
@@ -9340,7 +9340,7 @@
     },
     {
       "id": "syllabus-a2-10741",
-      "german": "der Schriftsteller",
+      "german": "Schriftsteller",
       "english": "writer",
       "category": "Professions",
       "level": "A2",
@@ -9360,7 +9360,7 @@
     },
     {
       "id": "syllabus-a2-10742",
-      "german": "der Dichter",
+      "german": "Dichter",
       "english": "poet",
       "category": "Professions",
       "level": "A2",
@@ -9380,7 +9380,7 @@
     },
     {
       "id": "syllabus-a2-10743",
-      "german": "der Übersetzer",
+      "german": "Übersetzer",
       "english": "translator",
       "category": "Professions",
       "level": "A2",
@@ -9400,7 +9400,7 @@
     },
     {
       "id": "syllabus-a2-10744",
-      "german": "der Dolmetscher",
+      "german": "Dolmetscher",
       "english": "interpreter",
       "category": "Professions",
       "level": "A2",
@@ -9420,7 +9420,7 @@
     },
     {
       "id": "syllabus-a2-10745",
-      "german": "der Sänger",
+      "german": "Sänger",
       "english": "singer",
       "category": "Professions",
       "level": "A2",
@@ -9440,7 +9440,7 @@
     },
     {
       "id": "syllabus-a2-10746",
-      "german": "der Schauspieler",
+      "german": "Schauspieler",
       "english": "actor",
       "category": "Professions",
       "level": "A2",
@@ -9460,7 +9460,7 @@
     },
     {
       "id": "syllabus-a2-10747",
-      "german": "der Regisseur",
+      "german": "Regisseur",
       "english": "director (film)",
       "category": "Professions",
       "level": "A2",
@@ -9480,7 +9480,7 @@
     },
     {
       "id": "syllabus-a2-10748",
-      "german": "der Designer",
+      "german": "Designer",
       "english": "designer",
       "category": "Professions",
       "level": "A2",
@@ -9500,7 +9500,7 @@
     },
     {
       "id": "syllabus-a2-10749",
-      "german": "der Fotograf",
+      "german": "Fotograf",
       "english": "photographer",
       "category": "Professions",
       "level": "A2",
@@ -9520,7 +9520,7 @@
     },
     {
       "id": "syllabus-a2-10750",
-      "german": "der Bibliothekar",
+      "german": "Bibliothekar",
       "english": "librarian",
       "category": "Professions",
       "level": "A2",
@@ -9540,7 +9540,7 @@
     },
     {
       "id": "syllabus-a2-10751",
-      "german": "der Sozialarbeiter",
+      "german": "Sozialarbeiter",
       "english": "social worker",
       "category": "Professions",
       "level": "A2",
@@ -9560,7 +9560,7 @@
     },
     {
       "id": "syllabus-a2-10752",
-      "german": "der Psychologe",
+      "german": "Psychologe",
       "english": "psychologist",
       "category": "Professions",
       "level": "A2",
@@ -9580,7 +9580,7 @@
     },
     {
       "id": "syllabus-a2-10753",
-      "german": "der Therapeut",
+      "german": "Therapeut",
       "english": "therapist",
       "category": "Professions",
       "level": "A2",
@@ -9600,7 +9600,7 @@
     },
     {
       "id": "syllabus-a2-10754",
-      "german": "der Sportler",
+      "german": "Sportler",
       "english": "athlete",
       "category": "Professions",
       "level": "A2",
@@ -9620,7 +9620,7 @@
     },
     {
       "id": "syllabus-a2-10755",
-      "german": "der Trainer",
+      "german": "Trainer",
       "english": "trainer/coach",
       "category": "Professions",
       "level": "A2",
@@ -9640,7 +9640,7 @@
     },
     {
       "id": "syllabus-a2-10756",
-      "german": "der Postbote",
+      "german": "Postbote",
       "english": "mail carrier",
       "category": "Professions",
       "level": "A2",
@@ -9660,7 +9660,7 @@
     },
     {
       "id": "syllabus-a2-10757",
-      "german": "der Müllmann",
+      "german": "Müllmann",
       "english": "garbage collector",
       "category": "Professions",
       "level": "A2",
@@ -9680,7 +9680,7 @@
     },
     {
       "id": "syllabus-a2-10758",
-      "german": "die Reinigungskraft",
+      "german": "Reinigungskraft",
       "english": "cleaner",
       "category": "Professions",
       "level": "A2",
@@ -9700,7 +9700,7 @@
     },
     {
       "id": "syllabus-a2-10759",
-      "german": "der Hausmeister",
+      "german": "Hausmeister",
       "english": "janitor/caretaker",
       "category": "Professions",
       "level": "A2",
@@ -9720,7 +9720,7 @@
     },
     {
       "id": "syllabus-a2-10760",
-      "german": "der Wächter",
+      "german": "Wächter",
       "english": "guard/watchman",
       "category": "Professions",
       "level": "A2",
@@ -9740,7 +9740,7 @@
     },
     {
       "id": "syllabus-a2-10761",
-      "german": "der Beruf",
+      "german": "Beruf",
       "english": "profession/occupation",
       "category": "Professions",
       "level": "A2",
@@ -9760,7 +9760,7 @@
     },
     {
       "id": "syllabus-a2-10762",
-      "german": "die Arbeit",
+      "german": "Arbeit",
       "english": "work/job",
       "category": "Professions",
       "level": "A2",
@@ -9780,7 +9780,7 @@
     },
     {
       "id": "syllabus-a2-10763",
-      "german": "die Stelle",
+      "german": "Stelle",
       "english": "position/job",
       "category": "Professions",
       "level": "A2",
@@ -9800,7 +9800,7 @@
     },
     {
       "id": "syllabus-a2-10764",
-      "german": "der Arbeitsplatz",
+      "german": "Arbeitsplatz",
       "english": "workplace",
       "category": "Professions",
       "level": "A2",
@@ -9820,7 +9820,7 @@
     },
     {
       "id": "syllabus-a2-10765",
-      "german": "der Arbeitgeber",
+      "german": "Arbeitgeber",
       "english": "employer",
       "category": "Professions",
       "level": "A2",
@@ -9840,7 +9840,7 @@
     },
     {
       "id": "syllabus-a2-10766",
-      "german": "der Arbeitnehmer",
+      "german": "Arbeitnehmer",
       "english": "employee",
       "category": "Professions",
       "level": "A2",
@@ -9860,7 +9860,7 @@
     },
     {
       "id": "syllabus-a2-10767",
-      "german": "der Kollege",
+      "german": "Kollege",
       "english": "colleague",
       "category": "Professions",
       "level": "A2",
@@ -9880,7 +9880,7 @@
     },
     {
       "id": "syllabus-a2-10768",
-      "german": "der Mitarbeiter",
+      "german": "Mitarbeiter",
       "english": "coworker",
       "category": "Professions",
       "level": "A2",
@@ -9900,7 +9900,7 @@
     },
     {
       "id": "syllabus-a2-10769",
-      "german": "der Praktikant",
+      "german": "Praktikant",
       "english": "intern",
       "category": "Professions",
       "level": "A2",
@@ -9920,7 +9920,7 @@
     },
     {
       "id": "syllabus-a2-10770",
-      "german": "der Auszubildende",
+      "german": "Auszubildende",
       "english": "apprentice/trainee",
       "category": "Professions",
       "level": "A2",
@@ -9940,7 +9940,7 @@
     },
     {
       "id": "syllabus-a2-10771",
-      "german": "der Azubi",
+      "german": "Azubi",
       "english": "apprentice (informal)",
       "category": "Professions",
       "level": "A2",
@@ -10020,7 +10020,7 @@
     },
     {
       "id": "syllabus-a2-10775",
-      "german": "die Vollzeit",
+      "german": "Vollzeit",
       "english": "full-time",
       "category": "Professions",
       "level": "A2",
@@ -10040,7 +10040,7 @@
     },
     {
       "id": "syllabus-a2-10776",
-      "german": "die Teilzeit",
+      "german": "Teilzeit",
       "english": "part-time",
       "category": "Professions",
       "level": "A2",
@@ -16019,7 +16019,7 @@
     },
     {
       "id": "syllabus-a2-10776",
-      "german": "der Computer",
+      "german": "Computer",
       "english": "computer",
       "category": "Technology",
       "level": "A2",
@@ -16039,7 +16039,7 @@
     },
     {
       "id": "syllabus-a2-10777",
-      "german": "das Handy",
+      "german": "Handy",
       "english": "mobile phone",
       "category": "Technology",
       "level": "A2",
@@ -16059,7 +16059,7 @@
     },
     {
       "id": "syllabus-a2-10778",
-      "german": "das Internet",
+      "german": "Internet",
       "english": "internet",
       "category": "Technology",
       "level": "A2",
@@ -16079,7 +16079,7 @@
     },
     {
       "id": "syllabus-a2-10779",
-      "german": "die E-Mail",
+      "german": "E-Mail",
       "english": "email",
       "category": "Technology",
       "level": "A2",
@@ -16099,7 +16099,7 @@
     },
     {
       "id": "syllabus-a2-10780",
-      "german": "der Laptop",
+      "german": "Laptop",
       "english": "laptop",
       "category": "Technology",
       "level": "A2",
@@ -16119,7 +16119,7 @@
     },
     {
       "id": "syllabus-a2-10781",
-      "german": "das Tablet",
+      "german": "Tablet",
       "english": "tablet",
       "category": "Technology",
       "level": "A2",
@@ -16139,7 +16139,7 @@
     },
     {
       "id": "syllabus-a2-10782",
-      "german": "die Tastatur",
+      "german": "Tastatur",
       "english": "keyboard",
       "category": "Technology",
       "level": "A2",
@@ -16159,7 +16159,7 @@
     },
     {
       "id": "syllabus-a2-10783",
-      "german": "die Maus",
+      "german": "Maus",
       "english": "mouse",
       "category": "Technology",
       "level": "A2",
@@ -16179,7 +16179,7 @@
     },
     {
       "id": "syllabus-a2-10784",
-      "german": "der Bildschirm",
+      "german": "Bildschirm",
       "english": "screen / monitor",
       "category": "Technology",
       "level": "A2",
@@ -16199,7 +16199,7 @@
     },
     {
       "id": "syllabus-a2-10785",
-      "german": "die Website",
+      "german": "Website",
       "english": "website",
       "category": "Technology",
       "level": "A2",
@@ -16219,7 +16219,7 @@
     },
     {
       "id": "syllabus-a2-10786",
-      "german": "die App",
+      "german": "App",
       "english": "app",
       "category": "Technology",
       "level": "A2",
@@ -16239,7 +16239,7 @@
     },
     {
       "id": "syllabus-a2-10787",
-      "german": "das Passwort",
+      "german": "Passwort",
       "english": "password",
       "category": "Technology",
       "level": "A2",
@@ -16259,7 +16259,7 @@
     },
     {
       "id": "syllabus-a2-10788",
-      "german": "der Drucker",
+      "german": "Drucker",
       "english": "printer",
       "category": "Technology",
       "level": "A2",
@@ -16279,7 +16279,7 @@
     },
     {
       "id": "syllabus-a2-10789",
-      "german": "die Datei",
+      "german": "Datei",
       "english": "file",
       "category": "Technology",
       "level": "A2",
@@ -16339,7 +16339,7 @@
     },
     {
       "id": "syllabus-a2-10792",
-      "german": "das Smartphone",
+      "german": "Smartphone",
       "english": "smartphone",
       "category": "Technology",
       "level": "A2",
@@ -16359,7 +16359,7 @@
     },
     {
       "id": "syllabus-a2-10793",
-      "german": "die Kopfhörer",
+      "german": "Kopfhörer",
       "english": "headphones",
       "category": "Technology",
       "level": "A2",
@@ -16379,7 +16379,7 @@
     },
     {
       "id": "syllabus-a2-10794",
-      "german": "der Lautsprecher",
+      "german": "Lautsprecher",
       "english": "speaker",
       "category": "Technology",
       "level": "A2",
@@ -16399,7 +16399,7 @@
     },
     {
       "id": "syllabus-a2-10795",
-      "german": "die Kamera",
+      "german": "Kamera",
       "english": "camera",
       "category": "Technology",
       "level": "A2",
@@ -16419,7 +16419,7 @@
     },
     {
       "id": "syllabus-a2-10796",
-      "german": "das Mikrofon",
+      "german": "Mikrofon",
       "english": "microphone",
       "category": "Technology",
       "level": "A2",
@@ -16439,7 +16439,7 @@
     },
     {
       "id": "syllabus-a2-10797",
-      "german": "der USB-Stick",
+      "german": "USB-Stick",
       "english": "USB stick / flash drive",
       "category": "Technology",
       "level": "A2",
@@ -16459,7 +16459,7 @@
     },
     {
       "id": "syllabus-a2-10798",
-      "german": "die Festplatte",
+      "german": "Festplatte",
       "english": "hard drive",
       "category": "Technology",
       "level": "A2",
@@ -16479,7 +16479,7 @@
     },
     {
       "id": "syllabus-a2-10799",
-      "german": "die SSD",
+      "german": "SSD",
       "english": "SSD / solid state drive",
       "category": "Technology",
       "level": "A2",
@@ -16499,7 +16499,7 @@
     },
     {
       "id": "syllabus-a2-10800",
-      "german": "der Akku",
+      "german": "Akku",
       "english": "battery / rechargeable battery",
       "category": "Technology",
       "level": "A2",
@@ -16519,7 +16519,7 @@
     },
     {
       "id": "syllabus-a2-10801",
-      "german": "das Ladegerät",
+      "german": "Ladegerät",
       "english": "charger",
       "category": "Technology",
       "level": "A2",
@@ -16539,7 +16539,7 @@
     },
     {
       "id": "syllabus-a2-10802",
-      "german": "das Kabel",
+      "german": "Kabel",
       "english": "cable",
       "category": "Technology",
       "level": "A2",
@@ -16559,7 +16559,7 @@
     },
     {
       "id": "syllabus-a2-10803",
-      "german": "das WLAN",
+      "german": "WLAN",
       "english": "WiFi / wireless LAN",
       "category": "Technology",
       "level": "A2",
@@ -16579,7 +16579,7 @@
     },
     {
       "id": "syllabus-a2-10804",
-      "german": "der Router",
+      "german": "Router",
       "english": "router",
       "category": "Technology",
       "level": "A2",
@@ -16599,7 +16599,7 @@
     },
     {
       "id": "syllabus-a2-10805",
-      "german": "das Netzwerk",
+      "german": "Netzwerk",
       "english": "network",
       "category": "Technology",
       "level": "A2",
@@ -16619,7 +16619,7 @@
     },
     {
       "id": "syllabus-a2-10806",
-      "german": "der Server",
+      "german": "Server",
       "english": "server",
       "category": "Technology",
       "level": "A2",
@@ -16639,7 +16639,7 @@
     },
     {
       "id": "syllabus-a2-10807",
-      "german": "die Cloud",
+      "german": "Cloud",
       "english": "cloud",
       "category": "Technology",
       "level": "A2",
@@ -16659,7 +16659,7 @@
     },
     {
       "id": "syllabus-a2-10808",
-      "german": "der Browser",
+      "german": "Browser",
       "english": "browser",
       "category": "Technology",
       "level": "A2",
@@ -16679,7 +16679,7 @@
     },
     {
       "id": "syllabus-a2-10809",
-      "german": "die Suchmaschine",
+      "german": "Suchmaschine",
       "english": "search engine",
       "category": "Technology",
       "level": "A2",
@@ -16699,7 +16699,7 @@
     },
     {
       "id": "syllabus-a2-10810",
-      "german": "der Link",
+      "german": "Link",
       "english": "link",
       "category": "Technology",
       "level": "A2",
@@ -16719,7 +16719,7 @@
     },
     {
       "id": "syllabus-a2-10811",
-      "german": "die URL",
+      "german": "URL",
       "english": "URL / web address",
       "category": "Technology",
       "level": "A2",
@@ -16739,7 +16739,7 @@
     },
     {
       "id": "syllabus-a2-10812",
-      "german": "der Download",
+      "german": "Download",
       "english": "download",
       "category": "Technology",
       "level": "A2",
@@ -16759,7 +16759,7 @@
     },
     {
       "id": "syllabus-a2-10813",
-      "german": "der Upload",
+      "german": "Upload",
       "english": "upload",
       "category": "Technology",
       "level": "A2",
@@ -16799,7 +16799,7 @@
     },
     {
       "id": "syllabus-a2-10815",
-      "german": "die Software",
+      "german": "Software",
       "english": "software",
       "category": "Technology",
       "level": "A2",
@@ -16819,7 +16819,7 @@
     },
     {
       "id": "syllabus-a2-10816",
-      "german": "das Programm",
+      "german": "Programm",
       "english": "program / application",
       "category": "Technology",
       "level": "A2",
@@ -16839,7 +16839,7 @@
     },
     {
       "id": "syllabus-a2-10817",
-      "german": "das Betriebssystem",
+      "german": "Betriebssystem",
       "english": "operating system",
       "category": "Technology",
       "level": "A2",
@@ -16859,7 +16859,7 @@
     },
     {
       "id": "syllabus-a2-10818",
-      "german": "das Update",
+      "german": "Update",
       "english": "update",
       "category": "Technology",
       "level": "A2",
@@ -17059,7 +17059,7 @@
     },
     {
       "id": "syllabus-a2-10828",
-      "german": "der Scanner",
+      "german": "Scanner",
       "english": "scanner",
       "category": "Technology",
       "level": "A2",
@@ -17079,7 +17079,7 @@
     },
     {
       "id": "syllabus-a2-10829",
-      "german": "der Ordner",
+      "german": "Ordner",
       "english": "folder",
       "category": "Technology",
       "level": "A2",
@@ -17099,7 +17099,7 @@
     },
     {
       "id": "syllabus-a2-10830",
-      "german": "das Dokument",
+      "german": "Dokument",
       "english": "document",
       "category": "Technology",
       "level": "A2",
@@ -17119,7 +17119,7 @@
     },
     {
       "id": "syllabus-a2-10831",
-      "german": "das Bild",
+      "german": "Bild",
       "english": "image / picture",
       "category": "Technology",
       "level": "A2",
@@ -17139,7 +17139,7 @@
     },
     {
       "id": "syllabus-a2-10832",
-      "german": "das Foto",
+      "german": "Foto",
       "english": "photo",
       "category": "Technology",
       "level": "A2",
@@ -17159,7 +17159,7 @@
     },
     {
       "id": "syllabus-a2-10833",
-      "german": "das Video",
+      "german": "Video",
       "english": "video",
       "category": "Technology",
       "level": "A2",
@@ -17179,7 +17179,7 @@
     },
     {
       "id": "syllabus-a2-10834",
-      "german": "das Audio",
+      "german": "Audio",
       "english": "audio",
       "category": "Technology",
       "level": "A2",
@@ -17199,7 +17199,7 @@
     },
     {
       "id": "syllabus-a2-10835",
-      "german": "die Musik",
+      "german": "Musik",
       "english": "music",
       "category": "Technology",
       "level": "A2",
@@ -17219,7 +17219,7 @@
     },
     {
       "id": "syllabus-a2-10836",
-      "german": "das MP3",
+      "german": "MP3",
       "english": "MP3",
       "category": "Technology",
       "level": "A2",
@@ -17239,7 +17239,7 @@
     },
     {
       "id": "syllabus-a2-10837",
-      "german": "das PDF",
+      "german": "PDF",
       "english": "PDF",
       "category": "Technology",
       "level": "A2",
@@ -17259,7 +17259,7 @@
     },
     {
       "id": "syllabus-a2-10838",
-      "german": "die Textverarbeitung",
+      "german": "Textverarbeitung",
       "english": "word processing",
       "category": "Technology",
       "level": "A2",
@@ -17279,7 +17279,7 @@
     },
     {
       "id": "syllabus-a2-10839",
-      "german": "die Tabellenkalkulation",
+      "german": "Tabellenkalkulation",
       "english": "spreadsheet",
       "category": "Technology",
       "level": "A2",
@@ -17299,7 +17299,7 @@
     },
     {
       "id": "syllabus-a2-10840",
-      "german": "die Präsentation",
+      "german": "Präsentation",
       "english": "presentation",
       "category": "Technology",
       "level": "A2",
@@ -17319,7 +17319,7 @@
     },
     {
       "id": "syllabus-a2-10841",
-      "german": "die Datenbank",
+      "german": "Datenbank",
       "english": "database",
       "category": "Technology",
       "level": "A2",
@@ -17359,7 +17359,7 @@
     },
     {
       "id": "syllabus-a2-10843",
-      "german": "das Backup",
+      "german": "Backup",
       "english": "backup",
       "category": "Technology",
       "level": "A2",
@@ -17379,7 +17379,7 @@
     },
     {
       "id": "syllabus-a2-10844",
-      "german": "die Sicherung",
+      "german": "Sicherung",
       "english": "backup / backup copy",
       "category": "Technology",
       "level": "A2",
@@ -17399,7 +17399,7 @@
     },
     {
       "id": "syllabus-a2-10845",
-      "german": "der Virus",
+      "german": "Virus",
       "english": "virus",
       "category": "Technology",
       "level": "A2",
@@ -17419,7 +17419,7 @@
     },
     {
       "id": "syllabus-a2-10846",
-      "german": "das Antivirus",
+      "german": "Antivirus",
       "english": "antivirus",
       "category": "Technology",
       "level": "A2",
@@ -17439,7 +17439,7 @@
     },
     {
       "id": "syllabus-a2-10847",
-      "german": "die Sicherheit",
+      "german": "Sicherheit",
       "english": "security",
       "category": "Technology",
       "level": "A2",
@@ -17459,7 +17459,7 @@
     },
     {
       "id": "syllabus-a2-10848",
-      "german": "die Firewall",
+      "german": "Firewall",
       "english": "firewall",
       "category": "Technology",
       "level": "A2",
@@ -17499,7 +17499,7 @@
     },
     {
       "id": "syllabus-a2-10850",
-      "german": "die Verschlüsselung",
+      "german": "Verschlüsselung",
       "english": "encryption",
       "category": "Technology",
       "level": "A2",
@@ -17519,7 +17519,7 @@
     },
     {
       "id": "syllabus-a2-10851",
-      "german": "der Benutzername",
+      "german": "Benutzername",
       "english": "username",
       "category": "Technology",
       "level": "A2",
@@ -17579,7 +17579,7 @@
     },
     {
       "id": "syllabus-a2-10854",
-      "german": "das Konto",
+      "german": "Konto",
       "english": "account",
       "category": "Technology",
       "level": "A2",
@@ -17599,7 +17599,7 @@
     },
     {
       "id": "syllabus-a2-10855",
-      "german": "das Profil",
+      "german": "Profil",
       "english": "profile",
       "category": "Technology",
       "level": "A2",
@@ -17639,7 +17639,7 @@
     },
     {
       "id": "syllabus-a2-10857",
-      "german": "die Nachricht",
+      "german": "Nachricht",
       "english": "message",
       "category": "Technology",
       "level": "A2",
@@ -17659,7 +17659,7 @@
     },
     {
       "id": "syllabus-a2-10858",
-      "german": "die SMS",
+      "german": "SMS",
       "english": "SMS / text message",
       "category": "Technology",
       "level": "A2",
@@ -17679,7 +17679,7 @@
     },
     {
       "id": "syllabus-a2-10859",
-      "german": "der Chat",
+      "german": "Chat",
       "english": "chat",
       "category": "Technology",
       "level": "A2",
@@ -17719,7 +17719,7 @@
     },
     {
       "id": "syllabus-a2-10861",
-      "german": "der Videoanruf",
+      "german": "Videoanruf",
       "english": "video call",
       "category": "Technology",
       "level": "A2",
@@ -17739,7 +17739,7 @@
     },
     {
       "id": "syllabus-a2-10862",
-      "german": "die Videokonferenz",
+      "german": "Videokonferenz",
       "english": "video conference",
       "category": "Technology",
       "level": "A2",
@@ -17799,7 +17799,7 @@
     },
     {
       "id": "syllabus-a2-10865",
-      "german": "die Post",
+      "german": "Post",
       "english": "post",
       "category": "Technology",
       "level": "A2",
@@ -17879,7 +17879,7 @@
     },
     {
       "id": "syllabus-a2-10869",
-      "german": "das Like",
+      "german": "Like",
       "english": "like",
       "category": "Technology",
       "level": "A2",
@@ -17899,7 +17899,7 @@
     },
     {
       "id": "syllabus-a2-10870",
-      "german": "der Kommentar",
+      "german": "Kommentar",
       "english": "comment",
       "category": "Technology",
       "level": "A2",
@@ -17939,7 +17939,7 @@
     },
     {
       "id": "syllabus-a2-10872",
-      "german": "der Follower",
+      "german": "Follower",
       "english": "follower",
       "category": "Technology",
       "level": "A2",
@@ -17979,7 +17979,7 @@
     },
     {
       "id": "syllabus-a2-10874",
-      "german": "der Hashtag",
+      "german": "Hashtag",
       "english": "hashtag",
       "category": "Technology",
       "level": "A2",
@@ -17999,7 +17999,7 @@
     },
     {
       "id": "syllabus-a2-10875",
-      "german": "die Story",
+      "german": "Story",
       "english": "story",
       "category": "Technology",
       "level": "A2",
@@ -18019,7 +18019,7 @@
     },
     {
       "id": "syllabus-a2-10876",
-      "german": "der Livestream",
+      "german": "Livestream",
       "english": "livestream",
       "category": "Technology",
       "level": "A2",
@@ -18059,7 +18059,7 @@
     },
     {
       "id": "syllabus-a2-10878",
-      "german": "das Streaming",
+      "german": "Streaming",
       "english": "streaming",
       "category": "Technology",
       "level": "A2",
@@ -18079,7 +18079,7 @@
     },
     {
       "id": "syllabus-a2-10879",
-      "german": "der Podcast",
+      "german": "Podcast",
       "english": "podcast",
       "category": "Technology",
       "level": "A2",
@@ -18119,7 +18119,7 @@
     },
     {
       "id": "syllabus-a2-10881",
-      "german": "das Abonnement",
+      "german": "Abonnement",
       "english": "subscription",
       "category": "Technology",
       "level": "A2",
@@ -18139,7 +18139,7 @@
     },
     {
       "id": "syllabus-a2-10882",
-      "german": "die Benachrichtigung",
+      "german": "Benachrichtigung",
       "english": "notification",
       "category": "Technology",
       "level": "A2",
@@ -18159,7 +18159,7 @@
     },
     {
       "id": "syllabus-a2-10883",
-      "german": "die Bildschirmzeit",
+      "german": "Bildschirmzeit",
       "english": "screen time",
       "category": "Technology",
       "level": "A2",
@@ -18279,7 +18279,7 @@
     },
     {
       "id": "syllabus-a2-10889",
-      "german": "das Bluetooth",
+      "german": "Bluetooth",
       "english": "Bluetooth",
       "category": "Technology",
       "level": "A2",
@@ -18299,7 +18299,7 @@
     },
     {
       "id": "syllabus-a2-10890",
-      "german": "das NFC",
+      "german": "NFC",
       "english": "NFC / near field communication",
       "category": "Technology",
       "level": "A2",
@@ -18319,7 +18319,7 @@
     },
     {
       "id": "syllabus-a2-10891",
-      "german": "der QR-Code",
+      "german": "QR-Code",
       "english": "QR code",
       "category": "Technology",
       "level": "A2",
@@ -18339,7 +18339,7 @@
     },
     {
       "id": "syllabus-a2-10892",
-      "german": "das GPS",
+      "german": "GPS",
       "english": "GPS",
       "category": "Technology",
       "level": "A2",
@@ -18359,7 +18359,7 @@
     },
     {
       "id": "syllabus-a2-10893",
-      "german": "die Navigation",
+      "german": "Navigation",
       "english": "navigation",
       "category": "Technology",
       "level": "A2",
@@ -18399,7 +18399,7 @@
     },
     {
       "id": "syllabus-a2-10895",
-      "german": "der Touchscreen",
+      "german": "Touchscreen",
       "english": "touchscreen",
       "category": "Technology",
       "level": "A2",
@@ -18519,7 +18519,7 @@
     },
     {
       "id": "syllabus-a2-10901",
-      "german": "der Doppelklick",
+      "german": "Doppelklick",
       "english": "double-click",
       "category": "Technology",
       "level": "A2",
@@ -18539,7 +18539,7 @@
     },
     {
       "id": "syllabus-a2-10902",
-      "german": "der Rechtsklick",
+      "german": "Rechtsklick",
       "english": "right-click",
       "category": "Technology",
       "level": "A2",
@@ -18579,7 +18579,7 @@
     },
     {
       "id": "syllabus-a2-10904",
-      "german": "der Fehler",
+      "german": "Fehler",
       "english": "error / bug",
       "category": "Technology",
       "level": "A2",
@@ -18599,7 +18599,7 @@
     },
     {
       "id": "syllabus-a2-10905",
-      "german": "der Bug",
+      "german": "Bug",
       "english": "bug",
       "category": "Technology",
       "level": "A2",
@@ -18619,7 +18619,7 @@
     },
     {
       "id": "syllabus-a2-10906",
-      "german": "der Absturz",
+      "german": "Absturz",
       "english": "crash",
       "category": "Technology",
       "level": "A2",

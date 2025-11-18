@@ -5,7 +5,7 @@
   "flashcards": [
     {
       "id": "syllabus-a2-10610",
-      "german": "Baum",
+      "german": "der Baum",
       "english": "tree",
       "category": "Nature",
       "level": "A2",
@@ -25,7 +25,7 @@
     },
     {
       "id": "syllabus-a2-10611",
-      "german": "Blume",
+      "german": "die Blume",
       "english": "flower",
       "category": "Nature",
       "level": "A2",
@@ -45,7 +45,7 @@
     },
     {
       "id": "syllabus-a2-10612",
-      "german": "Park",
+      "german": "der Park",
       "english": "park",
       "category": "Nature",
       "level": "A2",
@@ -65,7 +65,7 @@
     },
     {
       "id": "syllabus-a2-10613",
-      "german": "See",
+      "german": "der See",
       "english": "lake",
       "category": "Nature",
       "level": "A2",
@@ -85,7 +85,7 @@
     },
     {
       "id": "syllabus-a2-10614",
-      "german": "Wald",
+      "german": "der Wald",
       "english": "forest",
       "category": "Nature",
       "level": "A2",
@@ -105,7 +105,7 @@
     },
     {
       "id": "syllabus-a2-10615",
-      "german": "Berg",
+      "german": "der Berg",
       "english": "mountain",
       "category": "Nature",
       "level": "A2",
@@ -125,7 +125,7 @@
     },
     {
       "id": "syllabus-a2-10616",
-      "german": "Fluss",
+      "german": "der Fluss",
       "english": "river",
       "category": "Nature",
       "level": "A2",
@@ -145,7 +145,7 @@
     },
     {
       "id": "syllabus-a2-10617",
-      "german": "Meer",
+      "german": "das Meer",
       "english": "sea / ocean",
       "category": "Nature",
       "level": "A2",
@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-a2-10618",
-      "german": "Strand",
+      "german": "der Strand",
       "english": "beach",
       "category": "Nature",
       "level": "A2",
@@ -185,7 +185,7 @@
     },
     {
       "id": "syllabus-a2-10619",
-      "german": "Himmel",
+      "german": "der Himmel",
       "english": "sky",
       "category": "Nature",
       "level": "A2",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-a2-10620",
-      "german": "Sonne",
+      "german": "die Sonne",
       "english": "sun",
       "category": "Nature",
       "level": "A2",
@@ -225,7 +225,7 @@
     },
     {
       "id": "syllabus-a2-10621",
-      "german": "Mond",
+      "german": "der Mond",
       "english": "moon",
       "category": "Nature",
       "level": "A2",
@@ -245,7 +245,7 @@
     },
     {
       "id": "syllabus-a2-10622",
-      "german": "Stern",
+      "german": "der Stern",
       "english": "star",
       "category": "Nature",
       "level": "A2",
@@ -265,7 +265,7 @@
     },
     {
       "id": "syllabus-a2-10623",
-      "german": "Wolke",
+      "german": "die Wolke",
       "english": "cloud",
       "category": "Nature",
       "level": "A2",
@@ -285,7 +285,7 @@
     },
     {
       "id": "syllabus-a2-10624",
-      "german": "Regen",
+      "german": "der Regen",
       "english": "rain",
       "category": "Nature",
       "level": "A2",
@@ -305,7 +305,7 @@
     },
     {
       "id": "syllabus-a2-10625",
-      "german": "Schnee",
+      "german": "der Schnee",
       "english": "snow",
       "category": "Nature",
       "level": "A2",
@@ -325,7 +325,7 @@
     },
     {
       "id": "syllabus-a2-10626",
-      "german": "Wind",
+      "german": "der Wind",
       "english": "wind",
       "category": "Nature",
       "level": "A2",
@@ -345,7 +345,7 @@
     },
     {
       "id": "syllabus-a2-10627",
-      "german": "Tier",
+      "german": "das Tier",
       "english": "animal",
       "category": "Nature",
       "level": "A2",
@@ -365,7 +365,7 @@
     },
     {
       "id": "syllabus-a2-10628",
-      "german": "Vogel",
+      "german": "der Vogel",
       "english": "bird",
       "category": "Nature",
       "level": "A2",
@@ -385,7 +385,7 @@
     },
     {
       "id": "syllabus-a2-10629",
-      "german": "Fisch",
+      "german": "der Fisch",
       "english": "fish",
       "category": "Nature",
       "level": "A2",
@@ -405,7 +405,7 @@
     },
     {
       "id": "syllabus-a2-10630",
-      "german": "Insekt",
+      "german": "das Insekt",
       "english": "insect",
       "category": "Nature",
       "level": "A2",
@@ -425,7 +425,7 @@
     },
     {
       "id": "syllabus-a2-10631",
-      "german": "Pflanze",
+      "german": "die Pflanze",
       "english": "plant",
       "category": "Nature",
       "level": "A2",
@@ -445,7 +445,7 @@
     },
     {
       "id": "syllabus-a2-10632",
-      "german": "Gras",
+      "german": "das Gras",
       "english": "grass",
       "category": "Nature",
       "level": "A2",
@@ -465,7 +465,7 @@
     },
     {
       "id": "syllabus-a2-10633",
-      "german": "Stein",
+      "german": "der Stein",
       "english": "stone / rock",
       "category": "Nature",
       "level": "A2",

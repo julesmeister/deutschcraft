@@ -5,7 +5,7 @@
   "flashcards": [
     {
       "id": "syllabus-a1-10101",
-      "german": "Mutter",
+      "german": "die Mutter",
       "english": "mother",
       "category": "Family",
       "level": "A1",
@@ -25,7 +25,7 @@
     },
     {
       "id": "syllabus-a1-10102",
-      "german": "Vater",
+      "german": "der Vater",
       "english": "father",
       "category": "Family",
       "level": "A1",
@@ -45,7 +45,7 @@
     },
     {
       "id": "syllabus-a1-10103",
-      "german": "Bruder",
+      "german": "der Bruder",
       "english": "brother",
       "category": "Family",
       "level": "A1",
@@ -65,7 +65,7 @@
     },
     {
       "id": "syllabus-a1-10104",
-      "german": "Schwester",
+      "german": "die Schwester",
       "english": "sister",
       "category": "Family",
       "level": "A1",
@@ -85,7 +85,7 @@
     },
     {
       "id": "syllabus-a1-10105",
-      "german": "Kind",
+      "german": "das Kind",
       "english": "child",
       "category": "Family",
       "level": "A1",
@@ -105,7 +105,7 @@
     },
     {
       "id": "syllabus-a1-10106",
-      "german": "Eltern",
+      "german": "die Eltern",
       "english": "parents",
       "category": "Family",
       "level": "A1",
@@ -125,7 +125,7 @@
     },
     {
       "id": "syllabus-a1-10107",
-      "german": "Familie",
+      "german": "die Familie",
       "english": "family",
       "category": "Family",
       "level": "A1",
@@ -145,7 +145,7 @@
     },
     {
       "id": "syllabus-a1-10108",
-      "german": "Großmutter",
+      "german": "die Großmutter",
       "english": "grandmother",
       "category": "Family",
       "level": "A1",
@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-a1-10109",
-      "german": "Großvater",
+      "german": "der Großvater",
       "english": "grandfather",
       "category": "Family",
       "level": "A1",
@@ -185,7 +185,7 @@
     },
     {
       "id": "syllabus-a1-10110",
-      "german": "Oma",
+      "german": "die Oma",
       "english": "grandma",
       "category": "Family",
       "level": "A1",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-a1-10111",
-      "german": "Opa",
+      "german": "der Opa",
       "english": "grandpa",
       "category": "Family",
       "level": "A1",
@@ -225,7 +225,7 @@
     },
     {
       "id": "syllabus-a1-10112",
-      "german": "Tante",
+      "german": "die Tante",
       "english": "aunt",
       "category": "Family",
       "level": "A1",
@@ -245,7 +245,7 @@
     },
     {
       "id": "syllabus-a1-10113",
-      "german": "Onkel",
+      "german": "der Onkel",
       "english": "uncle",
       "category": "Family",
       "level": "A1",
@@ -265,7 +265,7 @@
     },
     {
       "id": "syllabus-a1-10114",
-      "german": "Cousin",
+      "german": "der Cousin",
       "english": "cousin (male)",
       "category": "Family",
       "level": "A1",
@@ -285,7 +285,7 @@
     },
     {
       "id": "syllabus-a1-10115",
-      "german": "Cousine",
+      "german": "die Cousine",
       "english": "cousin (female)",
       "category": "Family",
       "level": "A1",
@@ -305,7 +305,7 @@
     },
     {
       "id": "syllabus-a1-10116",
-      "german": "Sohn",
+      "german": "der Sohn",
       "english": "son",
       "category": "Family",
       "level": "A1",
@@ -325,7 +325,7 @@
     },
     {
       "id": "syllabus-a1-10117",
-      "german": "Tochter",
+      "german": "die Tochter",
       "english": "daughter",
       "category": "Family",
       "level": "A1",
@@ -345,7 +345,7 @@
     },
     {
       "id": "syllabus-a1-10118",
-      "german": "Mama",
+      "german": "die Mama",
       "english": "mom / mommy",
       "category": "Family",
       "level": "A1",
@@ -365,7 +365,7 @@
     },
     {
       "id": "syllabus-a1-10119",
-      "german": "Papa",
+      "german": "der Papa",
       "english": "dad / daddy",
       "category": "Family",
       "level": "A1",
@@ -385,7 +385,7 @@
     },
     {
       "id": "syllabus-a1-10120",
-      "german": "Ehemann",
+      "german": "der Ehemann",
       "english": "husband",
       "category": "Family",
       "level": "A1",
@@ -405,7 +405,7 @@
     },
     {
       "id": "syllabus-a1-10121",
-      "german": "Ehefrau",
+      "german": "die Ehefrau",
       "english": "wife",
       "category": "Family",
       "level": "A1",
@@ -425,7 +425,7 @@
     },
     {
       "id": "syllabus-a1-10122",
-      "german": "Mann",
+      "german": "der Mann",
       "english": "man / husband",
       "category": "Family",
       "level": "A1",
@@ -445,7 +445,7 @@
     },
     {
       "id": "syllabus-a1-10123",
-      "german": "Frau",
+      "german": "die Frau",
       "english": "woman / wife",
       "category": "Family",
       "level": "A1",
@@ -465,7 +465,7 @@
     },
     {
       "id": "syllabus-a1-10124",
-      "german": "Großeltern",
+      "german": "die Großeltern",
       "english": "grandparents",
       "category": "Family",
       "level": "A1",
@@ -485,7 +485,7 @@
     },
     {
       "id": "syllabus-a1-10125",
-      "german": "Geschwister",
+      "german": "die Geschwister",
       "english": "siblings",
       "category": "Family",
       "level": "A1",
@@ -505,7 +505,7 @@
     },
     {
       "id": "syllabus-a1-10126",
-      "german": "Kinder",
+      "german": "die Kinder",
       "english": "children",
       "category": "Family",
       "level": "A1",
@@ -525,7 +525,7 @@
     },
     {
       "id": "syllabus-a1-10127",
-      "german": "Baby",
+      "german": "das Baby",
       "english": "baby",
       "category": "Family",
       "level": "A1",
@@ -545,7 +545,7 @@
     },
     {
       "id": "syllabus-a1-10128",
-      "german": "Junge",
+      "german": "der Junge",
       "english": "boy",
       "category": "Family",
       "level": "A1",
@@ -565,7 +565,7 @@
     },
     {
       "id": "syllabus-a1-10129",
-      "german": "Mädchen",
+      "german": "das Mädchen",
       "english": "girl",
       "category": "Family",
       "level": "A1",
@@ -585,7 +585,7 @@
     },
     {
       "id": "syllabus-a1-10130",
-      "german": "Enkel",
+      "german": "der Enkel",
       "english": "grandson",
       "category": "Family",
       "level": "A1",

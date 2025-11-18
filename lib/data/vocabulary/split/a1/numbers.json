@@ -309,11 +309,18 @@
       "english": "thirteen",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "dreizehn"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "dreizehn"
+        ]
       }
     },
     {
@@ -322,11 +329,18 @@
       "english": "fourteen",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "vierzehn"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "vierzehn"
+        ]
       }
     },
     {
@@ -335,11 +349,18 @@
       "english": "fifteen",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "fünfzehn"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "fünfzehn"
+        ]
       }
     },
     {
@@ -348,11 +369,18 @@
       "english": "sixteen",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "sechzehn"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "sechzehn"
+        ]
       }
     },
     {
@@ -361,11 +389,18 @@
       "english": "seventeen",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "siebzehn"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "siebzehn"
+        ]
       }
     },
     {
@@ -374,11 +409,18 @@
       "english": "eighteen",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "achtzehn"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "achtzehn"
+        ]
       }
     },
     {
@@ -387,11 +429,18 @@
       "english": "nineteen",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "neunzehn"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "neunzehn"
+        ]
       }
     },
     {
@@ -400,11 +449,18 @@
       "english": "thirty",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "dreißig"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "dreißig"
+        ]
       }
     },
     {
@@ -413,11 +469,18 @@
       "english": "forty",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "vierzig"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "vierzig"
+        ]
       }
     },
     {
@@ -426,11 +489,18 @@
       "english": "fifty",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "fünfzig"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "fünfzig"
+        ]
       }
     },
     {
@@ -439,11 +509,18 @@
       "english": "sixty",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "sechzig"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "sechzig"
+        ]
       }
     },
     {
@@ -452,11 +529,18 @@
       "english": "seventy",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "siebzig"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "siebzig"
+        ]
       }
     },
     {
@@ -465,11 +549,18 @@
       "english": "eighty",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "achtzig"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "achtzig"
+        ]
       }
     },
     {
@@ -478,11 +569,18 @@
       "english": "ninety",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "neunzig"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "neunzig"
+        ]
       }
     },
     {
@@ -491,11 +589,18 @@
       "english": "thousand",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "tausend"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "tausend"
+        ]
       }
     },
     {
@@ -504,11 +609,18 @@
       "english": "one million",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "eine Million"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "eine Million"
+        ]
       }
     },
     {
@@ -517,11 +629,18 @@
       "english": "one billion",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "eine Milliarde"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "eine Milliarde"
+        ]
       }
     },
     {
@@ -530,11 +649,18 @@
       "english": "one trillion",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "eine Billion"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "eine Billion"
+        ]
       }
     },
     {
@@ -543,11 +669,18 @@
       "english": "first",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "erste"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "erste"
+        ]
       }
     },
     {
@@ -556,11 +689,18 @@
       "english": "second",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "zweite"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "zweite"
+        ]
       }
     },
     {
@@ -569,11 +709,18 @@
       "english": "third",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "dritte"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "dritte"
+        ]
       }
     },
     {
@@ -582,11 +729,18 @@
       "english": "fourth",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "vierte"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "vierte"
+        ]
       }
     },
     {
@@ -595,11 +749,18 @@
       "english": "fifth",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "fünfte"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "fünfte"
+        ]
       }
     },
     {
@@ -608,11 +769,18 @@
       "english": "sixth",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "sechste"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "sechste"
+        ]
       }
     },
     {
@@ -621,11 +789,18 @@
       "english": "seventh",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "siebte"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "siebte"
+        ]
       }
     },
     {
@@ -634,11 +809,18 @@
       "english": "eighth",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "achte"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "achte"
+        ]
       }
     },
     {
@@ -647,11 +829,18 @@
       "english": "ninth",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "neunte"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "neunte"
+        ]
       }
     },
     {
@@ -660,11 +849,18 @@
       "english": "tenth",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "zehnte"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "zehnte"
+        ]
       }
     },
     {
@@ -673,11 +869,18 @@
       "english": "eleventh",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "elfte"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "elfte"
+        ]
       }
     },
     {
@@ -686,11 +889,18 @@
       "english": "twelfth",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "zwölfte"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "zwölfte"
+        ]
       }
     },
     {
@@ -699,11 +909,18 @@
       "english": "twentieth",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "zwanzigste"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "zwanzigste"
+        ]
       }
     },
     {
@@ -712,11 +929,18 @@
       "english": "hundredth",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "hundertste"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "hundertste"
+        ]
       }
     },
     {
@@ -725,11 +949,18 @@
       "english": "half",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "halb"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "halb"
+        ]
       }
     },
     {
@@ -738,11 +969,18 @@
       "english": "one third",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "ein Drittel"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "ein Drittel"
+        ]
       }
     },
     {
@@ -751,11 +989,18 @@
       "english": "one quarter",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "ein Viertel"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "ein Viertel"
+        ]
       }
     },
     {
@@ -764,11 +1009,18 @@
       "english": "three quarters",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "drei Viertel"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "drei Viertel"
+        ]
       }
     },
     {
@@ -777,11 +1029,18 @@
       "english": "once",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "einmal"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "einmal"
+        ]
       }
     },
     {
@@ -790,11 +1049,18 @@
       "english": "twice",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "zweimal"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "zweimal"
+        ]
       }
     },
     {
@@ -803,11 +1069,18 @@
       "english": "three times",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "dreimal"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "dreimal"
+        ]
       }
     },
     {
@@ -816,24 +1089,38 @@
       "english": "percent",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "Prozent"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "Prozent"
+        ]
       }
     },
     {
       "id": "syllabus-a1-10293",
-      "german": "Zahl",
+      "german": "die Zahl",
       "english": "number",
       "category": "Numbers",
       "level": "A1",
-      "tags": ["syllabus", "A1"],
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
       "_meta": {
         "source": "Syllabus A1",
         "lineNumber": 0,
-        "hierarchy": ["A1", "Numbers", "Zahl"]
+        "hierarchy": [
+          "A1",
+          "Numbers",
+          "Zahl"
+        ]
       }
     }
   ]

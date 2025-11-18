@@ -5,7 +5,7 @@
   "flashcards": [
     {
       "id": "syllabus-a1-10086",
-      "german": "Deutschland",
+      "german": "das Deutschland",
       "english": "Germany",
       "category": "Countries",
       "level": "A1",
@@ -25,7 +25,7 @@
     },
     {
       "id": "syllabus-a1-10087",
-      "german": "Österreich",
+      "german": "das Österreich",
       "english": "Austria",
       "category": "Countries",
       "level": "A1",
@@ -45,7 +45,7 @@
     },
     {
       "id": "syllabus-a1-10088",
-      "german": "Schweiz",
+      "german": "die Schweiz",
       "english": "Switzerland",
       "category": "Countries",
       "level": "A1",
@@ -65,7 +65,7 @@
     },
     {
       "id": "syllabus-a1-10089",
-      "german": "Frankreich",
+      "german": "das Frankreich",
       "english": "France",
       "category": "Countries",
       "level": "A1",
@@ -85,7 +85,7 @@
     },
     {
       "id": "syllabus-a1-10090",
-      "german": "Italien",
+      "german": "das Italien",
       "english": "Italy",
       "category": "Countries",
       "level": "A1",
@@ -105,7 +105,7 @@
     },
     {
       "id": "syllabus-a1-10091",
-      "german": "Spanien",
+      "german": "das Spanien",
       "english": "Spain",
       "category": "Countries",
       "level": "A1",
@@ -125,7 +125,7 @@
     },
     {
       "id": "syllabus-a1-10092",
-      "german": "England",
+      "german": "das England",
       "english": "England",
       "category": "Countries",
       "level": "A1",
@@ -145,7 +145,7 @@
     },
     {
       "id": "syllabus-a1-10093",
-      "german": "Amerika",
+      "german": "das Amerika",
       "english": "America",
       "category": "Countries",
       "level": "A1",
@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-a1-10094",
-      "german": "Russland",
+      "german": "das Russland",
       "english": "Russia",
       "category": "Countries",
       "level": "A1",
@@ -185,7 +185,7 @@
     },
     {
       "id": "syllabus-a1-10095",
-      "german": "China",
+      "german": "das China",
       "english": "China",
       "category": "Countries",
       "level": "A1",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-a1-10096",
-      "german": "Japan",
+      "german": "das Japan",
       "english": "Japan",
       "category": "Countries",
       "level": "A1",
@@ -225,7 +225,7 @@
     },
     {
       "id": "syllabus-a1-10097",
-      "german": "Indien",
+      "german": "das Indien",
       "english": "India",
       "category": "Countries",
       "level": "A1",
@@ -245,7 +245,7 @@
     },
     {
       "id": "syllabus-a1-10098",
-      "german": "Polen",
+      "german": "das Polen",
       "english": "Poland",
       "category": "Countries",
       "level": "A1",
@@ -265,7 +265,7 @@
     },
     {
       "id": "syllabus-a1-10099",
-      "german": "Griechenland",
+      "german": "das Griechenland",
       "english": "Greece",
       "category": "Countries",
       "level": "A1",
@@ -285,7 +285,7 @@
     },
     {
       "id": "syllabus-a1-10100",
-      "german": "Türkei",
+      "german": "die Türkei",
       "english": "Turkey",
       "category": "Countries",
       "level": "A1",
@@ -305,7 +305,7 @@
     },
     {
       "id": "syllabus-a1-10101",
-      "german": "Portugal",
+      "german": "das Portugal",
       "english": "Portugal",
       "category": "Countries",
       "level": "A1",
@@ -325,7 +325,7 @@
     },
     {
       "id": "syllabus-a1-10102",
-      "german": "Niederlande",
+      "german": "die Niederlande",
       "english": "Netherlands",
       "category": "Countries",
       "level": "A1",
@@ -345,7 +345,7 @@
     },
     {
       "id": "syllabus-a1-10103",
-      "german": "Belgien",
+      "german": "das Belgien",
       "english": "Belgium",
       "category": "Countries",
       "level": "A1",
@@ -365,7 +365,7 @@
     },
     {
       "id": "syllabus-a1-10104",
-      "german": "Schweden",
+      "german": "das Schweden",
       "english": "Sweden",
       "category": "Countries",
       "level": "A1",
@@ -385,7 +385,7 @@
     },
     {
       "id": "syllabus-a1-10105",
-      "german": "Norwegen",
+      "german": "das Norwegen",
       "english": "Norway",
       "category": "Countries",
       "level": "A1",
@@ -405,7 +405,7 @@
     },
     {
       "id": "syllabus-a1-10106",
-      "german": "Dänemark",
+      "german": "das Dänemark",
       "english": "Denmark",
       "category": "Countries",
       "level": "A1",
@@ -425,7 +425,7 @@
     },
     {
       "id": "syllabus-a1-10107",
-      "german": "Finnland",
+      "german": "das Finnland",
       "english": "Finland",
       "category": "Countries",
       "level": "A1",
@@ -445,7 +445,7 @@
     },
     {
       "id": "syllabus-a1-10108",
-      "german": "Irland",
+      "german": "das Irland",
       "english": "Ireland",
       "category": "Countries",
       "level": "A1",
@@ -465,7 +465,7 @@
     },
     {
       "id": "syllabus-a1-10109",
-      "german": "Schottland",
+      "german": "das Schottland",
       "english": "Scotland",
       "category": "Countries",
       "level": "A1",
@@ -485,7 +485,7 @@
     },
     {
       "id": "syllabus-a1-10110",
-      "german": "Tschechien",
+      "german": "das Tschechien",
       "english": "Czech Republic",
       "category": "Countries",
       "level": "A1",
@@ -505,7 +505,7 @@
     },
     {
       "id": "syllabus-a1-10111",
-      "german": "Ungarn",
+      "german": "das Ungarn",
       "english": "Hungary",
       "category": "Countries",
       "level": "A1",
@@ -525,7 +525,7 @@
     },
     {
       "id": "syllabus-a1-10112",
-      "german": "Rumänien",
+      "german": "das Rumänien",
       "english": "Romania",
       "category": "Countries",
       "level": "A1",
@@ -545,7 +545,7 @@
     },
     {
       "id": "syllabus-a1-10113",
-      "german": "Bulgarien",
+      "german": "das Bulgarien",
       "english": "Bulgaria",
       "category": "Countries",
       "level": "A1",
@@ -565,7 +565,7 @@
     },
     {
       "id": "syllabus-a1-10114",
-      "german": "Kroatien",
+      "german": "das Kroatien",
       "english": "Croatia",
       "category": "Countries",
       "level": "A1",
@@ -585,7 +585,7 @@
     },
     {
       "id": "syllabus-a1-10115",
-      "german": "Serbien",
+      "german": "das Serbien",
       "english": "Serbia",
       "category": "Countries",
       "level": "A1",
@@ -605,7 +605,7 @@
     },
     {
       "id": "syllabus-a1-10116",
-      "german": "Ukraine",
+      "german": "die Ukraine",
       "english": "Ukraine",
       "category": "Countries",
       "level": "A1",
@@ -625,7 +625,7 @@
     },
     {
       "id": "syllabus-a1-10117",
-      "german": "Kanada",
+      "german": "das Kanada",
       "english": "Canada",
       "category": "Countries",
       "level": "A1",
@@ -645,7 +645,7 @@
     },
     {
       "id": "syllabus-a1-10118",
-      "german": "Mexiko",
+      "german": "das Mexiko",
       "english": "Mexico",
       "category": "Countries",
       "level": "A1",
@@ -665,7 +665,7 @@
     },
     {
       "id": "syllabus-a1-10119",
-      "german": "Brasilien",
+      "german": "das Brasilien",
       "english": "Brazil",
       "category": "Countries",
       "level": "A1",
@@ -685,7 +685,7 @@
     },
     {
       "id": "syllabus-a1-10120",
-      "german": "Argentinien",
+      "german": "das Argentinien",
       "english": "Argentina",
       "category": "Countries",
       "level": "A1",
@@ -705,7 +705,7 @@
     },
     {
       "id": "syllabus-a1-10121",
-      "german": "Chile",
+      "german": "das Chile",
       "english": "Chile",
       "category": "Countries",
       "level": "A1",
@@ -725,7 +725,7 @@
     },
     {
       "id": "syllabus-a1-10122",
-      "german": "Australien",
+      "german": "das Australien",
       "english": "Australia",
       "category": "Countries",
       "level": "A1",
@@ -745,7 +745,7 @@
     },
     {
       "id": "syllabus-a1-10123",
-      "german": "Neuseeland",
+      "german": "das Neuseeland",
       "english": "New Zealand",
       "category": "Countries",
       "level": "A1",
@@ -765,7 +765,7 @@
     },
     {
       "id": "syllabus-a1-10124",
-      "german": "Südafrika",
+      "german": "das Südafrika",
       "english": "South Africa",
       "category": "Countries",
       "level": "A1",
@@ -785,7 +785,7 @@
     },
     {
       "id": "syllabus-a1-10125",
-      "german": "Ägypten",
+      "german": "das Ägypten",
       "english": "Egypt",
       "category": "Countries",
       "level": "A1",
@@ -805,7 +805,7 @@
     },
     {
       "id": "syllabus-a1-10126",
-      "german": "Marokko",
+      "german": "das Marokko",
       "english": "Morocco",
       "category": "Countries",
       "level": "A1",
@@ -825,7 +825,7 @@
     },
     {
       "id": "syllabus-a1-10127",
-      "german": "Saudi-Arabien",
+      "german": "das Saudi-Arabien",
       "english": "Saudi Arabia",
       "category": "Countries",
       "level": "A1",
@@ -845,7 +845,7 @@
     },
     {
       "id": "syllabus-a1-10128",
-      "german": "Israel",
+      "german": "das Israel",
       "english": "Israel",
       "category": "Countries",
       "level": "A1",
@@ -865,7 +865,7 @@
     },
     {
       "id": "syllabus-a1-10129",
-      "german": "Iran",
+      "german": "der Iran",
       "english": "Iran",
       "category": "Countries",
       "level": "A1",
@@ -885,7 +885,7 @@
     },
     {
       "id": "syllabus-a1-10130",
-      "german": "Südkorea",
+      "german": "das Südkorea",
       "english": "South Korea",
       "category": "Countries",
       "level": "A1",
@@ -905,7 +905,7 @@
     },
     {
       "id": "syllabus-a1-10131",
-      "german": "Thailand",
+      "german": "das Thailand",
       "english": "Thailand",
       "category": "Countries",
       "level": "A1",
@@ -925,7 +925,7 @@
     },
     {
       "id": "syllabus-a1-10132",
-      "german": "Vietnam",
+      "german": "das Vietnam",
       "english": "Vietnam",
       "category": "Countries",
       "level": "A1",
@@ -945,7 +945,7 @@
     },
     {
       "id": "syllabus-a1-10133",
-      "german": "Philippinen",
+      "german": "die Philippinen",
       "english": "Philippines",
       "category": "Countries",
       "level": "A1",
@@ -965,7 +965,7 @@
     },
     {
       "id": "syllabus-a1-10134",
-      "german": "Indonesien",
+      "german": "das Indonesien",
       "english": "Indonesia",
       "category": "Countries",
       "level": "A1",

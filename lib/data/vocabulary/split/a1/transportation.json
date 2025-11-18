@@ -5,7 +5,7 @@
   "flashcards": [
     {
       "id": "syllabus-a1-10358",
-      "german": "Auto",
+      "german": "das Auto",
       "english": "car",
       "category": "Transportation",
       "level": "A1",
@@ -25,7 +25,7 @@
     },
     {
       "id": "syllabus-a1-10359",
-      "german": "Bus",
+      "german": "der Bus",
       "english": "bus",
       "category": "Transportation",
       "level": "A1",
@@ -45,7 +45,7 @@
     },
     {
       "id": "syllabus-a1-10360",
-      "german": "Zug",
+      "german": "der Zug",
       "english": "train",
       "category": "Transportation",
       "level": "A1",
@@ -65,7 +65,7 @@
     },
     {
       "id": "syllabus-a1-10361",
-      "german": "Fahrrad",
+      "german": "das Fahrrad",
       "english": "bicycle",
       "category": "Transportation",
       "level": "A1",
@@ -85,7 +85,7 @@
     },
     {
       "id": "syllabus-a1-10362",
-      "german": "Flugzeug",
+      "german": "das Flugzeug",
       "english": "airplane",
       "category": "Transportation",
       "level": "A1",
@@ -105,7 +105,7 @@
     },
     {
       "id": "syllabus-a1-10363",
-      "german": "Taxi",
+      "german": "das Taxi",
       "english": "taxi",
       "category": "Transportation",
       "level": "A1",
@@ -125,7 +125,7 @@
     },
     {
       "id": "syllabus-a1-10364",
-      "german": "U-Bahn",
+      "german": "die U-Bahn",
       "english": "subway / metro",
       "category": "Transportation",
       "level": "A1",
@@ -145,7 +145,7 @@
     },
     {
       "id": "syllabus-a1-10365",
-      "german": "Straßenbahn",
+      "german": "die Straßenbahn",
       "english": "tram / streetcar",
       "category": "Transportation",
       "level": "A1",
@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-a1-10366",
-      "german": "Schiff",
+      "german": "das Schiff",
       "english": "ship / boat",
       "category": "Transportation",
       "level": "A1",
@@ -185,7 +185,7 @@
     },
     {
       "id": "syllabus-a1-10367",
-      "german": "Motorrad",
+      "german": "das Motorrad",
       "english": "motorcycle",
       "category": "Transportation",
       "level": "A1",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-a1-10368",
-      "german": "Bahnhof",
+      "german": "der Bahnhof",
       "english": "train station",
       "category": "Transportation",
       "level": "A1",
@@ -225,7 +225,7 @@
     },
     {
       "id": "syllabus-a1-10369",
-      "german": "Haltestelle",
+      "german": "die Haltestelle",
       "english": "stop / station",
       "category": "Transportation",
       "level": "A1",
@@ -245,7 +245,7 @@
     },
     {
       "id": "syllabus-a1-10370",
-      "german": "Straße",
+      "german": "die Straße",
       "english": "street / road",
       "category": "Transportation",
       "level": "A1",
@@ -303,83 +303,1565 @@
         ]
       }
     },
-    {"id": "syllabus-a1-10439", "german": "Flughafen", "english": "airport", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Flughafen"]}},
-    {"id": "syllabus-a1-10440", "german": "Hafen", "english": "port / harbor", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Hafen"]}},
-    {"id": "syllabus-a1-10441", "german": "Parkplatz", "english": "parking lot / parking space", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Parkplatz"]}},
-    {"id": "syllabus-a1-10442", "german": "Garage", "english": "garage", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Garage"]}},
-    {"id": "syllabus-a1-10443", "german": "Tankstelle", "english": "gas station", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Tankstelle"]}},
-    {"id": "syllabus-a1-10444", "german": "Brücke", "english": "bridge", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Brücke"]}},
-    {"id": "syllabus-a1-10445", "german": "Tunnel", "english": "tunnel", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Tunnel"]}},
-    {"id": "syllabus-a1-10446", "german": "Kreuzung", "english": "intersection / crossroads", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Kreuzung"]}},
-    {"id": "syllabus-a1-10447", "german": "Ampel", "english": "traffic light", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Ampel"]}},
-    {"id": "syllabus-a1-10448", "german": "Verkehr", "english": "traffic", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Verkehr"]}},
-    {"id": "syllabus-a1-10449", "german": "Stau", "english": "traffic jam", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Stau"]}},
-    {"id": "syllabus-a1-10450", "german": "Autobahn", "english": "highway / freeway", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Autobahn"]}},
-    {"id": "syllabus-a1-10451", "german": "Gehweg", "english": "sidewalk / pavement", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Gehweg"]}},
-    {"id": "syllabus-a1-10452", "german": "Radweg", "english": "bike path / cycle lane", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Radweg"]}},
-    {"id": "syllabus-a1-10453", "german": "Führerschein", "english": "driver's license", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Führerschein"]}},
-    {"id": "syllabus-a1-10454", "german": "Ticket", "english": "ticket", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Ticket"]}},
-    {"id": "syllabus-a1-10455", "german": "Fahrkarte", "english": "ticket (for travel)", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Fahrkarte"]}},
-    {"id": "syllabus-a1-10456", "german": "Fahrplan", "english": "schedule / timetable", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Fahrplan"]}},
-    {"id": "syllabus-a1-10457", "german": "Reise", "english": "journey / trip", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Reise"]}},
-    {"id": "syllabus-a1-10458", "german": "Gepäck", "english": "luggage / baggage", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Gepäck"]}},
-    {"id": "syllabus-a1-10459", "german": "Koffer", "english": "suitcase", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Koffer"]}},
-    {"id": "syllabus-a1-10460", "german": "Rucksack", "english": "backpack", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Rucksack"]}},
-    {"id": "syllabus-a1-10461", "german": "Passagier", "english": "passenger", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Passagier"]}},
-    {"id": "syllabus-a1-10462", "german": "Fahrer", "english": "driver", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Fahrer"]}},
-    {"id": "syllabus-a1-10463", "german": "Pilot", "english": "pilot", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Pilot"]}},
-    {"id": "syllabus-a1-10464", "german": "Motor", "english": "engine / motor", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Motor"]}},
-    {"id": "syllabus-a1-10465", "german": "Rad", "english": "wheel", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Rad"]}},
-    {"id": "syllabus-a1-10466", "german": "Reifen", "english": "tire", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Reifen"]}},
-    {"id": "syllabus-a1-10467", "german": "Benzin", "english": "gasoline / petrol", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Benzin"]}},
-    {"id": "syllabus-a1-10468", "german": "Diesel", "english": "diesel", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Diesel"]}},
-    {"id": "syllabus-a1-10469", "german": "Tür", "english": "door", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Tür"]}},
-    {"id": "syllabus-a1-10470", "german": "Fenster", "english": "window", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Fenster"]}},
-    {"id": "syllabus-a1-10471", "german": "Sitz", "english": "seat", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Sitz"]}},
-    {"id": "syllabus-a1-10472", "german": "Sitzplatz", "english": "seat / seating place", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Sitzplatz"]}},
-    {"id": "syllabus-a1-10473", "german": "Gurt", "english": "belt / seatbelt", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Gurt"]}},
-    {"id": "syllabus-a1-10474", "german": "Sicherheitsgurt", "english": "seatbelt", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Sicherheitsgurt"]}},
-    {"id": "syllabus-a1-10475", "german": "Helm", "english": "helmet", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Helm"]}},
-    {"id": "syllabus-a1-10476", "german": "LKW", "english": "truck", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "LKW"]}},
-    {"id": "syllabus-a1-10477", "german": "Lastwagen", "english": "truck", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Lastwagen"]}},
-    {"id": "syllabus-a1-10478", "german": "Lieferwagen", "english": "delivery van", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Lieferwagen"]}},
-    {"id": "syllabus-a1-10479", "german": "Roller", "english": "scooter", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Roller"]}},
-    {"id": "syllabus-a1-10480", "german": "E-Bike", "english": "e-bike / electric bicycle", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "E-Bike"]}},
-    {"id": "syllabus-a1-10481", "german": "Fähre", "english": "ferry", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Fähre"]}},
-    {"id": "syllabus-a1-10482", "german": "Boot", "english": "boat", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Boot"]}},
-    {"id": "syllabus-a1-10483", "german": "Hubschrauber", "english": "helicopter", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Hubschrauber"]}},
-    {"id": "syllabus-a1-10484", "german": "Gleis", "english": "track / platform", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Gleis"]}},
-    {"id": "syllabus-a1-10485", "german": "Bahnsteig", "english": "platform", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Bahnsteig"]}},
-    {"id": "syllabus-a1-10486", "german": "Abfahrt", "english": "departure", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Abfahrt"]}},
-    {"id": "syllabus-a1-10487", "german": "Ankunft", "english": "arrival", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Ankunft"]}},
-    {"id": "syllabus-a1-10488", "german": "Verspätung", "english": "delay", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Verspätung"]}},
-    {"id": "syllabus-a1-10489", "german": "Umsteigen", "english": "transfer / change (transportation)", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "Umsteigen"]}},
-    {"id": "syllabus-a1-10490", "german": "einsteigen", "english": "to get in / to board", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "einsteigen"]}},
-    {"id": "syllabus-a1-10491", "german": "aussteigen", "english": "to get out / to exit", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "aussteigen"]}},
-    {"id": "syllabus-a1-10492", "german": "abfahren", "english": "to depart / to leave", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "abfahren"]}},
-    {"id": "syllabus-a1-10493", "german": "ankommen", "english": "to arrive", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "ankommen"]}},
-    {"id": "syllabus-a1-10494", "german": "reisen", "english": "to travel", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "reisen"]}},
-    {"id": "syllabus-a1-10495", "german": "fliegen", "english": "to fly", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "fliegen"]}},
-    {"id": "syllabus-a1-10496", "german": "laufen", "english": "to run / to walk", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "laufen"]}},
-    {"id": "syllabus-a1-10497", "german": "rennen", "english": "to run", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "rennen"]}},
-    {"id": "syllabus-a1-10498", "german": "parken", "english": "to park", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "parken"]}},
-    {"id": "syllabus-a1-10499", "german": "tanken", "english": "to refuel / to fill up", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "tanken"]}},
-    {"id": "syllabus-a1-10500", "german": "warten", "english": "to wait", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "warten"]}},
-    {"id": "syllabus-a1-10501", "german": "verpassen", "english": "to miss (a bus/train)", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "verpassen"]}},
-    {"id": "syllabus-a1-10502", "german": "bremsen", "english": "to brake", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "bremsen"]}},
-    {"id": "syllabus-a1-10503", "german": "lenken", "english": "to steer", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "lenken"]}},
-    {"id": "syllabus-a1-10504", "german": "biegen", "english": "to turn", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "biegen"]}},
-    {"id": "syllabus-a1-10505", "german": "links abbiegen", "english": "to turn left", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "links abbiegen"]}},
-    {"id": "syllabus-a1-10506", "german": "rechts abbiegen", "english": "to turn right", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "rechts abbiegen"]}},
-    {"id": "syllabus-a1-10507", "german": "geradeaus", "english": "straight ahead", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "geradeaus"]}},
-    {"id": "syllabus-a1-10508", "german": "schnell", "english": "fast / quick", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "schnell"]}},
-    {"id": "syllabus-a1-10509", "german": "langsam", "english": "slow", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "langsam"]}},
-    {"id": "syllabus-a1-10510", "german": "pünktlich", "english": "on time / punctual", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "pünktlich"]}},
-    {"id": "syllabus-a1-10511", "german": "zu Fuß", "english": "on foot", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "zu Fuß"]}},
-    {"id": "syllabus-a1-10512", "german": "mit dem Auto", "english": "by car", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "mit dem Auto"]}},
-    {"id": "syllabus-a1-10513", "german": "mit dem Bus", "english": "by bus", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "mit dem Bus"]}},
-    {"id": "syllabus-a1-10514", "german": "mit dem Zug", "english": "by train", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "mit dem Zug"]}},
-    {"id": "syllabus-a1-10515", "german": "mit dem Fahrrad", "english": "by bicycle", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "mit dem Fahrrad"]}},
-    {"id": "syllabus-a1-10516", "german": "mit dem Flugzeug", "english": "by plane", "category": "Transportation", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Transportation", "mit dem Flugzeug"]}}
+    {
+      "id": "syllabus-a1-10439",
+      "german": "der Flughafen",
+      "english": "airport",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Flughafen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10440",
+      "german": "der Hafen",
+      "english": "port / harbor",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Hafen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10441",
+      "german": "der Parkplatz",
+      "english": "parking lot / parking space",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Parkplatz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10442",
+      "german": "die Garage",
+      "english": "garage",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Garage"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10443",
+      "german": "die Tankstelle",
+      "english": "gas station",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Tankstelle"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10444",
+      "german": "die Brücke",
+      "english": "bridge",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Brücke"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10445",
+      "german": "der Tunnel",
+      "english": "tunnel",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Tunnel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10446",
+      "german": "die Kreuzung",
+      "english": "intersection / crossroads",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Kreuzung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10447",
+      "german": "die Ampel",
+      "english": "traffic light",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Ampel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10448",
+      "german": "der Verkehr",
+      "english": "traffic",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Verkehr"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10449",
+      "german": "der Stau",
+      "english": "traffic jam",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Stau"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10450",
+      "german": "die Autobahn",
+      "english": "highway / freeway",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Autobahn"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10451",
+      "german": "der Gehweg",
+      "english": "sidewalk / pavement",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Gehweg"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10452",
+      "german": "der Radweg",
+      "english": "bike path / cycle lane",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Radweg"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10453",
+      "german": "der Führerschein",
+      "english": "driver's license",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Führerschein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10454",
+      "german": "das Ticket",
+      "english": "ticket",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Ticket"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10455",
+      "german": "die Fahrkarte",
+      "english": "ticket (for travel)",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Fahrkarte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10456",
+      "german": "der Fahrplan",
+      "english": "schedule / timetable",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Fahrplan"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10457",
+      "german": "die Reise",
+      "english": "journey / trip",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Reise"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10458",
+      "german": "das Gepäck",
+      "english": "luggage / baggage",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Gepäck"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10459",
+      "german": "der Koffer",
+      "english": "suitcase",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Koffer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10460",
+      "german": "der Rucksack",
+      "english": "backpack",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Rucksack"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10461",
+      "german": "der Passagier",
+      "english": "passenger",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Passagier"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10462",
+      "german": "der Fahrer",
+      "english": "driver",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Fahrer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10463",
+      "german": "der Pilot",
+      "english": "pilot",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Pilot"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10464",
+      "german": "der Motor",
+      "english": "engine / motor",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Motor"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10465",
+      "german": "das Rad",
+      "english": "wheel",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Rad"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10466",
+      "german": "der Reifen",
+      "english": "tire",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Reifen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10467",
+      "german": "das Benzin",
+      "english": "gasoline / petrol",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Benzin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10468",
+      "german": "der Diesel",
+      "english": "diesel",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Diesel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10469",
+      "german": "die Tür",
+      "english": "door",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Tür"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10470",
+      "german": "das Fenster",
+      "english": "window",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Fenster"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10471",
+      "german": "der Sitz",
+      "english": "seat",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Sitz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10472",
+      "german": "der Sitzplatz",
+      "english": "seat / seating place",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Sitzplatz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10473",
+      "german": "der Gurt",
+      "english": "belt / seatbelt",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Gurt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10474",
+      "german": "der Sicherheitsgurt",
+      "english": "seatbelt",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Sicherheitsgurt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10475",
+      "german": "der Helm",
+      "english": "helmet",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Helm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10476",
+      "german": "der LKW",
+      "english": "truck",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "LKW"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10477",
+      "german": "der Lastwagen",
+      "english": "truck",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Lastwagen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10478",
+      "german": "der Lieferwagen",
+      "english": "delivery van",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Lieferwagen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10479",
+      "german": "der Roller",
+      "english": "scooter",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Roller"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10480",
+      "german": "das E-Bike",
+      "english": "e-bike / electric bicycle",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "E-Bike"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10481",
+      "german": "die Fähre",
+      "english": "ferry",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Fähre"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10482",
+      "german": "das Boot",
+      "english": "boat",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Boot"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10483",
+      "german": "der Hubschrauber",
+      "english": "helicopter",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Hubschrauber"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10484",
+      "german": "das Gleis",
+      "english": "track / platform",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Gleis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10485",
+      "german": "der Bahnsteig",
+      "english": "platform",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Bahnsteig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10486",
+      "german": "die Abfahrt",
+      "english": "departure",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Abfahrt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10487",
+      "german": "die Ankunft",
+      "english": "arrival",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Ankunft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10488",
+      "german": "die Verspätung",
+      "english": "delay",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Verspätung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10489",
+      "german": "Umsteigen",
+      "english": "transfer / change (transportation)",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "Umsteigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10490",
+      "german": "einsteigen",
+      "english": "to get in / to board",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "einsteigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10491",
+      "german": "aussteigen",
+      "english": "to get out / to exit",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "aussteigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10492",
+      "german": "abfahren",
+      "english": "to depart / to leave",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "abfahren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10493",
+      "german": "ankommen",
+      "english": "to arrive",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "ankommen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10494",
+      "german": "reisen",
+      "english": "to travel",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "reisen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10495",
+      "german": "fliegen",
+      "english": "to fly",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "fliegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10496",
+      "german": "laufen",
+      "english": "to run / to walk",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "laufen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10497",
+      "german": "rennen",
+      "english": "to run",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "rennen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10498",
+      "german": "parken",
+      "english": "to park",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "parken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10499",
+      "german": "tanken",
+      "english": "to refuel / to fill up",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "tanken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10500",
+      "german": "warten",
+      "english": "to wait",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "warten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10501",
+      "german": "verpassen",
+      "english": "to miss (a bus/train)",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "verpassen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10502",
+      "german": "bremsen",
+      "english": "to brake",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "bremsen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10503",
+      "german": "lenken",
+      "english": "to steer",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "lenken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10504",
+      "german": "biegen",
+      "english": "to turn",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "biegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10505",
+      "german": "links abbiegen",
+      "english": "to turn left",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "links abbiegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10506",
+      "german": "rechts abbiegen",
+      "english": "to turn right",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "rechts abbiegen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10507",
+      "german": "geradeaus",
+      "english": "straight ahead",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "geradeaus"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10508",
+      "german": "schnell",
+      "english": "fast / quick",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "schnell"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10509",
+      "german": "langsam",
+      "english": "slow",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "langsam"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10510",
+      "german": "pünktlich",
+      "english": "on time / punctual",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "pünktlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10511",
+      "german": "zu Fuß",
+      "english": "on foot",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "zu Fuß"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10512",
+      "german": "mit dem Auto",
+      "english": "by car",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "mit dem Auto"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10513",
+      "german": "mit dem Bus",
+      "english": "by bus",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "mit dem Bus"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10514",
+      "german": "mit dem Zug",
+      "english": "by train",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "mit dem Zug"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10515",
+      "german": "mit dem Fahrrad",
+      "english": "by bicycle",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "mit dem Fahrrad"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10516",
+      "german": "mit dem Flugzeug",
+      "english": "by plane",
+      "category": "Transportation",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Transportation",
+          "mit dem Flugzeug"
+        ]
+      }
+    }
   ]
 }

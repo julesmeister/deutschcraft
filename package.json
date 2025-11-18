@@ -21,7 +21,9 @@
     "vocab:merge-orphans:dry-run": "tsx scripts/merge-orphaned-files.ts",
     "vocab:audit": "tsx scripts/audit-vocabulary-structure.ts",
     "vocab:migrate": "tsx scripts/cleanup-and-migrate-vocabulary.ts",
-    "vocab:migrate:dry-run": "tsx scripts/cleanup-and-migrate-vocabulary.ts --dry-run"
+    "vocab:migrate:dry-run": "tsx scripts/cleanup-and-migrate-vocabulary.ts --dry-run",
+    "vocab:add-articles": "tsx scripts/add-articles-to-nouns.ts",
+    "vocab:check-missing": "tsx scripts/extract-missing-nouns.ts"
   },
   "dependencies": {
     "@libsql/client": "^0.15.15",

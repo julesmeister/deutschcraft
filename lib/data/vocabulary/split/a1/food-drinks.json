@@ -5,7 +5,7 @@
   "flashcards": [
     {
       "id": "syllabus-a1-10116",
-      "german": "Brot",
+      "german": "das Brot",
       "english": "bread",
       "category": "Food Drinks",
       "level": "A1",
@@ -25,7 +25,7 @@
     },
     {
       "id": "syllabus-a1-10117",
-      "german": "Brötchen",
+      "german": "das Brötchen",
       "english": "bread roll",
       "category": "Food Drinks",
       "level": "A1",
@@ -45,7 +45,7 @@
     },
     {
       "id": "syllabus-a1-10118",
-      "german": "Wasser",
+      "german": "das Wasser",
       "english": "water",
       "category": "Food Drinks",
       "level": "A1",
@@ -65,7 +65,7 @@
     },
     {
       "id": "syllabus-a1-10119",
-      "german": "Kaffee",
+      "german": "der Kaffee",
       "english": "coffee",
       "category": "Food Drinks",
       "level": "A1",
@@ -85,7 +85,7 @@
     },
     {
       "id": "syllabus-a1-10120",
-      "german": "Tee",
+      "german": "der Tee",
       "english": "tea",
       "category": "Food Drinks",
       "level": "A1",
@@ -105,7 +105,7 @@
     },
     {
       "id": "syllabus-a1-10121",
-      "german": "Milch",
+      "german": "die Milch",
       "english": "milk",
       "category": "Food Drinks",
       "level": "A1",
@@ -125,7 +125,7 @@
     },
     {
       "id": "syllabus-a1-10122",
-      "german": "Saft",
+      "german": "der Saft",
       "english": "juice",
       "category": "Food Drinks",
       "level": "A1",
@@ -145,7 +145,7 @@
     },
     {
       "id": "syllabus-a1-10123",
-      "german": "Bier",
+      "german": "das Bier",
       "english": "beer",
       "category": "Food Drinks",
       "level": "A1",
@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-a1-10124",
-      "german": "Wein",
+      "german": "der Wein",
       "english": "wine",
       "category": "Food Drinks",
       "level": "A1",
@@ -185,7 +185,7 @@
     },
     {
       "id": "syllabus-a1-10125",
-      "german": "Apfel",
+      "german": "der Apfel",
       "english": "apple",
       "category": "Food Drinks",
       "level": "A1",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-a1-10126",
-      "german": "Käse",
+      "german": "der Käse",
       "english": "cheese",
       "category": "Food Drinks",
       "level": "A1",
@@ -225,7 +225,7 @@
     },
     {
       "id": "syllabus-a1-10127",
-      "german": "Ei",
+      "german": "das Ei",
       "english": "egg",
       "category": "Food Drinks",
       "level": "A1",
@@ -245,7 +245,7 @@
     },
     {
       "id": "syllabus-a1-10128",
-      "german": "Butter",
+      "german": "die Butter",
       "english": "butter",
       "category": "Food Drinks",
       "level": "A1",
@@ -265,7 +265,7 @@
     },
     {
       "id": "syllabus-a1-10129",
-      "german": "Marmelade",
+      "german": "die Marmelade",
       "english": "jam",
       "category": "Food Drinks",
       "level": "A1",
@@ -285,7 +285,7 @@
     },
     {
       "id": "syllabus-a1-10130",
-      "german": "Honig",
+      "german": "der Honig",
       "english": "honey",
       "category": "Food Drinks",
       "level": "A1",
@@ -305,7 +305,7 @@
     },
     {
       "id": "syllabus-a1-10131",
-      "german": "Fleisch",
+      "german": "das Fleisch",
       "english": "meat",
       "category": "Food Drinks",
       "level": "A1",
@@ -325,7 +325,7 @@
     },
     {
       "id": "syllabus-a1-10132",
-      "german": "Fisch",
+      "german": "der Fisch",
       "english": "fish",
       "category": "Food Drinks",
       "level": "A1",
@@ -345,7 +345,7 @@
     },
     {
       "id": "syllabus-a1-10133",
-      "german": "Hähnchen",
+      "german": "das Hähnchen",
       "english": "chicken",
       "category": "Food Drinks",
       "level": "A1",
@@ -365,7 +365,7 @@
     },
     {
       "id": "syllabus-a1-10134",
-      "german": "Wurst",
+      "german": "die Wurst",
       "english": "sausage",
       "category": "Food Drinks",
       "level": "A1",
@@ -385,7 +385,7 @@
     },
     {
       "id": "syllabus-a1-10135",
-      "german": "Schinken",
+      "german": "der Schinken",
       "english": "ham",
       "category": "Food Drinks",
       "level": "A1",
@@ -405,7 +405,7 @@
     },
     {
       "id": "syllabus-a1-10136",
-      "german": "Reis",
+      "german": "der Reis",
       "english": "rice",
       "category": "Food Drinks",
       "level": "A1",
@@ -425,7 +425,7 @@
     },
     {
       "id": "syllabus-a1-10137",
-      "german": "Nudeln",
+      "german": "die Nudeln",
       "english": "noodles / pasta",
       "category": "Food Drinks",
       "level": "A1",
@@ -445,7 +445,7 @@
     },
     {
       "id": "syllabus-a1-10138",
-      "german": "Kartoffel",
+      "german": "die Kartoffel",
       "english": "potato",
       "category": "Food Drinks",
       "level": "A1",
@@ -465,7 +465,7 @@
     },
     {
       "id": "syllabus-a1-10139",
-      "german": "Gemüse",
+      "german": "das Gemüse",
       "english": "vegetables",
       "category": "Food Drinks",
       "level": "A1",
@@ -485,7 +485,7 @@
     },
     {
       "id": "syllabus-a1-10140",
-      "german": "Salat",
+      "german": "der Salat",
       "english": "salad / lettuce",
       "category": "Food Drinks",
       "level": "A1",
@@ -505,7 +505,7 @@
     },
     {
       "id": "syllabus-a1-10141",
-      "german": "Suppe",
+      "german": "die Suppe",
       "english": "soup",
       "category": "Food Drinks",
       "level": "A1",
@@ -525,7 +525,7 @@
     },
     {
       "id": "syllabus-a1-10142",
-      "german": "Pizza",
+      "german": "die Pizza",
       "english": "pizza",
       "category": "Food Drinks",
       "level": "A1",
@@ -545,7 +545,7 @@
     },
     {
       "id": "syllabus-a1-10143",
-      "german": "Kuchen",
+      "german": "der Kuchen",
       "english": "cake",
       "category": "Food Drinks",
       "level": "A1",
@@ -565,7 +565,7 @@
     },
     {
       "id": "syllabus-a1-10144",
-      "german": "Keks",
+      "german": "der Keks",
       "english": "cookie / biscuit",
       "category": "Food Drinks",
       "level": "A1",
@@ -585,7 +585,7 @@
     },
     {
       "id": "syllabus-a1-10145",
-      "german": "Schokolade",
+      "german": "die Schokolade",
       "english": "chocolate",
       "category": "Food Drinks",
       "level": "A1",
@@ -605,7 +605,7 @@
     },
     {
       "id": "syllabus-a1-10146",
-      "german": "Eis",
+      "german": "das Eis",
       "english": "ice cream",
       "category": "Food Drinks",
       "level": "A1",
@@ -625,7 +625,7 @@
     },
     {
       "id": "syllabus-a1-10147",
-      "german": "Zucker",
+      "german": "der Zucker",
       "english": "sugar",
       "category": "Food Drinks",
       "level": "A1",
@@ -645,7 +645,7 @@
     },
     {
       "id": "syllabus-a1-10148",
-      "german": "Salz",
+      "german": "das Salz",
       "english": "salt",
       "category": "Food Drinks",
       "level": "A1",
@@ -665,7 +665,7 @@
     },
     {
       "id": "syllabus-a1-10149",
-      "german": "Pfeffer",
+      "german": "der Pfeffer",
       "english": "pepper",
       "category": "Food Drinks",
       "level": "A1",
@@ -685,7 +685,7 @@
     },
     {
       "id": "syllabus-a1-10150",
-      "german": "Öl",
+      "german": "das Öl",
       "english": "oil",
       "category": "Food Drinks",
       "level": "A1",
@@ -705,7 +705,7 @@
     },
     {
       "id": "syllabus-a1-10151",
-      "german": "Essig",
+      "german": "der Essig",
       "english": "vinegar",
       "category": "Food Drinks",
       "level": "A1",
@@ -725,7 +725,7 @@
     },
     {
       "id": "syllabus-a1-10152",
-      "german": "Joghurt",
+      "german": "der Joghurt",
       "english": "yogurt",
       "category": "Food Drinks",
       "level": "A1",
@@ -745,7 +745,7 @@
     },
     {
       "id": "syllabus-a1-10153",
-      "german": "Obst",
+      "german": "das Obst",
       "english": "fruit",
       "category": "Food Drinks",
       "level": "A1",
@@ -765,7 +765,7 @@
     },
     {
       "id": "syllabus-a1-10154",
-      "german": "Frühstück",
+      "german": "das Frühstück",
       "english": "breakfast",
       "category": "Food Drinks",
       "level": "A1",
@@ -785,7 +785,7 @@
     },
     {
       "id": "syllabus-a1-10155",
-      "german": "Mittagessen",
+      "german": "das Mittagessen",
       "english": "lunch",
       "category": "Food Drinks",
       "level": "A1",
@@ -805,7 +805,7 @@
     },
     {
       "id": "syllabus-a1-10156",
-      "german": "Abendessen",
+      "german": "das Abendessen",
       "english": "dinner",
       "category": "Food Drinks",
       "level": "A1",

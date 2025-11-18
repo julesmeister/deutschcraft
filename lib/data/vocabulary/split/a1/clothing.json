@@ -5,7 +5,7 @@
   "flashcards": [
     {
       "id": "syllabus-a1-10056",
-      "german": "Hose",
+      "german": "die Hose",
       "english": "pants",
       "category": "Clothing",
       "level": "A1",
@@ -25,7 +25,7 @@
     },
     {
       "id": "syllabus-a1-10057",
-      "german": "Hemd",
+      "german": "das Hemd",
       "english": "shirt",
       "category": "Clothing",
       "level": "A1",
@@ -45,7 +45,7 @@
     },
     {
       "id": "syllabus-a1-10058",
-      "german": "Kleid",
+      "german": "das Kleid",
       "english": "dress",
       "category": "Clothing",
       "level": "A1",
@@ -65,7 +65,7 @@
     },
     {
       "id": "syllabus-a1-10059",
-      "german": "Schuhe",
+      "german": "die Schuhe",
       "english": "shoes",
       "category": "Clothing",
       "level": "A1",
@@ -85,7 +85,7 @@
     },
     {
       "id": "syllabus-a1-10060",
-      "german": "Jacke",
+      "german": "die Jacke",
       "english": "jacket",
       "category": "Clothing",
       "level": "A1",
@@ -105,7 +105,7 @@
     },
     {
       "id": "syllabus-a1-10061",
-      "german": "Rock",
+      "german": "der Rock",
       "english": "skirt",
       "category": "Clothing",
       "level": "A1",
@@ -125,7 +125,7 @@
     },
     {
       "id": "syllabus-a1-10062",
-      "german": "Pullover",
+      "german": "der Pullover",
       "english": "sweater / pullover",
       "category": "Clothing",
       "level": "A1",
@@ -145,7 +145,7 @@
     },
     {
       "id": "syllabus-a1-10063",
-      "german": "T-Shirt",
+      "german": "das T-Shirt",
       "english": "t-shirt",
       "category": "Clothing",
       "level": "A1",
@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-a1-10064",
-      "german": "Mantel",
+      "german": "der Mantel",
       "english": "coat",
       "category": "Clothing",
       "level": "A1",
@@ -185,7 +185,7 @@
     },
     {
       "id": "syllabus-a1-10065",
-      "german": "Mütze",
+      "german": "die Mütze",
       "english": "cap / hat",
       "category": "Clothing",
       "level": "A1",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-a1-10066",
-      "german": "Schal",
+      "german": "der Schal",
       "english": "scarf",
       "category": "Clothing",
       "level": "A1",
@@ -225,7 +225,7 @@
     },
     {
       "id": "syllabus-a1-10067",
-      "german": "Handschuhe",
+      "german": "die Handschuhe",
       "english": "gloves",
       "category": "Clothing",
       "level": "A1",
@@ -245,7 +245,7 @@
     },
     {
       "id": "syllabus-a1-10068",
-      "german": "Socken",
+      "german": "die Socken",
       "english": "socks",
       "category": "Clothing",
       "level": "A1",
@@ -265,7 +265,7 @@
     },
     {
       "id": "syllabus-a1-10069",
-      "german": "Hut",
+      "german": "der Hut",
       "english": "hat",
       "category": "Clothing",
       "level": "A1",
@@ -285,7 +285,7 @@
     },
     {
       "id": "syllabus-a1-10070",
-      "german": "Gürtel",
+      "german": "der Gürtel",
       "english": "belt",
       "category": "Clothing",
       "level": "A1",

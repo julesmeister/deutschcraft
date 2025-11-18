@@ -5,7 +5,7 @@
   "flashcards": [
     {
       "id": "syllabus-a1-10157",
-      "german": "Banane",
+      "german": "die Banane",
       "english": "banana",
       "category": "Fruits",
       "level": "A1",
@@ -25,7 +25,7 @@
     },
     {
       "id": "syllabus-a1-10158",
-      "german": "Orange",
+      "german": "die Orange",
       "english": "orange",
       "category": "Fruits",
       "level": "A1",
@@ -45,7 +45,7 @@
     },
     {
       "id": "syllabus-a1-10159",
-      "german": "Erdbeere",
+      "german": "die Erdbeere",
       "english": "strawberry",
       "category": "Fruits",
       "level": "A1",
@@ -65,7 +65,7 @@
     },
     {
       "id": "syllabus-a1-10160",
-      "german": "Traube",
+      "german": "die Traube",
       "english": "grape",
       "category": "Fruits",
       "level": "A1",
@@ -85,7 +85,7 @@
     },
     {
       "id": "syllabus-a1-10161",
-      "german": "Birne",
+      "german": "die Birne",
       "english": "pear",
       "category": "Fruits",
       "level": "A1",
@@ -105,7 +105,7 @@
     },
     {
       "id": "syllabus-a1-10162",
-      "german": "Kirsche",
+      "german": "die Kirsche",
       "english": "cherry",
       "category": "Fruits",
       "level": "A1",
@@ -125,7 +125,7 @@
     },
     {
       "id": "syllabus-a1-10163",
-      "german": "Zitrone",
+      "german": "die Zitrone",
       "english": "lemon",
       "category": "Fruits",
       "level": "A1",
@@ -145,7 +145,7 @@
     },
     {
       "id": "syllabus-a1-10164",
-      "german": "Pfirsich",
+      "german": "der Pfirsich",
       "english": "peach",
       "category": "Fruits",
       "level": "A1",
@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-a1-10165",
-      "german": "Melone",
+      "german": "die Melone",
       "english": "melon",
       "category": "Fruits",
       "level": "A1",
@@ -185,7 +185,7 @@
     },
     {
       "id": "syllabus-a1-10166",
-      "german": "Ananas",
+      "german": "die Ananas",
       "english": "pineapple",
       "category": "Fruits",
       "level": "A1",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-a1-10167",
-      "german": "Kiwi",
+      "german": "die Kiwi",
       "english": "kiwi",
       "category": "Fruits",
       "level": "A1",
@@ -225,7 +225,7 @@
     },
     {
       "id": "syllabus-a1-10168",
-      "german": "Mango",
+      "german": "die Mango",
       "english": "mango",
       "category": "Fruits",
       "level": "A1",
@@ -245,7 +245,7 @@
     },
     {
       "id": "syllabus-a1-10169",
-      "german": "Himbeere",
+      "german": "die Himbeere",
       "english": "raspberry",
       "category": "Fruits",
       "level": "A1",
@@ -265,7 +265,7 @@
     },
     {
       "id": "syllabus-a1-10170",
-      "german": "Blaubeere",
+      "german": "die Blaubeere",
       "english": "blueberry",
       "category": "Fruits",
       "level": "A1",
@@ -285,7 +285,7 @@
     },
     {
       "id": "syllabus-a1-10171",
-      "german": "Obst",
+      "german": "das Obst",
       "english": "fruit",
       "category": "Fruits",
       "level": "A1",
@@ -305,7 +305,7 @@
     },
     {
       "id": "syllabus-a1-10172",
-      "german": "Apfel",
+      "german": "der Apfel",
       "english": "apple",
       "category": "Fruits",
       "level": "A1",
@@ -325,7 +325,7 @@
     },
     {
       "id": "syllabus-a1-10173",
-      "german": "Aprikose",
+      "german": "die Aprikose",
       "english": "apricot",
       "category": "Fruits",
       "level": "A1",
@@ -345,7 +345,7 @@
     },
     {
       "id": "syllabus-a1-10174",
-      "german": "Pflaume",
+      "german": "die Pflaume",
       "english": "plum",
       "category": "Fruits",
       "level": "A1",
@@ -365,7 +365,7 @@
     },
     {
       "id": "syllabus-a1-10175",
-      "german": "Wassermelone",
+      "german": "die Wassermelone",
       "english": "watermelon",
       "category": "Fruits",
       "level": "A1",
@@ -385,7 +385,7 @@
     },
     {
       "id": "syllabus-a1-10176",
-      "german": "Brombeere",
+      "german": "die Brombeere",
       "english": "blackberry",
       "category": "Fruits",
       "level": "A1",
@@ -405,7 +405,7 @@
     },
     {
       "id": "syllabus-a1-10177",
-      "german": "Kokosnuss",
+      "german": "die Kokosnuss",
       "english": "coconut",
       "category": "Fruits",
       "level": "A1",
@@ -425,7 +425,7 @@
     },
     {
       "id": "syllabus-a1-10178",
-      "german": "Mandarine",
+      "german": "die Mandarine",
       "english": "tangerine / mandarin",
       "category": "Fruits",
       "level": "A1",
@@ -445,7 +445,7 @@
     },
     {
       "id": "syllabus-a1-10179",
-      "german": "Grapefruit",
+      "german": "die Grapefruit",
       "english": "grapefruit",
       "category": "Fruits",
       "level": "A1",
@@ -465,7 +465,7 @@
     },
     {
       "id": "syllabus-a1-10180",
-      "german": "Nektarine",
+      "german": "die Nektarine",
       "english": "nectarine",
       "category": "Fruits",
       "level": "A1",
@@ -485,7 +485,7 @@
     },
     {
       "id": "syllabus-a1-10181",
-      "german": "Papaya",
+      "german": "die Papaya",
       "english": "papaya",
       "category": "Fruits",
       "level": "A1",
@@ -505,7 +505,7 @@
     },
     {
       "id": "syllabus-a1-10182",
-      "german": "Feige",
+      "german": "die Feige",
       "english": "fig",
       "category": "Fruits",
       "level": "A1",
@@ -525,7 +525,7 @@
     },
     {
       "id": "syllabus-a1-10183",
-      "german": "Dattel",
+      "german": "die Dattel",
       "english": "date",
       "category": "Fruits",
       "level": "A1",
@@ -545,7 +545,7 @@
     },
     {
       "id": "syllabus-a1-10184",
-      "german": "Avocado",
+      "german": "die Avocado",
       "english": "avocado",
       "category": "Fruits",
       "level": "A1",
@@ -565,7 +565,7 @@
     },
     {
       "id": "syllabus-a1-10185",
-      "german": "Limette",
+      "german": "die Limette",
       "english": "lime",
       "category": "Fruits",
       "level": "A1",
@@ -585,7 +585,7 @@
     },
     {
       "id": "syllabus-a1-10186",
-      "german": "Passionsfrucht",
+      "german": "die Passionsfrucht",
       "english": "passion fruit",
       "category": "Fruits",
       "level": "A1",

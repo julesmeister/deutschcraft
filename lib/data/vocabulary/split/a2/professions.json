@@ -1,11 +1,11 @@
 {
   "level": "A2",
   "category": "Professions",
-  "totalCards": 114,
+  "totalCards": 113,
   "flashcards": [
     {
       "id": "syllabus-a2-10664",
-      "german": "Arzt",
+      "german": "der Arzt",
       "english": "doctor",
       "category": "Professions",
       "level": "A2",
@@ -25,7 +25,7 @@
     },
     {
       "id": "syllabus-a2-10665",
-      "german": "Lehrer",
+      "german": "der Lehrer",
       "english": "teacher",
       "category": "Professions",
       "level": "A2",
@@ -45,7 +45,7 @@
     },
     {
       "id": "syllabus-a2-10666",
-      "german": "Student",
+      "german": "der Student",
       "english": "student",
       "category": "Professions",
       "level": "A2",
@@ -65,7 +65,7 @@
     },
     {
       "id": "syllabus-a2-10667",
-      "german": "Koch",
+      "german": "der Koch",
       "english": "cook",
       "category": "Professions",
       "level": "A2",
@@ -85,7 +85,7 @@
     },
     {
       "id": "syllabus-a2-10668",
-      "german": "Verkäufer",
+      "german": "der Verkäufer",
       "english": "seller",
       "category": "Professions",
       "level": "A2",
@@ -105,7 +105,7 @@
     },
     {
       "id": "syllabus-a2-10669",
-      "german": "Ingenieur",
+      "german": "der Ingenieur",
       "english": "engineer",
       "category": "Professions",
       "level": "A2",
@@ -125,7 +125,7 @@
     },
     {
       "id": "syllabus-a2-10670",
-      "german": "Krankenschwester",
+      "german": "die Krankenschwester",
       "english": "nurse",
       "category": "Professions",
       "level": "A2",
@@ -145,7 +145,7 @@
     },
     {
       "id": "syllabus-a2-10671",
-      "german": "Polizist",
+      "german": "der Polizist",
       "english": "police officer",
       "category": "Professions",
       "level": "A2",
@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-a2-10672",
-      "german": "Anwalt",
+      "german": "der Anwalt",
       "english": "lawyer",
       "category": "Professions",
       "level": "A2",
@@ -185,7 +185,7 @@
     },
     {
       "id": "syllabus-a2-10673",
-      "german": "Friseur",
+      "german": "der Friseur",
       "english": "hairdresser",
       "category": "Professions",
       "level": "A2",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-a2-10674",
-      "german": "Mechaniker",
+      "german": "der Mechaniker",
       "english": "mechanic",
       "category": "Professions",
       "level": "A2",
@@ -225,7 +225,7 @@
     },
     {
       "id": "syllabus-a2-10675",
-      "german": "Bauer",
+      "german": "der Bauer",
       "english": "farmer",
       "category": "Professions",
       "level": "A2",
@@ -245,7 +245,7 @@
     },
     {
       "id": "syllabus-a2-10676",
-      "german": "Pilot",
+      "german": "der Pilot",
       "english": "pilot",
       "category": "Professions",
       "level": "A2",
@@ -265,7 +265,7 @@
     },
     {
       "id": "syllabus-a2-10677",
-      "german": "Kellner",
+      "german": "der Kellner",
       "english": "waiter",
       "category": "Professions",
       "level": "A2",
@@ -285,7 +285,7 @@
     },
     {
       "id": "syllabus-a2-10678",
-      "german": "Musiker",
+      "german": "der Musiker",
       "english": "musician",
       "category": "Professions",
       "level": "A2",
@@ -305,7 +305,7 @@
     },
     {
       "id": "syllabus-a2-10679",
-      "german": "Künstler",
+      "german": "der Künstler",
       "english": "artist",
       "category": "Professions",
       "level": "A2",
@@ -323,102 +323,1945 @@
         ]
       }
     },
-    {"id": "syllabus-a2-10680", "german": "Ärztin", "english": "doctor (female)", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Ärztin"]}},
-    {"id": "syllabus-a2-10681", "german": "Zahnarzt", "english": "dentist", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Zahnarzt"]}},
-    {"id": "syllabus-a2-10682", "german": "Tierarzt", "english": "veterinarian", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Tierarzt"]}},
-    {"id": "syllabus-a2-10683", "german": "Chirurg", "english": "surgeon", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Chirurg"]}},
-    {"id": "syllabus-a2-10684", "german": "Krankenpfleger", "english": "nurse (male)", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Krankenpfleger"]}},
-    {"id": "syllabus-a2-10685", "german": "Apotheker", "english": "pharmacist", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Apotheker"]}},
-    {"id": "syllabus-a2-10686", "german": "Lehrerin", "english": "teacher (female)", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Lehrerin"]}},
-    {"id": "syllabus-a2-10687", "german": "Professor", "english": "professor", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Professor"]}},
-    {"id": "syllabus-a2-10688", "german": "Schüler", "english": "pupil/student", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Schüler"]}},
-    {"id": "syllabus-a2-10689", "german": "Erzieher", "english": "educator/childcare worker", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Erzieher"]}},
-    {"id": "syllabus-a2-10690", "german": "Architekt", "english": "architect", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Architekt"]}},
-    {"id": "syllabus-a2-10691", "german": "Programmierer", "english": "programmer", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Programmierer"]}},
-    {"id": "syllabus-a2-10692", "german": "IT-Spezialist", "english": "IT specialist", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "IT-Spezialist"]}},
-    {"id": "syllabus-a2-10693", "german": "Informatiker", "english": "computer scientist", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Informatiker"]}},
-    {"id": "syllabus-a2-10694", "german": "Wissenschaftler", "english": "scientist", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Wissenschaftler"]}},
-    {"id": "syllabus-a2-10695", "german": "Forscher", "english": "researcher", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Forscher"]}},
-    {"id": "syllabus-a2-10696", "german": "Rechtsanwalt", "english": "attorney", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Rechtsanwalt"]}},
-    {"id": "syllabus-a2-10697", "german": "Richter", "english": "judge", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Richter"]}},
-    {"id": "syllabus-a2-10698", "german": "Notar", "english": "notary", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Notar"]}},
-    {"id": "syllabus-a2-10699", "german": "Feuerwehrmann", "english": "firefighter", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Feuerwehrmann"]}},
-    {"id": "syllabus-a2-10700", "german": "Soldat", "english": "soldier", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Soldat"]}},
-    {"id": "syllabus-a2-10701", "german": "Kassierer", "english": "cashier", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Kassierer"]}},
-    {"id": "syllabus-a2-10702", "german": "Einzelhändler", "english": "retailer", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Einzelhändler"]}},
-    {"id": "syllabus-a2-10703", "german": "Kaufmann", "english": "merchant/businessman", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Kaufmann"]}},
-    {"id": "syllabus-a2-10704", "german": "Geschäftsmann", "english": "businessman", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Geschäftsmann"]}},
-    {"id": "syllabus-a2-10705", "german": "Unternehmer", "english": "entrepreneur", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Unternehmer"]}},
-    {"id": "syllabus-a2-10706", "german": "Manager", "english": "manager", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Manager"]}},
-    {"id": "syllabus-a2-10707", "german": "Chef", "english": "boss/chief", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Chef"]}},
-    {"id": "syllabus-a2-10708", "german": "Direktor", "english": "director", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Direktor"]}},
-    {"id": "syllabus-a2-10709", "german": "Sekretär", "english": "secretary", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Sekretär"]}},
-    {"id": "syllabus-a2-10710", "german": "Assistent", "english": "assistant", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Assistent"]}},
-    {"id": "syllabus-a2-10711", "german": "Buchhalter", "english": "accountant", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Buchhalter"]}},
-    {"id": "syllabus-a2-10712", "german": "Banker", "english": "banker", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Banker"]}},
-    {"id": "syllabus-a2-10713", "german": "Finanzberater", "english": "financial advisor", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Finanzberater"]}},
-    {"id": "syllabus-a2-10714", "german": "Bäcker", "english": "baker", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Bäcker"]}},
-    {"id": "syllabus-a2-10715", "german": "Metzger", "english": "butcher", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Metzger"]}},
-    {"id": "syllabus-a2-10716", "german": "Kellnerin", "english": "waitress", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Kellnerin"]}},
-    {"id": "syllabus-a2-10717", "german": "Barkeeper", "english": "bartender", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Barkeeper"]}},
-    {"id": "syllabus-a2-10718", "german": "Kosmetiker", "english": "beautician/cosmetologist", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Kosmetiker"]}},
-    {"id": "syllabus-a2-10719", "german": "Masseur", "english": "massage therapist", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Masseur"]}},
-    {"id": "syllabus-a2-10720", "german": "Elektriker", "english": "electrician", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Elektriker"]}},
-    {"id": "syllabus-a2-10721", "german": "Klempner", "english": "plumber", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Klempner"]}},
-    {"id": "syllabus-a2-10722", "german": "Schreiner", "english": "carpenter", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Schreiner"]}},
-    {"id": "syllabus-a2-10723", "german": "Maler", "english": "painter", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Maler"]}},
-    {"id": "syllabus-a2-10724", "german": "Maurer", "english": "bricklayer/mason", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Maurer"]}},
-    {"id": "syllabus-a2-10725", "german": "Bauarbeiter", "english": "construction worker", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Bauarbeiter"]}},
-    {"id": "syllabus-a2-10726", "german": "Gärtner", "english": "gardener", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Gärtner"]}},
-    {"id": "syllabus-a2-10727", "german": "Landwirt", "english": "farmer/agriculturist", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Landwirt"]}},
-    {"id": "syllabus-a2-10728", "german": "Fischer", "english": "fisherman", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Fischer"]}},
-    {"id": "syllabus-a2-10729", "german": "Jäger", "english": "hunter", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Jäger"]}},
-    {"id": "syllabus-a2-10730", "german": "Flugbegleiter", "english": "flight attendant", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Flugbegleiter"]}},
-    {"id": "syllabus-a2-10731", "german": "Busfahrer", "english": "bus driver", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Busfahrer"]}},
-    {"id": "syllabus-a2-10732", "german": "Taxifahrer", "english": "taxi driver", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Taxifahrer"]}},
-    {"id": "syllabus-a2-10733", "german": "LKW-Fahrer", "english": "truck driver", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "LKW-Fahrer"]}},
-    {"id": "syllabus-a2-10734", "german": "Lokführer", "english": "train driver", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Lokführer"]}},
-    {"id": "syllabus-a2-10735", "german": "Matrose", "english": "sailor", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Matrose"]}},
-    {"id": "syllabus-a2-10736", "german": "Kapitän", "english": "captain", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Kapitän"]}},
-    {"id": "syllabus-a2-10737", "german": "Journalist", "english": "journalist", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Journalist"]}},
-    {"id": "syllabus-a2-10738", "german": "Reporter", "english": "reporter", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Reporter"]}},
-    {"id": "syllabus-a2-10739", "german": "Redakteur", "english": "editor", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Redakteur"]}},
-    {"id": "syllabus-a2-10740", "german": "Autor", "english": "author", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Autor"]}},
-    {"id": "syllabus-a2-10741", "german": "Schriftsteller", "english": "writer", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Schriftsteller"]}},
-    {"id": "syllabus-a2-10742", "german": "Dichter", "english": "poet", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Dichter"]}},
-    {"id": "syllabus-a2-10743", "german": "Übersetzer", "english": "translator", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Übersetzer"]}},
-    {"id": "syllabus-a2-10744", "german": "Dolmetscher", "english": "interpreter", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Dolmetscher"]}},
-    {"id": "syllabus-a2-10745", "german": "Sänger", "english": "singer", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Sänger"]}},
-    {"id": "syllabus-a2-10746", "german": "Schauspieler", "english": "actor", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Schauspieler"]}},
-    {"id": "syllabus-a2-10747", "german": "Regisseur", "english": "director (film)", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Regisseur"]}},
-    {"id": "syllabus-a2-10748", "german": "Designer", "english": "designer", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Designer"]}},
-    {"id": "syllabus-a2-10749", "german": "Fotograf", "english": "photographer", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Fotograf"]}},
-    {"id": "syllabus-a2-10750", "german": "Bibliothekar", "english": "librarian", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Bibliothekar"]}},
-    {"id": "syllabus-a2-10751", "german": "Sozialarbeiter", "english": "social worker", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Sozialarbeiter"]}},
-    {"id": "syllabus-a2-10752", "german": "Psychologe", "english": "psychologist", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Psychologe"]}},
-    {"id": "syllabus-a2-10753", "german": "Therapeut", "english": "therapist", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Therapeut"]}},
-    {"id": "syllabus-a2-10754", "german": "Sportler", "english": "athlete", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Sportler"]}},
-    {"id": "syllabus-a2-10755", "german": "Trainer", "english": "trainer/coach", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Trainer"]}},
-    {"id": "syllabus-a2-10756", "german": "Postbote", "english": "mail carrier", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Postbote"]}},
-    {"id": "syllabus-a2-10757", "german": "Müllmann", "english": "garbage collector", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Müllmann"]}},
-    {"id": "syllabus-a2-10758", "german": "Reinigungskraft", "english": "cleaner", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Reinigungskraft"]}},
-    {"id": "syllabus-a2-10759", "german": "Hausmeister", "english": "janitor/caretaker", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Hausmeister"]}},
-    {"id": "syllabus-a2-10760", "german": "Wächter", "english": "guard/watchman", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Wächter"]}},
-    {"id": "syllabus-a2-10761", "german": "Beruf", "english": "profession/occupation", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Beruf"]}},
-    {"id": "syllabus-a2-10762", "german": "Arbeit", "english": "work/job", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Arbeit"]}},
-    {"id": "syllabus-a2-10763", "german": "Stelle", "english": "position/job", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Stelle"]}},
-    {"id": "syllabus-a2-10764", "german": "Arbeitsplatz", "english": "workplace", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Arbeitsplatz"]}},
-    {"id": "syllabus-a2-10765", "german": "Arbeitgeber", "english": "employer", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Arbeitgeber"]}},
-    {"id": "syllabus-a2-10766", "german": "Arbeitnehmer", "english": "employee", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Arbeitnehmer"]}},
-    {"id": "syllabus-a2-10767", "german": "Kollege", "english": "colleague", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Kollege"]}},
-    {"id": "syllabus-a2-10768", "german": "Mitarbeiter", "english": "coworker", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Mitarbeiter"]}},
-    {"id": "syllabus-a2-10769", "german": "Praktikant", "english": "intern", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Praktikant"]}},
-    {"id": "syllabus-a2-10770", "german": "Auszubildende", "english": "apprentice/trainee", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Auszubildende"]}},
-    {"id": "syllabus-a2-10771", "german": "Azubi", "english": "apprentice (informal)", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Azubi"]}},
-    {"id": "syllabus-a2-10772", "german": "arbeiten", "english": "to work", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "arbeiten"]}},
-    {"id": "syllabus-a2-10773", "german": "arbeitslos", "english": "unemployed", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "arbeitslos"]}},
-    {"id": "syllabus-a2-10774", "german": "selbstständig", "english": "self-employed", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "selbstständig"]}},
-    {"id": "syllabus-a2-10775", "german": "Vollzeit", "english": "full-time", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Vollzeit"]}},
-    {"id": "syllabus-a2-10776", "german": "Teilzeit", "english": "part-time", "category": "Professions", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Professions", "Teilzeit"]}}
+    {
+      "id": "syllabus-a2-10680",
+      "german": "die Ärztin",
+      "english": "doctor (female)",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Ärztin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10681",
+      "german": "der Zahnarzt",
+      "english": "dentist",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Zahnarzt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10682",
+      "german": "der Tierarzt",
+      "english": "veterinarian",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Tierarzt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10683",
+      "german": "der Chirurg",
+      "english": "surgeon",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Chirurg"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10684",
+      "german": "der Krankenpfleger",
+      "english": "nurse (male)",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Krankenpfleger"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10685",
+      "german": "der Apotheker",
+      "english": "pharmacist",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Apotheker"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10686",
+      "german": "die Lehrerin",
+      "english": "teacher (female)",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Lehrerin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10687",
+      "german": "der Professor",
+      "english": "professor",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Professor"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10688",
+      "german": "der Schüler",
+      "english": "pupil/student",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Schüler"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10689",
+      "german": "der Erzieher",
+      "english": "educator/childcare worker",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Erzieher"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10690",
+      "german": "der Architekt",
+      "english": "architect",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Architekt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10691",
+      "german": "der Programmierer",
+      "english": "programmer",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Programmierer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10692",
+      "german": "der IT-Spezialist",
+      "english": "IT specialist",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "IT-Spezialist"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10693",
+      "german": "der Informatiker",
+      "english": "computer scientist",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Informatiker"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10694",
+      "german": "der Wissenschaftler",
+      "english": "scientist",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Wissenschaftler"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10695",
+      "german": "der Forscher",
+      "english": "researcher",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Forscher"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10696",
+      "german": "der Rechtsanwalt",
+      "english": "attorney",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Rechtsanwalt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10697",
+      "german": "der Richter",
+      "english": "judge",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Richter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10698",
+      "german": "der Notar",
+      "english": "notary",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Notar"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10699",
+      "german": "der Feuerwehrmann",
+      "english": "firefighter",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Feuerwehrmann"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10700",
+      "german": "der Soldat",
+      "english": "soldier",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Soldat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10701",
+      "german": "der Kassierer",
+      "english": "cashier",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Kassierer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10702",
+      "german": "der Einzelhändler",
+      "english": "retailer",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Einzelhändler"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10703",
+      "german": "der Kaufmann",
+      "english": "merchant/businessman",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Kaufmann"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10704",
+      "german": "der Geschäftsmann",
+      "english": "businessman",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Geschäftsmann"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10705",
+      "german": "der Unternehmer",
+      "english": "entrepreneur",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Unternehmer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10706",
+      "german": "der Manager",
+      "english": "manager",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Manager"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10707",
+      "german": "der Chef",
+      "english": "boss/chief",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Chef"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10708",
+      "german": "der Direktor",
+      "english": "director",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Direktor"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10709",
+      "german": "der Sekretär",
+      "english": "secretary",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Sekretär"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10710",
+      "german": "der Assistent",
+      "english": "assistant",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Assistent"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10711",
+      "german": "der Buchhalter",
+      "english": "accountant",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Buchhalter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10712",
+      "german": "der Banker",
+      "english": "banker",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Banker"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10713",
+      "german": "der Finanzberater",
+      "english": "financial advisor",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Finanzberater"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10714",
+      "german": "der Bäcker",
+      "english": "baker",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Bäcker"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10715",
+      "german": "der Metzger",
+      "english": "butcher",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Metzger"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10716",
+      "german": "die Kellnerin",
+      "english": "waitress",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Kellnerin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10717",
+      "german": "der Barkeeper",
+      "english": "bartender",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Barkeeper"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10718",
+      "german": "der Kosmetiker",
+      "english": "beautician/cosmetologist",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Kosmetiker"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10719",
+      "german": "der Masseur",
+      "english": "massage therapist",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Masseur"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10720",
+      "german": "der Elektriker",
+      "english": "electrician",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Elektriker"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10721",
+      "german": "der Klempner",
+      "english": "plumber",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Klempner"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10722",
+      "german": "der Schreiner",
+      "english": "carpenter",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Schreiner"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10723",
+      "german": "der Maler",
+      "english": "painter",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Maler"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10724",
+      "german": "der Maurer",
+      "english": "bricklayer/mason",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Maurer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10725",
+      "german": "der Bauarbeiter",
+      "english": "construction worker",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Bauarbeiter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10726",
+      "german": "der Gärtner",
+      "english": "gardener",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Gärtner"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10727",
+      "german": "der Landwirt",
+      "english": "farmer/agriculturist",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Landwirt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10728",
+      "german": "der Fischer",
+      "english": "fisherman",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Fischer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10729",
+      "german": "der Jäger",
+      "english": "hunter",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Jäger"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10730",
+      "german": "der Flugbegleiter",
+      "english": "flight attendant",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Flugbegleiter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10731",
+      "german": "der Busfahrer",
+      "english": "bus driver",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Busfahrer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10732",
+      "german": "der Taxifahrer",
+      "english": "taxi driver",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Taxifahrer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10733",
+      "german": "der LKW-Fahrer",
+      "english": "truck driver",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "LKW-Fahrer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10734",
+      "german": "der Lokführer",
+      "english": "train driver",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Lokführer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10735",
+      "german": "der Matrose",
+      "english": "sailor",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Matrose"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10736",
+      "german": "der Kapitän",
+      "english": "captain",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Kapitän"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10737",
+      "german": "der Journalist",
+      "english": "journalist",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Journalist"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10738",
+      "german": "der Reporter",
+      "english": "reporter",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Reporter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10739",
+      "german": "der Redakteur",
+      "english": "editor",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Redakteur"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10740",
+      "german": "der Autor",
+      "english": "author",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Autor"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10741",
+      "german": "der Schriftsteller",
+      "english": "writer",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Schriftsteller"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10742",
+      "german": "der Dichter",
+      "english": "poet",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Dichter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10743",
+      "german": "der Übersetzer",
+      "english": "translator",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Übersetzer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10744",
+      "german": "der Dolmetscher",
+      "english": "interpreter",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Dolmetscher"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10745",
+      "german": "der Sänger",
+      "english": "singer",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Sänger"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10746",
+      "german": "der Schauspieler",
+      "english": "actor",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Schauspieler"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10747",
+      "german": "der Regisseur",
+      "english": "director (film)",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Regisseur"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10748",
+      "german": "der Designer",
+      "english": "designer",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Designer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10749",
+      "german": "der Fotograf",
+      "english": "photographer",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Fotograf"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10750",
+      "german": "der Bibliothekar",
+      "english": "librarian",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Bibliothekar"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10751",
+      "german": "der Sozialarbeiter",
+      "english": "social worker",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Sozialarbeiter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10752",
+      "german": "der Psychologe",
+      "english": "psychologist",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Psychologe"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10753",
+      "german": "der Therapeut",
+      "english": "therapist",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Therapeut"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10754",
+      "german": "der Sportler",
+      "english": "athlete",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Sportler"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10755",
+      "german": "der Trainer",
+      "english": "trainer/coach",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Trainer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10756",
+      "german": "der Postbote",
+      "english": "mail carrier",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Postbote"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10757",
+      "german": "der Müllmann",
+      "english": "garbage collector",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Müllmann"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10758",
+      "german": "die Reinigungskraft",
+      "english": "cleaner",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Reinigungskraft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10759",
+      "german": "der Hausmeister",
+      "english": "janitor/caretaker",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Hausmeister"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10760",
+      "german": "der Wächter",
+      "english": "guard/watchman",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Wächter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10761",
+      "german": "der Beruf",
+      "english": "profession/occupation",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Beruf"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10762",
+      "german": "die Arbeit",
+      "english": "work/job",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Arbeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10763",
+      "german": "die Stelle",
+      "english": "position/job",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Stelle"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10764",
+      "german": "der Arbeitsplatz",
+      "english": "workplace",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Arbeitsplatz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10765",
+      "german": "der Arbeitgeber",
+      "english": "employer",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Arbeitgeber"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10766",
+      "german": "der Arbeitnehmer",
+      "english": "employee",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Arbeitnehmer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10767",
+      "german": "der Kollege",
+      "english": "colleague",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Kollege"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10768",
+      "german": "der Mitarbeiter",
+      "english": "coworker",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Mitarbeiter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10769",
+      "german": "der Praktikant",
+      "english": "intern",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Praktikant"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10770",
+      "german": "der Auszubildende",
+      "english": "apprentice/trainee",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Auszubildende"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10771",
+      "german": "der Azubi",
+      "english": "apprentice (informal)",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Azubi"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10772",
+      "german": "arbeiten",
+      "english": "to work",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "arbeiten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10773",
+      "german": "arbeitslos",
+      "english": "unemployed",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "arbeitslos"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10774",
+      "german": "selbstständig",
+      "english": "self-employed",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "selbstständig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10775",
+      "german": "die Vollzeit",
+      "english": "full-time",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Vollzeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10776",
+      "german": "die Teilzeit",
+      "english": "part-time",
+      "category": "Professions",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Professions",
+          "Teilzeit"
+        ]
+      }
+    }
   ]
 }

@@ -5,7 +5,7 @@
   "flashcards": [
     {
       "id": "syllabus-a1-10398",
-      "german": "Sonne",
+      "german": "die Sonne",
       "english": "sun",
       "category": "Weather",
       "level": "A1",
@@ -25,7 +25,7 @@
     },
     {
       "id": "syllabus-a1-10399",
-      "german": "Regen",
+      "german": "der Regen",
       "english": "rain",
       "category": "Weather",
       "level": "A1",
@@ -85,7 +85,7 @@
     },
     {
       "id": "syllabus-a1-10402",
-      "german": "Schnee",
+      "german": "der Schnee",
       "english": "snow",
       "category": "Weather",
       "level": "A1",
@@ -105,7 +105,7 @@
     },
     {
       "id": "syllabus-a1-10403",
-      "german": "Wind",
+      "german": "der Wind",
       "english": "wind",
       "category": "Weather",
       "level": "A1",
@@ -125,7 +125,7 @@
     },
     {
       "id": "syllabus-a1-10404",
-      "german": "Wolke",
+      "german": "die Wolke",
       "english": "cloud",
       "category": "Weather",
       "level": "A1",
@@ -145,7 +145,7 @@
     },
     {
       "id": "syllabus-a1-10405",
-      "german": "Gewitter",
+      "german": "das Gewitter",
       "english": "thunderstorm",
       "category": "Weather",
       "level": "A1",
@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-a1-10406",
-      "german": "Wetter",
+      "german": "das Wetter",
       "english": "weather",
       "category": "Weather",
       "level": "A1",
@@ -303,86 +303,1625 @@
         ]
       }
     },
-    {"id": "syllabus-a1-10517", "german": "Blitz", "english": "lightning", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Blitz"]}},
-    {"id": "syllabus-a1-10518", "german": "Donner", "english": "thunder", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Donner"]}},
-    {"id": "syllabus-a1-10519", "german": "Nebel", "english": "fog", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Nebel"]}},
-    {"id": "syllabus-a1-10520", "german": "Hagel", "english": "hail", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Hagel"]}},
-    {"id": "syllabus-a1-10521", "german": "Eis", "english": "ice", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Eis"]}},
-    {"id": "syllabus-a1-10522", "german": "Frost", "english": "frost", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Frost"]}},
-    {"id": "syllabus-a1-10523", "german": "Tau", "english": "dew", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Tau"]}},
-    {"id": "syllabus-a1-10524", "german": "Regenbogen", "english": "rainbow", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Regenbogen"]}},
-    {"id": "syllabus-a1-10525", "german": "Himmel", "english": "sky", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Himmel"]}},
-    {"id": "syllabus-a1-10526", "german": "Luft", "english": "air", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Luft"]}},
-    {"id": "syllabus-a1-10527", "german": "Sturm", "english": "storm", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Sturm"]}},
-    {"id": "syllabus-a1-10528", "german": "Orkan", "english": "hurricane", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Orkan"]}},
-    {"id": "syllabus-a1-10529", "german": "Temperatur", "english": "temperature", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Temperatur"]}},
-    {"id": "syllabus-a1-10530", "german": "Grad", "english": "degree", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Grad"]}},
-    {"id": "syllabus-a1-10531", "german": "Celsius", "english": "Celsius", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Celsius"]}},
-    {"id": "syllabus-a1-10532", "german": "Klima", "english": "climate", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Klima"]}},
-    {"id": "syllabus-a1-10533", "german": "Jahreszeit", "english": "season", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Jahreszeit"]}},
-    {"id": "syllabus-a1-10534", "german": "Wettervorhersage", "english": "weather forecast", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Wettervorhersage"]}},
-    {"id": "syllabus-a1-10535", "german": "Wetterbericht", "english": "weather report", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Wetterbericht"]}},
-    {"id": "syllabus-a1-10536", "german": "Regenschauer", "english": "rain shower", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Regenschauer"]}},
-    {"id": "syllabus-a1-10537", "german": "Schneesturm", "english": "snowstorm / blizzard", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Schneesturm"]}},
-    {"id": "syllabus-a1-10538", "german": "Schneeflocke", "english": "snowflake", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Schneeflocke"]}},
-    {"id": "syllabus-a1-10539", "german": "Regentropfen", "english": "raindrop", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Regentropfen"]}},
-    {"id": "syllabus-a1-10540", "german": "Feuchtigkeit", "english": "humidity / moisture", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Feuchtigkeit"]}},
-    {"id": "syllabus-a1-10541", "german": "Trockenheit", "english": "drought / dryness", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Trockenheit"]}},
-    {"id": "syllabus-a1-10542", "german": "Pfütze", "english": "puddle", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Pfütze"]}},
-    {"id": "syllabus-a1-10543", "german": "Regenschirm", "english": "umbrella", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Regenschirm"]}},
-    {"id": "syllabus-a1-10544", "german": "Regenmantel", "english": "raincoat", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Regenmantel"]}},
-    {"id": "syllabus-a1-10545", "german": "Regenjacke", "english": "rain jacket", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Regenjacke"]}},
-    {"id": "syllabus-a1-10546", "german": "Gummistiefel", "english": "rain boots / rubber boots", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Gummistiefel"]}},
-    {"id": "syllabus-a1-10547", "german": "Sonnenbrille", "english": "sunglasses", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Sonnenbrille"]}},
-    {"id": "syllabus-a1-10548", "german": "Sonnencreme", "english": "sunscreen / sun cream", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Sonnencreme"]}},
-    {"id": "syllabus-a1-10549", "german": "Handschuhe", "english": "gloves", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Handschuhe"]}},
-    {"id": "syllabus-a1-10550", "german": "Schal", "english": "scarf", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Schal"]}},
-    {"id": "syllabus-a1-10551", "german": "Mütze", "english": "cap / beanie", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Mütze"]}},
-    {"id": "syllabus-a1-10552", "german": "Jacke", "english": "jacket", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Jacke"]}},
-    {"id": "syllabus-a1-10553", "german": "Mantel", "english": "coat", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Mantel"]}},
-    {"id": "syllabus-a1-10554", "german": "regnen", "english": "to rain", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "regnen"]}},
-    {"id": "syllabus-a1-10555", "german": "schneien", "english": "to snow", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "schneien"]}},
-    {"id": "syllabus-a1-10556", "german": "hageln", "english": "to hail", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "hageln"]}},
-    {"id": "syllabus-a1-10557", "german": "donnern", "english": "to thunder", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "donnern"]}},
-    {"id": "syllabus-a1-10558", "german": "blitzen", "english": "to lightning / to flash", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "blitzen"]}},
-    {"id": "syllabus-a1-10559", "german": "scheinen", "english": "to shine", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "scheinen"]}},
-    {"id": "syllabus-a1-10560", "german": "wehen", "english": "to blow (wind)", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "wehen"]}},
-    {"id": "syllabus-a1-10561", "german": "frieren", "english": "to freeze / to be cold", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "frieren"]}},
-    {"id": "syllabus-a1-10562", "german": "schwitzen", "english": "to sweat", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "schwitzen"]}},
-    {"id": "syllabus-a1-10563", "german": "schmelzen", "english": "to melt", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "schmelzen"]}},
-    {"id": "syllabus-a1-10564", "german": "gefrieren", "english": "to freeze (into ice)", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "gefrieren"]}},
-    {"id": "syllabus-a1-10565", "german": "trocken", "english": "dry", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "trocken"]}},
-    {"id": "syllabus-a1-10566", "german": "nass", "english": "wet", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "nass"]}},
-    {"id": "syllabus-a1-10567", "german": "feucht", "english": "humid / damp", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "feucht"]}},
-    {"id": "syllabus-a1-10568", "german": "neblig", "english": "foggy", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "neblig"]}},
-    {"id": "syllabus-a1-10569", "german": "stürmisch", "english": "stormy", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "stürmisch"]}},
-    {"id": "syllabus-a1-10570", "german": "eisig", "english": "icy / freezing", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "eisig"]}},
-    {"id": "syllabus-a1-10571", "german": "frostig", "english": "frosty", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "frostig"]}},
-    {"id": "syllabus-a1-10572", "german": "mild", "english": "mild", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "mild"]}},
-    {"id": "syllabus-a1-10573", "german": "angenehm", "english": "pleasant", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "angenehm"]}},
-    {"id": "syllabus-a1-10574", "german": "unangenehm", "english": "unpleasant", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "unangenehm"]}},
-    {"id": "syllabus-a1-10575", "german": "schön", "english": "nice / beautiful (weather)", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "schön"]}},
-    {"id": "syllabus-a1-10576", "german": "schlecht", "english": "bad (weather)", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "schlecht"]}},
-    {"id": "syllabus-a1-10577", "german": "herrlich", "english": "wonderful / glorious", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "herrlich"]}},
-    {"id": "syllabus-a1-10578", "german": "furchtbar", "english": "terrible / awful", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "furchtbar"]}},
-    {"id": "syllabus-a1-10579", "german": "wechselhaft", "english": "changeable / variable", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "wechselhaft"]}},
-    {"id": "syllabus-a1-10580", "german": "beständig", "english": "steady / stable", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "beständig"]}},
-    {"id": "syllabus-a1-10581", "german": "klar", "english": "clear", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "klar"]}},
-    {"id": "syllabus-a1-10582", "german": "heiter", "english": "fair / bright", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "heiter"]}},
-    {"id": "syllabus-a1-10583", "german": "trüb", "english": "dull / overcast", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "trüb"]}},
-    {"id": "syllabus-a1-10584", "german": "dunkel", "english": "dark", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "dunkel"]}},
-    {"id": "syllabus-a1-10585", "german": "hell", "english": "bright / light", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "hell"]}},
-    {"id": "syllabus-a1-10586", "german": "schwül", "english": "muggy / sultry", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "schwül"]}},
-    {"id": "syllabus-a1-10587", "german": "drückend", "english": "oppressive (heat)", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "drückend"]}},
-    {"id": "syllabus-a1-10588", "german": "glatt", "english": "slippery / icy (roads)", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "glatt"]}},
-    {"id": "syllabus-a1-10589", "german": "rutschig", "english": "slippery", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "rutschig"]}},
-    {"id": "syllabus-a1-10590", "german": "Wie ist das Wetter?", "english": "What's the weather like?", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Wie ist das Wetter?"]}},
-    {"id": "syllabus-a1-10591", "german": "Es ist sonnig", "english": "It's sunny", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Es ist sonnig"]}},
-    {"id": "syllabus-a1-10592", "german": "Es regnet", "english": "It's raining", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Es regnet"]}},
-    {"id": "syllabus-a1-10593", "german": "Es schneit", "english": "It's snowing", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Es schneit"]}},
-    {"id": "syllabus-a1-10594", "german": "Es ist kalt", "english": "It's cold", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Es ist kalt"]}},
-    {"id": "syllabus-a1-10595", "german": "Es ist warm", "english": "It's warm", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Es ist warm"]}},
-    {"id": "syllabus-a1-10596", "german": "Es ist heiß", "english": "It's hot", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Es ist heiß"]}},
-    {"id": "syllabus-a1-10597", "german": "Es ist windig", "english": "It's windy", "category": "Weather", "level": "A1", "tags": ["syllabus", "A1"], "_meta": {"source": "Syllabus A1", "lineNumber": 0, "hierarchy": ["A1", "Weather", "Es ist windig"]}}
+    {
+      "id": "syllabus-a1-10517",
+      "german": "der Blitz",
+      "english": "lightning",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Blitz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10518",
+      "german": "der Donner",
+      "english": "thunder",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Donner"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10519",
+      "german": "der Nebel",
+      "english": "fog",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Nebel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10520",
+      "german": "der Hagel",
+      "english": "hail",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Hagel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10521",
+      "german": "das Eis",
+      "english": "ice",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Eis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10522",
+      "german": "der Frost",
+      "english": "frost",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Frost"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10523",
+      "german": "der Tau",
+      "english": "dew",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Tau"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10524",
+      "german": "der Regenbogen",
+      "english": "rainbow",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Regenbogen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10525",
+      "german": "der Himmel",
+      "english": "sky",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Himmel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10526",
+      "german": "die Luft",
+      "english": "air",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Luft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10527",
+      "german": "der Sturm",
+      "english": "storm",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Sturm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10528",
+      "german": "der Orkan",
+      "english": "hurricane",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Orkan"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10529",
+      "german": "die Temperatur",
+      "english": "temperature",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Temperatur"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10530",
+      "german": "der Grad",
+      "english": "degree",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Grad"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10531",
+      "german": "das Celsius",
+      "english": "Celsius",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Celsius"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10532",
+      "german": "das Klima",
+      "english": "climate",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Klima"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10533",
+      "german": "die Jahreszeit",
+      "english": "season",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Jahreszeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10534",
+      "german": "die Wettervorhersage",
+      "english": "weather forecast",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Wettervorhersage"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10535",
+      "german": "der Wetterbericht",
+      "english": "weather report",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Wetterbericht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10536",
+      "german": "der Regenschauer",
+      "english": "rain shower",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Regenschauer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10537",
+      "german": "der Schneesturm",
+      "english": "snowstorm / blizzard",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Schneesturm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10538",
+      "german": "die Schneeflocke",
+      "english": "snowflake",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Schneeflocke"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10539",
+      "german": "der Regentropfen",
+      "english": "raindrop",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Regentropfen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10540",
+      "german": "die Feuchtigkeit",
+      "english": "humidity / moisture",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Feuchtigkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10541",
+      "german": "die Trockenheit",
+      "english": "drought / dryness",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Trockenheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10542",
+      "german": "die Pfütze",
+      "english": "puddle",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Pfütze"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10543",
+      "german": "der Regenschirm",
+      "english": "umbrella",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Regenschirm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10544",
+      "german": "der Regenmantel",
+      "english": "raincoat",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Regenmantel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10545",
+      "german": "die Regenjacke",
+      "english": "rain jacket",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Regenjacke"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10546",
+      "german": "die Gummistiefel",
+      "english": "rain boots / rubber boots",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Gummistiefel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10547",
+      "german": "die Sonnenbrille",
+      "english": "sunglasses",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Sonnenbrille"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10548",
+      "german": "die Sonnencreme",
+      "english": "sunscreen / sun cream",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Sonnencreme"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10549",
+      "german": "die Handschuhe",
+      "english": "gloves",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Handschuhe"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10550",
+      "german": "der Schal",
+      "english": "scarf",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Schal"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10551",
+      "german": "die Mütze",
+      "english": "cap / beanie",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Mütze"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10552",
+      "german": "die Jacke",
+      "english": "jacket",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Jacke"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10553",
+      "german": "der Mantel",
+      "english": "coat",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Mantel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10554",
+      "german": "regnen",
+      "english": "to rain",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "regnen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10555",
+      "german": "schneien",
+      "english": "to snow",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "schneien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10556",
+      "german": "hageln",
+      "english": "to hail",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "hageln"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10557",
+      "german": "donnern",
+      "english": "to thunder",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "donnern"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10558",
+      "german": "blitzen",
+      "english": "to lightning / to flash",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "blitzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10559",
+      "german": "scheinen",
+      "english": "to shine",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "scheinen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10560",
+      "german": "wehen",
+      "english": "to blow (wind)",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "wehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10561",
+      "german": "frieren",
+      "english": "to freeze / to be cold",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "frieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10562",
+      "german": "schwitzen",
+      "english": "to sweat",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "schwitzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10563",
+      "german": "schmelzen",
+      "english": "to melt",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "schmelzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10564",
+      "german": "gefrieren",
+      "english": "to freeze (into ice)",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "gefrieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10565",
+      "german": "trocken",
+      "english": "dry",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "trocken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10566",
+      "german": "nass",
+      "english": "wet",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "nass"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10567",
+      "german": "feucht",
+      "english": "humid / damp",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "feucht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10568",
+      "german": "neblig",
+      "english": "foggy",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "neblig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10569",
+      "german": "stürmisch",
+      "english": "stormy",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "stürmisch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10570",
+      "german": "eisig",
+      "english": "icy / freezing",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "eisig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10571",
+      "german": "frostig",
+      "english": "frosty",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "frostig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10572",
+      "german": "mild",
+      "english": "mild",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "mild"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10573",
+      "german": "angenehm",
+      "english": "pleasant",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "angenehm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10574",
+      "german": "unangenehm",
+      "english": "unpleasant",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "unangenehm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10575",
+      "german": "schön",
+      "english": "nice / beautiful (weather)",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "schön"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10576",
+      "german": "schlecht",
+      "english": "bad (weather)",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "schlecht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10577",
+      "german": "herrlich",
+      "english": "wonderful / glorious",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "herrlich"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10578",
+      "german": "furchtbar",
+      "english": "terrible / awful",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "furchtbar"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10579",
+      "german": "wechselhaft",
+      "english": "changeable / variable",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "wechselhaft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10580",
+      "german": "beständig",
+      "english": "steady / stable",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "beständig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10581",
+      "german": "klar",
+      "english": "clear",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "klar"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10582",
+      "german": "heiter",
+      "english": "fair / bright",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "heiter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10583",
+      "german": "trüb",
+      "english": "dull / overcast",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "trüb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10584",
+      "german": "dunkel",
+      "english": "dark",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "dunkel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10585",
+      "german": "hell",
+      "english": "bright / light",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "hell"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10586",
+      "german": "schwül",
+      "english": "muggy / sultry",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "schwül"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10587",
+      "german": "drückend",
+      "english": "oppressive (heat)",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "drückend"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10588",
+      "german": "glatt",
+      "english": "slippery / icy (roads)",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "glatt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10589",
+      "german": "rutschig",
+      "english": "slippery",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "rutschig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10590",
+      "german": "Wie ist das Wetter?",
+      "english": "What's the weather like?",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Wie ist das Wetter?"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10591",
+      "german": "Es ist sonnig",
+      "english": "It's sunny",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Es ist sonnig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10592",
+      "german": "Es regnet",
+      "english": "It's raining",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Es regnet"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10593",
+      "german": "Es schneit",
+      "english": "It's snowing",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Es schneit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10594",
+      "german": "Es ist kalt",
+      "english": "It's cold",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Es ist kalt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10595",
+      "german": "Es ist warm",
+      "english": "It's warm",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Es ist warm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10596",
+      "german": "Es ist heiß",
+      "english": "It's hot",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Es ist heiß"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a1-10597",
+      "german": "Es ist windig",
+      "english": "It's windy",
+      "category": "Weather",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Syllabus A1",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Weather",
+          "Es ist windig"
+        ]
+      }
+    }
   ]
 }

@@ -5,7 +5,7 @@
   "flashcards": [
     {
       "id": "syllabus-a2-10776",
-      "german": "Computer",
+      "german": "der Computer",
       "english": "computer",
       "category": "Technology",
       "level": "A2",
@@ -25,7 +25,7 @@
     },
     {
       "id": "syllabus-a2-10777",
-      "german": "Handy",
+      "german": "das Handy",
       "english": "mobile phone",
       "category": "Technology",
       "level": "A2",
@@ -45,7 +45,7 @@
     },
     {
       "id": "syllabus-a2-10778",
-      "german": "Internet",
+      "german": "das Internet",
       "english": "internet",
       "category": "Technology",
       "level": "A2",
@@ -65,7 +65,7 @@
     },
     {
       "id": "syllabus-a2-10779",
-      "german": "E-Mail",
+      "german": "die E-Mail",
       "english": "email",
       "category": "Technology",
       "level": "A2",
@@ -85,7 +85,7 @@
     },
     {
       "id": "syllabus-a2-10780",
-      "german": "Laptop",
+      "german": "der Laptop",
       "english": "laptop",
       "category": "Technology",
       "level": "A2",
@@ -105,7 +105,7 @@
     },
     {
       "id": "syllabus-a2-10781",
-      "german": "Tablet",
+      "german": "das Tablet",
       "english": "tablet",
       "category": "Technology",
       "level": "A2",
@@ -125,7 +125,7 @@
     },
     {
       "id": "syllabus-a2-10782",
-      "german": "Tastatur",
+      "german": "die Tastatur",
       "english": "keyboard",
       "category": "Technology",
       "level": "A2",
@@ -145,7 +145,7 @@
     },
     {
       "id": "syllabus-a2-10783",
-      "german": "Maus",
+      "german": "die Maus",
       "english": "mouse",
       "category": "Technology",
       "level": "A2",
@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-a2-10784",
-      "german": "Bildschirm",
+      "german": "der Bildschirm",
       "english": "screen / monitor",
       "category": "Technology",
       "level": "A2",
@@ -185,7 +185,7 @@
     },
     {
       "id": "syllabus-a2-10785",
-      "german": "Website",
+      "german": "die Website",
       "english": "website",
       "category": "Technology",
       "level": "A2",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-a2-10786",
-      "german": "App",
+      "german": "die App",
       "english": "app",
       "category": "Technology",
       "level": "A2",
@@ -225,7 +225,7 @@
     },
     {
       "id": "syllabus-a2-10787",
-      "german": "Passwort",
+      "german": "das Passwort",
       "english": "password",
       "category": "Technology",
       "level": "A2",
@@ -245,7 +245,7 @@
     },
     {
       "id": "syllabus-a2-10788",
-      "german": "Drucker",
+      "german": "der Drucker",
       "english": "printer",
       "category": "Technology",
       "level": "A2",
@@ -265,7 +265,7 @@
     },
     {
       "id": "syllabus-a2-10789",
-      "german": "Datei",
+      "german": "die Datei",
       "english": "file",
       "category": "Technology",
       "level": "A2",
@@ -323,127 +323,2445 @@
         ]
       }
     },
-    {"id": "syllabus-a2-10792", "german": "Smartphone", "english": "smartphone", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Smartphone"]}},
-    {"id": "syllabus-a2-10793", "german": "Kopfhörer", "english": "headphones", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Kopfhörer"]}},
-    {"id": "syllabus-a2-10794", "german": "Lautsprecher", "english": "speaker", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Lautsprecher"]}},
-    {"id": "syllabus-a2-10795", "german": "Kamera", "english": "camera", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Kamera"]}},
-    {"id": "syllabus-a2-10796", "german": "Mikrofon", "english": "microphone", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Mikrofon"]}},
-    {"id": "syllabus-a2-10797", "german": "USB-Stick", "english": "USB stick / flash drive", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "USB-Stick"]}},
-    {"id": "syllabus-a2-10798", "german": "Festplatte", "english": "hard drive", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Festplatte"]}},
-    {"id": "syllabus-a2-10799", "german": "SSD", "english": "SSD / solid state drive", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "SSD"]}},
-    {"id": "syllabus-a2-10800", "german": "Akku", "english": "battery / rechargeable battery", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Akku"]}},
-    {"id": "syllabus-a2-10801", "german": "Ladegerät", "english": "charger", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Ladegerät"]}},
-    {"id": "syllabus-a2-10802", "german": "Kabel", "english": "cable", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Kabel"]}},
-    {"id": "syllabus-a2-10803", "german": "WLAN", "english": "WiFi / wireless LAN", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "WLAN"]}},
-    {"id": "syllabus-a2-10804", "german": "Router", "english": "router", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Router"]}},
-    {"id": "syllabus-a2-10805", "german": "Netzwerk", "english": "network", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Netzwerk"]}},
-    {"id": "syllabus-a2-10806", "german": "Server", "english": "server", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Server"]}},
-    {"id": "syllabus-a2-10807", "german": "Cloud", "english": "cloud", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Cloud"]}},
-    {"id": "syllabus-a2-10808", "german": "Browser", "english": "browser", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Browser"]}},
-    {"id": "syllabus-a2-10809", "german": "Suchmaschine", "english": "search engine", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Suchmaschine"]}},
-    {"id": "syllabus-a2-10810", "german": "Link", "english": "link", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Link"]}},
-    {"id": "syllabus-a2-10811", "german": "URL", "english": "URL / web address", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "URL"]}},
-    {"id": "syllabus-a2-10812", "german": "Download", "english": "download", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Download"]}},
-    {"id": "syllabus-a2-10813", "german": "Upload", "english": "upload", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Upload"]}},
-    {"id": "syllabus-a2-10814", "german": "hochladen", "english": "to upload", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "hochladen"]}},
-    {"id": "syllabus-a2-10815", "german": "Software", "english": "software", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Software"]}},
-    {"id": "syllabus-a2-10816", "german": "Programm", "english": "program / application", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Programm"]}},
-    {"id": "syllabus-a2-10817", "german": "Betriebssystem", "english": "operating system", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Betriebssystem"]}},
-    {"id": "syllabus-a2-10818", "german": "Update", "english": "update", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Update"]}},
-    {"id": "syllabus-a2-10819", "german": "aktualisieren", "english": "to update", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "aktualisieren"]}},
-    {"id": "syllabus-a2-10820", "german": "installieren", "english": "to install", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "installieren"]}},
-    {"id": "syllabus-a2-10821", "german": "deinstallieren", "english": "to uninstall", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "deinstallieren"]}},
-    {"id": "syllabus-a2-10822", "german": "löschen", "english": "to delete", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "löschen"]}},
-    {"id": "syllabus-a2-10823", "german": "kopieren", "english": "to copy", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "kopieren"]}},
-    {"id": "syllabus-a2-10824", "german": "einfügen", "english": "to paste", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "einfügen"]}},
-    {"id": "syllabus-a2-10825", "german": "ausschneiden", "english": "to cut", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "ausschneiden"]}},
-    {"id": "syllabus-a2-10826", "german": "drucken", "english": "to print", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "drucken"]}},
-    {"id": "syllabus-a2-10827", "german": "scannen", "english": "to scan", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "scannen"]}},
-    {"id": "syllabus-a2-10828", "german": "Scanner", "english": "scanner", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Scanner"]}},
-    {"id": "syllabus-a2-10829", "german": "Ordner", "english": "folder", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Ordner"]}},
-    {"id": "syllabus-a2-10830", "german": "Dokument", "english": "document", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Dokument"]}},
-    {"id": "syllabus-a2-10831", "german": "Bild", "english": "image / picture", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Bild"]}},
-    {"id": "syllabus-a2-10832", "german": "Foto", "english": "photo", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Foto"]}},
-    {"id": "syllabus-a2-10833", "german": "Video", "english": "video", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Video"]}},
-    {"id": "syllabus-a2-10834", "german": "Audio", "english": "audio", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Audio"]}},
-    {"id": "syllabus-a2-10835", "german": "Musik", "english": "music", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Musik"]}},
-    {"id": "syllabus-a2-10836", "german": "MP3", "english": "MP3", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "MP3"]}},
-    {"id": "syllabus-a2-10837", "german": "PDF", "english": "PDF", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "PDF"]}},
-    {"id": "syllabus-a2-10838", "german": "Textverarbeitung", "english": "word processing", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Textverarbeitung"]}},
-    {"id": "syllabus-a2-10839", "german": "Tabellenkalkulation", "english": "spreadsheet", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Tabellenkalkulation"]}},
-    {"id": "syllabus-a2-10840", "german": "Präsentation", "english": "presentation", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Präsentation"]}},
-    {"id": "syllabus-a2-10841", "german": "Datenbank", "english": "database", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Datenbank"]}},
-    {"id": "syllabus-a2-10842", "german": "Daten", "english": "data", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Daten"]}},
-    {"id": "syllabus-a2-10843", "german": "Backup", "english": "backup", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Backup"]}},
-    {"id": "syllabus-a2-10844", "german": "Sicherung", "english": "backup / backup copy", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Sicherung"]}},
-    {"id": "syllabus-a2-10845", "german": "Virus", "english": "virus", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Virus"]}},
-    {"id": "syllabus-a2-10846", "german": "Antivirus", "english": "antivirus", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Antivirus"]}},
-    {"id": "syllabus-a2-10847", "german": "Sicherheit", "english": "security", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Sicherheit"]}},
-    {"id": "syllabus-a2-10848", "german": "Firewall", "english": "firewall", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Firewall"]}},
-    {"id": "syllabus-a2-10849", "german": "verschlüsseln", "english": "to encrypt", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "verschlüsseln"]}},
-    {"id": "syllabus-a2-10850", "german": "Verschlüsselung", "english": "encryption", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Verschlüsselung"]}},
-    {"id": "syllabus-a2-10851", "german": "Benutzername", "english": "username", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Benutzername"]}},
-    {"id": "syllabus-a2-10852", "german": "anmelden", "english": "to log in / to sign in", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "anmelden"]}},
-    {"id": "syllabus-a2-10853", "german": "abmelden", "english": "to log out / to sign out", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "abmelden"]}},
-    {"id": "syllabus-a2-10854", "german": "Konto", "english": "account", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Konto"]}},
-    {"id": "syllabus-a2-10855", "german": "Profil", "english": "profile", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Profil"]}},
-    {"id": "syllabus-a2-10856", "german": "Einstellungen", "english": "settings", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Einstellungen"]}},
-    {"id": "syllabus-a2-10857", "german": "Nachricht", "english": "message", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Nachricht"]}},
-    {"id": "syllabus-a2-10858", "german": "SMS", "english": "SMS / text message", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "SMS"]}},
-    {"id": "syllabus-a2-10859", "german": "Chat", "english": "chat", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Chat"]}},
-    {"id": "syllabus-a2-10860", "german": "chatten", "english": "to chat", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "chatten"]}},
-    {"id": "syllabus-a2-10861", "german": "Videoanruf", "english": "video call", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Videoanruf"]}},
-    {"id": "syllabus-a2-10862", "german": "Videokonferenz", "english": "video conference", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Videokonferenz"]}},
-    {"id": "syllabus-a2-10863", "german": "soziale Medien", "english": "social media", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "soziale Medien"]}},
-    {"id": "syllabus-a2-10864", "german": "soziales Netzwerk", "english": "social network", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "soziales Netzwerk"]}},
-    {"id": "syllabus-a2-10865", "german": "Post", "english": "post", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Post"]}},
-    {"id": "syllabus-a2-10866", "german": "posten", "english": "to post", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "posten"]}},
-    {"id": "syllabus-a2-10867", "german": "teilen", "english": "to share", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "teilen"]}},
-    {"id": "syllabus-a2-10868", "german": "liken", "english": "to like", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "liken"]}},
-    {"id": "syllabus-a2-10869", "german": "Like", "english": "like", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Like"]}},
-    {"id": "syllabus-a2-10870", "german": "Kommentar", "english": "comment", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Kommentar"]}},
-    {"id": "syllabus-a2-10871", "german": "kommentieren", "english": "to comment", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "kommentieren"]}},
-    {"id": "syllabus-a2-10872", "german": "Follower", "english": "follower", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Follower"]}},
-    {"id": "syllabus-a2-10873", "german": "folgen", "english": "to follow", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "folgen"]}},
-    {"id": "syllabus-a2-10874", "german": "Hashtag", "english": "hashtag", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Hashtag"]}},
-    {"id": "syllabus-a2-10875", "german": "Story", "english": "story", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Story"]}},
-    {"id": "syllabus-a2-10876", "german": "Livestream", "english": "livestream", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Livestream"]}},
-    {"id": "syllabus-a2-10877", "german": "streamen", "english": "to stream", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "streamen"]}},
-    {"id": "syllabus-a2-10878", "german": "Streaming", "english": "streaming", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Streaming"]}},
-    {"id": "syllabus-a2-10879", "german": "Podcast", "english": "podcast", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Podcast"]}},
-    {"id": "syllabus-a2-10880", "german": "abonnieren", "english": "to subscribe", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "abonnieren"]}},
-    {"id": "syllabus-a2-10881", "german": "Abonnement", "english": "subscription", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Abonnement"]}},
-    {"id": "syllabus-a2-10882", "german": "Benachrichtigung", "english": "notification", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Benachrichtigung"]}},
-    {"id": "syllabus-a2-10883", "german": "Bildschirmzeit", "english": "screen time", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Bildschirmzeit"]}},
-    {"id": "syllabus-a2-10884", "german": "online", "english": "online", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "online"]}},
-    {"id": "syllabus-a2-10885", "german": "offline", "english": "offline", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "offline"]}},
-    {"id": "syllabus-a2-10886", "german": "digital", "english": "digital", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "digital"]}},
-    {"id": "syllabus-a2-10887", "german": "analog", "english": "analog", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "analog"]}},
-    {"id": "syllabus-a2-10888", "german": "drahtlos", "english": "wireless", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "drahtlos"]}},
-    {"id": "syllabus-a2-10889", "german": "Bluetooth", "english": "Bluetooth", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Bluetooth"]}},
-    {"id": "syllabus-a2-10890", "german": "NFC", "english": "NFC / near field communication", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "NFC"]}},
-    {"id": "syllabus-a2-10891", "german": "QR-Code", "english": "QR code", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "QR-Code"]}},
-    {"id": "syllabus-a2-10892", "german": "GPS", "english": "GPS", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "GPS"]}},
-    {"id": "syllabus-a2-10893", "german": "Navigation", "english": "navigation", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Navigation"]}},
-    {"id": "syllabus-a2-10894", "german": "navigieren", "english": "to navigate", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "navigieren"]}},
-    {"id": "syllabus-a2-10895", "german": "Touchscreen", "english": "touchscreen", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Touchscreen"]}},
-    {"id": "syllabus-a2-10896", "german": "tippen", "english": "to tap / to type", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "tippen"]}},
-    {"id": "syllabus-a2-10897", "german": "wischen", "english": "to swipe", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "wischen"]}},
-    {"id": "syllabus-a2-10898", "german": "scrollen", "english": "to scroll", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "scrollen"]}},
-    {"id": "syllabus-a2-10899", "german": "zoomen", "english": "to zoom", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "zoomen"]}},
-    {"id": "syllabus-a2-10900", "german": "klicken", "english": "to click", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "klicken"]}},
-    {"id": "syllabus-a2-10901", "german": "Doppelklick", "english": "double-click", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Doppelklick"]}},
-    {"id": "syllabus-a2-10902", "german": "Rechtsklick", "english": "right-click", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Rechtsklick"]}},
-    {"id": "syllabus-a2-10903", "german": "ziehen", "english": "to drag", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "ziehen"]}},
-    {"id": "syllabus-a2-10904", "german": "Fehler", "english": "error / bug", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Fehler"]}},
-    {"id": "syllabus-a2-10905", "german": "Bug", "english": "bug", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Bug"]}},
-    {"id": "syllabus-a2-10906", "german": "Absturz", "english": "crash", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "Absturz"]}},
-    {"id": "syllabus-a2-10907", "german": "abstürzen", "english": "to crash", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "abstürzen"]}},
-    {"id": "syllabus-a2-10908", "german": "einfrieren", "english": "to freeze", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "einfrieren"]}},
-    {"id": "syllabus-a2-10909", "german": "neu starten", "english": "to restart", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "neu starten"]}},
-    {"id": "syllabus-a2-10910", "german": "herunterfahren", "english": "to shut down", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "herunterfahren"]}},
-    {"id": "syllabus-a2-10911", "german": "hochfahren", "english": "to start up / to boot up", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "hochfahren"]}},
-    {"id": "syllabus-a2-10912", "german": "funktionieren", "english": "to work / to function", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "funktionieren"]}},
-    {"id": "syllabus-a2-10913", "german": "kaputt", "english": "broken", "category": "Technology", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Technology", "kaputt"]}}
+    {
+      "id": "syllabus-a2-10792",
+      "german": "das Smartphone",
+      "english": "smartphone",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Smartphone"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10793",
+      "german": "die Kopfhörer",
+      "english": "headphones",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Kopfhörer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10794",
+      "german": "der Lautsprecher",
+      "english": "speaker",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Lautsprecher"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10795",
+      "german": "die Kamera",
+      "english": "camera",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Kamera"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10796",
+      "german": "das Mikrofon",
+      "english": "microphone",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Mikrofon"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10797",
+      "german": "der USB-Stick",
+      "english": "USB stick / flash drive",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "USB-Stick"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10798",
+      "german": "die Festplatte",
+      "english": "hard drive",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Festplatte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10799",
+      "german": "die SSD",
+      "english": "SSD / solid state drive",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "SSD"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10800",
+      "german": "der Akku",
+      "english": "battery / rechargeable battery",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Akku"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10801",
+      "german": "das Ladegerät",
+      "english": "charger",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Ladegerät"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10802",
+      "german": "das Kabel",
+      "english": "cable",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Kabel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10803",
+      "german": "das WLAN",
+      "english": "WiFi / wireless LAN",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "WLAN"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10804",
+      "german": "der Router",
+      "english": "router",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Router"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10805",
+      "german": "das Netzwerk",
+      "english": "network",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Netzwerk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10806",
+      "german": "der Server",
+      "english": "server",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Server"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10807",
+      "german": "die Cloud",
+      "english": "cloud",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Cloud"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10808",
+      "german": "der Browser",
+      "english": "browser",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Browser"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10809",
+      "german": "die Suchmaschine",
+      "english": "search engine",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Suchmaschine"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10810",
+      "german": "der Link",
+      "english": "link",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Link"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10811",
+      "german": "die URL",
+      "english": "URL / web address",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "URL"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10812",
+      "german": "der Download",
+      "english": "download",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Download"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10813",
+      "german": "der Upload",
+      "english": "upload",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Upload"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10814",
+      "german": "hochladen",
+      "english": "to upload",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "hochladen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10815",
+      "german": "die Software",
+      "english": "software",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Software"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10816",
+      "german": "das Programm",
+      "english": "program / application",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Programm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10817",
+      "german": "das Betriebssystem",
+      "english": "operating system",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Betriebssystem"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10818",
+      "german": "das Update",
+      "english": "update",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Update"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10819",
+      "german": "aktualisieren",
+      "english": "to update",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "aktualisieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10820",
+      "german": "installieren",
+      "english": "to install",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "installieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10821",
+      "german": "deinstallieren",
+      "english": "to uninstall",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "deinstallieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10822",
+      "german": "löschen",
+      "english": "to delete",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "löschen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10823",
+      "german": "kopieren",
+      "english": "to copy",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "kopieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10824",
+      "german": "einfügen",
+      "english": "to paste",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "einfügen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10825",
+      "german": "ausschneiden",
+      "english": "to cut",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "ausschneiden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10826",
+      "german": "drucken",
+      "english": "to print",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "drucken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10827",
+      "german": "scannen",
+      "english": "to scan",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "scannen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10828",
+      "german": "der Scanner",
+      "english": "scanner",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Scanner"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10829",
+      "german": "der Ordner",
+      "english": "folder",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Ordner"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10830",
+      "german": "das Dokument",
+      "english": "document",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Dokument"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10831",
+      "german": "das Bild",
+      "english": "image / picture",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Bild"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10832",
+      "german": "das Foto",
+      "english": "photo",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Foto"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10833",
+      "german": "das Video",
+      "english": "video",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Video"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10834",
+      "german": "das Audio",
+      "english": "audio",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Audio"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10835",
+      "german": "die Musik",
+      "english": "music",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Musik"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10836",
+      "german": "das MP3",
+      "english": "MP3",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "MP3"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10837",
+      "german": "das PDF",
+      "english": "PDF",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "PDF"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10838",
+      "german": "die Textverarbeitung",
+      "english": "word processing",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Textverarbeitung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10839",
+      "german": "die Tabellenkalkulation",
+      "english": "spreadsheet",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Tabellenkalkulation"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10840",
+      "german": "die Präsentation",
+      "english": "presentation",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Präsentation"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10841",
+      "german": "die Datenbank",
+      "english": "database",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Datenbank"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10842",
+      "german": "Daten",
+      "english": "data",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Daten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10843",
+      "german": "das Backup",
+      "english": "backup",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Backup"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10844",
+      "german": "die Sicherung",
+      "english": "backup / backup copy",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Sicherung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10845",
+      "german": "der Virus",
+      "english": "virus",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Virus"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10846",
+      "german": "das Antivirus",
+      "english": "antivirus",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Antivirus"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10847",
+      "german": "die Sicherheit",
+      "english": "security",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Sicherheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10848",
+      "german": "die Firewall",
+      "english": "firewall",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Firewall"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10849",
+      "german": "verschlüsseln",
+      "english": "to encrypt",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "verschlüsseln"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10850",
+      "german": "die Verschlüsselung",
+      "english": "encryption",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Verschlüsselung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10851",
+      "german": "der Benutzername",
+      "english": "username",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Benutzername"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10852",
+      "german": "anmelden",
+      "english": "to log in / to sign in",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "anmelden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10853",
+      "german": "abmelden",
+      "english": "to log out / to sign out",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "abmelden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10854",
+      "german": "das Konto",
+      "english": "account",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Konto"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10855",
+      "german": "das Profil",
+      "english": "profile",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Profil"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10856",
+      "german": "Einstellungen",
+      "english": "settings",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Einstellungen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10857",
+      "german": "die Nachricht",
+      "english": "message",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Nachricht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10858",
+      "german": "die SMS",
+      "english": "SMS / text message",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "SMS"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10859",
+      "german": "der Chat",
+      "english": "chat",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Chat"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10860",
+      "german": "chatten",
+      "english": "to chat",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "chatten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10861",
+      "german": "der Videoanruf",
+      "english": "video call",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Videoanruf"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10862",
+      "german": "die Videokonferenz",
+      "english": "video conference",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Videokonferenz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10863",
+      "german": "soziale Medien",
+      "english": "social media",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "soziale Medien"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10864",
+      "german": "soziales Netzwerk",
+      "english": "social network",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "soziales Netzwerk"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10865",
+      "german": "die Post",
+      "english": "post",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Post"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10866",
+      "german": "posten",
+      "english": "to post",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "posten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10867",
+      "german": "teilen",
+      "english": "to share",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "teilen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10868",
+      "german": "liken",
+      "english": "to like",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "liken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10869",
+      "german": "das Like",
+      "english": "like",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Like"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10870",
+      "german": "der Kommentar",
+      "english": "comment",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Kommentar"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10871",
+      "german": "kommentieren",
+      "english": "to comment",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "kommentieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10872",
+      "german": "der Follower",
+      "english": "follower",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Follower"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10873",
+      "german": "folgen",
+      "english": "to follow",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "folgen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10874",
+      "german": "der Hashtag",
+      "english": "hashtag",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Hashtag"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10875",
+      "german": "die Story",
+      "english": "story",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Story"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10876",
+      "german": "der Livestream",
+      "english": "livestream",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Livestream"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10877",
+      "german": "streamen",
+      "english": "to stream",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "streamen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10878",
+      "german": "das Streaming",
+      "english": "streaming",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Streaming"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10879",
+      "german": "der Podcast",
+      "english": "podcast",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Podcast"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10880",
+      "german": "abonnieren",
+      "english": "to subscribe",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "abonnieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10881",
+      "german": "das Abonnement",
+      "english": "subscription",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Abonnement"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10882",
+      "german": "die Benachrichtigung",
+      "english": "notification",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Benachrichtigung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10883",
+      "german": "die Bildschirmzeit",
+      "english": "screen time",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Bildschirmzeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10884",
+      "german": "online",
+      "english": "online",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "online"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10885",
+      "german": "offline",
+      "english": "offline",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "offline"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10886",
+      "german": "digital",
+      "english": "digital",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "digital"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10887",
+      "german": "analog",
+      "english": "analog",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "analog"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10888",
+      "german": "drahtlos",
+      "english": "wireless",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "drahtlos"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10889",
+      "german": "das Bluetooth",
+      "english": "Bluetooth",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Bluetooth"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10890",
+      "german": "das NFC",
+      "english": "NFC / near field communication",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "NFC"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10891",
+      "german": "der QR-Code",
+      "english": "QR code",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "QR-Code"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10892",
+      "german": "das GPS",
+      "english": "GPS",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "GPS"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10893",
+      "german": "die Navigation",
+      "english": "navigation",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Navigation"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10894",
+      "german": "navigieren",
+      "english": "to navigate",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "navigieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10895",
+      "german": "der Touchscreen",
+      "english": "touchscreen",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Touchscreen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10896",
+      "german": "tippen",
+      "english": "to tap / to type",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "tippen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10897",
+      "german": "wischen",
+      "english": "to swipe",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "wischen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10898",
+      "german": "scrollen",
+      "english": "to scroll",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "scrollen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10899",
+      "german": "zoomen",
+      "english": "to zoom",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "zoomen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10900",
+      "german": "klicken",
+      "english": "to click",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "klicken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10901",
+      "german": "der Doppelklick",
+      "english": "double-click",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Doppelklick"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10902",
+      "german": "der Rechtsklick",
+      "english": "right-click",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Rechtsklick"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10903",
+      "german": "ziehen",
+      "english": "to drag",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "ziehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10904",
+      "german": "der Fehler",
+      "english": "error / bug",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Fehler"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10905",
+      "german": "der Bug",
+      "english": "bug",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Bug"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10906",
+      "german": "der Absturz",
+      "english": "crash",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "Absturz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10907",
+      "german": "abstürzen",
+      "english": "to crash",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "abstürzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10908",
+      "german": "einfrieren",
+      "english": "to freeze",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "einfrieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10909",
+      "german": "neu starten",
+      "english": "to restart",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "neu starten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10910",
+      "german": "herunterfahren",
+      "english": "to shut down",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "herunterfahren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10911",
+      "german": "hochfahren",
+      "english": "to start up / to boot up",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "hochfahren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10912",
+      "german": "funktionieren",
+      "english": "to work / to function",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "funktionieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10913",
+      "german": "kaputt",
+      "english": "broken",
+      "category": "Technology",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Technology",
+          "kaputt"
+        ]
+      }
+    }
   ]
 }

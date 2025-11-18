@@ -303,94 +303,1785 @@
         ]
       }
     },
-    {"id": "syllabus-a2-10760", "german": "umsteigen", "english": "to change (trains/buses)", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "umsteigen"]}},
-    {"id": "syllabus-a2-10761", "german": "anziehen", "english": "to put on (clothes)", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "anziehen"]}},
-    {"id": "syllabus-a2-10762", "german": "ausziehen", "english": "to take off (clothes) / to move out", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "ausziehen"]}},
-    {"id": "syllabus-a2-10763", "german": "umziehen", "english": "to move (residence) / to change clothes", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "umziehen"]}},
-    {"id": "syllabus-a2-10764", "german": "einkaufen", "english": "to shop / to go shopping", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "einkaufen"]}},
-    {"id": "syllabus-a2-10765", "german": "verkaufen", "english": "to sell", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "verkaufen"]}},
-    {"id": "syllabus-a2-10766", "german": "aufwachen", "english": "to wake up", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "aufwachen"]}},
-    {"id": "syllabus-a2-10767", "german": "aufräumen", "english": "to clean up / to tidy up", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "aufräumen"]}},
-    {"id": "syllabus-a2-10768", "german": "vorbereiten", "english": "to prepare", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "vorbereiten"]}},
-    {"id": "syllabus-a2-10769", "german": "vorstellen", "english": "to introduce / to imagine", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "vorstellen"]}},
-    {"id": "syllabus-a2-10770", "german": "nachdenken", "english": "to think about / to reflect", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "nachdenken"]}},
-    {"id": "syllabus-a2-10771", "german": "weitermachen", "english": "to continue / to carry on", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "weitermachen"]}},
-    {"id": "syllabus-a2-10772", "german": "weiterfahren", "english": "to continue driving / to drive on", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "weiterfahren"]}},
-    {"id": "syllabus-a2-10773", "german": "zurückfahren", "english": "to drive back", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "zurückfahren"]}},
-    {"id": "syllabus-a2-10774", "german": "zurückgeben", "english": "to give back / to return", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "zurückgeben"]}},
-    {"id": "syllabus-a2-10775", "german": "abfahren", "english": "to depart / to leave", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "abfahren"]}},
-    {"id": "syllabus-a2-10776", "german": "ankommen", "english": "to arrive", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "ankommen"]}},
-    {"id": "syllabus-a2-10777", "german": "weggehen", "english": "to go away / to leave", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "weggehen"]}},
-    {"id": "syllabus-a2-10778", "german": "wegfahren", "english": "to drive away", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "wegfahren"]}},
-    {"id": "syllabus-a2-10779", "german": "vorkommen", "english": "to happen / to occur", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "vorkommen"]}},
-    {"id": "syllabus-a2-10780", "german": "aufpassen", "english": "to pay attention / to watch out", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "aufpassen"]}},
-    {"id": "syllabus-a2-10781", "german": "zuhören", "english": "to listen", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "zuhören"]}},
-    {"id": "syllabus-a2-10782", "german": "zusehen", "english": "to watch", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "zusehen"]}},
-    {"id": "syllabus-a2-10783", "german": "aussehen", "english": "to look like / to appear", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "aussehen"]}},
-    {"id": "syllabus-a2-10784", "german": "ansehen", "english": "to look at / to watch", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "ansehen"]}},
-    {"id": "syllabus-a2-10785", "german": "kennenlernen", "english": "to get to know / to meet", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "kennenlernen"]}},
-    {"id": "syllabus-a2-10786", "german": "stattfinden", "english": "to take place", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "stattfinden"]}},
-    {"id": "syllabus-a2-10787", "german": "teilnehmen", "english": "to participate / to take part", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "teilnehmen"]}},
-    {"id": "syllabus-a2-10788", "german": "abnehmen", "english": "to lose weight / to take off", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "abnehmen"]}},
-    {"id": "syllabus-a2-10789", "german": "zunehmen", "english": "to gain weight / to increase", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "zunehmen"]}},
-    {"id": "syllabus-a2-10790", "german": "aufschreiben", "english": "to write down", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "aufschreiben"]}},
-    {"id": "syllabus-a2-10791", "german": "aufgeben", "english": "to give up / to mail", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "aufgeben"]}},
-    {"id": "syllabus-a2-10792", "german": "ausgeben", "english": "to spend (money)", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "ausgeben"]}},
-    {"id": "syllabus-a2-10793", "german": "herausfinden", "english": "to find out", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "herausfinden"]}},
-    {"id": "syllabus-a2-10794", "german": "herauskommen", "english": "to come out", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "herauskommen"]}},
-    {"id": "syllabus-a2-10795", "german": "hereinkommen", "english": "to come in / to enter", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "hereinkommen"]}},
-    {"id": "syllabus-a2-10796", "german": "hineingehen", "english": "to go in / to enter", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "hineingehen"]}},
-    {"id": "syllabus-a2-10797", "german": "hinausgehen", "english": "to go out", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "hinausgehen"]}},
-    {"id": "syllabus-a2-10798", "german": "raufgehen", "english": "to go up", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "raufgehen"]}},
-    {"id": "syllabus-a2-10799", "german": "runtergehen", "english": "to go down", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "runtergehen"]}},
-    {"id": "syllabus-a2-10800", "german": "hochgehen", "english": "to go up", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "hochgehen"]}},
-    {"id": "syllabus-a2-10801", "german": "runterladen", "english": "to download (colloquial)", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "runterladen"]}},
-    {"id": "syllabus-a2-10802", "german": "hochladen", "english": "to upload", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "hochladen"]}},
-    {"id": "syllabus-a2-10803", "german": "mitnehmen", "english": "to take along", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "mitnehmen"]}},
-    {"id": "syllabus-a2-10804", "german": "wegnehmen", "english": "to take away", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "wegnehmen"]}},
-    {"id": "syllabus-a2-10805", "german": "einnehmen", "english": "to take (medicine)", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "einnehmen"]}},
-    {"id": "syllabus-a2-10806", "german": "aufnehmen", "english": "to record / to take up", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "aufnehmen"]}},
-    {"id": "syllabus-a2-10807", "german": "vorhaben", "english": "to plan / to intend", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "vorhaben"]}},
-    {"id": "syllabus-a2-10808", "german": "durchführen", "english": "to carry out / to conduct", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "durchführen"]}},
-    {"id": "syllabus-a2-10809", "german": "durchmachen", "english": "to go through / to experience", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "durchmachen"]}},
-    {"id": "syllabus-a2-10810", "german": "einschalten", "english": "to turn on / to switch on", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "einschalten"]}},
-    {"id": "syllabus-a2-10811", "german": "ausschalten", "english": "to turn off / to switch off", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "ausschalten"]}},
-    {"id": "syllabus-a2-10812", "german": "umschalten", "english": "to switch / to change channels", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "umschalten"]}},
-    {"id": "syllabus-a2-10813", "german": "einpacken", "english": "to pack / to wrap", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "einpacken"]}},
-    {"id": "syllabus-a2-10814", "german": "auspacken", "english": "to unpack / to unwrap", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "auspacken"]}},
-    {"id": "syllabus-a2-10815", "german": "umtauschen", "english": "to exchange", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "umtauschen"]}},
-    {"id": "syllabus-a2-10816", "german": "aussprechen", "english": "to pronounce", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "aussprechen"]}},
-    {"id": "syllabus-a2-10817", "german": "besprechen", "english": "to discuss", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "besprechen"]}},
-    {"id": "syllabus-a2-10818", "german": "versprechen", "english": "to promise", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "versprechen"]}},
-    {"id": "syllabus-a2-10819", "german": "ansprechen", "english": "to address / to speak to", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "ansprechen"]}},
-    {"id": "syllabus-a2-10820", "german": "abschließen", "english": "to lock / to complete", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "abschließen"]}},
-    {"id": "syllabus-a2-10821", "german": "aufschließen", "english": "to unlock / to open", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "aufschließen"]}},
-    {"id": "syllabus-a2-10822", "german": "nachmachen", "english": "to imitate / to copy", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "nachmachen"]}},
-    {"id": "syllabus-a2-10823", "german": "mitmachen", "english": "to participate / to join in", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "mitmachen"]}},
-    {"id": "syllabus-a2-10824", "german": "weitergeben", "english": "to pass on", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "weitergeben"]}},
-    {"id": "syllabus-a2-10825", "german": "durchlesen", "english": "to read through", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "durchlesen"]}},
-    {"id": "syllabus-a2-10826", "german": "vorlesen", "english": "to read aloud", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "vorlesen"]}},
-    {"id": "syllabus-a2-10827", "german": "nachschlagen", "english": "to look up", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "nachschlagen"]}},
-    {"id": "syllabus-a2-10828", "german": "aufbauen", "english": "to build up / to set up", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "aufbauen"]}},
-    {"id": "syllabus-a2-10829", "german": "abbauen", "english": "to dismantle / to take down", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "abbauen"]}},
-    {"id": "syllabus-a2-10830", "german": "aufhängen", "english": "to hang up", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "aufhängen"]}},
-    {"id": "syllabus-a2-10831", "german": "abhängen", "english": "to take down / to depend on", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "abhängen"]}},
-    {"id": "syllabus-a2-10832", "german": "anmachen", "english": "to turn on (colloquial)", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "anmachen"]}},
-    {"id": "syllabus-a2-10833", "german": "ausmachen", "english": "to turn off / to matter", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "ausmachen"]}},
-    {"id": "syllabus-a2-10834", "german": "zumachen", "english": "to close (colloquial)", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "zumachen"]}},
-    {"id": "syllabus-a2-10835", "german": "aufbleiben", "english": "to stay up / to stay open", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "aufbleiben"]}},
-    {"id": "syllabus-a2-10836", "german": "fortsetzen", "english": "to continue", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "fortsetzen"]}},
-    {"id": "syllabus-a2-10837", "german": "fortgehen", "english": "to go away / to leave", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "fortgehen"]}},
-    {"id": "syllabus-a2-10838", "german": "feststellen", "english": "to notice / to determine", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "feststellen"]}},
-    {"id": "syllabus-a2-10839", "german": "festhalten", "english": "to hold on to", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "festhalten"]}},
-    {"id": "syllabus-a2-10840", "german": "losfahren", "english": "to set off / to drive off", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "losfahren"]}},
-    {"id": "syllabus-a2-10841", "german": "losgehen", "english": "to set off / to start", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "losgehen"]}},
-    {"id": "syllabus-a2-10842", "german": "loslassen", "english": "to let go", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "loslassen"]}},
-    {"id": "syllabus-a2-10843", "german": "hinzufügen", "english": "to add", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "hinzufügen"]}},
-    {"id": "syllabus-a2-10844", "german": "zustimmen", "english": "to agree", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "zustimmen"]}},
-    {"id": "syllabus-a2-10845", "german": "zunehmen", "english": "to increase / to gain weight", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "zunehmen"]}},
-    {"id": "syllabus-a2-10846", "german": "zusammenfassen", "english": "to summarize", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "zusammenfassen"]}},
-    {"id": "syllabus-a2-10847", "german": "zusammenarbeiten", "english": "to cooperate / to work together", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "zusammenarbeiten"]}},
-    {"id": "syllabus-a2-10848", "german": "zusammenleben", "english": "to live together", "category": "Separable Verbs", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Separable Verbs", "zusammenleben"]}}
+    {
+      "id": "syllabus-a2-10760",
+      "german": "umsteigen",
+      "english": "to change (trains/buses)",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "umsteigen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10761",
+      "german": "anziehen",
+      "english": "to put on (clothes)",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "anziehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10762",
+      "german": "ausziehen",
+      "english": "to take off (clothes) / to move out",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "ausziehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10763",
+      "german": "umziehen",
+      "english": "to move (residence) / to change clothes",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "umziehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10764",
+      "german": "einkaufen",
+      "english": "to shop / to go shopping",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "einkaufen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10765",
+      "german": "verkaufen",
+      "english": "to sell",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "verkaufen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10766",
+      "german": "aufwachen",
+      "english": "to wake up",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "aufwachen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10767",
+      "german": "aufräumen",
+      "english": "to clean up / to tidy up",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "aufräumen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10768",
+      "german": "vorbereiten",
+      "english": "to prepare",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "vorbereiten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10769",
+      "german": "vorstellen",
+      "english": "to introduce / to imagine",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "vorstellen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10770",
+      "german": "nachdenken",
+      "english": "to think about / to reflect",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "nachdenken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10771",
+      "german": "weitermachen",
+      "english": "to continue / to carry on",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "weitermachen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10772",
+      "german": "weiterfahren",
+      "english": "to continue driving / to drive on",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "weiterfahren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10773",
+      "german": "zurückfahren",
+      "english": "to drive back",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "zurückfahren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10774",
+      "german": "zurückgeben",
+      "english": "to give back / to return",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "zurückgeben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10775",
+      "german": "abfahren",
+      "english": "to depart / to leave",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "abfahren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10776",
+      "german": "ankommen",
+      "english": "to arrive",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "ankommen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10777",
+      "german": "weggehen",
+      "english": "to go away / to leave",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "weggehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10778",
+      "german": "wegfahren",
+      "english": "to drive away",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "wegfahren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10779",
+      "german": "vorkommen",
+      "english": "to happen / to occur",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "vorkommen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10780",
+      "german": "aufpassen",
+      "english": "to pay attention / to watch out",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "aufpassen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10781",
+      "german": "zuhören",
+      "english": "to listen",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "zuhören"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10782",
+      "german": "zusehen",
+      "english": "to watch",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "zusehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10783",
+      "german": "aussehen",
+      "english": "to look like / to appear",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "aussehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10784",
+      "german": "ansehen",
+      "english": "to look at / to watch",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "ansehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10785",
+      "german": "kennenlernen",
+      "english": "to get to know / to meet",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "kennenlernen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10786",
+      "german": "stattfinden",
+      "english": "to take place",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "stattfinden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10787",
+      "german": "teilnehmen",
+      "english": "to participate / to take part",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "teilnehmen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10788",
+      "german": "abnehmen",
+      "english": "to lose weight / to take off",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "abnehmen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10789",
+      "german": "zunehmen",
+      "english": "to gain weight / to increase",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "zunehmen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10790",
+      "german": "aufschreiben",
+      "english": "to write down",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "aufschreiben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10791",
+      "german": "aufgeben",
+      "english": "to give up / to mail",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "aufgeben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10792",
+      "german": "ausgeben",
+      "english": "to spend (money)",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "ausgeben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10793",
+      "german": "herausfinden",
+      "english": "to find out",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "herausfinden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10794",
+      "german": "herauskommen",
+      "english": "to come out",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "herauskommen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10795",
+      "german": "hereinkommen",
+      "english": "to come in / to enter",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "hereinkommen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10796",
+      "german": "hineingehen",
+      "english": "to go in / to enter",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "hineingehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10797",
+      "german": "hinausgehen",
+      "english": "to go out",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "hinausgehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10798",
+      "german": "raufgehen",
+      "english": "to go up",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "raufgehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10799",
+      "german": "runtergehen",
+      "english": "to go down",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "runtergehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10800",
+      "german": "hochgehen",
+      "english": "to go up",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "hochgehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10801",
+      "german": "runterladen",
+      "english": "to download (colloquial)",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "runterladen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10802",
+      "german": "hochladen",
+      "english": "to upload",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "hochladen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10803",
+      "german": "mitnehmen",
+      "english": "to take along",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "mitnehmen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10804",
+      "german": "wegnehmen",
+      "english": "to take away",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "wegnehmen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10805",
+      "german": "einnehmen",
+      "english": "to take (medicine)",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "einnehmen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10806",
+      "german": "aufnehmen",
+      "english": "to record / to take up",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "aufnehmen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10807",
+      "german": "vorhaben",
+      "english": "to plan / to intend",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "vorhaben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10808",
+      "german": "durchführen",
+      "english": "to carry out / to conduct",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "durchführen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10809",
+      "german": "durchmachen",
+      "english": "to go through / to experience",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "durchmachen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10810",
+      "german": "einschalten",
+      "english": "to turn on / to switch on",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "einschalten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10811",
+      "german": "ausschalten",
+      "english": "to turn off / to switch off",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "ausschalten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10812",
+      "german": "umschalten",
+      "english": "to switch / to change channels",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "umschalten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10813",
+      "german": "einpacken",
+      "english": "to pack / to wrap",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "einpacken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10814",
+      "german": "auspacken",
+      "english": "to unpack / to unwrap",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "auspacken"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10815",
+      "german": "umtauschen",
+      "english": "to exchange",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "umtauschen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10816",
+      "german": "aussprechen",
+      "english": "to pronounce",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "aussprechen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10817",
+      "german": "besprechen",
+      "english": "to discuss",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "besprechen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10818",
+      "german": "versprechen",
+      "english": "to promise",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "versprechen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10819",
+      "german": "ansprechen",
+      "english": "to address / to speak to",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "ansprechen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10820",
+      "german": "abschließen",
+      "english": "to lock / to complete",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "abschließen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10821",
+      "german": "aufschließen",
+      "english": "to unlock / to open",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "aufschließen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10822",
+      "german": "nachmachen",
+      "english": "to imitate / to copy",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "nachmachen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10823",
+      "german": "mitmachen",
+      "english": "to participate / to join in",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "mitmachen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10824",
+      "german": "weitergeben",
+      "english": "to pass on",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "weitergeben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10825",
+      "german": "durchlesen",
+      "english": "to read through",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "durchlesen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10826",
+      "german": "vorlesen",
+      "english": "to read aloud",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "vorlesen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10827",
+      "german": "nachschlagen",
+      "english": "to look up",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "nachschlagen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10828",
+      "german": "aufbauen",
+      "english": "to build up / to set up",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "aufbauen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10829",
+      "german": "abbauen",
+      "english": "to dismantle / to take down",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "abbauen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10830",
+      "german": "aufhängen",
+      "english": "to hang up",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "aufhängen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10831",
+      "german": "abhängen",
+      "english": "to take down / to depend on",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "abhängen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10832",
+      "german": "anmachen",
+      "english": "to turn on (colloquial)",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "anmachen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10833",
+      "german": "ausmachen",
+      "english": "to turn off / to matter",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "ausmachen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10834",
+      "german": "zumachen",
+      "english": "to close (colloquial)",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "zumachen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10835",
+      "german": "aufbleiben",
+      "english": "to stay up / to stay open",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "aufbleiben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10836",
+      "german": "fortsetzen",
+      "english": "to continue",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "fortsetzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10837",
+      "german": "fortgehen",
+      "english": "to go away / to leave",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "fortgehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10838",
+      "german": "feststellen",
+      "english": "to notice / to determine",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "feststellen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10839",
+      "german": "festhalten",
+      "english": "to hold on to",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "festhalten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10840",
+      "german": "losfahren",
+      "english": "to set off / to drive off",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "losfahren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10841",
+      "german": "losgehen",
+      "english": "to set off / to start",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "losgehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10842",
+      "german": "loslassen",
+      "english": "to let go",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "loslassen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10843",
+      "german": "hinzufügen",
+      "english": "to add",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "hinzufügen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10844",
+      "german": "zustimmen",
+      "english": "to agree",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "zustimmen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10845",
+      "german": "zunehmen",
+      "english": "to increase / to gain weight",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "zunehmen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10846",
+      "german": "zusammenfassen",
+      "english": "to summarize",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "zusammenfassen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10847",
+      "german": "zusammenarbeiten",
+      "english": "to cooperate / to work together",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "zusammenarbeiten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10848",
+      "german": "zusammenleben",
+      "english": "to live together",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Separable Verbs",
+          "zusammenleben"
+        ]
+      }
+    }
   ]
 }

@@ -1,0 +1,1366 @@
+{
+  "level": "C2",
+  "totalCards": 65,
+  "flashcards": [
+    {
+      "id": "body-c2-001",
+      "german": "die Hirnhaut",
+      "english": "meninges / brain membrane",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "nervous-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "die Hirnhaut"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-002",
+      "german": "der Liquor",
+      "english": "cerebrospinal fluid",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "nervous-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "der Liquor"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-003",
+      "german": "das Striatum",
+      "english": "striatum",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "nervous-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "das Striatum"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-004",
+      "german": "der Hippocampus",
+      "english": "hippocampus",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "nervous-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "der Hippocampus"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-005",
+      "german": "die Amygdala",
+      "english": "amygdala",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "nervous-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "die Amygdala"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-006",
+      "german": "die Epiphyse",
+      "english": "pineal gland / epiphysis",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "endocrine-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "die Epiphyse"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-007",
+      "german": "die Zirbeldrüse",
+      "english": "pineal gland",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "endocrine-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "die Zirbeldrüse"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-008",
+      "german": "das Endokard",
+      "english": "endocardium",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "cardiovascular-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "das Endokard"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-009",
+      "german": "das Perikard",
+      "english": "pericardium",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "cardiovascular-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "das Perikard"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-010",
+      "german": "das Myokard",
+      "english": "myocardium / heart muscle",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "cardiovascular-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "das Myokard"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-011",
+      "german": "der Ösophagus",
+      "english": "esophagus (medical term)",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "digestive-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "der Ösophagus"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-012",
+      "german": "die Epiglottis",
+      "english": "epiglottis",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "respiratory-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "die Epiglottis"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-013",
+      "german": "die Glomeruli",
+      "english": "glomeruli (kidney filtration units)",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "urinary-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "die Glomeruli"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-014",
+      "german": "das Nephron",
+      "english": "nephron",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "urinary-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "das Nephron"
+        ]
+      }
+    },
+    {
+      "id": "body-c2-015",
+      "german": "die Plazenta",
+      "english": "placenta",
+      "category": "Body Parts",
+      "level": "C2",
+      "tags": [
+        "body",
+        "highly-specialized",
+        "reproductive-system",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Body Parts Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Body Parts",
+          "die Plazenta"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11613",
+      "german": "Sehnsucht",
+      "english": "longing / yearning",
+      "category": "Literary Language",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Literary Language",
+          "Sehnsucht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11614",
+      "german": "Gemüt",
+      "english": "disposition / temperament",
+      "category": "Literary Language",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Literary Language",
+          "Gemüt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11615",
+      "german": "Weltschmerz",
+      "english": "world-weariness / melancholy",
+      "category": "Literary Language",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Literary Language",
+          "Weltschmerz"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11616",
+      "german": "Zeitgeist",
+      "english": "spirit of the times",
+      "category": "Literary Language",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Literary Language",
+          "Zeitgeist"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11617",
+      "german": "Fernweh",
+      "english": "wanderlust / desire to travel",
+      "category": "Literary Language",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Literary Language",
+          "Fernweh"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11618",
+      "german": "Schadenfreude",
+      "english": "pleasure at others' misfortune",
+      "category": "Literary Language",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Literary Language",
+          "Schadenfreude"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11619",
+      "german": "Heimweh",
+      "english": "homesickness",
+      "category": "Literary Language",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Literary Language",
+          "Heimweh"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11620",
+      "german": "Torschlusspanik",
+      "english": "fear of missing opportunities",
+      "category": "Literary Language",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Literary Language",
+          "Torschlusspanik"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11621",
+      "german": "Erkenntnis",
+      "english": "knowledge / cognition / insight",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Erkenntnis"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11622",
+      "german": "Wahrheit",
+      "english": "truth",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Wahrheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11623",
+      "german": "Vernunft",
+      "english": "reason / rationality",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Vernunft"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11624",
+      "german": "Dasein",
+      "english": "existence / being",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Dasein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11625",
+      "german": "Wesen",
+      "english": "essence / nature / being",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Wesen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11626",
+      "german": "Bewusstsein",
+      "english": "consciousness / awareness",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Bewusstsein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11627",
+      "german": "Freiheit",
+      "english": "freedom / liberty",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Freiheit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11628",
+      "german": "Notwendigkeit",
+      "english": "necessity",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Notwendigkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11629",
+      "german": "Wirklichkeit",
+      "english": "reality / actuality",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Wirklichkeit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11630",
+      "german": "Erscheinung",
+      "english": "appearance / phenomenon",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Erscheinung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11631",
+      "german": "Bestimmung",
+      "english": "determination / destiny / purpose",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Bestimmung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-c2-11632",
+      "german": "Vergänglichkeit",
+      "english": "transience / impermanence",
+      "category": "Philosophical Concepts",
+      "level": "C2",
+      "tags": [
+        "syllabus",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Syllabus C2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Philosophical Concepts",
+          "Vergänglichkeit"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-001",
+      "german": "sich ermannen",
+      "english": "to pluck up courage, to summon one's strength",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich ermannen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-002",
+      "german": "sich erdreisten",
+      "english": "to have the audacity, to presume",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "formal",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich erdreisten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-003",
+      "german": "sich ereifern",
+      "english": "to get worked up, to become agitated",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich ereifern"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-004",
+      "german": "sich erkecken",
+      "english": "to dare, to venture",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "archaic",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich erkecken"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-005",
+      "german": "sich gebärden",
+      "english": "to behave, to act (in a certain manner)",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "formal",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich gebärden"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-006",
+      "german": "sich härmen",
+      "english": "to grieve, to pine",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich härmen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-007",
+      "german": "sich verzehren",
+      "english": "to pine away, to consume oneself",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verzehren"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-008",
+      "german": "sich verausgaben",
+      "english": "to exhaust oneself, to overextend",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "formal",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verausgaben"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-009",
+      "german": "sich verbittern",
+      "english": "to become embittered",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "psychological",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verbittern"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-010",
+      "german": "sich verfestigen",
+      "english": "to solidify, to become fixed",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "abstract",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verfestigen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-011",
+      "german": "sich verflüchtigen",
+      "english": "to evaporate, to vanish",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "abstract",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verflüchtigen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-012",
+      "german": "sich verhärten",
+      "english": "to harden, to become obdurate",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "psychological",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verhärten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-013",
+      "german": "sich verkrampfen",
+      "english": "to tense up, to become cramped",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "physical",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verkrampfen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-014",
+      "german": "sich versinnbildlichen",
+      "english": "to be symbolized, to be embodied",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "abstract",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich versinnbildlichen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-015",
+      "german": "sich verstiegen haben",
+      "english": "to have overreached oneself",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verstiegen haben"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-016",
+      "german": "sich verwahren gegen",
+      "english": "to protest against, to object to",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "formal",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verwahren gegen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-017",
+      "german": "sich verwinden",
+      "english": "to come to terms with, to get over",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich verwinden"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-018",
+      "german": "sich wappnen",
+      "english": "to arm oneself, to prepare oneself",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "formal",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich wappnen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-019",
+      "german": "sich windend",
+      "english": "to wriggle, to writhe",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "physical",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich windend"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-020",
+      "german": "sich zutragen",
+      "english": "to occur, to happen (literary)",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich zutragen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-021",
+      "german": "sich befleißigen",
+      "english": "to apply oneself to, to endeavor",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "archaic",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich befleißigen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-022",
+      "german": "sich brüsten",
+      "english": "to boast, to brag",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "formal",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich brüsten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-023",
+      "german": "sich dünken",
+      "english": "to seem to oneself, to fancy (archaic)",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "archaic",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich dünken"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-024",
+      "german": "sich gedulden",
+      "english": "to be patient, to wait patiently",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich gedulden"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-025",
+      "german": "sich hüten",
+      "english": "to beware, to guard against",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "caution",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich hüten"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-026",
+      "german": "sich regen",
+      "english": "to stir, to move",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "literary",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich regen"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-027",
+      "german": "sich schicken",
+      "english": "to be fitting, to be proper",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "formal",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich schicken"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-028",
+      "german": "sich tummeln",
+      "english": "to romp about, to bustle",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "movement",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich tummeln"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-029",
+      "german": "sich vergewissern",
+      "english": "to make certain, to verify",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "verification",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich vergewissern"
+        ]
+      }
+    },
+    {
+      "id": "reflexive-c2-030",
+      "german": "sich vermessen",
+      "english": "to presume, to be presumptuous",
+      "category": "Reflexive Verbs",
+      "level": "C2",
+      "tags": [
+        "reflexive",
+        "presumption",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Reflexive Verbs",
+          "sich vermessen"
+        ]
+      }
+    }
+  ]
+}

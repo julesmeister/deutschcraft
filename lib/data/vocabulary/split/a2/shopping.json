@@ -323,98 +323,1865 @@
         ]
       }
     },
-    {"id": "syllabus-a2-10976", "german": "Laden", "english": "shop / store", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Laden"]}},
-    {"id": "syllabus-a2-10977", "german": "Einkaufszentrum", "english": "shopping mall / shopping center", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Einkaufszentrum"]}},
-    {"id": "syllabus-a2-10978", "german": "Kaufhaus", "english": "department store", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Kaufhaus"]}},
-    {"id": "syllabus-a2-10979", "german": "Markt", "english": "market", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Markt"]}},
-    {"id": "syllabus-a2-10980", "german": "Bäckerei", "english": "bakery", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Bäckerei"]}},
-    {"id": "syllabus-a2-10981", "german": "Metzgerei", "english": "butcher shop", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Metzgerei"]}},
-    {"id": "syllabus-a2-10982", "german": "Apotheke", "english": "pharmacy", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Apotheke"]}},
-    {"id": "syllabus-a2-10983", "german": "Buchhandlung", "english": "bookstore", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Buchhandlung"]}},
-    {"id": "syllabus-a2-10984", "german": "Drogerie", "english": "drugstore", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Drogerie"]}},
-    {"id": "syllabus-a2-10985", "german": "Verkäufer", "english": "salesperson / seller", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Verkäufer"]}},
-    {"id": "syllabus-a2-10986", "german": "Verkäuferin", "english": "salesperson (female)", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Verkäuferin"]}},
-    {"id": "syllabus-a2-10987", "german": "Käufer", "english": "buyer", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Käufer"]}},
-    {"id": "syllabus-a2-10988", "german": "Einkaufswagen", "english": "shopping cart", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Einkaufswagen"]}},
-    {"id": "syllabus-a2-10989", "german": "Einkaufskorb", "english": "shopping basket", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Einkaufskorb"]}},
-    {"id": "syllabus-a2-10990", "german": "Einkaufsliste", "english": "shopping list", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Einkaufsliste"]}},
-    {"id": "syllabus-a2-10991", "german": "Angebot", "english": "offer / special", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Angebot"]}},
-    {"id": "syllabus-a2-10992", "german": "Sonderangebot", "english": "special offer", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Sonderangebot"]}},
-    {"id": "syllabus-a2-10993", "german": "Ausverkauf", "english": "sale / clearance sale", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Ausverkauf"]}},
-    {"id": "syllabus-a2-10994", "german": "Schlussverkauf", "english": "final sale / end-of-season sale", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Schlussverkauf"]}},
-    {"id": "syllabus-a2-10995", "german": "günstig", "english": "affordable / inexpensive", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "günstig"]}},
-    {"id": "syllabus-a2-10996", "german": "reduziert", "english": "reduced / on sale", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "reduziert"]}},
-    {"id": "syllabus-a2-10997", "german": "Mehrwertsteuer", "english": "VAT / value-added tax", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Mehrwertsteuer"]}},
-    {"id": "syllabus-a2-10998", "german": "Cent", "english": "cent", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Cent"]}},
-    {"id": "syllabus-a2-10999", "german": "Bargeld", "english": "cash", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Bargeld"]}},
-    {"id": "syllabus-a2-11000", "german": "Kreditkarte", "english": "credit card", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Kreditkarte"]}},
-    {"id": "syllabus-a2-11001", "german": "Bankkarte", "english": "debit card / bank card", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Bankkarte"]}},
-    {"id": "syllabus-a2-11002", "german": "EC-Karte", "english": "debit card (German)", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "EC-Karte"]}},
-    {"id": "syllabus-a2-11003", "german": "Wechselgeld", "english": "change (money)", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Wechselgeld"]}},
-    {"id": "syllabus-a2-11004", "german": "Rückgeld", "english": "change (money back)", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Rückgeld"]}},
-    {"id": "syllabus-a2-11005", "german": "Rechnung", "english": "bill / receipt", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Rechnung"]}},
-    {"id": "syllabus-a2-11006", "german": "Kassenzettel", "english": "receipt", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Kassenzettel"]}},
-    {"id": "syllabus-a2-11007", "german": "Bon", "english": "receipt / slip", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Bon"]}},
-    {"id": "syllabus-a2-11008", "german": "Garantie", "english": "warranty / guarantee", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Garantie"]}},
-    {"id": "syllabus-a2-11009", "german": "umtauschen", "english": "to exchange", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "umtauschen"]}},
-    {"id": "syllabus-a2-11010", "german": "zurückgeben", "english": "to return", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "zurückgeben"]}},
-    {"id": "syllabus-a2-11011", "german": "Rückgabe", "english": "return", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Rückgabe"]}},
-    {"id": "syllabus-a2-11012", "german": "Erstattung", "english": "refund", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Erstattung"]}},
-    {"id": "syllabus-a2-11013", "german": "anprobieren", "english": "to try on", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "anprobieren"]}},
-    {"id": "syllabus-a2-11014", "german": "Umkleidekabine", "english": "fitting room / changing room", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Umkleidekabine"]}},
-    {"id": "syllabus-a2-11015", "german": "passen", "english": "to fit", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "passen"]}},
-    {"id": "syllabus-a2-11016", "german": "zu eng", "english": "too tight", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "zu eng"]}},
-    {"id": "syllabus-a2-11017", "german": "zu weit", "english": "too loose / too wide", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "zu weit"]}},
-    {"id": "syllabus-a2-11018", "german": "zu groß", "english": "too big", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "zu groß"]}},
-    {"id": "syllabus-a2-11019", "german": "zu klein", "english": "too small", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "zu klein"]}},
-    {"id": "syllabus-a2-11020", "german": "Kleidung", "english": "clothing", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Kleidung"]}},
-    {"id": "syllabus-a2-11021", "german": "Bekleidung", "english": "clothing / apparel", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Bekleidung"]}},
-    {"id": "syllabus-a2-11022", "german": "Mode", "english": "fashion", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Mode"]}},
-    {"id": "syllabus-a2-11023", "german": "Lebensmittel", "english": "groceries / food items", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Lebensmittel"]}},
-    {"id": "syllabus-a2-11024", "german": "Waren", "english": "goods / merchandise", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Waren"]}},
-    {"id": "syllabus-a2-11025", "german": "Produkt", "english": "product", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Produkt"]}},
-    {"id": "syllabus-a2-11026", "german": "Artikel", "english": "article / item", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Artikel"]}},
-    {"id": "syllabus-a2-11027", "german": "Marke", "english": "brand", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Marke"]}},
-    {"id": "syllabus-a2-11028", "german": "Qualität", "english": "quality", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Qualität"]}},
-    {"id": "syllabus-a2-11029", "german": "Menge", "english": "quantity / amount", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Menge"]}},
-    {"id": "syllabus-a2-11030", "german": "Packung", "english": "package / pack", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Packung"]}},
-    {"id": "syllabus-a2-11031", "german": "Dose", "english": "can / tin", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Dose"]}},
-    {"id": "syllabus-a2-11032", "german": "Flasche", "english": "bottle", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Flasche"]}},
-    {"id": "syllabus-a2-11033", "german": "Glas", "english": "jar / glass", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Glas"]}},
-    {"id": "syllabus-a2-11034", "german": "Karton", "english": "carton / box", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Karton"]}},
-    {"id": "syllabus-a2-11035", "german": "Gewicht", "english": "weight", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Gewicht"]}},
-    {"id": "syllabus-a2-11036", "german": "Gramm", "english": "gram", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Gramm"]}},
-    {"id": "syllabus-a2-11037", "german": "Kilogramm", "english": "kilogram", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Kilogramm"]}},
-    {"id": "syllabus-a2-11038", "german": "Liter", "english": "liter", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Liter"]}},
-    {"id": "syllabus-a2-11039", "german": "Stück", "english": "piece", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Stück"]}},
-    {"id": "syllabus-a2-11040", "german": "Haltbarkeitsdatum", "english": "expiration date / best before date", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Haltbarkeitsdatum"]}},
-    {"id": "syllabus-a2-11041", "german": "frisch", "english": "fresh", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "frisch"]}},
-    {"id": "syllabus-a2-11042", "german": "abgelaufen", "english": "expired", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "abgelaufen"]}},
-    {"id": "syllabus-a2-11043", "german": "Bio", "english": "organic", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Bio"]}},
-    {"id": "syllabus-a2-11044", "german": "regional", "english": "regional / local", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "regional"]}},
-    {"id": "syllabus-a2-11045", "german": "Regal", "english": "shelf", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Regal"]}},
-    {"id": "syllabus-a2-11046", "german": "Gang", "english": "aisle", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Gang"]}},
-    {"id": "syllabus-a2-11047", "german": "Abteilung", "english": "department / section", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Abteilung"]}},
-    {"id": "syllabus-a2-11048", "german": "Öffnungszeiten", "english": "opening hours", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Öffnungszeiten"]}},
-    {"id": "syllabus-a2-11049", "german": "geöffnet", "english": "open", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "geöffnet"]}},
-    {"id": "syllabus-a2-11050", "german": "geschlossen", "english": "closed", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "geschlossen"]}},
-    {"id": "syllabus-a2-11051", "german": "Schlange stehen", "english": "to stand in line / to queue", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Schlange stehen"]}},
-    {"id": "syllabus-a2-11052", "german": "Warteschlange", "english": "queue / waiting line", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Warteschlange"]}},
-    {"id": "syllabus-a2-11053", "german": "suchen", "english": "to look for / to search", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "suchen"]}},
-    {"id": "syllabus-a2-11054", "german": "finden", "english": "to find", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "finden"]}},
-    {"id": "syllabus-a2-11055", "german": "aussuchen", "english": "to choose / to select", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "aussuchen"]}},
-    {"id": "syllabus-a2-11056", "german": "wählen", "english": "to choose / to select", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "wählen"]}},
-    {"id": "syllabus-a2-11057", "german": "vergleichen", "english": "to compare", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "vergleichen"]}},
-    {"id": "syllabus-a2-11058", "german": "empfehlen", "english": "to recommend", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "empfehlen"]}},
-    {"id": "syllabus-a2-11059", "german": "Empfehlung", "english": "recommendation", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Empfehlung"]}},
-    {"id": "syllabus-a2-11060", "german": "Kunde werden", "english": "to become a customer", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Kunde werden"]}},
-    {"id": "syllabus-a2-11061", "german": "Kundenkarte", "english": "loyalty card / customer card", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Kundenkarte"]}},
-    {"id": "syllabus-a2-11062", "german": "Treuepunkte", "english": "loyalty points", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Treuepunkte"]}},
-    {"id": "syllabus-a2-11063", "german": "Gutschein", "english": "voucher / coupon", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Gutschein"]}},
-    {"id": "syllabus-a2-11064", "german": "Online-Shopping", "english": "online shopping", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Online-Shopping"]}},
-    {"id": "syllabus-a2-11065", "german": "Versand", "english": "shipping / delivery", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Versand"]}},
-    {"id": "syllabus-a2-11066", "german": "Versandkosten", "english": "shipping costs", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Versandkosten"]}},
-    {"id": "syllabus-a2-11067", "german": "Warenkorb", "english": "shopping cart (online)", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "Warenkorb"]}},
-    {"id": "syllabus-a2-11068", "german": "in den Warenkorb legen", "english": "to add to cart", "category": "Shopping", "level": "A2", "tags": ["syllabus", "A2"], "_meta": {"source": "Syllabus A2", "lineNumber": 0, "hierarchy": ["A2", "Shopping", "in den Warenkorb legen"]}}
+    {
+      "id": "syllabus-a2-10976",
+      "german": "Laden",
+      "english": "shop / store",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Laden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10977",
+      "german": "Einkaufszentrum",
+      "english": "shopping mall / shopping center",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Einkaufszentrum"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10978",
+      "german": "Kaufhaus",
+      "english": "department store",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Kaufhaus"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10979",
+      "german": "Markt",
+      "english": "market",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Markt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10980",
+      "german": "Bäckerei",
+      "english": "bakery",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Bäckerei"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10981",
+      "german": "Metzgerei",
+      "english": "butcher shop",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Metzgerei"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10982",
+      "german": "Apotheke",
+      "english": "pharmacy",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Apotheke"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10983",
+      "german": "Buchhandlung",
+      "english": "bookstore",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Buchhandlung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10984",
+      "german": "Drogerie",
+      "english": "drugstore",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Drogerie"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10985",
+      "german": "Verkäufer",
+      "english": "salesperson / seller",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Verkäufer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10986",
+      "german": "Verkäuferin",
+      "english": "salesperson (female)",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Verkäuferin"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10987",
+      "german": "Käufer",
+      "english": "buyer",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Käufer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10988",
+      "german": "Einkaufswagen",
+      "english": "shopping cart",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Einkaufswagen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10989",
+      "german": "Einkaufskorb",
+      "english": "shopping basket",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Einkaufskorb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10990",
+      "german": "Einkaufsliste",
+      "english": "shopping list",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Einkaufsliste"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10991",
+      "german": "Angebot",
+      "english": "offer / special",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Angebot"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10992",
+      "german": "Sonderangebot",
+      "english": "special offer",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Sonderangebot"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10993",
+      "german": "Ausverkauf",
+      "english": "sale / clearance sale",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Ausverkauf"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10994",
+      "german": "Schlussverkauf",
+      "english": "final sale / end-of-season sale",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Schlussverkauf"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10995",
+      "german": "günstig",
+      "english": "affordable / inexpensive",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "günstig"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10996",
+      "german": "reduziert",
+      "english": "reduced / on sale",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "reduziert"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10997",
+      "german": "Mehrwertsteuer",
+      "english": "VAT / value-added tax",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Mehrwertsteuer"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10998",
+      "german": "Cent",
+      "english": "cent",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Cent"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10999",
+      "german": "Bargeld",
+      "english": "cash",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Bargeld"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11000",
+      "german": "Kreditkarte",
+      "english": "credit card",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Kreditkarte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11001",
+      "german": "Bankkarte",
+      "english": "debit card / bank card",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Bankkarte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11002",
+      "german": "EC-Karte",
+      "english": "debit card (German)",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "EC-Karte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11003",
+      "german": "Wechselgeld",
+      "english": "change (money)",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Wechselgeld"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11004",
+      "german": "Rückgeld",
+      "english": "change (money back)",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Rückgeld"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11005",
+      "german": "Rechnung",
+      "english": "bill / receipt",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Rechnung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11006",
+      "german": "Kassenzettel",
+      "english": "receipt",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Kassenzettel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11007",
+      "german": "Bon",
+      "english": "receipt / slip",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Bon"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11008",
+      "german": "Garantie",
+      "english": "warranty / guarantee",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Garantie"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11009",
+      "german": "umtauschen",
+      "english": "to exchange",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "umtauschen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11010",
+      "german": "zurückgeben",
+      "english": "to return",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "zurückgeben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11011",
+      "german": "Rückgabe",
+      "english": "return",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Rückgabe"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11012",
+      "german": "Erstattung",
+      "english": "refund",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Erstattung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11013",
+      "german": "anprobieren",
+      "english": "to try on",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "anprobieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11014",
+      "german": "Umkleidekabine",
+      "english": "fitting room / changing room",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Umkleidekabine"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11015",
+      "german": "passen",
+      "english": "to fit",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "passen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11016",
+      "german": "zu eng",
+      "english": "too tight",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "zu eng"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11017",
+      "german": "zu weit",
+      "english": "too loose / too wide",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "zu weit"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11018",
+      "german": "zu groß",
+      "english": "too big",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "zu groß"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11019",
+      "german": "zu klein",
+      "english": "too small",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "zu klein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11020",
+      "german": "Kleidung",
+      "english": "clothing",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Kleidung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11021",
+      "german": "Bekleidung",
+      "english": "clothing / apparel",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Bekleidung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11022",
+      "german": "Mode",
+      "english": "fashion",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Mode"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11023",
+      "german": "Lebensmittel",
+      "english": "groceries / food items",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Lebensmittel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11024",
+      "german": "Waren",
+      "english": "goods / merchandise",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Waren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11025",
+      "german": "Produkt",
+      "english": "product",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Produkt"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11026",
+      "german": "Artikel",
+      "english": "article / item",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Artikel"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11027",
+      "german": "Marke",
+      "english": "brand",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Marke"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11028",
+      "german": "Qualität",
+      "english": "quality",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Qualität"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11029",
+      "german": "Menge",
+      "english": "quantity / amount",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Menge"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11030",
+      "german": "Packung",
+      "english": "package / pack",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Packung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11031",
+      "german": "Dose",
+      "english": "can / tin",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Dose"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11032",
+      "german": "Flasche",
+      "english": "bottle",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Flasche"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11033",
+      "german": "Glas",
+      "english": "jar / glass",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Glas"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11034",
+      "german": "Karton",
+      "english": "carton / box",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Karton"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11035",
+      "german": "Gewicht",
+      "english": "weight",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Gewicht"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11036",
+      "german": "Gramm",
+      "english": "gram",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Gramm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11037",
+      "german": "Kilogramm",
+      "english": "kilogram",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Kilogramm"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11038",
+      "german": "Liter",
+      "english": "liter",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Liter"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11039",
+      "german": "Stück",
+      "english": "piece",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Stück"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11040",
+      "german": "Haltbarkeitsdatum",
+      "english": "expiration date / best before date",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Haltbarkeitsdatum"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11041",
+      "german": "frisch",
+      "english": "fresh",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "frisch"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11042",
+      "german": "abgelaufen",
+      "english": "expired",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "abgelaufen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11043",
+      "german": "Bio",
+      "english": "organic",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Bio"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11044",
+      "german": "regional",
+      "english": "regional / local",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "regional"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11045",
+      "german": "Regal",
+      "english": "shelf",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Regal"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11046",
+      "german": "Gang",
+      "english": "aisle",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Gang"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11047",
+      "german": "Abteilung",
+      "english": "department / section",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Abteilung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11048",
+      "german": "Öffnungszeiten",
+      "english": "opening hours",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Öffnungszeiten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11049",
+      "german": "geöffnet",
+      "english": "open",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "geöffnet"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11050",
+      "german": "geschlossen",
+      "english": "closed",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "geschlossen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11051",
+      "german": "Schlange stehen",
+      "english": "to stand in line / to queue",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Schlange stehen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11052",
+      "german": "Warteschlange",
+      "english": "queue / waiting line",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Warteschlange"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11053",
+      "german": "suchen",
+      "english": "to look for / to search",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "suchen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11054",
+      "german": "finden",
+      "english": "to find",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "finden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11055",
+      "german": "aussuchen",
+      "english": "to choose / to select",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "aussuchen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11056",
+      "german": "wählen",
+      "english": "to choose / to select",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "wählen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11057",
+      "german": "vergleichen",
+      "english": "to compare",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "vergleichen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11058",
+      "german": "empfehlen",
+      "english": "to recommend",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "empfehlen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11059",
+      "german": "Empfehlung",
+      "english": "recommendation",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Empfehlung"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11060",
+      "german": "Kunde werden",
+      "english": "to become a customer",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Kunde werden"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11061",
+      "german": "Kundenkarte",
+      "english": "loyalty card / customer card",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Kundenkarte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11062",
+      "german": "Treuepunkte",
+      "english": "loyalty points",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Treuepunkte"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11063",
+      "german": "Gutschein",
+      "english": "voucher / coupon",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Gutschein"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11064",
+      "german": "Online-Shopping",
+      "english": "online shopping",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Online-Shopping"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11065",
+      "german": "Versand",
+      "english": "shipping / delivery",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Versand"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11066",
+      "german": "Versandkosten",
+      "english": "shipping costs",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Versandkosten"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11067",
+      "german": "Warenkorb",
+      "english": "shopping cart (online)",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "Warenkorb"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-11068",
+      "german": "in den Warenkorb legen",
+      "english": "to add to cart",
+      "category": "Shopping",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Shopping",
+          "in den Warenkorb legen"
+        ]
+      }
+    }
   ]
 }
