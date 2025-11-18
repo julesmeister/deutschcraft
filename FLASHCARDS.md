@@ -180,6 +180,63 @@ Before deploying, verify:
 
 ---
 
+## Documentation Index
+
+- **`FLASHCARD_SRS_IMPROVEMENTS.md`** - Complete SRS system documentation
+  - Card states (new, learning, review, relearning, lapsed)
+  - Mastery decay algorithm (2% per day)
+  - Enhanced struggling detection
+  - Smart card prioritization (NEW!)
+  - Expert difficulty level (NEW!)
+  - Real-time mastery updates (NEW!)
+
+- **`SPACED_REPETITION_VERIFICATION.md`** - Integration verification (NEW!)
+  - Complete data flow diagrams
+  - Testing instructions
+  - Expected behavior scenarios
+  - Database query examples
+
+---
+
+## Recent Improvements (2025-11-18)
+
+### Smart Card Prioritization
+Cards are now sorted intelligently:
+1. Struggling cards first (lapsed/relearning state)
+2. Lowest mastery first (need most practice)
+3. Most overdue first (earliest nextReviewDate)
+4. State priority (new > learning > relearning > review)
+
+**Implementation:** `app/dashboard/student/flashcard-review/page.tsx:151-177`
+
+### Visual Feedback for Next Review
+Each card now shows when it's next due:
+- "Due today" / "Overdue 2 days"
+- "Due tomorrow" / "Due in 3 days"
+- "Due in 2 weeks" / "Due in 6 months"
+- "Due in 1 year" (expert cards)
+
+**Implementation:** `components/flashcards/ReviewCardPreview.tsx:28-82`
+
+### Expert Difficulty Level
+5th difficulty option for fully mastered cards:
+- Sets mastery to 100%
+- Schedules review in 1-2 years
+- Removes from daily rotation
+- Perfect for words you know extremely well
+
+**Implementation:** `lib/utils/srsAlgorithm.ts:174-187`
+
+### Development Debug Logs
+Console logging to verify SRS is working:
+```
+📅 [SRS] Difficulty: good | Interval: 3 days | Next: 11/21/2025
+💾 [Save] Card: bleiben | Mastery: 40% | Next: 11/21/2025
+🔍 [Filter] Type: due-today | Total: 50 | Filtered: 3
+```
+
+---
+
 ## Quick Fix Commands
 
 ```bash

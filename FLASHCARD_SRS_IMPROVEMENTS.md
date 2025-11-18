@@ -361,6 +361,79 @@ const struggling = await getStrugglingFlashcards(userId, 100);
 **Firestore:** In-memory filter (OR logic not supported)
 **Turso:** Single SQL query with WHERE conditions
 
+### 6. Smart Card Prioritization (2025-11-18)
+
+**Added:**
+- Intelligent sorting algorithm for review cards
+- Multi-level priority system
+- Visual feedback for next review dates
+
+**Sorting Priority:**
+1. **Struggling cards first** - Cards in lapsed/relearning state
+2. **Lowest mastery first** - Cards needing most practice
+3. **Most overdue first** - Cards with earliest nextReviewDate
+4. **State priority** - new > learning > relearning > review > lapsed
+
+**Visual Feedback:**
+```typescript
+// Each card shows when it's next due
+formatNextReview(nextReviewDate) →
+  "Due today"
+  "Overdue 2 days"
+  "Due tomorrow"
+  "Due in 3 days"
+  "Due in 2 weeks"
+  "Due in 6 months"
+  "Due in 1 year"
+```
+
+**Implementation:** `app/dashboard/student/flashcard-review/page.tsx:151-177`
+
+### 7. Expert Difficulty Level (2025-11-18)
+
+**Added:**
+- 5th difficulty option for fully mastered cards
+- 1-2 year review intervals
+- Automatic 100% mastery
+
+**User Benefits:**
+- Mark cards as "expert" to remove from regular rotation
+- Cards reappear after 1+ year for long-term retention
+- Reduces daily review burden for well-known words
+
+**Implementation:** `lib/utils/srsAlgorithm.ts:174-187`
+
+### 8. Real-time Mastery Updates (2025-11-18)
+
+**Added:**
+- Battery-style mastery indicator on flashcards
+- Real-time updates during practice session
+- Color-coded progress (0-100%)
+
+**Visual Design:**
+```
+┌────────────────┐
+│ [████████  ] 80% │  ← Battery indicator
+└────────────────┘
+```
+
+**Implementation:** `components/flashcards/FlashcardCard.tsx`
+
+### 9. Debug Logging (2025-11-18)
+
+**Added development logs:**
+```
+📅 [SRS] Difficulty: good | Interval: 3 days | State: learning | Next: 11/21/2025
+💾 [Save] Card: bleiben | Mastery: 40% | Next: 11/21/2025
+🔍 [Filter] Type: due-today | Total: 50 | Reviews: 10 | Filtered: 3
+  📌 haben: 20% | Overdue 2d
+```
+
+**Files:**
+- `lib/utils/srsAlgorithm.ts:197-201`
+- `lib/hooks/useFlashcardMutations.ts:111-114`
+- `app/dashboard/student/flashcard-review/page.tsx:179-189`
+
 ## Future Enhancements
 
 ### Possible Additions (not implemented yet)
@@ -377,7 +450,6 @@ const struggling = await getStrugglingFlashcards(userId, 100);
 3. **Study Session Optimization**
    - Mix new cards with reviews (Anki-style)
    - Daily new card limits
-   - Due card prioritization
 
 4. **Advanced Metrics**
    - Retention rate by card
@@ -387,7 +459,6 @@ const struggling = await getStrugglingFlashcards(userId, 100);
 5. **Spaced Repetition Scheduler**
    - Background job to calculate daily due cards
    - Push notifications for due reviews
-   - Study streak tracking
 
 ## Resources
 
@@ -411,6 +482,19 @@ For questions about this implementation:
 
 ---
 
-**Last Updated:** 2025-11-17
-**Version:** 2.0.0
+**Last Updated:** 2025-11-18
+**Version:** 2.1.0
 **Status:** ✅ Complete and tested
+
+## Latest Updates (2025-11-18)
+
+### What's New
+- ✅ Smart card prioritization (struggling/low mastery first)
+- ✅ Visual feedback showing when cards are next due
+- ✅ Expert difficulty for fully mastered cards (1+ year intervals)
+- ✅ Real-time mastery battery indicator during practice
+- ✅ Development debug logs for verification
+- ✅ Complete end-to-end SRS verification
+
+### Verification
+See `SPACED_REPETITION_VERIFICATION.md` for complete integration details and testing instructions.

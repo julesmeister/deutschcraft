@@ -4,13 +4,14 @@ import { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CatLoader } from '@/components/ui/CatLoader';
-import { TabBar, type TabItem } from '@/components/ui/TabBar';
+import { TabBar } from '@/components/ui/TabBar';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
-import { DataCard, DataCardGrid } from '@/components/ui/DataCard';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useFlashcardReviews } from '@/lib/hooks/useFlashcards';
 import { useFlashcardSettings } from '@/lib/hooks/useFlashcardSettings';
 import { FlashcardPractice } from '@/components/flashcards/FlashcardPractice';
+import { ReviewEmptyState } from '@/components/flashcards/ReviewEmptyState';
+import { ReviewCardPreview } from '@/components/flashcards/ReviewCardPreview';
 import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
 
@@ -96,23 +97,25 @@ export default function FlashcardReviewPage() {
   const filteredFlashcards = useMemo(() => {
     const now = Date.now();
 
-    return allFlashcards
+    const cardsWithReview = allFlashcards
       .map(card => {
         const review = reviews.find(r => r.flashcardId === card.id || r.wordId === card.wordId);
-        // Add masteryLevel from review data
+        // Add masteryLevel and review data
         return {
           ...card,
           masteryLevel: review?.masteryLevel ?? 0,
+          nextReviewDate: review?.nextReviewDate ?? now,
+          review,
         };
       })
       .filter(card => {
-        const review = reviews.find(r => r.flashcardId === card.id || r.wordId === card.wordId);
+        const review = card.review;
 
         if (!review) return false; // Only show reviewed cards
 
       switch (filterType) {
         case 'due-today':
-          // Cards due for review today or overdue
+          // Cards due for review today or overdue (spaced repetition)
           return review.nextReviewDate <= now;
 
         case 'struggling':
@@ -144,7 +147,48 @@ export default function FlashcardReviewPage() {
         default:
           return false;
       }
+    })
+    .sort((a, b) => {
+      // Priority 1: Struggling cards first (lapsed/relearning state)
+      const aIsStruggling = a.review?.state === 'lapsed' || a.review?.state === 'relearning';
+      const bIsStruggling = b.review?.state === 'lapsed' || b.review?.state === 'relearning';
+      if (aIsStruggling && !bIsStruggling) return -1;
+      if (!aIsStruggling && bIsStruggling) return 1;
+
+      // Priority 2: Lowest mastery first (most in need of practice)
+      const masteryDiff = a.masteryLevel - b.masteryLevel;
+      if (masteryDiff !== 0) return masteryDiff;
+
+      // Priority 3: Most overdue first (earliest nextReviewDate)
+      const dateDiff = a.nextReviewDate - b.nextReviewDate;
+      if (dateDiff !== 0) return dateDiff;
+
+      // Priority 4: State priority (new > learning > review)
+      const statePriority: Record<string, number> = {
+        'new': 1,
+        'learning': 2,
+        'relearning': 3,
+        'review': 4,
+        'lapsed': 5,
+      };
+      const aStatePriority = statePriority[a.review?.state || 'review'] || 999;
+      const bStatePriority = statePriority[b.review?.state || 'review'] || 999;
+      return aStatePriority - bStatePriority;
     });
+
+    // Log filtering results for debugging
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`🔍 [Filter] Type: ${filterType} | Total cards: ${allFlashcards.length} | Reviews: ${reviews.length} | Filtered: ${cardsWithReview.length}`);
+      if (filterType === 'due-today' && cardsWithReview.length > 0) {
+        const now = Date.now();
+        cardsWithReview.slice(0, 3).forEach(card => {
+          const daysOverdue = Math.round((now - (card.nextReviewDate || now)) / (24 * 60 * 60 * 1000));
+          console.log(`  📌 ${card.german}: ${card.masteryLevel}% | ${daysOverdue > 0 ? `Overdue ${daysOverdue}d` : `Due ${Math.abs(daysOverdue)}d`}`);
+        });
+      }
+    }
+
+    return cardsWithReview;
   }, [allFlashcards, reviews, filterType]);
 
   // Apply session limits to filtered flashcards for practice
@@ -269,45 +313,7 @@ export default function FlashcardReviewPage() {
 
         {/* Cards Section */}
         {filteredFlashcards.length === 0 ? (
-          <div className="text-center py-16 bg-white border border-gray-200 rounded-2xl">
-            <div className="text-6xl mb-4">
-              {filterType === 'due-today' ? '🎉' :
-               filterType === 'struggling' ? '💪' :
-               filterType === 'new' ? '🆕' :
-               filterType === 'learning' ? '📖' :
-               filterType === 'review' ? '🔄' :
-               filterType === 'lapsed' ? '⚠️' : '📚'}
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
-              {filterType === 'due-today' ? 'All caught up!' :
-               filterType === 'struggling' ? 'No struggling cards' :
-               filterType === 'new' ? 'No new cards' :
-               filterType === 'learning' ? 'No cards in learning' :
-               filterType === 'review' ? 'No cards in review' :
-               filterType === 'lapsed' ? 'No lapsed cards' :
-               'No reviewed cards yet'}
-            </h3>
-            <p className="text-gray-600 mb-6">
-              {filterType === 'due-today' ? 'You have no cards due for review today. Great job!' :
-               filterType === 'struggling' ? 'All your cards are doing well! Keep up the good work.' :
-               filterType === 'new' ? 'All cards have been started. Begin practicing to see new cards.' :
-               filterType === 'learning' ? 'No cards are currently in the learning phase.' :
-               filterType === 'review' ? 'No cards have reached review stage yet. Keep practicing!' :
-               filterType === 'lapsed' ? 'Great! No cards have been forgotten recently.' :
-               'Start practicing flashcards to build your review collection.'}
-            </p>
-            <div className="flex justify-center">
-              <div className="w-fit">
-                <ActionButton
-                  onClick={() => router.push('/dashboard/student/flashcards')}
-                  variant="purple"
-                  icon={<ActionButtonIcons.ArrowRight />}
-                >
-                  Go to Flashcards
-                </ActionButton>
-              </div>
-            </div>
-          </div>
+          <ReviewEmptyState filterType={filterType} />
         ) : (
           <>
             {/* Review CTA */}
@@ -344,33 +350,12 @@ export default function FlashcardReviewPage() {
               </div>
             </div>
 
-            {/* Card Preview - Data Cards */}
-            <DataCardGrid>
-              {cardsForPractice.slice(0, 6).map((card, index) => {
-                const review = reviews.find(r => r.flashcardId === card.id || r.wordId === card.wordId);
-                const masteryLevel = review?.masteryLevel ?? 0;
-                return (
-                  <DataCard
-                    key={`${card.id}-${index}`}
-                    value={card.german}
-                    title={card.english}
-                    description={card.category}
-                    mastery={masteryLevel}
-                    onClick={() => setIsPracticing(true)}
-                    accentColor={
-                      masteryLevel >= 70 ? '#10b981' :
-                      masteryLevel >= 40 ? '#f59e0b' :
-                      '#6b7280'
-                    }
-                  />
-                );
-              })}
-            </DataCardGrid>
-            {cardsForPractice.length > 6 && (
-              <div className="text-center mt-4 text-sm text-gray-500">
-                +{cardsForPractice.length - 6} more cards in this session
-              </div>
-            )}
+            {/* Card Preview */}
+            <ReviewCardPreview
+              cards={cardsForPractice}
+              reviews={reviews}
+              onCardClick={() => setIsPracticing(true)}
+            />
           </>
         )}
       </div>

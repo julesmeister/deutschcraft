@@ -194,6 +194,12 @@ export function calculateSRSData(
   // Calculate next review date
   const nextReviewDate = now + interval * 24 * 60 * 60 * 1000;
 
+  // Log SRS calculation for debugging
+  if (process.env.NODE_ENV === 'development') {
+    const daysUntilReview = Math.round(interval);
+    console.log(`📅 [SRS] Difficulty: ${difficulty} | Interval: ${daysUntilReview} days | State: ${newState} | Next: ${new Date(nextReviewDate).toLocaleDateString()}`);
+  }
+
   // Calculate new mastery level (0-100)
   let newMastery = 0;
 
@@ -205,25 +211,35 @@ export function calculateSRSData(
     newMastery = 100;
   } else {
     // Base mastery on repetitions and state
+    // Use UPDATED repetitions count for accurate mastery calculation
     if (newState === 'learning' || newState === 'new') {
-      // Learning: 0% -> 20% -> 40% -> 60%
-      newMastery = Math.min(60, repetitions * 20);
+      // Learning: First correct = 20%, Second = 40%, Third = 60%
+      // Use the incremental progression based on how many times they got it right
+      const masteryFromReps = Math.min(60, repetitions * 20);
+      newMastery = Math.max(currentMastery, masteryFromReps);
     } else if (newState === 'relearning') {
-      // Relearning: starts at 20%, max 70%
-      newMastery = Math.min(70, 20 + repetitions * 15);
+      // Relearning: Progressive increase with each correct answer
+      const masteryFromReps = Math.min(70, 20 + repetitions * 15);
+      newMastery = Math.max(currentMastery, masteryFromReps);
     } else if (newState === 'review') {
       // Review: 60% - 100% based on consecutive correct and ease factor
-      const baseReview = 60 + Math.min(25, consecutiveCorrect * 5);
-      newMastery = Math.min(100, Math.round(baseReview * (easeFactor / 2.5)));
+      // Start at 60%, add 5% per consecutive correct (max +25%)
+      const consecutiveBonus = Math.min(25, consecutiveCorrect * 5);
+      const baseReview = 60 + consecutiveBonus;
+      // Apply ease factor multiplier
+      const easeMultiplier = easeFactor / 2.5;
+      newMastery = Math.min(100, Math.round(baseReview * easeMultiplier));
+
+      // Always ensure mastery increases in review state
+      newMastery = Math.max(currentMastery + 2, newMastery);
     }
 
     // Bonus for difficulty
     if (difficulty === 'easy') {
       newMastery = Math.min(100, newMastery + 5);
+    } else if (difficulty === 'good') {
+      newMastery = Math.min(100, newMastery + 2);
     }
-
-    // Ensure it's higher than current (learning increases mastery)
-    newMastery = Math.max(currentMastery, newMastery);
   }
 
   return {

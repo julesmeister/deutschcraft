@@ -108,6 +108,11 @@ export function useFlashcardMutations() {
       // Save using service layer
       await saveFlashcardProgress(progressId, updateData);
 
+      // Log save confirmation for debugging
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`💾 [Save] Card: ${flashcardId} | Mastery: ${srsData.masteryLevel}% | Next: ${new Date(srsData.nextReviewDate).toLocaleDateString()}`);
+      }
+
       return srsData;
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to save review';
