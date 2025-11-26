@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { User } from '@/lib/models/user';
 import { Transaction, getPaymentMethodDisplay, getTransactionStatusColor, getTransactionStatusText } from '@/lib/models/transaction';
 import { useUserTransactions, useCreateTransaction, useVerifyTransaction, useRejectTransaction } from '@/lib/hooks/useTransactions';
+import { useToast } from '@/components/ui/toast';
 
 interface TransactionDialogProps {
   user: User;
@@ -13,6 +14,7 @@ interface TransactionDialogProps {
 }
 
 export function TransactionDialog({ user, isOpen, onClose, onTransactionVerified }: TransactionDialogProps) {
+  const { showToast } = useToast();
   const [isCreating, setIsCreating] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState<'gcash' | 'bank_transfer' | 'cash' | 'other'>('gcash');
   const [amount, setAmount] = useState('');
@@ -28,7 +30,11 @@ export function TransactionDialog({ user, isOpen, onClose, onTransactionVerified
 
   const handleCreateTransaction = async () => {
     if (!amount || parseFloat(amount) <= 0) {
-      alert('Please enter a valid amount');
+      showToast({
+        title: 'Invalid Amount',
+        message: 'Please enter a valid amount',
+        variant: 'error',
+      });
       return;
     }
 
@@ -48,9 +54,17 @@ export function TransactionDialog({ user, isOpen, onClose, onTransactionVerified
       setReferenceNumber('');
       setNotes('');
       setIsCreating(false);
-      alert('Transaction created successfully!');
+      showToast({
+        title: 'Transaction Created',
+        message: 'Transaction created successfully',
+        variant: 'success',
+      });
     } catch (error) {
-      alert('Failed to create transaction');
+      showToast({
+        title: 'Error',
+        message: 'Failed to create transaction',
+        variant: 'error',
+      });
     }
   };
 
@@ -62,10 +76,18 @@ export function TransactionDialog({ user, isOpen, onClose, onTransactionVerified
         transactionId,
         verifiedBy: 'current-teacher@example.com', // TODO: Get from session
       });
-      alert('Transaction verified!');
+      showToast({
+        title: 'Transaction Verified',
+        message: 'Transaction has been verified successfully',
+        variant: 'success',
+      });
       onTransactionVerified?.();
     } catch (error) {
-      alert('Failed to verify transaction');
+      showToast({
+        title: 'Error',
+        message: 'Failed to verify transaction',
+        variant: 'error',
+      });
     }
   };
 
@@ -79,9 +101,17 @@ export function TransactionDialog({ user, isOpen, onClose, onTransactionVerified
         rejectedBy: 'current-teacher@example.com', // TODO: Get from session
         reason,
       });
-      alert('Transaction rejected');
+      showToast({
+        title: 'Transaction Rejected',
+        message: 'Transaction has been rejected',
+        variant: 'success',
+      });
     } catch (error) {
-      alert('Failed to reject transaction');
+      showToast({
+        title: 'Error',
+        message: 'Failed to reject transaction',
+        variant: 'error',
+      });
     }
   };
 

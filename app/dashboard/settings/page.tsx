@@ -13,8 +13,15 @@ import { useSettingsData } from '@/lib/hooks/useSettingsData';
 import { useProfileForm } from '@/lib/hooks/useProfileForm';
 import { useEnrollmentForm } from '@/lib/hooks/useEnrollmentForm';
 import { getSettingsMenuItems } from '@/components/ui/settings/getSettingsMenuItems';
+import { useQueryClient } from '@tanstack/react-query';
+import { useToast } from '@/components/ui/toast';
+import { useSession } from 'next-auth/react';
 
 export default function SettingsPage() {
+  const queryClient = useQueryClient();
+  const toast = useToast();
+  const { update: updateSession } = useSession();
+
   const {
     session,
     status,
@@ -43,6 +50,28 @@ export default function SettingsPage() {
   // Build menu items
   const menuItems = getSettingsMenuItems(isPending, activeTab, setActiveTab);
 
+  // Refresh user data from Firestore and JWT token
+  const handleRefresh = async () => {
+    if (session?.user?.email) {
+      console.log('[Refresh] Starting refresh for:', session.user.email);
+
+      // Invalidate and refetch React Query cache
+      await queryClient.invalidateQueries({ queryKey: ['user', session.user.email] });
+      await queryClient.refetchQueries({ queryKey: ['user', session.user.email] });
+
+      // Update session (triggers JWT refresh from Firestore)
+      await updateSession();
+      console.log('[Refresh] Session updated, reloading...');
+
+      toast.success('Data refreshed! Reloading page...');
+
+      // Reload page to apply new JWT token in middleware
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
+    }
+  };
+
   // Show loading while fetching user data or if not authenticated
   if (status === 'loading' || isLoading) {
     return <CatLoader fullScreen message="Loading settings..." />;
@@ -58,21 +87,23 @@ export default function SettingsPage() {
       {/* Header */}
       <div className="border-b border-gray-200">
         <div className="container mx-auto px-6 py-6">
-          <h1 className="text-3xl font-black text-gray-900">Settings ⚙️</h1>
-          <p className="text-gray-600 mt-1">Manage your account settings and preferences</p>
-
-          {/* Save Message */}
-          {saveMessage && (
-            <div
-              className={`mt-4 p-3 rounded-lg ${
-                saveMessage.includes('success')
-                  ? 'bg-green-100 text-green-800 border border-green-300'
-                  : 'bg-red-100 text-red-800 border border-red-300'
-              }`}
-            >
-              {saveMessage}
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-3xl font-black text-gray-900">Settings ⚙️</h1>
+              <p className="text-gray-600 mt-1">Manage your account settings and preferences</p>
             </div>
-          )}
+            {/* Refresh Button */}
+            <button
+              onClick={handleRefresh}
+              className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+              title="Refresh data from server"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+              Refresh
+            </button>
+          </div>
         </div>
       </div>
 
@@ -135,6 +166,7 @@ export default function SettingsPage() {
                   onSubmit={(e) => handleProfileSubmit(e, setSaveMessage, setSaveMessage)}
                   isSaving={profileSaving}
                   userPhotoURL={session?.user?.image || currentUser?.photoURL || undefined}
+                  userRole={currentUser?.role}
                   onDeleteAccount={() => handleDeleteAccount(setSaveMessage)}
                 />
               )}

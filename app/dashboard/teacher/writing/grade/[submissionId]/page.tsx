@@ -7,21 +7,28 @@
 
 import { useParams, useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { useWritingSubmission, useTeacherReview, useCreateTeacherReview, useUpdateTeacherReview } from '@/lib/hooks/useWritingExercises';
 import { TeacherGradingPanel } from '@/components/writing/TeacherGradingPanel';
 import { RevisionHistory } from '@/components/writing/RevisionHistory';
 import { TeacherReview } from '@/lib/models/writing';
 import { CatLoader } from '@/components/ui/CatLoader';
+import { getExerciseById } from '@/lib/data/translationExercises';
+import { SubmissionDisplay } from './SubmissionDisplay';
+import { GradingTabs } from './GradingTabs';
+import { useToast } from '@/components/ui/toast';
 
 export default function TeacherGradingPage() {
   const params = useParams();
   const router = useRouter();
   const { data: session } = useSession();
   const submissionId = params.submissionId as string;
+  const { showToast } = useToast();
 
   const [activeTab, setActiveTab] = useState<'grading' | 'history'>('grading');
+  const [correctedVersion, setCorrectedVersion] = useState('');
+  const [referenceTranslation, setReferenceTranslation] = useState<string | undefined>(undefined);
 
   // Fetch submission and existing review
   const { data: submission, isLoading: submissionLoading } = useWritingSubmission(submissionId);
@@ -31,30 +38,55 @@ export default function TeacherGradingPage() {
   const createReview = useCreateTeacherReview();
   const updateReview = useUpdateTeacherReview();
 
+  // Fetch reference translation for translation exercises
+  useEffect(() => {
+    if (submission?.exerciseType === 'translation' && submission.exerciseId) {
+      const exercise = getExerciseById(submission.exerciseId);
+      if (exercise) {
+        setReferenceTranslation(exercise.correctGermanText);
+      }
+    }
+  }, [submission]);
+
+  // Initialize corrected version from existing review
+  useEffect(() => {
+    if (existingReview?.correctedVersion) {
+      setCorrectedVersion(existingReview.correctedVersion);
+    }
+  }, [existingReview]);
+
   const handleSubmitReview = async (reviewData: Omit<TeacherReview, 'reviewId' | 'createdAt' | 'updatedAt'>) => {
     try {
       if (existingReview) {
-        // Update existing review
         await updateReview.mutateAsync({
           reviewId: existingReview.reviewId,
           updates: reviewData,
         });
-        alert('Review updated successfully!');
+        showToast({
+          title: 'Review Updated',
+          message: 'Your review has been updated successfully',
+          variant: 'success',
+        });
       } else {
-        // Create new review
         await createReview.mutateAsync(reviewData);
-        alert('Review submitted successfully!');
+        showToast({
+          title: 'Review Submitted',
+          message: 'Your review has been submitted successfully',
+          variant: 'success',
+        });
       }
-
-      // Redirect back to teacher writing dashboard
       router.push('/dashboard/teacher/writing');
     } catch (error) {
       console.error('Failed to submit review:', error);
-      alert('Failed to submit review. Please try again.');
+      showToast({
+        title: 'Error',
+        message: 'Failed to submit review. Please try again.',
+        variant: 'error',
+      });
     }
   };
 
-  // Show loading while authentication or data is loading
+  // Loading states
   const isLoading = !session || submissionLoading || reviewLoading;
 
   if (isLoading) {
@@ -123,123 +155,57 @@ export default function TeacherGradingPage() {
       />
 
       <div className="container mx-auto px-6 py-8">
-        {/* 2-Column Workspace Layout */}
         <div className="bg-white min-h-[600px] flex rounded-lg shadow-sm border border-gray-200">
           {/* LEFT: Student's Submission */}
-          <div className="flex-1 flex flex-col">
-            {/* Student Info Header */}
-            <div className="px-8 py-4 border-b border-gray-200 bg-gray-50/50">
-              <div className="grid grid-cols-4 gap-4 text-sm">
-                <div>
-                  <div className="text-xs text-gray-500 uppercase font-semibold mb-1">Student</div>
-                  <div className="font-medium text-gray-900">
-                    {session?.user?.name || submission.userId}
-                  </div>
-                </div>
-                <div>
-                  <div className="text-xs text-gray-500 uppercase font-semibold mb-1">Submitted</div>
-                  <div className="font-medium text-gray-900">
-                    {submission.submittedAt
-                      ? new Date(submission.submittedAt).toLocaleDateString('en-US', {
-                          weekday: 'short',
-                          month: 'short',
-                          day: 'numeric',
-                          year: 'numeric'
-                        })
-                      : 'Not submitted yet'}
-                  </div>
-                </div>
-                <div>
-                  <div className="text-xs text-gray-500 uppercase font-semibold mb-1">Words</div>
-                  <div className="font-medium text-gray-900">{submission.wordCount}</div>
-                </div>
-                <div>
-                  <div className="text-xs text-gray-500 uppercase font-semibold mb-1">Version</div>
-                  <div className="font-medium text-gray-900">v{submission.version}</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Student's Writing Content */}
-            <div className="flex-1 p-8">
-              <div className="prose max-w-none">
-                <p className="text-gray-900 whitespace-pre-wrap leading-relaxed text-lg">
-                  {submission.content}
-                </p>
-              </div>
-            </div>
-          </div>
+          <SubmissionDisplay
+            submission={submission}
+            userName={session?.user?.name}
+            referenceTranslation={referenceTranslation}
+            correctedVersion={correctedVersion}
+            onCorrectedVersionChange={setCorrectedVersion}
+          />
 
           {/* SEPARATOR */}
           <div className="w-px bg-gray-200" />
 
-          {/* RIGHT: Grading/History Panel with Tabs */}
-          <div className="w-[480px] flex flex-col">
-            {/* Tabs Navigation */}
-            <div className="flex border-b border-gray-200">
-              <button
-                onClick={() => setActiveTab('grading')}
-                className={`flex-1 px-4 py-3 text-sm font-medium transition-colors ${
-                  activeTab === 'grading'
-                    ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50/50'
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                }`}
-              >
-                Grading
-              </button>
-              <button
-                onClick={() => setActiveTab('history')}
-                className={`flex-1 px-4 py-3 text-sm font-medium transition-colors ${
-                  activeTab === 'history'
-                    ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50/50'
-                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                }`}
-              >
-                <span>History</span>
-                {submission.previousVersions && submission.previousVersions.length > 0 && (
-                  <span className="ml-1.5 px-1.5 py-0.5 text-xs bg-gray-200 text-gray-700 rounded">
-                    {submission.previousVersions.length}
-                  </span>
-                )}
-              </button>
-            </div>
-
-            {/* Tab Content */}
-            <div className="flex-1 overflow-y-auto">
-              {activeTab === 'grading' && (
-                <div className="p-6">
-                  <TeacherGradingPanel
-                    submissionId={submissionId}
-                    submissionContent={submission.content}
-                    studentId={submission.userId}
-                    teacherId={session.user.email}
-                    onSubmitReview={handleSubmitReview}
-                    existingReview={existingReview || undefined}
-                  />
+          {/* RIGHT: Grading/History Tabs */}
+          <GradingTabs
+            activeTab={activeTab}
+            onTabChange={setActiveTab}
+            historyCount={submission.previousVersions?.length || 0}
+            gradingPanel={
+              <TeacherGradingPanel
+                submissionId={submissionId}
+                submissionContent={submission.content}
+                studentId={submission.userId}
+                teacherId={session.user.email}
+                onSubmitReview={handleSubmitReview}
+                existingReview={existingReview || undefined}
+                correctedVersion={correctedVersion}
+              />
+            }
+            historyPanel={
+              submission.previousVersions && submission.previousVersions.length > 0 ? (
+                <RevisionHistory
+                  versions={submission.previousVersions}
+                  currentVersion={submission.version}
+                  onRestoreVersion={(version) => {
+                    showToast({
+                      title: 'Coming Soon',
+                      message: 'Restore version feature is coming soon',
+                      variant: 'info',
+                    });
+                  }}
+                />
+              ) : (
+                <div className="text-center py-12 text-gray-500">
+                  <div className="text-4xl mb-3">📝</div>
+                  <p className="text-sm">No revision history available yet.</p>
+                  <p className="text-xs mt-1">This is the first version of the submission.</p>
                 </div>
-              )}
-
-              {activeTab === 'history' && (
-                <div className="p-6">
-                  {submission.previousVersions && submission.previousVersions.length > 0 ? (
-                    <RevisionHistory
-                      versions={submission.previousVersions}
-                      currentVersion={submission.version}
-                      onRestoreVersion={(version) => {
-                        alert('Restore version feature coming soon!');
-                      }}
-                    />
-                  ) : (
-                    <div className="text-center py-12 text-gray-500">
-                      <div className="text-4xl mb-3">📝</div>
-                      <p className="text-sm">No revision history available yet.</p>
-                      <p className="text-xs mt-1">This is the first version of the submission.</p>
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
-          </div>
+              )
+            }
+          />
         </div>
       </div>
     </div>

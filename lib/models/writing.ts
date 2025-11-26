@@ -293,6 +293,7 @@ export interface TeacherReview {
   strengths: string[];
   areasForImprovement: string[];
   suggestedEdits: TextChange[];
+  correctedVersion?: string; // Teacher's grammar-corrected version of student's text
 
   // Grading
   grammarScore: number; // 0-100

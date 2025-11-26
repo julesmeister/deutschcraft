@@ -12,8 +12,10 @@ export default withAuth(
     }
 
     // Get user data from JWT token
-    const userRole = token.role as string | undefined;
+    const userRole = (token.role as string | undefined)?.toUpperCase(); // Normalize to uppercase
     const enrollmentStatus = token.enrollmentStatus as string | undefined;
+
+    console.log('[Middleware]', pathname, '| Role:', userRole, '| Status:', enrollmentStatus);
 
     // Check if user is pending approval
     const isPending = !userRole || userRole === 'PENDING_APPROVAL' || enrollmentStatus === 'pending';

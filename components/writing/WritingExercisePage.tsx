@@ -10,6 +10,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
+import { useToast } from '@/components/ui/toast';
 
 interface WritingExercisePageProps<T> {
   // Page configuration
@@ -50,6 +51,7 @@ export function WritingExercisePage<T>({
   const router = useRouter();
   const searchParams = useSearchParams();
   const { session } = useFirebaseAuth();
+  const { showToast } = useToast();
 
   const [level, setLevel] = useState<CEFRLevel>(CEFRLevel.A1);
   const [selectedExercise, setSelectedExercise] = useState<T | null>(null);
@@ -98,7 +100,11 @@ export function WritingExercisePage<T>({
     // TODO: Save to Firestore
     setTimeout(() => {
       setIsSaving(false);
-      alert('Draft saved successfully!');
+      showToast({
+        title: 'Draft Saved',
+        message: 'Your draft has been saved successfully',
+        variant: 'success',
+      });
     }, 1000);
   };
 
@@ -109,13 +115,21 @@ export function WritingExercisePage<T>({
     if (validateSubmit) {
       const validation = validateSubmit(selectedExercise, content, wordCount);
       if (!validation.valid) {
-        alert(validation.message || 'Please check your submission.');
+        showToast({
+          title: 'Validation Error',
+          message: validation.message || 'Please check your submission.',
+          variant: 'error',
+        });
         return;
       }
     } else {
       // Default validation
       if (!content.trim()) {
-        alert('Please write something before submitting.');
+        showToast({
+          title: 'Empty Submission',
+          message: 'Please write something before submitting.',
+          variant: 'error',
+        });
         return;
       }
     }
@@ -124,7 +138,11 @@ export function WritingExercisePage<T>({
     // TODO: Submit to Firestore and get AI feedback
     setTimeout(() => {
       setIsSaving(false);
-      alert('Submission successful! Generating feedback...');
+      showToast({
+        title: 'Submission Successful',
+        message: 'Generating feedback...',
+        variant: 'success',
+      });
       // TODO: Navigate to feedback page
     }, 1500);
   };

@@ -24,6 +24,7 @@ interface ProfileTabProps {
   onSubmit: (e: React.FormEvent) => void;
   isSaving?: boolean;
   userPhotoURL?: string;
+  userRole?: 'student' | 'teacher';
   onDeleteAccount?: () => void;
 }
 
@@ -33,13 +34,28 @@ export function ProfileTab({
   onSubmit,
   isSaving = false,
   userPhotoURL,
+  userRole,
   onDeleteAccount
 }: ProfileTabProps) {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
+  const isTeacher = userRole?.toLowerCase() === 'teacher';
+
   return (
     <>
-      <h2 className="text-xl font-bold text-gray-900 mb-8">Personal information</h2>
+      <div className="flex items-center gap-4 mb-8">
+        <h2 className="text-xl font-bold text-gray-900">Personal information</h2>
+        {/* Role Badge */}
+        {userRole && (
+          <span className={`px-3 py-1 rounded-md text-xs font-semibold ${
+            isTeacher
+              ? 'bg-purple-100 text-purple-700'
+              : 'bg-blue-100 text-blue-700'
+          }`}>
+            {isTeacher ? 'Teacher' : 'Student'}
+          </span>
+        )}
+      </div>
       <form onSubmit={onSubmit}>
         {/* Profile Image Upload */}
         <ProfileImageUpload

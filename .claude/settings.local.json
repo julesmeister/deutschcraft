@@ -54,7 +54,10 @@
       "Bash(\"C:\\Users\\User\\Documents\\testmanship-web-v2\\lib\\models\\task.ts\")",
       "Bash(Select-String -Pattern \"(error|Error|ERROR|warning|Warning)\")",
       "Bash(findstr:*)",
-      "Bash(missing.txt)"
+      "Bash(missing.txt)",
+      "Bash(Select-String -Pattern \"(error|Error|ERROR|warning|Warning|compiled|Compiled|Route)\")",
+      "Bash(Select-Object -First 100)",
+      "Bash(timeout /t 5)"
     ],
     "deny": [],
     "ask": []

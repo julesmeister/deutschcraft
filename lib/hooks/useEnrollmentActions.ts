@@ -3,14 +3,20 @@ import { useQueryClient } from '@tanstack/react-query';
 import { User } from '@/lib/models/user';
 import { CEFRLevel } from '@/lib/models/cefr';
 import { updateUser } from '@/lib/services/userService';
+import { useToast } from '@/components/ui/toast';
 
 export function useEnrollmentActions(teacherEmail: string | null | undefined) {
   const queryClient = useQueryClient();
+  const { showToast } = useToast();
   const [processingId, setProcessingId] = useState<string | null>(null);
 
   const handleApprove = async (user: User) => {
     if (!teacherEmail || !user.desiredCefrLevel) {
-      alert('Cannot approve: Missing CEFR level selection');
+      showToast({
+        title: 'Cannot Approve',
+        message: 'Missing CEFR level selection',
+        variant: 'error',
+      });
       return;
     }
 
@@ -29,8 +35,18 @@ export function useEnrollmentActions(teacherEmail: string | null | undefined) {
       queryClient.invalidateQueries({ queryKey: ['pending-enrollments-paginated'] });
       queryClient.invalidateQueries({ queryKey: ['pending-enrollments-count'] });
       queryClient.invalidateQueries({ queryKey: ['teacher-students'] });
+
+      showToast({
+        title: 'Enrollment Approved',
+        message: `${user.name || user.email} has been approved`,
+        variant: 'success',
+      });
     } catch (error) {
-      alert('Failed to approve enrollment. Please try again.');
+      showToast({
+        title: 'Error',
+        message: 'Failed to approve enrollment. Please try again.',
+        variant: 'error',
+      });
     } finally {
       setProcessingId(null);
     }
@@ -52,8 +68,18 @@ export function useEnrollmentActions(teacherEmail: string | null | undefined) {
       // Invalidate queries to refresh data
       queryClient.invalidateQueries({ queryKey: ['pending-enrollments-paginated'] });
       queryClient.invalidateQueries({ queryKey: ['pending-enrollments-count'] });
+
+      showToast({
+        title: 'Enrollment Rejected',
+        message: `${user.name || user.email} has been rejected`,
+        variant: 'success',
+      });
     } catch (error) {
-      alert('Failed to reject enrollment. Please try again.');
+      showToast({
+        title: 'Error',
+        message: 'Failed to reject enrollment. Please try again.',
+        variant: 'error',
+      });
     } finally {
       setProcessingId(null);
     }
@@ -68,8 +94,18 @@ export function useEnrollmentActions(teacherEmail: string | null | undefined) {
 
       // Invalidate queries to refresh data
       queryClient.invalidateQueries({ queryKey: ['pending-enrollments-paginated'] });
+
+      showToast({
+        title: 'Level Updated',
+        message: `CEFR level updated to ${level}`,
+        variant: 'success',
+      });
     } catch (error) {
-      alert('Failed to update CEFR level. Please try again.');
+      showToast({
+        title: 'Error',
+        message: 'Failed to update CEFR level. Please try again.',
+        variant: 'error',
+      });
     }
   };
 

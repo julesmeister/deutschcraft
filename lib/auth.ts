@@ -69,6 +69,7 @@ export const authOptions: NextAuthOptions = {
           const userData = await getUserAdmin(user.email);
           token.role = userData?.role;
           token.enrollmentStatus = userData?.enrollmentStatus;
+          console.log('[JWT] Sign in - Role:', userData?.role);
         }
 
         // On token refresh (when session is updated), refetch user data
@@ -76,8 +77,10 @@ export const authOptions: NextAuthOptions = {
           const userData = await getUserAdmin(token.email as string);
           token.role = userData?.role;
           token.enrollmentStatus = userData?.enrollmentStatus;
+          console.log('[JWT] Update - Role:', userData?.role);
         }
       } catch (error) {
+        console.error('[JWT] Error:', error);
         // Don't fail the entire auth flow - just continue without role
         // User will be redirected to settings page by middleware
       }

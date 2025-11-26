@@ -19,6 +19,7 @@ interface TeacherGradingPanelProps {
   teacherId: string;
   onSubmitReview: (review: Omit<TeacherReview, 'reviewId' | 'createdAt' | 'updatedAt'>) => void;
   existingReview?: TeacherReview;
+  correctedVersion: string;
 }
 
 export function TeacherGradingPanel({
@@ -28,6 +29,7 @@ export function TeacherGradingPanel({
   teacherId,
   onSubmitReview,
   existingReview,
+  correctedVersion,
 }: TeacherGradingPanelProps) {
   const [overallComment, setOverallComment] = useState(existingReview?.overallComment || '');
   const [strengths, setStrengths] = useState<string[]>(existingReview?.strengths || ['', '', '']);
@@ -53,6 +55,7 @@ export function TeacherGradingPanel({
       strengths: strengths.filter(s => s.trim() !== ''),
       areasForImprovement: areasForImprovement.filter(a => a.trim() !== ''),
       suggestedEdits: [], // TODO: Implement inline editing
+      correctedVersion: correctedVersion.trim() !== '' ? correctedVersion : undefined,
       grammarScore,
       vocabularyScore,
       coherenceScore,
@@ -100,11 +103,11 @@ export function TeacherGradingPanel({
       </GradingSection>
 
       {/* Overall Feedback */}
-      <GradingSection title="Overall Feedback">
+      <GradingSection title="Overall Feedback (Optional)">
         <GradingTextarea
           value={overallComment}
           onChange={setOverallComment}
-          placeholder="Provide constructive feedback about the student's overall performance..."
+          placeholder="Provide constructive feedback about the student's overall performance... (Optional)"
           rows={6}
         />
       </GradingSection>
@@ -198,7 +201,7 @@ export function TeacherGradingPanel({
         </ActionButton>
         <ActionButton
           onClick={handleSubmit}
-          disabled={!overallComment.trim() || grammarScore === 0}
+          disabled={grammarScore === 0}
           icon={<ActionButtonIcons.Check />}
           variant="purple"
         >

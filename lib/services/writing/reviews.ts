@@ -183,8 +183,13 @@ export async function createTeacherReview(reviewData: any): Promise<any> {
     const reviewsRef = collection(db, 'teacher-reviews');
     const now = Date.now();
 
+    // Remove undefined fields to avoid Firebase errors
+    const cleanedData = Object.fromEntries(
+      Object.entries(reviewData).filter(([_, value]) => value !== undefined)
+    );
+
     const review = {
-      ...reviewData,
+      ...cleanedData,
       createdAt: now,
       updatedAt: now,
     };
@@ -223,8 +228,14 @@ export async function createTeacherReview(reviewData: any): Promise<any> {
 export async function updateTeacherReview(reviewId: string, updates: any): Promise<void> {
   try {
     const reviewRef = doc(db, 'teacher-reviews', reviewId);
+
+    // Remove undefined fields to avoid Firebase errors
+    const cleanedUpdates = Object.fromEntries(
+      Object.entries(updates).filter(([_, value]) => value !== undefined)
+    );
+
     await updateDoc(reviewRef, {
-      ...updates,
+      ...cleanedUpdates,
       updatedAt: Date.now(),
     });
   } catch (error) {

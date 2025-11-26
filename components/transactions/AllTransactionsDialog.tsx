@@ -2,6 +2,7 @@
 
 import { Transaction, getPaymentMethodDisplay, getTransactionStatusColor, getTransactionStatusText } from '@/lib/models/transaction';
 import { usePendingTransactions, useVerifyTransaction, useRejectTransaction } from '@/lib/hooks/useTransactions';
+import { useToast } from '@/components/ui/toast';
 
 interface AllTransactionsDialogProps {
   isOpen: boolean;
@@ -9,6 +10,7 @@ interface AllTransactionsDialogProps {
 }
 
 export function AllTransactionsDialog({ isOpen, onClose }: AllTransactionsDialogProps) {
+  const { showToast } = useToast();
   const { data: transactions = [], isLoading } = usePendingTransactions();
   const verifyTransaction = useVerifyTransaction();
   const rejectTransaction = useRejectTransaction();
@@ -23,9 +25,17 @@ export function AllTransactionsDialog({ isOpen, onClose }: AllTransactionsDialog
         transactionId,
         verifiedBy: 'current-teacher@example.com', // TODO: Get from session
       });
-      alert('Transaction verified!');
+      showToast({
+        title: 'Transaction Verified',
+        message: 'Transaction has been verified successfully',
+        variant: 'success',
+      });
     } catch (error) {
-      alert('Failed to verify transaction');
+      showToast({
+        title: 'Error',
+        message: 'Failed to verify transaction',
+        variant: 'error',
+      });
     }
   };
 
@@ -39,9 +49,17 @@ export function AllTransactionsDialog({ isOpen, onClose }: AllTransactionsDialog
         rejectedBy: 'current-teacher@example.com', // TODO: Get from session
         reason,
       });
-      alert('Transaction rejected');
+      showToast({
+        title: 'Transaction Rejected',
+        message: 'Transaction has been rejected',
+        variant: 'success',
+      });
     } catch (error) {
-      alert('Failed to reject transaction');
+      showToast({
+        title: 'Error',
+        message: 'Failed to reject transaction',
+        variant: 'error',
+      });
     }
   };
 
