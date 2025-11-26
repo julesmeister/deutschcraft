@@ -9,9 +9,10 @@ import { WritingSubmission } from '@/lib/models/writing';
 interface FeedbackWorkspaceProps {
   submission: WritingSubmission;
   feedbackPanel: ReactNode;
+  referenceTranslation?: string; // For translation exercises
 }
 
-export function FeedbackWorkspace({ submission, feedbackPanel }: FeedbackWorkspaceProps) {
+export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslation }: FeedbackWorkspaceProps) {
   return (
     <div className="bg-white min-h-[600px] flex">
       {/* LEFT: Your Submission */}
@@ -37,14 +38,51 @@ export function FeedbackWorkspace({ submission, feedbackPanel }: FeedbackWorkspa
         </div>
 
         {/* Submission Content */}
-        <div className="flex-1 overflow-y-auto">
-          <p className="text-2xl text-gray-900 leading-relaxed whitespace-pre-wrap"
-             style={{
-               lineHeight: '1.6',
-               fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
-             }}>
-            {submission.content}
-          </p>
+        <div className="flex-1 overflow-y-auto space-y-8">
+          {/* Original English Text (for translation exercises) */}
+          {submission.exerciseType === 'translation' && submission.originalText && (
+            <div className="pb-6 border-b border-gray-200">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-xl">🇬🇧</span>
+                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Original English</h3>
+              </div>
+              <p className="text-base text-gray-600 leading-relaxed">
+                {submission.originalText}
+              </p>
+            </div>
+          )}
+
+          {/* Student's Translation */}
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-xl">✍️</span>
+              <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Your Translation</h3>
+            </div>
+            <p className="text-2xl text-gray-900 leading-relaxed whitespace-pre-wrap"
+               style={{
+                 lineHeight: '1.6',
+                 fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+               }}>
+              {submission.content}
+            </p>
+          </div>
+
+          {/* Reference Translation */}
+          {referenceTranslation && (
+            <div className="pt-6 border-t border-gray-200">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-xl">✅</span>
+                <h3 className="text-sm font-semibold text-green-700 uppercase tracking-wide">Reference Translation</h3>
+              </div>
+              <p className="text-2xl text-gray-900 leading-relaxed whitespace-pre-wrap"
+                 style={{
+                   lineHeight: '1.6',
+                   fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+                 }}>
+                {referenceTranslation}
+              </p>
+            </div>
+          )}
         </div>
       </div>
 

@@ -1,12 +1,14 @@
 'use client';
 
 import { useRouter, useParams } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { useWritingSubmission, useTeacherReview } from '@/lib/hooks/useWritingExercises';
 import { FeedbackWorkspace } from './FeedbackWorkspace';
 import { FeedbackPanel } from './FeedbackPanel';
 import { CatLoader } from '@/components/ui/CatLoader';
+import { getExerciseById } from '@/lib/data/translationExercises';
+import { TranslationExercise } from '@/lib/models/writing';
 
 export default function WritingFeedbackPage() {
   const router = useRouter();
@@ -14,9 +16,20 @@ export default function WritingFeedbackPage() {
   const submissionId = params.submissionId as string;
 
   const [activeTab, setActiveTab] = useState<'feedback' | 'history'>('feedback');
+  const [referenceTranslation, setReferenceTranslation] = useState<string | undefined>(undefined);
 
   const { data: submission, isLoading } = useWritingSubmission(submissionId);
   const { data: teacherReview, isLoading: teacherReviewLoading } = useTeacherReview(submissionId);
+
+  // Fetch reference translation for translation exercises
+  useEffect(() => {
+    if (submission && submission.exerciseType === 'translation' && submission.exerciseId) {
+      const exercise = getExerciseById(submission.exerciseId) as TranslationExercise | undefined;
+      if (exercise && exercise.correctGermanText) {
+        setReferenceTranslation(exercise.correctGermanText);
+      }
+    }
+  }, [submission]);
 
   if (isLoading) {
     return (
@@ -78,6 +91,7 @@ export default function WritingFeedbackPage() {
       <div className="container mx-auto px-6 py-8">
         <FeedbackWorkspace
           submission={submission}
+          referenceTranslation={referenceTranslation}
           feedbackPanel={
             <FeedbackPanel
               submission={submission}
