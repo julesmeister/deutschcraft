@@ -55,8 +55,8 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
           {/* Student's Translation */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-xl">✍️</span>
-              <h3 className="text-sm font-semibold text-gray-700 uppercase tracking-wide">Your Translation</h3>
+              <span className="text-sm">✍️</span>
+              <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wide">Your Translation</h3>
             </div>
             <p className="text-2xl text-gray-900 leading-relaxed whitespace-pre-wrap"
                style={{
@@ -71,10 +71,10 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
           {referenceTranslation && (
             <div className="pt-6 border-t border-gray-200">
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-xl">✅</span>
-                <h3 className="text-sm font-semibold text-green-700 uppercase tracking-wide">Reference Translation</h3>
+                <span className="text-sm">✅</span>
+                <h3 className="text-xs font-semibold text-green-700 uppercase tracking-wide">Reference Translation</h3>
               </div>
-              <p className="text-2xl text-gray-900 leading-relaxed whitespace-pre-wrap"
+              <p className="text-base text-gray-700 leading-relaxed whitespace-pre-wrap"
                  style={{
                    lineHeight: '1.6',
                    fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
