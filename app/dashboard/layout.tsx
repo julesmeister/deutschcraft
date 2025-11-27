@@ -96,6 +96,7 @@ function DashboardNavbar() {
                 {
                   title: 'Resources',
                   items: [
+                    { label: 'Dictionary', href: '/dashboard/dictionary' },
                     { label: 'Grammar Guide', href: '/dashboard/student/grammar' },
                     { label: 'Vocabulary', href: '/dashboard/student/vocabulary' },
                     { label: 'Prepositions', href: '/dashboard/student/prepositions' },
@@ -145,6 +146,7 @@ function DashboardNavbar() {
                 {
                   title: 'Resources',
                   items: [
+                    { label: 'Dictionary', href: '/dashboard/dictionary' },
                     { label: 'Materials', href: '/resources/materials' },
                     { label: 'Templates', href: '/resources/templates' },
                     { label: 'Help Center', href: '/help', external: true },
@@ -220,6 +222,9 @@ function DashboardNavbar() {
                   <Link href="/dashboard/student/writing-review" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Review
                   </Link>
+                  <Link href="/dashboard/dictionary" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                    Dictionary
+                  </Link>
                   <Link href="/dashboard/student/vocabulary" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Vocabulary
                   </Link>
@@ -244,6 +249,9 @@ function DashboardNavbar() {
                   </Link>
                   <Link href="/dashboard/teacher/writing" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Writing Review
+                  </Link>
+                  <Link href="/dashboard/dictionary" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                    Dictionary
                   </Link>
                   <Link href="/dashboard/analytics" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Analytics
