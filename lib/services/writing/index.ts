@@ -23,6 +23,7 @@ export * from './exercises';
 export * from './submissions';
 export * from './reviews';
 export * from './progress';
+export * from './stats-calculator';
 
 // ============================================================================
 // POSTGRESQL MIGRATION EXAMPLE (commented out)

@@ -5,6 +5,7 @@
  */
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { useEffect, useRef } from 'react';
 import {
   WritingProgress,
   WritingStats,
@@ -16,6 +17,7 @@ import {
   updateWritingStats,
   updateWritingProgress,
 } from '@/lib/services/writingService';
+import { getStudentSubmissions } from '@/lib/services/writing/submissions-queries';
 
 // ============================================================================
 // QUERY HOOKS - Progress and Stats
@@ -37,9 +39,13 @@ export function useWritingProgress(userId?: string) {
 
 /**
  * Get student's writing statistics
+ * Auto-recalculates if stats show 0% but student has graded submissions
  */
 export function useWritingStats(userId?: string) {
-  return useQuery({
+  const queryClient = useQueryClient();
+  const hasRecalculated = useRef(false);
+
+  const query = useQuery({
     queryKey: ['writing-stats', userId],
     queryFn: async () => {
       if (!userId) return null;
@@ -47,6 +53,43 @@ export function useWritingStats(userId?: string) {
     },
     enabled: !!userId,
   });
+
+  // Auto-recalculate if stats show 0% but student has graded submissions
+  useEffect(() => {
+    async function checkAndRecalculate() {
+      if (!userId || !query.data || hasRecalculated.current) return;
+
+      // If average score is 0%, check if there are graded submissions
+      if (query.data.averageOverallScore === 0) {
+        try {
+          const submissions = await getStudentSubmissions(userId);
+          const gradedCount = submissions.filter(s => s.teacherScore && s.teacherScore > 0).length;
+
+          // If there are graded submissions, trigger recalculation
+          if (gradedCount > 0) {
+            console.log(`[useWritingStats] Found ${gradedCount} graded submissions with 0% average. Triggering recalculation...`);
+            hasRecalculated.current = true;
+
+            // Call the recalculate API
+            await fetch('/api/writing/recalculate-stats', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ userId }),
+            });
+
+            // Invalidate and refetch stats
+            queryClient.invalidateQueries({ queryKey: ['writing-stats', userId] });
+          }
+        } catch (error) {
+          console.error('[useWritingStats] Error checking for recalculation:', error);
+        }
+      }
+    }
+
+    checkAndRecalculate();
+  }, [userId, query.data, queryClient]);
+
+  return query;
 }
 
 // ============================================================================

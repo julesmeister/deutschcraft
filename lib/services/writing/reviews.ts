@@ -15,6 +15,7 @@ import {
   orderBy,
   limit,
 } from 'firebase/firestore';
+import { recalculateWritingStats } from './stats-calculator';
 
 // ============================================================================
 // PEER REVIEWS
@@ -210,6 +211,9 @@ export async function createTeacherReview(reviewData: any): Promise<any> {
       updatedAt: now,
     });
 
+    // Recalculate student's writing stats
+    await recalculateWritingStats(reviewData.studentId);
+
     return {
       reviewId: docRef.id,
       ...review,
@@ -238,6 +242,29 @@ export async function updateTeacherReview(reviewId: string, updates: any): Promi
       ...cleanedUpdates,
       updatedAt: Date.now(),
     });
+
+    // If scores were updated, update submission and recalculate stats
+    if (updates.overallScore !== undefined || updates.grammarScore !== undefined) {
+      // Update submission with new scores
+      if (updates.submissionId) {
+        const submissionRef = doc(db, 'writing-submissions', updates.submissionId);
+        await updateDoc(submissionRef, {
+          teacherFeedback: {
+            grammarScore: updates.grammarScore,
+            vocabularyScore: updates.vocabularyScore,
+            coherenceScore: updates.coherenceScore,
+            overallScore: updates.overallScore,
+          },
+          teacherScore: updates.overallScore,
+          updatedAt: Date.now(),
+        });
+      }
+
+      // Recalculate student's writing stats
+      if (updates.studentId) {
+        await recalculateWritingStats(updates.studentId);
+      }
+    }
   } catch (error) {
     console.error('[reviews] Error updating teacher review:', error);
     throw error;
