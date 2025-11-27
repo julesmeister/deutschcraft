@@ -4,7 +4,7 @@
  * Clean email-composer style with minimal borders
  */
 
-import { ReactNode, useState } from 'react';
+import { ReactNode, useState, useRef } from 'react';
 import { WritingAttemptBanner } from './WritingAttemptBanner';
 import { DictionaryLookup } from '../dictionary/DictionaryLookup';
 
@@ -40,10 +40,44 @@ export function WritingWorkspace({
   readOnly = false,
   viewingAttempt,
 }: WritingWorkspaceProps) {
-  const [activeTab, setActiveTab] = useState<'write' | 'instructions' | 'history'>('write');
+  const [activeTab, setActiveTab] = useState<'write' | 'instructions' | 'history'>('instructions');
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  // Function to insert text at cursor position
+  const handleInsertText = (text: string) => {
+    const textarea = textareaRef.current;
+    if (!textarea) return;
+
+    // Clean the text: remove parentheses and their content
+    let cleanText = text.replace(/\s*\([^)]*\)/g, '').trim();
+
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+
+    // Check if we need to add a space before
+    const charBefore = start > 0 ? value[start - 1] : '';
+    const needsSpaceBefore = charBefore && charBefore !== ' ' && charBefore !== '\n';
+
+    // Check if we need to add a space after
+    const charAfter = end < value.length ? value[end] : '';
+    const needsSpaceAfter = charAfter && charAfter !== ' ' && charAfter !== '\n';
+
+    // Build the final text with appropriate spacing
+    const finalText = (needsSpaceBefore ? ' ' : '') + cleanText + (needsSpaceAfter ? ' ' : '');
+
+    const newValue = value.substring(0, start) + finalText + value.substring(end);
+
+    onChange(newValue);
+
+    // Set cursor position after inserted text
+    setTimeout(() => {
+      textarea.focus();
+      textarea.setSelectionRange(start + finalText.length, start + finalText.length);
+    }, 0);
+  };
 
   return (
-    <div className="bg-white min-h-[600px] flex flex-col lg:flex-row">
+    <div className="bg-white flex flex-col lg:flex-row">
       {/* Mobile/Tablet: Tab Navigation */}
       <div className="flex border-b border-gray-200 lg:hidden">
         <TabButton
@@ -74,56 +108,57 @@ export function WritingWorkspace({
           />
         )}
 
-        <div className="flex-1 flex flex-col">
-          <div className="p-4 md:p-8 flex-1 flex flex-col">
-            {/* Optional Top Indicator (e.g., word count) */}
-            {topIndicator && (
-              <div className="mb-4">
-                {topIndicator}
-              </div>
-            )}
-
-            {/* Optional Additional Fields (e.g., email To/Subject) */}
-            {additionalFields && (
-              <div className="mb-6 space-y-4">
-                {additionalFields}
-              </div>
-            )}
-
-            {/* Main Textarea */}
-            <textarea
-              value={value}
-              onChange={(e) => onChange(e.target.value)}
-              placeholder={placeholder}
-              readOnly={readOnly}
-              className={`flex-1 w-full bg-transparent border-none outline-none resize-none text-lg md:text-xl lg:text-2xl leading-relaxed ${
-                readOnly
-                  ? 'text-gray-700 cursor-default'
-                  : 'text-gray-900 placeholder-gray-400'
-              }`}
-              style={{
-                lineHeight: '1.6',
-                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
-              }}
-              autoFocus={!readOnly && autoFocus}
-            />
-          </div>
-
-          {/* Dictionary Lookup - Only show when not read-only */}
-          {!readOnly && (
-            <>
-              <div className="w-full h-px bg-gray-200" />
-              <div className="p-4 md:p-8">
-                <DictionaryLookup
-                  placeholder="Quick translate..."
-                  type="both"
-                  minChars={3}
-                  className="max-w-md"
-                />
-              </div>
-            </>
+        {/* Textarea area with fixed min-height */}
+        <div className="p-4 md:p-8" style={{ minHeight: '500px' }}>
+          {/* Optional Top Indicator (e.g., word count) */}
+          {topIndicator && (
+            <div className="mb-4">
+              {topIndicator}
+            </div>
           )}
+
+          {/* Optional Additional Fields (e.g., email To/Subject) */}
+          {additionalFields && (
+            <div className="mb-6 space-y-4">
+              {additionalFields}
+            </div>
+          )}
+
+          {/* Main Textarea */}
+          <textarea
+            ref={textareaRef}
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+            placeholder={placeholder}
+            readOnly={readOnly}
+            className={`w-full bg-transparent border-none outline-none resize-none text-lg md:text-xl lg:text-2xl leading-relaxed ${
+              readOnly
+                ? 'text-gray-700 cursor-default'
+                : 'text-gray-900 placeholder-gray-400'
+            }`}
+            style={{
+              minHeight: '400px',
+              lineHeight: '1.6',
+              fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+            }}
+            autoFocus={!readOnly && autoFocus}
+          />
         </div>
+
+        {/* Dictionary Lookup - Expands parent container downward */}
+        {!readOnly && (
+          <>
+            <div className="w-full h-px bg-gray-200" />
+            <div className="p-4 md:p-8">
+              <DictionaryLookup
+                placeholder="Quick translate..."
+                type="both"
+                minChars={3}
+                onInsertText={handleInsertText}
+              />
+            </div>
+          </>
+        )}
       </div>
 
       {/* SEPARATOR - Desktop only */}

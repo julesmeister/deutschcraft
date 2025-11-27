@@ -14,6 +14,7 @@ interface DictionaryLookupProps {
   type?: 'german' | 'english' | 'both';
   minChars?: number;
   className?: string;
+  onInsertText?: (text: string) => void;
 }
 
 export function DictionaryLookup({
@@ -21,6 +22,7 @@ export function DictionaryLookup({
   type = 'both',
   minChars = 3,
   className = '',
+  onInsertText,
 }: DictionaryLookupProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [showResults, setShowResults] = useState(false);
@@ -50,7 +52,7 @@ export function DictionaryLookup({
   const hasResults = results.length > 0;
 
   return (
-    <div ref={containerRef} className={`relative ${className}`}>
+    <div ref={containerRef} className="w-full">
       {/* Search Input */}
       <div className="relative">
         <div className="absolute left-0 top-1/2 -translate-y-1/2 text-gray-400">
@@ -72,55 +74,56 @@ export function DictionaryLookup({
         />
       </div>
 
-      {/* Results Dropdown */}
+      {/* Results - Inline, seamlessly expanding */}
       {showResults && searchTerm.length >= minChars && (
-        <div className="absolute z-50 w-full mt-2 bg-white border border-gray-200 rounded-lg shadow-lg max-h-80 overflow-y-auto">
+        <div className="mt-3 w-full">
           {isLoading && (
-            <div className="px-4 py-3 text-sm text-gray-500 text-center">
+            <div className="py-2 text-sm text-gray-500">
               Searching...
             </div>
           )}
 
           {!isLoading && !hasResults && (
-            <div className="px-4 py-3 text-sm text-gray-500 text-center">
+            <div className="py-2 text-sm text-gray-500">
               No translations found for "{searchTerm}"
             </div>
           )}
 
           {!isLoading && hasResults && (
-            <>
-              <div className="px-3 py-2 text-xs font-semibold text-gray-500 bg-gray-50 border-b border-gray-200 flex items-center gap-1.5">
-                <BookOpen className="w-3.5 h-3.5" />
-                {results.length} translation{results.length !== 1 ? 's' : ''}
-              </div>
-              <div className="divide-y divide-gray-100">
-                {results.map((entry) => (
-                  <button
-                    key={entry.id}
-                    onClick={() => {
-                      // Copy to clipboard or insert into textarea
-                      navigator.clipboard.writeText(type === 'german' ? entry.english : entry.german);
-                      setShowResults(false);
-                    }}
-                    className="w-full px-4 py-2.5 text-left hover:bg-blue-50 transition-colors group"
-                  >
-                    <div className="flex items-start justify-between gap-3">
-                      <div className="flex-1">
-                        <div className="font-medium text-gray-900 group-hover:text-blue-600">
-                          {entry.german}
-                        </div>
-                        <div className="text-sm text-gray-600 mt-0.5">
-                          {entry.english}
-                        </div>
+            <div className="space-y-1 w-full">
+              {results.map((entry) => (
+                <button
+                  key={entry.id}
+                  onClick={() => {
+                    // Insert translation at cursor position
+                    const textToInsert = type === 'german' ? entry.english : entry.german;
+                    if (onInsertText) {
+                      onInsertText(textToInsert);
+                    } else {
+                      // Fallback to clipboard if no insert handler
+                      navigator.clipboard.writeText(textToInsert);
+                    }
+                    setShowResults(false);
+                    setSearchTerm('');
+                  }}
+                  className="w-full px-2 py-1.5 text-left hover:bg-gray-50 transition-colors group rounded block"
+                >
+                  <div className="flex items-start justify-between gap-3 w-full">
+                    <div className="flex-1 min-w-0">
+                      <div className="text-sm font-medium text-gray-900 group-hover:text-blue-600">
+                        {entry.german}
                       </div>
-                      <div className="text-xs text-gray-400 group-hover:text-blue-500 mt-1">
-                        Click to copy
+                      <div className="text-xs text-gray-600 mt-0.5">
+                        {entry.english}
                       </div>
                     </div>
-                  </button>
-                ))}
-              </div>
-            </>
+                    <div className="text-xs text-gray-400 group-hover:text-blue-500 mt-0.5 flex-shrink-0">
+                      Insert
+                    </div>
+                  </div>
+                </button>
+              ))}
+            </div>
           )}
         </div>
       )}
