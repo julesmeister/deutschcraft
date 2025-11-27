@@ -87,14 +87,30 @@ export function DictionaryLookup({
             }
           }}
           placeholder={placeholder}
-          className="w-full pl-7 pr-9 py-2 text-base bg-transparent border-none outline-none text-gray-900 placeholder-gray-400"
+          className="w-full pl-7 pr-16 py-2 text-base bg-transparent border-none outline-none text-gray-900 placeholder-gray-400"
           style={{
             fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
           }}
         />
+        {/* Clear button - show when text is present */}
+        {searchTerm.length > 0 && (
+          <button
+            onClick={() => {
+              setSearchTerm('');
+              setShowResults(false);
+              setForceSearch(false);
+            }}
+            className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+            aria-label="Clear search"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        )}
         {/* Enter key hint - show when chars typed but not enough for auto-search */}
         {searchTerm.length >= 1 && searchTerm.length < minChars && !forceSearch && (
-          <div className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-300">
+          <div className="absolute right-9 top-1/2 -translate-y-1/2 text-gray-300">
             <CornerDownLeft className="w-4 h-4" />
           </div>
         )}

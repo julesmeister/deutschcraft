@@ -37,6 +37,13 @@ export function AttemptHistory({
   const attemptItems: ActivityItem[] = sortedAttempts.map((attempt) => {
     const isCurrent = attempt.submissionId === currentAttemptId;
 
+    // Handle teacherScore - could be a number or an object with scores
+    const teacherScore = typeof attempt.teacherScore === 'number'
+      ? attempt.teacherScore
+      : typeof attempt.teacherScore === 'object' && attempt.teacherScore !== null
+      ? (attempt.teacherScore as any).overallScore
+      : null;
+
     return {
       id: attempt.submissionId,
       icon: <span className="text-white text-xs">{attempt.attemptNumber}</span>,
@@ -44,7 +51,7 @@ export function AttemptHistory({
                   attempt.status === 'reviewed' ? 'bg-green-500' :
                   attempt.status === 'submitted' ? 'bg-amber-500' : 'bg-gray-400',
       title: `Attempt #${attempt.attemptNumber}${isCurrent ? ' (Current)' : ''}`,
-      description: `${attempt.wordCount} words${attempt.teacherScore ? ` • Score: ${attempt.teacherScore}/100` : ''}`,
+      description: `${attempt.wordCount} words${teacherScore ? ` • Score: ${teacherScore}/100` : ''}`,
       timestamp: attempt.submittedAt
         ? new Date(attempt.submittedAt).toLocaleDateString('en-US', {
             year: 'numeric',
@@ -62,9 +69,9 @@ export function AttemptHistory({
           color: attempt.status === 'draft' ? 'gray' as const :
                  attempt.status === 'submitted' ? 'amber' as const : 'green' as const,
         },
-        ...(attempt.teacherScore && attempt.teacherScore >= 80
+        ...(teacherScore && teacherScore >= 80
           ? [{ label: 'Excellent', color: 'green' as const }]
-          : attempt.teacherScore && attempt.teacherScore >= 60
+          : teacherScore && teacherScore >= 60
           ? [{ label: 'Good', color: 'blue' as const }]
           : []),
       ],
