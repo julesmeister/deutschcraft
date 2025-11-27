@@ -87,6 +87,11 @@ export function WritingHistory({
           color: submission.status === 'draft' ? 'gray' as const :
                  submission.status === 'submitted' ? 'amber' as const : 'green' as const,
         },
+        // Show score percentage badge
+        ...(submission.teacherScore
+          ? [{ label: `${submission.teacherScore}%`, color: 'blue' as const }]
+          : []),
+        // Show quality badge based on score
         ...(submission.teacherScore && submission.teacherScore >= 80
           ? [{ label: 'Excellent', color: 'green' as const }]
           : submission.teacherScore && submission.teacherScore >= 60
@@ -101,24 +106,32 @@ export function WritingHistory({
             {submission.content.length > 150 && '...'}
           </p>
 
-          {/* Scores if available */}
-          {submission.aiFeedback && (
+          {/* Scores if available - prefer teacher feedback over AI feedback */}
+          {(submission.teacherFeedback || submission.aiFeedback) && (
             <div className="grid grid-cols-4 gap-2 mb-3">
               <div className="bg-blue-50 rounded p-1.5 text-center">
                 <div className="text-xs text-blue-600 font-medium">Overall</div>
-                <div className="text-sm font-bold text-blue-700">{submission.aiFeedback.overallScore}%</div>
+                <div className="text-sm font-bold text-blue-700">
+                  {submission.teacherFeedback?.overallScore || submission.aiFeedback?.overallScore}%
+                </div>
               </div>
               <div className="bg-emerald-50 rounded p-1.5 text-center">
                 <div className="text-xs text-emerald-600 font-medium">Grammar</div>
-                <div className="text-sm font-bold text-emerald-700">{submission.aiFeedback.grammarScore}%</div>
+                <div className="text-sm font-bold text-emerald-700">
+                  {submission.teacherFeedback?.grammarScore || submission.aiFeedback?.grammarScore}%
+                </div>
               </div>
               <div className="bg-purple-50 rounded p-1.5 text-center">
                 <div className="text-xs text-purple-600 font-medium">Vocab</div>
-                <div className="text-sm font-bold text-purple-700">{submission.aiFeedback.vocabularyScore}%</div>
+                <div className="text-sm font-bold text-purple-700">
+                  {submission.teacherFeedback?.vocabularyScore || submission.aiFeedback?.vocabularyScore}%
+                </div>
               </div>
               <div className="bg-amber-50 rounded p-1.5 text-center">
                 <div className="text-xs text-amber-600 font-medium">Coherence</div>
-                <div className="text-sm font-bold text-amber-700">{submission.aiFeedback.coherenceScore}%</div>
+                <div className="text-sm font-bold text-amber-700">
+                  {submission.teacherFeedback?.coherenceScore || submission.aiFeedback?.coherenceScore}%
+                </div>
               </div>
             </div>
           )}
