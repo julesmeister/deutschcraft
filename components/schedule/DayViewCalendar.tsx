@@ -145,9 +145,21 @@ export function DayViewCalendar({
       if (resizing.direction === 'top') {
         const newStartMinutes = Math.max(0, timeToMinutes(resizing.originalStartTime) + deltaMinutes);
         newStartTime = minutesToTime(newStartMinutes);
+
+        // Ensure minimum 15 minute duration
+        const endMinutes = timeToMinutes(resizing.originalEndTime);
+        if (endMinutes - newStartMinutes < 15) {
+          newStartTime = minutesToTime(endMinutes - 15);
+        }
       } else {
         const newEndMinutes = Math.min(24 * 60, timeToMinutes(resizing.originalEndTime) + deltaMinutes);
         newEndTime = minutesToTime(newEndMinutes);
+
+        // Ensure minimum 15 minute duration
+        const startMinutes = timeToMinutes(resizing.originalStartTime);
+        if (newEndMinutes - startMinutes < 15) {
+          newEndTime = minutesToTime(startMinutes + 15);
+        }
       }
 
       // Update local state
@@ -254,7 +266,7 @@ export function DayViewCalendar({
           </div>
 
           {/* Events Column */}
-          <div className="flex-1 relative">
+          <div className="flex-1 relative overflow-hidden">
             {/* Grid Lines */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="h-12"></div> {/* Spacer */}

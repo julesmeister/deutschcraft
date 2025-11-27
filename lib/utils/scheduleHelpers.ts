@@ -144,8 +144,18 @@ export function convertTasksToDayViewEvents(
         const startTime = childStart.getHours() + ':' + String(childStart.getMinutes()).padStart(2, '0');
         const endTime = childEnd.getHours() + ':' + String(childEnd.getMinutes()).padStart(2, '0');
 
-        const displayStartTime = startTime === '0:00' ? '09:00' : startTime;
-        const displayEndTime = endTime === '0:00' ? '17:00' : endTime;
+        // Default to 9AM-10AM (1 hour) if no specific time is set
+        let displayStartTime = startTime === '0:00' ? '09:00' : startTime;
+        let displayEndTime = endTime === '0:00' ? '10:00' : endTime;
+
+        // If both start and end are the same (0 duration), set 1 hour duration
+        if (displayStartTime === displayEndTime) {
+          const [hours, minutes] = displayStartTime.split(':').map(Number);
+          const totalMinutes = hours * 60 + minutes + 60; // Add 1 hour
+          const newHours = Math.floor(totalMinutes / 60) % 24;
+          const newMinutes = totalMinutes % 60;
+          displayEndTime = `${String(newHours).padStart(2, '0')}:${String(newMinutes).padStart(2, '0')}`;
+        }
 
         events.push({
           id: child.id,
