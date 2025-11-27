@@ -53,7 +53,7 @@ export function DictionaryLookup({
     <div ref={containerRef} className={`relative ${className}`}>
       {/* Search Input */}
       <div className="relative">
-        <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 text-gray-400">
           <Search className="w-4 h-4" />
         </div>
         <input
@@ -65,7 +65,10 @@ export function DictionaryLookup({
           }}
           onFocus={() => setShowResults(true)}
           placeholder={placeholder}
-          className="w-full pl-10 pr-4 py-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
+          className="w-full pl-7 pr-4 py-2 text-base bg-transparent border-none outline-none text-gray-900 placeholder-gray-400"
+          style={{
+            fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+          }}
         />
       </div>
 

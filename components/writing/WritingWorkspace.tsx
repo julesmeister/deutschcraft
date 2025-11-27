@@ -74,51 +74,55 @@ export function WritingWorkspace({
           />
         )}
 
-        <div className="flex-1 p-4 md:p-8 flex flex-col">
+        <div className="flex-1 flex flex-col">
+          <div className="p-4 md:p-8 flex-1 flex flex-col">
+            {/* Optional Top Indicator (e.g., word count) */}
+            {topIndicator && (
+              <div className="mb-4">
+                {topIndicator}
+              </div>
+            )}
 
-        {/* Optional Top Indicator (e.g., word count) */}
-        {topIndicator && (
-          <div className="mb-4">
-            {topIndicator}
-          </div>
-        )}
+            {/* Optional Additional Fields (e.g., email To/Subject) */}
+            {additionalFields && (
+              <div className="mb-6 space-y-4">
+                {additionalFields}
+              </div>
+            )}
 
-        {/* Optional Additional Fields (e.g., email To/Subject) */}
-        {additionalFields && (
-          <div className="mb-6 space-y-4">
-            {additionalFields}
-          </div>
-        )}
-
-        {/* Main Textarea */}
-        <textarea
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          placeholder={placeholder}
-          readOnly={readOnly}
-          className={`flex-1 w-full bg-transparent border-none outline-none resize-none text-lg md:text-xl lg:text-2xl leading-relaxed ${
-            readOnly
-              ? 'text-gray-700 cursor-default'
-              : 'text-gray-900 placeholder-gray-400'
-          }`}
-          style={{
-            lineHeight: '1.6',
-            fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
-          }}
-          autoFocus={!readOnly && autoFocus}
-        />
-
-        {/* Dictionary Lookup - Only show when not read-only */}
-        {!readOnly && (
-          <div className="mt-4 pt-4 border-t border-gray-100">
-            <DictionaryLookup
-              placeholder="Quick translate..."
-              type="both"
-              minChars={3}
-              className="max-w-md"
+            {/* Main Textarea */}
+            <textarea
+              value={value}
+              onChange={(e) => onChange(e.target.value)}
+              placeholder={placeholder}
+              readOnly={readOnly}
+              className={`flex-1 w-full bg-transparent border-none outline-none resize-none text-lg md:text-xl lg:text-2xl leading-relaxed ${
+                readOnly
+                  ? 'text-gray-700 cursor-default'
+                  : 'text-gray-900 placeholder-gray-400'
+              }`}
+              style={{
+                lineHeight: '1.6',
+                fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+              }}
+              autoFocus={!readOnly && autoFocus}
             />
           </div>
-        )}
+
+          {/* Dictionary Lookup - Only show when not read-only */}
+          {!readOnly && (
+            <>
+              <div className="w-full h-px bg-gray-200" />
+              <div className="p-4 md:p-8">
+                <DictionaryLookup
+                  placeholder="Quick translate..."
+                  type="both"
+                  minChars={3}
+                  className="max-w-md"
+                />
+              </div>
+            </>
+          )}
         </div>
       </div>
 
