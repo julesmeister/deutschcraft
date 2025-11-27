@@ -76,7 +76,10 @@ export function FeedbackPanel({
                 </div>
               </div>
             ) : teacherReview ? (
-              <TeacherFeedbackDisplay teacherReview={teacherReview} />
+              <TeacherFeedbackDisplay
+                teacherReview={teacherReview}
+                studentOriginalText={submission.content}
+              />
             ) : (
               <div className="text-center py-12">
                 <div className="text-4xl mb-3">⏳</div>

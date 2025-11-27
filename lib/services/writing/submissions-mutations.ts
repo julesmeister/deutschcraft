@@ -86,6 +86,30 @@ export async function submitWriting(submissionId: string): Promise<void> {
 }
 
 /**
+ * Save AI-corrected version to a submission
+ * @param submissionId - Submission ID
+ * @param aiCorrectedVersion - AI-corrected text
+ */
+export async function saveAICorrectedVersion(
+  submissionId: string,
+  aiCorrectedVersion: string
+): Promise<void> {
+  try {
+    const submissionRef = doc(db, 'writing-submissions', submissionId);
+    const now = Date.now();
+
+    await updateDoc(submissionRef, {
+      aiCorrectedVersion,
+      aiCorrectedAt: now,
+      updatedAt: now,
+    });
+  } catch (error) {
+    console.error('[submissions] Error saving AI corrected version:', error);
+    throw error;
+  }
+}
+
+/**
  * Delete a writing submission
  * @param submissionId - Submission ID
  */

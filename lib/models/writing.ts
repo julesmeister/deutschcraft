@@ -155,6 +155,8 @@ export interface WritingSubmission {
 
   // AI Feedback (optional)
   aiFeedback?: WritingFeedback;
+  aiCorrectedVersion?: string; // AI-corrected version of student's text (submitted by student)
+  aiCorrectedAt?: number; // Timestamp when AI correction was added
 
   // Manual feedback (teacher)
   teacherFeedback?: string;

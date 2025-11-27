@@ -92,6 +92,7 @@ export default function WritingFeedbackPage() {
         <FeedbackWorkspace
           submission={submission}
           referenceTranslation={referenceTranslation}
+          hasTeacherReview={!!teacherReview}
           feedbackPanel={
             <FeedbackPanel
               submission={submission}

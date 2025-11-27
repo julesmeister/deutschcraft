@@ -5,12 +5,14 @@
 
 import { ActivityTimeline, ActivityItem } from '@/components/ui/activity/ActivityTimeline';
 import { TeacherReview } from '@/lib/models/writing';
+import { DiffTextCorrectedOnly } from './DiffText';
 
 interface TeacherFeedbackDisplayProps {
   teacherReview: TeacherReview;
+  studentOriginalText?: string; // For showing diff
 }
 
-export function TeacherFeedbackDisplay({ teacherReview }: TeacherFeedbackDisplayProps) {
+export function TeacherFeedbackDisplay({ teacherReview, studentOriginalText }: TeacherFeedbackDisplayProps) {
   const feedbackItems: ActivityItem[] = [
     // Overall Score
     {
@@ -26,6 +28,27 @@ export function TeacherFeedbackDisplay({ teacherReview }: TeacherFeedbackDisplay
         },
       ],
     },
+    // Corrected Version (if exists)
+    ...(teacherReview.correctedVersion && studentOriginalText
+      ? [
+          {
+            id: 'corrected-version',
+            icon: <span className="text-white text-xs">✏️</span>,
+            iconColor: 'bg-green-500',
+            title: 'Corrected Version',
+            description: 'Grammar corrections highlighted',
+            metadata: (
+              <div className="mt-2">
+                <DiffTextCorrectedOnly
+                  originalText={studentOriginalText}
+                  correctedText={teacherReview.correctedVersion}
+                  className="text-sm"
+                />
+              </div>
+            ),
+          } as ActivityItem,
+        ]
+      : []),
     // Teacher's Comment
     {
       id: 'comment',
