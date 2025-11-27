@@ -134,11 +134,13 @@ export function convertTasksToDayViewEvents(
       const childStart = new Date(child.startDate);
       const childEnd = new Date(child.endDate);
 
-      if (
-        (childStart >= selectedDateStart && childStart <= selectedDateEnd) ||
-        (childEnd >= selectedDateStart && childEnd <= selectedDateEnd) ||
-        (childStart < selectedDateStart && childEnd > selectedDateEnd)
-      ) {
+      // Normalize to date-only comparison (ignore time)
+      const taskStartDate = new Date(childStart.getFullYear(), childStart.getMonth(), childStart.getDate());
+      const taskEndDate = new Date(childEnd.getFullYear(), childEnd.getMonth(), childEnd.getDate());
+      const checkDate = new Date(selectedDate.getFullYear(), selectedDate.getMonth(), selectedDate.getDate());
+
+      // Check if the task is active on the selected date
+      if (taskStartDate <= checkDate && taskEndDate >= checkDate) {
         const startTime = childStart.getHours() + ':' + String(childStart.getMinutes()).padStart(2, '0');
         const endTime = childEnd.getHours() + ':' + String(childEnd.getMinutes()).padStart(2, '0');
 

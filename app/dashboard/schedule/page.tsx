@@ -246,6 +246,48 @@ export default function SchedulePage() {
     return null;
   };
 
+  // Handle day view event time updates
+  const handleEventTimeUpdate = async (eventId: string, newStartTime: string, newEndTime: string) => {
+    if (!hasEditPermission) {
+      toast.error('You do not have permission to edit the schedule');
+      return;
+    }
+
+    try {
+      // Find the gantt task
+      const ganttTask = ganttTasks.find(t => t.taskId === eventId);
+      if (!ganttTask) return;
+
+      // Get the current date from the task
+      const currentStart = new Date(ganttTask.startDate);
+      const currentEnd = new Date(ganttTask.endDate);
+
+      // Parse new times
+      const [startHours, startMinutes] = newStartTime.split(':').map(Number);
+      const [endHours, endMinutes] = newEndTime.split(':').map(Number);
+
+      // Update the times while keeping the date
+      const newStart = new Date(currentStart);
+      newStart.setHours(startHours, startMinutes, 0, 0);
+
+      const newEnd = new Date(currentEnd);
+      newEnd.setHours(endHours, endMinutes, 0, 0);
+
+      await updateGanttTaskMutation.mutateAsync({
+        taskId: eventId,
+        updates: {
+          startDate: newStart.getTime(),
+          endDate: newEnd.getTime(),
+        },
+      });
+
+      toast.success('Event time updated');
+    } catch (error) {
+      console.error('[Update Event Time] Error:', error);
+      toast.error('Failed to update event time');
+    }
+  };
+
   // Loading state
   if (isLoading || isLoadingTasks || isLoadingPermission || !session) {
     return <CatLoader message="Loading schedule..." size="lg" fullScreen />;
@@ -301,6 +343,7 @@ export default function SchedulePage() {
             events={dayViewEvents}
             onDateChange={setSelectedDate}
             onEventClick={(event) => console.log('Event clicked:', event)}
+            onEventUpdate={hasEditPermission ? handleEventTimeUpdate : undefined}
           />
         )}
 

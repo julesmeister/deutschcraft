@@ -20,6 +20,7 @@ interface DayViewSectionProps {
   events: DayViewEvent[];
   onDateChange: (date: Date) => void;
   onEventClick: (event: DayViewEvent) => void;
+  onEventUpdate?: (eventId: string, newStartTime: string, newEndTime: string) => void;
 }
 
 export function DayViewSection({
@@ -27,6 +28,7 @@ export function DayViewSection({
   events,
   onDateChange,
   onEventClick,
+  onEventUpdate,
 }: DayViewSectionProps) {
   return (
     <DayViewCalendar
@@ -34,6 +36,7 @@ export function DayViewSection({
       events={events}
       onDateChange={onDateChange}
       onEventClick={onEventClick}
+      onEventUpdate={onEventUpdate}
     />
   );
 }
