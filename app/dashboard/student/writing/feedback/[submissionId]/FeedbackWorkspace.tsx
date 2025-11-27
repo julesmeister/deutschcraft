@@ -7,7 +7,7 @@
 
 import { ReactNode } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
-import { WritingSubmission } from '@/lib/models/writing';
+import { WritingSubmission, TeacherReview } from '@/lib/models/writing';
 import { CopyForAIButton } from '@/components/writing/CopyForAIButton';
 import { AICorrectionsPanel } from '@/components/writing/AICorrectionsPanel';
 import { DiffTextCorrectedOnly } from '@/components/writing/DiffText';
@@ -18,9 +18,10 @@ interface FeedbackWorkspaceProps {
   feedbackPanel: ReactNode;
   referenceTranslation?: string; // For translation exercises
   hasTeacherReview?: boolean; // Whether teacher has reviewed
+  teacherReview?: TeacherReview | null; // Teacher review data for corrected version
 }
 
-export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslation, hasTeacherReview }: FeedbackWorkspaceProps) {
+export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslation, hasTeacherReview, teacherReview }: FeedbackWorkspaceProps) {
   const queryClient = useQueryClient();
 
   const handleSaveAICorrection = async (correctedText: string) => {
@@ -115,6 +116,24 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
                   currentAICorrectedAt={submission.aiCorrectedAt}
                   originalText={submission.content}
                   onSave={handleSaveAICorrection}
+                />
+              </div>
+            </>
+          )}
+
+          {/* Teacher's Corrected Version */}
+          {hasTeacherReview && teacherReview?.correctedVersion && (
+            <>
+              <div className="-mx-8 w-[calc(100%+4rem)] h-px bg-gray-200 my-6" />
+              <div>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-sm">✏️</span>
+                  <h3 className="text-xs font-semibold text-blue-700 uppercase tracking-wide">Teacher's Corrected Version</h3>
+                </div>
+                <DiffTextCorrectedOnly
+                  originalText={submission.content}
+                  correctedText={teacherReview.correctedVersion}
+                  className="text-base"
                 />
               </div>
             </>

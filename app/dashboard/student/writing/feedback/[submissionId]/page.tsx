@@ -93,6 +93,7 @@ export default function WritingFeedbackPage() {
           submission={submission}
           referenceTranslation={referenceTranslation}
           hasTeacherReview={!!teacherReview}
+          teacherReview={teacherReview}
           feedbackPanel={
             <FeedbackPanel
               submission={submission}
