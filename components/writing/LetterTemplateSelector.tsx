@@ -28,27 +28,29 @@ export function LetterTemplateSelector({
         description: 'Try selecting a different CEFR level'
       }}
     >
-      {templates.map((template) => (
-        <ExerciseCard
-          key={template.id}
-          icon=""
-          title={template.title}
-          difficulty={template.difficulty}
-          onClick={() => onSelect(template)}
-          isAttempted={attemptedExerciseIds?.has(template.id)}
-          description={
-            <p className="text-sm text-neutral-600 line-clamp-2">
-              {template.scenario}
-            </p>
-          }
-          footer={
-            <ExerciseFooter
-              left={`${template.minWords}+ words`}
-              right={template.type}
-            />
-          }
-        />
-      ))}
+      {templates.map((template) => {
+        // Extract key points from scenario
+        const scenarioPoints = template.scenario
+          .split(/[.!?]+/)
+          .map(s => s.trim())
+          .filter(s => s.length > 0)
+          .slice(0, 3);
+
+        return (
+          <ExerciseCard
+            key={template.id}
+            icon="✉️"
+            title={template.title}
+            difficulty={template.difficulty}
+            onClick={() => onSelect(template)}
+            isAttempted={attemptedExerciseIds?.has(template.id)}
+            description={template.type}
+            sampleSentences={scenarioPoints}
+            footerLeft={`⏱️ 25-35 min`}
+            footerRight={`📝 ${template.minWords}+ words`}
+          />
+        );
+      })}
     </ExerciseGrid>
   );
 }

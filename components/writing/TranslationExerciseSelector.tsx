@@ -24,24 +24,29 @@ export function TranslationExerciseSelector({ exercises, onSelect, attemptedExer
         description: 'Try selecting a different level or check back later'
       }}
     >
-      {exercises.map((exercise) => (
-        <ExerciseCard
-          key={exercise.exerciseId}
-          icon=""
-          title={exercise.title}
-          difficulty={exercise.difficulty}
-          onClick={() => onSelect(exercise)}
-          isAttempted={attemptedExerciseIds?.has(exercise.exerciseId)}
-          description={
-            <div className="bg-gray-50 border border-gray-200 p-3">
-              <p className="text-sm text-neutral-600 line-clamp-2 italic">
-                "{exercise.englishText.substring(0, 80)}..."
-              </p>
-            </div>
-          }
-          footer={<ExerciseFooter left={`${exercise.estimatedTime} min`} />}
-        />
-      ))}
+      {exercises.map((exercise) => {
+        // Split english text into sentences and take first 3
+        const sentences = exercise.englishText
+          .split(/[.!?]+/)
+          .map(s => s.trim())
+          .filter(s => s.length > 0)
+          .slice(0, 3);
+
+        return (
+          <ExerciseCard
+            key={exercise.exerciseId}
+            icon=""
+            title={exercise.title}
+            difficulty={exercise.difficulty}
+            onClick={() => onSelect(exercise)}
+            isAttempted={attemptedExerciseIds?.has(exercise.exerciseId)}
+            description={exercise.category}
+            sampleSentences={sentences}
+            footerLeft={`⏱️ ${exercise.estimatedTime} min`}
+            footerRight={`📝 ${exercise.targetVocabulary.length} words`}
+          />
+        );
+      })}
     </ExerciseGrid>
   );
 }

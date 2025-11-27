@@ -1,9 +1,10 @@
 /**
  * ExerciseGrid Component
  * Reusable grid wrapper for exercise selectors with empty state
+ * Uses column-based layout like testimonial cards
  */
 
-import { ReactNode } from 'react';
+import { ReactNode, Children } from 'react';
 
 interface ExerciseGridProps {
   children: ReactNode;
@@ -13,6 +14,7 @@ interface ExerciseGridProps {
     title: string;
     description: string;
   };
+  columnsPerRow?: number;
 }
 
 export function ExerciseGrid({
@@ -22,7 +24,8 @@ export function ExerciseGrid({
     icon: '📭',
     title: 'No exercises available',
     description: 'Try selecting a different level or check back later'
-  }
+  },
+  columnsPerRow = 3
 }: ExerciseGridProps) {
   if (isEmpty) {
     return (
@@ -38,9 +41,34 @@ export function ExerciseGrid({
     );
   }
 
+  // Convert children to array
+  const childrenArray = Children.toArray(children);
+
+  // Split children into columns
+  const columns: ReactNode[][] = Array.from({ length: columnsPerRow }, () => []);
+  childrenArray.forEach((child, index) => {
+    const columnIndex = index % columnsPerRow;
+    columns[columnIndex].push(child);
+  });
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {children}
+    <div
+      className="bg-[#f8f8f8] rounded-2xl p-4"
+      style={{
+        transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
+        transformStyle: 'preserve-3d'
+      }}
+    >
+      <div className="flex gap-5 overflow-x-auto">
+        {columns.map((column, columnIndex) => (
+          <div
+            key={columnIndex}
+            className="flex flex-col gap-5 flex-1"
+          >
+            {column}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
