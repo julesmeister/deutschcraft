@@ -38,12 +38,13 @@ export default function SchedulePage() {
   const updateGanttTaskMutation = useUpdateGanttTask();
   const deleteGanttTaskMutation = useDeleteGanttTask();
 
-  // Check edit permission
-  const { data: hasEditPermission = false, isLoading: isLoadingPermission } = useGanttEditPermission(currentTeacherId);
-
   // Check if current user is teacher
   const { student: currentUser } = useCurrentStudent(currentTeacherId || null);
   const isTeacher = currentUser?.role === 'TEACHER';
+
+  // Check edit permission (teachers always have edit permission)
+  const { data: hasStudentEditPermission = false, isLoading: isLoadingPermission } = useGanttEditPermission(currentTeacherId);
+  const hasEditPermission = isTeacher || hasStudentEditPermission;
 
   // Permission management
   const { data: activePermissions = [] } = useGanttPermissions();
