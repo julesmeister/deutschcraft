@@ -16,6 +16,7 @@ import { TranslationExercise, CreativeWritingExercise } from '@/lib/models/writi
 import { EmailTemplate } from '@/lib/data/emailTemplates';
 import { LetterTemplate } from '@/lib/data/letterTemplates';
 import { WritingSubmission } from '@/lib/models/writing';
+import { DictionaryLookup } from '@/components/dictionary/DictionaryLookup';
 
 type ExerciseType = 'translation' | 'creative' | 'email' | 'letters' | null;
 
@@ -231,6 +232,21 @@ export function WritingHub({
       {/* Writing Tips */}
       <div className="mt-8">
         <WritingTipsCard />
+      </div>
+
+      {/* Dictionary Lookup */}
+      <div className="mt-8">
+        <h2 className="text-lg font-bold text-neutral-900 mb-4">Quick Dictionary</h2>
+        <div className="bg-white border border-gray-200 rounded-2xl p-6">
+          <p className="text-sm text-gray-600 mb-4">
+            Need a quick translation? Type any German or English word below.
+          </p>
+          <DictionaryLookup
+            placeholder="Type a word (e.g., Haus, good, danke)..."
+            type="both"
+            minChars={3}
+          />
+        </div>
       </div>
     </>
   );
