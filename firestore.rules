@@ -153,7 +153,24 @@ service cloud.firestore {
       allow read: if isTeacher();
     }
 
-    // Writing submissions
+    // Writing submissions (with hyphen)
+    match /writing-submissions/{submissionId} {
+      // Students can create submissions
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.token.email;
+
+      // Students can read their own submissions
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.token.email;
+
+      // Students can update their own ungraded submissions
+      allow update: if isAuthenticated() &&
+                      resource.data.userId == request.auth.token.email &&
+                      resource.data.status != 'reviewed';
+
+      // Teachers can read all submissions and update (for grading)
+      allow read, update: if isTeacher();
+    }
+
+    // Legacy writing submissions (without hyphen)
     match /writingSubmissions/{submissionId} {
       // Students can create submissions
       allow create: if isAuthenticated() && request.resource.data.userId == request.auth.token.email;
@@ -164,10 +181,54 @@ service cloud.firestore {
       // Students can update their own ungraded submissions
       allow update: if isAuthenticated() &&
                       resource.data.userId == request.auth.token.email &&
-                      !resource.data.graded;
+                      resource.data.status != 'reviewed';
 
       // Teachers can read all submissions and update (for grading)
       allow read, update: if isTeacher();
+    }
+
+    // Writing stats
+    match /writing-stats/{userId} {
+      // Students can read their own stats
+      allow read: if isAuthenticated() && isOwner(userId);
+
+      // Students can write their own stats (for auto-updates)
+      allow write: if isAuthenticated() && isOwner(userId);
+
+      // Teachers can read and write all stats
+      allow read, write: if isTeacher();
+    }
+
+    // Writing progress (daily metrics)
+    match /writing-progress/{progressId} {
+      // Students can read/write their own progress
+      allow read, write: if isAuthenticated() && resource.data.userId == request.auth.token.email;
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.token.email;
+
+      // Teachers can read all progress
+      allow read: if isTeacher();
+    }
+
+    // Teacher reviews
+    match /teacher-reviews/{reviewId} {
+      // Students can read reviews of their submissions
+      allow read: if isAuthenticated() && resource.data.studentId == request.auth.token.email;
+
+      // Teachers can read and write all reviews
+      allow read, write: if isTeacher();
+    }
+
+    // Peer reviews
+    match /peer-reviews/{reviewId} {
+      // Students can read reviews of their submissions
+      allow read: if isAuthenticated() && resource.data.studentId == request.auth.token.email;
+
+      // Students can create and update their own reviews
+      allow create: if isAuthenticated() && request.resource.data.reviewerId == request.auth.token.email;
+      allow update: if isAuthenticated() && resource.data.reviewerId == request.auth.token.email;
+
+      // Teachers can read all peer reviews
+      allow read: if isTeacher();
     }
 
     // Writing prompts
