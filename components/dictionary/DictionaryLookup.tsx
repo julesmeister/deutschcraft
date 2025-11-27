@@ -7,7 +7,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useDictionarySearch } from '@/lib/hooks/useDictionary';
-import { Search, BookOpen } from 'lucide-react';
+import { Search, BookOpen, CornerDownLeft } from 'lucide-react';
 
 interface DictionaryLookupProps {
   placeholder?: string;
@@ -26,14 +26,18 @@ export function DictionaryLookup({
 }: DictionaryLookupProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [showResults, setShowResults] = useState(false);
+  const [forceSearch, setForceSearch] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Allow search if >= minChars OR if any chars and user pressed Enter
+  const shouldSearch = searchTerm.length >= minChars || (searchTerm.length >= 1 && forceSearch);
 
   const { data, isLoading } = useDictionarySearch({
     query: searchTerm,
     type,
     exact: false,
     limit: 10,
-    enabled: searchTerm.length >= minChars,
+    enabled: shouldSearch,
   });
 
   // Close dropdown when clicking outside
@@ -51,6 +55,14 @@ export function DictionaryLookup({
   const results = data?.results || [];
   const hasResults = results.length > 0;
 
+  // Handle Enter key press
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && searchTerm.length >= 1) {
+      setForceSearch(true);
+      setShowResults(true);
+    }
+  };
+
   return (
     <div ref={containerRef} className="w-full">
       {/* Search Input */}
@@ -63,19 +75,33 @@ export function DictionaryLookup({
           value={searchTerm}
           onChange={(e) => {
             setSearchTerm(e.target.value);
-            setShowResults(true);
+            setForceSearch(false); // Reset force search when typing
+            if (e.target.value.length >= minChars) {
+              setShowResults(true);
+            }
           }}
-          onFocus={() => setShowResults(true)}
+          onKeyDown={handleKeyDown}
+          onFocus={() => {
+            if (searchTerm.length >= minChars || forceSearch) {
+              setShowResults(true);
+            }
+          }}
           placeholder={placeholder}
-          className="w-full pl-7 pr-4 py-2 text-base bg-transparent border-none outline-none text-gray-900 placeholder-gray-400"
+          className="w-full pl-7 pr-9 py-2 text-base bg-transparent border-none outline-none text-gray-900 placeholder-gray-400"
           style={{
             fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
           }}
         />
+        {/* Enter key hint - show when chars typed but not enough for auto-search */}
+        {searchTerm.length >= 1 && searchTerm.length < minChars && !forceSearch && (
+          <div className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-300">
+            <CornerDownLeft className="w-4 h-4" />
+          </div>
+        )}
       </div>
 
       {/* Results - Inline, seamlessly expanding */}
-      {showResults && searchTerm.length >= minChars && (
+      {showResults && shouldSearch && (
         <div className="mt-3 w-full">
           {isLoading && (
             <div className="py-2 text-sm text-gray-500">
@@ -129,9 +155,9 @@ export function DictionaryLookup({
       )}
 
       {/* Helper Text */}
-      {searchTerm.length > 0 && searchTerm.length < minChars && (
+      {searchTerm.length >= 1 && searchTerm.length < minChars && !forceSearch && (
         <div className="mt-1.5 text-xs text-gray-500">
-          Type at least {minChars} characters to search
+          Press Enter to search or type {minChars - searchTerm.length} more character{minChars - searchTerm.length > 1 ? 's' : ''}
         </div>
       )}
     </div>
