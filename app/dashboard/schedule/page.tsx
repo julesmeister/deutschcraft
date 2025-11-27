@@ -276,11 +276,11 @@ export default function SchedulePage() {
             isTeacher={isTeacher}
             expandedBatches={expandedBatches}
             onExpandedChange={setExpandedBatches}
-            onAddTask={handleAddTask}
-            onAddSubTask={handleAddSubTask}
-            onDeleteTask={handleDeleteTask}
-            onRenameTask={handleRenameTask}
-            onOpenPermissions={() => setIsPermissionDialogOpen(true)}
+            onAddTask={hasEditPermission ? handleAddTask : undefined}
+            onAddSubTask={hasEditPermission ? handleAddSubTask : undefined}
+            onDeleteTask={hasEditPermission ? handleDeleteTask : undefined}
+            onRenameTask={hasEditPermission ? handleRenameTask : undefined}
+            onOpenPermissions={isTeacher ? () => setIsPermissionDialogOpen(true) : undefined}
             getTaskLevel={getTaskLevel}
           />
         )}
