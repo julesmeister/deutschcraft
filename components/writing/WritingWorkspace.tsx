@@ -6,6 +6,7 @@
 
 import { ReactNode, useState } from 'react';
 import { WritingAttemptBanner } from './WritingAttemptBanner';
+import { DictionaryLookup } from '../dictionary/DictionaryLookup';
 
 interface WritingWorkspaceProps {
   // Left side - Writing field
@@ -106,6 +107,18 @@ export function WritingWorkspace({
           }}
           autoFocus={!readOnly && autoFocus}
         />
+
+        {/* Dictionary Lookup - Only show when not read-only */}
+        {!readOnly && (
+          <div className="mt-4 pt-4 border-t border-gray-100">
+            <DictionaryLookup
+              placeholder="Quick translate..."
+              type="both"
+              minChars={3}
+              className="max-w-md"
+            />
+          </div>
+        )}
         </div>
       </div>
 
