@@ -365,6 +365,11 @@ service cloud.firestore {
                            (get(/databases/$(database)/documents/users/$(request.auth.token.email)).data.ganttEditExpiresAt == null ||
                             get(/databases/$(database)/documents/users/$(request.auth.token.email)).data.ganttEditExpiresAt > request.time.toMillis());
 
+      // Students can read gantt tasks for their assigned batch
+      allow read: if isStudent() &&
+                    exists(/databases/$(database)/documents/users/$(request.auth.token.email)) &&
+                    resource.data.parentTaskId == get(/databases/$(database)/documents/users/$(request.auth.token.email)).data.batchId;
+
       // All authenticated users can read (view-only for students without permission)
       allow read: if isAuthenticated();
     }

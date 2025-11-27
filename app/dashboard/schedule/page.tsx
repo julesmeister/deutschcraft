@@ -26,24 +26,32 @@ export default function SchedulePage() {
   const router = useRouter();
   const { session } = useFirebaseAuth();
   const toast = useToast();
-  const currentTeacherId = session?.user?.email;
+  const currentUserId = session?.user?.email;
 
-  // Fetch batches
-  const { batches, isLoading } = useActiveBatches(currentTeacherId);
+  // Check if current user is teacher
+  const { student: currentUser } = useCurrentStudent(currentUserId || null);
+  const isTeacher = currentUser?.role === 'TEACHER';
+
+  // For teachers: fetch all their batches
+  // For students: fetch only their assigned batch
+  const currentTeacherId = isTeacher ? currentUserId : currentUser?.teacherId;
+  const { batches: allBatches, isLoading } = useActiveBatches(currentTeacherId);
+
+  // Filter batches based on role
+  const batches = isTeacher
+    ? allBatches
+    : allBatches.filter(b => b.batchId === currentUser?.batchId);
+
   const createBatchMutation = useCreateBatch();
 
-  // Fetch gantt tasks
+  // Fetch gantt tasks for the teacher (students will see tasks for their batch)
   const { data: ganttTasks = [], isLoading: isLoadingTasks } = useGanttTasks(currentTeacherId);
   const createGanttTaskMutation = useCreateGanttTask();
   const updateGanttTaskMutation = useUpdateGanttTask();
   const deleteGanttTaskMutation = useDeleteGanttTask();
 
-  // Check if current user is teacher
-  const { student: currentUser } = useCurrentStudent(currentTeacherId || null);
-  const isTeacher = currentUser?.role === 'TEACHER';
-
   // Check edit permission (teachers always have edit permission)
-  const { data: hasStudentEditPermission = false, isLoading: isLoadingPermission } = useGanttEditPermission(currentTeacherId);
+  const { data: hasStudentEditPermission = false, isLoading: isLoadingPermission } = useGanttEditPermission(currentUserId);
   const hasEditPermission = isTeacher || hasStudentEditPermission;
 
   // Permission management
@@ -111,14 +119,14 @@ export default function SchedulePage() {
     startDate: number;
     endDate: number | null;
   }) => {
-    if (!currentTeacherId) {
-      toast.error('Unable to identify current teacher');
+    if (!isTeacher || !currentUserId) {
+      toast.error('Only teachers can create batches');
       return;
     }
 
     try {
       await createBatchMutation.mutateAsync({
-        teacherId: currentTeacherId,
+        teacherId: currentUserId,
         ...data,
       });
 
@@ -146,7 +154,7 @@ export default function SchedulePage() {
 
   // Add subtask (curriculum item) to a batch
   const handleAddSubTask = async (parentTaskId: string) => {
-    if (!currentTeacherId) return;
+    if (!currentUserId) return;
     if (!hasEditPermission) {
       toast.error('You do not have permission to edit the schedule');
       return;
@@ -172,7 +180,7 @@ export default function SchedulePage() {
         color: parentTask.color,
         parentTaskId,
         orderIndex,
-        createdBy: currentTeacherId,
+        createdBy: currentUserId,
       });
 
       toast.success('Curriculum item added');
