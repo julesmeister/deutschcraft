@@ -17,6 +17,7 @@ import {
   limit,
 } from 'firebase/firestore';
 import { ReviewQuiz, QuizBlank } from '../../models/writing';
+import { updateDailyProgressForQuiz } from '../turso/writingProgress/tracking';
 
 const COLLECTION = 'writing-review-quizzes';
 
@@ -79,6 +80,7 @@ export async function completeReviewQuiz(
     const quizRef = doc(db, COLLECTION, quizId);
     const now = Date.now();
 
+    // Update quiz status
     await updateDoc(quizRef, {
       answers,
       score,
@@ -87,6 +89,13 @@ export async function completeReviewQuiz(
       completedAt: now,
       updatedAt: now,
     });
+
+    // Get the updated quiz to track progress
+    const updatedQuiz = await getReviewQuiz(quizId);
+    if (updatedQuiz) {
+      // Update daily writing progress for streak tracking
+      await updateDailyProgressForQuiz(updatedQuiz.userId, updatedQuiz);
+    }
   } catch (error) {
     console.error('[reviewQuizService] Error completing quiz:', error);
     throw error;

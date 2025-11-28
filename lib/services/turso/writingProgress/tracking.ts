@@ -4,7 +4,7 @@
  */
 
 import { db } from '@/turso/client';
-import { WritingProgress, WritingSubmission } from '@/lib/models/writing';
+import { WritingProgress, WritingSubmission, ReviewQuiz } from '@/lib/models/writing';
 import { formatDateISO } from '@/lib/utils/dateHelpers';
 import { rowToProgress } from './helpers';
 
@@ -120,6 +120,82 @@ export async function updateDailyProgress(
     });
   } catch (error) {
     console.error('[writingProgressService:turso] Error updating daily progress:', error);
+    throw error;
+  }
+}
+
+/**
+ * Update daily writing progress after completing a review quiz
+ */
+export async function updateDailyProgressForQuiz(
+  userId: string,
+  quiz: ReviewQuiz
+): Promise<void> {
+  try {
+    const today = formatDateISO(new Date());
+    const progressId = `WPROG_${today.replace(/-/g, '')}_${userId}`;
+
+    // Get current progress or use defaults
+    const result = await db.execute({
+      sql: 'SELECT * FROM writing_progress WHERE user_id = ? AND date = ? LIMIT 1',
+      args: [userId, today],
+    });
+
+    const currentProgress: WritingProgress =
+      result.rows.length > 0
+        ? rowToProgress(result.rows[0])
+        : {
+            progressId,
+            userId,
+            date: today,
+            exercisesCompleted: 0,
+            translationsCompleted: 0,
+            creativeWritingsCompleted: 0,
+            totalWordsWritten: 0,
+            timeSpent: 0,
+            averageGrammarScore: 0,
+            averageVocabularyScore: 0,
+            averageOverallScore: 0,
+            currentStreak: 0,
+            longestStreak: 0,
+            createdAt: Date.now(),
+            updatedAt: Date.now(),
+          };
+
+    // Increment exercises completed (review quiz counts as an activity)
+    const newExercisesCompleted = currentProgress.exercisesCompleted + 1;
+
+    // Upsert progress (quiz doesn't change word count or scores, just activity count)
+    await db.execute({
+      sql: `INSERT INTO writing_progress (
+        progress_id, user_id, date, exercises_completed, translations_completed,
+        creative_writings_completed, total_words_written, time_spent,
+        average_grammar_score, average_vocabulary_score, average_overall_score,
+        current_streak, longest_streak, created_at, updated_at
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      ON CONFLICT(progress_id) DO UPDATE SET
+        exercises_completed = excluded.exercises_completed,
+        updated_at = excluded.updated_at`,
+      args: [
+        progressId,
+        userId,
+        today,
+        newExercisesCompleted,
+        currentProgress.translationsCompleted,
+        currentProgress.creativeWritingsCompleted,
+        currentProgress.totalWordsWritten,
+        currentProgress.timeSpent,
+        currentProgress.averageGrammarScore,
+        currentProgress.averageVocabularyScore,
+        currentProgress.averageOverallScore,
+        currentProgress.currentStreak,
+        currentProgress.longestStreak,
+        Date.now(),
+        Date.now(),
+      ],
+    });
+  } catch (error) {
+    console.error('[writingProgressService:turso] Error updating daily progress for quiz:', error);
     throw error;
   }
 }
