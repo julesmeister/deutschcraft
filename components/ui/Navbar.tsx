@@ -76,13 +76,13 @@ export function Navbar({
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 lg:py-3 lg:py-4">
+    <header className="lg:fixed lg:top-0 lg:left-0 lg:right-0 z-50 lg:py-3 lg:py-4">
       <div className="lg:container lg:mx-auto lg:px-6">
-        {/* Mobile: Sticky bar, no floating, no curves, no shadow */}
-        {/* Desktop: Floating with rounded corners */}
+        {/* Mobile: Non-sticky, simple bar, no border-radius */}
+        {/* Desktop: Sticky floating with rounded corners */}
         <div className={`flex items-center justify-between transition-all duration-500
           lg:py-3 lg:px-8 lg:rounded-full lg:shadow-lg
-          py-4 px-4
+          py-4 px-6
           ${dark ? 'bg-gray-900 text-white' : 'bg-white'}
           ${isScrolled ? 'lg:shadow-2xl' : 'lg:shadow-lg'}`}>
           {/* Logo */}

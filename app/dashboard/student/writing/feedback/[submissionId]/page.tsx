@@ -88,7 +88,7 @@ export default function WritingFeedbackPage() {
         }}
       />
 
-      <div className="container mx-auto px-6 py-8">
+      <div className="lg:container lg:mx-auto lg:px-6 py-8">
         <FeedbackWorkspace
           submission={submission}
           referenceTranslation={referenceTranslation}

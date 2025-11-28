@@ -12,6 +12,7 @@ import { CopyForAIButton } from '@/components/writing/CopyForAIButton';
 import { AICorrectionsPanel } from '@/components/writing/AICorrectionsPanel';
 import { DiffTextCorrectedOnly } from '@/components/writing/DiffText';
 import { ReviewQuiz } from '@/components/writing/ReviewQuiz';
+import { TwoColumnWorkspace } from '@/components/ui/TwoColumnWorkspace';
 import { useToast } from '@/components/ui/toast';
 import { saveAICorrectedVersion } from '@/lib/services/writing/submissions-mutations';
 import { createReviewQuiz, completeReviewQuiz } from '@/lib/services/writing/reviewQuizService';
@@ -100,12 +101,10 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
     setCurrentQuizId(null);
   };
 
-  return (
-    <div className="bg-white min-h-[600px] flex">
-      {/* LEFT: Your Submission */}
-      <div className="flex-1 flex flex-col">
+  const submissionPanel = (
+    <>
         {/* Submission Metadata */}
-        <div className="mb-4 px-8 pt-8 flex items-center justify-between">
+        <div className="mb-4 px-4 md:px-8 pt-4 md:pt-8 flex items-center justify-between">
           <div className="text-sm font-medium">
             <span className="text-gray-900">{submission.wordCount}</span>
             <span className="text-gray-400 mx-1">words</span>
@@ -125,7 +124,7 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
         </div>
 
         {/* Submission Content */}
-        <div className="flex-1 overflow-y-auto px-8">
+        <div className="flex-1 overflow-y-auto px-4 md:px-8">
           {/* Quiz Mode */}
           {quizMode && (
             <ReviewQuiz
@@ -156,7 +155,7 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
                   {submission.originalText}
                 </p>
               </div>
-              <div className="-mx-8 w-[calc(100%+4rem)] h-px bg-gray-200 my-6" />
+              <div className="-mx-4 md:-mx-8 w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] h-px bg-gray-200 my-6" />
             </>
           )}
 
@@ -175,7 +174,7 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
                 />
               )}
             </div>
-            <p className="text-2xl text-gray-900 leading-relaxed whitespace-pre-wrap"
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-900 leading-relaxed whitespace-pre-wrap"
                style={{
                  lineHeight: '1.6',
                  fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
@@ -187,7 +186,7 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
           {/* AI Corrected Version */}
           {(!hasTeacherReview || submission.aiCorrectedVersion) && (
             <>
-              <div className="-mx-8 w-[calc(100%+4rem)] h-px bg-gray-200 my-6" />
+              <div className="-mx-4 md:-mx-8 w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] h-px bg-gray-200 my-6" />
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
@@ -220,7 +219,7 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
           {/* Teacher's Corrected Version */}
           {hasTeacherReview && teacherReview?.correctedVersion && (
             <>
-              <div className="-mx-8 w-[calc(100%+4rem)] h-px bg-gray-200 my-6" />
+              <div className="-mx-4 md:-mx-8 w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] h-px bg-gray-200 my-6" />
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
@@ -246,7 +245,7 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
           {/* Reference Translation */}
           {referenceTranslation && (
             <>
-              <div className="-mx-8 w-[calc(100%+4rem)] h-px bg-gray-200 my-6" />
+              <div className="-mx-4 md:-mx-8 w-[calc(100%+2rem)] md:w-[calc(100%+4rem)] h-px bg-gray-200 my-6" />
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
@@ -271,13 +270,17 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
           </>
           )}
         </div>
-      </div>
+    </>
+  );
 
-      {/* SEPARATOR */}
-      <div className="w-px bg-gray-200" />
-
-      {/* RIGHT: Feedback Panel */}
-      {feedbackPanel}
-    </div>
+  return (
+    <TwoColumnWorkspace
+      leftPanel={submissionPanel}
+      leftLabel="Your Submission"
+      rightPanel={feedbackPanel}
+      rightLabel="Feedback"
+      rightPanelWidth="lg:w-[400px]"
+      defaultActiveTab="left"
+    />
   );
 }

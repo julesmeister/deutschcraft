@@ -46,7 +46,7 @@ export function FeedbackPanel({
   }, [submission.userId]);
 
   return (
-    <div className="w-[400px] flex flex-col">
+    <div className="w-full flex flex-col">
       {/* Tabs Navigation */}
       <div className="flex border-b border-gray-200">
         <TabButton
@@ -64,7 +64,7 @@ export function FeedbackPanel({
       </div>
 
       {/* Tab Content */}
-      <div className="flex-1 p-8 overflow-y-auto">
+      <div className="flex-1 p-4 md:p-8 overflow-y-auto">
         {/* Teacher Feedback Tab */}
         {activeTab === 'feedback' && (
           <div className="space-y-6">

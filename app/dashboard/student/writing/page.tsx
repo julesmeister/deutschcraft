@@ -142,7 +142,7 @@ export default function WritingExercisesPage() {
       )}
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 py-8">
+      <div className="lg:container lg:mx-auto lg:px-6 py-8">
         {selectedTranslation ? (
           <TranslationWorkspace
             exercise={selectedTranslation}

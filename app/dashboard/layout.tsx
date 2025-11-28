@@ -15,11 +15,11 @@ export default function DashboardLayout({
 }) {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Main navbar with dashboard items - Dark variant */}
+      {/* Main navbar with dashboard items - Use DashboardNavbar for mega dropdowns */}
       <DashboardNavbar />
 
       {/* Main Content with Enrollment Protection */}
-      <main className="pt-20">
+      <main className="lg:pt-20">
         <EnrollmentGuard>
           {children}
         </EnrollmentGuard>
@@ -50,9 +50,11 @@ function DashboardNavbar() {
   // Pending users will be redirected to /dashboard/settings when clicking protected links
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 py-2 sm:py-3 lg:py-4">
-      <div className="container mx-auto px-3 sm:px-4 lg:px-6">
-        <div className="flex items-center justify-between transition-all duration-500 bg-gray-900 text-white py-2 sm:py-3 px-4 sm:px-6 lg:px-8 rounded-full shadow-lg">
+    <header className="lg:fixed lg:top-0 lg:left-0 lg:right-0 z-50 lg:py-3 lg:py-4">
+      <div className="lg:container lg:mx-auto lg:px-6">
+        {/* Mobile: Non-sticky, simple bar, no border-radius */}
+        {/* Desktop: Sticky floating with rounded corners */}
+        <div className="flex items-center justify-between transition-all duration-500 bg-gray-900 text-white py-4 px-6 lg:py-3 lg:px-8 lg:rounded-full lg:shadow-lg">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-1.5 sm:space-x-2 group">
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -201,7 +203,7 @@ function DashboardNavbar() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-3 bg-gray-900 text-white rounded-2xl shadow-lg overflow-hidden animate-slide-down">
+          <div className="lg:hidden mt-0 bg-gray-900 text-white border-t border-gray-700 overflow-hidden animate-slide-down">
             <div className="py-4 px-5 space-y-4">
               {/* Student Section */}
               <div>
