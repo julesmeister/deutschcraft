@@ -1,6 +1,6 @@
 'use client';
 
-import { use, useEffect, useState } from 'react';
+import { use, useEffect, useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { FlashcardStatsSection } from '@/components/dashboard/FlashcardStatsSection';
@@ -11,6 +11,7 @@ import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useStudyStats } from '@/lib/hooks/useFlashcards';
 import { useWritingStats, useStudentSubmissions } from '@/lib/hooks/useWritingExercises';
 import { useSessionPagination } from '@/lib/hooks/useSessionPagination';
+import { useUserQuizzes } from '@/lib/hooks/useReviewQuizzes';
 import { getUser } from '@/lib/services/userService';
 import { User, getUserFullName } from '@/lib/models/user';
 
@@ -38,7 +39,53 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
 
   // Get student's writing stats
   const { data: writingStats } = useWritingStats(student?.email);
-  const { data: writingSubmissions = [] } = useStudentSubmissions(student?.email);
+  const { data: rawWritingSubmissions = [] } = useStudentSubmissions(student?.email);
+  const { data: userQuizzes = [] } = useUserQuizzes(student?.email);
+
+  // Normalize and combine writing submissions with quiz attempts
+  const writingSubmissions = useMemo(() => {
+    if (!rawWritingSubmissions || rawWritingSubmissions.length === 0) {
+      return [];
+    }
+
+    // Serialize and deserialize to break all object references
+    const serialized = JSON.parse(JSON.stringify(rawWritingSubmissions));
+
+    return serialized.map((submission: any) => {
+      // Normalize teacherScore
+      if (submission.teacherScore && typeof submission.teacherScore === 'object') {
+        submission.teacherScore = submission.teacherScore.overallScore || 0;
+      }
+      return submission;
+    });
+  }, [rawWritingSubmissions]);
+
+  // Combine submissions and quizzes, sorted by date
+  const combinedActivity = useMemo(() => {
+    const items = [
+      ...writingSubmissions,
+      // Only include completed quizzes
+      ...userQuizzes
+        .filter(quiz => quiz.status === 'completed')
+        .map(quiz => ({
+          ...quiz,
+          isQuiz: true,
+          submissionId: quiz.quizId,
+          exerciseType: 'quiz' as const,
+          status: 'reviewed' as const,
+          wordCount: quiz.totalBlanks,
+          submittedAt: quiz.completedAt || quiz.startedAt,
+          updatedAt: quiz.updatedAt,
+        }))
+    ];
+
+    // Sort by date (most recent first)
+    return items.sort((a, b) => {
+      const dateA = a.submittedAt || a.updatedAt || 0;
+      const dateB = b.submittedAt || b.updatedAt || 0;
+      return dateB - dateA;
+    });
+  }, [writingSubmissions, userQuizzes]);
 
   // Pagination for flashcard sessions
   const sessionPagination = useSessionPagination(student?.email, 8);
@@ -162,7 +209,7 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
           {activeTab === 'flashcards' ? (
             <FlashcardStatsSection stats={stats} />
           ) : (
-            <WritingStatsSection writingStats={writingStats} />
+            <WritingStatsSection writingStats={writingStats} studentEmail={student?.email} />
           )}
         </div>
 
@@ -182,7 +229,7 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
           <RecentActivityTimeline
             activeTab={activeTab}
             recentSessions={sessionPagination.sessions}
-            writingSubmissions={writingSubmissions}
+            writingSubmissions={combinedActivity}
             currentPage={sessionPagination.currentPage}
             onPageChange={sessionPagination.goToPage}
             isLoading={sessionPagination.isLoading}

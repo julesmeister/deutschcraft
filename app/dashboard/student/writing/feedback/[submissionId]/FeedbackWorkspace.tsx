@@ -5,13 +5,17 @@
 
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { WritingSubmission, TeacherReview } from '@/lib/models/writing';
 import { CopyForAIButton } from '@/components/writing/CopyForAIButton';
 import { AICorrectionsPanel } from '@/components/writing/AICorrectionsPanel';
 import { DiffTextCorrectedOnly } from '@/components/writing/DiffText';
+import { ReviewQuiz } from '@/components/writing/ReviewQuiz';
+import { useToast } from '@/components/ui/toast';
 import { saveAICorrectedVersion } from '@/lib/services/writing/submissions-mutations';
+import { createReviewQuiz, completeReviewQuiz } from '@/lib/services/writing/reviewQuizService';
+import { generateQuizBlanks } from '@/lib/utils/quizGenerator';
 
 interface FeedbackWorkspaceProps {
   submission: WritingSubmission;
@@ -23,6 +27,9 @@ interface FeedbackWorkspaceProps {
 
 export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslation, hasTeacherReview, teacherReview }: FeedbackWorkspaceProps) {
   const queryClient = useQueryClient();
+  const toast = useToast();
+  const [quizMode, setQuizMode] = useState<'ai' | 'teacher' | 'reference' | null>(null);
+  const [currentQuizId, setCurrentQuizId] = useState<string | null>(null);
 
   const handleSaveAICorrection = async (correctedText: string) => {
     await saveAICorrectedVersion(submission.submissionId, correctedText);
@@ -30,6 +37,67 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
     await queryClient.invalidateQueries({
       queryKey: ['writing-submission', submission.submissionId]
     });
+  };
+
+  const handleStartQuiz = async (sourceType: 'ai' | 'teacher' | 'reference', correctedText: string) => {
+    try {
+      const blanks = generateQuizBlanks(submission.content, correctedText);
+
+      if (blanks.length === 0) {
+        toast.info('No corrections to review in this version.');
+        return;
+      }
+
+      const quiz = await createReviewQuiz(
+        submission.submissionId,
+        submission.userId,
+        submission.exerciseId,
+        submission.exerciseType,
+        sourceType,
+        submission.content,
+        correctedText,
+        blanks
+      );
+
+      setCurrentQuizId(quiz.quizId);
+      setQuizMode(sourceType);
+    } catch (error) {
+      console.error('Error starting quiz:', error);
+      toast.error('Failed to start quiz. Please try again.');
+    }
+  };
+
+  const handleCompleteQuiz = async (
+    score: number,
+    correctAnswers: number,
+    totalBlanks: number,
+    answers: Record<number, string>
+  ) => {
+    if (!currentQuizId) return;
+
+    try {
+      await completeReviewQuiz(currentQuizId, answers, score, correctAnswers);
+      toast.success(`Quiz completed! Score: ${score}%`, { duration: 5000 });
+
+      // Invalidate quiz stats to refresh the data
+      await queryClient.invalidateQueries({
+        queryKey: ['user-quiz-stats', submission.userId]
+      });
+      await queryClient.invalidateQueries({
+        queryKey: ['completed-quizzes', submission.userId]
+      });
+
+      setQuizMode(null);
+      setCurrentQuizId(null);
+    } catch (error) {
+      console.error('Error completing quiz:', error);
+      toast.error('Failed to save quiz results. Please try again.');
+    }
+  };
+
+  const handleCancelQuiz = () => {
+    setQuizMode(null);
+    setCurrentQuizId(null);
   };
 
   return (
@@ -58,6 +126,24 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
 
         {/* Submission Content */}
         <div className="flex-1 overflow-y-auto px-8">
+          {/* Quiz Mode */}
+          {quizMode && (
+            <ReviewQuiz
+              originalText={submission.content}
+              correctedText={
+                quizMode === 'ai' ? submission.aiCorrectedVersion! :
+                quizMode === 'teacher' ? teacherReview?.correctedVersion! :
+                referenceTranslation!
+              }
+              sourceType={quizMode}
+              onComplete={handleCompleteQuiz}
+              onCancel={handleCancelQuiz}
+            />
+          )}
+
+          {/* Normal View Mode */}
+          {!quizMode && (
+            <>
           {/* Original English Text (for translation exercises) */}
           {submission.exerciseType === 'translation' && submission.originalText && (
             <>
@@ -103,11 +189,21 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
             <>
               <div className="-mx-8 w-[calc(100%+4rem)] h-px bg-gray-200 my-6" />
               <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-sm">✨</span>
-                  <h3 className="text-xs font-semibold text-purple-700 uppercase tracking-wide">AI-Corrected Version</h3>
-                  {hasTeacherReview && submission.aiCorrectedVersion && (
-                    <span className="text-xs text-gray-500 font-normal">(for comparison)</span>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm">✨</span>
+                    <h3 className="text-xs font-semibold text-purple-700 uppercase tracking-wide">AI-Corrected Version</h3>
+                    {hasTeacherReview && submission.aiCorrectedVersion && (
+                      <span className="text-xs text-gray-500 font-normal">(for comparison)</span>
+                    )}
+                  </div>
+                  {submission.aiCorrectedVersion && (
+                    <button
+                      onClick={() => handleStartQuiz('ai', submission.aiCorrectedVersion!)}
+                      className="text-xs text-purple-600 hover:text-purple-800 font-semibold flex items-center gap-1 transition-colors"
+                    >
+                      <span>📝</span> Test Yourself
+                    </button>
                   )}
                 </div>
                 <AICorrectionsPanel
@@ -126,9 +222,17 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
             <>
               <div className="-mx-8 w-[calc(100%+4rem)] h-px bg-gray-200 my-6" />
               <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-sm">✏️</span>
-                  <h3 className="text-xs font-semibold text-blue-700 uppercase tracking-wide">Teacher's Corrected Version</h3>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm">✏️</span>
+                    <h3 className="text-xs font-semibold text-blue-700 uppercase tracking-wide">Teacher's Corrected Version</h3>
+                  </div>
+                  <button
+                    onClick={() => handleStartQuiz('teacher', teacherReview.correctedVersion!)}
+                    className="text-xs text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-1 transition-colors"
+                  >
+                    <span>📝</span> Test Yourself
+                  </button>
                 </div>
                 <DiffTextCorrectedOnly
                   originalText={submission.content}
@@ -144,9 +248,17 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
             <>
               <div className="-mx-8 w-[calc(100%+4rem)] h-px bg-gray-200 my-6" />
               <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-sm">✅</span>
-                  <h3 className="text-xs font-semibold text-green-700 uppercase tracking-wide">Reference Translation</h3>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm">✅</span>
+                    <h3 className="text-xs font-semibold text-green-700 uppercase tracking-wide">Reference Translation</h3>
+                  </div>
+                  <button
+                    onClick={() => handleStartQuiz('reference', referenceTranslation)}
+                    className="text-xs text-green-600 hover:text-green-800 font-semibold flex items-center gap-1 transition-colors"
+                  >
+                    <span>📝</span> Test Yourself
+                  </button>
                 </div>
                 <DiffTextCorrectedOnly
                   originalText={submission.content}
@@ -155,6 +267,8 @@ export function FeedbackWorkspace({ submission, feedbackPanel, referenceTranslat
                 />
               </div>
             </>
+          )}
+          </>
           )}
         </div>
       </div>

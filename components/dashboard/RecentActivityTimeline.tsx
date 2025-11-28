@@ -138,33 +138,95 @@ export function RecentActivityTimeline({
   const endIndexWriting = startIndexWriting + itemsPerPage;
   const paginatedSubmissions = writingSubmissions.slice(startIndexWriting, endIndexWriting);
 
+  // SAFETY: Normalize teacherScore in case it wasn't done upstream
+  const safeSubmissions = paginatedSubmissions.map(sub => {
+    console.log('[RecentActivityTimeline] Full submission object:', sub);
+    console.log('[RecentActivityTimeline] All keys:', Object.keys(sub));
+
+    const safe: any = { ...sub };
+
+    // Check all fields for objects
+    Object.keys(safe).forEach(key => {
+      const value = safe[key];
+      if (value && typeof value === 'object' && !Array.isArray(value) && !(value instanceof Date)) {
+        console.log(`[RecentActivityTimeline] Found object in field "${key}":`, value);
+
+        // If it has score-like fields, extract overallScore
+        if ('overallScore' in value) {
+          console.log(`[RecentActivityTimeline] Extracting overallScore from ${key}`);
+          safe[key] = value.overallScore;
+        }
+      }
+    });
+
+    return safe;
+  });
+
   return (
     <>
       <ActivityTimeline
-        items={paginatedSubmissions.map((submission) => {
+        items={safeSubmissions.map((submission) => {
         const statusColor =
           submission.status === 'submitted' ? 'blue' :
           submission.status === 'reviewed' ? 'green' :
           submission.status === 'draft' ? 'gray' : 'gray';
 
-        const exerciseIcon =
+        const isQuiz = (submission as any).isQuiz;
+        const exerciseIcon = isQuiz ? '📝' :
           submission.exerciseType === 'creative' ? '✨' :
           submission.exerciseType === 'translation' ? '🔄' :
           submission.exerciseType === 'email' ? '✉️' : '📨';
 
+        // Handle teacherScore - could be number or object
+        const teacherScore = typeof submission.teacherScore === 'number'
+          ? submission.teacherScore
+          : typeof submission.teacherScore === 'object' && submission.teacherScore !== null
+          ? (submission.teacherScore as any).overallScore
+          : null;
+
+        // Ensure teacherScore is a number, not an object
+        const numericScore = typeof teacherScore === 'number' ? teacherScore : null;
+
+        const quizScore = isQuiz ? (submission as any).score : null;
+
         return {
           id: submission.submissionId,
           icon: <span className="text-white text-sm">{exerciseIcon}</span>,
-          iconColor: 'bg-purple-500',
-          title: (submission as any).exerciseTitle || `${submission.exerciseType} exercise`,
-          description: `${submission.wordCount} words • ${submission.status}`,
+          iconColor: isQuiz ? 'bg-blue-500' : 'bg-purple-500',
+          title: isQuiz
+            ? `Review Quiz - ${(submission as any).sourceType === 'ai' ? 'AI' : (submission as any).sourceType === 'teacher' ? 'Teacher' : 'Reference'} Correction`
+            : ((submission as any).exerciseTitle || `${submission.exerciseType} exercise`),
+          description: isQuiz
+            ? `${submission.wordCount} blanks${quizScore !== null ? ` • Score: ${quizScore}%` : ''}`
+            : `${submission.wordCount} words${numericScore ? ` • Score: ${numericScore}/100` : ''}`,
           timestamp: new Date(submission.submittedAt || submission.updatedAt).toLocaleDateString('en-US', {
             weekday: 'short',
             month: 'short',
             day: 'numeric',
-            year: 'numeric'
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
           }),
-          tags: [
+          tags: isQuiz ? [
+            {
+              label: 'Review Quiz',
+              color: 'blue',
+            },
+            {
+              label: (submission as any).sourceType || 'quiz',
+              color: 'purple',
+            },
+            {
+              label: submission.status === 'submitted' ? 'In Progress' : 'Completed',
+              color: statusColor,
+              icon: submission.status === 'reviewed' ? '✓' : undefined,
+            },
+            ...(quizScore && quizScore >= 80
+              ? [{ label: 'Excellent', color: 'green' as const }]
+              : quizScore && quizScore >= 60
+              ? [{ label: 'Good', color: 'blue' as const }]
+              : []),
+          ] : [
             {
               label: submission.exerciseType,
               color: 'purple',
@@ -174,12 +236,34 @@ export function RecentActivityTimeline({
               color: 'blue',
             },
             {
-              label: submission.status,
+              label: submission.status === 'draft' ? 'Draft' :
+                     submission.status === 'submitted' ? 'Awaiting Review' : 'Reviewed',
               color: statusColor,
               icon: submission.status === 'reviewed' ? '✓' : undefined,
             },
+            ...(numericScore && numericScore >= 80
+              ? [{ label: 'Excellent', color: 'green' as const }]
+              : numericScore && numericScore >= 60
+              ? [{ label: 'Good', color: 'blue' as const }]
+              : []),
           ],
-          metadata: submission.teacherScore ? `Score: ${submission.teacherScore}%` : undefined,
+          metadata: (
+            <div className="mt-2">
+              {submission.teacherFeedback && (
+                <p className="text-xs text-gray-600 italic line-clamp-2 mb-2">
+                  "{submission.teacherFeedback}"
+                </p>
+              )}
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={() => window.open(`/dashboard/student/writing/feedback/${submission.submissionId}`, '_blank')}
+                  className="text-xs font-medium text-blue-600 hover:text-blue-700 transition-colors"
+                >
+                  View Feedback →
+                </button>
+              </div>
+            </div>
+          ),
         } as ActivityItem;
       })}
       showConnector={true}

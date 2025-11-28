@@ -376,3 +376,54 @@ export interface WritingStats {
 
   updatedAt: number;
 }
+
+/**
+ * Review Quiz Model
+ * Fill-in-the-blanks quiz for reviewing corrections
+ * Path: writing-review-quizzes/{quizId}
+ */
+export interface ReviewQuiz {
+  quizId: string;
+  submissionId: string; // Original submission being reviewed
+  userId: string; // Student taking the quiz
+  exerciseId: string;
+  exerciseType: WritingExerciseType;
+
+  // Quiz source (which correction to test)
+  sourceType: 'ai' | 'teacher' | 'reference';
+
+  // Quiz content
+  originalText: string; // Student's original text
+  correctedText: string; // The correction being tested
+  blanks: QuizBlank[]; // Positions of blanks (highlighted corrections)
+
+  // Student's answers
+  answers: Record<number, string>; // blankIndex -> answer
+
+  // Scoring
+  score: number; // 0-100
+  correctAnswers: number;
+  totalBlanks: number;
+
+  // Status
+  status: 'in-progress' | 'completed';
+
+  // Timestamps
+  startedAt: number;
+  completedAt?: number;
+
+  createdAt: number;
+  updatedAt: number;
+}
+
+/**
+ * Quiz Blank Model
+ * Represents a fill-in-the-blank question
+ */
+export interface QuizBlank {
+  index: number; // Position in the blanks array
+  correctAnswer: string; // The correct word/phrase
+  studentOriginal?: string; // What the student originally wrote (if applicable)
+  position: number; // Character position in text
+  hint?: string; // Optional hint for the student
+}
