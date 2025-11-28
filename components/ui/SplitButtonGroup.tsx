@@ -68,9 +68,9 @@ const colorSchemes = {
 };
 
 const sizeClasses = {
-  sm: 'px-3 py-2 text-sm',
-  md: 'px-4 py-3 text-base',
-  lg: 'px-6 py-4 text-lg',
+  sm: 'px-2 py-1.5 md:px-3 md:py-2 text-sm',
+  md: 'px-3 py-2 md:px-4 md:py-3 text-base',
+  lg: 'px-3 py-2.5 md:px-5 md:py-3.5 lg:px-6 lg:py-4 text-lg',
 };
 
 export function SplitButtonGroup({

@@ -24,8 +24,8 @@ export function DifficultyButtons({
       value: 'again',
       label: (
         <div>
-          <div className="text-sm sm:text-base font-black">Forgotten</div>
-          <div className="text-[10px] sm:text-xs opacity-70 mt-0.5 hidden sm:block">Press 1</div>
+          <div className="text-xs md:text-sm lg:text-base font-black">Forgotten</div>
+          <div className="text-[9px] md:text-[10px] lg:text-xs opacity-70 mt-0.5 hidden md:block">Press 1</div>
         </div>
       ),
     },
@@ -33,8 +33,8 @@ export function DifficultyButtons({
       value: 'hard',
       label: (
         <div>
-          <div className="text-sm sm:text-base font-black">Hard</div>
-          <div className="text-[10px] sm:text-xs opacity-70 mt-0.5 hidden sm:block">Press 2</div>
+          <div className="text-xs md:text-sm lg:text-base font-black">Hard</div>
+          <div className="text-[9px] md:text-[10px] lg:text-xs opacity-70 mt-0.5 hidden md:block">Press 2</div>
         </div>
       ),
     },
@@ -42,8 +42,8 @@ export function DifficultyButtons({
       value: 'good',
       label: (
         <div>
-          <div className="text-sm sm:text-base font-black">Good</div>
-          <div className="text-[10px] sm:text-xs opacity-70 mt-0.5 hidden sm:block">Press 3</div>
+          <div className="text-xs md:text-sm lg:text-base font-black">Good</div>
+          <div className="text-[9px] md:text-[10px] lg:text-xs opacity-70 mt-0.5 hidden md:block">Press 3</div>
         </div>
       ),
     },
@@ -51,8 +51,8 @@ export function DifficultyButtons({
       value: 'easy',
       label: (
         <div>
-          <div className="text-sm sm:text-base font-black">Easy</div>
-          <div className="text-[10px] sm:text-xs opacity-70 mt-0.5 hidden sm:block">Press 4</div>
+          <div className="text-xs md:text-sm lg:text-base font-black">Easy</div>
+          <div className="text-[9px] md:text-[10px] lg:text-xs opacity-70 mt-0.5 hidden md:block">Press 4</div>
         </div>
       ),
     },
@@ -60,8 +60,8 @@ export function DifficultyButtons({
       value: 'expert',
       label: (
         <div>
-          <div className="text-sm sm:text-base font-black">Expert</div>
-          <div className="text-[10px] sm:text-xs opacity-70 mt-0.5 hidden sm:block">Press 5</div>
+          <div className="text-xs md:text-sm lg:text-base font-black">Expert</div>
+          <div className="text-[9px] md:text-[10px] lg:text-xs opacity-70 mt-0.5 hidden md:block">Press 5</div>
         </div>
       ),
     },

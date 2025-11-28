@@ -146,28 +146,28 @@ export function FlashcardPractice({
         showEnglishFirst={showEnglishFirst}
       />
 
-      {/* Combined: Navigation + Difficulty/Show Answer Buttons */}
-      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
+      {/* Difficulty/Show Answer Buttons */}
+      <div>
+        <DifficultyButtons
+          isFlipped={isFlipped}
+          onDifficulty={handleDifficulty}
+          onShowAnswer={handleFlip}
+        />
+      </div>
+
+      {/* Navigation Buttons */}
+      <div className="flex items-center gap-2 md:gap-3">
         {/* Previous Button */}
         <Button
           onClick={handlePrevious}
           disabled={currentIndex === 0}
           variant="secondary"
           size="sm"
-          className="shrink-0 order-2 sm:order-1"
+          className="flex-1"
         >
           <span className="hidden sm:inline">← Previous</span>
           <span className="sm:hidden">← Prev</span>
         </Button>
-
-        {/* Difficulty Buttons or Show Answer - Center Area */}
-        <div className="flex-1 order-1 sm:order-2">
-          <DifficultyButtons
-            isFlipped={isFlipped}
-            onDifficulty={handleDifficulty}
-            onShowAnswer={handleFlip}
-          />
-        </div>
 
         {/* Next Button */}
         <Button
@@ -175,7 +175,7 @@ export function FlashcardPractice({
           disabled={currentIndex === flashcards.length - 1}
           variant="secondary"
           size="sm"
-          className="shrink-0 order-3"
+          className="flex-1"
         >
           <span className="hidden sm:inline">Next →</span>
           <span className="sm:hidden">Next →</span>
