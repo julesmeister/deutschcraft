@@ -53,24 +53,84 @@ export function WritingHistory({
       case 'email': return '📧';
       case 'formal-letter':
       case 'informal-letter': return '💼';
+      case 'quiz': return '📝';
       default: return '📝';
     }
   };
 
   // Convert submissions to ActivityItems
   const activityItems: ActivityItem[] = submissions.map((submission) => {
-    const levelInfo = CEFRLevelInfo[submission.level];
-    const exerciseTypeName = submission.exerciseType.split('-').map(word =>
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join(' ');
+    const isQuiz = (submission as any).isQuiz;
+    const quizScore = isQuiz ? (submission as any).score : null;
+    const sourceType = isQuiz ? (submission as any).sourceType : null;
 
+    // For regular submissions
+    if (!isQuiz) {
+      const levelInfo = CEFRLevelInfo[submission.level];
+      const exerciseTypeName = submission.exerciseType.split('-').map(word =>
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join(' ');
+
+      return {
+        id: submission.submissionId,
+        icon: <span className="text-white text-sm">{getExerciseIcon(submission.exerciseType)}</span>,
+        iconColor: submission.status === 'reviewed' ? 'bg-green-500' :
+                   submission.status === 'submitted' ? 'bg-amber-500' : 'bg-gray-400',
+        title: `${exerciseTypeName} Exercise`,
+        description: `${levelInfo.displayName} • ${submission.wordCount} words`,
+        timestamp: submission.updatedAt
+          ? new Date(submission.updatedAt).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit'
+            })
+          : undefined,
+        tags: [
+          {
+            label: submission.status === 'draft' ? 'Draft' :
+                   submission.status === 'submitted' ? 'Awaiting Review' : 'Reviewed',
+            color: submission.status === 'draft' ? 'gray' as const :
+                   submission.status === 'submitted' ? 'amber' as const : 'green' as const,
+          },
+          // Show score percentage badge
+          ...(submission.teacherScore
+            ? [{ label: `${submission.teacherScore}%`, color: 'blue' as const }]
+            : []),
+          // Show quality badge based on score
+          ...(submission.teacherScore && submission.teacherScore >= 80
+            ? [{ label: 'Excellent', color: 'green' as const }]
+            : submission.teacherScore && submission.teacherScore >= 60
+            ? [{ label: 'Good', color: 'blue' as const }]
+            : []),
+        ],
+        metadata: (
+          <div className="mt-2">
+            {/* Content Preview */}
+            <p className="text-xs text-gray-600 line-clamp-2 mb-3">
+              {submission.content.substring(0, 150)}
+              {submission.content.length > 150 && '...'}
+            </p>
+
+            <button
+              onClick={() => onViewSubmission(submission.submissionId)}
+              className="text-xs font-medium text-blue-600 hover:text-blue-700 transition-colors"
+            >
+              View Details →
+            </button>
+          </div>
+        ),
+      };
+    }
+
+    // For quiz items
     return {
       id: submission.submissionId,
-      icon: <span className="text-white text-sm">{getExerciseIcon(submission.exerciseType)}</span>,
-      iconColor: submission.status === 'reviewed' ? 'bg-green-500' :
-                 submission.status === 'submitted' ? 'bg-amber-500' : 'bg-gray-400',
-      title: `${exerciseTypeName} Exercise`,
-      description: `${levelInfo.displayName} • ${submission.wordCount} words`,
+      icon: <span className="text-white text-sm">📝</span>,
+      iconColor: 'bg-blue-500',
+      title: `Review Quiz - ${sourceType === 'ai' ? 'AI' : sourceType === 'teacher' ? 'Teacher' : 'Reference'} Correction`,
+      description: `${submission.wordCount} blanks${quizScore !== null ? ` • Score: ${quizScore}%` : ''}`,
       timestamp: submission.updatedAt
         ? new Date(submission.updatedAt).toLocaleDateString('en-US', {
             year: 'numeric',
@@ -82,36 +142,29 @@ export function WritingHistory({
         : undefined,
       tags: [
         {
-          label: submission.status === 'draft' ? 'Draft' :
-                 submission.status === 'submitted' ? 'Awaiting Review' : 'Reviewed',
-          color: submission.status === 'draft' ? 'gray' as const :
-                 submission.status === 'submitted' ? 'amber' as const : 'green' as const,
+          label: 'Review Quiz',
+          color: 'blue' as const,
         },
-        // Show score percentage badge
-        ...(submission.teacherScore
-          ? [{ label: `${submission.teacherScore}%`, color: 'blue' as const }]
-          : []),
-        // Show quality badge based on score
-        ...(submission.teacherScore && submission.teacherScore >= 80
+        {
+          label: sourceType || 'quiz',
+          color: 'purple' as const,
+        },
+        {
+          label: 'Completed',
+          color: 'green' as const,
+          icon: '✓',
+        },
+        ...(quizScore && quizScore >= 80
           ? [{ label: 'Excellent', color: 'green' as const }]
-          : submission.teacherScore && submission.teacherScore >= 60
+          : quizScore && quizScore >= 60
           ? [{ label: 'Good', color: 'blue' as const }]
           : []),
       ],
       metadata: (
         <div className="mt-2">
-          {/* Content Preview */}
-          <p className="text-xs text-gray-600 line-clamp-2 mb-3">
-            {submission.content.substring(0, 150)}
-            {submission.content.length > 150 && '...'}
+          <p className="text-xs text-gray-600 mb-2">
+            Review quiz completed
           </p>
-
-          <button
-            onClick={() => onViewSubmission(submission.submissionId)}
-            className="text-xs font-medium text-blue-600 hover:text-blue-700 transition-colors"
-          >
-            View Details →
-          </button>
         </div>
       ),
     };

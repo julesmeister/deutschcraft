@@ -16,6 +16,8 @@ import { TranslationExercise, CreativeWritingExercise } from '@/lib/models/writi
 import { EmailTemplate } from '@/lib/data/emailTemplates';
 import { LetterTemplate } from '@/lib/data/letterTemplates';
 import { WritingSubmission } from '@/lib/models/writing';
+import { useUserQuizStats, useUserQuizzes } from '@/lib/hooks/useReviewQuizzes';
+import { useMemo } from 'react';
 
 type ExerciseType = 'translation' | 'creative' | 'email' | 'letters' | null;
 
@@ -46,6 +48,7 @@ interface WritingHubProps {
   onCreativeSelect: (exercise: CreativeWritingExercise) => void;
   onEmailSelect: (template: EmailTemplate) => void;
   onLetterSelect: (template: LetterTemplate) => void;
+  userEmail?: string | null;
 }
 
 export function WritingHub({
@@ -68,8 +71,39 @@ export function WritingHub({
   onCreativeSelect,
   onEmailSelect,
   onLetterSelect,
+  userEmail,
 }: WritingHubProps) {
-  // Create a Set of attempted exercise IDs from submissions
+  const { data: quizStats } = useUserQuizStats(userEmail || null);
+  const { data: userQuizzes = [] } = useUserQuizzes(userEmail || null);
+
+  // Combine submissions and quizzes, sorted by date (similar to teacher page)
+  const combinedSubmissions = useMemo(() => {
+    const items = [
+      ...submissions,
+      // Only include completed quizzes
+      ...userQuizzes
+        .filter(quiz => quiz.status === 'completed')
+        .map(quiz => ({
+          ...quiz,
+          isQuiz: true,
+          submissionId: quiz.quizId,
+          exerciseType: 'quiz' as const,
+          status: 'reviewed' as const,
+          wordCount: quiz.totalBlanks,
+          submittedAt: quiz.completedAt || quiz.startedAt,
+          updatedAt: quiz.updatedAt,
+        }))
+    ];
+
+    // Sort by date (most recent first)
+    return items.sort((a, b) => {
+      const dateA = a.submittedAt || a.updatedAt || 0;
+      const dateB = b.submittedAt || b.updatedAt || 0;
+      return dateB - dateA;
+    });
+  }, [submissions, userQuizzes]);
+
+  // Create a Set of attempted exercise IDs from submissions (exclude quizzes)
   const attemptedExerciseIds = new Set(
     submissions.map(submission => submission.exerciseId).filter((id): id is string => !!id)
   );
@@ -108,10 +142,16 @@ export function WritingHub({
               },
               {
                 id: 'score',
-                label: 'Average Score',
+                label: 'Avg Writing Score',
                 icon: undefined,
                 value: `${writingStats?.averageOverallScore || 0}%`,
               },
+              ...(quizStats && quizStats.totalQuizzes > 0 ? [{
+                id: 'quiz-score',
+                label: 'Avg Quiz Score',
+                icon: undefined,
+                value: `${quizStats.averageScore}%`,
+              }] : []),
               {
                 id: 'streak',
                 label: 'Day Streak',
@@ -211,7 +251,7 @@ export function WritingHub({
       <div className="mt-8">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-bold text-neutral-900">Recent Submissions</h2>
-          {submissions.length > 3 && (
+          {combinedSubmissions.length > 3 && (
             <button
               onClick={onToggleHistory}
               className="text-sm font-medium text-blue-600 hover:text-blue-700"
@@ -222,7 +262,7 @@ export function WritingHub({
         </div>
 
         <WritingHistory
-          submissions={showHistory ? submissions : submissions.slice(0, 3)}
+          submissions={showHistory ? combinedSubmissions : combinedSubmissions.slice(0, 3)}
           onViewSubmission={onViewSubmission}
           isLoading={submissionsLoading}
         />

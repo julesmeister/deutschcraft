@@ -252,6 +252,7 @@ export default function WritingExercisesPage() {
               onCreativeSelect={handleCreativeSelect}
               onEmailSelect={handleEmailSelect}
               onLetterSelect={handleLetterSelect}
+              userEmail={session?.user?.email}
             />
           </div>
         )}
