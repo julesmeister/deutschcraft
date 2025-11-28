@@ -152,13 +152,13 @@ export default function FlashcardsLandingPage() {
           backButton={
             selectedCategory
               ? {
-                  label: 'Back to Categories',
-                  onClick: handleBackToCategories
-                }
+                label: 'Back to Categories',
+                onClick: handleBackToCategories
+              }
               : {
-                  label: 'Back to Dashboard',
-                  onClick: () => router.push('/dashboard/student')
-                }
+                label: 'Back to Dashboard',
+                onClick: () => router.push('/dashboard/student')
+              }
           }
           actions={
             !selectedCategory && (
@@ -174,133 +174,133 @@ export default function FlashcardsLandingPage() {
           }
         />
 
-      {/* Loading indicator for transitions */}
-      {isPending && (
-        <div className="fixed top-20 right-6 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in-down">
-          <div className="flex items-center gap-2">
-            <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
-            <span className="font-medium">Loading flashcards...</span>
+        {/* Loading indicator for transitions */}
+        {isPending && (
+          <div className="fixed top-20 right-6 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in-down">
+            <div className="flex items-center gap-2">
+              <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
+              <span className="font-medium">Loading flashcards...</span>
+            </div>
           </div>
-        </div>
-      )}
-
-      {/* Main Content */}
-      <div className="container mx-auto px-6 py-8">
-        {/* Show Flashcard Practice if category is selected */}
-        {selectedCategory ? (
-          <FlashcardPractice
-            flashcards={practiceFlashcards}
-            categoryName={selectedCategory}
-            level={selectedLevel}
-            onBack={handleBackToCategories}
-            showExamples={settings.showExamples}
-          />
-        ) : (
-          <>
-            {/* Level Selector - Split Button Style */}
-            <div className="mb-8">
-              <CEFRLevelSelector
-                selectedLevel={selectedLevel}
-                onLevelChange={setSelectedLevel}
-                colorScheme="default"
-                showDescription={true}
-                size="sm"
-              />
-            </div>
-
-            {/* Loading State */}
-            {statsLoading ? (
-          <CatLoader message="Loading your stats..." size="md" />
-        ) : (
-          <>
-            {/* Stats Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-              <StatCardSimple
-                label="Available Cards"
-                value={totalRemNoteCards}
-                icon="📚"
-                bgColor="bg-blue-100"
-                iconBgColor="bg-blue-500"
-              />
-              <StatCardSimple
-                label="Cards Learned"
-                value={stats.cardsLearned}
-                icon="✅"
-                bgColor="bg-emerald-100"
-                iconBgColor="bg-emerald-500"
-              />
-              <StatCardSimple
-                label="Day Streak"
-                value={stats.streak}
-                icon="🔥"
-                bgColor="bg-amber-100"
-                iconBgColor="bg-amber-500"
-              />
-              <StatCardSimple
-                label="Accuracy"
-                value={`${stats.accuracy}%`}
-                icon="🎯"
-                bgColor="bg-purple-100"
-                iconBgColor="bg-purple-500"
-              />
-            </div>
-          </>
         )}
 
-        {/* Vocabulary Categories */}
-        <FileSection title={`${selectedLevel} Vocabulary Categories`}>
-          {categoriesLoading ? (
-            <CatLoader message="Loading categories..." size="md" />
-          ) : categories.length === 0 ? (
-            <div className="text-center py-12 bg-white border border-gray-200 rounded-2xl">
-              <div className="text-6xl mb-4">📝</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">No vocabulary yet</h3>
-              <p className="text-gray-600">
-                Vocabulary categories will appear here once you start learning
-              </p>
-            </div>
+        {/* Main Content */}
+        <div className="lg:container md:px-4 sm:px-4 xs:px-2 lg:mx-auto lg:px-6 px-4 py-8">
+          {/* Show Flashcard Practice if category is selected */}
+          {selectedCategory ? (
+            <FlashcardPractice
+              flashcards={practiceFlashcards}
+              categoryName={selectedCategory}
+              level={selectedLevel}
+              onBack={handleBackToCategories}
+              showExamples={settings.showExamples}
+            />
           ) : (
-            <FileGrid>
-              {categories.map((category) => (
-                <FileCard
-                  key={category.id}
-                  icon={
-                    <div className="text-4xl">{category.icon}</div>
-                  }
-                  name={category.name}
-                  size={`${category.cardCount} cards`}
-                  onClick={() => handleCategoryClick(category.id, category.name)}
-                  isAttempted={attemptedCategories.has(category.id)}
-                  attemptCount={categoryAttemptCounts.get(category.id)}
+            <>
+              {/* Level Selector - Split Button Style */}
+              <div className="mb-8">
+                <CEFRLevelSelector
+                  selectedLevel={selectedLevel}
+                  onLevelChange={setSelectedLevel}
+                  colorScheme="default"
+                  showDescription={true}
+                  size="sm"
                 />
-              ))}
-            </FileGrid>
-          )}
-        </FileSection>
+              </div>
 
-        {/* Quick Actions */}
-        <div className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-6">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div>
-              <h3 className="text-xl font-bold text-neutral-900 mb-2">Ready to practice?</h3>
-              <p className="text-sm text-neutral-600">
-                Start a flashcard session with all vocabulary or choose a specific category
-              </p>
-            </div>
-            <div className="md:w-64">
-              <ActionButton
-                onClick={handleStartPractice}
-                variant="purple"
-                icon={<ActionButtonIcons.ArrowRight />}
-              >
-                Start Practice Session
-              </ActionButton>
-            </div>
-          </div>
+              {/* Loading State */}
+              {statsLoading ? (
+                <CatLoader message="Loading your stats..." size="md" />
+              ) : (
+                <>
+                  {/* Stats Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                    <StatCardSimple
+                      label="Available Cards"
+                      value={totalRemNoteCards}
+                      icon="📚"
+                      bgColor="bg-blue-100"
+                      iconBgColor="bg-blue-500"
+                    />
+                    <StatCardSimple
+                      label="Cards Learned"
+                      value={stats.cardsLearned}
+                      icon="✅"
+                      bgColor="bg-emerald-100"
+                      iconBgColor="bg-emerald-500"
+                    />
+                    <StatCardSimple
+                      label="Day Streak"
+                      value={stats.streak}
+                      icon="🔥"
+                      bgColor="bg-amber-100"
+                      iconBgColor="bg-amber-500"
+                    />
+                    <StatCardSimple
+                      label="Accuracy"
+                      value={`${stats.accuracy}%`}
+                      icon="🎯"
+                      bgColor="bg-purple-100"
+                      iconBgColor="bg-purple-500"
+                    />
+                  </div>
+                </>
+              )}
+
+              {/* Vocabulary Categories */}
+              <FileSection title={`${selectedLevel} Vocabulary Categories`}>
+                {categoriesLoading ? (
+                  <CatLoader message="Loading categories..." size="md" />
+                ) : categories.length === 0 ? (
+                  <div className="text-center py-12 bg-white border border-gray-200 rounded-2xl">
+                    <div className="text-6xl mb-4">📝</div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">No vocabulary yet</h3>
+                    <p className="text-gray-600">
+                      Vocabulary categories will appear here once you start learning
+                    </p>
+                  </div>
+                ) : (
+                  <FileGrid>
+                    {categories.map((category) => (
+                      <FileCard
+                        key={category.id}
+                        icon={
+                          <div className="text-4xl">{category.icon}</div>
+                        }
+                        name={category.name}
+                        size={`${category.cardCount} cards`}
+                        onClick={() => handleCategoryClick(category.id, category.name)}
+                        isAttempted={attemptedCategories.has(category.id)}
+                        attemptCount={categoryAttemptCounts.get(category.id)}
+                      />
+                    ))}
+                  </FileGrid>
+                )}
+              </FileSection>
+
+              {/* Quick Actions */}
+              <div className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-6">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-neutral-900 mb-2">Ready to practice?</h3>
+                    <p className="text-sm text-neutral-600">
+                      Start a flashcard session with all vocabulary or choose a specific category
+                    </p>
+                  </div>
+                  <div className="md:w-64">
+                    <ActionButton
+                      onClick={handleStartPractice}
+                      variant="purple"
+                      icon={<ActionButtonIcons.ArrowRight />}
+                    >
+                      Start Practice Session
+                    </ActionButton>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
         </div>
-          </>
-        )}
-      </div>
       </div>
     </ToastProvider>
   );
