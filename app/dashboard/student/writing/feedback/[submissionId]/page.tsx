@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { useWritingSubmission, useTeacherReview } from '@/lib/hooks/useWritingExercises';
 import { FeedbackWorkspace } from './FeedbackWorkspace';
-import { FeedbackPanel } from './FeedbackPanel';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { getExerciseById } from '@/lib/data/translationExercises';
 import { TranslationExercise } from '@/lib/models/writing';
@@ -15,7 +14,7 @@ export default function WritingFeedbackPage() {
   const params = useParams();
   const submissionId = params.submissionId as string;
 
-  const [activeTab, setActiveTab] = useState<'feedback' | 'history'>('feedback');
+  const [activeTab, setActiveTab] = useState<'submission' | 'feedback' | 'history'>('submission');
   const [referenceTranslation, setReferenceTranslation] = useState<string | undefined>(undefined);
 
   const { data: submission, isLoading } = useWritingSubmission(submissionId);
@@ -88,23 +87,15 @@ export default function WritingFeedbackPage() {
         }}
       />
 
-      <div className="lg:container lg:mx-auto lg:px-6 py-8">
-        <FeedbackWorkspace
-          submission={submission}
-          referenceTranslation={referenceTranslation}
-          hasTeacherReview={!!teacherReview}
-          teacherReview={teacherReview}
-          feedbackPanel={
-            <FeedbackPanel
-              submission={submission}
-              teacherReview={teacherReview}
-              teacherReviewLoading={teacherReviewLoading}
-              activeTab={activeTab}
-              onTabChange={setActiveTab}
-            />
-          }
-        />
-      </div>
+      <FeedbackWorkspace
+        submission={submission}
+        referenceTranslation={referenceTranslation}
+        hasTeacherReview={!!teacherReview}
+        teacherReview={teacherReview}
+        teacherReviewLoading={teacherReviewLoading}
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+      />
     </div>
   );
 }

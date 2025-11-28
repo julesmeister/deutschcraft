@@ -57,7 +57,8 @@
       "Bash(missing.txt)",
       "Bash(Select-String -Pattern \"(error|Error|ERROR|warning|Warning|compiled|Compiled|Route)\")",
       "Bash(Select-Object -First 100)",
-      "Bash(timeout /t 5)"
+      "Bash(timeout /t 5)",
+      "Bash(npx grep:*)"
     ],
     "deny": [],
     "ask": []

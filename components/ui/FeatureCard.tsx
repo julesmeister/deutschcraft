@@ -64,8 +64,8 @@ export function FeatureCard({
   return (
     <div
       className={`
-        relative rounded-2xl p-6 md:p-7 lg:p-8
-        flex flex-col gap-6 lg:gap-8
+        relative rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8
+        flex flex-col gap-4 md:gap-5 lg:gap-8
         ${isHighlighted ? 'bg-white' : 'bg-white'}
         transition-all duration-300
         w-full
@@ -73,23 +73,23 @@ export function FeatureCard({
       `}
     >
       {/* Header Section with Badge */}
-      <div className="flex items-start justify-between gap-3">
-        <div className="flex flex-col gap-5 flex-1">
+      <div className="flex items-start justify-between gap-2 md:gap-3">
+        <div className="flex flex-col gap-3 md:gap-4 lg:gap-5 flex-1">
           {icon && (
             <img
               src={icon}
               alt=""
-              className="w-9 h-9 object-cover"
+              className="w-7 h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 object-cover"
             />
           )}
           <div className="flex flex-col gap-1">
             <div className="text-[#070515]">
-              <h3 className="font-bold text-xl uppercase tracking-[-0.02em] leading-[1.5]">
+              <h3 className="font-bold text-base md:text-lg lg:text-xl uppercase tracking-[-0.02em] leading-[1.5]">
                 {title}
               </h3>
             </div>
             {subtitle && (
-              <div className="text-[#6d6c6c] text-sm leading-[1.45]">
+              <div className="text-[#6d6c6c] text-xs md:text-sm leading-[1.45]">
                 {subtitle}
               </div>
             )}
@@ -101,7 +101,7 @@ export function FeatureCard({
           <div
             className={`
               ${getBadgeClasses(badge.variant)}
-              rounded-full px-4 py-2 text-sm font-semibold
+              rounded-full px-2.5 py-1.5 md:px-3 md:py-1.5 lg:px-4 lg:py-2 text-xs md:text-sm font-semibold
               inline-flex items-center justify-center
               flex-shrink-0
             `}
@@ -113,14 +113,14 @@ export function FeatureCard({
 
       {/* Footer Section - Badge Style */}
       {(footerLeft || footerRight) && (
-        <div className="flex items-center gap-3 flex-wrap">
+        <div className="flex items-center gap-2 md:gap-3 flex-wrap">
           {footerLeft && (
-            <div className="bg-gray-100 text-gray-700 rounded-full px-3 py-1.5 text-xs font-semibold inline-flex items-center">
+            <div className="bg-gray-100 text-gray-700 rounded-full px-2.5 py-1 md:px-3 md:py-1.5 text-xs font-semibold inline-flex items-center">
               {footerLeft}
             </div>
           )}
           {footerRight && (
-            <div className="bg-gray-100 text-gray-700 rounded-full px-3 py-1.5 text-xs font-semibold inline-flex items-center">
+            <div className="bg-gray-100 text-gray-700 rounded-full px-2.5 py-1 md:px-3 md:py-1.5 text-xs font-semibold inline-flex items-center">
               {footerRight}
             </div>
           )}
@@ -129,15 +129,15 @@ export function FeatureCard({
 
       {/* Features List */}
       {features && features.length > 0 && (
-        <div className="flex flex-col gap-3">
-          <div className="text-[#070515] font-normal text-base">
+        <div className="flex flex-col gap-2 md:gap-3">
+          <div className="text-[#070515] font-normal text-sm md:text-base">
             Sample sentences:
           </div>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-2 md:gap-3">
             {features.map((feature, index) => (
               <div key={index} className="flex items-center gap-2">
                 <svg
-                  className="w-6 h-6 flex-shrink-0"
+                  className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +148,7 @@ export function FeatureCard({
                     className="text-[#070515]"
                   />
                 </svg>
-                <div className="text-[#6d6c6c] text-base leading-[1.45] flex-1">
+                <div className="text-[#6d6c6c] text-sm md:text-base leading-[1.45] flex-1">
                   {feature}
                 </div>
               </div>

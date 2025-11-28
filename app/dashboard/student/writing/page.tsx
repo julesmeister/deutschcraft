@@ -142,7 +142,7 @@ export default function WritingExercisesPage() {
       )}
 
       {/* Main Content */}
-      <div className="lg:container lg:mx-auto lg:px-6 py-8">
+      <div className={hasSelectedExercise ? '' : 'lg:container lg:mx-auto lg:px-6 py-8'}>
         {selectedTranslation ? (
           <TranslationWorkspace
             exercise={selectedTranslation}
@@ -231,27 +231,29 @@ export default function WritingExercisesPage() {
             }
           />
         ) : (
-          <WritingHub
-            selectedLevel={selectedLevel}
-            onLevelChange={handleLevelChange}
-            selectedExerciseType={selectedExerciseType}
-            onExerciseTypeSelect={handleExerciseTypeSelect}
-            writingStats={writingStats ?? undefined}
-            statsLoading={statsLoading}
-            submissions={submissions}
-            submissionsLoading={submissionsLoading}
-            showHistory={showHistory}
-            onToggleHistory={handleToggleHistory}
-            onViewSubmission={handleViewSubmission}
-            filteredTranslationExercises={filteredTranslationExercises}
-            filteredCreativeExercises={filteredCreativeExercises}
-            filteredEmailTemplates={filteredEmailTemplates}
-            filteredLetterTemplates={filteredLetterTemplates}
-            onTranslationSelect={handleTranslationSelect}
-            onCreativeSelect={handleCreativeSelect}
-            onEmailSelect={handleEmailSelect}
-            onLetterSelect={handleLetterSelect}
-          />
+          <div className="px-6">
+            <WritingHub
+              selectedLevel={selectedLevel}
+              onLevelChange={handleLevelChange}
+              selectedExerciseType={selectedExerciseType}
+              onExerciseTypeSelect={handleExerciseTypeSelect}
+              writingStats={writingStats ?? undefined}
+              statsLoading={statsLoading}
+              submissions={submissions}
+              submissionsLoading={submissionsLoading}
+              showHistory={showHistory}
+              onToggleHistory={handleToggleHistory}
+              onViewSubmission={handleViewSubmission}
+              filteredTranslationExercises={filteredTranslationExercises}
+              filteredCreativeExercises={filteredCreativeExercises}
+              filteredEmailTemplates={filteredEmailTemplates}
+              filteredLetterTemplates={filteredLetterTemplates}
+              onTranslationSelect={handleTranslationSelect}
+              onCreativeSelect={handleCreativeSelect}
+              onEmailSelect={handleEmailSelect}
+              onLetterSelect={handleLetterSelect}
+            />
+          </div>
         )}
       </div>
 
