@@ -8,7 +8,7 @@
 import { useState } from 'react';
 import { useDictionarySearch } from '@/lib/hooks/useDictionary';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
-import { Search, ArrowRight } from 'lucide-react';
+import { Search, ArrowRight, X } from 'lucide-react';
 
 export default function DictionaryPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -35,6 +35,11 @@ export default function DictionaryPage() {
 
   const handleCopy = (text: string) => {
     navigator.clipboard.writeText(text);
+  };
+
+  const handleClear = () => {
+    setSearchTerm('');
+    setForceSearch(false);
   };
 
   return (
@@ -98,8 +103,17 @@ export default function DictionaryPage() {
                 }}
                 onKeyDown={handleKeyDown}
                 placeholder="Type a word to search..."
-                className="w-full pl-12 pr-4 py-3 text-lg border-none outline-none focus:ring-0"
+                className="w-full pl-12 pr-12 py-3 text-lg border-none outline-none focus:ring-0"
               />
+              {searchTerm && (
+                <button
+                  onClick={handleClear}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+                  aria-label="Clear search"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              )}
             </div>
 
             {/* Helper Text */}
