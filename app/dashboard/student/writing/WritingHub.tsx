@@ -138,7 +138,7 @@ export function WritingHub({
                 id: 'exercises',
                 label: 'Total Exercises',
                 icon: undefined,
-                value: writingStats?.totalExercisesCompleted || 0,
+                value: (writingStats?.totalExercisesCompleted || 0) + (quizStats?.totalQuizzes || 0),
               },
               {
                 id: 'score',
