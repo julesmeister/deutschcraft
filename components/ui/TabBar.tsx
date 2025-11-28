@@ -75,7 +75,7 @@ export function TabBar({ tabs, activeTabId, onTabChange, className = '', variant
                       isStatsMode ? 'text-neutral-900' : (isActive ? 'text-neutral-900' : 'text-zinc-500')
                     }`}>
                       {tab.icon && (
-                        <div className="h-3 w-3 sm:h-4 sm:w-4 min-w-3 sm:min-w-4 shrink-0">
+                        <div className="hidden sm:block h-3 w-3 sm:h-4 sm:w-4 min-w-3 sm:min-w-4 shrink-0">
                           {tab.icon}
                         </div>
                       )}
