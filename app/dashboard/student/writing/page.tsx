@@ -91,7 +91,10 @@ export default function WritingExercisesPage() {
                 label: hasSelectedExercise ? 'Back to Exercise List' : 'Back to Exercise Types',
                 onClick: hasSelectedExercise ? handleBackToExerciseList : handleBackToExerciseTypes
               }
-            : undefined
+            : {
+                label: 'Back to Dashboard',
+                onClick: () => router.push('/dashboard/student')
+              }
         }
         actions={
           hasSelectedExercise && (
