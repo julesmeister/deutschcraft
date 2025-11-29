@@ -61,6 +61,9 @@ export default function FlashcardsLandingPage() {
   const attemptedCategories = new Set<string>();
   const categoryAttemptCounts = new Map<string, number>();
 
+  console.log('🔍 [Categories] Total flashcard reviews:', flashcardReviews.length);
+  console.log('🔍 [Categories] Selected level:', selectedLevel);
+
   flashcardReviews.forEach(review => {
     // Find the flashcard in the level data to get its category
     const levelData = levelDataMap[selectedLevel];
@@ -69,8 +72,26 @@ export default function FlashcardsLandingPage() {
       const categoryId = flashcard.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
       attemptedCategories.add(categoryId);
       categoryAttemptCounts.set(categoryId, (categoryAttemptCounts.get(categoryId) || 0) + 1);
+
+      if (flashcard.category === 'Greetings') {
+        console.log('✅ [Categories] Found Greetings card:', {
+          flashcardId: flashcard.id,
+          reviewWordId: review.wordId,
+          reviewFlashcardId: review.flashcardId,
+          category: flashcard.category,
+          categoryId,
+        });
+      }
+    } else {
+      console.log('❌ [Categories] No flashcard found for review:', {
+        reviewWordId: review.wordId,
+        reviewFlashcardId: review.flashcardId,
+      });
     }
   });
+
+  console.log('📊 [Categories] Attempted categories:', Array.from(attemptedCategories));
+  console.log('📊 [Categories] Category attempt counts:', Object.fromEntries(categoryAttemptCounts));
 
   const handleCategoryClick = (categoryId: string, categoryName: string) => {
     // Get flashcards for this category and level
