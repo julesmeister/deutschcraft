@@ -9,7 +9,7 @@ export interface FileCardProps {
   onClick?: () => void;
   onMenuClick?: () => void;
   className?: string;
-  isAttempted?: boolean;
+  completionStatus?: 'completed' | 'in-progress' | 'not-started';
   attemptCount?: number;
 }
 
@@ -24,15 +24,27 @@ export function FileCard({
   onClick,
   onMenuClick,
   className = '',
-  isAttempted = false,
+  completionStatus = 'not-started',
   attemptCount,
 }: FileCardProps) {
+  // Determine background and border colors based on completion status
+  const statusStyles = {
+    'completed': 'bg-green-50 border-green-200 hover:border-green-300',
+    'in-progress': 'bg-yellow-50 border-yellow-200 hover:border-yellow-300',
+    'not-started': 'bg-white border-neutral-200',
+  };
+
+  // Determine badge colors based on completion status
+  const badgeStyles = {
+    'completed': 'bg-green-100 text-green-700',
+    'in-progress': 'bg-yellow-100 text-yellow-700',
+    'not-started': 'bg-blue-100 text-blue-700',
+  };
+
   return (
     <div
       className={`flex cursor-pointer items-center justify-between gap-2 rounded-2xl border-solid border px-3 py-3 sm:px-3.5 sm:py-4 duration-150 ease-in-out hover:shadow-sm active:scale-[0.98] ${
-        isAttempted
-          ? 'bg-blue-50 border-blue-200 hover:border-blue-300'
-          : 'bg-white border-neutral-200'
+        statusStyles[completionStatus]
       } ${className}`}
       role="button"
       onClick={onClick}
@@ -45,7 +57,7 @@ export function FileCard({
         </div>
       </div>
       {attemptCount !== undefined && attemptCount > 0 && (
-        <div className="flex items-center gap-1 sm:gap-1.5 bg-blue-100 text-blue-700 px-2 py-1 sm:px-3 sm:py-1.5 rounded-full shrink-0">
+        <div className={`flex items-center gap-1 sm:gap-1.5 px-2 py-1 sm:px-3 sm:py-1.5 rounded-full shrink-0 ${badgeStyles[completionStatus]}`}>
           <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>

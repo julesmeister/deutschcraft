@@ -60,15 +60,35 @@ export default function FlashcardsLandingPage() {
   // Create a Set of attempted category IDs and count attempts per category
   const attemptedCategories = new Set<string>();
   const categoryAttemptCounts = new Map<string, number>();
+  const categoryTotalCounts = new Map<string, number>();
 
+  // Count total cards per category
+  const levelData = levelDataMap[selectedLevel];
+  levelData.flashcards.forEach((card: any) => {
+    const categoryId = card.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+    categoryTotalCounts.set(categoryId, (categoryTotalCounts.get(categoryId) || 0) + 1);
+  });
+
+  // Count attempted cards per category
   flashcardReviews.forEach(review => {
-    // Find the flashcard in the level data to get its category
-    const levelData = levelDataMap[selectedLevel];
     const flashcard = levelData.flashcards.find((card: any) => card.id === review.wordId || card.id === review.flashcardId);
     if (flashcard) {
       const categoryId = flashcard.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
       attemptedCategories.add(categoryId);
       categoryAttemptCounts.set(categoryId, (categoryAttemptCounts.get(categoryId) || 0) + 1);
+    }
+  });
+
+  // Determine completion status for each category
+  const categoryCompletionStatus = new Map<string, 'completed' | 'in-progress' | 'not-started'>();
+  attemptedCategories.forEach(categoryId => {
+    const attempted = categoryAttemptCounts.get(categoryId) || 0;
+    const total = categoryTotalCounts.get(categoryId) || 0;
+
+    if (attempted >= total) {
+      categoryCompletionStatus.set(categoryId, 'completed');
+    } else if (attempted > 0) {
+      categoryCompletionStatus.set(categoryId, 'in-progress');
     }
   });
 
@@ -263,19 +283,22 @@ export default function FlashcardsLandingPage() {
                   </div>
                 ) : (
                   <FileGrid>
-                    {categories.map((category) => (
-                      <FileCard
-                        key={category.id}
-                        icon={
-                          <div className="text-4xl">{category.icon}</div>
-                        }
-                        name={category.name}
-                        size={`${category.cardCount} cards`}
-                        onClick={() => handleCategoryClick(category.id, category.name)}
-                        isAttempted={attemptedCategories.has(category.id)}
-                        attemptCount={categoryAttemptCounts.get(category.id)}
-                      />
-                    ))}
+                    {categories.map((category) => {
+                      const completionStatus = categoryCompletionStatus.get(category.id);
+                      return (
+                        <FileCard
+                          key={category.id}
+                          icon={
+                            <div className="text-4xl">{category.icon}</div>
+                          }
+                          name={category.name}
+                          size={`${category.cardCount} cards`}
+                          onClick={() => handleCategoryClick(category.id, category.name)}
+                          completionStatus={completionStatus}
+                          attemptCount={categoryAttemptCounts.get(category.id)}
+                        />
+                      );
+                    })}
                   </FileGrid>
                 )}
               </FileSection>
