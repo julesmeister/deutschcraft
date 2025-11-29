@@ -7,6 +7,7 @@
 import { ReactNode, useState, useRef } from 'react';
 import { WritingAttemptBanner } from './WritingAttemptBanner';
 import { DictionaryLookup } from '../dictionary/DictionaryLookup';
+import { GermanCharAutocomplete } from './GermanCharAutocomplete';
 
 interface WritingWorkspaceProps {
   // Left side - Writing field
@@ -78,6 +79,15 @@ export function WritingWorkspace({
 
   return (
     <div className="bg-white flex flex-col lg:flex-row">
+      {/* German Character Autocomplete */}
+      {!readOnly && (
+        <GermanCharAutocomplete
+          textareaRef={textareaRef}
+          content={value}
+          onContentChange={onChange}
+        />
+      )}
+
       {/* Mobile/Tablet: Tab Navigation */}
       <div className="flex border-b border-gray-200 lg:hidden">
         <TabButton

@@ -1,0 +1,158 @@
+/**
+ * GermanCharAutocomplete Component
+ * Provides autocomplete suggestions for German umlaut and special characters
+ *
+ * Replacements:
+ * - ae → ä
+ * - oe → ö
+ * - ue → ü
+ * - Ae → Ä
+ * - Oe → Ö
+ * - Ue → Ü
+ * - ss → ß
+ */
+
+'use client';
+
+import { useState, useEffect, useRef } from 'react';
+
+interface Suggestion {
+  trigger: string;
+  replacement: string;
+  display: string;
+}
+
+const GERMAN_SUGGESTIONS: Suggestion[] = [
+  { trigger: 'ae', replacement: 'ä', display: 'ae → ä' },
+  { trigger: 'oe', replacement: 'ö', display: 'oe → ö' },
+  { trigger: 'ue', replacement: 'ü', display: 'ue → ü' },
+  { trigger: 'Ae', replacement: 'Ä', display: 'Ae → Ä' },
+  { trigger: 'Oe', replacement: 'Ö', display: 'Oe → Ö' },
+  { trigger: 'Ue', replacement: 'Ü', display: 'Ue → Ü' },
+  { trigger: 'ss', replacement: 'ß', display: 'ss → ß' },
+];
+
+interface GermanCharAutocompleteProps {
+  textareaRef: React.RefObject<HTMLTextAreaElement>;
+  content: string;
+  onContentChange: (newContent: string) => void;
+}
+
+export function GermanCharAutocomplete({
+  textareaRef,
+  content,
+  onContentChange,
+}: GermanCharAutocompleteProps) {
+  const [showSuggestion, setShowSuggestion] = useState(false);
+  const [currentSuggestion, setCurrentSuggestion] = useState<Suggestion | null>(null);
+  const [suggestionPosition, setSuggestionPosition] = useState({ top: 0, left: 0 });
+  const [triggerStartPos, setTriggerStartPos] = useState(0);
+
+  // Check for trigger patterns as user types
+  useEffect(() => {
+    const textarea = textareaRef.current;
+    if (!textarea) return;
+
+    const cursorPos = textarea.selectionStart;
+
+    // Get text before cursor
+    const textBeforeCursor = content.substring(0, cursorPos);
+
+    // Check for trigger patterns at cursor position
+    for (const suggestion of GERMAN_SUGGESTIONS) {
+      const triggerLength = suggestion.trigger.length;
+      const potentialTrigger = textBeforeCursor.slice(-triggerLength);
+
+      if (potentialTrigger === suggestion.trigger) {
+        // Check if this is at word boundary or start
+        const charBeforeTrigger = textBeforeCursor.charAt(textBeforeCursor.length - triggerLength - 1);
+        const isWordBoundary = !charBeforeTrigger || /[\s,.\-!?;:()\[\]{}]/.test(charBeforeTrigger);
+
+        if (isWordBoundary) {
+          setCurrentSuggestion(suggestion);
+          setTriggerStartPos(cursorPos - triggerLength);
+          setShowSuggestion(true);
+
+          // Calculate position for tooltip
+          const rect = textarea.getBoundingClientRect();
+          const textareaStyle = window.getComputedStyle(textarea);
+          const lineHeight = parseInt(textareaStyle.lineHeight);
+
+          // Simple approximation - position below cursor
+          setSuggestionPosition({
+            top: rect.top + textarea.scrollTop + lineHeight,
+            left: rect.left + 20, // Offset from left
+          });
+
+          return;
+        }
+      }
+    }
+
+    // No trigger found
+    setShowSuggestion(false);
+    setCurrentSuggestion(null);
+  }, [content, textareaRef]);
+
+  // Handle keyboard events
+  useEffect(() => {
+    const textarea = textareaRef.current;
+    if (!textarea) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!showSuggestion || !currentSuggestion) return;
+
+      if (e.key === 'Enter' || e.key === 'Tab') {
+        e.preventDefault();
+        acceptSuggestion();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        setShowSuggestion(false);
+      }
+    };
+
+    textarea.addEventListener('keydown', handleKeyDown);
+    return () => textarea.removeEventListener('keydown', handleKeyDown);
+  }, [showSuggestion, currentSuggestion, triggerStartPos]);
+
+  const acceptSuggestion = () => {
+    if (!currentSuggestion || !textareaRef.current) return;
+
+    const textarea = textareaRef.current;
+    const cursorPos = textarea.selectionStart;
+
+    // Replace the trigger text with the replacement
+    const beforeTrigger = content.substring(0, triggerStartPos);
+    const afterCursor = content.substring(cursorPos);
+    const newContent = beforeTrigger + currentSuggestion.replacement + afterCursor;
+
+    onContentChange(newContent);
+    setShowSuggestion(false);
+
+    // Set cursor position after the replacement
+    setTimeout(() => {
+      const newCursorPos = triggerStartPos + currentSuggestion.replacement.length;
+      textarea.focus();
+      textarea.setSelectionRange(newCursorPos, newCursorPos);
+    }, 0);
+  };
+
+  if (!showSuggestion || !currentSuggestion) return null;
+
+  return (
+    <div
+      className="fixed z-50 bg-white border border-blue-500 rounded-lg shadow-lg px-3 py-2"
+      style={{
+        top: `${suggestionPosition.top}px`,
+        left: `${suggestionPosition.left}px`,
+      }}
+    >
+      <div className="flex items-center gap-2">
+        <span className="text-sm text-gray-700 font-mono">{currentSuggestion.display}</span>
+        <span className="text-xs text-gray-500">
+          Press <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-xs">Enter</kbd> or <kbd className="px-1 py-0.5 bg-gray-100 border border-gray-300 rounded text-xs">Tab</kbd>
+        </span>
+      </div>
+    </div>
+  );
+}

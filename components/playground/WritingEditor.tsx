@@ -5,6 +5,7 @@
 
 import { useRef } from 'react';
 import { DictionaryLookup } from '@/components/dictionary/DictionaryLookup';
+import { GermanCharAutocomplete } from '@/components/writing/GermanCharAutocomplete';
 
 interface WritingEditorProps {
   content: string;
@@ -62,6 +63,15 @@ export function WritingEditor({
 
   return (
     <div className="flex-1 flex flex-col">
+      {/* German Character Autocomplete */}
+      {canEdit && (
+        <GermanCharAutocomplete
+          textareaRef={textareaRef}
+          content={content}
+          onContentChange={onContentChange}
+        />
+      )}
+
       <div className="flex-1 flex flex-col px-8 pt-6 pb-8">
         {/* Status Bar - Show for own writing or when teacher is editing */}
         {canEdit && (
