@@ -132,7 +132,7 @@ function ensureUniqueIds(flashcards: Flashcard[]): Flashcard[] {
 /**
  * Merge category files back into a single level file
  */
-function mergeLevel(level: string, backup: boolean = true): boolean {
+function mergeLevel(level: string, backup: boolean = false): boolean {
   console.log(`\n📂 Processing ${level.toUpperCase()}...`);
 
   const flashcards = loadCategoryFiles(level);
