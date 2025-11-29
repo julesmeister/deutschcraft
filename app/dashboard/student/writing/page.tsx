@@ -144,47 +144,51 @@ export default function WritingExercisesPage() {
       {/* Main Content */}
       <div className={hasSelectedExercise ? '' : 'lg:container lg:mx-auto lg:px-6 py-8'}>
         {selectedTranslation ? (
-          <TranslationWorkspace
-            exercise={selectedTranslation}
-            translationText={viewingAttempt ? viewingAttempt.content : writingText}
-            onChange={setWritingText}
-            attemptCount={attempts.length}
-            readOnly={!!viewingAttempt}
-            viewingAttempt={viewingAttempt ? {
-              attemptNumber: viewingAttempt.attemptNumber,
-              status: viewingAttempt.status
-            } : undefined}
-            onBackToCurrentDraft={viewingAttempt ? handleBackToCurrentDraft : undefined}
-            attemptHistory={
-              <AttemptHistory
-                attempts={attempts}
-                onViewAttempt={handleViewSubmission}
-                onViewContent={handleViewAttemptContent}
-                currentAttemptId={undefined}
-              />
-            }
-          />
+          <div className="container mx-auto">
+            <TranslationWorkspace
+              exercise={selectedTranslation}
+              translationText={viewingAttempt ? viewingAttempt.content : writingText}
+              onChange={setWritingText}
+              attemptCount={attempts.length}
+              readOnly={!!viewingAttempt}
+              viewingAttempt={viewingAttempt ? {
+                attemptNumber: viewingAttempt.attemptNumber,
+                status: viewingAttempt.status
+              } : undefined}
+              onBackToCurrentDraft={viewingAttempt ? handleBackToCurrentDraft : undefined}
+              attemptHistory={
+                <AttemptHistory
+                  attempts={attempts}
+                  onViewAttempt={handleViewSubmission}
+                  onViewContent={handleViewAttemptContent}
+                  currentAttemptId={undefined}
+                />
+              }
+            />
+          </div>
         ) : selectedCreative ? (
-          <CreativeWritingArea
-            exercise={selectedCreative}
-            content={viewingAttempt ? viewingAttempt.content : writingText}
-            wordCount={viewingAttempt ? viewingAttempt.wordCount : wordCount}
-            onChange={setWritingText}
-            attemptCount={attempts.length}
-            readOnly={!!viewingAttempt}
-            viewingAttempt={viewingAttempt ? {
-              attemptNumber: viewingAttempt.attemptNumber,
-              status: viewingAttempt.status
-            } : undefined}
-            attemptHistory={
-              <AttemptHistory
-                attempts={attempts}
-                onViewAttempt={handleViewSubmission}
-                onViewContent={handleViewAttemptContent}
-                currentAttemptId={undefined}
-              />
-            }
-          />
+          <div className="container mx-auto">
+            <CreativeWritingArea
+              exercise={selectedCreative}
+              content={viewingAttempt ? viewingAttempt.content : writingText}
+              wordCount={viewingAttempt ? viewingAttempt.wordCount : wordCount}
+              onChange={setWritingText}
+              attemptCount={attempts.length}
+              readOnly={!!viewingAttempt}
+              viewingAttempt={viewingAttempt ? {
+                attemptNumber: viewingAttempt.attemptNumber,
+                status: viewingAttempt.status
+              } : undefined}
+              attemptHistory={
+                <AttemptHistory
+                  attempts={attempts}
+                  onViewAttempt={handleViewSubmission}
+                  onViewContent={handleViewAttemptContent}
+                  currentAttemptId={undefined}
+                />
+              }
+            />
+          </div>
         ) : selectedEmail ? (
           <div className="max-w-4xl mx-auto">
             <EmailTemplateInstructions template={selectedEmail} />
@@ -210,26 +214,28 @@ export default function WritingExercisesPage() {
             />
           </div>
         ) : selectedLetter ? (
-          <LetterWritingArea
-            template={selectedLetter}
-            content={viewingAttempt ? viewingAttempt.content : writingText}
-            wordCount={viewingAttempt ? viewingAttempt.wordCount : wordCount}
-            onChange={setWritingText}
-            attemptCount={attempts.length}
-            readOnly={!!viewingAttempt}
-            viewingAttempt={viewingAttempt ? {
-              attemptNumber: viewingAttempt.attemptNumber,
-              status: viewingAttempt.status
-            } : undefined}
-            attemptHistory={
-              <AttemptHistory
-                attempts={attempts}
-                onViewAttempt={handleViewSubmission}
-                onViewContent={handleViewAttemptContent}
-                currentAttemptId={undefined}
-              />
-            }
-          />
+          <div className="container mx-auto">
+            <LetterWritingArea
+              template={selectedLetter}
+              content={viewingAttempt ? viewingAttempt.content : writingText}
+              wordCount={viewingAttempt ? viewingAttempt.wordCount : wordCount}
+              onChange={setWritingText}
+              attemptCount={attempts.length}
+              readOnly={!!viewingAttempt}
+              viewingAttempt={viewingAttempt ? {
+                attemptNumber: viewingAttempt.attemptNumber,
+                status: viewingAttempt.status
+              } : undefined}
+              attemptHistory={
+                <AttemptHistory
+                  attempts={attempts}
+                  onViewAttempt={handleViewSubmission}
+                  onViewContent={handleViewAttemptContent}
+                  currentAttemptId={undefined}
+                />
+              }
+            />
+          </div>
         ) : (
           <div className="px-6">
             <WritingHub
