@@ -17,7 +17,7 @@ import {
   limit,
 } from 'firebase/firestore';
 import { ReviewQuiz, QuizBlank } from '../../models/writing';
-import { updateDailyProgressForQuiz } from '../turso/writingProgress/tracking';
+import { updateDailyProgressForQuiz } from './progress';
 
 const COLLECTION = 'writing-review-quizzes';
 
