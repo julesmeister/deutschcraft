@@ -64,11 +64,12 @@ export function GermanCharAutocomplete({
       const potentialTrigger = textBeforeCursor.slice(-triggerLength);
 
       if (potentialTrigger === suggestion.trigger) {
-        // Check if this is at word boundary or start
-        const charBeforeTrigger = textBeforeCursor.charAt(textBeforeCursor.length - triggerLength - 1);
-        const isWordBoundary = !charBeforeTrigger || /[\s,.\-!?;:()\[\]{}]/.test(charBeforeTrigger);
+        // Check that we're not in the middle of typing a longer sequence
+        // (e.g., don't trigger "ae" if user is typing "aero")
+        const charAfterCursor = content.charAt(cursorPos);
+        const isAtWordEnd = !charAfterCursor || /[\s,.\-!?;:()\[\]{}]/.test(charAfterCursor);
 
-        if (isWordBoundary) {
+        if (isAtWordEnd) {
           setCurrentSuggestion(suggestion);
           setTriggerStartPos(cursorPos - triggerLength);
           setShowSuggestion(true);
