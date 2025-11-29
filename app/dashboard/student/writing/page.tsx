@@ -144,7 +144,7 @@ export default function WritingExercisesPage() {
       {/* Main Content */}
       <div className={hasSelectedExercise ? '' : 'lg:container lg:mx-auto lg:px-6 py-8'}>
         {selectedTranslation ? (
-          <div className="container mx-auto">
+          <div className="lg:container lg:mx-auto">
             <TranslationWorkspace
               exercise={selectedTranslation}
               translationText={viewingAttempt ? viewingAttempt.content : writingText}
@@ -167,7 +167,7 @@ export default function WritingExercisesPage() {
             />
           </div>
         ) : selectedCreative ? (
-          <div className="container mx-auto">
+          <div className="lg:container lg:mx-auto">
             <CreativeWritingArea
               exercise={selectedCreative}
               content={viewingAttempt ? viewingAttempt.content : writingText}
@@ -214,7 +214,7 @@ export default function WritingExercisesPage() {
             />
           </div>
         ) : selectedLetter ? (
-          <div className="container mx-auto">
+          <div className="lg:container lg:mx-auto">
             <LetterWritingArea
               template={selectedLetter}
               content={viewingAttempt ? viewingAttempt.content : writingText}
