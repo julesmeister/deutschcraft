@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
+import { useQueryClient } from '@tanstack/react-query';
 import { StatCardSimple } from '@/components/ui/StatCardSimple';
 import { FileCard, FileGrid, FileSection } from '@/components/ui/FileCard';
 import { FlashcardPractice } from '@/components/flashcards/FlashcardPractice';
@@ -35,6 +36,7 @@ const levelDataMap = {
 
 export default function FlashcardsLandingPage() {
   const router = useRouter();
+  const queryClient = useQueryClient();
   const { session } = useFirebaseAuth();
   const [selectedLevel, setSelectedLevel] = useState<CEFRLevel>(CEFRLevel.A1);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -98,9 +100,9 @@ export default function FlashcardsLandingPage() {
   const handleBackToCategories = () => {
     setSelectedCategory(null);
     setPracticeFlashcards([]);
-    // Refresh stats and reviews after completing session
+    // Invalidate queries to force fresh data after completing session
+    queryClient.invalidateQueries({ queryKey: ['flashcard-reviews', session?.user?.email] });
     setStatsRefreshKey(prev => prev + 1);
-    refetchReviews();
   };
 
   const handleStartPractice = () => {
