@@ -5,15 +5,17 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useDictionarySearch } from '@/lib/hooks/useDictionary';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
+import { GermanCharAutocomplete } from '@/components/writing/GermanCharAutocomplete';
 import { Search, ArrowRight, X } from 'lucide-react';
 
 export default function DictionaryPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchType, setSearchType] = useState<'german' | 'english' | 'both'>('both');
   const [forceSearch, setForceSearch] = useState(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   const shouldSearch = searchTerm.length >= 2 || (searchTerm.length >= 1 && forceSearch);
 
@@ -44,6 +46,13 @@ export default function DictionaryPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-16">
+      {/* German Character Autocomplete */}
+      <GermanCharAutocomplete
+        textareaRef={searchInputRef as any}
+        content={searchTerm}
+        onContentChange={setSearchTerm}
+      />
+
       {/* Header */}
       <DashboardHeader
         title="Dictionary"
@@ -95,6 +104,7 @@ export default function DictionaryPage() {
                 <Search className="w-5 h-5" />
               </div>
               <input
+                ref={searchInputRef}
                 type="text"
                 value={searchTerm}
                 onChange={(e) => {

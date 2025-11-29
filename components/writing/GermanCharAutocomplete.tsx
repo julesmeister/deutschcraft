@@ -33,7 +33,7 @@ const GERMAN_SUGGESTIONS: Suggestion[] = [
 ];
 
 interface GermanCharAutocompleteProps {
-  textareaRef: React.RefObject<HTMLTextAreaElement>;
+  textareaRef: React.RefObject<HTMLTextAreaElement | HTMLInputElement>;
   content: string;
   onContentChange: (newContent: string) => void;
 }
