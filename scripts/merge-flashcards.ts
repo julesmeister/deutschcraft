@@ -102,6 +102,34 @@ function sortFlashcards(flashcards: Flashcard[]): Flashcard[] {
 }
 
 /**
+ * Regenerate unique IDs for flashcards with duplicates
+ */
+function ensureUniqueIds(flashcards: Flashcard[]): Flashcard[] {
+  const idCounts = new Map<string, number>();
+  const seenIds = new Set<string>();
+
+  return flashcards.map((card) => {
+    if (seenIds.has(card.id)) {
+      // Duplicate found - regenerate ID
+      const count = (idCounts.get(card.id) || 1) + 1;
+      idCounts.set(card.id, count);
+
+      const newId = `${card.id}-dup${count}`;
+      console.log(`   🔄 Duplicate ID found: ${card.id} → ${newId} (${card.german})`);
+
+      return {
+        ...card,
+        id: newId,
+      };
+    }
+
+    seenIds.add(card.id);
+    idCounts.set(card.id, 1);
+    return card;
+  });
+}
+
+/**
  * Merge category files back into a single level file
  */
 function mergeLevel(level: string, backup: boolean = true): boolean {
@@ -114,15 +142,22 @@ function mergeLevel(level: string, backup: boolean = true): boolean {
     return false;
   }
 
-  // Sort flashcards
+  // Sort flashcards first
   const sortedFlashcards = sortFlashcards(flashcards);
   console.log(`   📊 Total cards collected: ${sortedFlashcards.length}`);
+
+  // Ensure unique IDs
+  const uniqueFlashcards = ensureUniqueIds(sortedFlashcards);
+  const duplicateCount = uniqueFlashcards.filter(c => c.id.includes('-dup')).length;
+  if (duplicateCount > 0) {
+    console.log(`   ⚠️  Fixed ${duplicateCount} duplicate IDs`);
+  }
 
   // Create merged data
   const mergedData: FlashcardLevel = {
     level: level.toUpperCase(),
-    totalCards: sortedFlashcards.length,
-    flashcards: sortedFlashcards,
+    totalCards: uniqueFlashcards.length,
+    flashcards: uniqueFlashcards,
   };
 
   // Backup existing file if requested
