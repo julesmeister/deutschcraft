@@ -7,6 +7,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useDictionarySearch } from '@/lib/hooks/useDictionary';
+import { GermanCharAutocomplete } from '@/components/writing/GermanCharAutocomplete';
 import { Search, BookOpen, CornerDownLeft } from 'lucide-react';
 
 interface DictionaryLookupProps {
@@ -28,6 +29,7 @@ export function DictionaryLookup({
   const [showResults, setShowResults] = useState(false);
   const [forceSearch, setForceSearch] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   // Allow search if >= minChars OR if any chars and user pressed Enter
   const shouldSearch = searchTerm.length >= minChars || (searchTerm.length >= 1 && forceSearch);
@@ -65,12 +67,20 @@ export function DictionaryLookup({
 
   return (
     <div ref={containerRef} className="w-full">
+      {/* German Character Autocomplete */}
+      <GermanCharAutocomplete
+        textareaRef={inputRef}
+        content={searchTerm}
+        onContentChange={setSearchTerm}
+      />
+
       {/* Search Input */}
       <div className="relative">
         <div className="absolute left-0 top-1/2 -translate-y-1/2 text-gray-400">
           <Search className="w-4 h-4" />
         </div>
         <input
+          ref={inputRef}
           type="text"
           value={searchTerm}
           onChange={(e) => {
