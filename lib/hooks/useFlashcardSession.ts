@@ -131,15 +131,6 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
       console.warn('⚠️ [handleDifficulty] Cannot save: No wordId on card:', currentCard);
     } else {
       try {
-        console.log('💾 [Session] Saving review:', {
-          userId: session.user.email,
-          flashcardId: currentCard.id,
-          wordId: currentCard.wordId,
-          difficulty,
-          level: currentCard.level,
-          category: currentCard.category,
-        });
-
         const srsResult = await saveReview(
           session.user.email,
           currentCard.id,
