@@ -150,16 +150,14 @@ export function FlashcardPractice({
       {!isFlipped ? (
         // When card is NOT flipped: Previous, Show Answer, Next all in one line
         <div className="flex items-center gap-2 md:gap-3">
-          <Button
+          <button
             onClick={handlePrevious}
             disabled={currentIndex === 0}
-            variant="secondary"
-            size="sm"
-            className="flex-1"
+            className="flex-1 bg-gray-100 hover:bg-gray-200 active:bg-gray-300 text-gray-700 border border-gray-300 rounded-xl px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold transition-all hover:border-gray-400 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-gray-100"
           >
             <span className="hidden sm:inline">← Previous</span>
             <span className="sm:hidden">← Prev</span>
-          </Button>
+          </button>
 
           <button
             onClick={handleFlip}
@@ -168,16 +166,14 @@ export function FlashcardPractice({
             Show Answer <span className="text-xs opacity-60 ml-2 hidden sm:inline">(Space/Enter)</span>
           </button>
 
-          <Button
+          <button
             onClick={handleNext}
             disabled={currentIndex === flashcards.length - 1}
-            variant="secondary"
-            size="sm"
-            className="flex-1"
+            className="flex-1 bg-gray-100 hover:bg-gray-200 active:bg-gray-300 text-gray-700 border border-gray-300 rounded-xl px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold transition-all hover:border-gray-400 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-gray-100"
           >
             <span className="hidden sm:inline">Next →</span>
             <span className="sm:hidden">Next →</span>
-          </Button>
+          </button>
         </div>
       ) : (
         // When card IS flipped: Difficulty buttons on top, navigation below
