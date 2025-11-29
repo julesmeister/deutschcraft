@@ -147,9 +147,9 @@ export function FeedbackWorkspace({
   };
 
   return (
-    <div className="bg-white">
-      {/* Tab Navigation */}
-      <div className="flex border-b border-gray-200">
+    <div className="bg-white flex flex-col lg:flex-row">
+      {/* Mobile/Tablet: Tab Navigation */}
+      <div className="flex border-b border-gray-200 lg:hidden">
         <TabButton
           label="Submission"
           active={activeTab === 'submission'}
@@ -169,11 +169,9 @@ export function FeedbackWorkspace({
         />
       </div>
 
-      {/* Tab Content */}
-      <div className="overflow-y-auto">
-        {/* SUBMISSION TAB */}
-        {activeTab === 'submission' && (
-          <div className="p-4 md:p-8">
+      {/* LEFT: Submission Content (always visible on desktop) */}
+      <div className={`flex-1 flex flex-col ${activeTab !== 'submission' ? 'hidden lg:flex' : ''}`}>
+        <div className="p-4 md:p-8 lg:block">
             {/* Submission Metadata */}
             <div className="mb-6 flex items-center justify-between">
               <div className="text-sm font-medium">
@@ -338,112 +336,109 @@ export function FeedbackWorkspace({
                 )}
               </>
             )}
-          </div>
-        )}
+        </div>
+      </div>
 
-        {/* FEEDBACK TAB */}
-        {activeTab === 'feedback' && (
-          <div className="p-4 md:p-8">
-            {teacherReviewLoading ? (
-              <div className="flex items-center justify-center py-12">
-                <div className="text-center">
-                  <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-                  <p className="mt-2 text-sm text-gray-600">Loading feedback...</p>
-                </div>
-              </div>
-            ) : teacherReview ? (
-              <TeacherFeedbackDisplay teacherReview={teacherReview} />
+      {/* SEPARATOR - Desktop only */}
+      <div className="hidden lg:block w-px bg-gray-200" />
+
+      {/* RIGHT: Feedback/History Panel */}
+      <div className={`flex flex-col lg:w-[400px] ${activeTab === 'submission' ? 'hidden lg:flex' : ''}`}>
+        {/* Tabs Navigation - Desktop only */}
+        <div className="hidden lg:flex border-b border-gray-200">
+          <TabButton
+            label="Feedback"
+            active={activeTab === 'feedback'}
+            badge={teacherReview ? '✓' : undefined}
+            onClick={() => onTabChange('feedback')}
+          />
+          <TabButton
+            label="History"
+            active={activeTab === 'history'}
+            count={submission.previousVersions?.length || 0}
+            onClick={() => onTabChange('history')}
+          />
+        </div>
+
+        {/* Tab Content */}
+        <div className="flex-1 p-4 md:p-8 overflow-y-auto">
+          {/* Mobile/Tablet: Show based on activeTab */}
+          <div className="lg:hidden">
+            {activeTab === 'feedback' && (
+              <>
+                {teacherReviewLoading ? (
+                  <div className="flex items-center justify-center py-12">
+                    <div className="text-center">
+                      <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+                      <p className="mt-2 text-sm text-gray-600">Loading feedback...</p>
+                    </div>
+                  </div>
+                ) : teacherReview ? (
+                  <TeacherFeedbackDisplay teacherReview={teacherReview} />
+                ) : (
+                  <div className="text-center py-12">
+                    <div className="text-4xl mb-3">⏳</div>
+                    <h3 className="text-sm font-semibold text-gray-900 mb-2">Awaiting Teacher Review</h3>
+                    <p className="text-xs text-gray-600">
+                      Your teacher will review your submission soon.
+                    </p>
+                  </div>
+                )}
+
+                {/* Legacy AI Feedback (if exists) */}
+                {submission.aiFeedback && (
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <WritingFeedbackComponent
+                      feedback={submission.aiFeedback}
+                      studentText={submission.content}
+                      referenceText={submission.originalText}
+                    />
+                  </div>
+                )}
+              </>
+            )}
+            {activeTab === 'history' && <HistoryContent submission={submission} authorName={authorName} />}
+          </div>
+
+          {/* Desktop: Show based on desktop tabs */}
+          <div className="hidden lg:block">
+            {activeTab === 'feedback' ? (
+              <>
+                {teacherReviewLoading ? (
+                  <div className="flex items-center justify-center py-12">
+                    <div className="text-center">
+                      <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+                      <p className="mt-2 text-sm text-gray-600">Loading feedback...</p>
+                    </div>
+                  </div>
+                ) : teacherReview ? (
+                  <TeacherFeedbackDisplay teacherReview={teacherReview} />
+                ) : (
+                  <div className="text-center py-12">
+                    <div className="text-4xl mb-3">⏳</div>
+                    <h3 className="text-sm font-semibold text-gray-900 mb-2">Awaiting Teacher Review</h3>
+                    <p className="text-xs text-gray-600">
+                      Your teacher will review your submission soon.
+                    </p>
+                  </div>
+                )}
+
+                {/* Legacy AI Feedback (if exists) */}
+                {submission.aiFeedback && (
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <WritingFeedbackComponent
+                      feedback={submission.aiFeedback}
+                      studentText={submission.content}
+                      referenceText={submission.originalText}
+                    />
+                  </div>
+                )}
+              </>
             ) : (
-              <div className="text-center py-12">
-                <div className="text-4xl mb-3">⏳</div>
-                <h3 className="text-sm font-semibold text-gray-900 mb-2">Awaiting Teacher Review</h3>
-                <p className="text-xs text-gray-600">
-                  Your teacher will review your submission soon.
-                </p>
-              </div>
-            )}
-
-            {/* Legacy AI Feedback (if exists) */}
-            {submission.aiFeedback && (
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <WritingFeedbackComponent
-                  feedback={submission.aiFeedback}
-                  studentText={submission.content}
-                  referenceText={submission.originalText}
-                />
-              </div>
+              <HistoryContent submission={submission} authorName={authorName} />
             )}
           </div>
-        )}
-
-        {/* HISTORY TAB */}
-        {activeTab === 'history' && (
-          <div className="p-4 md:p-8">
-            <ActivityTimeline
-              items={[
-                // Current version
-                {
-                  id: 'current',
-                  icon: <span className="text-white text-xs">✓</span>,
-                  iconColor: 'bg-blue-500',
-                  title: `Version ${submission.version}`,
-                  description: `${submission.wordCount} words • ${submission.characterCount} characters`,
-                  timestamp: submission.submittedAt
-                    ? new Date(submission.submittedAt).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'short',
-                        day: 'numeric',
-                        hour: '2-digit',
-                        minute: '2-digit'
-                      })
-                    : 'Draft',
-                  tags: [
-                    {
-                      label: 'Current',
-                      color: 'blue',
-                    },
-                    {
-                      label: submission.status,
-                      color: submission.status === 'submitted' ? 'amber' :
-                             submission.status === 'reviewed' ? 'green' : 'gray',
-                    },
-                  ],
-                  metadata: (
-                    <div className="text-xs text-gray-500 mt-1">
-                      <span>By: {authorName}</span>
-                    </div>
-                  ),
-                },
-                // Previous versions (if any)
-                ...(submission.previousVersions || []).map((version) => ({
-                  id: `version-${version.version}`,
-                  icon: <span className="text-white text-xs">{version.version}</span>,
-                  iconColor: 'bg-gray-400',
-                  title: `Version ${version.version}`,
-                  description: version.wordCount
-                    ? `${version.wordCount} words`
-                    : 'Previous version',
-                  timestamp: version.savedAt
-                    ? new Date(version.savedAt).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'short',
-                        day: 'numeric',
-                        hour: '2-digit',
-                        minute: '2-digit'
-                      })
-                    : 'N/A',
-                  metadata: (
-                    <div className="text-xs text-gray-500 mt-1">
-                      <span>By: {authorName}</span>
-                    </div>
-                  ),
-                })),
-              ] as ActivityItem[]}
-              showConnector={true}
-              showPagination={false}
-            />
-          </div>
-        )}
+        </div>
       </div>
     </div>
   );
@@ -474,5 +469,74 @@ function TabButton({ label, active, badge, count, onClick }: TabButtonProps) {
         <span className="ml-1 text-xs text-gray-500">({count})</span>
       )}
     </button>
+  );
+}
+
+// History Content Component
+function HistoryContent({ submission, authorName }: { submission: any; authorName: string }) {
+  return (
+    <ActivityTimeline
+      items={[
+        // Current version
+        {
+          id: 'current',
+          icon: <span className="text-white text-xs">✓</span>,
+          iconColor: 'bg-blue-500',
+          title: `Version ${submission.version}`,
+          description: `${submission.wordCount} words • ${submission.characterCount} characters`,
+          timestamp: submission.submittedAt
+            ? new Date(submission.submittedAt).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+              })
+            : 'Draft',
+          tags: [
+            {
+              label: 'Current',
+              color: 'blue',
+            },
+            {
+              label: submission.status,
+              color: submission.status === 'submitted' ? 'amber' :
+                     submission.status === 'reviewed' ? 'green' : 'gray',
+            },
+          ],
+          metadata: (
+            <div className="text-xs text-gray-500 mt-1">
+              <span>By: {authorName}</span>
+            </div>
+          ),
+        },
+        // Previous versions (if any)
+        ...(submission.previousVersions || []).map((version: any) => ({
+          id: `version-${version.version}`,
+          icon: <span className="text-white text-xs">{version.version}</span>,
+          iconColor: 'bg-gray-400',
+          title: `Version ${version.version}`,
+          description: version.wordCount
+            ? `${version.wordCount} words`
+            : 'Previous version',
+          timestamp: version.savedAt
+            ? new Date(version.savedAt).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+              })
+            : 'N/A',
+          metadata: (
+            <div className="text-xs text-gray-500 mt-1">
+              <span>By: {authorName}</span>
+            </div>
+          ),
+        })),
+      ] as ActivityItem[]}
+      showConnector={true}
+      showPagination={false}
+    />
   );
 }
