@@ -146,41 +146,75 @@ export function FlashcardPractice({
         showEnglishFirst={showEnglishFirst}
       />
 
-      {/* Difficulty/Show Answer Buttons */}
-      <div>
-        <DifficultyButtons
-          isFlipped={isFlipped}
-          onDifficulty={handleDifficulty}
-          onShowAnswer={handleFlip}
-        />
-      </div>
+      {/* Button Layout: Changes based on whether card is flipped */}
+      {!isFlipped ? (
+        // When card is NOT flipped: Previous, Show Answer, Next all in one line
+        <div className="flex items-center gap-2 md:gap-3">
+          <Button
+            onClick={handlePrevious}
+            disabled={currentIndex === 0}
+            variant="secondary"
+            size="sm"
+            className="flex-1"
+          >
+            <span className="hidden sm:inline">← Previous</span>
+            <span className="sm:hidden">← Prev</span>
+          </Button>
 
-      {/* Navigation Buttons */}
-      <div className="flex items-center gap-2 md:gap-3">
-        {/* Previous Button */}
-        <Button
-          onClick={handlePrevious}
-          disabled={currentIndex === 0}
-          variant="secondary"
-          size="sm"
-          className="flex-1"
-        >
-          <span className="hidden sm:inline">← Previous</span>
-          <span className="sm:hidden">← Prev</span>
-        </Button>
+          <button
+            onClick={handleFlip}
+            className="flex-[2] bg-gray-100 hover:bg-gray-200 active:bg-gray-300 text-gray-700 border border-gray-300 rounded-xl px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold transition-all hover:border-gray-400"
+          >
+            Show Answer <span className="text-xs opacity-60 ml-2 hidden sm:inline">(Space/Enter)</span>
+          </button>
 
-        {/* Next Button */}
-        <Button
-          onClick={handleNext}
-          disabled={currentIndex === flashcards.length - 1}
-          variant="secondary"
-          size="sm"
-          className="flex-1"
-        >
-          <span className="hidden sm:inline">Next →</span>
-          <span className="sm:hidden">Next →</span>
-        </Button>
-      </div>
+          <Button
+            onClick={handleNext}
+            disabled={currentIndex === flashcards.length - 1}
+            variant="secondary"
+            size="sm"
+            className="flex-1"
+          >
+            <span className="hidden sm:inline">Next →</span>
+            <span className="sm:hidden">Next →</span>
+          </Button>
+        </div>
+      ) : (
+        // When card IS flipped: Difficulty buttons on top, navigation below
+        <>
+          <div>
+            <DifficultyButtons
+              isFlipped={isFlipped}
+              onDifficulty={handleDifficulty}
+              onShowAnswer={handleFlip}
+            />
+          </div>
+
+          <div className="flex items-center gap-2 md:gap-3">
+            <Button
+              onClick={handlePrevious}
+              disabled={currentIndex === 0}
+              variant="secondary"
+              size="sm"
+              className="flex-1"
+            >
+              <span className="hidden sm:inline">← Previous</span>
+              <span className="sm:hidden">← Prev</span>
+            </Button>
+
+            <Button
+              onClick={handleNext}
+              disabled={currentIndex === flashcards.length - 1}
+              variant="secondary"
+              size="sm"
+              className="flex-1"
+            >
+              <span className="hidden sm:inline">Next →</span>
+              <span className="sm:hidden">Next →</span>
+            </Button>
+          </div>
+        </>
+      )}
 
       {/* Keyboard Shortcuts Legend */}
       <KeyboardShortcutsLegend />
