@@ -87,15 +87,17 @@ export default function WritingFeedbackPage() {
         }}
       />
 
-      <FeedbackWorkspace
-        submission={submission}
-        referenceTranslation={referenceTranslation}
-        hasTeacherReview={!!teacherReview}
-        teacherReview={teacherReview}
-        teacherReviewLoading={teacherReviewLoading}
-        activeTab={activeTab}
-        onTabChange={setActiveTab}
-      />
+      <div className="lg:container lg:mx-auto">
+        <FeedbackWorkspace
+          submission={submission}
+          referenceTranslation={referenceTranslation}
+          hasTeacherReview={!!teacherReview}
+          teacherReview={teacherReview}
+          teacherReviewLoading={teacherReviewLoading}
+          activeTab={activeTab}
+          onTabChange={setActiveTab}
+        />
+      </div>
     </div>
   );
 }
