@@ -79,9 +79,14 @@ export function GermanCharAutocomplete({
           const textareaStyle = window.getComputedStyle(textarea);
           const lineHeight = parseInt(textareaStyle.lineHeight);
 
-          // Simple approximation - position below cursor
+          // Check if it's an input field (single line) or textarea (multi-line)
+          const isInput = textarea.tagName === 'INPUT';
+
+          // Position below the field - more offset for input to avoid blocking text
+          const verticalOffset = isInput ? rect.height + 8 : lineHeight;
+
           setSuggestionPosition({
-            top: rect.top + textarea.scrollTop + lineHeight,
+            top: rect.top + window.scrollY + verticalOffset,
             left: rect.left + 20, // Offset from left
           });
 
