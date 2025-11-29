@@ -17,7 +17,6 @@ import {
   limit,
 } from 'firebase/firestore';
 import { ReviewQuiz, QuizBlank } from '../../models/writing';
-import { updateDailyProgressForQuiz } from './progress';
 
 const COLLECTION = 'writing-review-quizzes';
 
@@ -69,13 +68,14 @@ export async function createReviewQuiz(
 
 /**
  * Complete a review quiz with answers and score
+ * Returns the completed quiz data for further processing (e.g., progress tracking)
  */
 export async function completeReviewQuiz(
   quizId: string,
   answers: Record<number, string>,
   score: number,
   correctAnswers: number
-): Promise<void> {
+): Promise<ReviewQuiz | null> {
   try {
     const quizRef = doc(db, COLLECTION, quizId);
     const now = Date.now();
@@ -90,12 +90,8 @@ export async function completeReviewQuiz(
       updatedAt: now,
     });
 
-    // Get the updated quiz to track progress
-    const updatedQuiz = await getReviewQuiz(quizId);
-    if (updatedQuiz) {
-      // Update daily writing progress for streak tracking
-      await updateDailyProgressForQuiz(updatedQuiz.userId, updatedQuiz);
-    }
+    // Return the updated quiz for caller to handle progress tracking
+    return await getReviewQuiz(quizId);
   } catch (error) {
     console.error('[reviewQuizService] Error completing quiz:', error);
     throw error;

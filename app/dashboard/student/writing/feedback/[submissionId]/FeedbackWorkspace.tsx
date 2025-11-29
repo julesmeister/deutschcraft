@@ -21,6 +21,7 @@ import { TeacherFeedbackDisplay } from '@/components/writing/TeacherFeedbackDisp
 import { ActivityTimeline, ActivityItem } from '@/components/ui/activity/ActivityTimeline';
 import { getUser } from '@/lib/services/userService';
 import { getUserFullName } from '@/lib/models/user';
+import { useUpdateProgressForQuiz } from '@/lib/hooks/useWritingExercises';
 
 interface FeedbackWorkspaceProps {
   submission: WritingSubmission;
@@ -43,6 +44,7 @@ export function FeedbackWorkspace({
 }: FeedbackWorkspaceProps) {
   const queryClient = useQueryClient();
   const toast = useToast();
+  const updateProgressForQuiz = useUpdateProgressForQuiz();
   const [quizMode, setQuizMode] = useState<'ai' | 'teacher' | 'reference' | null>(null);
   const [currentQuizId, setCurrentQuizId] = useState<string | null>(null);
   const [authorName, setAuthorName] = useState<string>('You');
@@ -110,7 +112,17 @@ export function FeedbackWorkspace({
     if (!currentQuizId) return;
 
     try {
-      await completeReviewQuiz(currentQuizId, answers, score, correctAnswers);
+      // Complete the quiz and get the updated quiz data
+      const completedQuiz = await completeReviewQuiz(currentQuizId, answers, score, correctAnswers);
+
+      // Update daily progress for streak tracking (using hook for abstraction)
+      if (completedQuiz) {
+        await updateProgressForQuiz.mutateAsync({
+          userId: completedQuiz.userId,
+          quiz: completedQuiz,
+        });
+      }
+
       toast.success(`Quiz completed! Score: ${score}%`, { duration: 5000 });
 
       // Invalidate quiz stats to refresh the data

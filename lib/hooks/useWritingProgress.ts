@@ -16,6 +16,7 @@ import {
   getWritingStats,
   updateWritingStats,
   updateWritingProgress,
+  updateDailyProgressForQuiz,
 } from '@/lib/services/writingService';
 import { getStudentSubmissions } from '@/lib/services/writing/submissions-queries';
 
@@ -132,6 +133,31 @@ export function useUpdateWritingProgress() {
     },
     onSuccess: (data) => {
       queryClient.invalidateQueries({ queryKey: ['writing-progress', data.userId] });
+    },
+  });
+}
+
+/**
+ * Update daily writing progress for quiz completion
+ * Used to track daily activity when students complete review quizzes
+ */
+export function useUpdateProgressForQuiz() {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: async ({
+      userId,
+      quiz,
+    }: {
+      userId: string;
+      quiz: any;
+    }) => {
+      await updateDailyProgressForQuiz(userId, quiz);
+      return { userId };
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({ queryKey: ['writing-progress', data.userId] });
+      queryClient.invalidateQueries({ queryKey: ['writing-stats', data.userId] });
     },
   });
 }

@@ -30,6 +30,7 @@ export {
   useWritingStats,
   useUpdateWritingStats,
   useUpdateWritingProgress,
+  useUpdateProgressForQuiz,
 } from './useWritingProgress';
 
 // Re-export review hooks
