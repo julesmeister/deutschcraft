@@ -14,7 +14,7 @@ import { useToast } from '@/components/ui/toast';
  */
 export function useFirebaseAuth() {
   const { data: session, status } = useSession();
-  const { showToast } = useToast();
+  const toast = useToast();
   const [isFirebaseReady, setIsFirebaseReady] = useState(false);
   const [hasShownError, setHasShownError] = useState(false);
 
@@ -58,14 +58,15 @@ export function useFirebaseAuth() {
           if (!hasShownError) {
             const isNetworkError = error?.code === 'auth/network-request-failed';
 
-            showToast({
-              title: isNetworkError ? 'Connection Error' : 'Authentication Error',
-              message: isNetworkError
+            toast.error(
+              isNetworkError
                 ? 'Unable to connect to Firebase. Please check your internet connection.'
                 : 'Failed to authenticate with Firebase. Some features may not work.',
-              variant: 'error',
-              duration: 6000,
-            });
+              {
+                title: isNetworkError ? 'Connection Error' : 'Authentication Error',
+                duration: 6000,
+              }
+            );
             setHasShownError(true);
           }
         }
