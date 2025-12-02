@@ -338,7 +338,7 @@ export default function FlashcardsLandingPage() {
         )}
 
         {/* Main Content */}
-        <div className="lg:container md:px-4 sm:px-4 xs:px-2 lg:mx-auto lg:px-6 px-4 py-8">
+        <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
           {/* Show Flashcard Practice if category is selected */}
           {selectedCategory ? (
             <FlashcardPractice
