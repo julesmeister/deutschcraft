@@ -16,6 +16,8 @@ import { useRemNoteCategories, useRemNoteTotalCards } from '@/lib/hooks/useRemNo
 import { useFlashcardSettings } from '@/lib/hooks/useFlashcardSettings';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
 import { CatLoader } from '@/components/ui/CatLoader';
+import { applyFlashcardSettings } from '@/lib/utils/flashcardSelection';
+import { calculateCategoryProgress } from '@/lib/utils/categoryProgress';
 
 // Import level data
 import a1Data from '@/lib/data/vocabulary/levels/a1.json';
@@ -59,40 +61,12 @@ export default function FlashcardsLandingPage() {
   // Fetch user's flashcard progress to identify attempted categories
   const { data: flashcardReviews = [], refetch: refetchReviews } = useFlashcardReviews(session?.user?.email);
 
-  // Create a Set of attempted category IDs and count attempts per category
-  const attemptedCategories = new Set<string>();
-  const categoryAttemptCounts = new Map<string, number>();
-  const categoryTotalCounts = new Map<string, number>();
-
-  // Count total cards per category
+  // Calculate category progress
   const levelData = levelDataMap[selectedLevel];
-  levelData.flashcards.forEach((card: any) => {
-    const categoryId = card.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-    categoryTotalCounts.set(categoryId, (categoryTotalCounts.get(categoryId) || 0) + 1);
-  });
-
-  // Count attempted cards per category
-  flashcardReviews.forEach(review => {
-    const flashcard = levelData.flashcards.find((card: any) => card.id === review.wordId || card.id === review.flashcardId);
-    if (flashcard) {
-      const categoryId = flashcard.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-      attemptedCategories.add(categoryId);
-      categoryAttemptCounts.set(categoryId, (categoryAttemptCounts.get(categoryId) || 0) + 1);
-    }
-  });
-
-  // Determine completion status for each category
-  const categoryCompletionStatus = new Map<string, 'completed' | 'in-progress' | 'not-started'>();
-  attemptedCategories.forEach(categoryId => {
-    const attempted = categoryAttemptCounts.get(categoryId) || 0;
-    const total = categoryTotalCounts.get(categoryId) || 0;
-
-    if (attempted >= total) {
-      categoryCompletionStatus.set(categoryId, 'completed');
-    } else if (attempted > 0) {
-      categoryCompletionStatus.set(categoryId, 'in-progress');
-    }
-  });
+  const { categoryAttemptCounts, categoryCompletionStatus } = calculateCategoryProgress(
+    levelData.flashcards,
+    flashcardReviews
+  );
 
   const handleCategoryClick = (categoryId: string, categoryName: string) => {
     // Get flashcards for this category and level
@@ -111,7 +85,11 @@ export default function FlashcardsLandingPage() {
     });
 
     // Apply settings (potentially heavy operation)
-    const { cards, nextDueInfo, upcomingCards } = applyFlashcardSettings(categoryFlashcards);
+    const { cards, nextDueInfo, upcomingCards } = applyFlashcardSettings(
+      categoryFlashcards,
+      flashcardReviews,
+      settings
+    );
 
     // Use transition to keep UI responsive during state updates
     startTransition(() => {
@@ -145,7 +123,11 @@ export default function FlashcardsLandingPage() {
     });
 
     // Apply settings (potentially heavy operation)
-    const { cards, nextDueInfo, upcomingCards } = applyFlashcardSettings(flashcardsWithWordId);
+    const { cards, nextDueInfo, upcomingCards } = applyFlashcardSettings(
+      flashcardsWithWordId,
+      flashcardReviews,
+      settings
+    );
 
     // Use transition to keep UI responsive during state updates
     startTransition(() => {
@@ -154,146 +136,6 @@ export default function FlashcardsLandingPage() {
       setNextDueInfo(nextDueInfo);
       setUpcomingCards(upcomingCards);
     });
-  };
-
-  // Apply flashcard settings to flashcard array with STRICT SRS enforcement
-  const applyFlashcardSettings = (flashcards: any[]): {
-    cards: any[];
-    nextDueInfo?: { count: number; nextDueDate: number };
-    upcomingCards: any[];
-  } => {
-    const now = Date.now();
-
-    // 1. STRICTLY FILTER TO ONLY DUE CARDS
-    // Only include: new cards (never seen) OR cards with nextReviewDate <= now
-    const dueCards = flashcards.filter(card => {
-      const progress = flashcardReviews.find(r => r.flashcardId === card.id || r.wordId === card.id);
-
-      // New cards (never seen) are always included
-      if (!progress) {
-        console.log('[FlashcardSelection] ✅ Including NEW card:', {
-          id: card.id,
-          german: card.german,
-          reason: 'Never seen before',
-        });
-        return true;
-      }
-
-      // Only include cards that are actually due for review RIGHT NOW
-      const isDue = (progress.nextReviewDate || 0) <= now;
-
-      if (isDue) {
-        console.log('[FlashcardSelection] ✅ Including DUE card:', {
-          id: card.id,
-          german: card.german,
-          nextReviewDate: new Date(progress.nextReviewDate || 0).toISOString(),
-          wasOverdueBy: (now - (progress.nextReviewDate || 0)) / (1000 * 60 * 60) + ' hours',
-        });
-      } else {
-        console.log('[FlashcardSelection] ❌ Skipping card NOT due yet:', {
-          id: card.id,
-          german: card.german,
-          nextReviewDate: new Date(progress.nextReviewDate || 0).toISOString(),
-          hoursUntilDue: ((progress.nextReviewDate || 0) - now) / (1000 * 60 * 60),
-        });
-      }
-
-      return isDue;
-    });
-
-    // Calculate next due info for cards not yet due
-    const notDueCards = flashcards.filter(card => {
-      const progress = flashcardReviews.find(r => r.flashcardId === card.id || r.wordId === card.id);
-      return progress && (progress.nextReviewDate || 0) > now;
-    }).sort((a, b) => {
-      const progressA = flashcardReviews.find(r => r.flashcardId === a.id || r.wordId === a.id);
-      const progressB = flashcardReviews.find(r => r.flashcardId === b.id || r.wordId === b.id);
-      return (progressA?.nextReviewDate || 0) - (progressB?.nextReviewDate || 0);
-    }).map(card => {
-      // Add the nextReviewDate to each card for display
-      const progress = flashcardReviews.find(r => r.flashcardId === card.id || r.wordId === card.id);
-      return {
-        ...card,
-        nextReviewDate: progress?.nextReviewDate || Date.now(),
-      };
-    });
-
-    const nextDueInfo = notDueCards.length > 0
-      ? {
-          count: notDueCards.length,
-          nextDueDate: flashcardReviews.find(r => r.flashcardId === notDueCards[0].id || r.wordId === notDueCards[0].id)?.nextReviewDate || Date.now(),
-        }
-      : undefined;
-
-    // 2. PRIORITY SORTING within due cards
-    let processedCards = dueCards.sort((a, b) => {
-      const progressA = flashcardReviews.find(r => r.flashcardId === a.id || r.wordId === a.id);
-      const progressB = flashcardReviews.find(r => r.flashcardId === b.id || r.wordId === b.id);
-
-      // New cards first
-      if (!progressA && progressB) return -1;
-      if (progressA && !progressB) return 1;
-      if (!progressA && !progressB) return 0;
-
-      // Among due cards, prioritize by next review date (earlier = higher priority)
-      return (progressA.nextReviewDate || 0) - (progressB.nextReviewDate || 0);
-    });
-
-    // 3. APPLY RANDOMIZATION (only among due cards)
-    if (settings.randomizeOrder) {
-      // Separate new cards from due review cards
-      const newCards = processedCards.filter(card => {
-        const progress = flashcardReviews.find(r => r.flashcardId === card.id || r.wordId === card.id);
-        return !progress;
-      });
-      const dueReviewCards = processedCards.filter(card => {
-        const progress = flashcardReviews.find(r => r.flashcardId === card.id || r.wordId === card.id);
-        return progress;
-      });
-
-      // Randomize each group separately
-      processedCards = [
-        ...newCards.sort(() => Math.random() - 0.5),
-        ...dueReviewCards.sort(() => Math.random() - 0.5),
-      ];
-    }
-
-    // 4. APPLY SESSION LIMIT
-    const cardsPerSession = settings.cardsPerSession !== -1 && settings.cardsPerSession > 0
-      ? settings.cardsPerSession
-      : 20; // Default to 20 if unlimited
-
-    const finalCards = processedCards.slice(0, cardsPerSession);
-
-    console.log('[FlashcardSelection] STRICT SRS Selection:', {
-      totalAvailable: flashcards.length,
-      dueForReview: dueCards.length,
-      newCards: dueCards.filter(c => !flashcardReviews.find(r => r.flashcardId === c.id || r.wordId === c.id)).length,
-      reviewCards: dueCards.filter(c => flashcardReviews.find(r => r.flashcardId === c.id || r.wordId === c.id)).length,
-      selectedForSession: finalCards.length,
-      notDueCards: flashcards.length - dueCards.length,
-      nextDueInfo,
-    });
-
-    // If no due cards, show detailed breakdown
-    if (finalCards.length === 0 && flashcards.length > 0) {
-      console.log('[FlashcardSelection] ✅ No cards due for review! Breakdown:', {
-        totalCards: flashcards.length,
-        cardsWithProgress: flashcards.filter(c => flashcardReviews.find(r => r.flashcardId === c.id || r.wordId === c.id)).length,
-        newCards: flashcards.filter(c => !flashcardReviews.find(r => r.flashcardId === c.id || r.wordId === c.id)).length,
-        futureReviews: notDueCards.length,
-        sampleFutureCard: notDueCards[0] ? {
-          german: notDueCards[0].german,
-          nextReview: new Date(flashcardReviews.find(r => r.flashcardId === notDueCards[0].id || r.wordId === notDueCards[0].id)?.nextReviewDate || 0).toISOString(),
-        } : null,
-      });
-    }
-
-    return {
-      cards: finalCards,
-      nextDueInfo,
-      upcomingCards: notDueCards.slice(0, 15), // Return up to 15 upcoming cards for display
-    };
   };
 
   return (
