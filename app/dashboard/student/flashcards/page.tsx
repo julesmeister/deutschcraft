@@ -68,6 +68,22 @@ export default function FlashcardsLandingPage() {
     flashcardReviews
   );
 
+  // Calculate due cards per category
+  const categoryDueCounts = new Map<string, number>();
+  const now = Date.now();
+
+  levelData.flashcards.forEach((card: any) => {
+    const categoryId = card.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+    const progress = flashcardReviews.find(r => r.flashcardId === card.id || r.wordId === card.id);
+
+    // Count if card is new (never seen) OR due for review now
+    const isDue = !progress || (progress.nextReviewDate || 0) <= now;
+
+    if (isDue) {
+      categoryDueCounts.set(categoryId, (categoryDueCounts.get(categoryId) || 0) + 1);
+    }
+  });
+
   const handleCategoryClick = (categoryId: string, categoryName: string) => {
     // Get flashcards for this category and level
     const levelData = levelDataMap[selectedLevel];
@@ -260,6 +276,7 @@ export default function FlashcardsLandingPage() {
                   <FileGrid>
                     {categories.map((category) => {
                       const completionStatus = categoryCompletionStatus.get(category.id);
+                      const dueCount = categoryDueCounts.get(category.id);
                       return (
                         <FileCard
                           key={category.id}
@@ -271,6 +288,7 @@ export default function FlashcardsLandingPage() {
                           onClick={() => handleCategoryClick(category.id, category.name)}
                           completionStatus={completionStatus}
                           attemptCount={categoryAttemptCounts.get(category.id)}
+                          dueCount={dueCount}
                         />
                       );
                     })}

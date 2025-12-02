@@ -11,6 +11,7 @@ export interface FileCardProps {
   className?: string;
   completionStatus?: 'completed' | 'in-progress' | 'not-started';
   attemptCount?: number;
+  dueCount?: number;
 }
 
 /**
@@ -26,6 +27,7 @@ export function FileCard({
   className = '',
   completionStatus = 'not-started',
   attemptCount,
+  dueCount,
 }: FileCardProps) {
   // Determine background and border colors based on completion status
   const statusStyles = {
@@ -43,12 +45,19 @@ export function FileCard({
 
   return (
     <div
-      className={`flex cursor-pointer items-center justify-between gap-2 rounded-2xl border-solid border px-3 py-3 sm:px-3.5 sm:py-4 duration-150 ease-in-out hover:shadow-sm active:scale-[0.98] ${
+      className={`relative flex cursor-pointer items-center justify-between gap-2 rounded-2xl border-solid border px-3 py-3 sm:px-3.5 sm:py-4 duration-150 ease-in-out hover:shadow-sm active:scale-[0.98] ${
         statusStyles[completionStatus]
       } ${className}`}
       role="button"
       onClick={onClick}
     >
+      {/* Due Count Badge - Top Right Absolute */}
+      {dueCount !== undefined && dueCount > 0 && (
+        <div className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs font-bold rounded-full w-7 h-7 flex items-center justify-center shadow-md border-2 border-white">
+          {dueCount}
+        </div>
+      )}
+
       <div className="flex items-center gap-2 min-w-0 flex-1">
         <div className="text-2xl sm:text-3xl leading-tight shrink-0">{icon}</div>
         <div className="min-w-0 flex-1">
