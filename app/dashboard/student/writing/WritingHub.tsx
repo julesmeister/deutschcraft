@@ -147,10 +147,10 @@ export function WritingHub({
                 value: `${writingStats?.averageOverallScore || 0}%`,
               },
               ...(quizStats && quizStats.totalQuizzes > 0 ? [{
-                id: 'quiz-score',
-                label: 'Avg Quiz Score',
+                id: 'quiz-points',
+                label: 'Quiz Points',
                 icon: undefined,
-                value: `${quizStats.averageScore}%`,
+                value: quizStats.totalPoints,
               }] : []),
               {
                 id: 'streak',

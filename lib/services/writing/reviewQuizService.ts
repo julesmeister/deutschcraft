@@ -191,12 +191,12 @@ export async function getCompletedQuizzesForUser(userId: string): Promise<Review
 }
 
 /**
- * Calculate average quiz score for a user
+ * Calculate quiz points for a user
  */
 export async function getUserQuizStats(userId: string): Promise<{
   totalQuizzes: number;
   completedQuizzes: number;
-  averageScore: number;
+  totalPoints: number;
   bestScore: number;
 }> {
   try {
@@ -205,15 +205,15 @@ export async function getUserQuizStats(userId: string): Promise<{
     const totalQuizzes = quizzes.length;
     const completedQuizzes = quizzes.filter(q => q.status === 'completed').length;
     const scores = quizzes.map(q => q.score);
-    const averageScore = scores.length > 0
-      ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length)
+    const totalPoints = scores.length > 0
+      ? scores.reduce((a, b) => a + b, 0)
       : 0;
     const bestScore = scores.length > 0 ? Math.max(...scores) : 0;
 
     return {
       totalQuizzes,
       completedQuizzes,
-      averageScore,
+      totalPoints,
       bestScore,
     };
   } catch (error) {

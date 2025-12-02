@@ -10,12 +10,13 @@ import { QuizBlank } from '@/lib/models/writing';
 import { generateQuizBlanks, checkAnswer, calculateQuizScore } from '@/lib/utils/quizGenerator';
 import { getDiff } from '@/lib/utils/textDiff';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
+import { calculateQuizPoints } from '@/lib/hooks/useQuizStats';
 
 interface ReviewQuizProps {
   originalText: string;
   correctedText: string;
   sourceType: 'ai' | 'teacher' | 'reference';
-  onComplete: (score: number, correctAnswers: number, totalBlanks: number, answers: Record<number, string>) => void;
+  onComplete: (points: number, correctAnswers: number, totalBlanks: number, answers: Record<number, string>) => void;
   onCancel: () => void;
 }
 
@@ -29,7 +30,7 @@ export function ReviewQuiz({
   const [blanks, setBlanks] = useState<QuizBlank[]>([]);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [showResults, setShowResults] = useState(false);
-  const [results, setResults] = useState<{ score: number; correctAnswers: number; totalBlanks: number } | null>(null);
+  const [results, setResults] = useState<{ points: number; correctAnswers: number; totalBlanks: number } | null>(null);
 
   useEffect(() => {
     // Generate quiz blanks on mount
@@ -46,13 +47,18 @@ export function ReviewQuiz({
 
   const handleSubmit = () => {
     const quizResults = calculateQuizScore(answers, blanks);
-    setResults(quizResults);
+    const points = calculateQuizPoints(quizResults.correctAnswers, quizResults.totalBlanks);
+    setResults({
+      points,
+      correctAnswers: quizResults.correctAnswers,
+      totalBlanks: quizResults.totalBlanks
+    });
     setShowResults(true);
   };
 
   const handleFinish = () => {
     if (results) {
-      onComplete(results.score, results.correctAnswers, results.totalBlanks, answers);
+      onComplete(results.points, results.correctAnswers, results.totalBlanks, answers);
     }
   };
 
@@ -110,20 +116,20 @@ export function ReviewQuiz({
         <div className="py-6">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-4xl">
-              {results.score >= 80 ? '🎉' : results.score >= 60 ? '👍' : '💪'}
+              {results.points >= 8 ? '🎉' : results.points >= 6 ? '👍' : '💪'}
             </span>
             <div>
               <h3 className="text-xl font-bold text-gray-900">
-                Score: {results.score}%
+                +{results.points} Points
               </h3>
               <p className="text-sm text-gray-600">
                 {results.correctAnswers} out of {results.totalBlanks} correct
               </p>
             </div>
           </div>
-          {results.score >= 80 ? (
+          {results.points >= 8 ? (
             <p className="text-sm text-gray-700">Excellent work! You've mastered these corrections.</p>
-          ) : results.score >= 60 ? (
+          ) : results.points >= 6 ? (
             <p className="text-sm text-gray-700">Good effort! Review the highlighted corrections and try again.</p>
           ) : (
             <p className="text-sm text-gray-700">Keep practicing! Review the corrections carefully.</p>

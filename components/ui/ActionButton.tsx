@@ -9,6 +9,7 @@ interface ActionButtonProps {
   variant?: 'purple' | 'cyan' | 'mint' | 'yellow' | 'orange' | 'gold' | 'gray' | 'red';
   className?: string;
   disabled?: boolean;
+  size?: 'default' | 'compact';
 }
 
 const variantStyles = {
@@ -40,8 +41,14 @@ export function ActionButton({
   variant = 'purple',
   className = '',
   disabled = false,
+  size = 'default',
 }: ActionButtonProps) {
-  const baseClasses = 'w-full group inline-flex items-center font-bold text-[14px] py-2 pl-4 pr-2 rounded-full transition-colors duration-300';
+  const sizeClasses = size === 'compact'
+    ? 'py-1.5 pl-3 pr-1.5 text-[13px]'
+    : 'py-2 pl-4 pr-2 text-[14px]';
+  const iconSize = size === 'compact' ? 'w-5 h-5' : 'w-8 h-8';
+
+  const baseClasses = `w-full group inline-flex items-center font-bold ${sizeClasses} rounded-full transition-colors duration-300`;
   const variantClass = variantStyles[variant];
   const iconBgClass = iconBgStyles[variant];
   const disabledClass = disabled ? 'opacity-50 cursor-not-allowed' : '';
@@ -56,7 +63,7 @@ export function ActionButton({
         {children}
       </span>
       {icon && (
-        <span className={`relative z-10 ml-3 w-8 h-8 flex items-center justify-center rounded-full transition-all duration-400 group-hover:rotate-[360deg] ${iconBgClass}`}>
+        <span className={`relative z-10 ml-3 ${iconSize} flex items-center justify-center rounded-full transition-all duration-400 group-hover:rotate-[360deg] ${iconBgClass}`}>
           {icon}
         </span>
       )}

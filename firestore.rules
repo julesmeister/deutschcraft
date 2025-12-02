@@ -199,6 +199,43 @@ service cloud.firestore {
       allow read, write: if isTeacher();
     }
 
+    // Writing review quizzes (fill-in-the-blank exercises)
+    match /writing-review-quizzes/{quizId} {
+      // Students can create their own quiz attempts
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.token.email;
+
+      // Students can read their own quiz attempts
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.token.email;
+
+      // Teachers can read all quiz attempts
+      allow read: if isTeacher();
+    }
+
+    // Mini exercise sentences (indexed sentences for practice)
+    match /mini-exercise-sentences/{sentenceId} {
+      // Students can read their own indexed sentences
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.token.email;
+
+      // System can create/update sentences (via service)
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.token.email;
+      allow update: if isAuthenticated() && resource.data.userId == request.auth.token.email;
+
+      // Teachers can read all sentences
+      allow read: if isTeacher();
+    }
+
+    // Mini exercise attempts (practice attempt records)
+    match /mini-exercise-attempts/{attemptId} {
+      // Students can create their own attempts
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.token.email;
+
+      // Students can read their own attempts
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.token.email;
+
+      // Teachers can read all attempts
+      allow read: if isTeacher();
+    }
+
     // Writing progress (daily metrics)
     match /writing-progress/{progressId} {
       // Students can read/write their own progress

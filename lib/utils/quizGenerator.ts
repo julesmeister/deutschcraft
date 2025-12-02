@@ -7,103 +7,102 @@ import { getDiff, DiffPart } from './textDiff';
 import { QuizBlank } from '../models/writing';
 
 /**
+ * Helper function to strip trailing punctuation from a word
+ * Example: "denke," -> "denke"
+ */
+function stripPunctuation(word: string): string {
+  return word.replace(/[^\w\s]+$/g, '');
+}
+
+/**
  * Generate quiz blanks from differences between original and corrected text
  * Uses word-level comparison to find complete word replacements only
- * Skips consecutive blanks to ensure there's context between them
+ * CRITICAL: Never creates consecutive blanks - ensures at least one word of context between them
  */
 export function generateQuizBlanks(originalText: string, correctedText: string): QuizBlank[] {
-  // Split both texts into words (keeping punctuation attached to words)
+  // Split both texts into words (keeping punctuation attached)
   const originalWords = originalText.split(/\s+/).filter(w => w.length > 0);
   const correctedWords = correctedText.split(/\s+/).filter(w => w.length > 0);
 
-  const potentialBlanks: Array<{ position: number; answer: string; wordIndex: number }> = [];
+  // Step 1: Identify ALL word differences (comparing words without trailing punctuation)
+  const potentialBlanks: Array<{ answer: string; wordIndex: number }> = [];
 
   // Simple word-by-word comparison
-  // When words don't match, mark the corrected word as a blank
   const maxLength = Math.max(originalWords.length, correctedWords.length);
 
   for (let i = 0; i < maxLength; i++) {
     const origWord = originalWords[i] || '';
     const corrWord = correctedWords[i] || '';
 
-    // If words are different and the corrected word exists, it's a correction
-    if (origWord !== corrWord && corrWord.length > 0) {
+    // Compare words without trailing punctuation
+    const origWordClean = stripPunctuation(origWord);
+    const corrWordClean = stripPunctuation(corrWord);
+
+    // If words are different (ignoring punctuation) and the corrected word exists
+    if (origWordClean !== corrWordClean && corrWordClean.length > 0) {
       // Only include complete words (at least 3 chars) to avoid articles and particles
-      if (corrWord.length >= 3) {
+      if (corrWordClean.length >= 3) {
         potentialBlanks.push({
-          position: 0, // We'll calculate actual position later
-          answer: corrWord,
+          answer: corrWordClean, // Store word WITHOUT punctuation
           wordIndex: i,
         });
       }
     }
   }
 
-  // Calculate actual character positions in the corrected text
-  const blanksWithPositions: Array<{ position: number; answer: string }> = [];
+  // Step 2: Filter to prevent consecutive blanks
+  // CRITICAL: Ensure at least 1 word of unchanged text between any two blanks
+  const filteredBlanks: Array<{ answer: string; wordIndex: number }> = [];
+  let lastIncludedWordIndex = -1;
+
+  for (const blank of potentialBlanks) {
+    const wordIndex = blank.wordIndex;
+
+    // Skip blanks at the very end (need at least 2 words after)
+    const wordsAfter = correctedWords.length - wordIndex - 1;
+    if (wordsAfter < 2) {
+      continue;
+    }
+
+    // First blank: always include it
+    if (lastIncludedWordIndex === -1) {
+      filteredBlanks.push(blank);
+      lastIncludedWordIndex = wordIndex;
+      continue;
+    }
+
+    // Check if there's at least 1 word between this blank and the last
+    const wordGap = wordIndex - lastIncludedWordIndex;
+
+    // wordGap = 1 means consecutive words (no gap)
+    // wordGap = 2 means one word between them (acceptable)
+    // CRITICAL FIX: Require wordGap >= 2 to ensure NO consecutive blanks
+    if (wordGap >= 2) {
+      filteredBlanks.push(blank);
+      lastIncludedWordIndex = wordIndex;
+    }
+  }
+
+  // Step 3: Calculate actual character positions in the corrected text
+  const blanks: QuizBlank[] = [];
   let charPosition = 0;
+  let blankIndex = 0;
 
   for (let i = 0; i < correctedWords.length; i++) {
     const word = correctedWords[i];
-    const isBlank = potentialBlanks.some(b => b.wordIndex === i);
+    const wordClean = stripPunctuation(word);
+    const isBlank = filteredBlanks.some(b => b.wordIndex === i);
 
     if (isBlank) {
-      blanksWithPositions.push({
+      blanks.push({
+        index: blankIndex++,
+        correctAnswer: wordClean, // Use word WITHOUT punctuation as the answer
         position: charPosition,
-        answer: word,
+        hint: `${wordClean.length} ${wordClean.length === 1 ? 'character' : 'characters'}`,
       });
     }
 
     charPosition += word.length + 1; // +1 for space
-  }
-
-  // Second pass: filter out consecutive blanks that are too close together
-  // Also skip blanks at the very end with no context after them
-  const blanks: QuizBlank[] = [];
-  let blankIndex = 0;
-  const MIN_WORD_GAP = 3; // minimum words between blanks
-  let lastIncludedWordIndex = -1;
-
-  for (let i = 0; i < potentialBlanks.length; i++) {
-    const current = potentialBlanks[i];
-    const wordIndex = current.wordIndex;
-
-    // Check if there are at least 2 words after this blank
-    const wordsAfter = correctedWords.length - wordIndex - 1;
-    if (wordsAfter < 2) {
-      continue; // Skip blanks at the very end
-    }
-
-    // If this is the first blank, include it
-    if (lastIncludedWordIndex === -1) {
-      const matchingBlank = blanksWithPositions.find(b => b.answer === current.answer);
-      if (matchingBlank) {
-        blanks.push({
-          index: blankIndex++,
-          correctAnswer: matchingBlank.answer,
-          position: matchingBlank.position,
-          hint: `${matchingBlank.answer.length} ${matchingBlank.answer.length === 1 ? 'character' : 'characters'}`,
-        });
-        lastIncludedWordIndex = wordIndex;
-      }
-    } else {
-      // Check word distance from last included blank
-      const wordGap = wordIndex - lastIncludedWordIndex;
-
-      // Include if there's enough word gap from the last included blank
-      if (wordGap >= MIN_WORD_GAP) {
-        const matchingBlank = blanksWithPositions.find(b => b.answer === current.answer);
-        if (matchingBlank) {
-          blanks.push({
-            index: blankIndex++,
-            correctAnswer: matchingBlank.answer,
-            position: matchingBlank.position,
-            hint: `${matchingBlank.answer.length} ${matchingBlank.answer.length === 1 ? 'character' : 'characters'}`,
-          });
-          lastIncludedWordIndex = wordIndex;
-        }
-      }
-    }
   }
 
   return blanks;

@@ -15,9 +15,11 @@ import { StudentQuickActions } from '@/components/dashboard/StudentQuickActions'
 import { DailyGoalCard } from '@/components/dashboard/DailyGoalCard';
 import { StudentRecentTasksCard } from '@/components/dashboard/StudentRecentTasksCard';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
+import { MiniBlankExercise } from '@/components/dashboard/MiniBlankExercise';
 import { useEffect, useState } from 'react';
 import { getTodayProgress } from '@/lib/services/progressService';
 import { CatLoader } from '@/components/ui/CatLoader';
+import { useMiniExercise } from '@/lib/hooks/useMiniExercise';
 export default function StudentDashboard() {
   const { session, isFirebaseReady } = useFirebaseAuth();
   const { student: fetchedStudent, isLoading: isLoadingStudent } = useCurrentStudent(session?.user?.email || null, isFirebaseReady);
@@ -36,6 +38,9 @@ export default function StudentDashboard() {
 
   // Get recent tasks (last 5)
   const recentTasks = allTasks.slice(0, 5);
+
+  // Get random mini exercise
+  const { exercise: miniExercise, isLoading: isMiniExerciseLoading, refresh: refreshMiniExercise } = useMiniExercise(session?.user?.email || undefined);
 
   // Fetch batch information
   const { batch, isLoading: isLoadingBatch } = useBatch(fetchedStudent?.batchId || undefined);
@@ -130,6 +135,57 @@ export default function StudentDashboard() {
               cardsReady={cardsReady}
               wordsToReview={wordsToReview}
               writingExercises={writingStats?.totalExercisesCompleted || 0}
+            />
+
+            {/* Mini Blank Exercise */}
+            <MiniBlankExercise
+              sentence={miniExercise?.sentence || ''}
+              blanks={miniExercise?.blanks || []}
+              onRefresh={refreshMiniExercise}
+              userId={session?.user?.email || undefined}
+              isLoading={isMiniExerciseLoading}
+              exerciseType={miniExercise?.exerciseType}
+              submittedAt={miniExercise?.submittedAt}
+              sentenceId={miniExercise?.sentenceId}
+              onComplete={async (points, correctAnswers, totalBlanks, sentenceId) => {
+                // Record attempt
+                if (miniExercise && session?.user?.email) {
+                  const { saveMiniQuizResult } = await import('@/lib/services/writing/miniQuizService');
+                  try {
+                    // Build answers object from blanks
+                    const answers: Record<number, string> = {};
+                    miniExercise.blanks.forEach(blank => {
+                      answers[blank.index] = blank.correctAnswer;
+                    });
+
+                    // If we have a sentenceId, use smart tracking
+                    if (sentenceId) {
+                      const { recordMiniExerciseAttempt } = await import('@/lib/services/writing/smartMiniExerciseService');
+                      await recordMiniExerciseAttempt(
+                        sentenceId,
+                        session.user.email,
+                        answers,
+                        correctAnswers,
+                        totalBlanks,
+                        points
+                      );
+                    }
+
+                    // Always save to quiz system for stats
+                    await saveMiniQuizResult(
+                      session.user.email,
+                      miniExercise.submissionId,
+                      miniExercise.sentence,
+                      miniExercise.blanks,
+                      answers,
+                      points,
+                      correctAnswers
+                    );
+                  } catch (error) {
+                    console.error('Failed to save mini quiz result:', error);
+                  }
+                }
+              }}
             />
           </div>
 
