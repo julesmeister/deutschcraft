@@ -53,8 +53,18 @@ export function FileCard({
     >
       {/* Due Count Badge - Top Right Absolute */}
       {dueCount !== undefined && dueCount > 0 && (
-        <div className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs font-bold rounded-full w-7 h-7 flex items-center justify-center shadow-md border-2 border-white">
+        <div
+          className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs font-bold rounded-full w-7 h-7 flex items-center justify-center shadow-md border-2 border-white group/badge"
+          title={`${dueCount} card${dueCount !== 1 ? 's' : ''} due today`}
+        >
           {dueCount}
+          {/* Tooltip */}
+          <div className="absolute bottom-full mb-2 hidden group-hover/badge:block pointer-events-none z-50">
+            <div className="bg-gray-900 text-white text-xs rounded py-1 px-2 whitespace-nowrap">
+              {dueCount} card{dueCount !== 1 ? 's' : ''} due today
+            </div>
+            <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-gray-900"></div>
+          </div>
         </div>
       )}
 
