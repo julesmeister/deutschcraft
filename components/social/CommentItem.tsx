@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Comment } from '@/lib/models/social';
 import { User } from '@/lib/models/user';
 import UserAvatar from './UserAvatar';
+import CommentSuggestions from './CommentSuggestions';
 import { getUser } from '@/lib/services/userService';
 import { useSocialService } from '@/lib/hooks/useSocialService';
 import { useToast } from '@/components/ui/toast';
@@ -11,9 +12,10 @@ import { useToast } from '@/components/ui/toast';
 interface CommentItemProps {
   comment: Comment;
   currentUserId: string;
+  currentUser?: User;
 }
 
-export default function CommentItem({ comment, currentUserId }: CommentItemProps) {
+export default function CommentItem({ comment, currentUserId, currentUser }: CommentItemProps) {
   const [showReplyForm, setShowReplyForm] = useState(false);
   const [replyText, setReplyText] = useState('');
   const [commentAuthor, setCommentAuthor] = useState<User | null>(null);
@@ -134,6 +136,16 @@ export default function CommentItem({ comment, currentUserId }: CommentItemProps
             <span className="text-xs text-gray-500">{likeCount} likes</span>
           )}
         </div>
+
+        {/* Compact Corrections */}
+        <CommentSuggestions
+          commentId={comment.commentId}
+          commentContent={comment.content}
+          commentUserId={comment.userId}
+          currentUserId={currentUserId}
+          currentUser={currentUser}
+          isAuthor={currentUserId === comment.userId}
+        />
 
         {/* Reply Form */}
         {showReplyForm && (
