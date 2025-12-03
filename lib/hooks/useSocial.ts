@@ -27,6 +27,7 @@ export function usePosts(filters?: {
 
   const loadPosts = useCallback(async () => {
     try {
+      console.log('[usePosts] Loading posts...');
       setLoading(true);
       const { posts: postsData } = await fetchPosts(
         {
@@ -37,6 +38,10 @@ export function usePosts(filters?: {
         filters?.limitCount || 20,
         0
       );
+      console.log('[usePosts] Loaded', postsData.length, 'posts');
+      if (postsData.length > 0) {
+        console.log('[usePosts] First post content:', postsData[0].content);
+      }
       setPosts(postsData);
       setLoading(false);
     } catch (err) {

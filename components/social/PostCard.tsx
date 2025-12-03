@@ -42,9 +42,18 @@ export default function PostCard({
     setShowSuggestionForm(false);
   };
 
-  const handleSuggestionAccepted = () => {
+  const handleSuggestionAccepted = async () => {
     // Notify parent to refresh the post
+    console.log('[PostCard] Suggestion accepted, triggering refresh');
     onPostUpdated?.();
+
+    // Also log current post data
+    console.log('[PostCard] Current post data:', {
+      postId: post.postId,
+      content: post.content,
+      isEdited: post.isEdited,
+      updatedAt: post.updatedAt
+    });
   };
 
   return (
