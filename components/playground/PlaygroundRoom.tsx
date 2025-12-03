@@ -55,6 +55,7 @@ interface PlaygroundRoomProps {
   onSaveWriting: (content: string) => Promise<void>;
   onToggleWritingVisibility: (writingId: string, isPublic: boolean) => Promise<void>;
   onToggleRoomPublicWriting?: (isPublic: boolean) => Promise<void>;
+  onMinimize?: () => void;
   onCloseDialog: () => void;
 }
 
@@ -79,6 +80,7 @@ export function PlaygroundRoom({
   onSaveWriting,
   onToggleWritingVisibility,
   onToggleRoomPublicWriting,
+  onMinimize,
   onCloseDialog,
 }: PlaygroundRoomProps) {
   // Only the host (room creator) can end the room
@@ -96,15 +98,30 @@ export function PlaygroundRoom({
           onClick: onLeaveRoom,
         }}
         actions={
-          isHost && (
-            <ActionButton
-              onClick={onEndRoom}
-              variant="red"
-              icon={<ActionButtonIcons.Close />}
-            >
-              End Room
-            </ActionButton>
-          )
+          <div className="flex items-center gap-2">
+            {onMinimize && (
+              <ActionButton
+                onClick={onMinimize}
+                variant="default"
+                icon={
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                }
+              >
+                Minimize
+              </ActionButton>
+            )}
+            {isHost && (
+              <ActionButton
+                onClick={onEndRoom}
+                variant="red"
+                icon={<ActionButtonIcons.Close />}
+              >
+                End Room
+              </ActionButton>
+            )}
+          </div>
         }
       />
 

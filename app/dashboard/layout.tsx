@@ -7,6 +7,8 @@ import { useSession } from 'next-auth/react';
 import { updateUser } from '@/lib/services/userService';
 import { useState } from 'react';
 import { EnrollmentGuard } from '@/components/dashboard/EnrollmentGuard';
+import { PlaygroundSessionProvider } from '@/lib/contexts/PlaygroundSessionContext';
+import { MinimizedPlayground } from '@/components/playground/MinimizedPlayground';
 
 export default function DashboardLayout({
   children,
@@ -14,17 +16,22 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Main navbar with dashboard items - Use DashboardNavbar for mega dropdowns */}
-      <DashboardNavbar />
+    <PlaygroundSessionProvider>
+      <div className="min-h-screen bg-gray-50">
+        {/* Main navbar with dashboard items - Use DashboardNavbar for mega dropdowns */}
+        <DashboardNavbar />
 
-      {/* Main Content with Enrollment Protection */}
-      <main className="lg:pt-20">
-        <EnrollmentGuard>
-          {children}
-        </EnrollmentGuard>
-      </main>
-    </div>
+        {/* Main Content with Enrollment Protection */}
+        <main className="lg:pt-20">
+          <EnrollmentGuard>
+            {children}
+          </EnrollmentGuard>
+        </main>
+
+        {/* Minimized Playground - shows when session is active and minimized */}
+        <MinimizedPlayground />
+      </div>
+    </PlaygroundSessionProvider>
   );
 }
 

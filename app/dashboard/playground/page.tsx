@@ -15,6 +15,7 @@ import { useWebRTCAudio } from '@/lib/hooks/useWebRTCAudio-v2';
 import { usePlaygroundHandlers } from '@/lib/hooks/usePlaygroundHandlers';
 import { getUserInfo } from '@/lib/utils/userHelpers';
 import { CatLoader } from '@/components/ui/CatLoader';
+import { usePlaygroundSession } from '@/lib/contexts/PlaygroundSessionContext';
 import {
   subscribeToRoom,
   subscribeToParticipants,
@@ -31,6 +32,7 @@ import type {
 export default function PlaygroundPage() {
   const router = useRouter();
   const { session } = useFirebaseAuth();
+  const playgroundSession = usePlaygroundSession();
 
   const [activeRooms, setActiveRooms] = useState<PlaygroundRoom[]>([]);
   const [currentRoom, setCurrentRoom] = useState<PlaygroundRoom | null>(null);
@@ -188,6 +190,64 @@ export default function PlaygroundPage() {
   // Note: Native WebRTC handles peer connections automatically
   // No need for manual peerId management or connectToPeer calls
 
+  // Sync with session context when room state changes
+  useEffect(() => {
+    if (currentRoom && userId && userName && userEmail) {
+      playgroundSession.updateSession({
+        currentRoom,
+        participants,
+        writings,
+        myParticipantId,
+        userId,
+        userName,
+        userEmail,
+        userRole,
+        isVoiceActive,
+        isMuted,
+      });
+    }
+  }, [currentRoom, participants, writings, myParticipantId, userId, userName, userEmail, userRole, isVoiceActive, isMuted]);
+
+  // Start session when joining a room
+  useEffect(() => {
+    if (currentRoom && userId && userName && userEmail && !playgroundSession.session) {
+      playgroundSession.startSession({
+        currentRoom,
+        participants,
+        writings,
+        myParticipantId,
+        userId,
+        userName,
+        userEmail,
+        userRole,
+        isVoiceActive,
+        isMuted,
+      });
+    }
+  }, [currentRoom?.roomId]);
+
+  // End session when leaving room
+  const wrappedHandleLeaveRoom = async () => {
+    await handleLeaveRoom();
+    playgroundSession.endSession();
+  };
+
+  // Minimize handler
+  const handleMinimize = () => {
+    playgroundSession.minimize();
+  };
+
+  // Check if user wants to maximize from minimized state
+  useEffect(() => {
+    if (playgroundSession.session && !playgroundSession.session.isMinimized && currentRoom) {
+      // User is maximizing - restore session state
+      setCurrentRoom(playgroundSession.session.currentRoom);
+      setParticipants(playgroundSession.session.participants);
+      setWritings(playgroundSession.session.writings);
+      setMyParticipantId(playgroundSession.session.myParticipantId);
+    }
+  }, [playgroundSession.session?.isMinimized]);
+
   const myWriting = writings.find((w) => w.userId === userId);
 
   // Show loading state while checking authentication and loading user data
@@ -210,6 +270,13 @@ export default function PlaygroundPage() {
         </div>
       </div>
     );
+  }
+
+  // If session is minimized, show nothing (minimized view is in layout)
+  if (playgroundSession.session?.isMinimized) {
+    // User navigated to playground while minimized - maximize it
+    playgroundSession.maximize();
+    return <CatLoader fullScreen message="Restoring playground..." />;
   }
 
   // Lobby view (no room joined)
@@ -242,7 +309,7 @@ export default function PlaygroundPage() {
       voiceStreams={audioStreams}
       voiceAnalysers={audioAnalysers}
       dialogState={dialogState}
-      onLeaveRoom={handleLeaveRoom}
+      onLeaveRoom={wrappedHandleLeaveRoom}
       onEndRoom={handleEndRoom}
       onStartVoice={handleStartVoice}
       onStopVoice={handleStopVoice}
@@ -252,6 +319,7 @@ export default function PlaygroundPage() {
       onToggleRoomPublicWriting={
         userRole === 'teacher' ? handleToggleRoomPublicWriting : undefined
       }
+      onMinimize={handleMinimize}
       onCloseDialog={() => setDialogState({ ...dialogState, isOpen: false })}
     />
   );
