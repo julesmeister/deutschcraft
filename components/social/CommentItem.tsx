@@ -17,13 +17,16 @@ interface CommentItemProps {
 
 export default function CommentItem({ comment, currentUserId, currentUser }: CommentItemProps) {
   const [showReplyForm, setShowReplyForm] = useState(false);
+  const [showSuggestForm, setShowSuggestForm] = useState(false);
   const [replyText, setReplyText] = useState('');
   const [commentAuthor, setCommentAuthor] = useState<User | null>(null);
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(comment.likesCount || 0);
 
-  const { toggleLike, createComment } = useSocialService();
+  const { toggleLike, createComment, hasUserLiked } = useSocialService();
   const toast = useToast();
+
+  const canSuggest = currentUserId !== comment.userId;
 
   useEffect(() => {
     const fetchAuthor = async () => {
@@ -38,6 +41,22 @@ export default function CommentItem({ comment, currentUserId, currentUser }: Com
     };
     fetchAuthor();
   }, [comment.userId]);
+
+  // Load initial like status for comment
+  useEffect(() => {
+    const loadLikeStatus = async () => {
+      try {
+        const liked = await hasUserLiked(currentUserId, comment.commentId);
+        setIsLiked(liked);
+      } catch (error) {
+        console.error('Error loading comment like status:', error);
+      }
+    };
+
+    if (currentUserId && comment.commentId) {
+      loadLikeStatus();
+    }
+  }, [currentUserId, comment.commentId]);
 
   const handleLikeComment = async () => {
     try {
@@ -132,6 +151,14 @@ export default function CommentItem({ comment, currentUserId, currentUser }: Com
           >
             Reply
           </button>
+          {canSuggest && (
+            <button
+              className="text-xs text-amber-600 hover:text-amber-700 font-medium transition-colors"
+              onClick={() => setShowSuggestForm(!showSuggestForm)}
+            >
+              Suggest
+            </button>
+          )}
           {likeCount > 0 && (
             <span className="text-xs text-gray-500">{likeCount} likes</span>
           )}
@@ -145,6 +172,8 @@ export default function CommentItem({ comment, currentUserId, currentUser }: Com
           currentUserId={currentUserId}
           currentUser={currentUser}
           isAuthor={currentUserId === comment.userId}
+          showForm={showSuggestForm}
+          onFormToggle={setShowSuggestForm}
         />
 
         {/* Reply Form */}

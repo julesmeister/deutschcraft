@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Post } from '@/lib/models/social';
 import { User } from '@/lib/models/user';
 import { useSocialService } from '@/lib/hooks/useSocialService';
@@ -40,11 +40,30 @@ export default function PostCard({
   const [displayContent, setDisplayContent] = useState(post.content);
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(post.likesCount || 0);
+  const [likeStatusLoaded, setLikeStatusLoaded] = useState(false);
 
-  const { toggleLike } = useSocialService();
+  const { toggleLike, hasUserLiked } = useSocialService();
   const toast = useToast();
 
   const isAuthor = currentUserId === post.userId;
+
+  // Load initial like status
+  useEffect(() => {
+    const loadLikeStatus = async () => {
+      try {
+        const liked = await hasUserLiked(currentUserId, post.postId);
+        setIsLiked(liked);
+        setLikeStatusLoaded(true);
+      } catch (error) {
+        console.error('Error loading like status:', error);
+        setLikeStatusLoaded(true);
+      }
+    };
+
+    if (currentUserId && post.postId) {
+      loadLikeStatus();
+    }
+  }, [currentUserId, post.postId]);
 
   const handleLike = async () => {
     try {

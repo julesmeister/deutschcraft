@@ -14,6 +14,8 @@ interface CommentSuggestionsProps {
   currentUserId: string;
   currentUser?: User;
   isAuthor: boolean;
+  showForm?: boolean;
+  onFormToggle?: (show: boolean) => void;
 }
 
 export default function CommentSuggestions({
@@ -22,9 +24,10 @@ export default function CommentSuggestions({
   commentUserId,
   currentUserId,
   currentUser,
-  isAuthor
+  isAuthor,
+  showForm: externalShowForm,
+  onFormToggle
 }: CommentSuggestionsProps) {
-  const [showForm, setShowForm] = useState(false);
   const [showList, setShowList] = useState(false);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [suggesterNames, setSuggesterNames] = useState<Record<string, string>>({});
@@ -36,6 +39,7 @@ export default function CommentSuggestions({
   const { success, error: showError } = useToast();
 
   const suggestionsCount = suggestions.length;
+  const showForm = externalShowForm ?? false;
 
   useEffect(() => {
     if (showList) {
@@ -103,7 +107,7 @@ export default function CommentSuggestions({
       success('Correction submitted!', { duration: 2000 });
       setCorrectionText('');
       setExplanation('');
-      setShowForm(false);
+      onFormToggle?.(false);
       await loadSuggestions();
     } catch (err) {
       showError('Failed to submit', { duration: 2000 });
@@ -132,21 +136,9 @@ export default function CommentSuggestions({
     }
   };
 
-  const canSuggest = currentUserId !== commentUserId;
-
   return (
     <div className="mt-1">
       <div className="flex items-center gap-2">
-        {/* Suggest Button */}
-        {canSuggest && !showForm && (
-          <button
-            onClick={() => setShowForm(true)}
-            className="text-[10px] text-amber-600 hover:text-amber-700 font-medium transition-colors"
-          >
-            Suggest
-          </button>
-        )}
-
         {/* Corrections Badge */}
         {suggestionsCount > 0 && (
           <button
