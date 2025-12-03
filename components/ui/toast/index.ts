@@ -1,7 +1,4 @@
-// Export Sonner-based toast hook (backward compatible)
-export { useToast } from './useSonnerToast';
-export type { ToastVariant, ToastProps, ToastAction } from './Toast';
-
-// Legacy exports (deprecated but kept for compatibility)
+// Export all toast components (now powered by Sonner)
 export { Toast } from './Toast';
-export { ToastProvider } from './ToastProvider';
+export { ToastProvider, useToast } from './ToastProvider';
+export type { ToastVariant, ToastProps, ToastAction } from './Toast';

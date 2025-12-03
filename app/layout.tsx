@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 import { SessionProvider } from "@/components/providers/SessionProvider";
-import { Toaster } from "sonner";
+import { ToastProvider } from "@/components/ui/toast";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -39,8 +39,9 @@ export default function RootLayout({
         className={`${inter.variable} ${manrope.variable} font-sans antialiased`}
       >
         <SessionProvider>
-          {children}
-          <Toaster position="top-right" richColors closeButton />
+          <ToastProvider>
+            {children}
+          </ToastProvider>
         </SessionProvider>
       </body>
     </html>

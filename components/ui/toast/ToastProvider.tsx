@@ -1,19 +1,8 @@
 'use client';
 
-import { createContext, useContext, useState, ReactNode, useEffect } from 'react';
-import { createPortal } from 'react-dom';
-import { Toast, ToastVariant, ToastAction } from './Toast';
-
-interface ToastItem {
-  id: string;
-  message: string;
-  title?: string;
-  description?: string;
-  variant: ToastVariant;
-  duration?: number;
-  actions?: ToastAction[];
-  showIcon?: boolean;
-}
+import { createContext, useContext, ReactNode } from 'react';
+import { toast as sonnerToast, Toaster } from 'sonner';
+import { ToastVariant, ToastAction } from './Toast';
 
 interface ToastOptions {
   title?: string;
@@ -24,9 +13,6 @@ interface ToastOptions {
 }
 
 interface ToastContextValue {
-  toasts: ToastItem[];
-  addToast: (message: string, variant?: ToastVariant, options?: ToastOptions) => void;
-  removeToast: (id: string) => void;
   success: (message: string, options?: ToastOptions) => void;
   error: (message: string, options?: ToastOptions) => void;
   warning: (message: string, options?: ToastOptions) => void;
@@ -37,69 +23,79 @@ interface ToastContextValue {
 const ToastContext = createContext<ToastContextValue | undefined>(undefined);
 
 export function ToastProvider({ children }: { children: ReactNode }) {
-  const [toasts, setToasts] = useState<ToastItem[]>([]);
-
-  const addToast = (message: string, variant: ToastVariant = 'info', options: ToastOptions = {}) => {
-    const id = Math.random().toString(36).substring(2, 9);
-    setToasts((prev) => [
-      ...prev,
-      {
-        id,
-        message,
-        variant,
-        duration: options.duration ?? 5000,
-        title: options.title,
-        description: options.description,
-        actions: options.actions,
-        showIcon: options.showIcon,
-      },
-    ]);
+  const success = (message: string, options?: ToastOptions) => {
+    if (options?.title || options?.description) {
+      sonnerToast.success(options.title || message, {
+        description: options.description || (options.title ? message : undefined),
+        duration: options.duration,
+      });
+    } else {
+      sonnerToast.success(message, {
+        duration: options?.duration,
+      });
+    }
   };
 
-  const removeToast = (id: string) => {
-    setToasts((prev) => prev.filter((toast) => toast.id !== id));
+  const error = (message: string, options?: ToastOptions) => {
+    if (options?.title || options?.description) {
+      sonnerToast.error(options.title || message, {
+        description: options.description || (options.title ? message : undefined),
+        duration: options?.duration,
+      });
+    } else {
+      sonnerToast.error(message, {
+        duration: options?.duration,
+      });
+    }
   };
 
-  // Convenience methods
-  const success = (message: string, options?: ToastOptions) => addToast(message, 'success', options);
+  const warning = (message: string, options?: ToastOptions) => {
+    if (options?.title || options?.description) {
+      sonnerToast.warning(options.title || message, {
+        description: options.description || (options.title ? message : undefined),
+        duration: options?.duration,
+      });
+    } else {
+      sonnerToast.warning(message, {
+        duration: options?.duration,
+      });
+    }
+  };
 
-  const error = (message: string, options?: ToastOptions) => addToast(message, 'error', options);
+  const info = (message: string, options?: ToastOptions) => {
+    if (options?.title || options?.description) {
+      sonnerToast.info(options.title || message, {
+        description: options.description || (options.title ? message : undefined),
+        duration: options?.duration,
+      });
+    } else {
+      sonnerToast.info(message, {
+        duration: options?.duration,
+      });
+    }
+  };
 
-  const warning = (message: string, options?: ToastOptions) => addToast(message, 'warning', options);
-
-  const info = (message: string, options?: ToastOptions) => addToast(message, 'info', options);
-
-  // Confirm toast with action buttons
   const confirm = (
     title: string,
     description: string,
     onConfirm: () => void,
-    options: Omit<ToastOptions, 'actions'> = {}
+    options?: Omit<ToastOptions, 'actions'>
   ) => {
-    addToast('', 'info', {
-      ...options,
-      title,
+    sonnerToast(title, {
       description,
-      duration: 0, // Don't auto-dismiss confirm toasts
-      actions: [
-        {
-          label: 'Confirm',
-          onClick: onConfirm,
-          variant: 'primary',
-        },
-        {
-          label: 'Close',
-          onClick: () => {},
-          variant: 'secondary',
-        },
-      ],
+      duration: options?.duration ?? Infinity,
+      action: {
+        label: 'Confirm',
+        onClick: onConfirm,
+      },
+      cancel: {
+        label: 'Cancel',
+        onClick: () => {},
+      },
     });
   };
 
   const value = {
-    toasts,
-    addToast,
-    removeToast,
     success,
     error,
     warning,
@@ -108,51 +104,10 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <ToastContext value={value}>
+    <ToastContext.Provider value={value}>
       {children}
-      <ToastContainer toasts={toasts} removeToast={removeToast} />
-    </ToastContext>
-  );
-}
-
-function ToastContainer({
-  toasts,
-  removeToast,
-}: {
-  toasts: ToastItem[];
-  removeToast: (id: string) => void;
-}) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted || typeof document === 'undefined') return null;
-
-  return createPortal(
-    <div
-      className="fixed top-4 right-4 z-50 flex flex-col gap-3 pointer-events-none"
-      aria-live="polite"
-      aria-atomic="true"
-    >
-      {toasts.map((toast) => (
-        <div key={toast.id} className="pointer-events-auto">
-          <Toast
-            id={toast.id}
-            message={toast.message}
-            title={toast.title}
-            description={toast.description}
-            variant={toast.variant}
-            duration={toast.duration}
-            onClose={removeToast}
-            actions={toast.actions}
-            showIcon={toast.showIcon}
-          />
-        </div>
-      ))}
-    </div>,
-    document.body
+      <Toaster position="top-right" richColors closeButton />
+    </ToastContext.Provider>
   );
 }
 

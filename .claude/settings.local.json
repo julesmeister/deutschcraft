@@ -59,7 +59,11 @@
       "Bash(Select-Object -First 100)",
       "Bash(timeout /t 5)",
       "Bash(npx grep:*)",
-      "Bash(Select-String -Pattern \"(error|Error|ERROR|flashcard)\" -Context 2,2)"
+      "Bash(Select-String -Pattern \"(error|Error|ERROR|flashcard)\" -Context 2,2)",
+      "Bash(for file in components/social/*.tsx)",
+      "Bash(sort:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(del componentsuitoastuseSonnerToast.ts)"
     ],
     "deny": [],
     "ask": []
