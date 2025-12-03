@@ -412,6 +412,138 @@ service cloud.firestore {
     }
 
     // ============================================================================
+    // SOCIAL MEDIA FEATURES
+    // ============================================================================
+
+    // Posts - Students and teachers can create and view posts
+    match /posts/{postId} {
+      // Anyone authenticated can read public posts
+      allow read: if isAuthenticated();
+
+      // Students and teachers can create posts
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.token.email;
+
+      // Users can update their own posts
+      allow update: if isAuthenticated() && resource.data.userId == request.auth.token.email;
+
+      // Teachers can update any post (for moderation)
+      allow update: if isTeacher();
+
+      // Users can delete their own posts
+      allow delete: if isAuthenticated() && resource.data.userId == request.auth.token.email;
+
+      // Teachers can delete any post (for moderation)
+      allow delete: if isTeacher();
+    }
+
+    // Comments - on posts
+    match /comments/{commentId} {
+      // Anyone authenticated can read comments
+      allow read: if isAuthenticated();
+
+      // Users can create comments
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.token.email;
+
+      // Users can update their own comments
+      allow update: if isAuthenticated() && resource.data.userId == request.auth.token.email;
+
+      // Users can delete their own comments
+      allow delete: if isAuthenticated() && resource.data.userId == request.auth.token.email;
+
+      // Teachers can delete any comment (for moderation)
+      allow delete: if isTeacher();
+    }
+
+    // Suggestions - corrections for posts
+    match /suggestions/{suggestionId} {
+      // Post authors and suggestion creators can read
+      allow read: if isAuthenticated() &&
+                    (resource.data.suggestedBy == request.auth.token.email ||
+                     resource.data.suggestedTo == request.auth.token.email);
+
+      // All authenticated users can read (for learning)
+      allow read: if isAuthenticated();
+
+      // Users can create suggestions on others' posts (not their own)
+      allow create: if isAuthenticated() &&
+                      request.resource.data.suggestedBy == request.auth.token.email &&
+                      request.resource.data.suggestedBy != request.resource.data.suggestedTo;
+
+      // Post authors can update suggestions (accept/reject)
+      allow update: if isAuthenticated() && resource.data.suggestedTo == request.auth.token.email;
+
+      // Suggestion creators can update their own suggestions (before accepted)
+      allow update: if isAuthenticated() &&
+                      resource.data.suggestedBy == request.auth.token.email &&
+                      resource.data.status == 'pending';
+
+      // Anyone can update to vote (upvote/downvote)
+      allow update: if isAuthenticated();
+
+      // Teachers can update any suggestion
+      allow update: if isTeacher();
+
+      // Suggestion creators can delete their pending suggestions
+      allow delete: if isAuthenticated() &&
+                      resource.data.suggestedBy == request.auth.token.email &&
+                      resource.data.status == 'pending';
+
+      // Teachers can delete any suggestion
+      allow delete: if isTeacher();
+    }
+
+    // Likes - for posts and comments
+    match /likes/{likeId} {
+      // Users can read their own likes
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.token.email;
+
+      // Anyone can read likes (for counts)
+      allow read: if isAuthenticated();
+
+      // Users can create their own likes
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.token.email;
+
+      // Users can delete their own likes (unlike)
+      allow delete: if isAuthenticated() && resource.data.userId == request.auth.token.email;
+    }
+
+    // Shares - post sharing
+    match /shares/{shareId} {
+      // Anyone authenticated can read shares
+      allow read: if isAuthenticated();
+
+      // Users can create shares
+      allow create: if isAuthenticated() && request.resource.data.sharedBy == request.auth.token.email;
+
+      // Users can delete their own shares
+      allow delete: if isAuthenticated() && resource.data.sharedBy == request.auth.token.email;
+    }
+
+    // Poll votes
+    match /pollVotes/{voteId} {
+      // Users can read poll results
+      allow read: if isAuthenticated();
+
+      // Users can create their own votes
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.token.email;
+
+      // Users can update their own votes (change vote)
+      allow update: if isAuthenticated() && resource.data.userId == request.auth.token.email;
+    }
+
+    // Post edit history - track all post edits
+    match /postEditHistory/{editId} {
+      // Post authors can read their edit history
+      allow read: if isAuthenticated() && resource.data.userId == request.auth.token.email;
+
+      // Teachers can read all edit history
+      allow read: if isTeacher();
+
+      // System creates edit history automatically
+      allow create: if isAuthenticated() && request.resource.data.userId == request.auth.token.email;
+    }
+
+    // ============================================================================
     // ALLOW ALL FOR DEVELOPMENT (Comment out in production)
     // ============================================================================
 

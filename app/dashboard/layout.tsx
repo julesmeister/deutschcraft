@@ -130,7 +130,6 @@ function DashboardNavbar() {
                     { label: 'Writing Review', href: '/dashboard/teacher/writing' },
                     { label: 'Analytics', href: '/dashboard/analytics' },
                     { label: 'Assignments', href: '/dashboard/assignments' },
-                    
                     { label: 'Playground', href: '/dashboard/playground' },
                   ],
                 },
@@ -156,6 +155,14 @@ function DashboardNavbar() {
                 },
               ]}
             />
+
+            {/* Social Link */}
+            <Link
+              href={session?.user ? (session.user.email && session.user.email.includes('@') ? '/dashboard/social' : '/dashboard/social') : '/dashboard/social'}
+              className="font-bold text-[15px] text-gray-300 hover:text-piku-mint transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-mint after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Social
+            </Link>
 
             {/* Settings Link */}
             <Link
@@ -266,6 +273,9 @@ function DashboardNavbar() {
 
               {/* Settings & Sign Out */}
               <div className="pt-3 border-t border-gray-700 space-y-2">
+                <Link href="/dashboard/social" className="block font-bold text-sm text-white hover:text-piku-mint transition-colors">
+                  Social
+                </Link>
                 <Link href="/dashboard/settings" className="block font-bold text-sm text-white hover:text-piku-cyan-accent transition-colors">
                   Settings
                 </Link>

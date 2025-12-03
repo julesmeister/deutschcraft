@@ -43,6 +43,14 @@ export function QuickActions() {
         >
           Review Writing
         </ActionButton>
+
+        <ActionButton
+          variant="orange"
+          icon={<ActionButtonIcons.Message />}
+          onClick={() => router.push('/dashboard/teacher/social')}
+        >
+          Social Feed
+        </ActionButton>
       </div>
     </div>
   );

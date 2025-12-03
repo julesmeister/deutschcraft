@@ -11,7 +11,7 @@ export function StudentQuickActions({ cardsReady, wordsToReview, writingExercise
   const router = useRouter();
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
       <ActionButton
         onClick={() => router.push('/dashboard/student/flashcards')}
         icon={<ActionButtonIcons.Document />}
@@ -34,6 +34,14 @@ export function StudentQuickActions({ cardsReady, wordsToReview, writingExercise
         variant="mint"
       >
         Review Cards
+      </ActionButton>
+
+      <ActionButton
+        onClick={() => router.push('/dashboard/student/social')}
+        icon={<ActionButtonIcons.Message />}
+        variant="yellow"
+      >
+        Social Feed
       </ActionButton>
     </div>
   );
