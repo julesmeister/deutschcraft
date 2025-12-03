@@ -235,6 +235,10 @@ export default function SuggestionsList({
                         Apply
                       </button>
                     )}
+
+                    {suggestion.status === 'accepted' && (
+                      <span className="text-[10px] text-green-600 font-semibold">✓ Applied</span>
+                    )}
                   </div>
                 </div>
               </div>
