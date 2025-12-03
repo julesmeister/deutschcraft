@@ -261,34 +261,34 @@ export async function acceptSuggestion(suggestionId: string): Promise<void> {
     changed: currentContent !== updatedContent
   });
 
-  // Now perform batch update
-  const batch = writeBatch(db);
   const now = Date.now();
 
-  // Update suggestion status
-  batch.update(suggestionRef, {
-    status: 'accepted',
-    acceptedAt: now,
-    updatedAt: now,
-  });
-
-  // Update post with corrected content
-  batch.update(postRef, {
+  // Update post FIRST with corrected content
+  console.log('[acceptSuggestion] Updating post content...');
+  await updateDoc(postRef, {
     content: updatedContent,
     hasAcceptedSuggestion: true,
     isEdited: true,
     updatedAt: now,
   });
+  console.log('[acceptSuggestion] Post updated successfully');
 
-  console.log('[acceptSuggestion] Committing batch update...');
-  await batch.commit();
-  console.log('[acceptSuggestion] Batch update committed successfully');
+  // Then update suggestion status
+  console.log('[acceptSuggestion] Updating suggestion status...');
+  await updateDoc(suggestionRef, {
+    status: 'accepted',
+    acceptedAt: now,
+    updatedAt: now,
+  });
+  console.log('[acceptSuggestion] Suggestion updated successfully');
 
   // Verify the update by reading the post again
   const verifyDoc = await getDoc(postRef);
   if (verifyDoc.exists()) {
     const verifyData = verifyDoc.data();
     console.log('[acceptSuggestion] Verified post content after update:', verifyData.content);
+    console.log('[acceptSuggestion] Expected:', updatedContent);
+    console.log('[acceptSuggestion] Match:', verifyData.content === updatedContent);
   }
 }
 
