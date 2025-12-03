@@ -13,6 +13,11 @@ interface ProfileSidebarProps {
     suggestionsGiven: number;
     suggestionsReceived: number;
     acceptanceRate: number;
+    cardsLearned?: number;
+    cardsMastered?: number;
+    streak?: number;
+    writingExercises?: number;
+    wordsWritten?: number;
   };
 }
 
@@ -24,6 +29,11 @@ export default function ProfileSidebar({ user, batchName, stats }: ProfileSideba
     suggestionsGiven: 0,
     suggestionsReceived: 0,
     acceptanceRate: 0,
+    cardsLearned: 0,
+    cardsMastered: 0,
+    streak: 0,
+    writingExercises: 0,
+    wordsWritten: 0,
     ...stats
   };
 
@@ -87,19 +97,31 @@ export default function ProfileSidebar({ user, batchName, stats }: ProfileSideba
                 <hr className="my-4 border-gray-200" />
                 <div className="text-left">
                   <h6 className="text-sm font-semibold mb-3">Learning Progress</h6>
-                  <div className="flex justify-between mb-2">
+                  <div className="flex justify-between mb-2 transform transition-all duration-300 hover:translate-x-1">
                     <small className="text-gray-600">Words Learned:</small>
-                    <small className="font-bold text-gray-900">{user.wordsLearned || 0}</small>
+                    <small className="font-bold text-gray-900">{defaultStats.cardsLearned}</small>
                   </div>
-                  <div className="flex justify-between mb-2">
+                  <div className="flex justify-between mb-2 transform transition-all duration-300 hover:translate-x-1">
+                    <small className="text-gray-600">Words Mastered:</small>
+                    <small className="font-bold text-gray-900">{defaultStats.cardsMastered}</small>
+                  </div>
+                  <div className="flex justify-between mb-2 transform transition-all duration-300 hover:translate-x-1">
                     <small className="text-gray-600">Current Streak:</small>
-                    <small className="font-bold text-gray-900">{user.currentStreak || 0} days</small>
+                    <small className="font-bold text-gray-900">{defaultStats.streak} days</small>
                   </div>
-                  <div className="flex justify-between mb-2">
+                  <div className="flex justify-between mb-2 transform transition-all duration-300 hover:translate-x-1">
+                    <small className="text-gray-600">Writing Exercises:</small>
+                    <small className="font-bold text-gray-900">{defaultStats.writingExercises}</small>
+                  </div>
+                  <div className="flex justify-between mb-2 transform transition-all duration-300 hover:translate-x-1">
+                    <small className="text-gray-600">Words Written:</small>
+                    <small className="font-bold text-gray-900">{defaultStats.wordsWritten}</small>
+                  </div>
+                  <div className="flex justify-between mb-2 transform transition-all duration-300 hover:translate-x-1">
                     <small className="text-gray-600">Suggestions Given:</small>
                     <small className="font-bold text-gray-900">{defaultStats.suggestionsGiven}</small>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between transform transition-all duration-300 hover:translate-x-1">
                     <small className="text-gray-600">Acceptance Rate:</small>
                     <small className="font-bold text-gray-900">
                       {defaultStats.acceptanceRate.toFixed(1)}%

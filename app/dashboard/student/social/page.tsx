@@ -6,6 +6,8 @@ import { useCurrentStudent } from '@/lib/hooks/useUsers';
 import { usePosts, useUserSocialStats } from '@/lib/hooks/useSocial';
 import { useBatch } from '@/lib/hooks/useBatches';
 import { usePostAuthors } from '@/lib/hooks/usePostAuthors';
+import { useStudyStats } from '@/lib/hooks/useFlashcards';
+import { useWritingStats } from '@/lib/hooks/useWritingExercises';
 import PostCard from '@/components/social/PostCard';
 import CreatePost from '@/components/social/CreatePost';
 import ProfileSidebar from '@/components/social/ProfileSidebar';
@@ -20,6 +22,10 @@ export default function StudentSocialPage() {
   const { stats } = useUserSocialStats(session?.user?.email || '');
   const { batch } = useBatch(currentUser?.batchId || undefined);
   const [postFilter, setPostFilter] = useState<'all' | 'batch'>('all');
+
+  // Get comprehensive study stats
+  const { stats: studyStats } = useStudyStats(session?.user?.email || undefined);
+  const { data: writingStats } = useWritingStats(session?.user?.email || undefined);
 
   // Ensure currentUser has photoURL from session if missing (memoized to prevent infinite loops)
   const enrichedCurrentUser = useMemo(() => {
@@ -90,6 +96,11 @@ export default function StudentSocialPage() {
                 suggestionsGiven: stats.suggestionsGiven,
                 suggestionsReceived: stats.suggestionsReceived,
                 acceptanceRate: stats.acceptanceRate,
+                cardsLearned: studyStats.cardsLearned,
+                cardsMastered: studyStats.cardsMastered,
+                streak: studyStats.streak,
+                writingExercises: writingStats?.totalExercisesCompleted || 0,
+                wordsWritten: writingStats?.totalWordsWritten || 0,
               }}
             />
           </div>
