@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Suggestion } from '@/lib/models/social';
 import { useSocialService } from '@/lib/hooks/useSocialService';
 import { useToast } from '@/components/ui/toast';
@@ -10,13 +10,15 @@ interface SuggestionsListProps {
   suggestionsCount: number;
   isAuthor: boolean;
   onSuggestionAccepted?: (correctedText: string) => void;
+  onAcceptedSuggestionLoaded?: (correctedText: string) => void;
 }
 
 export default function SuggestionsList({
   postId,
   suggestionsCount,
   isAuthor,
-  onSuggestionAccepted
+  onSuggestionAccepted,
+  onAcceptedSuggestionLoaded
 }: SuggestionsListProps) {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
@@ -25,11 +27,27 @@ export default function SuggestionsList({
   const { getSuggestions, acceptSuggestion, voteSuggestion } = useSocialService();
   const { success, error: showError } = useToast();
 
+  // Load accepted suggestion on mount
+  useEffect(() => {
+    if (suggestionsCount > 0) {
+      loadSuggestions();
+    }
+  }, []);
+
   const loadSuggestions = async () => {
     setLoading(true);
     try {
       const data = await getSuggestions(postId);
       setSuggestions(data);
+
+      // Find the most recent accepted suggestion and pass it to parent
+      const accepted = data
+        .filter(s => s.status === 'accepted')
+        .sort((a, b) => (b.acceptedAt || 0) - (a.acceptedAt || 0))[0];
+
+      if (accepted && onAcceptedSuggestionLoaded) {
+        onAcceptedSuggestionLoaded(accepted.suggestedText);
+      }
     } catch (err) {
       console.error('Failed to load suggestions:', err);
     } finally {

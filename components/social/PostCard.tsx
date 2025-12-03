@@ -35,12 +35,9 @@ export default function PostCard({
 }: PostCardProps) {
   const [showComments, setShowComments] = useState(true);
   const [showSuggestionForm, setShowSuggestionForm] = useState(false);
-  const [acceptedSuggestion, setAcceptedSuggestion] = useState<string | null>(null);
+  const [displayContent, setDisplayContent] = useState(post.content);
 
   const isAuthor = currentUserId === post.userId;
-
-  // Display the most recent accepted correction, or original content
-  const displayContent = acceptedSuggestion || post.content;
 
   const handleSuggestionCreated = () => {
     setShowSuggestionForm(false);
@@ -48,7 +45,7 @@ export default function PostCard({
 
   const handleSuggestionAccepted = (correctedText: string) => {
     // Update the displayed content with the accepted correction
-    setAcceptedSuggestion(correctedText);
+    setDisplayContent(correctedText);
   };
 
   return (
@@ -73,6 +70,7 @@ export default function PostCard({
           suggestionsCount={post.suggestionsCount}
           isAuthor={isAuthor}
           onSuggestionAccepted={handleSuggestionAccepted}
+          onAcceptedSuggestionLoaded={setDisplayContent}
         />
 
         {/* Suggestion Form - Inline */}
