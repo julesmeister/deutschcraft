@@ -51,8 +51,10 @@ export default function SuggestionsList({
       success('Correction applied!', { duration: 3000 });
       // Close the suggestions panel
       setShowSuggestions(false);
-      // Notify parent to refresh the post
-      onSuggestionAccepted?.();
+      // Small delay to ensure database has updated, then notify parent to refresh
+      setTimeout(() => {
+        onSuggestionAccepted?.();
+      }, 300);
     } catch (err) {
       showError('Failed to accept', { duration: 3000 });
     }

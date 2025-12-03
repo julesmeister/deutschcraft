@@ -212,42 +212,57 @@ export async function updateSuggestion(suggestionId: string, updates: Partial<Su
 }
 
 export async function acceptSuggestion(suggestionId: string): Promise<void> {
-  const batch = writeBatch(db);
-
-  // Update suggestion status
+  // Get suggestion data first (before any updates)
   const suggestionRef = doc(db, 'suggestions', suggestionId);
-  batch.update(suggestionRef, {
-    status: 'accepted',
-    acceptedAt: Date.now(),
-    updatedAt: Date.now(),
+  const suggestionDoc = await getDoc(suggestionRef);
+
+  if (!suggestionDoc.exists()) {
+    throw new Error('Suggestion not found');
+  }
+
+  const suggestion = suggestionDoc.data() as Suggestion;
+  const postRef = doc(db, 'posts', suggestion.postId);
+
+  // Get current post content
+  const postDoc = await getDoc(postRef);
+  if (!postDoc.exists()) {
+    throw new Error('Post not found');
+  }
+
+  const post = postDoc.data();
+  const currentContent = post.content || '';
+
+  // Replace original text with suggested text
+  const updatedContent = currentContent.replace(
+    suggestion.originalText,
+    suggestion.suggestedText
+  );
+
+  console.log('Accepting suggestion:', {
+    original: suggestion.originalText,
+    suggested: suggestion.suggestedText,
+    currentContent,
+    updatedContent
   });
 
-  // Get suggestion to update post
-  const suggestionDoc = await getDoc(suggestionRef);
-  if (suggestionDoc.exists()) {
-    const suggestion = suggestionDoc.data() as Suggestion;
-    const postRef = doc(db, 'posts', suggestion.postId);
+  // Now perform batch update
+  const batch = writeBatch(db);
+  const now = Date.now();
 
-    // Get current post to update content
-    const postDoc = await getDoc(postRef);
-    if (postDoc.exists()) {
-      const post = postDoc.data();
-      const currentContent = post.content || '';
+  // Update suggestion status
+  batch.update(suggestionRef, {
+    status: 'accepted',
+    acceptedAt: now,
+    updatedAt: now,
+  });
 
-      // Replace original text with suggested text
-      const updatedContent = currentContent.replace(
-        suggestion.originalText,
-        suggestion.suggestedText
-      );
-
-      batch.update(postRef, {
-        content: updatedContent,
-        hasAcceptedSuggestion: true,
-        isEdited: true,
-        updatedAt: Date.now(),
-      });
-    }
-  }
+  // Update post with corrected content
+  batch.update(postRef, {
+    content: updatedContent,
+    hasAcceptedSuggestion: true,
+    isEdited: true,
+    updatedAt: now,
+  });
 
   await batch.commit();
 }
