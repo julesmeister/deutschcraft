@@ -238,21 +238,22 @@ export async function acceptSuggestion(suggestionId: string): Promise<void> {
   // If original text matches entire post content, replace entirely
   if (suggestion.originalText === currentContent) {
     updatedContent = suggestion.suggestedText;
-    console.log('Replacing entire post content');
+    console.log('[acceptSuggestion] Replacing entire post content');
   } else if (currentContent.includes(suggestion.originalText)) {
     // If original text is found within content, replace that part
     updatedContent = currentContent.replace(
       suggestion.originalText,
       suggestion.suggestedText
     );
-    console.log('Replacing matched portion');
+    console.log('[acceptSuggestion] Replacing matched portion');
   } else {
     // Original text not found - this shouldn't happen but handle gracefully
-    console.warn('Original text not found, using suggested text as full replacement');
+    console.warn('[acceptSuggestion] Original text not found, using suggested text as full replacement');
     updatedContent = suggestion.suggestedText;
   }
 
-  console.log('Accepting suggestion:', {
+  console.log('[acceptSuggestion] Accepting suggestion:', {
+    postId: suggestion.postId,
     original: suggestion.originalText,
     suggested: suggestion.suggestedText,
     currentContent,
@@ -279,7 +280,16 @@ export async function acceptSuggestion(suggestionId: string): Promise<void> {
     updatedAt: now,
   });
 
+  console.log('[acceptSuggestion] Committing batch update...');
   await batch.commit();
+  console.log('[acceptSuggestion] Batch update committed successfully');
+
+  // Verify the update by reading the post again
+  const verifyDoc = await getDoc(postRef);
+  if (verifyDoc.exists()) {
+    const verifyData = verifyDoc.data();
+    console.log('[acceptSuggestion] Verified post content after update:', verifyData.content);
+  }
 }
 
 export async function voteSuggestion(suggestionId: string, vote: 'up' | 'down'): Promise<void> {
