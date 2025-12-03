@@ -29,10 +29,10 @@ export default function ProfileSidebar({ user, batchName, stats }: ProfileSideba
 
   return (
     <div className="px-2 lg:px-0">
-      <div className="bg-white border border-gray-200 overflow-hidden h-full">
+      <div className="bg-white border border-gray-200 overflow-hidden h-full transform transition-all duration-300 hover:shadow-lg">
         {/* Cover Image */}
         <div
-          className="h-20 bg-gradient-to-r from-blue-500 to-purple-600"
+          className="h-20 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 hover:brightness-110"
           style={{
             backgroundImage: 'url("/images/cover-placeholder.jpg")',
             backgroundPosition: 'center center',
@@ -44,13 +44,13 @@ export default function ProfileSidebar({ user, batchName, stats }: ProfileSideba
         <div className="pt-0 px-5 pb-5">
           <div className="text-center">
             {/* Avatar */}
-            <div className="-mt-8 mb-3">
+            <div className="-mt-8 mb-3 transform transition-all duration-300 hover:scale-110">
               <UserAvatar user={user} size="lg" />
             </div>
 
             {/* User Info */}
             <h5 className="mb-0 text-lg font-bold">
-              <a href="#" className="text-gray-800 hover:text-blue-600 transition-colors">
+              <a href="#" className="text-gray-800 hover:text-blue-600 transition-all duration-300">
                 {user.name || `${user.firstName || ''} ${user.lastName || ''}`.trim() || user.email}
               </a>
             </h5>
@@ -65,17 +65,17 @@ export default function ProfileSidebar({ user, batchName, stats }: ProfileSideba
 
             {/* Stats */}
             <div className="flex gap-2 justify-center mt-3">
-              <div className="text-center">
+              <div className="text-center transform transition-all duration-300 hover:scale-110">
                 <h6 className="text-sm font-bold mb-0 text-gray-800">{defaultStats.postsCount}</h6>
                 <small className="text-xs text-gray-600">Post</small>
               </div>
               <div className="w-px bg-gray-300 self-stretch opacity-25"></div>
-              <div className="text-center">
+              <div className="text-center transform transition-all duration-300 hover:scale-110">
                 <h6 className="text-sm font-bold mb-0 text-gray-800">{defaultStats.suggestionsReceived}</h6>
                 <small className="text-xs text-gray-600">Corrections</small>
               </div>
               <div className="w-px bg-gray-300 self-stretch opacity-25"></div>
-              <div className="text-center">
+              <div className="text-center transform transition-all duration-300 hover:scale-110">
                 <h6 className="text-sm font-bold mb-0 text-gray-800">{defaultStats.suggestionsGiven}</h6>
                 <small className="text-xs text-gray-600">Helped</small>
               </div>
@@ -115,7 +115,7 @@ export default function ProfileSidebar({ user, batchName, stats }: ProfileSideba
           {/* Navigation */}
           <ul className="flex flex-col gap-2">
             <li>
-              <a className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium" href={`/dashboard/${user.role === 'STUDENT' ? 'student' : 'teacher'}/social/my-posts`}>
+              <a className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-all duration-300 font-medium transform hover:translate-x-1" href={`/dashboard/${user.role === 'STUDENT' ? 'student' : 'teacher'}/social/my-posts`}>
                 <svg width="20" height="20" fill="currentColor" className="mr-2" viewBox="0 0 16 16">
                   <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
                   <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
@@ -124,7 +124,7 @@ export default function ProfileSidebar({ user, batchName, stats }: ProfileSideba
               </a>
             </li>
             <li>
-              <a className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium" href={`/dashboard/${user.role === 'STUDENT' ? 'student' : 'teacher'}/social/notifications`}>
+              <a className="flex items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-all duration-300 font-medium transform hover:translate-x-1" href={`/dashboard/${user.role === 'STUDENT' ? 'student' : 'teacher'}/social/notifications`}>
                 <svg width="20" height="20" fill="currentColor" className="mr-2" viewBox="0 0 16 16">
                   <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
                 </svg>
