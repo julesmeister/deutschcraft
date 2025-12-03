@@ -183,19 +183,18 @@ export default function SuggestionsList({
 
                 {/* Actions Row - Compact */}
                 <div className="flex items-center justify-between text-xs">
-                  <div className="flex flex-col gap-0.5">
-                    <div className="flex items-center gap-1.5">
-                      {suggestion.status === 'pending' && (
-                        <span className="px-1.5 py-0.5 text-[10px] rounded-full font-medium bg-gray-100 text-gray-600">
-                          pending
-                        </span>
-                      )}
-                      <span className="text-[10px] text-gray-600 font-medium">
-                        {suggesterNames[suggestion.suggestedBy] || suggestion.suggestedBy.split('@')[0]}
+                  <div className="flex items-center gap-1.5">
+                    {suggestion.status === 'pending' && (
+                      <span className="px-1.5 py-0.5 text-[10px] rounded-full font-medium bg-gray-100 text-gray-600">
+                        pending
                       </span>
-                    </div>
-                    <span className="text-[10px] text-gray-400">
-                      {new Date(suggestion.createdAt).toLocaleDateString()} {new Date(suggestion.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+                    )}
+                    <span className="text-xs text-gray-700 font-medium">
+                      {suggesterNames[suggestion.suggestedBy] || suggestion.suggestedBy.split('@')[0]}
+                    </span>
+                    <span className="text-xs text-gray-400">•</span>
+                    <span className="text-xs text-gray-500">
+                      {new Date(suggestion.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} {new Date(suggestion.createdAt).toLocaleTimeString('en-US', {hour: 'numeric', minute:'2-digit', hour12: true})}
                     </span>
                   </div>
 
