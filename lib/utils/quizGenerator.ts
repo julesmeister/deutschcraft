@@ -15,9 +15,39 @@ function stripPunctuation(word: string): string {
 }
 
 /**
+ * Common German pronouns that are too basic to use as blanks
+ * These will be filtered out to ensure more meaningful practice
+ */
+const GERMAN_PRONOUNS = new Set([
+  // Personal pronouns (nominative)
+  'ich', 'du', 'er', 'sie', 'es', 'wir', 'ihr',
+  // Personal pronouns (accusative)
+  'mich', 'dich', 'ihn', 'uns', 'euch',
+  // Personal pronouns (dative)
+  'mir', 'dir', 'ihm', 'ihr', 'ihnen',
+  // Possessive pronouns
+  'mein', 'dein', 'sein', 'unser', 'euer',
+  'meine', 'deine', 'seine', 'unsere', 'eure', 'ihre',
+  'meinen', 'deinen', 'seinen', 'unseren', 'euren', 'ihren',
+  'meinem', 'deinem', 'seinem', 'unserem', 'eurem', 'ihrem',
+  'meiner', 'deiner', 'seiner', 'unserer', 'eurer', 'ihrer',
+  'meines', 'deines', 'seines', 'unseres', 'eures', 'ihres',
+  // Demonstrative pronouns
+  'der', 'die', 'das', 'den', 'dem', 'des',
+  'dieser', 'diese', 'dieses', 'diesen', 'diesem', 'dieser',
+  'jener', 'jene', 'jenes', 'jenen', 'jenem', 'jener',
+  // Relative pronouns (already covered above)
+  // Reflexive pronouns
+  'sich',
+  // Indefinite pronouns (very common ones)
+  'man', 'einer', 'eine', 'eines', 'einen', 'einem',
+]);
+
+/**
  * Generate quiz blanks from differences between original and corrected text
  * Uses word-level comparison to find complete word replacements only
  * CRITICAL: Never creates consecutive blanks - ensures at least one word of context between them
+ * Filters out basic pronouns to ensure meaningful practice
  */
 export function generateQuizBlanks(originalText: string, correctedText: string): QuizBlank[] {
   // Split both texts into words (keeping punctuation attached)
@@ -40,8 +70,11 @@ export function generateQuizBlanks(originalText: string, correctedText: string):
 
     // If words are different (ignoring punctuation) and the corrected word exists
     if (origWordClean !== corrWordClean && corrWordClean.length > 0) {
-      // Only include complete words (at least 3 chars) to avoid articles and particles
-      if (corrWordClean.length >= 3) {
+      // Filter out basic pronouns (case-insensitive)
+      const isBasicPronoun = GERMAN_PRONOUNS.has(corrWordClean.toLowerCase());
+
+      // Only include complete words (at least 3 chars) and not basic pronouns
+      if (corrWordClean.length >= 3 && !isBasicPronoun) {
         potentialBlanks.push({
           answer: corrWordClean, // Store word WITHOUT punctuation
           wordIndex: i,
