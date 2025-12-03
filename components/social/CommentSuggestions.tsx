@@ -32,7 +32,6 @@ export default function CommentSuggestions({
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [suggesterNames, setSuggesterNames] = useState<Record<string, string>>({});
   const [correctionText, setCorrectionText] = useState('');
-  const [explanation, setExplanation] = useState('');
   const [loading, setLoading] = useState(false);
 
   const { getSuggestions, createSuggestion, acceptSuggestion, voteSuggestion } = useSocialService();
@@ -98,7 +97,6 @@ export default function CommentSuggestions({
         suggestedTo: commentUserId,
         originalText: commentContent,
         suggestedText: correctionText.trim(),
-        explanation: explanation.trim() || undefined,
         type: 'grammar',
         upvotes: 0,
         downvotes: 0,
@@ -106,7 +104,6 @@ export default function CommentSuggestions({
 
       success('Correction submitted!', { duration: 2000 });
       setCorrectionText('');
-      setExplanation('');
       onFormToggle?.(false);
       await loadSuggestions();
     } catch (err) {
@@ -161,14 +158,6 @@ export default function CommentSuggestions({
             placeholder="Your correction..."
             value={correctionText}
             onChange={(e) => setCorrectionText(e.target.value)}
-            className="w-full px-2 py-1 mb-1.5 text-xs border border-amber-200 rounded focus:outline-none focus:ring-1 focus:ring-amber-400"
-            disabled={loading}
-          />
-          <input
-            type="text"
-            placeholder="Explanation (optional)"
-            value={explanation}
-            onChange={(e) => setExplanation(e.target.value)}
             className="w-full px-2 py-1 mb-1.5 text-xs border border-amber-200 rounded focus:outline-none focus:ring-1 focus:ring-amber-400"
             disabled={loading}
           />
@@ -230,9 +219,6 @@ export default function CommentSuggestions({
                   <div className="text-amber-700 font-medium">
                     Now: {suggestion.suggestedText}
                   </div>
-                  {suggestion.explanation && (
-                    <div className="text-gray-600 italic">{suggestion.explanation}</div>
-                  )}
                 </div>
 
                 {suggestion.status === 'pending' && (
