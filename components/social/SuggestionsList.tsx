@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { Suggestion } from '@/lib/models/social';
+import { User } from '@/lib/models/user';
 import { useSocialService } from '@/lib/hooks/useSocialService';
 import { useToast } from '@/components/ui/toast';
+import { getUser } from '@/lib/services/userService';
 
 interface SuggestionsListProps {
   postId: string;
@@ -23,6 +25,7 @@ export default function SuggestionsList({
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [loading, setLoading] = useState(false);
+  const [suggesterNames, setSuggesterNames] = useState<Record<string, string>>({});
 
   const { getSuggestions, acceptSuggestion, voteSuggestion } = useSocialService();
   const { success, error: showError } = useToast();
@@ -39,6 +42,27 @@ export default function SuggestionsList({
     try {
       const data = await getSuggestions(postId);
       setSuggestions(data);
+
+      // Fetch suggester names
+      const uniqueSuggesters = [...new Set(data.map(s => s.suggestedBy))];
+      const names: Record<string, string> = {};
+
+      await Promise.all(
+        uniqueSuggesters.map(async (email) => {
+          try {
+            const user = await getUser(email);
+            if (user) {
+              names[email] = user.name || `${user.firstName || ''} ${user.lastName || ''}`.trim() || email.split('@')[0];
+            } else {
+              names[email] = email.split('@')[0];
+            }
+          } catch {
+            names[email] = email.split('@')[0];
+          }
+        })
+      );
+
+      setSuggesterNames(names);
 
       // Find the most recent accepted suggestion and pass it to parent
       const accepted = data
@@ -149,16 +173,19 @@ export default function SuggestionsList({
 
                 {/* Actions Row - Compact */}
                 <div className="flex items-center justify-between text-xs">
-                  <div className="flex items-center gap-1.5">
-                    <span className={`px-1.5 py-0.5 text-[10px] rounded-full font-medium ${
-                      suggestion.status === 'accepted' ? 'bg-green-100 text-green-700' :
-                      suggestion.status === 'rejected' ? 'bg-red-100 text-red-700' :
-                      'bg-gray-100 text-gray-600'
-                    }`}>
-                      {suggestion.status}
-                    </span>
-                    <span className="text-[10px] text-gray-500">
-                      by {suggestion.suggestedBy.split('@')[0]}
+                  <div className="flex flex-col gap-0.5">
+                    <div className="flex items-center gap-1.5">
+                      {suggestion.status === 'pending' && (
+                        <span className="px-1.5 py-0.5 text-[10px] rounded-full font-medium bg-gray-100 text-gray-600">
+                          pending
+                        </span>
+                      )}
+                      <span className="text-[10px] text-gray-600 font-medium">
+                        {suggesterNames[suggestion.suggestedBy] || suggestion.suggestedBy.split('@')[0]}
+                      </span>
+                    </div>
+                    <span className="text-[10px] text-gray-400">
+                      {new Date(suggestion.createdAt).toLocaleDateString()} {new Date(suggestion.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
                     </span>
                   </div>
 
@@ -197,10 +224,6 @@ export default function SuggestionsList({
                       >
                         Apply
                       </button>
-                    )}
-
-                    {suggestion.status === 'accepted' && (
-                      <span className="text-[10px] text-green-600 font-semibold">✓ Applied</span>
                     )}
                   </div>
                 </div>
