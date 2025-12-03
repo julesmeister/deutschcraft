@@ -175,7 +175,7 @@ export default function CommentSuggestions({
           <div className="flex items-center gap-1.5 justify-end">
             <button
               type="button"
-              onClick={() => setShowForm(false)}
+              onClick={() => onFormToggle?.(false)}
               className="px-2 py-1 text-[10px] text-gray-600 hover:text-gray-800 transition-colors"
               disabled={loading}
             >
