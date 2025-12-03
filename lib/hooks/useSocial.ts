@@ -1,23 +1,14 @@
 /**
  * Social Media Hooks
  * React hooks for social features with real-time updates
+ *
+ * NOTE: This hook uses the useSocialService abstraction layer,
+ * which allows switching between Firebase and Turso via environment variables.
  */
 
 import { useState, useEffect, useCallback } from 'react';
-import { collection, query, where, orderBy, onSnapshot, limit } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
 import { Post, Comment, Suggestion } from '@/lib/models/social';
-import {
-  createPost,
-  updatePost,
-  deletePost,
-  createComment,
-  createSuggestion,
-  toggleLike,
-  acceptSuggestion,
-  voteSuggestion,
-  getUserSocialStats,
-} from '@/lib/services/socialService';
+import { useSocialService, getSocialServiceProvider } from '@/lib/hooks/useSocialService';
 
 // ============================================================================
 // POSTS HOOK
@@ -32,75 +23,72 @@ export function usePosts(filters?: {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
+  const { getPosts: fetchPosts, createPost, updatePost, deletePost, isUsingTurso } = useSocialService();
+
+  const loadPosts = useCallback(async () => {
+    try {
+      setLoading(true);
+      const { posts: postsData } = await fetchPosts(
+        {
+          userId: filters?.userId,
+          cefrLevel: filters?.cefrLevel,
+          visibility: filters?.visibility,
+        },
+        filters?.limitCount || 20,
+        0
+      );
+      setPosts(postsData);
+      setLoading(false);
+    } catch (err) {
+      setError(err as Error);
+      setLoading(false);
+    }
+  }, [filters?.userId, filters?.cefrLevel, filters?.visibility, filters?.limitCount]);
 
   useEffect(() => {
-    let q = query(
-      collection(db, 'posts'),
-      orderBy('createdAt', 'desc'),
-      limit(filters?.limitCount || 20)
-    );
+    loadPosts();
 
-    if (filters?.userId) {
-      q = query(
-        collection(db, 'posts'),
-        where('userId', '==', filters.userId),
-        orderBy('createdAt', 'desc'),
-        limit(filters?.limitCount || 20)
-      );
+    // If using Turso, set up polling (no real-time updates)
+    // If using Firebase, could implement onSnapshot here
+    if (isUsingTurso) {
+      const interval = setInterval(loadPosts, 30000); // Poll every 30 seconds
+      return () => clearInterval(interval);
     }
-
-    if (filters?.cefrLevel) {
-      q = query(
-        collection(db, 'posts'),
-        where('cefrLevel', '==', filters.cefrLevel),
-        orderBy('createdAt', 'desc'),
-        limit(filters?.limitCount || 20)
-      );
-    }
-
-    const unsubscribe = onSnapshot(
-      q,
-      (snapshot) => {
-        const postsData = snapshot.docs.map(doc => doc.data() as Post);
-        setPosts(postsData);
-        setLoading(false);
-      },
-      (err) => {
-        setError(err as Error);
-        setLoading(false);
-      }
-    );
-
-    return () => unsubscribe();
-  }, [filters?.userId, filters?.cefrLevel, filters?.visibility, filters?.limitCount]);
+  }, [loadPosts, isUsingTurso]);
 
   const addPost = useCallback(async (postData: Omit<Post, 'postId' | 'createdAt' | 'updatedAt' | 'likesCount' | 'commentsCount' | 'suggestionsCount' | 'sharesCount' | 'isEdited' | 'hasAcceptedSuggestion'>) => {
     try {
       const postId = await createPost(postData);
+      // Refresh posts after adding
+      await loadPosts();
       return postId;
     } catch (err) {
       setError(err as Error);
       throw err;
     }
-  }, []);
+  }, [createPost, loadPosts]);
 
   const editPost = useCallback(async (postId: string, updates: Partial<Post>) => {
     try {
       await updatePost(postId, { ...updates, isEdited: true });
+      // Refresh posts after updating
+      await loadPosts();
     } catch (err) {
       setError(err as Error);
       throw err;
     }
-  }, []);
+  }, [updatePost, loadPosts]);
 
   const removePost = useCallback(async (postId: string) => {
     try {
       await deletePost(postId);
+      // Refresh posts after deleting
+      await loadPosts();
     } catch (err) {
       setError(err as Error);
       throw err;
     }
-  }, []);
+  }, [deletePost, loadPosts]);
 
   return {
     posts,
@@ -109,6 +97,7 @@ export function usePosts(filters?: {
     addPost,
     editPost,
     removePost,
+    refresh: loadPosts,
   };
 }
 
@@ -120,47 +109,50 @@ export function useComments(postId: string) {
   const [comments, setComments] = useState<Comment[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
+  const { getComments: fetchComments, createComment, isUsingTurso } = useSocialService();
 
-  useEffect(() => {
+  const loadComments = useCallback(async () => {
     if (!postId) return;
 
-    const q = query(
-      collection(db, 'comments'),
-      where('postId', '==', postId),
-      orderBy('createdAt', 'asc')
-    );
+    try {
+      setLoading(true);
+      const commentsData = await fetchComments(postId);
+      setComments(commentsData);
+      setLoading(false);
+    } catch (err) {
+      setError(err as Error);
+      setLoading(false);
+    }
+  }, [postId, fetchComments]);
 
-    const unsubscribe = onSnapshot(
-      q,
-      (snapshot) => {
-        const commentsData = snapshot.docs.map(doc => doc.data() as Comment);
-        setComments(commentsData);
-        setLoading(false);
-      },
-      (err) => {
-        setError(err as Error);
-        setLoading(false);
-      }
-    );
+  useEffect(() => {
+    loadComments();
 
-    return () => unsubscribe();
-  }, [postId]);
+    // If using Turso, set up polling
+    if (isUsingTurso) {
+      const interval = setInterval(loadComments, 15000); // Poll every 15 seconds
+      return () => clearInterval(interval);
+    }
+  }, [loadComments, isUsingTurso]);
 
   const addComment = useCallback(async (commentData: Omit<Comment, 'commentId' | 'createdAt' | 'updatedAt' | 'likesCount'>) => {
     try {
       const commentId = await createComment(commentData);
+      // Refresh comments after adding
+      await loadComments();
       return commentId;
     } catch (err) {
       setError(err as Error);
       throw err;
     }
-  }, []);
+  }, [createComment, loadComments]);
 
   return {
     comments,
     loading,
     error,
     addComment,
+    refresh: loadComments,
   };
 }
 
@@ -172,59 +164,71 @@ export function useSuggestions(postId: string) {
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
+  const {
+    getSuggestions: fetchSuggestions,
+    createSuggestion,
+    acceptSuggestion,
+    voteSuggestion,
+    isUsingTurso
+  } = useSocialService();
 
-  useEffect(() => {
+  const loadSuggestions = useCallback(async () => {
     if (!postId) return;
 
-    const q = query(
-      collection(db, 'suggestions'),
-      where('postId', '==', postId),
-      orderBy('upvotes', 'desc')
-    );
+    try {
+      setLoading(true);
+      const suggestionsData = await fetchSuggestions(postId);
+      setSuggestions(suggestionsData);
+      setLoading(false);
+    } catch (err) {
+      setError(err as Error);
+      setLoading(false);
+    }
+  }, [postId, fetchSuggestions]);
 
-    const unsubscribe = onSnapshot(
-      q,
-      (snapshot) => {
-        const suggestionsData = snapshot.docs.map(doc => doc.data() as Suggestion);
-        setSuggestions(suggestionsData);
-        setLoading(false);
-      },
-      (err) => {
-        setError(err as Error);
-        setLoading(false);
-      }
-    );
+  useEffect(() => {
+    loadSuggestions();
 
-    return () => unsubscribe();
-  }, [postId]);
+    // If using Turso, set up polling
+    if (isUsingTurso) {
+      const interval = setInterval(loadSuggestions, 20000); // Poll every 20 seconds
+      return () => clearInterval(interval);
+    }
+  }, [loadSuggestions, isUsingTurso]);
 
   const addSuggestion = useCallback(async (suggestionData: Omit<Suggestion, 'suggestionId' | 'createdAt' | 'updatedAt' | 'status' | 'upvotes' | 'downvotes'>) => {
     try {
       const suggestionId = await createSuggestion(suggestionData);
+      // Refresh suggestions after adding
+      await loadSuggestions();
       return suggestionId;
     } catch (err) {
       setError(err as Error);
       throw err;
     }
-  }, []);
+  }, [createSuggestion, loadSuggestions]);
 
   const accept = useCallback(async (suggestionId: string) => {
     try {
       await acceptSuggestion(suggestionId);
+      // Refresh suggestions after accepting
+      await loadSuggestions();
     } catch (err) {
       setError(err as Error);
       throw err;
     }
-  }, []);
+  }, [acceptSuggestion, loadSuggestions]);
 
   const vote = useCallback(async (suggestionId: string, voteType: 'up' | 'down') => {
     try {
       await voteSuggestion(suggestionId, voteType);
+      // Refresh suggestions after voting
+      await loadSuggestions();
     } catch (err) {
       setError(err as Error);
       throw err;
     }
-  }, []);
+  }, [voteSuggestion, loadSuggestions]);
 
   return {
     suggestions,
@@ -233,6 +237,7 @@ export function useSuggestions(postId: string) {
     addSuggestion,
     accept,
     vote,
+    refresh: loadSuggestions,
   };
 }
 
@@ -243,6 +248,7 @@ export function useSuggestions(postId: string) {
 export function useLike(userId: string, targetId: string, targetType: 'post' | 'comment') {
   const [isLiked, setIsLiked] = useState(false);
   const [loading, setLoading] = useState(false);
+  const { toggleLike } = useSocialService();
 
   const toggle = useCallback(async () => {
     setLoading(true);
@@ -254,7 +260,7 @@ export function useLike(userId: string, targetId: string, targetType: 'post' | '
     } finally {
       setLoading(false);
     }
-  }, [userId, targetId, targetType]);
+  }, [userId, targetId, targetType, toggleLike]);
 
   return {
     isLiked,
@@ -276,6 +282,7 @@ export function useUserSocialStats(userId: string) {
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error | null>(null);
+  const { getUserSocialStats } = useSocialService();
 
   useEffect(() => {
     if (!userId) return;
@@ -292,7 +299,7 @@ export function useUserSocialStats(userId: string) {
     };
 
     fetchStats();
-  }, [userId]);
+  }, [userId, getUserSocialStats]);
 
   return {
     stats,

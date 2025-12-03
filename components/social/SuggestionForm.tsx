@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import UserAvatar from './UserAvatar';
 import { User } from '@/lib/models/user';
+import { useToast } from '@/components/ui/toast';
+import { useSocialService } from '@/lib/hooks/useSocialService';
 
 interface SuggestionFormProps {
   postId: string;
@@ -11,6 +13,7 @@ interface SuggestionFormProps {
   currentUserId: string;
   currentUser?: User;
   onClose: () => void;
+  onSuggestionCreated?: () => void;
 }
 
 export default function SuggestionForm({
@@ -19,10 +22,13 @@ export default function SuggestionForm({
   postUserId,
   currentUserId,
   currentUser,
-  onClose
+  onClose,
+  onSuggestionCreated
 }: SuggestionFormProps) {
   const [suggestionText, setSuggestionText] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { success, error: showError } = useToast();
+  const { createSuggestion } = useSocialService();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,8 +36,6 @@ export default function SuggestionForm({
 
     setIsSubmitting(true);
     try {
-      const { createSuggestion } = await import('@/lib/services/socialService');
-
       await createSuggestion({
         postId,
         suggestedBy: currentUserId,
@@ -45,10 +49,27 @@ export default function SuggestionForm({
         downvotes: 0
       });
 
+      // Show success toast
+      success('Suggestion submitted successfully!', {
+        description: 'The author will be notified of your correction.',
+        duration: 4000
+      });
+
       setSuggestionText('');
       onClose();
-    } catch (error) {
-      console.error('Error submitting suggestion:', error);
+
+      // Trigger refresh if callback provided
+      if (onSuggestionCreated) {
+        onSuggestionCreated();
+      }
+    } catch (err) {
+      console.error('Error submitting suggestion:', err);
+
+      // Show error toast
+      showError('Failed to submit suggestion', {
+        description: 'Please try again later.',
+        duration: 5000
+      });
     } finally {
       setIsSubmitting(false);
     }

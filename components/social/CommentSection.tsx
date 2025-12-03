@@ -5,6 +5,8 @@ import { Comment } from '@/lib/models/social';
 import { User } from '@/lib/models/user';
 import UserAvatar from './UserAvatar';
 import { getUser } from '@/lib/services/userService';
+import { useSocialService } from '@/lib/hooks/useSocialService';
+import { useToast } from '@/components/ui/toast';
 
 interface CommentSectionProps {
   postId: string;
@@ -18,6 +20,8 @@ export default function CommentSection({ postId, currentUserId, currentUser, isE
   const [newComment, setNewComment] = useState('');
   const [loading, setLoading] = useState(false);
   const [showAll, setShowAll] = useState(false);
+  const { createComment, getComments } = useSocialService();
+  const { success, error: showError } = useToast();
 
   useEffect(() => {
     fetchComments();
@@ -25,19 +29,12 @@ export default function CommentSection({ postId, currentUserId, currentUser, isE
 
   const fetchComments = async () => {
     try {
-      const { collection, query, where, orderBy, getDocs } = await import('firebase/firestore');
-      const { db } = await import('@/lib/firebase');
-
-      const commentsQuery = query(
-        collection(db, 'comments'),
-        where('postId', '==', postId),
-        where('parentCommentId', '==', null),
-        orderBy('createdAt', 'desc')
-      );
-
-      const snapshot = await getDocs(commentsQuery);
-      const commentsData = snapshot.docs.map(doc => doc.data() as Comment);
-      setComments(commentsData);
+      const commentsData = await getComments(postId);
+      // Filter top-level comments (no parent) and sort by created date
+      const topLevelComments = commentsData
+        .filter(c => !c.parentCommentId)
+        .sort((a, b) => b.createdAt - a.createdAt);
+      setComments(topLevelComments);
     } catch (error) {
       console.error('Error fetching comments:', error);
       setComments([]);
@@ -50,21 +47,25 @@ export default function CommentSection({ postId, currentUserId, currentUser, isE
 
     setLoading(true);
     try {
-      const { createComment } = await import('@/lib/services/socialService');
-
       await createComment({
         postId,
         userId: currentUserId,
-        userEmail: currentUser.email,
         content: newComment.trim(),
         parentCommentId: null,
+        likesCount: 0,
       });
 
+      success('Comment posted!', { duration: 3000 });
       setNewComment('');
+
       // Refresh comments
       await fetchComments();
     } catch (error) {
       console.error('Error submitting comment:', error);
+      showError('Failed to post comment', {
+        description: 'Please try again later.',
+        duration: 4000
+      });
     } finally {
       setLoading(false);
     }

@@ -180,7 +180,50 @@ export {
 // writingService and writingProgressService. Import them explicitly if needed.
 
 // ============================================================================
+// SOCIAL MEDIA SERVICE
+// ============================================================================
+export {
+  createPost,
+  getPost,
+  getPosts,
+  updatePost,
+  deletePost,
+  createComment,
+  getComments,
+  deleteComment,
+  createSuggestion,
+  getSuggestions,
+  updateSuggestion,
+  acceptSuggestion,
+  voteSuggestion,
+  toggleLike,
+  hasUserLiked,
+  sharePost,
+  getUserSocialStats,
+} from './socialService';
+
+// ============================================================================
+// MEDIA SERVICE
+// ============================================================================
+export {
+  uploadMedia,
+  getMedia,
+  getPostMedia,
+  getPostMediaUrls,
+  deleteMedia,
+  deletePostMedia,
+  getUserStorageUsage,
+  getStorageStats,
+  compressImage,
+  generateVideoThumbnail,
+  validateFile,
+  fileToBase64,
+  base64ToDataUrl,
+} from './mediaService';
+
+// ============================================================================
 // TYPE EXPORTS
 // ============================================================================
 export type { Session } from './sessionService';
 export type { DailyProgress, WeeklyProgressData } from './progressService';
+export type { MediaFile, UploadOptions } from './mediaService';
