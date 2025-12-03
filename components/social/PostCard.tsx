@@ -52,6 +52,11 @@ export default function PostCard({
       setIsLiked(nowLiked);
       setLikeCount(prev => nowLiked ? prev + 1 : prev - 1);
 
+      // Show success toast
+      if (nowLiked) {
+        toast.success('Post liked!', { duration: 2000 });
+      }
+
       if (onLike) {
         onLike();
       }
@@ -63,11 +68,13 @@ export default function PostCard({
 
   const handleSuggestionCreated = () => {
     setShowSuggestionForm(false);
+    toast.success('Correction submitted!', { duration: 3000 });
   };
 
   const handleSuggestionAccepted = (correctedText: string) => {
     // Update the displayed content with the accepted correction
     setDisplayContent(correctedText);
+    toast.success('Correction applied to post!', { duration: 3000 });
   };
 
   return (
