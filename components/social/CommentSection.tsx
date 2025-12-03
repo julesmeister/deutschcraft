@@ -114,7 +114,7 @@ export default function CommentSection({ postId, currentUserId, currentUser, isE
             disabled={loading}
           />
           <button
-            className="absolute right-2 top-2 p-1.5 text-blue-600 hover:text-blue-700 disabled:opacity-50 transition-colors"
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 text-blue-600 hover:text-blue-700 disabled:opacity-50 transition-colors"
             type="submit"
             disabled={loading || !newComment.trim()}
           >
