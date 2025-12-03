@@ -232,17 +232,32 @@ export async function acceptSuggestion(suggestionId: string): Promise<void> {
   const post = postDoc.data();
   const currentContent = post.content || '';
 
-  // Replace original text with suggested text
-  const updatedContent = currentContent.replace(
-    suggestion.originalText,
-    suggestion.suggestedText
-  );
+  // Determine updated content
+  let updatedContent: string;
+
+  // If original text matches entire post content, replace entirely
+  if (suggestion.originalText === currentContent) {
+    updatedContent = suggestion.suggestedText;
+    console.log('Replacing entire post content');
+  } else if (currentContent.includes(suggestion.originalText)) {
+    // If original text is found within content, replace that part
+    updatedContent = currentContent.replace(
+      suggestion.originalText,
+      suggestion.suggestedText
+    );
+    console.log('Replacing matched portion');
+  } else {
+    // Original text not found - this shouldn't happen but handle gracefully
+    console.warn('Original text not found, using suggested text as full replacement');
+    updatedContent = suggestion.suggestedText;
+  }
 
   console.log('Accepting suggestion:', {
     original: suggestion.originalText,
     suggested: suggestion.suggestedText,
     currentContent,
-    updatedContent
+    updatedContent,
+    changed: currentContent !== updatedContent
   });
 
   // Now perform batch update

@@ -443,7 +443,27 @@ export async function acceptSuggestion(suggestionId: string): Promise<void> {
     }
 
     const currentContent = postResult.rows[0].content as string;
-    const updatedContent = currentContent.replace(originalText, suggestedText);
+
+    // Determine updated content
+    let updatedContent: string;
+    if (originalText === currentContent) {
+      updatedContent = suggestedText;
+      console.log('[socialService:turso] Replacing entire post content');
+    } else if (currentContent.includes(originalText)) {
+      updatedContent = currentContent.replace(originalText, suggestedText);
+      console.log('[socialService:turso] Replacing matched portion');
+    } else {
+      console.warn('[socialService:turso] Original text not found, using suggested text as full replacement');
+      updatedContent = suggestedText;
+    }
+
+    console.log('[socialService:turso] Accepting suggestion:', {
+      original: originalText,
+      suggested: suggestedText,
+      currentContent,
+      updatedContent,
+      changed: currentContent !== updatedContent
+    });
 
     // Update suggestion status
     await db.execute({
