@@ -46,7 +46,7 @@ export default function CreatePost({ currentUserId, userLevel, currentUser, onSu
   };
 
   return (
-    <div className="bg-white border border-gray-200 p-4">
+    <div className="bg-white border border-gray-200 p-4 transform transition-all duration-300 hover:shadow-lg">
       <div className="flex mb-3">
         <div className="mr-2 flex-shrink-0">
           {currentUser ? (

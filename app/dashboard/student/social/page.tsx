@@ -79,7 +79,7 @@ export default function StudentSocialPage() {
       <div className="container mx-auto px-6 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Left Sidebar - Profile */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 animate-fade-in-up animation-delay-100">
             <ProfileSidebar
               user={enrichedCurrentUser}
               batchName={batch?.name}
@@ -95,7 +95,7 @@ export default function StudentSocialPage() {
           </div>
 
           {/* Main Feed */}
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-6 animate-fade-in-up animation-delay-200">
             <div className="space-y-6">
               {/* Create Post */}
               <CreatePost
@@ -120,11 +120,15 @@ export default function StudentSocialPage() {
                   </p>
                 </div>
               ) : (
-                filteredPosts.map(post => (
-                  <PostCard
+                filteredPosts.map((post, index) => (
+                  <div
                     key={post.postId}
-                    post={post}
-                    author={users[post.userId] || ({
+                    className="animate-fade-in-up"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
+                    <PostCard
+                      post={post}
+                      author={users[post.userId] || ({
                       userId: post.userId,
                       email: post.userEmail,
                       firstName: 'User',
@@ -133,10 +137,11 @@ export default function StudentSocialPage() {
                       createdAt: Date.now(),
                       updatedAt: Date.now(),
                     } as User)}
-                    currentUserId={enrichedCurrentUser.userId}
-                    currentUser={enrichedCurrentUser}
-                    onPostUpdated={refreshPosts}
-                  />
+                      currentUserId={enrichedCurrentUser.userId}
+                      currentUser={enrichedCurrentUser}
+                      onPostUpdated={refreshPosts}
+                    />
+                  </div>
                 ))
               )}
 
@@ -150,7 +155,7 @@ export default function StudentSocialPage() {
           </div>
 
           {/* Right Sidebar - Filter & Tips */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 animate-fade-in-up animation-delay-300">
             <div className="space-y-6">
               {/* Filter */}
               <PostFilter

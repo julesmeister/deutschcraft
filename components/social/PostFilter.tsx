@@ -10,7 +10,7 @@ interface PostFilterProps {
 
 export default function PostFilter({ filter, onFilterChange, batch }: PostFilterProps) {
   return (
-    <div className="bg-white border border-gray-200">
+    <div className="bg-white border border-gray-200 transform transition-all duration-300 hover:shadow-lg">
       <div className="px-4 py-3 border-b border-gray-200">
         <h5 className="font-semibold text-gray-900">Filter Posts</h5>
       </div>
@@ -18,7 +18,7 @@ export default function PostFilter({ filter, onFilterChange, batch }: PostFilter
         <div className="space-y-2">
           <button
             onClick={() => onFilterChange('all')}
-            className={`w-full flex items-center justify-between px-3 py-2 rounded-lg transition-colors ${
+            className={`w-full flex items-center justify-between px-3 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 ${
               filter === 'all'
                 ? 'bg-blue-50 text-blue-700 border border-blue-200'
                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
@@ -39,7 +39,7 @@ export default function PostFilter({ filter, onFilterChange, batch }: PostFilter
           </button>
           <button
             onClick={() => onFilterChange('batch')}
-            className={`w-full flex items-center justify-between px-3 py-2 rounded-lg transition-colors ${
+            className={`w-full flex items-center justify-between px-3 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 ${
               filter === 'batch'
                 ? 'bg-blue-50 text-blue-700 border border-blue-200'
                 : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
@@ -59,7 +59,7 @@ export default function PostFilter({ filter, onFilterChange, batch }: PostFilter
           </button>
         </div>
         {batch && filter === 'batch' && (
-          <div className="mt-3 pt-3 border-t border-gray-200">
+          <div className="mt-3 pt-3 border-t border-gray-200 animate-fade-in-up">
             <p className="text-xs text-gray-500">
               Showing posts from <span className="font-semibold text-gray-700">{batch.name}</span>
             </p>
