@@ -104,25 +104,32 @@ export default function CommentSection({ postId, currentUserId, currentUser, isE
       {/* Add Comment Form */}
       <div className="flex gap-2 items-start">
         {currentUser && <UserAvatar user={currentUser} size="sm" />}
-        <form className="flex-1 relative" onSubmit={handleSubmitComment}>
-          <textarea
-            className="w-full px-3 py-2 pr-10 bg-gray-50 border border-gray-200 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
-            rows={1}
+        <div className="flex-1 flex items-center gap-2 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg">
+          <input
+            type="text"
+            className="flex-1 bg-transparent text-sm focus:outline-none"
             placeholder="Add a comment..."
             value={newComment}
             onChange={(e) => setNewComment(e.target.value)}
             disabled={loading}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && !e.shiftKey && newComment.trim()) {
+                e.preventDefault();
+                handleSubmitComment(e as any);
+              }
+            }}
           />
           <button
-            className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 text-blue-600 hover:text-blue-700 disabled:opacity-50 transition-colors"
-            type="submit"
+            className="p-1 text-blue-600 hover:text-blue-700 disabled:opacity-50 transition-colors"
+            type="button"
+            onClick={handleSubmitComment}
             disabled={loading || !newComment.trim()}
           >
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
               <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z" />
             </svg>
           </button>
-        </form>
+        </div>
       </div>
     </div>
   );
