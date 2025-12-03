@@ -69,6 +69,7 @@ export default function PostCard({
           postId={post.postId}
           suggestionsCount={post.suggestionsCount}
           isAuthor={isAuthor}
+          currentUser={currentUser}
           onSuggestionAccepted={handleSuggestionAccepted}
           onAcceptedSuggestionLoaded={setDisplayContent}
         />

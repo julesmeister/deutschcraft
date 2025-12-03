@@ -11,6 +11,7 @@ interface SuggestionsListProps {
   postId: string;
   suggestionsCount: number;
   isAuthor: boolean;
+  currentUser?: User;
   onSuggestionAccepted?: (correctedText: string) => void;
   onAcceptedSuggestionLoaded?: (correctedText: string) => void;
 }
@@ -19,6 +20,7 @@ export default function SuggestionsList({
   postId,
   suggestionsCount,
   isAuthor,
+  currentUser,
   onSuggestionAccepted,
   onAcceptedSuggestionLoaded
 }: SuggestionsListProps) {
@@ -47,8 +49,16 @@ export default function SuggestionsList({
       const uniqueSuggesters = [...new Set(data.map(s => s.suggestedBy))];
       const names: Record<string, string> = {};
 
+      // Add current user if they're a suggester
+      if (currentUser && uniqueSuggesters.includes(currentUser.userId)) {
+        names[currentUser.userId] = currentUser.name || `${currentUser.firstName || ''} ${currentUser.lastName || ''}`.trim() || currentUser.email.split('@')[0];
+      }
+
       await Promise.all(
         uniqueSuggesters.map(async (email) => {
+          // Skip if already have this name
+          if (names[email]) return;
+
           try {
             const user = await getUser(email);
             if (user) {
