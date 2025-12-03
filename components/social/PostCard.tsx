@@ -35,25 +35,20 @@ export default function PostCard({
 }: PostCardProps) {
   const [showComments, setShowComments] = useState(true);
   const [showSuggestionForm, setShowSuggestionForm] = useState(false);
+  const [acceptedSuggestion, setAcceptedSuggestion] = useState<string | null>(null);
 
   const isAuthor = currentUserId === post.userId;
+
+  // Display the most recent accepted correction, or original content
+  const displayContent = acceptedSuggestion || post.content;
 
   const handleSuggestionCreated = () => {
     setShowSuggestionForm(false);
   };
 
-  const handleSuggestionAccepted = async () => {
-    // Notify parent to refresh the post
-    console.log('[PostCard] Suggestion accepted, triggering refresh');
-    onPostUpdated?.();
-
-    // Also log current post data
-    console.log('[PostCard] Current post data:', {
-      postId: post.postId,
-      content: post.content,
-      isEdited: post.isEdited,
-      updatedAt: post.updatedAt
-    });
+  const handleSuggestionAccepted = (correctedText: string) => {
+    // Update the displayed content with the accepted correction
+    setAcceptedSuggestion(correctedText);
   };
 
   return (
@@ -70,7 +65,7 @@ export default function PostCard({
 
       {/* Content */}
       <div className="px-4 pb-4 pt-3">
-        <p className="text-gray-700 mb-3">{post.content}</p>
+        <p className="text-gray-700 mb-3">{displayContent}</p>
 
         {/* Suggestions List */}
         <SuggestionsList

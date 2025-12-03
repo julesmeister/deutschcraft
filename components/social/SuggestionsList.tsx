@@ -9,7 +9,7 @@ interface SuggestionsListProps {
   postId: string;
   suggestionsCount: number;
   isAuthor: boolean;
-  onSuggestionAccepted?: () => void;
+  onSuggestionAccepted?: (correctedText: string) => void;
 }
 
 export default function SuggestionsList({
@@ -47,14 +47,18 @@ export default function SuggestionsList({
 
   const handleAccept = async (suggestionId: string) => {
     try {
+      // Find the suggestion being accepted
+      const suggestion = suggestions.find(s => s.suggestionId === suggestionId);
+      if (!suggestion) return;
+
       await acceptSuggestion(suggestionId);
       success('Correction applied!', { duration: 3000 });
+
       // Close the suggestions panel
       setShowSuggestions(false);
-      // Small delay to ensure database has updated, then notify parent to refresh
-      setTimeout(() => {
-        onSuggestionAccepted?.();
-      }, 300);
+
+      // Pass the corrected text to parent
+      onSuggestionAccepted?.(suggestion.suggestedText);
     } catch (err) {
       showError('Failed to accept', { duration: 3000 });
     }
