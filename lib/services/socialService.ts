@@ -227,9 +227,26 @@ export async function acceptSuggestion(suggestionId: string): Promise<void> {
   if (suggestionDoc.exists()) {
     const suggestion = suggestionDoc.data() as Suggestion;
     const postRef = doc(db, 'posts', suggestion.postId);
-    batch.update(postRef, {
-      hasAcceptedSuggestion: true,
-    });
+
+    // Get current post to update content
+    const postDoc = await getDoc(postRef);
+    if (postDoc.exists()) {
+      const post = postDoc.data();
+      const currentContent = post.content || '';
+
+      // Replace original text with suggested text
+      const updatedContent = currentContent.replace(
+        suggestion.originalText,
+        suggestion.suggestedText
+      );
+
+      batch.update(postRef, {
+        content: updatedContent,
+        hasAcceptedSuggestion: true,
+        isEdited: true,
+        updatedAt: Date.now(),
+      });
+    }
   }
 
   await batch.commit();

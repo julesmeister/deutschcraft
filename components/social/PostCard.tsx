@@ -19,6 +19,7 @@ interface PostCardProps {
   onComment?: () => void;
   onSuggest?: () => void;
   onShare?: () => void;
+  onPostUpdated?: () => void;
 }
 
 export default function PostCard({
@@ -29,7 +30,8 @@ export default function PostCard({
   onLike,
   onComment,
   onSuggest,
-  onShare
+  onShare,
+  onPostUpdated
 }: PostCardProps) {
   const [showComments, setShowComments] = useState(true);
   const [showSuggestionForm, setShowSuggestionForm] = useState(false);
@@ -38,6 +40,11 @@ export default function PostCard({
 
   const handleSuggestionCreated = () => {
     setShowSuggestionForm(false);
+  };
+
+  const handleSuggestionAccepted = () => {
+    // Notify parent to refresh the post
+    onPostUpdated?.();
   };
 
   return (
@@ -61,6 +68,7 @@ export default function PostCard({
           postId={post.postId}
           suggestionsCount={post.suggestionsCount}
           isAuthor={isAuthor}
+          onSuggestionAccepted={handleSuggestionAccepted}
         />
 
         {/* Suggestion Form - Inline */}

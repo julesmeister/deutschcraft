@@ -49,7 +49,9 @@ export default function SuggestionsList({
     try {
       await acceptSuggestion(suggestionId);
       success('Correction applied!', { duration: 3000 });
-      await loadSuggestions();
+      // Close the suggestions panel
+      setShowSuggestions(false);
+      // Notify parent to refresh the post
       onSuggestionAccepted?.();
     } catch (err) {
       showError('Failed to accept', { duration: 3000 });

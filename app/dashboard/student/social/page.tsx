@@ -15,7 +15,7 @@ import { User } from '@/lib/models/user';
 export default function StudentSocialPage() {
   const { data: session } = useSession();
   const { student: currentUser, loading: userLoading } = useCurrentStudent(session?.user?.email || null);
-  const { posts, loading: postsLoading, addPost } = usePosts({ limitCount: 20 });
+  const { posts, loading: postsLoading, addPost, refresh: refreshPosts } = usePosts({ limitCount: 20 });
   const { stats } = useUserSocialStats(session?.user?.email || '');
   const { batch } = useBatch(currentUser?.batchId || undefined);
 
@@ -119,6 +119,7 @@ export default function StudentSocialPage() {
                     } as User)}
                     currentUserId={enrichedCurrentUser.userId}
                     currentUser={enrichedCurrentUser}
+                    onPostUpdated={refreshPosts}
                   />
                 ))
               )}

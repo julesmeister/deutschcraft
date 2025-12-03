@@ -417,9 +417,9 @@ export async function acceptSuggestion(suggestionId: string): Promise<void> {
   try {
     const now = Date.now();
 
-    // Get suggestion to find post_id
+    // Get suggestion details
     const suggestionResult = await db.execute({
-      sql: 'SELECT post_id FROM social_suggestions WHERE suggestion_id = ? LIMIT 1',
+      sql: 'SELECT post_id, original_text, suggested_text FROM social_suggestions WHERE suggestion_id = ? LIMIT 1',
       args: [suggestionId],
     });
 
@@ -427,7 +427,23 @@ export async function acceptSuggestion(suggestionId: string): Promise<void> {
       throw new Error('Suggestion not found');
     }
 
-    const postId = suggestionResult.rows[0].post_id;
+    const row = suggestionResult.rows[0];
+    const postId = row.post_id as string;
+    const originalText = row.original_text as string;
+    const suggestedText = row.suggested_text as string;
+
+    // Get current post content
+    const postResult = await db.execute({
+      sql: 'SELECT content FROM social_posts WHERE post_id = ? LIMIT 1',
+      args: [postId],
+    });
+
+    if (postResult.rows.length === 0) {
+      throw new Error('Post not found');
+    }
+
+    const currentContent = postResult.rows[0].content as string;
+    const updatedContent = currentContent.replace(originalText, suggestedText);
 
     // Update suggestion status
     await db.execute({
@@ -435,10 +451,10 @@ export async function acceptSuggestion(suggestionId: string): Promise<void> {
       args: ['accepted', now, now, suggestionId],
     });
 
-    // Update post to mark it has accepted suggestion
+    // Update post with corrected content
     await db.execute({
-      sql: 'UPDATE social_posts SET has_accepted_suggestion = 1 WHERE post_id = ?',
-      args: [postId],
+      sql: 'UPDATE social_posts SET content = ?, has_accepted_suggestion = 1, is_edited = 1, updated_at = ? WHERE post_id = ?',
+      args: [updatedContent, now, postId],
     });
   } catch (error) {
     console.error('[socialService:turso] Error accepting suggestion:', error);
