@@ -58,7 +58,8 @@
       "Bash(Select-String -Pattern \"(error|Error|ERROR|warning|Warning|compiled|Compiled|Route)\")",
       "Bash(Select-Object -First 100)",
       "Bash(timeout /t 5)",
-      "Bash(npx grep:*)"
+      "Bash(npx grep:*)",
+      "Bash(Select-String -Pattern \"(error|Error|ERROR|flashcard)\" -Context 2,2)"
     ],
     "deny": [],
     "ask": []

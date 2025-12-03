@@ -10,6 +10,8 @@ interface PostActionsProps {
   onShare?: () => void;
   onToggleComments?: () => void;
   onToggleSuggestions?: () => void;
+  isLiked?: boolean;
+  likeCount?: number;
 }
 
 export default function PostActions({
@@ -21,7 +23,9 @@ export default function PostActions({
   onSuggest,
   onShare,
   onToggleComments,
-  onToggleSuggestions
+  onToggleSuggestions,
+  isLiked = false,
+  likeCount = 0
 }: PostActionsProps) {
   const canSuggest = currentUserId !== authorId;
 
@@ -29,13 +33,17 @@ export default function PostActions({
     <div className="py-1.5 mt-2">
       <div className="flex items-center gap-1 text-xs">
         <button
-          className="flex items-center gap-1 py-1.5 px-3 text-gray-600 hover:bg-gray-50 rounded transition-colors"
+          className={`flex items-center gap-1 py-1.5 px-3 rounded transition-colors ${
+            isLiked
+              ? 'text-red-600 bg-red-50 hover:bg-red-100'
+              : 'text-gray-600 hover:bg-gray-50'
+          }`}
           onClick={onLike}
         >
-          <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+          <svg width="14" height="14" fill={isLiked ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="1" viewBox="0 0 16 16">
             <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
           </svg>
-          <span>Like</span>
+          <span>{likeCount > 0 ? likeCount : 'Like'}</span>
         </button>
 
         <button

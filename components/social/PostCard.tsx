@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { Post } from '@/lib/models/social';
 import { User } from '@/lib/models/user';
+import { useSocialService } from '@/lib/hooks/useSocialService';
+import { useToast } from '@/components/ui/toast';
 import PostHeader from './PostHeader';
 import PostActions from './PostActions';
 import PostMedia from './PostMedia';
@@ -36,8 +38,28 @@ export default function PostCard({
   const [showComments, setShowComments] = useState(true);
   const [showSuggestionForm, setShowSuggestionForm] = useState(false);
   const [displayContent, setDisplayContent] = useState(post.content);
+  const [isLiked, setIsLiked] = useState(false);
+  const [likeCount, setLikeCount] = useState(post.likesCount || 0);
+
+  const { toggleLike } = useSocialService();
+  const toast = useToast();
 
   const isAuthor = currentUserId === post.userId;
+
+  const handleLike = async () => {
+    try {
+      const nowLiked = await toggleLike(currentUserId, post.postId, 'post');
+      setIsLiked(nowLiked);
+      setLikeCount(prev => nowLiked ? prev + 1 : prev - 1);
+
+      if (onLike) {
+        onLike();
+      }
+    } catch (err) {
+      toast.error('Failed to like post', { duration: 2000 });
+      console.error('Error liking post:', err);
+    }
+  };
 
   const handleSuggestionCreated = () => {
     setShowSuggestionForm(false);
@@ -108,12 +130,14 @@ export default function PostCard({
           postId={post.postId}
           currentUserId={currentUserId}
           authorId={post.userId}
-          onLike={onLike}
+          onLike={handleLike}
           onComment={onComment}
           onSuggest={() => setShowSuggestionForm(!showSuggestionForm)}
           onShare={onShare}
           onToggleComments={() => setShowComments(!showComments)}
           onToggleSuggestions={() => setShowSuggestionForm(!showSuggestionForm)}
+          isLiked={isLiked}
+          likeCount={likeCount}
         />
 
         {/* Comments Section */}
