@@ -80,7 +80,7 @@ export default function CommentSection({ postId, currentUserId, currentUser, isE
   }
 
   return (
-    <div className="mt-3 pt-3 border-t border-gray-200">
+    <div className="mt-3">
       {/* Comments List */}
       {displayedComments.length > 0 && (
         <div className="space-y-3 mb-3">
