@@ -29,15 +29,6 @@ export default function UserAvatar({
     return `${firstInitial}${lastInitial}`.toUpperCase();
   };
 
-  // Debug log
-  console.log('[UserAvatar] Rendering with user:', {
-    userId: user.userId,
-    firstName: user.firstName,
-    lastName: user.lastName,
-    photoURL: user.photoURL,
-    email: user.email
-  });
-
   return (
     <div className={`relative inline-block ${className}`}>
       {hasStory && (
