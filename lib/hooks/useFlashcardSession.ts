@@ -111,17 +111,16 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
 
     // Show toast based on difficulty
     const toastMessages = {
-      again: { message: 'Will review again soon', variant: 'error' as const, duration: 800 },
-      hard: { message: 'Keep practicing!', variant: 'warning' as const, duration: 800 },
-      good: { message: 'Good recall! 👍', variant: 'success' as const, duration: 800 },
-      easy: { message: 'Perfect! Mastered! 🌟', variant: 'success' as const, duration: 800 },
-      expert: { message: '💯 Expert! Won\'t see this for a year!', variant: 'success' as const, duration: 1000 },
+      again: { message: 'Will review again soon', method: toast.error, duration: 800 },
+      hard: { message: 'Keep practicing!', method: toast.warning, duration: 800 },
+      good: { message: 'Good recall! 👍', method: toast.success, duration: 800 },
+      easy: { message: 'Perfect! Mastered! 🌟', method: toast.success, duration: 800 },
+      expert: { message: '💯 Expert! Won\'t see this for a year!', method: toast.success, duration: 1000 },
     };
 
     const toastConfig = toastMessages[difficulty];
-    toast.addToast(toastConfig.message, toastConfig.variant, {
+    toastConfig.method(toastConfig.message, {
       duration: toastConfig.duration,
-      showIcon: false
     });
 
     // Save review to Firestore if user is logged in
