@@ -97,7 +97,7 @@ export default function PostCard({
   };
 
   return (
-    <div className="bg-white border border-gray-200 transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+    <div className="bg-white border border-gray-200">
       {/* Header */}
       <div className="px-4 pt-4 pb-0">
         <PostHeader

@@ -10,7 +10,7 @@ interface PostFilterProps {
 
 export default function PostFilter({ filter, onFilterChange, batch }: PostFilterProps) {
   return (
-    <div className="bg-white border border-gray-200 transform transition-all duration-300 hover:shadow-lg">
+    <div className="bg-white border border-gray-200">
       <div className="px-4 py-3 border-b border-gray-200">
         <h5 className="font-semibold text-gray-900">Filter Posts</h5>
       </div>

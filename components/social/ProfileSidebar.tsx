@@ -39,7 +39,7 @@ export default function ProfileSidebar({ user, batchName, stats }: ProfileSideba
 
   return (
     <div className="px-2 lg:px-0">
-      <div className="bg-white border border-gray-200 overflow-hidden h-full transform transition-all duration-300 hover:shadow-lg">
+      <div className="bg-white border border-gray-200 overflow-hidden h-full">
         {/* Cover Image */}
         <div
           className="h-20 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 hover:brightness-110"
