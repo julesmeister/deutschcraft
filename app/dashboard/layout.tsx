@@ -156,6 +156,7 @@ function DashboardNavbar() {
                   title: 'Resources',
                   items: [
                     { label: 'Dictionary', href: '/dashboard/dictionary' },
+                    { label: 'Redemittel', href: '/dashboard/student/redemittel' },
                     { label: 'Materials', href: '/resources/materials' },
                     { label: 'Templates', href: '/resources/templates' },
                     { label: 'Help Center', href: '/help', external: true },
