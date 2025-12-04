@@ -235,6 +235,8 @@ export default function PlaygroundPage() {
   // Minimize handler
   const handleMinimize = () => {
     playgroundSession.minimize();
+    // Navigate away from playground to show minimized widget
+    router.push('/dashboard/student');
   };
 
   // Check if user wants to maximize from minimized state
@@ -247,6 +249,14 @@ export default function PlaygroundPage() {
       setMyParticipantId(playgroundSession.session.myParticipantId);
     }
   }, [playgroundSession.session?.isMinimized]);
+
+  // Auto-maximize when navigating to playground page while minimized
+  // Only runs once on mount if already minimized
+  useEffect(() => {
+    if (playgroundSession.session?.isMinimized) {
+      playgroundSession.maximize();
+    }
+  }, []); // Empty deps - only run on mount
 
   const myWriting = writings.find((w) => w.userId === userId);
 
@@ -272,10 +282,8 @@ export default function PlaygroundPage() {
     );
   }
 
-  // If session is minimized, show nothing (minimized view is in layout)
+  // If session is minimized, show loading while maximizing (handled by useEffect above)
   if (playgroundSession.session?.isMinimized) {
-    // User navigated to playground while minimized - maximize it
-    playgroundSession.maximize();
     return <CatLoader fullScreen message="Restoring playground..." />;
   }
 

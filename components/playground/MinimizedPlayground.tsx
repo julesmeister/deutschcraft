@@ -123,7 +123,7 @@ export function MinimizedPlayground() {
           {/* Action button */}
           <button
             onClick={handleMaximize}
-            className="w-full py-2.5 bg-gradient-to-r from-brand-purple to-pastel-ocean text-white font-bold text-sm rounded-lg hover:opacity-90 transition-opacity"
+            className="w-full py-2.5 bg-white text-gray-900 font-bold text-sm rounded-lg hover:bg-gray-100 transition-colors"
           >
             Return to Playground
           </button>

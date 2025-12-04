@@ -118,7 +118,7 @@ export function PlaygroundRoom({
                 variant="red"
                 icon={<ActionButtonIcons.Close />}
               >
-                End Room
+                End
               </ActionButton>
             )}
           </div>
