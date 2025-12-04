@@ -11,6 +11,7 @@ import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
 import { useToast } from '@/components/ui/toast';
+import { FloatingRedemittelWidget } from '@/components/writing/FloatingRedemittelWidget';
 
 interface WritingExercisePageProps<T> {
   // Page configuration
@@ -198,6 +199,9 @@ export function WritingExercisePage<T>({
           </div>
         )}
       </div>
+
+      {/* Floating Redemittel Widget - Always show for testing */}
+      <FloatingRedemittelWidget currentLevel={selectedExercise ? getExerciseLevel(selectedExercise) : undefined} />
     </div>
   );
 }

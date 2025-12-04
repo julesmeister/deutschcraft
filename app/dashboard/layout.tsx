@@ -108,6 +108,7 @@ function DashboardNavbar() {
                     { label: 'Dictionary', href: '/dashboard/dictionary' },
                     { label: 'Grammar Guide', href: '/dashboard/student/grammar' },
                     { label: 'Vocabulary', href: '/dashboard/student/vocabulary' },
+                    { label: 'Redemittel', href: '/dashboard/student/redemittel' },
                     { label: 'Prepositions', href: '/dashboard/student/prepositions' },
                     { label: 'Letter Writing', href: '/dashboard/student/letters' },
                     { label: 'Help Center', href: '/help', external: true },
@@ -243,6 +244,9 @@ function DashboardNavbar() {
                   </Link>
                   <Link href="/dashboard/student/vocabulary" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Vocabulary
+                  </Link>
+                  <Link href="/dashboard/student/redemittel" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                    Redemittel
                   </Link>
                 </div>
               </div>
