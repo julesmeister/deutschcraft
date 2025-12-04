@@ -63,23 +63,6 @@ export function EmailWritingForm({
 
   const instructions = (
     <>
-      {/* Email Context */}
-      <div className="mb-8">
-        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">✉️ Email Template</h3>
-        <p className="text-base text-gray-900 leading-relaxed mb-4">
-          {template.scenario}
-        </p>
-
-        <div className="flex flex-col gap-2 text-sm text-gray-600">
-          <div>
-            <span className="font-semibold">Recipient:</span> {template.recipient}
-          </div>
-          <div>
-            <span className="font-semibold">Subject:</span> {template.subject}
-          </div>
-        </div>
-      </div>
-
       {/* Key Phrases */}
       {template.keyPhrases && template.keyPhrases.length > 0 && (
         <div className="mb-6">

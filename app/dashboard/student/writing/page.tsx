@@ -10,10 +10,10 @@ import { CEFRLevelInfo } from '@/lib/models/cefr';
 import { AttemptHistory } from '@/components/writing/AttemptHistory';
 import { TranslationWorkspace } from '@/components/writing/TranslationWorkspace';
 import { CreativeWritingArea } from '@/components/writing/CreativeWritingArea';
-import { EmailTemplateInstructions } from '@/components/writing/EmailTemplateInstructions';
 import { EmailWritingForm } from '@/components/writing/EmailWritingForm';
 import { LetterWritingArea } from '@/components/writing/LetterWritingArea';
 import { WritingHub } from './WritingHub';
+import { FloatingRedemittelWidget } from '@/components/writing/FloatingRedemittelWidget';
 import { TRANSLATION_EXERCISES } from '@/lib/data/translationExercises';
 import { CREATIVE_EXERCISES } from '@/lib/data/creativeExercises';
 import { EMAIL_TEMPLATES } from '@/lib/data/emailTemplates';
@@ -193,8 +193,7 @@ export default function WritingExercisesPage() {
             />
           </div>
         ) : selectedEmail ? (
-          <div className="max-w-4xl mx-auto">
-            <EmailTemplateInstructions template={selectedEmail} />
+          <div className="lg:container lg:mx-auto">
             <EmailWritingForm
               template={selectedEmail}
               emailContent={viewingAttempt ? { to: '', subject: '', body: viewingAttempt.content } : emailContent}
@@ -274,6 +273,11 @@ export default function WritingExercisesPage() {
         title={dialogState.title}
         message={dialogState.message}
       />
+
+      {/* Floating Redemittel Widget - Show when working on an exercise */}
+      {hasSelectedExercise && (
+        <FloatingRedemittelWidget currentLevel={selectedLevel} />
+      )}
     </div>
   );
 }
