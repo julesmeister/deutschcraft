@@ -13,6 +13,7 @@ export type ConversationContext =
   | 'asking'
   | 'explaining'
   | 'describing'
+  | 'describing-images'
   | 'narrating'
   | 'comparing'
   | 'suggesting'
@@ -25,7 +26,8 @@ export type ConversationContext =
   | 'concluding'
   | 'transitioning'
   | 'emphasizing'
-  | 'clarifying';
+  | 'clarifying'
+  | 'colloquial';
 
 export interface Redemittel {
   id: string;
@@ -47,6 +49,7 @@ export const contextLabels: Record<ConversationContext, string> = {
   asking: 'Asking Questions',
   explaining: 'Explaining',
   describing: 'Describing',
+  'describing-images': 'Describing Images',
   narrating: 'Narrating',
   comparing: 'Comparing',
   suggesting: 'Making Suggestions',
@@ -60,4 +63,5 @@ export const contextLabels: Record<ConversationContext, string> = {
   transitioning: 'Transitioning',
   emphasizing: 'Emphasizing',
   clarifying: 'Clarifying',
+  colloquial: 'Colloquial/Informal',
 };
