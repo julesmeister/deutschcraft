@@ -10,7 +10,8 @@ import { useState, useEffect } from 'react';
 import { QuizBlank } from '@/lib/models/writing';
 import { checkAnswer } from '@/lib/utils/quizGenerator';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
-import { useQuizStats, calculateQuizPoints } from '@/lib/hooks/useQuizStats';
+import { useUserQuizStats } from '@/lib/hooks/useReviewQuizzes';
+import { calculateQuizPoints } from '@/lib/hooks/useQuizStats';
 import { useToast } from '@/components/ui/toast';
 import confetti from 'canvas-confetti';
 
@@ -33,7 +34,7 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
   const toast = useToast();
 
   // Fetch quiz stats
-  const { data: quizStats } = useQuizStats(userId);
+  const { data: quizStats } = useUserQuizStats(userId || null);
 
   // Reset state when sentence changes
   useEffect(() => {
@@ -214,8 +215,8 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
         <div className="lg:hidden">
           {quizStats && quizStats.totalQuizzes > 0 && (
             <div className="flex items-center gap-1.5 px-2.5 py-1 bg-gray-100 rounded-full">
-              <span className="text-[10px] font-medium text-gray-600">Avg:</span>
-              <span className="text-xs font-bold text-gray-900">{quizStats.averageScore}%</span>
+              <span className="text-[10px] font-medium text-gray-600">Best:</span>
+              <span className="text-xs font-bold text-gray-900">{quizStats.bestScore}</span>
             </div>
           )}
         </div>
