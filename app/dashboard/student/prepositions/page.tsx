@@ -110,56 +110,28 @@ export default function PrepositionsGuidePage() {
         </div>
 
         {/* Mnemonics Section */}
-        <div className="mb-8 grid grid-cols-1 md:grid-cols-2 gap-3">
-          {/* Akkusativ Mnemonic */}
-          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-4 border border-blue-200">
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">🔵</span>
-              <div className="flex-1">
-                <h3 className="text-sm font-bold text-blue-900 mb-1">Akkusativ</h3>
-                <p className="text-xs text-blue-700 leading-relaxed">
-                  <strong>Für</strong> my trip <strong>um</strong> the world, I walked <strong>durch</strong> forests, ran <strong>gegen</strong> the wind <strong>entlang</strong> beaches <strong>bis</strong> sunset, all <strong>ohne</strong> help—<strong>wider</strong> all odds!
-                </p>
-              </div>
+        <div className="mb-6 bg-white shadow-sm p-4">
+          <h3 className="text-sm font-bold text-gray-900 mb-3">Quick Mnemonics</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+            <div>
+              <div className="font-bold text-gray-900 mb-1">Akkusativ</div>
+              <div className="text-gray-700">durch, für, gegen, ohne, um, bis, entlang, wider</div>
+              <div className="text-gray-500 mt-1 italic">DOGFUB + entlang, wider</div>
             </div>
-          </div>
-
-          {/* Dativ Mnemonic */}
-          <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-4 border border-green-200">
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">🟢</span>
-              <div className="flex-1">
-                <h3 className="text-sm font-bold text-green-900 mb-1">Dativ</h3>
-                <p className="text-xs text-green-700 leading-relaxed">
-                  <strong>Von</strong> the house, I came <strong>aus</strong>, went <strong>zu</strong> the park <strong>mit</strong> friends, <strong>nach</strong> lunch <strong>bei</strong> the café—I've been doing this <strong>seit</strong> years, everyone <strong>außer</strong> me sits <strong>gegenüber</strong> the fountain.
-                </p>
-              </div>
+            <div>
+              <div className="font-bold text-gray-900 mb-1">Dativ</div>
+              <div className="text-gray-700">aus, außer, bei, mit, nach, seit, von, zu, gegenüber</div>
+              <div className="text-gray-500 mt-1 italic">Blue Danube melody</div>
             </div>
-          </div>
-
-          {/* Two-Way (Wechselpräpositionen) */}
-          <div className="bg-gradient-to-r from-purple-50 to-purple-100 rounded-xl p-4 border border-purple-200">
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">🟣</span>
-              <div className="flex-1">
-                <h3 className="text-sm font-bold text-purple-900 mb-1">Two-Way (Akk = motion, Dat = location)</h3>
-                <p className="text-xs text-purple-700 leading-relaxed">
-                  I hang the picture <strong>an</strong> the wall, place the book <strong>auf</strong> the table, hide <strong>hinter</strong> the door, step <strong>in</strong> the room, sit <strong>neben</strong> you, fly <strong>über</strong> the city, crawl <strong>unter</strong> the bridge, stand <strong>vor</strong> the mirror, squeeze <strong>zwischen</strong> the cars.
-                </p>
-              </div>
+            <div>
+              <div className="font-bold text-gray-900 mb-1">Two-Way (Akk/Dat)</div>
+              <div className="text-gray-700">an, auf, hinter, in, neben, über, unter, vor, zwischen</div>
+              <div className="text-gray-500 mt-1 italic">Ode to Joy melody</div>
             </div>
-          </div>
-
-          {/* Genitiv Mnemonic */}
-          <div className="bg-gradient-to-r from-orange-50 to-orange-100 rounded-xl p-4 border border-orange-200">
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">🟠</span>
-              <div className="flex-1">
-                <h3 className="text-sm font-bold text-orange-900 mb-1">Genitiv (Formal/Written)</h3>
-                <p className="text-xs text-orange-700 leading-relaxed">
-                  <strong>Während</strong> the meeting, I stayed <strong>wegen</strong> important business, and <strong>trotz</strong> the rain, I chose walking <strong>statt</strong> driving—I live <strong>außerhalb</strong> the city but must respond <strong>innerhalb</strong> 24 hours.
-                </p>
-              </div>
+            <div>
+              <div className="font-bold text-gray-900 mb-1">Genitiv</div>
+              <div className="text-gray-700">während, wegen, trotz, statt, innerhalb, außerhalb</div>
+              <div className="text-gray-500 mt-1 italic">WISTAN</div>
             </div>
           </div>
         </div>
