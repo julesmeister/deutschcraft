@@ -2,6 +2,7 @@
 
 import { StatGrid, StatItem } from '@/components/ui/StatGrid';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 interface Preposition {
   german: string;
@@ -54,6 +55,7 @@ const prepositions: Preposition[] = [
 
 export default function PrepositionsGuidePage() {
   const [selectedCase, setSelectedCase] = useState<'All' | 'Akkusativ' | 'Dativ' | 'Both' | 'Genitiv'>('All');
+  const router = useRouter();
 
   const filteredPrepositions = prepositions.filter((prep) => {
     return selectedCase === 'All' || prep.case === selectedCase;
@@ -70,12 +72,31 @@ export default function PrepositionsGuidePage() {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-black text-gray-900 mb-2">
-            German Prepositions Guide
-          </h1>
-          <p className="text-lg text-gray-600">
-            Master German prepositions and their required cases
-          </p>
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-4xl font-black text-gray-900 mb-2">
+                German Prepositions Guide
+              </h1>
+              <p className="text-lg text-gray-600">
+                Master German prepositions and their required cases
+              </p>
+            </div>
+            <div className="w-48">
+              <button
+                onClick={() => router.push('/dashboard/student/prepositions/practice')}
+                className="w-full group inline-flex items-center font-bold py-2 pl-4 pr-2 text-[14px] rounded-full transition-colors duration-300 bg-piku-purple-dark text-white hover:brightness-110 hover:shadow-lg"
+              >
+                <span className="relative z-10 flex-1 text-left transition-colors duration-300">
+                  Practice Mode
+                </span>
+                <span className="relative z-10 ml-3 w-8 h-8 flex items-center justify-center rounded-full transition-all duration-400 group-hover:rotate-[360deg] bg-white/20 group-hover:bg-white/30">
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
         </div>
 
         {/* Statistics */}
@@ -144,16 +165,16 @@ export default function PrepositionsGuidePage() {
         </div>
 
         {/* Filter */}
-        <div className="bg-white rounded-2xl shadow-sm p-6 mb-8">
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Filter by Case
+        <div className="mb-6 flex items-center justify-between">
+          <label className="text-sm font-medium text-gray-700">
+            Filter by Case:
           </label>
           <div className="flex flex-wrap gap-2">
             {(['All', 'Akkusativ', 'Dativ', 'Both', 'Genitiv'] as const).map((caseType) => (
               <button
                 key={caseType}
                 onClick={() => setSelectedCase(caseType)}
-                className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                className={`px-3 py-1 text-sm font-medium transition-colors ${
                   selectedCase === caseType
                     ? 'bg-gray-900 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -167,7 +188,7 @@ export default function PrepositionsGuidePage() {
 
         {/* Prepositions List */}
         <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
-          <div className="px-6 py-4 bg-gray-50 border-b border-gray-200">
+          <div className="py-4 bg-gray-50">
             <h2 className="text-xl font-bold text-gray-900">
               {filteredPrepositions.length} Preposition{filteredPrepositions.length !== 1 ? 's' : ''} Found
             </h2>

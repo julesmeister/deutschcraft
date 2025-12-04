@@ -28,9 +28,9 @@ export function StatGridSimple({ title, children, action, columns = 3 }: StatGri
         </div>
       )}
 
-      {/* Cards Grid */}
+      {/* Cards - Flex on mobile, Grid on desktop */}
       <div
-        className={`${gridColsClass} mt-4 grid grid-cols-1 gap-y-4 gap-x-4 rounded-2xl`}
+        className={`${gridColsClass} mt-4 flex flex-col md:grid gap-y-4 gap-x-4 rounded-2xl md:flex-none`}
       >
         {children}
       </div>

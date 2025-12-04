@@ -27,7 +27,7 @@ export function StatCard({
   isPositive = true,
 }: StatCardProps) {
   return (
-    <div className="flex flex-col gap-1 border-b border-neutral-200 px-4 py-3 md:border-b-0 md:border-r [border-right-style:solid] [border-bottom-style:solid] last:border-r-0">
+    <div className="flex flex-col gap-1 border-b border-neutral-200 px-4 py-3 md:border-b-0 md:border-r [border-right-style:solid] [border-bottom-style:solid] last:border-r-0 flex-1">
       {/* Icon */}
       <div
         className={`flex max-h-10 min-h-10 max-w-10 min-w-10 items-center justify-center ${iconBgColor} text-xl leading-snug text-neutral-900`}
