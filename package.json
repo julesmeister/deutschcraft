@@ -23,7 +23,8 @@
     "vocab:migrate": "tsx scripts/cleanup-and-migrate-vocabulary.ts",
     "vocab:migrate:dry-run": "tsx scripts/cleanup-and-migrate-vocabulary.ts --dry-run",
     "vocab:add-articles": "tsx scripts/add-articles-to-nouns.ts",
-    "vocab:check-missing": "tsx scripts/extract-missing-nouns.ts"
+    "vocab:check-missing": "tsx scripts/extract-missing-nouns.ts",
+    "dict:populate": "tsx scripts/populate-dictionary.ts"
   },
   "dependencies": {
     "@libsql/client": "^0.15.15",
