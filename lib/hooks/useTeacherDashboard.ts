@@ -9,6 +9,8 @@ import { useAllStudentsNested, useStudentsWithoutTeacher } from './useUsers';
 import { useActiveBatches, useCreateBatch } from './useBatches';
 import { useStudentManagement } from './useStudentManagement';
 import { useTableState } from './useTableState';
+import { useQuery } from '@tanstack/react-query';
+import { getStudyStats } from '../services/flashcardService';
 
 interface UseTeacherDashboardProps {
   currentTeacherId: string | undefined;
@@ -64,17 +66,43 @@ export function useTeacherDashboard({
       )
     : [];
 
+  // Fetch study stats for all students
+  const { data: studentsStats } = useQuery({
+    queryKey: ['students-stats', myStudents.map(s => s.userId)],
+    queryFn: async () => {
+      const statsPromises = myStudents.map(async (student) => {
+        try {
+          const stats = await getStudyStats(student.userId);
+          return { userId: student.userId, stats };
+        } catch (error) {
+          return { userId: student.userId, stats: { cardsLearned: 0, cardsMastered: 0, streak: 0, accuracy: 0, totalCards: 0 } };
+        }
+      });
+      return await Promise.all(statsPromises);
+    },
+    enabled: myStudents.length > 0,
+    staleTime: 60 * 1000, // 1 minute
+  });
+
+  // Create a map for quick lookup
+  const statsMap = new Map(
+    (studentsStats || []).map(item => [item.userId, item.stats])
+  );
+
   // Transform students for table display
   const studentsForTable = myStudents.map((student) => {
     // Handle both formats: {name: "Full Name"} OR {firstName: "First", lastName: "Last"}
     const displayName = (student as any).name || `${student.firstName || ''} ${student.lastName || ''}`.trim() || student.email;
 
+    // Get stats for this student
+    const stats = statsMap.get(student.userId) || { cardsLearned: 0, cardsMastered: 0, streak: 0, accuracy: 0, totalCards: 0 };
+
     return {
       id: student.userId, // Using email as ID now
       name: displayName,
       image: student.photoURL || `https://ui-avatars.com/api/?name=${encodeURIComponent(displayName)}&background=667eea&color=fff`,
-      sold: student.wordsLearned || 0,
-      gain: 0, // TODO: Calculate progress from last week
+      sold: stats.cardsLearned,
+      gain: stats.streak, // Show streak as "progress"
       level: student.cefrLevel || 'A1',
       status: (student.teacherId ? 'in-stock' : 'low-stock') as 'in-stock' | 'low-stock',
       statusText: student.teacherId ? 'Active learner' : 'No teacher assigned',

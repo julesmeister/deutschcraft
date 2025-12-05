@@ -37,6 +37,7 @@ export const authOptions: NextAuthOptions = {
           await upsertUserAdmin({
             email: user.email,
             userId: user.email,
+            name: displayName, // Combined name for backwards compatibility
             firstName,
             lastName,
             role: 'PENDING_APPROVAL' as const,

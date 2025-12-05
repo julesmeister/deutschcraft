@@ -20,6 +20,7 @@ export interface User {
   email: string; // Email address (same as userId)
 
   // Basic Info
+  name?: string; // Combined name (backwards compatibility with old data)
   firstName: string;
   lastName: string;
   role: 'STUDENT' | 'TEACHER' | 'PENDING_APPROVAL';

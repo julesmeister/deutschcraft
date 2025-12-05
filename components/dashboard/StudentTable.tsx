@@ -146,10 +146,10 @@ export function StudentTable({
           },
           {
             key: 'gain',
-            label: 'Progress',
+            label: 'Streak',
             render: (value) => (
               <p className="text-gray-500 text-xs flex items-center">
-                {SlimTableRenderers.Percentage(value)} from last week
+                🔥 {value} {value === 1 ? 'day' : 'days'}
               </p>
             ),
           },

@@ -39,6 +39,7 @@ export function useEnrollmentForm(session: Session | null) {
       await updateUser(session.user.email, {
         userId: session.user.email,
         email: session.user.email,
+        name: displayName, // Combined name for backwards compatibility
         firstName: firstName,
         lastName: lastName,
         role: 'PENDING_APPROVAL',
