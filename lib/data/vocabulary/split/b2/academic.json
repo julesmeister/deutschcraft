@@ -1,11 +1,11 @@
 {
   "level": "B2",
   "category": "Academic",
-  "totalCards": 30,
+  "totalCards": 31,
   "flashcards": [
     {
       "id": "syllabus-b2-11161",
-      "german": "Forschung",
+      "german": "die Forschung",
       "english": "research",
       "category": "Academic",
       "level": "B2",
@@ -25,7 +25,7 @@
     },
     {
       "id": "syllabus-b2-11162",
-      "german": "Theorie",
+      "german": "die Theorie",
       "english": "theory",
       "category": "Academic",
       "level": "B2",
@@ -45,7 +45,7 @@
     },
     {
       "id": "syllabus-b2-11163",
-      "german": "Hypothese",
+      "german": "die Hypothese",
       "english": "hypothesis",
       "category": "Academic",
       "level": "B2",
@@ -65,7 +65,7 @@
     },
     {
       "id": "syllabus-b2-11164",
-      "german": "Methode",
+      "german": "die Methode",
       "english": "method",
       "category": "Academic",
       "level": "B2",
@@ -85,7 +85,7 @@
     },
     {
       "id": "syllabus-b2-11165",
-      "german": "Ergebnis",
+      "german": "das Ergebnis",
       "english": "result",
       "category": "Academic",
       "level": "B2",
@@ -105,7 +105,7 @@
     },
     {
       "id": "syllabus-b2-11166",
-      "german": "Schlussfolgerung",
+      "german": "die Schlussfolgerung",
       "english": "conclusion",
       "category": "Academic",
       "level": "B2",
@@ -125,7 +125,7 @@
     },
     {
       "id": "syllabus-b2-11167",
-      "german": "Analyse",
+      "german": "die Analyse",
       "english": "analysis",
       "category": "Academic",
       "level": "B2",
@@ -145,7 +145,7 @@
     },
     {
       "id": "syllabus-b2-11168",
-      "german": "Argument",
+      "german": "das Argument",
       "english": "argument",
       "category": "Academic",
       "level": "B2",
@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-b2-11169",
-      "german": "These",
+      "german": "die These",
       "english": "thesis",
       "category": "Academic",
       "level": "B2",
@@ -185,7 +185,7 @@
     },
     {
       "id": "syllabus-b2-11170",
-      "german": "Beweis",
+      "german": "der Beweis",
       "english": "proof / evidence",
       "category": "Academic",
       "level": "B2",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-b2-11171",
-      "german": "Quelle",
+      "german": "die Quelle",
       "english": "source",
       "category": "Academic",
       "level": "B2",
@@ -225,7 +225,7 @@
     },
     {
       "id": "syllabus-b2-11172",
-      "german": "Literatur",
+      "german": "die Literatur",
       "english": "literature / references",
       "category": "Academic",
       "level": "B2",
@@ -245,7 +245,7 @@
     },
     {
       "id": "syllabus-b2-11173",
-      "german": "Dissertation",
+      "german": "die Dissertation",
       "english": "dissertation / thesis",
       "category": "Academic",
       "level": "B2",
@@ -265,7 +265,7 @@
     },
     {
       "id": "syllabus-b2-11174",
-      "german": "Abhandlung",
+      "german": "die Abhandlung",
       "english": "treatise / paper",
       "category": "Academic",
       "level": "B2",
@@ -285,7 +285,7 @@
     },
     {
       "id": "syllabus-b2-11175",
-      "german": "Fachzeitschrift",
+      "german": "die Fachzeitschrift",
       "english": "academic journal",
       "category": "Academic",
       "level": "B2",
@@ -305,7 +305,7 @@
     },
     {
       "id": "syllabus-b2-11176",
-      "german": "Veröffentlichung",
+      "german": "die Veröffentlichung",
       "english": "publication",
       "category": "Academic",
       "level": "B2",
@@ -325,7 +325,7 @@
     },
     {
       "id": "syllabus-b2-11177",
-      "german": "Studie",
+      "german": "die Studie",
       "english": "study",
       "category": "Academic",
       "level": "B2",
@@ -344,28 +344,8 @@
       }
     },
     {
-      "id": "syllabus-b2-11178",
-      "german": "Untersuchung",
-      "english": "investigation / examination",
-      "category": "Academic",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Academic",
-          "Untersuchung"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11179",
-      "german": "Experiment",
+      "german": "das Experiment",
       "english": "experiment",
       "category": "Academic",
       "level": "B2",
@@ -384,28 +364,8 @@
       }
     },
     {
-      "id": "syllabus-b2-11180",
-      "german": "Daten",
-      "english": "data",
-      "category": "Academic",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Academic",
-          "Daten"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11181",
-      "german": "Statistik",
+      "german": "die Statistik",
       "english": "statistics",
       "category": "Academic",
       "level": "B2",
@@ -425,7 +385,7 @@
     },
     {
       "id": "syllabus-b2-11182",
-      "german": "Stichprobe",
+      "german": "die Stichprobe",
       "english": "sample",
       "category": "Academic",
       "level": "B2",
@@ -445,7 +405,7 @@
     },
     {
       "id": "syllabus-b2-11183",
-      "german": "Erhebung",
+      "german": "die Erhebung",
       "english": "survey / data collection",
       "category": "Academic",
       "level": "B2",
@@ -465,7 +425,7 @@
     },
     {
       "id": "syllabus-b2-11184",
-      "german": "Auswertung",
+      "german": "die Auswertung",
       "english": "evaluation / analysis",
       "category": "Academic",
       "level": "B2",
@@ -485,7 +445,7 @@
     },
     {
       "id": "syllabus-b2-11185",
-      "german": "Interpretation",
+      "german": "die Interpretation",
       "english": "interpretation",
       "category": "Academic",
       "level": "B2",
@@ -505,7 +465,7 @@
     },
     {
       "id": "syllabus-b2-11186",
-      "german": "Darstellung",
+      "german": "die Darstellung",
       "english": "presentation / representation",
       "category": "Academic",
       "level": "B2",
@@ -525,7 +485,7 @@
     },
     {
       "id": "syllabus-b2-11187",
-      "german": "Vergleich",
+      "german": "der Vergleich",
       "english": "comparison",
       "category": "Academic",
       "level": "B2",
@@ -545,7 +505,7 @@
     },
     {
       "id": "syllabus-b2-11188",
-      "german": "Kritik",
+      "german": "die Kritik",
       "english": "criticism / critique",
       "category": "Academic",
       "level": "B2",
@@ -565,7 +525,7 @@
     },
     {
       "id": "syllabus-b2-11189",
-      "german": "Diskussion",
+      "german": "die Diskussion",
       "english": "discussion",
       "category": "Academic",
       "level": "B2",
@@ -585,7 +545,7 @@
     },
     {
       "id": "syllabus-b2-11190",
-      "german": "Zusammenfassung",
+      "german": "die Zusammenfassung",
       "english": "summary / abstract",
       "category": "Academic",
       "level": "B2",
@@ -600,6 +560,66 @@
           "B2",
           "Academic",
           "Zusammenfassung"
+        ]
+      }
+    },
+    {
+      "id": "b2-perspektive-044827",
+      "german": "die Perspektive",
+      "english": "perspective",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B2",
+          "Academic",
+          "Perspektive"
+        ]
+      }
+    },
+    {
+      "id": "b2-aspekt-044827",
+      "german": "der Aspekt",
+      "english": "aspect",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B2",
+          "Academic",
+          "Aspekt"
+        ]
+      }
+    },
+    {
+      "id": "b2-kontext-044827",
+      "german": "der Kontext",
+      "english": "context",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B2",
+          "Academic",
+          "Kontext"
         ]
       }
     }

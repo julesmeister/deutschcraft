@@ -1,7 +1,7 @@
 {
   "level": "A2",
   "category": "Redemittel",
-  "totalCards": 51,
+  "totalCards": 48,
   "flashcards": [
     {
       "id": "syllabus-a2-10680",
@@ -304,26 +304,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10695",
-      "german": "Das macht nichts",
-      "english": "That doesn't matter",
-      "category": "Redemittel",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Redemittel",
-          "Das macht nichts"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10696",
       "german": "Egal",
       "english": "Whatever / doesn't matter",
@@ -544,26 +524,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10707",
-      "german": "Entschuldigung",
-      "english": "Excuse me / Sorry",
-      "category": "Redemittel",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Redemittel",
-          "Entschuldigung"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10708",
       "german": "Kein Problem",
       "english": "No problem",
@@ -580,26 +540,6 @@
           "A2",
           "Redemittel",
           "Kein Problem"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10709",
-      "german": "Macht nichts",
-      "english": "Doesn't matter / Never mind",
-      "category": "Redemittel",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Redemittel",
-          "Macht nichts"
         ]
       }
     },

@@ -1,11 +1,11 @@
 {
   "level": "A2",
   "category": "Workplace",
-  "totalCards": 143,
+  "totalCards": 98,
   "flashcards": [
     {
       "id": "syllabus-a2-10828",
-      "german": "Büro",
+      "german": "das Büro",
       "english": "office",
       "category": "Workplace",
       "level": "A2",
@@ -25,7 +25,7 @@
     },
     {
       "id": "syllabus-a2-10829",
-      "german": "Firma",
+      "german": "die Firma",
       "english": "company",
       "category": "Workplace",
       "level": "A2",
@@ -44,108 +44,8 @@
       }
     },
     {
-      "id": "syllabus-a2-10830",
-      "german": "Arbeit",
-      "english": "work",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Arbeit"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10831",
-      "german": "arbeiten",
-      "english": "to work",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "arbeiten"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10832",
-      "german": "Kollege",
-      "english": "colleague",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Kollege"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10833",
-      "german": "Chef",
-      "english": "boss",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Chef"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10834",
-      "german": "Mitarbeiter",
-      "english": "employee / coworker",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Mitarbeiter"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10835",
-      "german": "Gehalt",
+      "german": "das Gehalt",
       "english": "salary",
       "category": "Workplace",
       "level": "A2",
@@ -165,7 +65,7 @@
     },
     {
       "id": "syllabus-a2-10836",
-      "german": "Vertrag",
+      "german": "der Vertrag",
       "english": "contract",
       "category": "Workplace",
       "level": "A2",
@@ -185,7 +85,7 @@
     },
     {
       "id": "syllabus-a2-10837",
-      "german": "Besprechung",
+      "german": "die Besprechung",
       "english": "meeting",
       "category": "Workplace",
       "level": "A2",
@@ -205,7 +105,7 @@
     },
     {
       "id": "syllabus-a2-10838",
-      "german": "Projekt",
+      "german": "das Projekt",
       "english": "project",
       "category": "Workplace",
       "level": "A2",
@@ -224,28 +124,8 @@
       }
     },
     {
-      "id": "syllabus-a2-10839",
-      "german": "Aufgabe",
-      "english": "task / assignment",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Aufgabe"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10840",
-      "german": "Termin",
+      "german": "der Termin",
       "english": "appointment",
       "category": "Workplace",
       "level": "A2",
@@ -260,46 +140,6 @@
           "A2",
           "Workplace",
           "Termin"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10841",
-      "german": "Pause",
-      "english": "break",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Pause"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10842",
-      "german": "Urlaub",
-      "english": "vacation / leave",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Urlaub"
         ]
       }
     },
@@ -320,106 +160,6 @@
           "A2",
           "Workplace",
           "Schreibtisch"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10849",
-      "german": "Kollegin",
-      "english": "colleague (female)",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Kollegin"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10850",
-      "german": "Chefin",
-      "english": "boss (female)",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Chefin"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10851",
-      "german": "Mitarbeiterin",
-      "english": "employee (female)",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Mitarbeiterin"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10852",
-      "german": "Arbeitgeber",
-      "english": "employer",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Arbeitgeber"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10853",
-      "german": "Arbeitnehmer",
-      "english": "employee",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Arbeitnehmer"
         ]
       }
     },
@@ -464,46 +204,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10856",
-      "german": "Abteilung",
-      "english": "department",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Abteilung"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10857",
-      "german": "Team",
-      "english": "team",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Team"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10858",
       "german": "Teamarbeit",
       "english": "teamwork",
@@ -520,66 +220,6 @@
           "A2",
           "Workplace",
           "Teamarbeit"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10859",
-      "german": "Unternehmen",
-      "english": "company / enterprise",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Unternehmen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10860",
-      "german": "Betrieb",
-      "english": "business / operation",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Betrieb"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10861",
-      "german": "Arbeitsplatz",
-      "english": "workplace / workstation",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Arbeitsplatz"
         ]
       }
     },
@@ -620,86 +260,6 @@
           "A2",
           "Workplace",
           "Überstunden"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10864",
-      "german": "Feierabend",
-      "english": "end of workday / closing time",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Feierabend"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10865",
-      "german": "Schicht",
-      "english": "shift",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Schicht"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10866",
-      "german": "Vollzeit",
-      "english": "full-time",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Vollzeit"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10867",
-      "german": "Teilzeit",
-      "english": "part-time",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Teilzeit"
         ]
       }
     },
@@ -745,7 +305,7 @@
     },
     {
       "id": "syllabus-a2-10870",
-      "german": "Bewerbung",
+      "german": "die Bewerbung",
       "english": "application",
       "category": "Workplace",
       "level": "A2",
@@ -784,28 +344,8 @@
       }
     },
     {
-      "id": "syllabus-a2-10872",
-      "german": "Vorstellungsgespräch",
-      "english": "job interview",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Vorstellungsgespräch"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10873",
-      "german": "Lebenslauf",
+      "german": "der Lebenslauf",
       "english": "CV / resume",
       "category": "Workplace",
       "level": "A2",
@@ -844,28 +384,8 @@
       }
     },
     {
-      "id": "syllabus-a2-10875",
-      "german": "Zeugnis",
-      "english": "certificate / reference",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Zeugnis"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10876",
-      "german": "Qualifikation",
+      "german": "die Qualifikation",
       "english": "qualification",
       "category": "Workplace",
       "level": "A2",
@@ -885,7 +405,7 @@
     },
     {
       "id": "syllabus-a2-10877",
-      "german": "Erfahrung",
+      "german": "die Erfahrung",
       "english": "experience",
       "category": "Workplace",
       "level": "A2",
@@ -905,7 +425,7 @@
     },
     {
       "id": "syllabus-a2-10878",
-      "german": "Berufserfahrung",
+      "german": "die Berufserfahrung",
       "english": "professional experience",
       "category": "Workplace",
       "level": "A2",
@@ -925,7 +445,7 @@
     },
     {
       "id": "syllabus-a2-10879",
-      "german": "Ausbildung",
+      "german": "die Ausbildung",
       "english": "training / apprenticeship",
       "category": "Workplace",
       "level": "A2",
@@ -945,7 +465,7 @@
     },
     {
       "id": "syllabus-a2-10880",
-      "german": "Praktikum",
+      "german": "das Praktikum",
       "english": "internship",
       "category": "Workplace",
       "level": "A2",
@@ -960,26 +480,6 @@
           "A2",
           "Workplace",
           "Praktikum"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10881",
-      "german": "Praktikant",
-      "english": "intern",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Praktikant"
         ]
       }
     },
@@ -1020,26 +520,6 @@
           "A2",
           "Workplace",
           "kündigen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10884",
-      "german": "Kündigung",
-      "english": "resignation / dismissal",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Kündigung"
         ]
       }
     },
@@ -1120,26 +600,6 @@
           "A2",
           "Workplace",
           "befördern"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10889",
-      "german": "Lohn",
-      "english": "wage / pay",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Lohn"
         ]
       }
     },
@@ -1244,26 +704,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10895",
-      "german": "Rente",
-      "english": "pension",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Rente"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10896",
       "german": "Krankheitstag",
       "english": "sick day",
@@ -1324,26 +764,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10899",
-      "german": "Feiertag",
-      "english": "public holiday",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Feiertag"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10900",
       "german": "Meeting",
       "english": "meeting",
@@ -1380,26 +800,6 @@
           "A2",
           "Workplace",
           "Konferenz"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10902",
-      "german": "Sitzung",
-      "english": "meeting / session",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Sitzung"
         ]
       }
     },
@@ -1444,26 +844,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10905",
-      "german": "Präsentation",
-      "english": "presentation",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Präsentation"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10906",
       "german": "präsentieren",
       "english": "to present",
@@ -1485,7 +865,7 @@
     },
     {
       "id": "syllabus-a2-10907",
-      "german": "Deadline",
+      "german": "die Deadline",
       "english": "deadline",
       "category": "Workplace",
       "level": "A2",
@@ -1500,26 +880,6 @@
           "A2",
           "Workplace",
           "Deadline"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10908",
-      "german": "Frist",
-      "english": "deadline / time limit",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Frist"
         ]
       }
     },
@@ -1644,26 +1004,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10915",
-      "german": "Verantwortung",
-      "english": "responsibility",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Verantwortung"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10916",
       "german": "zuständig",
       "english": "in charge / responsible",
@@ -1704,26 +1044,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10918",
-      "german": "Stift",
-      "english": "pen",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Stift"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10919",
       "german": "Kugelschreiber",
       "english": "ballpoint pen",
@@ -1740,26 +1060,6 @@
           "A2",
           "Workplace",
           "Kugelschreiber"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10920",
-      "german": "Bleistift",
-      "english": "pencil",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Bleistift"
         ]
       }
     },
@@ -1785,7 +1085,7 @@
     },
     {
       "id": "syllabus-a2-10922",
-      "german": "Papier",
+      "german": "das Papier",
       "english": "paper",
       "category": "Workplace",
       "level": "A2",
@@ -1884,26 +1184,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10927",
-      "german": "Ordner",
-      "english": "folder / binder",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Ordner"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10928",
       "german": "Akte",
       "english": "file / record",
@@ -1940,26 +1220,6 @@
           "A2",
           "Workplace",
           "Ablage"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10930",
-      "german": "Kalender",
-      "english": "calendar",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Kalender"
         ]
       }
     },
@@ -2124,26 +1384,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10939",
-      "german": "kopieren",
-      "english": "to copy",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "kopieren"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10940",
       "german": "faxen",
       "english": "to fax",
@@ -2304,26 +1544,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10948",
-      "german": "Rechnung",
-      "english": "invoice / bill",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Rechnung"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10949",
       "german": "Quittung",
       "english": "receipt",
@@ -2340,46 +1560,6 @@
           "A2",
           "Workplace",
           "Quittung"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10950",
-      "german": "Bestellung",
-      "english": "order",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Bestellung"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10951",
-      "german": "bestellen",
-      "english": "to order",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "bestellen"
         ]
       }
     },
@@ -2425,7 +1605,7 @@
     },
     {
       "id": "syllabus-a2-10954",
-      "german": "Kunde",
+      "german": "der Kunde",
       "english": "customer / client",
       "category": "Workplace",
       "level": "A2",
@@ -2584,26 +1764,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10962",
-      "german": "pünktlich",
-      "english": "punctual / on time",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "pünktlich"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10963",
       "german": "verspätet",
       "english": "delayed / late",
@@ -2620,26 +1780,6 @@
           "A2",
           "Workplace",
           "verspätet"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10964",
-      "german": "Verspätung",
-      "english": "delay",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "Verspätung"
         ]
       }
     },
@@ -2724,26 +1864,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10969",
-      "german": "wichtig",
-      "english": "important",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "wichtig"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10970",
       "german": "Priorität",
       "english": "priority",
@@ -2804,28 +1924,8 @@
       }
     },
     {
-      "id": "syllabus-a2-10973",
-      "german": "abschließen",
-      "english": "to complete / to finish",
-      "category": "Workplace",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Workplace",
-          "abschließen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10974",
-      "german": "Erfolg",
+      "german": "der Erfolg",
       "english": "success",
       "category": "Workplace",
       "level": "A2",

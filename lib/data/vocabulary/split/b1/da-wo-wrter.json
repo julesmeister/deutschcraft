@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Da / Wo-Wörter",
-  "totalCards": 39,
+  "totalCards": 35,
   "flashcards": [
     {
       "id": "remnote-231",
@@ -95,25 +95,6 @@
           "Da / Wo-Wörter",
           "Wo",
           "woraus"
-        ]
-      }
-    },
-    {
-      "id": "remnote-236",
-      "german": "womit",
-      "english": "with what",
-      "category": "Da / Wo-Wörter",
-      "level": "B1",
-      "tags": [
-        "Wo"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 643,
-        "hierarchy": [
-          "Da / Wo-Wörter",
-          "Wo",
-          "womit"
         ]
       }
     },
@@ -308,25 +289,6 @@
       }
     },
     {
-      "id": "remnote-247",
-      "german": "womit",
-      "english": "with what",
-      "category": "Da / Wo-Wörter",
-      "level": "B1",
-      "tags": [
-        "Wo"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 677,
-        "hierarchy": [
-          "Da / Wo-Wörter",
-          "Wo",
-          "womit"
-        ]
-      }
-    },
-    {
       "id": "remnote-248",
       "german": "darüber",
       "english": "about that",
@@ -365,25 +327,6 @@
       }
     },
     {
-      "id": "remnote-250",
-      "german": "darum",
-      "english": "around that / around it",
-      "category": "Da / Wo-Wörter",
-      "level": "B1",
-      "tags": [
-        "Da"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 687,
-        "hierarchy": [
-          "Da / Wo-Wörter",
-          "Da",
-          "darum"
-        ]
-      }
-    },
-    {
       "id": "remnote-251",
       "german": "daraus",
       "english": "out of that / out of it",
@@ -399,25 +342,6 @@
           "Da / Wo-Wörter",
           "Da",
           "daraus"
-        ]
-      }
-    },
-    {
-      "id": "remnote-252",
-      "german": "damit",
-      "english": "with that / with it",
-      "category": "Da / Wo-Wörter",
-      "level": "B1",
-      "tags": [
-        "Da"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 693,
-        "hierarchy": [
-          "Da / Wo-Wörter",
-          "Da",
-          "damit"
         ]
       }
     },

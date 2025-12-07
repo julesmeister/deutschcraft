@@ -1,91 +1,11 @@
 {
   "level": "A2",
   "category": "Body Health",
-  "totalCards": 19,
+  "totalCards": 30,
   "flashcards": [
     {
-      "id": "syllabus-a2-10478",
-      "german": "Kopf",
-      "english": "head",
-      "category": "Body Health",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Body Health",
-          "Kopf"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10479",
-      "german": "Arm",
-      "english": "arm",
-      "category": "Body Health",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Body Health",
-          "Arm"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10480",
-      "german": "Bein",
-      "english": "leg",
-      "category": "Body Health",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Body Health",
-          "Bein"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10481",
-      "german": "Hand",
-      "english": "hand",
-      "category": "Body Health",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Body Health",
-          "Hand"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10482",
-      "german": "Krankenhaus",
+      "german": "das Krankenhaus",
       "english": "hospital",
       "category": "Body Health",
       "level": "A2",
@@ -104,168 +24,8 @@
       }
     },
     {
-      "id": "syllabus-a2-10483",
-      "german": "Auge",
-      "english": "eye",
-      "category": "Body Health",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Body Health",
-          "Auge"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10484",
-      "german": "Ohr",
-      "english": "ear",
-      "category": "Body Health",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Body Health",
-          "Ohr"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10485",
-      "german": "Nase",
-      "english": "nose",
-      "category": "Body Health",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Body Health",
-          "Nase"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10486",
-      "german": "Mund",
-      "english": "mouth",
-      "category": "Body Health",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Body Health",
-          "Mund"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10487",
-      "german": "Fuß",
-      "english": "foot",
-      "category": "Body Health",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Body Health",
-          "Fuß"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10488",
-      "german": "Finger",
-      "english": "finger",
-      "category": "Body Health",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Body Health",
-          "Finger"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10489",
-      "german": "Rücken",
-      "english": "back",
-      "category": "Body Health",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Body Health",
-          "Rücken"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10490",
-      "german": "Bauch",
-      "english": "stomach / belly",
-      "category": "Body Health",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Body Health",
-          "Bauch"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10491",
-      "german": "Herz",
+      "german": "das Herz",
       "english": "heart",
       "category": "Body Health",
       "level": "A2",
@@ -284,48 +44,8 @@
       }
     },
     {
-      "id": "syllabus-a2-10492",
-      "german": "krank",
-      "english": "sick / ill",
-      "category": "Body Health",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Body Health",
-          "krank"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10493",
-      "german": "gesund",
-      "english": "healthy",
-      "category": "Body Health",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Body Health",
-          "gesund"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10494",
-      "german": "Schmerz",
+      "german": "der Schmerz",
       "english": "pain",
       "category": "Body Health",
       "level": "A2",
@@ -345,7 +65,7 @@
     },
     {
       "id": "syllabus-a2-10495",
-      "german": "Arzt",
+      "german": "der Arzt",
       "english": "doctor",
       "category": "Body Health",
       "level": "A2",
@@ -365,7 +85,7 @@
     },
     {
       "id": "syllabus-a2-10496",
-      "german": "Medikament",
+      "german": "das Medikament",
       "english": "medicine / medication",
       "category": "Body Health",
       "level": "A2",
@@ -380,6 +100,506 @@
           "A2",
           "Body Health",
           "Medikament"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miuj9qfe0qxs6",
+      "german": "die Gesundheit",
+      "english": "health",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 5,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Gesundheit"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miuj9qfeln3fy",
+      "german": "der Husten",
+      "english": "cough",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Husten"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miuj9qfetpnrt",
+      "german": "der Schnupfen",
+      "english": "cold / runny nose",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Schnupfen"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miuj9qfeycb0a",
+      "german": "die Tablette",
+      "english": "tablet / pill",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Tablette"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miuj9qfe1qubo",
+      "german": "die Spritze",
+      "english": "injection / shot",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Spritze"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miuj9qfeqsssx",
+      "german": "der Verband",
+      "english": "bandage",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Verband"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miuj9qfe58kw6",
+      "german": "das Pflaster",
+      "english": "band-aid / plaster",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Pflaster"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miuj9qfep23iu",
+      "german": "die Wunde",
+      "english": "wound",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Wunde"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miuj9qfejowqn",
+      "german": "verletzt",
+      "english": "injured",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "verletzt"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miuj9qfemus4s",
+      "german": "bluten",
+      "english": "to bleed",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "bluten"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miuj9qfe2q0bp",
+      "german": "gesund werden",
+      "english": "to get well",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "gesund werden"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miujdiwe3wwfo",
+      "german": "die Therapie",
+      "english": "therapy",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Therapie"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miujdiwe1gted",
+      "german": "der Notfall",
+      "english": "emergency",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Notfall"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miujdiwew9t2u",
+      "german": "die Rettung",
+      "english": "rescue",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Rettung"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miujdiwekmtub",
+      "german": "der Krankenwagen",
+      "english": "ambulance",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Krankenwagen"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miujdiwe19pc3",
+      "german": "die Notaufnahme",
+      "english": "emergency room",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Notaufnahme"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miujdiweybhef",
+      "german": "die Nebenwirkung",
+      "english": "side effect",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Nebenwirkung"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miujdiwev8kog",
+      "german": "die Dosis",
+      "english": "dose",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Dosis"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miujdiwemonnn",
+      "german": "die Salbe",
+      "english": "ointment",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Salbe"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miujdiwe7cd93",
+      "german": "der Tropfen",
+      "english": "drop",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Tropfen"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miujdiweymp2e",
+      "german": "die Impfung",
+      "english": "vaccination",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Impfung"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miujdiweqdyfo",
+      "german": "der Patient",
+      "english": "patient (male)",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 36,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Patient"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miujdiwevxo51",
+      "german": "die Patientin",
+      "english": "patient (female)",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 38,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "Patientin"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miujdiwedspq3",
+      "german": "schwanger",
+      "english": "pregnant",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 40,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "schwanger"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-health-miujf2nrpz6bp",
+      "german": "chronisch",
+      "english": "chronic",
+      "category": "Body Health",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Body Health",
+          "chronisch"
         ]
       }
     }

@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Reflexive Verbs",
-  "totalCards": 30,
+  "totalCards": 63,
   "flashcards": [
     {
       "id": "reflexive-b1-001",
@@ -88,27 +88,6 @@
       }
     },
     {
-      "id": "reflexive-b1-005",
-      "german": "sich verhalten",
-      "english": "to behave",
-      "category": "Reflexive Verbs",
-      "level": "B1",
-      "tags": [
-        "reflexive",
-        "behavior",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Reflexive Verbs",
-          "sich verhalten"
-        ]
-      }
-    },
-    {
       "id": "reflexive-b1-006",
       "german": "sich gewöhnen",
       "english": "to get used to",
@@ -126,27 +105,6 @@
           "B1",
           "Reflexive Verbs",
           "sich gewöhnen"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b1-007",
-      "german": "sich bemühen",
-      "english": "to try hard, to make an effort",
-      "category": "Reflexive Verbs",
-      "level": "B1",
-      "tags": [
-        "reflexive",
-        "effort",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Reflexive Verbs",
-          "sich bemühen"
         ]
       }
     },
@@ -319,27 +277,6 @@
       }
     },
     {
-      "id": "reflexive-b1-016",
-      "german": "sich nähern",
-      "english": "to approach",
-      "category": "Reflexive Verbs",
-      "level": "B1",
-      "tags": [
-        "reflexive",
-        "movement",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Reflexive Verbs",
-          "sich nähern"
-        ]
-      }
-    },
-    {
       "id": "reflexive-b1-017",
       "german": "sich schämen",
       "english": "to be ashamed",
@@ -357,48 +294,6 @@
           "B1",
           "Reflexive Verbs",
           "sich schämen"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b1-018",
-      "german": "sich sehnen",
-      "english": "to long for",
-      "category": "Reflexive Verbs",
-      "level": "B1",
-      "tags": [
-        "reflexive",
-        "emotions",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Reflexive Verbs",
-          "sich sehnen"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b1-019",
-      "german": "sich sorgen",
-      "english": "to worry",
-      "category": "Reflexive Verbs",
-      "level": "B1",
-      "tags": [
-        "reflexive",
-        "emotions",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Reflexive Verbs",
-          "sich sorgen"
         ]
       }
     },
@@ -487,27 +382,6 @@
       }
     },
     {
-      "id": "reflexive-b1-024",
-      "german": "sich anmelden",
-      "english": "to register, to sign up",
-      "category": "Reflexive Verbs",
-      "level": "B1",
-      "tags": [
-        "reflexive",
-        "administrative",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Reflexive Verbs",
-          "sich anmelden"
-        ]
-      }
-    },
-    {
       "id": "reflexive-b1-025",
       "german": "sich abmelden",
       "english": "to unregister, to log out",
@@ -546,27 +420,6 @@
           "B1",
           "Reflexive Verbs",
           "sich benehmen"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b1-027",
-      "german": "sich engagieren",
-      "english": "to be committed, to get involved",
-      "category": "Reflexive Verbs",
-      "level": "B1",
-      "tags": [
-        "reflexive",
-        "commitment",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Reflexive Verbs",
-          "sich engagieren"
         ]
       }
     },
@@ -613,23 +466,863 @@
       }
     },
     {
-      "id": "reflexive-b1-030",
-      "german": "sich lohnen",
-      "english": "to be worthwhile",
+      "id": "b1-reflexive-miujr73aavjzt",
+      "german": "sich einigen auf",
+      "english": "to agree on",
       "category": "Reflexive Verbs",
       "level": "B1",
       "tags": [
         "reflexive",
-        "value",
-        "B1"
+        "B1",
+        "expansion"
       ],
       "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 22,
         "hierarchy": [
           "B1",
           "Reflexive Verbs",
-          "sich lohnen"
+          "sich einigen auf"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73a5yfff",
+      "german": "sich einigen mit",
+      "english": "to come to an agreement with",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich einigen mit"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73aqiey9",
+      "german": "sich aussprechen für",
+      "english": "to speak out for / to advocate",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich aussprechen für"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73ag6y6o",
+      "german": "sich aussprechen gegen",
+      "english": "to speak out against",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich aussprechen gegen"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73acxyum",
+      "german": "sich aussprechen mit",
+      "english": "to have a frank talk with",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich aussprechen mit"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73ahfymz",
+      "german": "sich einsetzen für",
+      "english": "to stand up for / to campaign for",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich einsetzen für"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73a74fm1",
+      "german": "sich engagieren für",
+      "english": "to be committed to / to work for",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich engagieren für"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73aoz7hl",
+      "german": "sich bemühen um",
+      "english": "to make an effort / to try hard",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich bemühen um"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73axn407",
+      "german": "sich anstrengen",
+      "english": "to make an effort / to exert oneself",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich anstrengen"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73afamq4",
+      "german": "sich vornehmen",
+      "english": "to intend / to plan / to resolve",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich vornehmen"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73a6jzfo",
+      "german": "sich wehren",
+      "english": "to defend oneself / to fight back",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich wehren"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73asz3sg",
+      "german": "sich rächen",
+      "english": "to take revenge / to get revenge",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 33,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich rächen"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73ahwmgz",
+      "german": "sich rächen an",
+      "english": "to take revenge on",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich rächen an"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73aqtjhd",
+      "german": "sich richten nach",
+      "english": "to go by / to follow",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 35,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich richten nach"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73aic1o9",
+      "german": "sich richten an",
+      "english": "to be directed at / to address",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 36,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich richten an"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73ajbr8y",
+      "german": "sich berufen auf",
+      "english": "to refer to / to invoke",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 37,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich berufen auf"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73a08lx6",
+      "german": "sich beschäftigen mit",
+      "english": "to deal with / to occupy oneself with",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 38,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich beschäftigen mit"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73ai6rkh",
+      "german": "sich befassen mit",
+      "english": "to deal with / to concern oneself with",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 39,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich befassen mit"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73aoryng",
+      "german": "sich auskennen",
+      "english": "to know one's way around / to be knowledgeable",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 40,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich auskennen"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73anax3s",
+      "german": "sich auskennen mit",
+      "english": "to be familiar with",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 41,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich auskennen mit"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73a2084e",
+      "german": "sich anpassen an",
+      "english": "to adapt to / to adjust to",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 42,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich anpassen an"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73amzemg",
+      "german": "sich umgewöhnen",
+      "english": "to readjust / to change one's habits",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 43,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich umgewöhnen"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73azw63g",
+      "german": "sich rentieren",
+      "english": "to be profitable / to pay off",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 44,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich rentieren"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73ahiles",
+      "german": "sich eignen für",
+      "english": "to be suitable for",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 45,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich eignen für"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnaqnmew0",
+      "german": "sich distanzieren von",
+      "english": "to distance oneself from",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 46,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich distanzieren von"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnaqumoiq",
+      "german": "sich identifizieren mit",
+      "english": "to identify with",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 47,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich identifizieren mit"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnaquxyo1",
+      "german": "sich solidarisieren mit",
+      "english": "to show solidarity with",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 48,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich solidarisieren mit"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnaqzfygp",
+      "german": "sich abgrenzen von",
+      "english": "to differentiate oneself from",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 49,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich abgrenzen von"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnaqf2gsl",
+      "german": "sich erweisen als",
+      "english": "to prove to be / to turn out to be",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 50,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich erweisen als"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnaq095kp",
+      "german": "sich zeigen",
+      "english": "to show / to appear / to turn out",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 51,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich zeigen"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnaq3bgy4",
+      "german": "sich rechtfertigen",
+      "english": "to justify oneself",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 52,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich rechtfertigen"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnaqlyfop",
+      "german": "sich entlasten",
+      "english": "to exonerate oneself / to relieve oneself",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 53,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich entlasten"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnaq53pmo",
+      "german": "sich belasten",
+      "english": "to incriminate oneself / to burden oneself",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 54,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich belasten"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnaqyse04",
+      "german": "sich irren in",
+      "english": "to be wrong about",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 55,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich irren in"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnarwmi4u",
+      "german": "sich versprechen",
+      "english": "to make a slip of the tongue",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 56,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich versprechen"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnarp6e5m",
+      "german": "sich verrechnen",
+      "english": "to miscalculate",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 57,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich verrechnen"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnark9p2z",
+      "german": "sich verzählen",
+      "english": "to miscount",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 58,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich verzählen"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnargivzf",
+      "german": "sich verhören",
+      "english": "to mishear",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 59,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich verhören"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnarj9xk0",
+      "german": "sich versehen",
+      "english": "to make a mistake",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 60,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich versehen"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnar9uv22",
+      "german": "sich vergreifen",
+      "english": "to grab the wrong thing / to assault",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 61,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich vergreifen"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnarhyeut",
+      "german": "sich vergucken",
+      "english": "to fall for someone / to misjudge",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 62,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich vergucken"
         ]
       }
     }

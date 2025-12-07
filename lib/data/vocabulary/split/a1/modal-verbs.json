@@ -1,7 +1,7 @@
 {
   "level": "A1",
   "category": "Modal Verbs",
-  "totalCards": 6,
+  "totalCards": 4,
   "flashcards": [
     {
       "id": "syllabus-a1-10232",
@@ -40,46 +40,6 @@
           "A1",
           "Modal Verbs",
           "müssen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10234",
-      "german": "wollen",
-      "english": "to want",
-      "category": "Modal Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Modal Verbs",
-          "wollen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10235",
-      "german": "mögen",
-      "english": "to like",
-      "category": "Modal Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Modal Verbs",
-          "mögen"
         ]
       }
     },

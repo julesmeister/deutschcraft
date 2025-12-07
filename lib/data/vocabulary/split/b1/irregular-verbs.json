@@ -1,461 +1,621 @@
 {
   "level": "B1",
   "category": "Irregular Verbs",
-  "totalCards": 31,
+  "totalCards": 33,
   "flashcards": [
     {
-      "id": "syllabus-b1-10994",
-      "german": "backen",
-      "english": "to bake (bäckt, backte/buk, gebacken)",
+      "id": "b1-beifahren-207233",
+      "german": "beifahren",
+      "english": "to accompany (beifährt, befuhr, beigefahren)",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
+        "source": "B1 Category Expansion 2025",
         "lineNumber": 0,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "backen"
+          "beifahren"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10995",
-      "german": "befehlen",
-      "english": "to command (befiehlt, befahl, befohlen)",
+      "id": "b1-bekmpfen-207234",
+      "german": "bekämpfen",
+      "english": "to combat / to fight",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 1,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "befehlen"
+          "bekämpfen"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10996",
-      "german": "beginnen",
-      "english": "to begin (beginnt, begann, begonnen)",
+      "id": "b1-bekennen-207234",
+      "german": "bekennen",
+      "english": "to confess / to admit (bekennt, bekannte, bekannt)",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 2,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "beginnen"
+          "bekennen"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10997",
-      "german": "beißen",
-      "english": "to bite (beißt, biss, gebissen)",
+      "id": "b1-bekleiden-207234",
+      "german": "bekleiden",
+      "english": "to dress / to clothe",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 3,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "beißen"
+          "bekleiden"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10998",
-      "german": "betrügen",
-      "english": "to deceive (betrügt, betrog, betrogen)",
+      "id": "b1-beklemmung-207234",
+      "german": "beklemmung",
+      "english": "anxiety / uneasiness",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 4,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "betrügen"
+          "beklemmung"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10999",
-      "german": "biegen",
-      "english": "to bend (biegt, bog, gebogen)",
+      "id": "b1-bekneifen-207234",
+      "german": "bekneifen",
+      "english": "to pinch",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 5,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "biegen"
+          "bekneifen"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11000",
-      "german": "bieten",
-      "english": "to offer (bietet, bot, geboten)",
+      "id": "b1-bekstigung-207234",
+      "german": "beköstigung",
+      "english": "provisioning / feeding",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 6,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "bieten"
+          "beköstigung"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11001",
-      "german": "binden",
-      "english": "to bind (bindet, band, gebunden)",
+      "id": "b1-bekrftigun-207234",
+      "german": "bekräftigung",
+      "english": "affirmation / confirmation",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 7,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "binden"
+          "bekräftigung"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11002",
-      "german": "bitten",
-      "english": "to ask/request (bittet, bat, gebeten)",
+      "id": "b1-bekmmern-207234",
+      "german": "bekümmern",
+      "english": "to worry / to be concerned",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 8,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "bitten"
+          "bekümmern"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11003",
-      "german": "braten",
-      "english": "to roast/fry (brät, briet, gebraten)",
+      "id": "b1-bekmmert-207234",
+      "german": "bekümmert",
+      "english": "worried / concerned",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 9,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "braten"
+          "bekümmert"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11004",
-      "german": "empfehlen",
-      "english": "to recommend (empfiehlt, empfahl, empfohlen)",
+      "id": "b1-belach-207234",
+      "german": "belach",
+      "english": "to laugh at",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 10,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "empfehlen"
+          "belach"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11005",
-      "german": "erschrecken",
-      "english": "to frighten (erschrickt, erschrak, erschrocken)",
+      "id": "b1-beladen-207234",
+      "german": "beladen",
+      "english": "to load / to burden (belädt, belud, beladen)",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 11,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "erschrecken"
+          "beladen"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11006",
-      "german": "frieren",
-      "english": "to freeze (friert, fror, gefroren)",
+      "id": "b1-belag-207234",
+      "german": "belag",
+      "english": "coating / layer",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 12,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "frieren"
+          "belag"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11007",
-      "german": "gießen",
-      "english": "to pour (gießt, goss, gegossen)",
+      "id": "b1-belagern-207234",
+      "german": "belagern",
+      "english": "to besiege / to surround",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 13,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "gießen"
+          "belagern"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11008",
-      "german": "greifen",
-      "english": "to grasp (greift, griff, gegriffen)",
+      "id": "b1-belagertes-207234",
+      "german": "belagerte stadt",
+      "english": "besieged city",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 14,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "greifen"
+          "belagerte"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11009",
-      "german": "heben",
-      "english": "to lift (hebt, hob, gehoben)",
+      "id": "b1-belagerung-207234",
+      "german": "belagerung",
+      "english": "siege / blockade",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 15,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "heben"
+          "belagerung"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11010",
-      "german": "laden",
-      "english": "to load (lädt, lud, geladen)",
+      "id": "b1-belanagel-207234",
+      "german": "belanagel",
+      "english": "to nail down",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 16,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "laden"
+          "belanagel"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11011",
-      "german": "leiden",
-      "english": "to suffer (leidet, litt, gelitten)",
+      "id": "b1-belang-207234",
+      "german": "belang",
+      "english": "concern / importance",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 17,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "leiden"
+          "belang"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11012",
-      "german": "lügen",
-      "english": "to lie/tell lies (lügt, log, gelogen)",
+      "id": "b1-belanglos-207234",
+      "german": "belanglos",
+      "english": "unimportant / insignificant",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 18,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "lügen"
+          "belanglos"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11013",
-      "german": "meiden",
-      "english": "to avoid (meidet, mied, gemieden)",
+      "id": "b1-belanlosig-207234",
+      "german": "belanlosigkeit",
+      "english": "insignificance",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 19,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "meiden"
+          "belanlosigkeit"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11014",
-      "german": "pfeifen",
-      "english": "to whistle (pfeift, pfiff, gepfiffen)",
+      "id": "b1-belangreic-207234",
+      "german": "belangreich",
+      "english": "important / significant",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 20,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "pfeifen"
+          "belangreich"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11015",
-      "german": "reiben",
-      "english": "to rub (reibt, rieb, gerieben)",
+      "id": "b1-belangung-207234",
+      "german": "belangung",
+      "english": "prosecution / legal action",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 21,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "reiben"
+          "belangung"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11016",
+      "id": "b1-belappung-207234",
+      "german": "belappung",
+      "english": "clothing / apparel",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "belappung"
+        ]
+      }
+    },
+    {
+      "id": "b1-belarsch-207234",
+      "german": "belarsch",
+      "english": "to beat / to hit",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "belarsch"
+        ]
+      }
+    },
+    {
+      "id": "b1-belaschung-207234",
+      "german": "belaschung",
+      "english": "loading / burden",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "belaschung"
+        ]
+      }
+    },
+    {
+      "id": "b1-belasten-207234",
+      "german": "belasten",
+      "english": "to burden / to stress",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "belasten"
+        ]
+      }
+    },
+    {
+      "id": "b1-belastend-207234",
+      "german": "belastend",
+      "english": "burdensome / stressful",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "belastend"
+        ]
+      }
+    },
+    {
+      "id": "b1-belastung-207234",
+      "german": "belastung",
+      "english": "burden / stress",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "belastung"
+        ]
+      }
+    },
+    {
+      "id": "b1-belatmung-207234",
+      "german": "belatmung",
+      "english": "respiration / breathing",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "belatmung"
+        ]
+      }
+    },
+    {
+      "id": "b1-belubung-207234",
+      "german": "beläubung",
+      "english": "stunning / dazedness",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "beläubung"
+        ]
+      }
+    },
+    {
+      "id": "b1-irregular-verbs-miv8hiwn3cqcr",
       "german": "reißen",
-      "english": "to tear (reißt, riss, gerissen)",
+      "english": "to tear / to rip",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 30,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
@@ -464,157 +624,42 @@
       }
     },
     {
-      "id": "syllabus-b1-11017",
-      "german": "riechen",
-      "english": "to smell (riecht, roch, gerochen)",
+      "id": "b1-irregular-verbs-miv8hiwnzixgy",
+      "german": "streichen",
+      "english": "to paint / to delete",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 31,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "riechen"
+          "streichen"
         ]
       }
     },
     {
-      "id": "syllabus-b1-11018",
-      "german": "ringen",
-      "english": "to wrestle (ringt, rang, gerungen)",
+      "id": "b1-irregular-verbs-miv8hiwoafidm",
+      "german": "treiben",
+      "english": "to drive / to do (sports)",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 32,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "ringen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11019",
-      "german": "schließen",
-      "english": "to close (schließt, schloss, geschlossen)",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Irregular Verbs",
-          "schließen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11020",
-      "german": "schmelzen",
-      "english": "to melt (schmilzt, schmolz, geschmolzen)",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Irregular Verbs",
-          "schmelzen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11021",
-      "german": "schneiden",
-      "english": "to cut (schneidet, schnitt, geschnitten)",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Irregular Verbs",
-          "schneiden"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11022",
-      "german": "schweigen",
-      "english": "to be silent (schweigt, schwieg, geschwiegen)",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Irregular Verbs",
-          "schweigen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11023",
-      "german": "schwören",
-      "english": "to swear/vow (schwört, schwor, geschworen)",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Irregular Verbs",
-          "schwören"
-        ]
-      }
-    },
-    {
-      "id": "remnote-777",
-      "german": "tragen",
-      "english": "to carry / to wear",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 3566,
-        "hierarchy": [
-          "Verbs",
-          "tragen"
+          "treiben"
         ]
       }
     }

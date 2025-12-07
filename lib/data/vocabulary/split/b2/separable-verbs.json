@@ -1,7 +1,7 @@
 {
   "level": "B2",
   "category": "Separable Verbs",
-  "totalCards": 32,
+  "totalCards": 33,
   "flashcards": [
     {
       "id": "syllabus-b2-11468",
@@ -44,46 +44,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11470",
-      "german": "ablehnen",
-      "english": "to reject / to decline",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "ablehnen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11471",
-      "german": "abnehmen",
-      "english": "to decrease / to lose weight",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "abnehmen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11472",
       "german": "abschaffen",
       "english": "to abolish / to do away with",
@@ -100,146 +60,6 @@
           "B2",
           "Separable Verbs",
           "abschaffen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11473",
-      "german": "abschließen",
-      "english": "to conclude / to lock",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "abschließen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11474",
-      "german": "aufbauen",
-      "english": "to build up / to construct",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "aufbauen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11475",
-      "german": "aufgeben",
-      "english": "to give up / to abandon",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "aufgeben"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11476",
-      "german": "aufnehmen",
-      "english": "to record / to admit / to take up",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "aufnehmen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11477",
-      "german": "auftreten",
-      "english": "to appear / to perform",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "auftreten"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11478",
-      "german": "ausbrechen",
-      "english": "to break out / to escape",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "ausbrechen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11479",
-      "german": "ausdrücken",
-      "english": "to express",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "ausdrücken"
         ]
       }
     },
@@ -284,26 +104,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11482",
-      "german": "aussprechen",
-      "english": "to pronounce / to express",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "aussprechen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11483",
       "german": "ausstellen",
       "english": "to exhibit / to turn off",
@@ -344,66 +144,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11485",
-      "german": "durchführen",
-      "english": "to carry out / to implement",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "durchführen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11486",
-      "german": "durchsetzen",
-      "english": "to enforce / to assert",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "durchsetzen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11487",
-      "german": "einführen",
-      "english": "to introduce / to import",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "einführen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11488",
       "german": "einschätzen",
       "english": "to assess / to estimate",
@@ -424,216 +164,502 @@
       }
     },
     {
-      "id": "syllabus-b2-11489",
-      "german": "einstellen",
-      "english": "to hire / to adjust / to stop",
+      "id": "b2-separable-verbs-mivkdn5ra2o0t",
+      "german": "unterstützen",
+      "english": "to support",
       "category": "Separable Verbs",
       "level": "B2",
       "tags": [
-        "syllabus",
+        "expansion",
         "B2"
       ],
       "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 8,
         "hierarchy": [
           "B2",
           "Separable Verbs",
-          "einstellen"
+          "unterstützen"
         ]
       }
     },
     {
-      "id": "syllabus-b2-11490",
-      "german": "feststellen",
-      "english": "to determine / to establish",
+      "id": "b2-separable-verbs-mivkdn5rwwhoa",
+      "german": "zurückhalten",
+      "english": "to hold back / to restrain",
       "category": "Separable Verbs",
       "level": "B2",
       "tags": [
-        "syllabus",
+        "expansion",
         "B2"
       ],
       "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 9,
         "hierarchy": [
           "B2",
           "Separable Verbs",
-          "feststellen"
+          "zurückhalten"
         ]
       }
     },
     {
-      "id": "syllabus-b2-11491",
-      "german": "herstellen",
-      "english": "to manufacture / to produce",
+      "id": "b2-separable-verbs-mivkeieq24hqw",
+      "german": "abreisen",
+      "english": "to depart / to leave",
       "category": "Separable Verbs",
       "level": "B2",
       "tags": [
-        "syllabus",
+        "expansion",
         "B2"
       ],
       "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 10,
         "hierarchy": [
           "B2",
           "Separable Verbs",
-          "herstellen"
+          "abreisen"
         ]
       }
     },
     {
-      "id": "syllabus-b2-11492",
-      "german": "nachgeben",
-      "english": "to give in / to yield",
+      "id": "b2-separable-verbs-mivkeieqdmzny",
+      "german": "einbeziehen",
+      "english": "to include / to involve",
       "category": "Separable Verbs",
       "level": "B2",
       "tags": [
-        "syllabus",
+        "expansion",
         "B2"
       ],
       "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 11,
         "hierarchy": [
           "B2",
           "Separable Verbs",
-          "nachgeben"
+          "einbeziehen"
         ]
       }
     },
     {
-      "id": "syllabus-b2-11493",
-      "german": "teilnehmen",
-      "english": "to participate / to take part",
+      "id": "b2-separable-verbs-mivkeieqm1w71",
+      "german": "eindringen",
+      "english": "to penetrate / to intrude",
       "category": "Separable Verbs",
       "level": "B2",
       "tags": [
-        "syllabus",
+        "expansion",
         "B2"
       ],
       "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 12,
         "hierarchy": [
           "B2",
           "Separable Verbs",
-          "teilnehmen"
+          "eindringen"
         ]
       }
     },
     {
-      "id": "syllabus-b2-11494",
-      "german": "übernehmen",
-      "english": "to take over / to assume",
+      "id": "b2-separable-verbs-mivkeieq0ig8k",
+      "german": "einordnen",
+      "english": "to classify / to categorize",
       "category": "Separable Verbs",
       "level": "B2",
       "tags": [
-        "syllabus",
+        "expansion",
         "B2"
       ],
       "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 13,
         "hierarchy": [
           "B2",
           "Separable Verbs",
-          "übernehmen"
+          "einordnen"
         ]
       }
     },
     {
-      "id": "syllabus-b2-11495",
-      "german": "unternehmen",
-      "english": "to undertake / to do",
+      "id": "b2-separable-verbs-mivkeieq5gfag",
+      "german": "nachweisen",
+      "english": "to prove / to demonstrate",
       "category": "Separable Verbs",
       "level": "B2",
       "tags": [
-        "syllabus",
+        "expansion",
         "B2"
       ],
       "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 14,
         "hierarchy": [
           "B2",
           "Separable Verbs",
-          "unternehmen"
+          "nachweisen"
         ]
       }
     },
     {
-      "id": "syllabus-b2-11496",
-      "german": "vorlegen",
-      "english": "to present / to submit",
+      "id": "b2-separable-verbs-mivkeieqkgqo2",
+      "german": "umsetzen",
+      "english": "to implement / to convert",
       "category": "Separable Verbs",
       "level": "B2",
       "tags": [
-        "syllabus",
+        "expansion",
         "B2"
       ],
       "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 15,
         "hierarchy": [
           "B2",
           "Separable Verbs",
-          "vorlegen"
+          "umsetzen"
         ]
       }
     },
     {
-      "id": "syllabus-b2-11497",
-      "german": "zurückziehen",
-      "english": "to withdraw / to retreat",
+      "id": "b2-separable-verbs-mivkfb9qczg6b",
+      "german": "abhalten",
+      "english": "to hold / to prevent",
       "category": "Separable Verbs",
       "level": "B2",
       "tags": [
-        "syllabus",
+        "expansion",
         "B2"
       ],
       "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 16,
         "hierarchy": [
           "B2",
           "Separable Verbs",
-          "zurückziehen"
+          "abhalten"
         ]
       }
     },
     {
-      "id": "remnote-595",
-      "german": "herunterladen",
-      "english": "to download #verben",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 2694,
-        "hierarchy": [
-          "Verbs",
-          "herunterladen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-892",
-      "german": "nachvollziehen",
-      "english": "to be able to relate to sth. #verben",
+      "id": "b2-separable-verbs-mivkfb9qhes8p",
+      "german": "ankündigen",
+      "english": "to announce",
       "category": "Separable Verbs",
       "level": "B2",
       "tags": [
-        "ziehen"
+        "expansion",
+        "B2"
       ],
       "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 4125,
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 17,
         "hierarchy": [
-          "Verbs",
-          "ziehen",
-          "nachvollziehen"
+          "B2",
+          "Separable Verbs",
+          "ankündigen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkfb9qak4kq",
+      "german": "anregen",
+      "english": "to stimulate / to suggest",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "anregen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkfb9q819if",
+      "german": "ausrichten",
+      "english": "to align / to organize",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "ausrichten"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkfb9qeqkts",
+      "german": "ausschließen",
+      "english": "to exclude / to rule out",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "ausschließen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkfb9qq53el",
+      "german": "beistehen",
+      "english": "to stand by / to assist",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "beistehen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkfb9q4h962",
+      "german": "bevorstehen",
+      "english": "to be imminent / to lie ahead",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "bevorstehen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkfb9qnx8h3",
+      "german": "gegenüberstehen",
+      "english": "to face / to be opposite",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "gegenüberstehen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkfb9qm5uya",
+      "german": "hervorbringen",
+      "english": "to produce / to bring forth",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "hervorbringen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkfb9qy4bi0",
+      "german": "hervorrufen",
+      "english": "to cause / to provoke",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "hervorrufen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zg9hxw5",
+      "german": "nachkommen",
+      "english": "to comply / to follow",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "nachkommen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zgrsrwe",
+      "german": "nachlassen",
+      "english": "to decrease / to ease up",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "nachlassen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zg5mzwv",
+      "german": "vorangehen",
+      "english": "to precede / to go ahead",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "vorangehen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zghu0hk",
+      "german": "voraussetzen",
+      "english": "to presuppose / to assume",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "voraussetzen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zhhodtu",
+      "german": "vorherrschen",
+      "english": "to prevail / to predominate",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "vorherrschen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zh9ryrc",
+      "german": "zurückblicken",
+      "english": "to look back",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "zurückblicken"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zh8en9s",
+      "german": "zurückweisen",
+      "english": "to reject / to turn down",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "zurückweisen"
         ]
       }
     }

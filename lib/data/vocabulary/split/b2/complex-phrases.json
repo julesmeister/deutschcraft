@@ -1,0 +1,607 @@
+{
+  "level": "B2",
+  "category": "Complex Phrases",
+  "totalCards": 30,
+  "flashcards": [
+    {
+      "id": "b2-sich-auseinandersetzen-mit-044829",
+      "german": "sich auseinandersetzen mit",
+      "english": "to engage with / to deal with",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "sich auseinandersetzen mit"
+        ]
+      }
+    },
+    {
+      "id": "b2-in-betracht-ziehen-044829",
+      "german": "in Betracht ziehen",
+      "english": "to consider / to take into account",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "in Betracht ziehen"
+        ]
+      }
+    },
+    {
+      "id": "b2-stellung-nehmen-zu-044829",
+      "german": "Stellung nehmen zu",
+      "english": "to take a position on",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 2,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Stellung nehmen zu"
+        ]
+      }
+    },
+    {
+      "id": "b2-zur-verfuegung-stellen-044829",
+      "german": "zur Verfügung stellen",
+      "english": "to make available",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 3,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "zur Verfügung stellen"
+        ]
+      }
+    },
+    {
+      "id": "b2-in-frage-stellen-044829",
+      "german": "in Frage stellen",
+      "english": "to question / to challenge",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 4,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "in Frage stellen"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qdo0tp",
+      "german": "Es liegt mir am Herzen",
+      "english": "It is close to my heart / It matters to me",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 5,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Es liegt mir am Herzen"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qudtw0",
+      "german": "Ich kann es nicht fassen",
+      "english": "I can't believe it",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 6,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Ich kann es nicht fassen"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qlpw6c",
+      "german": "Das kommt nicht in Frage",
+      "english": "That's out of the question",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Das kommt nicht in Frage"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qsjybh",
+      "german": "Es steht außer Frage",
+      "english": "It is beyond question",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Es steht außer Frage"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qbd7qr",
+      "german": "Mir fällt ein Stein vom Herzen",
+      "english": "A weight is lifted off my chest",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Mir fällt ein Stein vom Herzen"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qr08sf",
+      "german": "Das geht mir auf die Nerven",
+      "english": "That gets on my nerves",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Das geht mir auf die Nerven"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qmoba2",
+      "german": "Ich bin am Ende meiner Kräfte",
+      "english": "I'm at the end of my strength",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Ich bin am Ende meiner Kräfte"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qj9euy",
+      "german": "Es ist höchste Zeit",
+      "english": "It's high time",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Es ist höchste Zeit"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qxg522",
+      "german": "Das lässt sich machen",
+      "english": "That can be done",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Das lässt sich machen"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5q6zeec",
+      "german": "Es hängt davon ab",
+      "english": "It depends on that",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Es hängt davon ab"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qrj31b",
+      "german": "Meines Erachtens",
+      "english": "In my opinion / To my mind",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Meines Erachtens"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qexbsq",
+      "german": "Im Grunde genommen",
+      "english": "Basically / Fundamentally",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Im Grunde genommen"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qt1bbu",
+      "german": "Unter Umständen",
+      "english": "Under certain circumstances / Possibly",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Unter Umständen"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qg6fqq",
+      "german": "Auf lange Sicht",
+      "english": "In the long run",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Auf lange Sicht"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5q5igje",
+      "german": "Auf kurze Sicht",
+      "english": "In the short term",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Auf kurze Sicht"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5q2db9k",
+      "german": "Im Nachhinein",
+      "english": "In hindsight / Afterwards",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Im Nachhinein"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qc3fhr",
+      "german": "Im Voraus",
+      "english": "In advance / Beforehand",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Im Voraus"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5q5wpp7",
+      "german": "Auf Anhieb",
+      "english": "Straight away / At first attempt",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Auf Anhieb"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qdean0",
+      "german": "Auf Dauer",
+      "english": "In the long run / Permanently",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Auf Dauer"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qevoeu",
+      "german": "In Bezug auf",
+      "english": "With regard to / Concerning",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "In Bezug auf"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qk9tcb",
+      "german": "Im Gegensatz zu",
+      "english": "In contrast to / Unlike",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Im Gegensatz zu"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qzoh9k",
+      "german": "Im Vergleich zu",
+      "english": "Compared to",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Im Vergleich zu"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5q0dns1",
+      "german": "Anhand von",
+      "english": "Based on / By means of",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Anhand von"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkdn5qsznok",
+      "german": "Aufgrund dessen",
+      "english": "Due to that / Because of that",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Aufgrund dessen"
+        ]
+      }
+    },
+    {
+      "id": "b2-complex-phrases-mivkh9d128hkx",
+      "german": "Außer Frage stehen",
+      "english": "To be beyond question / indisputable",
+      "category": "Complex Phrases",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B2",
+          "Complex Phrases",
+          "Außer Frage stehen"
+        ]
+      }
+    }
+  ]
+}

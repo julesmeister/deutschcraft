@@ -1,128 +1,8 @@
 {
   "level": "A2",
   "category": "Modal Verbs",
-  "totalCards": 15,
+  "totalCards": 31,
   "flashcards": [
-    {
-      "id": "syllabus-a2-10595",
-      "german": "können",
-      "english": "can / to be able to",
-      "category": "Modal Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Modal Verbs",
-          "können"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10596",
-      "german": "müssen",
-      "english": "must / to have to",
-      "category": "Modal Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Modal Verbs",
-          "müssen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10597",
-      "german": "wollen",
-      "english": "to want",
-      "category": "Modal Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Modal Verbs",
-          "wollen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10598",
-      "german": "dürfen",
-      "english": "may / to be allowed to",
-      "category": "Modal Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Modal Verbs",
-          "dürfen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10599",
-      "german": "sollen",
-      "english": "should / to be supposed to",
-      "category": "Modal Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Modal Verbs",
-          "sollen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10600",
-      "german": "mögen",
-      "english": "to like",
-      "category": "Modal Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Modal Verbs",
-          "mögen"
-        ]
-      }
-    },
     {
       "id": "syllabus-a2-10601",
       "german": "möchten",
@@ -140,66 +20,6 @@
           "A2",
           "Modal Verbs",
           "möchten"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10602",
-      "german": "brauchen",
-      "english": "to need",
-      "category": "Modal Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Modal Verbs",
-          "brauchen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10603",
-      "german": "lassen",
-      "english": "to let / to leave",
-      "category": "Modal Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Modal Verbs",
-          "lassen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10604",
-      "german": "werden",
-      "english": "will / to become",
-      "category": "Modal Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Modal Verbs",
-          "werden"
         ]
       }
     },
@@ -300,6 +120,506 @@
           "A2",
           "Modal Verbs",
           "soll nicht"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qffzx2d6",
+      "german": "ich kann",
+      "english": "I can",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 6,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "ich kann"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qffojr8g",
+      "german": "du kannst",
+      "english": "you can",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "du kannst"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qff7syjk",
+      "german": "er kann",
+      "english": "he can",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "er kann"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qff87hiu",
+      "german": "wir können",
+      "english": "we can",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "wir können"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qffodhdk",
+      "german": "ihr könnt",
+      "english": "you (pl.) can",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "ihr könnt"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qffzlab6",
+      "german": "sie können",
+      "english": "they can",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "sie können"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qff560t7",
+      "german": "ich muss",
+      "english": "I must",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "ich muss"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qffvi5oo",
+      "german": "du musst",
+      "english": "you must",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "du musst"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qff9sz72",
+      "german": "er muss",
+      "english": "he must",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "er muss"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qffbuoho",
+      "german": "wir müssen",
+      "english": "we must",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "wir müssen"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qffgo59j",
+      "german": "ihr müsst",
+      "english": "you (pl.) must",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "ihr müsst"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qff80hjp",
+      "german": "sie müssen",
+      "english": "they must",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "sie müssen"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qff6bosp",
+      "german": "ich darf",
+      "english": "I may",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "ich darf"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qff4i88k",
+      "german": "du darfst",
+      "english": "you may",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "du darfst"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qff1ok74",
+      "german": "er darf",
+      "english": "he may",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "er darf"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qffn81h6",
+      "german": "wir dürfen",
+      "english": "we may",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 36,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "wir dürfen"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qffod9ex",
+      "german": "ihr dürft",
+      "english": "you (pl.) may",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 38,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "ihr dürft"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qffdq9ir",
+      "german": "sie dürfen",
+      "english": "they may",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 40,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "sie dürfen"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qffwvka9",
+      "german": "ich will",
+      "english": "I want",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 42,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "ich will"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qffqupj3",
+      "german": "du willst",
+      "english": "you want",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 44,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "du willst"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qff5h9hu",
+      "german": "er will",
+      "english": "he wants",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 46,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "er will"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qffmicz6",
+      "german": "wir wollen",
+      "english": "we want",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 48,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "wir wollen"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miuj9qff5enp2",
+      "german": "sie wollen",
+      "english": "they want",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 50,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "sie wollen"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miujdiwjg6daj",
+      "german": "ich möchte",
+      "english": "I would like",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "ich möchte"
+        ]
+      }
+    },
+    {
+      "id": "a2-modal-verbs-miujdiwjm3jwp",
+      "german": "du möchtest",
+      "english": "you would like",
+      "category": "Modal Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "A2",
+          "Modal Verbs",
+          "du möchtest"
         ]
       }
     }

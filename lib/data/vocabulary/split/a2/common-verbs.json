@@ -1,48 +1,8 @@
 {
   "level": "A2",
   "category": "Common Verbs",
-  "totalCards": 7,
+  "totalCards": 30,
   "flashcards": [
-    {
-      "id": "syllabus-a2-10326",
-      "german": "nehmen",
-      "english": "to take",
-      "category": "Common Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Common Verbs",
-          "nehmen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10327",
-      "german": "geben",
-      "english": "to give",
-      "category": "Common Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Common Verbs",
-          "geben"
-        ]
-      }
-    },
     {
       "id": "syllabus-a2-10328",
       "german": "bringen",
@@ -64,82 +24,582 @@
       }
     },
     {
-      "id": "syllabus-a2-10329",
-      "german": "zeigen",
-      "english": "to show",
+      "id": "a2-common-verbs-miuj9qfcyjtvi",
+      "german": "versuchen",
+      "english": "to try",
       "category": "Common Verbs",
       "level": "A2",
       "tags": [
-        "syllabus",
+        "expansion",
         "A2"
       ],
       "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 1,
         "hierarchy": [
           "A2",
           "Common Verbs",
-          "zeigen"
+          "versuchen"
         ]
       }
     },
     {
-      "id": "syllabus-a2-10330",
-      "german": "helfen",
-      "english": "to help",
+      "id": "a2-common-verbs-miuj9qfcpn2vc",
+      "german": "passieren",
+      "english": "to happen",
       "category": "Common Verbs",
       "level": "A2",
       "tags": [
-        "syllabus",
+        "expansion",
         "A2"
       ],
       "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 3,
         "hierarchy": [
           "A2",
           "Common Verbs",
-          "helfen"
+          "passieren"
         ]
       }
     },
     {
-      "id": "syllabus-a2-10331",
-      "german": "schreiben",
-      "english": "to write",
+      "id": "a2-common-verbs-miuj9qfcypqlb",
+      "german": "benutzen",
+      "english": "to use",
       "category": "Common Verbs",
       "level": "A2",
       "tags": [
-        "syllabus",
+        "expansion",
         "A2"
       ],
       "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 5,
         "hierarchy": [
           "A2",
           "Common Verbs",
-          "schreiben"
+          "benutzen"
         ]
       }
     },
     {
-      "id": "syllabus-a2-10332",
-      "german": "sprechen",
-      "english": "to speak",
+      "id": "a2-common-verbs-miuj9qfck2kvk",
+      "german": "hoffen",
+      "english": "to hope",
       "category": "Common Verbs",
       "level": "A2",
       "tags": [
-        "syllabus",
+        "expansion",
         "A2"
       ],
       "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 7,
         "hierarchy": [
           "A2",
           "Common Verbs",
-          "sprechen"
+          "hoffen"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miuj9qfcjo2il",
+      "german": "hängen",
+      "english": "to hang",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "hängen"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujdiwbaiw3f",
+      "german": "tun",
+      "english": "to do",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 6,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "tun"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujf2nlp4z2s",
+      "german": "zumachen",
+      "english": "to close",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "zumachen"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujf2nlez2xi",
+      "german": "wegräumen",
+      "english": "to put away / to clear away",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "wegräumen"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujf2nlnt69u",
+      "german": "loswerden",
+      "english": "to get rid of",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "loswerden"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujf2nleat8g",
+      "german": "abgeben",
+      "english": "to hand in / to submit",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "abgeben"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujf2nl58qfg",
+      "german": "nachprüfen",
+      "english": "to check / to verify",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "nachprüfen"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujf2nl8mpv3",
+      "german": "überprüfen",
+      "english": "to check / to inspect",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "überprüfen"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujf2nl2rat5",
+      "german": "befolgen",
+      "english": "to follow / to obey",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "befolgen"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujf2nl7zxxb",
+      "german": "verstoßen gegen",
+      "english": "to violate",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "verstoßen gegen"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujg5fdp5a1d",
+      "german": "vorbeikommen",
+      "english": "to come by / to drop by",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "vorbeikommen"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujg5fdikhga",
+      "german": "vorbeigehen",
+      "english": "to pass by / to walk past",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "vorbeigehen"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujg5fdrmqlt",
+      "german": "herausgehen",
+      "english": "to go out / to leave",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "herausgehen"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujh1kkn1uqy",
+      "german": "nachdenken über",
+      "english": "to think about / to reflect on",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "nachdenken über"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujh1kkn123c",
+      "german": "sich Gedanken machen über",
+      "english": "to worry about / to think about",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "sich Gedanken machen über"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujh1kktl5px",
+      "german": "achten auf",
+      "english": "to pay attention to",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "achten auf"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujh1kktp1tz",
+      "german": "sorgen für",
+      "english": "to provide for / to take care of",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "sorgen für"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujh1kknwfiu",
+      "german": "sich Sorgen machen um",
+      "english": "to worry about",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "sich Sorgen machen um"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujh1kk06uvb",
+      "german": "rechnen mit",
+      "english": "to expect / to count on",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "rechnen mit"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujh1kkbme96",
+      "german": "sich verlassen auf",
+      "english": "to rely on",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "sich verlassen auf"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujh1kkj1ula",
+      "german": "abhängen von",
+      "english": "to depend on",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "abhängen von"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujh1kktscbh",
+      "german": "bestehen aus",
+      "english": "to consist of",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "bestehen aus"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujh1kkclzc0",
+      "german": "sich handeln um",
+      "english": "to be about / to concern",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 36,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "sich handeln um"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujh1kk2c368",
+      "german": "etwas unternehmen",
+      "english": "to do something / to undertake",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 38,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "etwas unternehmen"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujhqq5sneab",
+      "german": "umgehen mit",
+      "english": "to deal with / to handle",
+      "category": "Common Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "umgehen mit"
         ]
       }
     }

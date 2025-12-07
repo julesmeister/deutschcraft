@@ -1,0 +1,87 @@
+{
+  "level": "C1",
+  "category": "Nuanced Expressions",
+  "totalCards": 4,
+  "flashcards": [
+    {
+      "id": "c1-sich-bewusst-sein-044832",
+      "german": "sich bewusst sein",
+      "english": "to be aware / to be conscious of",
+      "category": "Nuanced Expressions",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Nuanced Expressions",
+          "sich bewusst sein"
+        ]
+      }
+    },
+    {
+      "id": "c1-in-kauf-nehmen-044832",
+      "german": "in Kauf nehmen",
+      "english": "to accept / to tolerate",
+      "category": "Nuanced Expressions",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "C1",
+          "Nuanced Expressions",
+          "in Kauf nehmen"
+        ]
+      }
+    },
+    {
+      "id": "c1-auf-etwas-hinauslaufen-044832",
+      "german": "auf etwas hinauslaufen",
+      "english": "to amount to / to come down to",
+      "category": "Nuanced Expressions",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 2,
+        "hierarchy": [
+          "C1",
+          "Nuanced Expressions",
+          "auf etwas hinauslaufen"
+        ]
+      }
+    },
+    {
+      "id": "c1-etwas-in-erwaegung-ziehen-044832",
+      "german": "etwas in Erwägung ziehen",
+      "english": "to consider something",
+      "category": "Nuanced Expressions",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 3,
+        "hierarchy": [
+          "C1",
+          "Nuanced Expressions",
+          "etwas in Erwägung ziehen"
+        ]
+      }
+    }
+  ]
+}

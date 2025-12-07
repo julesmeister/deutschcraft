@@ -84,26 +84,6 @@
       }
     },
     {
-      "id": "syllabus-c1-11577",
-      "german": "gewissermaßen",
-      "english": "in a way / to some extent",
-      "category": "Formal Language",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Formal Language",
-          "gewissermaßen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-c1-11578",
       "german": "inwiefern",
       "english": "to what extent / in what way",
@@ -120,46 +100,6 @@
           "C1",
           "Formal Language",
           "inwiefern"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11579",
-      "german": "insofern",
-      "english": "insofar / to that extent",
-      "category": "Formal Language",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Formal Language",
-          "insofern"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11580",
-      "german": "demnach",
-      "english": "accordingly / thus",
-      "category": "Formal Language",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Formal Language",
-          "demnach"
         ]
       }
     },
@@ -184,22 +124,82 @@
       }
     },
     {
-      "id": "syllabus-c1-11582",
-      "german": "folglich",
-      "english": "consequently / therefore",
+      "id": "c1-bezueglich-044830",
+      "german": "bezüglich",
+      "english": "regarding / concerning",
       "category": "Formal Language",
       "level": "C1",
       "tags": [
-        "syllabus",
+        "expansion",
         "C1"
       ],
       "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
+        "source": "Priority Expansion 2025",
+        "lineNumber": 6,
         "hierarchy": [
           "C1",
           "Formal Language",
-          "folglich"
+          "bezüglich"
+        ]
+      }
+    },
+    {
+      "id": "c1-angesichts-044830",
+      "german": "angesichts",
+      "english": "in view of / considering",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "angesichts"
+        ]
+      }
+    },
+    {
+      "id": "c1-mittels-044830",
+      "german": "mittels",
+      "english": "by means of / using",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "mittels"
+        ]
+      }
+    },
+    {
+      "id": "c1-infolge-044830",
+      "german": "infolge",
+      "english": "as a result of / due to",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "infolge"
         ]
       }
     }

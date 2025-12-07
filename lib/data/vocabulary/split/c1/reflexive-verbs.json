@@ -1,7 +1,7 @@
 {
   "level": "C1",
   "category": "Reflexive Verbs",
-  "totalCards": 40,
+  "totalCards": 38,
   "flashcards": [
     {
       "id": "reflexive-c1-001",
@@ -273,27 +273,6 @@
           "C1",
           "Reflexive Verbs",
           "sich hinwegsetzen über"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-c1-014",
-      "german": "sich profilieren",
-      "english": "to make a name for oneself",
-      "category": "Reflexive Verbs",
-      "level": "C1",
-      "tags": [
-        "reflexive",
-        "reputation",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Reflexive Verbs",
-          "sich profilieren"
         ]
       }
     },
@@ -693,27 +672,6 @@
           "C1",
           "Reflexive Verbs",
           "sich manifestieren"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-c1-034",
-      "german": "sich profilieren",
-      "english": "to distinguish oneself, to make one's mark",
-      "category": "Reflexive Verbs",
-      "level": "C1",
-      "tags": [
-        "reflexive",
-        "distinction",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Reflexive Verbs",
-          "sich profilieren"
         ]
       }
     },

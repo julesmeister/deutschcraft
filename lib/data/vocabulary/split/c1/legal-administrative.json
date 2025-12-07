@@ -1,7 +1,7 @@
 {
   "level": "C1",
   "category": "Legal Administrative",
-  "totalCards": 15,
+  "totalCards": 12,
   "flashcards": [
     {
       "id": "syllabus-c1-11583",
@@ -44,26 +44,6 @@
       }
     },
     {
-      "id": "syllabus-c1-11585",
-      "german": "Rechtsanwalt",
-      "english": "lawyer / attorney",
-      "category": "Legal Administrative",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Legal Administrative",
-          "Rechtsanwalt"
-        ]
-      }
-    },
-    {
       "id": "syllabus-c1-11586",
       "german": "Verfahren",
       "english": "procedure / proceedings / process",
@@ -80,26 +60,6 @@
           "C1",
           "Legal Administrative",
           "Verfahren"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11587",
-      "german": "Anspruch",
-      "english": "claim / entitlement / right",
-      "category": "Legal Administrative",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Legal Administrative",
-          "Anspruch"
         ]
       }
     },
@@ -200,26 +160,6 @@
           "C1",
           "Legal Administrative",
           "Urteil"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11593",
-      "german": "Zeugnis",
-      "english": "certificate / testimony / reference",
-      "category": "Legal Administrative",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Legal Administrative",
-          "Zeugnis"
         ]
       }
     },

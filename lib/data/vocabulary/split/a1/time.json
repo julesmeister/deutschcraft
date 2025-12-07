@@ -1,7 +1,7 @@
 {
   "level": "A1",
   "category": "Time",
-  "totalCards": 96,
+  "totalCards": 92,
   "flashcards": [
     {
       "id": "syllabus-a1-10343",
@@ -160,26 +160,6 @@
           "A1",
           "Time",
           "heute"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10351",
-      "german": "morgen",
-      "english": "tomorrow",
-      "category": "Time",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Time",
-          "morgen"
         ]
       }
     },
@@ -924,26 +904,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10389",
-      "german": "der Morgen",
-      "english": "morning",
-      "category": "Time",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Time",
-          "Morgen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10390",
       "german": "der Vormittag",
       "english": "late morning / before noon",
@@ -1120,46 +1080,6 @@
           "A1",
           "Time",
           "Sekunde"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10399",
-      "german": "das Viertel",
-      "english": "quarter (time)",
-      "category": "Time",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Time",
-          "Viertel"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10400",
-      "german": "halb",
-      "english": "half (time)",
-      "category": "Time",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Time",
-          "halb"
         ]
       }
     },

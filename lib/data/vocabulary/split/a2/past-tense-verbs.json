@@ -1,7 +1,7 @@
 {
   "level": "A2",
   "category": "Past Tense Verbs",
-  "totalCards": 15,
+  "totalCards": 45,
   "flashcards": [
     {
       "id": "syllabus-a2-10634",
@@ -300,6 +300,606 @@
           "A2",
           "Past Tense Verbs",
           "lag"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06368x0",
+      "german": "ich war",
+      "english": "I was",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "ich war"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06raxv0",
+      "german": "du warst",
+      "english": "you were",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "du warst"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06wc57w",
+      "german": "er war",
+      "english": "he was",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "er war"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06zf9lg",
+      "german": "wir waren",
+      "english": "we were",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "wir waren"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk063vanf",
+      "german": "ihr wart",
+      "english": "you (pl.) were",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "ihr wart"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06tc1th",
+      "german": "sie waren",
+      "english": "they were",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "sie waren"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06rztw6",
+      "german": "ich hatte",
+      "english": "I had",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "ich hatte"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06q8zdf",
+      "german": "du hattest",
+      "english": "you had",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "du hattest"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06ik5fn",
+      "german": "er hatte",
+      "english": "he had",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "er hatte"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06adz5q",
+      "german": "wir hatten",
+      "english": "we had",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 33,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "wir hatten"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06aqxi3",
+      "german": "ihr hattet",
+      "english": "you (pl.) had",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 35,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "ihr hattet"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06x98jf",
+      "german": "sie hatten",
+      "english": "they had",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 37,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "sie hatten"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06rz1jp",
+      "german": "ich ging",
+      "english": "I went",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 39,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "ich ging"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06cktj6",
+      "german": "du gingst",
+      "english": "you went",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 41,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "du gingst"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06kkv4r",
+      "german": "er ging",
+      "english": "he went",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 43,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "er ging"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk067yiwt",
+      "german": "wir gingen",
+      "english": "we went",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 45,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "wir gingen"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06bayg2",
+      "german": "ich kam",
+      "english": "I came",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 47,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "ich kam"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06wowjt",
+      "german": "du kamst",
+      "english": "you came",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 49,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "du kamst"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06mf0an",
+      "german": "er kam",
+      "english": "he came",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 51,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "er kam"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk06k1m5s",
+      "german": "wir kamen",
+      "english": "we came",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 53,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "wir kamen"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk07urzeb",
+      "german": "ich sah",
+      "english": "I saw",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 55,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "ich sah"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk07pnaez",
+      "german": "du sahst",
+      "english": "you saw",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 57,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "du sahst"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk07880by",
+      "german": "er sah",
+      "english": "he saw",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 59,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "er sah"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk07rtjmn",
+      "german": "wir sahen",
+      "english": "we saw",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 61,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "wir sahen"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk070df2e",
+      "german": "ich aß",
+      "english": "I ate",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 63,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "ich aß"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk07ub5m6",
+      "german": "du aßt",
+      "english": "you ate",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 65,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "du aßt"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk07qbf65",
+      "german": "er aß",
+      "english": "he ate",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 67,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "er aß"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk07wujm2",
+      "german": "wir aßen",
+      "english": "we ate",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 69,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "wir aßen"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk07bmex0",
+      "german": "ich trank",
+      "english": "I drank",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 71,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "ich trank"
+        ]
+      }
+    },
+    {
+      "id": "a2-past-tense-verbs-miujbk07ubkhv",
+      "german": "wir tranken",
+      "english": "we drank",
+      "category": "Past Tense Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 73,
+        "hierarchy": [
+          "A2",
+          "Past Tense Verbs",
+          "wir tranken"
         ]
       }
     }

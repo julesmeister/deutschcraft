@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "State Change Verbs",
-  "totalCards": 31,
+  "totalCards": 46,
   "flashcards": [
     {
       "id": "syllabus-b1-11101",
@@ -40,26 +40,6 @@
           "B1",
           "State Change Verbs",
           "sich verwandeln in"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11103",
-      "german": "sich entwickeln",
-      "english": "to develop / to evolve",
-      "category": "State Change Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "State Change Verbs",
-          "sich entwickeln"
         ]
       }
     },
@@ -104,66 +84,6 @@
       }
     },
     {
-      "id": "syllabus-b1-11106",
-      "german": "vergehen",
-      "english": "to pass / to elapse",
-      "category": "State Change Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "State Change Verbs",
-          "vergehen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11107",
-      "german": "verschwinden",
-      "english": "to disappear",
-      "category": "State Change Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "State Change Verbs",
-          "verschwinden"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11108",
-      "german": "erscheinen",
-      "english": "to appear",
-      "category": "State Change Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "State Change Verbs",
-          "erscheinen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b1-11109",
       "german": "auftauchen",
       "english": "to surface / to emerge",
@@ -180,46 +100,6 @@
           "B1",
           "State Change Verbs",
           "auftauchen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11110",
-      "german": "zunehmen",
-      "english": "to increase / to gain weight",
-      "category": "State Change Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "State Change Verbs",
-          "zunehmen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11111",
-      "german": "abnehmen",
-      "english": "to decrease / to lose weight",
-      "category": "State Change Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "State Change Verbs",
-          "abnehmen"
         ]
       }
     },
@@ -244,46 +124,6 @@
       }
     },
     {
-      "id": "syllabus-b1-11113",
-      "german": "sinken",
-      "english": "to sink / to decrease",
-      "category": "State Change Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "State Change Verbs",
-          "sinken"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11114",
-      "german": "steigen",
-      "english": "to rise / to climb",
-      "category": "State Change Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "State Change Verbs",
-          "steigen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b1-11115",
       "german": "erwachen",
       "english": "to awaken",
@@ -300,26 +140,6 @@
           "B1",
           "State Change Verbs",
           "erwachen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11116",
-      "german": "eintreten",
-      "english": "to enter / to occur",
-      "category": "State Change Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "State Change Verbs",
-          "eintreten"
         ]
       }
     },
@@ -384,26 +204,6 @@
       }
     },
     {
-      "id": "syllabus-b1-11120",
-      "german": "sich erholen",
-      "english": "to recover",
-      "category": "State Change Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "State Change Verbs",
-          "sich erholen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b1-11121",
       "german": "erkranken",
       "english": "to fall ill / to become sick",
@@ -464,46 +264,6 @@
       }
     },
     {
-      "id": "syllabus-b1-11124",
-      "german": "reifen",
-      "english": "to mature / to ripen",
-      "category": "State Change Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "State Change Verbs",
-          "reifen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11125",
-      "german": "wachsen",
-      "english": "to grow",
-      "category": "State Change Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "State Change Verbs",
-          "wachsen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b1-11126",
       "german": "schrumpfen",
       "english": "to shrink",
@@ -520,26 +280,6 @@
           "B1",
           "State Change Verbs",
           "schrumpfen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11127",
-      "german": "erröten",
-      "english": "to blush",
-      "category": "State Change Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "State Change Verbs",
-          "erröten"
         ]
       }
     },
@@ -604,17 +344,582 @@
       }
     },
     {
-      "id": "remnote-882",
-      "german": "wirken",
-      "english": "to seem / to appear / to affect #verben",
+      "id": "b1-erbleichen-827790",
+      "german": "erbleichen",
+      "english": "to turn pale / to pale",
       "category": "State Change Verbs",
       "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
       "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 4075,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 0,
         "hierarchy": [
-          "Verbs",
-          "wirken"
+          "B1",
+          "State Change Verbs",
+          "erbleichen"
+        ]
+      }
+    },
+    {
+      "id": "b1-erblhen-827790",
+      "german": "erblühen",
+      "english": "to blossom / to bloom",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erblühen"
+        ]
+      }
+    },
+    {
+      "id": "b1-erblte-827790",
+      "german": "erblüte",
+      "english": "to bloom",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 2,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erblüte"
+        ]
+      }
+    },
+    {
+      "id": "b1-erbrausen-827790",
+      "german": "erbrausen",
+      "english": "to roar / to crash",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 3,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erbrausen"
+        ]
+      }
+    },
+    {
+      "id": "b1-erbrausche-827790",
+      "german": "erbrauschen",
+      "english": "to roar / to crash",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 4,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erbrauschen"
+        ]
+      }
+    },
+    {
+      "id": "b1-erbrauste-827790",
+      "german": "erbrauste",
+      "english": "roared / crashed",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 5,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erbrauste"
+        ]
+      }
+    },
+    {
+      "id": "b1-erblichen-827790",
+      "german": "erblichen",
+      "english": "to turn pale",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 6,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erblichen"
+        ]
+      }
+    },
+    {
+      "id": "b1-erblichung-827790",
+      "german": "erblichung",
+      "english": "paling / turning pale",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erblichung"
+        ]
+      }
+    },
+    {
+      "id": "b1-erblhung-827790",
+      "german": "erblühung",
+      "english": "blooming / flowering",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erblühung"
+        ]
+      }
+    },
+    {
+      "id": "b1-erbrecher-827790",
+      "german": "erbrecher",
+      "english": "vomiter",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erbrecher"
+        ]
+      }
+    },
+    {
+      "id": "b1-erbrechung-827790",
+      "german": "erbrechung",
+      "english": "vomiting",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erbrechung"
+        ]
+      }
+    },
+    {
+      "id": "b1-erbrechene-827790",
+      "german": "erbrechenes",
+      "english": "vomitus",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erbrechenes"
+        ]
+      }
+    },
+    {
+      "id": "b1-erblassung-827790",
+      "german": "erblassung",
+      "english": "paling / becoming pale",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erblassung"
+        ]
+      }
+    },
+    {
+      "id": "b1-erblhte-827790",
+      "german": "erblühte",
+      "english": "bloomed / blossomed",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erblühte"
+        ]
+      }
+    },
+    {
+      "id": "b1-erbleichte-827790",
+      "german": "erbleichte",
+      "english": "paled / turned pale",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erbleichte"
+        ]
+      }
+    },
+    {
+      "id": "b1-erbleichun-827790",
+      "german": "erbleichung",
+      "english": "paling / pallor",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erbleichung"
+        ]
+      }
+    },
+    {
+      "id": "b1-erblhungde-827790",
+      "german": "erblühung des baumes",
+      "english": "blooming of the tree",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erblühung"
+        ]
+      }
+    },
+    {
+      "id": "b1-erbrechung-827790",
+      "german": "erbrechung verursachen",
+      "english": "to cause vomiting",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erbrechung"
+        ]
+      }
+    },
+    {
+      "id": "b1-erbrechung-827790",
+      "german": "erbrechungen",
+      "english": "vomiting (plural)",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erbrechungen"
+        ]
+      }
+    },
+    {
+      "id": "b1-erbrechend-827790",
+      "german": "erbrechendes mittel",
+      "english": "emetic / vomit-inducing substance",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erbrechendes"
+        ]
+      }
+    },
+    {
+      "id": "b1-erbleichte-827790",
+      "german": "erbleichtes gesicht",
+      "english": "pale face",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erbleichtes"
+        ]
+      }
+    },
+    {
+      "id": "b1-erblhterba-827790",
+      "german": "erblühter baum",
+      "english": "bloomed tree",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erblühter"
+        ]
+      }
+    },
+    {
+      "id": "b1-erbrichts-827790",
+      "german": "erbrichts",
+      "english": "vomiting (archaic)",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erbrichts"
+        ]
+      }
+    },
+    {
+      "id": "b1-erbleichte-827790",
+      "german": "erbleichte wangen",
+      "english": "paled cheeks",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erbleichte"
+        ]
+      }
+    },
+    {
+      "id": "b1-erblhtekno-827790",
+      "german": "erblühte knospen",
+      "english": "bloomed buds",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "erblühte"
+        ]
+      }
+    },
+    {
+      "id": "b1-state-change-verbs-miv8iuogcl5rz",
+      "german": "gebären",
+      "english": "to give birth",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 42,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "gebären"
+        ]
+      }
+    },
+    {
+      "id": "b1-state-change-verbs-miv8iuogrputl",
+      "german": "zunehmen",
+      "english": "to increase / to gain weight",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 43,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "zunehmen"
+        ]
+      }
+    },
+    {
+      "id": "b1-state-change-verbs-miv8iuogn97p0",
+      "german": "anschwellen",
+      "english": "to swell",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 44,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "anschwellen"
+        ]
+      }
+    },
+    {
+      "id": "b1-state-change-verbs-miv8iuogo020d",
+      "german": "abschwellen",
+      "english": "to reduce swelling / to go down",
+      "category": "State Change Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 45,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "abschwellen"
         ]
       }
     }

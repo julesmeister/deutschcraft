@@ -1,7 +1,7 @@
 {
   "level": "B2",
   "category": "Redemittel",
-  "totalCards": 32,
+  "totalCards": 31,
   "flashcards": [
     {
       "id": "remnote-905",
@@ -345,21 +345,6 @@
         "hierarchy": [
           "Redemittel",
           "Ja, ich bin dabei"
-        ]
-      }
-    },
-    {
-      "id": "remnote-947",
-      "german": "Die Nase voll haben",
-      "english": "Tired of something",
-      "category": "Redemittel",
-      "level": "B2",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 4240,
-        "hierarchy": [
-          "Redemittel",
-          "Die Nase voll haben"
         ]
       }
     },

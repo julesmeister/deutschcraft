@@ -1,68 +1,8 @@
 {
   "level": "A2",
   "category": "Feelings",
-  "totalCards": 35,
+  "totalCards": 30,
   "flashcards": [
-    {
-      "id": "syllabus-a2-10529",
-      "german": "glücklich",
-      "english": "happy",
-      "category": "Feelings",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Feelings",
-          "glücklich"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10530",
-      "german": "traurig",
-      "english": "sad",
-      "category": "Feelings",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Feelings",
-          "traurig"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10531",
-      "german": "müde",
-      "english": "tired",
-      "category": "Feelings",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Feelings",
-          "müde"
-        ]
-      }
-    },
     {
       "id": "syllabus-a2-10532",
       "german": "wütend",
@@ -100,26 +40,6 @@
           "A2",
           "Feelings",
           "aufgeregt"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10534",
-      "german": "nervös",
-      "english": "nervous",
-      "category": "Feelings",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Feelings",
-          "nervös"
         ]
       }
     },
@@ -404,26 +324,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10549",
-      "german": "lustig",
-      "english": "funny / cheerful",
-      "category": "Feelings",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Feelings",
-          "lustig"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10550",
       "german": "dankbar",
       "english": "grateful / thankful",
@@ -504,26 +404,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10554",
-      "german": "ruhig",
-      "english": "calm / quiet",
-      "category": "Feelings",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Feelings",
-          "ruhig"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10555",
       "german": "fröhlich",
       "english": "cheerful / merry",
@@ -540,106 +420,6 @@
           "A2",
           "Feelings",
           "fröhlich"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10556",
-      "german": "schlecht",
-      "english": "bad / unwell",
-      "category": "Feelings",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Feelings",
-          "schlecht"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10557",
-      "german": "krank",
-      "english": "sick / ill",
-      "category": "Feelings",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Feelings",
-          "krank"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10558",
-      "german": "gesund",
-      "english": "healthy / well",
-      "category": "Feelings",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Feelings",
-          "gesund"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10559",
-      "german": "hungrig",
-      "english": "hungry",
-      "category": "Feelings",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Feelings",
-          "hungrig"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10560",
-      "german": "durstig",
-      "english": "thirsty",
-      "category": "Feelings",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Feelings",
-          "durstig"
         ]
       }
     },
@@ -700,6 +480,126 @@
           "A2",
           "Feelings",
           "verliebt"
+        ]
+      }
+    },
+    {
+      "id": "a2-feelings-miujbk09nh0kw",
+      "german": "böse",
+      "english": "angry / evil",
+      "category": "Feelings",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "A2",
+          "Feelings",
+          "böse"
+        ]
+      }
+    },
+    {
+      "id": "a2-feelings-miujbk091cvsh",
+      "german": "energisch",
+      "english": "energetic",
+      "category": "Feelings",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "A2",
+          "Feelings",
+          "energisch"
+        ]
+      }
+    },
+    {
+      "id": "a2-feelings-miujdiwix9sb7",
+      "german": "verlegen",
+      "english": "embarrassed",
+      "category": "Feelings",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "A2",
+          "Feelings",
+          "verlegen"
+        ]
+      }
+    },
+    {
+      "id": "a2-feelings-miujdiwir6mb7",
+      "german": "peinlich",
+      "english": "embarrassing / awkward",
+      "category": "Feelings",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Feelings",
+          "peinlich"
+        ]
+      }
+    },
+    {
+      "id": "a2-feelings-miujh1ko5tzce",
+      "german": "gespannt",
+      "english": "curious / excited / tense",
+      "category": "Feelings",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Feelings",
+          "gespannt"
+        ]
+      }
+    },
+    {
+      "id": "a2-feelings-miujhqq8r4fuc",
+      "german": "ratlos",
+      "english": "at a loss / helpless",
+      "category": "Feelings",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Feelings",
+          "ratlos"
         ]
       }
     }

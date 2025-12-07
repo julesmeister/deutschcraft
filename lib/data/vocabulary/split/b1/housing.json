@@ -1,11 +1,11 @@
 {
   "level": "B1",
   "category": "Housing",
-  "totalCards": 17,
+  "totalCards": 52,
   "flashcards": [
     {
       "id": "syllabus-b1-10977",
-      "german": "Wohnung",
+      "german": "die Wohnung",
       "english": "apartment",
       "category": "Housing",
       "level": "B1",
@@ -25,7 +25,7 @@
     },
     {
       "id": "syllabus-b1-10978",
-      "german": "Miete",
+      "german": "die Miete",
       "english": "rent",
       "category": "Housing",
       "level": "B1",
@@ -45,7 +45,7 @@
     },
     {
       "id": "syllabus-b1-10979",
-      "german": "Vermieter",
+      "german": "der Vermieter",
       "english": "landlord",
       "category": "Housing",
       "level": "B1",
@@ -65,7 +65,7 @@
     },
     {
       "id": "syllabus-b1-10980",
-      "german": "Nachbar",
+      "german": "der Nachbar",
       "english": "neighbor",
       "category": "Housing",
       "level": "B1",
@@ -285,7 +285,7 @@
     },
     {
       "id": "syllabus-b1-10991",
-      "german": "Möbel",
+      "german": "die Möbel",
       "english": "furniture",
       "category": "Housing",
       "level": "B1",
@@ -305,7 +305,7 @@
     },
     {
       "id": "syllabus-b1-10992",
-      "german": "Umzug",
+      "german": "der Umzug",
       "english": "move / relocation",
       "category": "Housing",
       "level": "B1",
@@ -340,6 +340,706 @@
           "B1",
           "Housing",
           "einziehen"
+        ]
+      }
+    },
+    {
+      "id": "b1-derbalkon-827789",
+      "german": "der Balkon",
+      "english": "balcony",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-derspeiche-827789",
+      "german": "der Speicher",
+      "english": "attic / storage",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dervorraum-827789",
+      "german": "der Vorraum",
+      "english": "antechamber / foyer",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 2,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dervorflur-827789",
+      "german": "der Vorflur",
+      "english": "entry hall",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 3,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-derverschl-827789",
+      "german": "der Verschlag",
+      "english": "partition / enclosure",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 4,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dieveranda-827789",
+      "german": "die Veranda",
+      "english": "veranda / porch",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 5,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dievertief-827789",
+      "german": "die Vertiefung",
+      "english": "depression / indentation",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 6,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-derverschl-827789",
+      "german": "der Verschluss",
+      "english": "closure / lock",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dervorbau-827789",
+      "german": "der Vorbau",
+      "english": "extension / portico",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dievorkamm-827789",
+      "german": "die Vorkammer",
+      "english": "anteroom / waiting room",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dievorflch-827789",
+      "german": "die Vorfläche",
+      "english": "forecourt / entrance area",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasvorhaus-827789",
+      "german": "das Vorhaus",
+      "english": "vestibule / entrance house",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dervorhang-827789",
+      "german": "der Vorhang",
+      "english": "curtain / drape",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dervorkell-827789",
+      "german": "der Vorkeller",
+      "english": "front basement",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dievorlaub-827789",
+      "german": "die Vorlaubstube",
+      "english": "anteroom",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dervorlich-827789",
+      "german": "der Vorlichte",
+      "english": "porch light",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dervorplat-827789",
+      "german": "der Vorplatz",
+      "english": "forecourt / front plaza",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dievorramp-827789",
+      "german": "die Vorrampe",
+      "english": "entrance ramp",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dievorsule-827789",
+      "german": "die Vorsäulenhalle",
+      "english": "portico hall",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dervorspei-827789",
+      "german": "der Vorspeicher",
+      "english": "antechamber",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dervorstun-827789",
+      "german": "der Vorstunde",
+      "english": "antechamber",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dievortepp-827789",
+      "german": "die Vorteppich",
+      "english": "entrance carpet",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dievortr-827789",
+      "german": "die Vortür",
+      "english": "front door / entrance door",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dievorvers-827789",
+      "german": "die Vorversteckte",
+      "english": "hidden entrance",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dervorwage-827789",
+      "german": "der Vorwagen",
+      "english": "carriage entrance",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dievorwand-827789",
+      "german": "die Vorwand",
+      "english": "excuse / pretext",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dervorhof-827789",
+      "german": "der Vorhof",
+      "english": "forecourt / courtyard",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-miv8iuofgqtp9",
+      "german": "der Mieter",
+      "english": "tenant",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 44,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der Mieter"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-miv8iuofq36dm",
+      "german": "die Kaution",
+      "english": "deposit / security deposit",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 45,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die Kaution"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-miv8iuofmpw7m",
+      "german": "die Nebenkosten",
+      "english": "utility costs / additional costs",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 46,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die Nebenkosten"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-miv8iuofnjwsd",
+      "german": "der Mietvertrag",
+      "english": "rental contract / lease",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 47,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der Mietvertrag"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-miv8iuof0qiwz",
+      "german": "die Einrichtung",
+      "english": "furniture / furnishings",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 48,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die Einrichtung"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-miv8iuofndpx6",
+      "german": "möbliert",
+      "english": "furnished",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 49,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "möbliert"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-miv8iuof6f1i1",
+      "german": "unmöbliert",
+      "english": "unfurnished",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 50,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "unmöbliert"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-miv8iuofjurym",
+      "german": "die Renovierung",
+      "english": "renovation",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 51,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die Renovierung"
         ]
       }
     }

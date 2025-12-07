@@ -1,7 +1,7 @@
 {
   "level": "A2",
   "category": "Nature",
-  "totalCards": 24,
+  "totalCards": 30,
   "flashcards": [
     {
       "id": "syllabus-a2-10610",
@@ -184,46 +184,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10619",
-      "german": "der Himmel",
-      "english": "sky",
-      "category": "Nature",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Nature",
-          "Himmel"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10620",
-      "german": "die Sonne",
-      "english": "sun",
-      "category": "Nature",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Nature",
-          "Sonne"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10621",
       "german": "der Mond",
       "english": "moon",
@@ -260,146 +220,6 @@
           "A2",
           "Nature",
           "Stern"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10623",
-      "german": "die Wolke",
-      "english": "cloud",
-      "category": "Nature",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Nature",
-          "Wolke"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10624",
-      "german": "der Regen",
-      "english": "rain",
-      "category": "Nature",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Nature",
-          "Regen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10625",
-      "german": "der Schnee",
-      "english": "snow",
-      "category": "Nature",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Nature",
-          "Schnee"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10626",
-      "german": "der Wind",
-      "english": "wind",
-      "category": "Nature",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Nature",
-          "Wind"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10627",
-      "german": "das Tier",
-      "english": "animal",
-      "category": "Nature",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Nature",
-          "Tier"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10628",
-      "german": "der Vogel",
-      "english": "bird",
-      "category": "Nature",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Nature",
-          "Vogel"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10629",
-      "german": "der Fisch",
-      "english": "fish",
-      "category": "Nature",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Nature",
-          "Fisch"
         ]
       }
     },
@@ -480,6 +300,306 @@
           "A2",
           "Nature",
           "Stein"
+        ]
+      }
+    },
+    {
+      "id": "a2-nature-miujbk06u0c00",
+      "german": "die Natur",
+      "english": "nature",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Natur"
+        ]
+      }
+    },
+    {
+      "id": "a2-nature-miujbk06rrra1",
+      "german": "die Insel",
+      "english": "island",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Insel"
+        ]
+      }
+    },
+    {
+      "id": "a2-nature-miujbk06rt9hq",
+      "german": "die Biene",
+      "english": "bee",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Biene"
+        ]
+      }
+    },
+    {
+      "id": "a2-nature-miujdiwgjg4mo",
+      "german": "die Landschaft",
+      "english": "landscape",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Landschaft"
+        ]
+      }
+    },
+    {
+      "id": "a2-nature-miujdiwg086fw",
+      "german": "das Tal",
+      "english": "valley",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Tal"
+        ]
+      }
+    },
+    {
+      "id": "a2-nature-miujdiwg62oik",
+      "german": "der Hügel",
+      "english": "hill",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Hügel"
+        ]
+      }
+    },
+    {
+      "id": "a2-nature-miujdiwg7jzz7",
+      "german": "der Felsen",
+      "english": "rock / cliff",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Felsen"
+        ]
+      }
+    },
+    {
+      "id": "a2-nature-miujdiwgszhi9",
+      "german": "die Höhle",
+      "english": "cave",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Höhle"
+        ]
+      }
+    },
+    {
+      "id": "a2-nature-miujdiwgvlddy",
+      "german": "die Wiese",
+      "english": "meadow",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Wiese"
+        ]
+      }
+    },
+    {
+      "id": "a2-nature-miujdiwg8hn2d",
+      "german": "das Feld",
+      "english": "field",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Feld"
+        ]
+      }
+    },
+    {
+      "id": "a2-nature-miujdiwgoc4jj",
+      "german": "der Acker",
+      "english": "field (agricultural)",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Acker"
+        ]
+      }
+    },
+    {
+      "id": "a2-nature-miujdiwgzelns",
+      "german": "die Erde",
+      "english": "earth / soil",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Erde"
+        ]
+      }
+    },
+    {
+      "id": "a2-nature-miujdiwgmzzmv",
+      "german": "der Sand",
+      "english": "sand",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 36,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Sand"
+        ]
+      }
+    },
+    {
+      "id": "a2-nature-miujdiwgzbe7y",
+      "german": "der Staub",
+      "english": "dust",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 38,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Staub"
+        ]
+      }
+    },
+    {
+      "id": "a2-nature-miujf2ns3pi2t",
+      "german": "der Gipfel",
+      "english": "summit / peak",
+      "category": "Nature",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Nature",
+          "Gipfel"
         ]
       }
     }

@@ -1,11 +1,11 @@
 {
   "level": "C1",
   "category": "Economics Finance",
-  "totalCards": 15,
+  "totalCards": 12,
   "flashcards": [
     {
       "id": "syllabus-c1-11558",
-      "german": "Wirtschaft",
+      "german": "die Wirtschaft",
       "english": "economy",
       "category": "Economics Finance",
       "level": "C1",
@@ -85,7 +85,7 @@
     },
     {
       "id": "syllabus-c1-11562",
-      "german": "Investition",
+      "german": "die Investition",
       "english": "investment",
       "category": "Economics Finance",
       "level": "C1",
@@ -185,7 +185,7 @@
     },
     {
       "id": "syllabus-c1-11567",
-      "german": "Umsatz",
+      "german": "der Umsatz",
       "english": "turnover / revenue",
       "category": "Economics Finance",
       "level": "C1",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-c1-11568",
-      "german": "Gewinn",
+      "german": "der Gewinn",
       "english": "profit / gain",
       "category": "Economics Finance",
       "level": "C1",
@@ -225,7 +225,7 @@
     },
     {
       "id": "syllabus-c1-11569",
-      "german": "Verlust",
+      "german": "der Verlust",
       "english": "loss",
       "category": "Economics Finance",
       "level": "C1",
@@ -240,66 +240,6 @@
           "C1",
           "Economics Finance",
           "Verlust"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11570",
-      "german": "Wettbewerb",
-      "english": "competition",
-      "category": "Economics Finance",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Economics Finance",
-          "Wettbewerb"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11571",
-      "german": "Markt",
-      "english": "market",
-      "category": "Economics Finance",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Economics Finance",
-          "Markt"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11572",
-      "german": "Angebot",
-      "english": "supply / offer",
-      "category": "Economics Finance",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Economics Finance",
-          "Angebot"
         ]
       }
     }

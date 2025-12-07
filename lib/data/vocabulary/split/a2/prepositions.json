@@ -1,7 +1,7 @@
 {
   "level": "A2",
   "category": "Prepositions",
-  "totalCards": 27,
+  "totalCards": 54,
   "flashcards": [
     {
       "id": "syllabus-a2-10600",
@@ -586,6 +586,546 @@
           "A2",
           "Prepositions",
           "entgegen"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09ajqsn",
+      "german": "in",
+      "english": "in",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "in"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09zbftu",
+      "german": "an",
+      "english": "at / on (vertical surface)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "an"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09tlztv",
+      "german": "über",
+      "english": "over / above / about",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "über"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk0928l7t",
+      "german": "unter",
+      "english": "under / below / among",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 33,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "unter"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk099idid",
+      "german": "vor",
+      "english": "in front of / before",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 35,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "vor"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09aorz1",
+      "german": "hinter",
+      "english": "behind",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 37,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "hinter"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09giexd",
+      "german": "neben",
+      "english": "next to / beside",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 39,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "neben"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09roarp",
+      "german": "zwischen",
+      "english": "between",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 41,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "zwischen"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk094awor",
+      "german": "bei",
+      "english": "at / by / near",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 43,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "bei"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09f8cb2",
+      "german": "mit",
+      "english": "with",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 45,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "mit"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09pbzvu",
+      "german": "nach",
+      "english": "after / to (cities/countries)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 47,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "nach"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09b8n0l",
+      "german": "zu",
+      "english": "to / at (people/places)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 49,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "zu"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09aiejn",
+      "german": "von",
+      "english": "from / of / by",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 51,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "von"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09v1eb3",
+      "german": "für",
+      "english": "for",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 53,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "für"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09gnnsp",
+      "german": "gegen",
+      "english": "against / around (time)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 55,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "gegen"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09fb6k1",
+      "german": "ohne",
+      "english": "without",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 57,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "ohne"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09ybx9r",
+      "german": "durch",
+      "english": "through",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 59,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "durch"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09dte89",
+      "german": "um",
+      "english": "around / at (time)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 61,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "um"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk091smpz",
+      "german": "seit",
+      "english": "since / for (time)",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 63,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "seit"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09bdybo",
+      "german": "wegen",
+      "english": "because of",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 65,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "wegen"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09k3f4t",
+      "german": "trotz",
+      "english": "despite / in spite of",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 67,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "trotz"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk092gh2v",
+      "german": "bis",
+      "english": "until / by",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 69,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "bis"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09z6bav",
+      "german": "entlang",
+      "english": "along",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 71,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "entlang"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk0947z14",
+      "german": "gegenüber",
+      "english": "opposite / across from",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 73,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "gegenüber"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09iwhws",
+      "german": "außerhalb",
+      "english": "outside of",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 75,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "außerhalb"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk096pza9",
+      "german": "innerhalb",
+      "english": "inside / within",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 77,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "innerhalb"
+        ]
+      }
+    },
+    {
+      "id": "a2-prepositions-miujbk09eh8fn",
+      "german": "statt",
+      "english": "instead of",
+      "category": "Prepositions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 79,
+        "hierarchy": [
+          "A2",
+          "Prepositions",
+          "statt"
         ]
       }
     }

@@ -1,7 +1,7 @@
 {
   "level": "A1",
   "category": "Food Drinks",
-  "totalCards": 41,
+  "totalCards": 40,
   "flashcards": [
     {
       "id": "syllabus-a1-10116",
@@ -320,26 +320,6 @@
           "A1",
           "Food Drinks",
           "Fleisch"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10132",
-      "german": "der Fisch",
-      "english": "fish",
-      "category": "Food Drinks",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Food Drinks",
-          "Fisch"
         ]
       }
     },

@@ -1,0 +1,607 @@
+{
+  "level": "A2",
+  "category": "Work Career",
+  "totalCards": 30,
+  "flashcards": [
+    {
+      "id": "a2-ueberstunde-044825",
+      "german": "die Überstunde",
+      "english": "overtime",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Überstunde"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miuj9qfddmd52",
+      "german": "die Karriere",
+      "english": "career",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Karriere"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miuj9qfd48w6a",
+      "german": "der Lohn",
+      "english": "wage",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 3,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Lohn"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miuj9qfdye55q",
+      "german": "das Vorstellungsgespräch",
+      "english": "job interview",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 5,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Vorstellungsgespräch"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miuj9qfdp7fmo",
+      "german": "die Chefin",
+      "english": "boss (female)",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Chefin"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miuj9qfda4hek",
+      "german": "die Kollegin",
+      "english": "colleague (female)",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Kollegin"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miuj9qfdrawxl",
+      "german": "die Mitarbeiterin",
+      "english": "employee / co-worker (female)",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Mitarbeiterin"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miuj9qfd14c8m",
+      "german": "die Kündigung",
+      "english": "resignation / termination",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Kündigung"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miuj9qfdhle11",
+      "german": "befördert werden",
+      "english": "to be promoted",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "befördert werden"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujdiwdwuksj",
+      "german": "das Unternehmen",
+      "english": "company / enterprise",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Unternehmen"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujdiwdfdbfa",
+      "german": "der Betrieb",
+      "english": "company / operation",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Betrieb"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujdiwdgxfnc",
+      "german": "das Team",
+      "english": "team",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Team"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujdiwdzq2jx",
+      "german": "die Sitzung",
+      "english": "meeting",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Sitzung"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujdiwdo2lmy",
+      "german": "die Verantwortung",
+      "english": "responsibility",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Verantwortung"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujdiwdbioo5",
+      "german": "die Fähigkeit",
+      "english": "skill / ability",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Fähigkeit"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujdiwds536p",
+      "german": "die Kompetenz",
+      "english": "competence",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Kompetenz"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujdiwdibv2r",
+      "german": "die Leistung",
+      "english": "performance / achievement",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Leistung"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujdiwdj1r2x",
+      "german": "die Praxis",
+      "english": "practice / internship",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Praxis"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujdiwdt6a2d",
+      "german": "die Praktikantin",
+      "english": "intern (female)",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Praktikantin"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujdiwd3er8w",
+      "german": "die Frist",
+      "english": "deadline",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Frist"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujdiwdqzpjn",
+      "german": "der Feierabend",
+      "english": "end of work day",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Feierabend"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujf2np864eh",
+      "german": "die Schicht",
+      "english": "shift",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Schicht"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujf2npl6fc6",
+      "german": "die Nachtschicht",
+      "english": "night shift",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Nachtschicht"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujf2npl9xkm",
+      "german": "die Tagschicht",
+      "english": "day shift",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Tagschicht"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujf2npljuqt",
+      "german": "die Probezeit",
+      "english": "probation period",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Probezeit"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujf2nph5h2h",
+      "german": "der Arbeitsvertrag",
+      "english": "employment contract",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Arbeitsvertrag"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujf2npdgm2i",
+      "german": "die Sozialversicherung",
+      "english": "social security",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 33,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Sozialversicherung"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujf2npb2law",
+      "german": "die Krankenkasse",
+      "english": "health insurance",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 35,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Krankenkasse"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujk6v25rdiz",
+      "german": "die Rente",
+      "english": "pension / retirement",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "Rente"
+        ]
+      }
+    },
+    {
+      "id": "a2-work-career-miujk6v23m1rl",
+      "german": "pensioniert",
+      "english": "retired",
+      "category": "Work Career",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "A2",
+          "Work Career",
+          "pensioniert"
+        ]
+      }
+    }
+  ]
+}

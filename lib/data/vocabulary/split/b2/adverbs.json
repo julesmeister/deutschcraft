@@ -1,7 +1,7 @@
 {
   "level": "B2",
   "category": "Adverbs",
-  "totalCards": 100,
+  "totalCards": 89,
   "flashcards": [
     {
       "id": "remnote-13",
@@ -19,25 +19,6 @@
           "Adverbs",
           "Degree",
           "allmählich / schrittweise"
-        ]
-      }
-    },
-    {
-      "id": "remnote-15",
-      "german": "ausreichend",
-      "english": "ample / sufficient / adequate",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Degree"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 21,
-        "hierarchy": [
-          "Adverbs",
-          "Degree",
-          "ausreichend"
         ]
       }
     },
@@ -159,25 +140,6 @@
       }
     },
     {
-      "id": "remnote-35",
-      "german": "maßgeblich",
-      "english": "significantly",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Degree"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 67,
-        "hierarchy": [
-          "Adverbs",
-          "Degree",
-          "maßgeblich"
-        ]
-      }
-    },
-    {
       "id": "remnote-37",
       "german": "präzise / konkret / genau",
       "english": "precisely",
@@ -197,25 +159,6 @@
       }
     },
     {
-      "id": "remnote-40",
-      "german": "sorgfältig",
-      "english": "meticulously / thoroughly / carefully / mindfully",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Degree"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 79,
-        "hierarchy": [
-          "Adverbs",
-          "Degree",
-          "sorgfältig"
-        ]
-      }
-    },
-    {
       "id": "remnote-43",
       "german": "vorwiegend",
       "english": "predominantly / mainly",
@@ -231,25 +174,6 @@
           "Adverbs",
           "Degree",
           "vorwiegend"
-        ]
-      }
-    },
-    {
-      "id": "remnote-44",
-      "german": "zusätzlich",
-      "english": "additional",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Degree"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 89,
-        "hierarchy": [
-          "Adverbs",
-          "Degree",
-          "zusätzlich"
         ]
       }
     },
@@ -368,25 +292,6 @@
           "Adverbs",
           "Time",
           "endgültig / endlich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-61",
-      "german": "gelegentlich",
-      "english": "occasionally",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Time"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 126,
-        "hierarchy": [
-          "Adverbs",
-          "Time",
-          "gelegentlich"
         ]
       }
     },
@@ -587,25 +492,6 @@
           "Adverbs",
           "Time",
           "öfters / häufig"
-        ]
-      }
-    },
-    {
-      "id": "remnote-81",
-      "german": "rechtzeitig",
-      "english": "in time",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Time"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 160,
-        "hierarchy": [
-          "Adverbs",
-          "Time",
-          "rechtzeitig"
         ]
       }
     },
@@ -979,25 +865,6 @@
       }
     },
     {
-      "id": "remnote-120",
-      "german": "ausführlich",
-      "english": "detailed / comprehensive",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 238,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "ausführlich"
-        ]
-      }
-    },
-    {
       "id": "remnote-121",
       "german": "ausgerechnet",
       "english": "of all people",
@@ -1072,25 +939,6 @@
           "Adverbs",
           "Manner",
           "eindrucksvoll"
-        ]
-      }
-    },
-    {
-      "id": "remnote-131",
-      "german": "empfindlich",
-      "english": "sensitively",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 257,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "empfindlich"
         ]
       }
     },
@@ -1323,25 +1171,6 @@
       }
     },
     {
-      "id": "remnote-166",
-      "german": "nachhaltig",
-      "english": "sustainably / lastingly / strongly / deeply",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 332,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "nachhaltig"
-        ]
-      }
-    },
-    {
       "id": "remnote-167",
       "german": "nachträglich",
       "english": "subsequently / later / afterwards",
@@ -1376,25 +1205,6 @@
           "Adverbs",
           "Manner",
           "nutzbringend"
-        ]
-      }
-    },
-    {
-      "id": "remnote-172",
-      "german": "öffentlich",
-      "english": "publicly",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 351,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "öffentlich"
         ]
       }
     },
@@ -1604,25 +1414,6 @@
           "Adverbs",
           "Manner",
           "tatsächlich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-199",
-      "german": "traditionell",
-      "english": "traditionally",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 401,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "traditionell"
         ]
       }
     },

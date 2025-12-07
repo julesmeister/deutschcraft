@@ -1,10 +1,10 @@
 {
   "level": "C1",
-  "totalCards": 124,
+  "totalCards": 116,
   "flashcards": [
     {
       "id": "syllabus-c1-11548",
-      "german": "Nachhaltigkeit",
+      "german": "die Nachhaltigkeit",
       "english": "sustainability",
       "category": "Abstract Concepts",
       "level": "C1",
@@ -44,7 +44,7 @@
     },
     {
       "id": "syllabus-c1-11550",
-      "german": "Herausforderung",
+      "german": "die Herausforderung",
       "english": "challenge",
       "category": "Abstract Concepts",
       "level": "C1",
@@ -59,26 +59,6 @@
           "C1",
           "Abstract Concepts",
           "Herausforderung"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11551",
-      "german": "Verantwortung",
-      "english": "responsibility",
-      "category": "Abstract Concepts",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Abstract Concepts",
-          "Verantwortung"
         ]
       }
     },
@@ -164,7 +144,7 @@
     },
     {
       "id": "syllabus-c1-11556",
-      "german": "Entwicklung",
+      "german": "die Entwicklung",
       "english": "development / evolution",
       "category": "Abstract Concepts",
       "level": "C1",
@@ -534,7 +514,7 @@
     },
     {
       "id": "syllabus-c1-11558",
-      "german": "Wirtschaft",
+      "german": "die Wirtschaft",
       "english": "economy",
       "category": "Economics Finance",
       "level": "C1",
@@ -614,7 +594,7 @@
     },
     {
       "id": "syllabus-c1-11562",
-      "german": "Investition",
+      "german": "die Investition",
       "english": "investment",
       "category": "Economics Finance",
       "level": "C1",
@@ -714,7 +694,7 @@
     },
     {
       "id": "syllabus-c1-11567",
-      "german": "Umsatz",
+      "german": "der Umsatz",
       "english": "turnover / revenue",
       "category": "Economics Finance",
       "level": "C1",
@@ -734,7 +714,7 @@
     },
     {
       "id": "syllabus-c1-11568",
-      "german": "Gewinn",
+      "german": "der Gewinn",
       "english": "profit / gain",
       "category": "Economics Finance",
       "level": "C1",
@@ -754,7 +734,7 @@
     },
     {
       "id": "syllabus-c1-11569",
-      "german": "Verlust",
+      "german": "der Verlust",
       "english": "loss",
       "category": "Economics Finance",
       "level": "C1",
@@ -773,62 +753,82 @@
       }
     },
     {
-      "id": "syllabus-c1-11570",
-      "german": "Wettbewerb",
-      "english": "competition",
-      "category": "Economics Finance",
+      "id": "c1-angesichts-044830",
+      "german": "angesichts",
+      "english": "in view of / considering",
+      "category": "Formal Language",
       "level": "C1",
       "tags": [
-        "syllabus",
+        "expansion",
         "C1"
       ],
       "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
+        "source": "Priority Expansion 2025",
+        "lineNumber": 7,
         "hierarchy": [
           "C1",
-          "Economics Finance",
-          "Wettbewerb"
+          "Formal Language",
+          "angesichts"
         ]
       }
     },
     {
-      "id": "syllabus-c1-11571",
-      "german": "Markt",
-      "english": "market",
-      "category": "Economics Finance",
+      "id": "c1-bezueglich-044830",
+      "german": "bezüglich",
+      "english": "regarding / concerning",
+      "category": "Formal Language",
       "level": "C1",
       "tags": [
-        "syllabus",
+        "expansion",
         "C1"
       ],
       "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
+        "source": "Priority Expansion 2025",
+        "lineNumber": 6,
         "hierarchy": [
           "C1",
-          "Economics Finance",
-          "Markt"
+          "Formal Language",
+          "bezüglich"
         ]
       }
     },
     {
-      "id": "syllabus-c1-11572",
-      "german": "Angebot",
-      "english": "supply / offer",
-      "category": "Economics Finance",
+      "id": "c1-infolge-044830",
+      "german": "infolge",
+      "english": "as a result of / due to",
+      "category": "Formal Language",
       "level": "C1",
       "tags": [
-        "syllabus",
+        "expansion",
         "C1"
       ],
       "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
+        "source": "Priority Expansion 2025",
+        "lineNumber": 9,
         "hierarchy": [
           "C1",
-          "Economics Finance",
-          "Angebot"
+          "Formal Language",
+          "infolge"
+        ]
+      }
+    },
+    {
+      "id": "c1-mittels-044830",
+      "german": "mittels",
+      "english": "by means of / using",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "mittels"
         ]
       }
     },
@@ -913,26 +913,6 @@
       }
     },
     {
-      "id": "syllabus-c1-11577",
-      "german": "gewissermaßen",
-      "english": "in a way / to some extent",
-      "category": "Formal Language",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Formal Language",
-          "gewissermaßen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-c1-11578",
       "german": "inwiefern",
       "english": "to what extent / in what way",
@@ -953,46 +933,6 @@
       }
     },
     {
-      "id": "syllabus-c1-11579",
-      "german": "insofern",
-      "english": "insofar / to that extent",
-      "category": "Formal Language",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Formal Language",
-          "insofern"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11580",
-      "german": "demnach",
-      "english": "accordingly / thus",
-      "category": "Formal Language",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Formal Language",
-          "demnach"
-        ]
-      }
-    },
-    {
       "id": "syllabus-c1-11581",
       "german": "mithin",
       "english": "consequently / hence",
@@ -1009,26 +949,6 @@
           "C1",
           "Formal Language",
           "mithin"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11582",
-      "german": "folglich",
-      "english": "consequently / therefore",
-      "category": "Formal Language",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Formal Language",
-          "folglich"
         ]
       }
     },
@@ -1073,26 +993,6 @@
       }
     },
     {
-      "id": "syllabus-c1-11585",
-      "german": "Rechtsanwalt",
-      "english": "lawyer / attorney",
-      "category": "Legal Administrative",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Legal Administrative",
-          "Rechtsanwalt"
-        ]
-      }
-    },
-    {
       "id": "syllabus-c1-11586",
       "german": "Verfahren",
       "english": "procedure / proceedings / process",
@@ -1109,26 +1009,6 @@
           "C1",
           "Legal Administrative",
           "Verfahren"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11587",
-      "german": "Anspruch",
-      "english": "claim / entitlement / right",
-      "category": "Legal Administrative",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Legal Administrative",
-          "Anspruch"
         ]
       }
     },
@@ -1233,26 +1113,6 @@
       }
     },
     {
-      "id": "syllabus-c1-11593",
-      "german": "Zeugnis",
-      "english": "certificate / testimony / reference",
-      "category": "Legal Administrative",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Legal Administrative",
-          "Zeugnis"
-        ]
-      }
-    },
-    {
       "id": "syllabus-c1-11594",
       "german": "Vollmacht",
       "english": "power of attorney / authorization",
@@ -1333,6 +1193,186 @@
       }
     },
     {
+      "id": "c1-auf-etwas-hinauslaufen-044832",
+      "german": "auf etwas hinauslaufen",
+      "english": "to amount to / to come down to",
+      "category": "Nuanced Expressions",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 2,
+        "hierarchy": [
+          "C1",
+          "Nuanced Expressions",
+          "auf etwas hinauslaufen"
+        ]
+      }
+    },
+    {
+      "id": "c1-etwas-in-erwaegung-ziehen-044832",
+      "german": "etwas in Erwägung ziehen",
+      "english": "to consider something",
+      "category": "Nuanced Expressions",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 3,
+        "hierarchy": [
+          "C1",
+          "Nuanced Expressions",
+          "etwas in Erwägung ziehen"
+        ]
+      }
+    },
+    {
+      "id": "c1-in-kauf-nehmen-044832",
+      "german": "in Kauf nehmen",
+      "english": "to accept / to tolerate",
+      "category": "Nuanced Expressions",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "C1",
+          "Nuanced Expressions",
+          "in Kauf nehmen"
+        ]
+      }
+    },
+    {
+      "id": "c1-sich-bewusst-sein-044832",
+      "german": "sich bewusst sein",
+      "english": "to be aware / to be conscious of",
+      "category": "Nuanced Expressions",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C1",
+          "Nuanced Expressions",
+          "sich bewusst sein"
+        ]
+      }
+    },
+    {
+      "id": "c1-abwicklung-044831",
+      "german": "die Abwicklung",
+      "english": "processing / handling",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "Abwicklung"
+        ]
+      }
+    },
+    {
+      "id": "c1-durchfuehrung-044831",
+      "german": "die Durchführung",
+      "english": "implementation / execution",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "Durchführung"
+        ]
+      }
+    },
+    {
+      "id": "c1-vereinbarung-044831",
+      "german": "die Vereinbarung",
+      "english": "agreement / arrangement",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "Vereinbarung"
+        ]
+      }
+    },
+    {
+      "id": "c1-vorgehensweise-044831",
+      "german": "die Vorgehensweise",
+      "english": "procedure / approach",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "Vorgehensweise"
+        ]
+      }
+    },
+    {
+      "id": "c1-zustaendigkeit-044831",
+      "german": "die Zuständigkeit",
+      "english": "responsibility / jurisdiction",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "Zuständigkeit"
+        ]
+      }
+    },
+    {
       "id": "syllabus-c1-11598",
       "german": "vereinbaren",
       "english": "to agree upon / to arrange",
@@ -1369,66 +1409,6 @@
           "C1",
           "Professional Communication",
           "verhandeln"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11600",
-      "german": "beraten",
-      "english": "to advise / to consult",
-      "category": "Professional Communication",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Professional Communication",
-          "beraten"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11601",
-      "german": "koordinieren",
-      "english": "to coordinate",
-      "category": "Professional Communication",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Professional Communication",
-          "koordinieren"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11602",
-      "german": "vermitteln",
-      "english": "to mediate / to convey",
-      "category": "Professional Communication",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Professional Communication",
-          "vermitteln"
         ]
       }
     },
@@ -1473,46 +1453,6 @@
       }
     },
     {
-      "id": "syllabus-c1-11605",
-      "german": "genehmigen",
-      "english": "to approve / to authorize",
-      "category": "Professional Communication",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Professional Communication",
-          "genehmigen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11606",
-      "german": "ablehnen",
-      "english": "to reject / to decline",
-      "category": "Professional Communication",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Professional Communication",
-          "ablehnen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-c1-11607",
       "german": "zusichern",
       "english": "to assure / to guarantee",
@@ -1553,26 +1493,6 @@
       }
     },
     {
-      "id": "syllabus-c1-11609",
-      "german": "gewährleisten",
-      "english": "to ensure / to guarantee",
-      "category": "Professional Communication",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Professional Communication",
-          "gewährleisten"
-        ]
-      }
-    },
-    {
       "id": "syllabus-c1-11610",
       "german": "beanspruchen",
       "english": "to claim / to demand",
@@ -1589,46 +1509,6 @@
           "C1",
           "Professional Communication",
           "beanspruchen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11611",
-      "german": "beantragen",
-      "english": "to apply for / to request",
-      "category": "Professional Communication",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Professional Communication",
-          "beantragen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11612",
-      "german": "vorschlagen",
-      "english": "to propose / to suggest",
-      "category": "Professional Communication",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Professional Communication",
-          "vorschlagen"
         ]
       }
     },
@@ -1966,27 +1846,6 @@
           "C1",
           "Reflexive Verbs",
           "sich hinwegsetzen über"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-c1-014",
-      "german": "sich profilieren",
-      "english": "to make a name for oneself",
-      "category": "Reflexive Verbs",
-      "level": "C1",
-      "tags": [
-        "reflexive",
-        "reputation",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Reflexive Verbs",
-          "sich profilieren"
         ]
       }
     },
@@ -2386,27 +2245,6 @@
           "C1",
           "Reflexive Verbs",
           "sich manifestieren"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-c1-034",
-      "german": "sich profilieren",
-      "english": "to distinguish oneself, to make one's mark",
-      "category": "Reflexive Verbs",
-      "level": "C1",
-      "tags": [
-        "reflexive",
-        "distinction",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Reflexive Verbs",
-          "sich profilieren"
         ]
       }
     },

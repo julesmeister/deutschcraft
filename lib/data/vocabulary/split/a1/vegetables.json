@@ -1,28 +1,8 @@
 {
   "level": "A1",
   "category": "Vegetables",
-  "totalCards": 15,
+  "totalCards": 12,
   "flashcards": [
-    {
-      "id": "syllabus-a1-10383",
-      "german": "die Kartoffel",
-      "english": "potato",
-      "category": "Vegetables",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Vegetables",
-          "Kartoffel"
-        ]
-      }
-    },
     {
       "id": "syllabus-a1-10384",
       "german": "die Tomate",
@@ -60,26 +40,6 @@
           "A1",
           "Vegetables",
           "Gurke"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10386",
-      "german": "der Salat",
-      "english": "lettuce / salad",
-      "category": "Vegetables",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Vegetables",
-          "Salat"
         ]
       }
     },
@@ -280,26 +240,6 @@
           "A1",
           "Vegetables",
           "Mais"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10397",
-      "german": "das Gemüse",
-      "english": "vegetable",
-      "category": "Vegetables",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Vegetables",
-          "Gemüse"
         ]
       }
     }

@@ -1,0 +1,67 @@
+{
+  "level": "C2",
+  "category": "Advanced Idiomatic",
+  "totalCards": 3,
+  "flashcards": [
+    {
+      "id": "c2-auf-der-hand-liegen-044833",
+      "german": "auf der Hand liegen",
+      "english": "to be obvious / to be evident",
+      "category": "Advanced Idiomatic",
+      "level": "C2",
+      "tags": [
+        "expansion",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Advanced Idiomatic",
+          "auf der Hand liegen"
+        ]
+      }
+    },
+    {
+      "id": "c2-ins-gewicht-fallen-044833",
+      "german": "ins Gewicht fallen",
+      "english": "to carry weight / to be significant",
+      "category": "Advanced Idiomatic",
+      "level": "C2",
+      "tags": [
+        "expansion",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "C2",
+          "Advanced Idiomatic",
+          "ins Gewicht fallen"
+        ]
+      }
+    },
+    {
+      "id": "c2-seinen-senf-dazugeben-044833",
+      "german": "seinen Senf dazugeben",
+      "english": "to put in one's two cents / to give unsolicited opinion",
+      "category": "Advanced Idiomatic",
+      "level": "C2",
+      "tags": [
+        "expansion",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 2,
+        "hierarchy": [
+          "C2",
+          "Advanced Idiomatic",
+          "seinen Senf dazugeben"
+        ]
+      }
+    }
+  ]
+}

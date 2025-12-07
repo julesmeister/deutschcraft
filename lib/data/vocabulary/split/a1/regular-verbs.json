@@ -1,43 +1,8 @@
 {
   "level": "A1",
   "category": "Regular Verbs",
-  "totalCards": 31,
+  "totalCards": 17,
   "flashcards": [
-    {
-      "id": "remnote-883",
-      "german": "wissen",
-      "english": "to know",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 4080,
-        "hierarchy": [
-          "Verbs",
-          "wissen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10298",
-      "german": "wohnen",
-      "english": "to live",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "wohnen"
-        ]
-      }
-    },
     {
       "id": "syllabus-a1-10299",
       "german": "lernen",
@@ -79,126 +44,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10301",
-      "german": "kaufen",
-      "english": "to buy",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "kaufen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10302",
-      "german": "brauchen",
-      "english": "to need",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "brauchen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10303",
-      "german": "suchen",
-      "english": "to search / to look for",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "suchen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10304",
-      "german": "fragen",
-      "english": "to ask",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "fragen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10305",
-      "german": "sagen",
-      "english": "to say",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "sagen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10306",
-      "german": "hören",
-      "english": "to hear / to listen",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "hören"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10307",
       "german": "zeigen",
       "english": "to show",
@@ -219,86 +64,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10308",
-      "german": "machen",
-      "english": "to make / to do",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "machen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10309",
-      "german": "kosten",
-      "english": "to cost",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "kosten"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10310",
-      "german": "glauben",
-      "english": "to believe",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "glauben"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10311",
-      "german": "lieben",
-      "english": "to love",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "lieben"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10312",
       "german": "arbeiten",
       "english": "to work",
@@ -315,26 +80,6 @@
           "A1",
           "Regular Verbs",
           "arbeiten"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10313",
-      "german": "antworten",
-      "english": "to answer",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "antworten"
         ]
       }
     },
@@ -515,26 +260,6 @@
           "A1",
           "Regular Verbs",
           "grüßen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10323",
-      "german": "heißen",
-      "english": "to be called",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "heißen"
         ]
       }
     },

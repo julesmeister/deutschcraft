@@ -1,6 +1,6 @@
 {
   "level": "A1",
-  "totalCards": 820,
+  "totalCards": 733,
   "flashcards": [
     {
       "id": "syllabus-a1-10000",
@@ -1119,6 +1119,46 @@
           "A1",
           "Animals",
           "Tier"
+        ]
+      }
+    },
+    {
+      "id": "a1-geld-044822",
+      "german": "das Geld",
+      "english": "money",
+      "category": "Basic Nouns",
+      "level": "A1",
+      "tags": [
+        "expansion",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Basic Nouns",
+          "Geld"
+        ]
+      }
+    },
+    {
+      "id": "a1-zeit-044822",
+      "german": "die Zeit",
+      "english": "time",
+      "category": "Basic Nouns",
+      "level": "A1",
+      "tags": [
+        "expansion",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "A1",
+          "Basic Nouns",
+          "Zeit"
         ]
       }
     },
@@ -3723,6 +3763,26 @@
       }
     },
     {
+      "id": "a1-putzen-044823",
+      "german": "putzen",
+      "english": "to clean",
+      "category": "Daily Verbs",
+      "level": "A1",
+      "tags": [
+        "expansion",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Daily Verbs",
+          "putzen"
+        ]
+      }
+    },
+    {
       "id": "syllabus-a1-10101-dup2",
       "german": "die Mutter",
       "english": "mother",
@@ -4643,26 +4703,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10132-dup2",
-      "german": "der Fisch",
-      "english": "fish",
-      "category": "Food Drinks",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Food Drinks",
-          "Fisch"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10133-dup2",
       "german": "das Hähnchen",
       "english": "chicken",
@@ -5163,26 +5203,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10158",
-      "german": "die Orange",
-      "english": "orange",
-      "category": "Fruits",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Fruits",
-          "Orange"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10159",
       "german": "die Erdbeere",
       "english": "strawberry",
@@ -5419,46 +5439,6 @@
           "A1",
           "Fruits",
           "Blaubeere"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10171",
-      "german": "das Obst",
-      "english": "fruit",
-      "category": "Fruits",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Fruits",
-          "Obst"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10172",
-      "german": "der Apfel",
-      "english": "apple",
-      "category": "Fruits",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Fruits",
-          "Apfel"
         ]
       }
     },
@@ -5743,7 +5723,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10172-dup2",
+      "id": "syllabus-a1-10172",
       "german": "Hallo",
       "english": "Hello",
       "category": "Greetings",
@@ -5999,26 +5979,6 @@
           "A1",
           "Greetings",
           "Wie geht's?"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10185-dup2",
-      "german": "Gut",
-      "english": "Good / Well",
-      "category": "Greetings",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Greetings",
-          "Gut"
         ]
       }
     },
@@ -6343,46 +6303,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10202",
-      "german": "sein",
-      "english": "to be",
-      "category": "Irregular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Irregular Verbs",
-          "sein"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10203",
-      "german": "haben",
-      "english": "to have",
-      "category": "Irregular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Irregular Verbs",
-          "haben"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10204",
       "german": "werden",
       "english": "to become",
@@ -6399,166 +6319,6 @@
           "A1",
           "Irregular Verbs",
           "werden"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10205",
-      "german": "gehen",
-      "english": "to go",
-      "category": "Irregular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Irregular Verbs",
-          "gehen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10206",
-      "german": "kommen",
-      "english": "to come",
-      "category": "Irregular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Irregular Verbs",
-          "kommen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10207",
-      "german": "sehen",
-      "english": "to see",
-      "category": "Irregular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Irregular Verbs",
-          "sehen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10208",
-      "german": "essen",
-      "english": "to eat",
-      "category": "Irregular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Irregular Verbs",
-          "essen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10209",
-      "german": "trinken",
-      "english": "to drink",
-      "category": "Irregular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Irregular Verbs",
-          "trinken"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10210",
-      "german": "schlafen",
-      "english": "to sleep",
-      "category": "Irregular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Irregular Verbs",
-          "schlafen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10211",
-      "german": "geben",
-      "english": "to give",
-      "category": "Irregular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Irregular Verbs",
-          "geben"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10212",
-      "german": "nehmen",
-      "english": "to take",
-      "category": "Irregular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Irregular Verbs",
-          "nehmen"
         ]
       }
     },
@@ -6659,26 +6419,6 @@
           "A1",
           "Irregular Verbs",
           "schreiben"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10218",
-      "german": "finden",
-      "english": "to find",
-      "category": "Irregular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Irregular Verbs",
-          "finden"
         ]
       }
     },
@@ -6979,46 +6719,6 @@
           "A1",
           "Modal Verbs",
           "müssen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10234",
-      "german": "wollen",
-      "english": "to want",
-      "category": "Modal Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Modal Verbs",
-          "wollen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10235",
-      "german": "mögen",
-      "english": "to like",
-      "category": "Modal Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Modal Verbs",
-          "mögen"
         ]
       }
     },
@@ -8144,7 +7844,7 @@
     },
     {
       "id": "syllabus-a1-10292",
-      "german": "Prozent",
+      "german": "das Prozent",
       "english": "percent",
       "category": "Numbers",
       "level": "A1",
@@ -8179,156 +7879,6 @@
           "A1",
           "Numbers",
           "Zahl"
-        ]
-      }
-    },
-    {
-      "id": "remnote-638",
-      "german": "liegen",
-      "english": "to lie / to lay / to sit / to reside / to rest / to be situated",
-      "category": "Positional Verbs",
-      "level": "A1",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 2889,
-        "hierarchy": [
-          "Verbs",
-          "liegen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-752",
-      "german": "stehen",
-      "english": "to stand / to stuck [in traffic]",
-      "category": "Positional Verbs",
-      "level": "A1",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 3428,
-        "hierarchy": [
-          "Verbs",
-          "stehen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10253-dup2",
-      "german": "sein",
-      "english": "to be",
-      "category": "Positional Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Positional Verbs",
-          "sein"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10254-dup2",
-      "german": "stehen",
-      "english": "to stand",
-      "category": "Positional Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Positional Verbs",
-          "stehen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10255-dup2",
-      "german": "sitzen",
-      "english": "to sit",
-      "category": "Positional Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Positional Verbs",
-          "sitzen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10256-dup2",
-      "german": "liegen",
-      "english": "to lie / to be located",
-      "category": "Positional Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Positional Verbs",
-          "liegen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10257-dup2",
-      "german": "hängen",
-      "english": "to hang",
-      "category": "Positional Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Positional Verbs",
-          "hängen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10258-dup2",
-      "german": "stecken",
-      "english": "to be stuck / to be (in)",
-      "category": "Positional Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Positional Verbs",
-          "stecken"
         ]
       }
     },
@@ -8473,46 +8023,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10266-dup2",
-      "german": "hängen",
-      "english": "to hang (something)",
-      "category": "Positional Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Positional Verbs",
-          "hängen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10267-dup2",
-      "german": "stecken",
-      "english": "to put / to stick",
-      "category": "Positional Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Positional Verbs",
-          "stecken"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10268-dup2",
       "german": "ich",
       "english": "I",
@@ -8573,26 +8083,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10271-dup2",
-      "german": "sie",
-      "english": "she / they",
-      "category": "Pronouns",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Pronouns",
-          "sie"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10272-dup2",
       "german": "es",
       "english": "it",
@@ -8629,46 +8119,6 @@
           "A1",
           "Pronouns",
           "wir"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10274-dup2",
-      "german": "ihr",
-      "english": "you (plural informal)",
-      "category": "Pronouns",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Pronouns",
-          "ihr"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10275-dup2",
-      "german": "Sie",
-      "english": "you (formal)",
-      "category": "Pronouns",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Pronouns",
-          "Sie"
         ]
       }
     },
@@ -8713,46 +8163,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10278-dup2",
-      "german": "sein",
-      "english": "his / its",
-      "category": "Pronouns",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Pronouns",
-          "sein"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10279-dup2",
-      "german": "ihr",
-      "english": "her / their",
-      "category": "Pronouns",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Pronouns",
-          "ihr"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10280-dup2",
       "german": "unser",
       "english": "our",
@@ -8789,26 +8199,6 @@
           "A1",
           "Pronouns",
           "euer"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10282-dup2",
-      "german": "Ihr",
-      "english": "your (formal)",
-      "category": "Pronouns",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Pronouns",
-          "Ihr"
         ]
       }
     },
@@ -9281,41 +8671,6 @@
       }
     },
     {
-      "id": "remnote-883",
-      "german": "wissen",
-      "english": "to know",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 4080,
-        "hierarchy": [
-          "Verbs",
-          "wissen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10298",
-      "german": "wohnen",
-      "english": "to live",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "wohnen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10299",
       "german": "lernen",
       "english": "to learn",
@@ -9356,126 +8711,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10301",
-      "german": "kaufen",
-      "english": "to buy",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "kaufen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10302",
-      "german": "brauchen",
-      "english": "to need",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "brauchen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10303",
-      "german": "suchen",
-      "english": "to search / to look for",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "suchen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10304",
-      "german": "fragen",
-      "english": "to ask",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "fragen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10305",
-      "german": "sagen",
-      "english": "to say",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "sagen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10306",
-      "german": "hören",
-      "english": "to hear / to listen",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "hören"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10307",
       "german": "zeigen",
       "english": "to show",
@@ -9496,86 +8731,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10308",
-      "german": "machen",
-      "english": "to make / to do",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "machen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10309",
-      "german": "kosten",
-      "english": "to cost",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "kosten"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10310",
-      "german": "glauben",
-      "english": "to believe",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "glauben"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10311",
-      "german": "lieben",
-      "english": "to love",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "lieben"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10312",
       "german": "arbeiten",
       "english": "to work",
@@ -9592,26 +8747,6 @@
           "A1",
           "Regular Verbs",
           "arbeiten"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10313",
-      "german": "antworten",
-      "english": "to answer",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "antworten"
         ]
       }
     },
@@ -9796,26 +8931,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10323",
-      "german": "heißen",
-      "english": "to be called",
-      "category": "Regular Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Regular Verbs",
-          "heißen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10324",
       "german": "reisen",
       "english": "to travel",
@@ -9892,121 +9007,6 @@
           "A1",
           "Regular Verbs",
           "holen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-408",
-      "german": "bleiben",
-      "english": "to stay / to remain",
-      "category": "State Change Verbs",
-      "level": "A1",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1745,
-        "hierarchy": [
-          "Verbs",
-          "bleiben"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10328",
-      "german": "werden",
-      "english": "to become / to get",
-      "category": "State Change Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "State Change Verbs",
-          "werden"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10329",
-      "german": "sein",
-      "english": "to be",
-      "category": "State Change Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "State Change Verbs",
-          "sein"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10330",
-      "german": "bleiben",
-      "english": "to stay / to remain",
-      "category": "State Change Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "State Change Verbs",
-          "bleiben"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10331",
-      "german": "kommen",
-      "english": "to come",
-      "category": "State Change Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "State Change Verbs",
-          "kommen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10332",
-      "german": "gehen",
-      "english": "to go",
-      "category": "State Change Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "State Change Verbs",
-          "gehen"
         ]
       }
     },
@@ -10131,26 +9131,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10339",
-      "german": "fallen",
-      "english": "to fall",
-      "category": "State Change Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "State Change Verbs",
-          "fallen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10340",
       "german": "aufstehen",
       "english": "to get up / to stand up",
@@ -10167,26 +9147,6 @@
           "A1",
           "State Change Verbs",
           "aufstehen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10341",
-      "german": "sich setzen",
-      "english": "to sit down",
-      "category": "State Change Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "State Change Verbs",
-          "sich setzen"
         ]
       }
     },
@@ -10367,26 +9327,6 @@
           "A1",
           "Time",
           "heute"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10351",
-      "german": "morgen",
-      "english": "tomorrow",
-      "category": "Time",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Time",
-          "morgen"
         ]
       }
     },
@@ -11131,26 +10071,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10389",
-      "german": "der Morgen",
-      "english": "morning",
-      "category": "Time",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Time",
-          "Morgen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10390",
       "german": "der Vormittag",
       "english": "late morning / before noon",
@@ -11327,46 +10247,6 @@
           "A1",
           "Time",
           "Sekunde"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10399",
-      "german": "das Viertel",
-      "english": "quarter (time)",
-      "category": "Time",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Time",
-          "Viertel"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10400",
-      "german": "halb",
-      "english": "half (time)",
-      "category": "Time",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Time",
-          "halb"
         ]
       }
     },
@@ -12391,46 +11271,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10371-dup2",
-      "german": "fahren",
-      "english": "to drive / to go (by vehicle)",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "fahren"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10372-dup2",
-      "german": "gehen",
-      "english": "to go / to walk",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "gehen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10439",
       "german": "der Flughafen",
       "english": "airport",
@@ -13031,46 +11871,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10469",
-      "german": "die Tür",
-      "english": "door",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "Tür"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10470",
-      "german": "das Fenster",
-      "english": "window",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "Fenster"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10471",
       "german": "der Sitz",
       "english": "seat",
@@ -13511,46 +12311,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10493",
-      "german": "ankommen",
-      "english": "to arrive",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "ankommen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10494",
-      "german": "reisen",
-      "english": "to travel",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "reisen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10495",
       "german": "fliegen",
       "english": "to fly",
@@ -13567,26 +12327,6 @@
           "A1",
           "Transportation",
           "fliegen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10496",
-      "german": "laufen",
-      "english": "to run / to walk",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "laufen"
         ]
       }
     },
@@ -13647,26 +12387,6 @@
           "A1",
           "Transportation",
           "tanken"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10500",
-      "german": "warten",
-      "english": "to wait",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "warten"
         ]
       }
     },
@@ -13811,66 +12531,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10508",
-      "german": "schnell",
-      "english": "fast / quick",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "schnell"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10509",
-      "german": "langsam",
-      "english": "slow",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "langsam"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10510",
-      "german": "pünktlich",
-      "english": "on time / punctual",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "pünktlich"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10511",
       "german": "zu Fuß",
       "english": "on foot",
@@ -13991,86 +12651,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10373-dup2",
-      "german": "verstehen",
-      "english": "to understand",
-      "category": "Understanding Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Understanding Verbs",
-          "verstehen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10374-dup2",
-      "german": "kennen",
-      "english": "to know (a person/place)",
-      "category": "Understanding Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Understanding Verbs",
-          "kennen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10375-dup2",
-      "german": "wissen",
-      "english": "to know (a fact)",
-      "category": "Understanding Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Understanding Verbs",
-          "wissen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10376-dup2",
-      "german": "denken",
-      "english": "to think",
-      "category": "Understanding Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Understanding Verbs",
-          "denken"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10377-dup2",
       "german": "meinen",
       "english": "to mean / to think",
@@ -14087,46 +12667,6 @@
           "A1",
           "Understanding Verbs",
           "meinen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10378-dup2",
-      "german": "glauben",
-      "english": "to believe",
-      "category": "Understanding Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Understanding Verbs",
-          "glauben"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10379-dup2",
-      "german": "vergessen",
-      "english": "to forget",
-      "category": "Understanding Verbs",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Understanding Verbs",
-          "vergessen"
         ]
       }
     },
@@ -14191,26 +12731,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10383-dup2",
-      "german": "die Kartoffel",
-      "english": "potato",
-      "category": "Vegetables",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Vegetables",
-          "Kartoffel"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10384-dup2",
       "german": "die Tomate",
       "english": "tomato",
@@ -14247,26 +12767,6 @@
           "A1",
           "Vegetables",
           "Gurke"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10386-dup2",
-      "german": "der Salat",
-      "english": "lettuce / salad",
-      "category": "Vegetables",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Vegetables",
-          "Salat"
         ]
       }
     },
@@ -14311,7 +12811,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10389-dup2",
+      "id": "syllabus-a1-10389",
       "german": "die Paprika",
       "english": "bell pepper",
       "category": "Vegetables",
@@ -14471,26 +12971,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10397-dup2",
-      "german": "das Gemüse",
-      "english": "vegetable",
-      "category": "Vegetables",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Vegetables",
-          "Gemüse"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10398-dup2",
       "german": "die Sonne",
       "english": "sun",
@@ -14511,7 +12991,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10399-dup2",
+      "id": "syllabus-a1-10399",
       "german": "der Regen",
       "english": "rain",
       "category": "Weather",
@@ -14531,7 +13011,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10400-dup2",
+      "id": "syllabus-a1-10400",
       "german": "kalt",
       "english": "cold",
       "category": "Weather",
@@ -14867,26 +13347,6 @@
           "A1",
           "Weather",
           "Hagel"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10521",
-      "german": "das Eis",
-      "english": "ice",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "Eis"
         ]
       }
     },
@@ -15431,106 +13891,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10549",
-      "german": "die Handschuhe",
-      "english": "gloves",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "Handschuhe"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10550",
-      "german": "der Schal",
-      "english": "scarf",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "Schal"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10551",
-      "german": "die Mütze",
-      "english": "cap / beanie",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "Mütze"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10552",
-      "german": "die Jacke",
-      "english": "jacket",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "Jacke"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10553",
-      "german": "der Mantel",
-      "english": "coat",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "Mantel"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10554",
       "german": "regnen",
       "english": "to rain",
@@ -15951,46 +14311,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10575",
-      "german": "schön",
-      "english": "nice / beautiful (weather)",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "schön"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10576",
-      "german": "schlecht",
-      "english": "bad (weather)",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "schlecht"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10577",
       "german": "herrlich",
       "english": "wonderful / glorious",
@@ -16127,46 +14447,6 @@
           "A1",
           "Weather",
           "trüb"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10584",
-      "german": "dunkel",
-      "english": "dark",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "dunkel"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10585",
-      "german": "hell",
-      "english": "bright / light",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "hell"
         ]
       }
     },

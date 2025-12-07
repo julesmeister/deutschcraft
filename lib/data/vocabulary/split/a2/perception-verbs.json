@@ -1,28 +1,8 @@
 {
   "level": "A2",
   "category": "Perception Verbs",
-  "totalCards": 15,
+  "totalCards": 30,
   "flashcards": [
-    {
-      "id": "syllabus-a2-10649",
-      "german": "sehen",
-      "english": "to see",
-      "category": "Perception Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Perception Verbs",
-          "sehen"
-        ]
-      }
-    },
     {
       "id": "syllabus-a2-10650",
       "german": "schauen",
@@ -60,26 +40,6 @@
           "A2",
           "Perception Verbs",
           "beobachten"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10652",
-      "german": "hören",
-      "english": "to hear / to listen",
-      "category": "Perception Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Perception Verbs",
-          "hören"
         ]
       }
     },
@@ -140,26 +100,6 @@
           "A2",
           "Perception Verbs",
           "spüren"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10656",
-      "german": "riechen",
-      "english": "to smell",
-      "category": "Perception Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Perception Verbs",
-          "riechen"
         ]
       }
     },
@@ -300,6 +240,366 @@
           "A2",
           "Perception Verbs",
           "prüfen"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujbk04usnd7",
+      "german": "gucken",
+      "english": "to look / to watch (colloquial)",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "gucken"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujbk04we6zz",
+      "german": "entdecken",
+      "english": "to discover",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "entdecken"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujbk04qed3h",
+      "german": "schmecken nach",
+      "english": "to taste like",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "schmecken nach"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujbk047si8i",
+      "german": "riechen nach",
+      "english": "to smell like",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "riechen nach"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujdiwf0k19d",
+      "german": "leuchten",
+      "english": "to glow / to light up",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "leuchten"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujdiwfoww66",
+      "german": "blicken",
+      "english": "to look / to glance",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "blicken"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujdiwfi22an",
+      "german": "starren",
+      "english": "to stare",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "starren"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujdiwf8hcnj",
+      "german": "horchen",
+      "english": "to listen (carefully)",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "horchen"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujdiwfmn94a",
+      "german": "klingen",
+      "english": "to sound",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "klingen"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujdiwfq3oi6",
+      "german": "tönen",
+      "english": "to sound / to tone",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "tönen"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujdiwfcwfji",
+      "german": "stinken",
+      "english": "to stink / to smell bad",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "stinken"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujdiwfhsz92",
+      "german": "probieren",
+      "english": "to try / to taste",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "probieren"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujf2np96960",
+      "german": "vernehmen",
+      "english": "to perceive / to hear",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "vernehmen"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujf2npvvqng",
+      "german": "mitbekommen",
+      "english": "to notice / to catch",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "mitbekommen"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujf2npyjg81",
+      "german": "aufmerksam sein",
+      "english": "to be attentive",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "aufmerksam sein"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujg5fg3qz27",
+      "german": "übersehen",
+      "english": "to overlook / to miss",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "übersehen"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujg5fgra9mu",
+      "german": "überhören",
+      "english": "to not hear / to ignore (sound)",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "überhören"
+        ]
+      }
+    },
+    {
+      "id": "a2-perception-verbs-miujg5fg7r3gj",
+      "german": "vernachlässigen",
+      "english": "to neglect",
+      "category": "Perception Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "A2",
+          "Perception Verbs",
+          "vernachlässigen"
         ]
       }
     }

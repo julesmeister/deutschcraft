@@ -1,7 +1,7 @@
 {
   "level": "A2",
   "category": "Body Parts",
-  "totalCards": 15,
+  "totalCards": 30,
   "flashcards": [
     {
       "id": "body-a2-001",
@@ -315,6 +315,306 @@
           "A2",
           "Body Parts",
           "die Wimper"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-parts-miujdiwe6eii2",
+      "german": "der Zeigefinger",
+      "english": "index finger",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "Zeigefinger"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-parts-miujdiwee6xa8",
+      "german": "der Mittelfinger",
+      "english": "middle finger",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "Mittelfinger"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-parts-miujdiwez3fmc",
+      "german": "der Ringfinger",
+      "english": "ring finger",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "Ringfinger"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-parts-miujdiwe8q3b1",
+      "german": "der kleine Finger",
+      "english": "pinky finger",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "kleine Finger"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-parts-miujdiweu8xqq",
+      "german": "die Faust",
+      "english": "fist",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "Faust"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-parts-miujdiwecfxsi",
+      "german": "die Sohle",
+      "english": "sole",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "Sohle"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-parts-miujdiwesdono",
+      "german": "der Nagel",
+      "english": "nail",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "Nagel"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-parts-miujf2no23gng",
+      "german": "der Körperteil",
+      "english": "body part",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "Körperteil"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-parts-miujf2noxcphk",
+      "german": "das Glied",
+      "english": "limb",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "Glied"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-parts-miujg5ffgctkz",
+      "german": "der Bizeps",
+      "english": "bicep",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "Bizeps"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-parts-miujg5ff5mcxz",
+      "german": "der Trizeps",
+      "english": "tricep",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "Trizeps"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-parts-miujg5ffqwrq9",
+      "german": "die Achsel",
+      "english": "armpit",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "Achsel"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-parts-miujg5ffdpngd",
+      "german": "der Bauchnabel",
+      "english": "belly button / navel",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "Bauchnabel"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-parts-miujg5ffznps9",
+      "german": "der Nacken",
+      "english": "nape / back of neck",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "Nacken"
+        ]
+      }
+    },
+    {
+      "id": "a2-body-parts-miujhqq6ilxqc",
+      "german": "die Pore",
+      "english": "pore",
+      "category": "Body Parts",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Body Parts",
+          "Pore"
         ]
       }
     }

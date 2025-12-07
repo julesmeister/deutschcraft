@@ -1,248 +1,8 @@
 {
   "level": "A2",
   "category": "Time Expressions",
-  "totalCards": 20,
+  "totalCards": 30,
   "flashcards": [
-    {
-      "id": "syllabus-a2-10792",
-      "german": "gestern",
-      "english": "yesterday",
-      "category": "Time Expressions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Time Expressions",
-          "gestern"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10793",
-      "german": "heute",
-      "english": "today",
-      "category": "Time Expressions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Time Expressions",
-          "heute"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10794",
-      "german": "morgen",
-      "english": "tomorrow",
-      "category": "Time Expressions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Time Expressions",
-          "morgen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10795",
-      "german": "jetzt",
-      "english": "now",
-      "category": "Time Expressions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Time Expressions",
-          "jetzt"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10796",
-      "german": "später",
-      "english": "later",
-      "category": "Time Expressions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Time Expressions",
-          "später"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10797",
-      "german": "früher",
-      "english": "earlier / before",
-      "category": "Time Expressions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Time Expressions",
-          "früher"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10798",
-      "german": "bald",
-      "english": "soon",
-      "category": "Time Expressions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Time Expressions",
-          "bald"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10799",
-      "german": "oft",
-      "english": "often",
-      "category": "Time Expressions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Time Expressions",
-          "oft"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10800",
-      "german": "manchmal",
-      "english": "sometimes",
-      "category": "Time Expressions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Time Expressions",
-          "manchmal"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10801",
-      "german": "immer",
-      "english": "always",
-      "category": "Time Expressions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Time Expressions",
-          "immer"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10802",
-      "german": "nie",
-      "english": "never",
-      "category": "Time Expressions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Time Expressions",
-          "nie"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10803",
-      "german": "selten",
-      "english": "rarely / seldom",
-      "category": "Time Expressions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Time Expressions",
-          "selten"
-        ]
-      }
-    },
     {
       "id": "syllabus-a2-10804",
       "german": "jeden Tag",
@@ -260,46 +20,6 @@
           "A2",
           "Time Expressions",
           "jeden Tag"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10805",
-      "german": "vorgestern",
-      "english": "the day before yesterday",
-      "category": "Time Expressions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Time Expressions",
-          "vorgestern"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10806",
-      "german": "übermorgen",
-      "english": "the day after tomorrow",
-      "category": "Time Expressions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Time Expressions",
-          "übermorgen"
         ]
       }
     },
@@ -324,82 +44,562 @@
       }
     },
     {
-      "id": "syllabus-a2-10808",
-      "german": "nächste Woche",
-      "english": "next week",
+      "id": "a2-time-expressions-miuj9qfdut27d",
+      "german": "schon",
+      "english": "already",
       "category": "Time Expressions",
       "level": "A2",
       "tags": [
-        "syllabus",
+        "expansion",
         "A2"
       ],
       "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 4,
         "hierarchy": [
           "A2",
           "Time Expressions",
-          "nächste Woche"
+          "schon"
         ]
       }
     },
     {
-      "id": "syllabus-a2-10809",
-      "german": "dieses Jahr",
-      "english": "this year",
+      "id": "a2-time-expressions-miuj9qfdzkgzf",
+      "german": "noch",
+      "english": "still / yet",
       "category": "Time Expressions",
       "level": "A2",
       "tags": [
-        "syllabus",
+        "expansion",
         "A2"
       ],
       "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 6,
         "hierarchy": [
           "A2",
           "Time Expressions",
-          "dieses Jahr"
+          "noch"
         ]
       }
     },
     {
-      "id": "syllabus-a2-10810",
-      "german": "letztes Jahr",
-      "english": "last year",
+      "id": "a2-time-expressions-miuj9qfdp12zn",
+      "german": "meistens",
+      "english": "mostly / usually",
       "category": "Time Expressions",
       "level": "A2",
       "tags": [
-        "syllabus",
+        "expansion",
         "A2"
       ],
       "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 8,
         "hierarchy": [
           "A2",
           "Time Expressions",
-          "letztes Jahr"
+          "meistens"
         ]
       }
     },
     {
-      "id": "syllabus-a2-10811",
-      "german": "nächstes Jahr",
-      "english": "next year",
+      "id": "a2-time-expressions-miuj9qfdopwad",
+      "german": "vorher",
+      "english": "before / beforehand",
       "category": "Time Expressions",
       "level": "A2",
       "tags": [
-        "syllabus",
+        "expansion",
         "A2"
       ],
       "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 10,
         "hierarchy": [
           "A2",
           "Time Expressions",
-          "nächstes Jahr"
+          "vorher"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miuj9qfdtu5lv",
+      "german": "inzwischen",
+      "english": "meanwhile / in the meantime",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "inzwischen"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miuj9qfe8606t",
+      "german": "plötzlich",
+      "english": "suddenly",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "plötzlich"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miuj9qfe5zul2",
+      "german": "endlich",
+      "english": "finally",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "endlich"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujdiwcrlbl7",
+      "german": "die Uhrzeit",
+      "english": "time (of day)",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "Uhrzeit"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujdiwcymyou",
+      "german": "dauern",
+      "english": "to last / to take (time)",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "dauern"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujf2nmkt45q",
+      "german": "die Zeitspanne",
+      "english": "time span",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "Zeitspanne"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujf2nmvz3h1",
+      "german": "die Dauer",
+      "english": "duration",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "Dauer"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujf2nmr2xs8",
+      "german": "gleichzeitig",
+      "english": "at the same time / simultaneously",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "gleichzeitig"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujf2nmcmqut",
+      "german": "nacheinander",
+      "english": "one after another / in sequence",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "nacheinander"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujf2nmwxnhz",
+      "german": "hintereinander",
+      "english": "in a row / consecutively",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "hintereinander"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujf2nmbnrnd",
+      "german": "ab und zu",
+      "english": "now and then / occasionally",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "ab und zu"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujf2nmz6nt6",
+      "german": "hin und wieder",
+      "english": "now and again",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "hin und wieder"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujf2nmju7x8",
+      "german": "von Zeit zu Zeit",
+      "english": "from time to time",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "von Zeit zu Zeit"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujf2nmvwnax",
+      "german": "ab sofort",
+      "english": "from now on / immediately",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "ab sofort"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujg5fd5n15n",
+      "german": "der Augenblick",
+      "english": "moment",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "Augenblick"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujg5fd66j6f",
+      "german": "der Moment",
+      "english": "moment",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "Moment"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujg5fd60bdt",
+      "german": "im Moment",
+      "english": "at the moment",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "im Moment"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujg5fd3t8f0",
+      "german": "im Augenblick",
+      "english": "at the moment",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "im Augenblick"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujg5fdq1zv7",
+      "german": "zur Zeit",
+      "english": "at present / currently",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "zur Zeit"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujg5feie2hl",
+      "german": "derzeit",
+      "english": "currently / at present",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "derzeit"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujg5febnnch",
+      "german": "gegenwärtig",
+      "english": "currently / presently",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "gegenwärtig"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujh1kllrhbe",
+      "german": "vorübergehend",
+      "english": "temporary / temporarily",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "vorübergehend"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujk6v2mix4x",
+      "german": "die Zeitzone",
+      "english": "time zone",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "Zeitzone"
+        ]
+      }
+    },
+    {
+      "id": "a2-time-expressions-miujkpdigconb",
+      "german": "jahrelang",
+      "english": "for years",
+      "category": "Time Expressions",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Time Expressions",
+          "jahrelang"
         ]
       }
     }

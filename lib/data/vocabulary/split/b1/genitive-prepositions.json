@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Genitive Prepositions",
-  "totalCards": 15,
+  "totalCards": 52,
   "flashcards": [
     {
       "id": "syllabus-b1-11450",
@@ -326,6 +326,746 @@
           "B1",
           "Genitive Prepositions",
           "bezüglich"
+        ]
+      }
+    },
+    {
+      "id": "b1-trotzgenit-827788",
+      "german": "trotz (Genitiv)",
+      "english": "despite / in spite of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "trotz"
+        ]
+      }
+    },
+    {
+      "id": "b1-whrendgeni-827788",
+      "german": "während (Genitiv)",
+      "english": "during / while",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "während"
+        ]
+      }
+    },
+    {
+      "id": "b1-wegengenit-827788",
+      "german": "wegen (Genitiv)",
+      "english": "because of / on account of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 2,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "wegen"
+        ]
+      }
+    },
+    {
+      "id": "b1-stattgenit-827788",
+      "german": "statt (Genitiv)",
+      "english": "instead of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 3,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "statt"
+        ]
+      }
+    },
+    {
+      "id": "b1-anstellevo-827788",
+      "german": "anstelle von (Genitiv)",
+      "english": "in place of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 4,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "anstelle"
+        ]
+      }
+    },
+    {
+      "id": "b1-auerhalbge-827788",
+      "german": "außerhalb (Genitiv)",
+      "english": "outside of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 5,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "außerhalb"
+        ]
+      }
+    },
+    {
+      "id": "b1-innerhalbg-827788",
+      "german": "innerhalb (Genitiv)",
+      "english": "within / inside",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 6,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "innerhalb"
+        ]
+      }
+    },
+    {
+      "id": "b1-unweitgeni-827788",
+      "german": "unweit (Genitiv)",
+      "english": "not far from",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "unweit"
+        ]
+      }
+    },
+    {
+      "id": "b1-jenseitsge-827788",
+      "german": "jenseits (Genitiv)",
+      "english": "beyond / on the other side",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "jenseits"
+        ]
+      }
+    },
+    {
+      "id": "b1-diesseitsg-827788",
+      "german": "diesseits (Genitiv)",
+      "english": "on this side of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "diesseits"
+        ]
+      }
+    },
+    {
+      "id": "b1-halbergeni-827788",
+      "german": "halber (Genitiv)",
+      "english": "for the sake of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "halber"
+        ]
+      }
+    },
+    {
+      "id": "b1-seinetwege-827788",
+      "german": "seinetwegen",
+      "english": "for his sake / because of him",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "seinetwegen"
+        ]
+      }
+    },
+    {
+      "id": "b1-ihretwegen-827788",
+      "german": "ihretwegen",
+      "english": "for her sake / because of her",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "ihretwegen"
+        ]
+      }
+    },
+    {
+      "id": "b1-euretwegen-827788",
+      "german": "euretwegen",
+      "english": "for your sake / because of you (plural)",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "euretwegen"
+        ]
+      }
+    },
+    {
+      "id": "b1-meinetwege-827788",
+      "german": "meinetwegen",
+      "english": "for my sake / because of me",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "meinetwegen"
+        ]
+      }
+    },
+    {
+      "id": "b1-deinetwege-827788",
+      "german": "deinetwegen",
+      "english": "for your sake / because of you",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "deinetwegen"
+        ]
+      }
+    },
+    {
+      "id": "b1-unseretweg-827788",
+      "german": "unseretwegen",
+      "english": "for our sake / because of us",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "unseretwegen"
+        ]
+      }
+    },
+    {
+      "id": "b1-beiderseit-827788",
+      "german": "beiderseits (Genitiv)",
+      "english": "on both sides / on either side",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "beiderseits"
+        ]
+      }
+    },
+    {
+      "id": "b1-behufsgeni-827788",
+      "german": "behufs (Genitiv)",
+      "english": "for the purpose of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "behufs"
+        ]
+      }
+    },
+    {
+      "id": "b1-besorggeni-827788",
+      "german": "besorg (Genitiv)",
+      "english": "on behalf of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "besorg"
+        ]
+      }
+    },
+    {
+      "id": "b1-betreffsge-827788",
+      "german": "betreffs (Genitiv)",
+      "english": "concerning / with regard to",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "betreffs"
+        ]
+      }
+    },
+    {
+      "id": "b1-einschliel-827788",
+      "german": "einschließlich (Genitiv)",
+      "english": "including",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "einschließlich"
+        ]
+      }
+    },
+    {
+      "id": "b1-exklusivge-827788",
+      "german": "exklusiv (Genitiv)",
+      "english": "exclusive of / excluding",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "exklusiv"
+        ]
+      }
+    },
+    {
+      "id": "b1-infolgegen-827788",
+      "german": "infolge (Genitiv)",
+      "english": "as a result of / due to",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "infolge"
+        ]
+      }
+    },
+    {
+      "id": "b1-lautgeniti-827788",
+      "german": "laut (Genitiv)",
+      "english": "according to",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "laut"
+        ]
+      }
+    },
+    {
+      "id": "b1-mangelsgen-827788",
+      "german": "mangels (Genitiv)",
+      "english": "for lack of / in the absence of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "mangels"
+        ]
+      }
+    },
+    {
+      "id": "b1-notwendigg-827788",
+      "german": "notwendig (Genitiv)",
+      "english": "by necessity of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "notwendig"
+        ]
+      }
+    },
+    {
+      "id": "b1-obgleichge-827788",
+      "german": "obgleich (Genitiv)",
+      "english": "although",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "obgleich"
+        ]
+      }
+    },
+    {
+      "id": "b1-sdlichgeni-827788",
+      "german": "südlich (Genitiv)",
+      "english": "south of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "südlich"
+        ]
+      }
+    },
+    {
+      "id": "b1-genitive-prepositions-miv8iuodgx941",
+      "german": "aufgrund",
+      "english": "due to / based on",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 44,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "aufgrund"
+        ]
+      }
+    },
+    {
+      "id": "b1-genitive-prepositions-miv8iuodcxkie",
+      "german": "oberhalb",
+      "english": "above",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 45,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "oberhalb"
+        ]
+      }
+    },
+    {
+      "id": "b1-genitive-prepositions-miv8iuodc1ggw",
+      "german": "unterhalb",
+      "english": "below",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 46,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "unterhalb"
+        ]
+      }
+    },
+    {
+      "id": "b1-genitive-prepositions-miv8iuodwg3w8",
+      "german": "beiderseits",
+      "english": "on both sides of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 47,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "beiderseits"
+        ]
+      }
+    },
+    {
+      "id": "b1-genitive-prepositions-miv8iuodv5xt9",
+      "german": "zwecks",
+      "english": "for the purpose of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 48,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "zwecks"
+        ]
+      }
+    },
+    {
+      "id": "b1-genitive-prepositions-miv8iuodliwe7",
+      "german": "mangels",
+      "english": "for lack of",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 49,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "mangels"
+        ]
+      }
+    },
+    {
+      "id": "b1-genitive-prepositions-miv8iuodj2jah",
+      "german": "einschließlich",
+      "english": "including",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 50,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "einschließlich"
+        ]
+      }
+    },
+    {
+      "id": "b1-genitive-prepositions-miv8iuodg2ut0",
+      "german": "ausschließlich",
+      "english": "excluding / exclusively",
+      "category": "Genitive Prepositions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 51,
+        "hierarchy": [
+          "B1",
+          "Genitive Prepositions",
+          "ausschließlich"
         ]
       }
     }

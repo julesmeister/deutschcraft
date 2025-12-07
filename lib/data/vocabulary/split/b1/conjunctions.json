@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Conjunctions",
-  "totalCards": 22,
+  "totalCards": 43,
   "flashcards": [
     {
       "id": "syllabus-b1-10927",
@@ -180,26 +180,6 @@
           "B1",
           "Conjunctions",
           "trotzdem"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-10936",
-      "german": "außerdem",
-      "english": "besides / moreover",
-      "category": "Conjunctions",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Conjunctions",
-          "außerdem"
         ]
       }
     },
@@ -440,6 +420,446 @@
           "B1",
           "Conjunctions",
           "dennoch"
+        ]
+      }
+    },
+    {
+      "id": "b1-angenommen-827791",
+      "german": "angenommen",
+      "english": "assuming / granted",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "angenommen"
+        ]
+      }
+    },
+    {
+      "id": "b1-anstelle-827791",
+      "german": "anstelle",
+      "english": "instead of",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "anstelle"
+        ]
+      }
+    },
+    {
+      "id": "b1-anstatt-827791",
+      "german": "anstatt",
+      "english": "instead of",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 2,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "anstatt"
+        ]
+      }
+    },
+    {
+      "id": "b1-ausgenomme-827791",
+      "german": "ausgenommen",
+      "english": "except for / excepting",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 3,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "ausgenommen"
+        ]
+      }
+    },
+    {
+      "id": "b1-dabei-827791",
+      "german": "dabei",
+      "english": "in doing so / while",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 4,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "dabei"
+        ]
+      }
+    },
+    {
+      "id": "b1-daher-827791",
+      "german": "daher",
+      "english": "therefore / for that reason",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 5,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "daher"
+        ]
+      }
+    },
+    {
+      "id": "b1-daran-827791",
+      "german": "daran",
+      "english": "on that / with that",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 6,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "daran"
+        ]
+      }
+    },
+    {
+      "id": "b1-darunterle-827792",
+      "german": "darunter leiden",
+      "english": "to suffer from it",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "darunter"
+        ]
+      }
+    },
+    {
+      "id": "b1-darunterve-827792",
+      "german": "darunter verstehen",
+      "english": "to understand by that",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "darunter"
+        ]
+      }
+    },
+    {
+      "id": "b1-darunterfa-827792",
+      "german": "darunter fallen",
+      "english": "to fall under",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "darunter"
+        ]
+      }
+    },
+    {
+      "id": "b1-darunterhi-827792",
+      "german": "darunter hinein",
+      "english": "into that",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "darunter"
+        ]
+      }
+    },
+    {
+      "id": "b1-darunterli-827792",
+      "german": "darunter liegend",
+      "english": "lying under",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "darunter"
+        ]
+      }
+    },
+    {
+      "id": "b1-darunterst-827792",
+      "german": "darunter stecken",
+      "english": "to be stuck underneath",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "darunter"
+        ]
+      }
+    },
+    {
+      "id": "b1-conjunctions-miv8iuohw7p1n",
+      "german": "und",
+      "english": "and",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "und"
+        ]
+      }
+    },
+    {
+      "id": "b1-conjunctions-miv8iuohgn5ud",
+      "german": "oder",
+      "english": "or",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 35,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "oder"
+        ]
+      }
+    },
+    {
+      "id": "b1-conjunctions-miv8iuoheuq07",
+      "german": "aber",
+      "english": "but",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 36,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "aber"
+        ]
+      }
+    },
+    {
+      "id": "b1-conjunctions-miv8iuoh4picf",
+      "german": "sondern",
+      "english": "but rather / but instead",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 37,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "sondern"
+        ]
+      }
+    },
+    {
+      "id": "b1-conjunctions-miv8iuohgeedg",
+      "german": "doch",
+      "english": "but / however / yet",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 38,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "doch"
+        ]
+      }
+    },
+    {
+      "id": "b1-conjunctions-miv8iuoh90iwd",
+      "german": "jedoch",
+      "english": "however / nevertheless",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 39,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "jedoch"
+        ]
+      }
+    },
+    {
+      "id": "b1-conjunctions-miv8iuohfozrx",
+      "german": "zwar",
+      "english": "indeed / to be sure",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 40,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "zwar"
+        ]
+      }
+    },
+    {
+      "id": "b1-conjunctions-miv8iuohq2kkg",
+      "german": "einerseits",
+      "english": "on the one hand",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 41,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "einerseits"
+        ]
+      }
+    },
+    {
+      "id": "b1-conjunctions-miv8iuohswdqk",
+      "german": "andererseits",
+      "english": "on the other hand",
+      "category": "Conjunctions",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 42,
+        "hierarchy": [
+          "B1",
+          "Conjunctions",
+          "andererseits"
         ]
       }
     }

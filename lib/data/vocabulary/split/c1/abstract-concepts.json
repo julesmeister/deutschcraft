@@ -1,11 +1,11 @@
 {
   "level": "C1",
   "category": "Abstract Concepts",
-  "totalCards": 10,
+  "totalCards": 9,
   "flashcards": [
     {
       "id": "syllabus-c1-11548",
-      "german": "Nachhaltigkeit",
+      "german": "die Nachhaltigkeit",
       "english": "sustainability",
       "category": "Abstract Concepts",
       "level": "C1",
@@ -45,7 +45,7 @@
     },
     {
       "id": "syllabus-c1-11550",
-      "german": "Herausforderung",
+      "german": "die Herausforderung",
       "english": "challenge",
       "category": "Abstract Concepts",
       "level": "C1",
@@ -60,26 +60,6 @@
           "C1",
           "Abstract Concepts",
           "Herausforderung"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c1-11551",
-      "german": "Verantwortung",
-      "english": "responsibility",
-      "category": "Abstract Concepts",
-      "level": "C1",
-      "tags": [
-        "syllabus",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Syllabus C1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Abstract Concepts",
-          "Verantwortung"
         ]
       }
     },
@@ -165,7 +145,7 @@
     },
     {
       "id": "syllabus-c1-11556",
-      "german": "Entwicklung",
+      "german": "die Entwicklung",
       "english": "development / evolution",
       "category": "Abstract Concepts",
       "level": "C1",

@@ -1,7 +1,7 @@
 {
   "level": "B2",
   "category": "Environment Climate",
-  "totalCards": 30,
+  "totalCards": 32,
   "flashcards": [
     {
       "id": "syllabus-b2-11281",
@@ -220,26 +220,6 @@
           "B2",
           "Environment Climate",
           "Ökosystem"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11292",
-      "german": "nachhaltig",
-      "english": "sustainable",
-      "category": "Environment Climate",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Environment Climate",
-          "nachhaltig"
         ]
       }
     },
@@ -600,6 +580,66 @@
           "B2",
           "Environment Climate",
           "fossile Brennstoffe"
+        ]
+      }
+    },
+    {
+      "id": "b2-environment-climate-mivkdn5vfbdtv",
+      "german": "der Klimawandel",
+      "english": "climate change",
+      "category": "Environment Climate",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B2",
+          "Environment Climate",
+          "der Klimawandel"
+        ]
+      }
+    },
+    {
+      "id": "b2-environment-climate-mivkdn5v9msdf",
+      "german": "die Erderwärmung",
+      "english": "global warming",
+      "category": "Environment Climate",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B2",
+          "Environment Climate",
+          "die Erderwärmung"
+        ]
+      }
+    },
+    {
+      "id": "b2-environment-climate-mivkdn5vhwnv6",
+      "german": "der Treibhauseffekt",
+      "english": "greenhouse effect",
+      "category": "Environment Climate",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "B2",
+          "Environment Climate",
+          "der Treibhauseffekt"
         ]
       }
     }

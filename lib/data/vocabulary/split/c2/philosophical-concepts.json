@@ -1,7 +1,7 @@
 {
   "level": "C2",
   "category": "Philosophical Concepts",
-  "totalCards": 12,
+  "totalCards": 11,
   "flashcards": [
     {
       "id": "syllabus-c2-11621",
@@ -100,26 +100,6 @@
           "C2",
           "Philosophical Concepts",
           "Wesen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-c2-11626",
-      "german": "Bewusstsein",
-      "english": "consciousness / awareness",
-      "category": "Philosophical Concepts",
-      "level": "C2",
-      "tags": [
-        "syllabus",
-        "C2"
-      ],
-      "_meta": {
-        "source": "Syllabus C2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C2",
-          "Philosophical Concepts",
-          "Bewusstsein"
         ]
       }
     },

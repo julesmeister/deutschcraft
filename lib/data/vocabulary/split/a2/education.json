@@ -1,7 +1,7 @@
 {
   "level": "A2",
   "category": "Education",
-  "totalCards": 80,
+  "totalCards": 74,
   "flashcards": [
     {
       "id": "syllabus-a2-10512",
@@ -20,26 +20,6 @@
           "A2",
           "Education",
           "Schule"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10513",
-      "german": "lernen",
-      "english": "to learn",
-      "category": "Education",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Education",
-          "lernen"
         ]
       }
     },
@@ -984,26 +964,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10561",
-      "german": "der Rucksack",
-      "english": "backpack",
-      "category": "Education",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Education",
-          "Rucksack"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10562",
       "german": "der Radiergummi",
       "english": "eraser",
@@ -1264,46 +1224,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10575",
-      "german": "erklären",
-      "english": "to explain",
-      "category": "Education",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Education",
-          "erklären"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10576",
-      "german": "verstehen",
-      "english": "to understand",
-      "category": "Education",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Education",
-          "verstehen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10577",
       "german": "wiederholen",
       "english": "to repeat / to review",
@@ -1340,46 +1260,6 @@
           "A2",
           "Education",
           "üben"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10579",
-      "german": "schreiben",
-      "english": "to write",
-      "category": "Education",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Education",
-          "schreiben"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10580",
-      "german": "lesen",
-      "english": "to read",
-      "category": "Education",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Education",
-          "lesen"
         ]
       }
     },

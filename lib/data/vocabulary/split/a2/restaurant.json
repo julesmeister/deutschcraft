@@ -1,11 +1,11 @@
 {
   "level": "A2",
   "category": "Restaurant",
-  "totalCards": 15,
+  "totalCards": 33,
   "flashcards": [
     {
       "id": "syllabus-a2-10730",
-      "german": "Restaurant",
+      "german": "das Restaurant",
       "english": "restaurant",
       "category": "Restaurant",
       "level": "A2",
@@ -25,7 +25,7 @@
     },
     {
       "id": "syllabus-a2-10731",
-      "german": "Speisekarte",
+      "german": "die Speisekarte",
       "english": "menu",
       "category": "Restaurant",
       "level": "A2",
@@ -45,7 +45,7 @@
     },
     {
       "id": "syllabus-a2-10732",
-      "german": "Rechnung",
+      "german": "die Rechnung",
       "english": "bill / check",
       "category": "Restaurant",
       "level": "A2",
@@ -60,46 +60,6 @@
           "A2",
           "Restaurant",
           "Rechnung"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10733",
-      "german": "Kellner",
-      "english": "waiter",
-      "category": "Restaurant",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Restaurant",
-          "Kellner"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10734",
-      "german": "Kellnerin",
-      "english": "waitress",
-      "category": "Restaurant",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Restaurant",
-          "Kellnerin"
         ]
       }
     },
@@ -124,28 +84,8 @@
       }
     },
     {
-      "id": "syllabus-a2-10736",
-      "german": "schmecken",
-      "english": "to taste",
-      "category": "Restaurant",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Restaurant",
-          "schmecken"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10737",
-      "german": "Trinkgeld",
+      "german": "das Trinkgeld",
       "english": "tip / gratuity",
       "category": "Restaurant",
       "level": "A2",
@@ -164,68 +104,8 @@
       }
     },
     {
-      "id": "syllabus-a2-10738",
-      "german": "Frühstück",
-      "english": "breakfast",
-      "category": "Restaurant",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Restaurant",
-          "Frühstück"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10739",
-      "german": "Mittagessen",
-      "english": "lunch",
-      "category": "Restaurant",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Restaurant",
-          "Mittagessen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10740",
-      "german": "Abendessen",
-      "english": "dinner",
-      "category": "Restaurant",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Restaurant",
-          "Abendessen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10741",
-      "german": "Vorspeise",
+      "german": "die Vorspeise",
       "english": "appetizer / starter",
       "category": "Restaurant",
       "level": "A2",
@@ -245,7 +125,7 @@
     },
     {
       "id": "syllabus-a2-10742",
-      "german": "Hauptgericht",
+      "german": "das Hauptgericht",
       "english": "main course",
       "category": "Restaurant",
       "level": "A2",
@@ -265,7 +145,7 @@
     },
     {
       "id": "syllabus-a2-10743",
-      "german": "Nachtisch",
+      "german": "der Nachtisch",
       "english": "dessert",
       "category": "Restaurant",
       "level": "A2",
@@ -285,7 +165,7 @@
     },
     {
       "id": "syllabus-a2-10744",
-      "german": "Getränk",
+      "german": "das Getränk",
       "english": "drink / beverage",
       "category": "Restaurant",
       "level": "A2",
@@ -300,6 +180,486 @@
           "A2",
           "Restaurant",
           "Getränk"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miuj9qfgzmk4r",
+      "german": "das Café",
+      "english": "café",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Café"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miuj9qfg3hy2o",
+      "german": "die Bar",
+      "english": "bar",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Bar"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miuj9qfgoa7qx",
+      "german": "die Bestellung",
+      "english": "order",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Bestellung"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miuj9qfgzdkc9",
+      "german": "die Hauptspeise",
+      "english": "main course",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Hauptspeise"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miuj9qfg0ih9a",
+      "german": "die Nachspeise",
+      "english": "dessert",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Nachspeise"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miuj9qfg98j8t",
+      "german": "das Gericht",
+      "english": "dish",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Gericht"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miuj9qfgxkngn",
+      "german": "die Portion",
+      "english": "portion / serving",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Portion"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miuj9qfgmegb1",
+      "german": "die Beilage",
+      "english": "side dish",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Beilage"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miuj9qfggjnih",
+      "german": "die Soße",
+      "english": "sauce",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Soße"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miuj9qfgfgh8i",
+      "german": "das Gewürz",
+      "english": "spice",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Gewürz"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miuj9qfgk22r7",
+      "german": "die Reservierung",
+      "english": "reservation",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Reservierung"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miuj9qfgs0enn",
+      "german": "der Platz",
+      "english": "seat / place",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Platz"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miuj9qfgfhtq7",
+      "german": "lecker",
+      "english": "delicious / tasty",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 33,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "lecker"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miujdiwivdjxz",
+      "german": "die Kantine",
+      "english": "canteen / cafeteria",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Kantine"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miujdiwiuf6xd",
+      "german": "der Imbiss",
+      "english": "snack bar / fast food stand",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Imbiss"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miujdiwiboa2i",
+      "german": "die Terrasse",
+      "english": "terrace / patio",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Terrasse"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miujdiwi0p70c",
+      "german": "der Garten",
+      "english": "garden",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Garten"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miujdiwib6w5c",
+      "german": "drinnen",
+      "english": "inside",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "drinnen"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miujdiwik0giv",
+      "german": "draußen",
+      "english": "outside",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "draußen"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miujdiwikyx3c",
+      "german": "servieren",
+      "english": "to serve",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "servieren"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miujdiwiy3sd2",
+      "german": "das Tagesgericht",
+      "english": "dish of the day",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 36,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Tagesgericht"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miujdiwid1eue",
+      "german": "das Menü",
+      "english": "set menu",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 38,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Menü"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miujdiwiqbwym",
+      "german": "à la carte",
+      "english": "à la carte",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 40,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "à la carte"
+        ]
+      }
+    },
+    {
+      "id": "a2-restaurant-miujdiwiil3jb",
+      "german": "die Getränkekarte",
+      "english": "drink menu",
+      "category": "Restaurant",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 42,
+        "hierarchy": [
+          "A2",
+          "Restaurant",
+          "Getränkekarte"
         ]
       }
     }

@@ -1,7 +1,7 @@
 {
   "level": "C2",
   "category": "Reflexive Verbs",
-  "totalCards": 30,
+  "totalCards": 29,
   "flashcards": [
     {
       "id": "reflexive-c2-001",
@@ -588,27 +588,6 @@
           "C2",
           "Reflexive Verbs",
           "sich tummeln"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-c2-029",
-      "german": "sich vergewissern",
-      "english": "to make certain, to verify",
-      "category": "Reflexive Verbs",
-      "level": "C2",
-      "tags": [
-        "reflexive",
-        "verification",
-        "C2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C2",
-          "Reflexive Verbs",
-          "sich vergewissern"
         ]
       }
     },

@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Adverbs",
-  "totalCards": 118,
+  "totalCards": 114,
   "flashcards": [
     {
       "id": "remnote-14",
@@ -536,25 +536,6 @@
       }
     },
     {
-      "id": "remnote-60",
-      "german": "frisch",
-      "english": "newly / fresh / crisp",
-      "category": "Adverbs",
-      "level": "B1",
-      "tags": [
-        "Time"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 124,
-        "hierarchy": [
-          "Adverbs",
-          "Time",
-          "frisch"
-        ]
-      }
-    },
-    {
       "id": "remnote-62",
       "german": "hindurch",
       "english": "throughout / through it",
@@ -722,25 +703,6 @@
           "Adverbs",
           "Time",
           "rasch"
-        ]
-      }
-    },
-    {
-      "id": "remnote-83",
-      "german": "selten",
-      "english": "rare / seldom",
-      "category": "Adverbs",
-      "level": "B1",
-      "tags": [
-        "Time"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 164,
-        "hierarchy": [
-          "Adverbs",
-          "Time",
-          "selten"
         ]
       }
     },
@@ -1372,25 +1334,6 @@
       }
     },
     {
-      "id": "remnote-146",
-      "german": "identisch",
-      "english": "identical",
-      "category": "Adverbs",
-      "level": "B1",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 285,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "identisch"
-        ]
-      }
-    },
-    {
       "id": "remnote-148",
       "german": "heil",
       "english": "safely",
@@ -1596,25 +1539,6 @@
           "Adverbs",
           "Manner",
           "locker"
-        ]
-      }
-    },
-    {
-      "id": "remnote-165",
-      "german": "möglich",
-      "english": "possible",
-      "category": "Adverbs",
-      "level": "B1",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 330,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "möglich"
         ]
       }
     },

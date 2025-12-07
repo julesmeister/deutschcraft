@@ -1,48 +1,8 @@
 {
   "level": "B1",
   "category": "Daily Routines",
-  "totalCards": 28,
+  "totalCards": 39,
   "flashcards": [
-    {
-      "id": "syllabus-b1-10949",
-      "german": "aufwachen",
-      "english": "to wake up",
-      "category": "Daily Routines",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Daily Routines",
-          "aufwachen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-10950",
-      "german": "aufstehen",
-      "english": "to get up",
-      "category": "Daily Routines",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Daily Routines",
-          "aufstehen"
-        ]
-      }
-    },
     {
       "id": "syllabus-b1-10951",
       "german": "sich waschen",
@@ -264,26 +224,6 @@
       }
     },
     {
-      "id": "syllabus-b1-10962",
-      "german": "Feierabend",
-      "english": "end of work day",
-      "category": "Daily Routines",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Daily Routines",
-          "Feierabend"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b1-10963",
       "german": "nach Hause kommen",
       "english": "to come home",
@@ -320,26 +260,6 @@
           "B1",
           "Daily Routines",
           "einkaufen gehen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-10965",
-      "german": "kochen",
-      "english": "to cook",
-      "category": "Daily Routines",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Daily Routines",
-          "kochen"
         ]
       }
     },
@@ -384,26 +304,6 @@
       }
     },
     {
-      "id": "syllabus-b1-10968",
-      "german": "aufräumen",
-      "english": "to clean up / to tidy",
-      "category": "Daily Routines",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Daily Routines",
-          "aufräumen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b1-10969",
       "german": "Hausaufgaben machen",
       "english": "to do homework",
@@ -420,86 +320,6 @@
           "B1",
           "Daily Routines",
           "Hausaufgaben machen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-10970",
-      "german": "fernsehen",
-      "english": "to watch TV",
-      "category": "Daily Routines",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Daily Routines",
-          "fernsehen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-10971",
-      "german": "sich ausruhen",
-      "english": "to rest / to relax",
-      "category": "Daily Routines",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Daily Routines",
-          "sich ausruhen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-10972",
-      "german": "sich umziehen",
-      "english": "to change clothes",
-      "category": "Daily Routines",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Daily Routines",
-          "sich umziehen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-10973",
-      "german": "sich ausziehen",
-      "english": "to get undressed",
-      "category": "Daily Routines",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Daily Routines",
-          "sich ausziehen"
         ]
       }
     },
@@ -544,22 +364,422 @@
       }
     },
     {
-      "id": "syllabus-b1-10976",
-      "german": "einschlafen",
-      "english": "to fall asleep",
+      "id": "b1-sichanzieh-827791",
+      "german": "sich anziehn",
+      "english": "to get dressed / to dress",
       "category": "Daily Routines",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
+        "source": "B1 Category Expansion 2025",
         "lineNumber": 0,
         "hierarchy": [
           "B1",
           "Daily Routines",
-          "einschlafen"
+          "sich"
+        ]
+      }
+    },
+    {
+      "id": "b1-sichfrisch-827791",
+      "german": "sich frisch machen",
+      "english": "to freshen up",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "sich"
+        ]
+      }
+    },
+    {
+      "id": "b1-zubettgehe-827791",
+      "german": "zu Bett gehen",
+      "english": "to go to bed",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 2,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "zu"
+        ]
+      }
+    },
+    {
+      "id": "b1-ausschlafe-827791",
+      "german": "ausschlafen",
+      "english": "to sleep in / to sleep enough",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 3,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "ausschlafen"
+        ]
+      }
+    },
+    {
+      "id": "b1-diezhneput-827791",
+      "german": "die Zähne putzen",
+      "english": "to brush teeth",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 4,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-diehaarekm-827791",
+      "german": "die Haare kämmen",
+      "english": "to comb hair",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 5,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-diehaarewa-827791",
+      "german": "die Haare waschen",
+      "english": "to wash hair",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 6,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-einenkaffe-827791",
+      "german": "einen Kaffee trinken",
+      "english": "to drink a coffee",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "einen"
+        ]
+      }
+    },
+    {
+      "id": "b1-einenteetr-827791",
+      "german": "einen Tee trinken",
+      "english": "to drink a tea",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "einen"
+        ]
+      }
+    },
+    {
+      "id": "b1-dietagesze-827791",
+      "german": "die Tageszeitung lesen",
+      "english": "to read the newspaper",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-diewohnung-827791",
+      "german": "die Wohnung putzen",
+      "english": "to clean the apartment",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dentischde-827791",
+      "german": "den Tisch decken",
+      "english": "to set the table",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "den"
+        ]
+      }
+    },
+    {
+      "id": "b1-absplen-827791",
+      "german": "abspülen",
+      "english": "to rinse / to do the dishes",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "abspülen"
+        ]
+      }
+    },
+    {
+      "id": "b1-diewschewa-827791",
+      "german": "die Wäsche waschen",
+      "english": "to do laundry",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-diewschetr-827791",
+      "german": "die Wäsche trocknen",
+      "english": "to dry laundry",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-wschebgeln-827791",
+      "german": "Wäsche bügeln",
+      "english": "to iron",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "Wäsche"
+        ]
+      }
+    },
+    {
+      "id": "b1-vonderarbe-827791",
+      "german": "von der Arbeit nach Hause kommen",
+      "english": "to come home from work",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "von"
+        ]
+      }
+    },
+    {
+      "id": "b1-daily-routines-miv8iuogk7d0p",
+      "german": "Staub saugen",
+      "english": "to vacuum",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 35,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "Staub saugen"
+        ]
+      }
+    },
+    {
+      "id": "b1-daily-routines-miv8iuogwkab4",
+      "german": "Wäsche waschen",
+      "english": "to do laundry",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 36,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "Wäsche waschen"
+        ]
+      }
+    },
+    {
+      "id": "b1-daily-routines-miv8iuogv283o",
+      "german": "bügeln",
+      "english": "to iron",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 37,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "bügeln"
+        ]
+      }
+    },
+    {
+      "id": "b1-daily-routines-miv8iuogbholk",
+      "german": "Gassi gehen",
+      "english": "to walk the dog",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 38,
+        "hierarchy": [
+          "B1",
+          "Daily Routines",
+          "Gassi gehen"
         ]
       }
     }

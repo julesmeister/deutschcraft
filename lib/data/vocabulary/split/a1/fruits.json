@@ -1,7 +1,7 @@
 {
   "level": "A1",
   "category": "Fruits",
-  "totalCards": 30,
+  "totalCards": 27,
   "flashcards": [
     {
       "id": "syllabus-a1-10157",
@@ -20,26 +20,6 @@
           "A1",
           "Fruits",
           "Banane"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10158",
-      "german": "die Orange",
-      "english": "orange",
-      "category": "Fruits",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Fruits",
-          "Orange"
         ]
       }
     },
@@ -280,46 +260,6 @@
           "A1",
           "Fruits",
           "Blaubeere"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10171",
-      "german": "das Obst",
-      "english": "fruit",
-      "category": "Fruits",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Fruits",
-          "Obst"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10172",
-      "german": "der Apfel",
-      "english": "apple",
-      "category": "Fruits",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Fruits",
-          "Apfel"
         ]
       }
     },

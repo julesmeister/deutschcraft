@@ -1,345 +1,825 @@
 {
   "level": "B1",
   "category": "Business Work",
-  "totalCards": 17,
+  "totalCards": 41,
   "flashcards": [
     {
-      "id": "syllabus-b1-10910",
-      "german": "Termin",
-      "english": "appointment",
+      "id": "b1-diearbeits-186187",
+      "german": "die Arbeitskraft",
+      "english": "labor / workforce",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
+        "source": "B1 Category Expansion 2025",
         "lineNumber": 0,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Termin"
+          "die"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10911",
-      "german": "Besprechung",
-      "english": "meeting / discussion",
+      "id": "b1-diearbeits-186187",
+      "german": "die Arbeitszeit",
+      "english": "working hours / work time",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 1,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Besprechung"
+          "die"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10912",
-      "german": "Vertrag",
-      "english": "contract",
+      "id": "b1-dasarbeits-186187",
+      "german": "das Arbeitsamt",
+      "english": "employment office",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 2,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Vertrag"
+          "das"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10913",
-      "german": "Gehalt",
-      "english": "salary",
+      "id": "b1-diearbeits-186187",
+      "german": "die Arbeitsbedingung",
+      "english": "working conditions",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 3,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Gehalt"
+          "die"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10914",
-      "german": "Bewerbung",
-      "english": "application",
+      "id": "b1-diearbeits-186187",
+      "german": "die Arbeitsgruppe",
+      "english": "working group / team",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 4,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Bewerbung"
+          "die"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10915",
-      "german": "Lebenslauf",
-      "english": "CV / resume",
+      "id": "b1-dasarbeits-186187",
+      "german": "das Arbeitsklima",
+      "english": "working atmosphere",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 5,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Lebenslauf"
+          "das"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10916",
-      "german": "Vorstellungsgespräch",
-      "english": "job interview",
-      "category": "Business Work",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Business Work",
-          "Vorstellungsgespräch"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-10917",
-      "german": "Kollege",
+      "id": "b1-derarbeits-186187",
+      "german": "der Arbeitskollege",
       "english": "colleague",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 6,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Kollege"
+          "der"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10918",
-      "german": "Chef",
-      "english": "boss",
+      "id": "b1-diearbeits-186187",
+      "german": "die Arbeitsvergabe",
+      "english": "task assignment",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 7,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Chef"
+          "die"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10919",
-      "german": "Angestellte",
-      "english": "employee",
+      "id": "b1-diearbeits-186187",
+      "german": "die Arbeitsvermittlung",
+      "english": "job placement",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 8,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Angestellte"
+          "die"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10920",
-      "german": "Abteilung",
-      "english": "department",
+      "id": "b1-dasarbeits-186187",
+      "german": "das Arbeitsverhältnis",
+      "english": "employment relationship",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 9,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Abteilung"
+          "das"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10921",
-      "german": "Projekt",
-      "english": "project",
+      "id": "b1-dieberufsa-186187",
+      "german": "die Berufsausbildung",
+      "english": "vocational training",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 10,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Projekt"
+          "die"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10922",
-      "german": "Frist",
-      "english": "deadline",
+      "id": "b1-derberufsa-186187",
+      "german": "der Berufsanfänger",
+      "english": "beginner in profession",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 11,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Frist"
+          "der"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10923",
-      "german": "Überstunden",
-      "english": "overtime",
+      "id": "b1-dieberufsb-186187",
+      "german": "die Berufsberatung",
+      "english": "career counseling",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 12,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Überstunden"
+          "die"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10924",
-      "german": "Geschäftsreise",
-      "english": "business trip",
+      "id": "b1-dieberufsb-186187",
+      "german": "die Berufsbezeichnung",
+      "english": "job title",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 13,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Geschäftsreise"
+          "die"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10925",
-      "german": "Kündigung",
-      "english": "resignation / termination",
+      "id": "b1-dieberufsg-186187",
+      "german": "die Berufsgenossenschaft",
+      "english": "trade association",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 14,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Kündigung"
+          "die"
         ]
       }
     },
     {
-      "id": "syllabus-b1-10926",
-      "german": "Beförderung",
+      "id": "b1-dieberufsg-186187",
+      "german": "die Berufsgruppe",
+      "english": "occupational group",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-derberufss-186187",
+      "german": "der Berufsstand",
+      "english": "profession / occupational group",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dieberufsu-186187",
+      "german": "die Berufsunfähigkeit",
+      "english": "occupational disability",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-derberufsu-186187",
+      "german": "der Berufsunfall",
+      "english": "occupational accident",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dieberufsv-186187",
+      "german": "die Berufsvertretung",
+      "english": "professional representation",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-diebetrieb-186187",
+      "german": "die Betriebsamkeit",
+      "english": "business / hustle",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-diebetrieb-186187",
+      "german": "die Betriebsrat",
+      "english": "works council",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-derbetrieb-186187",
+      "german": "der Betriebsleiter",
+      "english": "operations manager",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-diebetrieb-186187",
+      "german": "die Betriebsrente",
+      "english": "occupational pension",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-diegeschft-186187",
+      "german": "die Geschäftsführung",
+      "english": "business management",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dergeschft-186187",
+      "german": "der Geschäftsführer",
+      "english": "business manager / CEO",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dergeschft-186187",
+      "german": "der Geschäftsbetrieb",
+      "english": "business operations",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-diegeschft-186187",
+      "german": "die Geschäftsstelle",
+      "english": "business office",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasgeschft-186187",
+      "german": "das Geschäftsgeheimnis",
+      "english": "trade secret",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "das"
+        ]
+      }
+    },
+    {
+      "id": "b1-diegeschft-186187",
+      "german": "die Geschäftsfrau",
+      "english": "businesswoman",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dergeschft-186187",
+      "german": "der Geschäftskollege",
+      "english": "business colleague",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasgeschft-186187",
+      "german": "das Geschäftsmodell",
+      "english": "business model",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "das"
+        ]
+      }
+    },
+    {
+      "id": "b1-business-work-miv8hiwmwnjaa",
+      "german": "die Kundin",
+      "english": "customer (female)",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die Kundin"
+        ]
+      }
+    },
+    {
+      "id": "b1-business-work-miv8hiwmf6ubj",
+      "german": "die Verhandlung",
+      "english": "negotiation",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 33,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die Verhandlung"
+        ]
+      }
+    },
+    {
+      "id": "b1-business-work-miv8hiwm5fgzn",
+      "german": "die Nachfrage",
+      "english": "demand",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die Nachfrage"
+        ]
+      }
+    },
+    {
+      "id": "b1-business-work-miv8hiwmui26z",
+      "german": "die Quittung",
+      "english": "receipt",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 35,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die Quittung"
+        ]
+      }
+    },
+    {
+      "id": "b1-business-work-miv8hiwmr1we8",
+      "german": "die Lieferung",
+      "english": "delivery",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 36,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die Lieferung"
+        ]
+      }
+    },
+    {
+      "id": "b1-business-work-miv8hiwmux25c",
+      "german": "der Lieferant",
+      "english": "supplier",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 37,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "der Lieferant"
+        ]
+      }
+    },
+    {
+      "id": "b1-business-work-miv8hiwmwthpl",
+      "german": "die Konkurrenz",
+      "english": "competition / competitors",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 38,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die Konkurrenz"
+        ]
+      }
+    },
+    {
+      "id": "b1-business-work-miv8hiwmvp0tf",
+      "german": "die Branche",
+      "english": "industry / sector",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 39,
+        "hierarchy": [
+          "B1",
+          "Business Work",
+          "die Branche"
+        ]
+      }
+    },
+    {
+      "id": "b1-business-work-miv8hiwm11uqc",
+      "german": "die Beförderung",
       "english": "promotion",
       "category": "Business Work",
       "level": "B1",
       "tags": [
-        "syllabus",
+        "expansion",
         "B1"
       ],
       "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 40,
         "hierarchy": [
           "B1",
           "Business Work",
-          "Beförderung"
+          "die Beförderung"
         ]
       }
     }

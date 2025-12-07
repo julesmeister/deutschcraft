@@ -1,7 +1,7 @@
 {
   "level": "A2",
   "category": "Irregular Verbs",
-  "totalCards": 31,
+  "totalCards": 40,
   "flashcards": [
     {
       "id": "syllabus-a2-10565",
@@ -40,26 +40,6 @@
           "A2",
           "Irregular Verbs",
           "brechen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10567",
-      "german": "empfehlen",
-      "english": "to recommend",
-      "category": "Irregular Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Irregular Verbs",
-          "empfehlen"
         ]
       }
     },
@@ -144,26 +124,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10572",
-      "german": "hängen",
-      "english": "to hang",
-      "category": "Irregular Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Irregular Verbs",
-          "hängen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10573",
       "german": "laden",
       "english": "to load / to invite",
@@ -244,26 +204,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10577",
-      "german": "rennen",
-      "english": "to run",
-      "category": "Irregular Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Irregular Verbs",
-          "rennen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10578",
       "german": "riechen",
       "english": "to smell",
@@ -280,26 +220,6 @@
           "A2",
           "Irregular Verbs",
           "riechen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10579",
-      "german": "scheinen",
-      "english": "to seem / to shine",
-      "category": "Irregular Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Irregular Verbs",
-          "scheinen"
         ]
       }
     },
@@ -324,26 +244,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10581",
-      "german": "schließen",
-      "english": "to close",
-      "category": "Irregular Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Irregular Verbs",
-          "schließen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10582",
       "german": "schneiden",
       "english": "to cut",
@@ -360,26 +260,6 @@
           "A2",
           "Irregular Verbs",
           "schneiden"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10583",
-      "german": "singen",
-      "english": "to sing",
-      "category": "Irregular Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Irregular Verbs",
-          "singen"
         ]
       }
     },
@@ -424,26 +304,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10586",
-      "german": "sterben",
-      "english": "to die",
-      "category": "Irregular Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Irregular Verbs",
-          "sterben"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10587",
       "german": "streiten",
       "english": "to argue",
@@ -484,46 +344,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10589",
-      "german": "wachsen",
-      "english": "to grow",
-      "category": "Irregular Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Irregular Verbs",
-          "wachsen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10590",
-      "german": "werfen",
-      "english": "to throw",
-      "category": "Irregular Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Irregular Verbs",
-          "werfen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10591",
       "german": "wiegen",
       "english": "to weigh",
@@ -540,26 +360,6 @@
           "A2",
           "Irregular Verbs",
           "wiegen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10592",
-      "german": "ziehen",
-      "english": "to pull / to move",
-      "category": "Irregular Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Irregular Verbs",
-          "ziehen"
         ]
       }
     },
@@ -604,17 +404,402 @@
       }
     },
     {
-      "id": "remnote-670",
-      "german": "nehmen",
+      "id": "a2-irregular-verbs-miujbk08uubph",
+      "german": "sein (ist, war, gewesen)",
+      "english": "to be",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "sein (ist, war, gewesen)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk088hrya",
+      "german": "haben (hat, hatte, gehabt)",
+      "english": "to have",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "haben (hat, hatte, gehabt)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk08sc7mi",
+      "german": "werden (wird, wurde, geworden)",
+      "english": "to become / will",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "werden (wird, wurde, geworden)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk08a0i0a",
+      "german": "geben (gibt, gab, gegeben)",
+      "english": "to give",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "geben (gibt, gab, gegeben)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk0861bz0",
+      "german": "nehmen (nimmt, nahm, genommen)",
       "english": "to take",
       "category": "Irregular Verbs",
       "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
       "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 3007,
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
         "hierarchy": [
-          "Verbs",
-          "nehmen"
+          "A2",
+          "Irregular Verbs",
+          "nehmen (nimmt, nahm, genommen)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk08bmq23",
+      "german": "kommen (kommt, kam, gekommen)",
+      "english": "to come",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "kommen (kommt, kam, gekommen)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk083wkty",
+      "german": "gehen (geht, ging, gegangen)",
+      "english": "to go",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "gehen (geht, ging, gegangen)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk08akg4p",
+      "german": "sehen (sieht, sah, gesehen)",
+      "english": "to see",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "sehen (sieht, sah, gesehen)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk08j2x4u",
+      "german": "wissen (weiß, wusste, gewusst)",
+      "english": "to know (fact)",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 36,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "wissen (weiß, wusste, gewusst)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk08asr1c",
+      "german": "fahren (fährt, fuhr, gefahren)",
+      "english": "to drive / to travel",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 38,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "fahren (fährt, fuhr, gefahren)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk08lutz7",
+      "german": "essen (isst, aß, gegessen)",
+      "english": "to eat",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 40,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "essen (isst, aß, gegessen)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk08aje4w",
+      "german": "trinken (trinkt, trank, getrunken)",
+      "english": "to drink",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 42,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "trinken (trinkt, trank, getrunken)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk08owogd",
+      "german": "lesen (liest, las, gelesen)",
+      "english": "to read",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 44,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "lesen (liest, las, gelesen)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk08jmvs5",
+      "german": "schreiben (schreibt, schrieb, geschrieben)",
+      "english": "to write",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 46,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "schreiben (schreibt, schrieb, geschrieben)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk0876bx7",
+      "german": "sprechen (spricht, sprach, gesprochen)",
+      "english": "to speak",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 48,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "sprechen (spricht, sprach, gesprochen)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk08luick",
+      "german": "helfen (hilft, half, geholfen)",
+      "english": "to help",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 50,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "helfen (hilft, half, geholfen)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk08ow2sn",
+      "german": "laufen (läuft, lief, gelaufen)",
+      "english": "to run / to walk",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 52,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "laufen (läuft, lief, gelaufen)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk08cmkwr",
+      "german": "finden (findet, fand, gefunden)",
+      "english": "to find",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 54,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "finden (findet, fand, gefunden)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk08ne1gp",
+      "german": "tragen (trägt, trug, getragen)",
+      "english": "to carry / to wear",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 56,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "tragen (trägt, trug, getragen)"
+        ]
+      }
+    },
+    {
+      "id": "a2-irregular-verbs-miujbk08lb7cq",
+      "german": "schlafen (schläft, schlief, geschlafen)",
+      "english": "to sleep",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 58,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "schlafen (schläft, schlief, geschlafen)"
         ]
       }
     }

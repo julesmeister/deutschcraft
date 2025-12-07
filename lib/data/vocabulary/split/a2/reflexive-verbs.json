@@ -1,7 +1,7 @@
 {
   "level": "A2",
   "category": "Reflexive Verbs",
-  "totalCards": 18,
+  "totalCards": 73,
   "flashcards": [
     {
       "id": "reflexive-a2-001",
@@ -340,44 +340,1185 @@
       }
     },
     {
-      "id": "reflexive-a2-017",
-      "german": "sich langweilen",
-      "english": "to be bored",
+      "id": "a2-reflexive-verbs-miujbk07784mz",
+      "german": "sich interessieren für",
+      "english": "to be interested in",
       "category": "Reflexive Verbs",
       "level": "A2",
       "tags": [
-        "reflexive",
-        "emotions",
+        "expansion",
         "A2"
       ],
       "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 17,
         "hierarchy": [
           "A2",
           "Reflexive Verbs",
-          "sich langweilen"
+          "sich interessieren für"
         ]
       }
     },
     {
-      "id": "reflexive-a2-018",
-      "german": "sich setzen",
-      "english": "to sit down",
+      "id": "a2-reflexive-verbs-miujbk07ylvoc",
+      "german": "sich erinnern an",
+      "english": "to remember",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich erinnern an"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-verbs-miujbk07zzxgc",
+      "german": "sich konzentrieren auf",
+      "english": "to concentrate on",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich konzentrieren auf"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-verbs-miujbk0734qwt",
+      "german": "sich vorbereiten auf",
+      "english": "to prepare for",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich vorbereiten auf"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-verbs-miujbk07r1tea",
+      "german": "sich gewöhnen an",
+      "english": "to get used to",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich gewöhnen an"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-verbs-miujbk07ydd1w",
+      "german": "sich beschweren über",
+      "english": "to complain about",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich beschweren über"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-verbs-miujbk07tz343",
+      "german": "sich bedanken für",
+      "english": "to thank for",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich bedanken für"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-verbs-miujbk07anwk1",
+      "german": "sich entschuldigen für",
+      "english": "to apologize for",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich entschuldigen für"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-verbs-miujbk07xfidw",
+      "german": "sich kümmern um",
+      "english": "to take care of",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 33,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich kümmern um"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-verbs-miujbk079sfeq",
+      "german": "sich bewegen",
+      "english": "to move",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 35,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich bewegen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-verbs-miujg5fhwy96l",
+      "german": "sich wundern über",
+      "english": "to be surprised about",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich wundern über"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-verbs-miujh1kop189n",
+      "german": "sich wehren gegen",
+      "english": "to defend oneself against",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich wehren gegen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-final-2-1",
+      "german": "sich ärgern über",
+      "english": "to be annoyed about",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich ärgern über"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-final-2-2",
+      "german": "sich erkundigen nach",
+      "english": "to inquire about",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich erkundigen nach"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739py7pb",
+      "german": "sich baden",
+      "english": "to take a bath",
       "category": "Reflexive Verbs",
       "level": "A2",
       "tags": [
         "reflexive",
-        "movement",
-        "A2"
+        "A2",
+        "expansion"
       ],
       "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 30,
         "hierarchy": [
           "A2",
           "Reflexive Verbs",
-          "sich setzen"
+          "sich baden"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739a6hfs",
+      "german": "sich putzen",
+      "english": "to clean oneself / to brush (teeth)",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich putzen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739w460f",
+      "german": "sich die Zähne putzen",
+      "english": "to brush one's teeth",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich die Zähne putzen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739bdl63",
+      "german": "sich die Hände waschen",
+      "english": "to wash one's hands",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 33,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich die Hände waschen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739fjoua",
+      "german": "sich verbrennen",
+      "english": "to burn oneself",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich verbrennen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr7397pdju",
+      "german": "sich schneiden",
+      "english": "to cut oneself",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 35,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich schneiden"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739vtobm",
+      "german": "sich freuen auf",
+      "english": "to look forward to",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 36,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich freuen auf"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739yr02g",
+      "german": "sich freuen über",
+      "english": "to be happy about",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 37,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich freuen über"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr7399fvi2",
+      "german": "sich aufregen über",
+      "english": "to get upset about",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 38,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich aufregen über"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr7395is6o",
+      "german": "sich sorgen um",
+      "english": "to worry about",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 39,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich sorgen um"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739d6u1i",
+      "german": "sich Sorgen machen",
+      "english": "to worry",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 40,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich Sorgen machen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739xxu4p",
+      "german": "sich fürchten vor",
+      "english": "to be afraid of",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 41,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich fürchten vor"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739r732u",
+      "german": "sich schämen für",
+      "english": "to be ashamed of",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 42,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich schämen für"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr73944kx7",
+      "german": "sich verlieben in",
+      "english": "to fall in love with",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 43,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich verlieben in"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739lblbg",
+      "german": "sich trennen von",
+      "english": "to separate from / to break up with",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 44,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich trennen von"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739lvwwq",
+      "german": "sich streiten mit",
+      "english": "to argue with",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 45,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich streiten mit"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739m73gz",
+      "german": "sich versöhnen mit",
+      "english": "to reconcile with / to make up with",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 46,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich versöhnen mit"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739f7y9u",
+      "german": "sich verabschieden von",
+      "english": "to say goodbye to",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 47,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich verabschieden von"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739jl4wt",
+      "german": "sich bedanken bei",
+      "english": "to thank",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 48,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich bedanken bei"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739unij3",
+      "german": "sich entschuldigen bei",
+      "english": "to apologize to",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 49,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich entschuldigen bei"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739ivl2j",
+      "german": "sich beschweren bei",
+      "english": "to complain to",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 50,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich beschweren bei"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739fghra",
+      "german": "sich umdrehen",
+      "english": "to turn around",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 51,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich umdrehen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr73932as8",
+      "german": "sich umsehen",
+      "english": "to look around",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 52,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich umsehen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739aon0o",
+      "german": "sich orientieren",
+      "english": "to orient oneself / to find one's way",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 53,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich orientieren"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739l7kio",
+      "german": "sich verfahren",
+      "english": "to get lost (by car)",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 54,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich verfahren"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-miujr739j4wk2",
+      "german": "sich verspäten",
+      "english": "to be late",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 55,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich verspäten"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaqv90ze",
+      "german": "sich fertig machen",
+      "english": "to get ready",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 56,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich fertig machen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaq7m8zi",
+      "german": "sich bücken",
+      "english": "to bend down / to stoop",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 57,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich bücken"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaqnhxhd",
+      "german": "sich strecken",
+      "english": "to stretch",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 58,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich strecken"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaqtq24s",
+      "german": "sich drehen",
+      "english": "to turn / to rotate",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 59,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich drehen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaq7ieci",
+      "german": "sich entfernen",
+      "english": "to move away / to distance oneself",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 60,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich entfernen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaqie68l",
+      "german": "sich befinden",
+      "english": "to be located / to be situated",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 61,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich befinden"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaql821g",
+      "german": "sich aufhalten",
+      "english": "to stay / to be (somewhere)",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 62,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich aufhalten"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaqecbr0",
+      "german": "sich zurücklehnen",
+      "english": "to lean back",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 63,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich zurücklehnen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaq167gw",
+      "german": "sich vorbeugen",
+      "english": "to lean forward",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 64,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich vorbeugen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaqw52a0",
+      "german": "sich anlehnen",
+      "english": "to lean (against)",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 65,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich anlehnen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaqpe5mb",
+      "german": "sich rühren",
+      "english": "to move / to stir",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 66,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich rühren"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaqirv6a",
+      "german": "sich wenden an",
+      "english": "to turn to / to contact",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 67,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich wenden an"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaqdnxc4",
+      "german": "sich küssen",
+      "english": "to kiss (each other)",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 68,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich küssen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaqqllct",
+      "german": "sich umarmen",
+      "english": "to hug / to embrace (each other)",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 69,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich umarmen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaqc74kl",
+      "german": "sich anfreunden mit",
+      "english": "to make friends with",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 70,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich anfreunden mit"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaqujsb8",
+      "german": "sich vertragen",
+      "english": "to get along",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 71,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich vertragen"
+        ]
+      }
+    },
+    {
+      "id": "a2-reflexive-2-miujsnaqv5c8r",
+      "german": "sich einig sein",
+      "english": "to agree / to be in agreement",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "A2",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 72,
+        "hierarchy": [
+          "A2",
+          "Reflexive Verbs",
+          "sich einig sein"
         ]
       }
     }

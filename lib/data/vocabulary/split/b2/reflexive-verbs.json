@@ -1,128 +1,8 @@
 {
   "level": "B2",
   "category": "Reflexive Verbs",
-  "totalCards": 71,
+  "totalCards": 39,
   "flashcards": [
-    {
-      "id": "syllabus-b2-11418",
-      "german": "sich freuen auf + Akk",
-      "english": "to look forward to",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich freuen auf + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11419",
-      "german": "sich freuen über + Akk",
-      "english": "to be happy about",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich freuen über + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11420",
-      "german": "sich erinnern an + Akk",
-      "english": "to remember",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich erinnern an + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11421",
-      "german": "sich interessieren für + Akk",
-      "english": "to be interested in",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich interessieren für + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11422",
-      "german": "sich entscheiden für + Akk",
-      "english": "to decide on",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich entscheiden für + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11423",
-      "german": "sich ärgern über + Akk",
-      "english": "to be annoyed about",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich ärgern über + Akk"
-        ]
-      }
-    },
     {
       "id": "syllabus-b2-11424",
       "german": "sich unterhalten mit + Dat",
@@ -140,106 +20,6 @@
           "B2",
           "Reflexive Verbs",
           "sich unterhalten mit + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11425",
-      "german": "sich unterhalten über + Akk",
-      "english": "to talk about",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich unterhalten über + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11426",
-      "german": "sich beschweren über + Akk",
-      "english": "to complain about",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich beschweren über + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11427",
-      "german": "sich bedanken für + Akk",
-      "english": "to thank for",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich bedanken für + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11428",
-      "german": "sich entschuldigen für + Akk",
-      "english": "to apologize for",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich entschuldigen für + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11429",
-      "german": "sich kümmern um + Akk",
-      "english": "to take care of",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich kümmern um + Akk"
         ]
       }
     },
@@ -264,46 +44,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11431",
-      "german": "sich wehren gegen + Akk",
-      "english": "to defend oneself against",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich wehren gegen + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11432",
-      "german": "sich informieren über + Akk",
-      "english": "to inform oneself about",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich informieren über + Akk"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11433",
       "german": "sich beklagen über + Akk",
       "english": "to complain about",
@@ -320,26 +60,6 @@
           "B2",
           "Reflexive Verbs",
           "sich beklagen über + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11434",
-      "german": "sich bemühen um + Akk",
-      "english": "to make an effort for",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich bemühen um + Akk"
         ]
       }
     },
@@ -364,26 +84,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11436",
-      "german": "sich auseinandersetzen mit + Dat",
-      "english": "to deal with / to engage with",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich auseinandersetzen mit + Dat"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11437",
       "german": "sich rächen an + Dat",
       "english": "to take revenge on",
@@ -400,46 +100,6 @@
           "B2",
           "Reflexive Verbs",
           "sich rächen an + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11438",
-      "german": "sich verlassen auf + Akk",
-      "english": "to rely on",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich verlassen auf + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11439",
-      "german": "sich beziehen auf + Akk",
-      "english": "to refer to",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich beziehen auf + Akk"
         ]
       }
     },
@@ -464,86 +124,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11441",
-      "german": "sich bewerben um + Akk",
-      "english": "to apply for (position)",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich bewerben um + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11442",
-      "german": "sich einigen auf + Akk",
-      "english": "to agree on",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich einigen auf + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11443",
-      "german": "sich trennen von + Dat",
-      "english": "to separate from",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich trennen von + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11444",
-      "german": "sich verlieben in + Akk",
-      "english": "to fall in love with",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich verlieben in + Akk"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11445",
       "german": "sich verloben mit + Dat",
       "english": "to get engaged to",
@@ -560,106 +140,6 @@
           "B2",
           "Reflexive Verbs",
           "sich verloben mit + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11446",
-      "german": "sich verstehen mit + Dat",
-      "english": "to get along with",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich verstehen mit + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11447",
-      "german": "sich gewöhnen an + Akk",
-      "english": "to get used to",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich gewöhnen an + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11448",
-      "german": "sich konzentrieren auf + Akk",
-      "english": "to concentrate on",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich konzentrieren auf + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11449",
-      "german": "sich beschäftigen mit + Dat",
-      "english": "to occupy oneself with",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich beschäftigen mit + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11450",
-      "german": "sich vorbereiten auf + Akk",
-      "english": "to prepare for",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich vorbereiten auf + Akk"
         ]
       }
     },
@@ -864,46 +344,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11461",
-      "german": "sich irren",
-      "english": "to be mistaken",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich irren"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11462",
-      "german": "sich täuschen",
-      "english": "to be deceived / to deceive oneself",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich täuschen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11463",
       "german": "sich erholen von + Dat",
       "english": "to recover from",
@@ -964,26 +404,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11466",
-      "german": "sich wenden an + Akk",
-      "english": "to turn to / to contact",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich wenden an + Akk"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11467",
       "german": "sich streiten mit + Dat",
       "english": "to argue with",
@@ -1000,25 +420,6 @@
           "B2",
           "Reflexive Verbs",
           "sich streiten mit + Dat"
-        ]
-      }
-    },
-    {
-      "id": "remnote-366",
-      "german": "berücksichtigen",
-      "english": "to consider / take into account",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "beinhalten"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 1523,
-        "hierarchy": [
-          "Verbs",
-          "beinhalten",
-          "berücksichtigen"
         ]
       }
     },
@@ -1250,48 +651,6 @@
           "B2",
           "Reflexive Verbs",
           "sich versammeln"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-012",
-      "german": "sich verschlechtern",
-      "english": "to deteriorate, to worsen",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "change",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich verschlechtern"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-013",
-      "german": "sich verbessern",
-      "english": "to improve",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "improvement",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich verbessern"
         ]
       }
     },

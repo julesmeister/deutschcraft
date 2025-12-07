@@ -1,7 +1,7 @@
 {
   "level": "A1",
   "category": "Transportation",
-  "totalCards": 93,
+  "totalCards": 82,
   "flashcards": [
     {
       "id": "syllabus-a1-10358",
@@ -260,46 +260,6 @@
           "A1",
           "Transportation",
           "Straße"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10371",
-      "german": "fahren",
-      "english": "to drive / to go (by vehicle)",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "fahren"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10372",
-      "german": "gehen",
-      "english": "to go / to walk",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "gehen"
         ]
       }
     },
@@ -904,46 +864,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10469",
-      "german": "die Tür",
-      "english": "door",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "Tür"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10470",
-      "german": "das Fenster",
-      "english": "window",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "Fenster"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10471",
       "german": "der Sitz",
       "english": "seat",
@@ -1384,46 +1304,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10493",
-      "german": "ankommen",
-      "english": "to arrive",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "ankommen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10494",
-      "german": "reisen",
-      "english": "to travel",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "reisen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10495",
       "german": "fliegen",
       "english": "to fly",
@@ -1440,26 +1320,6 @@
           "A1",
           "Transportation",
           "fliegen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10496",
-      "german": "laufen",
-      "english": "to run / to walk",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "laufen"
         ]
       }
     },
@@ -1520,26 +1380,6 @@
           "A1",
           "Transportation",
           "tanken"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10500",
-      "german": "warten",
-      "english": "to wait",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "warten"
         ]
       }
     },
@@ -1680,66 +1520,6 @@
           "A1",
           "Transportation",
           "geradeaus"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10508",
-      "german": "schnell",
-      "english": "fast / quick",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "schnell"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10509",
-      "german": "langsam",
-      "english": "slow",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "langsam"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10510",
-      "german": "pünktlich",
-      "english": "on time / punctual",
-      "category": "Transportation",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Transportation",
-          "pünktlich"
         ]
       }
     },

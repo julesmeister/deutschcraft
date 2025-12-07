@@ -1,11 +1,11 @@
 {
   "level": "B2",
   "category": "Politics Society",
-  "totalCards": 30,
+  "totalCards": 32,
   "flashcards": [
     {
       "id": "syllabus-b2-11388",
-      "german": "Regierung",
+      "german": "die Regierung",
       "english": "government",
       "category": "Politics Society",
       "level": "B2",
@@ -45,7 +45,7 @@
     },
     {
       "id": "syllabus-b2-11390",
-      "german": "Wahl",
+      "german": "die Wahl",
       "english": "election",
       "category": "Politics Society",
       "level": "B2",
@@ -65,7 +65,7 @@
     },
     {
       "id": "syllabus-b2-11391",
-      "german": "Partei",
+      "german": "die Partei",
       "english": "political party",
       "category": "Politics Society",
       "level": "B2",
@@ -85,7 +85,7 @@
     },
     {
       "id": "syllabus-b2-11392",
-      "german": "Gesetz",
+      "german": "das Gesetz",
       "english": "law",
       "category": "Politics Society",
       "level": "B2",
@@ -105,7 +105,7 @@
     },
     {
       "id": "syllabus-b2-11393",
-      "german": "Demokratie",
+      "german": "die Demokratie",
       "english": "democracy",
       "category": "Politics Society",
       "level": "B2",
@@ -145,7 +145,7 @@
     },
     {
       "id": "syllabus-b2-11395",
-      "german": "Gesellschaft",
+      "german": "die Gesellschaft",
       "english": "society",
       "category": "Politics Society",
       "level": "B2",
@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-b2-11396",
-      "german": "Integration",
+      "german": "die Integration",
       "english": "integration",
       "category": "Politics Society",
       "level": "B2",
@@ -185,7 +185,7 @@
     },
     {
       "id": "syllabus-b2-11397",
-      "german": "Diskriminierung",
+      "german": "die Diskriminierung",
       "english": "discrimination",
       "category": "Politics Society",
       "level": "B2",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-b2-11398",
-      "german": "Gleichberechtigung",
+      "german": "die Gleichberechtigung",
       "english": "equal rights",
       "category": "Politics Society",
       "level": "B2",
@@ -600,6 +600,46 @@
           "B2",
           "Politics Society",
           "Sozialpolitik"
+        ]
+      }
+    },
+    {
+      "id": "b2-bevoelkerung-044828",
+      "german": "die Bevölkerung",
+      "english": "population",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Bevölkerung"
+        ]
+      }
+    },
+    {
+      "id": "b2-globalisierung-044828",
+      "german": "die Globalisierung",
+      "english": "globalization",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Globalisierung"
         ]
       }
     }

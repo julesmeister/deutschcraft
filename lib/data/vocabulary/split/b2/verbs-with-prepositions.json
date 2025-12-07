@@ -1,108 +1,8 @@
 {
   "level": "B2",
   "category": "Verbs With Prepositions",
-  "totalCards": 50,
+  "totalCards": 32,
   "flashcards": [
-    {
-      "id": "syllabus-b2-11498",
-      "german": "sich verlassen auf + Akk",
-      "english": "to rely on",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich verlassen auf + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11499",
-      "german": "sich beziehen auf + Akk",
-      "english": "to refer to",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich beziehen auf + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11500",
-      "german": "bestehen auf + Dat",
-      "english": "to insist on",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "bestehen auf + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11501",
-      "german": "bestehen aus + Dat",
-      "english": "to consist of",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "bestehen aus + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11502",
-      "german": "leiden an + Dat",
-      "english": "to suffer from",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "leiden an + Dat"
-        ]
-      }
-    },
     {
       "id": "syllabus-b2-11503",
       "german": "leiden unter + Dat",
@@ -124,146 +24,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11504",
-      "german": "zweifeln an + Dat",
-      "english": "to doubt",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "zweifeln an + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11505",
-      "german": "sich handeln um + Akk",
-      "english": "to be about/concern",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich handeln um + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11506",
-      "german": "sich bewerben bei + Dat",
-      "english": "to apply to (company)",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich bewerben bei + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11507",
-      "german": "sich bewerben um + Akk",
-      "english": "to apply for (position)",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich bewerben um + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11508",
-      "german": "sich informieren über + Akk",
-      "english": "to inform oneself about",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich informieren über + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11509",
-      "german": "sich beklagen über + Akk",
-      "english": "to complain about",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich beklagen über + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11510",
-      "german": "sich sehnen nach + Dat",
-      "english": "to long for",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich sehnen nach + Dat"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11511",
       "german": "streben nach + Dat",
       "english": "to strive for",
@@ -280,46 +40,6 @@
           "B2",
           "Verbs With Prepositions",
           "streben nach + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11512",
-      "german": "sich wehren gegen + Akk",
-      "english": "to defend oneself against",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich wehren gegen + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11513",
-      "german": "kämpfen gegen + Akk",
-      "english": "to fight against",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "kämpfen gegen + Akk"
         ]
       }
     },
@@ -364,26 +84,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11516",
-      "german": "sich sorgen um + Akk",
-      "english": "to worry about",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich sorgen um + Akk"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11517",
       "german": "rechnen mit + Dat",
       "english": "to count on / to expect",
@@ -424,66 +124,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11519",
-      "german": "sich eignen für + Akk",
-      "english": "to be suitable for",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich eignen für + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11520",
-      "german": "sich auseinandersetzen mit + Dat",
-      "english": "to deal with / to engage with",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich auseinandersetzen mit + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11521",
-      "german": "sich bemühen um + Akk",
-      "english": "to make an effort / to try for",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich bemühen um + Akk"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11522",
       "german": "beitragen zu + Dat",
       "english": "to contribute to",
@@ -500,46 +140,6 @@
           "B2",
           "Verbs With Prepositions",
           "beitragen zu + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11523",
-      "german": "verzichten auf + Akk",
-      "english": "to renounce / to do without",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "verzichten auf + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11524",
-      "german": "sich rächen an + Dat",
-      "english": "to take revenge on",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich rächen an + Dat"
         ]
       }
     },
@@ -584,46 +184,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11527",
-      "german": "sich einigen auf + Akk",
-      "english": "to agree on",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich einigen auf + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11528",
-      "german": "sich freuen über + Akk",
-      "english": "to be pleased about",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich freuen über + Akk"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11529",
       "german": "stimmen für + Akk",
       "english": "to vote for",
@@ -640,46 +200,6 @@
           "B2",
           "Verbs With Prepositions",
           "stimmen für + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11530",
-      "german": "achten auf + Akk",
-      "english": "to pay attention to",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "achten auf + Akk"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11531",
-      "german": "sich ekeln vor + Dat",
-      "english": "to be disgusted by",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich ekeln vor + Dat"
         ]
       }
     },
@@ -704,66 +224,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11533",
-      "german": "sich trennen von + Dat",
-      "english": "to separate from",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich trennen von + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11534",
-      "german": "sich verloben mit + Dat",
-      "english": "to get engaged to",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich verloben mit + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11535",
-      "german": "sich verstehen mit + Dat",
-      "english": "to get along with",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich verstehen mit + Dat"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11536",
       "german": "zerbrechen an + Dat",
       "english": "to break up over",
@@ -780,26 +240,6 @@
           "B2",
           "Verbs With Prepositions",
           "zerbrechen an + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11537",
-      "german": "sich wenden an + Akk",
-      "english": "to turn to / to contact",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich wenden an + Akk"
         ]
       }
     },
@@ -844,26 +284,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11540",
-      "german": "sich beschweren über + Akk",
-      "english": "to complain about (something)",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich beschweren über + Akk"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11541",
       "german": "teilhaben an + Dat",
       "english": "to participate in",
@@ -904,26 +324,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11543",
-      "german": "sich unterscheiden von + Dat",
-      "english": "to differ from",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich unterscheiden von + Dat"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11544",
       "german": "ausgehen von + Dat",
       "english": "to assume / to proceed from",
@@ -940,26 +340,6 @@
           "B2",
           "Verbs With Prepositions",
           "ausgehen von + Dat"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11545",
-      "german": "sich beschränken auf + Akk",
-      "english": "to limit oneself to",
-      "category": "Verbs With Prepositions",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Verbs With Prepositions",
-          "sich beschränken auf + Akk"
         ]
       }
     },
@@ -984,22 +364,282 @@
       }
     },
     {
-      "id": "syllabus-b2-11547",
-      "german": "sich orientieren an + Dat",
-      "english": "to orient oneself by",
+      "id": "b2-verbs-with-prepositions-mivkdn5srt6vm",
+      "german": "ankommen auf",
+      "english": "to depend on / to matter",
       "category": "Verbs With Prepositions",
       "level": "B2",
       "tags": [
-        "syllabus",
+        "expansion",
         "B2"
       ],
       "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 18,
         "hierarchy": [
           "B2",
           "Verbs With Prepositions",
-          "sich orientieren an + Dat"
+          "ankommen auf"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5s52q1n",
+      "german": "aufpassen auf",
+      "english": "to watch out for / to look after",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "aufpassen auf"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5sko49s",
+      "german": "bestehen auf",
+      "english": "to insist on",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "bestehen auf"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5smehhp",
+      "german": "sich beteiligen an",
+      "english": "to participate in",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "sich beteiligen an"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5so05ga",
+      "german": "sich bewerben um",
+      "english": "to apply for",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "sich bewerben um"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5sgaojf",
+      "german": "bitten um",
+      "english": "to ask for / to request",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "bitten um"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5snan9d",
+      "german": "danken für",
+      "english": "to thank for",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "danken für"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5s24f3o",
+      "german": "gehören zu",
+      "english": "to belong to",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "gehören zu"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5svimbr",
+      "german": "halten von",
+      "english": "to think of / to have an opinion about",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "halten von"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5ss3yug",
+      "german": "kämpfen für",
+      "english": "to fight for",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "kämpfen für"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5s1og87",
+      "german": "sich schützen vor",
+      "english": "to protect oneself from",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "sich schützen vor"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5sueo9j",
+      "german": "träumen von",
+      "english": "to dream of",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "träumen von"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5s5xnlp",
+      "german": "warnen vor",
+      "english": "to warn about",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "warnen vor"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5ssbd0w",
+      "german": "zweifeln an",
+      "english": "to doubt",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "zweifeln an"
         ]
       }
     }

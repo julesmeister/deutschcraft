@@ -1,7 +1,7 @@
 {
   "level": "A2",
   "category": "Communication Verbs",
-  "totalCards": 15,
+  "totalCards": 30,
   "flashcards": [
     {
       "id": "syllabus-a2-10497",
@@ -60,26 +60,6 @@
           "A2",
           "Communication Verbs",
           "diskutieren"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10500",
-      "german": "antworten",
-      "english": "to answer",
-      "category": "Communication Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Communication Verbs",
-          "antworten"
         ]
       }
     },
@@ -300,6 +280,326 @@
           "A2",
           "Communication Verbs",
           "warnen"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujbk04vvxtn",
+      "german": "reden",
+      "english": "to talk",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "reden"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujbk05sr4zb",
+      "german": "plaudern",
+      "english": "to chat",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "plaudern"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujbk05a09h3",
+      "german": "flüstern",
+      "english": "to whisper",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "flüstern"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujdiwg2tfz4",
+      "german": "informieren",
+      "english": "to inform",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "informieren"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujdiwgvvllz",
+      "german": "erwähnen",
+      "english": "to mention",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "erwähnen"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujdiwg6y2nw",
+      "german": "betonen",
+      "english": "to emphasize",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "betonen"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujf2nnczdie",
+      "german": "sich unterhalten über",
+      "english": "to talk about",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "sich unterhalten über"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujf2nnwhy4t",
+      "german": "reden über",
+      "english": "to talk about",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "reden über"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujf2nn1z5yk",
+      "german": "sprechen über",
+      "english": "to speak about",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "sprechen über"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujf2nn546m6",
+      "german": "sich besprechen",
+      "english": "to discuss / to confer",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "sich besprechen"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujf2nnz2ge4",
+      "german": "sich aussprechen",
+      "english": "to have it out / to talk things over",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "sich aussprechen"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujf2nn0aa7l",
+      "german": "beantworten",
+      "english": "to answer (a question)",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "beantworten"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujf2nnoypy5",
+      "german": "reagieren auf",
+      "english": "to react to",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "reagieren auf"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujg5fenkdu7",
+      "german": "kritisieren",
+      "english": "to criticize",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "kritisieren"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujh1kmwv02i",
+      "german": "sich äußern zu",
+      "english": "to express oneself about",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "sich äußern zu"
+        ]
+      }
+    },
+    {
+      "id": "a2-communication-verbs-miujh1kmtlgcj",
+      "german": "eine Meinung äußern",
+      "english": "to express an opinion",
+      "category": "Communication Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "A2",
+          "Communication Verbs",
+          "eine Meinung äußern"
         ]
       }
     }

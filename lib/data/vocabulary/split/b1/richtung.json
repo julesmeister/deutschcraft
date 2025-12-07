@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Richtung",
-  "totalCards": 12,
+  "totalCards": 45,
   "flashcards": [
     {
       "id": "remnote-1",
@@ -180,6 +180,666 @@
         "hierarchy": [
           "Richtung",
           "schon seit zwei Monaten"
+        ]
+      }
+    },
+    {
+      "id": "b1-oben-827787",
+      "german": "oben",
+      "english": "above / up",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "oben"
+        ]
+      }
+    },
+    {
+      "id": "b1-unten-827787",
+      "german": "unten",
+      "english": "below / down",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "unten"
+        ]
+      }
+    },
+    {
+      "id": "b1-vorne-827787",
+      "german": "vorne",
+      "english": "in front / ahead",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 2,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "vorne"
+        ]
+      }
+    },
+    {
+      "id": "b1-hinten-827787",
+      "german": "hinten",
+      "english": "behind / at the back",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 3,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "hinten"
+        ]
+      }
+    },
+    {
+      "id": "b1-berall-827787",
+      "german": "überall",
+      "english": "everywhere",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 4,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "überall"
+        ]
+      }
+    },
+    {
+      "id": "b1-irgendwo-827787",
+      "german": "irgendwo",
+      "english": "somewhere",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 5,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "irgendwo"
+        ]
+      }
+    },
+    {
+      "id": "b1-nirgends-827787",
+      "german": "nirgends",
+      "english": "nowhere",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 6,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "nirgends"
+        ]
+      }
+    },
+    {
+      "id": "b1-dort-827787",
+      "german": "dort",
+      "english": "there",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "dort"
+        ]
+      }
+    },
+    {
+      "id": "b1-dorthin-827787",
+      "german": "dorthin",
+      "english": "to there / there",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "dorthin"
+        ]
+      }
+    },
+    {
+      "id": "b1-dahin-827787",
+      "german": "dahin",
+      "english": "to there",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "dahin"
+        ]
+      }
+    },
+    {
+      "id": "b1-hin-827787",
+      "german": "hin",
+      "english": "toward / to",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "hin"
+        ]
+      }
+    },
+    {
+      "id": "b1-her-827787",
+      "german": "her",
+      "english": "here / toward here",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "her"
+        ]
+      }
+    },
+    {
+      "id": "b1-herauf-827787",
+      "german": "herauf",
+      "english": "up / upward",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "herauf"
+        ]
+      }
+    },
+    {
+      "id": "b1-herab-827787",
+      "german": "herab",
+      "english": "down / downward",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "herab"
+        ]
+      }
+    },
+    {
+      "id": "b1-herber-827787",
+      "german": "herüber",
+      "english": "over / across",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "herüber"
+        ]
+      }
+    },
+    {
+      "id": "b1-hinber-827787",
+      "german": "hinüber",
+      "english": "over / across",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "hinüber"
+        ]
+      }
+    },
+    {
+      "id": "b1-herum-827787",
+      "german": "herum",
+      "english": "around",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "herum"
+        ]
+      }
+    },
+    {
+      "id": "b1-hinein-827787",
+      "german": "hinein",
+      "english": "in / inside",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "hinein"
+        ]
+      }
+    },
+    {
+      "id": "b1-heraus-827787",
+      "german": "heraus",
+      "english": "out / outside",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "heraus"
+        ]
+      }
+    },
+    {
+      "id": "b1-hinaus-827787",
+      "german": "hinaus",
+      "english": "out / outside",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "hinaus"
+        ]
+      }
+    },
+    {
+      "id": "b1-hervor-827787",
+      "german": "hervor",
+      "english": "out / forth",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "hervor"
+        ]
+      }
+    },
+    {
+      "id": "b1-jenseits-827787",
+      "german": "jenseits",
+      "english": "beyond / on the other side",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "jenseits"
+        ]
+      }
+    },
+    {
+      "id": "b1-diesseits-827787",
+      "german": "diesseits",
+      "english": "on this side / this side of",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "diesseits"
+        ]
+      }
+    },
+    {
+      "id": "b1-richtung-miv8hiwqshznv",
+      "german": "rückwärts",
+      "english": "backwards",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 35,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "rückwärts"
+        ]
+      }
+    },
+    {
+      "id": "b1-richtung-miv8hiwq5fyva",
+      "german": "vorwärts",
+      "english": "forwards",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 36,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "vorwärts"
+        ]
+      }
+    },
+    {
+      "id": "b1-richtung-miv8hiwqy6cj9",
+      "german": "seitwärts",
+      "english": "sideways",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 37,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "seitwärts"
+        ]
+      }
+    },
+    {
+      "id": "b1-richtung-miv8hiwqkt317",
+      "german": "aufwärts",
+      "english": "upwards",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 38,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "aufwärts"
+        ]
+      }
+    },
+    {
+      "id": "b1-richtung-miv8hiwq9huai",
+      "german": "abwärts",
+      "english": "downwards",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 39,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "abwärts"
+        ]
+      }
+    },
+    {
+      "id": "b1-richtung-miv8hiwqxjekc",
+      "german": "hinunter",
+      "english": "down (away from speaker)",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 40,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "hinunter"
+        ]
+      }
+    },
+    {
+      "id": "b1-richtung-miv8hiwqusfdw",
+      "german": "herunter",
+      "english": "down (towards speaker)",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 41,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "herunter"
+        ]
+      }
+    },
+    {
+      "id": "b1-richtung-miv8hiwqsdtgf",
+      "german": "herein",
+      "english": "in / into (towards speaker)",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 42,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "herein"
+        ]
+      }
+    },
+    {
+      "id": "b1-richtung-miv8hiwqgudvg",
+      "german": "rundherum",
+      "english": "all around",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 43,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "rundherum"
+        ]
+      }
+    },
+    {
+      "id": "b1-richtung-miv8hiwqxoppi",
+      "german": "mitten",
+      "english": "in the middle",
+      "category": "Richtung",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 44,
+        "hierarchy": [
+          "B1",
+          "Richtung",
+          "mitten"
         ]
       }
     }

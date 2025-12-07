@@ -1,7 +1,7 @@
 {
   "level": "A2",
   "category": "Technology",
-  "totalCards": 138,
+  "totalCards": 133,
   "flashcards": [
     {
       "id": "syllabus-a2-10776",
@@ -140,26 +140,6 @@
           "A2",
           "Technology",
           "Tastatur"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10783",
-      "german": "die Maus",
-      "english": "mouse",
-      "category": "Technology",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Technology",
-          "Maus"
         ]
       }
     },
@@ -764,26 +744,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10814",
-      "german": "hochladen",
-      "english": "to upload",
-      "category": "Technology",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Technology",
-          "hochladen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10815",
       "german": "die Software",
       "english": "software",
@@ -1180,26 +1140,6 @@
           "A2",
           "Technology",
           "Audio"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10835",
-      "german": "die Musik",
-      "english": "music",
-      "category": "Technology",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Technology",
-          "Musik"
         ]
       }
     },
@@ -2540,46 +2480,6 @@
           "A2",
           "Technology",
           "Rechtsklick"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10903",
-      "german": "ziehen",
-      "english": "to drag",
-      "category": "Technology",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Technology",
-          "ziehen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10904",
-      "german": "der Fehler",
-      "english": "error / bug",
-      "category": "Technology",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Technology",
-          "Fehler"
         ]
       }
     },

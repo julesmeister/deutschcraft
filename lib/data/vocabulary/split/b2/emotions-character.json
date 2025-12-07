@@ -1,48 +1,8 @@
 {
   "level": "B2",
   "category": "Emotions Character",
-  "totalCards": 30,
+  "totalCards": 35,
   "flashcards": [
-    {
-      "id": "syllabus-b2-11251",
-      "german": "begeistert",
-      "english": "enthusiastic / thrilled",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "begeistert"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11252",
-      "german": "enttäuscht",
-      "english": "disappointed",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "enttäuscht"
-        ]
-      }
-    },
     {
       "id": "syllabus-b2-11253",
       "german": "erleichtert",
@@ -60,106 +20,6 @@
           "B2",
           "Emotions Character",
           "erleichtert"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11254",
-      "german": "besorgt",
-      "english": "worried / concerned",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "besorgt"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11255",
-      "german": "hoffnungsvoll",
-      "english": "hopeful",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "hoffnungsvoll"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11256",
-      "german": "verzweifelt",
-      "english": "desperate",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "verzweifelt"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11257",
-      "german": "zufrieden",
-      "english": "satisfied / content",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "zufrieden"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11258",
-      "german": "stolz",
-      "english": "proud",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "stolz"
         ]
       }
     },
@@ -184,66 +44,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11260",
-      "german": "dankbar",
-      "english": "grateful / thankful",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "dankbar"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11261",
-      "german": "mutig",
-      "english": "brave / courageous",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "mutig"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11262",
-      "german": "geduldig",
-      "english": "patient",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "geduldig"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11263",
       "german": "ehrgeizig",
       "english": "ambitious",
@@ -260,66 +60,6 @@
           "B2",
           "Emotions Character",
           "ehrgeizig"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11264",
-      "german": "fleißig",
-      "english": "diligent / hardworking",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "fleißig"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11265",
-      "german": "faul",
-      "english": "lazy",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "faul"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11266",
-      "german": "zuverlässig",
-      "english": "reliable / dependable",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "zuverlässig"
         ]
       }
     },
@@ -364,26 +104,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11269",
-      "german": "bescheiden",
-      "english": "modest / humble",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "bescheiden"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11270",
       "german": "arrogant",
       "english": "arrogant",
@@ -400,106 +120,6 @@
           "B2",
           "Emotions Character",
           "arrogant"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11271",
-      "german": "großzügig",
-      "english": "generous",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "großzügig"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11272",
-      "german": "geizig",
-      "english": "stingy / miserly",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "geizig"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11273",
-      "german": "höflich",
-      "english": "polite / courteous",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "höflich"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11274",
-      "german": "unhöflich",
-      "english": "impolite / rude",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "unhöflich"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11275",
-      "german": "vernünftig",
-      "english": "reasonable / sensible",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "vernünftig"
         ]
       }
     },
@@ -544,26 +164,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11278",
-      "german": "zurückhaltend",
-      "english": "reserved / restrained",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "zurückhaltend"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11279",
       "german": "aufgeschlossen",
       "english": "open-minded",
@@ -600,6 +200,506 @@
           "B2",
           "Emotions Character",
           "stur"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s5e941",
+      "german": "die Begeisterung",
+      "english": "enthusiasm / excitement",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Begeisterung"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5sc5rhe",
+      "german": "die Verzweiflung",
+      "english": "despair / desperation",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Verzweiflung"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5sr3rxu",
+      "german": "die Erleichterung",
+      "english": "relief",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Erleichterung"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s6e2dn",
+      "german": "die Genugtuung",
+      "english": "satisfaction / gratification",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Genugtuung"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s1dnhc",
+      "german": "die Bewunderung",
+      "english": "admiration",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Bewunderung"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5scoha5",
+      "german": "die Verachtung",
+      "english": "contempt / disdain",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Verachtung"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5sam9e6",
+      "german": "die Reue",
+      "english": "remorse / regret",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Reue"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s85hom",
+      "german": "die Scham",
+      "english": "shame",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Scham"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s79nvx",
+      "german": "der Neid",
+      "english": "envy",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "der Neid"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5ssz8zi",
+      "german": "die Eifersucht",
+      "english": "jealousy",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Eifersucht"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s00h3a",
+      "german": "die Gelassenheit",
+      "english": "composure / serenity",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Gelassenheit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5sjn62x",
+      "german": "die Ungeduld",
+      "english": "impatience",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Ungeduld"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s6kopi",
+      "german": "die Geduld",
+      "english": "patience",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Geduld"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5szjpeg",
+      "german": "die Hingabe",
+      "english": "devotion / dedication",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Hingabe"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5si98ly",
+      "german": "die Dankbarkeit",
+      "english": "gratitude / thankfulness",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Dankbarkeit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5smeapr",
+      "german": "die Großzügigkeit",
+      "english": "generosity",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Großzügigkeit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s1xn7t",
+      "german": "der Geiz",
+      "english": "stinginess / greed",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "der Geiz"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5stpuua",
+      "german": "die Bescheidenheit",
+      "english": "modesty / humility",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Bescheidenheit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5sue2rg",
+      "german": "die Arroganz",
+      "english": "arrogance",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Arroganz"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5sczm87",
+      "german": "die Vorsicht",
+      "english": "caution / carefulness",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Vorsicht"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5smxnep",
+      "german": "die Rücksichtslosigkeit",
+      "english": "recklessness / ruthlessness",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Rücksichtslosigkeit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s0w7ww",
+      "german": "die Entschlossenheit",
+      "english": "determination / resolution",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Entschlossenheit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5skhqce",
+      "german": "die Zögerlichkeit",
+      "english": "hesitation / reluctance",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Zögerlichkeit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s8k4yq",
+      "german": "die Hartnäckigkeit",
+      "english": "stubbornness / persistence",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 33,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Hartnäckigkeit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s8dviz",
+      "german": "die Flexibilität",
+      "english": "flexibility",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Flexibilität"
         ]
       }
     }

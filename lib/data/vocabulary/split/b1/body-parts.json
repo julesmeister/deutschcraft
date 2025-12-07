@@ -1,29 +1,8 @@
 {
   "level": "B1",
   "category": "Body Parts",
-  "totalCards": 30,
+  "totalCards": 39,
   "flashcards": [
-    {
-      "id": "body-b1-001",
-      "german": "das Herz",
-      "english": "heart",
-      "category": "Body Parts",
-      "level": "B1",
-      "tags": [
-        "body",
-        "internal-organs",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Body Parts Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Body Parts",
-          "das Herz"
-        ]
-      }
-    },
     {
       "id": "body-b1-002",
       "german": "die Lunge",
@@ -630,6 +609,206 @@
           "B1",
           "Body Parts",
           "der Gaumen"
+        ]
+      }
+    },
+    {
+      "id": "b1-dieschlfe-827793",
+      "german": "die Schläfe",
+      "english": "temple",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasschienb-827793",
+      "german": "das Schienbein",
+      "english": "shin / shinbone",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "das"
+        ]
+      }
+    },
+    {
+      "id": "b1-derfersenk-827793",
+      "german": "der Fersenknochen",
+      "english": "heel bone / calcaneus",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 2,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-derfurcken-827793",
+      "german": "der Fußrücken",
+      "english": "top of the foot",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 3,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "der"
+        ]
+      }
+    },
+    {
+      "id": "b1-dieellboge-827793",
+      "german": "die Ellboge",
+      "english": "elbow",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 4,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "die"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasellboge-827793",
+      "german": "das Ellbogengelenk",
+      "english": "elbow joint",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 5,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasschulte-827793",
+      "german": "das Schulterblatt",
+      "english": "shoulder blade / scapula",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 6,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasschlsse-827793",
+      "german": "das Schlüsselbein",
+      "english": "collarbone / clavicle",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasbrustbe-827793",
+      "german": "das Brustbein",
+      "english": "breastbone / sternum",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasrippenf-827793",
+      "german": "das Rippenfell",
+      "english": "pleura / rib membrane",
+      "category": "Body Parts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "B1",
+          "Body Parts",
+          "das"
         ]
       }
     }

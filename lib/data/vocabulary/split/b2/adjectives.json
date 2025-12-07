@@ -1,7 +1,7 @@
 {
   "level": "B2",
   "category": "Adjectives",
-  "totalCards": 60,
+  "totalCards": 55,
   "flashcards": [
     {
       "id": "syllabus-b2-11191",
@@ -20,26 +20,6 @@
           "B2",
           "Adjectives",
           "anspruchsvoll"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11192",
-      "german": "aufwendig",
-      "english": "elaborate / costly",
-      "category": "Adjectives",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Adjectives",
-          "aufwendig"
         ]
       }
     },
@@ -200,26 +180,6 @@
           "B2",
           "Adjectives",
           "beziehungsweise"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11201",
-      "german": "drastisch",
-      "english": "drastic",
-      "category": "Adjectives",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Adjectives",
-          "drastisch"
         ]
       }
     },
@@ -524,26 +484,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11217",
-      "german": "gründlich",
-      "english": "thorough",
-      "category": "Adjectives",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Adjectives",
-          "gründlich"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11218",
       "german": "hinsichtlich",
       "english": "regarding / with respect to",
@@ -560,26 +500,6 @@
           "B2",
           "Adjectives",
           "hinsichtlich"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11219",
-      "german": "kritisch",
-      "english": "critical",
-      "category": "Adjectives",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Adjectives",
-          "kritisch"
         ]
       }
     },
@@ -760,26 +680,6 @@
           "B2",
           "Adjectives",
           "rational"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11229",
-      "german": "sachlich",
-      "english": "factual / objective",
-      "category": "Adjectives",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Adjectives",
-          "sachlich"
         ]
       }
     },

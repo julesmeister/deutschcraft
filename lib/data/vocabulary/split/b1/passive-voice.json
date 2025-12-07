@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Passive Voice",
-  "totalCards": 4,
+  "totalCards": 63,
   "flashcards": [
     {
       "id": "remnote-297",
@@ -56,6 +56,1186 @@
         "hierarchy": [
           "Passiv",
           "What would happen..."
+        ]
+      }
+    },
+    {
+      "id": "b1-daswirdgem-827785",
+      "german": "Das wird gemacht.",
+      "english": "That is being done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-daswurdege-827785",
+      "german": "Das wurde gemacht.",
+      "english": "That was done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-daswirdgem-827785",
+      "german": "Das wird gemacht werden.",
+      "english": "That will be done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 2,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-daswrdegem-827785",
+      "german": "Das würde gemacht.",
+      "english": "That would be done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 3,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasistgema-827785",
+      "german": "Das ist gemacht worden.",
+      "english": "That has been done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 4,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-daswargema-827785",
+      "german": "Das war gemacht worden.",
+      "english": "That had been done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 5,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-eswirdange-827785",
+      "german": "Es wird angenommen, dass...",
+      "english": "It is assumed that...",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 6,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Es"
+        ]
+      }
+    },
+    {
+      "id": "b1-eswirdange-827785",
+      "german": "Es wird angenommen worden.",
+      "english": "It has been assumed.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Es"
+        ]
+      }
+    },
+    {
+      "id": "b1-daskanngem-827785",
+      "german": "Das kann gemacht werden.",
+      "english": "That can be done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasmussgem-827785",
+      "german": "Das muss gemacht werden.",
+      "english": "That must be done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dassollteg-827785",
+      "german": "Das sollte gemacht werden.",
+      "english": "That should be done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasdarfgem-827785",
+      "german": "Das darf gemacht werden.",
+      "english": "That may be done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasdurfteg-827785",
+      "german": "Das durfte gemacht werden.",
+      "english": "That was allowed to be done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dassollgem-827785",
+      "german": "Das soll gemacht werden.",
+      "english": "That shall be done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasmaggema-827785",
+      "german": "Das mag gemacht werden.",
+      "english": "That may be done (might).",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasknntege-827785",
+      "german": "Das könnte gemacht werden.",
+      "english": "That could be done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-daswrdegem-827785",
+      "german": "Das würde gemacht werden.",
+      "english": "That would be done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dashttegem-827785",
+      "german": "Das hätte gemacht werden können.",
+      "english": "That could have been done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dashttegem-827785",
+      "german": "Das hätte gemacht werden sollen.",
+      "english": "That should have been done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dashttegem-827785",
+      "german": "Das hätte gemacht werden müssen.",
+      "english": "That would have had to be done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasistzuma-827785",
+      "german": "Das ist zu machen.",
+      "english": "That is to be done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasbleibtz-827785",
+      "german": "Das bleibt zu sehen.",
+      "english": "That remains to be seen.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasgehtlei-827785",
+      "german": "Das geht leicht.",
+      "english": "That is easy to do.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-daslsstsic-827785",
+      "german": "Das lässt sich machen.",
+      "english": "That can be done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasscheint-827785",
+      "german": "Das scheint gemacht zu sein.",
+      "english": "That appears to have been done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasgiltals-827785",
+      "german": "Das gilt als gemacht.",
+      "english": "That is considered done.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-daswirdvon-827785",
+      "german": "Das wird von ihm gemacht.",
+      "english": "That is done by him.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-daswurdevo-827785",
+      "german": "Das wurde von uns gemacht.",
+      "english": "That was done by us.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dasistvonm-827785",
+      "german": "Das ist von mir gemacht worden.",
+      "english": "That has been done by me.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-dassollvon-827785",
+      "german": "Das soll von ihr gemacht werden.",
+      "english": "That shall be done by her.",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "Das"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnq307n",
+      "german": "gebaut werden",
+      "english": "to be built",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "gebaut werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwngtewp",
+      "german": "gemacht werden",
+      "english": "to be made / done",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 35,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "gemacht werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnenn0e",
+      "german": "gesagt werden",
+      "english": "to be said",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 36,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "gesagt werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnscpdy",
+      "german": "geschrieben werden",
+      "english": "to be written",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 37,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "geschrieben werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnrz63h",
+      "german": "gelesen werden",
+      "english": "to be read",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 38,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "gelesen werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnxjuai",
+      "german": "gesehen werden",
+      "english": "to be seen",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 39,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "gesehen werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnusp80",
+      "german": "gehört werden",
+      "english": "to be heard",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 40,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "gehört werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwn6ych5",
+      "german": "gefunden werden",
+      "english": "to be found",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 41,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "gefunden werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnr0a2f",
+      "german": "verkauft werden",
+      "english": "to be sold",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 42,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "verkauft werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnjdd82",
+      "german": "gekauft werden",
+      "english": "to be bought",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 43,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "gekauft werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnch7sn",
+      "german": "bezahlt werden",
+      "english": "to be paid",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 44,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "bezahlt werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnu8gs1",
+      "german": "benutzt werden",
+      "english": "to be used",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 45,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "benutzt werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwni4tpg",
+      "german": "gebraucht werden",
+      "english": "to be needed / used",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 46,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "gebraucht werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnharoy",
+      "german": "geöffnet werden",
+      "english": "to be opened",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 47,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "geöffnet werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwn3dsw7",
+      "german": "geschlossen werden",
+      "english": "to be closed",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 48,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "geschlossen werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnzg7me",
+      "german": "repariert werden",
+      "english": "to be repaired",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 49,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "repariert werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnxiu9v",
+      "german": "geändert werden",
+      "english": "to be changed",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 50,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "geändert werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwn6wr1u",
+      "german": "verbessert werden",
+      "english": "to be improved",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 51,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "verbessert werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnrf0kz",
+      "german": "entwickelt werden",
+      "english": "to be developed",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 52,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "entwickelt werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnekmrz",
+      "german": "produziert werden",
+      "english": "to be produced",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 53,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "produziert werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnrzav2",
+      "german": "hergestellt werden",
+      "english": "to be manufactured",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 54,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "hergestellt werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnk7f8q",
+      "german": "geliefert werden",
+      "english": "to be delivered",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 55,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "geliefert werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnqu74w",
+      "german": "transportiert werden",
+      "english": "to be transported",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 56,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "transportiert werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwn2ei6g",
+      "german": "untersucht werden",
+      "english": "to be examined",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 57,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "untersucht werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnh5d3l",
+      "german": "getestet werden",
+      "english": "to be tested",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 58,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "getestet werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwn90e5t",
+      "german": "geprüft werden",
+      "english": "to be checked / tested",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 59,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "geprüft werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwnao80b",
+      "german": "kontrolliert werden",
+      "english": "to be controlled / checked",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 60,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "kontrolliert werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwn3aego",
+      "german": "organisiert werden",
+      "english": "to be organized",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 61,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "organisiert werden"
+        ]
+      }
+    },
+    {
+      "id": "b1-passive-voice-miv8hiwndnsbw",
+      "german": "geplant werden",
+      "english": "to be planned",
+      "category": "Passive Voice",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 62,
+        "hierarchy": [
+          "B1",
+          "Passive Voice",
+          "geplant werden"
         ]
       }
     }

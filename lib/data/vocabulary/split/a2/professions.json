@@ -1,68 +1,8 @@
 {
   "level": "A2",
   "category": "Professions",
-  "totalCards": 113,
+  "totalCards": 105,
   "flashcards": [
-    {
-      "id": "syllabus-a2-10664",
-      "german": "der Arzt",
-      "english": "doctor",
-      "category": "Professions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Professions",
-          "Arzt"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10665",
-      "german": "der Lehrer",
-      "english": "teacher",
-      "category": "Professions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Professions",
-          "Lehrer"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10666",
-      "german": "der Student",
-      "english": "student",
-      "category": "Professions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Professions",
-          "Student"
-        ]
-      }
-    },
     {
       "id": "syllabus-a2-10667",
       "german": "der Koch",
@@ -244,26 +184,6 @@
       }
     },
     {
-      "id": "syllabus-a2-10676",
-      "german": "der Pilot",
-      "english": "pilot",
-      "category": "Professions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Professions",
-          "Pilot"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a2-10677",
       "german": "der Kellner",
       "english": "waiter",
@@ -440,66 +360,6 @@
           "A2",
           "Professions",
           "Apotheker"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10686",
-      "german": "die Lehrerin",
-      "english": "teacher (female)",
-      "category": "Professions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Professions",
-          "Lehrerin"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10687",
-      "german": "der Professor",
-      "english": "professor",
-      "category": "Professions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Professions",
-          "Professor"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10688",
-      "german": "der Schüler",
-      "english": "pupil/student",
-      "category": "Professions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Professions",
-          "Schüler"
         ]
       }
     },
@@ -2160,26 +2020,6 @@
           "A2",
           "Professions",
           "Azubi"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10772",
-      "german": "arbeiten",
-      "english": "to work",
-      "category": "Professions",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Professions",
-          "arbeiten"
         ]
       }
     },

@@ -1,7 +1,7 @@
 {
   "level": "B2",
   "category": "Body Parts",
-  "totalCards": 20,
+  "totalCards": 30,
   "flashcards": [
     {
       "id": "body-b2-001",
@@ -440,6 +440,206 @@
           "B2",
           "Body Parts",
           "das Knochenmark"
+        ]
+      }
+    },
+    {
+      "id": "b2-body-parts-mivkdn5t79y2d",
+      "german": "das Blutgefäß",
+      "english": "blood vessel",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "das Blutgefäß"
+        ]
+      }
+    },
+    {
+      "id": "b2-body-parts-mivkeiesq4cov",
+      "german": "das Becken",
+      "english": "pelvis / basin",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "das Becken"
+        ]
+      }
+    },
+    {
+      "id": "b2-body-parts-mivkeiesjs20p",
+      "german": "die Zelle",
+      "english": "cell",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Zelle"
+        ]
+      }
+    },
+    {
+      "id": "b2-body-parts-mivkeies8k4cs",
+      "german": "das Gewebe",
+      "english": "tissue",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "das Gewebe"
+        ]
+      }
+    },
+    {
+      "id": "b2-body-parts-mivkeiesxx42z",
+      "german": "der Puls",
+      "english": "pulse",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "der Puls"
+        ]
+      }
+    },
+    {
+      "id": "b2-body-parts-mivkg2zhpuu8z",
+      "german": "der Eierstock",
+      "english": "ovary",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "der Eierstock"
+        ]
+      }
+    },
+    {
+      "id": "b2-body-parts-mivkg2zhc8qkl",
+      "german": "die Prostata",
+      "english": "prostate",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Prostata"
+        ]
+      }
+    },
+    {
+      "id": "b2-body-parts-mivkg2zhwveuu",
+      "german": "die Mandel",
+      "english": "tonsil",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Mandel"
+        ]
+      }
+    },
+    {
+      "id": "b2-body-parts-mivkgqq41tqxw",
+      "german": "die Nebenniere",
+      "english": "adrenal gland",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Nebenniere"
+        ]
+      }
+    },
+    {
+      "id": "b2-body-parts-mivkgqq4nez39",
+      "german": "die Rachenmandel",
+      "english": "adenoid",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Rachenmandel"
         ]
       }
     }

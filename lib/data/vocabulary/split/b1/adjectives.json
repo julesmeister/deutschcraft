@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Adjectives",
-  "totalCards": 50,
+  "totalCards": 93,
   "flashcards": [
     {
       "id": "syllabus-b1-10860",
@@ -40,46 +40,6 @@
           "B1",
           "Adjectives",
           "faul"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-10862",
-      "german": "pünktlich",
-      "english": "punctual",
-      "category": "Adjectives",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Adjectives",
-          "pünktlich"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-10863",
-      "german": "verspätet",
-      "english": "late / delayed",
-      "category": "Adjectives",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Adjectives",
-          "verspätet"
         ]
       }
     },
@@ -224,26 +184,6 @@
       }
     },
     {
-      "id": "syllabus-b1-10871",
-      "german": "stolz",
-      "english": "proud",
-      "category": "Adjectives",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Adjectives",
-          "stolz"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b1-10872",
       "german": "bescheiden",
       "english": "modest",
@@ -264,46 +204,6 @@
       }
     },
     {
-      "id": "syllabus-b1-10873",
-      "german": "mutig",
-      "english": "brave / courageous",
-      "category": "Adjectives",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Adjectives",
-          "mutig"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-10874",
-      "german": "ängstlich",
-      "english": "fearful / anxious",
-      "category": "Adjectives",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Adjectives",
-          "ängstlich"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b1-10875",
       "german": "selbstbewusst",
       "english": "self-confident",
@@ -320,26 +220,6 @@
           "B1",
           "Adjectives",
           "selbstbewusst"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-10876",
-      "german": "schüchtern",
-      "english": "shy",
-      "category": "Adjectives",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Adjectives",
-          "schüchtern"
         ]
       }
     },
@@ -764,46 +644,6 @@
       }
     },
     {
-      "id": "syllabus-b1-10898",
-      "german": "angenehm",
-      "english": "pleasant",
-      "category": "Adjectives",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Adjectives",
-          "angenehm"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-10899",
-      "german": "unangenehm",
-      "english": "unpleasant",
-      "category": "Adjectives",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Adjectives",
-          "unangenehm"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b1-10900",
       "german": "bequem",
       "english": "comfortable",
@@ -1000,6 +840,1026 @@
           "B1",
           "Adjectives",
           "veraltet"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8aq2soo",
+      "german": "tief",
+      "english": "deep",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 42,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "tief"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8avyito",
+      "german": "flach",
+      "english": "flat / shallow",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 43,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "flach"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8aq6403",
+      "german": "alt",
+      "english": "old",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 44,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "alt"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8abmtzm",
+      "german": "jung",
+      "english": "young",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 45,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "jung"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8akvkup",
+      "german": "arm",
+      "english": "poor",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 46,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "arm"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8amgb97",
+      "german": "reich",
+      "english": "rich",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 47,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "reich"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8aczxh1",
+      "german": "bald",
+      "english": "bald",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 48,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "bald"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8am4js0",
+      "german": "haarig",
+      "english": "hairy",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 49,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "haarig"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8audv3j",
+      "german": "bedeutend",
+      "english": "important",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 50,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "bedeutend"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8aqbh9y",
+      "german": "unbedeutend",
+      "english": "unimportant",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 51,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unbedeutend"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8abbrmo",
+      "german": "begabt",
+      "english": "talented",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 52,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "begabt"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8au5sdr",
+      "german": "unbegabt",
+      "english": "untalented",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 53,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unbegabt"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8an2ujw",
+      "german": "behaglich",
+      "english": "comfortable",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 54,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "behaglich"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8apnvfs",
+      "german": "unbehаglich",
+      "english": "uncomfortable",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 55,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unbehаglich"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8axy18u",
+      "german": "belastend",
+      "english": "stressful",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 56,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "belastend"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8aeslmy",
+      "german": "entlastend",
+      "english": "relieving",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 57,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "entlastend"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8a5hvv7",
+      "german": "belobigt",
+      "english": "praised",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 58,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "belobigt"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8am16vs",
+      "german": "getadelt",
+      "english": "criticized",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 59,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "getadelt"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8aode4i",
+      "german": "bemitleidenswert",
+      "english": "pitiable",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 60,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "bemitleidenswert"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8ayzgry",
+      "german": "beneidenswert",
+      "english": "enviable",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 61,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "beneidenswert"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8ak0d6r",
+      "german": "bemitleitet",
+      "english": "pitied",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 62,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "bemitleitet"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8amusya",
+      "german": "bewundert",
+      "english": "admired",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 63,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "bewundert"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8al138e",
+      "german": "bemitleidet",
+      "english": "pitied",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 64,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "bemitleidet"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8a7s3lf",
+      "german": "beradigelt",
+      "english": "smoking",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 65,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "beradigelt"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8az50sl",
+      "german": "beraucht",
+      "english": "non-smoking",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 66,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "beraucht"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8anzx1h",
+      "german": "berechtigt",
+      "english": "justified",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 67,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "berechtigt"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8apoj8e",
+      "german": "beraubt",
+      "english": "robbed",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 68,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "beraubt"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8acfb8w",
+      "german": "bereitschaft",
+      "english": "readiness",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 69,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "bereitschaft"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8apar55",
+      "german": "unwillingness",
+      "english": "unwillingness",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 70,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unwillingness"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8a5juz3",
+      "german": "beseelt",
+      "english": "animated",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 71,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "beseelt"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8al3714",
+      "german": "unbeseelt",
+      "english": "inanimate",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 72,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unbeseelt"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8aypylc",
+      "german": "beseitigung",
+      "english": "removal",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 73,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "beseitigung"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8azecuv",
+      "german": "beseitz",
+      "english": "possessed",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 74,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "beseitz"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8aqvuag",
+      "german": "nichtbeseitz",
+      "english": "unpossessed",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 75,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "nichtbeseitz"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8a53u6s",
+      "german": "besonnen",
+      "english": "prudent",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 76,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "besonnen"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8atzdb0",
+      "german": "unbesonnen",
+      "english": "reckless",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 77,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unbesonnen"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8aphaio",
+      "german": "besorgtheit",
+      "english": "concern",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 78,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "besorgtheit"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8aukdwt",
+      "german": "sorglosigkeit",
+      "english": "carelessness",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 79,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "sorglosigkeit"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8az7tex",
+      "german": "besorgung",
+      "english": "fulfillment",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 80,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "besorgung"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8anopq5",
+      "german": "besonnenheit",
+      "english": "prudence",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 81,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "besonnenheit"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8a2sz51",
+      "german": "unbesonnenheit",
+      "english": "recklessness",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 82,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "unbesonnenheit"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8aojbqe",
+      "german": "nichterfüllung",
+      "english": "non-fulfillment",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 83,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "nichterfüllung"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8ai64i0",
+      "german": "besorgnis",
+      "english": "worry",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 84,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "besorgnis"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8azncmo",
+      "german": "hoffnung",
+      "english": "hope",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 85,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "hoffnung"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8a298l1",
+      "german": "schmal",
+      "english": "narrow",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 86,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "schmal"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8aj8z58",
+      "german": "rau",
+      "english": "rough",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 87,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "rau"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8at123u",
+      "german": "spitz",
+      "english": "pointed / sharp",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 88,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "spitz"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8avz7y3",
+      "german": "stumpf",
+      "english": "blunt / dull",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 89,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "stumpf"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8aiymyr",
+      "german": "fest",
+      "english": "firm / solid",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 90,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "fest"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8ainn44",
+      "german": "süß",
+      "english": "sweet",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 91,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "süß"
+        ]
+      }
+    },
+    {
+      "id": "b1-adjectives-mivkmu8ahau4i",
+      "german": "sauer",
+      "english": "sour",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "adjectives",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Split from Adjective Pairs 2025",
+        "lineNumber": 92,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "sauer"
         ]
       }
     }

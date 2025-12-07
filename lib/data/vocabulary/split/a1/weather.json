@@ -1,7 +1,7 @@
 {
   "level": "A1",
   "category": "Weather",
-  "totalCards": 96,
+  "totalCards": 86,
   "flashcards": [
     {
       "id": "syllabus-a1-10398",
@@ -380,26 +380,6 @@
           "A1",
           "Weather",
           "Hagel"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10521",
-      "german": "das Eis",
-      "english": "ice",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "Eis"
         ]
       }
     },
@@ -944,106 +924,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10549",
-      "german": "die Handschuhe",
-      "english": "gloves",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "Handschuhe"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10550",
-      "german": "der Schal",
-      "english": "scarf",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "Schal"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10551",
-      "german": "die Mütze",
-      "english": "cap / beanie",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "Mütze"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10552",
-      "german": "die Jacke",
-      "english": "jacket",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "Jacke"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10553",
-      "german": "der Mantel",
-      "english": "coat",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "Mantel"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10554",
       "german": "regnen",
       "english": "to rain",
@@ -1464,46 +1344,6 @@
       }
     },
     {
-      "id": "syllabus-a1-10575",
-      "german": "schön",
-      "english": "nice / beautiful (weather)",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "schön"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10576",
-      "german": "schlecht",
-      "english": "bad (weather)",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "schlecht"
-        ]
-      }
-    },
-    {
       "id": "syllabus-a1-10577",
       "german": "herrlich",
       "english": "wonderful / glorious",
@@ -1640,46 +1480,6 @@
           "A1",
           "Weather",
           "trüb"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10584",
-      "german": "dunkel",
-      "english": "dark",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "dunkel"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a1-10585",
-      "german": "hell",
-      "english": "bright / light",
-      "category": "Weather",
-      "level": "A1",
-      "tags": [
-        "syllabus",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Syllabus A1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Weather",
-          "hell"
         ]
       }
     },
