@@ -63,7 +63,21 @@
       "Bash(for file in components/social/*.tsx)",
       "Bash(sort:*)",
       "Bash(git check-ignore:*)",
-      "Bash(del componentsuitoastuseSonnerToast.ts)"
+      "Bash(del componentsuitoastuseSonnerToast.ts)",
+      "Bash(git grep:*)",
+      "Bash(grep:*)",
+      "Bash(Select-String -Pattern \"FloatingRedemittel|WritingExercisePage\" -Context 2,2)",
+      "Bash(npm run dict:populate:*)",
+      "Bash(npm run vocab:analyze:*)",
+      "Bash(npm run vocab:fix-duplicates:*)",
+      "Bash(npm run vocab:missing-articles:*)",
+      "Bash(Select-String -Pattern \"(^📝|^Found|^═|^\\d+\\.|^   File:|^   Category:|^   Suggestion:)\")",
+      "Bash(npm run vocab:expand:*)",
+      "Bash(npm run vocab:add-priority:*)",
+      "Bash(npm run vocab:fix-articles:*)",
+      "Bash(npm run flashcards:merge:*)",
+      "Bash(cat:*)",
+      "Bash(npx ts-node:*)"
     ],
     "deny": [],
     "ask": []
