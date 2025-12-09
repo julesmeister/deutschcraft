@@ -1,7 +1,7 @@
 {
   "level": "A1",
   "category": "Basic Verbs",
-  "totalCards": 30,
+  "totalCards": 31,
   "flashcards": [
     {
       "id": "syllabus-a1-10030",
@@ -600,6 +600,26 @@
           "A1",
           "Basic Verbs",
           "nehmen"
+        ]
+      }
+    },
+    {
+      "id": "a1-putzen-044823",
+      "german": "putzen",
+      "english": "to clean",
+      "category": "Basic Verbs",
+      "level": "A1",
+      "tags": [
+        "expansion",
+        "A1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A1",
+          "Basic Verbs",
+          "putzen"
         ]
       }
     }

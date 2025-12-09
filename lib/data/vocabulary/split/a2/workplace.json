@@ -145,7 +145,7 @@
     },
     {
       "id": "syllabus-a2-10843",
-      "german": "Schreibtisch",
+      "german": "der Schreibtisch",
       "english": "desk",
       "category": "Workplace",
       "level": "A2",
@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-a2-10854",
-      "german": "Vorgesetzter",
+      "german": "der Vorgesetzte",
       "english": "supervisor",
       "category": "Workplace",
       "level": "A2",
@@ -185,7 +185,7 @@
     },
     {
       "id": "syllabus-a2-10855",
-      "german": "Geschäftsführer",
+      "german": "der Geschäftsführer",
       "english": "managing director / CEO",
       "category": "Workplace",
       "level": "A2",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-a2-10858",
-      "german": "Teamarbeit",
+      "german": "die Teamarbeit",
       "english": "teamwork",
       "category": "Workplace",
       "level": "A2",
@@ -225,7 +225,7 @@
     },
     {
       "id": "syllabus-a2-10862",
-      "german": "Arbeitszeit",
+      "german": "die Arbeitszeit",
       "english": "working hours",
       "category": "Workplace",
       "level": "A2",
@@ -245,7 +245,7 @@
     },
     {
       "id": "syllabus-a2-10863",
-      "german": "Überstunden",
+      "german": "die Überstunden",
       "english": "overtime",
       "category": "Workplace",
       "level": "A2",
@@ -265,7 +265,7 @@
     },
     {
       "id": "syllabus-a2-10868",
-      "german": "Heimarbeit",
+      "german": "die Heimarbeit",
       "english": "home work / work from home",
       "category": "Workplace",
       "level": "A2",
@@ -285,7 +285,7 @@
     },
     {
       "id": "syllabus-a2-10869",
-      "german": "Homeoffice",
+      "german": "das Homeoffice",
       "english": "home office / remote work",
       "category": "Workplace",
       "level": "A2",
@@ -365,7 +365,7 @@
     },
     {
       "id": "syllabus-a2-10874",
-      "german": "Anschreiben",
+      "german": "das Anschreiben",
       "english": "cover letter",
       "category": "Workplace",
       "level": "A2",
@@ -545,7 +545,7 @@
     },
     {
       "id": "syllabus-a2-10886",
-      "german": "Entlassung",
+      "german": "die Entlassung",
       "english": "dismissal / layoff",
       "category": "Workplace",
       "level": "A2",
@@ -565,7 +565,7 @@
     },
     {
       "id": "syllabus-a2-10887",
-      "german": "Beförderung",
+      "german": "die Beförderung",
       "english": "promotion",
       "category": "Workplace",
       "level": "A2",
@@ -605,7 +605,7 @@
     },
     {
       "id": "syllabus-a2-10890",
-      "german": "Einkommen",
+      "german": "das Einkommen",
       "english": "income",
       "category": "Workplace",
       "level": "A2",
@@ -625,7 +625,7 @@
     },
     {
       "id": "syllabus-a2-10891",
-      "german": "Bonus",
+      "german": "der Bonus",
       "english": "bonus",
       "category": "Workplace",
       "level": "A2",
@@ -645,7 +645,7 @@
     },
     {
       "id": "syllabus-a2-10892",
-      "german": "Zuschlag",
+      "german": "der Zuschlag",
       "english": "surcharge / extra pay",
       "category": "Workplace",
       "level": "A2",
@@ -665,7 +665,7 @@
     },
     {
       "id": "syllabus-a2-10893",
-      "german": "Sozialleistungen",
+      "german": "die Sozialleistungen",
       "english": "benefits / social benefits",
       "category": "Workplace",
       "level": "A2",
@@ -685,7 +685,7 @@
     },
     {
       "id": "syllabus-a2-10894",
-      "german": "Krankenversicherung",
+      "german": "die Krankenversicherung",
       "english": "health insurance",
       "category": "Workplace",
       "level": "A2",
@@ -705,7 +705,7 @@
     },
     {
       "id": "syllabus-a2-10896",
-      "german": "Krankheitstag",
+      "german": "der Krankheitstag",
       "english": "sick day",
       "category": "Workplace",
       "level": "A2",
@@ -725,7 +725,7 @@
     },
     {
       "id": "syllabus-a2-10897",
-      "german": "Krankschreibung",
+      "german": "die Krankschreibung",
       "english": "sick note / medical certificate",
       "category": "Workplace",
       "level": "A2",
@@ -745,7 +745,7 @@
     },
     {
       "id": "syllabus-a2-10898",
-      "german": "Urlaubstag",
+      "german": "der Urlaubstag",
       "english": "vacation day",
       "category": "Workplace",
       "level": "A2",
@@ -765,7 +765,7 @@
     },
     {
       "id": "syllabus-a2-10900",
-      "german": "Meeting",
+      "german": "das Meeting",
       "english": "meeting",
       "category": "Workplace",
       "level": "A2",
@@ -785,7 +785,7 @@
     },
     {
       "id": "syllabus-a2-10901",
-      "german": "Konferenz",
+      "german": "die Konferenz",
       "english": "conference",
       "category": "Workplace",
       "level": "A2",
@@ -805,7 +805,7 @@
     },
     {
       "id": "syllabus-a2-10903",
-      "german": "Tagesordnung",
+      "german": "die Tagesordnung",
       "english": "agenda",
       "category": "Workplace",
       "level": "A2",
@@ -825,7 +825,7 @@
     },
     {
       "id": "syllabus-a2-10904",
-      "german": "Protokoll",
+      "german": "das Protokoll",
       "english": "minutes / protocol",
       "category": "Workplace",
       "level": "A2",
@@ -885,7 +885,7 @@
     },
     {
       "id": "syllabus-a2-10909",
-      "german": "Zeitplan",
+      "german": "der Zeitplan",
       "english": "schedule / timeline",
       "category": "Workplace",
       "level": "A2",
@@ -1025,7 +1025,7 @@
     },
     {
       "id": "syllabus-a2-10917",
-      "german": "Büromaterial",
+      "german": "das Büromaterial",
       "english": "office supplies",
       "category": "Workplace",
       "level": "A2",
@@ -1045,7 +1045,7 @@
     },
     {
       "id": "syllabus-a2-10919",
-      "german": "Kugelschreiber",
+      "german": "der Kugelschreiber",
       "english": "ballpoint pen",
       "category": "Workplace",
       "level": "A2",
@@ -1065,7 +1065,7 @@
     },
     {
       "id": "syllabus-a2-10921",
-      "german": "Marker",
+      "german": "der Marker",
       "english": "marker / highlighter",
       "category": "Workplace",
       "level": "A2",
@@ -1105,7 +1105,7 @@
     },
     {
       "id": "syllabus-a2-10923",
-      "german": "Notizblock",
+      "german": "der Notizblock",
       "english": "notepad",
       "category": "Workplace",
       "level": "A2",
@@ -1125,7 +1125,7 @@
     },
     {
       "id": "syllabus-a2-10924",
-      "german": "Heftklammer",
+      "german": "die Heftklammer",
       "english": "staple",
       "category": "Workplace",
       "level": "A2",
@@ -1145,7 +1145,7 @@
     },
     {
       "id": "syllabus-a2-10925",
-      "german": "Tacker",
+      "german": "der Tacker",
       "english": "stapler",
       "category": "Workplace",
       "level": "A2",
@@ -1165,7 +1165,7 @@
     },
     {
       "id": "syllabus-a2-10926",
-      "german": "Büroklammer",
+      "german": "die Büroklammer",
       "english": "paper clip",
       "category": "Workplace",
       "level": "A2",
@@ -1185,7 +1185,7 @@
     },
     {
       "id": "syllabus-a2-10928",
-      "german": "Akte",
+      "german": "die Akte",
       "english": "file / record",
       "category": "Workplace",
       "level": "A2",
@@ -1205,7 +1205,7 @@
     },
     {
       "id": "syllabus-a2-10929",
-      "german": "Ablage",
+      "german": "die Ablage",
       "english": "filing / storage",
       "category": "Workplace",
       "level": "A2",
@@ -1225,7 +1225,7 @@
     },
     {
       "id": "syllabus-a2-10931",
-      "german": "Telefon",
+      "german": "das Telefon",
       "english": "telephone",
       "category": "Workplace",
       "level": "A2",
@@ -1265,7 +1265,7 @@
     },
     {
       "id": "syllabus-a2-10933",
-      "german": "Telefonat",
+      "german": "das Telefonat",
       "english": "phone call",
       "category": "Workplace",
       "level": "A2",
@@ -1285,7 +1285,7 @@
     },
     {
       "id": "syllabus-a2-10934",
-      "german": "Anruf",
+      "german": "der Anruf",
       "english": "call",
       "category": "Workplace",
       "level": "A2",
@@ -1345,7 +1345,7 @@
     },
     {
       "id": "syllabus-a2-10937",
-      "german": "Kopie",
+      "german": "die Kopie",
       "english": "copy",
       "category": "Workplace",
       "level": "A2",
@@ -1365,7 +1365,7 @@
     },
     {
       "id": "syllabus-a2-10938",
-      "german": "Kopierer",
+      "german": "der Kopierer",
       "english": "copier",
       "category": "Workplace",
       "level": "A2",
@@ -1405,7 +1405,7 @@
     },
     {
       "id": "syllabus-a2-10941",
-      "german": "Fax",
+      "german": "das Fax",
       "english": "fax",
       "category": "Workplace",
       "level": "A2",
@@ -1425,7 +1425,7 @@
     },
     {
       "id": "syllabus-a2-10942",
-      "german": "Formular",
+      "german": "das Formular",
       "english": "form",
       "category": "Workplace",
       "level": "A2",
@@ -1485,7 +1485,7 @@
     },
     {
       "id": "syllabus-a2-10945",
-      "german": "Unterschrift",
+      "german": "die Unterschrift",
       "english": "signature",
       "category": "Workplace",
       "level": "A2",
@@ -1505,7 +1505,7 @@
     },
     {
       "id": "syllabus-a2-10946",
-      "german": "Stempel",
+      "german": "der Stempel",
       "english": "stamp",
       "category": "Workplace",
       "level": "A2",
@@ -1545,7 +1545,7 @@
     },
     {
       "id": "syllabus-a2-10949",
-      "german": "Quittung",
+      "german": "die Quittung",
       "english": "receipt",
       "category": "Workplace",
       "level": "A2",
@@ -1565,7 +1565,7 @@
     },
     {
       "id": "syllabus-a2-10952",
-      "german": "Lieferung",
+      "german": "die Lieferung",
       "english": "delivery",
       "category": "Workplace",
       "level": "A2",
@@ -1625,7 +1625,7 @@
     },
     {
       "id": "syllabus-a2-10955",
-      "german": "Kundin",
+      "german": "die Kundin",
       "english": "customer (female)",
       "category": "Workplace",
       "level": "A2",
@@ -1645,7 +1645,7 @@
     },
     {
       "id": "syllabus-a2-10956",
-      "german": "Kundendienst",
+      "german": "der Kundendienst",
       "english": "customer service",
       "category": "Workplace",
       "level": "A2",
@@ -1665,7 +1665,7 @@
     },
     {
       "id": "syllabus-a2-10957",
-      "german": "Auftraggeber",
+      "german": "der Auftraggeber",
       "english": "client / principal",
       "category": "Workplace",
       "level": "A2",
@@ -1685,7 +1685,7 @@
     },
     {
       "id": "syllabus-a2-10958",
-      "german": "Auftrag",
+      "german": "der Auftrag",
       "english": "order / assignment",
       "category": "Workplace",
       "level": "A2",
@@ -1865,7 +1865,7 @@
     },
     {
       "id": "syllabus-a2-10970",
-      "german": "Priorität",
+      "german": "die Priorität",
       "english": "priority",
       "category": "Workplace",
       "level": "A2",

@@ -1,6 +1,6 @@
 {
   "level": "A1",
-  "totalCards": 733,
+  "totalCards": 731,
   "flashcards": [
     {
       "id": "syllabus-a1-10000",
@@ -1123,10 +1123,10 @@
       }
     },
     {
-      "id": "a1-geld-044822",
-      "german": "das Geld",
-      "english": "money",
-      "category": "Basic Nouns",
+      "id": "a1-putzen-044823",
+      "german": "putzen",
+      "english": "to clean",
+      "category": "Basic Verbs",
       "level": "A1",
       "tags": [
         "expansion",
@@ -1137,28 +1137,8 @@
         "lineNumber": 0,
         "hierarchy": [
           "A1",
-          "Basic Nouns",
-          "Geld"
-        ]
-      }
-    },
-    {
-      "id": "a1-zeit-044822",
-      "german": "die Zeit",
-      "english": "time",
-      "category": "Basic Nouns",
-      "level": "A1",
-      "tags": [
-        "expansion",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 1,
-        "hierarchy": [
-          "A1",
-          "Basic Nouns",
-          "Zeit"
+          "Basic Verbs",
+          "putzen"
         ]
       }
     },
@@ -3759,26 +3739,6 @@
           "A1",
           "Countries",
           "Indonesien"
-        ]
-      }
-    },
-    {
-      "id": "a1-putzen-044823",
-      "german": "putzen",
-      "english": "to clean",
-      "category": "Daily Verbs",
-      "level": "A1",
-      "tags": [
-        "expansion",
-        "A1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A1",
-          "Daily Verbs",
-          "putzen"
         ]
       }
     },

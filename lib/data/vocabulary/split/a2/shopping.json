@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-a2-10771",
-      "german": "Größe",
+      "german": "die Größe",
       "english": "size",
       "category": "Shopping",
       "level": "A2",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-a2-10977",
-      "german": "Einkaufszentrum",
+      "german": "das Einkaufszentrum",
       "english": "shopping mall / shopping center",
       "category": "Shopping",
       "level": "A2",
@@ -225,7 +225,7 @@
     },
     {
       "id": "syllabus-a2-10978",
-      "german": "Kaufhaus",
+      "german": "das Kaufhaus",
       "english": "department store",
       "category": "Shopping",
       "level": "A2",
@@ -265,7 +265,7 @@
     },
     {
       "id": "syllabus-a2-10980",
-      "german": "Bäckerei",
+      "german": "die Bäckerei",
       "english": "bakery",
       "category": "Shopping",
       "level": "A2",
@@ -285,7 +285,7 @@
     },
     {
       "id": "syllabus-a2-10981",
-      "german": "Metzgerei",
+      "german": "die Metzgerei",
       "english": "butcher shop",
       "category": "Shopping",
       "level": "A2",
@@ -325,7 +325,7 @@
     },
     {
       "id": "syllabus-a2-10983",
-      "german": "Buchhandlung",
+      "german": "die Buchhandlung",
       "english": "bookstore",
       "category": "Shopping",
       "level": "A2",
@@ -345,7 +345,7 @@
     },
     {
       "id": "syllabus-a2-10984",
-      "german": "Drogerie",
+      "german": "die Drogerie",
       "english": "drugstore",
       "category": "Shopping",
       "level": "A2",
@@ -365,7 +365,7 @@
     },
     {
       "id": "syllabus-a2-10986",
-      "german": "Verkäuferin",
+      "german": "die Verkäuferin",
       "english": "salesperson (female)",
       "category": "Shopping",
       "level": "A2",
@@ -385,7 +385,7 @@
     },
     {
       "id": "syllabus-a2-10987",
-      "german": "Käufer",
+      "german": "der Käufer",
       "english": "buyer",
       "category": "Shopping",
       "level": "A2",
@@ -405,7 +405,7 @@
     },
     {
       "id": "syllabus-a2-10988",
-      "german": "Einkaufswagen",
+      "german": "der Einkaufswagen",
       "english": "shopping cart",
       "category": "Shopping",
       "level": "A2",
@@ -425,7 +425,7 @@
     },
     {
       "id": "syllabus-a2-10989",
-      "german": "Einkaufskorb",
+      "german": "der Einkaufskorb",
       "english": "shopping basket",
       "category": "Shopping",
       "level": "A2",
@@ -445,7 +445,7 @@
     },
     {
       "id": "syllabus-a2-10990",
-      "german": "Einkaufsliste",
+      "german": "die Einkaufsliste",
       "english": "shopping list",
       "category": "Shopping",
       "level": "A2",
@@ -485,7 +485,7 @@
     },
     {
       "id": "syllabus-a2-10992",
-      "german": "Sonderangebot",
+      "german": "das Sonderangebot",
       "english": "special offer",
       "category": "Shopping",
       "level": "A2",
@@ -505,7 +505,7 @@
     },
     {
       "id": "syllabus-a2-10993",
-      "german": "Ausverkauf",
+      "german": "der Ausverkauf",
       "english": "sale / clearance sale",
       "category": "Shopping",
       "level": "A2",
@@ -525,7 +525,7 @@
     },
     {
       "id": "syllabus-a2-10994",
-      "german": "Schlussverkauf",
+      "german": "der Schlussverkauf",
       "english": "final sale / end-of-season sale",
       "category": "Shopping",
       "level": "A2",
@@ -585,7 +585,7 @@
     },
     {
       "id": "syllabus-a2-10997",
-      "german": "Mehrwertsteuer",
+      "german": "die Mehrwertsteuer",
       "english": "VAT / value-added tax",
       "category": "Shopping",
       "level": "A2",
@@ -605,7 +605,7 @@
     },
     {
       "id": "syllabus-a2-10998",
-      "german": "Cent",
+      "german": "der Cent",
       "english": "cent",
       "category": "Shopping",
       "level": "A2",
@@ -625,7 +625,7 @@
     },
     {
       "id": "syllabus-a2-10999",
-      "german": "Bargeld",
+      "german": "das Bargeld",
       "english": "cash",
       "category": "Shopping",
       "level": "A2",
@@ -645,7 +645,7 @@
     },
     {
       "id": "syllabus-a2-11000",
-      "german": "Kreditkarte",
+      "german": "die Kreditkarte",
       "english": "credit card",
       "category": "Shopping",
       "level": "A2",
@@ -665,7 +665,7 @@
     },
     {
       "id": "syllabus-a2-11001",
-      "german": "Bankkarte",
+      "german": "die Bankkarte",
       "english": "debit card / bank card",
       "category": "Shopping",
       "level": "A2",
@@ -685,7 +685,7 @@
     },
     {
       "id": "syllabus-a2-11002",
-      "german": "EC-Karte",
+      "german": "die EC-Karte",
       "english": "debit card (German)",
       "category": "Shopping",
       "level": "A2",
@@ -705,7 +705,7 @@
     },
     {
       "id": "syllabus-a2-11003",
-      "german": "Wechselgeld",
+      "german": "das Wechselgeld",
       "english": "change (money)",
       "category": "Shopping",
       "level": "A2",
@@ -725,7 +725,7 @@
     },
     {
       "id": "syllabus-a2-11004",
-      "german": "Rückgeld",
+      "german": "das Rückgeld",
       "english": "change (money back)",
       "category": "Shopping",
       "level": "A2",
@@ -745,7 +745,7 @@
     },
     {
       "id": "syllabus-a2-11006",
-      "german": "Kassenzettel",
+      "german": "der Kassenzettel",
       "english": "receipt",
       "category": "Shopping",
       "level": "A2",
@@ -765,7 +765,7 @@
     },
     {
       "id": "syllabus-a2-11007",
-      "german": "Bon",
+      "german": "der Bon",
       "english": "receipt / slip",
       "category": "Shopping",
       "level": "A2",
@@ -785,7 +785,7 @@
     },
     {
       "id": "syllabus-a2-11008",
-      "german": "Garantie",
+      "german": "die Garantie",
       "english": "warranty / guarantee",
       "category": "Shopping",
       "level": "A2",
@@ -805,7 +805,7 @@
     },
     {
       "id": "syllabus-a2-11011",
-      "german": "Rückgabe",
+      "german": "die Rückgabe",
       "english": "return",
       "category": "Shopping",
       "level": "A2",
@@ -825,7 +825,7 @@
     },
     {
       "id": "syllabus-a2-11012",
-      "german": "Erstattung",
+      "german": "die Erstattung",
       "english": "refund",
       "category": "Shopping",
       "level": "A2",
@@ -865,7 +865,7 @@
     },
     {
       "id": "syllabus-a2-11014",
-      "german": "Umkleidekabine",
+      "german": "die Umkleidekabine",
       "english": "fitting room / changing room",
       "category": "Shopping",
       "level": "A2",
@@ -985,7 +985,7 @@
     },
     {
       "id": "syllabus-a2-11020",
-      "german": "Kleidung",
+      "german": "die Kleidung",
       "english": "clothing",
       "category": "Shopping",
       "level": "A2",
@@ -1005,7 +1005,7 @@
     },
     {
       "id": "syllabus-a2-11021",
-      "german": "Bekleidung",
+      "german": "die Bekleidung",
       "english": "clothing / apparel",
       "category": "Shopping",
       "level": "A2",
@@ -1025,7 +1025,7 @@
     },
     {
       "id": "syllabus-a2-11022",
-      "german": "Mode",
+      "german": "die Mode",
       "english": "fashion",
       "category": "Shopping",
       "level": "A2",
@@ -1045,7 +1045,7 @@
     },
     {
       "id": "syllabus-a2-11023",
-      "german": "Lebensmittel",
+      "german": "die Lebensmittel",
       "english": "groceries / food items",
       "category": "Shopping",
       "level": "A2",
@@ -1065,7 +1065,7 @@
     },
     {
       "id": "syllabus-a2-11024",
-      "german": "Waren",
+      "german": "die Waren",
       "english": "goods / merchandise",
       "category": "Shopping",
       "level": "A2",
@@ -1085,7 +1085,7 @@
     },
     {
       "id": "syllabus-a2-11025",
-      "german": "Produkt",
+      "german": "das Produkt",
       "english": "product",
       "category": "Shopping",
       "level": "A2",
@@ -1105,7 +1105,7 @@
     },
     {
       "id": "syllabus-a2-11026",
-      "german": "Artikel",
+      "german": "der Artikel",
       "english": "article / item",
       "category": "Shopping",
       "level": "A2",
@@ -1125,7 +1125,7 @@
     },
     {
       "id": "syllabus-a2-11027",
-      "german": "Marke",
+      "german": "die Marke",
       "english": "brand",
       "category": "Shopping",
       "level": "A2",
@@ -1145,7 +1145,7 @@
     },
     {
       "id": "syllabus-a2-11028",
-      "german": "Qualität",
+      "german": "die Qualität",
       "english": "quality",
       "category": "Shopping",
       "level": "A2",
@@ -1165,7 +1165,7 @@
     },
     {
       "id": "syllabus-a2-11029",
-      "german": "Menge",
+      "german": "die Menge",
       "english": "quantity / amount",
       "category": "Shopping",
       "level": "A2",
@@ -1185,7 +1185,7 @@
     },
     {
       "id": "syllabus-a2-11030",
-      "german": "Packung",
+      "german": "die Packung",
       "english": "package / pack",
       "category": "Shopping",
       "level": "A2",
@@ -1205,7 +1205,7 @@
     },
     {
       "id": "syllabus-a2-11031",
-      "german": "Dose",
+      "german": "die Dose",
       "english": "can / tin",
       "category": "Shopping",
       "level": "A2",
@@ -1225,7 +1225,7 @@
     },
     {
       "id": "syllabus-a2-11032",
-      "german": "Flasche",
+      "german": "die Flasche",
       "english": "bottle",
       "category": "Shopping",
       "level": "A2",
@@ -1245,7 +1245,7 @@
     },
     {
       "id": "syllabus-a2-11033",
-      "german": "Glas",
+      "german": "das Glas",
       "english": "jar / glass",
       "category": "Shopping",
       "level": "A2",
@@ -1265,7 +1265,7 @@
     },
     {
       "id": "syllabus-a2-11034",
-      "german": "Karton",
+      "german": "der Karton",
       "english": "carton / box",
       "category": "Shopping",
       "level": "A2",
@@ -1285,7 +1285,7 @@
     },
     {
       "id": "syllabus-a2-11035",
-      "german": "Gewicht",
+      "german": "das Gewicht",
       "english": "weight",
       "category": "Shopping",
       "level": "A2",
@@ -1305,7 +1305,7 @@
     },
     {
       "id": "syllabus-a2-11036",
-      "german": "Gramm",
+      "german": "das Gramm",
       "english": "gram",
       "category": "Shopping",
       "level": "A2",
@@ -1325,7 +1325,7 @@
     },
     {
       "id": "syllabus-a2-11037",
-      "german": "Kilogramm",
+      "german": "das Kilogramm",
       "english": "kilogram",
       "category": "Shopping",
       "level": "A2",
@@ -1345,7 +1345,7 @@
     },
     {
       "id": "syllabus-a2-11038",
-      "german": "Liter",
+      "german": "der Liter",
       "english": "liter",
       "category": "Shopping",
       "level": "A2",
@@ -1365,7 +1365,7 @@
     },
     {
       "id": "syllabus-a2-11039",
-      "german": "Stück",
+      "german": "das Stück",
       "english": "piece",
       "category": "Shopping",
       "level": "A2",
@@ -1385,7 +1385,7 @@
     },
     {
       "id": "syllabus-a2-11040",
-      "german": "Haltbarkeitsdatum",
+      "german": "das Haltbarkeitsdatum",
       "english": "expiration date / best before date",
       "category": "Shopping",
       "level": "A2",
@@ -1445,7 +1445,7 @@
     },
     {
       "id": "syllabus-a2-11043",
-      "german": "Bio",
+      "german": "das Bio",
       "english": "organic",
       "category": "Shopping",
       "level": "A2",
@@ -1485,7 +1485,7 @@
     },
     {
       "id": "syllabus-a2-11045",
-      "german": "Regal",
+      "german": "das Regal",
       "english": "shelf",
       "category": "Shopping",
       "level": "A2",
@@ -1505,7 +1505,7 @@
     },
     {
       "id": "syllabus-a2-11046",
-      "german": "Gang",
+      "german": "der Gang",
       "english": "aisle",
       "category": "Shopping",
       "level": "A2",
@@ -1525,7 +1525,7 @@
     },
     {
       "id": "syllabus-a2-11047",
-      "german": "Abteilung",
+      "german": "die Abteilung",
       "english": "department / section",
       "category": "Shopping",
       "level": "A2",
@@ -1545,7 +1545,7 @@
     },
     {
       "id": "syllabus-a2-11048",
-      "german": "Öffnungszeiten",
+      "german": "die Öffnungszeiten",
       "english": "opening hours",
       "category": "Shopping",
       "level": "A2",
@@ -1605,7 +1605,7 @@
     },
     {
       "id": "syllabus-a2-11052",
-      "german": "Warteschlange",
+      "german": "die Warteschlange",
       "english": "queue / waiting line",
       "category": "Shopping",
       "level": "A2",
@@ -1685,7 +1685,7 @@
     },
     {
       "id": "syllabus-a2-11059",
-      "german": "Empfehlung",
+      "german": "die Empfehlung",
       "english": "recommendation",
       "category": "Shopping",
       "level": "A2",
@@ -1725,7 +1725,7 @@
     },
     {
       "id": "syllabus-a2-11061",
-      "german": "Kundenkarte",
+      "german": "die Kundenkarte",
       "english": "loyalty card / customer card",
       "category": "Shopping",
       "level": "A2",
@@ -1745,7 +1745,7 @@
     },
     {
       "id": "syllabus-a2-11062",
-      "german": "Treuepunkte",
+      "german": "die Treuepunkte",
       "english": "loyalty points",
       "category": "Shopping",
       "level": "A2",
@@ -1765,7 +1765,7 @@
     },
     {
       "id": "syllabus-a2-11063",
-      "german": "Gutschein",
+      "german": "der Gutschein",
       "english": "voucher / coupon",
       "category": "Shopping",
       "level": "A2",
@@ -1785,7 +1785,7 @@
     },
     {
       "id": "syllabus-a2-11064",
-      "german": "Online-Shopping",
+      "german": "das Online-Shopping",
       "english": "online shopping",
       "category": "Shopping",
       "level": "A2",
@@ -1805,7 +1805,7 @@
     },
     {
       "id": "syllabus-a2-11065",
-      "german": "Versand",
+      "german": "der Versand",
       "english": "shipping / delivery",
       "category": "Shopping",
       "level": "A2",
@@ -1825,7 +1825,7 @@
     },
     {
       "id": "syllabus-a2-11066",
-      "german": "Versandkosten",
+      "german": "die Versandkosten",
       "english": "shipping costs",
       "category": "Shopping",
       "level": "A2",
@@ -1845,7 +1845,7 @@
     },
     {
       "id": "syllabus-a2-11067",
-      "german": "Warenkorb",
+      "german": "der Warenkorb",
       "english": "shopping cart (online)",
       "category": "Shopping",
       "level": "A2",
