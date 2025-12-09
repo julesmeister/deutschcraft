@@ -5,7 +5,7 @@
   "flashcards": [
     {
       "id": "syllabus-b2-11281",
-      "german": "Klimawandel",
+      "german": "der Klimawandel",
       "english": "climate change",
       "category": "Environment Climate",
       "level": "B2",
@@ -25,7 +25,7 @@
     },
     {
       "id": "syllabus-b2-11282",
-      "german": "Erderwärmung",
+      "german": "die Erderwärmung",
       "english": "global warming",
       "category": "Environment Climate",
       "level": "B2",
@@ -45,7 +45,7 @@
     },
     {
       "id": "syllabus-b2-11283",
-      "german": "Umweltverschmutzung",
+      "german": "die Umweltverschmutzung",
       "english": "environmental pollution",
       "category": "Environment Climate",
       "level": "B2",
@@ -85,7 +85,7 @@
     },
     {
       "id": "syllabus-b2-11285",
-      "german": "Treibhausgas",
+      "german": "das Treibhausgas",
       "english": "greenhouse gas",
       "category": "Environment Climate",
       "level": "B2",
@@ -105,7 +105,7 @@
     },
     {
       "id": "syllabus-b2-11286",
-      "german": "Recycling",
+      "german": "das Recycling",
       "english": "recycling",
       "category": "Environment Climate",
       "level": "B2",
@@ -125,7 +125,7 @@
     },
     {
       "id": "syllabus-b2-11287",
-      "german": "Müll",
+      "german": "der Müll",
       "english": "garbage / waste / trash",
       "category": "Environment Climate",
       "level": "B2",
@@ -145,7 +145,7 @@
     },
     {
       "id": "syllabus-b2-11288",
-      "german": "Abfall",
+      "german": "der Abfall",
       "english": "waste / refuse",
       "category": "Environment Climate",
       "level": "B2",
@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-b2-11289",
-      "german": "Naturschutz",
+      "german": "der Naturschutz",
       "english": "nature conservation",
       "category": "Environment Climate",
       "level": "B2",
@@ -185,7 +185,7 @@
     },
     {
       "id": "syllabus-b2-11290",
-      "german": "Artenvielfalt",
+      "german": "die Artenvielfalt",
       "english": "biodiversity",
       "category": "Environment Climate",
       "level": "B2",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-b2-11291",
-      "german": "Ökosystem",
+      "german": "das Ökosystem",
       "english": "ecosystem",
       "category": "Environment Climate",
       "level": "B2",
@@ -225,7 +225,7 @@
     },
     {
       "id": "syllabus-b2-11293",
-      "german": "Umweltbewusstsein",
+      "german": "das Umweltbewusstsein",
       "english": "environmental awareness",
       "category": "Environment Climate",
       "level": "B2",
@@ -245,7 +245,7 @@
     },
     {
       "id": "syllabus-b2-11294",
-      "german": "Ressourcen",
+      "german": "die Ressourcen",
       "english": "resources",
       "category": "Environment Climate",
       "level": "B2",
@@ -265,7 +265,7 @@
     },
     {
       "id": "syllabus-b2-11295",
-      "german": "Energieverbrauch",
+      "german": "der Energieverbrauch",
       "english": "energy consumption",
       "category": "Environment Climate",
       "level": "B2",
@@ -285,7 +285,7 @@
     },
     {
       "id": "syllabus-b2-11296",
-      "german": "CO2-Ausstoß",
+      "german": "der CO2-Ausstoß",
       "english": "CO2 emissions",
       "category": "Environment Climate",
       "level": "B2",
@@ -305,7 +305,7 @@
     },
     {
       "id": "syllabus-b2-11297",
-      "german": "Luftverschmutzung",
+      "german": "die Luftverschmutzung",
       "english": "air pollution",
       "category": "Environment Climate",
       "level": "B2",
@@ -325,7 +325,7 @@
     },
     {
       "id": "syllabus-b2-11298",
-      "german": "Wasserverschmutzung",
+      "german": "die Wasserverschmutzung",
       "english": "water pollution",
       "category": "Environment Climate",
       "level": "B2",
@@ -345,7 +345,7 @@
     },
     {
       "id": "syllabus-b2-11299",
-      "german": "Bodenverschmutzung",
+      "german": "die Bodenverschmutzung",
       "english": "soil pollution",
       "category": "Environment Climate",
       "level": "B2",
@@ -365,7 +365,7 @@
     },
     {
       "id": "syllabus-b2-11300",
-      "german": "Abholzung",
+      "german": "die Abholzung",
       "english": "deforestation",
       "category": "Environment Climate",
       "level": "B2",
@@ -385,7 +385,7 @@
     },
     {
       "id": "syllabus-b2-11301",
-      "german": "Wiederaufforstung",
+      "german": "die Wiederaufforstung",
       "english": "reforestation",
       "category": "Environment Climate",
       "level": "B2",
@@ -445,7 +445,7 @@
     },
     {
       "id": "syllabus-b2-11304",
-      "german": "Mülltrennung",
+      "german": "die Mülltrennung",
       "english": "waste separation",
       "category": "Environment Climate",
       "level": "B2",
@@ -465,7 +465,7 @@
     },
     {
       "id": "syllabus-b2-11305",
-      "german": "Kompost",
+      "german": "der Kompost",
       "english": "compost",
       "category": "Environment Climate",
       "level": "B2",
@@ -485,7 +485,7 @@
     },
     {
       "id": "syllabus-b2-11306",
-      "german": "Solarenergie",
+      "german": "die Solarenergie",
       "english": "solar energy",
       "category": "Environment Climate",
       "level": "B2",
@@ -505,7 +505,7 @@
     },
     {
       "id": "syllabus-b2-11307",
-      "german": "Windenergie",
+      "german": "die Windenergie",
       "english": "wind energy",
       "category": "Environment Climate",
       "level": "B2",
@@ -525,7 +525,7 @@
     },
     {
       "id": "syllabus-b2-11308",
-      "german": "Wasserkraft",
+      "german": "die Wasserkraft",
       "english": "hydropower",
       "category": "Environment Climate",
       "level": "B2",
@@ -545,7 +545,7 @@
     },
     {
       "id": "syllabus-b2-11309",
-      "german": "Atomkraft",
+      "german": "die Atomkraft",
       "english": "nuclear power",
       "category": "Environment Climate",
       "level": "B2",

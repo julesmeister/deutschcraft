@@ -85,7 +85,7 @@
     },
     {
       "id": "syllabus-b1-10981",
-      "german": "Erdgeschoss",
+      "german": "das Erdgeschoss",
       "english": "ground floor",
       "category": "Housing",
       "level": "B1",
@@ -105,7 +105,7 @@
     },
     {
       "id": "syllabus-b1-10982",
-      "german": "Stock",
+      "german": "der Stock",
       "english": "floor / story",
       "category": "Housing",
       "level": "B1",
@@ -125,7 +125,7 @@
     },
     {
       "id": "syllabus-b1-10983",
-      "german": "Treppe",
+      "german": "die Treppe",
       "english": "stairs",
       "category": "Housing",
       "level": "B1",
@@ -145,7 +145,7 @@
     },
     {
       "id": "syllabus-b1-10984",
-      "german": "Aufzug",
+      "german": "der Aufzug",
       "english": "elevator",
       "category": "Housing",
       "level": "B1",
@@ -165,7 +165,7 @@
     },
     {
       "id": "syllabus-b1-10985",
-      "german": "Balkon",
+      "german": "der Balkon",
       "english": "balcony",
       "category": "Housing",
       "level": "B1",
@@ -185,7 +185,7 @@
     },
     {
       "id": "syllabus-b1-10986",
-      "german": "Keller",
+      "german": "der Keller",
       "english": "basement / cellar",
       "category": "Housing",
       "level": "B1",
@@ -205,7 +205,7 @@
     },
     {
       "id": "syllabus-b1-10987",
-      "german": "Dachboden",
+      "german": "der Dachboden",
       "english": "attic",
       "category": "Housing",
       "level": "B1",
@@ -225,7 +225,7 @@
     },
     {
       "id": "syllabus-b1-10988",
-      "german": "Heizung",
+      "german": "die Heizung",
       "english": "heating",
       "category": "Housing",
       "level": "B1",
@@ -245,7 +245,7 @@
     },
     {
       "id": "syllabus-b1-10989",
-      "german": "Kaution",
+      "german": "die Kaution",
       "english": "security deposit",
       "category": "Housing",
       "level": "B1",
@@ -265,7 +265,7 @@
     },
     {
       "id": "syllabus-b1-10990",
-      "german": "Nebenkosten",
+      "german": "die Nebenkosten",
       "english": "additional costs / utilities",
       "category": "Housing",
       "level": "B1",
