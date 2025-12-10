@@ -2,12 +2,14 @@
  * WritingWorkspace Component
  * Reusable 2-column layout: Writing field (left) | Instructions/History tabs (right)
  * Clean email-composer style with minimal borders
+ * Features: Fullscreen mode for distraction-free writing
  */
 
-import { ReactNode, useState, useRef } from 'react';
+import { ReactNode, useState, useRef, useEffect } from 'react';
 import { WritingAttemptBanner } from './WritingAttemptBanner';
 import { DictionaryLookup } from '../dictionary/DictionaryLookup';
 import { GermanCharAutocomplete } from './GermanCharAutocomplete';
+import { Maximize2, Minimize2 } from 'lucide-react';
 
 interface WritingWorkspaceProps {
   // Left side - Writing field
@@ -42,7 +44,26 @@ export function WritingWorkspace({
   viewingAttempt,
 }: WritingWorkspaceProps) {
   const [activeTab, setActiveTab] = useState<'write' | 'instructions' | 'history'>('instructions');
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  // Keyboard shortcuts for fullscreen
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // ESC to exit fullscreen
+      if (e.key === 'Escape' && isFullscreen) {
+        setIsFullscreen(false);
+      }
+      // F11 to toggle fullscreen (prevent default browser fullscreen)
+      if (e.key === 'F11' && !readOnly) {
+        e.preventDefault();
+        setIsFullscreen(!isFullscreen);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isFullscreen, readOnly]);
 
   // Function to insert text at cursor position
   const handleInsertText = (text: string) => {
@@ -78,7 +99,7 @@ export function WritingWorkspace({
   };
 
   return (
-    <div className="bg-white flex flex-col lg:flex-row">
+    <div className={`bg-white flex flex-col lg:flex-row ${isFullscreen ? 'fixed inset-0 z-50' : ''}`}>
       {/* German Character Autocomplete */}
       {!readOnly && (
         <GermanCharAutocomplete
@@ -89,7 +110,7 @@ export function WritingWorkspace({
       )}
 
       {/* Mobile/Tablet: Tab Navigation */}
-      <div className="flex border-b border-gray-200 lg:hidden">
+      <div className={`flex border-b border-gray-200 ${isFullscreen ? 'hidden' : 'lg:hidden'}`}>
         <TabButton
           label="Write"
           active={activeTab === 'write'}
@@ -109,7 +130,7 @@ export function WritingWorkspace({
       </div>
 
       {/* LEFT: Writing Field */}
-      <div className={`flex-1 flex flex-col ${activeTab !== 'write' ? 'hidden lg:flex' : ''}`}>
+      <div className={`flex-1 flex flex-col ${activeTab !== 'write' ? 'hidden lg:flex' : ''} ${isFullscreen ? 'w-full' : ''}`}>
         {/* Viewing Attempt Banner */}
         {readOnly && viewingAttempt && (
           <WritingAttemptBanner
@@ -119,7 +140,21 @@ export function WritingWorkspace({
         )}
 
         {/* Textarea area with fixed min-height */}
-        <div className="p-4 md:p-8" style={{ minHeight: '500px' }}>
+        <div className="p-4 md:p-8 relative" style={{ minHeight: '500px' }}>
+          {/* Fullscreen Toggle Button */}
+          {!readOnly && (
+            <button
+              onClick={() => setIsFullscreen(!isFullscreen)}
+              className="absolute top-4 right-4 md:top-8 md:right-8 p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg transition-colors z-10"
+              title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
+            >
+              {isFullscreen ? (
+                <Minimize2 className="w-5 h-5" />
+              ) : (
+                <Maximize2 className="w-5 h-5" />
+              )}
+            </button>
+          )}
           {/* Optional Top Indicator (e.g., word count) */}
           {topIndicator && (
             <div className="mb-4">
@@ -141,13 +176,17 @@ export function WritingWorkspace({
             onChange={(e) => onChange(e.target.value)}
             placeholder={placeholder}
             readOnly={readOnly}
-            className={`w-full bg-transparent border-none outline-none resize-none text-lg md:text-xl lg:text-2xl leading-relaxed ${
+            className={`w-full bg-transparent border-none outline-none resize-none leading-relaxed ${
               readOnly
                 ? 'text-gray-700 cursor-default'
                 : 'text-gray-900 placeholder-gray-400'
+            } ${
+              isFullscreen
+                ? 'text-xl md:text-2xl lg:text-3xl'
+                : 'text-lg md:text-xl lg:text-2xl'
             }`}
             style={{
-              minHeight: '400px',
+              minHeight: isFullscreen ? 'calc(100vh - 200px)' : '400px',
               lineHeight: '1.6',
               fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
             }}
@@ -172,10 +211,10 @@ export function WritingWorkspace({
       </div>
 
       {/* SEPARATOR - Desktop only */}
-      <div className="hidden lg:block w-px bg-gray-200" />
+      <div className={`hidden lg:block w-px bg-gray-200 ${isFullscreen ? 'hidden' : ''}`} />
 
       {/* RIGHT: Instructions/History Panel */}
-      <div className={`flex flex-col lg:w-[400px] ${activeTab === 'write' ? 'hidden lg:flex' : ''}`}>
+      <div className={`flex flex-col lg:w-[400px] ${activeTab === 'write' ? 'hidden lg:flex' : ''} ${isFullscreen ? 'hidden' : ''}`}>
         {/* Tabs Navigation - Desktop only */}
         <div className="hidden lg:flex border-b border-gray-200">
           <TabButton
