@@ -17,7 +17,7 @@ import confetti from 'canvas-confetti';
 
 interface MiniBlankExerciseProps {
   sentence: string;
-  blanks: QuizBlank[];
+  blanks: QuizBlank[]; // Will use only the first blank
   onRefresh: () => void;
   onComplete?: (points: number, correctAnswers: number, totalBlanks: number, sentenceId?: string) => void;
   userId?: string;
@@ -28,7 +28,10 @@ interface MiniBlankExerciseProps {
 }
 
 export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, userId, isLoading, exerciseType, submittedAt, sentenceId }: MiniBlankExerciseProps) {
-  const [answers, setAnswers] = useState<Record<number, string>>({});
+  // Only use the first blank
+  const singleBlank = blanks.length > 0 ? [blanks[0]] : [];
+
+  const [answer, setAnswer] = useState<string>('');
   const [showResult, setShowResult] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const toast = useToast();
@@ -38,48 +41,27 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
 
   // Reset state when sentence changes
   useEffect(() => {
-    setAnswers({});
+    setAnswer('');
     setShowResult(false);
     setIsCorrect(false);
   }, [sentence]);
 
-  const handleAnswerChange = (blankIndex: number, value: string) => {
-    setAnswers(prev => ({
-      ...prev,
-      [blankIndex]: value
-    }));
-  };
-
   const handleCheck = () => {
-    // Check if all blanks are filled
-    const allFilled = blanks.every(blank => answers[blank.index]?.trim().length > 0);
-    if (!allFilled) return;
+    // Check if blank is filled
+    if (!answer.trim()) return;
 
-    // Calculate score and collect incorrect answers
-    let correctAnswers = 0;
-    const incorrectAnswers: Array<{ wrong: string; correct: string }> = [];
+    // Check if answer is correct
+    const blank = singleBlank[0];
+    const correct = checkAnswer(answer, blank.correctAnswer);
 
-    blanks.forEach(blank => {
-      const studentAnswer = answers[blank.index] || '';
-      if (checkAnswer(studentAnswer, blank.correctAnswer)) {
-        correctAnswers++;
-      } else {
-        incorrectAnswers.push({
-          wrong: studentAnswer,
-          correct: blank.correctAnswer
-        });
-      }
-    });
+    const points = calculateQuizPoints(correct ? 1 : 0, 1);
 
-    const points = calculateQuizPoints(correctAnswers, blanks.length);
-    const allCorrect = correctAnswers === blanks.length;
-
-    setIsCorrect(allCorrect);
+    setIsCorrect(correct);
     setShowResult(true);
 
     // Show toast with results
-    if (allCorrect) {
-      // Trigger confetti for perfect score
+    if (correct) {
+      // Trigger confetti for correct answer
       confetti({
         particleCount: 100,
         spread: 70,
@@ -87,16 +69,12 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
       });
       toast.success(`Perfect! +${points} points!`);
     } else {
-      // Show corrections in toast
-      const corrections = incorrectAnswers.map(item =>
-        `"${item.wrong}" → "${item.correct}"`
-      ).join(', ');
-      toast.warning(`Not quite right. +${points} points. Corrections: ${corrections}`);
+      toast.warning(`Not quite right. +${points} points. Correct answer: "${blank.correctAnswer}"`);
     }
 
     // Notify parent component
     if (onComplete) {
-      onComplete(points, correctAnswers, blanks.length, sentenceId);
+      onComplete(points, correct ? 1 : 0, 1, sentenceId);
     }
   };
 
@@ -119,7 +97,7 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
     );
   }
 
-  if (blanks.length === 0) {
+  if (singleBlank.length === 0) {
     return (
       <div className="bg-white border border-gray-200 p-6">
         <div className="flex items-center gap-3 mb-4">
@@ -133,40 +111,34 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
     );
   }
 
-  // Build the display parts with blanks
-  const parts: Array<{ type: 'text' | 'blank'; content: string; blankIndex?: number }> = [];
-  let lastPosition = 0;
+  // Build the display parts with single blank
+  const blank = singleBlank[0];
+  const parts: Array<{ type: 'text' | 'blank'; content: string }> = [];
 
-  const sortedBlanks = [...blanks].sort((a, b) => a.position - b.position);
-
-  for (const blank of sortedBlanks) {
-    // Add text before blank
-    if (blank.position > lastPosition) {
-      parts.push({
-        type: 'text',
-        content: sentence.substring(lastPosition, blank.position)
-      });
-    }
-
-    // Add blank
-    parts.push({
-      type: 'blank',
-      content: blank.correctAnswer,
-      blankIndex: blank.index
-    });
-
-    lastPosition = blank.position + blank.correctAnswer.length;
-  }
-
-  // Add remaining text
-  if (lastPosition < sentence.length) {
+  // Add text before blank
+  if (blank.position > 0) {
     parts.push({
       type: 'text',
-      content: sentence.substring(lastPosition)
+      content: sentence.substring(0, blank.position)
     });
   }
 
-  const allFilled = blanks.every(blank => answers[blank.index]?.trim().length > 0);
+  // Add blank
+  parts.push({
+    type: 'blank',
+    content: blank.correctAnswer
+  });
+
+  // Add remaining text
+  const endPosition = blank.position + blank.correctAnswer.length;
+  if (endPosition < sentence.length) {
+    parts.push({
+      type: 'text',
+      content: sentence.substring(endPosition)
+    });
+  }
+
+  const isFilled = answer.trim().length > 0;
 
   return (
     <div className="bg-white border border-gray-200 p-6">
@@ -189,7 +161,7 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
             <div className="w-48">
               <ActionButton
                 onClick={handleCheck}
-                disabled={!allFilled}
+                disabled={!isFilled}
                 variant="purple"
                 icon={<ActionButtonIcons.Check />}
                 size="compact"
@@ -230,28 +202,25 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
             <span className="text-gray-500"> • {new Date(submittedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
           </>
         ) : (
-          <>Fill in the blank{blanks.length > 1 ? 's' : ''} with the correct word{blanks.length > 1 ? 's' : ''}</>
+          <>Fill in the blank with the correct word</>
         )}
       </p>
 
-      {/* Sentence with blanks */}
+      {/* Sentence with blank */}
       <div className="mb-6 text-lg leading-loose">
         {parts.map((part, index) => {
           if (part.type === 'text') {
             return <span key={index} className="text-gray-900">{part.content}</span>;
           } else {
-            const blankIndex = part.blankIndex!;
-            const studentAnswer = answers[blankIndex] || '';
-            const hasAnswer = showResult;
-            const answerIsCorrect = hasAnswer && checkAnswer(studentAnswer, part.content);
-            const answerIsIncorrect = hasAnswer && !answerIsCorrect;
+            const answerIsCorrect = showResult && checkAnswer(answer, part.content);
+            const answerIsIncorrect = showResult && !answerIsCorrect;
 
             return (
               <span key={index} className="inline-flex items-center gap-1 mx-1.5 my-2">
                 <input
                   type="text"
-                  value={studentAnswer}
-                  onChange={(e) => handleAnswerChange(blankIndex, e.target.value)}
+                  value={answer}
+                  onChange={(e) => setAnswer(e.target.value)}
                   disabled={showResult}
                   className={`text-base font-bold text-center transition-all outline-none ${
                     answerIsCorrect
@@ -279,7 +248,7 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
           <div className="w-48">
             <ActionButton
               onClick={handleCheck}
-              disabled={!allFilled}
+              disabled={!isFilled}
               variant="purple"
               icon={<ActionButtonIcons.Check />}
             >
