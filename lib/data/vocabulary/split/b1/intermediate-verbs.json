@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Intermediate Verbs",
-  "totalCards": 515,
+  "totalCards": 520,
   "flashcards": [
     {
       "id": "remnote-297",
@@ -8622,6 +8622,106 @@
           "zuschneiden",
           "noun→der Schneider ← tailor",
           "maßgeschneidert"
+        ]
+      }
+    },
+    {
+      "id": "b1-bekmpfen-207234",
+      "german": "bekämpfen",
+      "english": "to combat / to fight",
+      "category": "Intermediate Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "B1",
+          "Intermediate Verbs",
+          "bekämpfen"
+        ]
+      }
+    },
+    {
+      "id": "b1-bekleiden-207234",
+      "german": "bekleiden",
+      "english": "to dress / to clothe",
+      "category": "Intermediate Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 3,
+        "hierarchy": [
+          "B1",
+          "Intermediate Verbs",
+          "bekleiden"
+        ]
+      }
+    },
+    {
+      "id": "b1-bekmmern-207234",
+      "german": "bekümmern",
+      "english": "to worry / to be concerned",
+      "category": "Intermediate Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "B1",
+          "Intermediate Verbs",
+          "bekümmern"
+        ]
+      }
+    },
+    {
+      "id": "b1-belagern-207234",
+      "german": "belagern",
+      "english": "to besiege / to surround",
+      "category": "Intermediate Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "B1",
+          "Intermediate Verbs",
+          "belagern"
+        ]
+      }
+    },
+    {
+      "id": "b1-belasten-207234",
+      "german": "belasten",
+      "english": "to burden / to stress",
+      "category": "Intermediate Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B1",
+          "Intermediate Verbs",
+          "belasten"
         ]
       }
     }

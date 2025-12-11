@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Adjectives",
-  "totalCards": 93,
+  "totalCards": 97,
   "flashcards": [
     {
       "id": "syllabus-b1-10860",
@@ -1860,6 +1860,86 @@
           "B1",
           "Adjectives",
           "sauer"
+        ]
+      }
+    },
+    {
+      "id": "b1-bekmmert-207234",
+      "german": "bekümmert",
+      "english": "worried / concerned",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "bekümmert"
+        ]
+      }
+    },
+    {
+      "id": "b1-belanglos-207234",
+      "german": "belanglos",
+      "english": "unimportant / insignificant",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "belanglos"
+        ]
+      }
+    },
+    {
+      "id": "b1-belangreic-207234",
+      "german": "belangreich",
+      "english": "important / significant",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "belangreich"
+        ]
+      }
+    },
+    {
+      "id": "b1-belastend-207234",
+      "german": "belastend",
+      "english": "burdensome / stressful",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B1",
+          "Adjectives",
+          "belastend"
         ]
       }
     }

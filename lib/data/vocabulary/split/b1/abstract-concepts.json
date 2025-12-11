@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Abstract Concepts",
-  "totalCards": 60,
+  "totalCards": 73,
   "flashcards": [
     {
       "id": "b1-meinung-044826",
@@ -1200,6 +1200,266 @@
           "B1",
           "Abstract Concepts",
           "die Hoffnung"
+        ]
+      }
+    },
+    {
+      "id": "b1-beklemmung-207234",
+      "german": "beklemmung",
+      "english": "anxiety / uneasiness",
+      "category": "Abstract Concepts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 4,
+        "hierarchy": [
+          "B1",
+          "Abstract Concepts",
+          "beklemmung"
+        ]
+      }
+    },
+    {
+      "id": "b1-bekstigung-207234",
+      "german": "beköstigung",
+      "english": "provisioning / feeding",
+      "category": "Abstract Concepts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 6,
+        "hierarchy": [
+          "B1",
+          "Abstract Concepts",
+          "beköstigung"
+        ]
+      }
+    },
+    {
+      "id": "b1-bekrftigun-207234",
+      "german": "bekräftigung",
+      "english": "affirmation / confirmation",
+      "category": "Abstract Concepts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "B1",
+          "Abstract Concepts",
+          "bekräftigung"
+        ]
+      }
+    },
+    {
+      "id": "b1-belag-207234",
+      "german": "belag",
+      "english": "coating / layer",
+      "category": "Abstract Concepts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "B1",
+          "Abstract Concepts",
+          "belag"
+        ]
+      }
+    },
+    {
+      "id": "b1-belagerung-207234",
+      "german": "belagerung",
+      "english": "siege / blockade",
+      "category": "Abstract Concepts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "B1",
+          "Abstract Concepts",
+          "belagerung"
+        ]
+      }
+    },
+    {
+      "id": "b1-belang-207234",
+      "german": "belang",
+      "english": "concern / importance",
+      "category": "Abstract Concepts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "B1",
+          "Abstract Concepts",
+          "belang"
+        ]
+      }
+    },
+    {
+      "id": "b1-belanlosig-207234",
+      "german": "belanlosigkeit",
+      "english": "insignificance",
+      "category": "Abstract Concepts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "B1",
+          "Abstract Concepts",
+          "belanlosigkeit"
+        ]
+      }
+    },
+    {
+      "id": "b1-belangung-207234",
+      "german": "belangung",
+      "english": "prosecution / legal action",
+      "category": "Abstract Concepts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B1",
+          "Abstract Concepts",
+          "belangung"
+        ]
+      }
+    },
+    {
+      "id": "b1-belappung-207234",
+      "german": "belappung",
+      "english": "clothing / apparel",
+      "category": "Abstract Concepts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B1",
+          "Abstract Concepts",
+          "belappung"
+        ]
+      }
+    },
+    {
+      "id": "b1-belaschung-207234",
+      "german": "belaschung",
+      "english": "loading / burden",
+      "category": "Abstract Concepts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B1",
+          "Abstract Concepts",
+          "belaschung"
+        ]
+      }
+    },
+    {
+      "id": "b1-belastung-207234",
+      "german": "belastung",
+      "english": "burden / stress",
+      "category": "Abstract Concepts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B1",
+          "Abstract Concepts",
+          "belastung"
+        ]
+      }
+    },
+    {
+      "id": "b1-belatmung-207234",
+      "german": "belatmung",
+      "english": "respiration / breathing",
+      "category": "Abstract Concepts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B1",
+          "Abstract Concepts",
+          "belatmung"
+        ]
+      }
+    },
+    {
+      "id": "b1-belubung-207234",
+      "german": "beläubung",
+      "english": "stunning / dazedness",
+      "category": "Abstract Concepts",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B1",
+          "Abstract Concepts",
+          "beläubung"
         ]
       }
     }
