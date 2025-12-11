@@ -116,7 +116,23 @@ export function useTeacherDashboard({
   const { data: paginatedStudents, totalPages, totalItems } = tableState.paginateData(studentsForTable);
 
   // Available members for selection
-  const availableMembers = studentsWithoutTeacher.map(student => {
+  // Show students who either have no batch OR have this teacher but are in a different batch
+  const availableStudents = allStudents.filter(student => {
+    const role = (student.role || '').toUpperCase();
+    if (role !== 'STUDENT') return false;
+
+    // Must belong to current teacher (or have no teacher)
+    const belongsToTeacher = student.teacherId === currentTeacherId || !student.teacherId;
+    if (!belongsToTeacher) return false;
+
+    // Show if: no batch OR different batch than selected
+    const hasNoBatch = !student.batchId || student.batchId === null || student.batchId === undefined;
+    const inDifferentBatch = selectedBatch && student.batchId !== selectedBatch.batchId;
+
+    return hasNoBatch || inDifferentBatch;
+  });
+
+  const availableMembers = availableStudents.map(student => {
     // Handle both formats: {name: "Full Name"} OR {firstName: "First", lastName: "Last"}
     const displayName = (student as any).name || `${student.firstName || ''} ${student.lastName || ''}`.trim() || student.email;
 
