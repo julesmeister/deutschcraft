@@ -113,9 +113,9 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
     const toastMessages = {
       again: { message: 'Will review again soon', method: toast.error, duration: 800 },
       hard: { message: 'Keep practicing!', method: toast.warning, duration: 800 },
-      good: { message: 'Good recall! 👍', method: toast.success, duration: 800 },
-      easy: { message: 'Perfect! Mastered! 🌟', method: toast.success, duration: 800 },
-      expert: { message: '💯 Expert! Won\'t see this for a year!', method: toast.success, duration: 1000 },
+      good: { message: 'Good recall!', method: toast.success, duration: 800 },
+      easy: { message: 'Perfect! Mastered!', method: toast.success, duration: 800 },
+      expert: { message: 'Expert! Won\'t see this for a year!', method: toast.success, duration: 1000 },
     };
 
     const toastConfig = toastMessages[difficulty];
