@@ -1385,8 +1385,8 @@
     },
     {
       "id": "b1-adjectives-mivkmu8acfb8w",
-      "german": "bereitschaft",
-      "english": "readiness",
+      "german": "bereit",
+      "english": "willing / ready",
       "category": "Adjectives",
       "level": "B1",
       "tags": [
@@ -1399,14 +1399,14 @@
         "hierarchy": [
           "B1",
           "Adjectives",
-          "bereitschaft"
+          "bereit"
         ]
       }
     },
     {
       "id": "b1-adjectives-mivkmu8apar55",
-      "german": "unwillingness",
-      "english": "unwillingness",
+      "german": "unwillig",
+      "english": "unwilling",
       "category": "Adjectives",
       "level": "B1",
       "tags": [
@@ -1419,7 +1419,7 @@
         "hierarchy": [
           "B1",
           "Adjectives",
-          "unwillingness"
+          "unwillig"
         ]
       }
     },
