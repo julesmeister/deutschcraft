@@ -1,6 +1,6 @@
 {
   "level": "B1",
-  "totalCards": 1594,
+  "totalCards": 1596,
   "flashcards": [
     {
       "id": "b1-abstract-concepts-miv8hiwo0giq5",
@@ -16788,6 +16788,106 @@
       }
     },
     {
+      "id": "b1-irregular-beraten-xa1bc2",
+      "german": "beraten",
+      "english": "to advise / to consult (berät, beriet, beraten)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "irregular-verbs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Irregular Verbs Final Addition 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "beraten"
+        ]
+      }
+    },
+    {
+      "id": "b1-irregular-beschieen-xd3ef4",
+      "german": "beschießen",
+      "english": "to shoot at / to fire at (beschießt, beschoss, beschossen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "irregular-verbs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Irregular Verbs Final Addition 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "beschießen"
+        ]
+      }
+    },
+    {
+      "id": "b1-irregular-betragen-xg5hi6",
+      "german": "betragen",
+      "english": "to amount to / to behave (beträgt, betrug, betragen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "irregular-verbs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Irregular Verbs Final Addition 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "betragen"
+        ]
+      }
+    },
+    {
+      "id": "b1-irregular-betrgen-xj7kl8",
+      "german": "betrügen",
+      "english": "to deceive / to cheat (betrügt, betrog, betrogen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "irregular-verbs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Irregular Verbs Final Addition 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "betrügen"
+        ]
+      }
+    },
+    {
+      "id": "b1-irregular-bewegen-xm9no0",
+      "german": "bewegen",
+      "english": "to move / to persuade (bewegt, bewog, bewogen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "irregular-verbs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Irregular Verbs Final Addition 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "bewegen"
+        ]
+      }
+    },
+    {
       "id": "b1-irregular-beweisen-y5z6a7",
       "german": "beweisen",
       "english": "to prove (beweist, bewies, bewiesen)",
@@ -16808,9 +16908,9 @@
       }
     },
     {
-      "id": "b1-irregular-binden-s79t0n",
-      "german": "binden",
-      "english": "to tie / to bind (bindet, band, gebunden)",
+      "id": "b1-irregular-bieten-jxdrqk",
+      "german": "bieten",
+      "english": "to offer (bietet, bot, geboten)",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -16818,12 +16918,12 @@
         "B1"
       ],
       "_meta": {
-        "source": "B1 Irregular Verbs Repopulation 2025",
-        "lineNumber": 8,
+        "source": "B1 Irregular Verbs Unique Addition 2025",
+        "lineNumber": 15,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "binden"
+          "bieten"
         ]
       }
     },
@@ -16848,9 +16948,9 @@
       }
     },
     {
-      "id": "b1-irregular-erschrecken-k7l8m9",
-      "german": "erschrecken",
-      "english": "to frighten / to be frightened (erschrickt, erschrak, erschrocken)",
+      "id": "b1-irregular-erwerben-xp1qr2",
+      "german": "erwerben",
+      "english": "to acquire / to obtain (erwirbt, erwarb, erworben)",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -16858,19 +16958,19 @@
         "B1"
       ],
       "_meta": {
-        "source": "B1 Irregular Verbs Manual Addition 2025",
+        "source": "B1 Irregular Verbs Final Addition 2025",
         "lineNumber": 24,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "erschrecken"
+          "erwerben"
         ]
       }
     },
     {
-      "id": "b1-irregular-gelten-n0o1p2",
-      "german": "gelten",
-      "english": "to be valid / to apply (gilt, galt, gegolten)",
+      "id": "b1-irregular-flieen-c4qyvk",
+      "german": "fließen",
+      "english": "to flow (fließt, floss, geflossen)",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -16878,19 +16978,39 @@
         "B1"
       ],
       "_meta": {
-        "source": "B1 Irregular Verbs Manual Addition 2025",
+        "source": "B1 Irregular Verbs Unique Addition 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "fließen"
+        ]
+      }
+    },
+    {
+      "id": "b1-irregular-gedeihen-xs3tu4",
+      "german": "gedeihen",
+      "english": "to thrive / to prosper (gedeiht, gedieh, gediehen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "irregular-verbs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Irregular Verbs Final Addition 2025",
         "lineNumber": 25,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "gelten"
+          "gedeihen"
         ]
       }
     },
     {
-      "id": "b1-irregular-greifen-b8c9d0",
-      "german": "greifen",
-      "english": "to grasp / to reach (greift, griff, gegriffen)",
+      "id": "b1-irregular-genieen-zyo633",
+      "german": "genießen",
+      "english": "to enjoy (genießt, genoss, genossen)",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -16898,19 +17018,19 @@
         "B1"
       ],
       "_meta": {
-        "source": "B1 Irregular Verbs Manual Addition 2025",
-        "lineNumber": 21,
+        "source": "B1 Irregular Verbs Unique Addition 2025",
+        "lineNumber": 17,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "greifen"
+          "genießen"
         ]
       }
     },
     {
-      "id": "b1-irregular-heben-q3r4s5",
-      "german": "heben",
-      "english": "to lift / to raise (hebt, hob, gehoben)",
+      "id": "b1-irregular-gieen-149f6r",
+      "german": "gießen",
+      "english": "to pour / to water (gießt, goss, gegossen)",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -16918,12 +17038,52 @@
         "B1"
       ],
       "_meta": {
-        "source": "B1 Irregular Verbs Manual Addition 2025",
+        "source": "B1 Irregular Verbs Unique Addition 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "gießen"
+        ]
+      }
+    },
+    {
+      "id": "b1-irregular-gleichen-xv5wx6",
+      "german": "gleichen",
+      "english": "to resemble / to be like (gleicht, glich, geglichen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "irregular-verbs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Irregular Verbs Final Addition 2025",
         "lineNumber": 26,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "heben"
+          "gleichen"
+        ]
+      }
+    },
+    {
+      "id": "b1-irregular-gleiten-xy7za8",
+      "german": "gleiten",
+      "english": "to glide / to slide (gleitet, glitt, geglitten)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "irregular-verbs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Irregular Verbs Final Addition 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "gleiten"
         ]
       }
     },
@@ -16988,9 +17148,9 @@
       }
     },
     {
-      "id": "b1-irregular-raten-h4i5j6",
-      "german": "raten",
-      "english": "to advise / to guess (rät, riet, geraten)",
+      "id": "b1-irregular-schmelzen-xb9cd0",
+      "german": "schmelzen",
+      "english": "to melt (schmilzt, schmolz, geschmolzen)",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -16998,52 +17158,12 @@
         "B1"
       ],
       "_meta": {
-        "source": "B1 Irregular Verbs Manual Addition 2025",
-        "lineNumber": 23,
+        "source": "B1 Irregular Verbs Final Addition 2025",
+        "lineNumber": 28,
         "hierarchy": [
           "B1",
           "Irregular Verbs",
-          "raten"
-        ]
-      }
-    },
-    {
-      "id": "b1-irregular-schieben-g7h8i9",
-      "german": "schieben",
-      "english": "to push / to shove (schiebt, schob, geschoben)",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "tags": [
-        "irregular-verbs",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Irregular Verbs Manual Addition 2025",
-        "lineNumber": 14,
-        "hierarchy": [
-          "B1",
-          "Irregular Verbs",
-          "schieben"
-        ]
-      }
-    },
-    {
-      "id": "b1-irregular-schlieen-j0k1l2",
-      "german": "schließen",
-      "english": "to close (schließt, schloss, geschlossen)",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "tags": [
-        "irregular-verbs",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Irregular Verbs Manual Addition 2025",
-        "lineNumber": 15,
-        "hierarchy": [
-          "B1",
-          "Irregular Verbs",
-          "schließen"
+          "schmelzen"
         ]
       }
     },
@@ -17068,6 +17188,26 @@
       }
     },
     {
+      "id": "b1-irregular-schwren-xe1fg2",
+      "german": "schwören",
+      "english": "to swear / to take an oath (schwört, schwor, geschworen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "irregular-verbs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Irregular Verbs Final Addition 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "schwören"
+        ]
+      }
+    },
+    {
       "id": "b1-irregular-stechen-m3n4o5",
       "german": "stechen",
       "english": "to sting / to prick (sticht, stach, gestochen)",
@@ -17088,66 +17228,6 @@
       }
     },
     {
-      "id": "b1-irregular-stehlen-ep7hrn",
-      "german": "stehlen",
-      "english": "to steal (stiehlt, stahl, gestohlen)",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "tags": [
-        "irregular-verbs",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Irregular Verbs Repopulation 2025",
-        "lineNumber": 11,
-        "hierarchy": [
-          "B1",
-          "Irregular Verbs",
-          "stehlen"
-        ]
-      }
-    },
-    {
-      "id": "b1-irregular-streiten-p6q7r8",
-      "german": "streiten",
-      "english": "to argue / to quarrel (streitet, stritt, gestritten)",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "tags": [
-        "irregular-verbs",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Irregular Verbs Manual Addition 2025",
-        "lineNumber": 17,
-        "hierarchy": [
-          "B1",
-          "Irregular Verbs",
-          "streiten"
-        ]
-      }
-    },
-    {
-      "id": "b1-irregular-treten-t6u7v8",
-      "german": "treten",
-      "english": "to step / to kick (tritt, trat, getreten)",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "tags": [
-        "irregular-verbs",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Irregular Verbs Manual Addition 2025",
-        "lineNumber": 27,
-        "hierarchy": [
-          "B1",
-          "Irregular Verbs",
-          "treten"
-        ]
-      }
-    },
-    {
       "id": "b1-irregular-verbieten-s9t0u1",
       "german": "verbieten",
       "english": "to forbid (verbietet, verbot, verboten)",
@@ -17164,26 +17244,6 @@
           "B1",
           "Irregular Verbs",
           "verbieten"
-        ]
-      }
-    },
-    {
-      "id": "b1-irregular-verbs-miv8hiwn3cqcr",
-      "german": "reißen",
-      "english": "to tear / to rip",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 30,
-        "hierarchy": [
-          "B1",
-          "Irregular Verbs",
-          "reißen"
         ]
       }
     },
@@ -17224,26 +17284,6 @@
           "B1",
           "Irregular Verbs",
           "treiben"
-        ]
-      }
-    },
-    {
-      "id": "b1-irregular-werfen-v2w3x4",
-      "german": "werfen",
-      "english": "to throw (wirft, warf, geworfen)",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "tags": [
-        "irregular-verbs",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Irregular Verbs Manual Addition 2025",
-        "lineNumber": 19,
-        "hierarchy": [
-          "B1",
-          "Irregular Verbs",
-          "werfen"
         ]
       }
     },
