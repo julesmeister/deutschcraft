@@ -7,6 +7,7 @@ import { CEFRLevel } from '@/lib/models';
 import { SAMPLE_AUDIO_BOOKS, AudioBook, AudioSection } from '@/lib/models/audio';
 import { AudioSectionCard } from '@/components/audio/AudioSectionCard';
 import { AudioPlayer } from '@/components/audio/AudioPlayer';
+import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CatLoader } from '@/components/ui/CatLoader';
 
 export default function AudiosPage() {
@@ -34,17 +35,14 @@ export default function AudiosPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="container mx-auto px-6 max-w-7xl">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-black text-gray-900 mb-2">
-            🎧 Audio Library
-          </h1>
-          <p className="text-gray-600">
-            Listen to audio tracks from your German textbook - Level: <span className="font-bold text-blue-600">{studentLevel}</span>
-          </p>
-        </div>
+    <div className="min-h-screen bg-gray-50">
+      <DashboardHeader
+        title="Audio Library 🎧"
+        subtitle={`Listen to audio tracks from your German textbook - Level: ${studentLevel}`}
+      />
+
+      {/* Main Content */}
+      <div className="container mx-auto px-6 py-8">
 
         {/* Book Selector */}
         {availableBooks.length > 0 && (
@@ -60,10 +58,10 @@ export default function AudiosPage() {
                     setSelectedBook(book);
                     setSelectedSection(null);
                   }}
-                  className={`px-6 py-3 rounded-xl font-bold text-sm transition-all ${
+                  className={`px-6 py-3 font-bold text-sm transition-all ${
                     selectedBook?.bookId === book.bookId
-                      ? 'bg-blue-600 text-white shadow-lg scale-105'
-                      : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-blue-400 hover:shadow-md'
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-white text-gray-700 border border-gray-200 hover:border-blue-400'
                   }`}
                 >
                   <div className="flex items-center gap-2">
@@ -81,7 +79,7 @@ export default function AudiosPage() {
 
         {/* No books available */}
         {availableBooks.length === 0 && (
-          <div className="bg-yellow-50 border-2 border-yellow-200 rounded-xl p-8 text-center">
+          <div className="bg-yellow-50 border border-yellow-200 p-8 text-center">
             <div className="text-6xl mb-4">📚</div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">
               No Audio Books Available
@@ -104,14 +102,14 @@ export default function AudiosPage() {
               {Array.from({ length: Math.min(selectedBook.totalSections, 6) }).map((_, index) => (
                 <div
                   key={index}
-                  className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all cursor-pointer"
+                  className="bg-white border border-gray-200 p-6 hover:border-blue-400 transition-all cursor-pointer"
                   onClick={() => {
                     // TODO: Load actual section data
                     console.log(`Loading section ${index + 1}`);
                   }}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-blue-100 flex items-center justify-center flex-shrink-0">
                       <span className="text-xl font-black text-blue-600">{index + 1}</span>
                     </div>
                     <div className="flex-1">
@@ -133,7 +131,7 @@ export default function AudiosPage() {
             </div>
 
             {/* Coming Soon Message */}
-            <div className="mt-8 bg-blue-50 border-2 border-blue-200 rounded-xl p-6">
+            <div className="mt-8 bg-blue-50 border border-blue-200 p-6">
               <div className="flex items-start gap-4">
                 <span className="text-3xl">🎧</span>
                 <div>
@@ -159,7 +157,7 @@ export default function AudiosPage() {
 
         {/* Selected Section Audio Player */}
         {selectedSection && (
-          <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+          <div className="bg-white border border-gray-200 p-6">
             <h3 className="text-xl font-bold text-gray-900 mb-4">
               {selectedSection.title}
             </h3>
