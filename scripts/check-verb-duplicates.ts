@@ -39,7 +39,7 @@ for (const level of ['a1', 'a2', 'b2', 'c1', 'c2']) {
 
     b1Verbs.forEach(verb => {
       const found = data.flashcards.find(card =>
-        card.german.toLowerCase().includes(verb)
+        card.german.toLowerCase() === verb
       );
 
       if (found) {

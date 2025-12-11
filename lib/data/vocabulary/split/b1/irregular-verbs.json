@@ -464,26 +464,6 @@
       }
     },
     {
-      "id": "b1-irregular-bewegen-xm9no0",
-      "german": "bewegen",
-      "english": "to move / to persuade (bewegt, bewog, bewogen)",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "tags": [
-        "irregular-verbs",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Irregular Verbs Final Addition 2025",
-        "lineNumber": 23,
-        "hierarchy": [
-          "B1",
-          "Irregular Verbs",
-          "bewegen"
-        ]
-      }
-    },
-    {
       "id": "b1-irregular-erwerben-xp1qr2",
       "german": "erwerben",
       "english": "to acquire / to obtain (erwirbt, erwarb, erworben)",
@@ -564,26 +544,6 @@
       }
     },
     {
-      "id": "b1-irregular-schmelzen-xb9cd0",
-      "german": "schmelzen",
-      "english": "to melt (schmilzt, schmolz, geschmolzen)",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "tags": [
-        "irregular-verbs",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Irregular Verbs Final Addition 2025",
-        "lineNumber": 28,
-        "hierarchy": [
-          "B1",
-          "Irregular Verbs",
-          "schmelzen"
-        ]
-      }
-    },
-    {
       "id": "b1-irregular-schwren-xe1fg2",
       "german": "schwören",
       "english": "to swear / to take an oath (schwört, schwor, geschworen)",
@@ -600,6 +560,46 @@
           "B1",
           "Irregular Verbs",
           "schwören"
+        ]
+      }
+    },
+    {
+      "id": "b1-irregular-bergen-mz6f7w",
+      "german": "bergen",
+      "english": "to salvage / to rescue (birgt, barg, geborgen)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "irregular-verbs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Irregular Verbs Unique Verification 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "bergen"
+        ]
+      }
+    },
+    {
+      "id": "b1-irregular-bersten-44r4cq",
+      "german": "bersten",
+      "english": "to burst (birst, barst, geborsten)",
+      "category": "Irregular Verbs",
+      "level": "B1",
+      "tags": [
+        "irregular-verbs",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Irregular Verbs Unique Verification 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "bersten"
         ]
       }
     }
