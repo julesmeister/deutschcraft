@@ -1,6 +1,7 @@
 import { useState, useDeferredValue, useEffect } from 'react';
 import { SlimTable, SlimTableRenderers } from '@/components/ui/SlimTable';
 import { StudentActionsDropdown } from '@/components/ui/StudentActionsDropdown';
+import { CompactButtonDropdown, DropdownOption } from '@/components/ui/CompactButtonDropdown';
 import { useRouter } from 'next/navigation';
 import { CEFRLevel } from '@/lib/models';
 
@@ -157,6 +158,38 @@ export function StudentTable({
             ),
           },
           {
+            key: 'level',
+            label: 'Level',
+            align: 'center',
+            width: '100px',
+            render: (value, row) => {
+              const levelOptions: DropdownOption[] = [
+                { value: 'A1', label: 'A1', disabled: value === 'A1' },
+                { value: 'A2', label: 'A2', disabled: value === 'A2' },
+                { value: 'B1', label: 'B1', disabled: value === 'B1' },
+                { value: 'B2', label: 'B2', disabled: value === 'B2' },
+                { value: 'C1', label: 'C1', disabled: value === 'C1' },
+                { value: 'C2', label: 'C2', disabled: value === 'C2' },
+              ];
+
+              return (
+                <div onClick={(e) => e.stopPropagation()}>
+                  <CompactButtonDropdown
+                    label={value as string}
+                    options={levelOptions}
+                    onChange={(newLevel) => {
+                      if (onChangeLevel && typeof newLevel === 'string') {
+                        onChangeLevel(row.id, newLevel as CEFRLevel);
+                      }
+                    }}
+                    usePortal={true}
+                    buttonClassName="!text-xs !py-1 !px-3 !bg-blue-50 hover:!bg-blue-100 !text-blue-700 !font-bold"
+                  />
+                </div>
+              );
+            },
+          },
+          {
             key: 'actions',
             label: 'Actions',
             align: 'center',
@@ -164,9 +197,7 @@ export function StudentTable({
             render: (_, row) => (
               <StudentActionsDropdown
                 studentId={row.id}
-                currentLevel={row.level}
                 onRemoveStudent={onRemoveStudent}
-                onChangeLevel={onChangeLevel}
                 isRemoving={isRemoving}
               />
             ),

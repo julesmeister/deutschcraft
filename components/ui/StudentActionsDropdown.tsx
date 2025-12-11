@@ -1,79 +1,25 @@
 'use client';
 
 import { CompactButtonDropdown, DropdownOption } from './CompactButtonDropdown';
-import { CEFRLevel } from '@/lib/models';
 
 interface StudentActionsDropdownProps {
   studentId: string;
-  currentLevel?: string;
   onRemoveStudent: (studentId: string) => void;
-  onChangeLevel?: (studentId: string, newLevel: CEFRLevel) => void;
   isRemoving: boolean;
 }
 
 export function StudentActionsDropdown({
   studentId,
-  currentLevel,
   onRemoveStudent,
-  onChangeLevel,
   isRemoving,
 }: StudentActionsDropdownProps) {
   const handleAction = (value: string | string[]) => {
     if (value === 'remove' && !isRemoving) {
       onRemoveStudent(studentId);
-    } else if (value.startsWith('level-') && onChangeLevel) {
-      const newLevel = value.replace('level-', '') as CEFRLevel;
-      onChangeLevel(studentId, newLevel);
     }
   };
 
   const actionOptions: DropdownOption[] = [
-    {
-      value: 'change-level',
-      label: 'Change Level',
-      icon: (
-        <svg className="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"
-          />
-        </svg>
-      ),
-      children: [
-        {
-          value: 'level-A1',
-          label: 'A1',
-          disabled: currentLevel === 'A1',
-        },
-        {
-          value: 'level-A2',
-          label: 'A2',
-          disabled: currentLevel === 'A2',
-        },
-        {
-          value: 'level-B1',
-          label: 'B1',
-          disabled: currentLevel === 'B1',
-        },
-        {
-          value: 'level-B2',
-          label: 'B2',
-          disabled: currentLevel === 'B2',
-        },
-        {
-          value: 'level-C1',
-          label: 'C1',
-          disabled: currentLevel === 'C1',
-        },
-        {
-          value: 'level-C2',
-          label: 'C2',
-          disabled: currentLevel === 'C2',
-        },
-      ],
-    },
     {
       value: 'remove',
       label: isRemoving ? 'Removing...' : 'Remove',
