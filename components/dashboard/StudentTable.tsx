@@ -2,6 +2,7 @@ import { useState, useDeferredValue, useEffect } from 'react';
 import { SlimTable, SlimTableRenderers } from '@/components/ui/SlimTable';
 import { StudentActionsDropdown } from '@/components/ui/StudentActionsDropdown';
 import { useRouter } from 'next/navigation';
+import { CEFRLevel } from '@/lib/models';
 
 interface StudentTableProps {
   students: Array<{
@@ -27,6 +28,7 @@ interface StudentTableProps {
   selectedBatch: { name: string } | null;
   onAddStudent: () => void;
   onRemoveStudent: (studentId: string) => void;
+  onChangeLevel?: (studentId: string, newLevel: CEFRLevel) => void;
   isRemoving: boolean;
   currentPage: number;
   setCurrentPage: (page: number) => void;
@@ -39,6 +41,7 @@ export function StudentTable({
   selectedBatch,
   onAddStudent,
   onRemoveStudent,
+  onChangeLevel,
   isRemoving,
   currentPage,
   setCurrentPage,
@@ -161,7 +164,9 @@ export function StudentTable({
             render: (_, row) => (
               <StudentActionsDropdown
                 studentId={row.id}
+                currentLevel={row.level}
                 onRemoveStudent={onRemoveStudent}
+                onChangeLevel={onChangeLevel}
                 isRemoving={isRemoving}
               />
             ),

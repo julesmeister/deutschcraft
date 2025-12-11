@@ -4,13 +4,14 @@
  */
 
 import { useState, useEffect } from 'react';
-import { Batch } from '../models';
+import { Batch, CEFRLevel } from '../models';
 import { useAllStudentsNested, useStudentsWithoutTeacher } from './useUsers';
 import { useActiveBatches, useCreateBatch } from './useBatches';
 import { useStudentManagement } from './useStudentManagement';
 import { useTableState } from './useTableState';
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { getStudyStats } from '../services/flashcardService';
+import { updateStudentLevel } from '../services/studentService';
 
 interface UseTeacherDashboardProps {
   currentTeacherId: string | undefined;
@@ -25,6 +26,8 @@ export function useTeacherDashboard({
   onError,
   onInfo,
 }: UseTeacherDashboardProps) {
+  const queryClient = useQueryClient();
+
   // Data fetching
   const { students: allStudents, isLoading: studentsLoading, isError: studentsError } = useAllStudentsNested();
   const { students: studentsWithoutTeacher } = useStudentsWithoutTeacher();
@@ -172,6 +175,24 @@ export function useTeacherDashboard({
     }
   };
 
+  /**
+   * Handle changing student's CEFR level
+   */
+  const handleChangeLevel = async (studentId: string, newLevel: CEFRLevel) => {
+    try {
+      onInfo?.(`Updating level to ${newLevel}...`);
+      await updateStudentLevel(studentId, newLevel);
+
+      // Invalidate queries to refresh data
+      await queryClient.invalidateQueries({ queryKey: ['students'] });
+
+      onSuccess?.(`Student level updated to ${newLevel}!`);
+    } catch (error) {
+      console.error('[Change Level] Error updating student level:', error);
+      onError?.('Failed to update student level. Please try again.');
+    }
+  };
+
   return {
     // Loading states
     isLoading: studentsLoading,
@@ -194,6 +215,7 @@ export function useTeacherDashboard({
     // Student management
     handleAddStudents,
     handleRemoveStudent,
+    handleChangeLevel,
     toggleStudentSelection: studentManagement.toggleStudentSelection,
     isAddingStudents: studentManagement.isAddingStudents,
     isRemovingStudent: studentManagement.isRemovingStudent,

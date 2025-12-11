@@ -136,6 +136,7 @@ export default function TeacherDashboard() {
               selectedBatch={dashboard.selectedBatch}
               onAddStudent={() => dashboard.setIsAddStudentOpen(true)}
               onRemoveStudent={dashboard.handleRemoveStudent}
+              onChangeLevel={dashboard.handleChangeLevel}
               isRemoving={dashboard.isRemovingStudent}
               currentPage={dashboard.currentPage}
               setCurrentPage={dashboard.setCurrentPage}
