@@ -1,0 +1,92 @@
+/**
+ * Writings Service
+ * Pure functions for writing submissions filtering, sorting, and pagination
+ *
+ * This service has no React dependencies and can be tested independently.
+ */
+
+import { WritingSubmission } from '@/lib/models/writing';
+
+/**
+ * Filter submissions to only include those with corrections
+ * (either AI or teacher feedback)
+ *
+ * @param submissions - All submissions
+ * @returns Filtered submissions with corrections only
+ */
+export function filterSubmissionsWithCorrections(
+  submissions: WritingSubmission[]
+): WritingSubmission[] {
+  return submissions.filter(submission => {
+    // Exclude drafts
+    if (submission.status === 'draft') return false;
+
+    // Must have either AI correction or teacher review
+    return submission.aiCorrectedVersion || submission.teacherScore !== undefined;
+  });
+}
+
+/**
+ * Sort submissions by submission date (most recent first)
+ *
+ * @param submissions - Submissions to sort
+ * @returns Sorted submissions
+ */
+export function sortSubmissionsByDate(
+  submissions: WritingSubmission[]
+): WritingSubmission[] {
+  return [...submissions].sort((a, b) => {
+    const timeA = a.submittedAt || 0;
+    const timeB = b.submittedAt || 0;
+    return timeB - timeA; // Descending order
+  });
+}
+
+/**
+ * Paginate submissions in memory
+ *
+ * @param submissions - All submissions
+ * @param page - Current page number (1-indexed)
+ * @param itemsPerPage - Number of items per page
+ * @returns Paginated submissions for current page
+ */
+export function paginateSubmissions(
+  submissions: WritingSubmission[],
+  page: number,
+  itemsPerPage: number
+): WritingSubmission[] {
+  const startIndex = (page - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  return submissions.slice(startIndex, endIndex);
+}
+
+/**
+ * Check if there are more pages available
+ *
+ * @param totalCount - Total number of submissions
+ * @param currentPage - Current page number
+ * @param itemsPerPage - Number of items per page
+ * @returns Whether more pages exist
+ */
+export function hasMorePages(
+  totalCount: number,
+  currentPage: number,
+  itemsPerPage: number
+): boolean {
+  return currentPage * itemsPerPage < totalCount;
+}
+
+/**
+ * Process submissions: filter, sort, and prepare for display
+ *
+ * This is a convenience function that combines the common operations.
+ *
+ * @param submissions - Raw submissions from database
+ * @returns Processed submissions ready for display
+ */
+export function processSubmissions(
+  submissions: WritingSubmission[]
+): WritingSubmission[] {
+  const filtered = filterSubmissionsWithCorrections(submissions);
+  return sortSubmissionsByDate(filtered);
+}
