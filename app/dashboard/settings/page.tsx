@@ -13,16 +13,10 @@ import { CatLoader } from '@/components/ui/CatLoader';
 import { useSettingsData } from '@/lib/hooks/useSettingsData';
 import { useProfileForm } from '@/lib/hooks/useProfileForm';
 import { useEnrollmentForm } from '@/lib/hooks/useEnrollmentForm';
+import { useSettingsRefresh } from '@/lib/hooks/useSettingsRefresh';
 import { getSettingsMenuItems } from '@/components/ui/settings/getSettingsMenuItems';
-import { useQueryClient } from '@tanstack/react-query';
-import { useToast } from '@/components/ui/toast';
-import { useSession } from 'next-auth/react';
 
 export default function SettingsPage() {
-  const queryClient = useQueryClient();
-  const toast = useToast();
-  const { update: updateSession } = useSession();
-
   const {
     session,
     status,
@@ -48,30 +42,10 @@ export default function SettingsPage() {
     handleDeleteAccount,
   } = useEnrollmentForm(session);
 
+  const { handleRefresh } = useSettingsRefresh();
+
   // Build menu items
   const menuItems = getSettingsMenuItems(isPending, activeTab, setActiveTab);
-
-  // Refresh user data from Firestore and JWT token
-  const handleRefresh = async () => {
-    if (session?.user?.email) {
-      console.log('[Refresh] Starting refresh for:', session.user.email);
-
-      // Invalidate and refetch React Query cache
-      await queryClient.invalidateQueries({ queryKey: ['user', session.user.email] });
-      await queryClient.refetchQueries({ queryKey: ['user', session.user.email] });
-
-      // Update session (triggers JWT refresh from Firestore)
-      await updateSession();
-      console.log('[Refresh] Session updated, reloading...');
-
-      toast.success('Data refreshed! Reloading page...');
-
-      // Reload page to apply new JWT token in middleware
-      setTimeout(() => {
-        window.location.reload();
-      }, 1000);
-    }
-  };
 
   // Show loading while fetching user data or if not authenticated
   if (status === 'loading' || isLoading) {
@@ -95,7 +69,7 @@ export default function SettingsPage() {
             </div>
             {/* Refresh Button */}
             <button
-              onClick={handleRefresh}
+              onClick={() => handleRefresh(session?.user?.email)}
               className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
               title="Refresh data from server"
             >
