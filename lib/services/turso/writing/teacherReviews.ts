@@ -177,3 +177,51 @@ export async function updateTeacherReview(reviewId: string, updates: any): Promi
     throw error;
   }
 }
+
+/**
+ * Get teacher reviews for multiple submissions in batch (OPTIMIZED for Turso)
+ * Uses a single SQL query with IN clause for better performance
+ *
+ * @param submissionIds - Array of submission IDs
+ * @returns Map of submission ID to teacher review
+ */
+export async function getTeacherReviewsBatch(
+  submissionIds: string[]
+): Promise<Record<string, any>> {
+  if (submissionIds.length === 0) return {};
+
+  try {
+    // Build placeholders for IN clause: (?, ?, ?)
+    const placeholders = submissionIds.map(() => '?').join(', ');
+
+    // Single optimized query instead of multiple queries
+    const result = await db.execute({
+      sql: `SELECT * FROM teacher_reviews WHERE submission_id IN (${placeholders})`,
+      args: submissionIds,
+    });
+
+    // Convert to map for O(1) lookup
+    const reviewsMap: Record<string, any> = {};
+
+    for (const row of result.rows) {
+      const submissionId = row.submission_id as string;
+      reviewsMap[submissionId] = {
+        reviewId: row.review_id,
+        submissionId: row.submission_id,
+        teacherId: row.teacher_id,
+        grammarScore: Number(row.grammar_score),
+        vocabularyScore: Number(row.vocabulary_score),
+        coherenceScore: Number(row.coherence_score),
+        overallScore: Number(row.overall_score),
+        comments: row.comments,
+        createdAt: Number(row.created_at),
+        updatedAt: Number(row.updated_at),
+      };
+    }
+
+    return reviewsMap;
+  } catch (error) {
+    console.error('[writingService:turso] Error fetching teacher reviews batch:', error);
+    throw error;
+  }
+}

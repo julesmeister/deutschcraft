@@ -270,3 +270,61 @@ export async function updateTeacherReview(reviewId: string, updates: any): Promi
     throw error;
   }
 }
+
+/**
+ * Get teacher reviews for multiple submissions in batch (Firestore implementation)
+ * Fetches reviews for multiple submissions - could be optimized with whereIn query
+ *
+ * @param submissionIds - Array of submission IDs
+ * @returns Map of submission ID to teacher review
+ */
+export async function getTeacherReviewsBatch(
+  submissionIds: string[]
+): Promise<Record<string, any>> {
+  if (submissionIds.length === 0) return {};
+
+  try {
+    const reviewsRef = collection(db, 'teacher-reviews');
+    const reviewsMap: Record<string, any> = {};
+
+    // Note: Firestore supports whereIn with up to 10 items
+    // For better performance with many IDs, we could batch them in groups of 10
+    if (submissionIds.length <= 10) {
+      // Optimized: single query using whereIn
+      const q = query(
+        reviewsRef,
+        where('submissionId', 'in', submissionIds)
+      );
+
+      const snapshot = await getDocs(q);
+      snapshot.docs.forEach(doc => {
+        const data = doc.data();
+        reviewsMap[data.submissionId] = {
+          reviewId: doc.id,
+          ...data,
+        };
+      });
+    } else {
+      // Fallback: fetch individually for >10 submissions
+      // This matches the approach in writingsService.ts
+      await Promise.all(
+        submissionIds.map(async (submissionId) => {
+          try {
+            const review = await getTeacherReview(submissionId);
+            if (review) {
+              reviewsMap[submissionId] = review;
+            }
+          } catch (error) {
+            console.error(`[reviews] Error fetching review for ${submissionId}:`, error);
+            // Continue with other submissions even if one fails
+          }
+        })
+      );
+    }
+
+    return reviewsMap;
+  } catch (error) {
+    console.error('[reviews] Error fetching teacher reviews batch:', error);
+    throw error;
+  }
+}

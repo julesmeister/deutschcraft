@@ -43,6 +43,7 @@ export {
   getTeacherReviews,
   createTeacherReview,
   updateTeacherReview,
+  getTeacherReviewsBatch,
 } from './teacherReviews';
 
 // Progress and stats operations
