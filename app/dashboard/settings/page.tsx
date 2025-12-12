@@ -8,6 +8,7 @@ import { FlashcardSettingsTab } from '@/components/ui/settings/FlashcardSettings
 import { IntegrationTab } from '@/components/ui/settings/IntegrationTab';
 import { EnrollmentTab } from '@/components/ui/settings/EnrollmentTab';
 import { EnrollmentPendingTab } from '@/components/ui/settings/EnrollmentPendingTab';
+import { DatabaseMigrationTab } from '@/components/ui/settings/DatabaseMigrationTab';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { useSettingsData } from '@/lib/hooks/useSettingsData';
 import { useProfileForm } from '@/lib/hooks/useProfileForm';
@@ -182,6 +183,9 @@ export default function SettingsPage() {
 
               {/* Integration Tab - Only for approved users */}
               {activeTab === 'integration' && !isPending && <IntegrationTab />}
+
+              {/* Database Migration Tab - Only for approved users */}
+              {activeTab === 'migration' && !isPending && <DatabaseMigrationTab />}
             </div>
           </div>
         </div>

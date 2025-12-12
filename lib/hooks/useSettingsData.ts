@@ -5,7 +5,7 @@ import { useFirebaseAuth } from './useFirebaseAuth';
 import { useCurrentStudent } from './useUsers';
 import { isPendingApproval } from '../models/user';
 
-export type SettingsTab = 'enrollment' | 'profile' | 'security' | 'notification' | 'flashcards' | 'integration';
+export type SettingsTab = 'enrollment' | 'profile' | 'security' | 'notification' | 'flashcards' | 'integration' | 'migration';
 
 /**
  * Hook to manage settings page data and state
