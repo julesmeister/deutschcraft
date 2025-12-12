@@ -4,6 +4,11 @@
 
 Refactored `app/dashboard/student/writings/page.tsx` to follow clean architecture principles by extracting business logic into services and hooks.
 
+**IMPORTANT: DATABASE-AGNOSTIC ARCHITECTURE**
+- Service and hook layers do NOT directly interact with Firestore or Turso
+- All database queries are delegated to `lib/services/writingService.ts`
+- Switching databases only requires changing the service implementation, NOT the hook or component
+
 ---
 
 ## ✅ What Was Refactored
@@ -102,15 +107,18 @@ Service layer with pure functions for writings operations.
 - `paginateSubmissions(submissions, page, itemsPerPage)` - In-memory pagination
 - `hasMorePages(totalCount, currentPage, itemsPerPage)` - Check for more pages
 - `processSubmissions(submissions)` - Convenience function: filter + sort
+- `getTeacherReviewsBatch(submissionIds)` - **DATABASE-AGNOSTIC** fetch teacher reviews
 
 **Why a service?**
 - Pure functions = easy to test
 - No React dependencies
+- No database dependencies (delegates to writingService)
 - Can be used in other contexts (API routes, background jobs)
 - Clear separation of concerns
 
+**DATABASE-AGNOSTIC DESIGN:**
 ```typescript
-// Example service function
+// Pure function - no database access
 export function filterSubmissionsWithCorrections(
   submissions: WritingSubmission[]
 ): WritingSubmission[] {
@@ -119,12 +127,20 @@ export function filterSubmissionsWithCorrections(
     return submission.aiCorrectedVersion || submission.teacherScore !== undefined;
   });
 }
+
+// Database-agnostic function - delegates to configured service
+export async function getTeacherReviewsBatch(
+  submissionIds: string[]
+): Promise<Record<string, TeacherReview>> {
+  // Calls getTeacherReview() from @/lib/services/writingService
+  // Works with Firestore, Turso, or any configured database
+}
 ```
 
 ---
 
 ### 2. `lib/hooks/useWritingsData.ts`
-React hook that orchestrates the writings page data flow.
+**DATABASE-AGNOSTIC** React hook that orchestrates the writings page data flow.
 
 **Returns:**
 - `submissions` - Paginated submissions for current page
@@ -136,41 +152,47 @@ React hook that orchestrates the writings page data flow.
 - `totalWithCorrections` - Count of submissions with corrections
 
 **What it does:**
-1. Fetches all submissions using `useStudentSubmissions`
-2. Filters and sorts using service functions
+1. Fetches all submissions using `useStudentSubmissions` (database-agnostic hook)
+2. Filters and sorts using service functions (pure functions, no database access)
 3. Handles pagination state
-4. Fetches teacher reviews for visible submissions
+4. Fetches teacher reviews via `getTeacherReviewsBatch` (database-agnostic service)
 5. Manages infinite scroll with IntersectionObserver
 
 **Why a hook?**
 - Manages React-specific concerns (state, refs, effects)
 - Composes service functions with React hooks
 - Provides clean API for components
-- Handles data fetching and caching
+- **DATABASE-AGNOSTIC**: Works with Firestore, Turso, or any configured database
 
+**DATABASE-AGNOSTIC DESIGN:**
 ```typescript
 export function useWritingsData(userEmail: string | null) {
   const [currentPage, setCurrentPage] = useState(1);
   const loadMoreRef = useRef<HTMLDivElement>(null);
 
-  // Fetch and process submissions
+  // ✅ DATABASE-AGNOSTIC: Uses hook that delegates to service layer
   const { data: allSubmissions = [], isLoading } = useStudentSubmissions(userEmail);
+
+  // ✅ Pure function - no database access
   const processedSubmissions = useMemo(
     () => processSubmissions(allSubmissions),
     [allSubmissions]
   );
 
-  // Paginate
+  // ✅ Pure function - no database access
   const paginatedSubmissions = useMemo(
     () => paginateSubmissions(processedSubmissions, currentPage, ITEMS_PER_PAGE),
     [processedSubmissions, currentPage]
   );
 
-  // Fetch teacher reviews for visible submissions
-  const { data: teacherReviews } = useQuery({ /* ... */ });
+  // ✅ DATABASE-AGNOSTIC: Calls service function that delegates to database layer
+  const { data: teacherReviews } = useQuery({
+    queryKey: ['teacher-reviews-batch', submissionIds],
+    queryFn: async () => await getTeacherReviewsBatch(submissionIds),
+  });
 
-  // Infinite scroll with IntersectionObserver
-  useEffect(() => { /* ... */ }, [hasMore, currentPage]);
+  // ✅ Pure React logic - no database access
+  useEffect(() => { /* IntersectionObserver setup */ }, [hasMore, currentPage]);
 
   return { submissions: paginatedSubmissions, teacherReviews, isLoading, hasMore, loadMoreRef, totalWithCorrections: processedSubmissions.length };
 }
@@ -190,22 +212,53 @@ export function useWritingsData(userEmail: string | null) {
 └─────────────────┬───────────────────────────────────────────┘
                   │ uses
 ┌─────────────────▼───────────────────────────────────────────┐
-│  Hook Layer (React Logic)                                   │
+│  Hook Layer (React Logic) - DATABASE-AGNOSTIC               │
 │  lib/hooks/useWritingsData.ts                               │
 │  - Manages React state (pagination, refs)                   │
 │  - Orchestrates services                                    │
 │  - Handles side effects (infinite scroll)                   │
-│  - Fetches teacher reviews                                  │
+│  - NO direct database queries                               │
 └─────────────────┬───────────────────────────────────────────┘
                   │ uses
 ┌─────────────────▼───────────────────────────────────────────┐
-│  Service Layer (Business Logic)                             │
+│  Service Layer (Business Logic) - DATABASE-AGNOSTIC         │
 │  lib/services/writingsService.ts                            │
 │  - Pure functions for filter, sort, paginate                │
+│  - getTeacherReviewsBatch delegates to database service     │
 │  - No React dependencies                                    │
-│  - Easy to test                                             │
-└─────────────────────────────────────────────────────────────┘
+│  - No direct database access                                │
+└─────────────────┬───────────────────────────────────────────┘
+                  │ delegates to
+┌─────────────────▼───────────────────────────────────────────┐
+│  Database Service Layer                                     │
+│  lib/services/writingService.ts (re-exports from below)     │
+└─────────────────┬───────────────────────────────────────────┘
+                  │ selects implementation
+      ┌───────────┴───────────┐
+      ▼                       ▼
+┌─────────────────┐  ┌─────────────────────┐
+│  Firestore      │  │  Turso              │
+│  lib/services/  │  │  lib/services/turso/│
+│  writing/*.ts   │  │  writing/*.ts       │
+│  (Active ✅)    │  │  (Available 💤)     │
+└─────────────────┘  └─────────────────────┘
 ```
+
+### How Database Switching Works
+
+**Currently:** App reads from Firestore
+```typescript
+// lib/services/writingService.ts
+export * from './writing'; // ← Points to Firestore implementation
+```
+
+**To switch to Turso:**
+```typescript
+// lib/services/writingService.ts
+export * from './turso/writing'; // ← Points to Turso implementation
+```
+
+**Hook and component require NO changes!** ✅
 
 ---
 

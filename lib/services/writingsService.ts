@@ -1,11 +1,13 @@
 /**
  * Writings Service
  * Pure functions for writing submissions filtering, sorting, and pagination
+ * Also provides database-agnostic data fetching for teacher reviews
  *
  * This service has no React dependencies and can be tested independently.
  */
 
-import { WritingSubmission } from '@/lib/models/writing';
+import { WritingSubmission, TeacherReview } from '@/lib/models/writing';
+import { getTeacherReview } from '@/lib/services/writingService';
 
 /**
  * Filter submissions to only include those with corrections
@@ -89,4 +91,37 @@ export function processSubmissions(
 ): WritingSubmission[] {
   const filtered = filterSubmissionsWithCorrections(submissions);
   return sortSubmissionsByDate(filtered);
+}
+
+/**
+ * Fetch teacher reviews for multiple submissions in batch
+ *
+ * This is a database-agnostic function that delegates to the configured
+ * database service (Firestore or Turso).
+ *
+ * @param submissionIds - Array of submission IDs
+ * @returns Map of submission ID to teacher review
+ */
+export async function getTeacherReviewsBatch(
+  submissionIds: string[]
+): Promise<Record<string, TeacherReview>> {
+  const reviewsMap: Record<string, TeacherReview> = {};
+
+  // Fetch reviews for each submission
+  // Note: This could be optimized with a batch query in the database layer
+  await Promise.all(
+    submissionIds.map(async (submissionId) => {
+      try {
+        const review = await getTeacherReview(submissionId);
+        if (review) {
+          reviewsMap[submissionId] = review;
+        }
+      } catch (error) {
+        console.error(`[writingsService] Error fetching review for ${submissionId}:`, error);
+        // Continue with other submissions even if one fails
+      }
+    })
+  );
+
+  return reviewsMap;
 }

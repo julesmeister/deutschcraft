@@ -1,21 +1,23 @@
 /**
  * useWritingsData Hook
- * Manages writings page data fetching, filtering, and pagination
+ * DATABASE-AGNOSTIC hook for managing writings page data
  *
  * This hook orchestrates the writings page data flow:
- * 1. Fetches all submissions for current user
+ * 1. Fetches all submissions for current user (via useStudentSubmissions)
  * 2. Filters to only show submissions with corrections
  * 3. Sorts by date
  * 4. Handles pagination
- * 5. Fetches teacher reviews for visible submissions
+ * 5. Fetches teacher reviews for visible submissions (via database service)
+ *
+ * Works with Firestore, Turso, or any other data source configured in
+ * lib/services/writingService.ts
  */
 
 import { useState, useMemo, useRef, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { getDocs, collection, query, where } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
-import { WritingSubmission, TeacherReview } from '@/lib/models/writing';
+import { TeacherReview } from '@/lib/models/writing';
 import { useStudentSubmissions } from '@/lib/hooks/useWritingExercises';
+import { getTeacherReviewsBatch } from '@/lib/services/writingsService';
 import {
   processSubmissions,
   paginateSubmissions,
@@ -28,22 +30,22 @@ export function useWritingsData(userEmail: string | null) {
   const [currentPage, setCurrentPage] = useState(1);
   const loadMoreRef = useRef<HTMLDivElement>(null);
 
-  // Fetch all submissions for current user
+  // Fetch all submissions for current user (database-agnostic via hook)
   const { data: allSubmissions = [], isLoading } = useStudentSubmissions(userEmail);
 
-  // Process submissions: filter and sort
+  // Process submissions: filter and sort (pure functions, no database access)
   const processedSubmissions = useMemo(
     () => processSubmissions(allSubmissions),
     [allSubmissions]
   );
 
-  // Paginate in memory
+  // Paginate in memory (pure function, no database access)
   const paginatedSubmissions = useMemo(
     () => paginateSubmissions(processedSubmissions, currentPage, ITEMS_PER_PAGE),
     [processedSubmissions, currentPage]
   );
 
-  // Check if more pages available
+  // Check if more pages available (pure function)
   const hasMore = hasMorePages(
     processedSubmissions.length,
     currentPage,
@@ -56,29 +58,12 @@ export function useWritingsData(userEmail: string | null) {
     [paginatedSubmissions]
   );
 
-  // Fetch teacher reviews for paginated submissions
+  // Fetch teacher reviews for paginated submissions (database-agnostic via service)
   const { data: teacherReviews } = useQuery({
     queryKey: ['teacher-reviews-batch', submissionIds],
     queryFn: async () => {
       if (submissionIds.length === 0) return {};
-
-      const reviewsRef = collection(db, 'writing-teacher-reviews');
-      const reviewsMap: Record<string, TeacherReview> = {};
-
-      // Fetch reviews for each submission
-      for (const submissionId of submissionIds) {
-        const q = query(reviewsRef, where('submissionId', '==', submissionId));
-        const snapshot = await getDocs(q);
-
-        if (snapshot.docs.length > 0) {
-          reviewsMap[submissionId] = {
-            ...snapshot.docs[0].data(),
-            reviewId: snapshot.docs[0].id,
-          } as TeacherReview;
-        }
-      }
-
-      return reviewsMap;
+      return await getTeacherReviewsBatch(submissionIds);
     },
     enabled: submissionIds.length > 0,
   });
