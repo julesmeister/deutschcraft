@@ -13,22 +13,12 @@
  * - TURSO_AUTH_TOKEN: Your Turso authentication token
  */
 
-import { createClient } from '@libsql/client';
+import { createClient, Client } from '@libsql/client';
 
-// Validate environment variables
-const TURSO_DATABASE_URL = process.env.TURSO_DATABASE_URL;
-const TURSO_AUTH_TOKEN = process.env.TURSO_AUTH_TOKEN;
-
-if (!TURSO_DATABASE_URL) {
-  throw new Error('TURSO_DATABASE_URL environment variable is required');
-}
-
-if (!TURSO_AUTH_TOKEN) {
-  throw new Error('TURSO_AUTH_TOKEN environment variable is required');
-}
+let _db: Client | null = null;
 
 /**
- * Turso database client instance
+ * Get the Turso database client instance (lazy initialization)
  *
  * Features:
  * - Edge-compatible SQLite database
@@ -36,9 +26,39 @@ if (!TURSO_AUTH_TOKEN) {
  * - Low latency reads from edge locations
  * - Strong consistency for writes
  */
-export const db = createClient({
-  url: TURSO_DATABASE_URL,
-  authToken: TURSO_AUTH_TOKEN,
+function getDb(): Client {
+  if (_db) return _db;
+
+  // Validate environment variables at runtime
+  const TURSO_DATABASE_URL = process.env.TURSO_DATABASE_URL;
+  const TURSO_AUTH_TOKEN = process.env.TURSO_AUTH_TOKEN;
+
+  if (!TURSO_DATABASE_URL) {
+    throw new Error('TURSO_DATABASE_URL environment variable is required');
+  }
+
+  if (!TURSO_AUTH_TOKEN) {
+    throw new Error('TURSO_AUTH_TOKEN environment variable is required');
+  }
+
+  _db = createClient({
+    url: TURSO_DATABASE_URL,
+    authToken: TURSO_AUTH_TOKEN,
+  });
+
+  return _db;
+}
+
+/**
+ * Turso database client instance
+ * Lazily initialized on first access to avoid build-time errors
+ */
+export const db = new Proxy({} as Client, {
+  get(_target, prop) {
+    const client = getDb();
+    const value = (client as any)[prop];
+    return typeof value === 'function' ? value.bind(client) : value;
+  },
 });
 
 /**
@@ -80,7 +100,10 @@ export async function transaction(queries: { sql: string; params?: any[] }[]) {
  */
 export async function closeConnection() {
   try {
-    await db.close();
+    if (_db) {
+      await _db.close();
+      _db = null;
+    }
   } catch (error) {
     console.error('[Turso] Error closing connection:', error);
   }
