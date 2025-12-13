@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Housing",
-  "totalCards": 25,
+  "totalCards": 71,
   "flashcards": [
     {
       "id": "syllabus-b1-10977",
@@ -500,6 +500,926 @@
           "B1",
           "Housing",
           "die Renovierung"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-c9a32d3a",
+      "german": "das Haus",
+      "english": "house",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "das Haus"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-c8971aad",
+      "german": "das Einfamilienhaus",
+      "english": "single-family house",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "das Einfamilienhaus"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-c78b79f0",
+      "german": "das Mehrfamilienhaus",
+      "english": "apartment building",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 2,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "das Mehrfamilienhaus"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-a8ec2fb3",
+      "german": "die WG",
+      "english": "shared apartment / flatshare",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 3,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die WG"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-77d1efe5",
+      "german": "die Wohngemeinschaft",
+      "english": "shared living community",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 4,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die Wohngemeinschaft"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-7337edbd",
+      "german": "das Zimmer",
+      "english": "room",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 5,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "das Zimmer"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-ee0a71d0",
+      "german": "das Wohnzimmer",
+      "english": "living room",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 6,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "das Wohnzimmer"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-b4e29457",
+      "german": "das Schlafzimmer",
+      "english": "bedroom",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "das Schlafzimmer"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-47f59790",
+      "german": "die Küche",
+      "english": "kitchen",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die Küche"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-7bb9664b",
+      "german": "das Bad",
+      "english": "bathroom",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "das Bad"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-e9c5c71d",
+      "german": "das Badezimmer",
+      "english": "bathroom",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "das Badezimmer"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-f2334c85",
+      "german": "die Toilette",
+      "english": "toilet",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die Toilette"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-e188155a",
+      "german": "der Flur",
+      "english": "hallway / corridor",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der Flur"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-fc3fef4e",
+      "german": "das Arbeitszimmer",
+      "english": "study / home office",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "das Arbeitszimmer"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-8748da7e",
+      "german": "die Tür",
+      "english": "door",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die Tür"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-59be36af",
+      "german": "die Haustür",
+      "english": "front door",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die Haustür"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-733c8d41",
+      "german": "das Fenster",
+      "english": "window",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "das Fenster"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-3be6e139",
+      "german": "die Wand",
+      "english": "wall",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die Wand"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-ece862a9",
+      "german": "die Decke",
+      "english": "ceiling",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die Decke"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-a152762a",
+      "german": "der Boden",
+      "english": "floor / ground",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der Boden"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-9ed638aa",
+      "german": "das Dach",
+      "english": "roof",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "das Dach"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-043567ce",
+      "german": "der Garten",
+      "english": "garden / yard",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der Garten"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-311415d9",
+      "german": "die Terrasse",
+      "english": "terrace / patio",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die Terrasse"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-f920811a",
+      "german": "der Hof",
+      "english": "courtyard / yard",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der Hof"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-d8532b35",
+      "german": "ausziehen",
+      "english": "to move out",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "ausziehen"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-80f0fd5f",
+      "german": "umziehen",
+      "english": "to move / relocate",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "umziehen"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-ad1929ed",
+      "german": "renovieren",
+      "english": "to renovate",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "renovieren"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-acb925c8",
+      "german": "putzen",
+      "english": "to clean",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "putzen"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-62216e9f",
+      "german": "mieten",
+      "english": "to rent",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "mieten"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-613360ef",
+      "german": "vermieten",
+      "english": "to rent out",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "vermieten"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-520c8ab7",
+      "german": "der Schlüssel",
+      "english": "key",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der Schlüssel"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-6f07873f",
+      "german": "die Klingel",
+      "english": "doorbell",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die Klingel"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-372ca02a",
+      "german": "der Briefkasten",
+      "english": "mailbox",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der Briefkasten"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-b23c7fa4",
+      "german": "die Hausverwaltung",
+      "english": "property management",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 33,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die Hausverwaltung"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-5c9eb6ce",
+      "german": "der Hausmeister",
+      "english": "caretaker / janitor",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der Hausmeister"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-6ca72a34",
+      "german": "der Strom",
+      "english": "electricity",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 35,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der Strom"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-fe041f5e",
+      "german": "das Wasser",
+      "english": "water",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 36,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "das Wasser"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-277eb138",
+      "german": "das Gas",
+      "english": "gas",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 37,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "das Gas"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-f3b70107",
+      "german": "der Müll",
+      "english": "garbage / trash",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 38,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "der Müll"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-f14e7263",
+      "german": "die Mülltonne",
+      "english": "garbage bin",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 39,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "die Mülltonne"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-5a2274b9",
+      "german": "hell",
+      "english": "bright / light",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 40,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "hell"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-75d1f9e7",
+      "german": "dunkel",
+      "english": "dark",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 41,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "dunkel"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-da40e2ca",
+      "german": "ruhig",
+      "english": "quiet / peaceful",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 42,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "ruhig"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-8c4d7a06",
+      "german": "laut",
+      "english": "loud / noisy",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 43,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "laut"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-c28cc9ad",
+      "german": "gemütlich",
+      "english": "cozy / comfortable",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 44,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "gemütlich"
+        ]
+      }
+    },
+    {
+      "id": "b1-housing-47b66d25",
+      "german": "geräumig",
+      "english": "spacious",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Housing Expansion 2025",
+        "lineNumber": 45,
+        "hierarchy": [
+          "B1",
+          "Housing",
+          "geräumig"
         ]
       }
     }
