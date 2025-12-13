@@ -77,7 +77,11 @@
       "Bash(npm run vocab:fix-articles:*)",
       "Bash(npm run flashcards:merge:*)",
       "Bash(cat:*)",
-      "Bash(npx ts-node:*)"
+      "Bash(npx ts-node:*)",
+      "Bash(npm audit fix:*)",
+      "Bash(git push)",
+      "Bash(del:*)",
+      "Bash(Select-String -Pattern \"(error|Error|ERROR|warning|Warning|compiled|Compiled|✓|Route)\")"
     ],
     "deny": [],
     "ask": []
