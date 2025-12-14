@@ -113,6 +113,7 @@ function DashboardNavbar() {
                     { label: 'Redemittel', href: '/dashboard/student/redemittel' },
                     { label: 'Prepositions', href: '/dashboard/student/prepositions' },
                     { label: 'Letter Writing', href: '/dashboard/student/letters' },
+                    { label: 'Videos', href: '/dashboard/student/videos' },
                     { label: 'Help Center', href: '/help', external: true },
                   ],
                 },
@@ -159,6 +160,7 @@ function DashboardNavbar() {
                   items: [
                     { label: 'Dictionary', href: '/dashboard/dictionary' },
                     { label: 'Redemittel', href: '/dashboard/student/redemittel' },
+                    { label: 'Videos', href: '/dashboard/student/videos' },
                     { label: 'Materials', href: '/resources/materials' },
                     { label: 'Templates', href: '/resources/templates' },
                     { label: 'Help Center', href: '/help', external: true },
@@ -254,6 +256,9 @@ function DashboardNavbar() {
                   <Link href="/dashboard/student/redemittel" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Redemittel
                   </Link>
+                  <Link href="/dashboard/student/videos" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                    Videos
+                  </Link>
                 </div>
               </div>
 
@@ -278,6 +283,9 @@ function DashboardNavbar() {
                   </Link>
                   <Link href="/dashboard/dictionary" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Dictionary
+                  </Link>
+                  <Link href="/dashboard/student/videos" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                    Videos
                   </Link>
                   <Link href="/dashboard/analytics" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Analytics
