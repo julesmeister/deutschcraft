@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
+import { CompactButtonDropdown, DropdownOption } from '@/components/ui/CompactButtonDropdown';
 
 // TikTok video data structure
 interface TikTokVideo {
@@ -55,6 +56,26 @@ const CATEGORY_LABELS = {
   other: 'Other',
 };
 
+const CATEGORY_OPTIONS: DropdownOption[] = [
+  { value: 'all', label: 'All Categories', icon: '🎬' },
+  { value: 'grammar', label: 'Grammar', icon: '📚' },
+  { value: 'vocabulary', label: 'Vocabulary', icon: '📖' },
+  { value: 'pronunciation', label: 'Pronunciation', icon: '🗣️' },
+  { value: 'culture', label: 'Culture', icon: '🌍' },
+  { value: 'tips', label: 'Tips & Tricks', icon: '💡' },
+  { value: 'other', label: 'Other', icon: '📌' },
+];
+
+const LEVEL_OPTIONS: DropdownOption[] = [
+  { value: 'all', label: 'All Levels', icon: '🌟' },
+  { value: 'A1', label: 'A1 - Beginner', icon: '🔤' },
+  { value: 'A2', label: 'A2 - Elementary', icon: '🔡' },
+  { value: 'B1', label: 'B1 - Intermediate', icon: '📗' },
+  { value: 'B2', label: 'B2 - Upper Intermediate', icon: '📘' },
+  { value: 'C1', label: 'C1 - Advanced', icon: '📙' },
+  { value: 'C2', label: 'C2 - Proficient', icon: '📕' },
+];
+
 export default function VideosPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedLevel, setSelectedLevel] = useState<string>('all');
@@ -65,6 +86,10 @@ export default function VideosPage() {
     return categoryMatch && levelMatch;
   });
 
+  // Get selected labels for display
+  const selectedCategoryLabel = CATEGORY_OPTIONS.find(opt => opt.value === selectedCategory)?.label || 'Category';
+  const selectedLevelLabel = LEVEL_OPTIONS.find(opt => opt.value === selectedLevel)?.label || 'Level';
+
   return (
     <div className="min-h-screen bg-gray-50">
       <DashboardHeader
@@ -74,41 +99,26 @@ export default function VideosPage() {
 
       <div className="container mx-auto px-6 py-8">
         {/* Filters */}
-        <div className="mb-8 flex flex-wrap gap-4">
+        <div className="mb-8 flex flex-wrap gap-3">
           {/* Category Filter */}
-          <div>
-            <label className="block text-sm font-bold text-gray-700 mb-2">Category</label>
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#11316e]"
-            >
-              <option value="all">All Categories</option>
-              {Object.entries(CATEGORY_LABELS).map(([key, label]) => (
-                <option key={key} value={key}>
-                  {label}
-                </option>
-              ))}
-            </select>
-          </div>
+          <CompactButtonDropdown
+            label={selectedCategoryLabel}
+            icon="🎯"
+            options={CATEGORY_OPTIONS}
+            value={selectedCategory}
+            onChange={(value) => setSelectedCategory(value as string)}
+            searchable={false}
+          />
 
           {/* Level Filter */}
-          <div>
-            <label className="block text-sm font-bold text-gray-700 mb-2">Level</label>
-            <select
-              value={selectedLevel}
-              onChange={(e) => setSelectedLevel(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#11316e]"
-            >
-              <option value="all">All Levels</option>
-              <option value="A1">A1</option>
-              <option value="A2">A2</option>
-              <option value="B1">B1</option>
-              <option value="B2">B2</option>
-              <option value="C1">C1</option>
-              <option value="C2">C2</option>
-            </select>
-          </div>
+          <CompactButtonDropdown
+            label={selectedLevelLabel}
+            icon="📊"
+            options={LEVEL_OPTIONS}
+            value={selectedLevel}
+            onChange={(value) => setSelectedLevel(value as string)}
+            searchable={false}
+          />
         </div>
 
         {/* Videos Grid - TikTok style */}
