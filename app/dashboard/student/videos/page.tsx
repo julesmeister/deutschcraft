@@ -5,6 +5,9 @@ import { useSession } from 'next-auth/react';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CompactButtonDropdown, DropdownOption } from '@/components/ui/CompactButtonDropdown';
 import { CatLoader } from '@/components/ui/CatLoader';
+import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
+import { VideoUploadModal } from '@/components/videos/VideoUploadModal';
+import { Pagination } from '@/components/ui/Pagination';
 import type { LearningVideo } from '@/lib/models/video';
 
 const CATEGORY_COLORS = {
@@ -45,51 +48,101 @@ const LEVEL_OPTIONS: DropdownOption[] = [
   { value: 'C2', label: 'C2 - Proficient', icon: '📕' },
 ];
 
+const ITEMS_PER_PAGE = 24;
+
 export default function VideosPage() {
   const { data: session } = useSession();
   const [videos, setVideos] = useState<LearningVideo[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedLevel, setSelectedLevel] = useState<string>('all');
+  const [showUploadModal, setShowUploadModal] = useState(false);
+  const [userRole, setUserRole] = useState<string | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
 
-  // Fetch videos from API
+  // Fetch user role
   useEffect(() => {
-    async function fetchVideos() {
-      setIsLoading(true);
+    async function fetchUserRole() {
+      if (!session?.user?.email) return;
+
       try {
-        const params = new URLSearchParams();
-        if (selectedCategory !== 'all') params.append('category', selectedCategory);
-        if (selectedLevel !== 'all') params.append('level', selectedLevel);
-
-        const response = await fetch(`/api/videos?${params.toString()}`);
+        const response = await fetch('/api/auth-check');
         const data = await response.json();
-
-        if (data.success) {
-          setVideos(data.videos);
+        if (data.user?.role) {
+          setUserRole(data.user.role);
         }
       } catch (error) {
-        console.error('Error fetching videos:', error);
-      } finally {
-        setIsLoading(false);
+        console.error('Error fetching user role:', error);
       }
     }
 
+    fetchUserRole();
+  }, [session]);
+
+  // Fetch videos from API
+  useEffect(() => {
+    setCurrentPage(1); // Reset to page 1 when filters change
     fetchVideos();
   }, [selectedCategory, selectedLevel]);
+
+  async function fetchVideos() {
+    setIsLoading(true);
+    try {
+      const params = new URLSearchParams();
+      if (selectedCategory !== 'all') params.append('category', selectedCategory);
+      if (selectedLevel !== 'all') params.append('level', selectedLevel);
+
+      const response = await fetch(`/api/videos?${params.toString()}`);
+      const data = await response.json();
+
+      if (data.success) {
+        setVideos(data.videos);
+      }
+    } catch (error) {
+      console.error('Error fetching videos:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  function handleUploadSuccess() {
+    fetchVideos(); // Refresh the videos list
+  }
 
   // Get selected labels for display
   const selectedCategoryLabel = CATEGORY_OPTIONS.find(opt => opt.value === selectedCategory)?.label || 'Category';
   const selectedLevelLabel = LEVEL_OPTIONS.find(opt => opt.value === selectedLevel)?.label || 'Level';
 
+  // Pagination calculations
+  const totalPages = Math.ceil(videos.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const paginatedVideos = videos.slice(startIndex, endIndex);
+
   if (isLoading) {
     return <CatLoader message="Loading videos..." size="lg" fullScreen />;
   }
+
+  const isTeacher = userRole === 'TEACHER';
 
   return (
     <div className="min-h-screen bg-gray-50">
       <DashboardHeader
         title="Learning Videos 🎬"
         subtitle="Curated TikTok videos and slideshows to help you learn German"
+        actions={
+          isTeacher ? (
+            <div className="w-full sm:w-[200px]">
+              <ActionButton
+                onClick={() => setShowUploadModal(true)}
+                icon={<ActionButtonIcons.Plus />}
+                variant="purple"
+              >
+                Upload Video
+              </ActionButton>
+            </div>
+          ) : undefined
+        }
       />
 
       <div className="container mx-auto px-6 py-8">
@@ -128,13 +181,34 @@ export default function VideosPage() {
             </p>
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-            {videos.map((video) => (
-              <VideoCard key={video.videoId} video={video} />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+              {paginatedVideos.map((video) => (
+                <VideoCard key={video.videoId} video={video} />
+              ))}
+            </div>
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="mt-8">
+                <Pagination
+                  currentPage={currentPage}
+                  totalPages={totalPages}
+                  onPageChange={setCurrentPage}
+                  variant="rounded"
+                />
+              </div>
+            )}
+          </>
         )}
       </div>
+
+      {/* Upload Modal */}
+      <VideoUploadModal
+        isOpen={showUploadModal}
+        onClose={() => setShowUploadModal(false)}
+        onSuccess={handleUploadSuccess}
+      />
     </div>
   );
 }

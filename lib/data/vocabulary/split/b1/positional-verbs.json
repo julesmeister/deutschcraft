@@ -1,826 +1,136 @@
 {
   "level": "B1",
   "category": "Positional Verbs",
-  "totalCards": 41,
+  "totalCards": 10,
   "flashcards": [
     {
-      "id": "syllabus-b1-11047",
-      "german": "hängen (transitiv)",
-      "english": "to hang (transitive - with accusative)",
+      "id": "syllabus-b1-positional-01",
+      "german": "legen",
+      "english": "to lay / to put (flat)",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
+      "tags": ["syllabus", "B1"],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "hängen (transitiv)"
-        ]
+        "hierarchy": ["B1", "Positional Verbs", "legen"]
       }
     },
     {
-      "id": "syllabus-b1-11048",
-      "german": "hängen (intransitiv)",
-      "english": "to hang / to be hanging (with dative)",
+      "id": "syllabus-b1-positional-02",
+      "german": "liegen",
+      "english": "to lie / to be lying",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
+      "tags": ["syllabus", "B1"],
       "_meta": {
         "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "hängen (intransitiv)"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11049",
-      "german": "stecken (transitiv)",
-      "english": "to put / to stick (with accusative)",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "stecken (transitiv)"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11050",
-      "german": "stecken (intransitiv)",
-      "english": "to be stuck / to be located (with dative)",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "stecken (intransitiv)"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11055",
-      "german": "sich hinstellen",
-      "english": "to stand up / to position oneself",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "sich hinstellen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11057",
-      "german": "auflegen",
-      "english": "to put on / to hang up (phone)",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "auflegen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11058",
-      "german": "aufliegen",
-      "english": "to lie on / to rest on",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "aufliegen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11059",
-      "german": "aufstellen",
-      "english": "to set up / to erect",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "aufstellen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11061",
-      "german": "ablegen",
-      "english": "to put down / to take off",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "ablegen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11062",
-      "german": "abliegen",
-      "english": "to be remote / to be far from",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "abliegen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11064",
-      "german": "abstehen",
-      "english": "to stick out / to protrude",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "abstehen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11065",
-      "german": "hinlegen",
-      "english": "to lay down / to put down",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "hinlegen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11066",
-      "german": "hinstellen",
-      "english": "to put down / to place",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "hinstellen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11069",
-      "german": "vorliegen",
-      "english": "to be present / to exist",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "vorliegen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-11070",
-      "german": "darstellen",
-      "english": "to represent / to depict",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "darstellen"
-        ]
-      }
-    },
-    {
-      "id": "b1-hocken-827788",
-      "german": "hocken",
-      "english": "to crouch / to squat",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "hocken"
-        ]
-      }
-    },
-    {
-      "id": "b1-kauern-827788",
-      "german": "kauern",
-      "english": "to cower / to crouch",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
         "lineNumber": 1,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "kauern"
-        ]
+        "hierarchy": ["B1", "Positional Verbs", "liegen"]
       }
     },
     {
-      "id": "b1-stecken-827788",
-      "german": "stecken",
-      "english": "to be stuck / to stick",
+      "id": "syllabus-b1-positional-03",
+      "german": "stellen",
+      "english": "to place / to put (upright)",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
+      "tags": ["syllabus", "B1"],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
+        "source": "Syllabus B1",
         "lineNumber": 2,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "stecken"
-        ]
+        "hierarchy": ["B1", "Positional Verbs", "stellen"]
       }
     },
     {
-      "id": "b1-dahinterst-827788",
-      "german": "dahinterstehen",
-      "english": "to stand behind",
+      "id": "syllabus-b1-positional-04",
+      "german": "stehen",
+      "english": "to stand / to be standing",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
+      "tags": ["syllabus", "B1"],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
+        "source": "Syllabus B1",
         "lineNumber": 3,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "dahinterstehen"
-        ]
+        "hierarchy": ["B1", "Positional Verbs", "stehen"]
       }
     },
     {
-      "id": "b1-daruntersi-827788",
-      "german": "darunter sitzen",
-      "english": "to sit among",
+      "id": "syllabus-b1-positional-05",
+      "german": "setzen",
+      "english": "to set / to place (seated position)",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
+      "tags": ["syllabus", "B1"],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
+        "source": "Syllabus B1",
         "lineNumber": 4,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "darunter"
-        ]
+        "hierarchy": ["B1", "Positional Verbs", "setzen"]
       }
     },
     {
-      "id": "b1-dortselbst-827788",
-      "german": "dortselbst stehen",
-      "english": "to stand there",
+      "id": "syllabus-b1-positional-06",
+      "german": "sitzen",
+      "english": "to sit / to be sitting",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
+      "tags": ["syllabus", "B1"],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
+        "source": "Syllabus B1",
         "lineNumber": 5,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "dortselbst"
-        ]
+        "hierarchy": ["B1", "Positional Verbs", "sitzen"]
       }
     },
     {
-      "id": "b1-eilfertige-827788",
-      "german": "eilfertig eilen",
-      "english": "to hurry eagerly",
+      "id": "syllabus-b1-positional-07",
+      "german": "hängen",
+      "english": "to hang / to be hanging",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
+      "tags": ["syllabus", "B1"],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
+        "source": "Syllabus B1",
         "lineNumber": 6,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "eilfertig"
-        ]
+        "hierarchy": ["B1", "Positional Verbs", "hängen"]
       }
     },
     {
-      "id": "b1-eiferndeif-827788",
-      "german": "eifernd eifern",
-      "english": "to emulate eagerly",
+      "id": "syllabus-b1-positional-08",
+      "german": "stecken",
+      "english": "to put / to stick / to be stuck",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
+      "tags": ["syllabus", "B1"],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
+        "source": "Syllabus B1",
         "lineNumber": 7,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "eifernd"
-        ]
+        "hierarchy": ["B1", "Positional Verbs", "stecken"]
       }
     },
     {
-      "id": "b1-eingewicke-827788",
-      "german": "eingewickelt liegen",
-      "english": "to lie wrapped",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 8,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "eingewickelt"
-        ]
-      }
-    },
-    {
-      "id": "b1-eingestric-827788",
-      "german": "eingestrickt sitzen",
-      "english": "to sit knitted in",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 9,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "eingestrickt"
-        ]
-      }
-    },
-    {
-      "id": "b1-verborgenl-827788",
-      "german": "verborgen liegen",
-      "english": "to lie hidden",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 10,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "verborgen"
-        ]
-      }
-    },
-    {
-      "id": "b1-versammelt-827788",
-      "german": "versammelt stehen",
-      "english": "to stand gathered",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 11,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "versammelt"
-        ]
-      }
-    },
-    {
-      "id": "b1-verzettelt-827788",
-      "german": "verzettelt liegen",
-      "english": "to lie scattered",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 12,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "verzettelt"
-        ]
-      }
-    },
-    {
-      "id": "b1-verzweifel-827788",
-      "german": "verzweifelt sitzen",
-      "english": "to sit desperate",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 13,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "verzweifelt"
-        ]
-      }
-    },
-    {
-      "id": "b1-verhangenh-827788",
-      "german": "verhangen hängen",
-      "english": "to hang covered",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 14,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "verhangen"
-        ]
-      }
-    },
-    {
-      "id": "b1-verhederts-827788",
-      "german": "verhedert sitzen",
-      "english": "to sit tangled",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 15,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "verhedert"
-        ]
-      }
-    },
-    {
-      "id": "b1-vereinzelt-827788",
-      "german": "vereinzelt stehen",
-      "english": "to stand isolated",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 16,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "vereinzelt"
-        ]
-      }
-    },
-    {
-      "id": "b1-vertrautsi-827788",
-      "german": "vertraut sitzen",
-      "english": "to sit trusting",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 17,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "vertraut"
-        ]
-      }
-    },
-    {
-      "id": "b1-versunkenl-827788",
-      "german": "versunken liegen",
-      "english": "to lie sunken",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 18,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "versunken"
-        ]
-      }
-    },
-    {
-      "id": "b1-versteckts-827788",
-      "german": "versteckt stehen",
-      "english": "to stand hidden",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 19,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "versteckt"
-        ]
-      }
-    },
-    {
-      "id": "b1-verweiltsi-827788",
-      "german": "verweilt sitzen",
-      "english": "to sit lingering",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 20,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "verweilt"
-        ]
-      }
-    },
-    {
-      "id": "b1-verwirrtst-827788",
-      "german": "verwirrt stehen",
-      "english": "to stand confused",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 21,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "verwirrt"
-        ]
-      }
-    },
-    {
-      "id": "b1-verworrenl-827788",
-      "german": "verworren liegen",
-      "english": "to lie tangled",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 22,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "verworren"
-        ]
-      }
-    },
-    {
-      "id": "b1-verzaudert-827788",
-      "german": "verzaudert stehen",
-      "english": "to stand dawdling",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 23,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "verzaudert"
-        ]
-      }
-    },
-    {
-      "id": "b1-positional-verbs-miv8iuoe8zyea",
+      "id": "syllabus-b1-positional-09",
       "german": "lehnen",
       "english": "to lean",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
+      "tags": ["syllabus", "B1"],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 39,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "lehnen"
-        ]
+        "source": "Syllabus B1",
+        "lineNumber": 8,
+        "hierarchy": ["B1", "Positional Verbs", "lehnen"]
       }
     },
     {
-      "id": "b1-positional-verbs-miv8iuoe8nbij",
-      "german": "anlehnen",
-      "english": "to lean against",
+      "id": "syllabus-b1-positional-10",
+      "german": "hocken",
+      "english": "to crouch / to squat",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
+      "tags": ["syllabus", "B1"],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 40,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "anlehnen"
-        ]
+        "source": "Syllabus B1",
+        "lineNumber": 9,
+        "hierarchy": ["B1", "Positional Verbs", "hocken"]
       }
     }
   ]
