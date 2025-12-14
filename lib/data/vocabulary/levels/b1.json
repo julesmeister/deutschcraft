@@ -1,6 +1,6 @@
 {
   "level": "B1",
-  "totalCards": 1601,
+  "totalCards": 1595,
   "flashcards": [
     {
       "id": "b1-abstract-concepts-miv8hiwo0giq5",
@@ -20405,8 +20405,8 @@
     },
     {
       "id": "syllabus-b1-positional-01",
-      "german": "legen",
-      "english": "to lay / to put (flat)",
+      "german": "hängen",
+      "english": "to hang / to be hanging",
       "category": "Positional Verbs",
       "level": "B1",
       "tags": [
@@ -20419,14 +20419,14 @@
         "hierarchy": [
           "B1",
           "Positional Verbs",
-          "legen"
+          "hängen"
         ]
       }
     },
     {
       "id": "syllabus-b1-positional-02",
-      "german": "liegen",
-      "english": "to lie / to be lying",
+      "german": "stecken",
+      "english": "to put / to stick / to be stuck",
       "category": "Positional Verbs",
       "level": "B1",
       "tags": [
@@ -20439,14 +20439,14 @@
         "hierarchy": [
           "B1",
           "Positional Verbs",
-          "liegen"
+          "stecken"
         ]
       }
     },
     {
       "id": "syllabus-b1-positional-03",
-      "german": "stellen",
-      "english": "to place / to put (upright)",
+      "german": "lehnen",
+      "english": "to lean",
       "category": "Positional Verbs",
       "level": "B1",
       "tags": [
@@ -20459,132 +20459,12 @@
         "hierarchy": [
           "B1",
           "Positional Verbs",
-          "stellen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-positional-04",
-      "german": "stehen",
-      "english": "to stand / to be standing",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 3,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "stehen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-positional-05",
-      "german": "setzen",
-      "english": "to set / to place (seated position)",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 4,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "setzen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-positional-06",
-      "german": "sitzen",
-      "english": "to sit / to be sitting",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 5,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "sitzen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-positional-07",
-      "german": "hängen",
-      "english": "to hang / to be hanging",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 6,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "hängen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-positional-08",
-      "german": "stecken",
-      "english": "to put / to stick / to be stuck",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 7,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
-          "stecken"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b1-positional-09",
-      "german": "lehnen",
-      "english": "to lean",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": [
-        "syllabus",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 8,
-        "hierarchy": [
-          "B1",
-          "Positional Verbs",
           "lehnen"
         ]
       }
     },
     {
-      "id": "syllabus-b1-positional-10",
+      "id": "syllabus-b1-positional-04",
       "german": "hocken",
       "english": "to crouch / to squat",
       "category": "Positional Verbs",
@@ -20595,7 +20475,7 @@
       ],
       "_meta": {
         "source": "Syllabus B1",
-        "lineNumber": 9,
+        "lineNumber": 3,
         "hierarchy": [
           "B1",
           "Positional Verbs",
