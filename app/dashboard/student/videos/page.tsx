@@ -1,42 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSession } from 'next-auth/react';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CompactButtonDropdown, DropdownOption } from '@/components/ui/CompactButtonDropdown';
-
-// TikTok video data structure
-interface TikTokVideo {
-  id: string;
-  title: string;
-  description: string;
-  videoUrl: string;
-  thumbnailUrl?: string;
-  category: 'grammar' | 'vocabulary' | 'pronunciation' | 'culture' | 'tips' | 'other';
-  level?: 'A1' | 'A2' | 'B1' | 'B2' | 'C1' | 'C2';
-  isSlideshow?: boolean;
-}
-
-// Sample data - replace with actual video paths
-const SAMPLE_VIDEOS: TikTokVideo[] = [
-  {
-    id: '1',
-    title: 'German Pronunciation Tips',
-    description: 'Common pronunciation mistakes and how to fix them',
-    videoUrl: '/videos/sample1.mp4',
-    category: 'pronunciation',
-    level: 'A1',
-  },
-  {
-    id: '2',
-    title: 'B1 Grammar Explained',
-    description: 'Understanding complex German sentence structures',
-    videoUrl: '/videos/sample2.mp4',
-    category: 'grammar',
-    level: 'B1',
-    isSlideshow: true,
-  },
-  // Add more videos here
-];
+import { CatLoader } from '@/components/ui/CatLoader';
+import type { LearningVideo } from '@/lib/models/video';
 
 const CATEGORY_COLORS = {
   grammar: 'bg-blue-100 text-blue-800',
@@ -77,18 +46,44 @@ const LEVEL_OPTIONS: DropdownOption[] = [
 ];
 
 export default function VideosPage() {
+  const { data: session } = useSession();
+  const [videos, setVideos] = useState<LearningVideo[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedLevel, setSelectedLevel] = useState<string>('all');
 
-  const filteredVideos = SAMPLE_VIDEOS.filter((video) => {
-    const categoryMatch = selectedCategory === 'all' || video.category === selectedCategory;
-    const levelMatch = selectedLevel === 'all' || video.level === selectedLevel;
-    return categoryMatch && levelMatch;
-  });
+  // Fetch videos from API
+  useEffect(() => {
+    async function fetchVideos() {
+      setIsLoading(true);
+      try {
+        const params = new URLSearchParams();
+        if (selectedCategory !== 'all') params.append('category', selectedCategory);
+        if (selectedLevel !== 'all') params.append('level', selectedLevel);
+
+        const response = await fetch(`/api/videos?${params.toString()}`);
+        const data = await response.json();
+
+        if (data.success) {
+          setVideos(data.videos);
+        }
+      } catch (error) {
+        console.error('Error fetching videos:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    fetchVideos();
+  }, [selectedCategory, selectedLevel]);
 
   // Get selected labels for display
   const selectedCategoryLabel = CATEGORY_OPTIONS.find(opt => opt.value === selectedCategory)?.label || 'Category';
   const selectedLevelLabel = LEVEL_OPTIONS.find(opt => opt.value === selectedLevel)?.label || 'Level';
+
+  if (isLoading) {
+    return <CatLoader message="Loading videos..." size="lg" fullScreen />;
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -122,7 +117,7 @@ export default function VideosPage() {
         </div>
 
         {/* Videos Grid - TikTok style */}
-        {filteredVideos.length === 0 ? (
+        {videos.length === 0 ? (
           <div className="bg-[#f2f2e5] rounded-[10px] p-12 text-center">
             <div className="text-6xl mb-4">📹</div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -134,8 +129,8 @@ export default function VideosPage() {
           </div>
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-            {filteredVideos.map((video) => (
-              <VideoCard key={video.id} video={video} />
+            {videos.map((video) => (
+              <VideoCard key={video.videoId} video={video} />
             ))}
           </div>
         )}
@@ -145,7 +140,7 @@ export default function VideosPage() {
 }
 
 interface VideoCardProps {
-  video: TikTokVideo;
+  video: LearningVideo;
 }
 
 function VideoCard({ video }: VideoCardProps) {

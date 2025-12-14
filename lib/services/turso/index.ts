@@ -222,8 +222,25 @@ export {
 } from './mediaService';
 
 // ============================================================================
+// VIDEO SERVICE
+// ============================================================================
+export {
+  uploadVideo,
+  getAllVideos,
+  getVideosByCategory,
+  getVideosByLevel,
+  getVideosByCategoryAndLevel,
+  getVideoById,
+  updateVideo,
+  deleteVideo,
+  getVideosByTeacher,
+  getVideoStats,
+} from './videoService';
+
+// ============================================================================
 // TYPE EXPORTS
 // ============================================================================
 export type { Session } from './sessionService';
 export type { DailyProgress, WeeklyProgressData } from './progressService';
 export type { MediaFile, UploadOptions } from './mediaService';
+export type { LearningVideo, VideoUploadData, VideoCategory, CEFRLevel } from './videoService';
