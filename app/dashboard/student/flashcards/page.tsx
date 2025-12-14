@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useTransition } from 'react';
+import { useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQueryClient } from '@tanstack/react-query';
 import { StatCardSimple } from '@/components/ui/StatCardSimple';
@@ -14,6 +14,7 @@ import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useStudyStats, useFlashcardReviews } from '@/lib/hooks/useFlashcards';
 import { useRemNoteCategories, useRemNoteTotalCards } from '@/lib/hooks/useRemNoteCategories';
 import { useFlashcardSettings } from '@/lib/hooks/useFlashcardSettings';
+import { usePersistedLevel } from '@/lib/hooks/usePersistedLevel';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { applyFlashcardSettings } from '@/lib/utils/flashcardSelection';
@@ -40,7 +41,7 @@ export default function FlashcardsLandingPage() {
   const router = useRouter();
   const queryClient = useQueryClient();
   const { session } = useFirebaseAuth();
-  const [selectedLevel, setSelectedLevel] = useState<CEFRLevel>(CEFRLevel.A1);
+  const [selectedLevel, setSelectedLevel] = usePersistedLevel('flashcards-last-level');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [practiceFlashcards, setPracticeFlashcards] = useState<any[]>([]);
   const [statsRefreshKey, setStatsRefreshKey] = useState(0);

@@ -11,6 +11,7 @@ import { LetterTemplate } from '@/lib/data/letterTemplates';
 import { useWritingStats, useStudentSubmissions } from './useWritingExercises';
 import { useWritingSubmissionHandlers } from './useWritingSubmissionHandlers';
 import { useExerciseAttempts, useAttemptStats } from './useWritingAttempts';
+import { usePersistedLevel } from './usePersistedLevel';
 
 export type ExerciseType = 'translation' | 'creative' | 'email' | 'letters' | null;
 
@@ -20,7 +21,7 @@ interface UseWritingExerciseStateProps {
 
 export function useWritingExerciseState({ userEmail }: UseWritingExerciseStateProps) {
   // Core state
-  const [selectedLevel, setSelectedLevel] = useState<CEFRLevel>(CEFRLevel.A1);
+  const [selectedLevel, setSelectedLevel] = usePersistedLevel('writing-last-level');
   const [showHistory, setShowHistory] = useState(false);
   const [selectedExerciseType, setSelectedExerciseType] = useState<ExerciseType>(null);
   const [selectedTranslation, setSelectedTranslation] = useState<TranslationExercise | null>(null);
