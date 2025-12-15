@@ -61,6 +61,7 @@ export function useWritingExerciseState({ userEmail }: UseWritingExerciseStatePr
     selectedEmail,
     selectedLetter,
     writingText,
+    emailContent,
     userEmail,
   });
 

@@ -32,6 +32,7 @@ interface UseWritingSubmissionHandlersProps {
   selectedEmail: EmailTemplate | null;
   selectedLetter: LetterTemplate | null;
   writingText: string;
+  emailContent?: { to: string; subject: string; body: string };
   userEmail?: string;
 }
 
@@ -42,8 +43,19 @@ export function useWritingSubmissionHandlers({
   selectedEmail,
   selectedLetter,
   writingText,
+  emailContent,
   userEmail,
 }: UseWritingSubmissionHandlersProps) {
+
+  // Get actual content based on exercise type
+  const getContent = () => {
+    if (selectedEmail && emailContent) {
+      return emailContent.body;
+    }
+    return writingText;
+  };
+
+  const content = getContent();
   const router = useRouter();
   const queryClient = useQueryClient();
   const [isSaving, setIsSaving] = useState(false);
@@ -82,7 +94,7 @@ export function useWritingSubmissionHandlers({
       return;
     }
 
-    if (!writingText.trim()) {
+    if (!content.trim()) {
       showDialog('Empty Content', 'Please write something before saving');
       return;
     }
@@ -108,14 +120,14 @@ export function useWritingSubmissionHandlers({
         ? 'email'
         : ((selectedLetter as any)?.type || 'formal-letter') as WritingExerciseType;
 
-      const wordCount = writingText.trim().split(/\s+/).length;
+      const wordCount = content.trim().split(/\s+/).length;
 
       if (currentDraftId) {
         // Update existing draft
         await updateSubmission.mutateAsync({
           submissionId: currentDraftId,
           updates: {
-            content: writingText,
+            content: content,
             wordCount,
             lastSavedAt: Date.now(),
             updatedAt: Date.now(),
@@ -132,7 +144,7 @@ export function useWritingSubmissionHandlers({
           await updateSubmission.mutateAsync({
             submissionId: existingDraft.submissionId,
             updates: {
-              content: writingText,
+              content: content,
               wordCount,
               lastSavedAt: Date.now(),
               updatedAt: Date.now(),
@@ -148,9 +160,9 @@ export function useWritingSubmissionHandlers({
             exerciseId,
             exerciseType,
             level: selectedLevel,
-            content: writingText,
+            content: content,
             wordCount,
-            characterCount: writingText.length,
+            characterCount: content.length,
             attemptNumber,
             status: 'draft',
             startedAt: Date.now(),
@@ -176,7 +188,7 @@ export function useWritingSubmissionHandlers({
       return;
     }
 
-    if (!writingText.trim()) {
+    if (!content.trim()) {
       showDialog('Empty Content', 'Please write your response before submitting.');
       return;
     }
@@ -200,7 +212,7 @@ export function useWritingSubmissionHandlers({
         ? 'email'
         : ((selectedLetter as any)?.type || 'formal-letter') as WritingExerciseType;
 
-      const wordCount = writingText.trim().split(/\s+/).length;
+      const wordCount = content.trim().split(/\s+/).length;
 
       // Check min word count requirement (if exists)
       const minWords = (currentExercise as any).wordCountRange?.min || (currentExercise as any).minWords || 0;
@@ -219,9 +231,9 @@ export function useWritingSubmissionHandlers({
         await updateSubmission.mutateAsync({
           submissionId: currentDraftId,
           updates: {
-            content: writingText,
+            content: content,
             wordCount,
-            characterCount: writingText.length,
+            characterCount: content.length,
             status: 'submitted',
             submittedAt: Date.now(),
             lastSavedAt: Date.now(),
@@ -237,9 +249,9 @@ export function useWritingSubmissionHandlers({
           exerciseId,
           exerciseType,
           level: selectedLevel,
-          content: writingText,
+          content: content,
           wordCount,
-          characterCount: writingText.length,
+          characterCount: content.length,
           attemptNumber: 1, // Will be updated from actual data
           status: 'submitted',
           submissionId: currentDraftId,
@@ -259,9 +271,9 @@ export function useWritingSubmissionHandlers({
           exerciseId,
           exerciseType,
           level: selectedLevel,
-          content: writingText,
+          content: content,
           wordCount,
-          characterCount: writingText.length,
+          characterCount: content.length,
           attemptNumber,
           status: 'submitted',
           startedAt: Date.now(),
