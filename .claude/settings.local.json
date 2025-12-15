@@ -81,7 +81,12 @@
       "Bash(npm audit fix:*)",
       "Bash(git push)",
       "Bash(del:*)",
-      "Bash(Select-String -Pattern \"(error|Error|ERROR|warning|Warning|compiled|Compiled|✓|Route)\")"
+      "Bash(Select-String -Pattern \"(error|Error|ERROR|warning|Warning|compiled|Compiled|✓|Route)\")",
+      "Bash(node clean-housing.js:*)",
+      "Bash(node add-housing-vocab.js:*)",
+      "Bash(node check-duplicates.js:*)",
+      "Bash(node remove-duplicates.js:*)",
+      "Bash(npm run:*)"
     ],
     "deny": [],
     "ask": []

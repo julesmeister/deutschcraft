@@ -6,6 +6,7 @@ import { useQueryClient } from '@tanstack/react-query';
 import { StatCardSimple } from '@/components/ui/StatCardSimple';
 import { FileCard, FileGrid, FileSection } from '@/components/ui/FileCard';
 import { FlashcardPractice } from '@/components/flashcards/FlashcardPractice';
+import { FlashcardReviewList } from '@/components/flashcards/FlashcardReviewList';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { ToastProvider } from '@/components/ui/toast';
 import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
@@ -48,6 +49,7 @@ export default function FlashcardsLandingPage() {
   const [isPending, startTransition] = useTransition();
   const [nextDueInfo, setNextDueInfo] = useState<{ count: number; nextDueDate: number } | undefined>();
   const [upcomingCards, setUpcomingCards] = useState<any[]>([]);
+  const [isReviewMode, setIsReviewMode] = useState(false);
 
   // Fetch real data from Firestore (with refresh key to force re-fetch after session)
   const { stats, isLoading: statsLoading } = useStudyStats(session?.user?.email || undefined, statsRefreshKey);
@@ -114,12 +116,14 @@ export default function FlashcardsLandingPage() {
       setSelectedCategory(categoryName);
       setNextDueInfo(nextDueInfo);
       setUpcomingCards(upcomingCards);
+      setIsReviewMode(false); // Reset to practice mode when selecting category
     });
   };
 
   const handleBackToCategories = () => {
     setSelectedCategory(null);
     setPracticeFlashcards([]);
+    setIsReviewMode(false); // Reset review mode
     // Invalidate queries to force fresh data after completing session
     queryClient.invalidateQueries({ queryKey: ['flashcard-reviews', session?.user?.email] });
     setStatsRefreshKey(prev => prev + 1);
@@ -152,6 +156,65 @@ export default function FlashcardsLandingPage() {
       setSelectedCategory('All Categories');
       setNextDueInfo(nextDueInfo);
       setUpcomingCards(upcomingCards);
+      setIsReviewMode(false); // Reset to practice mode
+    });
+  };
+
+  const handleToggleReviewMode = () => {
+    if (!selectedCategory) return;
+
+    const newReviewMode = !isReviewMode;
+
+    // Get the current category flashcards
+    const levelData = levelDataMap[selectedLevel];
+    let categoryFlashcards: any[];
+
+    if (selectedCategory === 'All Categories') {
+      categoryFlashcards = levelData.flashcards;
+    } else {
+      const categoryId = selectedCategory.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+      categoryFlashcards = levelData.flashcards.filter(
+        (card: any) => card.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') === categoryId
+      );
+    }
+
+    // Map with progress data
+    let flashcardsWithWordId = categoryFlashcards.map((card: any) => {
+      const progress = flashcardReviews.find(r => r.flashcardId === card.id || r.wordId === card.id);
+      return {
+        ...card,
+        wordId: card.id,
+        masteryLevel: progress?.masteryLevel ?? 0,
+        nextReviewDate: progress?.nextReviewDate,
+      };
+    });
+
+    let finalCards: any[];
+    let finalNextDueInfo: { count: number; nextDueDate: number } | undefined;
+    let finalUpcomingCards: any[];
+
+    if (newReviewMode) {
+      // Review mode: Show ALL cards, no filtering
+      finalCards = flashcardsWithWordId;
+      finalNextDueInfo = undefined;
+      finalUpcomingCards = [];
+    } else {
+      // Practice mode: Apply settings (only due cards)
+      const result = applyFlashcardSettings(
+        flashcardsWithWordId,
+        flashcardReviews,
+        settings
+      );
+      finalCards = result.cards;
+      finalNextDueInfo = result.nextDueInfo;
+      finalUpcomingCards = result.upcomingCards;
+    }
+
+    startTransition(() => {
+      setPracticeFlashcards(finalCards);
+      setNextDueInfo(finalNextDueInfo);
+      setUpcomingCards(finalUpcomingCards);
+      setIsReviewMode(newReviewMode);
     });
   };
 
@@ -173,7 +236,16 @@ export default function FlashcardsLandingPage() {
               }
           }
           actions={
-            !selectedCategory && (
+            selectedCategory ? (
+              <ActionButton
+                onClick={handleToggleReviewMode}
+                variant={isReviewMode ? 'purple' : 'cyan'}
+                icon={isReviewMode ? <ActionButtonIcons.Check /> : <ActionButtonIcons.Eye />}
+                disabled={isPending}
+              >
+                {isReviewMode ? 'Start Practice' : 'Review All'}
+              </ActionButton>
+            ) : (
               <ActionButton
                 onClick={handleStartPractice}
                 variant="purple"
@@ -198,17 +270,25 @@ export default function FlashcardsLandingPage() {
 
         {/* Main Content */}
         <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
-          {/* Show Flashcard Practice if category is selected */}
+          {/* Show Flashcard Practice/Review if category is selected */}
           {selectedCategory ? (
-            <FlashcardPractice
-              flashcards={practiceFlashcards}
-              categoryName={selectedCategory}
-              level={selectedLevel}
-              onBack={handleBackToCategories}
-              showExamples={settings.showExamples}
-              nextDueInfo={nextDueInfo}
-              upcomingCards={upcomingCards}
-            />
+            isReviewMode ? (
+              <FlashcardReviewList
+                flashcards={practiceFlashcards}
+                categoryName={selectedCategory}
+                level={selectedLevel}
+              />
+            ) : (
+              <FlashcardPractice
+                flashcards={practiceFlashcards}
+                categoryName={selectedCategory}
+                level={selectedLevel}
+                onBack={handleBackToCategories}
+                showExamples={settings.showExamples}
+                nextDueInfo={nextDueInfo}
+                upcomingCards={upcomingCards}
+              />
+            )
           ) : (
             <>
               {/* Level Selector - Split Button Style */}
