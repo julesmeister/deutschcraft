@@ -76,6 +76,11 @@ export default function WritingExercisesPage() {
 
   const hasSelectedExercise = !!(selectedTranslation || selectedCreative || selectedEmail || selectedLetter);
 
+  // Check if content is filled based on exercise type
+  const hasContent = selectedEmail
+    ? emailContent.body.trim().length > 0
+    : writingText.trim().length > 0;
+
   return (
     <div className="min-h-screen bg-gray-50">
       <DashboardHeader
@@ -101,7 +106,7 @@ export default function WritingExercisesPage() {
             <div className="flex gap-2">
               <ActionButton
                 onClick={handleSaveDraft}
-                disabled={isSaving || !writingText.trim()}
+                disabled={isSaving || !hasContent}
                 variant="cyan"
                 icon={<ActionButtonIcons.Document />}
                 className="min-w-[140px]"
@@ -110,7 +115,7 @@ export default function WritingExercisesPage() {
               </ActionButton>
               <ActionButton
                 onClick={handleSubmit}
-                disabled={isSaving || !writingText.trim()}
+                disabled={isSaving || !hasContent}
                 variant="purple"
                 icon={<ActionButtonIcons.Check />}
                 className="min-w-[200px]"
