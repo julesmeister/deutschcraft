@@ -21,6 +21,9 @@ export default function TeacherSocialPage() {
   const { posts, loading: postsLoading, addPost, refresh: refreshPosts } = usePosts({ limitCount: 20 });
   const { stats } = useUserSocialStats(session?.user?.email || '');
   const { batches, loading: batchesLoading } = useTeacherBatches(session?.user?.email || null);
+
+  // State must be declared before it's used in hooks
+  const [filterBatch, setFilterBatch] = useState<string>('all');
   const { theme, loading: themeLoading, createTheme, updateTheme } = useDailyTheme(filterBatch === 'all' ? undefined : filterBatch);
 
   // Ensure currentUser has photoURL from session if missing (memoized to prevent infinite loops)
@@ -33,8 +36,6 @@ export default function TeacherSocialPage() {
   }, [currentUser?.userId, currentUser?.photoURL, session?.user?.image]);
 
   const { users } = usePostAuthors(posts, enrichedCurrentUser);
-
-  const [filterBatch, setFilterBatch] = useState<string>('all');
 
   const handleCreatePost = async (content: string, mediaUrls?: string[]) => {
     if (!enrichedCurrentUser) return;
