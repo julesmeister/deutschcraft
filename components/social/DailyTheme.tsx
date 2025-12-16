@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { DailyTheme as DailyThemeType } from '@/lib/models/dailyTheme';
+import { useToast } from '@/components/ui/toast';
 
 // Shared theme display component
 function ThemeContent({ theme }: { theme: DailyThemeType }) {
@@ -59,24 +60,22 @@ function EmptyState({ onSetTheme }: { onSetTheme?: () => void }) {
   );
 }
 
-// Editor form - Subtle inline style
+// Editor form - Subtle inline style with auto-save
 function ThemeEditor({
   title,
   description,
   onTitleChange,
   onDescriptionChange,
-  onSave,
   isSaving,
 }: {
   title: string;
   description: string;
   onTitleChange: (value: string) => void;
   onDescriptionChange: (value: string) => void;
-  onSave: () => void;
   isSaving: boolean;
 }) {
   return (
-    <div className="space-y-3">
+    <div className="space-y-2">
       <div>
         <input
           type="text"
@@ -97,18 +96,11 @@ function ThemeEditor({
           maxLength={300}
         />
       </div>
-      <div className="flex items-center justify-between pt-2">
-        <p className="text-xs text-gray-500">
-          {title.trim() ? '✓ Theme will be saved automatically' : 'Enter a theme title to save'}
+      {isSaving && (
+        <p className="text-xs text-gray-400 animate-pulse">
+          Saving...
         </p>
-        <button
-          onClick={onSave}
-          disabled={!title.trim() || isSaving}
-          className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-lg font-medium text-xs transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-        >
-          {isSaving ? 'Saving...' : 'Save'}
-        </button>
-      </div>
+      )}
     </div>
   );
 }
@@ -173,6 +165,8 @@ export function DailyThemeEditor({
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [isSaving, setIsSaving] = useState(false);
+  const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const { showToast } = useToast();
 
   useEffect(() => {
     if (theme) {
@@ -186,15 +180,68 @@ export function DailyThemeEditor({
 
   const handleSave = async () => {
     if (!title.trim()) return;
+
     setIsSaving(true);
     try {
       await onSave(title, description);
+      showToast({
+        message: 'Theme saved successfully',
+        variant: 'success',
+        duration: 2000,
+      });
     } catch (error) {
       console.error('Error saving theme:', error);
+      showToast({
+        message: 'Failed to save theme',
+        variant: 'error',
+        duration: 3000,
+      });
     } finally {
       setIsSaving(false);
     }
   };
+
+  // Auto-save with 2-second debounce
+  const handleTitleChange = (value: string) => {
+    setTitle(value);
+
+    // Clear existing timeout
+    if (saveTimeoutRef.current) {
+      clearTimeout(saveTimeoutRef.current);
+    }
+
+    // Set new timeout for auto-save (only if title is not empty)
+    if (value.trim()) {
+      saveTimeoutRef.current = setTimeout(() => {
+        handleSave();
+      }, 2000);
+    }
+  };
+
+  const handleDescriptionChange = (value: string) => {
+    setDescription(value);
+
+    // Clear existing timeout
+    if (saveTimeoutRef.current) {
+      clearTimeout(saveTimeoutRef.current);
+    }
+
+    // Set new timeout for auto-save (only if title exists)
+    if (title.trim()) {
+      saveTimeoutRef.current = setTimeout(() => {
+        handleSave();
+      }, 2000);
+    }
+  };
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (saveTimeoutRef.current) {
+        clearTimeout(saveTimeoutRef.current);
+      }
+    };
+  }, []);
 
   const formatDate = (timestamp: number) => {
     const date = new Date(timestamp);
@@ -203,24 +250,20 @@ export function DailyThemeEditor({
 
   return (
     <ThemeContainer>
-      <div className="space-y-4">
+      <div className="space-y-3">
         {/* Always show editor */}
         <ThemeEditor
           title={title}
           description={description}
-          onTitleChange={setTitle}
-          onDescriptionChange={setDescription}
-          onSave={handleSave}
+          onTitleChange={handleTitleChange}
+          onDescriptionChange={handleDescriptionChange}
           isSaving={isSaving}
         />
 
         {/* Show last updated info if theme exists */}
         {theme && (
-          <div className="pt-3 border-t border-gray-100">
-            <div className="flex items-center justify-between text-xs text-gray-500">
-              <span>💡 Students in this batch can see this theme</span>
-              <span>Updated {formatDate(theme.updatedAt)}</span>
-            </div>
+          <div className="text-xs text-gray-500 text-right">
+            Updated {formatDate(theme.updatedAt)}
           </div>
         )}
       </div>

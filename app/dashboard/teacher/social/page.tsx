@@ -12,6 +12,7 @@ import CreatePost from '@/components/social/CreatePost';
 import ProfileSidebar from '@/components/social/ProfileSidebar';
 import { DailyThemeEditor } from '@/components/social/DailyTheme';
 import { CompactButtonDropdown } from '@/components/ui/CompactButtonDropdown';
+import { ToastProvider } from '@/components/ui/toast';
 import { Post } from '@/lib/models/social';
 import { User } from '@/lib/models/user';
 
@@ -115,7 +116,8 @@ export default function TeacherSocialPage() {
   }, [batches]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <ToastProvider>
+      <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-6 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Left Sidebar - Profile */}
@@ -330,5 +332,6 @@ export default function TeacherSocialPage() {
         </div>
       </div>
     </div>
+    </ToastProvider>
   );
 }
