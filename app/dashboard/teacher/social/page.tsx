@@ -206,6 +206,26 @@ export default function TeacherSocialPage() {
           {/* Right Sidebar - Teacher Insights */}
           <div className="lg:col-span-3">
             <div className="space-y-6">
+              {/* Batch Selector - Prominent in Sidebar */}
+              <div className="bg-white border border-gray-200">
+                <div className="px-4 py-3 border-b border-gray-200">
+                  <h5 className="font-semibold text-gray-900">Select Batch</h5>
+                </div>
+                <div className="p-4">
+                  <CompactButtonDropdown
+                    label={batchOptions.find(opt => opt.value === filterBatch)?.label || 'All Batches'}
+                    icon={<span>📚</span>}
+                    options={batchOptions}
+                    value={filterBatch}
+                    onChange={(value) => setFilterBatch(value as string)}
+                    buttonClassName="bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
+                  />
+                  <p className="text-xs text-gray-500 mt-2">
+                    Choose a batch to set daily themes and filter posts
+                  </p>
+                </div>
+              </div>
+
               {/* Daily Theme Editor */}
               {filterBatch !== 'all' && enrichedCurrentUser && (
                 <DailyThemeEditor
@@ -214,15 +234,6 @@ export default function TeacherSocialPage() {
                   teacherId={enrichedCurrentUser.userId}
                   onSave={handleSaveTheme}
                 />
-              )}
-
-              {/* Info message when no batch is selected */}
-              {filterBatch === 'all' && (
-                <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
-                  <p className="text-sm text-blue-800">
-                    💡 Select a batch to set today's writing theme for your students
-                  </p>
-                </div>
               )}
 
               {/* Teaching Impact */}
