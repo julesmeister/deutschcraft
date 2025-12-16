@@ -34,13 +34,13 @@ function ThemeContainer({
     <div className="bg-white border border-gray-200">
       <div className="px-4 py-3 border-b border-gray-200">
         <div className="flex items-center justify-between">
+          <h5 className="font-semibold text-gray-900">Suggest Topic</h5>
           <div className="flex items-center gap-2">
-            <h5 className="font-semibold text-gray-900">Today's Writing Theme</h5>
+            {action}
             {lastUpdated && (
-              <span className="text-xs text-gray-400">· {formatRelativeTime(lastUpdated)}</span>
+              <span className="text-xs text-gray-400">{formatRelativeTime(lastUpdated)}</span>
             )}
           </div>
-          {action}
         </div>
       </div>
       <div className="p-4">{children}</div>
@@ -180,7 +180,7 @@ export function DailyThemeEditor({
   const [description, setDescription] = useState('');
   const [isSaving, setIsSaving] = useState(false);
   const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-  const { showToast } = useToast();
+  const { success, error } = useToast();
 
   useEffect(() => {
     if (theme) {
@@ -198,18 +198,10 @@ export function DailyThemeEditor({
     setIsSaving(true);
     try {
       await onSave(title, description);
-      showToast({
-        message: 'Theme saved successfully',
-        variant: 'success',
-        duration: 2000,
-      });
-    } catch (error) {
-      console.error('Error saving theme:', error);
-      showToast({
-        message: 'Failed to save theme',
-        variant: 'error',
-        duration: 3000,
-      });
+      success('Theme saved successfully', { duration: 2000 });
+    } catch (err) {
+      console.error('Error saving theme:', err);
+      error('Failed to save theme', { duration: 3000 });
     } finally {
       setIsSaving(false);
     }
