@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Comment } from '@/lib/models/social';
 import { User } from '@/lib/models/user';
 import UserAvatar from './UserAvatar';
 import CommentItem from './CommentItem';
 import { useSocialService } from '@/lib/hooks/useSocialService';
 import { useToast } from '@/components/ui/toast';
+import { GermanCharAutocomplete } from '@/components/writing/GermanCharAutocomplete';
 
 interface CommentSectionProps {
   postId: string;
@@ -22,6 +23,7 @@ export default function CommentSection({ postId, currentUserId, currentUser, isE
   const [showAll, setShowAll] = useState(false);
   const { createComment, getComments } = useSocialService();
   const { success, error: showError } = useToast();
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     fetchComments();
@@ -104,8 +106,9 @@ export default function CommentSection({ postId, currentUserId, currentUser, isE
       {/* Add Comment Form */}
       <div className="flex gap-2 items-start">
         {currentUser && <UserAvatar user={currentUser} size="sm" />}
-        <div className="flex-1 flex items-center gap-2 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg">
+        <div className="flex-1 flex items-center gap-2 px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg relative">
           <input
+            ref={inputRef}
             type="text"
             className="flex-1 bg-transparent text-sm focus:outline-none"
             placeholder="Add a comment..."
@@ -118,6 +121,11 @@ export default function CommentSection({ postId, currentUserId, currentUser, isE
                 handleSubmitComment(e as any);
               }
             }}
+          />
+          <GermanCharAutocomplete
+            textareaRef={inputRef}
+            content={newComment}
+            onContentChange={setNewComment}
           />
           <button
             className="p-1 text-blue-600 hover:text-blue-700 disabled:opacity-50 transition-colors"

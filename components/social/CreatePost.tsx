@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { CEFRLevel } from '@/lib/models/cefr';
 import { User } from '@/lib/models/user';
 import UserAvatar from './UserAvatar';
+import { GermanCharAutocomplete } from '@/components/writing/GermanCharAutocomplete';
 
 interface CreatePostProps {
   currentUserId: string;
@@ -16,6 +17,7 @@ export default function CreatePost({ currentUserId, userLevel, currentUser, onSu
   const [content, setContent] = useState('');
   const [selectedMedia, setSelectedMedia] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const handleSubmit = async () => {
     if (!content.trim()) return;
@@ -55,14 +57,20 @@ export default function CreatePost({ currentUserId, userLevel, currentUser, onSu
             <div className="w-10 h-10 rounded-full bg-gray-300"></div>
           )}
         </div>
-        <div className="flex-1">
+        <div className="flex-1 relative">
           <textarea
+            ref={textareaRef}
             className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
             rows={2}
             placeholder={`Share your German practice... (Level: ${userLevel})`}
             value={content}
             onChange={(e) => setContent(e.target.value)}
             disabled={isSubmitting}
+          />
+          <GermanCharAutocomplete
+            textareaRef={textareaRef}
+            content={content}
+            onContentChange={setContent}
           />
         </div>
       </div>
