@@ -6,9 +6,11 @@ import { useCurrentUser } from '@/lib/hooks/useUsers';
 import { usePosts, useUserSocialStats } from '@/lib/hooks/useSocial';
 import { usePostAuthors } from '@/lib/hooks/usePostAuthors';
 import { useTeacherBatches } from '@/lib/hooks/useBatches';
+import { useDailyTheme } from '@/lib/hooks/useDailyTheme';
 import PostCard from '@/components/social/PostCard';
 import CreatePost from '@/components/social/CreatePost';
 import ProfileSidebar from '@/components/social/ProfileSidebar';
+import { DailyThemeEditor } from '@/components/social/DailyTheme';
 import { CompactButtonDropdown } from '@/components/ui/CompactButtonDropdown';
 import { Post } from '@/lib/models/social';
 import { User } from '@/lib/models/user';
@@ -19,6 +21,7 @@ export default function TeacherSocialPage() {
   const { posts, loading: postsLoading, addPost, refresh: refreshPosts } = usePosts({ limitCount: 20 });
   const { stats } = useUserSocialStats(session?.user?.email || '');
   const { batches, loading: batchesLoading } = useTeacherBatches(session?.user?.email || null);
+  const { theme, loading: themeLoading, createTheme, updateTheme } = useDailyTheme(filterBatch === 'all' ? undefined : filterBatch);
 
   // Ensure currentUser has photoURL from session if missing (memoized to prevent infinite loops)
   const enrichedCurrentUser = useMemo(() => {
@@ -45,6 +48,28 @@ export default function TeacherSocialPage() {
       cefrLevel: 'B2',
       visibility: 'public',
     });
+  };
+
+  const handleSaveTheme = async (title: string, description: string) => {
+    if (!enrichedCurrentUser || filterBatch === 'all') return;
+
+    if (theme) {
+      // Update existing theme
+      await updateTheme(theme.themeId, { title, description });
+    } else {
+      // Create new theme
+      await createTheme({
+        batchId: filterBatch,
+        title,
+        description,
+        createdBy: enrichedCurrentUser.userId,
+      });
+    }
+  };
+
+  const handleSuggestCorrection = (post: Post) => {
+    // Placeholder for suggestion functionality
+    console.log('Suggest correction for post:', post.postId);
   };
 
   if (userLoading) {
@@ -180,6 +205,25 @@ export default function TeacherSocialPage() {
           {/* Right Sidebar - Teacher Insights */}
           <div className="lg:col-span-3">
             <div className="space-y-6">
+              {/* Daily Theme Editor */}
+              {filterBatch !== 'all' && enrichedCurrentUser && (
+                <DailyThemeEditor
+                  theme={theme}
+                  batchId={filterBatch}
+                  teacherId={enrichedCurrentUser.userId}
+                  onSave={handleSaveTheme}
+                />
+              )}
+
+              {/* Info message when no batch is selected */}
+              {filterBatch === 'all' && (
+                <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                  <p className="text-sm text-blue-800">
+                    💡 Select a batch to set today's writing theme for your students
+                  </p>
+                </div>
+              )}
+
               {/* Teaching Impact */}
               <div className="bg-white border border-gray-200">
                 <div className="px-4 py-3 border-b border-gray-200">

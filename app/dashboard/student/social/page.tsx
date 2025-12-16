@@ -8,10 +8,12 @@ import { useBatch } from '@/lib/hooks/useBatches';
 import { usePostAuthors } from '@/lib/hooks/usePostAuthors';
 import { useStudyStats } from '@/lib/hooks/useFlashcards';
 import { useWritingStats } from '@/lib/hooks/useWritingExercises';
+import { useDailyTheme } from '@/lib/hooks/useDailyTheme';
 import PostCard from '@/components/social/PostCard';
 import CreatePost from '@/components/social/CreatePost';
 import ProfileSidebar from '@/components/social/ProfileSidebar';
 import PostFilter from '@/components/social/PostFilter';
+import { DailyThemeDisplay } from '@/components/social/DailyTheme';
 import { Post } from '@/lib/models/social';
 import { User } from '@/lib/models/user';
 
@@ -22,6 +24,7 @@ export default function StudentSocialPage() {
   const { stats } = useUserSocialStats(session?.user?.email || '');
   const { batch } = useBatch(currentUser?.batchId || undefined);
   const [postFilter, setPostFilter] = useState<'all' | 'batch'>('all');
+  const { theme, loading: themeLoading } = useDailyTheme(currentUser?.batchId);
 
   // Get comprehensive study stats
   const { stats: studyStats } = useStudyStats(session?.user?.email || undefined);
@@ -174,6 +177,9 @@ export default function StudentSocialPage() {
                 onFilterChange={setPostFilter}
                 batch={batch}
               />
+
+              {/* Daily Theme */}
+              <DailyThemeDisplay theme={theme} loading={themeLoading} />
 
               {/* Quick Tips */}
               <div className="bg-white border border-gray-200">
