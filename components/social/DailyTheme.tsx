@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { DailyTheme as DailyThemeType } from '@/lib/models/dailyTheme';
 import { useToast } from '@/components/ui/toast';
 import { formatRelativeTime } from '@/lib/utils/dateHelpers';
+import { GermanCharAutocomplete } from '@/components/writing/GermanCharAutocomplete';
 
 // Shared theme display component
 function ThemeContent({ theme }: { theme: DailyThemeType }) {
@@ -82,10 +83,14 @@ function ThemeEditor({
   onDescriptionChange: (value: string) => void;
   isSaving: boolean;
 }) {
+  const titleRef = useRef<HTMLTextAreaElement>(null);
+  const descriptionRef = useRef<HTMLTextAreaElement>(null);
+
   return (
     <div className="space-y-2">
-      <div>
+      <div className="relative">
         <textarea
+          ref={titleRef}
           value={title}
           onChange={(e) => onTitleChange(e.target.value)}
           placeholder="What should students write about today?"
@@ -99,15 +104,26 @@ function ThemeEditor({
             target.style.height = target.scrollHeight + 'px';
           }}
         />
+        <GermanCharAutocomplete
+          textareaRef={titleRef}
+          content={title}
+          onContentChange={onTitleChange}
+        />
       </div>
-      <div>
+      <div className="relative">
         <textarea
+          ref={descriptionRef}
           value={description}
           onChange={(e) => onDescriptionChange(e.target.value)}
           placeholder="Add optional details or instructions..."
           className="w-full px-2 py-1.5 bg-transparent border-0 focus:outline-none text-sm text-gray-600 placeholder:text-gray-400 resize-none"
           rows={2}
           maxLength={300}
+        />
+        <GermanCharAutocomplete
+          textareaRef={descriptionRef}
+          content={description}
+          onContentChange={onDescriptionChange}
         />
       </div>
       {isSaving && (
