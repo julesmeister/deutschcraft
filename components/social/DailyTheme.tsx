@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { DailyTheme as DailyThemeType } from '@/lib/models/dailyTheme';
 import { useToast } from '@/components/ui/toast';
+import { formatRelativeTime } from '@/lib/utils/dateHelpers';
 
 // Shared theme display component
 function ThemeContent({ theme }: { theme: DailyThemeType }) {
@@ -22,16 +23,23 @@ function ThemeContent({ theme }: { theme: DailyThemeType }) {
 // Shared container with header
 function ThemeContainer({
   children,
-  action
+  action,
+  lastUpdated
 }: {
   children: React.ReactNode;
   action?: React.ReactNode;
+  lastUpdated?: number;
 }) {
   return (
     <div className="bg-white border border-gray-200">
       <div className="px-4 py-3 border-b border-gray-200">
         <div className="flex items-center justify-between">
-          <h5 className="font-semibold text-gray-900">Today's Writing Theme</h5>
+          <div className="flex items-center gap-2">
+            <h5 className="font-semibold text-gray-900">Today's Writing Theme</h5>
+            {lastUpdated && (
+              <span className="text-xs text-gray-400">· {formatRelativeTime(lastUpdated)}</span>
+            )}
+          </div>
           {action}
         </div>
       </div>
@@ -77,13 +85,19 @@ function ThemeEditor({
   return (
     <div className="space-y-2">
       <div>
-        <input
-          type="text"
+        <textarea
           value={title}
           onChange={(e) => onTitleChange(e.target.value)}
-          placeholder="📝 What should students write about today?"
-          className="w-full px-2 py-1.5 bg-transparent border-0 focus:outline-none text-base font-semibold text-gray-900 placeholder:text-gray-400 placeholder:font-normal transition-colors"
+          placeholder="What should students write about today?"
+          className="w-full px-2 py-1.5 bg-transparent border-0 focus:outline-none text-base font-semibold text-gray-900 placeholder:text-gray-400 placeholder:font-normal transition-colors resize-none overflow-hidden"
           maxLength={100}
+          rows={1}
+          style={{ minHeight: '2rem' }}
+          onInput={(e) => {
+            const target = e.target as HTMLTextAreaElement;
+            target.style.height = 'auto';
+            target.style.height = target.scrollHeight + 'px';
+          }}
         />
       </div>
       <div>
@@ -134,7 +148,7 @@ export function DailyThemeDisplay({
   }
 
   return (
-    <ThemeContainer>
+    <ThemeContainer lastUpdated={theme.updatedAt}>
       <div className="space-y-3">
         <ThemeContent theme={theme} />
         <div className="bg-green-50 border border-green-200 rounded-lg p-2">
@@ -243,13 +257,8 @@ export function DailyThemeEditor({
     };
   }, []);
 
-  const formatDate = (timestamp: number) => {
-    const date = new Date(timestamp);
-    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
-  };
-
   return (
-    <ThemeContainer>
+    <ThemeContainer lastUpdated={theme?.updatedAt}>
       <div className="space-y-3">
         {/* Always show editor */}
         <ThemeEditor
@@ -259,13 +268,6 @@ export function DailyThemeEditor({
           onDescriptionChange={handleDescriptionChange}
           isSaving={isSaving}
         />
-
-        {/* Show last updated info if theme exists */}
-        {theme && (
-          <div className="text-xs text-gray-500 text-right">
-            Updated {formatDate(theme.updatedAt)}
-          </div>
-        )}
       </div>
     </ThemeContainer>
   );

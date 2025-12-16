@@ -113,3 +113,18 @@ export function getWeekNumber(date: Date = new Date()): number {
   const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
   return Math.ceil((((d.getTime() - yearStart.getTime()) / 86400000) + 1) / 7);
 }
+
+/**
+ * Format timestamp as relative time (e.g., "Just now", "5hrs ago", "2 days ago")
+ */
+export function formatRelativeTime(timestamp: number): string {
+  const now = Date.now();
+  const diff = now - timestamp;
+  const hours = Math.floor(diff / (1000 * 60 * 60));
+
+  if (hours < 1) return 'Just now';
+  if (hours < 24) return `${hours}hr${hours > 1 ? 's' : ''} ago`;
+
+  const days = Math.floor(hours / 24);
+  return `${days} day${days > 1 ? 's' : ''} ago`;
+}
