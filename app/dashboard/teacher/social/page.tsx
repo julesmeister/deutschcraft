@@ -208,12 +208,12 @@ export default function TeacherSocialPage() {
           {/* Right Sidebar - Teacher Insights */}
           <div className="lg:col-span-3">
             <div className="space-y-6">
-              {/* Batch Selector - Prominent in Sidebar */}
+              {/* Batch Selector - Compact */}
               <div className="bg-white border border-gray-200">
-                <div className="px-4 py-3 border-b border-gray-200">
-                  <h5 className="font-semibold text-gray-900">Select Batch</h5>
+                <div className="px-3 py-2 border-b border-gray-200">
+                  <h5 className="font-semibold text-gray-900 text-sm">Select Batch</h5>
                 </div>
-                <div className="p-4">
+                <div className="p-3">
                   <CompactButtonDropdown
                     label={batchOptions.find(opt => opt.value === filterBatch)?.label || 'All Batches'}
                     icon={<span>📚</span>}
@@ -222,9 +222,6 @@ export default function TeacherSocialPage() {
                     onChange={(value) => setFilterBatch(value as string)}
                     buttonClassName="bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
                   />
-                  <p className="text-xs text-gray-500 mt-2">
-                    Choose a batch to set daily themes and filter posts
-                  </p>
                 </div>
               </div>
 

@@ -82,7 +82,7 @@ function ThemeEditor({
           value={title}
           onChange={(e) => onTitleChange(e.target.value)}
           placeholder="📝 What should students write about today?"
-          className="w-full px-2 py-1.5 bg-transparent border-0 border-b-2 border-gray-200 focus:border-blue-500 focus:outline-none text-base font-semibold text-gray-900 placeholder:text-gray-400 placeholder:font-normal transition-colors"
+          className="w-full px-2 py-1.5 bg-transparent border-0 focus:outline-none text-base font-semibold text-gray-900 placeholder:text-gray-400 placeholder:font-normal transition-colors"
           maxLength={100}
         />
       </div>
