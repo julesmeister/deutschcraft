@@ -1,67 +1,7 @@
 {
   "level": "B2",
-  "totalCards": 581,
+  "totalCards": 551,
   "flashcards": [
-    {
-      "id": "b2-aspekt-044827",
-      "german": "der Aspekt",
-      "english": "aspect",
-      "category": "Academic",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 29,
-        "hierarchy": [
-          "B2",
-          "Academic",
-          "Aspekt"
-        ]
-      }
-    },
-    {
-      "id": "b2-kontext-044827",
-      "german": "der Kontext",
-      "english": "context",
-      "category": "Academic",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 30,
-        "hierarchy": [
-          "B2",
-          "Academic",
-          "Kontext"
-        ]
-      }
-    },
-    {
-      "id": "b2-perspektive-044827",
-      "german": "die Perspektive",
-      "english": "perspective",
-      "category": "Academic",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 28,
-        "hierarchy": [
-          "B2",
-          "Academic",
-          "Perspektive"
-        ]
-      }
-    },
     {
       "id": "syllabus-b2-11161",
       "german": "die Forschung",
@@ -619,6 +559,66 @@
           "B2",
           "Academic",
           "Zusammenfassung"
+        ]
+      }
+    },
+    {
+      "id": "b2-perspektive-044827",
+      "german": "die Perspektive",
+      "english": "perspective",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B2",
+          "Academic",
+          "Perspektive"
+        ]
+      }
+    },
+    {
+      "id": "b2-aspekt-044827",
+      "german": "der Aspekt",
+      "english": "aspect",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B2",
+          "Academic",
+          "Aspekt"
+        ]
+      }
+    },
+    {
+      "id": "b2-kontext-044827",
+      "german": "der Kontext",
+      "english": "context",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B2",
+          "Academic",
+          "Kontext"
         ]
       }
     },
@@ -1723,263 +1723,6 @@
       }
     },
     {
-      "id": "remnote-101",
-      "german": "auf und nieder",
-      "english": "up and down",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Location",
-        "hinab",
-        "synonym;;nieder"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 200,
-        "hierarchy": [
-          "Adverbs",
-          "Location",
-          "hinab",
-          "synonym;;nieder",
-          "auf und nieder"
-        ]
-      }
-    },
-    {
-      "id": "remnote-103",
-      "german": "nebeneinander",
-      "english": "side by side",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Location"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 206,
-        "hierarchy": [
-          "Adverbs",
-          "Location",
-          "nebeneinander"
-        ]
-      }
-    },
-    {
-      "id": "remnote-104",
-      "german": "nirgendwo / nirgends",
-      "english": "nowhere",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Location"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 209,
-        "hierarchy": [
-          "Adverbs",
-          "Location",
-          "nirgendwo / nirgends"
-        ]
-      }
-    },
-    {
-      "id": "remnote-108",
-      "german": "voran / vorn",
-      "english": "ahead / forward",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Location"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 215,
-        "hierarchy": [
-          "Adverbs",
-          "Location",
-          "voran / vorn"
-        ]
-      }
-    },
-    {
-      "id": "remnote-109",
-      "german": "Sie [nickte](German/Verbs/nicken.md) und ging voran.",
-      "english": "She nodded and went ahead.",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Location",
-        "voran / vorn"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 218,
-        "hierarchy": [
-          "Adverbs",
-          "Location",
-          "voran / vorn",
-          "Sie [nickte](German/Verbs/nicken.md) und ging voran."
-        ]
-      }
-    },
-    {
-      "id": "remnote-110",
-      "german": "abschließend",
-      "english": "finally / afterall / in conclusion",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 221,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "abschließend"
-        ]
-      }
-    },
-    {
-      "id": "remnote-111",
-      "german": "allerdings",
-      "english": "however",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 223,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "allerdings"
-        ]
-      }
-    },
-    {
-      "id": "remnote-112",
-      "german": "**Allerdings** war es sehr knapp.",
-      "english": "However, it was very close.",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner",
-        "allerdings"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 224,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "allerdings",
-          "**Allerdings** war es sehr knapp."
-        ]
-      }
-    },
-    {
-      "id": "remnote-118",
-      "german": "außergewöhnlich",
-      "english": "exceptionally",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 236,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "außergewöhnlich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-119",
-      "german": "außerordentlich",
-      "english": "extraordinarily",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 237,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "außerordentlich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-121",
-      "german": "ausgerechnet",
-      "english": "of all people",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 241,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "ausgerechnet"
-        ]
-      }
-    },
-    {
-      "id": "remnote-125",
-      "german": "dementsprechend",
-      "english": "accordingly",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 248,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "dementsprechend"
-        ]
-      }
-    },
-    {
-      "id": "remnote-127",
-      "german": "Demnach war also alles natürlich.",
-      "english": "Accordingly, everything was natural.",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner",
-        "demnach"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 252,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "demnach",
-          "Demnach war also alles natürlich."
-        ]
-      }
-    },
-    {
       "id": "remnote-13",
       "german": "allmählich / schrittweise",
       "english": "gradually",
@@ -1995,234 +1738,6 @@
           "Adverbs",
           "Degree",
           "allmählich / schrittweise"
-        ]
-      }
-    },
-    {
-      "id": "remnote-130",
-      "german": "eindrucksvoll",
-      "english": "impressive / spectacular",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 256,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "eindrucksvoll"
-        ]
-      }
-    },
-    {
-      "id": "remnote-133",
-      "german": "erforderlich",
-      "english": "required",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 260,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "erforderlich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-134",
-      "german": "erhältlich",
-      "english": "available / obtainable",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 262,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "erhältlich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-142",
-      "german": "gewissermaßen",
-      "english": "in a way / to an extent / in a sense",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 276,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "gewissermaßen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-143",
-      "german": "gleichermaßen",
-      "english": "equally / likewise",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 278,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "gleichermaßen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-144",
-      "german": "gleichmäßig",
-      "english": "evenly / even / steady",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 280,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "gleichmäßig"
-        ]
-      }
-    },
-    {
-      "id": "remnote-147",
-      "german": "im gegenzug",
-      "english": "in return",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 287,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "im gegenzug"
-        ]
-      }
-    },
-    {
-      "id": "remnote-155",
-      "german": "jeweils / beziehungsweise",
-      "english": "respectively",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 309,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "jeweils / beziehungsweise"
-        ]
-      }
-    },
-    {
-      "id": "remnote-156",
-      "german": "kaum / knapp",
-      "english": "barely / nearly",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 312,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "kaum / knapp"
-        ]
-      }
-    },
-    {
-      "id": "remnote-157",
-      "german": "keinesfalls",
-      "english": "under no circumstances / not at all / never ever",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 314,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "keinesfalls"
-        ]
-      }
-    },
-    {
-      "id": "remnote-158",
-      "german": "keineswegs",
-      "english": "by no means",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 316,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "keineswegs"
-        ]
-      }
-    },
-    {
-      "id": "remnote-159",
-      "german": "kontinuierlich",
-      "english": "continuously",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 318,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "kontinuierlich"
         ]
       }
     },
@@ -2249,158 +1764,6 @@
       }
     },
     {
-      "id": "remnote-161",
-      "german": "kurzerhand",
-      "english": "without further ado",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 322,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "kurzerhand"
-        ]
-      }
-    },
-    {
-      "id": "remnote-167",
-      "german": "nachträglich",
-      "english": "subsequently / later / afterwards",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 336,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "nachträglich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-170",
-      "german": "nutzbringend",
-      "english": "beneficially",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 346,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "nutzbringend"
-        ]
-      }
-    },
-    {
-      "id": "remnote-173",
-      "german": "ohnehin / sowieso",
-      "english": "anyway",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 354,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "ohnehin / sowieso"
-        ]
-      }
-    },
-    {
-      "id": "remnote-174",
-      "german": "parat | bereit",
-      "english": "ready",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 355,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "parat | bereit"
-        ]
-      }
-    },
-    {
-      "id": "remnote-175",
-      "german": "prinzipiell",
-      "english": "on principle",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 358,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "prinzipiell"
-        ]
-      }
-    },
-    {
-      "id": "remnote-177",
-      "german": "rechtswidrig",
-      "english": "illegally / unlawfully",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 363,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "rechtswidrig"
-        ]
-      }
-    },
-    {
-      "id": "remnote-178",
-      "german": "reibungslos",
-      "english": "smoothly",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 365,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "reibungslos"
-        ]
-      }
-    },
-    {
       "id": "remnote-18",
       "german": "äußerst / überaus",
       "english": "extremely",
@@ -2416,426 +1779,6 @@
           "Adverbs",
           "Degree",
           "äußerst / überaus"
-        ]
-      }
-    },
-    {
-      "id": "remnote-180",
-      "german": "regelrecht",
-      "english": "really / downright / literally",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 369,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "regelrecht"
-        ]
-      }
-    },
-    {
-      "id": "remnote-183",
-      "german": "scheinbar / erkennbar",
-      "english": "apparently / seemingly",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 376,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "scheinbar / erkennbar"
-        ]
-      }
-    },
-    {
-      "id": "remnote-185",
-      "german": "schließlich",
-      "english": "ultimately / finally / in the end / lastly / after all",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 380,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "schließlich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-188",
-      "german": "sichtbar / sichtlich / einsehbar",
-      "english": "visible",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 385,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "sichtbar / sichtlich / einsehbar"
-        ]
-      }
-    },
-    {
-      "id": "remnote-194",
-      "german": "spielerisch",
-      "english": "playfully",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 394,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "spielerisch"
-        ]
-      }
-    },
-    {
-      "id": "remnote-197",
-      "german": "tatsächlich",
-      "english": "actually / indeed",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 399,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "tatsächlich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-200",
-      "german": "übersichtlich",
-      "english": "clearly",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 402,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "übersichtlich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-203",
-      "german": "im übrigen",
-      "english": "as a matter of fact",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner",
-        "übrigens"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 411,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "übrigens",
-          "im übrigen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-207",
-      "german": "unerlässlich",
-      "english": "indispensable / essential",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 419,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "unerlässlich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-208",
-      "german": "unerträglich",
-      "english": "unbearable / unbearably",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 423,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "unerträglich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-209",
-      "german": "unerwartet",
-      "english": "unexpectedly",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 426,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "unerwartet"
-        ]
-      }
-    },
-    {
-      "id": "remnote-211",
-      "german": "durchaus / unter allen Umständen",
-      "english": "by all means",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 431,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "durchaus / unter allen Umständen"
-        ]
-      }
-    },
-    {
-      "id": "remnote-213",
-      "german": "unter anderem",
-      "english": "among other things",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 436,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "unter anderem"
-        ]
-      }
-    },
-    {
-      "id": "remnote-214",
-      "german": "unverzüglich",
-      "english": "immediately / without delay",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 437,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "unverzüglich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-215",
-      "german": "vergeblich",
-      "english": "in vain",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 438,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "vergeblich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-216",
-      "german": "vermeintlich",
-      "english": "supposedly",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 441,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "vermeintlich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-218",
-      "german": "vertraulich",
-      "english": "confidential",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 443,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "vertraulich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-219",
-      "german": "verzweifelt",
-      "english": "desperately",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 445,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "verzweifelt"
-        ]
-      }
-    },
-    {
-      "id": "remnote-222",
-      "german": "vorsichtig",
-      "english": "careful / cautious",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 457,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "vorsichtig"
-        ]
-      }
-    },
-    {
-      "id": "remnote-227",
-      "german": "zugänglich",
-      "english": "open / accessible",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 464,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "zugänglich"
-        ]
-      }
-    },
-    {
-      "id": "remnote-229",
-      "german": "zwangsläufig",
-      "english": "inevitably",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 474,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "zwangsläufig"
-        ]
-      }
-    },
-    {
-      "id": "remnote-230",
-      "german": "zweifellos",
-      "english": "undoubtedly",
-      "category": "Adverbs",
-      "level": "B2",
-      "tags": [
-        "Manner"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 475,
-        "hierarchy": [
-          "Adverbs",
-          "Manner",
-          "zweifellos"
         ]
       }
     },
@@ -3443,202 +2386,1059 @@
       }
     },
     {
-      "id": "b2-body-parts-mivkdn5t79y2d",
-      "german": "das Blutgefäß",
-      "english": "blood vessel",
-      "category": "Body Parts",
+      "id": "remnote-101",
+      "german": "auf und nieder",
+      "english": "up and down",
+      "category": "Adverbs",
       "level": "B2",
       "tags": [
-        "expansion",
-        "B2"
+        "Location",
+        "hinab",
+        "synonym;;nieder"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 20,
+        "source": "RemNote German.md",
+        "lineNumber": 200,
         "hierarchy": [
-          "B2",
-          "Body Parts",
-          "das Blutgefäß"
+          "Adverbs",
+          "Location",
+          "hinab",
+          "synonym;;nieder",
+          "auf und nieder"
         ]
       }
     },
     {
-      "id": "b2-body-parts-mivkeies8k4cs",
-      "german": "das Gewebe",
-      "english": "tissue",
-      "category": "Body Parts",
+      "id": "remnote-103",
+      "german": "nebeneinander",
+      "english": "side by side",
+      "category": "Adverbs",
       "level": "B2",
       "tags": [
-        "expansion",
-        "B2"
+        "Location"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 23,
+        "source": "RemNote German.md",
+        "lineNumber": 206,
         "hierarchy": [
-          "B2",
-          "Body Parts",
-          "das Gewebe"
+          "Adverbs",
+          "Location",
+          "nebeneinander"
         ]
       }
     },
     {
-      "id": "b2-body-parts-mivkeiesjs20p",
-      "german": "die Zelle",
-      "english": "cell",
-      "category": "Body Parts",
+      "id": "remnote-104",
+      "german": "nirgendwo / nirgends",
+      "english": "nowhere",
+      "category": "Adverbs",
       "level": "B2",
       "tags": [
-        "expansion",
-        "B2"
+        "Location"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 22,
+        "source": "RemNote German.md",
+        "lineNumber": 209,
         "hierarchy": [
-          "B2",
-          "Body Parts",
-          "die Zelle"
+          "Adverbs",
+          "Location",
+          "nirgendwo / nirgends"
         ]
       }
     },
     {
-      "id": "b2-body-parts-mivkeiesq4cov",
-      "german": "das Becken",
-      "english": "pelvis / basin",
-      "category": "Body Parts",
+      "id": "remnote-108",
+      "german": "voran / vorn",
+      "english": "ahead / forward",
+      "category": "Adverbs",
       "level": "B2",
       "tags": [
-        "expansion",
-        "B2"
+        "Location"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 21,
+        "source": "RemNote German.md",
+        "lineNumber": 215,
         "hierarchy": [
-          "B2",
-          "Body Parts",
-          "das Becken"
+          "Adverbs",
+          "Location",
+          "voran / vorn"
         ]
       }
     },
     {
-      "id": "b2-body-parts-mivkeiesxx42z",
-      "german": "der Puls",
-      "english": "pulse",
-      "category": "Body Parts",
+      "id": "remnote-109",
+      "german": "Sie [nickte](German/Verbs/nicken.md) und ging voran.",
+      "english": "She nodded and went ahead.",
+      "category": "Adverbs",
       "level": "B2",
       "tags": [
-        "expansion",
-        "B2"
+        "Location",
+        "voran / vorn"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 24,
+        "source": "RemNote German.md",
+        "lineNumber": 218,
         "hierarchy": [
-          "B2",
-          "Body Parts",
-          "der Puls"
+          "Adverbs",
+          "Location",
+          "voran / vorn",
+          "Sie [nickte](German/Verbs/nicken.md) und ging voran."
         ]
       }
     },
     {
-      "id": "b2-body-parts-mivkg2zhc8qkl",
-      "german": "die Prostata",
-      "english": "prostate",
-      "category": "Body Parts",
+      "id": "remnote-110",
+      "german": "abschließend",
+      "english": "finally / afterall / in conclusion",
+      "category": "Adverbs",
       "level": "B2",
       "tags": [
-        "expansion",
-        "B2"
+        "Manner"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 26,
+        "source": "RemNote German.md",
+        "lineNumber": 221,
         "hierarchy": [
-          "B2",
-          "Body Parts",
-          "die Prostata"
+          "Adverbs",
+          "Manner",
+          "abschließend"
         ]
       }
     },
     {
-      "id": "b2-body-parts-mivkg2zhpuu8z",
-      "german": "der Eierstock",
-      "english": "ovary",
-      "category": "Body Parts",
+      "id": "remnote-111",
+      "german": "allerdings",
+      "english": "however",
+      "category": "Adverbs",
       "level": "B2",
       "tags": [
-        "expansion",
-        "B2"
+        "Manner"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 25,
+        "source": "RemNote German.md",
+        "lineNumber": 223,
         "hierarchy": [
-          "B2",
-          "Body Parts",
-          "der Eierstock"
+          "Adverbs",
+          "Manner",
+          "allerdings"
         ]
       }
     },
     {
-      "id": "b2-body-parts-mivkg2zhwveuu",
-      "german": "die Mandel",
-      "english": "tonsil",
-      "category": "Body Parts",
+      "id": "remnote-112",
+      "german": "**Allerdings** war es sehr knapp.",
+      "english": "However, it was very close.",
+      "category": "Adverbs",
       "level": "B2",
       "tags": [
-        "expansion",
-        "B2"
+        "Manner",
+        "allerdings"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 27,
+        "source": "RemNote German.md",
+        "lineNumber": 224,
         "hierarchy": [
-          "B2",
-          "Body Parts",
-          "die Mandel"
+          "Adverbs",
+          "Manner",
+          "allerdings",
+          "**Allerdings** war es sehr knapp."
         ]
       }
     },
     {
-      "id": "b2-body-parts-mivkgqq41tqxw",
-      "german": "die Nebenniere",
-      "english": "adrenal gland",
-      "category": "Body Parts",
+      "id": "remnote-118",
+      "german": "außergewöhnlich",
+      "english": "exceptionally",
+      "category": "Adverbs",
       "level": "B2",
       "tags": [
-        "expansion",
-        "B2"
+        "Manner"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 28,
+        "source": "RemNote German.md",
+        "lineNumber": 236,
         "hierarchy": [
-          "B2",
-          "Body Parts",
-          "die Nebenniere"
+          "Adverbs",
+          "Manner",
+          "außergewöhnlich"
         ]
       }
     },
     {
-      "id": "b2-body-parts-mivkgqq4nez39",
-      "german": "die Rachenmandel",
-      "english": "adenoid",
-      "category": "Body Parts",
+      "id": "remnote-119",
+      "german": "außerordentlich",
+      "english": "extraordinarily",
+      "category": "Adverbs",
       "level": "B2",
       "tags": [
-        "expansion",
-        "B2"
+        "Manner"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 29,
+        "source": "RemNote German.md",
+        "lineNumber": 237,
         "hierarchy": [
-          "B2",
-          "Body Parts",
-          "die Rachenmandel"
+          "Adverbs",
+          "Manner",
+          "außerordentlich"
+        ]
+      }
+    },
+    {
+      "id": "remnote-121",
+      "german": "ausgerechnet",
+      "english": "of all people",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 241,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "ausgerechnet"
+        ]
+      }
+    },
+    {
+      "id": "remnote-125",
+      "german": "dementsprechend",
+      "english": "accordingly",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 248,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "dementsprechend"
+        ]
+      }
+    },
+    {
+      "id": "remnote-127",
+      "german": "Demnach war also alles natürlich.",
+      "english": "Accordingly, everything was natural.",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner",
+        "demnach"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 252,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "demnach",
+          "Demnach war also alles natürlich."
+        ]
+      }
+    },
+    {
+      "id": "remnote-130",
+      "german": "eindrucksvoll",
+      "english": "impressive / spectacular",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 256,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "eindrucksvoll"
+        ]
+      }
+    },
+    {
+      "id": "remnote-133",
+      "german": "erforderlich",
+      "english": "required",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 260,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "erforderlich"
+        ]
+      }
+    },
+    {
+      "id": "remnote-134",
+      "german": "erhältlich",
+      "english": "available / obtainable",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 262,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "erhältlich"
+        ]
+      }
+    },
+    {
+      "id": "remnote-142",
+      "german": "gewissermaßen",
+      "english": "in a way / to an extent / in a sense",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 276,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "gewissermaßen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-143",
+      "german": "gleichermaßen",
+      "english": "equally / likewise",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 278,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "gleichermaßen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-144",
+      "german": "gleichmäßig",
+      "english": "evenly / even / steady",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 280,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "gleichmäßig"
+        ]
+      }
+    },
+    {
+      "id": "remnote-147",
+      "german": "im gegenzug",
+      "english": "in return",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 287,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "im gegenzug"
+        ]
+      }
+    },
+    {
+      "id": "remnote-155",
+      "german": "jeweils / beziehungsweise",
+      "english": "respectively",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 309,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "jeweils / beziehungsweise"
+        ]
+      }
+    },
+    {
+      "id": "remnote-156",
+      "german": "kaum / knapp",
+      "english": "barely / nearly",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 312,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "kaum / knapp"
+        ]
+      }
+    },
+    {
+      "id": "remnote-157",
+      "german": "keinesfalls",
+      "english": "under no circumstances / not at all / never ever",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 314,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "keinesfalls"
+        ]
+      }
+    },
+    {
+      "id": "remnote-158",
+      "german": "keineswegs",
+      "english": "by no means",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 316,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "keineswegs"
+        ]
+      }
+    },
+    {
+      "id": "remnote-159",
+      "german": "kontinuierlich",
+      "english": "continuously",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 318,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "kontinuierlich"
+        ]
+      }
+    },
+    {
+      "id": "remnote-161",
+      "german": "kurzerhand",
+      "english": "without further ado",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 322,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "kurzerhand"
+        ]
+      }
+    },
+    {
+      "id": "remnote-167",
+      "german": "nachträglich",
+      "english": "subsequently / later / afterwards",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 336,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "nachträglich"
+        ]
+      }
+    },
+    {
+      "id": "remnote-170",
+      "german": "nutzbringend",
+      "english": "beneficially",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 346,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "nutzbringend"
+        ]
+      }
+    },
+    {
+      "id": "remnote-173",
+      "german": "ohnehin / sowieso",
+      "english": "anyway",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 354,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "ohnehin / sowieso"
+        ]
+      }
+    },
+    {
+      "id": "remnote-174",
+      "german": "parat | bereit",
+      "english": "ready",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 355,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "parat | bereit"
+        ]
+      }
+    },
+    {
+      "id": "remnote-175",
+      "german": "prinzipiell",
+      "english": "on principle",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 358,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "prinzipiell"
+        ]
+      }
+    },
+    {
+      "id": "remnote-177",
+      "german": "rechtswidrig",
+      "english": "illegally / unlawfully",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 363,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "rechtswidrig"
+        ]
+      }
+    },
+    {
+      "id": "remnote-178",
+      "german": "reibungslos",
+      "english": "smoothly",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 365,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "reibungslos"
+        ]
+      }
+    },
+    {
+      "id": "remnote-180",
+      "german": "regelrecht",
+      "english": "really / downright / literally",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 369,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "regelrecht"
+        ]
+      }
+    },
+    {
+      "id": "remnote-183",
+      "german": "scheinbar / erkennbar",
+      "english": "apparently / seemingly",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 376,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "scheinbar / erkennbar"
+        ]
+      }
+    },
+    {
+      "id": "remnote-185",
+      "german": "schließlich",
+      "english": "ultimately / finally / in the end / lastly / after all",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 380,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "schließlich"
+        ]
+      }
+    },
+    {
+      "id": "remnote-188",
+      "german": "sichtbar / sichtlich / einsehbar",
+      "english": "visible",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 385,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "sichtbar / sichtlich / einsehbar"
+        ]
+      }
+    },
+    {
+      "id": "remnote-194",
+      "german": "spielerisch",
+      "english": "playfully",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 394,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "spielerisch"
+        ]
+      }
+    },
+    {
+      "id": "remnote-197",
+      "german": "tatsächlich",
+      "english": "actually / indeed",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 399,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "tatsächlich"
+        ]
+      }
+    },
+    {
+      "id": "remnote-200",
+      "german": "übersichtlich",
+      "english": "clearly",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 402,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "übersichtlich"
+        ]
+      }
+    },
+    {
+      "id": "remnote-203",
+      "german": "im übrigen",
+      "english": "as a matter of fact",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner",
+        "übrigens"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 411,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "übrigens",
+          "im übrigen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-207",
+      "german": "unerlässlich",
+      "english": "indispensable / essential",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 419,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "unerlässlich"
+        ]
+      }
+    },
+    {
+      "id": "remnote-208",
+      "german": "unerträglich",
+      "english": "unbearable / unbearably",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 423,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "unerträglich"
+        ]
+      }
+    },
+    {
+      "id": "remnote-209",
+      "german": "unerwartet",
+      "english": "unexpectedly",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 426,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "unerwartet"
+        ]
+      }
+    },
+    {
+      "id": "remnote-211",
+      "german": "durchaus / unter allen Umständen",
+      "english": "by all means",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 431,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "durchaus / unter allen Umständen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-213",
+      "german": "unter anderem",
+      "english": "among other things",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 436,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "unter anderem"
+        ]
+      }
+    },
+    {
+      "id": "remnote-214",
+      "german": "unverzüglich",
+      "english": "immediately / without delay",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 437,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "unverzüglich"
+        ]
+      }
+    },
+    {
+      "id": "remnote-215",
+      "german": "vergeblich",
+      "english": "in vain",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 438,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "vergeblich"
+        ]
+      }
+    },
+    {
+      "id": "remnote-216",
+      "german": "vermeintlich",
+      "english": "supposedly",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 441,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "vermeintlich"
+        ]
+      }
+    },
+    {
+      "id": "remnote-218",
+      "german": "vertraulich",
+      "english": "confidential",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 443,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "vertraulich"
+        ]
+      }
+    },
+    {
+      "id": "remnote-219",
+      "german": "verzweifelt",
+      "english": "desperately",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 445,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "verzweifelt"
+        ]
+      }
+    },
+    {
+      "id": "remnote-222",
+      "german": "vorsichtig",
+      "english": "careful / cautious",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 457,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "vorsichtig"
+        ]
+      }
+    },
+    {
+      "id": "remnote-227",
+      "german": "zugänglich",
+      "english": "open / accessible",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 464,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "zugänglich"
+        ]
+      }
+    },
+    {
+      "id": "remnote-229",
+      "german": "zwangsläufig",
+      "english": "inevitably",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 474,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "zwangsläufig"
+        ]
+      }
+    },
+    {
+      "id": "remnote-230",
+      "german": "zweifellos",
+      "english": "undoubtedly",
+      "category": "Adverbs",
+      "level": "B2",
+      "tags": [
+        "Manner"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 475,
+        "hierarchy": [
+          "Adverbs",
+          "Manner",
+          "zweifellos"
         ]
       }
     },
@@ -4083,30 +3883,10 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5q0dns1",
-      "german": "Anhand von",
-      "english": "Based on / By means of",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 27,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Anhand von"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5q2db9k",
-      "german": "Im Nachhinein",
-      "english": "In hindsight / Afterwards",
-      "category": "Complex Phrases",
+      "id": "b2-body-parts-mivkdn5t79y2d",
+      "german": "das Blutgefäß",
+      "english": "blood vessel",
+      "category": "Body Parts",
       "level": "B2",
       "tags": [
         "expansion",
@@ -4117,96 +3897,16 @@
         "lineNumber": 20,
         "hierarchy": [
           "B2",
-          "Complex Phrases",
-          "Im Nachhinein"
+          "Body Parts",
+          "das Blutgefäß"
         ]
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5q5igje",
-      "german": "Auf kurze Sicht",
-      "english": "In the short term",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 19,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Auf kurze Sicht"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5q5wpp7",
-      "german": "Auf Anhieb",
-      "english": "Straight away / At first attempt",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 22,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Auf Anhieb"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5q6zeec",
-      "german": "Es hängt davon ab",
-      "english": "It depends on that",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 14,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Es hängt davon ab"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5qbd7qr",
-      "german": "Mir fällt ein Stein vom Herzen",
-      "english": "A weight is lifted off my chest",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 9,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Mir fällt ein Stein vom Herzen"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5qc3fhr",
-      "german": "Im Voraus",
-      "english": "In advance / Beforehand",
-      "category": "Complex Phrases",
+      "id": "b2-body-parts-mivkeiesq4cov",
+      "german": "das Becken",
+      "english": "pelvis / basin",
+      "category": "Body Parts",
       "level": "B2",
       "tags": [
         "expansion",
@@ -4217,16 +3917,36 @@
         "lineNumber": 21,
         "hierarchy": [
           "B2",
-          "Complex Phrases",
-          "Im Voraus"
+          "Body Parts",
+          "das Becken"
         ]
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qdean0",
-      "german": "Auf Dauer",
-      "english": "In the long run / Permanently",
-      "category": "Complex Phrases",
+      "id": "b2-body-parts-mivkeiesjs20p",
+      "german": "die Zelle",
+      "english": "cell",
+      "category": "Body Parts",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B2",
+          "Body Parts",
+          "die Zelle"
+        ]
+      }
+    },
+    {
+      "id": "b2-body-parts-mivkeies8k4cs",
+      "german": "das Gewebe",
+      "english": "tissue",
+      "category": "Body Parts",
       "level": "B2",
       "tags": [
         "expansion",
@@ -4237,36 +3957,16 @@
         "lineNumber": 23,
         "hierarchy": [
           "B2",
-          "Complex Phrases",
-          "Auf Dauer"
+          "Body Parts",
+          "das Gewebe"
         ]
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qdo0tp",
-      "german": "Es liegt mir am Herzen",
-      "english": "It is close to my heart / It matters to me",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 5,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Es liegt mir am Herzen"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5qevoeu",
-      "german": "In Bezug auf",
-      "english": "With regard to / Concerning",
-      "category": "Complex Phrases",
+      "id": "b2-body-parts-mivkeiesxx42z",
+      "german": "der Puls",
+      "english": "pulse",
+      "category": "Body Parts",
       "level": "B2",
       "tags": [
         "expansion",
@@ -4277,76 +3977,16 @@
         "lineNumber": 24,
         "hierarchy": [
           "B2",
-          "Complex Phrases",
-          "In Bezug auf"
+          "Body Parts",
+          "der Puls"
         ]
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qexbsq",
-      "german": "Im Grunde genommen",
-      "english": "Basically / Fundamentally",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 16,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Im Grunde genommen"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5qg6fqq",
-      "german": "Auf lange Sicht",
-      "english": "In the long run",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 18,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Auf lange Sicht"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5qj9euy",
-      "german": "Es ist höchste Zeit",
-      "english": "It's high time",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 12,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Es ist höchste Zeit"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5qk9tcb",
-      "german": "Im Gegensatz zu",
-      "english": "In contrast to / Unlike",
-      "category": "Complex Phrases",
+      "id": "b2-body-parts-mivkg2zhpuu8z",
+      "german": "der Eierstock",
+      "english": "ovary",
+      "category": "Body Parts",
       "level": "B2",
       "tags": [
         "expansion",
@@ -4357,196 +3997,16 @@
         "lineNumber": 25,
         "hierarchy": [
           "B2",
-          "Complex Phrases",
-          "Im Gegensatz zu"
+          "Body Parts",
+          "der Eierstock"
         ]
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qlpw6c",
-      "german": "Das kommt nicht in Frage",
-      "english": "That's out of the question",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 7,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Das kommt nicht in Frage"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5qmoba2",
-      "german": "Ich bin am Ende meiner Kräfte",
-      "english": "I'm at the end of my strength",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 11,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Ich bin am Ende meiner Kräfte"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5qr08sf",
-      "german": "Das geht mir auf die Nerven",
-      "english": "That gets on my nerves",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 10,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Das geht mir auf die Nerven"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5qrj31b",
-      "german": "Meines Erachtens",
-      "english": "In my opinion / To my mind",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 15,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Meines Erachtens"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5qsjybh",
-      "german": "Es steht außer Frage",
-      "english": "It is beyond question",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 8,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Es steht außer Frage"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5qsznok",
-      "german": "Aufgrund dessen",
-      "english": "Due to that / Because of that",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 28,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Aufgrund dessen"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5qt1bbu",
-      "german": "Unter Umständen",
-      "english": "Under certain circumstances / Possibly",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 17,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Unter Umständen"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5qudtw0",
-      "german": "Ich kann es nicht fassen",
-      "english": "I can't believe it",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 6,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Ich kann es nicht fassen"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5qxg522",
-      "german": "Das lässt sich machen",
-      "english": "That can be done",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 13,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Das lässt sich machen"
-        ]
-      }
-    },
-    {
-      "id": "b2-complex-phrases-mivkdn5qzoh9k",
-      "german": "Im Vergleich zu",
-      "english": "Compared to",
-      "category": "Complex Phrases",
+      "id": "b2-body-parts-mivkg2zhc8qkl",
+      "german": "die Prostata",
+      "english": "prostate",
+      "category": "Body Parts",
       "level": "B2",
       "tags": [
         "expansion",
@@ -4557,576 +4017,16 @@
         "lineNumber": 26,
         "hierarchy": [
           "B2",
-          "Complex Phrases",
-          "Im Vergleich zu"
+          "Body Parts",
+          "die Prostata"
         ]
       }
     },
     {
-      "id": "b2-complex-phrases-mivkh9d128hkx",
-      "german": "Außer Frage stehen",
-      "english": "To be beyond question / indisputable",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 29,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Außer Frage stehen"
-        ]
-      }
-    },
-    {
-      "id": "b2-in-betracht-ziehen-044829",
-      "german": "in Betracht ziehen",
-      "english": "to consider / to take into account",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 1,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "in Betracht ziehen"
-        ]
-      }
-    },
-    {
-      "id": "b2-in-frage-stellen-044829",
-      "german": "in Frage stellen",
-      "english": "to question / to challenge",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 4,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "in Frage stellen"
-        ]
-      }
-    },
-    {
-      "id": "b2-sich-auseinandersetzen-mit-044829",
-      "german": "sich auseinandersetzen mit",
-      "english": "to engage with / to deal with",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "sich auseinandersetzen mit"
-        ]
-      }
-    },
-    {
-      "id": "b2-stellung-nehmen-zu-044829",
-      "german": "Stellung nehmen zu",
-      "english": "to take a position on",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 2,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "Stellung nehmen zu"
-        ]
-      }
-    },
-    {
-      "id": "b2-zur-verfuegung-stellen-044829",
-      "german": "zur Verfügung stellen",
-      "english": "to make available",
-      "category": "Complex Phrases",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 3,
-        "hierarchy": [
-          "B2",
-          "Complex Phrases",
-          "zur Verfügung stellen"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5s00h3a",
-      "german": "die Gelassenheit",
-      "english": "composure / serenity",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 20,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Gelassenheit"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5s0w7ww",
-      "german": "die Entschlossenheit",
-      "english": "determination / resolution",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 31,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Entschlossenheit"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5s1dnhc",
-      "german": "die Bewunderung",
-      "english": "admiration",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 14,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Bewunderung"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5s1xn7t",
-      "german": "der Geiz",
-      "english": "stinginess / greed",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 26,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "der Geiz"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5s5e941",
-      "german": "die Begeisterung",
-      "english": "enthusiasm / excitement",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 10,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Begeisterung"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5s6e2dn",
-      "german": "die Genugtuung",
-      "english": "satisfaction / gratification",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 13,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Genugtuung"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5s6kopi",
-      "german": "die Geduld",
-      "english": "patience",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 22,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Geduld"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5s79nvx",
-      "german": "der Neid",
-      "english": "envy",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 18,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "der Neid"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5s85hom",
-      "german": "die Scham",
-      "english": "shame",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 17,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Scham"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5s8dviz",
-      "german": "die Flexibilität",
-      "english": "flexibility",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 34,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Flexibilität"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5s8k4yq",
-      "german": "die Hartnäckigkeit",
-      "english": "stubbornness / persistence",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 33,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Hartnäckigkeit"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5sam9e6",
-      "german": "die Reue",
-      "english": "remorse / regret",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 16,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Reue"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5sc5rhe",
-      "german": "die Verzweiflung",
-      "english": "despair / desperation",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 11,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Verzweiflung"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5scoha5",
-      "german": "die Verachtung",
-      "english": "contempt / disdain",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 15,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Verachtung"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5sczm87",
-      "german": "die Vorsicht",
-      "english": "caution / carefulness",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 29,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Vorsicht"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5si98ly",
-      "german": "die Dankbarkeit",
-      "english": "gratitude / thankfulness",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 24,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Dankbarkeit"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5sjn62x",
-      "german": "die Ungeduld",
-      "english": "impatience",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 21,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Ungeduld"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5skhqce",
-      "german": "die Zögerlichkeit",
-      "english": "hesitation / reluctance",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 32,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Zögerlichkeit"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5smeapr",
-      "german": "die Großzügigkeit",
-      "english": "generosity",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 25,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Großzügigkeit"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5smxnep",
-      "german": "die Rücksichtslosigkeit",
-      "english": "recklessness / ruthlessness",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 30,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Rücksichtslosigkeit"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5sr3rxu",
-      "german": "die Erleichterung",
-      "english": "relief",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 12,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Erleichterung"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5ssz8zi",
-      "german": "die Eifersucht",
-      "english": "jealousy",
-      "category": "Emotions Character",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 19,
-        "hierarchy": [
-          "B2",
-          "Emotions Character",
-          "die Eifersucht"
-        ]
-      }
-    },
-    {
-      "id": "b2-emotions-character-mivkdn5stpuua",
-      "german": "die Bescheidenheit",
-      "english": "modesty / humility",
-      "category": "Emotions Character",
+      "id": "b2-body-parts-mivkg2zhwveuu",
+      "german": "die Mandel",
+      "english": "tonsil",
+      "category": "Body Parts",
       "level": "B2",
       "tags": [
         "expansion",
@@ -5137,16 +4037,16 @@
         "lineNumber": 27,
         "hierarchy": [
           "B2",
-          "Emotions Character",
-          "die Bescheidenheit"
+          "Body Parts",
+          "die Mandel"
         ]
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5sue2rg",
-      "german": "die Arroganz",
-      "english": "arrogance",
-      "category": "Emotions Character",
+      "id": "b2-body-parts-mivkgqq41tqxw",
+      "german": "die Nebenniere",
+      "english": "adrenal gland",
+      "category": "Body Parts",
       "level": "B2",
       "tags": [
         "expansion",
@@ -5157,16 +4057,16 @@
         "lineNumber": 28,
         "hierarchy": [
           "B2",
-          "Emotions Character",
-          "die Arroganz"
+          "Body Parts",
+          "die Nebenniere"
         ]
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5szjpeg",
-      "german": "die Hingabe",
-      "english": "devotion / dedication",
-      "category": "Emotions Character",
+      "id": "b2-body-parts-mivkgqq4nez39",
+      "german": "die Rachenmandel",
+      "english": "adenoid",
+      "category": "Body Parts",
       "level": "B2",
       "tags": [
         "expansion",
@@ -5174,11 +4074,11 @@
       ],
       "_meta": {
         "source": "B2 Category Expansion 2025",
-        "lineNumber": 23,
+        "lineNumber": 29,
         "hierarchy": [
           "B2",
-          "Emotions Character",
-          "die Hingabe"
+          "Body Parts",
+          "die Rachenmandel"
         ]
       }
     },
@@ -5383,10 +4283,10 @@
       }
     },
     {
-      "id": "b2-environment-climate-mivkdn5v9msdf",
-      "german": "die Erderwärmung",
-      "english": "global warming",
-      "category": "Environment Climate",
+      "id": "b2-emotions-character-mivkdn5s5e941",
+      "german": "die Begeisterung",
+      "english": "enthusiasm / excitement",
+      "category": "Emotions Character",
       "level": "B2",
       "tags": [
         "expansion",
@@ -5394,19 +4294,379 @@
       ],
       "_meta": {
         "source": "B2 Category Expansion 2025",
-        "lineNumber": 30,
+        "lineNumber": 10,
         "hierarchy": [
           "B2",
-          "Environment Climate",
-          "die Erderwärmung"
+          "Emotions Character",
+          "die Begeisterung"
         ]
       }
     },
     {
-      "id": "b2-environment-climate-mivkdn5vfbdtv",
-      "german": "der Klimawandel",
-      "english": "climate change",
-      "category": "Environment Climate",
+      "id": "b2-emotions-character-mivkdn5sc5rhe",
+      "german": "die Verzweiflung",
+      "english": "despair / desperation",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Verzweiflung"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5sr3rxu",
+      "german": "die Erleichterung",
+      "english": "relief",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Erleichterung"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s6e2dn",
+      "german": "die Genugtuung",
+      "english": "satisfaction / gratification",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Genugtuung"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s1dnhc",
+      "german": "die Bewunderung",
+      "english": "admiration",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Bewunderung"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5scoha5",
+      "german": "die Verachtung",
+      "english": "contempt / disdain",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 15,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Verachtung"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5sam9e6",
+      "german": "die Reue",
+      "english": "remorse / regret",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Reue"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s85hom",
+      "german": "die Scham",
+      "english": "shame",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Scham"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s79nvx",
+      "german": "der Neid",
+      "english": "envy",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "der Neid"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5ssz8zi",
+      "german": "die Eifersucht",
+      "english": "jealousy",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Eifersucht"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s00h3a",
+      "german": "die Gelassenheit",
+      "english": "composure / serenity",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Gelassenheit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5sjn62x",
+      "german": "die Ungeduld",
+      "english": "impatience",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Ungeduld"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s6kopi",
+      "german": "die Geduld",
+      "english": "patience",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Geduld"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5szjpeg",
+      "german": "die Hingabe",
+      "english": "devotion / dedication",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Hingabe"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5si98ly",
+      "german": "die Dankbarkeit",
+      "english": "gratitude / thankfulness",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Dankbarkeit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5smeapr",
+      "german": "die Großzügigkeit",
+      "english": "generosity",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Großzügigkeit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s1xn7t",
+      "german": "der Geiz",
+      "english": "stinginess / greed",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "der Geiz"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5stpuua",
+      "german": "die Bescheidenheit",
+      "english": "modesty / humility",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Bescheidenheit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5sue2rg",
+      "german": "die Arroganz",
+      "english": "arrogance",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Arroganz"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5sczm87",
+      "german": "die Vorsicht",
+      "english": "caution / carefulness",
+      "category": "Emotions Character",
       "level": "B2",
       "tags": [
         "expansion",
@@ -5417,16 +4677,36 @@
         "lineNumber": 29,
         "hierarchy": [
           "B2",
-          "Environment Climate",
-          "der Klimawandel"
+          "Emotions Character",
+          "die Vorsicht"
         ]
       }
     },
     {
-      "id": "b2-environment-climate-mivkdn5vhwnv6",
-      "german": "der Treibhauseffekt",
-      "english": "greenhouse effect",
-      "category": "Environment Climate",
+      "id": "b2-emotions-character-mivkdn5smxnep",
+      "german": "die Rücksichtslosigkeit",
+      "english": "recklessness / ruthlessness",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Rücksichtslosigkeit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s0w7ww",
+      "german": "die Entschlossenheit",
+      "english": "determination / resolution",
+      "category": "Emotions Character",
       "level": "B2",
       "tags": [
         "expansion",
@@ -5437,8 +4717,68 @@
         "lineNumber": 31,
         "hierarchy": [
           "B2",
-          "Environment Climate",
-          "der Treibhauseffekt"
+          "Emotions Character",
+          "die Entschlossenheit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5skhqce",
+      "german": "die Zögerlichkeit",
+      "english": "hesitation / reluctance",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Zögerlichkeit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s8k4yq",
+      "german": "die Hartnäckigkeit",
+      "english": "stubbornness / persistence",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 33,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Hartnäckigkeit"
+        ]
+      }
+    },
+    {
+      "id": "b2-emotions-character-mivkdn5s8dviz",
+      "german": "die Flexibilität",
+      "english": "flexibility",
+      "category": "Emotions Character",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "B2",
+          "Emotions Character",
+          "die Flexibilität"
         ]
       }
     },
@@ -6019,6 +5359,66 @@
           "B2",
           "Environment Climate",
           "fossile Brennstoffe"
+        ]
+      }
+    },
+    {
+      "id": "b2-environment-climate-mivkdn5vfbdtv",
+      "german": "der Klimawandel",
+      "english": "climate change",
+      "category": "Environment Climate",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B2",
+          "Environment Climate",
+          "der Klimawandel"
+        ]
+      }
+    },
+    {
+      "id": "b2-environment-climate-mivkdn5v9msdf",
+      "german": "die Erderwärmung",
+      "english": "global warming",
+      "category": "Environment Climate",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B2",
+          "Environment Climate",
+          "die Erderwärmung"
+        ]
+      }
+    },
+    {
+      "id": "b2-environment-climate-mivkdn5vhwnv6",
+      "german": "der Treibhauseffekt",
+      "english": "greenhouse effect",
+      "category": "Environment Climate",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "B2",
+          "Environment Climate",
+          "der Treibhauseffekt"
         ]
       }
     },
@@ -7563,306 +6963,6 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkdn5u6umc5",
-      "german": "vereinfachen",
-      "english": "to simplify",
-      "category": "Intermediate Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 21,
-        "hierarchy": [
-          "B2",
-          "Intermediate Verbs",
-          "vereinfachen"
-        ]
-      }
-    },
-    {
-      "id": "b2-intermediate-verbs-mivkdn5ubis68",
-      "german": "erweitern",
-      "english": "to expand / to extend",
-      "category": "Intermediate Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 20,
-        "hierarchy": [
-          "B2",
-          "Intermediate Verbs",
-          "erweitern"
-        ]
-      }
-    },
-    {
-      "id": "b2-intermediate-verbs-mivkdn5uc8opj",
-      "german": "hemmen",
-      "english": "to inhibit / to hinder",
-      "category": "Intermediate Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 25,
-        "hierarchy": [
-          "B2",
-          "Intermediate Verbs",
-          "hemmen"
-        ]
-      }
-    },
-    {
-      "id": "b2-intermediate-verbs-mivkdn5ucmh8l",
-      "german": "beeinflussen",
-      "english": "to influence",
-      "category": "Intermediate Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 24,
-        "hierarchy": [
-          "B2",
-          "Intermediate Verbs",
-          "beeinflussen"
-        ]
-      }
-    },
-    {
-      "id": "b2-intermediate-verbs-mivkdn5upqdp2",
-      "german": "erschweren",
-      "english": "to make difficult / to complicate",
-      "category": "Intermediate Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 26,
-        "hierarchy": [
-          "B2",
-          "Intermediate Verbs",
-          "erschweren"
-        ]
-      }
-    },
-    {
-      "id": "b2-intermediate-verbs-mivkdn5utfk8f",
-      "german": "bewerten",
-      "english": "to evaluate / to rate",
-      "category": "Intermediate Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 23,
-        "hierarchy": [
-          "B2",
-          "Intermediate Verbs",
-          "bewerten"
-        ]
-      }
-    },
-    {
-      "id": "b2-intermediate-verbs-mivkdn5uut2iw",
-      "german": "komplizieren",
-      "english": "to complicate",
-      "category": "Intermediate Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 22,
-        "hierarchy": [
-          "B2",
-          "Intermediate Verbs",
-          "komplizieren"
-        ]
-      }
-    },
-    {
-      "id": "b2-intermediate-verbs-mivkeier3pzwb",
-      "german": "konkretisieren",
-      "english": "to make concrete / to specify",
-      "category": "Intermediate Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 31,
-        "hierarchy": [
-          "B2",
-          "Intermediate Verbs",
-          "konkretisieren"
-        ]
-      }
-    },
-    {
-      "id": "b2-intermediate-verbs-mivkeier6hy02",
-      "german": "analysieren",
-      "english": "to analyze",
-      "category": "Intermediate Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 27,
-        "hierarchy": [
-          "B2",
-          "Intermediate Verbs",
-          "analysieren"
-        ]
-      }
-    },
-    {
-      "id": "b2-intermediate-verbs-mivkeier9sfrd",
-      "german": "spezifizieren",
-      "english": "to specify",
-      "category": "Intermediate Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 30,
-        "hierarchy": [
-          "B2",
-          "Intermediate Verbs",
-          "spezifizieren"
-        ]
-      }
-    },
-    {
-      "id": "b2-intermediate-verbs-mivkeierefmwb",
-      "german": "maximieren",
-      "english": "to maximize",
-      "category": "Intermediate Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 34,
-        "hierarchy": [
-          "B2",
-          "Intermediate Verbs",
-          "maximieren"
-        ]
-      }
-    },
-    {
-      "id": "b2-intermediate-verbs-mivkeierf6kpg",
-      "german": "definieren",
-      "english": "to define",
-      "category": "Intermediate Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 29,
-        "hierarchy": [
-          "B2",
-          "Intermediate Verbs",
-          "definieren"
-        ]
-      }
-    },
-    {
-      "id": "b2-intermediate-verbs-mivkeiergksla",
-      "german": "minimieren",
-      "english": "to minimize",
-      "category": "Intermediate Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 33,
-        "hierarchy": [
-          "B2",
-          "Intermediate Verbs",
-          "minimieren"
-        ]
-      }
-    },
-    {
-      "id": "b2-intermediate-verbs-mivkeierr38a1",
-      "german": "optimieren",
-      "english": "to optimize",
-      "category": "Intermediate Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 32,
-        "hierarchy": [
-          "B2",
-          "Intermediate Verbs",
-          "optimieren"
-        ]
-      }
-    },
-    {
-      "id": "b2-intermediate-verbs-mivkeieru98ug",
-      "german": "interpretieren",
-      "english": "to interpret",
-      "category": "Intermediate Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 28,
-        "hierarchy": [
-          "B2",
-          "Intermediate Verbs",
-          "interpretieren"
-        ]
-      }
-    },
-    {
       "id": "remnote-270",
       "german": "Freuen",
       "english": "to look happy",
@@ -8261,42 +7361,302 @@
       }
     },
     {
-      "id": "b2-bevoelkerung-044828",
-      "german": "die Bevölkerung",
-      "english": "population",
-      "category": "Politics Society",
+      "id": "b2-intermediate-verbs-mivkdn5ubis68",
+      "german": "erweitern",
+      "english": "to expand / to extend",
+      "category": "Intermediate Verbs",
       "level": "B2",
       "tags": [
         "expansion",
         "B2"
       ],
       "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 30,
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 20,
         "hierarchy": [
           "B2",
-          "Politics Society",
-          "Bevölkerung"
+          "Intermediate Verbs",
+          "erweitern"
         ]
       }
     },
     {
-      "id": "b2-globalisierung-044828",
-      "german": "die Globalisierung",
-      "english": "globalization",
-      "category": "Politics Society",
+      "id": "b2-intermediate-verbs-mivkdn5u6umc5",
+      "german": "vereinfachen",
+      "english": "to simplify",
+      "category": "Intermediate Verbs",
       "level": "B2",
       "tags": [
         "expansion",
         "B2"
       ],
       "_meta": {
-        "source": "Priority Expansion 2025",
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "vereinfachen"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkdn5uut2iw",
+      "german": "komplizieren",
+      "english": "to complicate",
+      "category": "Intermediate Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "komplizieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkdn5utfk8f",
+      "german": "bewerten",
+      "english": "to evaluate / to rate",
+      "category": "Intermediate Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "bewerten"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkdn5ucmh8l",
+      "german": "beeinflussen",
+      "english": "to influence",
+      "category": "Intermediate Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "beeinflussen"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkdn5uc8opj",
+      "german": "hemmen",
+      "english": "to inhibit / to hinder",
+      "category": "Intermediate Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "hemmen"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkdn5upqdp2",
+      "german": "erschweren",
+      "english": "to make difficult / to complicate",
+      "category": "Intermediate Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "erschweren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeier6hy02",
+      "german": "analysieren",
+      "english": "to analyze",
+      "category": "Intermediate Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "analysieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeieru98ug",
+      "german": "interpretieren",
+      "english": "to interpret",
+      "category": "Intermediate Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "interpretieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeierf6kpg",
+      "german": "definieren",
+      "english": "to define",
+      "category": "Intermediate Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "definieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeier9sfrd",
+      "german": "spezifizieren",
+      "english": "to specify",
+      "category": "Intermediate Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "spezifizieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeier3pzwb",
+      "german": "konkretisieren",
+      "english": "to make concrete / to specify",
+      "category": "Intermediate Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
         "lineNumber": 31,
         "hierarchy": [
           "B2",
-          "Politics Society",
-          "Globalisierung"
+          "Intermediate Verbs",
+          "konkretisieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeierr38a1",
+      "german": "optimieren",
+      "english": "to optimize",
+      "category": "Intermediate Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "optimieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeiergksla",
+      "german": "minimieren",
+      "english": "to minimize",
+      "category": "Intermediate Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 33,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "minimieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeierefmwb",
+      "german": "maximieren",
+      "english": "to maximize",
+      "category": "Intermediate Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "maximieren"
         ]
       }
     },
@@ -8901,6 +8261,46 @@
       }
     },
     {
+      "id": "b2-bevoelkerung-044828",
+      "german": "die Bevölkerung",
+      "english": "population",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Bevölkerung"
+        ]
+      }
+    },
+    {
+      "id": "b2-globalisierung-044828",
+      "german": "die Globalisierung",
+      "english": "globalization",
+      "category": "Politics Society",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "B2",
+          "Politics Society",
+          "Globalisierung"
+        ]
+      }
+    },
+    {
       "id": "remnote-905",
       "german": "Ich schließe aus",
       "english": "I exclude",
@@ -9384,384 +8784,6 @@
       }
     },
     {
-      "id": "reflexive-b2-001",
-      "german": "sich auseinandersetzen",
-      "english": "to deal with, to grapple with",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "intellectual",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich auseinandersetzen"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-002",
-      "german": "sich bewähren",
-      "english": "to prove oneself, to stand the test",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "professional",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich bewähren"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-003",
-      "german": "sich durchsetzen",
-      "english": "to assert oneself, to prevail",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "assertion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich durchsetzen"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-004",
-      "german": "sich einsetzen",
-      "english": "to stand up for, to campaign for",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "activism",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich einsetzen"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-005",
-      "german": "sich empören",
-      "english": "to be outraged, to be indignant",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "emotions",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich empören"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-006",
-      "german": "sich etwas einbilden",
-      "english": "to imagine something, to be conceited",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "mental",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich etwas einbilden"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-007",
-      "german": "sich herausstellen",
-      "english": "to turn out, to emerge",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "discovery",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich herausstellen"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-008",
-      "german": "sich niederlassen",
-      "english": "to settle down, to establish oneself",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "settlement",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich niederlassen"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-009",
-      "german": "sich vergewissern",
-      "english": "to make sure, to ascertain",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "verification",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich vergewissern"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-010",
-      "german": "sich verpflichten",
-      "english": "to commit oneself, to undertake",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "commitment",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich verpflichten"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-011",
-      "german": "sich versammeln",
-      "english": "to assemble, to gather",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "gathering",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich versammeln"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-014",
-      "german": "sich widmen",
-      "english": "to dedicate oneself to",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "dedication",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich widmen"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-015",
-      "german": "sich zurückziehen",
-      "english": "to withdraw, to retreat",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "withdrawal",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich zurückziehen"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-016",
-      "german": "sich zusammentun",
-      "english": "to team up, to join forces",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "collaboration",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich zusammentun"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-017",
-      "german": "sich beziehen auf",
-      "english": "to refer to, to relate to",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "reference",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich beziehen auf"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-018",
-      "german": "sich abheben",
-      "english": "to stand out, to distinguish oneself",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "distinction",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich abheben"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-019",
-      "german": "sich anpassen",
-      "english": "to adapt, to adjust",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "adaptation",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich anpassen"
-        ]
-      }
-    },
-    {
-      "id": "reflexive-b2-020",
-      "german": "sich auflösen",
-      "english": "to dissolve, to disband",
-      "category": "Reflexive Verbs",
-      "level": "B2",
-      "tags": [
-        "reflexive",
-        "dissolution",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Reflexive Verbs Expansion",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Reflexive Verbs",
-          "sich auflösen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11424",
       "german": "sich unterhalten mit + Dat",
       "english": "to converse with",
@@ -10182,502 +9204,380 @@
       }
     },
     {
-      "id": "b2-separable-verbs-mivkdn5ra2o0t",
-      "german": "unterstützen",
-      "english": "to support",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-001",
+      "german": "sich auseinandersetzen",
+      "english": "to deal with, to grapple with",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "intellectual",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 8,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "unterstützen"
+          "Reflexive Verbs",
+          "sich auseinandersetzen"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkdn5rwwhoa",
-      "german": "zurückhalten",
-      "english": "to hold back / to restrain",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-002",
+      "german": "sich bewähren",
+      "english": "to prove oneself, to stand the test",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "professional",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 9,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "zurückhalten"
+          "Reflexive Verbs",
+          "sich bewähren"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkeieq0ig8k",
-      "german": "einordnen",
-      "english": "to classify / to categorize",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-003",
+      "german": "sich durchsetzen",
+      "english": "to assert oneself, to prevail",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "assertion",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 13,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "einordnen"
+          "Reflexive Verbs",
+          "sich durchsetzen"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkeieq24hqw",
-      "german": "abreisen",
-      "english": "to depart / to leave",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-004",
+      "german": "sich einsetzen",
+      "english": "to stand up for, to campaign for",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "activism",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 10,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "abreisen"
+          "Reflexive Verbs",
+          "sich einsetzen"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkeieq5gfag",
-      "german": "nachweisen",
-      "english": "to prove / to demonstrate",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-005",
+      "german": "sich empören",
+      "english": "to be outraged, to be indignant",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "emotions",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 14,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "nachweisen"
+          "Reflexive Verbs",
+          "sich empören"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkeieqdmzny",
-      "german": "einbeziehen",
-      "english": "to include / to involve",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-006",
+      "german": "sich etwas einbilden",
+      "english": "to imagine something, to be conceited",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "mental",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 11,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "einbeziehen"
+          "Reflexive Verbs",
+          "sich etwas einbilden"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkeieqkgqo2",
-      "german": "umsetzen",
-      "english": "to implement / to convert",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-007",
+      "german": "sich herausstellen",
+      "english": "to turn out, to emerge",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "discovery",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 15,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "umsetzen"
+          "Reflexive Verbs",
+          "sich herausstellen"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkeieqm1w71",
-      "german": "eindringen",
-      "english": "to penetrate / to intrude",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-008",
+      "german": "sich niederlassen",
+      "english": "to settle down, to establish oneself",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "settlement",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 12,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "eindringen"
+          "Reflexive Verbs",
+          "sich niederlassen"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkfb9q4h962",
-      "german": "bevorstehen",
-      "english": "to be imminent / to lie ahead",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-009",
+      "german": "sich vergewissern",
+      "english": "to make sure, to ascertain",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "verification",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 22,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "bevorstehen"
+          "Reflexive Verbs",
+          "sich vergewissern"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkfb9q819if",
-      "german": "ausrichten",
-      "english": "to align / to organize",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-010",
+      "german": "sich verpflichten",
+      "english": "to commit oneself, to undertake",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "commitment",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 19,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "ausrichten"
+          "Reflexive Verbs",
+          "sich verpflichten"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkfb9qak4kq",
-      "german": "anregen",
-      "english": "to stimulate / to suggest",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-011",
+      "german": "sich versammeln",
+      "english": "to assemble, to gather",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "gathering",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 18,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "anregen"
+          "Reflexive Verbs",
+          "sich versammeln"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkfb9qczg6b",
-      "german": "abhalten",
-      "english": "to hold / to prevent",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-014",
+      "german": "sich widmen",
+      "english": "to dedicate oneself to",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "dedication",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 16,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "abhalten"
+          "Reflexive Verbs",
+          "sich widmen"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkfb9qeqkts",
-      "german": "ausschließen",
-      "english": "to exclude / to rule out",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-015",
+      "german": "sich zurückziehen",
+      "english": "to withdraw, to retreat",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "withdrawal",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 20,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "ausschließen"
+          "Reflexive Verbs",
+          "sich zurückziehen"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkfb9qhes8p",
-      "german": "ankündigen",
-      "english": "to announce",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-016",
+      "german": "sich zusammentun",
+      "english": "to team up, to join forces",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "collaboration",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 17,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "ankündigen"
+          "Reflexive Verbs",
+          "sich zusammentun"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkfb9qm5uya",
-      "german": "hervorbringen",
-      "english": "to produce / to bring forth",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-017",
+      "german": "sich beziehen auf",
+      "english": "to refer to, to relate to",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "reference",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 24,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "hervorbringen"
+          "Reflexive Verbs",
+          "sich beziehen auf"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkfb9qnx8h3",
-      "german": "gegenüberstehen",
-      "english": "to face / to be opposite",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-018",
+      "german": "sich abheben",
+      "english": "to stand out, to distinguish oneself",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "distinction",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 23,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "gegenüberstehen"
+          "Reflexive Verbs",
+          "sich abheben"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkfb9qq53el",
-      "german": "beistehen",
-      "english": "to stand by / to assist",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-019",
+      "german": "sich anpassen",
+      "english": "to adapt, to adjust",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "adaptation",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 21,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "beistehen"
+          "Reflexive Verbs",
+          "sich anpassen"
         ]
       }
     },
     {
-      "id": "b2-separable-verbs-mivkfb9qy4bi0",
-      "german": "hervorrufen",
-      "english": "to cause / to provoke",
-      "category": "Separable Verbs",
+      "id": "reflexive-b2-020",
+      "german": "sich auflösen",
+      "english": "to dissolve, to disband",
+      "category": "Reflexive Verbs",
       "level": "B2",
       "tags": [
-        "expansion",
+        "reflexive",
+        "dissolution",
         "B2"
       ],
       "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 25,
+        "source": "Reflexive Verbs Expansion",
+        "lineNumber": 0,
         "hierarchy": [
           "B2",
-          "Separable Verbs",
-          "hervorrufen"
-        ]
-      }
-    },
-    {
-      "id": "b2-separable-verbs-mivkg2zg5mzwv",
-      "german": "vorangehen",
-      "english": "to precede / to go ahead",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 28,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "vorangehen"
-        ]
-      }
-    },
-    {
-      "id": "b2-separable-verbs-mivkg2zg9hxw5",
-      "german": "nachkommen",
-      "english": "to comply / to follow",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 26,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "nachkommen"
-        ]
-      }
-    },
-    {
-      "id": "b2-separable-verbs-mivkg2zghu0hk",
-      "german": "voraussetzen",
-      "english": "to presuppose / to assume",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 29,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "voraussetzen"
-        ]
-      }
-    },
-    {
-      "id": "b2-separable-verbs-mivkg2zgrsrwe",
-      "german": "nachlassen",
-      "english": "to decrease / to ease up",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 27,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "nachlassen"
-        ]
-      }
-    },
-    {
-      "id": "b2-separable-verbs-mivkg2zh8en9s",
-      "german": "zurückweisen",
-      "english": "to reject / to turn down",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 32,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "zurückweisen"
-        ]
-      }
-    },
-    {
-      "id": "b2-separable-verbs-mivkg2zh9ryrc",
-      "german": "zurückblicken",
-      "english": "to look back",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 31,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "zurückblicken"
-        ]
-      }
-    },
-    {
-      "id": "b2-separable-verbs-mivkg2zhhodtu",
-      "german": "vorherrschen",
-      "english": "to prevail / to predominate",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 30,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "vorherrschen"
+          "Reflexive Verbs",
+          "sich auflösen"
         ]
       }
     },
@@ -10842,10 +9742,10 @@
       }
     },
     {
-      "id": "b2-verbs-with-prepositions-mivkdn5s1og87",
-      "german": "sich schützen vor",
-      "english": "to protect oneself from",
-      "category": "Verbs With Prepositions",
+      "id": "b2-separable-verbs-mivkdn5ra2o0t",
+      "german": "unterstützen",
+      "english": "to support",
+      "category": "Separable Verbs",
       "level": "B2",
       "tags": [
         "expansion",
@@ -10853,19 +9753,19 @@
       ],
       "_meta": {
         "source": "B2 Category Expansion 2025",
-        "lineNumber": 28,
+        "lineNumber": 8,
         "hierarchy": [
           "B2",
-          "Verbs With Prepositions",
-          "sich schützen vor"
+          "Separable Verbs",
+          "unterstützen"
         ]
       }
     },
     {
-      "id": "b2-verbs-with-prepositions-mivkdn5s24f3o",
-      "german": "gehören zu",
-      "english": "to belong to",
-      "category": "Verbs With Prepositions",
+      "id": "b2-separable-verbs-mivkdn5rwwhoa",
+      "german": "zurückhalten",
+      "english": "to hold back / to restrain",
+      "category": "Separable Verbs",
       "level": "B2",
       "tags": [
         "expansion",
@@ -10873,19 +9773,19 @@
       ],
       "_meta": {
         "source": "B2 Category Expansion 2025",
-        "lineNumber": 25,
+        "lineNumber": 9,
         "hierarchy": [
           "B2",
-          "Verbs With Prepositions",
-          "gehören zu"
+          "Separable Verbs",
+          "zurückhalten"
         ]
       }
     },
     {
-      "id": "b2-verbs-with-prepositions-mivkdn5s52q1n",
-      "german": "aufpassen auf",
-      "english": "to watch out for / to look after",
-      "category": "Verbs With Prepositions",
+      "id": "b2-separable-verbs-mivkeieq24hqw",
+      "german": "abreisen",
+      "english": "to depart / to leave",
+      "category": "Separable Verbs",
       "level": "B2",
       "tags": [
         "expansion",
@@ -10893,19 +9793,19 @@
       ],
       "_meta": {
         "source": "B2 Category Expansion 2025",
-        "lineNumber": 19,
+        "lineNumber": 10,
         "hierarchy": [
           "B2",
-          "Verbs With Prepositions",
-          "aufpassen auf"
+          "Separable Verbs",
+          "abreisen"
         ]
       }
     },
     {
-      "id": "b2-verbs-with-prepositions-mivkdn5s5xnlp",
-      "german": "warnen vor",
-      "english": "to warn about",
-      "category": "Verbs With Prepositions",
+      "id": "b2-separable-verbs-mivkeieqdmzny",
+      "german": "einbeziehen",
+      "english": "to include / to involve",
+      "category": "Separable Verbs",
       "level": "B2",
       "tags": [
         "expansion",
@@ -10913,19 +9813,19 @@
       ],
       "_meta": {
         "source": "B2 Category Expansion 2025",
-        "lineNumber": 30,
+        "lineNumber": 11,
         "hierarchy": [
           "B2",
-          "Verbs With Prepositions",
-          "warnen vor"
+          "Separable Verbs",
+          "einbeziehen"
         ]
       }
     },
     {
-      "id": "b2-verbs-with-prepositions-mivkdn5sgaojf",
-      "german": "bitten um",
-      "english": "to ask for / to request",
-      "category": "Verbs With Prepositions",
+      "id": "b2-separable-verbs-mivkeieqm1w71",
+      "german": "eindringen",
+      "english": "to penetrate / to intrude",
+      "category": "Separable Verbs",
       "level": "B2",
       "tags": [
         "expansion",
@@ -10933,19 +9833,19 @@
       ],
       "_meta": {
         "source": "B2 Category Expansion 2025",
-        "lineNumber": 23,
+        "lineNumber": 12,
         "hierarchy": [
           "B2",
-          "Verbs With Prepositions",
-          "bitten um"
+          "Separable Verbs",
+          "eindringen"
         ]
       }
     },
     {
-      "id": "b2-verbs-with-prepositions-mivkdn5sko49s",
-      "german": "bestehen auf",
-      "english": "to insist on",
-      "category": "Verbs With Prepositions",
+      "id": "b2-separable-verbs-mivkeieq0ig8k",
+      "german": "einordnen",
+      "english": "to classify / to categorize",
+      "category": "Separable Verbs",
       "level": "B2",
       "tags": [
         "expansion",
@@ -10953,19 +9853,19 @@
       ],
       "_meta": {
         "source": "B2 Category Expansion 2025",
-        "lineNumber": 20,
+        "lineNumber": 13,
         "hierarchy": [
           "B2",
-          "Verbs With Prepositions",
-          "bestehen auf"
+          "Separable Verbs",
+          "einordnen"
         ]
       }
     },
     {
-      "id": "b2-verbs-with-prepositions-mivkdn5smehhp",
-      "german": "sich beteiligen an",
-      "english": "to participate in",
-      "category": "Verbs With Prepositions",
+      "id": "b2-separable-verbs-mivkeieq5gfag",
+      "german": "nachweisen",
+      "english": "to prove / to demonstrate",
+      "category": "Separable Verbs",
       "level": "B2",
       "tags": [
         "expansion",
@@ -10973,19 +9873,19 @@
       ],
       "_meta": {
         "source": "B2 Category Expansion 2025",
-        "lineNumber": 21,
+        "lineNumber": 14,
         "hierarchy": [
           "B2",
-          "Verbs With Prepositions",
-          "sich beteiligen an"
+          "Separable Verbs",
+          "nachweisen"
         ]
       }
     },
     {
-      "id": "b2-verbs-with-prepositions-mivkdn5snan9d",
-      "german": "danken für",
-      "english": "to thank for",
-      "category": "Verbs With Prepositions",
+      "id": "b2-separable-verbs-mivkeieqkgqo2",
+      "german": "umsetzen",
+      "english": "to implement / to convert",
+      "category": "Separable Verbs",
       "level": "B2",
       "tags": [
         "expansion",
@@ -10993,19 +9893,19 @@
       ],
       "_meta": {
         "source": "B2 Category Expansion 2025",
-        "lineNumber": 24,
+        "lineNumber": 15,
         "hierarchy": [
           "B2",
-          "Verbs With Prepositions",
-          "danken für"
+          "Separable Verbs",
+          "umsetzen"
         ]
       }
     },
     {
-      "id": "b2-verbs-with-prepositions-mivkdn5so05ga",
-      "german": "sich bewerben um",
-      "english": "to apply for",
-      "category": "Verbs With Prepositions",
+      "id": "b2-separable-verbs-mivkfb9qczg6b",
+      "german": "abhalten",
+      "english": "to hold / to prevent",
+      "category": "Separable Verbs",
       "level": "B2",
       "tags": [
         "expansion",
@@ -11013,19 +9913,39 @@
       ],
       "_meta": {
         "source": "B2 Category Expansion 2025",
-        "lineNumber": 22,
+        "lineNumber": 16,
         "hierarchy": [
           "B2",
-          "Verbs With Prepositions",
-          "sich bewerben um"
+          "Separable Verbs",
+          "abhalten"
         ]
       }
     },
     {
-      "id": "b2-verbs-with-prepositions-mivkdn5srt6vm",
-      "german": "ankommen auf",
-      "english": "to depend on / to matter",
-      "category": "Verbs With Prepositions",
+      "id": "b2-separable-verbs-mivkfb9qhes8p",
+      "german": "ankündigen",
+      "english": "to announce",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 17,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "ankündigen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkfb9qak4kq",
+      "german": "anregen",
+      "english": "to stimulate / to suggest",
+      "category": "Separable Verbs",
       "level": "B2",
       "tags": [
         "expansion",
@@ -11036,16 +9956,16 @@
         "lineNumber": 18,
         "hierarchy": [
           "B2",
-          "Verbs With Prepositions",
-          "ankommen auf"
+          "Separable Verbs",
+          "anregen"
         ]
       }
     },
     {
-      "id": "b2-verbs-with-prepositions-mivkdn5ss3yug",
-      "german": "kämpfen für",
-      "english": "to fight for",
-      "category": "Verbs With Prepositions",
+      "id": "b2-separable-verbs-mivkfb9q819if",
+      "german": "ausrichten",
+      "english": "to align / to organize",
+      "category": "Separable Verbs",
       "level": "B2",
       "tags": [
         "expansion",
@@ -11053,19 +9973,19 @@
       ],
       "_meta": {
         "source": "B2 Category Expansion 2025",
-        "lineNumber": 27,
+        "lineNumber": 19,
         "hierarchy": [
           "B2",
-          "Verbs With Prepositions",
-          "kämpfen für"
+          "Separable Verbs",
+          "ausrichten"
         ]
       }
     },
     {
-      "id": "b2-verbs-with-prepositions-mivkdn5ssbd0w",
-      "german": "zweifeln an",
-      "english": "to doubt",
-      "category": "Verbs With Prepositions",
+      "id": "b2-separable-verbs-mivkfb9qeqkts",
+      "german": "ausschließen",
+      "english": "to exclude / to rule out",
+      "category": "Separable Verbs",
       "level": "B2",
       "tags": [
         "expansion",
@@ -11073,19 +9993,19 @@
       ],
       "_meta": {
         "source": "B2 Category Expansion 2025",
-        "lineNumber": 31,
+        "lineNumber": 20,
         "hierarchy": [
           "B2",
-          "Verbs With Prepositions",
-          "zweifeln an"
+          "Separable Verbs",
+          "ausschließen"
         ]
       }
     },
     {
-      "id": "b2-verbs-with-prepositions-mivkdn5sueo9j",
-      "german": "träumen von",
-      "english": "to dream of",
-      "category": "Verbs With Prepositions",
+      "id": "b2-separable-verbs-mivkfb9qq53el",
+      "german": "beistehen",
+      "english": "to stand by / to assist",
+      "category": "Separable Verbs",
       "level": "B2",
       "tags": [
         "expansion",
@@ -11093,19 +10013,99 @@
       ],
       "_meta": {
         "source": "B2 Category Expansion 2025",
-        "lineNumber": 29,
+        "lineNumber": 21,
         "hierarchy": [
           "B2",
-          "Verbs With Prepositions",
-          "träumen von"
+          "Separable Verbs",
+          "beistehen"
         ]
       }
     },
     {
-      "id": "b2-verbs-with-prepositions-mivkdn5svimbr",
-      "german": "halten von",
-      "english": "to think of / to have an opinion about",
-      "category": "Verbs With Prepositions",
+      "id": "b2-separable-verbs-mivkfb9q4h962",
+      "german": "bevorstehen",
+      "english": "to be imminent / to lie ahead",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "bevorstehen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkfb9qnx8h3",
+      "german": "gegenüberstehen",
+      "english": "to face / to be opposite",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "gegenüberstehen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkfb9qm5uya",
+      "german": "hervorbringen",
+      "english": "to produce / to bring forth",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "hervorbringen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkfb9qy4bi0",
+      "german": "hervorrufen",
+      "english": "to cause / to provoke",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "hervorrufen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zg9hxw5",
+      "german": "nachkommen",
+      "english": "to comply / to follow",
+      "category": "Separable Verbs",
       "level": "B2",
       "tags": [
         "expansion",
@@ -11116,8 +10116,128 @@
         "lineNumber": 26,
         "hierarchy": [
           "B2",
-          "Verbs With Prepositions",
-          "halten von"
+          "Separable Verbs",
+          "nachkommen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zgrsrwe",
+      "german": "nachlassen",
+      "english": "to decrease / to ease up",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "nachlassen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zg5mzwv",
+      "german": "vorangehen",
+      "english": "to precede / to go ahead",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "vorangehen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zghu0hk",
+      "german": "voraussetzen",
+      "english": "to presuppose / to assume",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "voraussetzen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zhhodtu",
+      "german": "vorherrschen",
+      "english": "to prevail / to predominate",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "vorherrschen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zh9ryrc",
+      "german": "zurückblicken",
+      "english": "to look back",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "zurückblicken"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zh8en9s",
+      "german": "zurückweisen",
+      "english": "to reject / to turn down",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "zurückweisen"
         ]
       }
     },
@@ -11478,6 +10598,286 @@
           "B2",
           "Verbs With Prepositions",
           "gelten für + Akk"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5srt6vm",
+      "german": "ankommen auf",
+      "english": "to depend on / to matter",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 18,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "ankommen auf"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5s52q1n",
+      "german": "aufpassen auf",
+      "english": "to watch out for / to look after",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 19,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "aufpassen auf"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5sko49s",
+      "german": "bestehen auf",
+      "english": "to insist on",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "bestehen auf"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5smehhp",
+      "german": "sich beteiligen an",
+      "english": "to participate in",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "sich beteiligen an"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5so05ga",
+      "german": "sich bewerben um",
+      "english": "to apply for",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "sich bewerben um"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5sgaojf",
+      "german": "bitten um",
+      "english": "to ask for / to request",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "bitten um"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5snan9d",
+      "german": "danken für",
+      "english": "to thank for",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "danken für"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5s24f3o",
+      "german": "gehören zu",
+      "english": "to belong to",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "gehören zu"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5svimbr",
+      "german": "halten von",
+      "english": "to think of / to have an opinion about",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "halten von"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5ss3yug",
+      "german": "kämpfen für",
+      "english": "to fight for",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "kämpfen für"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5s1og87",
+      "german": "sich schützen vor",
+      "english": "to protect oneself from",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "sich schützen vor"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5sueo9j",
+      "german": "träumen von",
+      "english": "to dream of",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "träumen von"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5s5xnlp",
+      "german": "warnen vor",
+      "english": "to warn about",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "warnen vor"
+        ]
+      }
+    },
+    {
+      "id": "b2-verbs-with-prepositions-mivkdn5ssbd0w",
+      "german": "zweifeln an",
+      "english": "to doubt",
+      "category": "Verbs With Prepositions",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "B2",
+          "Verbs With Prepositions",
+          "zweifeln an"
         ]
       }
     }

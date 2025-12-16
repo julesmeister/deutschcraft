@@ -1,7 +1,7 @@
 {
   "level": "A1",
-  "totalCards": 475,
-  "totalCategories": 26,
+  "totalCards": 483,
+  "totalCategories": 27,
   "categories": [
     {
       "name": "Adjectives",
@@ -102,6 +102,11 @@
       "name": "Regular Verbs",
       "count": 31,
       "file": "regular-verbs.json"
+    },
+    {
+      "name": "Seasons",
+      "count": 8,
+      "file": "seasons.json"
     },
     {
       "name": "State Change Verbs",

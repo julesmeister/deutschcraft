@@ -1,0 +1,151 @@
+{
+  "category": "New Year",
+  "level": "B1",
+  "icon": "🎆",
+  "flashcards": [
+    {
+      "id": "newyear-b1-001",
+      "german": "Silvester",
+      "english": "New Year's Eve",
+      "category": "New Year",
+      "level": "B1",
+      "tags": ["holidays", "new-year", "B1"],
+      "_meta": {
+        "source": "New Year B1",
+        "hierarchy": ["B1", "New Year", "Silvester"]
+      }
+    },
+    {
+      "id": "newyear-b1-002",
+      "german": "Neujahr",
+      "english": "New Year's Day",
+      "category": "New Year",
+      "level": "B1",
+      "tags": ["holidays", "new-year", "B1"],
+      "_meta": {
+        "source": "New Year B1",
+        "hierarchy": ["B1", "New Year", "Neujahr"]
+      }
+    },
+    {
+      "id": "newyear-b1-003",
+      "german": "das Feuerwerk",
+      "english": "fireworks",
+      "category": "New Year",
+      "level": "B1",
+      "tags": ["holidays", "new-year", "B1"],
+      "_meta": {
+        "source": "New Year B1",
+        "hierarchy": ["B1", "New Year", "das Feuerwerk"]
+      }
+    },
+    {
+      "id": "newyear-b1-004",
+      "german": "der Vorsatz",
+      "english": "resolution",
+      "category": "New Year",
+      "level": "B1",
+      "tags": ["holidays", "new-year", "B1"],
+      "_meta": {
+        "source": "New Year B1",
+        "hierarchy": ["B1", "New Year", "der Vorsatz"]
+      }
+    },
+    {
+      "id": "newyear-b1-005",
+      "german": "der Jahreswechsel",
+      "english": "turn of the year",
+      "category": "New Year",
+      "level": "B1",
+      "tags": ["holidays", "new-year", "B1"],
+      "_meta": {
+        "source": "New Year B1",
+        "hierarchy": ["B1", "New Year", "der Jahreswechsel"]
+      }
+    },
+    {
+      "id": "newyear-b1-006",
+      "german": "anstoßen",
+      "english": "to toast / clink glasses",
+      "category": "New Year",
+      "level": "B1",
+      "tags": ["holidays", "new-year", "verbs", "B1"],
+      "_meta": {
+        "source": "New Year B1",
+        "hierarchy": ["B1", "New Year", "anstoßen"]
+      }
+    },
+    {
+      "id": "newyear-b1-007",
+      "german": "der Sekt",
+      "english": "sparkling wine / champagne",
+      "category": "New Year",
+      "level": "B1",
+      "tags": ["holidays", "new-year", "drinks", "B1"],
+      "_meta": {
+        "source": "New Year B1",
+        "hierarchy": ["B1", "New Year", "der Sekt"]
+      }
+    },
+    {
+      "id": "newyear-b1-008",
+      "german": "feiern",
+      "english": "to celebrate",
+      "category": "New Year",
+      "level": "B1",
+      "tags": ["holidays", "new-year", "verbs", "B1"],
+      "_meta": {
+        "source": "New Year B1",
+        "hierarchy": ["B1", "New Year", "feiern"]
+      }
+    },
+    {
+      "id": "newyear-b1-009",
+      "german": "die Rakete",
+      "english": "rocket / firecracker",
+      "category": "New Year",
+      "level": "B1",
+      "tags": ["holidays", "new-year", "B1"],
+      "_meta": {
+        "source": "New Year B1",
+        "hierarchy": ["B1", "New Year", "die Rakete"]
+      }
+    },
+    {
+      "id": "newyear-b1-010",
+      "german": "der Countdown",
+      "english": "countdown",
+      "category": "New Year",
+      "level": "B1",
+      "tags": ["holidays", "new-year", "B1"],
+      "_meta": {
+        "source": "New Year B1",
+        "hierarchy": ["B1", "New Year", "der Countdown"]
+      }
+    },
+    {
+      "id": "newyear-b1-011",
+      "german": "Prost Neujahr!",
+      "english": "Happy New Year!",
+      "category": "New Year",
+      "level": "B1",
+      "tags": ["holidays", "new-year", "phrases", "B1"],
+      "_meta": {
+        "source": "New Year B1",
+        "hierarchy": ["B1", "New Year", "Prost Neujahr!"]
+      }
+    },
+    {
+      "id": "newyear-b1-012",
+      "german": "das Bleigießen",
+      "english": "lead pouring (New Year's tradition)",
+      "category": "New Year",
+      "level": "B1",
+      "tags": ["holidays", "new-year", "traditions", "B1"],
+      "_meta": {
+        "source": "New Year B1",
+        "hierarchy": ["B1", "New Year", "das Bleigießen"]
+      }
+    }
+  ]
+}

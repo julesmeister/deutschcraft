@@ -1,0 +1,223 @@
+{
+  "category": "Christmas",
+  "level": "A2",
+  "icon": "🎄",
+  "flashcards": [
+    {
+      "id": "christmas-a2-001",
+      "german": "Weihnachten",
+      "english": "Christmas",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "Weihnachten"]
+      }
+    },
+    {
+      "id": "christmas-a2-002",
+      "german": "der Weihnachtsbaum",
+      "english": "Christmas tree",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "der Weihnachtsbaum"]
+      }
+    },
+    {
+      "id": "christmas-a2-003",
+      "german": "das Geschenk",
+      "english": "gift / present",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "das Geschenk"]
+      }
+    },
+    {
+      "id": "christmas-a2-004",
+      "german": "der Weihnachtsmann",
+      "english": "Santa Claus",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "der Weihnachtsmann"]
+      }
+    },
+    {
+      "id": "christmas-a2-005",
+      "german": "der Adventskranz",
+      "english": "Advent wreath",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "der Adventskranz"]
+      }
+    },
+    {
+      "id": "christmas-a2-006",
+      "german": "die Kerze",
+      "english": "candle",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "die Kerze"]
+      }
+    },
+    {
+      "id": "christmas-a2-007",
+      "german": "der Heilige Abend",
+      "english": "Christmas Eve",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "der Heilige Abend"]
+      }
+    },
+    {
+      "id": "christmas-a2-008",
+      "german": "die Weihnachtskarte",
+      "english": "Christmas card",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "die Weihnachtskarte"]
+      }
+    },
+    {
+      "id": "christmas-a2-009",
+      "german": "der Lebkuchen",
+      "english": "gingerbread",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "food", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "der Lebkuchen"]
+      }
+    },
+    {
+      "id": "christmas-a2-010",
+      "german": "der Weihnachtsmarkt",
+      "english": "Christmas market",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "der Weihnachtsmarkt"]
+      }
+    },
+    {
+      "id": "christmas-a2-011",
+      "german": "der Stern",
+      "english": "star",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "der Stern"]
+      }
+    },
+    {
+      "id": "christmas-a2-012",
+      "german": "die Glocke",
+      "english": "bell",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "die Glocke"]
+      }
+    },
+    {
+      "id": "christmas-a2-013",
+      "german": "der Schlitten",
+      "english": "sleigh / sled",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "der Schlitten"]
+      }
+    },
+    {
+      "id": "christmas-a2-014",
+      "german": "die Krippe",
+      "english": "nativity scene / manger",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "die Krippe"]
+      }
+    },
+    {
+      "id": "christmas-a2-015",
+      "german": "singen",
+      "english": "to sing",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "verbs", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "singen"]
+      }
+    },
+    {
+      "id": "christmas-a2-016",
+      "german": "das Weihnachtslied",
+      "english": "Christmas carol",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "das Weihnachtslied"]
+      }
+    },
+    {
+      "id": "christmas-a2-017",
+      "german": "schmücken",
+      "english": "to decorate",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "verbs", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "schmücken"]
+      }
+    },
+    {
+      "id": "christmas-a2-018",
+      "german": "die Christbaumkugel",
+      "english": "Christmas ornament / bauble",
+      "category": "Christmas",
+      "level": "A2",
+      "tags": ["holidays", "christmas", "A2"],
+      "_meta": {
+        "source": "Christmas A2",
+        "hierarchy": ["A2", "Christmas", "die Christbaumkugel"]
+      }
+    }
+  ]
+}

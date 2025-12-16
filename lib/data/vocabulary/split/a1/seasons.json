@@ -1,0 +1,103 @@
+{
+  "category": "Seasons",
+  "level": "A1",
+  "icon": "🌸",
+  "flashcards": [
+    {
+      "id": "seasons-a1-001",
+      "german": "der Frühling",
+      "english": "spring",
+      "category": "Seasons",
+      "level": "A1",
+      "tags": ["seasons", "A1"],
+      "_meta": {
+        "source": "Seasons A1",
+        "hierarchy": ["A1", "Seasons", "der Frühling"]
+      }
+    },
+    {
+      "id": "seasons-a1-002",
+      "german": "der Sommer",
+      "english": "summer",
+      "category": "Seasons",
+      "level": "A1",
+      "tags": ["seasons", "A1"],
+      "_meta": {
+        "source": "Seasons A1",
+        "hierarchy": ["A1", "Seasons", "der Sommer"]
+      }
+    },
+    {
+      "id": "seasons-a1-003",
+      "german": "der Herbst",
+      "english": "autumn / fall",
+      "category": "Seasons",
+      "level": "A1",
+      "tags": ["seasons", "A1"],
+      "_meta": {
+        "source": "Seasons A1",
+        "hierarchy": ["A1", "Seasons", "der Herbst"]
+      }
+    },
+    {
+      "id": "seasons-a1-004",
+      "german": "der Winter",
+      "english": "winter",
+      "category": "Seasons",
+      "level": "A1",
+      "tags": ["seasons", "A1"],
+      "_meta": {
+        "source": "Seasons A1",
+        "hierarchy": ["A1", "Seasons", "der Winter"]
+      }
+    },
+    {
+      "id": "seasons-a1-005",
+      "german": "die Jahreszeit",
+      "english": "season",
+      "category": "Seasons",
+      "level": "A1",
+      "tags": ["seasons", "A1"],
+      "_meta": {
+        "source": "Seasons A1",
+        "hierarchy": ["A1", "Seasons", "die Jahreszeit"]
+      }
+    },
+    {
+      "id": "seasons-a1-006",
+      "german": "der Schnee",
+      "english": "snow",
+      "category": "Seasons",
+      "level": "A1",
+      "tags": ["seasons", "weather", "A1"],
+      "_meta": {
+        "source": "Seasons A1",
+        "hierarchy": ["A1", "Seasons", "der Schnee"]
+      }
+    },
+    {
+      "id": "seasons-a1-007",
+      "german": "die Sonne",
+      "english": "sun",
+      "category": "Seasons",
+      "level": "A1",
+      "tags": ["seasons", "weather", "A1"],
+      "_meta": {
+        "source": "Seasons A1",
+        "hierarchy": ["A1", "Seasons", "die Sonne"]
+      }
+    },
+    {
+      "id": "seasons-a1-008",
+      "german": "der Regen",
+      "english": "rain",
+      "category": "Seasons",
+      "level": "A1",
+      "tags": ["seasons", "weather", "A1"],
+      "_meta": {
+        "source": "Seasons A1",
+        "hierarchy": ["A1", "Seasons", "der Regen"]
+      }
+    }
+  ]
+}

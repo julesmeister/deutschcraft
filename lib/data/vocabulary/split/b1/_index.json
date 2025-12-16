@@ -1,7 +1,7 @@
 {
   "level": "B1",
-  "totalCards": 1376,
-  "totalCategories": 21,
+  "totalCards": 1402,
+  "totalCategories": 23,
   "categories": [
     {
       "name": "Adjective Pairs",
@@ -64,9 +64,19 @@
       "file": "irregular-verbs.json"
     },
     {
+      "name": "Karneval",
+      "count": 14,
+      "file": "karneval.json"
+    },
+    {
       "name": "Medical Health",
       "count": 17,
       "file": "medical-health.json"
+    },
+    {
+      "name": "New Year",
+      "count": 12,
+      "file": "new-year.json"
     },
     {
       "name": "Passive Voice",

@@ -1,7 +1,7 @@
 {
   "level": "A2",
-  "totalCards": 473,
-  "totalCategories": 24,
+  "totalCards": 518,
+  "totalCategories": 27,
   "categories": [
     {
       "name": "Action Verbs",
@@ -24,9 +24,19 @@
       "file": "body-parts.json"
     },
     {
+      "name": "Christmas",
+      "count": 18,
+      "file": "christmas.json"
+    },
+    {
       "name": "Common Verbs",
       "count": 7,
       "file": "common-verbs.json"
+    },
+    {
+      "name": "Easter",
+      "count": 12,
+      "file": "easter.json"
     },
     {
       "name": "Communication Verbs",
@@ -42,6 +52,11 @@
       "name": "Feelings",
       "count": 19,
       "file": "feelings.json"
+    },
+    {
+      "name": "Halloween",
+      "count": 15,
+      "file": "halloween.json"
     },
     {
       "name": "Hobbies",

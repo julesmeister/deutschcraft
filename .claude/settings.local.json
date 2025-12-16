@@ -86,7 +86,8 @@
       "Bash(node add-housing-vocab.js:*)",
       "Bash(node check-duplicates.js:*)",
       "Bash(node remove-duplicates.js:*)",
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(ls:*)"
     ],
     "deny": [],
     "ask": []

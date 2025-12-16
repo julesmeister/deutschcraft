@@ -1,0 +1,187 @@
+{
+  "category": "Halloween",
+  "level": "A2",
+  "icon": "🎃",
+  "flashcards": [
+    {
+      "id": "halloween-a2-001",
+      "german": "Halloween",
+      "english": "Halloween",
+      "category": "Halloween",
+      "level": "A2",
+      "tags": ["holidays", "halloween", "A2"],
+      "_meta": {
+        "source": "Halloween A2",
+        "hierarchy": ["A2", "Halloween", "Halloween"]
+      }
+    },
+    {
+      "id": "halloween-a2-002",
+      "german": "der Kürbis",
+      "english": "pumpkin",
+      "category": "Halloween",
+      "level": "A2",
+      "tags": ["holidays", "halloween", "A2"],
+      "_meta": {
+        "source": "Halloween A2",
+        "hierarchy": ["A2", "Halloween", "der Kürbis"]
+      }
+    },
+    {
+      "id": "halloween-a2-003",
+      "german": "das Gespenst",
+      "english": "ghost",
+      "category": "Halloween",
+      "level": "A2",
+      "tags": ["holidays", "halloween", "A2"],
+      "_meta": {
+        "source": "Halloween A2",
+        "hierarchy": ["A2", "Halloween", "das Gespenst"]
+      }
+    },
+    {
+      "id": "halloween-a2-004",
+      "german": "die Hexe",
+      "english": "witch",
+      "category": "Halloween",
+      "level": "A2",
+      "tags": ["holidays", "halloween", "A2"],
+      "_meta": {
+        "source": "Halloween A2",
+        "hierarchy": ["A2", "Halloween", "die Hexe"]
+      }
+    },
+    {
+      "id": "halloween-a2-005",
+      "german": "das Kostüm",
+      "english": "costume",
+      "category": "Halloween",
+      "level": "A2",
+      "tags": ["holidays", "halloween", "A2"],
+      "_meta": {
+        "source": "Halloween A2",
+        "hierarchy": ["A2", "Halloween", "das Kostüm"]
+      }
+    },
+    {
+      "id": "halloween-a2-006",
+      "german": "gruselig",
+      "english": "scary / creepy",
+      "category": "Halloween",
+      "level": "A2",
+      "tags": ["holidays", "halloween", "adjectives", "A2"],
+      "_meta": {
+        "source": "Halloween A2",
+        "hierarchy": ["A2", "Halloween", "gruselig"]
+      }
+    },
+    {
+      "id": "halloween-a2-007",
+      "german": "die Süßigkeiten",
+      "english": "candy / sweets",
+      "category": "Halloween",
+      "level": "A2",
+      "tags": ["holidays", "halloween", "A2"],
+      "_meta": {
+        "source": "Halloween A2",
+        "hierarchy": ["A2", "Halloween", "die Süßigkeiten"]
+      }
+    },
+    {
+      "id": "halloween-a2-008",
+      "german": "der Vampir",
+      "english": "vampire",
+      "category": "Halloween",
+      "level": "A2",
+      "tags": ["holidays", "halloween", "A2"],
+      "_meta": {
+        "source": "Halloween A2",
+        "hierarchy": ["A2", "Halloween", "der Vampir"]
+      }
+    },
+    {
+      "id": "halloween-a2-009",
+      "german": "das Skelett",
+      "english": "skeleton",
+      "category": "Halloween",
+      "level": "A2",
+      "tags": ["holidays", "halloween", "A2"],
+      "_meta": {
+        "source": "Halloween A2",
+        "hierarchy": ["A2", "Halloween", "das Skelett"]
+      }
+    },
+    {
+      "id": "halloween-a2-010",
+      "german": "die Maske",
+      "english": "mask",
+      "category": "Halloween",
+      "level": "A2",
+      "tags": ["holidays", "halloween", "A2"],
+      "_meta": {
+        "source": "Halloween A2",
+        "hierarchy": ["A2", "Halloween", "die Maske"]
+      }
+    },
+    {
+      "id": "halloween-a2-011",
+      "german": "der Besen",
+      "english": "broom / broomstick",
+      "category": "Halloween",
+      "level": "A2",
+      "tags": ["holidays", "halloween", "A2"],
+      "_meta": {
+        "source": "Halloween A2",
+        "hierarchy": ["A2", "Halloween", "der Besen"]
+      }
+    },
+    {
+      "id": "halloween-a2-012",
+      "german": "die Fledermaus",
+      "english": "bat",
+      "category": "Halloween",
+      "level": "A2",
+      "tags": ["holidays", "halloween", "animals", "A2"],
+      "_meta": {
+        "source": "Halloween A2",
+        "hierarchy": ["A2", "Halloween", "die Fledermaus"]
+      }
+    },
+    {
+      "id": "halloween-a2-013",
+      "german": "die Spinne",
+      "english": "spider",
+      "category": "Halloween",
+      "level": "A2",
+      "tags": ["holidays", "halloween", "animals", "A2"],
+      "_meta": {
+        "source": "Halloween A2",
+        "hierarchy": ["A2", "Halloween", "die Spinne"]
+      }
+    },
+    {
+      "id": "halloween-a2-014",
+      "german": "der Friedhof",
+      "english": "cemetery / graveyard",
+      "category": "Halloween",
+      "level": "A2",
+      "tags": ["holidays", "halloween", "A2"],
+      "_meta": {
+        "source": "Halloween A2",
+        "hierarchy": ["A2", "Halloween", "der Friedhof"]
+      }
+    },
+    {
+      "id": "halloween-a2-015",
+      "german": "sich verkleiden",
+      "english": "to dress up / disguise oneself",
+      "category": "Halloween",
+      "level": "A2",
+      "tags": ["holidays", "halloween", "verbs", "A2"],
+      "_meta": {
+        "source": "Halloween A2",
+        "hierarchy": ["A2", "Halloween", "sich verkleiden"]
+      }
+    }
+  ]
+}

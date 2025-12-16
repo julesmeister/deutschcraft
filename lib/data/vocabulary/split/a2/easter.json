@@ -1,0 +1,151 @@
+{
+  "category": "Easter",
+  "level": "A2",
+  "icon": "🐰",
+  "flashcards": [
+    {
+      "id": "easter-a2-001",
+      "german": "Ostern",
+      "english": "Easter",
+      "category": "Easter",
+      "level": "A2",
+      "tags": ["holidays", "easter", "A2"],
+      "_meta": {
+        "source": "Easter A2",
+        "hierarchy": ["A2", "Easter", "Ostern"]
+      }
+    },
+    {
+      "id": "easter-a2-002",
+      "german": "der Osterhase",
+      "english": "Easter bunny",
+      "category": "Easter",
+      "level": "A2",
+      "tags": ["holidays", "easter", "A2"],
+      "_meta": {
+        "source": "Easter A2",
+        "hierarchy": ["A2", "Easter", "der Osterhase"]
+      }
+    },
+    {
+      "id": "easter-a2-003",
+      "german": "das Osterei",
+      "english": "Easter egg",
+      "category": "Easter",
+      "level": "A2",
+      "tags": ["holidays", "easter", "A2"],
+      "_meta": {
+        "source": "Easter A2",
+        "hierarchy": ["A2", "Easter", "das Osterei"]
+      }
+    },
+    {
+      "id": "easter-a2-004",
+      "german": "das Nest",
+      "english": "nest",
+      "category": "Easter",
+      "level": "A2",
+      "tags": ["holidays", "easter", "A2"],
+      "_meta": {
+        "source": "Easter A2",
+        "hierarchy": ["A2", "Easter", "das Nest"]
+      }
+    },
+    {
+      "id": "easter-a2-005",
+      "german": "suchen",
+      "english": "to search / look for",
+      "category": "Easter",
+      "level": "A2",
+      "tags": ["holidays", "easter", "verbs", "A2"],
+      "_meta": {
+        "source": "Easter A2",
+        "hierarchy": ["A2", "Easter", "suchen"]
+      }
+    },
+    {
+      "id": "easter-a2-006",
+      "german": "verstecken",
+      "english": "to hide",
+      "category": "Easter",
+      "level": "A2",
+      "tags": ["holidays", "easter", "verbs", "A2"],
+      "_meta": {
+        "source": "Easter A2",
+        "hierarchy": ["A2", "Easter", "verstecken"]
+      }
+    },
+    {
+      "id": "easter-a2-007",
+      "german": "bemalen",
+      "english": "to paint / decorate",
+      "category": "Easter",
+      "level": "A2",
+      "tags": ["holidays", "easter", "verbs", "A2"],
+      "_meta": {
+        "source": "Easter A2",
+        "hierarchy": ["A2", "Easter", "bemalen"]
+      }
+    },
+    {
+      "id": "easter-a2-008",
+      "german": "die Schokolade",
+      "english": "chocolate",
+      "category": "Easter",
+      "level": "A2",
+      "tags": ["holidays", "easter", "food", "A2"],
+      "_meta": {
+        "source": "Easter A2",
+        "hierarchy": ["A2", "Easter", "die Schokolade"]
+      }
+    },
+    {
+      "id": "easter-a2-009",
+      "german": "der Korb",
+      "english": "basket",
+      "category": "Easter",
+      "level": "A2",
+      "tags": ["holidays", "easter", "A2"],
+      "_meta": {
+        "source": "Easter A2",
+        "hierarchy": ["A2", "Easter", "der Korb"]
+      }
+    },
+    {
+      "id": "easter-a2-010",
+      "german": "das Küken",
+      "english": "chick",
+      "category": "Easter",
+      "level": "A2",
+      "tags": ["holidays", "easter", "animals", "A2"],
+      "_meta": {
+        "source": "Easter A2",
+        "hierarchy": ["A2", "Easter", "das Küken"]
+      }
+    },
+    {
+      "id": "easter-a2-011",
+      "german": "die Blume",
+      "english": "flower",
+      "category": "Easter",
+      "level": "A2",
+      "tags": ["holidays", "easter", "A2"],
+      "_meta": {
+        "source": "Easter A2",
+        "hierarchy": ["A2", "Easter", "die Blume"]
+      }
+    },
+    {
+      "id": "easter-a2-012",
+      "german": "bunt",
+      "english": "colorful",
+      "category": "Easter",
+      "level": "A2",
+      "tags": ["holidays", "easter", "adjectives", "A2"],
+      "_meta": {
+        "source": "Easter A2",
+        "hierarchy": ["A2", "Easter", "bunt"]
+      }
+    }
+  ]
+}

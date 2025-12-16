@@ -1,6 +1,6 @@
 {
   "level": "C1",
-  "totalCards": 116,
+  "totalCards": 112,
   "flashcards": [
     {
       "id": "syllabus-c1-11548",
@@ -753,86 +753,6 @@
       }
     },
     {
-      "id": "c1-angesichts-044830",
-      "german": "angesichts",
-      "english": "in view of / considering",
-      "category": "Formal Language",
-      "level": "C1",
-      "tags": [
-        "expansion",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 7,
-        "hierarchy": [
-          "C1",
-          "Formal Language",
-          "angesichts"
-        ]
-      }
-    },
-    {
-      "id": "c1-bezueglich-044830",
-      "german": "bezüglich",
-      "english": "regarding / concerning",
-      "category": "Formal Language",
-      "level": "C1",
-      "tags": [
-        "expansion",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 6,
-        "hierarchy": [
-          "C1",
-          "Formal Language",
-          "bezüglich"
-        ]
-      }
-    },
-    {
-      "id": "c1-infolge-044830",
-      "german": "infolge",
-      "english": "as a result of / due to",
-      "category": "Formal Language",
-      "level": "C1",
-      "tags": [
-        "expansion",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 9,
-        "hierarchy": [
-          "C1",
-          "Formal Language",
-          "infolge"
-        ]
-      }
-    },
-    {
-      "id": "c1-mittels-044830",
-      "german": "mittels",
-      "english": "by means of / using",
-      "category": "Formal Language",
-      "level": "C1",
-      "tags": [
-        "expansion",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 8,
-        "hierarchy": [
-          "C1",
-          "Formal Language",
-          "mittels"
-        ]
-      }
-    },
-    {
       "id": "syllabus-c1-11573",
       "german": "diesbezüglich",
       "english": "in this regard / concerning this",
@@ -949,6 +869,86 @@
           "C1",
           "Formal Language",
           "mithin"
+        ]
+      }
+    },
+    {
+      "id": "c1-bezueglich-044830",
+      "german": "bezüglich",
+      "english": "regarding / concerning",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 6,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "bezüglich"
+        ]
+      }
+    },
+    {
+      "id": "c1-angesichts-044830",
+      "german": "angesichts",
+      "english": "in view of / considering",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "angesichts"
+        ]
+      }
+    },
+    {
+      "id": "c1-mittels-044830",
+      "german": "mittels",
+      "english": "by means of / using",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "mittels"
+        ]
+      }
+    },
+    {
+      "id": "c1-infolge-044830",
+      "german": "infolge",
+      "english": "as a result of / due to",
+      "category": "Formal Language",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "C1",
+          "Formal Language",
+          "infolge"
         ]
       }
     },
@@ -1193,186 +1193,6 @@
       }
     },
     {
-      "id": "c1-auf-etwas-hinauslaufen-044832",
-      "german": "auf etwas hinauslaufen",
-      "english": "to amount to / to come down to",
-      "category": "Nuanced Expressions",
-      "level": "C1",
-      "tags": [
-        "expansion",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 2,
-        "hierarchy": [
-          "C1",
-          "Nuanced Expressions",
-          "auf etwas hinauslaufen"
-        ]
-      }
-    },
-    {
-      "id": "c1-etwas-in-erwaegung-ziehen-044832",
-      "german": "etwas in Erwägung ziehen",
-      "english": "to consider something",
-      "category": "Nuanced Expressions",
-      "level": "C1",
-      "tags": [
-        "expansion",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 3,
-        "hierarchy": [
-          "C1",
-          "Nuanced Expressions",
-          "etwas in Erwägung ziehen"
-        ]
-      }
-    },
-    {
-      "id": "c1-in-kauf-nehmen-044832",
-      "german": "in Kauf nehmen",
-      "english": "to accept / to tolerate",
-      "category": "Nuanced Expressions",
-      "level": "C1",
-      "tags": [
-        "expansion",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 1,
-        "hierarchy": [
-          "C1",
-          "Nuanced Expressions",
-          "in Kauf nehmen"
-        ]
-      }
-    },
-    {
-      "id": "c1-sich-bewusst-sein-044832",
-      "german": "sich bewusst sein",
-      "english": "to be aware / to be conscious of",
-      "category": "Nuanced Expressions",
-      "level": "C1",
-      "tags": [
-        "expansion",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 0,
-        "hierarchy": [
-          "C1",
-          "Nuanced Expressions",
-          "sich bewusst sein"
-        ]
-      }
-    },
-    {
-      "id": "c1-abwicklung-044831",
-      "german": "die Abwicklung",
-      "english": "processing / handling",
-      "category": "Professional Communication",
-      "level": "C1",
-      "tags": [
-        "expansion",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 10,
-        "hierarchy": [
-          "C1",
-          "Professional Communication",
-          "Abwicklung"
-        ]
-      }
-    },
-    {
-      "id": "c1-durchfuehrung-044831",
-      "german": "die Durchführung",
-      "english": "implementation / execution",
-      "category": "Professional Communication",
-      "level": "C1",
-      "tags": [
-        "expansion",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 11,
-        "hierarchy": [
-          "C1",
-          "Professional Communication",
-          "Durchführung"
-        ]
-      }
-    },
-    {
-      "id": "c1-vereinbarung-044831",
-      "german": "die Vereinbarung",
-      "english": "agreement / arrangement",
-      "category": "Professional Communication",
-      "level": "C1",
-      "tags": [
-        "expansion",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 7,
-        "hierarchy": [
-          "C1",
-          "Professional Communication",
-          "Vereinbarung"
-        ]
-      }
-    },
-    {
-      "id": "c1-vorgehensweise-044831",
-      "german": "die Vorgehensweise",
-      "english": "procedure / approach",
-      "category": "Professional Communication",
-      "level": "C1",
-      "tags": [
-        "expansion",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 9,
-        "hierarchy": [
-          "C1",
-          "Professional Communication",
-          "Vorgehensweise"
-        ]
-      }
-    },
-    {
-      "id": "c1-zustaendigkeit-044831",
-      "german": "die Zuständigkeit",
-      "english": "responsibility / jurisdiction",
-      "category": "Professional Communication",
-      "level": "C1",
-      "tags": [
-        "expansion",
-        "C1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 8,
-        "hierarchy": [
-          "C1",
-          "Professional Communication",
-          "Zuständigkeit"
-        ]
-      }
-    },
-    {
       "id": "syllabus-c1-11598",
       "german": "vereinbaren",
       "english": "to agree upon / to arrange",
@@ -1509,6 +1329,106 @@
           "C1",
           "Professional Communication",
           "beanspruchen"
+        ]
+      }
+    },
+    {
+      "id": "c1-vereinbarung-044831",
+      "german": "die Vereinbarung",
+      "english": "agreement / arrangement",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 7,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "Vereinbarung"
+        ]
+      }
+    },
+    {
+      "id": "c1-zustaendigkeit-044831",
+      "german": "die Zuständigkeit",
+      "english": "responsibility / jurisdiction",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "Zuständigkeit"
+        ]
+      }
+    },
+    {
+      "id": "c1-vorgehensweise-044831",
+      "german": "die Vorgehensweise",
+      "english": "procedure / approach",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "Vorgehensweise"
+        ]
+      }
+    },
+    {
+      "id": "c1-abwicklung-044831",
+      "german": "die Abwicklung",
+      "english": "processing / handling",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "Abwicklung"
+        ]
+      }
+    },
+    {
+      "id": "c1-durchfuehrung-044831",
+      "german": "die Durchführung",
+      "english": "implementation / execution",
+      "category": "Professional Communication",
+      "level": "C1",
+      "tags": [
+        "expansion",
+        "C1"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "C1",
+          "Professional Communication",
+          "Durchführung"
         ]
       }
     },

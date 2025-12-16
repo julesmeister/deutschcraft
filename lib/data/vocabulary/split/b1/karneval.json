@@ -1,0 +1,175 @@
+{
+  "category": "Karneval",
+  "level": "B1",
+  "icon": "🎭",
+  "flashcards": [
+    {
+      "id": "karneval-b1-001",
+      "german": "der Karneval",
+      "english": "carnival",
+      "category": "Karneval",
+      "level": "B1",
+      "tags": ["holidays", "karneval", "traditions", "B1"],
+      "_meta": {
+        "source": "Karneval B1",
+        "hierarchy": ["B1", "Karneval", "der Karneval"]
+      }
+    },
+    {
+      "id": "karneval-b1-002",
+      "german": "der Fasching",
+      "english": "carnival (Southern German term)",
+      "category": "Karneval",
+      "level": "B1",
+      "tags": ["holidays", "karneval", "traditions", "B1"],
+      "_meta": {
+        "source": "Karneval B1",
+        "hierarchy": ["B1", "Karneval", "der Fasching"]
+      }
+    },
+    {
+      "id": "karneval-b1-003",
+      "german": "die Fastnacht",
+      "english": "carnival (Southwestern German term)",
+      "category": "Karneval",
+      "level": "B1",
+      "tags": ["holidays", "karneval", "traditions", "B1"],
+      "_meta": {
+        "source": "Karneval B1",
+        "hierarchy": ["B1", "Karneval", "die Fastnacht"]
+      }
+    },
+    {
+      "id": "karneval-b1-004",
+      "german": "der Umzug",
+      "english": "parade / procession",
+      "category": "Karneval",
+      "level": "B1",
+      "tags": ["holidays", "karneval", "B1"],
+      "_meta": {
+        "source": "Karneval B1",
+        "hierarchy": ["B1", "Karneval", "der Umzug"]
+      }
+    },
+    {
+      "id": "karneval-b1-005",
+      "german": "der Wagen",
+      "english": "float (parade)",
+      "category": "Karneval",
+      "level": "B1",
+      "tags": ["holidays", "karneval", "B1"],
+      "_meta": {
+        "source": "Karneval B1",
+        "hierarchy": ["B1", "Karneval", "der Wagen"]
+      }
+    },
+    {
+      "id": "karneval-b1-006",
+      "german": "die Verkleidung",
+      "english": "costume / disguise",
+      "category": "Karneval",
+      "level": "B1",
+      "tags": ["holidays", "karneval", "B1"],
+      "_meta": {
+        "source": "Karneval B1",
+        "hierarchy": ["B1", "Karneval", "die Verkleidung"]
+      }
+    },
+    {
+      "id": "karneval-b1-007",
+      "german": "Helau!",
+      "english": "Carnival greeting (Rhineland)",
+      "category": "Karneval",
+      "level": "B1",
+      "tags": ["holidays", "karneval", "phrases", "B1"],
+      "_meta": {
+        "source": "Karneval B1",
+        "hierarchy": ["B1", "Karneval", "Helau!"]
+      }
+    },
+    {
+      "id": "karneval-b1-008",
+      "german": "Alaaf!",
+      "english": "Carnival greeting (Cologne)",
+      "category": "Karneval",
+      "level": "B1",
+      "tags": ["holidays", "karneval", "phrases", "B1"],
+      "_meta": {
+        "source": "Karneval B1",
+        "hierarchy": ["B1", "Karneval", "Alaaf!"]
+      }
+    },
+    {
+      "id": "karneval-b1-009",
+      "german": "die Kamelle",
+      "english": "candy (thrown at carnival)",
+      "category": "Karneval",
+      "level": "B1",
+      "tags": ["holidays", "karneval", "B1"],
+      "_meta": {
+        "source": "Karneval B1",
+        "hierarchy": ["B1", "Karneval", "die Kamelle"]
+      }
+    },
+    {
+      "id": "karneval-b1-010",
+      "german": "schunkeln",
+      "english": "to sway (rhythmically, at carnival)",
+      "category": "Karneval",
+      "level": "B1",
+      "tags": ["holidays", "karneval", "verbs", "B1"],
+      "_meta": {
+        "source": "Karneval B1",
+        "hierarchy": ["B1", "Karneval", "schunkeln"]
+      }
+    },
+    {
+      "id": "karneval-b1-011",
+      "german": "die Bütt",
+      "english": "carnival stage / podium",
+      "category": "Karneval",
+      "level": "B1",
+      "tags": ["holidays", "karneval", "B1"],
+      "_meta": {
+        "source": "Karneval B1",
+        "hierarchy": ["B1", "Karneval", "die Bütt"]
+      }
+    },
+    {
+      "id": "karneval-b1-012",
+      "german": "der Narr",
+      "english": "jester / fool",
+      "category": "Karneval",
+      "level": "B1",
+      "tags": ["holidays", "karneval", "B1"],
+      "_meta": {
+        "source": "Karneval B1",
+        "hierarchy": ["B1", "Karneval", "der Narr"]
+      }
+    },
+    {
+      "id": "karneval-b1-013",
+      "german": "der Rosenmontag",
+      "english": "Rose Monday (main carnival day)",
+      "category": "Karneval",
+      "level": "B1",
+      "tags": ["holidays", "karneval", "B1"],
+      "_meta": {
+        "source": "Karneval B1",
+        "hierarchy": ["B1", "Karneval", "der Rosenmontag"]
+      }
+    },
+    {
+      "id": "karneval-b1-014",
+      "german": "der Aschermittwoch",
+      "english": "Ash Wednesday",
+      "category": "Karneval",
+      "level": "B1",
+      "tags": ["holidays", "karneval", "B1"],
+      "_meta": {
+        "source": "Karneval B1",
+        "hierarchy": ["B1", "Karneval", "der Aschermittwoch"]
+      }
+    }
+  ]
+}
