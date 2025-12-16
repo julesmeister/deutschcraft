@@ -59,14 +59,13 @@ function EmptyState({ onSetTheme }: { onSetTheme?: () => void }) {
   );
 }
 
-// Editor form
+// Editor form - Subtle inline style
 function ThemeEditor({
   title,
   description,
   onTitleChange,
   onDescriptionChange,
   onSave,
-  onCancel,
   isSaving,
 }: {
   title: string;
@@ -74,51 +73,40 @@ function ThemeEditor({
   onTitleChange: (value: string) => void;
   onDescriptionChange: (value: string) => void;
   onSave: () => void;
-  onCancel: () => void;
   isSaving: boolean;
 }) {
   return (
     <div className="space-y-3">
       <div>
-        <label className="block text-xs font-semibold text-gray-700 mb-1">
-          Theme Title *
-        </label>
         <input
           type="text"
           value={title}
           onChange={(e) => onTitleChange(e.target.value)}
-          placeholder="e.g., Describe your weekend"
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+          placeholder="📝 What should students write about today?"
+          className="w-full px-2 py-1.5 bg-transparent border-0 border-b-2 border-gray-200 focus:border-blue-500 focus:outline-none text-base font-semibold text-gray-900 placeholder:text-gray-400 placeholder:font-normal transition-colors"
           maxLength={100}
         />
       </div>
       <div>
-        <label className="block text-xs font-semibold text-gray-700 mb-1">
-          Description (Optional)
-        </label>
         <textarea
           value={description}
           onChange={(e) => onDescriptionChange(e.target.value)}
-          placeholder="Add details or instructions for students..."
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm resize-none"
-          rows={3}
+          placeholder="Add optional details or instructions..."
+          className="w-full px-2 py-1.5 bg-transparent border-0 focus:outline-none text-sm text-gray-600 placeholder:text-gray-400 resize-none"
+          rows={2}
           maxLength={300}
         />
       </div>
-      <div className="flex gap-2">
+      <div className="flex items-center justify-between pt-2">
+        <p className="text-xs text-gray-500">
+          {title.trim() ? '✓ Theme will be saved automatically' : 'Enter a theme title to save'}
+        </p>
         <button
           onClick={onSave}
           disabled={!title.trim() || isSaving}
-          className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-lg font-medium text-xs transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
         >
-          {isSaving ? 'Saving...' : 'Save Theme'}
-        </button>
-        <button
-          onClick={onCancel}
-          disabled={isSaving}
-          className="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-lg font-semibold text-sm transition-colors"
-        >
-          Cancel
+          {isSaving ? 'Saving...' : 'Save'}
         </button>
       </div>
     </div>
@@ -182,7 +170,6 @@ export function DailyThemeEditor({
   teacherId: string;
   onSave: (title: string, description: string) => Promise<void>;
 }) {
-  const [isEditing, setIsEditing] = useState(false);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [isSaving, setIsSaving] = useState(false);
@@ -191,6 +178,9 @@ export function DailyThemeEditor({
     if (theme) {
       setTitle(theme.title);
       setDescription(theme.description);
+    } else {
+      setTitle('');
+      setDescription('');
     }
   }, [theme]);
 
@@ -199,23 +189,11 @@ export function DailyThemeEditor({
     setIsSaving(true);
     try {
       await onSave(title, description);
-      setIsEditing(false);
     } catch (error) {
       console.error('Error saving theme:', error);
     } finally {
       setIsSaving(false);
     }
-  };
-
-  const handleCancel = () => {
-    if (theme) {
-      setTitle(theme.title);
-      setDescription(theme.description);
-    } else {
-      setTitle('');
-      setDescription('');
-    }
-    setIsEditing(false);
   };
 
   const formatDate = (timestamp: number) => {
@@ -224,44 +202,28 @@ export function DailyThemeEditor({
   };
 
   return (
-    <ThemeContainer
-      action={
-        !isEditing && (
-          <button
-            onClick={() => setIsEditing(true)}
-            className="text-xs bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-lg font-semibold transition-colors"
-          >
-            ✏️ Edit
-          </button>
-        )
-      }
-    >
-      {isEditing ? (
+    <ThemeContainer>
+      <div className="space-y-4">
+        {/* Always show editor */}
         <ThemeEditor
           title={title}
           description={description}
           onTitleChange={setTitle}
           onDescriptionChange={setDescription}
           onSave={handleSave}
-          onCancel={handleCancel}
           isSaving={isSaving}
         />
-      ) : theme ? (
-        <div className="space-y-3">
-          <ThemeContent theme={theme} />
-          <div className="flex items-center justify-between text-xs text-gray-500">
-            <span>Last updated:</span>
-            <span>{formatDate(theme.updatedAt)}</span>
+
+        {/* Show last updated info if theme exists */}
+        {theme && (
+          <div className="pt-3 border-t border-gray-100">
+            <div className="flex items-center justify-between text-xs text-gray-500">
+              <span>💡 Students in this batch can see this theme</span>
+              <span>Updated {formatDate(theme.updatedAt)}</span>
+            </div>
           </div>
-          <div className="bg-gray-50 border border-gray-200 rounded-lg p-2">
-            <p className="text-xs text-gray-600">
-              💡 Students in this batch can see this theme
-            </p>
-          </div>
-        </div>
-      ) : (
-        <EmptyState onSetTheme={() => setIsEditing(true)} />
-      )}
+        )}
+      </div>
     </ThemeContainer>
   );
 }
