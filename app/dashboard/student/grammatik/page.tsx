@@ -7,6 +7,7 @@ import { CEFRLevel } from '@/lib/models/cefr';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useGrammarReviews } from '@/lib/hooks/useGrammarExercises';
 import { usePersistedLevel } from '@/lib/hooks/usePersistedLevel';
+import { GrammarSentencePractice } from '@/components/grammar/GrammarSentencePractice';
 
 // Import existing grammar data from grammar guide
 import a1Data from '@/lib/data/grammar/levels/a1.json';
@@ -16,6 +17,9 @@ import b2Data from '@/lib/data/grammar/levels/b2.json';
 import c1Data from '@/lib/data/grammar/levels/c1.json';
 import c2Data from '@/lib/data/grammar/levels/c2.json';
 
+// Import sentence data
+import a1Sentences from '@/lib/data/grammar/sentences/a1.json';
+
 const levelDataMap = {
   [CEFRLevel.A1]: a1Data,
   [CEFRLevel.A2]: a2Data,
@@ -23,6 +27,14 @@ const levelDataMap = {
   [CEFRLevel.B2]: b2Data,
   [CEFRLevel.C1]: c1Data,
   [CEFRLevel.C2]: c2Data,
+};
+
+const sentenceDataMap: Record<string, any> = {
+  [CEFRLevel.A1]: a1Sentences,
+  // TODO: Add other levels when sentence files are created
+  // [CEFRLevel.A2]: a2Sentences,
+  // [CEFRLevel.B1]: b1Sentences,
+  // etc...
 };
 
 interface GrammarRule {
@@ -73,29 +85,46 @@ export default function GrammatikPracticePage() {
     return { completed, total, percentage };
   };
 
-  if (selectedRule) {
-    // TODO: Implement practice mode component
+  // Get sentences for selected rule
+  const selectedRuleData = useMemo(() => {
+    if (!selectedRule) return null;
+    return rules.find((r) => r.id === selectedRule);
+  }, [selectedRule, rules]);
+
+  const selectedRuleSentences = useMemo(() => {
+    if (!selectedRule) return [];
+
+    const sentenceData = sentenceDataMap[selectedLevel];
+    if (!sentenceData || !sentenceData.sentences) return [];
+
+    // Filter sentences for this rule (exclude [TODO] placeholders)
+    return sentenceData.sentences.filter(
+      (s: any) => s.ruleId === selectedRule && !s.english.includes('[TODO]')
+    );
+  }, [selectedRule, selectedLevel]);
+
+  const handlePracticeComplete = (results: { sentenceId: string; difficulty: string }[]) => {
+    // TODO: Save progress to database
+    console.log('Practice session complete:', results);
+
+    // Return to rules list
+    setSelectedRule(null);
+  };
+
+  if (selectedRule && selectedRuleData) {
     return (
       <div className="min-h-screen bg-gray-50 pb-16">
         <DashboardHeader
           title="Grammar Practice"
-          subtitle="Practice sentences for grammar rules"
+          subtitle={`Practicing: ${selectedRuleData.title}`}
         />
         <div className="container mx-auto px-6 mt-8">
-          <div className="bg-white rounded-lg shadow-sm p-8 text-center">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
-              Practice Mode Coming Soon
-            </h3>
-            <p className="text-gray-600 mb-6">
-              The sentence practice interface will be implemented here.
-            </p>
-            <button
-              onClick={() => setSelectedRule(null)}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold"
-            >
-              Back to Rules
-            </button>
-          </div>
+          <GrammarSentencePractice
+            sentences={selectedRuleSentences}
+            ruleTitle={selectedRuleData.title}
+            onBack={() => setSelectedRule(null)}
+            onComplete={handlePracticeComplete}
+          />
         </div>
       </div>
     );
