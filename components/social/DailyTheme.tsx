@@ -25,11 +25,13 @@ function ThemeContent({ theme }: { theme: DailyThemeType }) {
 function ThemeContainer({
   children,
   action,
-  lastUpdated
+  lastUpdated,
+  isSaving
 }: {
   children: React.ReactNode;
   action?: React.ReactNode;
   lastUpdated?: number;
+  isSaving?: boolean;
 }) {
   return (
     <div className="bg-white border border-gray-200">
@@ -38,9 +40,11 @@ function ThemeContainer({
           <h5 className="font-semibold text-gray-900">Suggest Topic</h5>
           <div className="flex items-center gap-2">
             {action}
-            {lastUpdated && (
+            {isSaving ? (
+              <span className="text-xs text-blue-500 animate-pulse">Saving...</span>
+            ) : lastUpdated ? (
               <span className="text-xs text-gray-400">{formatRelativeTime(lastUpdated)}</span>
-            )}
+            ) : null}
           </div>
         </div>
       </div>
@@ -126,11 +130,6 @@ function ThemeEditor({
           onContentChange={onDescriptionChange}
         />
       </div>
-      {isSaving && (
-        <p className="text-xs text-gray-400 animate-pulse">
-          Saving...
-        </p>
-      )}
     </div>
   );
 }
@@ -275,7 +274,7 @@ export function DailyThemeEditor({
   }, []);
 
   return (
-    <ThemeContainer lastUpdated={theme?.updatedAt}>
+    <ThemeContainer lastUpdated={theme?.updatedAt} isSaving={isSaving}>
       <div className="space-y-3">
         {/* Always show editor */}
         <ThemeEditor
