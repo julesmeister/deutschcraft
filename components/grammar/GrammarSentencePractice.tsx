@@ -124,7 +124,7 @@ export function GrammarSentencePractice({
   }
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div>
       {/* Progress Bar */}
       <div className="mb-6">
         <div className="flex items-center justify-between text-sm text-gray-600 mb-2">
