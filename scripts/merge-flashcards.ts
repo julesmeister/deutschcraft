@@ -88,11 +88,18 @@ function loadCategoryFiles(level: string): Flashcard[] {
 }
 
 /**
- * Sort flashcards (by category, then by ID)
+ * Sort flashcards (Family first, then by category, then by ID)
  */
 function sortFlashcards(flashcards: Flashcard[]): Flashcard[] {
   return flashcards.sort((a, b) => {
-    // First sort by category
+    // Family category takes priority
+    const aIsFamily = a.category === 'Family';
+    const bIsFamily = b.category === 'Family';
+
+    if (aIsFamily && !bIsFamily) return -1;
+    if (!aIsFamily && bIsFamily) return 1;
+
+    // Then sort by category
     if (a.category !== b.category) {
       return a.category.localeCompare(b.category);
     }
@@ -102,31 +109,37 @@ function sortFlashcards(flashcards: Flashcard[]): Flashcard[] {
 }
 
 /**
- * Regenerate unique IDs for flashcards with duplicates
+ * Remove duplicate IDs, keeping the preferred category
+ * Priority: Family > Others (alphabetical)
  */
 function ensureUniqueIds(flashcards: Flashcard[]): Flashcard[] {
-  const idCounts = new Map<string, number>();
-  const seenIds = new Set<string>();
+  const idMap = new Map<string, Flashcard>();
+  let duplicatesRemoved = 0;
 
-  return flashcards.map((card) => {
-    if (seenIds.has(card.id)) {
-      // Duplicate found - regenerate ID
-      const count = (idCounts.get(card.id) || 1) + 1;
-      idCounts.set(card.id, count);
+  for (const card of flashcards) {
+    const existing = idMap.get(card.id);
 
-      const newId = `${card.id}-dup${count}`;
-      console.log(`   🔄 Duplicate ID found: ${card.id} → ${newId} (${card.german})`);
+    if (existing) {
+      // Duplicate found - keep the preferred one
+      const preferNew = card.category === 'Family' && existing.category !== 'Family';
 
-      return {
-        ...card,
-        id: newId,
-      };
+      if (preferNew) {
+        console.log(`   🔄 Replacing ${existing.category} card ${card.id} (${existing.german}) with Family card (${card.german})`);
+        idMap.set(card.id, card);
+      } else {
+        console.log(`   🗑️  Removing duplicate ${card.category} card ${card.id} (${card.german}), keeping ${existing.category}`);
+      }
+      duplicatesRemoved++;
+    } else {
+      idMap.set(card.id, card);
     }
+  }
 
-    seenIds.add(card.id);
-    idCounts.set(card.id, 1);
-    return card;
-  });
+  if (duplicatesRemoved > 0) {
+    console.log(`   ⚠️  Removed ${duplicatesRemoved} duplicate cards`);
+  }
+
+  return Array.from(idMap.values());
 }
 
 /**
@@ -142,7 +155,7 @@ function mergeLevel(level: string, backup: boolean = false): boolean {
     return false;
   }
 
-  // Sort flashcards first
+  // Sort flashcards first (Family first for duplicate resolution)
   const sortedFlashcards = sortFlashcards(flashcards);
   console.log(`   📊 Total cards collected: ${sortedFlashcards.length}`);
 
@@ -153,11 +166,19 @@ function mergeLevel(level: string, backup: boolean = false): boolean {
     console.log(`   ⚠️  Fixed ${duplicateCount} duplicate IDs`);
   }
 
+  // Sort alphabetically by category for final output
+  const finalSortedFlashcards = uniqueFlashcards.sort((a, b) => {
+    if (a.category !== b.category) {
+      return a.category.localeCompare(b.category);
+    }
+    return a.id.localeCompare(b.id);
+  });
+
   // Create merged data
   const mergedData: FlashcardLevel = {
     level: level.toUpperCase(),
-    totalCards: uniqueFlashcards.length,
-    flashcards: uniqueFlashcards,
+    totalCards: finalSortedFlashcards.length,
+    flashcards: finalSortedFlashcards,
   };
 
   // Backup existing file if requested

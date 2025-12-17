@@ -34,7 +34,23 @@ export function calculateCategoryProgress(
 
   // Count attempted cards per category
   flashcardReviews.forEach(review => {
-    const flashcard = levelFlashcards.find((card: any) => card.id === review.wordId || card.id === review.flashcardId);
+    // Remove -dupN suffix from review IDs if present
+    const cleanWordId = review.wordId?.replace(/-dup\d+$/, '');
+    const cleanFlashcardId = review.flashcardId?.replace(/-dup\d+$/, '');
+
+    // Try multiple ID matching strategies
+    const flashcard = levelFlashcards.find((card: any) =>
+      // Exact match
+      card.id === review.wordId ||
+      card.id === review.flashcardId ||
+      // String conversion
+      review.wordId?.toString() === card.id?.toString() ||
+      review.flashcardId?.toString() === card.id?.toString() ||
+      // Match with cleaned IDs (without -dupN suffix)
+      card.id === cleanWordId ||
+      card.id === cleanFlashcardId
+    );
+
     if (flashcard) {
       const categoryId = flashcard.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
       attemptedCategories.add(categoryId);
@@ -44,15 +60,19 @@ export function calculateCategoryProgress(
 
   // Determine completion status for each category
   const categoryCompletionStatus = new Map<string, CompletionStatus>();
-  attemptedCategories.forEach(categoryId => {
+  categoryTotalCounts.forEach((total, categoryId) => {
     const attempted = categoryAttemptCounts.get(categoryId) || 0;
-    const total = categoryTotalCounts.get(categoryId) || 0;
 
-    if (attempted >= total) {
-      categoryCompletionStatus.set(categoryId, 'completed');
+    let status: CompletionStatus;
+    if (attempted >= total && total > 0) {
+      status = 'completed';
     } else if (attempted > 0) {
-      categoryCompletionStatus.set(categoryId, 'in-progress');
+      status = 'in-progress';
+    } else {
+      status = 'not-started';
     }
+
+    categoryCompletionStatus.set(categoryId, status);
   });
 
   return {
