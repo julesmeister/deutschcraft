@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { useCurrentUser } from '@/lib/hooks/useUsers';
 import { usePosts, useUserSocialStats } from '@/lib/hooks/useSocial';
@@ -24,8 +24,21 @@ export default function TeacherSocialPage() {
   const { batches, loading: batchesLoading } = useTeacherBatches(session?.user?.email || null);
 
   // State must be declared before it's used in hooks
-  const [filterBatch, setFilterBatch] = useState<string>('all');
+  // Load from localStorage on mount
+  const [filterBatch, setFilterBatch] = useState<string>(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('teacher-social-batch-filter') || 'all';
+    }
+    return 'all';
+  });
   const { theme, loading: themeLoading, createTheme, updateTheme } = useDailyTheme(filterBatch === 'all' ? undefined : filterBatch);
+
+  // Save to localStorage whenever filterBatch changes
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('teacher-social-batch-filter', filterBatch);
+    }
+  }, [filterBatch]);
 
   // Ensure currentUser has photoURL from session if missing (memoized to prevent infinite loops)
   const enrichedCurrentUser = useMemo(() => {
