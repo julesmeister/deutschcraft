@@ -93,7 +93,7 @@ export default function CommentSuggestions({
 
     setLoading(true);
     try {
-      await createSuggestion({
+      const suggestionId = await createSuggestion({
         postId: commentId, // Using commentId as the target
         suggestedBy: currentUserId,
         suggestedTo: commentUserId,
@@ -104,9 +104,18 @@ export default function CommentSuggestions({
         downvotes: 0,
       });
 
-      success('Correction submitted!', { duration: 2000 });
+      // Auto-accept the suggestion for comments
+      await acceptSuggestion(suggestionId);
+
+      success('Correction applied!', { duration: 2000 });
       setCorrectionText('');
       onFormToggle?.(false);
+
+      // Notify parent to update display
+      if (onSuggestionAccepted) {
+        onSuggestionAccepted(correctionText.trim());
+      }
+
       await loadSuggestions();
     } catch (err) {
       showError('Failed to submit', { duration: 2000 });
