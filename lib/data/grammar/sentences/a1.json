@@ -1,0 +1,5744 @@
+{
+  "level": "A1",
+  "totalRules": 26,
+  "totalSentences": 520,
+  "targetSentences": 520,
+  "completionPercentage": 100,
+  "sentences": [
+    {
+      "sentenceId": "a1-articles-definite-001",
+      "ruleId": "a1-articles-definite",
+      "english": "The man is tall",
+      "german": "Der Mann ist groß",
+      "hints": [
+        "Use 'der' for masculine nouns",
+        "groß = tall"
+      ],
+      "keywords": [
+        "der",
+        "Mann",
+        "groß"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a1-articles-definite-002",
+      "ruleId": "a1-articles-definite",
+      "english": "The woman is beautiful",
+      "german": "Die Frau ist schön",
+      "hints": [
+        "Use 'die' for feminine nouns",
+        "schön = beautiful"
+      ],
+      "keywords": [
+        "die",
+        "Frau",
+        "schön"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a1-articles-definite-003",
+      "ruleId": "a1-articles-definite",
+      "english": "The child is small",
+      "german": "Das Kind ist klein",
+      "hints": [
+        "Use 'das' for neuter nouns",
+        "klein = small"
+      ],
+      "keywords": [
+        "das",
+        "Kind",
+        "klein"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a1-articles-definite-004",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 4 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-005",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 5 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-006",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 6 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-007",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 7 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-008",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 8 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-009",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 9 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-010",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 10 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-011",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 11 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-012",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 12 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-013",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 13 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-014",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 14 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-015",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 15 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-016",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 16 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-017",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 17 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-018",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 18 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-019",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 19 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-definite-020",
+      "ruleId": "a1-articles-definite",
+      "english": "[TODO: English sentence 20 for: Definite Articles (der, die, das)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Definite Articles (der, die, das)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-001",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 1 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-002",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 2 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-003",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 3 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-004",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 4 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-005",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 5 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-006",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 6 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-007",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 7 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-008",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 8 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-009",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 9 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-010",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 10 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-011",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 11 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-012",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 12 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-013",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 13 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-014",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 14 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-015",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 15 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-016",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 16 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-017",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 17 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-018",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 18 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-019",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 19 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-articles-indefinite-020",
+      "ruleId": "a1-articles-indefinite",
+      "english": "[TODO: English sentence 20 for: Indefinite Articles (ein, eine)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Indefinite Articles (ein, eine)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-001",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 1 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-002",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 2 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-003",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 3 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-004",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 4 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-005",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 5 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-006",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 6 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-007",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 7 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-008",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 8 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-009",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 9 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-010",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 10 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-011",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 11 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-012",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 12 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-013",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 13 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-014",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 14 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-015",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 15 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-016",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 16 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-017",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 17 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-018",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 18 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-019",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 19 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-regular-020",
+      "ruleId": "a1-present-tense-regular",
+      "english": "[TODO: English sentence 20 for: Present Tense - Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-001",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 1 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-002",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 2 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-003",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 3 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-004",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 4 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-005",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 5 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-006",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 6 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-007",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 7 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-008",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 8 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-009",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 9 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-010",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 10 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-011",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 11 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-012",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 12 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-013",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 13 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-014",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 14 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-015",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 15 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-016",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 16 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-017",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 17 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-018",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 18 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-019",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 19 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-sein-020",
+      "ruleId": "a1-present-tense-sein",
+      "english": "[TODO: English sentence 20 for: Present Tense - sein (to be)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - sein (to be)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-001",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 1 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-002",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 2 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-003",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 3 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-004",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 4 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-005",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 5 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-006",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 6 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-007",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 7 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-008",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 8 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-009",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 9 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-010",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 10 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-011",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 11 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-012",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 12 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-013",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 13 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-014",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 14 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-015",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 15 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-016",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 16 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-017",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 17 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-018",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 18 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-019",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 19 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-present-tense-haben-020",
+      "ruleId": "a1-present-tense-haben",
+      "english": "[TODO: English sentence 20 for: Present Tense - haben (to have)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Present Tense - haben (to have)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-001",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 1 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-002",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 2 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-003",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 3 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-004",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 4 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-005",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 5 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-006",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 6 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-007",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 7 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-008",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 8 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-009",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 9 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-010",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 10 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-011",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 11 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-012",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 12 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-013",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 13 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-014",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 14 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-015",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 15 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-016",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 16 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-017",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 17 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-018",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 18 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-019",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 19 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-word-order-basic-020",
+      "ruleId": "a1-word-order-basic",
+      "english": "[TODO: English sentence 20 for: Basic Word Order (SVO)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Word Order (SVO)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-001",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 1 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-002",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 2 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-003",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 3 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-004",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 4 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-005",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 5 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-006",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 6 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-007",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 7 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-008",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 8 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-009",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 9 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-010",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 10 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-011",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 11 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-012",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 12 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-013",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 13 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-014",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 14 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-015",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 15 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-016",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 16 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-017",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 17 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-018",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 18 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-019",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 19 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-nominative-case-020",
+      "ruleId": "a1-nominative-case",
+      "english": "[TODO: English sentence 20 for: Nominative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-001",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 1 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-002",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 2 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-003",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 3 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-004",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 4 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-005",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 5 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-006",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 6 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-007",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 7 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-008",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 8 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-009",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 9 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-010",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 10 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-011",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 11 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-012",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 12 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-013",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 13 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-014",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 14 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-015",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 15 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-016",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 16 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-017",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 17 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-018",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 18 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-019",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 19 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-accusative-case-020",
+      "ruleId": "a1-accusative-case",
+      "english": "[TODO: English sentence 20 for: Accusative Case]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Accusative Case]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-001",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 1 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-002",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 2 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-003",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 3 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-004",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 4 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-005",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 5 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-006",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 6 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-007",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 7 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-008",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 8 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-009",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 9 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-010",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 10 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-011",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 11 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-012",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 12 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-013",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 13 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-014",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 14 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-015",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 15 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-016",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 16 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-017",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 17 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-018",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 18 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-019",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 19 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-personal-pronouns-020",
+      "ruleId": "a1-personal-pronouns",
+      "english": "[TODO: English sentence 20 for: Personal Pronouns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Personal Pronouns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-001",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 1 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-002",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 2 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-003",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 3 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-004",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 4 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-005",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 5 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-006",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 6 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-007",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 7 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-008",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 8 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-009",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 9 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-010",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 10 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-011",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 11 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-012",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 12 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-013",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 13 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-014",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 14 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-015",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 15 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-016",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 16 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-017",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 17 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-018",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 18 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-019",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 19 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-1-20-020",
+      "ruleId": "a1-numbers-1-20",
+      "english": "[TODO: English sentence 20 for: Numbers 1-20]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 1-20]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-001",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 1 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-002",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 2 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-003",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 3 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-004",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 4 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-005",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 5 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-006",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 6 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-007",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 7 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-008",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 8 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-009",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 9 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-010",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 10 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-011",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 11 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-012",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 12 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-013",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 13 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-014",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 14 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-015",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 15 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-016",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 16 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-017",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 17 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-018",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 18 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-019",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 19 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-nicht-020",
+      "ruleId": "a1-negation-nicht",
+      "english": "[TODO: English sentence 20 for: Negation with 'nicht']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'nicht']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-001",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 1 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-002",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 2 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-003",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 3 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-004",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 4 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-005",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 5 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-006",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 6 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-007",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 7 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-008",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 8 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-009",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 9 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-010",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 10 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-011",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 11 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-012",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 12 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-013",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 13 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-014",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 14 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-015",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 15 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-016",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 16 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-017",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 17 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-018",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 18 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-019",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 19 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-negation-kein-020",
+      "ruleId": "a1-negation-kein",
+      "english": "[TODO: English sentence 20 for: Negation with 'kein']",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Negation with 'kein']"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-001",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 1 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-002",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 2 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-003",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 3 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-004",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 4 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-005",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 5 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-006",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 6 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-007",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 7 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-008",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 8 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-009",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 9 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-010",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 10 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-011",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 11 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-012",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 12 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-013",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 13 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-014",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 14 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-015",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 15 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-016",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 16 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-017",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 17 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-018",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 18 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-019",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 19 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-yes-no-020",
+      "ruleId": "a1-questions-yes-no",
+      "english": "[TODO: English sentence 20 for: Yes/No Questions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Yes/No Questions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-001",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 1 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-002",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 2 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-003",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 3 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-004",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 4 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-005",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 5 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-006",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 6 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-007",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 7 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-008",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 8 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-009",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 9 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-010",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 10 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-011",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 11 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-012",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 12 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-013",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 13 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-014",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 14 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-015",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 15 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-016",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 16 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-017",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 17 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-018",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 18 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-019",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 19 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-questions-w-questions-020",
+      "ruleId": "a1-questions-w-questions",
+      "english": "[TODO: English sentence 20 for: W-Questions (Question Words)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about W-Questions (Question Words)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-001",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 1 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-002",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 2 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-003",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 3 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-004",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 4 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-005",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 5 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-006",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 6 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-007",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 7 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-008",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 8 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-009",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 9 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-010",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 10 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-011",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 11 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-012",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 12 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-013",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 13 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-014",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 14 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-015",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 15 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-016",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 16 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-017",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 17 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-018",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 18 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-019",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 19 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-plural-formation-020",
+      "ruleId": "a1-plural-formation",
+      "english": "[TODO: English sentence 20 for: Plural Formation]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Plural Formation]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-001",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 1 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-002",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 2 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-003",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 3 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-004",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 4 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-005",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 5 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-006",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 6 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-007",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 7 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-008",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 8 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-009",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 9 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-010",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 10 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-011",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 11 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-012",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 12 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-013",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 13 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-014",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 14 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-015",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 15 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-016",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 16 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-017",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 17 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-018",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 18 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-019",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 19 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-adjectives-basic-020",
+      "ruleId": "a1-adjectives-basic",
+      "english": "[TODO: English sentence 20 for: Basic Adjectives (Predicative)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Basic Adjectives (Predicative)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-001",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 1 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-002",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 2 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-003",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 3 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-004",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 4 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-005",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 5 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-006",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 6 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-007",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 7 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-008",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 8 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-009",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 9 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-010",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 10 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-011",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 11 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-012",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 12 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-013",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 13 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-014",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 14 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-015",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 15 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-016",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 16 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-017",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 17 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-018",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 18 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-019",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 19 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-possessives-mein-dein-020",
+      "ruleId": "a1-possessives-mein-dein",
+      "english": "[TODO: English sentence 20 for: Possessives: mein, dein]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Possessives: mein, dein]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-001",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 1 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-002",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 2 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-003",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 3 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-004",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 4 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-005",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 5 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-006",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 6 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-007",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 7 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-008",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 8 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-009",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 9 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-010",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 10 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-011",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 11 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-012",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 12 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-013",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 13 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-014",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 14 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-015",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 15 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-016",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 16 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-017",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 17 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-018",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 18 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-019",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 19 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-prepositions-in-aus-020",
+      "ruleId": "a1-prepositions-in-aus",
+      "english": "[TODO: English sentence 20 for: Prepositions: in, aus]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositions: in, aus]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-001",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 1 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-002",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 2 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-003",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 3 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-004",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 4 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-005",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 5 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-006",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 6 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-007",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 7 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-008",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 8 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-009",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 9 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-010",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 10 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-011",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 11 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-012",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 12 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-013",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 13 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-014",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 14 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-015",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 15 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-016",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 16 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-017",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 17 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-018",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 18 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-019",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 19 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-days-week-020",
+      "ruleId": "a1-time-days-week",
+      "english": "[TODO: English sentence 20 for: Days of the Week]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Days of the Week]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-001",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 1 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-002",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 2 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-003",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 3 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-004",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 4 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-005",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 5 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-006",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 6 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-007",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 7 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-008",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 8 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-009",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 9 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-010",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 10 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-011",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 11 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-012",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 12 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-013",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 13 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-014",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 14 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-015",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 15 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-016",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 16 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-017",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 17 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-018",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 18 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-019",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 19 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-time-months-020",
+      "ruleId": "a1-time-months",
+      "english": "[TODO: English sentence 20 for: Months of the Year]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Months of the Year]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-001",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 1 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-002",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 2 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-003",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 3 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-004",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 4 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-005",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 5 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-006",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 6 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-007",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 7 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-008",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 8 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-009",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 9 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-010",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 10 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-011",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 11 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-012",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 12 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-013",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 13 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-014",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 14 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-015",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 15 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-016",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 16 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-017",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 17 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-018",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 18 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-019",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 19 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-greetings-020",
+      "ruleId": "a1-greetings",
+      "english": "[TODO: English sentence 20 for: Common Greetings]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Greetings]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-001",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 1 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-002",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 2 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-003",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 3 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-004",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 4 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-005",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 5 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-006",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 6 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-007",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 7 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-008",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 8 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-009",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 9 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-010",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 10 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-011",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 11 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-012",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 12 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-013",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 13 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-014",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 14 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-015",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 15 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-016",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 16 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-017",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 17 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-018",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 18 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-019",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 19 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-numbers-20-100-020",
+      "ruleId": "a1-numbers-20-100",
+      "english": "[TODO: English sentence 20 for: Numbers 20-100]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Numbers 20-100]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-001",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 1 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-002",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 2 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-003",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 3 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-004",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 4 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-005",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 5 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-006",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 6 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-007",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 7 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-008",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 8 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-009",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 9 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-010",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 10 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-011",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 11 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-012",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 12 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-013",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 13 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-014",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 14 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-015",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 15 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-016",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 16 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-017",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 17 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-018",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 18 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-019",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 19 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-telling-time-basic-020",
+      "ruleId": "a1-telling-time-basic",
+      "english": "[TODO: English sentence 20 for: Telling Time (Basic)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Telling Time (Basic)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-001",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 1 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-002",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 2 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-003",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 3 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-004",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 4 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-005",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 5 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-006",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 6 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-007",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 7 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-008",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 8 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-009",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 9 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-010",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 10 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-011",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 11 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-012",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 12 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-013",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 13 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-014",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 14 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-015",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 15 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-016",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 16 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-017",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 17 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-018",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 18 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-019",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 19 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-verb-moechten-020",
+      "ruleId": "a1-verb-moechten",
+      "english": "[TODO: English sentence 20 for: The Verb 'möchten' (would like)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about The Verb 'möchten' (would like)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-001",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 1 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-002",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 2 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-003",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 3 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-004",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 4 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-005",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 5 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-006",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 6 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-007",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 7 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-008",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 8 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-009",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 9 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-010",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 10 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-011",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 11 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-012",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 12 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-013",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 13 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-014",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 14 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-015",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 15 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-016",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 16 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-017",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 17 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-018",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 18 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-019",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 19 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-common-verbs-020",
+      "ruleId": "a1-common-verbs",
+      "english": "[TODO: English sentence 20 for: Common Regular Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Common Regular Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-001",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 1 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-002",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 2 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-003",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 3 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-004",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 4 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-005",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 5 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-006",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 6 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-007",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 7 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-008",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 8 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-009",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 9 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-010",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 10 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-011",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 11 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-012",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 12 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-013",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 13 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-014",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 14 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-015",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 15 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-016",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 16 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-017",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 17 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-018",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 18 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-019",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 19 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a1-courtesy-phrases-020",
+      "ruleId": "a1-courtesy-phrases",
+      "english": "[TODO: English sentence 20 for: Courtesy Phrases]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Courtesy Phrases]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    }
+  ]
+}

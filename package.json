@@ -33,7 +33,8 @@
     "vocab:add-priority": "tsx scripts/add-priority-vocab.ts",
     "vocab:fix-articles": "tsx scripts/fix-missing-articles.ts",
     "dict:populate": "tsx scripts/populate-dictionary.ts",
-    "migrate:add-name": "tsx scripts/migrate-add-name-field.ts"
+    "migrate:add-name": "tsx scripts/migrate-add-name-field.ts",
+    "grammar:generate-templates": "tsx scripts/generate-grammar-sentence-templates.ts"
   },
   "dependencies": {
     "@libsql/client": "^0.15.15",

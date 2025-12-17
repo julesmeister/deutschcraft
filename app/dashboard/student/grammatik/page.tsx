@@ -1,35 +1,63 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
 import { CEFRLevel } from '@/lib/models/cefr';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { useGrammarRulesByLevel, useGrammarReviews } from '@/lib/hooks/useGrammarExercises';
-import { CatLoader } from '@/components/ui/CatLoader';
+import { useGrammarReviews } from '@/lib/hooks/useGrammarExercises';
 import { usePersistedLevel } from '@/lib/hooks/usePersistedLevel';
+
+// Import existing grammar data from grammar guide
+import a1Data from '@/lib/data/grammar/levels/a1.json';
+import a2Data from '@/lib/data/grammar/levels/a2.json';
+import b1Data from '@/lib/data/grammar/levels/b1.json';
+import b2Data from '@/lib/data/grammar/levels/b2.json';
+import c1Data from '@/lib/data/grammar/levels/c1.json';
+import c2Data from '@/lib/data/grammar/levels/c2.json';
+
+const levelDataMap = {
+  [CEFRLevel.A1]: a1Data,
+  [CEFRLevel.A2]: a2Data,
+  [CEFRLevel.B1]: b1Data,
+  [CEFRLevel.B2]: b2Data,
+  [CEFRLevel.C1]: c1Data,
+  [CEFRLevel.C2]: c2Data,
+};
+
+interface GrammarRule {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  examples: string[];
+  notes: string;
+}
 
 export default function GrammatikPracticePage() {
   const { session } = useFirebaseAuth();
   const [selectedLevel, setSelectedLevel] = usePersistedLevel('grammatik-last-level');
   const [selectedRule, setSelectedRule] = useState<string | null>(null);
 
-  // Fetch grammar rules for selected level
-  const { rules, isLoading: rulesLoading } = useGrammarRulesByLevel(selectedLevel);
+  // Load grammar rules from JSON files
+  const rules = useMemo(() => {
+    const levelData = levelDataMap[selectedLevel];
+    return levelData.rules as GrammarRule[];
+  }, [selectedLevel]);
 
   // Fetch user's progress
   const { reviews, isLoading: reviewsLoading } = useGrammarReviews(session?.user?.email);
 
-  const isLoading = rulesLoading || reviewsLoading;
-
   // Group rules by category
-  const rulesByCategory = rules.reduce((acc, rule) => {
-    if (!acc[rule.category]) {
-      acc[rule.category] = [];
-    }
-    acc[rule.category].push(rule);
-    return acc;
-  }, {} as Record<string, typeof rules>);
+  const rulesByCategory = useMemo(() => {
+    return rules.reduce((acc, rule) => {
+      if (!acc[rule.category]) {
+        acc[rule.category] = [];
+      }
+      acc[rule.category].push(rule);
+      return acc;
+    }, {} as Record<string, GrammarRule[]>);
+  }, [rules]);
 
   const categories = Object.keys(rulesByCategory).sort();
 
@@ -102,28 +130,8 @@ export default function GrammatikPracticePage() {
           </div>
         </div>
 
-        {/* Loading State */}
-        {isLoading && (
-          <div className="flex items-center justify-center py-20">
-            <CatLoader message="Loading grammar rules..." />
-          </div>
-        )}
-
-        {/* Empty State */}
-        {!isLoading && rules.length === 0 && (
-          <div className="bg-white rounded-lg shadow-sm p-12 text-center">
-            <div className="text-6xl mb-4">📚</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
-              No Grammar Rules Yet
-            </h3>
-            <p className="text-gray-600">
-              Grammar rules for {selectedLevel} are being prepared. Check back soon!
-            </p>
-          </div>
-        )}
-
         {/* Grammar Rules by Category */}
-        {!isLoading && rules.length > 0 && (
+        {rules.length > 0 && (
           <div className="space-y-8">
             {categories.map((category) => (
               <div key={category}>
