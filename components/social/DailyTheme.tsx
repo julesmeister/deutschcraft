@@ -196,7 +196,15 @@ export function DailyThemeEditor({
   const [isSaving, setIsSaving] = useState(false);
   const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const lastThemeIdRef = useRef<string | null>(null);
+  const titleRef = useRef(title);
+  const descriptionRef = useRef(description);
   const { success, error } = useToast();
+
+  // Keep refs in sync with state
+  useEffect(() => {
+    titleRef.current = title;
+    descriptionRef.current = description;
+  }, [title, description]);
 
   // Only sync state when theme ID changes (switching batches) or initial load
   // Don't sync when theme updates from our own save
@@ -217,11 +225,15 @@ export function DailyThemeEditor({
   }, [theme?.themeId, batchId]);
 
   const handleSave = async () => {
-    if (!title.trim()) return;
+    // Always use the ref values which are current
+    const currentTitle = titleRef.current;
+    const currentDescription = descriptionRef.current;
+
+    if (!currentTitle.trim()) return;
 
     setIsSaving(true);
     try {
-      await onSave(title, description);
+      await onSave(currentTitle, currentDescription);
       success('Theme saved successfully', { duration: 2000 });
     } catch (err) {
       console.error('Error saving theme:', err);
@@ -243,7 +255,7 @@ export function DailyThemeEditor({
     // Set new timeout for auto-save (only if title is not empty)
     if (value.trim()) {
       saveTimeoutRef.current = setTimeout(() => {
-        handleSave();
+        handleSave(); // Will use refs which have the latest values
       }, 2000);
     }
   };
@@ -257,9 +269,9 @@ export function DailyThemeEditor({
     }
 
     // Set new timeout for auto-save (only if title exists)
-    if (title.trim()) {
+    if (titleRef.current.trim()) {
       saveTimeoutRef.current = setTimeout(() => {
-        handleSave();
+        handleSave(); // Will use refs which have the latest values
       }, 2000);
     }
   };
