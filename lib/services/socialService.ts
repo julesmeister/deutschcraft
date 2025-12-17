@@ -182,11 +182,23 @@ export async function createSuggestion(suggestionData: Omit<Suggestion, 'suggest
   // Create suggestion
   batch.set(suggestionRef, newSuggestion);
 
-  // Increment post suggestion count
-  const postRef = doc(db, 'posts', suggestionData.postId);
-  batch.update(postRef, {
-    suggestionsCount: increment(1),
-  });
+  // Try to increment post suggestion count
+  // First check if it's a post or comment
+  try {
+    const postRef = doc(db, 'posts', suggestionData.postId);
+    const postSnap = await getDoc(postRef);
+
+    if (postSnap.exists()) {
+      // It's a post - increment suggestionsCount
+      batch.update(postRef, {
+        suggestionsCount: increment(1),
+      });
+    }
+    // If it's a comment, we don't update suggestionsCount (comments don't have this field)
+  } catch (err) {
+    console.error('Error checking post/comment:', err);
+    // Continue without updating count
+  }
 
   await batch.commit();
   return suggestionId;
