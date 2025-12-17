@@ -196,17 +196,26 @@ export function DailyThemeEditor({
   const [description, setDescription] = useState('');
   const [isSaving, setIsSaving] = useState(false);
   const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const lastThemeIdRef = useRef<string | null>(null);
   const { success, error } = useToast();
 
+  // Only sync state when theme ID changes (switching batches) or initial load
+  // Don't sync when theme updates from our own save
   useEffect(() => {
-    if (theme) {
-      setTitle(theme.title);
-      setDescription(theme.description);
-    } else {
-      setTitle('');
-      setDescription('');
+    const themeId = theme?.themeId || null;
+
+    // Only update if theme ID actually changed
+    if (lastThemeIdRef.current !== themeId) {
+      if (theme) {
+        setTitle(theme.title);
+        setDescription(theme.description);
+      } else {
+        setTitle('');
+        setDescription('');
+      }
+      lastThemeIdRef.current = themeId;
     }
-  }, [theme]);
+  }, [theme?.themeId, batchId]);
 
   const handleSave = async () => {
     if (!title.trim()) return;
