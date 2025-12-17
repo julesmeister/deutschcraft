@@ -29,6 +29,7 @@ export default function CommentItem({ comment, currentUserId, currentUser, onCom
   const [displayContent, setDisplayContent] = useState(comment.content);
   const [showOriginal, setShowOriginal] = useState(false);
   const [hasAcceptedSuggestion, setHasAcceptedSuggestion] = useState(false);
+  const [originalText, setOriginalText] = useState(comment.content);
 
   const { toggleLike, createComment, hasUserLiked, deleteComment, getSuggestions } = useSocialService();
   const toast = useToast();
@@ -58,6 +59,7 @@ export default function CommentItem({ comment, currentUserId, currentUser, onCom
         const accepted = suggestions.find(s => s.status === 'accepted');
         if (accepted) {
           setDisplayContent(accepted.suggestedText);
+          setOriginalText(accepted.originalText);
           setHasAcceptedSuggestion(true);
         }
       } catch (error) {
@@ -179,9 +181,9 @@ export default function CommentItem({ comment, currentUserId, currentUser, onCom
               <span className="text-xs text-gray-500">{formatTimestamp(comment.createdAt)}</span>
             </div>
             <p className="text-sm text-gray-700">
-              {showOriginal ? comment.content : displayContent}
+              {showOriginal ? originalText : displayContent}
             </p>
-            {hasAcceptedSuggestion && (showOriginal ? comment.content : displayContent) !== comment.content && (
+            {hasAcceptedSuggestion && (
               <span className="text-xs text-green-600 font-medium mt-1 inline-block">✓ Corrected</span>
             )}
           </div>
@@ -240,6 +242,7 @@ export default function CommentItem({ comment, currentUserId, currentUser, onCom
           showForm={showSuggestForm}
           onFormToggle={setShowSuggestForm}
           onSuggestionAccepted={(correctedText) => {
+            setOriginalText(comment.content);
             setDisplayContent(correctedText);
             setHasAcceptedSuggestion(true);
             setShowOriginal(false);

@@ -6,21 +6,6 @@ import { useToast } from '@/components/ui/toast';
 import { formatRelativeTime } from '@/lib/utils/dateHelpers';
 import { GermanCharAutocomplete } from '@/components/writing/GermanCharAutocomplete';
 
-// Shared theme display component
-function ThemeContent({ theme }: { theme: DailyThemeType }) {
-  return (
-    <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-      <div className="flex items-start gap-2 mb-2">
-        <span className="text-lg">📝</span>
-        <h6 className="font-bold text-gray-900 text-sm flex-1">{theme.title}</h6>
-      </div>
-      {theme.description && (
-        <p className="text-sm text-gray-600 leading-relaxed ml-7">{theme.description}</p>
-      )}
-    </div>
-  );
-}
-
 // Shared container with header
 function ThemeContainer({
   children,
@@ -165,15 +150,15 @@ export function DailyThemeDisplay({
   return (
     <ThemeContainer lastUpdated={theme.updatedAt}>
       <div className="space-y-3">
-        <ThemeContent theme={theme} />
-        <div className="bg-green-50 border border-green-200 rounded-lg p-2">
-          <div className="flex items-center gap-2">
-            <span className="text-base">✍️</span>
-            <p className="text-xs font-medium text-gray-700">
-              Write a post about this theme to practice!
-            </p>
-          </div>
+        <div>
+          <h6 className="font-bold text-gray-900 text-sm mb-2">{theme.title}</h6>
+          {theme.description && (
+            <p className="text-sm text-gray-600 leading-relaxed">{theme.description}</p>
+          )}
         </div>
+        <p className="text-xs font-medium text-gray-700">
+          Write a post about this theme to practice!
+        </p>
       </div>
     </ThemeContainer>
   );
