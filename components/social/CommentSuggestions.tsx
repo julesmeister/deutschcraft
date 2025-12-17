@@ -16,6 +16,7 @@ interface CommentSuggestionsProps {
   isAuthor: boolean;
   showForm?: boolean;
   onFormToggle?: (show: boolean) => void;
+  onSuggestionAccepted?: (correctedText: string) => void;
 }
 
 export default function CommentSuggestions({
@@ -26,7 +27,8 @@ export default function CommentSuggestions({
   currentUser,
   isAuthor,
   showForm: externalShowForm,
-  onFormToggle
+  onFormToggle,
+  onSuggestionAccepted
 }: CommentSuggestionsProps) {
   const [showList, setShowList] = useState(false);
   const [suggestions, setSuggestions] = useState<Suggestion[]>([]);
@@ -115,9 +117,13 @@ export default function CommentSuggestions({
 
   const handleAccept = async (suggestionId: string) => {
     try {
+      const suggestion = suggestions.find(s => s.suggestionId === suggestionId);
       await acceptSuggestion(suggestionId);
       success('Applied!', { duration: 2000 });
       setShowList(false);
+      if (suggestion && onSuggestionAccepted) {
+        onSuggestionAccepted(suggestion.suggestedText);
+      }
       await loadSuggestions();
     } catch (err) {
       showError('Failed', { duration: 2000 });

@@ -26,8 +26,11 @@ export default function CommentItem({ comment, currentUserId, currentUser, onCom
   const [likeCount, setLikeCount] = useState(comment.likesCount || 0);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [displayContent, setDisplayContent] = useState(comment.content);
+  const [showOriginal, setShowOriginal] = useState(false);
+  const [hasAcceptedSuggestion, setHasAcceptedSuggestion] = useState(false);
 
-  const { toggleLike, createComment, hasUserLiked, deleteComment } = useSocialService();
+  const { toggleLike, createComment, hasUserLiked, deleteComment, getSuggestions } = useSocialService();
   const toast = useToast();
 
   const canSuggest = currentUserId !== comment.userId;
@@ -46,6 +49,23 @@ export default function CommentItem({ comment, currentUserId, currentUser, onCom
     };
     fetchAuthor();
   }, [comment.userId]);
+
+  // Load accepted suggestions on mount
+  useEffect(() => {
+    const loadAcceptedSuggestion = async () => {
+      try {
+        const suggestions = await getSuggestions(comment.commentId);
+        const accepted = suggestions.find(s => s.status === 'accepted');
+        if (accepted) {
+          setDisplayContent(accepted.suggestedText);
+          setHasAcceptedSuggestion(true);
+        }
+      } catch (error) {
+        console.error('Error loading suggestions:', error);
+      }
+    };
+    loadAcceptedSuggestion();
+  }, [comment.commentId]);
 
   // Load initial like status for comment
   useEffect(() => {
@@ -158,7 +178,12 @@ export default function CommentItem({ comment, currentUserId, currentUser, onCom
               </h6>
               <span className="text-xs text-gray-500">{formatTimestamp(comment.createdAt)}</span>
             </div>
-            <p className="text-sm text-gray-700">{comment.content}</p>
+            <p className="text-sm text-gray-700">
+              {showOriginal ? comment.content : displayContent}
+            </p>
+            {hasAcceptedSuggestion && (showOriginal ? comment.content : displayContent) !== comment.content && (
+              <span className="text-xs text-green-600 font-medium mt-1 inline-block">✓ Corrected</span>
+            )}
           </div>
           <div className="flex items-center gap-3 mt-1 px-2">
             <button
@@ -181,6 +206,14 @@ export default function CommentItem({ comment, currentUserId, currentUser, onCom
                 onClick={() => setShowSuggestForm(!showSuggestForm)}
               >
                 Suggest
+              </button>
+            )}
+            {hasAcceptedSuggestion && (
+              <button
+                className="text-xs text-gray-600 hover:text-gray-700 font-medium transition-colors"
+                onClick={() => setShowOriginal(!showOriginal)}
+              >
+                {showOriginal ? 'Hide Previous' : 'Show Previous'}
               </button>
             )}
             {isAuthor && (
@@ -206,6 +239,11 @@ export default function CommentItem({ comment, currentUserId, currentUser, onCom
           isAuthor={currentUserId === comment.userId}
           showForm={showSuggestForm}
           onFormToggle={setShowSuggestForm}
+          onSuggestionAccepted={(correctedText) => {
+            setDisplayContent(correctedText);
+            setHasAcceptedSuggestion(true);
+            setShowOriginal(false);
+          }}
         />
 
         {/* Reply Form */}
