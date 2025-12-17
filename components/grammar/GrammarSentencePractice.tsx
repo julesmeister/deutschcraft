@@ -108,14 +108,17 @@ export function GrammarSentencePractice({
 
   if (!currentSentence) {
     return (
-      <div className="bg-white rounded-lg shadow-sm p-8 text-center">
+      <div className="bg-white shadow-sm p-8 text-center">
         <h3 className="text-xl font-bold text-gray-900 mb-4">No sentences available</h3>
         <p className="text-gray-600 mb-6">
           This grammar rule doesn't have practice sentences yet.
         </p>
-        <ActionButton onClick={onBack} icon={<ActionButtonIcons.ArrowRight />} variant="gray">
-          Back to Rules
-        </ActionButton>
+        <button
+          onClick={onBack}
+          className="bg-gray-900 hover:bg-gray-800 text-white font-semibold px-6 py-2 transition-colors"
+        >
+          ← Back to Rules
+        </button>
       </div>
     );
   }
@@ -130,16 +133,16 @@ export function GrammarSentencePractice({
             {currentIndex + 1} / {sentences.length}
           </span>
         </div>
-        <div className="w-full bg-gray-200 rounded-full h-2">
+        <div className="w-full bg-gray-200 h-2">
           <div
-            className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+            className="bg-blue-600 h-2 transition-all duration-300"
             style={{ width: `${progress}%` }}
           ></div>
         </div>
       </div>
 
       {/* Practice Card */}
-      <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-6">
+      <div className="bg-white shadow-sm overflow-hidden mb-6">
         <div className="p-8 sm:p-12">
           {/* English Prompt */}
           <div className="mb-8">
@@ -160,7 +163,7 @@ export function GrammarSentencePractice({
                 value={userAnswer}
                 onChange={(e) => setUserAnswer(e.target.value)}
                 placeholder="Type your answer in German..."
-                className="w-full px-4 py-3 text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 transition-colors"
+                className="w-full px-4 py-3 text-lg border-2 border-gray-300 focus:outline-none focus:border-blue-600 transition-colors"
                 onKeyPress={(e) => {
                   if (e.key === 'Enter' && userAnswer.trim()) {
                     handleRevealAnswer();
@@ -178,7 +181,7 @@ export function GrammarSentencePractice({
                 <div>
                   <h5 className="text-sm font-semibold text-gray-500 mb-2">Your Answer</h5>
                   <div
-                    className={`px-4 py-3 rounded-lg ${
+                    className={`px-4 py-3 ${
                       isCorrect()
                         ? 'bg-green-50 border-2 border-green-300 text-green-900'
                         : 'bg-red-50 border-2 border-red-300 text-red-900'
@@ -192,7 +195,7 @@ export function GrammarSentencePractice({
                 {!isCorrect() && (
                   <div>
                     <h5 className="text-sm font-semibold text-gray-500 mb-2">Correct Answer</h5>
-                    <div className="px-4 py-3 rounded-lg bg-blue-50 border-2 border-blue-300">
+                    <div className="px-4 py-3 bg-blue-50 border-2 border-blue-300">
                       <p className="text-lg font-bold text-blue-900">{currentSentence.german}</p>
                     </div>
                   </div>
@@ -228,7 +231,7 @@ export function GrammarSentencePractice({
 
               {/* Hints */}
               {currentSentence.hints && currentSentence.hints.length > 0 && (
-                <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200">
                   <h5 className="text-sm font-semibold text-yellow-900 mb-2">💡 Hints</h5>
                   <ul className="text-sm text-yellow-800 space-y-1">
                     {currentSentence.hints.map((hint, index) => (

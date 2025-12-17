@@ -46,6 +46,16 @@ interface GrammarRule {
   notes: string;
 }
 
+// Color schemes for grammar rule cards (same as grammar guide)
+const CARD_COLOR_SCHEMES = [
+  { bg: 'hover:bg-blue-100', text: 'group-hover:text-blue-900', badge: 'group-hover:bg-blue-500' },
+  { bg: 'hover:bg-emerald-100', text: 'group-hover:text-emerald-900', badge: 'group-hover:bg-emerald-500' },
+  { bg: 'hover:bg-amber-100', text: 'group-hover:text-amber-900', badge: 'group-hover:bg-amber-500' },
+  { bg: 'hover:bg-purple-100', text: 'group-hover:text-purple-900', badge: 'group-hover:bg-purple-500' },
+  { bg: 'hover:bg-pink-100', text: 'group-hover:text-pink-900', badge: 'group-hover:bg-pink-500' },
+  { bg: 'hover:bg-indigo-100', text: 'group-hover:text-indigo-900', badge: 'group-hover:bg-indigo-500' },
+];
+
 export default function GrammatikPracticePage() {
   const { session } = useFirebaseAuth();
   const [selectedLevel, setSelectedLevel] = usePersistedLevel('grammatik-last-level');
@@ -153,7 +163,7 @@ export default function GrammatikPracticePage() {
               <CEFRLevelSelector
                 selectedLevel={selectedLevel}
                 onLevelChange={setSelectedLevel}
-                variant="pills"
+                size="sm"
               />
             </div>
           </div>
@@ -161,66 +171,67 @@ export default function GrammatikPracticePage() {
 
         {/* Grammar Rules by Category */}
         {rules.length > 0 && (
-          <div className="space-y-8">
-            {categories.map((category) => (
-              <div key={category}>
-                {/* Category Header */}
-                <div className="mb-4">
-                  <h2 className="text-xl font-bold text-gray-900">{category}</h2>
-                  <div className="h-1 w-16 bg-blue-600 rounded-full mt-2"></div>
-                </div>
+          <div className="bg-white shadow-sm overflow-hidden">
+            <div className="divide-y divide-gray-100">
+              {categories.map((category, catIndex) => (
+                <div key={category}>
+                  {/* Category Header */}
+                  <div className="bg-gray-50 px-6 py-3 border-b border-gray-200">
+                    <h2 className="text-sm font-bold text-gray-700 uppercase tracking-wide">{category}</h2>
+                  </div>
 
-                {/* Rules Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {rulesByCategory[category].map((rule) => {
-                    const progress = getRuleProgress(rule.id);
+                  {/* Rules List */}
+                  <div className="divide-y divide-gray-100">
+                    {rulesByCategory[category].map((rule, ruleIndex) => {
+                      const progress = getRuleProgress(rule.id);
+                      const colorScheme = CARD_COLOR_SCHEMES[ruleIndex % CARD_COLOR_SCHEMES.length];
 
-                    return (
-                      <div
-                        key={rule.id}
-                        className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                        onClick={() => setSelectedRule(rule.id)}
-                      >
-                        <div className="p-5">
-                          {/* Title */}
-                          <h3 className="text-lg font-bold text-gray-900 mb-2">
-                            {rule.title}
-                          </h3>
+                      return (
+                        <div
+                          key={rule.id}
+                          className={`group ${colorScheme.bg} px-6 py-4 transition-all duration-200 cursor-pointer`}
+                          onClick={() => setSelectedRule(rule.id)}
+                        >
+                          <div className="flex items-start justify-between gap-4">
+                            <div className="flex-1 min-w-0">
+                              <h3 className={`text-lg font-bold text-gray-900 ${colorScheme.text} transition-colors duration-200 mb-1`}>
+                                {rule.title}
+                              </h3>
+                              <p className="text-sm text-gray-600 mb-3">
+                                {rule.description}
+                              </p>
 
-                          {/* Description */}
-                          <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-                            {rule.description}
-                          </p>
-
-                          {/* Progress Bar */}
-                          {progress.total > 0 && (
-                            <div className="mb-3">
-                              <div className="flex items-center justify-between text-xs text-gray-600 mb-1">
-                                <span>Progress</span>
-                                <span>
-                                  {progress.completed}/{progress.total} sentences
-                                </span>
-                              </div>
-                              <div className="w-full bg-gray-200 rounded-full h-2">
-                                <div
-                                  className="bg-blue-600 h-2 rounded-full transition-all"
-                                  style={{ width: `${progress.percentage}%` }}
-                                ></div>
-                              </div>
+                              {/* Progress Bar */}
+                              {progress.total > 0 && (
+                                <div className="flex items-center gap-3 text-xs text-gray-600">
+                                  <span className="font-medium">
+                                    {progress.completed}/{progress.total} sentences
+                                  </span>
+                                  <div className="flex-1 max-w-xs bg-gray-200 h-1.5">
+                                    <div
+                                      className="bg-blue-600 h-1.5 transition-all"
+                                      style={{ width: `${progress.percentage}%` }}
+                                    ></div>
+                                  </div>
+                                  <span className="font-medium">{progress.percentage}%</span>
+                                </div>
+                              )}
                             </div>
-                          )}
 
-                          {/* Action Button */}
-                          <button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">
-                            {progress.total > 0 ? 'Continue Practice' : 'Start Practice'}
-                          </button>
+                            {/* Action Badge */}
+                            <div className="flex-shrink-0">
+                              <span className={`inline-flex items-center px-3 py-1 text-xs font-bold bg-gray-100 text-gray-600 ${colorScheme.badge} group-hover:text-white transition-all duration-200`}>
+                                {progress.total > 0 ? 'PRACTICE' : 'START'}
+                              </span>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         )}
       </div>
