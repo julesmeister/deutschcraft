@@ -233,75 +233,77 @@ export async function acceptSuggestion(suggestionId: string): Promise<void> {
   }
 
   const suggestion = suggestionDoc.data() as Suggestion;
-  const postRef = doc(db, 'posts', suggestion.postId);
-
-  // Get current post content
-  const postDoc = await getDoc(postRef);
-  if (!postDoc.exists()) {
-    throw new Error('Post not found');
-  }
-
-  const post = postDoc.data();
-  const currentContent = post.content || '';
-
-  // Determine updated content
-  let updatedContent: string;
-
-  // If original text matches entire post content, replace entirely
-  if (suggestion.originalText === currentContent) {
-    updatedContent = suggestion.suggestedText;
-    console.log('[acceptSuggestion] Replacing entire post content');
-  } else if (currentContent.includes(suggestion.originalText)) {
-    // If original text is found within content, replace that part
-    updatedContent = currentContent.replace(
-      suggestion.originalText,
-      suggestion.suggestedText
-    );
-    console.log('[acceptSuggestion] Replacing matched portion');
-  } else {
-    // Original text not found - this shouldn't happen but handle gracefully
-    console.warn('[acceptSuggestion] Original text not found, using suggested text as full replacement');
-    updatedContent = suggestion.suggestedText;
-  }
-
-  console.log('[acceptSuggestion] Accepting suggestion:', {
-    postId: suggestion.postId,
-    original: suggestion.originalText,
-    suggested: suggestion.suggestedText,
-    currentContent,
-    updatedContent,
-    changed: currentContent !== updatedContent
-  });
-
   const now = Date.now();
 
-  // Update post FIRST with corrected content
-  console.log('[acceptSuggestion] Updating post content...');
-  await updateDoc(postRef, {
-    content: updatedContent,
-    hasAcceptedSuggestion: true,
-    isEdited: true,
-    updatedAt: now,
-  });
-  console.log('[acceptSuggestion] Post updated successfully');
+  // Try to find if it's a post or comment
+  const postRef = doc(db, 'posts', suggestion.postId);
+  const postDoc = await getDoc(postRef);
 
-  // Then update suggestion status
-  console.log('[acceptSuggestion] Updating suggestion status...');
+  if (postDoc.exists()) {
+    // It's a POST - update post content
+    const post = postDoc.data();
+    const currentContent = post.content || '';
+
+    // Determine updated content
+    let updatedContent: string;
+
+    if (suggestion.originalText === currentContent) {
+      updatedContent = suggestion.suggestedText;
+    } else if (currentContent.includes(suggestion.originalText)) {
+      updatedContent = currentContent.replace(
+        suggestion.originalText,
+        suggestion.suggestedText
+      );
+    } else {
+      updatedContent = suggestion.suggestedText;
+    }
+
+    // Update post with corrected content
+    await updateDoc(postRef, {
+      content: updatedContent,
+      hasAcceptedSuggestion: true,
+      isEdited: true,
+      updatedAt: now,
+    });
+  } else {
+    // It's a COMMENT - check comments collection
+    const commentRef = doc(db, 'comments', suggestion.postId);
+    const commentDoc = await getDoc(commentRef);
+
+    if (!commentDoc.exists()) {
+      throw new Error('Target post or comment not found');
+    }
+
+    const comment = commentDoc.data();
+    const currentContent = comment.content || '';
+
+    // Determine updated content
+    let updatedContent: string;
+
+    if (suggestion.originalText === currentContent) {
+      updatedContent = suggestion.suggestedText;
+    } else if (currentContent.includes(suggestion.originalText)) {
+      updatedContent = currentContent.replace(
+        suggestion.originalText,
+        suggestion.suggestedText
+      );
+    } else {
+      updatedContent = suggestion.suggestedText;
+    }
+
+    // Update comment with corrected content
+    await updateDoc(commentRef, {
+      content: updatedContent,
+      updatedAt: now,
+    });
+  }
+
+  // Update suggestion status
   await updateDoc(suggestionRef, {
     status: 'accepted',
     acceptedAt: now,
     updatedAt: now,
   });
-  console.log('[acceptSuggestion] Suggestion updated successfully');
-
-  // Verify the update by reading the post again
-  const verifyDoc = await getDoc(postRef);
-  if (verifyDoc.exists()) {
-    const verifyData = verifyDoc.data();
-    console.log('[acceptSuggestion] Verified post content after update:', verifyData.content);
-    console.log('[acceptSuggestion] Expected:', updatedContent);
-    console.log('[acceptSuggestion] Match:', verifyData.content === updatedContent);
-  }
 }
 
 export async function voteSuggestion(suggestionId: string, vote: 'up' | 'down'): Promise<void> {
