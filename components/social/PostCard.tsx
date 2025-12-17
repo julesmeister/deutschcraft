@@ -5,6 +5,7 @@ import { Post } from '@/lib/models/social';
 import { User } from '@/lib/models/user';
 import { useSocialService } from '@/lib/hooks/useSocialService';
 import { useToast } from '@/components/ui/toast';
+import { ConfirmDialog } from '@/components/ui/Dialog';
 import PostHeader from './PostHeader';
 import PostActions from './PostActions';
 import PostMedia from './PostMedia';
@@ -41,8 +42,10 @@ export default function PostCard({
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(post.likesCount || 0);
   const [likeStatusLoaded, setLikeStatusLoaded] = useState(false);
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
 
-  const { toggleLike, hasUserLiked } = useSocialService();
+  const { toggleLike, hasUserLiked, deletePost } = useSocialService();
   const toast = useToast();
 
   const isAuthor = currentUserId === post.userId;
@@ -96,17 +99,39 @@ export default function PostCard({
     toast.success('Correction applied to post!', { duration: 3000 });
   };
 
+  const handleDeletePost = async () => {
+    setIsDeleting(true);
+    try {
+      await deletePost(post.postId);
+      toast.success('Post deleted successfully', { duration: 2000 });
+      setShowDeleteDialog(false);
+      // Refresh the posts list
+      if (onPostUpdated) {
+        onPostUpdated();
+      }
+    } catch (error) {
+      console.error('Error deleting post:', error);
+      toast.error('Failed to delete post', { duration: 3000 });
+    } finally {
+      setIsDeleting(false);
+    }
+  };
+
   return (
-    <div className="bg-white border border-gray-200">
-      {/* Header */}
-      <div className="px-4 pt-4 pb-0">
-        <PostHeader
-          author={author}
-          cefrLevel={post.cefrLevel}
-          createdAt={post.createdAt}
-          isEdited={post.isEdited}
-        />
-      </div>
+    <>
+      <div className="bg-white border border-gray-200">
+        {/* Header */}
+        <div className="px-4 pt-4 pb-0">
+          <PostHeader
+            author={author}
+            cefrLevel={post.cefrLevel}
+            createdAt={post.createdAt}
+            isEdited={post.isEdited}
+            currentUserId={currentUserId}
+            postId={post.postId}
+            onDelete={() => setShowDeleteDialog(true)}
+          />
+        </div>
 
       {/* Content */}
       <div className="px-4 pb-4 pt-3">
@@ -175,5 +200,19 @@ export default function PostCard({
         />
       </div>
     </div>
+
+    {/* Delete Confirmation Dialog */}
+    <ConfirmDialog
+      open={showDeleteDialog}
+      onClose={() => setShowDeleteDialog(false)}
+      onConfirm={handleDeletePost}
+      title="Delete Post"
+      message="Are you sure you want to delete this post? This action cannot be undone."
+      confirmText="Delete"
+      cancelText="Cancel"
+      variant="danger"
+      isLoading={isDeleting}
+    />
+    </>
   );
 }

@@ -8,25 +8,30 @@ import CommentSuggestions from './CommentSuggestions';
 import { getUser } from '@/lib/services/userService';
 import { useSocialService } from '@/lib/hooks/useSocialService';
 import { useToast } from '@/components/ui/toast';
+import { ConfirmDialog } from '@/components/ui/Dialog';
 
 interface CommentItemProps {
   comment: Comment;
   currentUserId: string;
   currentUser?: User;
+  onCommentDeleted?: () => void;
 }
 
-export default function CommentItem({ comment, currentUserId, currentUser }: CommentItemProps) {
+export default function CommentItem({ comment, currentUserId, currentUser, onCommentDeleted }: CommentItemProps) {
   const [showReplyForm, setShowReplyForm] = useState(false);
   const [showSuggestForm, setShowSuggestForm] = useState(false);
   const [replyText, setReplyText] = useState('');
   const [commentAuthor, setCommentAuthor] = useState<User | null>(null);
   const [isLiked, setIsLiked] = useState(false);
   const [likeCount, setLikeCount] = useState(comment.likesCount || 0);
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
 
-  const { toggleLike, createComment, hasUserLiked } = useSocialService();
+  const { toggleLike, createComment, hasUserLiked, deleteComment } = useSocialService();
   const toast = useToast();
 
   const canSuggest = currentUserId !== comment.userId;
+  const isAuthor = currentUserId === comment.userId;
 
   useEffect(() => {
     const fetchAuthor = async () => {
@@ -95,6 +100,24 @@ export default function CommentItem({ comment, currentUserId, currentUser }: Com
     }
   };
 
+  const handleDeleteComment = async () => {
+    setIsDeleting(true);
+    try {
+      await deleteComment(comment.commentId, comment.postId);
+      toast.success('Comment deleted successfully', { duration: 2000 });
+      setShowDeleteDialog(false);
+      // Refresh the comments list
+      if (onCommentDeleted) {
+        onCommentDeleted();
+      }
+    } catch (error) {
+      console.error('Error deleting comment:', error);
+      toast.error('Failed to delete comment', { duration: 3000 });
+    } finally {
+      setIsDeleting(false);
+    }
+  };
+
   const formatTimestamp = (timestamp: number) => {
     const now = Date.now();
     const diff = now - timestamp;
@@ -119,50 +142,59 @@ export default function CommentItem({ comment, currentUserId, currentUser }: Com
   };
 
   return (
-    <div className="flex gap-2">
-      <div className="flex-shrink-0">
-        <UserAvatar user={displayUser} size="sm" />
-      </div>
-      <div className="flex-1 min-w-0">
-        <div className="bg-gray-50 rounded-lg px-3 py-2">
-          <div className="flex items-baseline justify-between gap-2 mb-1">
-            <h6 className="text-sm font-semibold text-gray-900">
-              {commentAuthor?.name ||
-               `${commentAuthor?.firstName || ''} ${commentAuthor?.lastName || ''}`.trim() ||
-               comment.userEmail?.split('@')[0] ||
-               'User'}
-            </h6>
-            <span className="text-xs text-gray-500">{formatTimestamp(comment.createdAt)}</span>
+    <>
+      <div className="flex gap-2">
+        <div className="flex-shrink-0">
+          <UserAvatar user={displayUser} size="sm" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="bg-gray-50 rounded-lg px-3 py-2">
+            <div className="flex items-baseline justify-between gap-2 mb-1">
+              <h6 className="text-sm font-semibold text-gray-900">
+                {commentAuthor?.name ||
+                 `${commentAuthor?.firstName || ''} ${commentAuthor?.lastName || ''}`.trim() ||
+                 comment.userEmail?.split('@')[0] ||
+                 'User'}
+              </h6>
+              <span className="text-xs text-gray-500">{formatTimestamp(comment.createdAt)}</span>
+            </div>
+            <p className="text-sm text-gray-700">{comment.content}</p>
           </div>
-          <p className="text-sm text-gray-700">{comment.content}</p>
-        </div>
-        <div className="flex items-center gap-3 mt-1 px-2">
-          <button
-            className={`text-xs font-medium transition-colors ${
-              isLiked ? 'text-blue-600' : 'text-gray-600 hover:text-blue-600'
-            }`}
-            onClick={handleLikeComment}
-          >
-            {isLiked ? 'Liked' : 'Like'}
-          </button>
-          <button
-            className="text-xs text-gray-600 hover:text-blue-600 font-medium transition-colors"
-            onClick={() => setShowReplyForm(!showReplyForm)}
-          >
-            Reply
-          </button>
-          {canSuggest && (
+          <div className="flex items-center gap-3 mt-1 px-2">
             <button
-              className="text-xs text-amber-600 hover:text-amber-700 font-medium transition-colors"
-              onClick={() => setShowSuggestForm(!showSuggestForm)}
+              className={`text-xs font-medium transition-colors ${
+                isLiked ? 'text-blue-600' : 'text-gray-600 hover:text-blue-600'
+              }`}
+              onClick={handleLikeComment}
             >
-              Suggest
+              {isLiked ? 'Liked' : 'Like'}
             </button>
-          )}
-          {likeCount > 0 && (
-            <span className="text-xs text-gray-500">{likeCount} likes</span>
-          )}
-        </div>
+            <button
+              className="text-xs text-gray-600 hover:text-blue-600 font-medium transition-colors"
+              onClick={() => setShowReplyForm(!showReplyForm)}
+            >
+              Reply
+            </button>
+            {canSuggest && (
+              <button
+                className="text-xs text-amber-600 hover:text-amber-700 font-medium transition-colors"
+                onClick={() => setShowSuggestForm(!showSuggestForm)}
+              >
+                Suggest
+              </button>
+            )}
+            {isAuthor && (
+              <button
+                className="text-xs text-red-600 hover:text-red-700 font-medium transition-colors"
+                onClick={() => setShowDeleteDialog(true)}
+              >
+                Delete
+              </button>
+            )}
+            {likeCount > 0 && (
+              <span className="text-xs text-gray-500">{likeCount} likes</span>
+            )}
+          </div>
 
         {/* Compact Corrections */}
         <CommentSuggestions
@@ -208,5 +240,19 @@ export default function CommentItem({ comment, currentUserId, currentUser }: Com
         )}
       </div>
     </div>
+
+    {/* Delete Confirmation Dialog */}
+    <ConfirmDialog
+      open={showDeleteDialog}
+      onClose={() => setShowDeleteDialog(false)}
+      onConfirm={handleDeleteComment}
+      title="Delete Comment"
+      message="Are you sure you want to delete this comment? This action cannot be undone."
+      confirmText="Delete"
+      cancelText="Cancel"
+      variant="danger"
+      isLoading={isDeleting}
+    />
+    </>
   );
 }

@@ -110,6 +110,7 @@ export function GermanCharAutocomplete({
 
       if (e.key === 'Enter' || e.key === 'Tab') {
         e.preventDefault();
+        e.stopPropagation(); // Prevent event from reaching parent handlers
         acceptSuggestion();
       } else if (e.key === 'Escape') {
         e.preventDefault();

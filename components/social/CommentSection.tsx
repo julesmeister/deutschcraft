@@ -87,7 +87,13 @@ export default function CommentSection({ postId, currentUserId, currentUser, isE
       {displayedComments.length > 0 && (
         <div className="space-y-3 mb-3">
           {displayedComments.map((comment) => (
-            <CommentItem key={comment.commentId} comment={comment} currentUserId={currentUserId} currentUser={currentUser} />
+            <CommentItem
+              key={comment.commentId}
+              comment={comment}
+              currentUserId={currentUserId}
+              currentUser={currentUser}
+              onCommentDeleted={fetchComments}
+            />
           ))}
         </div>
       )}
