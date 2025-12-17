@@ -86,3 +86,13 @@ export type {
   GanttTaskCreateInput,
   GanttTaskUpdateInput,
 } from './gantt';
+
+// Grammar Exercise Models
+export type {
+  GrammarRule,
+  GrammarSentence,
+  GrammarReview,
+  GrammarReviewHistory,
+  GrammarProgressSummary,
+  DifficultyRating,
+} from './grammar';

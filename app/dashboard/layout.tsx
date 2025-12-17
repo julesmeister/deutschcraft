@@ -89,6 +89,7 @@ function DashboardNavbar() {
                   title: 'Practice',
                   items: [
                     { label: 'Flashcards', href: '/dashboard/student/flashcards' },
+                    { label: 'Grammatik', href: '/dashboard/student/grammatik' },
                     { label: 'Writing', href: '/dashboard/student/writing' },
                     { label: 'Review', href: '/dashboard/student/writing-review' },
                     { label: 'Audios', href: '/dashboard/student/audios' },
@@ -237,6 +238,9 @@ function DashboardNavbar() {
                 <div className="ml-6 space-y-2">
                   <Link href="/dashboard/student/flashcards" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Flashcards
+                  </Link>
+                  <Link href="/dashboard/student/grammatik" className="block text-sm text-gray-300 hover:text-white transition-colors">
+                    Grammatik
                   </Link>
                   <Link href="/dashboard/student/writing" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Writing
