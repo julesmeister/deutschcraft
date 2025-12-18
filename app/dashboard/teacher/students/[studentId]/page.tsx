@@ -15,6 +15,7 @@ import { useGrammarReviews } from '@/lib/hooks/useGrammarExercises';
 import { useSessionPagination } from '@/lib/hooks/useSessionPagination';
 import { useUserQuizzes } from '@/lib/hooks/useReviewQuizzes';
 import { getUser } from '@/lib/services/userService';
+import { getBatch } from '@/lib/services/batchService';
 import { User, getUserFullName } from '@/lib/models/user';
 
 interface StudentProfilePageProps {
@@ -26,6 +27,7 @@ interface StudentData {
   name: string;
   currentLevel: string;
   photoURL?: string;
+  batchName?: string;
 }
 
 export default function StudentProfilePage({ params }: StudentProfilePageProps) {
@@ -143,11 +145,23 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
           // Handle both formats: {name: "Full Name"} OR {firstName: "First", lastName: "Last"}
           const displayName = (userData as any).name || getUserFullName(userData);
 
+          // Fetch batch information if student has a batchId
+          let batchName: string | undefined = undefined;
+          if (userData.batchId) {
+            try {
+              const batchData = await getBatch(userData.batchId);
+              batchName = batchData?.name;
+            } catch (error) {
+              console.error('Error fetching batch data:', error);
+            }
+          }
+
           setStudent({
             email: userData.email,
             name: displayName,
             currentLevel: userData.cefrLevel || 'A1',
             photoURL: userData.photoURL,
+            batchName,
           });
         }
       } catch (error) {
@@ -210,7 +224,7 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
         avatar={{
           src: student.photoURL,
           initial: (student.name || student.email || '?').charAt(0).toUpperCase(),
-          subtitle: student.email,
+          subtitle: student.batchName || student.email,
         }}
       />
 
