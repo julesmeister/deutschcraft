@@ -5,11 +5,13 @@ import { useRouter } from 'next/navigation';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { FlashcardStatsSection } from '@/components/dashboard/FlashcardStatsSection';
 import { WritingStatsSection } from '@/components/dashboard/WritingStatsSection';
+import { GrammarStatsSection } from '@/components/dashboard/GrammarStatsSection';
 import { RecentActivityTimeline } from '@/components/dashboard/RecentActivityTimeline';
 import { CategoryProgressSection } from '@/components/dashboard/CategoryProgressSection';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useStudyStats } from '@/lib/hooks/useFlashcards';
 import { useWritingStats, useStudentSubmissions } from '@/lib/hooks/useWritingExercises';
+import { useGrammarReviews } from '@/lib/hooks/useGrammarExercises';
 import { useSessionPagination } from '@/lib/hooks/useSessionPagination';
 import { useUserQuizzes } from '@/lib/hooks/useReviewQuizzes';
 import { getUser } from '@/lib/services/userService';
@@ -32,7 +34,7 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
   const { session } = useFirebaseAuth();
   const [student, setStudent] = useState<StudentData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<'flashcards' | 'writing'>('flashcards');
+  const [activeTab, setActiveTab] = useState<'flashcards' | 'writing' | 'grammatik'>('flashcards');
 
   // Get student's study stats
   const { stats } = useStudyStats(student?.email);
@@ -41,6 +43,9 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
   const { data: writingStats } = useWritingStats(student?.email);
   const { data: rawWritingSubmissions = [] } = useStudentSubmissions(student?.email);
   const { data: userQuizzes = [] } = useUserQuizzes(student?.email);
+
+  // Get student's grammar reviews
+  const { reviews: grammarReviews } = useGrammarReviews(student?.email);
 
   // Normalize and combine writing submissions with quiz attempts
   const writingSubmissions = useMemo(() => {
@@ -60,7 +65,39 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
     });
   }, [rawWritingSubmissions]);
 
-  // Combine submissions and quizzes, sorted by date
+  // Convert grammar reviews to activity items (grouped by date)
+  const grammarSessions = useMemo(() => {
+    if (!grammarReviews || grammarReviews.length === 0) return [];
+
+    // Group reviews by date (lastReviewDate)
+    const sessionsByDate = grammarReviews
+      .filter(review => review.lastReviewDate)
+      .reduce((acc, review) => {
+        const dateKey = new Date(review.lastReviewDate!).toDateString();
+        if (!acc[dateKey]) {
+          acc[dateKey] = [];
+        }
+        acc[dateKey].push(review);
+        return acc;
+      }, {} as Record<string, typeof grammarReviews>);
+
+    // Convert to session objects
+    return Object.entries(sessionsByDate).map(([dateKey, reviews]) => ({
+      isGrammarSession: true,
+      submissionId: `grammar-${dateKey}`,
+      exerciseType: 'grammar' as const,
+      status: 'reviewed' as const,
+      sentenceCount: reviews.length,
+      submittedAt: reviews[0].lastReviewDate!,
+      updatedAt: reviews[0].lastReviewDate!,
+      averageMastery: Math.round(
+        reviews.reduce((sum, r) => sum + r.masteryLevel, 0) / reviews.length
+      ),
+      grammarReviews: reviews,
+    }));
+  }, [grammarReviews]);
+
+  // Combine submissions, quizzes, and grammar sessions, sorted by date
   const combinedActivity = useMemo(() => {
     const items = [
       ...writingSubmissions,
@@ -76,7 +113,8 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
           wordCount: quiz.totalBlanks,
           submittedAt: quiz.completedAt || quiz.startedAt,
           updatedAt: quiz.updatedAt,
-        }))
+        })),
+      ...grammarSessions,
     ];
 
     // Sort by date (most recent first)
@@ -85,7 +123,7 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
       const dateB = b.submittedAt || b.updatedAt || 0;
       return dateB - dateA;
     });
-  }, [writingSubmissions, userQuizzes]);
+  }, [writingSubmissions, userQuizzes, grammarSessions]);
 
   // Pagination for flashcard sessions
   const sessionPagination = useSessionPagination(student?.email, 8);
@@ -201,6 +239,16 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
             >
               ✍️ Writing
             </button>
+            <button
+              onClick={() => setActiveTab('grammatik')}
+              className={`px-6 py-3 font-bold transition ${
+                activeTab === 'grammatik'
+                  ? 'text-green-600 border-b-2 border-green-600'
+                  : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              📖 Grammatik
+            </button>
           </div>
         </div>
 
@@ -208,8 +256,10 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
         <div className="mb-8">
           {activeTab === 'flashcards' ? (
             <FlashcardStatsSection stats={stats} />
-          ) : (
+          ) : activeTab === 'writing' ? (
             <WritingStatsSection writingStats={writingStats} studentEmail={student?.email} />
+          ) : (
+            <GrammarStatsSection studentEmail={student?.email} />
           )}
         </div>
 
@@ -223,7 +273,11 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
         {/* Recent Activity */}
         <div className="bg-white border border-gray-200 rounded-2xl p-6">
           <h2 className="text-2xl font-black text-gray-900 mb-4">
-            {activeTab === 'flashcards' ? 'Recent Flashcard Sessions' : 'Recent Writing Submissions'}
+            {activeTab === 'flashcards'
+              ? 'Recent Flashcard Sessions'
+              : activeTab === 'writing'
+              ? 'Recent Writing Submissions'
+              : 'Recent Grammar Practice Sessions'}
           </h2>
 
           <RecentActivityTimeline

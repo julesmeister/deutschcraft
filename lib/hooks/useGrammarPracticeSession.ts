@@ -6,8 +6,17 @@ interface GrammarReview {
   sentenceId: string;
   ruleId: string;
   masteryLevel: number;
-  nextReviewDate?: string;
+  nextReviewDate?: number; // timestamp
+  lastReviewDate?: number; // timestamp
   repetitions?: number;
+  easeFactor?: number;
+  interval?: number;
+  correctCount?: number;
+  incorrectCount?: number;
+  consecutiveCorrect?: number;
+  consecutiveIncorrect?: number;
+  firstSeenAt?: number;
+  createdAt?: number;
 }
 
 interface SentenceDataMap {
@@ -36,10 +45,10 @@ export function useGrammarPracticeSession({
 
   // Calculate due sentences count
   const dueSentencesCount = useMemo(() => {
-    const now = new Date();
+    const now = Date.now();
     return reviews.filter(review => {
       if (!review.nextReviewDate) return false;
-      return new Date(review.nextReviewDate) <= now;
+      return review.nextReviewDate <= now;
     }).length;
   }, [reviews]);
 
@@ -67,10 +76,10 @@ export function useGrammarPracticeSession({
         // Prepare current progress object for SRS calculation
         const currentProgress = existingReview ? {
           masteryLevel: existingReview.masteryLevel || 0,
-          nextReviewDate: existingReview.nextReviewDate ? new Date(existingReview.nextReviewDate).getTime() : Date.now(),
+          nextReviewDate: existingReview.nextReviewDate || Date.now(),
           repetitions: existingReview.repetitions || 0,
-          easeFactor: (existingReview as any).easeFactor || 2.5,
-          interval: (existingReview as any).intervalDays || 0,
+          easeFactor: existingReview.easeFactor || 2.5,
+          interval: existingReview.interval || 0,
           consecutiveCorrect: 0,
           consecutiveIncorrect: 0,
           lapseCount: 0,
@@ -98,6 +107,12 @@ export function useGrammarPracticeSession({
 
         // Prepare review data
         const reviewId = `${session.user.email}_${sentenceId}`;
+        const now = Date.now();
+
+        // Determine if this is correct or incorrect based on difficulty
+        const isCorrect = difficulty === 'easy' || difficulty === 'good' || difficulty === 'expert';
+        const isIncorrect = difficulty === 'again' || difficulty === 'hard';
+
         const reviewData = {
           userId: session.user.email,
           sentenceId: sentenceId,
@@ -106,10 +121,19 @@ export function useGrammarPracticeSession({
           masteryLevel: srsResult.masteryLevel || 0,
           repetitions: srsResult.repetitions || 0,
           easeFactor: srsResult.easeFactor || 2.5,
-          intervalDays: srsResult.interval,
-          nextReviewDate: nextReviewDate.toISOString(),
-          lastReviewed: new Date().toISOString(),
-          lastDifficulty: difficulty,
+          interval: srsResult.interval, // days until next review
+          nextReviewDate: nextReviewDate.getTime(), // timestamp
+          lastReviewDate: now, // timestamp
+
+          // Performance tracking
+          correctCount: (existingReview?.correctCount || 0) + (isCorrect ? 1 : 0),
+          incorrectCount: (existingReview?.incorrectCount || 0) + (isIncorrect ? 1 : 0),
+          consecutiveCorrect: isCorrect ? (existingReview?.consecutiveCorrect || 0) + 1 : 0,
+          consecutiveIncorrect: isIncorrect ? (existingReview?.consecutiveIncorrect || 0) + 1 : 0,
+
+          // First seen tracking
+          firstSeenAt: existingReview?.firstSeenAt || now,
+          createdAt: existingReview?.createdAt || now,
         };
 
         // Save to database
@@ -137,11 +161,10 @@ export function useGrammarPracticeSession({
     }
 
     // Get sentences that are due for review (SRS mode)
-    const now = new Date();
+    const now = Date.now();
     const dueReviews = reviews.filter((review) => {
       if (!review.nextReviewDate) return false;
-      const nextReview = new Date(review.nextReviewDate);
-      return nextReview <= now;
+      return review.nextReviewDate <= now;
     });
 
     if (dueReviews.length === 0) {
