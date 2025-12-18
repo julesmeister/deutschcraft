@@ -225,6 +225,7 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
           src: student.photoURL,
           initial: (student.name || student.email || '?').charAt(0).toUpperCase(),
           subtitle: student.batchName || student.email,
+          subtitleAsBadge: !!student.batchName, // Show as badge only if it's a batch name
         }}
       />
 

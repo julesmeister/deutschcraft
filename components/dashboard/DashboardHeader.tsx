@@ -17,6 +17,7 @@ interface DashboardHeaderProps {
     src?: string;
     initial: string;
     subtitle?: string;
+    subtitleAsBadge?: boolean; // Display subtitle as a badge
   };
 }
 
@@ -104,7 +105,13 @@ export function DashboardHeader({
                 <p className="text-sm sm:text-base text-gray-600 mt-0.5 sm:mt-1 line-clamp-2">{subtitle}</p>
               )}
               {avatar?.subtitle && (
-                <p className="text-xs sm:text-sm text-gray-500 truncate">{avatar.subtitle}</p>
+                avatar.subtitleAsBadge ? (
+                  <span className="inline-block px-2 py-0.5 bg-piku-mint text-green-800 text-xs font-medium rounded">
+                    {avatar.subtitle}
+                  </span>
+                ) : (
+                  <p className="text-xs sm:text-sm text-gray-500 truncate">{avatar.subtitle}</p>
+                )
               )}
             </div>
           </div>
