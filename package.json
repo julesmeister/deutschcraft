@@ -34,7 +34,8 @@
     "vocab:fix-articles": "tsx scripts/fix-missing-articles.ts",
     "dict:populate": "tsx scripts/populate-dictionary.ts",
     "migrate:add-name": "tsx scripts/migrate-add-name-field.ts",
-    "grammar:generate-templates": "tsx scripts/generate-grammar-sentence-templates.ts"
+    "grammar:generate-templates": "tsx scripts/generate-grammar-sentence-templates.ts",
+    "grammar:fill": "tsx scripts/fill-grammar-sentences.ts"
   },
   "dependencies": {
     "@libsql/client": "^0.15.15",

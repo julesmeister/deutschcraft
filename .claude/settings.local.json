@@ -87,7 +87,14 @@
       "Bash(node check-duplicates.js:*)",
       "Bash(node remove-duplicates.js:*)",
       "Bash(npm run:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(for level in a1 a2 b1 b2 c1 c2)",
+      "Bash(do echo -n \"$level: \")",
+      "Bash(Select-String -Pattern \"(First sentence|Includes|First char)\")",
+      "Bash(Select-Object -First 12)",
+      "Bash(for level in a1 a2 b1 b2)",
+      "Bash(do echo \"=== $level ===\")",
+      "Bash(git rm:*)"
     ],
     "deny": [],
     "ask": []
