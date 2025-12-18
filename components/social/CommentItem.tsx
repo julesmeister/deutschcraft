@@ -14,10 +14,11 @@ interface CommentItemProps {
   comment: Comment;
   currentUserId: string;
   currentUser?: User;
+  currentUserRole?: 'STUDENT' | 'TEACHER' | 'PENDING_APPROVAL';
   onCommentDeleted?: () => void;
 }
 
-export default function CommentItem({ comment, currentUserId, currentUser, onCommentDeleted }: CommentItemProps) {
+export default function CommentItem({ comment, currentUserId, currentUser, currentUserRole, onCommentDeleted }: CommentItemProps) {
   const [showReplyForm, setShowReplyForm] = useState(false);
   const [showSuggestForm, setShowSuggestForm] = useState(false);
   const [replyText, setReplyText] = useState('');
@@ -173,10 +174,23 @@ export default function CommentItem({ comment, currentUserId, currentUser, onCom
           <div className="bg-gray-50 rounded-lg px-3 py-2">
             <div className="flex items-baseline justify-between gap-2 mb-1">
               <h6 className="text-sm font-semibold text-gray-900">
-                {commentAuthor?.name ||
-                 `${commentAuthor?.firstName || ''} ${commentAuthor?.lastName || ''}`.trim() ||
-                 comment.userEmail?.split('@')[0] ||
-                 'User'}
+                {currentUserRole === 'TEACHER' && commentAuthor ? (
+                  <a
+                    href={`/dashboard/teacher/students/${encodeURIComponent(commentAuthor.email)}`}
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    {commentAuthor.name ||
+                     `${commentAuthor.firstName || ''} ${commentAuthor.lastName || ''}`.trim() ||
+                     commentAuthor.email}
+                  </a>
+                ) : (
+                  <>
+                    {commentAuthor?.name ||
+                     `${commentAuthor?.firstName || ''} ${commentAuthor?.lastName || ''}`.trim() ||
+                     comment.userEmail?.split('@')[0] ||
+                     'User'}
+                  </>
+                )}
               </h6>
               <span className="text-xs text-gray-500">{formatTimestamp(comment.createdAt)}</span>
             </div>

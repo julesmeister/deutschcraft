@@ -92,6 +92,7 @@ export default function CommentSection({ postId, currentUserId, currentUser, isE
               comment={comment}
               currentUserId={currentUserId}
               currentUser={currentUser}
+              currentUserRole={currentUser?.role}
               onCommentDeleted={fetchComments}
             />
           ))}

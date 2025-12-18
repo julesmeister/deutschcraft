@@ -10,11 +10,12 @@ interface PostHeaderProps {
   createdAt: number;
   isEdited: boolean;
   currentUserId?: string;
+  currentUserRole?: 'STUDENT' | 'TEACHER' | 'PENDING_APPROVAL';
   postId?: string;
   onDelete?: () => void;
 }
 
-export default function PostHeader({ author, cefrLevel, createdAt, isEdited, currentUserId, postId, onDelete }: PostHeaderProps) {
+export default function PostHeader({ author, cefrLevel, createdAt, isEdited, currentUserId, currentUserRole, postId, onDelete }: PostHeaderProps) {
   const [showMenu, setShowMenu] = useState(false);
   const isAuthor = currentUserId && author.userId === currentUserId;
 
@@ -36,9 +37,18 @@ export default function PostHeader({ author, cefrLevel, createdAt, isEdited, cur
         <UserAvatar user={author} size="md" className="mr-3" />
         <div>
           <h6 className="text-sm font-bold mb-0 text-gray-800">
-            <span role="button" className="hover:text-blue-600 cursor-pointer transition-colors">
-              {author.name || `${author.firstName || ''} ${author.lastName || ''}`.trim() || author.email}
-            </span>
+            {currentUserRole === 'TEACHER' ? (
+              <a
+                href={`/dashboard/teacher/students/${encodeURIComponent(author.email)}`}
+                className="hover:text-blue-600 cursor-pointer transition-colors"
+              >
+                {author.name || `${author.firstName || ''} ${author.lastName || ''}`.trim() || author.email}
+              </a>
+            ) : (
+              <span className="hover:text-blue-600 cursor-pointer transition-colors">
+                {author.name || `${author.firstName || ''} ${author.lastName || ''}`.trim() || author.email}
+              </span>
+            )}
           </h6>
           <div className="flex items-center gap-1 text-xs text-gray-600">
             <span>Level: {cefrLevel}</span>

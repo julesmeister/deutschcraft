@@ -128,6 +128,7 @@ export default function PostCard({
             createdAt={post.createdAt}
             isEdited={post.isEdited}
             currentUserId={currentUserId}
+            currentUserRole={currentUser?.role}
             postId={post.postId}
             onDelete={() => setShowDeleteDialog(true)}
           />
