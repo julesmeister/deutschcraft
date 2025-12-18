@@ -1,9 +1,11 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import { useRouter } from 'next/navigation';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
 import { CEFRLevel } from '@/lib/models/cefr';
+import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 
 // Import grammar data
 import a1Data from '@/lib/data/grammar/levels/a1.json';
@@ -33,6 +35,7 @@ interface GrammarRule {
 }
 
 export default function GrammarGuidePage() {
+  const router = useRouter();
   const [selectedLevel, setSelectedLevel] = useState<CEFRLevel>(CEFRLevel.A1);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -83,6 +86,15 @@ export default function GrammarGuidePage() {
       <DashboardHeader
         title="Grammar Guide"
         subtitle="Learn German grammar rules by CEFR level"
+        actions={
+          <ActionButton
+            onClick={() => router.push('/dashboard/student/grammatik')}
+            icon={<ActionButtonIcons.Play />}
+            variant="purple"
+          >
+            Practice Grammar
+          </ActionButton>
+        }
       />
 
       <div className="container mx-auto px-6 mt-8">

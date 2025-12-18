@@ -1,0 +1,6247 @@
+{
+  "level": "B1",
+  "totalRules": 21,
+  "totalSentences": 420,
+  "targetSentences": 420,
+  "completionPercentage": 100,
+  "sentences": [
+    {
+      "sentenceId": "b1-subordinate-clauses-001",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "I stay home because it is raining",
+      "german": "Ich bleibe zu Hause, weil es regnet",
+      "hints": [
+        "weil = because",
+        "Verb to end"
+      ],
+      "keywords": [
+        "weil",
+        "regnet"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-002",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "He says that he is tired",
+      "german": "Er sagt, dass er müde ist",
+      "hints": [
+        "dass = that",
+        "ist at end"
+      ],
+      "keywords": [
+        "dass",
+        "ist"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-003",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "If you have time, call me",
+      "german": "Wenn du Zeit hast, ruf mich an",
+      "hints": [
+        "wenn = if",
+        "hast at end, main clause starts with verb"
+      ],
+      "keywords": [
+        "wenn",
+        "hast"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-004",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "She doesn't come because she is sick",
+      "german": "Sie kommt nicht, weil sie krank ist",
+      "hints": [
+        "weil = because",
+        "ist at end"
+      ],
+      "keywords": [
+        "weil",
+        "krank"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-005",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "I know that you are right",
+      "german": "Ich weiß, dass du recht hast",
+      "hints": [
+        "dass = that",
+        "hast at end"
+      ],
+      "keywords": [
+        "dass",
+        "hast"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-006",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "Although it is cold, I go outside",
+      "german": "Obwohl es kalt ist, gehe ich nach draußen",
+      "hints": [
+        "obwohl = although",
+        "Main verb immediately after comma"
+      ],
+      "keywords": [
+        "obwohl",
+        "ist"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-007",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "He works hard so that he succeeds",
+      "german": "Er arbeitet hart, damit er Erfolg hat",
+      "hints": [
+        "damit = so that",
+        "hat at end"
+      ],
+      "keywords": [
+        "damit",
+        "hat"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-008",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "Since I don't have time, I can't come",
+      "german": "Da ich keine Zeit habe, kann ich nicht kommen",
+      "hints": [
+        "da = since/because",
+        "kann immediately after comma"
+      ],
+      "keywords": [
+        "da",
+        "habe"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-009",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "I'll wait until you come",
+      "german": "Ich warte, bis du kommst",
+      "hints": [
+        "bis = until",
+        "kommst at end"
+      ],
+      "keywords": [
+        "bis",
+        "kommst"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-010",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "Before you go, we should talk",
+      "german": "Bevor du gehst, sollten wir sprechen",
+      "hints": [
+        "bevor = before",
+        "sollten immediately after"
+      ],
+      "keywords": [
+        "bevor",
+        "gehst"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-011",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "After I had eaten, I went to bed",
+      "german": "Nachdem ich gegessen hatte, ging ich ins Bett",
+      "hints": [
+        "nachdem = after",
+        "Past perfect + preterite"
+      ],
+      "keywords": [
+        "nachdem",
+        "hatte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-012",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "While he was sleeping, I worked",
+      "german": "Während er schlief, arbeitete ich",
+      "hints": [
+        "während = while",
+        "Preterite in both clauses"
+      ],
+      "keywords": [
+        "während",
+        "schlief"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-013",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "As soon as I arrive, I'll call you",
+      "german": "Sobald ich ankomme, rufe ich dich an",
+      "hints": [
+        "sobald = as soon as",
+        "Present for future"
+      ],
+      "keywords": [
+        "sobald",
+        "ankomme"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-014",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "I learned German so that I could work in Germany",
+      "german": "Ich lernte Deutsch, damit ich in Deutschland arbeiten konnte",
+      "hints": [
+        "damit + modal",
+        "konnte at end"
+      ],
+      "keywords": [
+        "damit",
+        "konnte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-015",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "Even though he studied, he failed",
+      "german": "Obwohl er gelernt hatte, fiel er durch",
+      "hints": [
+        "obwohl + past perfect",
+        "hatte at end"
+      ],
+      "keywords": [
+        "obwohl",
+        "hatte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-016",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "I don't know whether he is coming",
+      "german": "Ich weiß nicht, ob er kommt",
+      "hints": [
+        "ob = whether/if",
+        "kommt at end"
+      ],
+      "keywords": [
+        "ob",
+        "kommt"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-017",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "Since it was raining, we stayed inside",
+      "german": "Weil es regnete, blieben wir drinnen",
+      "hints": [
+        "weil + preterite",
+        "blieben after comma"
+      ],
+      "keywords": [
+        "weil",
+        "regnete"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-018",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "Unless you hurry, you'll be late",
+      "german": "Wenn du dich nicht beeilst, wirst du zu spät kommen",
+      "hints": [
+        "wenn + nicht = unless",
+        "Future tense"
+      ],
+      "keywords": [
+        "wenn",
+        "beeilst"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-019",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "As far as I know, he lives in Berlin",
+      "german": "Soweit ich weiß, wohnt er in Berlin",
+      "hints": [
+        "soweit = as far as",
+        "weiß at end"
+      ],
+      "keywords": [
+        "soweit",
+        "weiß"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-subordinate-clauses-020",
+      "ruleId": "b1-subordinate-clauses",
+      "english": "The fact that he didn't come worries me",
+      "german": "Dass er nicht gekommen ist, macht mir Sorgen",
+      "hints": [
+        "dass-clause as subject",
+        "ist at end of clause"
+      ],
+      "keywords": [
+        "dass",
+        "ist"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-genitive-case-001",
+      "ruleId": "b1-genitive-case",
+      "english": "The man's car",
+      "german": "Das Auto des Mannes",
+      "hints": [
+        "des Mannes (genitive)",
+        "Add -s to masculine noun"
+      ],
+      "keywords": [
+        "des",
+        "Mannes"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-genitive-case-002",
+      "ruleId": "b1-genitive-case",
+      "english": "My parents' house",
+      "german": "Das Haus meiner Eltern",
+      "hints": [
+        "meiner Eltern (genitive plural)",
+        "No -s added to plural"
+      ],
+      "keywords": [
+        "meiner",
+        "Eltern"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-genitive-case-003",
+      "ruleId": "b1-genitive-case",
+      "english": "The color of the sky",
+      "german": "Die Farbe des Himmels",
+      "hints": [
+        "des Himmels (genitive)",
+        "Himmel + -s"
+      ],
+      "keywords": [
+        "des",
+        "Himmels"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-genitive-case-004",
+      "ruleId": "b1-genitive-case",
+      "english": "The woman's bag",
+      "german": "Die Tasche der Frau",
+      "hints": [
+        "der Frau (genitive feminine)",
+        "No -s on feminine nouns"
+      ],
+      "keywords": [
+        "der",
+        "Frau"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-genitive-case-005",
+      "ruleId": "b1-genitive-case",
+      "english": "The child's toy",
+      "german": "Das Spielzeug des Kindes",
+      "hints": [
+        "des Kindes (genitive neuter)",
+        "Kind + -es"
+      ],
+      "keywords": [
+        "des",
+        "Kindes"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-genitive-case-006",
+      "ruleId": "b1-genitive-case",
+      "english": "My brother's friend",
+      "german": "Der Freund meines Bruders",
+      "hints": [
+        "meines Bruders (genitive)",
+        "Bruder + -s"
+      ],
+      "keywords": [
+        "meines",
+        "Bruders"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-genitive-case-007",
+      "ruleId": "b1-genitive-case",
+      "english": "The door of the house",
+      "german": "Die Tür des Hauses",
+      "hints": [
+        "des Hauses (genitive)",
+        "Haus + -es"
+      ],
+      "keywords": [
+        "des",
+        "Hauses"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-genitive-case-008",
+      "ruleId": "b1-genitive-case",
+      "english": "The teacher's book",
+      "german": "Das Buch des Lehrers",
+      "hints": [
+        "des Lehrers (genitive)",
+        "Lehrer + -s"
+      ],
+      "keywords": [
+        "des",
+        "Lehrers"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-genitive-case-009",
+      "ruleId": "b1-genitive-case",
+      "english": "The beginning of the year",
+      "german": "Der Anfang des Jahres",
+      "hints": [
+        "des Jahres (genitive)",
+        "Jahr + -es"
+      ],
+      "keywords": [
+        "des",
+        "Jahres"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-genitive-case-010",
+      "ruleId": "b1-genitive-case",
+      "english": "The name of my sister",
+      "german": "Der Name meiner Schwester",
+      "hints": [
+        "meiner Schwester (genitive)",
+        "Name is n-declension"
+      ],
+      "keywords": [
+        "meiner",
+        "Schwester"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-case-011",
+      "ruleId": "b1-genitive-case",
+      "english": "The end of the movie",
+      "german": "Das Ende des Films",
+      "hints": [
+        "des Films (genitive)",
+        "Film + -s"
+      ],
+      "keywords": [
+        "des",
+        "Films"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-genitive-case-012",
+      "ruleId": "b1-genitive-case",
+      "english": "My father's car",
+      "german": "Das Auto meines Vaters",
+      "hints": [
+        "meines Vaters (genitive)",
+        "Vater + -s"
+      ],
+      "keywords": [
+        "meines",
+        "Vaters"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-genitive-case-013",
+      "ruleId": "b1-genitive-case",
+      "english": "The capital of Germany",
+      "german": "Die Hauptstadt Deutschlands",
+      "hints": [
+        "Deutschlands (genitive)",
+        "Country name + -s"
+      ],
+      "keywords": [
+        "Deutschlands"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-case-014",
+      "ruleId": "b1-genitive-case",
+      "english": "The owner of the restaurant",
+      "german": "Der Besitzer des Restaurants",
+      "hints": [
+        "des Restaurants (genitive)",
+        "Restaurant + -s"
+      ],
+      "keywords": [
+        "des",
+        "Restaurants"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-case-015",
+      "ruleId": "b1-genitive-case",
+      "english": "The wife of the president",
+      "german": "Die Frau des Präsidenten",
+      "hints": [
+        "des Präsidenten (genitive)",
+        "Präsident is n-declension"
+      ],
+      "keywords": [
+        "des",
+        "Präsidenten"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-case-016",
+      "ruleId": "b1-genitive-case",
+      "english": "The result of the test",
+      "german": "Das Ergebnis des Tests",
+      "hints": [
+        "des Tests (genitive)",
+        "Test + -s"
+      ],
+      "keywords": [
+        "des",
+        "Tests"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-case-017",
+      "ruleId": "b1-genitive-case",
+      "english": "The opinion of the people",
+      "german": "Die Meinung der Leute",
+      "hints": [
+        "der Leute (genitive plural)",
+        "Leute = people"
+      ],
+      "keywords": [
+        "der",
+        "Leute"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-case-018",
+      "ruleId": "b1-genitive-case",
+      "english": "The price of the ticket",
+      "german": "Der Preis des Tickets",
+      "hints": [
+        "des Tickets (genitive)",
+        "Ticket + -s"
+      ],
+      "keywords": [
+        "des",
+        "Tickets"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-case-019",
+      "ruleId": "b1-genitive-case",
+      "english": "The center of the city",
+      "german": "Das Zentrum der Stadt",
+      "hints": [
+        "der Stadt (genitive feminine)",
+        "No ending on Stadt"
+      ],
+      "keywords": [
+        "der",
+        "Stadt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-case-020",
+      "ruleId": "b1-genitive-case",
+      "english": "The rights of the workers",
+      "german": "Die Rechte der Arbeiter",
+      "hints": [
+        "der Arbeiter (genitive plural)",
+        "Arbeiter unchanged"
+      ],
+      "keywords": [
+        "der",
+        "Arbeiter"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-passive-voice-001",
+      "ruleId": "b1-passive-voice",
+      "english": "The car is being repaired",
+      "german": "Das Auto wird repariert",
+      "hints": [
+        "werden + past participle",
+        "Present passive"
+      ],
+      "keywords": [
+        "wird",
+        "repariert"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-passive-voice-002",
+      "ruleId": "b1-passive-voice",
+      "english": "The letter was written",
+      "german": "Der Brief wurde geschrieben",
+      "hints": [
+        "wurde = was (passive)",
+        "Past passive"
+      ],
+      "keywords": [
+        "wurde",
+        "geschrieben"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-passive-voice-003",
+      "ruleId": "b1-passive-voice",
+      "english": "The house is being built",
+      "german": "Das Haus wird gebaut",
+      "hints": [
+        "wird gebaut",
+        "Present passive"
+      ],
+      "keywords": [
+        "wird",
+        "gebaut"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-passive-voice-004",
+      "ruleId": "b1-passive-voice",
+      "english": "German is spoken here",
+      "german": "Hier wird Deutsch gesprochen",
+      "hints": [
+        "wird gesprochen",
+        "No agent mentioned"
+      ],
+      "keywords": [
+        "wird",
+        "gesprochen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-passive-voice-005",
+      "ruleId": "b1-passive-voice",
+      "english": "The door was opened",
+      "german": "Die Tür wurde geöffnet",
+      "hints": [
+        "wurde geöffnet",
+        "Past passive"
+      ],
+      "keywords": [
+        "wurde",
+        "geöffnet"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-passive-voice-006",
+      "ruleId": "b1-passive-voice",
+      "english": "The book is read by many people",
+      "german": "Das Buch wird von vielen Leuten gelesen",
+      "hints": [
+        "von + dative for agent",
+        "vielen Leuten"
+      ],
+      "keywords": [
+        "von",
+        "gelesen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-passive-voice-007",
+      "ruleId": "b1-passive-voice",
+      "english": "The windows are cleaned every week",
+      "german": "Die Fenster werden jede Woche geputzt",
+      "hints": [
+        "werden + past participle (plural)",
+        "jede Woche"
+      ],
+      "keywords": [
+        "werden",
+        "geputzt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-passive-voice-008",
+      "ruleId": "b1-passive-voice",
+      "english": "The problem was solved",
+      "german": "Das Problem wurde gelöst",
+      "hints": [
+        "wurde gelöst",
+        "lösen = to solve"
+      ],
+      "keywords": [
+        "wurde",
+        "gelöst"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-passive-voice-009",
+      "ruleId": "b1-passive-voice",
+      "english": "The letter will be sent",
+      "german": "Der Brief wird geschickt werden",
+      "hints": [
+        "Future passive",
+        "wird...werden"
+      ],
+      "keywords": [
+        "wird",
+        "geschickt",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-passive-voice-010",
+      "ruleId": "b1-passive-voice",
+      "english": "The cake was made by my mother",
+      "german": "Der Kuchen wurde von meiner Mutter gemacht",
+      "hints": [
+        "von + dative agent",
+        "meiner Mutter"
+      ],
+      "keywords": [
+        "von",
+        "meiner"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-passive-voice-011",
+      "ruleId": "b1-passive-voice",
+      "english": "The meeting has been cancelled",
+      "german": "Das Treffen ist abgesagt worden",
+      "hints": [
+        "Perfect passive",
+        "ist...worden (not geworden!)"
+      ],
+      "keywords": [
+        "ist",
+        "worden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-passive-voice-012",
+      "ruleId": "b1-passive-voice",
+      "english": "The work must be finished",
+      "german": "Die Arbeit muss beendet werden",
+      "hints": [
+        "Modal + werden + participle",
+        "muss...werden"
+      ],
+      "keywords": [
+        "muss",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-passive-voice-013",
+      "ruleId": "b1-passive-voice",
+      "english": "The building was destroyed by fire",
+      "german": "Das Gebäude wurde durch Feuer zerstört",
+      "hints": [
+        "durch for means/cause",
+        "Feuer"
+      ],
+      "keywords": [
+        "durch",
+        "zerstört"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-passive-voice-014",
+      "ruleId": "b1-passive-voice",
+      "english": "Many books are sold every year",
+      "german": "Viele Bücher werden jedes Jahr verkauft",
+      "hints": [
+        "werden verkauft (plural)",
+        "jedes Jahr"
+      ],
+      "keywords": [
+        "werden",
+        "verkauft"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-passive-voice-015",
+      "ruleId": "b1-passive-voice",
+      "english": "The new law was introduced",
+      "german": "Das neue Gesetz wurde eingeführt",
+      "hints": [
+        "wurde eingeführt",
+        "Separable verb in passive"
+      ],
+      "keywords": [
+        "wurde",
+        "eingeführt"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-passive-voice-016",
+      "ruleId": "b1-passive-voice",
+      "english": "The students are being tested",
+      "german": "Die Studenten werden geprüft",
+      "hints": [
+        "werden geprüft",
+        "Testing in progress"
+      ],
+      "keywords": [
+        "werden",
+        "geprüft"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-passive-voice-017",
+      "ruleId": "b1-passive-voice",
+      "english": "The report had been written",
+      "german": "Der Bericht war geschrieben worden",
+      "hints": [
+        "Past perfect passive",
+        "war...worden"
+      ],
+      "keywords": [
+        "war",
+        "worden"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-passive-voice-018",
+      "ruleId": "b1-passive-voice",
+      "english": "The room can be rented",
+      "german": "Das Zimmer kann gemietet werden",
+      "hints": [
+        "Modal + passive infinitive",
+        "kann...werden"
+      ],
+      "keywords": [
+        "kann",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-passive-voice-019",
+      "ruleId": "b1-passive-voice",
+      "english": "The decision is made by the manager",
+      "german": "Die Entscheidung wird vom Manager getroffen",
+      "hints": [
+        "vom = von dem",
+        "getroffen"
+      ],
+      "keywords": [
+        "vom",
+        "getroffen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-passive-voice-020",
+      "ruleId": "b1-passive-voice",
+      "english": "The bridge is being repaired",
+      "german": "Die Brücke wird gerade repariert",
+      "hints": [
+        "gerade = right now",
+        "Present progressive passive"
+      ],
+      "keywords": [
+        "gerade",
+        "repariert"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-001",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "I would like to come",
+      "german": "Ich würde gerne kommen",
+      "hints": [
+        "würde + gerne + infinitive",
+        "Polite wish"
+      ],
+      "keywords": [
+        "würde",
+        "gerne"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-002",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "Could you help me",
+      "german": "Könntest du mir helfen",
+      "hints": [
+        "können → könntest",
+        "Polite request"
+      ],
+      "keywords": [
+        "könntest",
+        "helfen"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-003",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "If I had time, I would help",
+      "german": "Wenn ich Zeit hätte, würde ich helfen",
+      "hints": [
+        "hätte = would have",
+        "Conditional sentence"
+      ],
+      "keywords": [
+        "hätte",
+        "würde"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-004",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "He would come if he could",
+      "german": "Er würde kommen, wenn er könnte",
+      "hints": [
+        "könnte = could",
+        "Conditional"
+      ],
+      "keywords": [
+        "würde",
+        "könnte"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-005",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "I wish I were rich",
+      "german": "Ich wünschte, ich wäre reich",
+      "hints": [
+        "wäre = would be",
+        "Wish/unreal situation"
+      ],
+      "keywords": [
+        "wünschte",
+        "wäre"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-006",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "Would you like coffee",
+      "german": "Möchtest du Kaffee",
+      "hints": [
+        "mögen → möchtest",
+        "Polite offer"
+      ],
+      "keywords": [
+        "möchtest"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-007",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "I should learn more",
+      "german": "Ich sollte mehr lernen",
+      "hints": [
+        "sollen → sollte",
+        "Recommendation"
+      ],
+      "keywords": [
+        "sollte",
+        "lernen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-008",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "We could go to the cinema",
+      "german": "Wir könnten ins Kino gehen",
+      "hints": [
+        "können → könnten",
+        "Suggestion"
+      ],
+      "keywords": [
+        "könnten",
+        "gehen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-009",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "If I were you, I would wait",
+      "german": "Wenn ich du wäre, würde ich warten",
+      "hints": [
+        "Wenn ich du wäre",
+        "Advice structure"
+      ],
+      "keywords": [
+        "wäre",
+        "würde"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-010",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "It would be nice if you came",
+      "german": "Es wäre schön, wenn du kämest",
+      "hints": [
+        "kämest = would come",
+        "Formal subjunctive"
+      ],
+      "keywords": [
+        "wäre",
+        "kämest"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-011",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "I would have time",
+      "german": "Ich hätte Zeit",
+      "hints": [
+        "haben → hätte",
+        "Simple subjunctive"
+      ],
+      "keywords": [
+        "hätte"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-012",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "That wouldn't be good",
+      "german": "Das wäre nicht gut",
+      "hints": [
+        "sein → wäre",
+        "Negation"
+      ],
+      "keywords": [
+        "wäre",
+        "nicht"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-013",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "He would rather stay home",
+      "german": "Er würde lieber zu Hause bleiben",
+      "hints": [
+        "lieber = rather",
+        "Preference"
+      ],
+      "keywords": [
+        "würde",
+        "lieber"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-014",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "Could you please close the door",
+      "german": "Könnten Sie bitte die Tür schließen",
+      "hints": [
+        "Formal polite request",
+        "Könnten Sie"
+      ],
+      "keywords": [
+        "könnten",
+        "bitte"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-015",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "If only I had known",
+      "german": "Wenn ich das nur gewusst hätte",
+      "hints": [
+        "Past subjunctive",
+        "hätte + participle"
+      ],
+      "keywords": [
+        "gewusst",
+        "hätte"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-016",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "I would like to order",
+      "german": "Ich hätte gern bestellt",
+      "hints": [
+        "hätte gern",
+        "Restaurant context"
+      ],
+      "keywords": [
+        "hätte",
+        "gern"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-017",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "You should have called",
+      "german": "Du hättest anrufen sollen",
+      "hints": [
+        "Past subjunctive with modal",
+        "hättest...sollen"
+      ],
+      "keywords": [
+        "hättest",
+        "sollen"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-018",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "It would be possible",
+      "german": "Es wäre möglich",
+      "hints": [
+        "sein → wäre",
+        "Possibility"
+      ],
+      "keywords": [
+        "wäre",
+        "möglich"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-019",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "I wouldn't do that",
+      "german": "Ich würde das nicht machen",
+      "hints": [
+        "würde + nicht",
+        "Negation"
+      ],
+      "keywords": [
+        "würde",
+        "nicht"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-konjunktiv-ii-020",
+      "ruleId": "b1-konjunktiv-ii",
+      "english": "If he had asked, I would have helped",
+      "german": "Wenn er gefragt hätte, hätte ich geholfen",
+      "hints": [
+        "Past conditional",
+        "Both clauses with hätte"
+      ],
+      "keywords": [
+        "gefragt",
+        "hätte"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-relative-clauses-001",
+      "ruleId": "b1-relative-clauses",
+      "english": "The man who is standing there is my teacher",
+      "german": "Der Mann, der dort steht, ist mein Lehrer",
+      "hints": [
+        "der = who (masc. nom.)",
+        "steht at end"
+      ],
+      "keywords": [
+        "der",
+        "steht"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-relative-clauses-002",
+      "ruleId": "b1-relative-clauses",
+      "english": "The book that I am reading is exciting",
+      "german": "Das Buch, das ich lese, ist spannend",
+      "hints": [
+        "das = that (neut. acc.)",
+        "lese at end"
+      ],
+      "keywords": [
+        "das",
+        "lese"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-relative-clauses-003",
+      "ruleId": "b1-relative-clauses",
+      "english": "The woman with whom I am speaking is nice",
+      "german": "Die Frau, mit der ich spreche, ist nett",
+      "hints": [
+        "mit der (dative)",
+        "spreche at end"
+      ],
+      "keywords": [
+        "mit",
+        "der"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-relative-clauses-004",
+      "ruleId": "b1-relative-clauses",
+      "english": "The car that I bought is red",
+      "german": "Das Auto, das ich gekauft habe, ist rot",
+      "hints": [
+        "das (neut. acc.)",
+        "habe at end"
+      ],
+      "keywords": [
+        "das",
+        "gekauft"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-relative-clauses-005",
+      "ruleId": "b1-relative-clauses",
+      "english": "The students who learn German are smart",
+      "german": "Die Studenten, die Deutsch lernen, sind klug",
+      "hints": [
+        "die (plural nom.)",
+        "lernen at end"
+      ],
+      "keywords": [
+        "die",
+        "lernen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-relative-clauses-006",
+      "ruleId": "b1-relative-clauses",
+      "english": "The house that we live in is old",
+      "german": "Das Haus, in dem wir wohnen, ist alt",
+      "hints": [
+        "in dem (dative)",
+        "wohnen at end"
+      ],
+      "keywords": [
+        "in",
+        "dem"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-relative-clauses-007",
+      "ruleId": "b1-relative-clauses",
+      "english": "The teacher whose book I have is strict",
+      "german": "Der Lehrer, dessen Buch ich habe, ist streng",
+      "hints": [
+        "dessen = whose (masc.)",
+        "Genitive relative"
+      ],
+      "keywords": [
+        "dessen",
+        "habe"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-relative-clauses-008",
+      "ruleId": "b1-relative-clauses",
+      "english": "The city that I visited was beautiful",
+      "german": "Die Stadt, die ich besucht habe, war schön",
+      "hints": [
+        "die (fem. acc.)",
+        "habe at end"
+      ],
+      "keywords": [
+        "die",
+        "besucht"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-relative-clauses-009",
+      "ruleId": "b1-relative-clauses",
+      "english": "The friend to whom I wrote lives in Berlin",
+      "german": "Der Freund, dem ich geschrieben habe, wohnt in Berlin",
+      "hints": [
+        "dem (masc. dative)",
+        "habe at end"
+      ],
+      "keywords": [
+        "dem",
+        "geschrieben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-relative-clauses-010",
+      "ruleId": "b1-relative-clauses",
+      "english": "The children whose parents work are at school",
+      "german": "Die Kinder, deren Eltern arbeiten, sind in der Schule",
+      "hints": [
+        "deren = whose (plural)",
+        "arbeiten at end"
+      ],
+      "keywords": [
+        "deren",
+        "arbeiten"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-relative-clauses-011",
+      "ruleId": "b1-relative-clauses",
+      "english": "The movie that we watched was boring",
+      "german": "Der Film, den wir gesehen haben, war langweilig",
+      "hints": [
+        "den (masc. acc.)",
+        "haben at end"
+      ],
+      "keywords": [
+        "den",
+        "gesehen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-relative-clauses-012",
+      "ruleId": "b1-relative-clauses",
+      "english": "The woman whose car was stolen is sad",
+      "german": "Die Frau, deren Auto gestohlen wurde, ist traurig",
+      "hints": [
+        "deren = whose (fem.)",
+        "wurde at end"
+      ],
+      "keywords": [
+        "deren",
+        "wurde"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-relative-clauses-013",
+      "ruleId": "b1-relative-clauses",
+      "english": "The restaurant where we ate was expensive",
+      "german": "Das Restaurant, in dem wir gegessen haben, war teuer",
+      "hints": [
+        "in dem = where",
+        "haben at end"
+      ],
+      "keywords": [
+        "in",
+        "dem"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-relative-clauses-014",
+      "ruleId": "b1-relative-clauses",
+      "english": "The people who I met were friendly",
+      "german": "Die Leute, die ich getroffen habe, waren freundlich",
+      "hints": [
+        "die (plural acc.)",
+        "habe at end"
+      ],
+      "keywords": [
+        "die",
+        "getroffen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-relative-clauses-015",
+      "ruleId": "b1-relative-clauses",
+      "english": "The dog that belongs to my neighbor is loud",
+      "german": "Der Hund, der meinem Nachbarn gehört, ist laut",
+      "hints": [
+        "der (masc. nom.)",
+        "gehört takes dative"
+      ],
+      "keywords": [
+        "der",
+        "gehört"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-relative-clauses-016",
+      "ruleId": "b1-relative-clauses",
+      "english": "The girl whom I helped thanked me",
+      "german": "Das Mädchen, dem ich geholfen habe, dankte mir",
+      "hints": [
+        "dem (neut. dative)",
+        "helfen takes dative"
+      ],
+      "keywords": [
+        "dem",
+        "geholfen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-relative-clauses-017",
+      "ruleId": "b1-relative-clauses",
+      "english": "The place where I was born is small",
+      "german": "Der Ort, wo ich geboren wurde, ist klein",
+      "hints": [
+        "wo = where (alternative)",
+        "wurde at end"
+      ],
+      "keywords": [
+        "wo",
+        "wurde"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-relative-clauses-018",
+      "ruleId": "b1-relative-clauses",
+      "english": "The woman who called me is my boss",
+      "german": "Die Frau, die mich angerufen hat, ist meine Chefin",
+      "hints": [
+        "die (fem. nom.)",
+        "hat at end"
+      ],
+      "keywords": [
+        "die",
+        "angerufen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-relative-clauses-019",
+      "ruleId": "b1-relative-clauses",
+      "english": "The chair on which I sit is uncomfortable",
+      "german": "Der Stuhl, auf dem ich sitze, ist unbequem",
+      "hints": [
+        "auf dem (dative)",
+        "sitze at end"
+      ],
+      "keywords": [
+        "auf",
+        "dem"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-relative-clauses-020",
+      "ruleId": "b1-relative-clauses",
+      "english": "The language that I am learning is difficult",
+      "german": "Die Sprache, die ich lerne, ist schwierig",
+      "hints": [
+        "die (fem. acc.)",
+        "lerne at end"
+      ],
+      "keywords": [
+        "die",
+        "lerne"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-tense-001",
+      "ruleId": "b1-preterite-tense",
+      "english": "I learned German",
+      "german": "Ich lernte Deutsch",
+      "hints": [
+        "lernen → lernte",
+        "Regular preterite"
+      ],
+      "keywords": [
+        "lernte"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-preterite-tense-002",
+      "ruleId": "b1-preterite-tense",
+      "english": "She worked yesterday",
+      "german": "Sie arbeitete gestern",
+      "hints": [
+        "arbeiten → arbeitete",
+        "Add -ete for -ten verbs"
+      ],
+      "keywords": [
+        "arbeitete"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-preterite-tense-003",
+      "ruleId": "b1-preterite-tense",
+      "english": "We played football",
+      "german": "Wir spielten Fußball",
+      "hints": [
+        "spielen → spielten",
+        "Regular -ten ending"
+      ],
+      "keywords": [
+        "spielten"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-preterite-tense-004",
+      "ruleId": "b1-preterite-tense",
+      "english": "He said nothing",
+      "german": "Er sagte nichts",
+      "hints": [
+        "sagen → sagte",
+        "Regular preterite"
+      ],
+      "keywords": [
+        "sagte"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-preterite-tense-005",
+      "ruleId": "b1-preterite-tense",
+      "english": "They lived in Berlin",
+      "german": "Sie wohnten in Berlin",
+      "hints": [
+        "wohnen → wohnten",
+        "Regular plural"
+      ],
+      "keywords": [
+        "wohnten"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-preterite-tense-006",
+      "ruleId": "b1-preterite-tense",
+      "english": "I bought a car",
+      "german": "Ich kaufte ein Auto",
+      "hints": [
+        "kaufen → kaufte",
+        "Regular preterite"
+      ],
+      "keywords": [
+        "kaufte"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-preterite-tense-007",
+      "ruleId": "b1-preterite-tense",
+      "english": "She opened the window",
+      "german": "Sie öffnete das Fenster",
+      "hints": [
+        "öffnen → öffnete",
+        "Add -ete"
+      ],
+      "keywords": [
+        "öffnete"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-preterite-tense-008",
+      "ruleId": "b1-preterite-tense",
+      "english": "We waited for the bus",
+      "german": "Wir warteten auf den Bus",
+      "hints": [
+        "warten → warteten",
+        "Add -ete for -ten verbs"
+      ],
+      "keywords": [
+        "warteten"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-preterite-tense-009",
+      "ruleId": "b1-preterite-tense",
+      "english": "You showed me the way",
+      "german": "Du zeigtest mir den Weg",
+      "hints": [
+        "zeigen → zeigtest",
+        "Regular -test"
+      ],
+      "keywords": [
+        "zeigtest"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-preterite-tense-010",
+      "ruleId": "b1-preterite-tense",
+      "english": "He answered the question",
+      "german": "Er beantwortete die Frage",
+      "hints": [
+        "beantworten → beantwortete",
+        "Long stem + -ete"
+      ],
+      "keywords": [
+        "beantwortete"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-tense-011",
+      "ruleId": "b1-preterite-tense",
+      "english": "They searched for the key",
+      "german": "Sie suchten den Schlüssel",
+      "hints": [
+        "suchen → suchten",
+        "Regular plural"
+      ],
+      "keywords": [
+        "suchten"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-preterite-tense-012",
+      "ruleId": "b1-preterite-tense",
+      "english": "I believed him",
+      "german": "Ich glaubte ihm",
+      "hints": [
+        "glauben → glaubte",
+        "Dative object"
+      ],
+      "keywords": [
+        "glaubte"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-preterite-tense-013",
+      "ruleId": "b1-preterite-tense",
+      "english": "She cooked dinner",
+      "german": "Sie kochte Abendessen",
+      "hints": [
+        "kochen → kochte",
+        "Regular preterite"
+      ],
+      "keywords": [
+        "kochte"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-preterite-tense-014",
+      "ruleId": "b1-preterite-tense",
+      "english": "We listened to music",
+      "german": "Wir hörten Musik",
+      "hints": [
+        "hören → hörten",
+        "Regular plural"
+      ],
+      "keywords": [
+        "hörten"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-preterite-tense-015",
+      "ruleId": "b1-preterite-tense",
+      "english": "He needed help",
+      "german": "Er brauchte Hilfe",
+      "hints": [
+        "brauchen → brauchte",
+        "Regular preterite"
+      ],
+      "keywords": [
+        "brauchte"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-preterite-tense-016",
+      "ruleId": "b1-preterite-tense",
+      "english": "I asked a question",
+      "german": "Ich stellte eine Frage",
+      "hints": [
+        "stellen → stellte",
+        "eine Frage stellen"
+      ],
+      "keywords": [
+        "stellte"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-tense-017",
+      "ruleId": "b1-preterite-tense",
+      "english": "They cleaned the house",
+      "german": "Sie putzten das Haus",
+      "hints": [
+        "putzen → putzten",
+        "Regular plural"
+      ],
+      "keywords": [
+        "putzten"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-tense-018",
+      "ruleId": "b1-preterite-tense",
+      "english": "She smiled at me",
+      "german": "Sie lächelte mich an",
+      "hints": [
+        "anlächeln → lächelte...an",
+        "Separable in preterite"
+      ],
+      "keywords": [
+        "lächelte"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-tense-019",
+      "ruleId": "b1-preterite-tense",
+      "english": "We followed the road",
+      "german": "Wir folgten der Straße",
+      "hints": [
+        "folgen → folgten",
+        "Takes dative"
+      ],
+      "keywords": [
+        "folgten"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-tense-020",
+      "ruleId": "b1-preterite-tense",
+      "english": "He placed the book on the table",
+      "german": "Er legte das Buch auf den Tisch",
+      "hints": [
+        "legen → legte",
+        "Regular but note accusative"
+      ],
+      "keywords": [
+        "legte"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-001",
+      "ruleId": "b1-preterite-irregular",
+      "english": "I went home",
+      "german": "Ich ging nach Hause",
+      "hints": [
+        "gehen → ging",
+        "Vowel change"
+      ],
+      "keywords": [
+        "ging"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-002",
+      "ruleId": "b1-preterite-irregular",
+      "english": "She came yesterday",
+      "german": "Sie kam gestern",
+      "hints": [
+        "kommen → kam",
+        "Vowel change"
+      ],
+      "keywords": [
+        "kam"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-003",
+      "ruleId": "b1-preterite-irregular",
+      "english": "We saw the movie",
+      "german": "Wir sahen den Film",
+      "hints": [
+        "sehen → sahen",
+        "Vowel change"
+      ],
+      "keywords": [
+        "sahen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-004",
+      "ruleId": "b1-preterite-irregular",
+      "english": "He took the bus",
+      "german": "Er nahm den Bus",
+      "hints": [
+        "nehmen → nahm",
+        "Vowel change"
+      ],
+      "keywords": [
+        "nahm"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-005",
+      "ruleId": "b1-preterite-irregular",
+      "english": "They gave me a gift",
+      "german": "Sie gaben mir ein Geschenk",
+      "hints": [
+        "geben → gaben",
+        "Dative object"
+      ],
+      "keywords": [
+        "gaben"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-006",
+      "ruleId": "b1-preterite-irregular",
+      "english": "I found the key",
+      "german": "Ich fand den Schlüssel",
+      "hints": [
+        "finden → fand",
+        "Vowel change"
+      ],
+      "keywords": [
+        "fand"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-007",
+      "ruleId": "b1-preterite-irregular",
+      "english": "She wrote a letter",
+      "german": "Sie schrieb einen Brief",
+      "hints": [
+        "schreiben → schrieb",
+        "Vowel change"
+      ],
+      "keywords": [
+        "schrieb"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-008",
+      "ruleId": "b1-preterite-irregular",
+      "english": "We read the book",
+      "german": "Wir lasen das Buch",
+      "hints": [
+        "lesen → lasen",
+        "Vowel change"
+      ],
+      "keywords": [
+        "lasen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-009",
+      "ruleId": "b1-preterite-irregular",
+      "english": "He drank coffee",
+      "german": "Er trank Kaffee",
+      "hints": [
+        "trinken → trank",
+        "Vowel change"
+      ],
+      "keywords": [
+        "trank"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-010",
+      "ruleId": "b1-preterite-irregular",
+      "english": "I slept well",
+      "german": "Ich schlief gut",
+      "hints": [
+        "schlafen → schlief",
+        "Vowel change"
+      ],
+      "keywords": [
+        "schlief"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-011",
+      "ruleId": "b1-preterite-irregular",
+      "english": "They ran fast",
+      "german": "Sie liefen schnell",
+      "hints": [
+        "laufen → liefen",
+        "Vowel change"
+      ],
+      "keywords": [
+        "liefen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-012",
+      "ruleId": "b1-preterite-irregular",
+      "english": "She helped me",
+      "german": "Sie half mir",
+      "hints": [
+        "helfen → half",
+        "Takes dative"
+      ],
+      "keywords": [
+        "half"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-013",
+      "ruleId": "b1-preterite-irregular",
+      "english": "We drove to Berlin",
+      "german": "Wir fuhren nach Berlin",
+      "hints": [
+        "fahren → fuhren",
+        "Vowel change"
+      ],
+      "keywords": [
+        "fuhren"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-014",
+      "ruleId": "b1-preterite-irregular",
+      "english": "He ate the apple",
+      "german": "Er aß den Apfel",
+      "hints": [
+        "essen → aß",
+        "Vowel change"
+      ],
+      "keywords": [
+        "aß"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-015",
+      "ruleId": "b1-preterite-irregular",
+      "english": "I knew the answer",
+      "german": "Ich wusste die Antwort",
+      "hints": [
+        "wissen → wusste",
+        "Mixed conjugation"
+      ],
+      "keywords": [
+        "wusste"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-016",
+      "ruleId": "b1-preterite-irregular",
+      "english": "She spoke German",
+      "german": "Sie sprach Deutsch",
+      "hints": [
+        "sprechen → sprach",
+        "Vowel change"
+      ],
+      "keywords": [
+        "sprach"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-017",
+      "ruleId": "b1-preterite-irregular",
+      "english": "We stood there",
+      "german": "Wir standen dort",
+      "hints": [
+        "stehen → standen",
+        "Vowel change"
+      ],
+      "keywords": [
+        "standen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-018",
+      "ruleId": "b1-preterite-irregular",
+      "english": "He thought about it",
+      "german": "Er dachte darüber nach",
+      "hints": [
+        "nachdenken → dachte...nach",
+        "Mixed conjugation"
+      ],
+      "keywords": [
+        "dachte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-019",
+      "ruleId": "b1-preterite-irregular",
+      "english": "They sang a song",
+      "german": "Sie sangen ein Lied",
+      "hints": [
+        "singen → sangen",
+        "Vowel change"
+      ],
+      "keywords": [
+        "sangen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-preterite-irregular-020",
+      "ruleId": "b1-preterite-irregular",
+      "english": "I brought flowers",
+      "german": "Ich brachte Blumen",
+      "hints": [
+        "bringen → brachte",
+        "Mixed conjugation"
+      ],
+      "keywords": [
+        "brachte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-001",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "I hope to see you soon",
+      "german": "Ich hoffe, dich bald zu sehen",
+      "hints": [
+        "hoffen + zu + infinitive",
+        "Comma before zu-clause"
+      ],
+      "keywords": [
+        "hoffe",
+        "zu"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-002",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "It is important to learn German",
+      "german": "Es ist wichtig, Deutsch zu lernen",
+      "hints": [
+        "Es ist + adjective + zu",
+        "Impersonal construction"
+      ],
+      "keywords": [
+        "wichtig",
+        "zu"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-003",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "I have no time to go to the cinema",
+      "german": "Ich habe keine Zeit, ins Kino zu gehen",
+      "hints": [
+        "Zeit haben + zu",
+        "Separable verb with zu"
+      ],
+      "keywords": [
+        "Zeit",
+        "zu"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-004",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "She tries to be punctual",
+      "german": "Sie versucht, pünktlich zu sein",
+      "hints": [
+        "versuchen + zu",
+        "sein at end"
+      ],
+      "keywords": [
+        "versucht",
+        "zu"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-005",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "I forgot to call him",
+      "german": "Ich vergaß, ihn anzurufen",
+      "hints": [
+        "vergessen + zu",
+        "zu between prefix and verb"
+      ],
+      "keywords": [
+        "vergaß",
+        "anzurufen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-006",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "He decided to stay",
+      "german": "Er entschied sich, zu bleiben",
+      "hints": [
+        "sich entscheiden + zu",
+        "Reflexive verb"
+      ],
+      "keywords": [
+        "entschied",
+        "zu"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-007",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "We promise to come",
+      "german": "Wir versprechen zu kommen",
+      "hints": [
+        "versprechen + zu",
+        "No comma with short clause"
+      ],
+      "keywords": [
+        "versprechen",
+        "zu"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-008",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "It is difficult to understand",
+      "german": "Es ist schwierig zu verstehen",
+      "hints": [
+        "Es ist + adjective + zu",
+        "No comma needed"
+      ],
+      "keywords": [
+        "schwierig",
+        "zu"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-009",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "I plan to travel to Germany",
+      "german": "Ich plane, nach Deutschland zu reisen",
+      "hints": [
+        "planen + zu",
+        "nach + country"
+      ],
+      "keywords": [
+        "plane",
+        "zu"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-010",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "She began to cry",
+      "german": "Sie begann zu weinen",
+      "hints": [
+        "beginnen + zu",
+        "No comma"
+      ],
+      "keywords": [
+        "begann",
+        "zu"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-011",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "I'm afraid to ask",
+      "german": "Ich habe Angst zu fragen",
+      "hints": [
+        "Angst haben + zu",
+        "No comma"
+      ],
+      "keywords": [
+        "Angst",
+        "zu"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-012",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "He offered to help me",
+      "german": "Er bot an, mir zu helfen",
+      "hints": [
+        "anbieten + zu",
+        "Separable verb anbieten"
+      ],
+      "keywords": [
+        "bot",
+        "zu"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-013",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "We refuse to pay",
+      "german": "Wir weigern uns zu zahlen",
+      "hints": [
+        "sich weigern + zu",
+        "Reflexive"
+      ],
+      "keywords": [
+        "weigern",
+        "zu"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-014",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "It is easy to learn",
+      "german": "Es ist leicht zu lernen",
+      "hints": [
+        "Es ist + adjective + zu",
+        "leicht = easy"
+      ],
+      "keywords": [
+        "leicht",
+        "zu"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-015",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "I advised him to wait",
+      "german": "Ich riet ihm zu warten",
+      "hints": [
+        "raten + zu",
+        "Dative object"
+      ],
+      "keywords": [
+        "riet",
+        "zu"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-016",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "She stopped smoking",
+      "german": "Sie hörte auf zu rauchen",
+      "hints": [
+        "aufhören + zu",
+        "Separable verb"
+      ],
+      "keywords": [
+        "aufhören",
+        "zu"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-017",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "I have the opportunity to work abroad",
+      "german": "Ich habe die Möglichkeit, im Ausland zu arbeiten",
+      "hints": [
+        "Möglichkeit haben + zu",
+        "Long zu-clause"
+      ],
+      "keywords": [
+        "Möglichkeit",
+        "zu"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-018",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "He seems to be tired",
+      "german": "Er scheint müde zu sein",
+      "hints": [
+        "scheinen + zu",
+        "No comma"
+      ],
+      "keywords": [
+        "scheint",
+        "zu"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-019",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "We managed to find it",
+      "german": "Es gelang uns, es zu finden",
+      "hints": [
+        "gelingen + zu",
+        "es gelang uns"
+      ],
+      "keywords": [
+        "gelang",
+        "zu"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-infinitive-with-zu-020",
+      "ruleId": "b1-infinitive-with-zu",
+      "english": "I'm looking forward to seeing you",
+      "german": "Ich freue mich darauf, dich zu sehen",
+      "hints": [
+        "sich freuen darauf + zu",
+        "Prepositional object"
+      ],
+      "keywords": [
+        "darauf",
+        "zu"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-001",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "During the day",
+      "german": "Während des Tages",
+      "hints": [
+        "während + genitive",
+        "des Tages"
+      ],
+      "keywords": [
+        "während",
+        "des"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-002",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "Because of the weather",
+      "german": "Wegen des Wetters",
+      "hints": [
+        "wegen + genitive",
+        "des Wetters"
+      ],
+      "keywords": [
+        "wegen",
+        "des"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-003",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "Despite the cold",
+      "german": "Trotz der Kälte",
+      "hints": [
+        "trotz + genitive",
+        "der Kälte"
+      ],
+      "keywords": [
+        "trotz",
+        "der"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-004",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "Outside the city",
+      "german": "Außerhalb der Stadt",
+      "hints": [
+        "außerhalb + genitive",
+        "der Stadt"
+      ],
+      "keywords": [
+        "außerhalb",
+        "der"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-005",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "Within a week",
+      "german": "Innerhalb einer Woche",
+      "hints": [
+        "innerhalb + genitive",
+        "einer Woche"
+      ],
+      "keywords": [
+        "innerhalb",
+        "einer"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-006",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "Instead of money",
+      "german": "Statt des Geldes",
+      "hints": [
+        "statt + genitive",
+        "des Geldes"
+      ],
+      "keywords": [
+        "statt",
+        "des"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-007",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "During the summer",
+      "german": "Während des Sommers",
+      "hints": [
+        "während + genitive",
+        "des Sommers"
+      ],
+      "keywords": [
+        "während",
+        "Sommers"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-008",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "Because of the children",
+      "german": "Wegen der Kinder",
+      "hints": [
+        "wegen + genitive plural",
+        "der Kinder"
+      ],
+      "keywords": [
+        "wegen",
+        "Kinder"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-009",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "Despite the rain",
+      "german": "Trotz des Regens",
+      "hints": [
+        "trotz + genitive",
+        "des Regens"
+      ],
+      "keywords": [
+        "trotz",
+        "Regens"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-010",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "On behalf of my father",
+      "german": "Namens meines Vaters",
+      "hints": [
+        "namens + genitive",
+        "meines Vaters"
+      ],
+      "keywords": [
+        "namens",
+        "meines"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-011",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "Instead of the car",
+      "german": "Anstatt des Autos",
+      "hints": [
+        "anstatt + genitive",
+        "des Autos"
+      ],
+      "keywords": [
+        "anstatt",
+        "Autos"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-012",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "During the meeting",
+      "german": "Während des Treffens",
+      "hints": [
+        "während + genitive",
+        "des Treffens"
+      ],
+      "keywords": [
+        "während",
+        "Treffens"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-013",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "Because of me",
+      "german": "Meinetwegen",
+      "hints": [
+        "wegen + genitive pronoun",
+        "One word!"
+      ],
+      "keywords": [
+        "meinetwegen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-014",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "On the other side of the street",
+      "german": "Jenseits der Straße",
+      "hints": [
+        "jenseits + genitive",
+        "der Straße"
+      ],
+      "keywords": [
+        "jenseits",
+        "Straße"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-015",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "During the winter",
+      "german": "Während des Winters",
+      "hints": [
+        "während + genitive",
+        "des Winters"
+      ],
+      "keywords": [
+        "während",
+        "Winters"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-016",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "Because of you",
+      "german": "Deinetwegen",
+      "hints": [
+        "wegen + genitive pronoun",
+        "One word"
+      ],
+      "keywords": [
+        "deinetwegen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-017",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "Beyond the mountains",
+      "german": "Jenseits der Berge",
+      "hints": [
+        "jenseits + genitive plural",
+        "der Berge"
+      ],
+      "keywords": [
+        "jenseits",
+        "Berge"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-018",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "Instead of wine",
+      "german": "Anstelle des Weins",
+      "hints": [
+        "anstelle + genitive",
+        "des Weins"
+      ],
+      "keywords": [
+        "anstelle",
+        "Weins"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-019",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "During my studies",
+      "german": "Während meines Studiums",
+      "hints": [
+        "während + genitive",
+        "meines Studiums"
+      ],
+      "keywords": [
+        "während",
+        "Studiums"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-genitive-prepositions-020",
+      "ruleId": "b1-genitive-prepositions",
+      "english": "For the sake of peace",
+      "german": "Um des Friedens willen",
+      "hints": [
+        "um...willen + genitive",
+        "Split construction"
+      ],
+      "keywords": [
+        "um",
+        "willen"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-001",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Very good",
+      "german": "Sehr gut",
+      "hints": [
+        "sehr = very",
+        "Before adjective"
+      ],
+      "keywords": [
+        "sehr"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-002",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Quite tired",
+      "german": "Ziemlich müde",
+      "hints": [
+        "ziemlich = quite",
+        "Before adjective"
+      ],
+      "keywords": [
+        "ziemlich"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-003",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Somewhat cold",
+      "german": "Etwas kalt",
+      "hints": [
+        "etwas = somewhat",
+        "Weakens adjective"
+      ],
+      "keywords": [
+        "etwas"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-004",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Especially beautiful",
+      "german": "Besonders schön",
+      "hints": [
+        "besonders = especially",
+        "Emphasizes"
+      ],
+      "keywords": [
+        "besonders"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-005",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Completely crazy",
+      "german": "Völlig verrückt",
+      "hints": [
+        "völlig = completely",
+        "Total degree"
+      ],
+      "keywords": [
+        "völlig"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-006",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Barely visible",
+      "german": "Kaum sichtbar",
+      "hints": [
+        "kaum = barely/hardly",
+        "Minimal degree"
+      ],
+      "keywords": [
+        "kaum"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-007",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Extremely important",
+      "german": "Äußerst wichtig",
+      "hints": [
+        "äußerst = extremely",
+        "Very strong"
+      ],
+      "keywords": [
+        "äußerst"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-008",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Too expensive",
+      "german": "Zu teuer",
+      "hints": [
+        "zu = too (excessive)",
+        "Negative connotation"
+      ],
+      "keywords": [
+        "zu"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-009",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Rather late",
+      "german": "Ziemlich spät",
+      "hints": [
+        "ziemlich = rather/quite",
+        "Moderate degree"
+      ],
+      "keywords": [
+        "ziemlich"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-010",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Totally wrong",
+      "german": "Völlig falsch",
+      "hints": [
+        "völlig = totally",
+        "Complete degree"
+      ],
+      "keywords": [
+        "völlig"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-011",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Pretty expensive",
+      "german": "Recht teuer",
+      "hints": [
+        "recht = pretty/quite",
+        "Informal"
+      ],
+      "keywords": [
+        "recht"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-012",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Absolutely right",
+      "german": "Absolut richtig",
+      "hints": [
+        "absolut = absolutely",
+        "Complete agreement"
+      ],
+      "keywords": [
+        "absolut"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-013",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Incredibly fast",
+      "german": "Unglaublich schnell",
+      "hints": [
+        "unglaublich = incredibly",
+        "Strong emphasis"
+      ],
+      "keywords": [
+        "unglaublich"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-014",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "So beautiful",
+      "german": "So schön",
+      "hints": [
+        "so = so (as degree)",
+        "Exclamatory"
+      ],
+      "keywords": [
+        "so"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-015",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Relatively easy",
+      "german": "Relativ einfach",
+      "hints": [
+        "relativ = relatively",
+        "Moderate assessment"
+      ],
+      "keywords": [
+        "relativ"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-016",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Absolutely necessary",
+      "german": "Unbedingt notwendig",
+      "hints": [
+        "unbedingt = absolutely",
+        "Essential"
+      ],
+      "keywords": [
+        "unbedingt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-017",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Fairly good",
+      "german": "Ziemlich gut",
+      "hints": [
+        "ziemlich = fairly",
+        "Moderate positive"
+      ],
+      "keywords": [
+        "ziemlich"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-018",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Almost finished",
+      "german": "Fast fertig",
+      "hints": [
+        "fast = almost/nearly",
+        "Not quite complete"
+      ],
+      "keywords": [
+        "fast"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-019",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Particularly interesting",
+      "german": "Besonders interessant",
+      "hints": [
+        "besonders = particularly",
+        "Stands out"
+      ],
+      "keywords": [
+        "besonders"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adverbs-of-degree-020",
+      "ruleId": "b1-adverbs-of-degree",
+      "english": "Slightly better",
+      "german": "Etwas besser",
+      "hints": [
+        "etwas = slightly",
+        "Small improvement"
+      ],
+      "keywords": [
+        "etwas"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-compound-nouns-001",
+      "ruleId": "b1-compound-nouns",
+      "english": "Front door",
+      "german": "Die Haustür",
+      "hints": [
+        "Haus + Tür = Haustür",
+        "Gender from last word (die Tür)"
+      ],
+      "keywords": [
+        "Haustür"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-compound-nouns-002",
+      "ruleId": "b1-compound-nouns",
+      "english": "Apple juice",
+      "german": "Der Apfelsaft",
+      "hints": [
+        "Apfel + Saft = Apfelsaft",
+        "Gender from Saft (der)"
+      ],
+      "keywords": [
+        "Apfelsaft"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-compound-nouns-003",
+      "ruleId": "b1-compound-nouns",
+      "english": "Office/study room",
+      "german": "Das Arbeitszimmer",
+      "hints": [
+        "Arbeit + Zimmer = Arbeitszimmer",
+        "Gender from Zimmer (das)"
+      ],
+      "keywords": [
+        "Arbeitszimmer"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-compound-nouns-004",
+      "ruleId": "b1-compound-nouns",
+      "english": "Glove",
+      "german": "Der Handschuh",
+      "hints": [
+        "Hand + Schuh = Handschuh",
+        "Literally 'hand shoe'"
+      ],
+      "keywords": [
+        "Handschuh"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-compound-nouns-005",
+      "ruleId": "b1-compound-nouns",
+      "english": "Birthday",
+      "german": "Der Geburtstag",
+      "hints": [
+        "Geburt + Tag = Geburtstag",
+        "s-connector between words"
+      ],
+      "keywords": [
+        "Geburtstag"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-compound-nouns-006",
+      "ruleId": "b1-compound-nouns",
+      "english": "Train station",
+      "german": "Der Bahnhof",
+      "hints": [
+        "Bahn + Hof = Bahnhof",
+        "Gender from Hof"
+      ],
+      "keywords": [
+        "Bahnhof"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-compound-nouns-007",
+      "ruleId": "b1-compound-nouns",
+      "english": "Refrigerator",
+      "german": "Der Kühlschrank",
+      "hints": [
+        "Kühl + Schrank = Kühlschrank",
+        "Literally 'cool cupboard'"
+      ],
+      "keywords": [
+        "Kühlschrank"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-compound-nouns-008",
+      "ruleId": "b1-compound-nouns",
+      "english": "Driving license",
+      "german": "Der Führerschein",
+      "hints": [
+        "Führer + Schein = Führerschein",
+        "er-connector"
+      ],
+      "keywords": [
+        "Führerschein"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-compound-nouns-009",
+      "ruleId": "b1-compound-nouns",
+      "english": "Notebook",
+      "german": "Das Notizbuch",
+      "hints": [
+        "Notiz + Buch = Notizbuch",
+        "Gender from Buch"
+      ],
+      "keywords": [
+        "Notizbuch"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-compound-nouns-010",
+      "ruleId": "b1-compound-nouns",
+      "english": "Washing machine",
+      "german": "Die Waschmaschine",
+      "hints": [
+        "Wasch + Maschine = Waschmaschine",
+        "Gender from Maschine"
+      ],
+      "keywords": [
+        "Waschmaschine"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-compound-nouns-011",
+      "ruleId": "b1-compound-nouns",
+      "english": "Weekend",
+      "german": "Das Wochenende",
+      "hints": [
+        "Woche + Ende = Wochenende",
+        "n-connector"
+      ],
+      "keywords": [
+        "Wochenende"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-compound-nouns-012",
+      "ruleId": "b1-compound-nouns",
+      "english": "Airport",
+      "german": "Der Flughafen",
+      "hints": [
+        "Flug + Hafen = Flughafen",
+        "Literally 'flight harbor'"
+      ],
+      "keywords": [
+        "Flughafen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-compound-nouns-013",
+      "ruleId": "b1-compound-nouns",
+      "english": "Textbook",
+      "german": "Das Lehrbuch",
+      "hints": [
+        "Lehr + Buch = Lehrbuch",
+        "From lehren (to teach)"
+      ],
+      "keywords": [
+        "Lehrbuch"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-compound-nouns-014",
+      "ruleId": "b1-compound-nouns",
+      "english": "Vacation home",
+      "german": "Das Ferienhaus",
+      "hints": [
+        "Ferien + Haus = Ferienhaus",
+        "n-connector"
+      ],
+      "keywords": [
+        "Ferienhaus"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-compound-nouns-015",
+      "ruleId": "b1-compound-nouns",
+      "english": "Hospital",
+      "german": "Das Krankenhaus",
+      "hints": [
+        "Kranken + Haus = Krankenhaus",
+        "n-connector"
+      ],
+      "keywords": [
+        "Krankenhaus"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-compound-nouns-016",
+      "ruleId": "b1-compound-nouns",
+      "english": "Sunglasses",
+      "german": "Die Sonnenbrille",
+      "hints": [
+        "Sonnen + Brille = Sonnenbrille",
+        "n-connector"
+      ],
+      "keywords": [
+        "Sonnenbrille"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-compound-nouns-017",
+      "ruleId": "b1-compound-nouns",
+      "english": "Vocabulary",
+      "german": "Der Wortschatz",
+      "hints": [
+        "Wort + Schatz = Wortschatz",
+        "Literally 'word treasure'"
+      ],
+      "keywords": [
+        "Wortschatz"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-compound-nouns-018",
+      "ruleId": "b1-compound-nouns",
+      "english": "Credit card",
+      "german": "Die Kreditkarte",
+      "hints": [
+        "Kredit + Karte = Kreditkarte",
+        "Modern compound"
+      ],
+      "keywords": [
+        "Kreditkarte"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-compound-nouns-019",
+      "ruleId": "b1-compound-nouns",
+      "english": "Pedestrian zone",
+      "german": "Die Fußgängerzone",
+      "hints": [
+        "Fußgänger + Zone = Fußgängerzone",
+        "Long compound"
+      ],
+      "keywords": [
+        "Fußgängerzone"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-compound-nouns-020",
+      "ruleId": "b1-compound-nouns",
+      "english": "Fireplace",
+      "german": "Der Kamin",
+      "hints": [
+        "Not a compound! Single word",
+        "Common mistake"
+      ],
+      "keywords": [
+        "Kamin"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-001",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "The German (man)",
+      "german": "Der Deutsche",
+      "hints": [
+        "Adjective as noun",
+        "Masculine nominative"
+      ],
+      "keywords": [
+        "Deutsche"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-002",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "A German man",
+      "german": "Ein Deutscher",
+      "hints": [
+        "After ein",
+        "Strong ending -er"
+      ],
+      "keywords": [
+        "Deutscher"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-003",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "A German woman",
+      "german": "Eine Deutsche",
+      "hints": [
+        "After eine",
+        "Strong ending -e"
+      ],
+      "keywords": [
+        "Deutsche"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-004",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "Something beautiful",
+      "german": "Etwas Schönes",
+      "hints": [
+        "After etwas",
+        "Capitalized, neuter ending"
+      ],
+      "keywords": [
+        "Schönes"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-005",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "Nothing new",
+      "german": "Nichts Neues",
+      "hints": [
+        "After nichts",
+        "Capitalized, neuter ending"
+      ],
+      "keywords": [
+        "Neues"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-006",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "All the best",
+      "german": "Alles Gute",
+      "hints": [
+        "After alles",
+        "Capitalized, neuter ending"
+      ],
+      "keywords": [
+        "Gute"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-007",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "I met a German",
+      "german": "Ich traf einen Deutschen",
+      "hints": [
+        "Accusative masculine",
+        "Weak ending -en"
+      ],
+      "keywords": [
+        "Deutschen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-008",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "The Germans",
+      "german": "Die Deutschen",
+      "hints": [
+        "Plural nominative",
+        "Takes adjective endings"
+      ],
+      "keywords": [
+        "Deutschen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-009",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "Something interesting",
+      "german": "Etwas Interessantes",
+      "hints": [
+        "After etwas",
+        "Long adjective capitalized"
+      ],
+      "keywords": [
+        "Interessantes"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-010",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "The unemployed person",
+      "german": "Der Arbeitslose",
+      "hints": [
+        "arbeitslos → Arbeitslose",
+        "Masculine nominative"
+      ],
+      "keywords": [
+        "Arbeitslose"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-011",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "Many unemployed people",
+      "german": "Viele Arbeitslose",
+      "hints": [
+        "Plural",
+        "Takes plural adjective ending"
+      ],
+      "keywords": [
+        "Arbeitslose"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-012",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "The sick person",
+      "german": "Der Kranke",
+      "hints": [
+        "krank → Kranke",
+        "Capitalized adjective"
+      ],
+      "keywords": [
+        "Kranke"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-013",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "Nothing special",
+      "german": "Nichts Besonderes",
+      "hints": [
+        "After nichts",
+        "besonders → Besonderes"
+      ],
+      "keywords": [
+        "Besonderes"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-014",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "The old man",
+      "german": "Der Alte",
+      "hints": [
+        "alt → Alte",
+        "Masculine noun"
+      ],
+      "keywords": [
+        "Alte"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-015",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "Everything good",
+      "german": "Alles Gute",
+      "hints": [
+        "After alles",
+        "Common expression"
+      ],
+      "keywords": [
+        "Gute"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-016",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "The rich",
+      "german": "Die Reichen",
+      "hints": [
+        "reich → Reichen",
+        "Plural, the rich people"
+      ],
+      "keywords": [
+        "Reichen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-017",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "Something cold",
+      "german": "Etwas Kaltes",
+      "hints": [
+        "After etwas",
+        "kalt → Kaltes"
+      ],
+      "keywords": [
+        "Kaltes"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-018",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "The dead person",
+      "german": "Der Tote",
+      "hints": [
+        "tot → Tote",
+        "Masculine"
+      ],
+      "keywords": [
+        "Tote"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-019",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "I'll tell you something nice",
+      "german": "Ich erzähle dir etwas Schönes",
+      "hints": [
+        "etwas + adjective noun",
+        "Accusative"
+      ],
+      "keywords": [
+        "Schönes"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-adjectival-nouns-020",
+      "ruleId": "b1-adjectival-nouns",
+      "english": "The unknown",
+      "german": "Das Unbekannte",
+      "hints": [
+        "unbekannt → Unbekannte",
+        "Neuter noun"
+      ],
+      "keywords": [
+        "Unbekannte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-indirect-questions-001",
+      "ruleId": "b1-indirect-questions",
+      "english": "I don't know where he lives",
+      "german": "Ich weiß nicht, wo er wohnt",
+      "hints": [
+        "wo = where",
+        "Verb to end"
+      ],
+      "keywords": [
+        "wo",
+        "wohnt"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-indirect-questions-002",
+      "ruleId": "b1-indirect-questions",
+      "english": "She asks if you are coming",
+      "german": "Sie fragt, ob du kommst",
+      "hints": [
+        "ob = if/whether",
+        "Verb to end"
+      ],
+      "keywords": [
+        "ob",
+        "kommst"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-indirect-questions-003",
+      "ruleId": "b1-indirect-questions",
+      "english": "He wants to know when the train leaves",
+      "german": "Er möchte wissen, wann der Zug fährt",
+      "hints": [
+        "wann = when",
+        "fährt at end"
+      ],
+      "keywords": [
+        "wann",
+        "fährt"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-indirect-questions-004",
+      "ruleId": "b1-indirect-questions",
+      "english": "Can you tell me what time it is",
+      "german": "Kannst du mir sagen, wie spät es ist",
+      "hints": [
+        "wie spät = what time",
+        "ist at end"
+      ],
+      "keywords": [
+        "wie",
+        "ist"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-indirect-questions-005",
+      "ruleId": "b1-indirect-questions",
+      "english": "I wonder how that works",
+      "german": "Ich frage mich, wie das funktioniert",
+      "hints": [
+        "wie = how",
+        "funktioniert at end"
+      ],
+      "keywords": [
+        "wie",
+        "funktioniert"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-indirect-questions-006",
+      "ruleId": "b1-indirect-questions",
+      "english": "Do you know why he didn't come",
+      "german": "Weißt du, warum er nicht gekommen ist",
+      "hints": [
+        "warum = why",
+        "ist at end"
+      ],
+      "keywords": [
+        "warum",
+        "ist"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-indirect-questions-007",
+      "ruleId": "b1-indirect-questions",
+      "english": "She doesn't know who I am",
+      "german": "Sie weiß nicht, wer ich bin",
+      "hints": [
+        "wer = who",
+        "bin at end"
+      ],
+      "keywords": [
+        "wer",
+        "bin"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-indirect-questions-008",
+      "ruleId": "b1-indirect-questions",
+      "english": "I asked where the station is",
+      "german": "Ich fragte, wo der Bahnhof ist",
+      "hints": [
+        "Indirect question in past",
+        "ist at end"
+      ],
+      "keywords": [
+        "wo",
+        "ist"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-indirect-questions-009",
+      "ruleId": "b1-indirect-questions",
+      "english": "Tell me what you want",
+      "german": "Sag mir, was du willst",
+      "hints": [
+        "was = what",
+        "willst at end"
+      ],
+      "keywords": [
+        "was",
+        "willst"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-indirect-questions-010",
+      "ruleId": "b1-indirect-questions",
+      "english": "I don't understand why this is important",
+      "german": "Ich verstehe nicht, warum das wichtig ist",
+      "hints": [
+        "warum = why",
+        "ist at end"
+      ],
+      "keywords": [
+        "warum",
+        "ist"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-indirect-questions-011",
+      "ruleId": "b1-indirect-questions",
+      "english": "Do you know whether he speaks German",
+      "german": "Weißt du, ob er Deutsch spricht",
+      "hints": [
+        "ob = whether",
+        "spricht at end"
+      ],
+      "keywords": [
+        "ob",
+        "spricht"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-indirect-questions-012",
+      "ruleId": "b1-indirect-questions",
+      "english": "Can you explain how this works",
+      "german": "Kannst du erklären, wie das funktioniert",
+      "hints": [
+        "wie = how",
+        "funktioniert at end"
+      ],
+      "keywords": [
+        "wie",
+        "funktioniert"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-indirect-questions-013",
+      "ruleId": "b1-indirect-questions",
+      "english": "I wonder when she will arrive",
+      "german": "Ich frage mich, wann sie ankommen wird",
+      "hints": [
+        "wann + future",
+        "wird at end"
+      ],
+      "keywords": [
+        "wann",
+        "wird"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-indirect-questions-014",
+      "ruleId": "b1-indirect-questions",
+      "english": "She asked who had called",
+      "german": "Sie fragte, wer angerufen hatte",
+      "hints": [
+        "wer = who",
+        "hatte at end"
+      ],
+      "keywords": [
+        "wer",
+        "hatte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-indirect-questions-015",
+      "ruleId": "b1-indirect-questions",
+      "english": "I don't know what I should do",
+      "german": "Ich weiß nicht, was ich machen soll",
+      "hints": [
+        "was + modal",
+        "soll at end"
+      ],
+      "keywords": [
+        "was",
+        "soll"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-indirect-questions-016",
+      "ruleId": "b1-indirect-questions",
+      "english": "He wants to know how much it costs",
+      "german": "Er will wissen, wie viel es kostet",
+      "hints": [
+        "wie viel = how much",
+        "kostet at end"
+      ],
+      "keywords": [
+        "wie",
+        "kostet"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-indirect-questions-017",
+      "ruleId": "b1-indirect-questions",
+      "english": "Can you tell me where I can find it",
+      "german": "Kannst du mir sagen, wo ich es finden kann",
+      "hints": [
+        "wo + modal",
+        "kann at end"
+      ],
+      "keywords": [
+        "wo",
+        "kann"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-indirect-questions-018",
+      "ruleId": "b1-indirect-questions",
+      "english": "I asked why she was sad",
+      "german": "Ich fragte, warum sie traurig war",
+      "hints": [
+        "warum + past",
+        "war at end"
+      ],
+      "keywords": [
+        "warum",
+        "war"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-indirect-questions-019",
+      "ruleId": "b1-indirect-questions",
+      "english": "Do you remember who said that",
+      "german": "Erinnerst du dich, wer das gesagt hat",
+      "hints": [
+        "wer + perfect",
+        "hat at end"
+      ],
+      "keywords": [
+        "wer",
+        "hat"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-indirect-questions-020",
+      "ruleId": "b1-indirect-questions",
+      "english": "I'm not sure if I can come",
+      "german": "Ich bin nicht sicher, ob ich kommen kann",
+      "hints": [
+        "ob + modal",
+        "kann at end"
+      ],
+      "keywords": [
+        "ob",
+        "kann"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-001",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "I'm driving to Berlin tomorrow by car",
+      "german": "Ich fahre morgen mit dem Auto nach Berlin",
+      "hints": [
+        "Time (morgen) - Manner (mit dem Auto) - Place (nach Berlin)",
+        "TeKaMoLo order"
+      ],
+      "keywords": [
+        "morgen",
+        "mit",
+        "nach"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-002",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "She goes home quickly today because of work",
+      "german": "Sie geht heute wegen der Arbeit schnell nach Hause",
+      "hints": [
+        "Te-Ka-Mo-Lo",
+        "heute, wegen, schnell, nach Hause"
+      ],
+      "keywords": [
+        "heute",
+        "wegen",
+        "schnell"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-003",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "We're meeting on Monday at the café",
+      "german": "Wir treffen uns am Montag im Café",
+      "hints": [
+        "Time before place",
+        "am Montag, im Café"
+      ],
+      "keywords": [
+        "am",
+        "im"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-004",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "He came yesterday by train",
+      "german": "Er kam gestern mit dem Zug",
+      "hints": [
+        "Time before manner",
+        "gestern, mit dem Zug"
+      ],
+      "keywords": [
+        "gestern",
+        "mit"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-005",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "She goes to school every day on foot",
+      "german": "Sie geht jeden Tag zu Fuß zur Schule",
+      "hints": [
+        "Time - Manner - Place",
+        "jeden Tag, zu Fuß, zur Schule"
+      ],
+      "keywords": [
+        "jeden",
+        "zu",
+        "zur"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-006",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "I work from Monday to Friday in the office",
+      "german": "Ich arbeite von Montag bis Freitag im Büro",
+      "hints": [
+        "Time before place",
+        "Long time expression first"
+      ],
+      "keywords": [
+        "von",
+        "im"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-007",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "We travel next week by plane to Spain",
+      "german": "Wir reisen nächste Woche mit dem Flugzeug nach Spanien",
+      "hints": [
+        "Te-Mo-Lo",
+        "nächste Woche, mit dem Flugzeug, nach Spanien"
+      ],
+      "keywords": [
+        "nächste",
+        "mit",
+        "nach"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-008",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "He stayed at home yesterday because of illness",
+      "german": "Er blieb gestern wegen Krankheit zu Hause",
+      "hints": [
+        "Te-Ka-Lo",
+        "gestern, wegen, zu Hause"
+      ],
+      "keywords": [
+        "gestern",
+        "wegen",
+        "zu"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-009",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "She comes today with her friend",
+      "german": "Sie kommt heute mit ihrer Freundin",
+      "hints": [
+        "Time before manner",
+        "heute, mit ihrer Freundin"
+      ],
+      "keywords": [
+        "heute",
+        "mit"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-010",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "I meet him tomorrow at 3 o'clock at the train station",
+      "german": "Ich treffe ihn morgen um 3 Uhr am Bahnhof",
+      "hints": [
+        "Time before place",
+        "Multiple time expressions together"
+      ],
+      "keywords": [
+        "morgen",
+        "um",
+        "am"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-011",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "We go every weekend to the mountains",
+      "german": "Wir gehen jedes Wochenende in die Berge",
+      "hints": [
+        "Time before place",
+        "jedes Wochenende, in die Berge"
+      ],
+      "keywords": [
+        "jedes",
+        "in"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-012",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "He walks slowly through the park in the morning",
+      "german": "Er geht morgens langsam durch den Park",
+      "hints": [
+        "Te-Mo-Lo",
+        "morgens, langsam, durch den Park"
+      ],
+      "keywords": [
+        "morgens",
+        "langsam",
+        "durch"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-013",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "She traveled last year for three months to Asia",
+      "german": "Sie reiste letztes Jahr drei Monate lang nach Asien",
+      "hints": [
+        "Multiple time expressions",
+        "Then place"
+      ],
+      "keywords": [
+        "letztes",
+        "drei",
+        "nach"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-014",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "I go tonight with friends to the cinema",
+      "german": "Ich gehe heute Abend mit Freunden ins Kino",
+      "hints": [
+        "Te-Mo-Lo",
+        "heute Abend, mit Freunden, ins Kino"
+      ],
+      "keywords": [
+        "heute",
+        "mit",
+        "ins"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-015",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "We drive in summer always to the sea",
+      "german": "Wir fahren im Sommer immer ans Meer",
+      "hints": [
+        "Time before place",
+        "im Sommer, immer, ans Meer"
+      ],
+      "keywords": [
+        "im",
+        "immer",
+        "ans"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-016",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "He ran yesterday very fast home",
+      "german": "Er lief gestern sehr schnell nach Hause",
+      "hints": [
+        "Te-Mo-Lo",
+        "gestern, sehr schnell, nach Hause"
+      ],
+      "keywords": [
+        "gestern",
+        "sehr",
+        "nach"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-017",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "She works during the week gladly in the library",
+      "german": "Sie arbeitet unter der Woche gern in der Bibliothek",
+      "hints": [
+        "Te-Mo-Lo",
+        "unter der Woche, gern, in der Bibliothek"
+      ],
+      "keywords": [
+        "unter",
+        "gern",
+        "in"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-018",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "I traveled last month because of business to Munich",
+      "german": "Ich reiste letzten Monat geschäftlich nach München",
+      "hints": [
+        "Te-Ka-Lo",
+        "letzten Monat, geschäftlich, nach München"
+      ],
+      "keywords": [
+        "letzten",
+        "geschäftlich",
+        "nach"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-019",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "We eat on Sundays together at home",
+      "german": "Wir essen sonntags zusammen zu Hause",
+      "hints": [
+        "Te-Mo-Lo",
+        "sonntags, zusammen, zu Hause"
+      ],
+      "keywords": [
+        "sonntags",
+        "zusammen",
+        "zu"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-word-order-tekamolo-020",
+      "ruleId": "b1-word-order-tekamolo",
+      "english": "He flies tomorrow early in the morning to London",
+      "german": "Er fliegt morgen früh am Morgen nach London",
+      "hints": [
+        "Multiple time expressions",
+        "Then place"
+      ],
+      "keywords": [
+        "morgen",
+        "früh",
+        "nach"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-comparative-structures-001",
+      "ruleId": "b1-comparative-structures",
+      "english": "He is taller than I",
+      "german": "Er ist größer als ich",
+      "hints": [
+        "Comparative + als",
+        "größer als"
+      ],
+      "keywords": [
+        "größer",
+        "als"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-comparative-structures-002",
+      "ruleId": "b1-comparative-structures",
+      "english": "She runs faster than her brother",
+      "german": "Sie läuft schneller als ihr Bruder",
+      "hints": [
+        "Comparative + als",
+        "schneller als"
+      ],
+      "keywords": [
+        "schneller",
+        "als"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-comparative-structures-003",
+      "ruleId": "b1-comparative-structures",
+      "english": "The book is as interesting as the film",
+      "german": "Das Buch ist so interessant wie der Film",
+      "hints": [
+        "so...wie for equality",
+        "Not 'als'"
+      ],
+      "keywords": [
+        "so",
+        "wie"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-comparative-structures-004",
+      "ruleId": "b1-comparative-structures",
+      "english": "I am just as tired as you",
+      "german": "Ich bin genauso müde wie du",
+      "hints": [
+        "genauso...wie = just as...as",
+        "Emphasizes equality"
+      ],
+      "keywords": [
+        "genauso",
+        "wie"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-comparative-structures-005",
+      "ruleId": "b1-comparative-structures",
+      "english": "This car is more expensive than that one",
+      "german": "Dieses Auto ist teurer als das da",
+      "hints": [
+        "Comparative + als",
+        "teurer als"
+      ],
+      "keywords": [
+        "teurer",
+        "als"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-comparative-structures-006",
+      "ruleId": "b1-comparative-structures",
+      "english": "She is as smart as he is",
+      "german": "Sie ist so klug wie er",
+      "hints": [
+        "so...wie",
+        "Equality comparison"
+      ],
+      "keywords": [
+        "so",
+        "wie"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-comparative-structures-007",
+      "ruleId": "b1-comparative-structures",
+      "english": "My brother is younger than me",
+      "german": "Mein Bruder ist jünger als ich",
+      "hints": [
+        "jünger + als",
+        "Umlaut in comparative"
+      ],
+      "keywords": [
+        "jünger",
+        "als"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-comparative-structures-008",
+      "ruleId": "b1-comparative-structures",
+      "english": "This exercise is easier than the last one",
+      "german": "Diese Übung ist leichter als die letzte",
+      "hints": [
+        "leichter + als",
+        "die letzte = the last one"
+      ],
+      "keywords": [
+        "leichter",
+        "als"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-comparative-structures-009",
+      "ruleId": "b1-comparative-structures",
+      "english": "He works as hard as she does",
+      "german": "Er arbeitet so hart wie sie",
+      "hints": [
+        "so...wie",
+        "Equal effort"
+      ],
+      "keywords": [
+        "so",
+        "wie"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-comparative-structures-010",
+      "ruleId": "b1-comparative-structures",
+      "english": "The weather is better than yesterday",
+      "german": "Das Wetter ist besser als gestern",
+      "hints": [
+        "Irregular: gut → besser",
+        "besser als"
+      ],
+      "keywords": [
+        "besser",
+        "als"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-comparative-structures-011",
+      "ruleId": "b1-comparative-structures",
+      "english": "I have more time than you",
+      "german": "Ich habe mehr Zeit als du",
+      "hints": [
+        "Irregular: viel → mehr",
+        "mehr als"
+      ],
+      "keywords": [
+        "mehr",
+        "als"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-comparative-structures-012",
+      "ruleId": "b1-comparative-structures",
+      "english": "She sings as beautifully as a bird",
+      "german": "Sie singt so schön wie ein Vogel",
+      "hints": [
+        "so...wie",
+        "Poetic comparison"
+      ],
+      "keywords": [
+        "so",
+        "wie"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-comparative-structures-013",
+      "ruleId": "b1-comparative-structures",
+      "english": "This house is bigger than ours",
+      "german": "Dieses Haus ist größer als unseres",
+      "hints": [
+        "größer als unseres",
+        "Possessive pronoun"
+      ],
+      "keywords": [
+        "größer",
+        "unseres"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-comparative-structures-014",
+      "ruleId": "b1-comparative-structures",
+      "english": "He speaks German as well as a native",
+      "german": "Er spricht Deutsch so gut wie ein Muttersprachler",
+      "hints": [
+        "so gut wie",
+        "High level comparison"
+      ],
+      "keywords": [
+        "so",
+        "wie"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-comparative-structures-015",
+      "ruleId": "b1-comparative-structures",
+      "english": "The test was harder than I thought",
+      "german": "Der Test war schwerer, als ich dachte",
+      "hints": [
+        "Comma before als-clause",
+        "als ich dachte"
+      ],
+      "keywords": [
+        "schwerer",
+        "als"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-comparative-structures-016",
+      "ruleId": "b1-comparative-structures",
+      "english": "She is not as tall as her sister",
+      "german": "Sie ist nicht so groß wie ihre Schwester",
+      "hints": [
+        "nicht so...wie",
+        "Negative comparison"
+      ],
+      "keywords": [
+        "nicht",
+        "so",
+        "wie"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-comparative-structures-017",
+      "ruleId": "b1-comparative-structures",
+      "english": "This solution is better than that one",
+      "german": "Diese Lösung ist besser als die da",
+      "hints": [
+        "besser als",
+        "die da = that one"
+      ],
+      "keywords": [
+        "besser",
+        "als"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-comparative-structures-018",
+      "ruleId": "b1-comparative-structures",
+      "english": "I can run as fast as you",
+      "german": "Ich kann so schnell laufen wie du",
+      "hints": [
+        "so schnell...wie",
+        "With modal verb"
+      ],
+      "keywords": [
+        "so",
+        "wie"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-comparative-structures-019",
+      "ruleId": "b1-comparative-structures",
+      "english": "The movie was more boring than expected",
+      "german": "Der Film war langweiliger, als erwartet",
+      "hints": [
+        "Comma before als",
+        "als erwartet"
+      ],
+      "keywords": [
+        "langweiliger",
+        "als"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-comparative-structures-020",
+      "ruleId": "b1-comparative-structures",
+      "english": "He is three years older than she is",
+      "german": "Er ist drei Jahre älter als sie",
+      "hints": [
+        "Quantity + comparative",
+        "drei Jahre älter"
+      ],
+      "keywords": [
+        "drei",
+        "älter",
+        "als"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-double-infinitive-001",
+      "ruleId": "b1-double-infinitive",
+      "english": "I wasn't able to come",
+      "german": "Ich habe nicht kommen können",
+      "hints": [
+        "Perfect + modal = double infinitive",
+        "können instead of gekonnt"
+      ],
+      "keywords": [
+        "kommen",
+        "können"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-double-infinitive-002",
+      "ruleId": "b1-double-infinitive",
+      "english": "He had to repair the car",
+      "german": "Er hat das Auto reparieren müssen",
+      "hints": [
+        "Perfect + modal",
+        "müssen instead of gemusst"
+      ],
+      "keywords": [
+        "reparieren",
+        "müssen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-double-infinitive-003",
+      "ruleId": "b1-double-infinitive",
+      "english": "She wanted to learn German",
+      "german": "Sie hat Deutsch lernen wollen",
+      "hints": [
+        "Perfect + modal",
+        "wollen instead of gewollt"
+      ],
+      "keywords": [
+        "lernen",
+        "wollen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-double-infinitive-004",
+      "ruleId": "b1-double-infinitive",
+      "english": "We had to wait a long time",
+      "german": "Wir haben lange warten müssen",
+      "hints": [
+        "Perfect + modal",
+        "Both infinitives at end"
+      ],
+      "keywords": [
+        "warten",
+        "müssen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-double-infinitive-005",
+      "ruleId": "b1-double-infinitive",
+      "english": "I couldn't find it",
+      "german": "Ich habe es nicht finden können",
+      "hints": [
+        "Perfect + modal",
+        "Double infinitive construction"
+      ],
+      "keywords": [
+        "finden",
+        "können"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-double-infinitive-006",
+      "ruleId": "b1-double-infinitive",
+      "english": "She was allowed to go",
+      "german": "Sie hat gehen dürfen",
+      "hints": [
+        "Perfect + modal",
+        "dürfen instead of gedurft"
+      ],
+      "keywords": [
+        "gehen",
+        "dürfen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-double-infinitive-007",
+      "ruleId": "b1-double-infinitive",
+      "english": "We wanted to stay longer",
+      "german": "Wir haben länger bleiben wollen",
+      "hints": [
+        "Perfect + modal",
+        "länger between haben and infinitives"
+      ],
+      "keywords": [
+        "bleiben",
+        "wollen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-double-infinitive-008",
+      "ruleId": "b1-double-infinitive",
+      "english": "He had to work overtime",
+      "german": "Er hat Überstunden machen müssen",
+      "hints": [
+        "Perfect + modal",
+        "Object before infinitives"
+      ],
+      "keywords": [
+        "machen",
+        "müssen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-double-infinitive-009",
+      "ruleId": "b1-double-infinitive",
+      "english": "I should have called",
+      "german": "Ich hätte anrufen sollen",
+      "hints": [
+        "Past subjunctive + modal",
+        "hätte with double infinitive"
+      ],
+      "keywords": [
+        "anrufen",
+        "sollen"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-double-infinitive-010",
+      "ruleId": "b1-double-infinitive",
+      "english": "They were able to help us",
+      "german": "Sie haben uns helfen können",
+      "hints": [
+        "Perfect + modal",
+        "uns before infinitives"
+      ],
+      "keywords": [
+        "helfen",
+        "können"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-double-infinitive-011",
+      "ruleId": "b1-double-infinitive",
+      "english": "She didn't want to eat",
+      "german": "Sie hat nicht essen wollen",
+      "hints": [
+        "Perfect + modal + nicht",
+        "nicht before infinitives"
+      ],
+      "keywords": [
+        "essen",
+        "wollen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-double-infinitive-012",
+      "ruleId": "b1-double-infinitive",
+      "english": "I had to get up early",
+      "german": "Ich habe früh aufstehen müssen",
+      "hints": [
+        "Perfect + modal + separable",
+        "aufstehen together"
+      ],
+      "keywords": [
+        "aufstehen",
+        "müssen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-double-infinitive-013",
+      "ruleId": "b1-double-infinitive",
+      "english": "We couldn't understand him",
+      "german": "Wir haben ihn nicht verstehen können",
+      "hints": [
+        "Perfect + modal",
+        "Object pronoun before infinitives"
+      ],
+      "keywords": [
+        "verstehen",
+        "können"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-double-infinitive-014",
+      "ruleId": "b1-double-infinitive",
+      "english": "He was supposed to come",
+      "german": "Er hat kommen sollen",
+      "hints": [
+        "Perfect + modal",
+        "sollen instead of gesollt"
+      ],
+      "keywords": [
+        "kommen",
+        "sollen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-double-infinitive-015",
+      "ruleId": "b1-double-infinitive",
+      "english": "I would have liked to see it",
+      "german": "Ich hätte es gern sehen mögen",
+      "hints": [
+        "Past subjunctive + mögen",
+        "hätte...mögen"
+      ],
+      "keywords": [
+        "sehen",
+        "mögen"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-double-infinitive-016",
+      "ruleId": "b1-double-infinitive",
+      "english": "She had to leave early",
+      "german": "Sie hat früh gehen müssen",
+      "hints": [
+        "Perfect + modal",
+        "früh before infinitives"
+      ],
+      "keywords": [
+        "gehen",
+        "müssen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-double-infinitive-017",
+      "ruleId": "b1-double-infinitive",
+      "english": "We wanted to buy it",
+      "german": "Wir haben es kaufen wollen",
+      "hints": [
+        "Perfect + modal",
+        "es before infinitives"
+      ],
+      "keywords": [
+        "kaufen",
+        "wollen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-double-infinitive-018",
+      "ruleId": "b1-double-infinitive",
+      "english": "He couldn't sleep",
+      "german": "Er hat nicht schlafen können",
+      "hints": [
+        "Perfect + modal",
+        "nicht before infinitives"
+      ],
+      "keywords": [
+        "schlafen",
+        "können"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-double-infinitive-019",
+      "ruleId": "b1-double-infinitive",
+      "english": "I had to tell him",
+      "german": "Ich habe es ihm sagen müssen",
+      "hints": [
+        "Perfect + modal",
+        "Both objects before infinitives"
+      ],
+      "keywords": [
+        "sagen",
+        "müssen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-double-infinitive-020",
+      "ruleId": "b1-double-infinitive",
+      "english": "They should have known",
+      "german": "Sie hätten es wissen sollen",
+      "hints": [
+        "Past subjunctive + modal",
+        "hätten...sollen"
+      ],
+      "keywords": [
+        "wissen",
+        "sollen"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-n-declension-001",
+      "ruleId": "b1-n-declension",
+      "english": "I know the student",
+      "german": "Ich kenne den Studenten",
+      "hints": [
+        "Accusative: den Studenten",
+        "Add -en"
+      ],
+      "keywords": [
+        "Studenten"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-n-declension-002",
+      "ruleId": "b1-n-declension",
+      "english": "The student's car is new",
+      "german": "Das Auto des Studenten ist neu",
+      "hints": [
+        "Genitive: des Studenten",
+        "Add -en"
+      ],
+      "keywords": [
+        "Studenten"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-n-declension-003",
+      "ruleId": "b1-n-declension",
+      "english": "I give the student a book",
+      "german": "Ich gebe dem Studenten ein Buch",
+      "hints": [
+        "Dative: dem Studenten",
+        "Add -en"
+      ],
+      "keywords": [
+        "Studenten"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-n-declension-004",
+      "ruleId": "b1-n-declension",
+      "english": "The colleague's office",
+      "german": "Das Büro des Kollegen",
+      "hints": [
+        "Genitive: des Kollegen",
+        "Add -n"
+      ],
+      "keywords": [
+        "Kollegen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-n-declension-005",
+      "ruleId": "b1-n-declension",
+      "english": "I help the colleague",
+      "german": "Ich helfe dem Kollegen",
+      "hints": [
+        "Dative: dem Kollegen",
+        "helfen takes dative"
+      ],
+      "keywords": [
+        "Kollegen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-n-declension-006",
+      "ruleId": "b1-n-declension",
+      "english": "The boy is playing",
+      "german": "Der Junge spielt",
+      "hints": [
+        "Nominative: no ending",
+        "Only case without -n"
+      ],
+      "keywords": [
+        "Junge"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-n-declension-007",
+      "ruleId": "b1-n-declension",
+      "english": "I see the boy",
+      "german": "Ich sehe den Jungen",
+      "hints": [
+        "Accusative: den Jungen",
+        "Add -n"
+      ],
+      "keywords": [
+        "Jungen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-n-declension-008",
+      "ruleId": "b1-n-declension",
+      "english": "The man is tall",
+      "german": "Der Herr ist groß",
+      "hints": [
+        "Nominative: no ending change",
+        "Herr unchanged"
+      ],
+      "keywords": [
+        "Herr"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-n-declension-009",
+      "ruleId": "b1-n-declension",
+      "english": "I greet the gentleman",
+      "german": "Ich grüße den Herrn",
+      "hints": [
+        "Accusative: den Herrn",
+        "Add -n"
+      ],
+      "keywords": [
+        "Herrn"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-n-declension-010",
+      "ruleId": "b1-n-declension",
+      "english": "The neighbor is friendly",
+      "german": "Der Nachbar ist freundlich",
+      "hints": [
+        "Nominative unchanged",
+        "Nachbar"
+      ],
+      "keywords": [
+        "Nachbar"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-n-declension-011",
+      "ruleId": "b1-n-declension",
+      "english": "I talk to the neighbor",
+      "german": "Ich spreche mit dem Nachbarn",
+      "hints": [
+        "Dative: dem Nachbarn",
+        "Add -n"
+      ],
+      "keywords": [
+        "Nachbarn"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-n-declension-012",
+      "ruleId": "b1-n-declension",
+      "english": "The customer's order",
+      "german": "Die Bestellung des Kunden",
+      "hints": [
+        "Genitive: des Kunden",
+        "Add -n"
+      ],
+      "keywords": [
+        "Kunden"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-n-declension-013",
+      "ruleId": "b1-n-declension",
+      "english": "I help the customer",
+      "german": "Ich helfe dem Kunden",
+      "hints": [
+        "Dative: dem Kunden",
+        "Add -n"
+      ],
+      "keywords": [
+        "Kunden"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-n-declension-014",
+      "ruleId": "b1-n-declension",
+      "english": "The name of the man",
+      "german": "Der Name des Mannes",
+      "hints": [
+        "Name is n-declension",
+        "des Mannes"
+      ],
+      "keywords": [
+        "Name"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-n-declension-015",
+      "ruleId": "b1-n-declension",
+      "english": "What is your name",
+      "german": "Wie ist dein Name",
+      "hints": [
+        "Nominative: Name unchanged",
+        "No -n"
+      ],
+      "keywords": [
+        "Name"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-n-declension-016",
+      "ruleId": "b1-n-declension",
+      "english": "I forget the name",
+      "german": "Ich vergesse den Namen",
+      "hints": [
+        "Accusative: den Namen",
+        "Add -n"
+      ],
+      "keywords": [
+        "Namen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-n-declension-017",
+      "ruleId": "b1-n-declension",
+      "english": "The human is mortal",
+      "german": "Der Mensch ist sterblich",
+      "hints": [
+        "Nominative unchanged",
+        "Mensch"
+      ],
+      "keywords": [
+        "Mensch"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-n-declension-018",
+      "ruleId": "b1-n-declension",
+      "english": "I see the human",
+      "german": "Ich sehe den Menschen",
+      "hints": [
+        "Accusative: den Menschen",
+        "Add -en"
+      ],
+      "keywords": [
+        "Menschen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-n-declension-019",
+      "ruleId": "b1-n-declension",
+      "english": "The boy's friend",
+      "german": "Der Freund des Jungen",
+      "hints": [
+        "Genitive: des Jungen",
+        "Add -n"
+      ],
+      "keywords": [
+        "Jungen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-n-declension-020",
+      "ruleId": "b1-n-declension",
+      "english": "The heart of the poet",
+      "german": "Das Herz des Dichters",
+      "hints": [
+        "Herz is special n-declension",
+        "Genitive: Herzens"
+      ],
+      "keywords": [
+        "Herz"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-001",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "When I was young, I lived in Berlin",
+      "german": "Als ich jung war, lebte ich in Berlin",
+      "hints": [
+        "als = one-time past event",
+        "Single occurrence"
+      ],
+      "keywords": [
+        "als",
+        "war"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-002",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "When I have time, I like to read",
+      "german": "Wenn ich Zeit habe, lese ich gern",
+      "hints": [
+        "wenn = repeated action",
+        "Habitual"
+      ],
+      "keywords": [
+        "wenn",
+        "habe"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-003",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "When are you coming",
+      "german": "Wann kommst du",
+      "hints": [
+        "wann = in questions",
+        "Question word"
+      ],
+      "keywords": [
+        "wann"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-004",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "When he came home, he was tired",
+      "german": "Als er nach Hause kam, war er müde",
+      "hints": [
+        "als = single past event",
+        "kam = preterite"
+      ],
+      "keywords": [
+        "als",
+        "kam"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-005",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "When it rains, I stay inside",
+      "german": "Wenn es regnet, bleibe ich drinnen",
+      "hints": [
+        "wenn = repeated/conditional",
+        "Habitual action"
+      ],
+      "keywords": [
+        "wenn",
+        "regnet"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-006",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "I don't know when he will arrive",
+      "german": "Ich weiß nicht, wann er ankommt",
+      "hints": [
+        "wann in indirect question",
+        "ankommt at end"
+      ],
+      "keywords": [
+        "wann",
+        "ankommt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-007",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "When I was a child, I played a lot",
+      "german": "Als ich ein Kind war, spielte ich viel",
+      "hints": [
+        "als = one-time period",
+        "Specific past time"
+      ],
+      "keywords": [
+        "als",
+        "war"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-008",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "If you want, you can come",
+      "german": "Wenn du willst, kannst du kommen",
+      "hints": [
+        "wenn = if/conditional",
+        "Future possibility"
+      ],
+      "keywords": [
+        "wenn",
+        "willst"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-009",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "When does the train leave",
+      "german": "Wann fährt der Zug ab",
+      "hints": [
+        "wann = question word",
+        "Direct question"
+      ],
+      "keywords": [
+        "wann"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-010",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "When I saw her, I was happy",
+      "german": "Als ich sie sah, war ich glücklich",
+      "hints": [
+        "als = single past event",
+        "sah = preterite"
+      ],
+      "keywords": [
+        "als",
+        "sah"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-011",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "Whenever I visit him, he cooks",
+      "german": "Wenn ich ihn besuche, kocht er",
+      "hints": [
+        "wenn = whenever",
+        "Repeated action"
+      ],
+      "keywords": [
+        "wenn",
+        "besuche"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-012",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "Can you tell me when it starts",
+      "german": "Kannst du mir sagen, wann es anfängt",
+      "hints": [
+        "wann in indirect question",
+        "anfängt at end"
+      ],
+      "keywords": [
+        "wann",
+        "anfängt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-013",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "When we met, it was raining",
+      "german": "Als wir uns trafen, regnete es",
+      "hints": [
+        "als = single past meeting",
+        "trafen = preterite"
+      ],
+      "keywords": [
+        "als",
+        "trafen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-014",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "When I'm hungry, I eat",
+      "german": "Wenn ich Hunger habe, esse ich",
+      "hints": [
+        "wenn = whenever",
+        "General statement"
+      ],
+      "keywords": [
+        "wenn",
+        "habe"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-015",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "Since when do you live here",
+      "german": "Seit wann wohnst du hier",
+      "hints": [
+        "Seit wann = since when",
+        "Question"
+      ],
+      "keywords": [
+        "wann"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-016",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "When the war ended, people celebrated",
+      "german": "Als der Krieg endete, feierten die Leute",
+      "hints": [
+        "als = specific historical event",
+        "One-time past"
+      ],
+      "keywords": [
+        "als",
+        "endete"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-017",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "If it snows tomorrow, we'll stay home",
+      "german": "Wenn es morgen schneit, bleiben wir zu Hause",
+      "hints": [
+        "wenn = if (future)",
+        "Conditional"
+      ],
+      "keywords": [
+        "wenn",
+        "schneit"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-018",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "I asked when the meeting is",
+      "german": "Ich fragte, wann das Treffen ist",
+      "hints": [
+        "wann in indirect question",
+        "ist at end"
+      ],
+      "keywords": [
+        "wann",
+        "ist"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-019",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "When I turned 18, I got my license",
+      "german": "Als ich 18 wurde, machte ich den Führerschein",
+      "hints": [
+        "als = specific birthday",
+        "One-time event"
+      ],
+      "keywords": [
+        "als",
+        "wurde"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-als-wenn-wann-020",
+      "ruleId": "b1-als-wenn-wann",
+      "english": "When you're ready, call me",
+      "german": "Wenn du fertig bist, ruf mich an",
+      "hints": [
+        "wenn = when (future)",
+        "Future instruction"
+      ],
+      "keywords": [
+        "wenn",
+        "bist"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-lassen-construction-001",
+      "ruleId": "b1-lassen-construction",
+      "english": "I'm having my car repaired",
+      "german": "Ich lasse mein Auto reparieren",
+      "hints": [
+        "lassen + infinitive",
+        "Having something done"
+      ],
+      "keywords": [
+        "lasse",
+        "reparieren"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-lassen-construction-002",
+      "ruleId": "b1-lassen-construction",
+      "english": "She doesn't let me go",
+      "german": "Sie lässt mich nicht gehen",
+      "hints": [
+        "lassen = to let/allow",
+        "nicht before infinitive"
+      ],
+      "keywords": [
+        "lässt",
+        "gehen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-lassen-construction-003",
+      "ruleId": "b1-lassen-construction",
+      "english": "Let's go home",
+      "german": "Lass uns nach Hause gehen",
+      "hints": [
+        "Imperative + lassen",
+        "Let's construction"
+      ],
+      "keywords": [
+        "lass",
+        "gehen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-lassen-construction-004",
+      "ruleId": "b1-lassen-construction",
+      "english": "He had the letter translated",
+      "german": "Er ließ den Brief übersetzen",
+      "hints": [
+        "ließ = preterite of lassen",
+        "Past tense"
+      ],
+      "keywords": [
+        "ließ",
+        "übersetzen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-lassen-construction-005",
+      "ruleId": "b1-lassen-construction",
+      "english": "I'm having my hair cut",
+      "german": "Ich lasse mir die Haare schneiden",
+      "hints": [
+        "Dative reflexive",
+        "mir die Haare"
+      ],
+      "keywords": [
+        "lasse",
+        "schneiden"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-lassen-construction-006",
+      "ruleId": "b1-lassen-construction",
+      "english": "She lets the children play",
+      "german": "Sie lässt die Kinder spielen",
+      "hints": [
+        "lassen = to let",
+        "Allow to do"
+      ],
+      "keywords": [
+        "lässt",
+        "spielen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-lassen-construction-007",
+      "ruleId": "b1-lassen-construction",
+      "english": "Let me think",
+      "german": "Lass mich nachdenken",
+      "hints": [
+        "Imperative",
+        "Let me..."
+      ],
+      "keywords": [
+        "lass",
+        "nachdenken"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-lassen-construction-008",
+      "ruleId": "b1-lassen-construction",
+      "english": "I had it checked",
+      "german": "Ich habe es prüfen lassen",
+      "hints": [
+        "Perfect with lassen",
+        "habe...lassen"
+      ],
+      "keywords": [
+        "prüfen",
+        "lassen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-lassen-construction-009",
+      "ruleId": "b1-lassen-construction",
+      "english": "He's having a house built",
+      "german": "Er lässt ein Haus bauen",
+      "hints": [
+        "lassen + bauen",
+        "Having done"
+      ],
+      "keywords": [
+        "lässt",
+        "bauen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-lassen-construction-010",
+      "ruleId": "b1-lassen-construction",
+      "english": "Leave me alone",
+      "german": "Lass mich in Ruhe",
+      "hints": [
+        "lassen = to leave",
+        "Idiomatic expression"
+      ],
+      "keywords": [
+        "lass",
+        "Ruhe"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-lassen-construction-011",
+      "ruleId": "b1-lassen-construction",
+      "english": "She had her eyes tested",
+      "german": "Sie ließ ihre Augen testen",
+      "hints": [
+        "ließ = preterite",
+        "Past tense"
+      ],
+      "keywords": [
+        "ließ",
+        "testen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-lassen-construction-012",
+      "ruleId": "b1-lassen-construction",
+      "english": "I can't let you do that",
+      "german": "Ich kann dich das nicht machen lassen",
+      "hints": [
+        "Modal + lassen",
+        "kann...lassen"
+      ],
+      "keywords": [
+        "machen",
+        "lassen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-lassen-construction-013",
+      "ruleId": "b1-lassen-construction",
+      "english": "Let's eat",
+      "german": "Lass uns essen",
+      "hints": [
+        "Let's construction",
+        "lass uns"
+      ],
+      "keywords": [
+        "lass",
+        "essen"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-lassen-construction-014",
+      "ruleId": "b1-lassen-construction",
+      "english": "He leaves the window open",
+      "german": "Er lässt das Fenster offen",
+      "hints": [
+        "lassen = to leave in state",
+        "offen = open"
+      ],
+      "keywords": [
+        "lässt",
+        "offen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-lassen-construction-015",
+      "ruleId": "b1-lassen-construction",
+      "english": "I'm having it delivered",
+      "german": "Ich lasse es liefern",
+      "hints": [
+        "lassen + liefern",
+        "Having delivered"
+      ],
+      "keywords": [
+        "lasse",
+        "liefern"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-lassen-construction-016",
+      "ruleId": "b1-lassen-construction",
+      "english": "She lets nothing show",
+      "german": "Sie lässt sich nichts anmerken",
+      "hints": [
+        "Reflexive + lassen",
+        "Idiomatic"
+      ],
+      "keywords": [
+        "lässt",
+        "anmerken"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-lassen-construction-017",
+      "ruleId": "b1-lassen-construction",
+      "english": "Leave the door open",
+      "german": "Lass die Tür offen",
+      "hints": [
+        "Imperative + adjective",
+        "Leave in state"
+      ],
+      "keywords": [
+        "lass",
+        "offen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-lassen-construction-018",
+      "ruleId": "b1-lassen-construction",
+      "english": "I had my luggage brought up",
+      "german": "Ich ließ mein Gepäck hinauftragen",
+      "hints": [
+        "ließ + compound verb",
+        "Past tense"
+      ],
+      "keywords": [
+        "ließ",
+        "hinauftragen"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-lassen-construction-019",
+      "ruleId": "b1-lassen-construction",
+      "english": "That can be done",
+      "german": "Das lässt sich machen",
+      "hints": [
+        "sich lassen = can be",
+        "Passive meaning"
+      ],
+      "keywords": [
+        "lässt",
+        "sich"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-lassen-construction-020",
+      "ruleId": "b1-lassen-construction",
+      "english": "He won't let himself be helped",
+      "german": "Er lässt sich nicht helfen",
+      "hints": [
+        "Reflexive passive",
+        "lässt sich + infinitive"
+      ],
+      "keywords": [
+        "lässt",
+        "sich"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-001",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "Many guests are coming",
+      "german": "Es kommen viele Gäste",
+      "hints": [
+        "es as placeholder",
+        "Subject is viele Gäste"
+      ],
+      "keywords": [
+        "es",
+        "kommen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-002",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "Tomorrow many guests are coming",
+      "german": "Morgen kommen viele Gäste",
+      "hints": [
+        "No es when another element is first",
+        "Morgen takes first position"
+      ],
+      "keywords": [
+        "morgen",
+        "kommen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-003",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "There are many problems",
+      "german": "Es gibt viele Probleme",
+      "hints": [
+        "es gibt = there is/are",
+        "Fixed expression"
+      ],
+      "keywords": [
+        "es",
+        "gibt"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-004",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "It is important to be punctual",
+      "german": "Es ist wichtig, pünktlich zu sein",
+      "hints": [
+        "Impersonal es",
+        "Real subject is zu-clause"
+      ],
+      "keywords": [
+        "es",
+        "wichtig"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-005",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "Someone is knocking",
+      "german": "Es klopft jemand",
+      "hints": [
+        "es as placeholder",
+        "jemand is real subject"
+      ],
+      "keywords": [
+        "es",
+        "klopft"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-006",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "It is raining",
+      "german": "Es regnet",
+      "hints": [
+        "Weather es",
+        "No real subject"
+      ],
+      "keywords": [
+        "es",
+        "regnet"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-007",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "It smells good",
+      "german": "Es riecht gut",
+      "hints": [
+        "Impersonal es",
+        "Sensory verb"
+      ],
+      "keywords": [
+        "es",
+        "riecht"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-008",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "How are you doing",
+      "german": "Wie geht es dir",
+      "hints": [
+        "Idiomatic es",
+        "wie geht es"
+      ],
+      "keywords": [
+        "es",
+        "dir"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-009",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "Yesterday there was a concert",
+      "german": "Gestern gab es ein Konzert",
+      "hints": [
+        "es gibt in past",
+        "gab es"
+      ],
+      "keywords": [
+        "gab",
+        "es"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-010",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "It seems that he is sick",
+      "german": "Es scheint, dass er krank ist",
+      "hints": [
+        "es + scheint",
+        "dass-clause follows"
+      ],
+      "keywords": [
+        "es",
+        "scheint"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-011",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "Three people are standing there",
+      "german": "Es stehen drei Leute dort",
+      "hints": [
+        "es as placeholder",
+        "Plural verb"
+      ],
+      "keywords": [
+        "es",
+        "stehen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-012",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "In summer there are many tourists",
+      "german": "Im Sommer gibt es viele Touristen",
+      "hints": [
+        "es gibt",
+        "No placeholder es (Im Sommer is first)"
+      ],
+      "keywords": [
+        "gibt",
+        "es"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-013",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "It is snowing",
+      "german": "Es schneit",
+      "hints": [
+        "Weather es",
+        "No subject"
+      ],
+      "keywords": [
+        "es",
+        "schneit"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-014",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "There is a problem",
+      "german": "Es gibt ein Problem",
+      "hints": [
+        "es gibt singular",
+        "ein Problem"
+      ],
+      "keywords": [
+        "es",
+        "gibt"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-015",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "It was loud",
+      "german": "Es war laut",
+      "hints": [
+        "Impersonal es",
+        "General statement"
+      ],
+      "keywords": [
+        "es",
+        "war"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-016",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "It is said that...",
+      "german": "Es heißt, dass...",
+      "hints": [
+        "es heißt = it is said",
+        "Impersonal"
+      ],
+      "keywords": [
+        "es",
+        "heißt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-017",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "It's cold to me",
+      "german": "Mir ist kalt",
+      "hints": [
+        "No es when dative is first",
+        "Personal feeling"
+      ],
+      "keywords": [
+        "mir",
+        "kalt"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-018",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "It is getting dark",
+      "german": "Es wird dunkel",
+      "hints": [
+        "Impersonal es + werden",
+        "Weather/time"
+      ],
+      "keywords": [
+        "es",
+        "wird"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-019",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "It tastes good",
+      "german": "Es schmeckt gut",
+      "hints": [
+        "Impersonal es",
+        "Taste"
+      ],
+      "keywords": [
+        "es",
+        "schmeckt"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "b1-es-as-placeholder-020",
+      "ruleId": "b1-es-as-placeholder",
+      "english": "It depends on you",
+      "german": "Es kommt auf dich an",
+      "hints": [
+        "Idiomatic: es kommt an auf",
+        "Depends on"
+      ],
+      "keywords": [
+        "es",
+        "kommt",
+        "an"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-001",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "After I had finished my homework, I went outside to play soccer with my friends in the park",
+      "german": "Nachdem ich meine Hausaufgaben gemacht hatte, ging ich nach draußen, um mit meinen Freunden im Park Fußball zu spielen",
+      "hints": [
+        "nachdem + Plusquamperfekt",
+        "hatte gemacht",
+        "Main clause in simple past"
+      ],
+      "keywords": [
+        "nachdem",
+        "hatte",
+        "gemacht"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-002",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "She had already left for work when I arrived at her apartment to pick her up for the meeting",
+      "german": "Sie war schon zur Arbeit gegangen, als ich zu ihrer Wohnung kam, um sie für die Besprechung abzuholen",
+      "hints": [
+        "war...gegangen",
+        "gehen uses sein",
+        "als + simple past"
+      ],
+      "keywords": [
+        "war",
+        "gegangen",
+        "als"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-003",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "Before the teacher came into the classroom, the students had already opened their books and prepared their notebooks",
+      "german": "Bevor der Lehrer ins Klassenzimmer kam, hatten die Schüler schon ihre Bücher aufgemacht und ihre Hefte vorbereitet",
+      "hints": [
+        "bevor + simple past",
+        "hatten...aufgemacht und vorbereitet",
+        "Two past participles"
+      ],
+      "keywords": [
+        "bevor",
+        "hatten",
+        "aufgemacht",
+        "vorbereitet"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-004",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "We had been living in Munich for five years before we decided to move to Berlin for my new job",
+      "german": "Wir hatten fünf Jahre lang in München gewohnt, bevor wir beschlossen, für meine neue Arbeit nach Berlin zu ziehen",
+      "hints": [
+        "hatten...gewohnt",
+        "fünf Jahre lang",
+        "Time duration before another past action"
+      ],
+      "keywords": [
+        "hatten",
+        "gewohnt",
+        "bevor"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-005",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "Because he had forgotten his wallet at home, he couldn't pay for the expensive dinner at the restaurant",
+      "german": "Weil er sein Portemonnaie zu Hause vergessen hatte, konnte er nicht für das teure Abendessen im Restaurant bezahlen",
+      "hints": [
+        "weil + Plusquamperfekt",
+        "hatte...vergessen",
+        "Result in simple past with modal"
+      ],
+      "keywords": [
+        "weil",
+        "hatte",
+        "vergessen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-006",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "After they had traveled through Europe for three months, they finally returned home completely exhausted but very happy",
+      "german": "Nachdem sie drei Monate lang durch Europa gereist waren, kehrten sie endlich völlig erschöpft, aber sehr glücklich nach Hause zurück",
+      "hints": [
+        "nachdem + Plusquamperfekt",
+        "waren...gereist",
+        "Motion verb uses sein"
+      ],
+      "keywords": [
+        "nachdem",
+        "waren",
+        "gereist"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-007",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "The movie had already started when we arrived at the cinema, so we had to wait for the next showing",
+      "german": "Der Film hatte schon angefangen, als wir im Kino ankamen, also mussten wir auf die nächste Vorstellung warten",
+      "hints": [
+        "hatte...angefangen",
+        "als + simple past",
+        "also = so/therefore"
+      ],
+      "keywords": [
+        "hatte",
+        "angefangen",
+        "als"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-008",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "My grandmother had baked a delicious cake before the guests arrived for her eightieth birthday celebration",
+      "german": "Meine Großmutter hatte einen köstlichen Kuchen gebacken, bevor die Gäste zu ihrer achtzigsten Geburtstagsfeier ankamen",
+      "hints": [
+        "hatte...gebacken",
+        "bevor + simple past",
+        "Strong verb: backen→gebacken"
+      ],
+      "keywords": [
+        "hatte",
+        "gebacken",
+        "bevor"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-009",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "After the storm had destroyed many houses in the village, the residents began rebuilding their homes together",
+      "german": "Nachdem der Sturm viele Häuser im Dorf zerstört hatte, begannen die Bewohner gemeinsam, ihre Häuser wieder aufzubauen",
+      "hints": [
+        "nachdem + Plusquamperfekt",
+        "hatte...zerstört",
+        "begannen + zu + infinitive"
+      ],
+      "keywords": [
+        "nachdem",
+        "hatte",
+        "zerstört"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-010",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "She was very disappointed because she had studied hard for the exam but still didn't pass it",
+      "german": "Sie war sehr enttäuscht, weil sie hart für die Prüfung gelernt hatte, aber trotzdem nicht bestanden hatte",
+      "hints": [
+        "weil + Plusquamperfekt",
+        "hatte gelernt...hatte bestanden",
+        "Two Plusquamperfekt verbs"
+      ],
+      "keywords": [
+        "weil",
+        "hatte",
+        "gelernt",
+        "bestanden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-011",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "When I came home from work, I noticed that someone had broken into my apartment and stolen my laptop",
+      "german": "Als ich von der Arbeit nach Hause kam, bemerkte ich, dass jemand in meine Wohnung eingebrochen war und meinen Laptop gestohlen hatte",
+      "hints": [
+        "als + simple past",
+        "war eingebrochen (sein)",
+        "hatte gestohlen (haben)",
+        "Mixed auxiliaries"
+      ],
+      "keywords": [
+        "als",
+        "war",
+        "eingebrochen",
+        "hatte",
+        "gestohlen"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-012",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "Before I started learning German, I had already learned English and French at school for many years",
+      "german": "Bevor ich anfing, Deutsch zu lernen, hatte ich schon viele Jahre lang Englisch und Französisch in der Schule gelernt",
+      "hints": [
+        "bevor + simple past",
+        "hatte...gelernt",
+        "viele Jahre lang"
+      ],
+      "keywords": [
+        "bevor",
+        "hatte",
+        "gelernt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-013",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "After we had eaten the delicious Italian pasta, we ordered a tiramisu for dessert because we were still hungry",
+      "german": "Nachdem wir die köstliche italienische Pasta gegessen hatten, bestellten wir ein Tiramisu als Nachtisch, weil wir noch Hunger hatten",
+      "hints": [
+        "nachdem + Plusquamperfekt",
+        "hatten...gegessen",
+        "Two simple past clauses follow"
+      ],
+      "keywords": [
+        "nachdem",
+        "hatten",
+        "gegessen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-014",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "He had never been to Germany before, so he was very excited when he finally got the opportunity to visit Berlin",
+      "german": "Er war noch nie in Deutschland gewesen, also war er sehr aufgeregt, als er endlich die Gelegenheit bekam, Berlin zu besuchen",
+      "hints": [
+        "war...gewesen",
+        "sein uses sein",
+        "noch nie = never before"
+      ],
+      "keywords": [
+        "war",
+        "gewesen",
+        "noch",
+        "nie"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-015",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "Because the train had already departed from the platform, we had to wait two hours for the next train to Hamburg",
+      "german": "Weil der Zug schon vom Bahnsteig abgefahren war, mussten wir zwei Stunden auf den nächsten Zug nach Hamburg warten",
+      "hints": [
+        "weil + Plusquamperfekt",
+        "war...abgefahren",
+        "abfahren uses sein"
+      ],
+      "keywords": [
+        "weil",
+        "war",
+        "abgefahren"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-016",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "After my parents had sold their old house in the countryside, they bought a modern apartment in the city center",
+      "german": "Nachdem meine Eltern ihr altes Haus auf dem Land verkauft hatten, kauften sie eine moderne Wohnung im Stadtzentrum",
+      "hints": [
+        "nachdem + Plusquamperfekt",
+        "hatten...verkauft",
+        "kauften = simple past"
+      ],
+      "keywords": [
+        "nachdem",
+        "hatten",
+        "verkauft"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-017",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "The children were very tired because they had played outside in the snow for more than three hours without a break",
+      "german": "Die Kinder waren sehr müde, weil sie mehr als drei Stunden lang ohne Pause draußen im Schnee gespielt hatten",
+      "hints": [
+        "weil + Plusquamperfekt",
+        "hatten...gespielt",
+        "mehr als drei Stunden"
+      ],
+      "keywords": [
+        "weil",
+        "hatten",
+        "gespielt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-018",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "When the doctor finally arrived at the hospital, the patient had already been waiting in the emergency room for over an hour",
+      "german": "Als der Arzt endlich im Krankenhaus ankam, hatte der Patient schon über eine Stunde lang in der Notaufnahme gewartet",
+      "hints": [
+        "als + simple past",
+        "hatte...gewartet",
+        "über eine Stunde lang"
+      ],
+      "keywords": [
+        "als",
+        "hatte",
+        "gewartet"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-019",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "After she had become a successful lawyer, she decided to help poor people who couldn't afford legal representation",
+      "german": "Nachdem sie eine erfolgreiche Anwältin geworden war, beschloss sie, armen Menschen zu helfen, die sich keine Rechtsvertretung leisten konnten",
+      "hints": [
+        "nachdem + Plusquamperfekt",
+        "war...geworden",
+        "werden uses sein",
+        "Complex sentence"
+      ],
+      "keywords": [
+        "nachdem",
+        "war",
+        "geworden"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b1-plusquamperfekt-020",
+      "ruleId": "b1-plusquamperfekt",
+      "english": "Before the Internet existed, people had communicated with each other through letters, telephone calls, and personal visits",
+      "german": "Bevor das Internet existierte, hatten die Menschen durch Briefe, Telefonanrufe und persönliche Besuche miteinander kommuniziert",
+      "hints": [
+        "bevor + simple past",
+        "hatten...kommuniziert",
+        "miteinander = with each other"
+      ],
+      "keywords": [
+        "bevor",
+        "hatten",
+        "kommuniziert"
+      ],
+      "difficulty": 8
+    }
+  ]
+}

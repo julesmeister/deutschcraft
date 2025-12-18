@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { DifficultyButtons } from '@/components/flashcards/DifficultyButtons';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
+import { GermanCharAutocomplete } from '@/components/writing/GermanCharAutocomplete';
 
 interface GrammarSentence {
   sentenceId: string;
@@ -17,7 +18,6 @@ interface GrammarSentence {
 interface GrammarSentencePracticeProps {
   sentences: GrammarSentence[];
   ruleTitle: string;
-  onBack: () => void;
   onComplete: (results: { sentenceId: string; difficulty: string }[]) => void;
 }
 
@@ -26,7 +26,6 @@ type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy' | 'expert';
 export function GrammarSentencePractice({
   sentences,
   ruleTitle,
-  onBack,
   onComplete,
 }: GrammarSentencePracticeProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,8 +48,8 @@ export function GrammarSentencePractice({
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (!isRevealed) {
-        // Space or Enter to reveal answer
-        if (e.key === ' ' || e.key === 'Enter') {
+        // Only Enter to reveal answer (not spacebar)
+        if (e.key === 'Enter') {
           if (userAnswer.trim()) {
             e.preventDefault();
             handleRevealAnswer();
@@ -59,6 +58,7 @@ export function GrammarSentencePractice({
       } else {
         // Number keys for difficulty
         if (e.key >= '1' && e.key <= '5') {
+          e.preventDefault(); // Prevent the number from being typed into the next input
           const difficulties: DifficultyLevel[] = ['again', 'hard', 'good', 'easy', 'expert'];
           handleDifficulty(difficulties[parseInt(e.key) - 1]);
         }
@@ -110,15 +110,9 @@ export function GrammarSentencePractice({
     return (
       <div className="bg-white shadow-sm p-8 text-center">
         <h3 className="text-xl font-bold text-gray-900 mb-4">No sentences available</h3>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600">
           This grammar rule doesn't have practice sentences yet.
         </p>
-        <button
-          onClick={onBack}
-          className="bg-gray-900 hover:bg-gray-800 text-white font-semibold px-6 py-2 transition-colors"
-        >
-          ← Back to Rules
-        </button>
       </div>
     );
   }
@@ -156,12 +150,20 @@ export function GrammarSentencePractice({
 
           {/* Input Field */}
           {!isRevealed && (
-            <div className="mb-6">
+            <div className="mb-6 relative">
               <input
                 ref={inputRef}
                 type="text"
                 value={userAnswer}
-                onChange={(e) => setUserAnswer(e.target.value)}
+                onChange={(e) => {
+                  const newValue = e.target.value;
+                  // Capitalize first letter
+                  if (newValue.length === 1) {
+                    setUserAnswer(newValue.charAt(0).toUpperCase());
+                  } else {
+                    setUserAnswer(newValue);
+                  }
+                }}
                 placeholder="Type your answer in German..."
                 className="w-full px-4 py-3 text-lg border-2 border-gray-300 focus:outline-none focus:border-blue-600 transition-colors"
                 onKeyPress={(e) => {
@@ -169,6 +171,11 @@ export function GrammarSentencePractice({
                     handleRevealAnswer();
                   }
                 }}
+              />
+              <GermanCharAutocomplete
+                textareaRef={inputRef}
+                content={userAnswer}
+                onContentChange={setUserAnswer}
               />
             </div>
           )}
@@ -178,25 +185,27 @@ export function GrammarSentencePractice({
             <div className="mb-6">
               <div className="space-y-4">
                 {/* Your Answer */}
-                <div>
-                  <h5 className="text-sm font-semibold text-gray-500 mb-2">Your Answer</h5>
-                  <div
-                    className={`px-4 py-3 ${
-                      isCorrect()
-                        ? 'bg-green-50 border-2 border-green-300 text-green-900'
-                        : 'bg-red-50 border-2 border-red-300 text-red-900'
-                    }`}
-                  >
-                    <p className="text-lg font-medium">{userAnswer || '(no answer)'}</p>
+                <div
+                  className={`p-4 ${
+                    isCorrect()
+                      ? 'bg-emerald-100'
+                      : 'bg-pink-100'
+                  }`}
+                >
+                  <h5 className="text-sm font-semibold text-gray-700 mb-2 uppercase">Your Answer</h5>
+                  <div className="px-3 py-2 bg-white border border-gray-200">
+                    <p className="text-sm font-medium text-gray-900">
+                      {userAnswer || '(no answer)'}
+                    </p>
                   </div>
                 </div>
 
                 {/* Correct Answer */}
                 {!isCorrect() && (
-                  <div>
-                    <h5 className="text-sm font-semibold text-gray-500 mb-2">Correct Answer</h5>
-                    <div className="px-4 py-3 bg-blue-50 border-2 border-blue-300">
-                      <p className="text-lg font-bold text-blue-900">{currentSentence.german}</p>
+                  <div className="p-4 bg-blue-100">
+                    <h5 className="text-sm font-semibold text-gray-700 mb-2 uppercase">Correct Answer</h5>
+                    <div className="px-3 py-2 bg-white border border-gray-200">
+                      <p className="text-sm font-bold text-gray-900">{currentSentence.german}</p>
                     </div>
                   </div>
                 )}
@@ -215,15 +224,17 @@ export function GrammarSentencePractice({
                       <span className="text-xl font-bold">Correct!</span>
                     </div>
                   ) : (
-                    <div className="inline-flex items-center gap-2 text-red-600">
-                      <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span className="text-xl font-bold">Try Again</span>
+                    <div className="max-w-xs mx-auto">
+                      <ActionButton
+                        onClick={() => {
+                          setIsRevealed(false);
+                          setUserAnswer('');
+                        }}
+                        icon={<ActionButtonIcons.ArrowRight />}
+                        variant="orange"
+                      >
+                        Retry This Sentence
+                      </ActionButton>
                     </div>
                   )}
                 </div>
@@ -231,13 +242,15 @@ export function GrammarSentencePractice({
 
               {/* Hints */}
               {currentSentence.hints && currentSentence.hints.length > 0 && (
-                <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200">
-                  <h5 className="text-sm font-semibold text-yellow-900 mb-2">💡 Hints</h5>
-                  <ul className="text-sm text-yellow-800 space-y-1">
+                <div className="p-4 bg-amber-100">
+                  <h5 className="text-sm font-semibold text-gray-700 mb-2 uppercase">💡 Hints</h5>
+                  <div className="space-y-2">
                     {currentSentence.hints.map((hint, index) => (
-                      <li key={index}>• {hint}</li>
+                      <div key={index} className="px-3 py-2 bg-white border border-gray-200">
+                        <span className="text-sm text-gray-900">{hint}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               )}
             </div>
@@ -252,16 +265,6 @@ export function GrammarSentencePractice({
             onShowAnswer={handleRevealAnswer}
           />
         </div>
-      </div>
-
-      {/* Back Button */}
-      <div className="text-center">
-        <button
-          onClick={onBack}
-          className="text-gray-600 hover:text-gray-900 font-semibold text-sm transition-colors"
-        >
-          ← Back to Rules
-        </button>
       </div>
     </div>
   );

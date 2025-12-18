@@ -260,6 +260,19 @@
         "Es ist wichtig, pünktlich zu sein. (It is important to be punctual.)"
       ],
       "notes": "Not to be confused with 'es' as a pronoun. This 'es' has no meaning and just fills first position."
+    },
+    {
+      "id": "b1-plusquamperfekt",
+      "title": "Plusquamperfekt (Past Perfect)",
+      "category": "Verb Conjugation",
+      "description": "The past perfect tense expresses an action that was completed before another past action. Formed with hatte/war + past participle.",
+      "examples": [
+        "Ich hatte schon gegessen, als er ankam. (I had already eaten when he arrived.)",
+        "Sie war schon nach Hause gegangen, bevor es regnete. (She had already gone home before it rained.)",
+        "Nachdem er das Buch gelesen hatte, gab er es zurück. (After he had read the book, he gave it back.)",
+        "Er hatte die Prüfung bestanden, bevor er die gute Nachricht bekam. (He had passed the exam before he got the good news.)"
+      ],
+      "notes": "Use 'hatte' with most verbs, 'war' with motion/change of state verbs (same as perfect tense). Common with temporal conjunctions: nachdem, bevor, als."
     }
   ]
 }

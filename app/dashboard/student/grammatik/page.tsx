@@ -5,9 +5,12 @@ import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
 import { CEFRLevel } from '@/lib/models/cefr';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { useGrammarReviews } from '@/lib/hooks/useGrammarExercises';
+import { useGrammarReviews, useSaveGrammarReview } from '@/lib/hooks/useGrammarExercises';
 import { usePersistedLevel } from '@/lib/hooks/usePersistedLevel';
+import { useGrammarPracticeSession } from '@/lib/hooks/useGrammarPracticeSession';
 import { GrammarSentencePractice } from '@/components/grammar/GrammarSentencePractice';
+import { GrammarRuleCard } from '@/components/grammar/GrammarRuleCard';
+import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 
 // Import existing grammar data from grammar guide
 import a1Data from '@/lib/data/grammar/levels/a1.json';
@@ -19,6 +22,9 @@ import c2Data from '@/lib/data/grammar/levels/c2.json';
 
 // Import sentence data
 import a1Sentences from '@/lib/data/grammar/sentences/a1.json';
+import a2Sentences from '@/lib/data/grammar/sentences/a2.json';
+import b1Sentences from '@/lib/data/grammar/sentences/b1.json';
+import b2Sentences from '@/lib/data/grammar/sentences/b2.json';
 
 const levelDataMap = {
   [CEFRLevel.A1]: a1Data,
@@ -31,10 +37,12 @@ const levelDataMap = {
 
 const sentenceDataMap: Record<string, any> = {
   [CEFRLevel.A1]: a1Sentences,
+  [CEFRLevel.A2]: a2Sentences,
+  [CEFRLevel.B1]: b1Sentences,
+  [CEFRLevel.B2]: b2Sentences,
   // TODO: Add other levels when sentence files are created
-  // [CEFRLevel.A2]: a2Sentences,
-  // [CEFRLevel.B1]: b1Sentences,
-  // etc...
+  // [CEFRLevel.C1]: c1Sentences,
+  // [CEFRLevel.C2]: c2Sentences,
 };
 
 interface GrammarRule {
@@ -68,7 +76,26 @@ export default function GrammatikPracticePage() {
   }, [selectedLevel]);
 
   // Fetch user's progress
-  const { reviews, isLoading: reviewsLoading } = useGrammarReviews(session?.user?.email);
+  const { reviews, isLoading: reviewsLoading, refetch: refetchReviews } = useGrammarReviews(session?.user?.email);
+  const { saveReview } = useSaveGrammarReview();
+
+  // Practice session hook
+  const {
+    isPracticeMode,
+    practiceSentences,
+    dueSentencesCount,
+    setIsPracticeMode,
+    setPracticeSentences,
+    handlePracticeComplete,
+    handleStartPractice: startPractice,
+  } = useGrammarPracticeSession({
+    selectedLevel,
+    sentenceDataMap,
+    reviews,
+    session,
+    saveReview,
+    refetchReviews,
+  });
 
   // Group rules by category
   const rulesByCategory = useMemo(() => {
@@ -85,23 +112,39 @@ export default function GrammatikPracticePage() {
 
   // Calculate progress for each rule
   const getRuleProgress = (ruleId: string) => {
+    // Get total available sentences for this rule
+    const sentenceData = sentenceDataMap[selectedLevel];
+    const totalSentences = sentenceData?.sentences?.filter(
+      (s: any) => s.ruleId === ruleId && !s.english.includes('[TODO')
+    ).length || 0;
+
+    // Get reviewed sentences
     const ruleReviews = reviews.filter((r) => r.ruleId === ruleId);
-    if (ruleReviews.length === 0) return { completed: 0, total: 0, percentage: 0 };
-
+    const practiced = ruleReviews.length;
     const completed = ruleReviews.filter((r) => r.masteryLevel >= 80).length;
-    const total = ruleReviews.length;
-    const percentage = Math.round((completed / total) * 100);
+    const percentage = totalSentences > 0 ? Math.round((practiced / totalSentences) * 100) : 0;
 
-    return { completed, total, percentage };
+    return {
+      practiced,
+      total: totalSentences,
+      completed,
+      percentage
+    };
   };
 
-  // Get sentences for selected rule
+  // Get sentences for selected rule or practice mode
   const selectedRuleData = useMemo(() => {
     if (!selectedRule) return null;
     return rules.find((r) => r.id === selectedRule);
   }, [selectedRule, rules]);
 
   const selectedRuleSentences = useMemo(() => {
+    // Practice mode: return the practice sentences we set
+    if (isPracticeMode && practiceSentences.length > 0) {
+      return practiceSentences;
+    }
+
+    // Regular mode: filter by selected rule
     if (!selectedRule) return [];
 
     const sentenceData = sentenceDataMap[selectedLevel];
@@ -111,29 +154,45 @@ export default function GrammatikPracticePage() {
     return sentenceData.sentences.filter(
       (s: any) => s.ruleId === selectedRule && !s.english.includes('[TODO]')
     );
-  }, [selectedRule, selectedLevel]);
+  }, [selectedRule, selectedLevel, isPracticeMode, practiceSentences]);
 
-  const handlePracticeComplete = (results: { sentenceId: string; difficulty: string }[]) => {
-    // TODO: Save progress to database
-    console.log('Practice session complete:', results);
+  const handleStartPractice = () => {
+    const ruleId = startPractice();
+    if (ruleId) {
+      setSelectedRule(ruleId);
+    }
+  };
 
-    // Return to rules list
+  const onPracticeComplete = async (results: { sentenceId: string; difficulty: string }[]) => {
+    await handlePracticeComplete(results);
     setSelectedRule(null);
   };
 
-  if (selectedRule && selectedRuleData) {
+  if (selectedRule) {
+    // Determine title based on mode
+    const practiceTitle = isPracticeMode
+      ? 'SRS Practice Session'
+      : selectedRuleData?.title || 'Grammar Practice';
+
     return (
       <div className="min-h-screen bg-gray-50 pb-16">
         <DashboardHeader
           title="Grammar Practice"
-          subtitle={`Practicing: ${selectedRuleData.title}`}
+          subtitle={isPracticeMode ? `Reviewing ${selectedRuleSentences.length} due sentences` : `Practicing: ${practiceTitle}`}
+          backButton={{
+            label: "Back to Rules",
+            onClick: () => {
+              setSelectedRule(null);
+              setIsPracticeMode(false);
+              setPracticeSentences([]);
+            },
+          }}
         />
         <div className="container mx-auto px-6 mt-8">
           <GrammarSentencePractice
             sentences={selectedRuleSentences}
-            ruleTitle={selectedRuleData.title}
-            onBack={() => setSelectedRule(null)}
-            onComplete={handlePracticeComplete}
+            ruleTitle={practiceTitle}
+            onComplete={onPracticeComplete}
           />
         </div>
       </div>
@@ -146,6 +205,17 @@ export default function GrammatikPracticePage() {
       <DashboardHeader
         title="Grammatik Practice"
         subtitle="Practice German grammar with sentence exercises"
+        actions={
+          dueSentencesCount > 0 ? (
+            <ActionButton
+              onClick={handleStartPractice}
+              variant="purple"
+              icon={<ActionButtonIcons.Play />}
+            >
+              Practice ({dueSentencesCount} due)
+            </ActionButton>
+          ) : null
+        }
       />
 
       <div className="container mx-auto px-6 mt-8">
@@ -187,45 +257,13 @@ export default function GrammatikPracticePage() {
                       const colorScheme = CARD_COLOR_SCHEMES[ruleIndex % CARD_COLOR_SCHEMES.length];
 
                       return (
-                        <div
+                        <GrammarRuleCard
                           key={rule.id}
-                          className={`group ${colorScheme.bg} px-6 py-4 transition-all duration-200 cursor-pointer`}
+                          rule={rule}
+                          progress={progress}
+                          colorScheme={colorScheme}
                           onClick={() => setSelectedRule(rule.id)}
-                        >
-                          <div className="flex items-start justify-between gap-4">
-                            <div className="flex-1 min-w-0">
-                              <h3 className={`text-lg font-bold text-gray-900 ${colorScheme.text} transition-colors duration-200 mb-1`}>
-                                {rule.title}
-                              </h3>
-                              <p className="text-sm text-gray-600 mb-3">
-                                {rule.description}
-                              </p>
-
-                              {/* Progress Bar */}
-                              {progress.total > 0 && (
-                                <div className="flex items-center gap-3 text-xs text-gray-600">
-                                  <span className="font-medium">
-                                    {progress.completed}/{progress.total} sentences
-                                  </span>
-                                  <div className="flex-1 max-w-xs bg-gray-200 h-1.5">
-                                    <div
-                                      className="bg-blue-600 h-1.5 transition-all"
-                                      style={{ width: `${progress.percentage}%` }}
-                                    ></div>
-                                  </div>
-                                  <span className="font-medium">{progress.percentage}%</span>
-                                </div>
-                              )}
-                            </div>
-
-                            {/* Action Badge */}
-                            <div className="flex-shrink-0">
-                              <span className={`inline-flex items-center px-3 py-1 text-xs font-bold bg-gray-100 text-gray-600 ${colorScheme.badge} group-hover:text-white transition-all duration-200`}>
-                                {progress.total > 0 ? 'PRACTICE' : 'START'}
-                              </span>
-                            </div>
-                          </div>
-                        </div>
+                        />
                       );
                     })}
                   </div>

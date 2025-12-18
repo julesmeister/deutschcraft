@@ -1,0 +1,6007 @@
+{
+  "level": "B2",
+  "totalRules": 20,
+  "totalSentences": 400,
+  "targetSentences": 400,
+  "completionPercentage": 100,
+  "sentences": [
+    {
+      "sentenceId": "b2-partizip-i-001",
+      "ruleId": "b2-partizip-i",
+      "english": "The playing child",
+      "german": "Das spielende Kind",
+      "hints": [
+        "spielen + d = spielend",
+        "Takes adjective ending"
+      ],
+      "keywords": [
+        "spielende"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-i-002",
+      "ruleId": "b2-partizip-i",
+      "english": "The running woman",
+      "german": "Die laufende Frau",
+      "hints": [
+        "laufen + d = laufend",
+        "Feminine nominative"
+      ],
+      "keywords": [
+        "laufende"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-i-003",
+      "ruleId": "b2-partizip-i",
+      "english": "A growing tree",
+      "german": "Ein wachsender Baum",
+      "hints": [
+        "wachsen + d = wachsend",
+        "Strong masculine ending"
+      ],
+      "keywords": [
+        "wachsender"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-i-004",
+      "ruleId": "b2-partizip-i",
+      "english": "The crying baby",
+      "german": "Das weinende Baby",
+      "hints": [
+        "weinen + d = weinend",
+        "Neuter nominative"
+      ],
+      "keywords": [
+        "weinende"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-i-005",
+      "ruleId": "b2-partizip-i",
+      "english": "A sleeping cat",
+      "german": "Eine schlafende Katze",
+      "hints": [
+        "schlafen + d = schlafend",
+        "Feminine after ein"
+      ],
+      "keywords": [
+        "schlafende"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-i-006",
+      "ruleId": "b2-partizip-i",
+      "english": "The singing birds",
+      "german": "Die singenden Vögel",
+      "hints": [
+        "singen + d = singend",
+        "Plural ending -en"
+      ],
+      "keywords": [
+        "singenden"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-i-007",
+      "ruleId": "b2-partizip-i",
+      "english": "I saw a flying bird",
+      "german": "Ich sah einen fliegenden Vogel",
+      "hints": [
+        "fliegen + d",
+        "Accusative masculine"
+      ],
+      "keywords": [
+        "fliegenden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-partizip-i-008",
+      "ruleId": "b2-partizip-i",
+      "english": "The working people",
+      "german": "Die arbeitenden Menschen",
+      "hints": [
+        "arbeiten + d",
+        "Plural"
+      ],
+      "keywords": [
+        "arbeitenden"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-i-009",
+      "ruleId": "b2-partizip-i",
+      "english": "With a smiling face",
+      "german": "Mit einem lächelnden Gesicht",
+      "hints": [
+        "lächeln + d",
+        "Dative neuter"
+      ],
+      "keywords": [
+        "lächelnden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-partizip-i-010",
+      "ruleId": "b2-partizip-i",
+      "english": "The barking dog",
+      "german": "Der bellende Hund",
+      "hints": [
+        "bellen + d",
+        "Masculine nominative"
+      ],
+      "keywords": [
+        "bellende"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-i-011",
+      "ruleId": "b2-partizip-i",
+      "english": "A burning house",
+      "german": "Ein brennendes Haus",
+      "hints": [
+        "brennen + d",
+        "Neuter after ein"
+      ],
+      "keywords": [
+        "brennendes"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-partizip-i-012",
+      "ruleId": "b2-partizip-i",
+      "english": "The rising sun",
+      "german": "Die aufgehende Sonne",
+      "hints": [
+        "aufgehen + d",
+        "Separable verb + d"
+      ],
+      "keywords": [
+        "aufgehende"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-partizip-i-013",
+      "ruleId": "b2-partizip-i",
+      "english": "The falling leaves",
+      "german": "Die fallenden Blätter",
+      "hints": [
+        "fallen + d",
+        "Plural"
+      ],
+      "keywords": [
+        "fallenden"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-i-014",
+      "ruleId": "b2-partizip-i",
+      "english": "A growing problem",
+      "german": "Ein wachsendes Problem",
+      "hints": [
+        "wachsen + d",
+        "Neuter problem"
+      ],
+      "keywords": [
+        "wachsendes"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-partizip-i-015",
+      "ruleId": "b2-partizip-i",
+      "english": "The passing time",
+      "german": "Die vergehende Zeit",
+      "hints": [
+        "vergehen + d",
+        "Zeit is feminine"
+      ],
+      "keywords": [
+        "vergehende"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-partizip-i-016",
+      "ruleId": "b2-partizip-i",
+      "english": "The increasing number",
+      "german": "Die steigende Zahl",
+      "hints": [
+        "steigen + d",
+        "Zahl is feminine"
+      ],
+      "keywords": [
+        "steigende"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-partizip-i-017",
+      "ruleId": "b2-partizip-i",
+      "english": "A dancing couple",
+      "german": "Ein tanzendes Paar",
+      "hints": [
+        "tanzen + d",
+        "Paar is neuter"
+      ],
+      "keywords": [
+        "tanzendes"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-i-018",
+      "ruleId": "b2-partizip-i",
+      "english": "The waiting guests",
+      "german": "Die wartenden Gäste",
+      "hints": [
+        "warten + d",
+        "Plural"
+      ],
+      "keywords": [
+        "wartenden"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-i-019",
+      "ruleId": "b2-partizip-i",
+      "english": "A developing country",
+      "german": "Ein sich entwickelndes Land",
+      "hints": [
+        "sich entwickeln + d",
+        "Reflexive + d"
+      ],
+      "keywords": [
+        "entwickelndes"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-partizip-i-020",
+      "ruleId": "b2-partizip-i",
+      "english": "The remaining questions",
+      "german": "Die verbleibenden Fragen",
+      "hints": [
+        "verbleiben + d",
+        "Plural feminine"
+      ],
+      "keywords": [
+        "verbleibenden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-001",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The study published last year",
+      "german": "Die im letzten Jahr veröffentlichte Studie",
+      "hints": [
+        "Extended phrase before noun",
+        "veröffentlicht + adjective ending"
+      ],
+      "keywords": [
+        "veröffentlichte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-002",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The report started yesterday",
+      "german": "Der gestern angefangene Bericht",
+      "hints": [
+        "Past participle as adjective",
+        "angefangen + e"
+      ],
+      "keywords": [
+        "angefangene"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-003",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The book recommended by experts",
+      "german": "Das von Experten empfohlene Buch",
+      "hints": [
+        "von + dative in extended phrase",
+        "empfohlen + e"
+      ],
+      "keywords": [
+        "empfohlene"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-004",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The car repaired in the garage",
+      "german": "Das in der Werkstatt reparierte Auto",
+      "hints": [
+        "in der + dative",
+        "repariert + e"
+      ],
+      "keywords": [
+        "reparierte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-005",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The newly built house",
+      "german": "Das neu gebaute Haus",
+      "hints": [
+        "neu + past participle",
+        "gebaut + e"
+      ],
+      "keywords": [
+        "gebaute"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-006",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The highly praised film",
+      "german": "Der viel gelobte Film",
+      "hints": [
+        "viel + gelobt",
+        "Masculine nominative"
+      ],
+      "keywords": [
+        "gelobte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-007",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The often mentioned problem",
+      "german": "Das oft erwähnte Problem",
+      "hints": [
+        "oft + erwähnt",
+        "Neuter"
+      ],
+      "keywords": [
+        "erwähnte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-008",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The recently discovered planet",
+      "german": "Der kürzlich entdeckte Planet",
+      "hints": [
+        "kürzlich + entdeckt",
+        "Masculine"
+      ],
+      "keywords": [
+        "entdeckte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-009",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The widely read newspaper",
+      "german": "Die weit verbreitete Zeitung",
+      "hints": [
+        "weit verbreitet",
+        "Feminine"
+      ],
+      "keywords": [
+        "verbreitete"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-010",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The carefully planned trip",
+      "german": "Die sorgfältig geplante Reise",
+      "hints": [
+        "sorgfältig + geplant",
+        "Feminine"
+      ],
+      "keywords": [
+        "geplante"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-011",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The well-known author",
+      "german": "Der bekannte Autor",
+      "hints": [
+        "bekannt = well-known",
+        "Simple form"
+      ],
+      "keywords": [
+        "bekannte"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-012",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The much discussed topic",
+      "german": "Das viel diskutierte Thema",
+      "hints": [
+        "viel + diskutiert",
+        "Neuter"
+      ],
+      "keywords": [
+        "diskutierte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-013",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The badly damaged building",
+      "german": "Das schwer beschädigte Gebäude",
+      "hints": [
+        "schwer + beschädigt",
+        "Neuter"
+      ],
+      "keywords": [
+        "beschädigte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-014",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The long awaited answer",
+      "german": "Die lang erwartete Antwort",
+      "hints": [
+        "lang + erwartet",
+        "Feminine"
+      ],
+      "keywords": [
+        "erwartete"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-015",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The internationally recognized university",
+      "german": "Die international anerkannte Universität",
+      "hints": [
+        "international + anerkannt",
+        "Feminine"
+      ],
+      "keywords": [
+        "anerkannte"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-016",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The quickly prepared meal",
+      "german": "Das schnell zubereitete Essen",
+      "hints": [
+        "schnell + zubereitet",
+        "Neuter"
+      ],
+      "keywords": [
+        "zubereitete"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-017",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The recently opened restaurant",
+      "german": "Das kürzlich eröffnete Restaurant",
+      "hints": [
+        "kürzlich + eröffnet",
+        "Neuter"
+      ],
+      "keywords": [
+        "eröffnete"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-018",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The strongly recommended course",
+      "german": "Der stark empfohlene Kurs",
+      "hints": [
+        "stark + empfohlen",
+        "Masculine"
+      ],
+      "keywords": [
+        "empfohlene"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-019",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The completely renovated apartment",
+      "german": "Die komplett renovierte Wohnung",
+      "hints": [
+        "komplett + renoviert",
+        "Feminine"
+      ],
+      "keywords": [
+        "renovierte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-extended-adjective-constructions-020",
+      "ruleId": "b2-extended-adjective-constructions",
+      "english": "The incorrectly filled form",
+      "german": "Das falsch ausgefüllte Formular",
+      "hints": [
+        "falsch + ausgefüllt",
+        "Neuter"
+      ],
+      "keywords": [
+        "ausgefüllte"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-nominalization-001",
+      "ruleId": "b2-nominalization",
+      "english": "Running is healthy",
+      "german": "Das Laufen ist gesund",
+      "hints": [
+        "laufen → das Laufen",
+        "Always neuter"
+      ],
+      "keywords": [
+        "Laufen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-nominalization-002",
+      "ruleId": "b2-nominalization",
+      "english": "Beauty is subjective",
+      "german": "Die Schönheit ist subjektiv",
+      "hints": [
+        "schön → die Schönheit",
+        "-heit suffix"
+      ],
+      "keywords": [
+        "Schönheit"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-nominalization-003",
+      "ruleId": "b2-nominalization",
+      "english": "Friendliness is important",
+      "german": "Die Freundlichkeit ist wichtig",
+      "hints": [
+        "freundlich → -keit",
+        "Feminine"
+      ],
+      "keywords": [
+        "Freundlichkeit"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-nominalization-004",
+      "ruleId": "b2-nominalization",
+      "english": "Swimming is fun",
+      "german": "Das Schwimmen macht Spaß",
+      "hints": [
+        "schwimmen → das Schwimmen",
+        "Neuter"
+      ],
+      "keywords": [
+        "Schwimmen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-nominalization-005",
+      "ruleId": "b2-nominalization",
+      "english": "The truth hurts",
+      "german": "Die Wahrheit tut weh",
+      "hints": [
+        "wahr → die Wahrheit",
+        "-heit suffix"
+      ],
+      "keywords": [
+        "Wahrheit"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-nominalization-006",
+      "ruleId": "b2-nominalization",
+      "english": "The possibility exists",
+      "german": "Die Möglichkeit besteht",
+      "hints": [
+        "möglich → -keit",
+        "Feminine"
+      ],
+      "keywords": [
+        "Möglichkeit"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-nominalization-007",
+      "ruleId": "b2-nominalization",
+      "english": "Reading books is relaxing",
+      "german": "Das Lesen von Büchern ist entspannend",
+      "hints": [
+        "lesen → das Lesen",
+        "von + dative"
+      ],
+      "keywords": [
+        "Lesen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-nominalization-008",
+      "ruleId": "b2-nominalization",
+      "english": "The illness was severe",
+      "german": "Die Krankheit war schwer",
+      "hints": [
+        "krank → die Krankheit",
+        "-heit suffix"
+      ],
+      "keywords": [
+        "Krankheit"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-nominalization-009",
+      "ruleId": "b2-nominalization",
+      "english": "The meaning is unclear",
+      "german": "Die Bedeutung ist unklar",
+      "hints": [
+        "bedeuten → die Bedeutung",
+        "-ung suffix"
+      ],
+      "keywords": [
+        "Bedeutung"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-nominalization-010",
+      "ruleId": "b2-nominalization",
+      "english": "Cooking takes time",
+      "german": "Das Kochen braucht Zeit",
+      "hints": [
+        "kochen → das Kochen",
+        "Neuter verb noun"
+      ],
+      "keywords": [
+        "Kochen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-nominalization-011",
+      "ruleId": "b2-nominalization",
+      "english": "Freedom is valuable",
+      "german": "Die Freiheit ist wertvoll",
+      "hints": [
+        "frei → die Freiheit",
+        "-heit suffix"
+      ],
+      "keywords": [
+        "Freiheit"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-nominalization-012",
+      "ruleId": "b2-nominalization",
+      "english": "The housing situation",
+      "german": "Die Wohnung",
+      "hints": [
+        "wohnen → die Wohnung",
+        "-ung = apartment/housing"
+      ],
+      "keywords": [
+        "Wohnung"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-nominalization-013",
+      "ruleId": "b2-nominalization",
+      "english": "Wisdom comes with age",
+      "german": "Die Weisheit kommt mit dem Alter",
+      "hints": [
+        "weise → die Weisheit",
+        "-heit suffix"
+      ],
+      "keywords": [
+        "Weisheit"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-nominalization-014",
+      "ruleId": "b2-nominalization",
+      "english": "The teacher teaches",
+      "german": "Der Lehrer unterrichtet",
+      "hints": [
+        "lehren → der Lehrer",
+        "-er suffix masculine"
+      ],
+      "keywords": [
+        "Lehrer"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-nominalization-015",
+      "ruleId": "b2-nominalization",
+      "english": "Friendship is important",
+      "german": "Die Freundschaft ist wichtig",
+      "hints": [
+        "Freund → -schaft",
+        "Feminine"
+      ],
+      "keywords": [
+        "Freundschaft"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-nominalization-016",
+      "ruleId": "b2-nominalization",
+      "english": "Science progresses",
+      "german": "Die Wissenschaft macht Fortschritte",
+      "hints": [
+        "wissen → die Wissenschaft",
+        "-schaft suffix"
+      ],
+      "keywords": [
+        "Wissenschaft"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-nominalization-017",
+      "ruleId": "b2-nominalization",
+      "english": "The worker works hard",
+      "german": "Der Arbeiter arbeitet hart",
+      "hints": [
+        "arbeiten → der Arbeiter",
+        "-er masculine"
+      ],
+      "keywords": [
+        "Arbeiter"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-nominalization-018",
+      "ruleId": "b2-nominalization",
+      "english": "Loneliness is difficult",
+      "german": "Die Einsamkeit ist schwer",
+      "hints": [
+        "einsam → -keit",
+        "Feminine"
+      ],
+      "keywords": [
+        "Einsamkeit"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-nominalization-019",
+      "ruleId": "b2-nominalization",
+      "english": "The development continues",
+      "german": "Die Entwicklung geht weiter",
+      "hints": [
+        "entwickeln → -ung",
+        "Feminine"
+      ],
+      "keywords": [
+        "Entwicklung"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-nominalization-020",
+      "ruleId": "b2-nominalization",
+      "english": "Dancing brings joy",
+      "german": "Das Tanzen bringt Freude",
+      "hints": [
+        "tanzen → das Tanzen",
+        "Neuter infinitive"
+      ],
+      "keywords": [
+        "Tanzen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-future-perfect-001",
+      "ruleId": "b2-future-perfect",
+      "english": "I will have read the book",
+      "german": "Ich werde das Buch gelesen haben",
+      "hints": [
+        "werden + past participle + haben",
+        "Futur II"
+      ],
+      "keywords": [
+        "werde",
+        "gelesen",
+        "haben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-future-perfect-002",
+      "ruleId": "b2-future-perfect",
+      "english": "She will have arrived",
+      "german": "Sie wird angekommen sein",
+      "hints": [
+        "werden + past participle + sein",
+        "Motion verb"
+      ],
+      "keywords": [
+        "wird",
+        "angekommen",
+        "sein"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-future-perfect-003",
+      "ruleId": "b2-future-perfect",
+      "english": "By tomorrow we will be finished",
+      "german": "Bis morgen werden wir fertig sein",
+      "hints": [
+        "bis + time expression",
+        "werden + fertig + sein"
+      ],
+      "keywords": [
+        "bis",
+        "werden",
+        "sein"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-future-perfect-004",
+      "ruleId": "b2-future-perfect",
+      "english": "He will have left",
+      "german": "Er wird gegangen sein",
+      "hints": [
+        "gehen uses sein",
+        "Future perfect"
+      ],
+      "keywords": [
+        "wird",
+        "gegangen",
+        "sein"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-future-perfect-005",
+      "ruleId": "b2-future-perfect",
+      "english": "They will have eaten",
+      "german": "Sie werden gegessen haben",
+      "hints": [
+        "essen uses haben",
+        "Futur II"
+      ],
+      "keywords": [
+        "werden",
+        "gegessen",
+        "haben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-future-perfect-006",
+      "ruleId": "b2-future-perfect",
+      "english": "By then I will have learned German",
+      "german": "Bis dahin werde ich Deutsch gelernt haben",
+      "hints": [
+        "bis dahin = by then",
+        "Future perfect"
+      ],
+      "keywords": [
+        "bis",
+        "gelernt",
+        "haben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-future-perfect-007",
+      "ruleId": "b2-future-perfect",
+      "english": "You will have forgotten it",
+      "german": "Du wirst es vergessen haben",
+      "hints": [
+        "vergessen + haben",
+        "Second person"
+      ],
+      "keywords": [
+        "wirst",
+        "vergessen",
+        "haben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-future-perfect-008",
+      "ruleId": "b2-future-perfect",
+      "english": "We will have moved",
+      "german": "Wir werden umgezogen sein",
+      "hints": [
+        "umziehen uses sein",
+        "Change of state"
+      ],
+      "keywords": [
+        "werden",
+        "umgezogen",
+        "sein"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-future-perfect-009",
+      "ruleId": "b2-future-perfect",
+      "english": "The train will have departed",
+      "german": "Der Zug wird abgefahren sein",
+      "hints": [
+        "abfahren uses sein",
+        "Motion"
+      ],
+      "keywords": [
+        "wird",
+        "abgefahren",
+        "sein"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-future-perfect-010",
+      "ruleId": "b2-future-perfect",
+      "english": "I will have completed the work",
+      "german": "Ich werde die Arbeit erledigt haben",
+      "hints": [
+        "erledigen + haben",
+        "Completion"
+      ],
+      "keywords": [
+        "werde",
+        "erledigt",
+        "haben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-future-perfect-011",
+      "ruleId": "b2-future-perfect",
+      "english": "They will have returned",
+      "german": "Sie werden zurückgekehrt sein",
+      "hints": [
+        "zurückkehren uses sein",
+        "Motion back"
+      ],
+      "keywords": [
+        "werden",
+        "zurückgekehrt",
+        "sein"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-future-perfect-012",
+      "ruleId": "b2-future-perfect",
+      "english": "By next week he will have decided",
+      "german": "Bis nächste Woche wird er entschieden haben",
+      "hints": [
+        "bis + time",
+        "entscheiden + haben"
+      ],
+      "keywords": [
+        "bis",
+        "entschieden",
+        "haben"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-future-perfect-013",
+      "ruleId": "b2-future-perfect",
+      "english": "You will have understood",
+      "german": "Ihr werdet verstanden haben",
+      "hints": [
+        "verstehen + haben",
+        "Plural you"
+      ],
+      "keywords": [
+        "werdet",
+        "verstanden",
+        "haben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-future-perfect-014",
+      "ruleId": "b2-future-perfect",
+      "english": "She will have grown older",
+      "german": "Sie wird älter geworden sein",
+      "hints": [
+        "werden uses sein",
+        "Comparative + geworden"
+      ],
+      "keywords": [
+        "wird",
+        "geworden",
+        "sein"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-future-perfect-015",
+      "ruleId": "b2-future-perfect",
+      "english": "The problem will have been solved",
+      "german": "Das Problem wird gelöst worden sein",
+      "hints": [
+        "Passive Futur II",
+        "worden for passive"
+      ],
+      "keywords": [
+        "wird",
+        "gelöst",
+        "worden",
+        "sein"
+      ],
+      "difficulty": 10
+    },
+    {
+      "sentenceId": "b2-future-perfect-016",
+      "ruleId": "b2-future-perfect",
+      "english": "I will have written the letter",
+      "german": "Ich werde den Brief geschrieben haben",
+      "hints": [
+        "schreiben + haben",
+        "Accusative"
+      ],
+      "keywords": [
+        "werde",
+        "geschrieben",
+        "haben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-future-perfect-017",
+      "ruleId": "b2-future-perfect",
+      "english": "They will have disappeared",
+      "german": "Sie werden verschwunden sein",
+      "hints": [
+        "verschwinden uses sein",
+        "Disappearance"
+      ],
+      "keywords": [
+        "werden",
+        "verschwunden",
+        "sein"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-future-perfect-018",
+      "ruleId": "b2-future-perfect",
+      "english": "By Sunday you will have recovered",
+      "german": "Bis Sonntag wirst du dich erholt haben",
+      "hints": [
+        "sich erholen + haben",
+        "Reflexive"
+      ],
+      "keywords": [
+        "bis",
+        "erholt",
+        "haben"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-future-perfect-019",
+      "ruleId": "b2-future-perfect",
+      "english": "The flowers will have wilted",
+      "german": "Die Blumen werden verwelkt sein",
+      "hints": [
+        "verwelken uses sein",
+        "Change of state"
+      ],
+      "keywords": [
+        "werden",
+        "verwelkt",
+        "sein"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-future-perfect-020",
+      "ruleId": "b2-future-perfect",
+      "english": "We will have forgotten everything",
+      "german": "Wir werden alles vergessen haben",
+      "hints": [
+        "vergessen + haben",
+        "alles = everything"
+      ],
+      "keywords": [
+        "werden",
+        "vergessen",
+        "haben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-001",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "The boiled egg",
+      "german": "Das gekochte Ei",
+      "hints": [
+        "kochen → gekocht",
+        "Neuter nominative"
+      ],
+      "keywords": [
+        "gekochte"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-002",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "The read books",
+      "german": "Die gelesenen Bücher",
+      "hints": [
+        "lesen → gelesen",
+        "Plural -en ending"
+      ],
+      "keywords": [
+        "gelesenen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-003",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "An opened window",
+      "german": "Ein geöffnetes Fenster",
+      "hints": [
+        "öffnen → geöffnet",
+        "Neuter after ein"
+      ],
+      "keywords": [
+        "geöffnetes"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-004",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "The repaired car",
+      "german": "Der reparierte Wagen",
+      "hints": [
+        "reparieren → repariert",
+        "Masculine nominative"
+      ],
+      "keywords": [
+        "reparierte"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-005",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "A broken glass",
+      "german": "Ein zerbrochenes Glas",
+      "hints": [
+        "zerbrechen → zerbrochen",
+        "Neuter"
+      ],
+      "keywords": [
+        "zerbrochenes"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-006",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "The closed door",
+      "german": "Die geschlossene Tür",
+      "hints": [
+        "schließen → geschlossen",
+        "Feminine"
+      ],
+      "keywords": [
+        "geschlossene"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-007",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "The stolen bike",
+      "german": "Das gestohlene Fahrrad",
+      "hints": [
+        "stehlen → gestohlen",
+        "Neuter"
+      ],
+      "keywords": [
+        "gestohlene"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-008",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "A written letter",
+      "german": "Ein geschriebener Brief",
+      "hints": [
+        "schreiben → geschrieben",
+        "Masculine after ein"
+      ],
+      "keywords": [
+        "geschriebener"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-009",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "The lost key",
+      "german": "Der verlorene Schlüssel",
+      "hints": [
+        "verlieren → verloren",
+        "Masculine"
+      ],
+      "keywords": [
+        "verlorene"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-010",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "The found wallet",
+      "german": "Die gefundene Geldbörse",
+      "hints": [
+        "finden → gefunden",
+        "Feminine"
+      ],
+      "keywords": [
+        "gefundene"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-011",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "A baked cake",
+      "german": "Ein gebackener Kuchen",
+      "hints": [
+        "backen → gebacken",
+        "Masculine"
+      ],
+      "keywords": [
+        "gebackener"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-012",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "The forgotten umbrella",
+      "german": "Der vergessene Regenschirm",
+      "hints": [
+        "vergessen → vergessen",
+        "Masculine"
+      ],
+      "keywords": [
+        "vergessene"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-013",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "The washed clothes",
+      "german": "Die gewaschene Kleidung",
+      "hints": [
+        "waschen → gewaschen",
+        "Feminine"
+      ],
+      "keywords": [
+        "gewaschene"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-014",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "A painted picture",
+      "german": "Ein gemaltes Bild",
+      "hints": [
+        "malen → gemalt",
+        "Neuter"
+      ],
+      "keywords": [
+        "gemaltes"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-015",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "The burnt toast",
+      "german": "Der verbrannte Toast",
+      "hints": [
+        "verbrennen → verbrannt",
+        "Masculine"
+      ],
+      "keywords": [
+        "verbrannte"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-016",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "The built house",
+      "german": "Das gebaute Haus",
+      "hints": [
+        "bauen → gebaut",
+        "Neuter"
+      ],
+      "keywords": [
+        "gebaute"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-017",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "The received message",
+      "german": "Die empfangene Nachricht",
+      "hints": [
+        "empfangen → empfangen",
+        "Feminine"
+      ],
+      "keywords": [
+        "empfangene"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-018",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "A solved problem",
+      "german": "Ein gelöstes Problem",
+      "hints": [
+        "lösen → gelöst",
+        "Neuter"
+      ],
+      "keywords": [
+        "gelöstes"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-019",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "The bought groceries",
+      "german": "Die gekauften Lebensmittel",
+      "hints": [
+        "kaufen → gekauft",
+        "Plural"
+      ],
+      "keywords": [
+        "gekauften"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-partizip-ii-as-adjective-020",
+      "ruleId": "b2-partizip-ii-as-adjective",
+      "english": "The sent package",
+      "german": "Das gesendete Paket",
+      "hints": [
+        "senden → gesendet",
+        "Neuter"
+      ],
+      "keywords": [
+        "gesendete"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-001",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The car must be repaired",
+      "german": "Das Auto muss repariert werden",
+      "hints": [
+        "modal + past participle + werden",
+        "muss = must"
+      ],
+      "keywords": [
+        "muss",
+        "repariert",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-002",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The letter can be sent today",
+      "german": "Der Brief kann heute geschickt werden",
+      "hints": [
+        "kann = can",
+        "geschickt werden"
+      ],
+      "keywords": [
+        "kann",
+        "geschickt",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-003",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The task should be completed by tomorrow",
+      "german": "Die Aufgabe soll bis morgen erledigt werden",
+      "hints": [
+        "soll = should",
+        "bis morgen"
+      ],
+      "keywords": [
+        "soll",
+        "erledigt",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-004",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The problem could be solved",
+      "german": "Das Problem konnte gelöst werden",
+      "hints": [
+        "Past tense: konnte",
+        "gelöst werden"
+      ],
+      "keywords": [
+        "konnte",
+        "gelöst",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-005",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The house must be cleaned",
+      "german": "Das Haus muss geputzt werden",
+      "hints": [
+        "muss + geputzt + werden",
+        "Passive present"
+      ],
+      "keywords": [
+        "muss",
+        "geputzt",
+        "werden"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-006",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The book can be read quickly",
+      "german": "Das Buch kann schnell gelesen werden",
+      "hints": [
+        "kann + gelesen + werden",
+        "schnell = quickly"
+      ],
+      "keywords": [
+        "kann",
+        "gelesen",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-007",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The door should be closed",
+      "german": "Die Tür soll geschlossen werden",
+      "hints": [
+        "soll + geschlossen + werden",
+        "Tür feminine"
+      ],
+      "keywords": [
+        "soll",
+        "geschlossen",
+        "werden"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-008",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The test must be written",
+      "german": "Der Test muss geschrieben werden",
+      "hints": [
+        "muss + geschrieben + werden",
+        "Test masculine"
+      ],
+      "keywords": [
+        "muss",
+        "geschrieben",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-009",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The message can be sent later",
+      "german": "Die Nachricht kann später gesendet werden",
+      "hints": [
+        "kann + später + gesendet",
+        "später = later"
+      ],
+      "keywords": [
+        "kann",
+        "gesendet",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-010",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The window should be opened",
+      "german": "Das Fenster soll geöffnet werden",
+      "hints": [
+        "soll + geöffnet + werden",
+        "Fenster neuter"
+      ],
+      "keywords": [
+        "soll",
+        "geöffnet",
+        "werden"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-011",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The project may be finished",
+      "german": "Das Projekt darf fertiggestellt werden",
+      "hints": [
+        "darf = may/allowed",
+        "fertiggestellt"
+      ],
+      "keywords": [
+        "darf",
+        "fertiggestellt",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-012",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The report must be submitted",
+      "german": "Der Bericht muss abgegeben werden",
+      "hints": [
+        "muss + abgegeben + werden",
+        "Bericht masculine"
+      ],
+      "keywords": [
+        "muss",
+        "abgegeben",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-013",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The plan can be changed",
+      "german": "Der Plan kann geändert werden",
+      "hints": [
+        "kann + geändert + werden",
+        "Plan masculine"
+      ],
+      "keywords": [
+        "kann",
+        "geändert",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-014",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The contract should be signed",
+      "german": "Der Vertrag soll unterschrieben werden",
+      "hints": [
+        "soll + unterschrieben",
+        "Vertrag = contract"
+      ],
+      "keywords": [
+        "soll",
+        "unterschrieben",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-015",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The mistake must be corrected",
+      "german": "Der Fehler muss korrigiert werden",
+      "hints": [
+        "muss + korrigiert + werden",
+        "Fehler masculine"
+      ],
+      "keywords": [
+        "muss",
+        "korrigiert",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-016",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The question can be answered",
+      "german": "Die Frage kann beantwortet werden",
+      "hints": [
+        "kann + beantwortet + werden",
+        "Frage feminine"
+      ],
+      "keywords": [
+        "kann",
+        "beantwortet",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-017",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The room should be reserved",
+      "german": "Das Zimmer soll reserviert werden",
+      "hints": [
+        "soll + reserviert + werden",
+        "Zimmer neuter"
+      ],
+      "keywords": [
+        "soll",
+        "reserviert",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-018",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The food can be ordered",
+      "german": "Das Essen kann bestellt werden",
+      "hints": [
+        "kann + bestellt + werden",
+        "Essen neuter"
+      ],
+      "keywords": [
+        "kann",
+        "bestellt",
+        "werden"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-019",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The decision must be made",
+      "german": "Die Entscheidung muss getroffen werden",
+      "hints": [
+        "muss + getroffen + werden",
+        "Entscheidung treffen"
+      ],
+      "keywords": [
+        "muss",
+        "getroffen",
+        "werden"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-passive-with-modals-020",
+      "ruleId": "b2-passive-with-modals",
+      "english": "The information can be found",
+      "german": "Die Information kann gefunden werden",
+      "hints": [
+        "kann + gefunden + werden",
+        "Information feminine"
+      ],
+      "keywords": [
+        "kann",
+        "gefunden",
+        "werden"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-001",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "If only I were rich",
+      "german": "Wenn ich doch reich wäre",
+      "hints": [
+        "wenn...doch",
+        "wäre = subjunctive of sein"
+      ],
+      "keywords": [
+        "wenn",
+        "doch",
+        "wäre"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-002",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "If only I had known that",
+      "german": "Hätte ich das nur gewusst",
+      "hints": [
+        "hätte + past participle",
+        "nur = only"
+      ],
+      "keywords": [
+        "hätte",
+        "nur",
+        "gewusst"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-003",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "If only I had stayed home",
+      "german": "Wäre ich doch zu Hause geblieben",
+      "hints": [
+        "wäre + past participle",
+        "Past wish with sein"
+      ],
+      "keywords": [
+        "wäre",
+        "doch",
+        "geblieben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-004",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "I wish I could fly",
+      "german": "Ich wünschte, ich könnte fliegen",
+      "hints": [
+        "ich wünschte + subjunctive",
+        "könnte = could"
+      ],
+      "keywords": [
+        "wünschte",
+        "könnte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-005",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "If only it would stop raining",
+      "german": "Wenn es doch aufhören würde zu regnen",
+      "hints": [
+        "würde + infinitive",
+        "aufhören = stop"
+      ],
+      "keywords": [
+        "würde",
+        "aufhören"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-006",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "I wish you were here",
+      "german": "Ich wünschte, du wärst hier",
+      "hints": [
+        "wünschte + wärst",
+        "wärst = you were (subj)"
+      ],
+      "keywords": [
+        "wünschte",
+        "wärst"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-007",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "If only I had more time",
+      "german": "Hätte ich doch mehr Zeit",
+      "hints": [
+        "hätte + mehr",
+        "Present wish about having"
+      ],
+      "keywords": [
+        "hätte",
+        "doch",
+        "mehr"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-008",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "If only she had called",
+      "german": "Hätte sie doch angerufen",
+      "hints": [
+        "hätte + past participle",
+        "Past regret"
+      ],
+      "keywords": [
+        "hätte",
+        "angerufen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-009",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "I wish I lived in Germany",
+      "german": "Ich wünschte, ich würde in Deutschland leben",
+      "hints": [
+        "würde + infinitive",
+        "leben = live"
+      ],
+      "keywords": [
+        "wünschte",
+        "würde",
+        "leben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-010",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "If only I had studied more",
+      "german": "Hätte ich nur mehr gelernt",
+      "hints": [
+        "hätte + nur + past participle",
+        "Past regret"
+      ],
+      "keywords": [
+        "hätte",
+        "nur",
+        "gelernt"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-011",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "If only the weather were better",
+      "german": "Wenn das Wetter nur besser wäre",
+      "hints": [
+        "wenn...nur",
+        "wäre = were"
+      ],
+      "keywords": [
+        "wenn",
+        "nur",
+        "wäre"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-012",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "I wish I could speak German",
+      "german": "Ich wünschte, ich könnte Deutsch sprechen",
+      "hints": [
+        "könnte + infinitive",
+        "Present wish"
+      ],
+      "keywords": [
+        "wünschte",
+        "könnte",
+        "sprechen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-013",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "If only they had listened",
+      "german": "Hätten sie nur zugehört",
+      "hints": [
+        "hätten + zugehört",
+        "Plural past regret"
+      ],
+      "keywords": [
+        "hätten",
+        "nur",
+        "zugehört"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-014",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "If only I were younger",
+      "german": "Wäre ich doch jünger",
+      "hints": [
+        "wäre + comparative",
+        "jünger = younger"
+      ],
+      "keywords": [
+        "wäre",
+        "doch",
+        "jünger"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-015",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "I wish I had gone",
+      "german": "Ich wünschte, ich wäre gegangen",
+      "hints": [
+        "wünschte + wäre + past participle",
+        "Motion verb"
+      ],
+      "keywords": [
+        "wünschte",
+        "wäre",
+        "gegangen"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-016",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "If only they would help",
+      "german": "Würden sie doch helfen",
+      "hints": [
+        "würden + infinitive",
+        "Present wish about others"
+      ],
+      "keywords": [
+        "würden",
+        "doch",
+        "helfen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-017",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "If only I had money",
+      "german": "Hätte ich nur Geld",
+      "hints": [
+        "hätte + nur",
+        "Simple present wish"
+      ],
+      "keywords": [
+        "hätte",
+        "nur",
+        "Geld"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-018",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "I wish it weren't so expensive",
+      "german": "Ich wünschte, es wäre nicht so teuer",
+      "hints": [
+        "wünschte + wäre + nicht",
+        "teuer = expensive"
+      ],
+      "keywords": [
+        "wünschte",
+        "wäre",
+        "teuer"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-019",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "If only we had known",
+      "german": "Hätten wir nur gewusst",
+      "hints": [
+        "hätten + nur + gewusst",
+        "Plural past regret"
+      ],
+      "keywords": [
+        "hätten",
+        "nur",
+        "gewusst"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-subjunctive-for-wishes-020",
+      "ruleId": "b2-subjunctive-for-wishes",
+      "english": "I wish I could help",
+      "german": "Ich wünschte, ich könnte helfen",
+      "hints": [
+        "könnte + infinitive",
+        "Present wish"
+      ],
+      "keywords": [
+        "wünschte",
+        "könnte",
+        "helfen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-001",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "German is spoken here",
+      "german": "Man spricht hier Deutsch",
+      "hints": [
+        "man = one/people",
+        "Active alternative to passive"
+      ],
+      "keywords": [
+        "man",
+        "spricht"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-002",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "That can be easily explained",
+      "german": "Das lässt sich leicht erklären",
+      "hints": [
+        "sich lassen + infinitive",
+        "Implies possibility"
+      ],
+      "keywords": [
+        "lässt",
+        "sich",
+        "erklären"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-003",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "The book is easy to read",
+      "german": "Das Buch ist leicht zu lesen",
+      "hints": [
+        "zu + infinitive",
+        "Shows feasibility"
+      ],
+      "keywords": [
+        "zu",
+        "lesen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-004",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "The text is difficult to understand",
+      "german": "Der Text ist schwer zu verstehen",
+      "hints": [
+        "schwer + zu + infinitive",
+        "Difficulty"
+      ],
+      "keywords": [
+        "schwer",
+        "zu",
+        "verstehen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-005",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "One can solve that",
+      "german": "Das kann man lösen",
+      "hints": [
+        "man + kann",
+        "Alternative to passive with modal"
+      ],
+      "keywords": [
+        "man",
+        "kann",
+        "lösen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-006",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "That cannot be changed",
+      "german": "Das lässt sich nicht ändern",
+      "hints": [
+        "lässt sich nicht",
+        "Negative possibility"
+      ],
+      "keywords": [
+        "lässt",
+        "sich",
+        "nicht",
+        "ändern"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-007",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "English is spoken everywhere",
+      "german": "Man spricht überall Englisch",
+      "hints": [
+        "man + spricht",
+        "überall = everywhere"
+      ],
+      "keywords": [
+        "man",
+        "überall"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-008",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "The problem is solvable",
+      "german": "Das Problem lässt sich lösen",
+      "hints": [
+        "lässt sich + infinitive",
+        "Solvable = can be solved"
+      ],
+      "keywords": [
+        "lässt",
+        "sich",
+        "lösen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-009",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "That is hard to believe",
+      "german": "Das ist schwer zu glauben",
+      "hints": [
+        "schwer + zu + glauben",
+        "glauben = believe"
+      ],
+      "keywords": [
+        "schwer",
+        "zu",
+        "glauben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-010",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "One says that...",
+      "german": "Man sagt, dass...",
+      "hints": [
+        "man sagt = it is said",
+        "Alternative to es wird gesagt"
+      ],
+      "keywords": [
+        "man",
+        "sagt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-011",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "That can easily be done",
+      "german": "Das lässt sich leicht machen",
+      "hints": [
+        "lässt sich leicht + infinitive",
+        "machen = do"
+      ],
+      "keywords": [
+        "lässt",
+        "sich",
+        "machen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-012",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "The door is easy to open",
+      "german": "Die Tür ist leicht zu öffnen",
+      "hints": [
+        "zu öffnen",
+        "öffnen = open"
+      ],
+      "keywords": [
+        "zu",
+        "öffnen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-013",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "One must work hard",
+      "german": "Man muss hart arbeiten",
+      "hints": [
+        "man muss",
+        "General statement"
+      ],
+      "keywords": [
+        "man",
+        "muss"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-014",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "That cannot be proven",
+      "german": "Das lässt sich nicht beweisen",
+      "hints": [
+        "lässt sich nicht beweisen",
+        "beweisen = prove"
+      ],
+      "keywords": [
+        "lässt",
+        "sich",
+        "nicht",
+        "beweisen"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-015",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "The task is impossible to complete",
+      "german": "Die Aufgabe ist unmöglich zu erledigen",
+      "hints": [
+        "unmöglich + zu",
+        "erledigen = complete"
+      ],
+      "keywords": [
+        "unmöglich",
+        "zu",
+        "erledigen"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-016",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "One needs patience",
+      "german": "Man braucht Geduld",
+      "hints": [
+        "man braucht = one needs",
+        "Geduld = patience"
+      ],
+      "keywords": [
+        "man",
+        "braucht",
+        "Geduld"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-017",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "That can be seen",
+      "german": "Das lässt sich sehen",
+      "hints": [
+        "lässt sich sehen",
+        "Visible/viewable"
+      ],
+      "keywords": [
+        "lässt",
+        "sich",
+        "sehen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-018",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "The question is difficult to answer",
+      "german": "Die Frage ist schwer zu beantworten",
+      "hints": [
+        "schwer + zu beantworten",
+        "beantworten = answer"
+      ],
+      "keywords": [
+        "schwer",
+        "zu",
+        "beantworten"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-019",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "One can find it here",
+      "german": "Man kann es hier finden",
+      "hints": [
+        "man kann finden",
+        "Alternative to 'it can be found'"
+      ],
+      "keywords": [
+        "man",
+        "kann",
+        "finden"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-alternative-to-passive-020",
+      "ruleId": "b2-alternative-to-passive",
+      "english": "That is not to be forgotten",
+      "german": "Das ist nicht zu vergessen",
+      "hints": [
+        "nicht + zu + infinitive",
+        "Should not be forgotten"
+      ],
+      "keywords": [
+        "nicht",
+        "zu",
+        "vergessen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-001",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "He sells cars",
+      "german": "Er verkauft Autos",
+      "hints": [
+        "kaufen → verkaufen",
+        "ver- changes meaning"
+      ],
+      "keywords": [
+        "verkauft"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-002",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "I understand you",
+      "german": "Ich verstehe dich",
+      "hints": [
+        "stehen → verstehen",
+        "ver- prefix"
+      ],
+      "keywords": [
+        "verstehe"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-003",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "She receives a gift",
+      "german": "Sie bekommt ein Geschenk",
+      "hints": [
+        "kommen → bekommen",
+        "be- prefix"
+      ],
+      "keywords": [
+        "bekommt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-004",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "We visit the museum",
+      "german": "Wir besuchen das Museum",
+      "hints": [
+        "suchen → besuchen",
+        "be- changes meaning"
+      ],
+      "keywords": [
+        "besuchen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-005",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "They discovered America",
+      "german": "Sie entdeckten Amerika",
+      "hints": [
+        "decken → entdecken",
+        "ent- = dis-/un-"
+      ],
+      "keywords": [
+        "entdeckten"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-006",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "The company develops software",
+      "german": "Die Firma entwickelt Software",
+      "hints": [
+        "wickeln → entwickeln",
+        "ent- prefix"
+      ],
+      "keywords": [
+        "entwickelt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-007",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "That is impossible",
+      "german": "Das ist unmöglich",
+      "hints": [
+        "möglich → unmöglich",
+        "un- = un-/im-"
+      ],
+      "keywords": [
+        "unmöglich"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-008",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "He is unhappy",
+      "german": "Er ist unglücklich",
+      "hints": [
+        "glücklich → unglücklich",
+        "un- negates"
+      ],
+      "keywords": [
+        "unglücklich"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-009",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "I explain the rule",
+      "german": "Ich erkläre die Regel",
+      "hints": [
+        "er- prefix",
+        "erklären = explain"
+      ],
+      "keywords": [
+        "erkläre"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-010",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "She tells a story",
+      "german": "Sie erzählt eine Geschichte",
+      "hints": [
+        "zählen → erzählen",
+        "er- changes meaning"
+      ],
+      "keywords": [
+        "erzählt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-011",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "The glass breaks",
+      "german": "Das Glas zerbricht",
+      "hints": [
+        "brechen → zerbrechen",
+        "zer- = into pieces"
+      ],
+      "keywords": [
+        "zerbricht"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-012",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "The paper tears",
+      "german": "Das Papier zerreißt",
+      "hints": [
+        "reißen → zerreißen",
+        "zer- = tear apart"
+      ],
+      "keywords": [
+        "zerreißt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-013",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "He misunderstands me",
+      "german": "Er missversteht mich",
+      "hints": [
+        "verstehen → missverstehen",
+        "miss- = mis-"
+      ],
+      "keywords": [
+        "missversteht"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-014",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "I trust you",
+      "german": "Ich vertraue dir",
+      "hints": [
+        "ver- + trauen",
+        "Dative verb"
+      ],
+      "keywords": [
+        "vertraue"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-015",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "She forbids it",
+      "german": "Sie verbietet es",
+      "hints": [
+        "bieten → verbieten",
+        "ver- = for-"
+      ],
+      "keywords": [
+        "verbietet"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-016",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "We escape",
+      "german": "Wir entkommen",
+      "hints": [
+        "kommen → entkommen",
+        "ent- = escape/away"
+      ],
+      "keywords": [
+        "entkommen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-017",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "He survives",
+      "german": "Er überlebt",
+      "hints": [
+        "leben → überleben",
+        "über- = over/survive"
+      ],
+      "keywords": [
+        "überlebt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-018",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "I forget it",
+      "german": "Ich vergesse es",
+      "hints": [
+        "vergessen has ver-",
+        "No ge- in past participle"
+      ],
+      "keywords": [
+        "vergesse"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-019",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "That belongs to me",
+      "german": "Das gehört mir",
+      "hints": [
+        "ge- prefix (rare)",
+        "gehören = belong"
+      ],
+      "keywords": [
+        "gehört"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-prefixes-020",
+      "ruleId": "b2-word-formation-prefixes",
+      "english": "We employ workers",
+      "german": "Wir beschäftigen Arbeiter",
+      "hints": [
+        "be- + schäftigen",
+        "beschäftigen = employ"
+      ],
+      "keywords": [
+        "beschäftigen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-001",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "The meaning is important",
+      "german": "Die Bedeutung ist wichtig",
+      "hints": [
+        "bedeuten → -ung",
+        "Feminine suffix"
+      ],
+      "keywords": [
+        "Bedeutung"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-002",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "The apartment is small",
+      "german": "Die Wohnung ist klein",
+      "hints": [
+        "wohnen → die Wohnung",
+        "-ung feminine"
+      ],
+      "keywords": [
+        "Wohnung"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-003",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "The illness is serious",
+      "german": "Die Krankheit ist ernst",
+      "hints": [
+        "krank → -heit",
+        "Feminine suffix"
+      ],
+      "keywords": [
+        "Krankheit"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-004",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "The possibility exists",
+      "german": "Die Möglichkeit besteht",
+      "hints": [
+        "möglich → -keit",
+        "Feminine suffix"
+      ],
+      "keywords": [
+        "Möglichkeit"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-005",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "The teacher is nice",
+      "german": "Der Lehrer ist nett",
+      "hints": [
+        "lehren → -er",
+        "Masculine suffix"
+      ],
+      "keywords": [
+        "Lehrer"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-006",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "The worker is tired",
+      "german": "Der Arbeiter ist müde",
+      "hints": [
+        "arbeiten → -er",
+        "Masculine"
+      ],
+      "keywords": [
+        "Arbeiter"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-007",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "Friendship is valuable",
+      "german": "Die Freundschaft ist wertvoll",
+      "hints": [
+        "-schaft feminine",
+        "Freund → Freundschaft"
+      ],
+      "keywords": [
+        "Freundschaft"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-008",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "Science is fascinating",
+      "german": "Die Wissenschaft ist faszinierend",
+      "hints": [
+        "wissen → -schaft",
+        "Feminine"
+      ],
+      "keywords": [
+        "Wissenschaft"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-009",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "The solution is simple",
+      "german": "Die Lösung ist einfach",
+      "hints": [
+        "lösen → -ung",
+        "Feminine"
+      ],
+      "keywords": [
+        "Lösung"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-010",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "Freedom is important",
+      "german": "Die Freiheit ist wichtig",
+      "hints": [
+        "frei → -heit",
+        "Feminine"
+      ],
+      "keywords": [
+        "Freiheit"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-011",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "The difficulty is great",
+      "german": "Die Schwierigkeit ist groß",
+      "hints": [
+        "schwierig → -keit",
+        "Feminine"
+      ],
+      "keywords": [
+        "Schwierigkeit"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-012",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "The driver is careful",
+      "german": "Der Fahrer ist vorsichtig",
+      "hints": [
+        "fahren → -er",
+        "Masculine"
+      ],
+      "keywords": [
+        "Fahrer"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-013",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "The painting is beautiful",
+      "german": "Die Malerei ist schön",
+      "hints": [
+        "malen → -erei",
+        "Feminine activity"
+      ],
+      "keywords": [
+        "Malerei"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-014",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "The bakery is closed",
+      "german": "Die Bäckerei ist geschlossen",
+      "hints": [
+        "backen → -erei",
+        "Feminine shop"
+      ],
+      "keywords": [
+        "Bäckerei"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-015",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "Loneliness hurts",
+      "german": "Die Einsamkeit tut weh",
+      "hints": [
+        "einsam → -keit",
+        "Feminine"
+      ],
+      "keywords": [
+        "Einsamkeit"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-016",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "The development continues",
+      "german": "Die Entwicklung geht weiter",
+      "hints": [
+        "entwickeln → -ung",
+        "Feminine"
+      ],
+      "keywords": [
+        "Entwicklung"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-017",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "The singer is famous",
+      "german": "Der Sänger ist berühmt",
+      "hints": [
+        "singen → -er",
+        "Masculine"
+      ],
+      "keywords": [
+        "Sänger"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-018",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "The beauty is amazing",
+      "german": "Die Schönheit ist erstaunlich",
+      "hints": [
+        "schön → -heit",
+        "Feminine"
+      ],
+      "keywords": [
+        "Schönheit"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-019",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "The economy grows",
+      "german": "Die Wirtschaft wächst",
+      "hints": [
+        "-schaft suffix",
+        "Wirtschaft = economy"
+      ],
+      "keywords": [
+        "Wirtschaft"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-word-formation-suffixes-020",
+      "ruleId": "b2-word-formation-suffixes",
+      "english": "Honesty is the best policy",
+      "german": "Ehrlichkeit ist die beste Politik",
+      "hints": [
+        "ehrlich → -keit",
+        "Feminine"
+      ],
+      "keywords": [
+        "Ehrlichkeit"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-001",
+      "ruleId": "b2-expressing-purpose",
+      "english": "I'm learning German to work in Germany",
+      "german": "Ich lerne Deutsch, um in Deutschland zu arbeiten",
+      "hints": [
+        "um...zu",
+        "Same subject both clauses"
+      ],
+      "keywords": [
+        "um",
+        "zu",
+        "arbeiten"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-002",
+      "ruleId": "b2-expressing-purpose",
+      "english": "She goes to bed early to be fit tomorrow",
+      "german": "Sie geht früh ins Bett, um morgen fit zu sein",
+      "hints": [
+        "um...zu",
+        "Purpose clause"
+      ],
+      "keywords": [
+        "um",
+        "morgen",
+        "zu",
+        "sein"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-003",
+      "ruleId": "b2-expressing-purpose",
+      "english": "I'm calling you so that you know",
+      "german": "Ich rufe dich an, damit du Bescheid weißt",
+      "hints": [
+        "damit",
+        "Different subjects"
+      ],
+      "keywords": [
+        "damit",
+        "Bescheid",
+        "weißt"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-004",
+      "ruleId": "b2-expressing-purpose",
+      "english": "He speaks slowly so everyone understands",
+      "german": "Er spricht langsam, damit alle ihn verstehen",
+      "hints": [
+        "damit + verb to end",
+        "alle = everyone"
+      ],
+      "keywords": [
+        "damit",
+        "alle",
+        "verstehen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-005",
+      "ruleId": "b2-expressing-purpose",
+      "english": "I study hard to pass the exam",
+      "german": "Ich lerne fleißig, um die Prüfung zu bestehen",
+      "hints": [
+        "um...zu",
+        "fleißig = diligently"
+      ],
+      "keywords": [
+        "um",
+        "zu",
+        "bestehen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-006",
+      "ruleId": "b2-expressing-purpose",
+      "english": "She saves money to buy a car",
+      "german": "Sie spart Geld, um ein Auto zu kaufen",
+      "hints": [
+        "um...zu",
+        "sparen = save"
+      ],
+      "keywords": [
+        "um",
+        "zu",
+        "kaufen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-007",
+      "ruleId": "b2-expressing-purpose",
+      "english": "I write it down so I don't forget",
+      "german": "Ich schreibe es auf, damit ich es nicht vergesse",
+      "hints": [
+        "damit + nicht",
+        "aufschreiben = write down"
+      ],
+      "keywords": [
+        "damit",
+        "nicht",
+        "vergesse"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-008",
+      "ruleId": "b2-expressing-purpose",
+      "english": "He exercises to stay healthy",
+      "german": "Er trainiert, um gesund zu bleiben",
+      "hints": [
+        "um...zu bleiben",
+        "trainieren = exercise"
+      ],
+      "keywords": [
+        "um",
+        "zu",
+        "bleiben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-009",
+      "ruleId": "b2-expressing-purpose",
+      "english": "We speak German so they understand us",
+      "german": "Wir sprechen Deutsch, damit sie uns verstehen",
+      "hints": [
+        "damit",
+        "Different subjects"
+      ],
+      "keywords": [
+        "damit",
+        "verstehen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-010",
+      "ruleId": "b2-expressing-purpose",
+      "english": "She wakes up early to catch the train",
+      "german": "Sie steht früh auf, um den Zug zu erreichen",
+      "hints": [
+        "um...zu erreichen",
+        "erreichen = catch"
+      ],
+      "keywords": [
+        "um",
+        "zu",
+        "erreichen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-011",
+      "ruleId": "b2-expressing-purpose",
+      "english": "I open the window to get fresh air",
+      "german": "Ich öffne das Fenster, um frische Luft zu bekommen",
+      "hints": [
+        "um...zu bekommen",
+        "frische Luft = fresh air"
+      ],
+      "keywords": [
+        "um",
+        "zu",
+        "bekommen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-012",
+      "ruleId": "b2-expressing-purpose",
+      "english": "She whispers so nobody hears",
+      "german": "Sie flüstert, damit niemand es hört",
+      "hints": [
+        "damit",
+        "niemand = nobody"
+      ],
+      "keywords": [
+        "damit",
+        "niemand",
+        "hört"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-013",
+      "ruleId": "b2-expressing-purpose",
+      "english": "I hurry to arrive on time",
+      "german": "Ich beeile mich, um pünktlich anzukommen",
+      "hints": [
+        "sich beeilen + um...zu",
+        "Reflexive verb"
+      ],
+      "keywords": [
+        "um",
+        "pünktlich",
+        "anzukommen"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-014",
+      "ruleId": "b2-expressing-purpose",
+      "english": "He explains slowly so everyone understands",
+      "german": "Er erklärt langsam, damit jeder es versteht",
+      "hints": [
+        "damit + jeder",
+        "jeder = everyone"
+      ],
+      "keywords": [
+        "damit",
+        "jeder",
+        "versteht"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-015",
+      "ruleId": "b2-expressing-purpose",
+      "english": "We work hard to succeed",
+      "german": "Wir arbeiten hart, um Erfolg zu haben",
+      "hints": [
+        "um...zu haben",
+        "Erfolg = success"
+      ],
+      "keywords": [
+        "um",
+        "Erfolg",
+        "zu",
+        "haben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-016",
+      "ruleId": "b2-expressing-purpose",
+      "english": "I use a dictionary to understand the text",
+      "german": "Ich benutze ein Wörterbuch, um den Text zu verstehen",
+      "hints": [
+        "um...zu verstehen",
+        "Wörterbuch = dictionary"
+      ],
+      "keywords": [
+        "um",
+        "zu",
+        "verstehen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-017",
+      "ruleId": "b2-expressing-purpose",
+      "english": "She closes the door so it's quiet",
+      "german": "Sie schließt die Tür, damit es ruhig ist",
+      "hints": [
+        "damit + es ruhig ist",
+        "ruhig = quiet"
+      ],
+      "keywords": [
+        "damit",
+        "ruhig"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-018",
+      "ruleId": "b2-expressing-purpose",
+      "english": "I practice every day to improve",
+      "german": "Ich übe jeden Tag, um mich zu verbessern",
+      "hints": [
+        "sich verbessern + um...zu",
+        "Reflexive"
+      ],
+      "keywords": [
+        "um",
+        "zu",
+        "verbessern"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-019",
+      "ruleId": "b2-expressing-purpose",
+      "english": "He turns on the light so we can see",
+      "german": "Er macht das Licht an, damit wir sehen können",
+      "hints": [
+        "damit + modal verb",
+        "können at end"
+      ],
+      "keywords": [
+        "damit",
+        "können"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-expressing-purpose-020",
+      "ruleId": "b2-expressing-purpose",
+      "english": "I take notes to remember everything",
+      "german": "Ich mache Notizen, um alles zu erinnern",
+      "hints": [
+        "um...zu erinnern",
+        "Notizen = notes"
+      ],
+      "keywords": [
+        "um",
+        "zu",
+        "erinnern"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-001",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The man who stands there",
+      "german": "Der Mann, der dort steht",
+      "hints": [
+        "Nominative masculine",
+        "der for masculine"
+      ],
+      "keywords": [
+        "der",
+        "steht"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-002",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The book that I'm reading",
+      "german": "Das Buch, das ich lese",
+      "hints": [
+        "Accusative neuter",
+        "das object of lesen"
+      ],
+      "keywords": [
+        "das",
+        "lese"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-003",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The woman whom I help",
+      "german": "Die Frau, der ich helfe",
+      "hints": [
+        "Dative feminine",
+        "helfen + dative"
+      ],
+      "keywords": [
+        "der",
+        "helfe"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-004",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The man whose car is red",
+      "german": "Der Mann, dessen Auto rot ist",
+      "hints": [
+        "Genitive masculine",
+        "dessen = whose"
+      ],
+      "keywords": [
+        "dessen",
+        "ist"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-005",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The girl who is singing",
+      "german": "Das Mädchen, das singt",
+      "hints": [
+        "Nominative neuter",
+        "Mädchen = neuter"
+      ],
+      "keywords": [
+        "das",
+        "singt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-006",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The friends whom I visited",
+      "german": "Die Freunde, die ich besucht habe",
+      "hints": [
+        "Accusative plural",
+        "die for plural"
+      ],
+      "keywords": [
+        "die",
+        "besucht"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-007",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The children whom I gave books",
+      "german": "Die Kinder, denen ich Bücher gab",
+      "hints": [
+        "Dative plural",
+        "denen for plural dative"
+      ],
+      "keywords": [
+        "denen",
+        "gab"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-008",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The woman whose daughter studies here",
+      "german": "Die Frau, deren Tochter hier studiert",
+      "hints": [
+        "Genitive feminine",
+        "deren = whose (fem/pl)"
+      ],
+      "keywords": [
+        "deren",
+        "studiert"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-009",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The house that I bought",
+      "german": "Das Haus, das ich gekauft habe",
+      "hints": [
+        "Accusative neuter",
+        "kaufen + accusative"
+      ],
+      "keywords": [
+        "das",
+        "gekauft"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-010",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The teacher whom I trust",
+      "german": "Der Lehrer, dem ich vertraue",
+      "hints": [
+        "Dative masculine",
+        "vertrauen + dative"
+      ],
+      "keywords": [
+        "dem",
+        "vertraue"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-011",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The dog that is barking",
+      "german": "Der Hund, der bellt",
+      "hints": [
+        "Nominative masculine",
+        "der bellt"
+      ],
+      "keywords": [
+        "der",
+        "bellt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-012",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The car that he drives",
+      "german": "Das Auto, das er fährt",
+      "hints": [
+        "Accusative neuter",
+        "fahren = drive"
+      ],
+      "keywords": [
+        "das",
+        "fährt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-013",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The student whose book is lost",
+      "german": "Der Student, dessen Buch verloren ist",
+      "hints": [
+        "Genitive masculine",
+        "dessen Buch"
+      ],
+      "keywords": [
+        "dessen",
+        "verloren"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-014",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The people with whom I work",
+      "german": "Die Leute, mit denen ich arbeite",
+      "hints": [
+        "mit + dative",
+        "denen for plural"
+      ],
+      "keywords": [
+        "denen",
+        "arbeite"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-015",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The city that I like",
+      "german": "Die Stadt, die ich mag",
+      "hints": [
+        "Accusative feminine",
+        "mögen + accusative"
+      ],
+      "keywords": [
+        "die",
+        "mag"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-016",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The neighbor whom I see daily",
+      "german": "Der Nachbar, den ich täglich sehe",
+      "hints": [
+        "Accusative masculine",
+        "den for masc acc"
+      ],
+      "keywords": [
+        "den",
+        "sehe"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-017",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The students whose parents are teachers",
+      "german": "Die Studenten, deren Eltern Lehrer sind",
+      "hints": [
+        "Genitive plural",
+        "deren for pl genitive"
+      ],
+      "keywords": [
+        "deren",
+        "sind"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-018",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The restaurant in which we ate",
+      "german": "Das Restaurant, in dem wir aßen",
+      "hints": [
+        "in + dative",
+        "dem for neuter dative"
+      ],
+      "keywords": [
+        "dem",
+        "aßen"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-019",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The letter that I wrote",
+      "german": "Der Brief, den ich geschrieben habe",
+      "hints": [
+        "Accusative masculine",
+        "den for masc acc"
+      ],
+      "keywords": [
+        "den",
+        "geschrieben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-relative-pronouns-all-cases-020",
+      "ruleId": "b2-relative-pronouns-all-cases",
+      "english": "The child to whom I gave candy",
+      "german": "Das Kind, dem ich Süßigkeiten gab",
+      "hints": [
+        "Dative neuter",
+        "geben + dative"
+      ],
+      "keywords": [
+        "dem",
+        "gab"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-001",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "It's raining. Therefore I'm staying home",
+      "german": "Es regnet. Deshalb bleibe ich zu Hause",
+      "hints": [
+        "deshalb = therefore",
+        "Position 1, verb position 2"
+      ],
+      "keywords": [
+        "deshalb",
+        "bleibe"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-002",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "He's tired. Nevertheless he continues working",
+      "german": "Er ist müde. Trotzdem arbeitet er weiter",
+      "hints": [
+        "trotzdem = nevertheless",
+        "Verb second position"
+      ],
+      "keywords": [
+        "trotzdem",
+        "arbeitet"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-003",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "She's learning German. Additionally she's learning Spanish",
+      "german": "Sie lernt Deutsch. Außerdem lernt sie Spanisch",
+      "hints": [
+        "außerdem = additionally",
+        "Adverb position 1"
+      ],
+      "keywords": [
+        "außerdem",
+        "lernt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-004",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "The weather is bad. Nevertheless we're going for a walk",
+      "german": "Das Wetter ist schlecht. Dennoch gehen wir spazieren",
+      "hints": [
+        "dennoch = nevertheless",
+        "Verb in position 2"
+      ],
+      "keywords": [
+        "dennoch",
+        "gehen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-005",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "It's late. Therefore I must go",
+      "german": "Es ist spät. Daher muss ich gehen",
+      "hints": [
+        "daher = therefore",
+        "Modal verb in pos 2"
+      ],
+      "keywords": [
+        "daher",
+        "muss"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-006",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "I'm sick. Otherwise I would come",
+      "german": "Ich bin krank. Sonst würde ich kommen",
+      "hints": [
+        "sonst = otherwise",
+        "Konjunktiv II"
+      ],
+      "keywords": [
+        "sonst",
+        "würde"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-007",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "He studied hard. Consequently he passed",
+      "german": "Er lernte fleißig. Folglich bestand er die Prüfung",
+      "hints": [
+        "folglich = consequently",
+        "Formal connector"
+      ],
+      "keywords": [
+        "folglich",
+        "bestand"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-008",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "She's talented. Moreover she's hardworking",
+      "german": "Sie ist talentiert. Zudem ist sie fleißig",
+      "hints": [
+        "zudem = moreover",
+        "fleißig = hardworking"
+      ],
+      "keywords": [
+        "zudem",
+        "ist"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-009",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "I'm tired. Still I'll continue",
+      "german": "Ich bin müde. Trotzdem mache ich weiter",
+      "hints": [
+        "trotzdem = still/nevertheless",
+        "weitermachen"
+      ],
+      "keywords": [
+        "trotzdem",
+        "mache"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-010",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "It's expensive. Therefore I won't buy it",
+      "german": "Es ist teuer. Deshalb kaufe ich es nicht",
+      "hints": [
+        "deshalb + nicht",
+        "Won't buy"
+      ],
+      "keywords": [
+        "deshalb",
+        "kaufe",
+        "nicht"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-011",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "He's young. Nevertheless he's experienced",
+      "german": "Er ist jung. Dennoch ist er erfahren",
+      "hints": [
+        "dennoch",
+        "erfahren = experienced"
+      ],
+      "keywords": [
+        "dennoch",
+        "ist"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-012",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "She's busy. Still she finds time",
+      "german": "Sie ist beschäftigt. Trotzdem findet sie Zeit",
+      "hints": [
+        "trotzdem",
+        "beschäftigt = busy"
+      ],
+      "keywords": [
+        "trotzdem",
+        "findet"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-013",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "I don't have money. Therefore I can't go",
+      "german": "Ich habe kein Geld. Deshalb kann ich nicht gehen",
+      "hints": [
+        "deshalb + modal",
+        "kann nicht"
+      ],
+      "keywords": [
+        "deshalb",
+        "kann"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-014",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "It's cold. Furthermore it's raining",
+      "german": "Es ist kalt. Außerdem regnet es",
+      "hints": [
+        "außerdem",
+        "Furthermore"
+      ],
+      "keywords": [
+        "außerdem",
+        "regnet"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-015",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "He forgot. Otherwise he would have called",
+      "german": "Er vergaß es. Sonst hätte er angerufen",
+      "hints": [
+        "sonst + Konjunktiv II past",
+        "hätte angerufen"
+      ],
+      "keywords": [
+        "sonst",
+        "hätte"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-016",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "She's intelligent. Besides she's friendly",
+      "german": "Sie ist intelligent. Zudem ist sie freundlich",
+      "hints": [
+        "zudem = besides",
+        "Positive connector"
+      ],
+      "keywords": [
+        "zudem",
+        "ist"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-017",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "It's difficult. Nevertheless it's possible",
+      "german": "Es ist schwierig. Dennoch ist es möglich",
+      "hints": [
+        "dennoch",
+        "Contrast connector"
+      ],
+      "keywords": [
+        "dennoch",
+        "ist"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-018",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "I'm learning. Therefore I'm improving",
+      "german": "Ich lerne. Daher verbessere ich mich",
+      "hints": [
+        "daher",
+        "sich verbessern = improve"
+      ],
+      "keywords": [
+        "daher",
+        "verbessere"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-019",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "He's sick. Consequently he stays home",
+      "german": "Er ist krank. Folglich bleibt er zu Hause",
+      "hints": [
+        "folglich",
+        "Formal consequence"
+      ],
+      "keywords": [
+        "folglich",
+        "bleibt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-conjunctional-adverbs-020",
+      "ruleId": "b2-conjunctional-adverbs",
+      "english": "She agreed. Otherwise there would be problems",
+      "german": "Sie stimmte zu. Sonst gäbe es Probleme",
+      "hints": [
+        "sonst + gäbe",
+        "Konjunktiv II"
+      ],
+      "keywords": [
+        "sonst",
+        "gäbe"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-001",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "Smoking is forbidden here",
+      "german": "Das Rauchen ist hier verboten",
+      "hints": [
+        "rauchen → das Rauchen",
+        "Neuter verb noun"
+      ],
+      "keywords": [
+        "Rauchen",
+        "verboten"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-002",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "I often fall asleep while reading",
+      "german": "Beim Lesen schlafe ich oft ein",
+      "hints": [
+        "beim + verbal noun",
+        "beim = while -ing"
+      ],
+      "keywords": [
+        "Beim",
+        "Lesen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-003",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "I need time for cooking",
+      "german": "Zum Kochen brauche ich Zeit",
+      "hints": [
+        "zum + verbal noun",
+        "zum = for -ing"
+      ],
+      "keywords": [
+        "Zum",
+        "Kochen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-004",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "Before eating we wash our hands",
+      "german": "Vor dem Essen waschen wir uns die Hände",
+      "hints": [
+        "vor dem + verbal noun",
+        "Reflexive waschen"
+      ],
+      "keywords": [
+        "vor",
+        "dem",
+        "Essen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-005",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "After working I relax",
+      "german": "Nach dem Arbeiten entspanne ich mich",
+      "hints": [
+        "nach dem + verbal noun",
+        "Reflexive entspannen"
+      ],
+      "keywords": [
+        "nach",
+        "dem",
+        "Arbeiten"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-006",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "Swimming is healthy",
+      "german": "Das Schwimmen ist gesund",
+      "hints": [
+        "schwimmen → das Schwimmen",
+        "Subject of sentence"
+      ],
+      "keywords": [
+        "Schwimmen",
+        "gesund"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-007",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "While walking I listen to music",
+      "german": "Beim Gehen höre ich Musik",
+      "hints": [
+        "beim Gehen",
+        "Simultaneous action"
+      ],
+      "keywords": [
+        "Beim",
+        "Gehen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-008",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "For learning I need quiet",
+      "german": "Zum Lernen brauche ich Ruhe",
+      "hints": [
+        "zum Lernen",
+        "Ruhe = quiet"
+      ],
+      "keywords": [
+        "Zum",
+        "Lernen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-009",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "Before going to bed I brush my teeth",
+      "german": "Vor dem Schlafengehen putze ich mir die Zähne",
+      "hints": [
+        "das Schlafengehen",
+        "Compound verbal noun"
+      ],
+      "keywords": [
+        "Schlafengehen"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-010",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "Studying is important",
+      "german": "Das Studieren ist wichtig",
+      "hints": [
+        "studieren → das Studieren",
+        "Importance statement"
+      ],
+      "keywords": [
+        "Studieren"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-011",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "While driving I don't phone",
+      "german": "Beim Fahren telefoniere ich nicht",
+      "hints": [
+        "beim Fahren",
+        "Safety rule"
+      ],
+      "keywords": [
+        "Beim",
+        "Fahren"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-012",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "For writing I use a pen",
+      "german": "Zum Schreiben benutze ich einen Stift",
+      "hints": [
+        "zum Schreiben",
+        "einen Stift = a pen"
+      ],
+      "keywords": [
+        "Zum",
+        "Schreiben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-013",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "After waking up I drink coffee",
+      "german": "Nach dem Aufwachen trinke ich Kaffee",
+      "hints": [
+        "nach dem Aufwachen",
+        "aufwachen = wake up"
+      ],
+      "keywords": [
+        "nach",
+        "dem",
+        "Aufwachen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-014",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "Dancing is fun",
+      "german": "Das Tanzen macht Spaß",
+      "hints": [
+        "tanzen → das Tanzen",
+        "Spaß machen = be fun"
+      ],
+      "keywords": [
+        "Tanzen",
+        "Spaß"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-015",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "While singing she dances",
+      "german": "Beim Singen tanzt sie",
+      "hints": [
+        "beim Singen",
+        "Simultaneous actions"
+      ],
+      "keywords": [
+        "Beim",
+        "Singen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-016",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "For thinking I need silence",
+      "german": "Zum Denken brauche ich Stille",
+      "hints": [
+        "zum Denken",
+        "Stille = silence"
+      ],
+      "keywords": [
+        "Zum",
+        "Denken"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-017",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "Before leaving I lock the door",
+      "german": "Vor dem Gehen schließe ich die Tür ab",
+      "hints": [
+        "vor dem Gehen",
+        "abschließen = lock"
+      ],
+      "keywords": [
+        "vor",
+        "dem",
+        "Gehen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-018",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "Running is exhausting",
+      "german": "Das Laufen ist anstrengend",
+      "hints": [
+        "laufen → das Laufen",
+        "anstrengend = exhausting"
+      ],
+      "keywords": [
+        "Laufen",
+        "anstrengend"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-019",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "While waiting I read",
+      "german": "Beim Warten lese ich",
+      "hints": [
+        "beim Warten",
+        "warten = wait"
+      ],
+      "keywords": [
+        "Beim",
+        "Warten"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-verbal-nouns-usage-020",
+      "ruleId": "b2-verbal-nouns-usage",
+      "english": "For sleeping I need a bed",
+      "german": "Zum Schlafen brauche ich ein Bett",
+      "hints": [
+        "zum Schlafen",
+        "Need statement"
+      ],
+      "keywords": [
+        "Zum",
+        "Schlafen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-negation-strategies-001",
+      "ruleId": "b2-negation-strategies",
+      "english": "I have neither time nor money",
+      "german": "Ich habe weder Zeit noch Geld",
+      "hints": [
+        "weder...noch",
+        "Neither...nor construction"
+      ],
+      "keywords": [
+        "weder",
+        "noch"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-negation-strategies-002",
+      "ruleId": "b2-negation-strategies",
+      "english": "That is by no means simple",
+      "german": "Das ist keineswegs einfach",
+      "hints": [
+        "keineswegs = by no means",
+        "Emphatic negation"
+      ],
+      "keywords": [
+        "keineswegs"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-negation-strategies-003",
+      "ruleId": "b2-negation-strategies",
+      "english": "I barely slept",
+      "german": "Ich habe kaum geschlafen",
+      "hints": [
+        "kaum = barely/hardly",
+        "Partial negation"
+      ],
+      "keywords": [
+        "kaum"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-negation-strategies-004",
+      "ruleId": "b2-negation-strategies",
+      "english": "I will never do that",
+      "german": "Das werde ich niemals tun",
+      "hints": [
+        "niemals = never",
+        "Strong negation"
+      ],
+      "keywords": [
+        "niemals"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-negation-strategies-005",
+      "ruleId": "b2-negation-strategies",
+      "english": "Nobody came",
+      "german": "Niemand kam",
+      "hints": [
+        "niemand = nobody",
+        "Subject negation"
+      ],
+      "keywords": [
+        "niemand"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-negation-strategies-006",
+      "ruleId": "b2-negation-strategies",
+      "english": "Nothing helps",
+      "german": "Nichts hilft",
+      "hints": [
+        "nichts = nothing",
+        "Object negation"
+      ],
+      "keywords": [
+        "nichts"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-negation-strategies-007",
+      "ruleId": "b2-negation-strategies",
+      "english": "I no longer live there",
+      "german": "Ich wohne dort nicht mehr",
+      "hints": [
+        "nicht mehr = no longer",
+        "Time negation"
+      ],
+      "keywords": [
+        "nicht",
+        "mehr"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-negation-strategies-008",
+      "ruleId": "b2-negation-strategies",
+      "english": "Not yet",
+      "german": "Noch nicht",
+      "hints": [
+        "noch nicht = not yet",
+        "Temporal negation"
+      ],
+      "keywords": [
+        "noch",
+        "nicht"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-negation-strategies-009",
+      "ruleId": "b2-negation-strategies",
+      "english": "I don't have any friends",
+      "german": "Ich habe keine Freunde",
+      "hints": [
+        "keine = no/not any",
+        "Noun negation"
+      ],
+      "keywords": [
+        "keine"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-negation-strategies-010",
+      "ruleId": "b2-negation-strategies",
+      "english": "Neither of them came",
+      "german": "Keiner von ihnen kam",
+      "hints": [
+        "keiner = none/neither",
+        "Pronoun negation"
+      ],
+      "keywords": [
+        "keiner"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-negation-strategies-011",
+      "ruleId": "b2-negation-strategies",
+      "english": "She can in no way help",
+      "german": "Sie kann auf keine Weise helfen",
+      "hints": [
+        "auf keine Weise = in no way",
+        "Manner negation"
+      ],
+      "keywords": [
+        "keine",
+        "Weise"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-negation-strategies-012",
+      "ruleId": "b2-negation-strategies",
+      "english": "I understand nothing",
+      "german": "Ich verstehe gar nichts",
+      "hints": [
+        "gar nichts = nothing at all",
+        "Emphatic"
+      ],
+      "keywords": [
+        "gar",
+        "nichts"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-negation-strategies-013",
+      "ruleId": "b2-negation-strategies",
+      "english": "He never comes on time",
+      "german": "Er kommt nie pünktlich",
+      "hints": [
+        "nie = never",
+        "Frequency negation"
+      ],
+      "keywords": [
+        "nie"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-negation-strategies-014",
+      "ruleId": "b2-negation-strategies",
+      "english": "There is absolutely no reason",
+      "german": "Es gibt überhaupt keinen Grund",
+      "hints": [
+        "überhaupt + kein",
+        "Absolutely no"
+      ],
+      "keywords": [
+        "überhaupt",
+        "keinen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-negation-strategies-015",
+      "ruleId": "b2-negation-strategies",
+      "english": "I don't have a car either",
+      "german": "Ich habe auch kein Auto",
+      "hints": [
+        "auch...nicht/kein",
+        "Either/neither"
+      ],
+      "keywords": [
+        "auch",
+        "kein"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-negation-strategies-016",
+      "ruleId": "b2-negation-strategies",
+      "english": "Nowhere is it cheaper",
+      "german": "Nirgendwo ist es billiger",
+      "hints": [
+        "nirgendwo = nowhere",
+        "Place negation"
+      ],
+      "keywords": [
+        "nirgendwo"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-negation-strategies-017",
+      "ruleId": "b2-negation-strategies",
+      "english": "Under no circumstances",
+      "german": "Unter keinen Umständen",
+      "hints": [
+        "unter keinen Umständen",
+        "Fixed expression"
+      ],
+      "keywords": [
+        "keinen",
+        "Umständen"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-negation-strategies-018",
+      "ruleId": "b2-negation-strategies",
+      "english": "I seldom go there",
+      "german": "Ich gehe selten dorthin",
+      "hints": [
+        "selten = seldom/rarely",
+        "Frequency"
+      ],
+      "keywords": [
+        "selten"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-negation-strategies-019",
+      "ruleId": "b2-negation-strategies",
+      "english": "Neither fish nor meat",
+      "german": "Weder Fisch noch Fleisch",
+      "hints": [
+        "weder...noch idiom",
+        "Neither one nor other"
+      ],
+      "keywords": [
+        "weder",
+        "noch"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-negation-strategies-020",
+      "ruleId": "b2-negation-strategies",
+      "english": "I don't trust anyone",
+      "german": "Ich vertraue niemandem",
+      "hints": [
+        "niemandem = nobody (dative)",
+        "Trust + dative"
+      ],
+      "keywords": [
+        "niemandem"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-es-constructions-001",
+      "ruleId": "b2-es-constructions",
+      "english": "I'm doing well",
+      "german": "Es geht mir gut",
+      "hints": [
+        "es geht mir",
+        "Fixed expression"
+      ],
+      "keywords": [
+        "es",
+        "geht",
+        "mir"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-es-constructions-002",
+      "ruleId": "b2-es-constructions",
+      "english": "I'm sorry",
+      "german": "Es tut mir leid",
+      "hints": [
+        "es tut mir leid",
+        "Fixed apology"
+      ],
+      "keywords": [
+        "es",
+        "tut",
+        "leid"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-es-constructions-003",
+      "ruleId": "b2-es-constructions",
+      "english": "It depends",
+      "german": "Es kommt darauf an",
+      "hints": [
+        "es kommt darauf an",
+        "Fixed expression"
+      ],
+      "keywords": [
+        "es",
+        "kommt",
+        "darauf",
+        "an"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-es-constructions-004",
+      "ruleId": "b2-es-constructions",
+      "english": "There are many people",
+      "german": "Es gibt viele Leute",
+      "hints": [
+        "es gibt = there is/are",
+        "Plural"
+      ],
+      "keywords": [
+        "es",
+        "gibt"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-es-constructions-005",
+      "ruleId": "b2-es-constructions",
+      "english": "It concerns the weather",
+      "german": "Es handelt sich um das Wetter",
+      "hints": [
+        "es handelt sich um",
+        "Concern/about"
+      ],
+      "keywords": [
+        "es",
+        "handelt",
+        "sich"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-es-constructions-006",
+      "ruleId": "b2-es-constructions",
+      "english": "It's difficult for me",
+      "german": "Es fällt mir schwer",
+      "hints": [
+        "es fällt mir schwer",
+        "Difficulty"
+      ],
+      "keywords": [
+        "es",
+        "fällt",
+        "schwer"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-es-constructions-007",
+      "ruleId": "b2-es-constructions",
+      "english": "It's easy for me",
+      "german": "Es fällt mir leicht",
+      "hints": [
+        "es fällt mir leicht",
+        "Ease"
+      ],
+      "keywords": [
+        "es",
+        "fällt",
+        "leicht"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-es-constructions-008",
+      "ruleId": "b2-es-constructions",
+      "english": "It doesn't matter",
+      "german": "Es macht nichts",
+      "hints": [
+        "es macht nichts",
+        "No problem"
+      ],
+      "keywords": [
+        "es",
+        "macht",
+        "nichts"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-es-constructions-009",
+      "ruleId": "b2-es-constructions",
+      "english": "How are you doing",
+      "german": "Wie geht es dir",
+      "hints": [
+        "wie geht es dir/Ihnen",
+        "How are you"
+      ],
+      "keywords": [
+        "wie",
+        "geht",
+        "es"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-es-constructions-010",
+      "ruleId": "b2-es-constructions",
+      "english": "There is hope",
+      "german": "Es gibt Hoffnung",
+      "hints": [
+        "es gibt singular",
+        "Hoffnung = hope"
+      ],
+      "keywords": [
+        "es",
+        "gibt",
+        "Hoffnung"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-es-constructions-011",
+      "ruleId": "b2-es-constructions",
+      "english": "It's about love",
+      "german": "Es geht um Liebe",
+      "hints": [
+        "es geht um = it's about",
+        "um + accusative"
+      ],
+      "keywords": [
+        "es",
+        "geht",
+        "um"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-es-constructions-012",
+      "ruleId": "b2-es-constructions",
+      "english": "It's worth it",
+      "german": "Es lohnt sich",
+      "hints": [
+        "es lohnt sich",
+        "Worthwhile"
+      ],
+      "keywords": [
+        "es",
+        "lohnt",
+        "sich"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-es-constructions-013",
+      "ruleId": "b2-es-constructions",
+      "english": "It hurts me",
+      "german": "Es tut mir weh",
+      "hints": [
+        "es tut weh",
+        "Physical/emotional pain"
+      ],
+      "keywords": [
+        "es",
+        "tut",
+        "weh"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-es-constructions-014",
+      "ruleId": "b2-es-constructions",
+      "english": "It's a matter of time",
+      "german": "Es ist eine Frage der Zeit",
+      "hints": [
+        "Fixed expression",
+        "Genitive Zeit"
+      ],
+      "keywords": [
+        "es",
+        "Frage",
+        "Zeit"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-es-constructions-015",
+      "ruleId": "b2-es-constructions",
+      "english": "It smells good",
+      "german": "Es riecht gut",
+      "hints": [
+        "es riecht",
+        "Impersonal smell"
+      ],
+      "keywords": [
+        "es",
+        "riecht"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "b2-es-constructions-016",
+      "ruleId": "b2-es-constructions",
+      "english": "It's getting late",
+      "german": "Es wird spät",
+      "hints": [
+        "es wird + adjective",
+        "Time expression"
+      ],
+      "keywords": [
+        "es",
+        "wird",
+        "spät"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-es-constructions-017",
+      "ruleId": "b2-es-constructions",
+      "english": "It's been a long time",
+      "german": "Es ist lange her",
+      "hints": [
+        "es ist...her",
+        "Time passed"
+      ],
+      "keywords": [
+        "es",
+        "ist",
+        "her"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-es-constructions-018",
+      "ruleId": "b2-es-constructions",
+      "english": "There was an accident",
+      "german": "Es gab einen Unfall",
+      "hints": [
+        "es gab = there was",
+        "Past tense"
+      ],
+      "keywords": [
+        "es",
+        "gab"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-es-constructions-019",
+      "ruleId": "b2-es-constructions",
+      "english": "It seems to me that...",
+      "german": "Es scheint mir, dass...",
+      "hints": [
+        "es scheint mir",
+        "Opinion"
+      ],
+      "keywords": [
+        "es",
+        "scheint"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-es-constructions-020",
+      "ruleId": "b2-es-constructions",
+      "english": "It's up to you",
+      "german": "Es liegt an dir",
+      "hints": [
+        "es liegt an + dative",
+        "Your decision"
+      ],
+      "keywords": [
+        "es",
+        "liegt",
+        "an"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-001",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The invention of the computer",
+      "german": "Die Erfindung des Computers",
+      "hints": [
+        "Genitive masculine",
+        "des + noun"
+      ],
+      "keywords": [
+        "Erfindung",
+        "des"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-002",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The development of technology",
+      "german": "Die Entwicklung der Technologie",
+      "hints": [
+        "Genitive feminine",
+        "der + noun"
+      ],
+      "keywords": [
+        "Entwicklung",
+        "der"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-003",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The end of the war",
+      "german": "Das Ende des Krieges",
+      "hints": [
+        "Genitive masculine",
+        "des Krieges"
+      ],
+      "keywords": [
+        "Ende",
+        "des"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-004",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The capital of Germany",
+      "german": "Die Hauptstadt Deutschlands",
+      "hints": [
+        "Proper noun genitive",
+        "-s ending"
+      ],
+      "keywords": [
+        "Hauptstadt",
+        "Deutschlands"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-005",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The color of the sky",
+      "german": "Die Farbe des Himmels",
+      "hints": [
+        "Genitive masculine",
+        "des Himmels"
+      ],
+      "keywords": [
+        "Farbe",
+        "des"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-006",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The beginning of the story",
+      "german": "Der Anfang der Geschichte",
+      "hints": [
+        "Genitive feminine",
+        "der Geschichte"
+      ],
+      "keywords": [
+        "Anfang",
+        "der"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-007",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The price of freedom",
+      "german": "Der Preis der Freiheit",
+      "hints": [
+        "Genitive feminine",
+        "Abstract noun"
+      ],
+      "keywords": [
+        "Preis",
+        "der"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-008",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The history of Europe",
+      "german": "Die Geschichte Europas",
+      "hints": [
+        "Proper noun genitive",
+        "Europas"
+      ],
+      "keywords": [
+        "Geschichte",
+        "Europas"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-009",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The beauty of nature",
+      "german": "Die Schönheit der Natur",
+      "hints": [
+        "Genitive feminine",
+        "der Natur"
+      ],
+      "keywords": [
+        "Schönheit",
+        "der"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-010",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The roof of the house",
+      "german": "Das Dach des Hauses",
+      "hints": [
+        "Genitive neuter",
+        "des Hauses"
+      ],
+      "keywords": [
+        "Dach",
+        "des"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-011",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The meaning of life",
+      "german": "Die Bedeutung des Lebens",
+      "hints": [
+        "Genitive neuter",
+        "des Lebens"
+      ],
+      "keywords": [
+        "Bedeutung",
+        "des"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-012",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The name of the city",
+      "german": "Der Name der Stadt",
+      "hints": [
+        "Genitive feminine",
+        "der Stadt"
+      ],
+      "keywords": [
+        "Name",
+        "der"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-013",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The arrival of the train",
+      "german": "Die Ankunft des Zuges",
+      "hints": [
+        "Genitive masculine",
+        "des Zuges"
+      ],
+      "keywords": [
+        "Ankunft",
+        "des"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-014",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The inhabitants of the country",
+      "german": "Die Einwohner des Landes",
+      "hints": [
+        "Genitive neuter",
+        "des Landes"
+      ],
+      "keywords": [
+        "Einwohner",
+        "des"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-015",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The author of the book",
+      "german": "Der Autor des Buches",
+      "hints": [
+        "Genitive neuter",
+        "des Buches"
+      ],
+      "keywords": [
+        "Autor",
+        "des"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-016",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The top of the mountain",
+      "german": "Die Spitze des Berges",
+      "hints": [
+        "Genitive masculine",
+        "des Berges"
+      ],
+      "keywords": [
+        "Spitze",
+        "des"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-017",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The members of the club",
+      "german": "Die Mitglieder des Vereins",
+      "hints": [
+        "Genitive masculine",
+        "des Vereins"
+      ],
+      "keywords": [
+        "Mitglieder",
+        "des"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-018",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The center of the city",
+      "german": "Das Zentrum der Stadt",
+      "hints": [
+        "Genitive feminine",
+        "der Stadt"
+      ],
+      "keywords": [
+        "Zentrum",
+        "der"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-019",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The result of the test",
+      "german": "Das Ergebnis des Tests",
+      "hints": [
+        "Genitive masculine",
+        "des Tests"
+      ],
+      "keywords": [
+        "Ergebnis",
+        "des"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-attributive-genitive-020",
+      "ruleId": "b2-attributive-genitive",
+      "english": "The edge of the forest",
+      "german": "Der Rand des Waldes",
+      "hints": [
+        "Genitive masculine",
+        "des Waldes"
+      ],
+      "keywords": [
+        "Rand",
+        "des"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-001",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "He said he was tired",
+      "german": "Er sagte, er sei müde",
+      "hints": [
+        "Konjunktiv I: sei",
+        "Present reported"
+      ],
+      "keywords": [
+        "sagte",
+        "sei"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-002",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "She said she had eaten",
+      "german": "Sie sagte, sie habe gegessen",
+      "hints": [
+        "Konjunktiv I perfect: habe",
+        "Past reported"
+      ],
+      "keywords": [
+        "sagte",
+        "habe"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-003",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "He said he would come",
+      "german": "Er sagte, er werde kommen",
+      "hints": [
+        "Konjunktiv I future: werde",
+        "Future reported"
+      ],
+      "keywords": [
+        "sagte",
+        "werde"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-004",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "They said they were happy",
+      "german": "Sie sagten, sie seien glücklich",
+      "hints": [
+        "Konjunktiv I plural: seien",
+        "Plural reported"
+      ],
+      "keywords": [
+        "sagten",
+        "seien"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-005",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "She claimed she knew nothing",
+      "german": "Sie behauptete, sie wisse nichts",
+      "hints": [
+        "Konjunktiv I: wisse",
+        "wissen irregular"
+      ],
+      "keywords": [
+        "behauptete",
+        "wisse"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-006",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "He reported it was expensive",
+      "german": "Er berichtete, es sei teuer",
+      "hints": [
+        "berichten + Konjunktiv I",
+        "Reporting verb"
+      ],
+      "keywords": [
+        "berichtete",
+        "sei"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-007",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "She mentioned she had time",
+      "german": "Sie erwähnte, sie habe Zeit",
+      "hints": [
+        "erwähnen + Konjunktiv I",
+        "habe Zeit"
+      ],
+      "keywords": [
+        "erwähnte",
+        "habe"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-008",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "They announced they would arrive soon",
+      "german": "Sie kündigten an, sie würden bald ankommen",
+      "hints": [
+        "würden for unclear forms",
+        "Konjunktiv II"
+      ],
+      "keywords": [
+        "kündigten",
+        "würden"
+      ],
+      "difficulty": 10
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-009",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "He explained it was difficult",
+      "german": "Er erklärte, es sei schwierig",
+      "hints": [
+        "erklären + Konjunktiv I",
+        "sei schwierig"
+      ],
+      "keywords": [
+        "erklärte",
+        "sei"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-010",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "She confirmed she had understood",
+      "german": "Sie bestätigte, sie habe verstanden",
+      "hints": [
+        "bestätigen + perfect",
+        "habe verstanden"
+      ],
+      "keywords": [
+        "bestätigte",
+        "habe"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-011",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "He promised he would help",
+      "german": "Er versprach, er werde helfen",
+      "hints": [
+        "versprechen + future",
+        "werde helfen"
+      ],
+      "keywords": [
+        "versprach",
+        "werde"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-012",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "They said it was possible",
+      "german": "Sie sagten, es sei möglich",
+      "hints": [
+        "Konjunktiv I: sei",
+        "möglich = possible"
+      ],
+      "keywords": [
+        "sagten",
+        "sei"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-013",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "She admitted she had lied",
+      "german": "Sie gab zu, sie habe gelogen",
+      "hints": [
+        "zugeben + perfect",
+        "habe gelogen"
+      ],
+      "keywords": [
+        "gab",
+        "habe"
+      ],
+      "difficulty": 10
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-014",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "He insisted he was right",
+      "german": "Er bestand darauf, er habe recht",
+      "hints": [
+        "bestehen auf + Konjunktiv I",
+        "habe recht"
+      ],
+      "keywords": [
+        "bestand",
+        "habe"
+      ],
+      "difficulty": 10
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-015",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "She believed she could win",
+      "german": "Sie glaubte, sie könne gewinnen",
+      "hints": [
+        "Konjunktiv I: könne",
+        "können irregular"
+      ],
+      "keywords": [
+        "glaubte",
+        "könne"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-016",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "They informed us it was ready",
+      "german": "Sie informierten uns, es sei fertig",
+      "hints": [
+        "informieren + Konjunktiv I",
+        "sei fertig"
+      ],
+      "keywords": [
+        "informierten",
+        "sei"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-017",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "He denied he had seen it",
+      "german": "Er leugnete, er habe es gesehen",
+      "hints": [
+        "leugnen + perfect",
+        "habe gesehen"
+      ],
+      "keywords": [
+        "leugnete",
+        "habe"
+      ],
+      "difficulty": 10
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-018",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "She assured it would work",
+      "german": "Sie versicherte, es werde funktionieren",
+      "hints": [
+        "versichern + future",
+        "werde funktionieren"
+      ],
+      "keywords": [
+        "versicherte",
+        "werde"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-019",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "He claimed he had won",
+      "german": "Er behauptete, er habe gewonnen",
+      "hints": [
+        "behaupten + perfect",
+        "habe gewonnen"
+      ],
+      "keywords": [
+        "behauptete",
+        "habe"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-reported-speech-tense-020",
+      "ruleId": "b2-reported-speech-tense",
+      "english": "They said there was a problem",
+      "german": "Sie sagten, es gebe ein Problem",
+      "hints": [
+        "Konjunktiv I: gebe",
+        "es gibt → gebe"
+      ],
+      "keywords": [
+        "sagten",
+        "gebe"
+      ],
+      "difficulty": 10
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-001",
+      "ruleId": "b2-concessive-clauses",
+      "english": "Although it's raining, I'm going for a walk",
+      "german": "Obwohl es regnet, gehe ich spazieren",
+      "hints": [
+        "obwohl + verb to end",
+        "Subordinating conjunction"
+      ],
+      "keywords": [
+        "obwohl",
+        "regnet",
+        "gehe"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-002",
+      "ruleId": "b2-concessive-clauses",
+      "english": "Despite the rain, I'm going for a walk",
+      "german": "Trotz des Regens gehe ich spazieren",
+      "hints": [
+        "trotz + genitive",
+        "Preposition"
+      ],
+      "keywords": [
+        "trotz",
+        "des"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-003",
+      "ruleId": "b2-concessive-clauses",
+      "english": "It's raining. Nevertheless I'm going for a walk",
+      "german": "Es regnet. Trotzdem gehe ich spazieren",
+      "hints": [
+        "trotzdem = nevertheless",
+        "Adverb, verb second"
+      ],
+      "keywords": [
+        "trotzdem",
+        "gehe"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-004",
+      "ruleId": "b2-concessive-clauses",
+      "english": "However tired I am, I must work",
+      "german": "So müde ich auch bin, ich muss arbeiten",
+      "hints": [
+        "so...auch",
+        "Concessive construction"
+      ],
+      "keywords": [
+        "so",
+        "auch",
+        "bin"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-005",
+      "ruleId": "b2-concessive-clauses",
+      "english": "Although he's young, he's experienced",
+      "german": "Obwohl er jung ist, ist er erfahren",
+      "hints": [
+        "obwohl + ist",
+        "Contrast"
+      ],
+      "keywords": [
+        "obwohl",
+        "ist"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-006",
+      "ruleId": "b2-concessive-clauses",
+      "english": "Despite his age, he's fit",
+      "german": "Trotz seines Alters ist er fit",
+      "hints": [
+        "trotz + genitive",
+        "seines Alters"
+      ],
+      "keywords": [
+        "trotz",
+        "seines"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-007",
+      "ruleId": "b2-concessive-clauses",
+      "english": "It's expensive. Still I'll buy it",
+      "german": "Es ist teuer. Dennoch kaufe ich es",
+      "hints": [
+        "dennoch = still",
+        "Adverb"
+      ],
+      "keywords": [
+        "dennoch",
+        "kaufe"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-008",
+      "ruleId": "b2-concessive-clauses",
+      "english": "Although she studies, she fails",
+      "german": "Obwohl sie lernt, fällt sie durch",
+      "hints": [
+        "obwohl + lernt",
+        "durchfallen = fail"
+      ],
+      "keywords": [
+        "obwohl",
+        "lernt",
+        "fällt"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-009",
+      "ruleId": "b2-concessive-clauses",
+      "english": "Despite the cold, we went out",
+      "german": "Trotz der Kälte gingen wir aus",
+      "hints": [
+        "trotz + genitive feminine",
+        "der Kälte"
+      ],
+      "keywords": [
+        "trotz",
+        "der"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-010",
+      "ruleId": "b2-concessive-clauses",
+      "english": "However much he tries, he can't do it",
+      "german": "So sehr er sich auch bemüht, er kann es nicht",
+      "hints": [
+        "so sehr...auch",
+        "Reflexive bemühen"
+      ],
+      "keywords": [
+        "so",
+        "auch",
+        "bemüht"
+      ],
+      "difficulty": 10
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-011",
+      "ruleId": "b2-concessive-clauses",
+      "english": "Although it's late, he's still working",
+      "german": "Obwohl es spät ist, arbeitet er noch",
+      "hints": [
+        "obwohl + ist",
+        "noch = still"
+      ],
+      "keywords": [
+        "obwohl",
+        "ist",
+        "noch"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-012",
+      "ruleId": "b2-concessive-clauses",
+      "english": "Despite the problems, we continue",
+      "german": "Trotz der Probleme machen wir weiter",
+      "hints": [
+        "trotz + genitive plural",
+        "der Probleme"
+      ],
+      "keywords": [
+        "trotz",
+        "der"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-013",
+      "ruleId": "b2-concessive-clauses",
+      "english": "It's difficult. Nevertheless I try",
+      "german": "Es ist schwierig. Trotzdem versuche ich es",
+      "hints": [
+        "trotzdem + verb second",
+        "versuchen = try"
+      ],
+      "keywords": [
+        "trotzdem",
+        "versuche"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-014",
+      "ruleId": "b2-concessive-clauses",
+      "english": "Although I'm tired, I can't sleep",
+      "german": "Obwohl ich müde bin, kann ich nicht schlafen",
+      "hints": [
+        "obwohl + bin",
+        "Modal verb"
+      ],
+      "keywords": [
+        "obwohl",
+        "bin",
+        "kann"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-015",
+      "ruleId": "b2-concessive-clauses",
+      "english": "Despite the heat, she wore a jacket",
+      "german": "Trotz der Hitze trug sie eine Jacke",
+      "hints": [
+        "trotz + genitive",
+        "der Hitze"
+      ],
+      "keywords": [
+        "trotz",
+        "der"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-016",
+      "ruleId": "b2-concessive-clauses",
+      "english": "However hard I work, it's not enough",
+      "german": "So hart ich auch arbeite, es reicht nicht",
+      "hints": [
+        "so...auch construction",
+        "reichen = suffice"
+      ],
+      "keywords": [
+        "so",
+        "auch",
+        "arbeite"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-017",
+      "ruleId": "b2-concessive-clauses",
+      "english": "Although she's rich, she's unhappy",
+      "german": "Obwohl sie reich ist, ist sie unglücklich",
+      "hints": [
+        "obwohl + ist",
+        "Paradox"
+      ],
+      "keywords": [
+        "obwohl",
+        "ist"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-018",
+      "ruleId": "b2-concessive-clauses",
+      "english": "Despite my efforts, I failed",
+      "german": "Trotz meiner Bemühungen scheiterte ich",
+      "hints": [
+        "trotz + genitive",
+        "meiner Bemühungen"
+      ],
+      "keywords": [
+        "trotz",
+        "meiner"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-019",
+      "ruleId": "b2-concessive-clauses",
+      "english": "He's sick. Nevertheless he came",
+      "german": "Er ist krank. Dennoch kam er",
+      "hints": [
+        "dennoch = nevertheless",
+        "Came despite illness"
+      ],
+      "keywords": [
+        "dennoch",
+        "kam"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-concessive-clauses-020",
+      "ruleId": "b2-concessive-clauses",
+      "english": "However often I explain, he doesn't understand",
+      "german": "So oft ich es auch erkläre, er versteht es nicht",
+      "hints": [
+        "so oft...auch",
+        "Repeated action"
+      ],
+      "keywords": [
+        "so",
+        "oft",
+        "auch"
+      ],
+      "difficulty": 10
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-001",
+      "ruleId": "b2-emphatic-structures",
+      "english": "That was what I wanted to say",
+      "german": "Das war es, was ich sagen wollte",
+      "hints": [
+        "das war es, was...",
+        "Emphatic cleft"
+      ],
+      "keywords": [
+        "das",
+        "war",
+        "es",
+        "was"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-002",
+      "ruleId": "b2-emphatic-structures",
+      "english": "He is the one who helped me",
+      "german": "Er ist es, der mir geholfen hat",
+      "hints": [
+        "er ist es, der...",
+        "Emphasizing subject"
+      ],
+      "keywords": [
+        "ist",
+        "es",
+        "der"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-003",
+      "ruleId": "b2-emphatic-structures",
+      "english": "That's exactly why I'm doing this",
+      "german": "Gerade deshalb mache ich das",
+      "hints": [
+        "gerade = exactly",
+        "Emphasis particle"
+      ],
+      "keywords": [
+        "gerade",
+        "deshalb"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-004",
+      "ruleId": "b2-emphatic-structures",
+      "english": "Of all days, it has to rain today",
+      "german": "Ausgerechnet heute muss es regnen",
+      "hints": [
+        "ausgerechnet = of all",
+        "Bad timing"
+      ],
+      "keywords": [
+        "ausgerechnet",
+        "heute"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-005",
+      "ruleId": "b2-emphatic-structures",
+      "english": "You are the one I meant",
+      "german": "Du bist es, den ich meinte",
+      "hints": [
+        "du bist es, den...",
+        "Accusative relative"
+      ],
+      "keywords": [
+        "bist",
+        "es",
+        "den"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-006",
+      "ruleId": "b2-emphatic-structures",
+      "english": "That's precisely the problem",
+      "german": "Genau das ist das Problem",
+      "hints": [
+        "genau = precisely",
+        "Front position"
+      ],
+      "keywords": [
+        "genau",
+        "das"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-007",
+      "ruleId": "b2-emphatic-structures",
+      "english": "Only now do I understand",
+      "german": "Erst jetzt verstehe ich",
+      "hints": [
+        "erst = only",
+        "Time emphasis"
+      ],
+      "keywords": [
+        "erst",
+        "jetzt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-008",
+      "ruleId": "b2-emphatic-structures",
+      "english": "Even he couldn't do it",
+      "german": "Selbst er konnte es nicht",
+      "hints": [
+        "selbst = even",
+        "Surprising"
+      ],
+      "keywords": [
+        "selbst",
+        "konnte"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-009",
+      "ruleId": "b2-emphatic-structures",
+      "english": "That's exactly it",
+      "german": "Genau das ist es",
+      "hints": [
+        "genau das",
+        "Agreement/confirmation"
+      ],
+      "keywords": [
+        "genau",
+        "das",
+        "ist"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-010",
+      "ruleId": "b2-emphatic-structures",
+      "english": "Just for that reason",
+      "german": "Eben deshalb",
+      "hints": [
+        "eben = just/exactly",
+        "Emphatic particle"
+      ],
+      "keywords": [
+        "eben",
+        "deshalb"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-011",
+      "ruleId": "b2-emphatic-structures",
+      "english": "It was you who said that",
+      "german": "Du warst es, der das gesagt hat",
+      "hints": [
+        "du warst es, der...",
+        "Blame/credit"
+      ],
+      "keywords": [
+        "warst",
+        "es",
+        "der"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-012",
+      "ruleId": "b2-emphatic-structures",
+      "english": "Of all people, he forgot",
+      "german": "Ausgerechnet er hat es vergessen",
+      "hints": [
+        "ausgerechnet er",
+        "Ironic"
+      ],
+      "keywords": [
+        "ausgerechnet",
+        "er"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-013",
+      "ruleId": "b2-emphatic-structures",
+      "english": "That's the very thing I need",
+      "german": "Genau das brauche ich",
+      "hints": [
+        "genau das",
+        "Perfect fit"
+      ],
+      "keywords": [
+        "genau",
+        "das",
+        "brauche"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-014",
+      "ruleId": "b2-emphatic-structures",
+      "english": "Only then did I notice",
+      "german": "Erst dann bemerkte ich",
+      "hints": [
+        "erst dann",
+        "Delayed realization"
+      ],
+      "keywords": [
+        "erst",
+        "dann"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-015",
+      "ruleId": "b2-emphatic-structures",
+      "english": "Even the teacher made mistakes",
+      "german": "Selbst der Lehrer machte Fehler",
+      "hints": [
+        "selbst + subject",
+        "Surprising subject"
+      ],
+      "keywords": [
+        "selbst",
+        "der"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-016",
+      "ruleId": "b2-emphatic-structures",
+      "english": "That's absolutely correct",
+      "german": "Genau so ist es",
+      "hints": [
+        "genau so",
+        "Emphatic agreement"
+      ],
+      "keywords": [
+        "genau",
+        "so"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-017",
+      "ruleId": "b2-emphatic-structures",
+      "english": "It's the truth that matters",
+      "german": "Es ist die Wahrheit, die zählt",
+      "hints": [
+        "es ist..., die...",
+        "Cleft sentence"
+      ],
+      "keywords": [
+        "ist",
+        "die",
+        "zählt"
+      ],
+      "difficulty": 9
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-018",
+      "ruleId": "b2-emphatic-structures",
+      "english": "Just because of that",
+      "german": "Gerade deswegen",
+      "hints": [
+        "gerade deswegen",
+        "Causal emphasis"
+      ],
+      "keywords": [
+        "gerade",
+        "deswegen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-019",
+      "ruleId": "b2-emphatic-structures",
+      "english": "You yourself said it",
+      "german": "Du selbst hast es gesagt",
+      "hints": [
+        "selbst after pronoun",
+        "You personally"
+      ],
+      "keywords": [
+        "selbst",
+        "hast"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "b2-emphatic-structures-020",
+      "ruleId": "b2-emphatic-structures",
+      "english": "That's the exact reason",
+      "german": "Das ist genau der Grund",
+      "hints": [
+        "genau der Grund",
+        "Precise reason"
+      ],
+      "keywords": [
+        "genau",
+        "der",
+        "Grund"
+      ],
+      "difficulty": 7
+    }
+  ]
+}

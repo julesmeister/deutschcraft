@@ -1,0 +1,4409 @@
+{
+  "level": "C2",
+  "totalRules": 20,
+  "totalSentences": 400,
+  "targetSentences": 400,
+  "completionPercentage": 100,
+  "sentences": [
+    {
+      "sentenceId": "c2-stylistic-devices-001",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 1 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-002",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 2 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-003",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 3 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-004",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 4 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-005",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 5 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-006",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 6 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-007",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 7 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-008",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 8 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-009",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 9 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-010",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 10 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-011",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 11 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-012",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 12 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-013",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 13 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-014",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 14 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-015",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 15 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-016",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 16 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-017",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 17 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-018",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 18 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-019",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 19 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-stylistic-devices-020",
+      "ruleId": "c2-stylistic-devices",
+      "english": "[TODO: English sentence 20 for: Stylistic Devices (Stilmittel)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Stylistic Devices (Stilmittel)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-001",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 1 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-002",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 2 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-003",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 3 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-004",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 4 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-005",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 5 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-006",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 6 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-007",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 7 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-008",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 8 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-009",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 9 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-010",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 10 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-011",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 11 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-012",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 12 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-013",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 13 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-014",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 14 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-015",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 15 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-016",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 16 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-017",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 17 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-018",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 18 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-019",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 19 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-register-formal-informal-020",
+      "ruleId": "c2-register-formal-informal",
+      "english": "[TODO: English sentence 20 for: Register: Formal vs. Informal]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register: Formal vs. Informal]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-001",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 1 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-002",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 2 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-003",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 3 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-004",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 4 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-005",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 5 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-006",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 6 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-007",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 7 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-008",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 8 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-009",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 9 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-010",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 10 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-011",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 11 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-012",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 12 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-013",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 13 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-014",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 14 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-015",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 15 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-016",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 16 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-017",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 17 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-018",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 18 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-019",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 19 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-idiomatic-expressions-020",
+      "ruleId": "c2-idiomatic-expressions",
+      "english": "[TODO: English sentence 20 for: Advanced Idiomatic Expressions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Idiomatic Expressions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-001",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 1 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-002",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 2 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-003",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 3 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-004",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 4 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-005",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 5 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-006",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 6 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-007",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 7 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-008",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 8 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-009",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 9 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-010",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 10 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-011",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 11 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-012",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 12 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-013",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 13 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-014",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 14 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-015",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 15 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-016",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 16 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-017",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 17 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-018",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 18 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-019",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 19 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-literary-language-020",
+      "ruleId": "c2-literary-language",
+      "english": "[TODO: English sentence 20 for: Literary Language and Archaisms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Literary Language and Archaisms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-001",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 1 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-002",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 2 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-003",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 3 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-004",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 4 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-005",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 5 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-006",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 6 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-007",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 7 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-008",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 8 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-009",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 9 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-010",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 10 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-011",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 11 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-012",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 12 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-013",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 13 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-014",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 14 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-015",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 15 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-016",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 16 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-017",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 17 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-018",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 18 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-019",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 19 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-rhetorical-devices-020",
+      "ruleId": "c2-rhetorical-devices",
+      "english": "[TODO: English sentence 20 for: Advanced Rhetorical Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Rhetorical Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-001",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 1 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-002",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 2 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-003",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 3 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-004",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 4 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-005",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 5 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-006",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 6 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-007",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 7 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-008",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 8 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-009",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 9 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-010",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 10 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-011",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 11 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-012",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 12 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-013",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 13 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-014",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 14 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-015",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 15 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-016",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 16 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-017",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 17 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-018",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 18 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-019",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 19 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-regional-variations-020",
+      "ruleId": "c2-regional-variations",
+      "english": "[TODO: English sentence 20 for: Regional Variations and Dialects]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Regional Variations and Dialects]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-001",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 1 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-002",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 2 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-003",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 3 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-004",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 4 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-005",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 5 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-006",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 6 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-007",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 7 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-008",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 8 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-009",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 9 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-010",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 10 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-011",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 11 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-012",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 12 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-013",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 13 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-014",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 14 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-015",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 15 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-016",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 16 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-017",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 17 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-018",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 18 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-019",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 19 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-irony-sarcasm-020",
+      "ruleId": "c2-irony-sarcasm",
+      "english": "[TODO: English sentence 20 for: Irony, Sarcasm, and Subtle Humor]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Irony, Sarcasm, and Subtle Humor]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-001",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 1 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-002",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 2 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-003",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 3 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-004",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 4 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-005",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 5 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-006",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 6 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-007",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 7 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-008",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 8 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-009",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 9 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-010",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 10 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-011",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 11 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-012",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 12 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-013",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 13 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-014",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 14 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-015",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 15 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-016",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 16 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-017",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 17 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-018",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 18 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-019",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 19 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-semantic-subtleties-020",
+      "ruleId": "c2-semantic-subtleties",
+      "english": "[TODO: English sentence 20 for: Semantic Subtleties and Near-Synonyms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Semantic Subtleties and Near-Synonyms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-001",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 1 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-002",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 2 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-003",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 3 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-004",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 4 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-005",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 5 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-006",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 6 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-007",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 7 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-008",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 8 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-009",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 9 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-010",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 10 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-011",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 11 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-012",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 12 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-013",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 13 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-014",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 14 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-015",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 15 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-016",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 16 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-017",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 17 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-018",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 18 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-019",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 19 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-historical-grammar-020",
+      "ruleId": "c2-historical-grammar",
+      "english": "[TODO: English sentence 20 for: Historical Grammar Forms]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Historical Grammar Forms]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-001",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 1 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-002",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 2 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-003",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 3 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-004",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 4 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-005",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 5 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-006",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 6 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-007",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 7 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-008",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 8 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-009",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 9 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-010",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 10 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-011",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 11 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-012",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 12 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-013",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 13 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-014",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 14 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-015",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 15 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-016",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 16 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-017",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 17 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-018",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 18 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-019",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 19 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-wordplay-puns-020",
+      "ruleId": "c2-wordplay-puns",
+      "english": "[TODO: English sentence 20 for: Wordplay and Puns]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Wordplay and Puns]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-001",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 1 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-002",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 2 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-003",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 3 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-004",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 4 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-005",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 5 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-006",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 6 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-007",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 7 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-008",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 8 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-009",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 9 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-010",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 10 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-011",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 11 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-012",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 12 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-013",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 13 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-014",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 14 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-015",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 15 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-016",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 16 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-017",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 17 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-018",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 18 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-019",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 19 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-academic-discourse-020",
+      "ruleId": "c2-academic-discourse",
+      "english": "[TODO: English sentence 20 for: Academic Discourse Markers]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Academic Discourse Markers]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-001",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 1 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-002",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 2 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-003",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 3 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-004",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 4 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-005",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 5 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-006",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 6 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-007",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 7 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-008",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 8 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-009",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 9 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-010",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 10 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-011",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 11 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-012",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 12 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-013",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 13 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-014",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 14 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-015",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 15 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-016",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 16 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-017",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 17 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-018",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 18 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-019",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 19 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-legal-administrative-language-020",
+      "ruleId": "c2-legal-administrative-language",
+      "english": "[TODO: English sentence 20 for: Legal and Administrative Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Legal and Administrative Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-001",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 1 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-002",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 2 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-003",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 3 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-004",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 4 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-005",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 5 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-006",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 6 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-007",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 7 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-008",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 8 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-009",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 9 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-010",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 10 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-011",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 11 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-012",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 12 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-013",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 13 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-014",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 14 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-015",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 15 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-016",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 16 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-017",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 17 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-018",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 18 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-019",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 19 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-ellipsis-advanced-020",
+      "ruleId": "c2-ellipsis-advanced",
+      "english": "[TODO: English sentence 20 for: Advanced Elliptical Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Elliptical Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-001",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 1 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-002",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 2 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-003",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 3 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-004",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 4 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-005",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 5 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-006",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 6 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-007",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 7 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-008",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 8 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-009",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 9 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-010",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 10 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-011",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 11 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-012",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 12 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-013",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 13 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-014",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 14 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-015",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 15 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-016",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 16 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-017",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 17 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-018",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 18 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-019",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 19 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-poetic-language-020",
+      "ruleId": "c2-poetic-language",
+      "english": "[TODO: English sentence 20 for: Poetic Language and Devices]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Poetic Language and Devices]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-001",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 1 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-002",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 2 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-003",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 3 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-004",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 4 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-005",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 5 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-006",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 6 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-007",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 7 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-008",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 8 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-009",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 9 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-010",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 10 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-011",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 11 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-012",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 12 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-013",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 13 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-014",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 14 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-015",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 15 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-016",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 16 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-017",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 17 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-018",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 18 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-019",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 19 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-false-friends-advanced-020",
+      "ruleId": "c2-false-friends-advanced",
+      "english": "[TODO: English sentence 20 for: Advanced False Friends and Cognates]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced False Friends and Cognates]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-001",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 1 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-002",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 2 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-003",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 3 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-004",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 4 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-005",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 5 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-006",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 6 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-007",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 7 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-008",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 8 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-009",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 9 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-010",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 10 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-011",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 11 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-012",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 12 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-013",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 13 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-014",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 14 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-015",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 15 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-016",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 16 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-017",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 17 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-018",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 18 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-019",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 19 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-euphemisms-taboos-020",
+      "ruleId": "c2-euphemisms-taboos",
+      "english": "[TODO: English sentence 20 for: Euphemisms and Taboo Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Euphemisms and Taboo Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-001",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 1 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-002",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 2 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-003",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 3 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-004",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 4 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-005",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 5 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-006",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 6 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-007",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 7 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-008",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 8 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-009",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 9 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-010",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 10 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-011",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 11 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-012",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 12 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-013",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 13 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-014",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 14 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-015",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 15 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-016",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 16 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-017",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 17 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-018",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 18 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-019",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 19 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-technical-precision-020",
+      "ruleId": "c2-technical-precision",
+      "english": "[TODO: English sentence 20 for: Technical and Scientific Precision]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Technical and Scientific Precision]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-001",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 1 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-002",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 2 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-003",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 3 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-004",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 4 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-005",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 5 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-006",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 6 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-007",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 7 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-008",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 8 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-009",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 9 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-010",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 10 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-011",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 11 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-012",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 12 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-013",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 13 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-014",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 14 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-015",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 15 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-016",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 16 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-017",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 17 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-018",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 18 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-019",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 19 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-complex-metaphors-020",
+      "ruleId": "c2-complex-metaphors",
+      "english": "[TODO: English sentence 20 for: Complex Metaphorical Language]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Metaphorical Language]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-001",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 1 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-002",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 2 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-003",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 3 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-004",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 4 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-005",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 5 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-006",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 6 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-007",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 7 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-008",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 8 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-009",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 9 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-010",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 10 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-011",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 11 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-012",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 12 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-013",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 13 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-014",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 14 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-015",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 15 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-016",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 16 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-017",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 17 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-018",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 18 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-019",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 19 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-communicative-strategies-020",
+      "ruleId": "c2-communicative-strategies",
+      "english": "[TODO: English sentence 20 for: Advanced Communicative Strategies]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Communicative Strategies]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-001",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 1 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-002",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 2 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-003",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 3 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-004",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 4 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-005",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 5 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-006",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 6 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-007",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 7 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-008",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 8 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-009",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 9 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-010",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 10 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-011",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 11 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-012",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 12 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-013",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 13 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-014",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 14 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-015",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 15 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-016",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 16 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-017",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 17 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-018",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 18 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-019",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 19 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c2-language-varieties-020",
+      "ruleId": "c2-language-varieties",
+      "english": "[TODO: English sentence 20 for: Sociolects and Professional Jargon]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Sociolects and Professional Jargon]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    }
+  ]
+}

@@ -1,0 +1,4189 @@
+{
+  "level": "C1",
+  "totalRules": 19,
+  "totalSentences": 380,
+  "targetSentences": 380,
+  "completionPercentage": 100,
+  "sentences": [
+    {
+      "sentenceId": "c1-konjunktiv-i-001",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 1 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-002",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 2 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-003",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 3 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-004",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 4 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-005",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 5 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-006",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 6 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-007",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 7 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-008",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 8 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-009",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 9 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-010",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 10 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-011",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 11 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-012",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 12 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-013",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 13 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-014",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 14 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-015",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 15 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-016",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 16 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-017",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 17 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-018",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 18 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-019",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 19 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-konjunktiv-i-020",
+      "ruleId": "c1-konjunktiv-i",
+      "english": "[TODO: English sentence 20 for: Konjunktiv I (Reported Speech)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv I (Reported Speech)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-001",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 1 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-002",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 2 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-003",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 3 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-004",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 4 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-005",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 5 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-006",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 6 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-007",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 7 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-008",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 8 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-009",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 9 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-010",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 10 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-011",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 11 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-012",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 12 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-013",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 13 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-014",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 14 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-015",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 15 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-016",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 16 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-017",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 17 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-018",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 18 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-019",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 19 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-modal-particles-020",
+      "ruleId": "c1-modal-particles",
+      "english": "[TODO: English sentence 20 for: Modal Particles]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Modal Particles]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-001",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 1 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-002",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 2 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-003",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 3 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-004",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 4 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-005",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 5 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-006",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 6 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-007",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 7 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-008",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 8 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-009",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 9 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-010",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 10 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-011",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 11 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-012",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 12 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-013",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 13 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-014",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 14 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-015",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 15 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-016",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 16 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-017",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 17 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-018",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 18 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-019",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 19 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-alternatives-020",
+      "ruleId": "c1-subjunctive-alternatives",
+      "english": "[TODO: English sentence 20 for: Alternatives to Subjunctive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Alternatives to Subjunctive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-001",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 1 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-002",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 2 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-003",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 3 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-004",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 4 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-005",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 5 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-006",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 6 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-007",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 7 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-008",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 8 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-009",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 9 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-010",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 10 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-011",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 11 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-012",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 12 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-013",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 13 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-014",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 14 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-015",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 15 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-016",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 16 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-017",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 17 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-018",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 18 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-019",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 19 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-extended-participial-constructions-020",
+      "ruleId": "c1-extended-participial-constructions",
+      "english": "[TODO: English sentence 20 for: Extended Participial Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Extended Participial Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-001",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 1 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-002",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 2 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-003",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 3 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-004",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 4 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-005",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 5 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-006",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 6 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-007",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 7 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-008",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 8 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-009",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 9 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-010",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 10 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-011",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 11 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-012",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 12 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-013",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 13 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-014",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 14 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-015",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 15 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-016",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 16 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-017",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 17 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-018",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 18 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-019",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 19 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-functional-verb-constructions-020",
+      "ruleId": "c1-functional-verb-constructions",
+      "english": "[TODO: English sentence 20 for: Functional Verb Constructions (Funktionsverbgefüge)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Functional Verb Constructions (Funktionsverbgefüge)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-001",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 1 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-002",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 2 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-003",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 3 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-004",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 4 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-005",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 5 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-006",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 6 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-007",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 7 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-008",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 8 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-009",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 9 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-010",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 10 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-011",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 11 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-012",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 12 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-013",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 13 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-014",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 14 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-015",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 15 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-016",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 16 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-017",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 17 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-018",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 18 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-019",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 19 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjective-modals-020",
+      "ruleId": "c1-subjective-modals",
+      "english": "[TODO: English sentence 20 for: Subjective Use of Modal Verbs]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Subjective Use of Modal Verbs]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-001",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 1 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-002",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 2 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-003",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 3 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-004",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 4 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-005",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 5 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-006",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 6 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-007",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 7 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-008",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 8 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-009",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 9 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-010",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 10 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-011",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 11 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-012",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 12 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-013",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 13 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-014",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 14 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-015",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 15 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-016",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 16 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-017",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 17 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-018",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 18 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-019",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 19 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-conditional-sentences-advanced-020",
+      "ruleId": "c1-conditional-sentences-advanced",
+      "english": "[TODO: English sentence 20 for: Advanced Conditional Sentences]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Conditional Sentences]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-001",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 1 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-002",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 2 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-003",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 3 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-004",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 4 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-005",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 5 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-006",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 6 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-007",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 7 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-008",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 8 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-009",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 9 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-010",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 10 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-011",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 11 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-012",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 12 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-013",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 13 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-014",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 14 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-015",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 15 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-016",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 16 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-017",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 17 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-018",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 18 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-019",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 19 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominalization-advanced-020",
+      "ruleId": "c1-nominalization-advanced",
+      "english": "[TODO: English sentence 20 for: Advanced Nominalization]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Nominalization]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-001",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 1 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-002",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 2 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-003",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 3 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-004",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 4 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-005",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 5 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-006",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 6 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-007",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 7 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-008",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 8 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-009",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 9 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-010",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 10 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-011",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 11 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-012",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 12 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-013",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 13 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-014",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 14 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-015",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 15 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-016",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 16 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-017",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 17 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-018",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 18 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-019",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 19 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-discourse-markers-020",
+      "ruleId": "c1-discourse-markers",
+      "english": "[TODO: English sentence 20 for: Discourse Markers and Connectors]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Discourse Markers and Connectors]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-001",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 1 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-002",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 2 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-003",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 3 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-004",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 4 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-005",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 5 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-006",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 6 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-007",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 7 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-008",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 8 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-009",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 9 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-010",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 10 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-011",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 11 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-012",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 12 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-013",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 13 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-014",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 14 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-015",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 15 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-016",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 16 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-017",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 17 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-018",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 18 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-019",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 19 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-prepositional-adverbs-020",
+      "ruleId": "c1-prepositional-adverbs",
+      "english": "[TODO: English sentence 20 for: Prepositional Adverbs (da-/wo-compounds)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Prepositional Adverbs (da-/wo-compounds)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-001",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 1 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-002",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 2 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-003",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 3 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-004",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 4 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-005",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 5 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-006",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 6 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-007",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 7 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-008",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 8 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-009",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 9 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-010",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 10 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-011",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 11 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-012",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 12 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-013",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 13 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-014",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 14 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-015",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 15 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-016",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 16 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-017",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 17 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-018",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 18 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-019",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 19 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-passive-state-vs-process-020",
+      "ruleId": "c1-passive-state-vs-process",
+      "english": "[TODO: English sentence 20 for: State Passive vs. Process Passive]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about State Passive vs. Process Passive]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-001",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 1 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-002",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 2 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-003",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 3 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-004",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 4 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-005",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 5 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-006",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 6 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-007",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 7 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-008",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 8 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-009",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 9 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-010",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 10 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-011",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 11 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-012",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 12 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-013",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 13 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-014",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 14 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-015",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 15 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-016",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 16 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-017",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 17 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-018",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 18 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-019",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 19 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-subjunctive-past-perfect-020",
+      "ruleId": "c1-subjunctive-past-perfect",
+      "english": "[TODO: English sentence 20 for: Konjunktiv II - Past Perfect]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Konjunktiv II - Past Perfect]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-001",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 1 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-002",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 2 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-003",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 3 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-004",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 4 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-005",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 5 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-006",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 6 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-007",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 7 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-008",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 8 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-009",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 9 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-010",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 10 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-011",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 11 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-012",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 12 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-013",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 13 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-014",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 14 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-015",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 15 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-016",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 16 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-017",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 17 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-018",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 18 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-019",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 19 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-anticipatory-es-020",
+      "ruleId": "c1-anticipatory-es",
+      "english": "[TODO: English sentence 20 for: Anticipatory 'es' with Subordinate Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Anticipatory 'es' with Subordinate Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-001",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 1 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-002",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 2 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-003",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 3 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-004",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 4 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-005",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 5 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-006",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 6 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-007",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 7 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-008",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 8 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-009",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 9 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-010",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 10 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-011",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 11 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-012",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 12 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-013",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 13 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-014",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 14 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-015",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 15 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-016",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 16 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-017",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 17 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-018",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 18 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-019",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 19 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-attributive-vs-predicative-020",
+      "ruleId": "c1-attributive-vs-predicative",
+      "english": "[TODO: English sentence 20 for: Attributive vs. Predicative Adjectives]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Attributive vs. Predicative Adjectives]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-001",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 1 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-002",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 2 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-003",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 3 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-004",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 4 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-005",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 5 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-006",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 6 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-007",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 7 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-008",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 8 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-009",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 9 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-010",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 10 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-011",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 11 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-012",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 12 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-013",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 13 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-014",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 14 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-015",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 15 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-016",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 16 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-017",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 17 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-018",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 18 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-019",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 19 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-genitive-constructions-020",
+      "ruleId": "c1-genitive-constructions",
+      "english": "[TODO: English sentence 20 for: Advanced Genitive Constructions]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Genitive Constructions]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-001",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 1 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-002",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 2 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-003",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 3 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-004",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 4 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-005",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 5 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-006",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 6 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-007",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 7 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-008",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 8 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-009",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 9 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-010",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 10 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-011",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 11 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-012",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 12 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-013",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 13 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-014",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 14 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-015",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 15 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-016",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 16 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-017",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 17 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-018",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 18 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-019",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 19 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-register-switching-020",
+      "ruleId": "c1-register-switching",
+      "english": "[TODO: English sentence 20 for: Register Switching and Style]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Register Switching and Style]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-001",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 1 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-002",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 2 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-003",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 3 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-004",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 4 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-005",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 5 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-006",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 6 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-007",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 7 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-008",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 8 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-009",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 9 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-010",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 10 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-011",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 11 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-012",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 12 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-013",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 13 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-014",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 14 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-015",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 15 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-016",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 16 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-017",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 17 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-018",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 18 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-019",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 19 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-nominal-style-020",
+      "ruleId": "c1-nominal-style",
+      "english": "[TODO: English sentence 20 for: Nominal Style (Nominalstil)]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Nominal Style (Nominalstil)]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-001",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 1 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-002",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 2 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-003",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 3 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-004",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 4 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-005",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 5 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-006",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 6 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-007",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 7 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-008",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 8 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-009",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 9 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-010",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 10 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-011",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 11 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-012",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 12 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-013",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 13 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-014",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 14 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-015",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 15 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-016",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 16 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-017",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 17 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-018",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 18 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-019",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 19 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-complex-relative-clauses-020",
+      "ruleId": "c1-complex-relative-clauses",
+      "english": "[TODO: English sentence 20 for: Complex Relative Clauses]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Complex Relative Clauses]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-001",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 1 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-002",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 2 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-003",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 3 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-004",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 4 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-005",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 5 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-006",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 6 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-007",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 7 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-008",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 8 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-009",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 9 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-010",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 10 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-011",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 11 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-012",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 12 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-013",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 13 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-014",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 14 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-015",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 15 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-016",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 16 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-017",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 17 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-018",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 18 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-019",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 19 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "c1-particle-verbs-advanced-020",
+      "ruleId": "c1-particle-verbs-advanced",
+      "english": "[TODO: English sentence 20 for: Advanced Particle Verbs and Prefixes]",
+      "german": "[TODO: German translation]",
+      "hints": [
+        "[TODO: Hint about Advanced Particle Verbs and Prefixes]"
+      ],
+      "keywords": [],
+      "difficulty": 5
+    }
+  ]
+}

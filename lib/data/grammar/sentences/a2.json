@@ -1,0 +1,5000 @@
+{
+  "level": "A2",
+  "totalRules": 17,
+  "totalSentences": 340,
+  "targetSentences": 340,
+  "completionPercentage": 100,
+  "sentences": [
+    {
+      "sentenceId": "a2-perfect-tense-001",
+      "ruleId": "a2-perfect-tense",
+      "english": "I learned German",
+      "german": "Ich habe Deutsch gelernt",
+      "hints": [
+        "Use 'haben' + past participle",
+        "gelernt = learned"
+      ],
+      "keywords": [
+        "haben",
+        "gelernt"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-perfect-tense-002",
+      "ruleId": "a2-perfect-tense",
+      "english": "She went home",
+      "german": "Sie ist nach Hause gegangen",
+      "hints": [
+        "Verbs of motion use 'sein'",
+        "gegangen = gone"
+      ],
+      "keywords": [
+        "ist",
+        "gegangen"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-perfect-tense-003",
+      "ruleId": "a2-perfect-tense",
+      "english": "We ate pizza",
+      "german": "Wir haben Pizza gegessen",
+      "hints": [
+        "Use 'haben' with eating",
+        "gegessen = eaten"
+      ],
+      "keywords": [
+        "haben",
+        "gegessen"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-perfect-tense-004",
+      "ruleId": "a2-perfect-tense",
+      "english": "He came yesterday",
+      "german": "Er ist gestern gekommen",
+      "hints": [
+        "Verbs of arrival use 'sein'",
+        "gekommen = come"
+      ],
+      "keywords": [
+        "ist",
+        "gekommen"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-perfect-tense-005",
+      "ruleId": "a2-perfect-tense",
+      "english": "I bought a car",
+      "german": "Ich habe ein Auto gekauft",
+      "hints": [
+        "Use 'haben' with buying",
+        "gekauft = bought"
+      ],
+      "keywords": [
+        "haben",
+        "gekauft"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-perfect-tense-006",
+      "ruleId": "a2-perfect-tense",
+      "english": "They traveled to Berlin",
+      "german": "Sie sind nach Berlin gereist",
+      "hints": [
+        "Travel uses 'sein'",
+        "gereist = traveled"
+      ],
+      "keywords": [
+        "sind",
+        "gereist"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-perfect-tense-007",
+      "ruleId": "a2-perfect-tense",
+      "english": "She has written a letter",
+      "german": "Sie hat einen Brief geschrieben",
+      "hints": [
+        "Use 'haben' with writing",
+        "geschrieben = written"
+      ],
+      "keywords": [
+        "hat",
+        "geschrieben"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-perfect-tense-008",
+      "ruleId": "a2-perfect-tense",
+      "english": "We stayed at home",
+      "german": "Wir sind zu Hause geblieben",
+      "hints": [
+        "State change uses 'sein'",
+        "geblieben = stayed"
+      ],
+      "keywords": [
+        "sind",
+        "geblieben"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-perfect-tense-009",
+      "ruleId": "a2-perfect-tense",
+      "english": "I have seen the movie",
+      "german": "Ich habe den Film gesehen",
+      "hints": [
+        "Use 'haben' with seeing",
+        "gesehen = seen"
+      ],
+      "keywords": [
+        "haben",
+        "gesehen"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-perfect-tense-010",
+      "ruleId": "a2-perfect-tense",
+      "english": "He has become a teacher",
+      "german": "Er ist Lehrer geworden",
+      "hints": [
+        "'werden' uses 'sein'",
+        "geworden = become"
+      ],
+      "keywords": [
+        "ist",
+        "geworden"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-perfect-tense-011",
+      "ruleId": "a2-perfect-tense",
+      "english": "They have worked hard",
+      "german": "Sie haben hart gearbeitet",
+      "hints": [
+        "Use 'haben' with working",
+        "gearbeitet = worked"
+      ],
+      "keywords": [
+        "haben",
+        "gearbeitet"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-perfect-tense-012",
+      "ruleId": "a2-perfect-tense",
+      "english": "I have slept well",
+      "german": "Ich habe gut geschlafen",
+      "hints": [
+        "Use 'haben' with sleeping",
+        "geschlafen = slept"
+      ],
+      "keywords": [
+        "haben",
+        "geschlafen"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-perfect-tense-013",
+      "ruleId": "a2-perfect-tense",
+      "english": "She has run fast",
+      "german": "Sie ist schnell gelaufen",
+      "hints": [
+        "Running uses 'sein'",
+        "gelaufen = run"
+      ],
+      "keywords": [
+        "ist",
+        "gelaufen"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-perfect-tense-014",
+      "ruleId": "a2-perfect-tense",
+      "english": "We have spoken German",
+      "german": "Wir haben Deutsch gesprochen",
+      "hints": [
+        "Use 'haben' with speaking",
+        "gesprochen = spoken"
+      ],
+      "keywords": [
+        "haben",
+        "gesprochen"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-perfect-tense-015",
+      "ruleId": "a2-perfect-tense",
+      "english": "He has driven to work",
+      "german": "Er ist zur Arbeit gefahren",
+      "hints": [
+        "Driving uses 'sein'",
+        "gefahren = driven"
+      ],
+      "keywords": [
+        "ist",
+        "gefahren"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-perfect-tense-016",
+      "ruleId": "a2-perfect-tense",
+      "english": "I have drunk coffee",
+      "german": "Ich habe Kaffee getrunken",
+      "hints": [
+        "Use 'haben' with drinking",
+        "getrunken = drunk"
+      ],
+      "keywords": [
+        "haben",
+        "getrunken"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-perfect-tense-017",
+      "ruleId": "a2-perfect-tense",
+      "english": "They have swum in the lake",
+      "german": "Sie sind im See geschwommen",
+      "hints": [
+        "Swimming uses 'sein'",
+        "geschwommen = swum"
+      ],
+      "keywords": [
+        "sind",
+        "geschwommen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-perfect-tense-018",
+      "ruleId": "a2-perfect-tense",
+      "english": "She has found the keys",
+      "german": "Sie hat die Schlüssel gefunden",
+      "hints": [
+        "Use 'haben' with finding",
+        "gefunden = found"
+      ],
+      "keywords": [
+        "hat",
+        "gefunden"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-perfect-tense-019",
+      "ruleId": "a2-perfect-tense",
+      "english": "We have forgotten the homework",
+      "german": "Wir haben die Hausaufgaben vergessen",
+      "hints": [
+        "Use 'haben' with forgetting",
+        "vergessen = forgotten"
+      ],
+      "keywords": [
+        "haben",
+        "vergessen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-perfect-tense-020",
+      "ruleId": "a2-perfect-tense",
+      "english": "He has grown tall",
+      "german": "Er ist groß gewachsen",
+      "hints": [
+        "Growth uses 'sein'",
+        "gewachsen = grown"
+      ],
+      "keywords": [
+        "ist",
+        "gewachsen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-dative-case-001",
+      "ruleId": "a2-dative-case",
+      "english": "I give the man a book",
+      "german": "Ich gebe dem Mann ein Buch",
+      "hints": [
+        "dem Mann = to the man (dative)",
+        "indirect object"
+      ],
+      "keywords": [
+        "dem",
+        "Mann"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-dative-case-002",
+      "ruleId": "a2-dative-case",
+      "english": "She helps the woman",
+      "german": "Sie hilft der Frau",
+      "hints": [
+        "helfen takes dative",
+        "der Frau = to the woman"
+      ],
+      "keywords": [
+        "hilft",
+        "der"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-dative-case-003",
+      "ruleId": "a2-dative-case",
+      "english": "He speaks with the child",
+      "german": "Er spricht mit dem Kind",
+      "hints": [
+        "mit requires dative",
+        "dem Kind = with the child"
+      ],
+      "keywords": [
+        "mit",
+        "dem"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-dative-case-004",
+      "ruleId": "a2-dative-case",
+      "english": "I thank my friend",
+      "german": "Ich danke meinem Freund",
+      "hints": [
+        "danken takes dative",
+        "meinem Freund = to my friend"
+      ],
+      "keywords": [
+        "danke",
+        "meinem"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-dative-case-005",
+      "ruleId": "a2-dative-case",
+      "english": "The book belongs to me",
+      "german": "Das Buch gehört mir",
+      "hints": [
+        "gehören takes dative",
+        "mir = to me"
+      ],
+      "keywords": [
+        "gehört",
+        "mir"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-dative-case-006",
+      "ruleId": "a2-dative-case",
+      "english": "She answers the teacher",
+      "german": "Sie antwortet dem Lehrer",
+      "hints": [
+        "antworten takes dative",
+        "dem Lehrer = to the teacher"
+      ],
+      "keywords": [
+        "antwortet",
+        "dem"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-dative-case-007",
+      "ruleId": "a2-dative-case",
+      "english": "I come from the city",
+      "german": "Ich komme aus der Stadt",
+      "hints": [
+        "aus requires dative",
+        "der Stadt = from the city"
+      ],
+      "keywords": [
+        "aus",
+        "der"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-dative-case-008",
+      "ruleId": "a2-dative-case",
+      "english": "He goes to the school",
+      "german": "Er geht zu der Schule",
+      "hints": [
+        "zu requires dative",
+        "der Schule = to the school"
+      ],
+      "keywords": [
+        "zu",
+        "der"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-dative-case-009",
+      "ruleId": "a2-dative-case",
+      "english": "We live with our parents",
+      "german": "Wir wohnen bei unseren Eltern",
+      "hints": [
+        "bei requires dative",
+        "unseren Eltern = with our parents"
+      ],
+      "keywords": [
+        "bei",
+        "unseren"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-dative-case-010",
+      "ruleId": "a2-dative-case",
+      "english": "The gift is for my mother",
+      "german": "Das Geschenk ist für meine Mutter",
+      "hints": [
+        "Wait - 'für' takes accusative!",
+        "This is a trick question"
+      ],
+      "keywords": [
+        "für",
+        "meine"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-dative-case-011",
+      "ruleId": "a2-dative-case",
+      "english": "She comes from the station",
+      "german": "Sie kommt von dem Bahnhof",
+      "hints": [
+        "von requires dative",
+        "dem Bahnhof = from the station"
+      ],
+      "keywords": [
+        "von",
+        "dem"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-dative-case-012",
+      "ruleId": "a2-dative-case",
+      "english": "I am going to my grandmother",
+      "german": "Ich fahre zu meiner Großmutter",
+      "hints": [
+        "zu requires dative",
+        "meiner Großmutter = to my grandmother"
+      ],
+      "keywords": [
+        "zu",
+        "meiner"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-dative-case-013",
+      "ruleId": "a2-dative-case",
+      "english": "He walks with his dog",
+      "german": "Er geht mit seinem Hund spazieren",
+      "hints": [
+        "mit requires dative",
+        "seinem Hund = with his dog"
+      ],
+      "keywords": [
+        "mit",
+        "seinem"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-dative-case-014",
+      "ruleId": "a2-dative-case",
+      "english": "We eat at the restaurant",
+      "german": "Wir essen in dem Restaurant",
+      "hints": [
+        "in + location = dative",
+        "dem Restaurant = at the restaurant"
+      ],
+      "keywords": [
+        "in",
+        "dem"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-dative-case-015",
+      "ruleId": "a2-dative-case",
+      "english": "The cat sleeps on the bed",
+      "german": "Die Katze schläft auf dem Bett",
+      "hints": [
+        "auf + location = dative",
+        "dem Bett = on the bed"
+      ],
+      "keywords": [
+        "auf",
+        "dem"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-dative-case-016",
+      "ruleId": "a2-dative-case",
+      "english": "I send you a letter",
+      "german": "Ich schicke dir einen Brief",
+      "hints": [
+        "dir = to you (dative)",
+        "indirect object"
+      ],
+      "keywords": [
+        "dir",
+        "schicke"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-dative-case-017",
+      "ruleId": "a2-dative-case",
+      "english": "She shows us the pictures",
+      "german": "Sie zeigt uns die Bilder",
+      "hints": [
+        "uns = to us (dative)",
+        "indirect object"
+      ],
+      "keywords": [
+        "zeigt",
+        "uns"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-dative-case-018",
+      "ruleId": "a2-dative-case",
+      "english": "The shoes fit me well",
+      "german": "Die Schuhe passen mir gut",
+      "hints": [
+        "passen takes dative",
+        "mir = to me"
+      ],
+      "keywords": [
+        "passen",
+        "mir"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-dative-case-019",
+      "ruleId": "a2-dative-case",
+      "english": "I trust my sister",
+      "german": "Ich vertraue meiner Schwester",
+      "hints": [
+        "vertrauen takes dative",
+        "meiner Schwester = my sister"
+      ],
+      "keywords": [
+        "vertraue",
+        "meiner"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-dative-case-020",
+      "ruleId": "a2-dative-case",
+      "english": "He congratulates his colleague",
+      "german": "Er gratuliert seinem Kollegen",
+      "hints": [
+        "gratulieren takes dative",
+        "seinem Kollegen = to his colleague"
+      ],
+      "keywords": [
+        "gratuliert",
+        "seinem"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-modal-verbs-001",
+      "ruleId": "a2-modal-verbs",
+      "english": "I can swim",
+      "german": "Ich kann schwimmen",
+      "hints": [
+        "können = can/to be able to",
+        "Infinitive goes to end"
+      ],
+      "keywords": [
+        "kann",
+        "schwimmen"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-modal-verbs-002",
+      "ruleId": "a2-modal-verbs",
+      "english": "You must learn",
+      "german": "Du musst lernen",
+      "hints": [
+        "müssen = must/have to",
+        "Infinitive at end"
+      ],
+      "keywords": [
+        "musst",
+        "lernen"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-modal-verbs-003",
+      "ruleId": "a2-modal-verbs",
+      "english": "She wants to sleep",
+      "german": "Sie will schlafen",
+      "hints": [
+        "wollen = to want",
+        "Infinitive at end"
+      ],
+      "keywords": [
+        "will",
+        "schlafen"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-modal-verbs-004",
+      "ruleId": "a2-modal-verbs",
+      "english": "We may go",
+      "german": "Wir dürfen gehen",
+      "hints": [
+        "dürfen = may/to be allowed to",
+        "Infinitive at end"
+      ],
+      "keywords": [
+        "dürfen",
+        "gehen"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-modal-verbs-005",
+      "ruleId": "a2-modal-verbs",
+      "english": "He should study",
+      "german": "Er soll studieren",
+      "hints": [
+        "sollen = should/supposed to",
+        "Infinitive at end"
+      ],
+      "keywords": [
+        "soll",
+        "studieren"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-modal-verbs-006",
+      "ruleId": "a2-modal-verbs",
+      "english": "I like to read",
+      "german": "Ich mag lesen",
+      "hints": [
+        "mögen = to like",
+        "Also means 'may'"
+      ],
+      "keywords": [
+        "mag",
+        "lesen"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-modal-verbs-007",
+      "ruleId": "a2-modal-verbs",
+      "english": "Can you help me",
+      "german": "Kannst du mir helfen",
+      "hints": [
+        "können = can",
+        "mir = dative pronoun"
+      ],
+      "keywords": [
+        "kannst",
+        "helfen"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-modal-verbs-008",
+      "ruleId": "a2-modal-verbs",
+      "english": "She must work tomorrow",
+      "german": "Sie muss morgen arbeiten",
+      "hints": [
+        "müssen = must",
+        "Time word before infinitive"
+      ],
+      "keywords": [
+        "muss",
+        "arbeiten"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-modal-verbs-009",
+      "ruleId": "a2-modal-verbs",
+      "english": "We want to travel to Spain",
+      "german": "Wir wollen nach Spanien reisen",
+      "hints": [
+        "wollen = want",
+        "nach + country name"
+      ],
+      "keywords": [
+        "wollen",
+        "reisen"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-modal-verbs-010",
+      "ruleId": "a2-modal-verbs",
+      "english": "You are not allowed to smoke here",
+      "german": "Du darfst hier nicht rauchen",
+      "hints": [
+        "nicht + infinitive",
+        "dürfen negated = not allowed"
+      ],
+      "keywords": [
+        "darfst",
+        "nicht"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-modal-verbs-011",
+      "ruleId": "a2-modal-verbs",
+      "english": "He cannot come today",
+      "german": "Er kann heute nicht kommen",
+      "hints": [
+        "nicht before infinitive",
+        "können negated"
+      ],
+      "keywords": [
+        "kann",
+        "nicht"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-modal-verbs-012",
+      "ruleId": "a2-modal-verbs",
+      "english": "I should eat more vegetables",
+      "german": "Ich soll mehr Gemüse essen",
+      "hints": [
+        "sollen = should",
+        "mehr = more"
+      ],
+      "keywords": [
+        "soll",
+        "mehr"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-modal-verbs-013",
+      "ruleId": "a2-modal-verbs",
+      "english": "Do you want to watch a movie",
+      "german": "Willst du einen Film sehen",
+      "hints": [
+        "wollen in question",
+        "einen Film = accusative"
+      ],
+      "keywords": [
+        "willst",
+        "sehen"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-modal-verbs-014",
+      "ruleId": "a2-modal-verbs",
+      "english": "She can speak three languages",
+      "german": "Sie kann drei Sprachen sprechen",
+      "hints": [
+        "können + sprechen",
+        "drei Sprachen = object"
+      ],
+      "keywords": [
+        "kann",
+        "sprechen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-modal-verbs-015",
+      "ruleId": "a2-modal-verbs",
+      "english": "We have to finish the homework",
+      "german": "Wir müssen die Hausaufgaben fertigmachen",
+      "hints": [
+        "müssen = have to",
+        "fertigmachen = to finish"
+      ],
+      "keywords": [
+        "müssen",
+        "fertigmachen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-modal-verbs-016",
+      "ruleId": "a2-modal-verbs",
+      "english": "May I ask a question",
+      "german": "Darf ich eine Frage stellen",
+      "hints": [
+        "dürfen = may/permission",
+        "eine Frage stellen = ask a question"
+      ],
+      "keywords": [
+        "darf",
+        "stellen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-modal-verbs-017",
+      "ruleId": "a2-modal-verbs",
+      "english": "You should not drink so much coffee",
+      "german": "Du sollst nicht so viel Kaffee trinken",
+      "hints": [
+        "sollen + nicht",
+        "so viel = so much"
+      ],
+      "keywords": [
+        "sollst",
+        "nicht"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-modal-verbs-018",
+      "ruleId": "a2-modal-verbs",
+      "english": "He wants to become a doctor",
+      "german": "Er will Arzt werden",
+      "hints": [
+        "wollen + werden",
+        "No article before professions"
+      ],
+      "keywords": [
+        "will",
+        "werden"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-modal-verbs-019",
+      "ruleId": "a2-modal-verbs",
+      "english": "I would like to order",
+      "german": "Ich möchte bestellen",
+      "hints": [
+        "möchten = would like (subjunctive)",
+        "Polite form"
+      ],
+      "keywords": [
+        "möchte",
+        "bestellen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-modal-verbs-020",
+      "ruleId": "a2-modal-verbs",
+      "english": "Can you tell me the way",
+      "german": "Können Sie mir den Weg sagen",
+      "hints": [
+        "können in formal question",
+        "mir = to me, den Weg = the way"
+      ],
+      "keywords": [
+        "können",
+        "sagen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-001",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "The car is bigger",
+      "german": "Das Auto ist größer",
+      "hints": [
+        "groß + er = größer",
+        "Umlaut added"
+      ],
+      "keywords": [
+        "größer"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-002",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "She is older than me",
+      "german": "Sie ist älter als ich",
+      "hints": [
+        "alt + er = älter",
+        "als = than"
+      ],
+      "keywords": [
+        "älter",
+        "als"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-003",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "This house is smaller",
+      "german": "Dieses Haus ist kleiner",
+      "hints": [
+        "klein + er = kleiner",
+        "No umlaut needed"
+      ],
+      "keywords": [
+        "kleiner"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-004",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "He runs faster",
+      "german": "Er läuft schneller",
+      "hints": [
+        "schnell + er = schneller",
+        "No umlaut"
+      ],
+      "keywords": [
+        "schneller"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-005",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "The book is more interesting",
+      "german": "Das Buch ist interessanter",
+      "hints": [
+        "Add -er to long adjectives too",
+        "interessant + er"
+      ],
+      "keywords": [
+        "interessanter"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-006",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "My brother is younger",
+      "german": "Mein Bruder ist jünger",
+      "hints": [
+        "jung + er = jünger",
+        "Umlaut added"
+      ],
+      "keywords": [
+        "jünger"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-007",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "This test is harder",
+      "german": "Dieser Test ist schwerer",
+      "hints": [
+        "schwer + er = schwerer",
+        "No umlaut"
+      ],
+      "keywords": [
+        "schwerer"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-008",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "The weather is warmer today",
+      "german": "Das Wetter ist heute wärmer",
+      "hints": [
+        "warm + er = wärmer",
+        "Umlaut added"
+      ],
+      "keywords": [
+        "wärmer"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-009",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "She is smarter than him",
+      "german": "Sie ist klüger als er",
+      "hints": [
+        "klug + er = klüger",
+        "als er = than him"
+      ],
+      "keywords": [
+        "klüger",
+        "als"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-010",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "This bag is heavier",
+      "german": "Diese Tasche ist schwerer",
+      "hints": [
+        "schwer = heavy/difficult",
+        "schwerer = heavier"
+      ],
+      "keywords": [
+        "schwerer"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-011",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "The coffee is stronger",
+      "german": "Der Kaffee ist stärker",
+      "hints": [
+        "stark + er = stärker",
+        "Umlaut added"
+      ],
+      "keywords": [
+        "stärker"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-012",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "Her hair is longer",
+      "german": "Ihr Haar ist länger",
+      "hints": [
+        "lang + er = länger",
+        "Umlaut added"
+      ],
+      "keywords": [
+        "länger"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-013",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "This chair is more comfortable",
+      "german": "Dieser Stuhl ist bequemer",
+      "hints": [
+        "bequem + er = bequemer",
+        "No umlaut"
+      ],
+      "keywords": [
+        "bequemer"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-014",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "The movie is better",
+      "german": "Der Film ist besser",
+      "hints": [
+        "Irregular: gut → besser",
+        "Not 'guter'!"
+      ],
+      "keywords": [
+        "besser"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-015",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "I have more time",
+      "german": "Ich habe mehr Zeit",
+      "hints": [
+        "Irregular: viel → mehr",
+        "Not 'vieler'!"
+      ],
+      "keywords": [
+        "mehr"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-016",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "This street is narrower",
+      "german": "Diese Straße ist enger",
+      "hints": [
+        "eng + er = enger",
+        "No umlaut"
+      ],
+      "keywords": [
+        "enger"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-017",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "The train is faster than the bus",
+      "german": "Der Zug ist schneller als der Bus",
+      "hints": [
+        "schneller als",
+        "der Bus = nominative after als"
+      ],
+      "keywords": [
+        "schneller",
+        "als"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-018",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "My apartment is closer to the city",
+      "german": "Meine Wohnung ist näher zur Stadt",
+      "hints": [
+        "nah + er = näher (irregular)",
+        "Umlaut + different stem"
+      ],
+      "keywords": [
+        "näher"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-019",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "He is taller than his father",
+      "german": "Er ist größer als sein Vater",
+      "hints": [
+        "größer als",
+        "sein Vater = his father"
+      ],
+      "keywords": [
+        "größer",
+        "als"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-comparative-adjectives-020",
+      "ruleId": "a2-comparative-adjectives",
+      "english": "This exercise is more difficult than the last one",
+      "german": "Diese Übung ist schwieriger als die letzte",
+      "hints": [
+        "schwierig + er",
+        "die letzte = the last one"
+      ],
+      "keywords": [
+        "schwieriger",
+        "als"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-separable-verbs-001",
+      "ruleId": "a2-separable-verbs",
+      "english": "I get up at 7 o'clock",
+      "german": "Ich stehe um 7 Uhr auf",
+      "hints": [
+        "aufstehen = to get up",
+        "Prefix 'auf' goes to end"
+      ],
+      "keywords": [
+        "stehe",
+        "auf"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-separable-verbs-002",
+      "ruleId": "a2-separable-verbs",
+      "english": "She goes shopping",
+      "german": "Sie kauft ein",
+      "hints": [
+        "einkaufen = to shop",
+        "Prefix 'ein' to end"
+      ],
+      "keywords": [
+        "kauft",
+        "ein"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-separable-verbs-003",
+      "ruleId": "a2-separable-verbs",
+      "english": "Are you coming along",
+      "german": "Kommst du mit",
+      "hints": [
+        "mitkommen = to come along",
+        "'mit' to end"
+      ],
+      "keywords": [
+        "kommst",
+        "mit"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-separable-verbs-004",
+      "ruleId": "a2-separable-verbs",
+      "english": "He calls me back",
+      "german": "Er ruft mich zurück",
+      "hints": [
+        "zurückrufen = to call back",
+        "'zurück' to end"
+      ],
+      "keywords": [
+        "ruft",
+        "zurück"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-separable-verbs-005",
+      "ruleId": "a2-separable-verbs",
+      "english": "We turn on the TV",
+      "german": "Wir schalten den Fernseher ein",
+      "hints": [
+        "einschalten = to turn on",
+        "'ein' to end"
+      ],
+      "keywords": [
+        "schalten",
+        "ein"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-separable-verbs-006",
+      "ruleId": "a2-separable-verbs",
+      "english": "I clean up my room",
+      "german": "Ich räume mein Zimmer auf",
+      "hints": [
+        "aufräumen = to clean up",
+        "'auf' to end"
+      ],
+      "keywords": [
+        "räume",
+        "auf"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-separable-verbs-007",
+      "ruleId": "a2-separable-verbs",
+      "english": "She takes off her shoes",
+      "german": "Sie zieht ihre Schuhe aus",
+      "hints": [
+        "ausziehen = to take off",
+        "'aus' to end"
+      ],
+      "keywords": [
+        "zieht",
+        "aus"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-separable-verbs-008",
+      "ruleId": "a2-separable-verbs",
+      "english": "The train departs at 10",
+      "german": "Der Zug fährt um 10 Uhr ab",
+      "hints": [
+        "abfahren = to depart",
+        "'ab' to end"
+      ],
+      "keywords": [
+        "fährt",
+        "ab"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-separable-verbs-009",
+      "ruleId": "a2-separable-verbs",
+      "english": "I pick you up",
+      "german": "Ich hole dich ab",
+      "hints": [
+        "abholen = to pick up",
+        "'ab' to end"
+      ],
+      "keywords": [
+        "hole",
+        "ab"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-separable-verbs-010",
+      "ruleId": "a2-separable-verbs",
+      "english": "He closes the door",
+      "german": "Er macht die Tür zu",
+      "hints": [
+        "zumachen = to close",
+        "'zu' to end"
+      ],
+      "keywords": [
+        "macht",
+        "zu"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-separable-verbs-011",
+      "ruleId": "a2-separable-verbs",
+      "english": "We arrive tomorrow",
+      "german": "Wir kommen morgen an",
+      "hints": [
+        "ankommen = to arrive",
+        "'an' to end"
+      ],
+      "keywords": [
+        "kommen",
+        "an"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-separable-verbs-012",
+      "ruleId": "a2-separable-verbs",
+      "english": "She brings the children",
+      "german": "Sie bringt die Kinder mit",
+      "hints": [
+        "mitbringen = to bring along",
+        "'mit' to end"
+      ],
+      "keywords": [
+        "bringt",
+        "mit"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-separable-verbs-013",
+      "ruleId": "a2-separable-verbs",
+      "english": "I turn off the light",
+      "german": "Ich mache das Licht aus",
+      "hints": [
+        "ausmachen = to turn off",
+        "'aus' to end"
+      ],
+      "keywords": [
+        "mache",
+        "aus"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-separable-verbs-014",
+      "ruleId": "a2-separable-verbs",
+      "english": "He invites us",
+      "german": "Er lädt uns ein",
+      "hints": [
+        "einladen = to invite",
+        "'ein' to end, stem change"
+      ],
+      "keywords": [
+        "lädt",
+        "ein"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-separable-verbs-015",
+      "ruleId": "a2-separable-verbs",
+      "english": "The movie starts at 8",
+      "german": "Der Film fängt um 8 Uhr an",
+      "hints": [
+        "anfangen = to start",
+        "'an' to end"
+      ],
+      "keywords": [
+        "fängt",
+        "an"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-separable-verbs-016",
+      "ruleId": "a2-separable-verbs",
+      "english": "I throw away the garbage",
+      "german": "Ich werfe den Müll weg",
+      "hints": [
+        "wegwerfen = to throw away",
+        "'weg' to end"
+      ],
+      "keywords": [
+        "werfe",
+        "weg"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-separable-verbs-017",
+      "ruleId": "a2-separable-verbs",
+      "english": "She writes down the number",
+      "german": "Sie schreibt die Nummer auf",
+      "hints": [
+        "aufschreiben = to write down",
+        "'auf' to end"
+      ],
+      "keywords": [
+        "schreibt",
+        "auf"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-separable-verbs-018",
+      "ruleId": "a2-separable-verbs",
+      "english": "We give back the books",
+      "german": "Wir geben die Bücher zurück",
+      "hints": [
+        "zurückgeben = to give back",
+        "'zurück' to end"
+      ],
+      "keywords": [
+        "geben",
+        "zurück"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-separable-verbs-019",
+      "ruleId": "a2-separable-verbs",
+      "english": "He looks forward to the vacation",
+      "german": "Er freut sich auf den Urlaub",
+      "hints": [
+        "sich freuen auf = to look forward to",
+        "Reflexive + separable"
+      ],
+      "keywords": [
+        "freut",
+        "sich",
+        "auf"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-separable-verbs-020",
+      "ruleId": "a2-separable-verbs",
+      "english": "I get dressed",
+      "german": "Ich ziehe mich an",
+      "hints": [
+        "sich anziehen = to get dressed",
+        "Reflexive separable verb"
+      ],
+      "keywords": [
+        "ziehe",
+        "an"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-001",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I go into the school",
+      "german": "Ich gehe in die Schule",
+      "hints": [
+        "Motion → accusative",
+        "in + die (accusative)"
+      ],
+      "keywords": [
+        "in",
+        "die"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-002",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I am in the school",
+      "german": "Ich bin in der Schule",
+      "hints": [
+        "Location → dative",
+        "in + der (dative)"
+      ],
+      "keywords": [
+        "in",
+        "der"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-003",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He puts the book on the table",
+      "german": "Er legt das Buch auf den Tisch",
+      "hints": [
+        "legen = motion → accusative",
+        "auf + den"
+      ],
+      "keywords": [
+        "auf",
+        "den"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-004",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The book is on the table",
+      "german": "Das Buch liegt auf dem Tisch",
+      "hints": [
+        "liegen = location → dative",
+        "auf + dem"
+      ],
+      "keywords": [
+        "auf",
+        "dem"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-005",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She goes to the board",
+      "german": "Sie geht an die Tafel",
+      "hints": [
+        "Motion → accusative",
+        "an + die"
+      ],
+      "keywords": [
+        "an",
+        "die"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-006",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The lamp hangs on the ceiling",
+      "german": "Die Lampe hängt an der Decke",
+      "hints": [
+        "Location → dative",
+        "an + der"
+      ],
+      "keywords": [
+        "an",
+        "der"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-007",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The bird flies over the house",
+      "german": "Der Vogel fliegt über das Haus",
+      "hints": [
+        "Motion → accusative",
+        "über + das"
+      ],
+      "keywords": [
+        "über",
+        "das"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-008",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The picture hangs above the sofa",
+      "german": "Das Bild hängt über dem Sofa",
+      "hints": [
+        "Location → dative",
+        "über + dem"
+      ],
+      "keywords": [
+        "über",
+        "dem"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-009",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The cat runs under the table",
+      "german": "Die Katze läuft unter den Tisch",
+      "hints": [
+        "Motion → accusative",
+        "unter + den"
+      ],
+      "keywords": [
+        "unter",
+        "den"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-010",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The cat sleeps under the table",
+      "german": "Die Katze schläft unter dem Tisch",
+      "hints": [
+        "Location → dative",
+        "unter + dem"
+      ],
+      "keywords": [
+        "unter",
+        "dem"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-011",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He steps in front of the door",
+      "german": "Er tritt vor die Tür",
+      "hints": [
+        "Motion → accusative",
+        "vor + die"
+      ],
+      "keywords": [
+        "vor",
+        "die"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-012",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He stands in front of the door",
+      "german": "Er steht vor der Tür",
+      "hints": [
+        "Location → dative",
+        "vor + der"
+      ],
+      "keywords": [
+        "vor",
+        "der"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-013",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The dog runs behind the house",
+      "german": "Der Hund rennt hinter das Haus",
+      "hints": [
+        "Motion → accusative",
+        "hinter + das"
+      ],
+      "keywords": [
+        "hinter",
+        "das"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-014",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The garden is behind the house",
+      "german": "Der Garten ist hinter dem Haus",
+      "hints": [
+        "Location → dative",
+        "hinter + dem"
+      ],
+      "keywords": [
+        "hinter",
+        "dem"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-015",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She sits down next to her friend",
+      "german": "Sie setzt sich neben ihren Freund",
+      "hints": [
+        "Motion → accusative",
+        "neben + ihren"
+      ],
+      "keywords": [
+        "neben",
+        "ihren"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-016",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She sits next to her friend",
+      "german": "Sie sitzt neben ihrem Freund",
+      "hints": [
+        "Location → dative",
+        "neben + ihrem"
+      ],
+      "keywords": [
+        "neben",
+        "ihrem"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-017",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He places the vase between the books",
+      "german": "Er stellt die Vase zwischen die Bücher",
+      "hints": [
+        "Motion → accusative",
+        "zwischen + die"
+      ],
+      "keywords": [
+        "zwischen",
+        "die"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-018",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The vase stands between the books",
+      "german": "Die Vase steht zwischen den Büchern",
+      "hints": [
+        "Location → dative",
+        "zwischen + den"
+      ],
+      "keywords": [
+        "zwischen",
+        "den"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-019",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I hang the picture on the wall",
+      "german": "Ich hänge das Bild an die Wand",
+      "hints": [
+        "hängen (transitive) → accusative",
+        "an + die"
+      ],
+      "keywords": [
+        "hänge",
+        "an"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-020",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The coat hangs in the closet",
+      "german": "Der Mantel hängt im Schrank",
+      "hints": [
+        "hängen (intransitive) → dative",
+        "im = in dem"
+      ],
+      "keywords": [
+        "hängt",
+        "im"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-001",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "I wash myself",
+      "german": "Ich wasche mich",
+      "hints": [
+        "sich waschen",
+        "mich = myself"
+      ],
+      "keywords": [
+        "wasche",
+        "mich"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-002",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "You are happy",
+      "german": "Du freust dich",
+      "hints": [
+        "sich freuen = to be happy",
+        "dich = yourself"
+      ],
+      "keywords": [
+        "freust",
+        "dich"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-003",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "She is interested in music",
+      "german": "Sie interessiert sich für Musik",
+      "hints": [
+        "sich interessieren für",
+        "sich = herself"
+      ],
+      "keywords": [
+        "interessiert",
+        "sich"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-004",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "We meet at 8 o'clock",
+      "german": "Wir treffen uns um 8 Uhr",
+      "hints": [
+        "sich treffen = to meet",
+        "uns = ourselves"
+      ],
+      "keywords": [
+        "treffen",
+        "uns"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-005",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "I remember the name",
+      "german": "Ich erinnere mich an den Namen",
+      "hints": [
+        "sich erinnern an",
+        "mich = myself"
+      ],
+      "keywords": [
+        "erinnere",
+        "mich"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-006",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "He hurries",
+      "german": "Er beeilt sich",
+      "hints": [
+        "sich beeilen = to hurry",
+        "sich = himself"
+      ],
+      "keywords": [
+        "beeilt",
+        "sich"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-007",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "Do you feel well",
+      "german": "Fühlst du dich wohl",
+      "hints": [
+        "sich fühlen = to feel",
+        "dich = yourself"
+      ],
+      "keywords": [
+        "fühlst",
+        "dich"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-008",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "She is looking forward to the weekend",
+      "german": "Sie freut sich auf das Wochenende",
+      "hints": [
+        "sich freuen auf",
+        "Accusative after 'auf'"
+      ],
+      "keywords": [
+        "freut",
+        "sich",
+        "auf"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-009",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "I apologize",
+      "german": "Ich entschuldige mich",
+      "hints": [
+        "sich entschuldigen",
+        "mich = myself"
+      ],
+      "keywords": [
+        "entschuldige",
+        "mich"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-010",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "We rest",
+      "german": "Wir erholen uns",
+      "hints": [
+        "sich erholen = to rest/relax",
+        "uns = ourselves"
+      ],
+      "keywords": [
+        "erholen",
+        "uns"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-011",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "He is annoyed about the noise",
+      "german": "Er ärgert sich über den Lärm",
+      "hints": [
+        "sich ärgern über",
+        "Accusative after 'über'"
+      ],
+      "keywords": [
+        "ärgert",
+        "sich",
+        "über"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-012",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "I am getting dressed",
+      "german": "Ich ziehe mich an",
+      "hints": [
+        "sich anziehen",
+        "Separable + reflexive"
+      ],
+      "keywords": [
+        "ziehe",
+        "mich",
+        "an"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-013",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "She is taking a break",
+      "german": "Sie macht sich eine Pause",
+      "hints": [
+        "sich eine Pause machen",
+        "Dative reflexive"
+      ],
+      "keywords": [
+        "macht",
+        "sich"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-014",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "We are deciding",
+      "german": "Wir entscheiden uns",
+      "hints": [
+        "sich entscheiden = to decide",
+        "uns = ourselves"
+      ],
+      "keywords": [
+        "entscheiden",
+        "uns"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-015",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "You should relax",
+      "german": "Du sollst dich entspannen",
+      "hints": [
+        "sich entspannen",
+        "Modal + reflexive"
+      ],
+      "keywords": [
+        "entspannen",
+        "dich"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-016",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "He is concentrating on his work",
+      "german": "Er konzentriert sich auf seine Arbeit",
+      "hints": [
+        "sich konzentrieren auf",
+        "Accusative after 'auf'"
+      ],
+      "keywords": [
+        "konzentriert",
+        "sich"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-017",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "I can imagine that",
+      "german": "Ich kann mir das vorstellen",
+      "hints": [
+        "sich vorstellen (dative)",
+        "Dative reflexive + modal"
+      ],
+      "keywords": [
+        "vorstellen",
+        "mir"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-018",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "She is worried about her exam",
+      "german": "Sie sorgt sich um ihre Prüfung",
+      "hints": [
+        "sich sorgen um",
+        "Accusative after 'um'"
+      ],
+      "keywords": [
+        "sorgt",
+        "sich",
+        "um"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-019",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "We are complaining about the service",
+      "german": "Wir beschweren uns über den Service",
+      "hints": [
+        "sich beschweren über",
+        "Accusative after 'über'"
+      ],
+      "keywords": [
+        "beschweren",
+        "uns"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-reflexive-verbs-020",
+      "ruleId": "a2-reflexive-verbs",
+      "english": "I am brushing my teeth",
+      "german": "Ich putze mir die Zähne",
+      "hints": [
+        "Dative reflexive possession",
+        "mir = my (dative)"
+      ],
+      "keywords": [
+        "putze",
+        "mir"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-imperative-001",
+      "ruleId": "a2-imperative",
+      "english": "Come",
+      "german": "Komm",
+      "hints": [
+        "du-form: drop -st",
+        "Informal singular"
+      ],
+      "keywords": [
+        "komm"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-imperative-002",
+      "ruleId": "a2-imperative",
+      "english": "Come (plural)",
+      "german": "Kommt",
+      "hints": [
+        "ihr-form: same as present",
+        "Informal plural"
+      ],
+      "keywords": [
+        "kommt"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-imperative-003",
+      "ruleId": "a2-imperative",
+      "english": "Come (formal)",
+      "german": "Kommen Sie",
+      "hints": [
+        "Sie-form: infinitive + Sie",
+        "Formal"
+      ],
+      "keywords": [
+        "kommen",
+        "Sie"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-imperative-004",
+      "ruleId": "a2-imperative",
+      "english": "Go",
+      "german": "Geh",
+      "hints": [
+        "du-form: gehen → geh",
+        "e-ending optional"
+      ],
+      "keywords": [
+        "geh"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-imperative-005",
+      "ruleId": "a2-imperative",
+      "english": "Be quiet",
+      "german": "Sei ruhig",
+      "hints": [
+        "sein → sei (irregular)",
+        "du-form"
+      ],
+      "keywords": [
+        "sei",
+        "ruhig"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-imperative-006",
+      "ruleId": "a2-imperative",
+      "english": "Be quiet (plural)",
+      "german": "Seid ruhig",
+      "hints": [
+        "sein → seid (irregular)",
+        "ihr-form"
+      ],
+      "keywords": [
+        "seid",
+        "ruhig"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-imperative-007",
+      "ruleId": "a2-imperative",
+      "english": "Take a seat",
+      "german": "Nehmen Sie Platz",
+      "hints": [
+        "Formal imperative",
+        "Platz nehmen = take a seat"
+      ],
+      "keywords": [
+        "nehmen",
+        "Platz"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-imperative-008",
+      "ruleId": "a2-imperative",
+      "english": "Help me",
+      "german": "Hilf mir",
+      "hints": [
+        "helfen → hilf",
+        "Stem-vowel change"
+      ],
+      "keywords": [
+        "hilf",
+        "mir"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-imperative-009",
+      "ruleId": "a2-imperative",
+      "english": "Read the book",
+      "german": "Lies das Buch",
+      "hints": [
+        "lesen → lies",
+        "Stem-vowel change"
+      ],
+      "keywords": [
+        "lies"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-imperative-010",
+      "ruleId": "a2-imperative",
+      "english": "Wait",
+      "german": "Warte",
+      "hints": [
+        "warten → warte",
+        "e-ending for -ten verbs"
+      ],
+      "keywords": [
+        "warte"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-imperative-011",
+      "ruleId": "a2-imperative",
+      "english": "Write the letter",
+      "german": "Schreib den Brief",
+      "hints": [
+        "schreiben → schreib",
+        "du-form"
+      ],
+      "keywords": [
+        "schreib"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-imperative-012",
+      "ruleId": "a2-imperative",
+      "english": "Speak louder",
+      "german": "Sprich lauter",
+      "hints": [
+        "sprechen → sprich",
+        "Stem-vowel change"
+      ],
+      "keywords": [
+        "sprich",
+        "lauter"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-imperative-013",
+      "ruleId": "a2-imperative",
+      "english": "Have patience",
+      "german": "Hab Geduld",
+      "hints": [
+        "haben → hab",
+        "Geduld = patience"
+      ],
+      "keywords": [
+        "hab",
+        "Geduld"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-imperative-014",
+      "ruleId": "a2-imperative",
+      "english": "Don't forget",
+      "german": "Vergiss nicht",
+      "hints": [
+        "vergessen → vergiss",
+        "nicht at end"
+      ],
+      "keywords": [
+        "vergiss",
+        "nicht"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-imperative-015",
+      "ruleId": "a2-imperative",
+      "english": "Get up",
+      "german": "Steh auf",
+      "hints": [
+        "aufstehen → steh ... auf",
+        "Separable verb"
+      ],
+      "keywords": [
+        "steh",
+        "auf"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-imperative-016",
+      "ruleId": "a2-imperative",
+      "english": "Close the door",
+      "german": "Mach die Tür zu",
+      "hints": [
+        "zumachen → mach ... zu",
+        "Separable verb"
+      ],
+      "keywords": [
+        "mach",
+        "zu"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-imperative-017",
+      "ruleId": "a2-imperative",
+      "english": "Turn off the light",
+      "german": "Mach das Licht aus",
+      "hints": [
+        "ausmachen → mach ... aus",
+        "Separable verb"
+      ],
+      "keywords": [
+        "mach",
+        "aus"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-imperative-018",
+      "ruleId": "a2-imperative",
+      "english": "Please sit down",
+      "german": "Setzen Sie sich bitte",
+      "hints": [
+        "Reflexive formal imperative",
+        "bitte = please"
+      ],
+      "keywords": [
+        "setzen",
+        "sich"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-imperative-019",
+      "ruleId": "a2-imperative",
+      "english": "Let's go",
+      "german": "Gehen wir",
+      "hints": [
+        "wir-form imperative",
+        "Same as present tense"
+      ],
+      "keywords": [
+        "gehen",
+        "wir"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-imperative-020",
+      "ruleId": "a2-imperative",
+      "english": "Don't be afraid",
+      "german": "Hab keine Angst",
+      "hints": [
+        "haben imperative",
+        "keine Angst = no fear"
+      ],
+      "keywords": [
+        "hab",
+        "keine"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-001",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "My book",
+      "german": "Mein Buch",
+      "hints": [
+        "mein + neuter noun",
+        "Nominative"
+      ],
+      "keywords": [
+        "mein"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-002",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "Your bag",
+      "german": "Deine Tasche",
+      "hints": [
+        "dein + feminine",
+        "-e ending for feminine"
+      ],
+      "keywords": [
+        "deine"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-003",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "His car",
+      "german": "Sein Auto",
+      "hints": [
+        "sein = his",
+        "Neuter nominative"
+      ],
+      "keywords": [
+        "sein"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-004",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "Her house",
+      "german": "Ihr Haus",
+      "hints": [
+        "ihr = her",
+        "Neuter nominative"
+      ],
+      "keywords": [
+        "ihr"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-005",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "Our friends",
+      "german": "Unsere Freunde",
+      "hints": [
+        "unser + plural",
+        "-e ending for plural"
+      ],
+      "keywords": [
+        "unsere"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-006",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "Your dog (informal plural)",
+      "german": "Euer Hund",
+      "hints": [
+        "euer = your (ihr-form)",
+        "Masculine nominative"
+      ],
+      "keywords": [
+        "euer"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-007",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "Their children",
+      "german": "Ihre Kinder",
+      "hints": [
+        "ihr (plural) = their",
+        "Plural nominative"
+      ],
+      "keywords": [
+        "ihre"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-008",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "I see your brother",
+      "german": "Ich sehe deinen Bruder",
+      "hints": [
+        "Accusative masculine",
+        "dein → deinen"
+      ],
+      "keywords": [
+        "deinen"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-009",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "He loves his mother",
+      "german": "Er liebt seine Mutter",
+      "hints": [
+        "Accusative feminine",
+        "sein → seine"
+      ],
+      "keywords": [
+        "seine"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-010",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "We visit our grandmother",
+      "german": "Wir besuchen unsere Großmutter",
+      "hints": [
+        "Accusative feminine",
+        "unser → unsere"
+      ],
+      "keywords": [
+        "unsere"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-011",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "I give my father a gift",
+      "german": "Ich gebe meinem Vater ein Geschenk",
+      "hints": [
+        "Dative masculine",
+        "mein → meinem"
+      ],
+      "keywords": [
+        "meinem"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-012",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "She helps her sister",
+      "german": "Sie hilft ihrer Schwester",
+      "hints": [
+        "Dative feminine",
+        "ihr → ihrer"
+      ],
+      "keywords": [
+        "ihrer"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-013",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "He thanks his teacher",
+      "german": "Er dankt seinem Lehrer",
+      "hints": [
+        "Dative masculine",
+        "sein → seinem"
+      ],
+      "keywords": [
+        "seinem"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-014",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "I write to my parents",
+      "german": "Ich schreibe meinen Eltern",
+      "hints": [
+        "Dative plural",
+        "mein → meinen"
+      ],
+      "keywords": [
+        "meinen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-015",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "Your son (formal)",
+      "german": "Ihr Sohn",
+      "hints": [
+        "Ihr = your (Sie-form)",
+        "Capitalize for formal"
+      ],
+      "keywords": [
+        "Ihr"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-016",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "Our teacher is nice",
+      "german": "Unser Lehrer ist nett",
+      "hints": [
+        "unser + masculine",
+        "Nominative"
+      ],
+      "keywords": [
+        "unser"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-017",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "I like your dress",
+      "german": "Ich mag dein Kleid",
+      "hints": [
+        "Accusative neuter",
+        "dein Kleid"
+      ],
+      "keywords": [
+        "dein"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-018",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "His books are interesting",
+      "german": "Seine Bücher sind interessant",
+      "hints": [
+        "Nominative plural",
+        "sein → seine"
+      ],
+      "keywords": [
+        "seine"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-019",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "We live in our house",
+      "german": "Wir wohnen in unserem Haus",
+      "hints": [
+        "Dative neuter",
+        "unser → unserem"
+      ],
+      "keywords": [
+        "unserem"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-possessive-pronouns-020",
+      "ruleId": "a2-possessive-pronouns",
+      "english": "She plays with her friends",
+      "german": "Sie spielt mit ihren Freunden",
+      "hints": [
+        "Dative plural",
+        "ihr → ihren + -n"
+      ],
+      "keywords": [
+        "ihren"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-001",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "I was at the cinema yesterday",
+      "german": "Ich war gestern im Kino",
+      "hints": [
+        "war = was (ich)",
+        "im = in dem"
+      ],
+      "keywords": [
+        "war",
+        "gestern"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-002",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "You were very nice",
+      "german": "Du warst sehr nett",
+      "hints": [
+        "warst = were (du)",
+        "sehr = very"
+      ],
+      "keywords": [
+        "warst",
+        "nett"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-003",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "She was tired",
+      "german": "Sie war müde",
+      "hints": [
+        "war = was (sie)",
+        "müde = tired"
+      ],
+      "keywords": [
+        "war",
+        "müde"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-004",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "We were in Berlin",
+      "german": "Wir waren in Berlin",
+      "hints": [
+        "waren = were (wir)",
+        "Plural form"
+      ],
+      "keywords": [
+        "waren"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-005",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "You were happy (plural)",
+      "german": "Ihr wart glücklich",
+      "hints": [
+        "wart = were (ihr)",
+        "glücklich = happy"
+      ],
+      "keywords": [
+        "wart",
+        "glücklich"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-006",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "They were at home",
+      "german": "Sie waren zu Hause",
+      "hints": [
+        "waren = were (sie pl.)",
+        "zu Hause = at home"
+      ],
+      "keywords": [
+        "waren",
+        "Hause"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-007",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "I had a lot of work",
+      "german": "Ich hatte viel Arbeit",
+      "hints": [
+        "hatte = had (ich)",
+        "viel = a lot"
+      ],
+      "keywords": [
+        "hatte",
+        "viel"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-008",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "You had no time",
+      "german": "Du hattest keine Zeit",
+      "hints": [
+        "hattest = had (du)",
+        "keine = no"
+      ],
+      "keywords": [
+        "hattest",
+        "keine"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-009",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "He had a good idea",
+      "german": "Er hatte eine gute Idee",
+      "hints": [
+        "hatte = had (er)",
+        "gute Idee"
+      ],
+      "keywords": [
+        "hatte",
+        "gute"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-010",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "We had a car",
+      "german": "Wir hatten ein Auto",
+      "hints": [
+        "hatten = had (wir)",
+        "Plural form"
+      ],
+      "keywords": [
+        "hatten"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-011",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "She had many friends",
+      "german": "Sie hatte viele Freunde",
+      "hints": [
+        "hatte = had (sie)",
+        "viele = many"
+      ],
+      "keywords": [
+        "hatte",
+        "viele"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-012",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "It was cold",
+      "german": "Es war kalt",
+      "hints": [
+        "war = was",
+        "kalt = cold"
+      ],
+      "keywords": [
+        "war",
+        "kalt"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-013",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "The weather was beautiful",
+      "german": "Das Wetter war schön",
+      "hints": [
+        "war = was",
+        "schön = beautiful"
+      ],
+      "keywords": [
+        "Wetter",
+        "war"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-014",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "We were students",
+      "german": "Wir waren Studenten",
+      "hints": [
+        "waren = were",
+        "No article before profession/status"
+      ],
+      "keywords": [
+        "waren",
+        "Studenten"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-015",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "I had a question",
+      "german": "Ich hatte eine Frage",
+      "hints": [
+        "hatte = had",
+        "eine Frage = a question"
+      ],
+      "keywords": [
+        "hatte",
+        "Frage"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-016",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "You were right",
+      "german": "Du hattest recht",
+      "hints": [
+        "recht haben = to be right",
+        "Past: hattest recht"
+      ],
+      "keywords": [
+        "hattest",
+        "recht"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-017",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "They had luck",
+      "german": "Sie hatten Glück",
+      "hints": [
+        "Glück haben = to have luck",
+        "hatten = had"
+      ],
+      "keywords": [
+        "hatten",
+        "Glück"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-018",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "Were you at the party",
+      "german": "Warst du auf der Party",
+      "hints": [
+        "Question: warst du",
+        "auf der Party = at the party"
+      ],
+      "keywords": [
+        "warst",
+        "Party"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-019",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "I was not hungry",
+      "german": "Ich war nicht hungrig",
+      "hints": [
+        "war nicht = was not",
+        "hungrig = hungry"
+      ],
+      "keywords": [
+        "war",
+        "nicht"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-past-tense-sein-haben-020",
+      "ruleId": "a2-past-tense-sein-haben",
+      "english": "We had no money",
+      "german": "Wir hatten kein Geld",
+      "hints": [
+        "hatten kein = had no",
+        "Geld = money"
+      ],
+      "keywords": [
+        "hatten",
+        "kein"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-001",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "I learn German because it is interesting",
+      "german": "Ich lerne Deutsch, weil es interessant ist",
+      "hints": [
+        "weil = because",
+        "Verb goes to end"
+      ],
+      "keywords": [
+        "weil",
+        "ist"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-002",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "He says that he is tired",
+      "german": "Er sagt, dass er müde ist",
+      "hints": [
+        "dass = that",
+        "Verb to end"
+      ],
+      "keywords": [
+        "dass",
+        "ist"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-003",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "If you have time, we can meet",
+      "german": "Wenn du Zeit hast, können wir uns treffen",
+      "hints": [
+        "wenn = if/when",
+        "Verb to end in clause"
+      ],
+      "keywords": [
+        "wenn",
+        "hast"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-004",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "She stays home because she is sick",
+      "german": "Sie bleibt zu Hause, weil sie krank ist",
+      "hints": [
+        "weil = because",
+        "ist at end"
+      ],
+      "keywords": [
+        "weil",
+        "krank"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-005",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "I think that you are right",
+      "german": "Ich denke, dass du recht hast",
+      "hints": [
+        "dass = that",
+        "hast to end"
+      ],
+      "keywords": [
+        "dass",
+        "hast"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-006",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "When it rains, I stay inside",
+      "german": "Wenn es regnet, bleibe ich drinnen",
+      "hints": [
+        "wenn = when",
+        "regnet at end"
+      ],
+      "keywords": [
+        "wenn",
+        "regnet"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-007",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "Although it is late, I am not tired",
+      "german": "Obwohl es spät ist, bin ich nicht müde",
+      "hints": [
+        "obwohl = although",
+        "ist at end"
+      ],
+      "keywords": [
+        "obwohl",
+        "ist"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-008",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "She is happy because she passed the test",
+      "german": "Sie ist glücklich, weil sie die Prüfung bestanden hat",
+      "hints": [
+        "weil + perfect tense",
+        "hat at very end"
+      ],
+      "keywords": [
+        "weil",
+        "bestanden",
+        "hat"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-009",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "I know that he can speak German",
+      "german": "Ich weiß, dass er Deutsch sprechen kann",
+      "hints": [
+        "dass with modal",
+        "kann to end"
+      ],
+      "keywords": [
+        "dass",
+        "kann"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-010",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "When I am hungry, I eat",
+      "german": "Wenn ich hungrig bin, esse ich",
+      "hints": [
+        "wenn = when",
+        "bin at end of clause"
+      ],
+      "keywords": [
+        "wenn",
+        "bin"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-011",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "He works hard because he wants to succeed",
+      "german": "Er arbeitet hart, weil er erfolgreich sein will",
+      "hints": [
+        "weil + modal",
+        "will at end"
+      ],
+      "keywords": [
+        "weil",
+        "will"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-012",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "I believe that she is coming",
+      "german": "Ich glaube, dass sie kommt",
+      "hints": [
+        "dass = that",
+        "kommt to end"
+      ],
+      "keywords": [
+        "glaube",
+        "dass"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-013",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "If you want, you can come",
+      "german": "Wenn du willst, kannst du kommen",
+      "hints": [
+        "wenn = if",
+        "willst at end"
+      ],
+      "keywords": [
+        "wenn",
+        "willst"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-014",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "She says that the movie is good",
+      "german": "Sie sagt, dass der Film gut ist",
+      "hints": [
+        "dass = that",
+        "ist to end"
+      ],
+      "keywords": [
+        "sagt",
+        "dass"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-015",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "Although he studies, he fails",
+      "german": "Obwohl er lernt, fällt er durch",
+      "hints": [
+        "obwohl = although",
+        "lernt at end"
+      ],
+      "keywords": [
+        "obwohl",
+        "lernt"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-016",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "I stay home when I am sick",
+      "german": "Ich bleibe zu Hause, wenn ich krank bin",
+      "hints": [
+        "wenn = when",
+        "bin at end"
+      ],
+      "keywords": [
+        "wenn",
+        "bin"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-017",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "He is sad because his dog died",
+      "german": "Er ist traurig, weil sein Hund gestorben ist",
+      "hints": [
+        "weil + perfect",
+        "ist at end"
+      ],
+      "keywords": [
+        "weil",
+        "gestorben"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-018",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "I know that you have been waiting",
+      "german": "Ich weiß, dass du gewartet hast",
+      "hints": [
+        "dass + perfect",
+        "hast at end"
+      ],
+      "keywords": [
+        "dass",
+        "gewartet"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-019",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "When the sun shines, we go outside",
+      "german": "Wenn die Sonne scheint, gehen wir nach draußen",
+      "hints": [
+        "wenn = when",
+        "scheint at end"
+      ],
+      "keywords": [
+        "wenn",
+        "scheint"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-subordinating-conjunctions-020",
+      "ruleId": "a2-subordinating-conjunctions",
+      "english": "She doesn't come because she has no time",
+      "german": "Sie kommt nicht, weil sie keine Zeit hat",
+      "hints": [
+        "weil = because",
+        "hat at end"
+      ],
+      "keywords": [
+        "weil",
+        "hat"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-001",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "I go home and I eat",
+      "german": "Ich gehe nach Hause und ich esse",
+      "hints": [
+        "und = and",
+        "No word order change"
+      ],
+      "keywords": [
+        "und"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-002",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "She is nice but sometimes loud",
+      "german": "Sie ist nett, aber manchmal laut",
+      "hints": [
+        "aber = but",
+        "No word order change"
+      ],
+      "keywords": [
+        "aber"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-003",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "Do you want coffee or tea",
+      "german": "Willst du Kaffee oder Tee",
+      "hints": [
+        "oder = or",
+        "No word order change"
+      ],
+      "keywords": [
+        "oder"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-004",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "I stay here because it is raining",
+      "german": "Ich bleibe hier, denn es regnet",
+      "hints": [
+        "denn = because",
+        "No word order change"
+      ],
+      "keywords": [
+        "denn"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-005",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "He works and she studies",
+      "german": "Er arbeitet und sie studiert",
+      "hints": [
+        "und = and",
+        "Normal word order both sides"
+      ],
+      "keywords": [
+        "und"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-006",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "I am tired but I continue",
+      "german": "Ich bin müde, aber ich mache weiter",
+      "hints": [
+        "aber = but",
+        "Normal word order"
+      ],
+      "keywords": [
+        "aber"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-007",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "We can walk or take the bus",
+      "german": "Wir können laufen oder den Bus nehmen",
+      "hints": [
+        "oder = or",
+        "Two infinitives"
+      ],
+      "keywords": [
+        "oder"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-008",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "She didn't come because she was sick",
+      "german": "Sie kam nicht, denn sie war krank",
+      "hints": [
+        "denn = because",
+        "War stays in position 2"
+      ],
+      "keywords": [
+        "denn"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-009",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "I like apples and pears",
+      "german": "Ich mag Äpfel und Birnen",
+      "hints": [
+        "und = and",
+        "Connecting nouns"
+      ],
+      "keywords": [
+        "und"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-010",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "He is young but very smart",
+      "german": "Er ist jung, aber sehr klug",
+      "hints": [
+        "aber = but",
+        "Connecting adjectives"
+      ],
+      "keywords": [
+        "aber"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-011",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "Should I call or write",
+      "german": "Soll ich anrufen oder schreiben",
+      "hints": [
+        "oder = or",
+        "Two infinitives"
+      ],
+      "keywords": [
+        "oder"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-012",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "I don't like it because it is boring",
+      "german": "Ich mag es nicht, denn es ist langweilig",
+      "hints": [
+        "denn = because",
+        "ist stays position 2"
+      ],
+      "keywords": [
+        "denn"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-013",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "She reads and he watches TV",
+      "german": "Sie liest und er sieht fern",
+      "hints": [
+        "und = and",
+        "Two complete clauses"
+      ],
+      "keywords": [
+        "und"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-014",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "It is cheap but not good",
+      "german": "Es ist billig, aber nicht gut",
+      "hints": [
+        "aber = but",
+        "Connecting adjectives"
+      ],
+      "keywords": [
+        "aber"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-015",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "Coffee or tea or water",
+      "german": "Kaffee oder Tee oder Wasser",
+      "hints": [
+        "oder = or",
+        "Multiple items"
+      ],
+      "keywords": [
+        "oder"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-016",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "I wanted to go but it was too late",
+      "german": "Ich wollte gehen, aber es war zu spät",
+      "hints": [
+        "aber = but",
+        "Past tense both sides"
+      ],
+      "keywords": [
+        "aber"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-017",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "He neither smokes nor drinks",
+      "german": "Er raucht weder noch trinkt er",
+      "hints": [
+        "weder...noch = neither...nor",
+        "Inverted word order after noch"
+      ],
+      "keywords": [
+        "weder",
+        "noch"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-018",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "She comes today or tomorrow",
+      "german": "Sie kommt heute oder morgen",
+      "hints": [
+        "oder = or",
+        "Time expressions"
+      ],
+      "keywords": [
+        "oder"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-019",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "I study hard but I still fail",
+      "german": "Ich lerne fleißig, aber ich falle trotzdem durch",
+      "hints": [
+        "aber = but",
+        "trotzdem = still/nevertheless"
+      ],
+      "keywords": [
+        "aber",
+        "trotzdem"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-coordinating-conjunctions-020",
+      "ruleId": "a2-coordinating-conjunctions",
+      "english": "We eat and then we sleep",
+      "german": "Wir essen und dann schlafen wir",
+      "hints": [
+        "und dann = and then",
+        "dann triggers inversion"
+      ],
+      "keywords": [
+        "und",
+        "dann"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-001",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "This is the fastest car",
+      "german": "Das ist das schnellste Auto",
+      "hints": [
+        "schnell → schnellste",
+        "Definite article + -ste"
+      ],
+      "keywords": [
+        "schnellste"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-002",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "She is the smartest student",
+      "german": "Sie ist die klügste Studentin",
+      "hints": [
+        "klug → klügste",
+        "Umlaut + -ste"
+      ],
+      "keywords": [
+        "klügste"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-003",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "He runs the fastest",
+      "german": "Er läuft am schnellsten",
+      "hints": [
+        "am + adjective + -sten",
+        "Adverbial form"
+      ],
+      "keywords": [
+        "am",
+        "schnellsten"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-004",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "This is the biggest house",
+      "german": "Das ist das größte Haus",
+      "hints": [
+        "groß → größte",
+        "Umlaut + -ste"
+      ],
+      "keywords": [
+        "größte"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-005",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "She sings the best",
+      "german": "Sie singt am besten",
+      "hints": [
+        "Irregular: gut → am besten",
+        "Not 'gutesten'!"
+      ],
+      "keywords": [
+        "am",
+        "besten"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-006",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "He has the most money",
+      "german": "Er hat das meiste Geld",
+      "hints": [
+        "Irregular: viel → meiste",
+        "das meiste"
+      ],
+      "keywords": [
+        "meiste"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-007",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "This is the most beautiful flower",
+      "german": "Das ist die schönste Blume",
+      "hints": [
+        "schön → schönste",
+        "Umlaut + -ste"
+      ],
+      "keywords": [
+        "schönste"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-008",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "Winter is the coldest season",
+      "german": "Winter ist die kälteste Jahreszeit",
+      "hints": [
+        "kalt → kälteste",
+        "Umlaut + -este"
+      ],
+      "keywords": [
+        "kälteste"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-009",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "She is the oldest",
+      "german": "Sie ist die Älteste",
+      "hints": [
+        "alt → Älteste",
+        "Capitalized as noun"
+      ],
+      "keywords": [
+        "Älteste"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-010",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "This street is the longest",
+      "german": "Diese Straße ist die längste",
+      "hints": [
+        "lang → längste",
+        "Umlaut + -ste"
+      ],
+      "keywords": [
+        "längste"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-011",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "He learns the most",
+      "german": "Er lernt am meisten",
+      "hints": [
+        "Irregular: viel → am meisten",
+        "Adverbial"
+      ],
+      "keywords": [
+        "am",
+        "meisten"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-012",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "This is the most expensive restaurant",
+      "german": "Das ist das teuerste Restaurant",
+      "hints": [
+        "teuer → teuerste",
+        "Drop -e before -ste"
+      ],
+      "keywords": [
+        "teuerste"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-013",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "She is the youngest in the class",
+      "german": "Sie ist die Jüngste in der Klasse",
+      "hints": [
+        "jung → Jüngste",
+        "Capitalized"
+      ],
+      "keywords": [
+        "Jüngste"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-014",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "This is the closest supermarket",
+      "german": "Das ist der nächste Supermarkt",
+      "hints": [
+        "Irregular: nah → nächste",
+        "Different stem"
+      ],
+      "keywords": [
+        "nächste"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-015",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "He speaks the loudest",
+      "german": "Er spricht am lautesten",
+      "hints": [
+        "laut → am lautesten",
+        "Adverbial form"
+      ],
+      "keywords": [
+        "am",
+        "lautesten"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-016",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "This is the most interesting book",
+      "german": "Das ist das interessanteste Buch",
+      "hints": [
+        "interessant → interessanteste",
+        "Long adjectives too"
+      ],
+      "keywords": [
+        "interessanteste"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-017",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "She works the hardest",
+      "german": "Sie arbeitet am härtesten",
+      "hints": [
+        "hart → am härtesten",
+        "Umlaut"
+      ],
+      "keywords": [
+        "am",
+        "härtesten"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-018",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "This is the highest mountain",
+      "german": "Das ist der höchste Berg",
+      "hints": [
+        "Irregular: hoch → höchste",
+        "Different stem"
+      ],
+      "keywords": [
+        "höchste"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-019",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "He has the fewest mistakes",
+      "german": "Er hat die wenigsten Fehler",
+      "hints": [
+        "Irregular: wenig → wenigsten",
+        "die wenigsten"
+      ],
+      "keywords": [
+        "wenigsten"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-superlative-adjectives-020",
+      "ruleId": "a2-superlative-adjectives",
+      "english": "This is the most popular song",
+      "german": "Das ist das beliebteste Lied",
+      "hints": [
+        "beliebt → beliebteste",
+        "Long adjective"
+      ],
+      "keywords": [
+        "beliebteste"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-time-expressions-001",
+      "ruleId": "a2-time-expressions",
+      "english": "What time is it",
+      "german": "Wie spät ist es",
+      "hints": [
+        "Wie spät = what time",
+        "Standard question"
+      ],
+      "keywords": [
+        "spät"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-time-expressions-002",
+      "ruleId": "a2-time-expressions",
+      "english": "It is 3 o'clock",
+      "german": "Es ist drei Uhr",
+      "hints": [
+        "Uhr = o'clock",
+        "Use cardinal numbers"
+      ],
+      "keywords": [
+        "Uhr"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-time-expressions-003",
+      "ruleId": "a2-time-expressions",
+      "english": "At what time",
+      "german": "Um wie viel Uhr",
+      "hints": [
+        "Um = at (time)",
+        "wie viel Uhr"
+      ],
+      "keywords": [
+        "um"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-time-expressions-004",
+      "ruleId": "a2-time-expressions",
+      "english": "I come at 8 o'clock",
+      "german": "Ich komme um 8 Uhr",
+      "hints": [
+        "um + time",
+        "Accusative"
+      ],
+      "keywords": [
+        "um"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-time-expressions-005",
+      "ruleId": "a2-time-expressions",
+      "english": "In the morning",
+      "german": "Morgens",
+      "hints": [
+        "morgens = in the morning",
+        "Adverb"
+      ],
+      "keywords": [
+        "morgens"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-time-expressions-006",
+      "ruleId": "a2-time-expressions",
+      "english": "In the afternoon",
+      "german": "Nachmittags",
+      "hints": [
+        "nachmittags = in the afternoon",
+        "Adverb"
+      ],
+      "keywords": [
+        "nachmittags"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-time-expressions-007",
+      "ruleId": "a2-time-expressions",
+      "english": "In the evening",
+      "german": "Abends",
+      "hints": [
+        "abends = in the evening",
+        "Adverb"
+      ],
+      "keywords": [
+        "abends"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-time-expressions-008",
+      "ruleId": "a2-time-expressions",
+      "english": "Today",
+      "german": "Heute",
+      "hints": [
+        "heute = today",
+        "Accusative time"
+      ],
+      "keywords": [
+        "heute"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-time-expressions-009",
+      "ruleId": "a2-time-expressions",
+      "english": "Yesterday",
+      "german": "Gestern",
+      "hints": [
+        "gestern = yesterday",
+        "Accusative time"
+      ],
+      "keywords": [
+        "gestern"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-time-expressions-010",
+      "ruleId": "a2-time-expressions",
+      "english": "Tomorrow",
+      "german": "Morgen",
+      "hints": [
+        "morgen = tomorrow",
+        "Not 'Morgen' (morning)"
+      ],
+      "keywords": [
+        "morgen"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-time-expressions-011",
+      "ruleId": "a2-time-expressions",
+      "english": "Last week",
+      "german": "Letzte Woche",
+      "hints": [
+        "letzte = last",
+        "Accusative"
+      ],
+      "keywords": [
+        "letzte"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-time-expressions-012",
+      "ruleId": "a2-time-expressions",
+      "english": "Next year",
+      "german": "Nächstes Jahr",
+      "hints": [
+        "nächstes = next",
+        "Accusative neuter"
+      ],
+      "keywords": [
+        "nächstes"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-time-expressions-013",
+      "ruleId": "a2-time-expressions",
+      "english": "This month",
+      "german": "Diesen Monat",
+      "hints": [
+        "diesen = this",
+        "Accusative masculine"
+      ],
+      "keywords": [
+        "diesen"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-time-expressions-014",
+      "ruleId": "a2-time-expressions",
+      "english": "It is 15 o'clock",
+      "german": "Es ist 15 Uhr",
+      "hints": [
+        "24-hour format",
+        "15 Uhr = 3 PM"
+      ],
+      "keywords": [
+        "15"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-time-expressions-015",
+      "ruleId": "a2-time-expressions",
+      "english": "On Monday",
+      "german": "Am Montag",
+      "hints": [
+        "am = on (days)",
+        "Dative"
+      ],
+      "keywords": [
+        "am"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-time-expressions-016",
+      "ruleId": "a2-time-expressions",
+      "english": "In January",
+      "german": "Im Januar",
+      "hints": [
+        "im = in (months)",
+        "Dative"
+      ],
+      "keywords": [
+        "im"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-time-expressions-017",
+      "ruleId": "a2-time-expressions",
+      "english": "Every day",
+      "german": "Jeden Tag",
+      "hints": [
+        "jeden = every",
+        "Accusative"
+      ],
+      "keywords": [
+        "jeden"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-time-expressions-018",
+      "ruleId": "a2-time-expressions",
+      "english": "At night",
+      "german": "Nachts",
+      "hints": [
+        "nachts = at night",
+        "Adverb"
+      ],
+      "keywords": [
+        "nachts"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-time-expressions-019",
+      "ruleId": "a2-time-expressions",
+      "english": "I work from Monday to Friday",
+      "german": "Ich arbeite von Montag bis Freitag",
+      "hints": [
+        "von...bis = from...to",
+        "No article"
+      ],
+      "keywords": [
+        "von",
+        "bis"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-time-expressions-020",
+      "ruleId": "a2-time-expressions",
+      "english": "The day after tomorrow",
+      "german": "Übermorgen",
+      "hints": [
+        "übermorgen = day after tomorrow",
+        "One word"
+      ],
+      "keywords": [
+        "übermorgen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-dative-verbs-001",
+      "ruleId": "a2-dative-verbs",
+      "english": "I help you",
+      "german": "Ich helfe dir",
+      "hints": [
+        "helfen takes dative",
+        "dir = to you"
+      ],
+      "keywords": [
+        "helfe",
+        "dir"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-dative-verbs-002",
+      "ruleId": "a2-dative-verbs",
+      "english": "She thanks him",
+      "german": "Sie dankt ihm",
+      "hints": [
+        "danken takes dative",
+        "ihm = to him"
+      ],
+      "keywords": [
+        "dankt",
+        "ihm"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-dative-verbs-003",
+      "ruleId": "a2-dative-verbs",
+      "english": "I like the book",
+      "german": "Das Buch gefällt mir",
+      "hints": [
+        "gefallen takes dative",
+        "mir = to me, literally 'pleases me'"
+      ],
+      "keywords": [
+        "gefällt",
+        "mir"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-dative-verbs-004",
+      "ruleId": "a2-dative-verbs",
+      "english": "The car belongs to my father",
+      "german": "Das Auto gehört meinem Vater",
+      "hints": [
+        "gehören takes dative",
+        "meinem Vater"
+      ],
+      "keywords": [
+        "gehört",
+        "meinem"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-dative-verbs-005",
+      "ruleId": "a2-dative-verbs",
+      "english": "The dog follows the child",
+      "german": "Der Hund folgt dem Kind",
+      "hints": [
+        "folgen takes dative",
+        "dem Kind"
+      ],
+      "keywords": [
+        "folgt",
+        "dem"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-dative-verbs-006",
+      "ruleId": "a2-dative-verbs",
+      "english": "He answers me",
+      "german": "Er antwortet mir",
+      "hints": [
+        "antworten takes dative",
+        "mir = to me"
+      ],
+      "keywords": [
+        "antwortet",
+        "mir"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-dative-verbs-007",
+      "ruleId": "a2-dative-verbs",
+      "english": "I congratulate you",
+      "german": "Ich gratuliere dir",
+      "hints": [
+        "gratulieren takes dative",
+        "dir = to you"
+      ],
+      "keywords": [
+        "gratuliere",
+        "dir"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-dative-verbs-008",
+      "ruleId": "a2-dative-verbs",
+      "english": "The shoes fit me",
+      "german": "Die Schuhe passen mir",
+      "hints": [
+        "passen takes dative",
+        "mir = to me"
+      ],
+      "keywords": [
+        "passen",
+        "mir"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-dative-verbs-009",
+      "ruleId": "a2-dative-verbs",
+      "english": "He trusts her",
+      "german": "Er vertraut ihr",
+      "hints": [
+        "vertrauen takes dative",
+        "ihr = to her"
+      ],
+      "keywords": [
+        "vertraut",
+        "ihr"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-dative-verbs-010",
+      "ruleId": "a2-dative-verbs",
+      "english": "It is important to me",
+      "german": "Es ist mir wichtig",
+      "hints": [
+        "wichtig sein takes dative",
+        "mir = to me"
+      ],
+      "keywords": [
+        "mir",
+        "wichtig"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-dative-verbs-011",
+      "ruleId": "a2-dative-verbs",
+      "english": "The movie pleases us",
+      "german": "Der Film gefällt uns",
+      "hints": [
+        "gefallen takes dative",
+        "uns = to us"
+      ],
+      "keywords": [
+        "gefällt",
+        "uns"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-dative-verbs-012",
+      "ruleId": "a2-dative-verbs",
+      "english": "I believe you",
+      "german": "Ich glaube dir",
+      "hints": [
+        "glauben takes dative",
+        "dir = you"
+      ],
+      "keywords": [
+        "glaube",
+        "dir"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-dative-verbs-013",
+      "ruleId": "a2-dative-verbs",
+      "english": "The house belongs to them",
+      "german": "Das Haus gehört ihnen",
+      "hints": [
+        "gehören takes dative",
+        "ihnen = to them"
+      ],
+      "keywords": [
+        "gehört",
+        "ihnen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-dative-verbs-014",
+      "ruleId": "a2-dative-verbs",
+      "english": "She listens to him",
+      "german": "Sie hört ihm zu",
+      "hints": [
+        "zuhören takes dative",
+        "Separable verb"
+      ],
+      "keywords": [
+        "hört",
+        "zu"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-dative-verbs-015",
+      "ruleId": "a2-dative-verbs",
+      "english": "I meet him",
+      "german": "Ich begegne ihm",
+      "hints": [
+        "begegnen takes dative",
+        "ihm = to him"
+      ],
+      "keywords": [
+        "begegne",
+        "ihm"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-dative-verbs-016",
+      "ruleId": "a2-dative-verbs",
+      "english": "The book is missing to me",
+      "german": "Das Buch fehlt mir",
+      "hints": [
+        "fehlen takes dative",
+        "mir = to me"
+      ],
+      "keywords": [
+        "fehlt",
+        "mir"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-dative-verbs-017",
+      "ruleId": "a2-dative-verbs",
+      "english": "He advises me",
+      "german": "Er rät mir",
+      "hints": [
+        "raten takes dative",
+        "mir = to me"
+      ],
+      "keywords": [
+        "rät",
+        "mir"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-dative-verbs-018",
+      "ruleId": "a2-dative-verbs",
+      "english": "I forgive you",
+      "german": "Ich verzeihe dir",
+      "hints": [
+        "verzeihen takes dative",
+        "dir = you"
+      ],
+      "keywords": [
+        "verzeihe",
+        "dir"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-dative-verbs-019",
+      "ruleId": "a2-dative-verbs",
+      "english": "It is cold to me",
+      "german": "Mir ist kalt",
+      "hints": [
+        "Dative for personal feelings",
+        "mir = to me"
+      ],
+      "keywords": [
+        "mir",
+        "kalt"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-dative-verbs-020",
+      "ruleId": "a2-dative-verbs",
+      "english": "The color suits you",
+      "german": "Die Farbe steht dir",
+      "hints": [
+        "stehen (suit) takes dative",
+        "dir = you"
+      ],
+      "keywords": [
+        "steht",
+        "dir"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-adjective-endings-001",
+      "ruleId": "a2-adjective-endings",
+      "english": "The tall man",
+      "german": "Der große Mann",
+      "hints": [
+        "Masculine nominative",
+        "große (weak ending)"
+      ],
+      "keywords": [
+        "große"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-adjective-endings-002",
+      "ruleId": "a2-adjective-endings",
+      "english": "The beautiful woman",
+      "german": "Die schöne Frau",
+      "hints": [
+        "Feminine nominative",
+        "schöne (weak ending)"
+      ],
+      "keywords": [
+        "schöne"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-adjective-endings-003",
+      "ruleId": "a2-adjective-endings",
+      "english": "The small child",
+      "german": "Das kleine Kind",
+      "hints": [
+        "Neuter nominative",
+        "kleine (weak ending)"
+      ],
+      "keywords": [
+        "kleine"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-adjective-endings-004",
+      "ruleId": "a2-adjective-endings",
+      "english": "I see the tall man",
+      "german": "Ich sehe den großen Mann",
+      "hints": [
+        "Masculine accusative",
+        "großen (weak ending)"
+      ],
+      "keywords": [
+        "großen"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-adjective-endings-005",
+      "ruleId": "a2-adjective-endings",
+      "english": "I see the beautiful woman",
+      "german": "Ich sehe die schöne Frau",
+      "hints": [
+        "Feminine accusative",
+        "schöne (same as nom)"
+      ],
+      "keywords": [
+        "schöne"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-adjective-endings-006",
+      "ruleId": "a2-adjective-endings",
+      "english": "I see the small child",
+      "german": "Ich sehe das kleine Kind",
+      "hints": [
+        "Neuter accusative",
+        "kleine (same as nom)"
+      ],
+      "keywords": [
+        "kleine"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-adjective-endings-007",
+      "ruleId": "a2-adjective-endings",
+      "english": "With the tall man",
+      "german": "Mit dem großen Mann",
+      "hints": [
+        "Masculine dative",
+        "großen (weak ending)"
+      ],
+      "keywords": [
+        "großen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-adjective-endings-008",
+      "ruleId": "a2-adjective-endings",
+      "english": "With the beautiful woman",
+      "german": "Mit der schönen Frau",
+      "hints": [
+        "Feminine dative",
+        "schönen (weak ending)"
+      ],
+      "keywords": [
+        "schönen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-adjective-endings-009",
+      "ruleId": "a2-adjective-endings",
+      "english": "With the small child",
+      "german": "Mit dem kleinen Kind",
+      "hints": [
+        "Neuter dative",
+        "kleinen (weak ending)"
+      ],
+      "keywords": [
+        "kleinen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-adjective-endings-010",
+      "ruleId": "a2-adjective-endings",
+      "english": "The old houses",
+      "german": "Die alten Häuser",
+      "hints": [
+        "Plural nominative",
+        "alten (weak ending)"
+      ],
+      "keywords": [
+        "alten"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-adjective-endings-011",
+      "ruleId": "a2-adjective-endings",
+      "english": "I see the old houses",
+      "german": "Ich sehe die alten Häuser",
+      "hints": [
+        "Plural accusative",
+        "alten (same as nom)"
+      ],
+      "keywords": [
+        "alten"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-adjective-endings-012",
+      "ruleId": "a2-adjective-endings",
+      "english": "With the old houses",
+      "german": "Mit den alten Häusern",
+      "hints": [
+        "Plural dative",
+        "alten + -n on noun"
+      ],
+      "keywords": [
+        "alten"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-adjective-endings-013",
+      "ruleId": "a2-adjective-endings",
+      "english": "A good idea",
+      "german": "Eine gute Idee",
+      "hints": [
+        "After 'ein': mixed ending",
+        "gute"
+      ],
+      "keywords": [
+        "gute"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-adjective-endings-014",
+      "ruleId": "a2-adjective-endings",
+      "english": "I have a good idea",
+      "german": "Ich habe eine gute Idee",
+      "hints": [
+        "Accusative feminine",
+        "gute (same)"
+      ],
+      "keywords": [
+        "gute"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-adjective-endings-015",
+      "ruleId": "a2-adjective-endings",
+      "english": "With a good friend",
+      "german": "Mit einem guten Freund",
+      "hints": [
+        "Dative masculine",
+        "guten (mixed ending)"
+      ],
+      "keywords": [
+        "guten"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-adjective-endings-016",
+      "ruleId": "a2-adjective-endings",
+      "english": "The red car is fast",
+      "german": "Das rote Auto ist schnell",
+      "hints": [
+        "Neuter nominative",
+        "rote (weak)"
+      ],
+      "keywords": [
+        "rote"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-adjective-endings-017",
+      "ruleId": "a2-adjective-endings",
+      "english": "I buy the red car",
+      "german": "Ich kaufe das rote Auto",
+      "hints": [
+        "Neuter accusative",
+        "rote (same)"
+      ],
+      "keywords": [
+        "rote"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-adjective-endings-018",
+      "ruleId": "a2-adjective-endings",
+      "english": "The new teacher is nice",
+      "german": "Der neue Lehrer ist nett",
+      "hints": [
+        "Masculine nominative",
+        "neue (weak)"
+      ],
+      "keywords": [
+        "neue"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-adjective-endings-019",
+      "ruleId": "a2-adjective-endings",
+      "english": "I know the new teacher",
+      "german": "Ich kenne den neuen Lehrer",
+      "hints": [
+        "Masculine accusative",
+        "neuen (weak)"
+      ],
+      "keywords": [
+        "neuen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-adjective-endings-020",
+      "ruleId": "a2-adjective-endings",
+      "english": "The young students learn fast",
+      "german": "Die jungen Studenten lernen schnell",
+      "hints": [
+        "Plural nominative",
+        "jungen (weak)"
+      ],
+      "keywords": [
+        "jungen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-future-tense-001",
+      "ruleId": "a2-future-tense",
+      "english": "I will come tomorrow",
+      "german": "Ich werde morgen kommen",
+      "hints": [
+        "werden + infinitive",
+        "Infinitive at end"
+      ],
+      "keywords": [
+        "werde",
+        "kommen"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-future-tense-002",
+      "ruleId": "a2-future-tense",
+      "english": "She will learn German",
+      "german": "Sie wird Deutsch lernen",
+      "hints": [
+        "wird = will (sie)",
+        "lernen at end"
+      ],
+      "keywords": [
+        "wird",
+        "lernen"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-future-tense-003",
+      "ruleId": "a2-future-tense",
+      "english": "We will drive to Berlin",
+      "german": "Wir werden nach Berlin fahren",
+      "hints": [
+        "werden = will (wir)",
+        "fahren at end"
+      ],
+      "keywords": [
+        "werden",
+        "fahren"
+      ],
+      "difficulty": 4
+    },
+    {
+      "sentenceId": "a2-future-tense-004",
+      "ruleId": "a2-future-tense",
+      "english": "You will be late",
+      "german": "Du wirst zu spät sein",
+      "hints": [
+        "wirst = will (du)",
+        "sein at end"
+      ],
+      "keywords": [
+        "wirst",
+        "sein"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-future-tense-005",
+      "ruleId": "a2-future-tense",
+      "english": "He will call you",
+      "german": "Er wird dich anrufen",
+      "hints": [
+        "wird + infinitive",
+        "Separable verb"
+      ],
+      "keywords": [
+        "wird",
+        "anrufen"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-future-tense-006",
+      "ruleId": "a2-future-tense",
+      "english": "They will help us",
+      "german": "Sie werden uns helfen",
+      "hints": [
+        "werden = will (sie pl.)",
+        "helfen at end"
+      ],
+      "keywords": [
+        "werden",
+        "helfen"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-future-tense-007",
+      "ruleId": "a2-future-tense",
+      "english": "I will not come",
+      "german": "Ich werde nicht kommen",
+      "hints": [
+        "nicht before infinitive",
+        "Negation"
+      ],
+      "keywords": [
+        "werde",
+        "nicht"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-future-tense-008",
+      "ruleId": "a2-future-tense",
+      "english": "Will you come",
+      "german": "Wirst du kommen",
+      "hints": [
+        "Question: wirst du",
+        "Infinitive at end"
+      ],
+      "keywords": [
+        "wirst"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-future-tense-009",
+      "ruleId": "a2-future-tense",
+      "english": "She will probably be at home",
+      "german": "Sie wird wohl zu Hause sein",
+      "hints": [
+        "Future for probability",
+        "wohl = probably"
+      ],
+      "keywords": [
+        "wird",
+        "wohl"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-future-tense-010",
+      "ruleId": "a2-future-tense",
+      "english": "We will see",
+      "german": "Wir werden sehen",
+      "hints": [
+        "werden + sehen",
+        "Common phrase"
+      ],
+      "keywords": [
+        "werden",
+        "sehen"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-future-tense-011",
+      "ruleId": "a2-future-tense",
+      "english": "It will rain",
+      "german": "Es wird regnen",
+      "hints": [
+        "Weather with future",
+        "wird regnen"
+      ],
+      "keywords": [
+        "wird",
+        "regnen"
+      ],
+      "difficulty": 5
+    },
+    {
+      "sentenceId": "a2-future-tense-012",
+      "ruleId": "a2-future-tense",
+      "english": "He will be successful",
+      "german": "Er wird erfolgreich sein",
+      "hints": [
+        "Adjective + sein",
+        "sein at end"
+      ],
+      "keywords": [
+        "wird",
+        "erfolgreich"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-future-tense-013",
+      "ruleId": "a2-future-tense",
+      "english": "When will you arrive",
+      "german": "Wann wirst du ankommen",
+      "hints": [
+        "Question word + future",
+        "ankommen at end"
+      ],
+      "keywords": [
+        "wann",
+        "wirst"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-future-tense-014",
+      "ruleId": "a2-future-tense",
+      "english": "I will have to work",
+      "german": "Ich werde arbeiten müssen",
+      "hints": [
+        "Future with modal",
+        "Double infinitive at end"
+      ],
+      "keywords": [
+        "werde",
+        "müssen"
+      ],
+      "difficulty": 8
+    },
+    {
+      "sentenceId": "a2-future-tense-015",
+      "ruleId": "a2-future-tense",
+      "english": "She will probably know",
+      "german": "Sie wird es wohl wissen",
+      "hints": [
+        "Future = probability",
+        "wohl = probably"
+      ],
+      "keywords": [
+        "wird",
+        "wohl"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-future-tense-016",
+      "ruleId": "a2-future-tense",
+      "english": "We will move next month",
+      "german": "Wir werden nächsten Monat umziehen",
+      "hints": [
+        "Future with separable",
+        "umziehen at end"
+      ],
+      "keywords": [
+        "werden",
+        "umziehen"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-future-tense-017",
+      "ruleId": "a2-future-tense",
+      "english": "You will understand",
+      "german": "Du wirst verstehen",
+      "hints": [
+        "Simple future",
+        "verstehen at end"
+      ],
+      "keywords": [
+        "wirst",
+        "verstehen"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-future-tense-018",
+      "ruleId": "a2-future-tense",
+      "english": "They will not believe it",
+      "german": "Sie werden es nicht glauben",
+      "hints": [
+        "Negation with future",
+        "nicht before infinitive"
+      ],
+      "keywords": [
+        "werden",
+        "nicht"
+      ],
+      "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-future-tense-019",
+      "ruleId": "a2-future-tense",
+      "english": "He will have time",
+      "german": "Er wird Zeit haben",
+      "hints": [
+        "Future of haben",
+        "haben at end"
+      ],
+      "keywords": [
+        "wird",
+        "haben"
+      ],
+      "difficulty": 6
+    },
+    {
+      "sentenceId": "a2-future-tense-020",
+      "ruleId": "a2-future-tense",
+      "english": "What will you do",
+      "german": "Was wirst du machen",
+      "hints": [
+        "Question: was wirst du",
+        "machen at end"
+      ],
+      "keywords": [
+        "was",
+        "wirst"
+      ],
+      "difficulty": 7
+    }
+  ]
+}
