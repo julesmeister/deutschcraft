@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Comment } from '@/lib/models/social';
 import { User } from '@/lib/models/user';
 import UserAvatar from './UserAvatar';
@@ -175,14 +176,14 @@ export default function CommentItem({ comment, currentUserId, currentUser, curre
             <div className="flex items-baseline justify-between gap-2 mb-1">
               <h6 className="text-sm font-semibold text-gray-900">
                 {currentUserRole === 'TEACHER' && commentAuthor ? (
-                  <a
+                  <Link
                     href={`/dashboard/teacher/students/${encodeURIComponent(commentAuthor.email)}`}
                     className="hover:text-blue-600 transition-colors"
                   >
                     {commentAuthor.name ||
                      `${commentAuthor.firstName || ''} ${commentAuthor.lastName || ''}`.trim() ||
                      commentAuthor.email}
-                  </a>
+                  </Link>
                 ) : (
                   <>
                     {commentAuthor?.name ||

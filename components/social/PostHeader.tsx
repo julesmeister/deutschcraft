@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { User } from '@/lib/models/user';
 import UserAvatar from './UserAvatar';
 
@@ -38,12 +39,12 @@ export default function PostHeader({ author, cefrLevel, createdAt, isEdited, cur
         <div>
           <h6 className="text-sm font-bold mb-0 text-gray-800">
             {currentUserRole === 'TEACHER' ? (
-              <a
+              <Link
                 href={`/dashboard/teacher/students/${encodeURIComponent(author.email)}`}
                 className="hover:text-blue-600 cursor-pointer transition-colors"
               >
                 {author.name || `${author.firstName || ''} ${author.lastName || ''}`.trim() || author.email}
-              </a>
+              </Link>
             ) : (
               <span className="hover:text-blue-600 cursor-pointer transition-colors">
                 {author.name || `${author.firstName || ''} ${author.lastName || ''}`.trim() || author.email}
