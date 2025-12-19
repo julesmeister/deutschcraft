@@ -153,7 +153,7 @@ export function useGrammarPracticeSession({
           const { saveDailyProgress } = await import('@/lib/services/flashcards/progress');
           await saveDailyProgress(session.user.email, {
             cardsReviewed: results.length,
-            timeSpent: results.length * 30, // Estimate 30 seconds per sentence
+            timeSpent: Math.ceil((results.length * 30) / 60), // Convert seconds to minutes (30 sec per sentence)
             correctCount: totalCorrect,
             incorrectCount: totalIncorrect,
           });
