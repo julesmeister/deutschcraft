@@ -15,9 +15,6 @@ interface WritingStatsSectionProps {
 export function WritingStatsSection({ writingStats, studentEmail }: WritingStatsSectionProps) {
   const { data: quizStats } = useUserQuizStats(studentEmail || null);
 
-  console.log('[WritingStatsSection] studentEmail:', studentEmail);
-  console.log('[WritingStatsSection] quizStats:', quizStats);
-
   // Combine writing stats and quiz stats into one row
   const allTabs = [
     {

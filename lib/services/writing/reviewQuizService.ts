@@ -203,14 +203,9 @@ export async function getUserQuizStats(userId: string): Promise<{
   try {
     const quizzes = await getCompletedQuizzesForUser(userId);
 
-    console.log('[getUserQuizStats] userId:', userId);
-    console.log('[getUserQuizStats] Total quizzes found:', quizzes.length);
-
     const totalQuizzes = quizzes.length;
     const completedQuizzes = quizzes.filter(q => q.status === 'completed').length;
     const scores = quizzes.map(q => q.score);
-
-    console.log('[getUserQuizStats] Scores array:', scores);
 
     const totalPoints = scores.length > 0
       ? scores.reduce((a, b) => a + b, 0)
@@ -219,14 +214,6 @@ export async function getUserQuizStats(userId: string): Promise<{
     const averageScore = scores.length > 0
       ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length)
       : 0;
-
-    console.log('[getUserQuizStats] Calculated stats:', {
-      totalQuizzes,
-      completedQuizzes,
-      totalPoints,
-      bestScore,
-      averageScore,
-    });
 
     return {
       totalQuizzes,
