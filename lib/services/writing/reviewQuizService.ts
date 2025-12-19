@@ -198,23 +198,42 @@ export async function getUserQuizStats(userId: string): Promise<{
   completedQuizzes: number;
   totalPoints: number;
   bestScore: number;
+  averageScore: number;
 }> {
   try {
     const quizzes = await getCompletedQuizzesForUser(userId);
 
+    console.log('[getUserQuizStats] userId:', userId);
+    console.log('[getUserQuizStats] Total quizzes found:', quizzes.length);
+
     const totalQuizzes = quizzes.length;
     const completedQuizzes = quizzes.filter(q => q.status === 'completed').length;
     const scores = quizzes.map(q => q.score);
+
+    console.log('[getUserQuizStats] Scores array:', scores);
+
     const totalPoints = scores.length > 0
       ? scores.reduce((a, b) => a + b, 0)
       : 0;
     const bestScore = scores.length > 0 ? Math.max(...scores) : 0;
+    const averageScore = scores.length > 0
+      ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length)
+      : 0;
+
+    console.log('[getUserQuizStats] Calculated stats:', {
+      totalQuizzes,
+      completedQuizzes,
+      totalPoints,
+      bestScore,
+      averageScore,
+    });
 
     return {
       totalQuizzes,
       completedQuizzes,
       totalPoints,
       bestScore,
+      averageScore,
     };
   } catch (error) {
     console.error('[reviewQuizService] Error calculating quiz stats:', error);
