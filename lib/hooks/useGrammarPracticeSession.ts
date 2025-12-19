@@ -61,6 +61,9 @@ export function useGrammarPracticeSession({
     }
 
     try {
+      let totalCorrect = 0;
+      let totalIncorrect = 0;
+
       // Save each sentence review to database
       for (const result of results) {
         const { sentenceId, difficulty } = result;
@@ -113,6 +116,10 @@ export function useGrammarPracticeSession({
         const isCorrect = difficulty === 'easy' || difficulty === 'good' || difficulty === 'expert';
         const isIncorrect = difficulty === 'again' || difficulty === 'hard';
 
+        // Track totals for daily progress
+        if (isCorrect) totalCorrect++;
+        if (isIncorrect) totalIncorrect++;
+
         const reviewData = {
           userId: session.user.email,
           sentenceId: sentenceId,
@@ -138,6 +145,22 @@ export function useGrammarPracticeSession({
 
         // Save to database
         await saveReview({ reviewId, reviewData });
+      }
+
+      // Update daily progress to contribute to streak
+      if (results.length > 0) {
+        try {
+          const { saveDailyProgress } = await import('@/lib/services/flashcards/progress');
+          await saveDailyProgress(session.user.email, {
+            cardsReviewed: results.length,
+            timeSpent: results.length * 30, // Estimate 30 seconds per sentence
+            correctCount: totalCorrect,
+            incorrectCount: totalIncorrect,
+          });
+          console.log('Daily progress updated for grammatik session');
+        } catch (error) {
+          console.error('Failed to update daily progress:', error);
+        }
       }
 
       // Refetch reviews to update UI
