@@ -7,13 +7,14 @@
  * Useful for rebuilding the main data files from split sources.
  *
  * Usage:
- *   npx tsx scripts/merge-flashcards.ts [level]
- *   npx tsx scripts/merge-flashcards.ts all
+ *   npx tsx scripts/merge-flashcards.ts [level] [--no-backup]
+ *   (defaults to 'all' if no level specified)
  *
  * Examples:
- *   npx tsx scripts/merge-flashcards.ts a1
- *   npx tsx scripts/merge-flashcards.ts b1
- *   npx tsx scripts/merge-flashcards.ts all
+ *   npx tsx scripts/merge-flashcards.ts       # merges all levels
+ *   npx tsx scripts/merge-flashcards.ts a1    # merges only A1
+ *   npx tsx scripts/merge-flashcards.ts all   # merges all levels
+ *   npx tsx scripts/merge-flashcards.ts b1 --no-backup
  */
 
 import fs from 'fs';
@@ -209,23 +210,11 @@ function mergeLevel(level: string, backup: boolean = false): boolean {
  */
 function main() {
   const args = process.argv.slice(2);
-  const targetLevel = args[0]?.toLowerCase();
+  const targetLevel = args[0]?.toLowerCase() || 'all'; // Default to 'all' if no parameter
   const skipBackup = args.includes('--no-backup');
 
   console.log('🔧 Flashcard Merger Tool\n');
   console.log('='.repeat(50));
-
-  if (!targetLevel) {
-    console.log('\n❌ Please specify a level or "all"');
-    console.log('\nUsage:');
-    console.log('  npx tsx scripts/merge-flashcards.ts [level] [--no-backup]');
-    console.log('  npx tsx scripts/merge-flashcards.ts all');
-    console.log('\nExamples:');
-    console.log('  npx tsx scripts/merge-flashcards.ts a1');
-    console.log('  npx tsx scripts/merge-flashcards.ts b1 --no-backup');
-    console.log('  npx tsx scripts/merge-flashcards.ts all');
-    process.exit(1);
-  }
 
   const levelsToProcess = targetLevel === 'all' ? LEVELS : [targetLevel];
 
