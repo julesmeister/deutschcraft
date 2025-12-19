@@ -6,13 +6,14 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { QuizBlank } from '@/lib/models/writing';
 import { checkAnswer } from '@/lib/utils/quizGenerator';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { useUserQuizStats } from '@/lib/hooks/useReviewQuizzes';
 import { calculateQuizPoints } from '@/lib/hooks/useQuizStats';
 import { useToast } from '@/components/ui/toast';
+import { GermanCharAutocomplete } from '@/components/writing/GermanCharAutocomplete';
 import confetti from 'canvas-confetti';
 
 interface MiniBlankExerciseProps {
@@ -34,6 +35,7 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
   const [answer, setAnswer] = useState<string>('');
   const [showResult, setShowResult] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
   const toast = useToast();
 
   // Fetch quiz stats
@@ -216,8 +218,9 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
             const answerIsIncorrect = showResult && !answerIsCorrect;
 
             return (
-              <span key={index} className="inline-flex items-center gap-1 mx-1.5 my-2">
+              <span key={index} className="inline-flex items-center gap-1 mx-1.5 my-2 relative">
                 <input
+                  ref={inputRef}
                   type="text"
                   value={answer}
                   onChange={(e) => setAnswer(e.target.value)}
@@ -231,6 +234,13 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
                   }`}
                   style={{ width: `${Math.max(part.content.length * 10, 60)}px` }}
                 />
+                {!showResult && (
+                  <GermanCharAutocomplete
+                    textareaRef={inputRef}
+                    content={answer}
+                    onContentChange={setAnswer}
+                  />
+                )}
                 {answerIsIncorrect && (
                   <span className="inline-flex items-center justify-center px-1.5 py-1 bg-piku-mint text-gray-900 text-base font-bold rounded-r-md">
                     {part.content}

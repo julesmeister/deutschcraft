@@ -102,7 +102,7 @@ export default function WritingExercisesPage() {
               }
         }
         actions={
-          hasSelectedExercise && (
+          hasSelectedExercise ? (
             <div className="flex gap-2">
               <ActionButton
                 onClick={handleSaveDraft}
@@ -123,6 +123,14 @@ export default function WritingExercisesPage() {
                 {isSaving ? 'Submitting...' : 'Submit for Review'}
               </ActionButton>
             </div>
+          ) : (
+            <ActionButton
+              onClick={() => router.push('/dashboard/student/writing/quiz')}
+              variant="purple"
+              icon={<ActionButtonIcons.Play />}
+            >
+              Review Quiz
+            </ActionButton>
           )
         }
       />

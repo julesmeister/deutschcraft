@@ -16,6 +16,8 @@ export interface MiniExerciseData {
   exerciseTitle?: string;
   exerciseType?: string;
   submittedAt?: number;
+  sentenceIndex?: number; // Index of this sentence in the original submission
+  allSentences?: string[]; // All sentences from the corrected text for context
 }
 
 /**
@@ -156,10 +158,13 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
     }
 
     // Try to find a sentence with corrections (has blanks)
-    // Shuffle sentences to get variety
-    const shuffledSentences = sentences.sort(() => Math.random() - 0.5);
+    // Create array of sentence indices for randomization
+    const sentenceIndices = sentences.map((_, idx) => idx);
+    const shuffledIndices = sentenceIndices.sort(() => Math.random() - 0.5);
 
-    for (const sentence of shuffledSentences) {
+    for (const sentenceIdx of shuffledIndices) {
+      const sentence = sentences[sentenceIdx];
+
       // Find corresponding sentence in original text
       const originalSentences = splitIntoSentences(submission.content);
 
@@ -194,6 +199,8 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
           exerciseTitle: submission.exerciseTitle,
           exerciseType: submission.exerciseType,
           submittedAt: submission.submittedAt,
+          sentenceIndex: sentenceIdx,
+          allSentences: sentences,
         };
       }
     }
@@ -215,6 +222,8 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
       exerciseTitle: submission.exerciseTitle,
       exerciseType: submission.exerciseType,
       submittedAt: submission.submittedAt,
+      sentenceIndex: 0,
+      allSentences: sentences,
     };
   } catch (error) {
     console.error('Error fetching random mini exercise:', error);

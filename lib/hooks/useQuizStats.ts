@@ -17,12 +17,12 @@ export interface QuizStats {
 
 /**
  * Calculate points for a quiz sentence
- * 10 points per sentence, distributed based on correct answers
+ * 10 points per correct answer
  */
 export function calculateQuizPoints(correctAnswers: number, totalBlanks: number): number {
   if (totalBlanks === 0) return 0;
-  const ratio = correctAnswers / totalBlanks;
-  return Math.round(ratio * 10);
+  // 10 points per correct answer (not proportional)
+  return correctAnswers * 10;
 }
 
 /**
