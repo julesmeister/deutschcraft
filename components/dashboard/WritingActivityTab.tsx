@@ -41,20 +41,14 @@ export function WritingActivityTab({
 
   // SAFETY: Normalize teacherScore in case it wasn't done upstream
   const safeSubmissions = paginatedSubmissions.map(sub => {
-    console.log('[WritingActivityTab] Full submission object:', sub);
-    console.log('[WritingActivityTab] All keys:', Object.keys(sub));
-
     const safe: any = { ...sub };
 
     // Check all fields for objects
     Object.keys(safe).forEach(key => {
       const value = safe[key];
       if (value && typeof value === 'object' && !Array.isArray(value) && !(value instanceof Date)) {
-        console.log(`[WritingActivityTab] Found object in field "${key}":`, value);
-
         // If it has score-like fields, extract overallScore
         if ('overallScore' in value) {
-          console.log(`[WritingActivityTab] Extracting overallScore from ${key}`);
           safe[key] = value.overallScore;
         }
       }
