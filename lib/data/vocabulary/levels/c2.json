@@ -1,7 +1,67 @@
 {
   "level": "C2",
-  "totalCards": 69,
+  "totalCards": 72,
   "flashcards": [
+    {
+      "id": "c2-auf-der-hand-liegen-044833",
+      "german": "auf der Hand liegen",
+      "english": "to be obvious / to be evident",
+      "category": "Advanced Idiomatic",
+      "level": "C2",
+      "tags": [
+        "expansion",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "C2",
+          "Advanced Idiomatic",
+          "auf der Hand liegen"
+        ]
+      }
+    },
+    {
+      "id": "c2-ins-gewicht-fallen-044833",
+      "german": "ins Gewicht fallen",
+      "english": "to carry weight / to be significant",
+      "category": "Advanced Idiomatic",
+      "level": "C2",
+      "tags": [
+        "expansion",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "C2",
+          "Advanced Idiomatic",
+          "ins Gewicht fallen"
+        ]
+      }
+    },
+    {
+      "id": "c2-seinen-senf-dazugeben-044833",
+      "german": "seinen Senf dazugeben",
+      "english": "to put in one's two cents / to give unsolicited opinion",
+      "category": "Advanced Idiomatic",
+      "level": "C2",
+      "tags": [
+        "expansion",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 2,
+        "hierarchy": [
+          "C2",
+          "Advanced Idiomatic",
+          "seinen Senf dazugeben"
+        ]
+      }
+    },
     {
       "id": "body-c2-001",
       "german": "die Hirnhaut",
@@ -333,6 +393,126 @@
       }
     },
     {
+      "id": "c2-ambiguitaet-044832",
+      "german": "die Ambiguität",
+      "english": "ambiguity",
+      "category": "Literary Language",
+      "level": "C2",
+      "tags": [
+        "expansion",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "C2",
+          "Literary Language",
+          "Ambiguität"
+        ]
+      }
+    },
+    {
+      "id": "c2-eloquenz-044832",
+      "german": "die Eloquenz",
+      "english": "eloquence",
+      "category": "Literary Language",
+      "level": "C2",
+      "tags": [
+        "expansion",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 12,
+        "hierarchy": [
+          "C2",
+          "Literary Language",
+          "Eloquenz"
+        ]
+      }
+    },
+    {
+      "id": "c2-metapher-044832",
+      "german": "die Metapher",
+      "english": "metaphor",
+      "category": "Literary Language",
+      "level": "C2",
+      "tags": [
+        "expansion",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "C2",
+          "Literary Language",
+          "Metapher"
+        ]
+      }
+    },
+    {
+      "id": "c2-nuance-044832",
+      "german": "die Nuance",
+      "english": "nuance",
+      "category": "Literary Language",
+      "level": "C2",
+      "tags": [
+        "expansion",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 10,
+        "hierarchy": [
+          "C2",
+          "Literary Language",
+          "Nuance"
+        ]
+      }
+    },
+    {
+      "id": "c2-paradoxon-044832",
+      "german": "das Paradoxon",
+      "english": "paradox",
+      "category": "Literary Language",
+      "level": "C2",
+      "tags": [
+        "expansion",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "C2",
+          "Literary Language",
+          "Paradoxon"
+        ]
+      }
+    },
+    {
+      "id": "c2-subtilitaet-044832",
+      "german": "die Subtilität",
+      "english": "subtlety",
+      "category": "Literary Language",
+      "level": "C2",
+      "tags": [
+        "expansion",
+        "C2"
+      ],
+      "_meta": {
+        "source": "Priority Expansion 2025",
+        "lineNumber": 11,
+        "hierarchy": [
+          "C2",
+          "Literary Language",
+          "Subtilität"
+        ]
+      }
+    },
+    {
       "id": "syllabus-c2-11613",
       "german": "die Sehnsucht",
       "english": "longing / yearning",
@@ -489,126 +669,6 @@
           "C2",
           "Literary Language",
           "Torschlusspanik"
-        ]
-      }
-    },
-    {
-      "id": "c2-ambiguitaet-044832",
-      "german": "die Ambiguität",
-      "english": "ambiguity",
-      "category": "Literary Language",
-      "level": "C2",
-      "tags": [
-        "expansion",
-        "C2"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 8,
-        "hierarchy": [
-          "C2",
-          "Literary Language",
-          "Ambiguität"
-        ]
-      }
-    },
-    {
-      "id": "c2-metapher-044832",
-      "german": "die Metapher",
-      "english": "metaphor",
-      "category": "Literary Language",
-      "level": "C2",
-      "tags": [
-        "expansion",
-        "C2"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 9,
-        "hierarchy": [
-          "C2",
-          "Literary Language",
-          "Metapher"
-        ]
-      }
-    },
-    {
-      "id": "c2-nuance-044832",
-      "german": "die Nuance",
-      "english": "nuance",
-      "category": "Literary Language",
-      "level": "C2",
-      "tags": [
-        "expansion",
-        "C2"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 10,
-        "hierarchy": [
-          "C2",
-          "Literary Language",
-          "Nuance"
-        ]
-      }
-    },
-    {
-      "id": "c2-subtilitaet-044832",
-      "german": "die Subtilität",
-      "english": "subtlety",
-      "category": "Literary Language",
-      "level": "C2",
-      "tags": [
-        "expansion",
-        "C2"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 11,
-        "hierarchy": [
-          "C2",
-          "Literary Language",
-          "Subtilität"
-        ]
-      }
-    },
-    {
-      "id": "c2-eloquenz-044832",
-      "german": "die Eloquenz",
-      "english": "eloquence",
-      "category": "Literary Language",
-      "level": "C2",
-      "tags": [
-        "expansion",
-        "C2"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 12,
-        "hierarchy": [
-          "C2",
-          "Literary Language",
-          "Eloquenz"
-        ]
-      }
-    },
-    {
-      "id": "c2-paradoxon-044832",
-      "german": "das Paradoxon",
-      "english": "paradox",
-      "category": "Literary Language",
-      "level": "C2",
-      "tags": [
-        "expansion",
-        "C2"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 13,
-        "hierarchy": [
-          "C2",
-          "Literary Language",
-          "Paradoxon"
         ]
       }
     },
