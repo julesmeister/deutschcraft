@@ -91,7 +91,6 @@ function DashboardNavbar() {
                     { label: 'Flashcards', href: '/dashboard/student/flashcards' },
                     { label: 'Grammatik', href: '/dashboard/student/grammatik' },
                     { label: 'Writing', href: '/dashboard/student/writing' },
-                    { label: 'Review', href: '/dashboard/student/writing-review' },
                     { label: 'Audios', href: '/dashboard/student/audios' },
                     { label: 'Playground', href: '/dashboard/playground' },
                   ],
@@ -244,9 +243,6 @@ function DashboardNavbar() {
                   </Link>
                   <Link href="/dashboard/student/writing" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Writing
-                  </Link>
-                  <Link href="/dashboard/student/writing-review" className="block text-sm text-gray-300 hover:text-white transition-colors">
-                    Review
                   </Link>
                   <Link href="/dashboard/student/audios" className="block text-sm text-gray-300 hover:text-white transition-colors">
                     Audios
