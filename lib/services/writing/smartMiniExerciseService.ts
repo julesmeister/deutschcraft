@@ -72,8 +72,6 @@ export async function indexSubmissionSentences(
   submission: WritingSubmission
 ): Promise<void> {
   try {
-    console.log('[smartMiniExercise] Indexing sentences for submission:', submission.submissionId);
-
     // Get corrected text
     let correctedText = '';
     let sourceType: 'ai' | 'teacher' | 'reference' = 'ai';
@@ -91,7 +89,6 @@ export async function indexSubmissionSentences(
       );
       sourceType = 'ai';
     } else {
-      console.log('[smartMiniExercise] No corrections available, skipping indexing');
       return;
     }
 
@@ -122,7 +119,6 @@ export async function indexSubmissionSentences(
       const existingDoc = await getDoc(sentenceDocRef);
 
       if (existingDoc.exists()) {
-        console.log('[smartMiniExercise] Sentence already indexed:', sentenceId);
         continue;
       }
 
@@ -150,7 +146,6 @@ export async function indexSubmissionSentences(
       };
 
       await setDoc(sentenceDocRef, sentenceData);
-      console.log('[smartMiniExercise] Indexed sentence:', sentenceId);
     }
   } catch (error) {
     console.error('[smartMiniExercise] Error indexing sentences:', error);
@@ -225,8 +220,6 @@ export async function getSmartMiniExercise(userId: string): Promise<{
   submittedAt: number;
 } | null> {
   try {
-    console.log('[smartMiniExercise] Getting smart exercise for user:', userId);
-
     const sentencesRef = collection(db, 'mini-exercise-sentences');
     const q = query(
       sentencesRef,
@@ -237,7 +230,6 @@ export async function getSmartMiniExercise(userId: string): Promise<{
     const snapshot = await getDocs(q);
 
     if (snapshot.empty) {
-      console.log('[smartMiniExercise] No indexed sentences found');
       return null;
     }
 
@@ -268,13 +260,6 @@ export async function getSmartMiniExercise(userId: string): Promise<{
       timesShown: sentence.timesShown + 1,
       lastShownAt: Date.now(),
       updatedAt: Date.now(),
-    });
-
-    console.log('[smartMiniExercise] Selected sentence:', {
-      sentenceId: sentence.sentenceId,
-      priority: selected.priority,
-      timesShown: sentence.timesShown,
-      accuracy: sentence.averageAccuracy,
     });
 
     return {
@@ -368,13 +353,6 @@ export async function recordMiniExerciseAttempt(
       needsReview,
       lastCompletedAt: now,
       updatedAt: now,
-    });
-
-    console.log('[smartMiniExercise] Recorded attempt:', {
-      sentenceId,
-      accuracy,
-      consecutiveCorrect: newConsecutiveCorrect,
-      isMastered,
     });
   } catch (error) {
     console.error('[smartMiniExercise] Error recording attempt:', error);

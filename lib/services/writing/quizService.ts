@@ -51,8 +51,6 @@ async function getContextSentences(
   sentenceIndex: number
 ): Promise<{ before?: string; after?: string }> {
   try {
-    console.log('[getContextSentences] Looking for neighbors of index:', sentenceIndex, 'in submission:', submissionId);
-
     const sentencesRef = collection(db, 'mini-exercise-sentences');
 
     // Query for previous sentence (sentenceIndex - 1)
@@ -66,7 +64,6 @@ async function getContextSentences(
       const beforeSnapshot = await getDocs(beforeQuery);
       if (!beforeSnapshot.empty) {
         beforeSentence = beforeSnapshot.docs[0].data().sentence;
-        console.log('[getContextSentences] Found before sentence at index', sentenceIndex - 1);
       }
     }
 
@@ -78,15 +75,6 @@ async function getContextSentences(
     );
     const afterSnapshot = await getDocs(afterQuery);
     const afterSentence = afterSnapshot.empty ? undefined : afterSnapshot.docs[0].data().sentence;
-
-    if (!afterSnapshot.empty) {
-      console.log('[getContextSentences] Found after sentence at index', sentenceIndex + 1);
-    }
-
-    console.log('[getContextSentences] Returning:', {
-      hasBefore: !!beforeSentence,
-      hasAfter: !!afterSentence,
-    });
 
     return {
       before: beforeSentence,
@@ -136,9 +124,6 @@ export async function getQuizSentences(
   count: number = 10
 ): Promise<QuizSentence[]> {
   try {
-    console.log('[quizService] ===== STARTING getQuizSentences =====');
-    console.log('[quizService] Getting quiz sentences for user:', userId, 'count:', count);
-
     const sentencesRef = collection(db, 'mini-exercise-sentences');
     const q = query(
       sentencesRef,
@@ -146,12 +131,9 @@ export async function getQuizSentences(
       firestoreLimit(100) // Get a large pool of candidates
     );
 
-    console.log('[quizService] Fetching from Firestore...');
     const snapshot = await getDocs(q);
-    console.log('[quizService] Found', snapshot.size, 'sentences in database');
 
     if (snapshot.empty) {
-      console.log('[quizService] No indexed sentences found, falling back to random');
 
       // Fall back to random sentences
       const randomSentences: QuizSentence[] = [];
@@ -177,16 +159,8 @@ export async function getQuizSentences(
             contextBefore: sentenceIdx > 0 ? allSentences[sentenceIdx - 1] : undefined,
             contextAfter: sentenceIdx < allSentences.length - 1 ? allSentences[sentenceIdx + 1] : undefined,
           });
-
-          console.log('[quizService] Random sentence', i, 'context:', {
-            sentenceIdx,
-            hasBefore: sentenceIdx > 0,
-            hasAfter: sentenceIdx < allSentences.length - 1,
-            totalSentences: allSentences.length,
-          });
         }
       }
-      console.log('[quizService] Generated', randomSentences.length, 'random sentences with context');
       return randomSentences;
     }
 
@@ -210,17 +184,12 @@ export async function getQuizSentences(
     const quizSentences: QuizSentence[] = [];
 
     // Process each selected sentence
-    console.log('[quizService] Processing', selectedSentences.length, 'selected sentences');
     for (const { sentence } of selectedSentences) {
-      console.log('[quizService] Processing sentence:', sentence.sentenceId, 'index:', sentence.sentenceIndex);
-
       // Generate blanks
       const allBlanks = generateQuizBlanks(sentence.originalSentence, sentence.sentence);
-      console.log('[quizService] Generated', allBlanks.length, 'blanks for sentence');
 
       // Only include sentences with blanks
       if (allBlanks.length === 0) {
-        console.log('[quizService] Skipping sentence - no blanks');
         continue;
       }
 
@@ -228,14 +197,7 @@ export async function getQuizSentences(
       const blanks = [allBlanks[0]];
 
       // Get context sentences
-      console.log('[quizService] Fetching context for sentence index:', sentence.sentenceIndex, 'from submission:', sentence.submissionId);
       const context = await getContextSentences(sentence.submissionId, sentence.sentenceIndex);
-
-      console.log('[quizService] Context for sentence', sentence.sentenceIndex, ':', {
-        before: context.before,
-        after: context.after,
-        submissionId: sentence.submissionId,
-      });
 
       quizSentences.push({
         sentence: sentence.sentence,
@@ -259,7 +221,6 @@ export async function getQuizSentences(
       });
     }
 
-    console.log('[quizService] Selected', quizSentences.length, 'sentences for quiz');
     return quizSentences;
   } catch (error) {
     console.error('[quizService] Error getting quiz sentences:', error);

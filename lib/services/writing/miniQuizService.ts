@@ -44,7 +44,6 @@ export async function saveMiniQuizResult(
     };
 
     await addDoc(quizzesRef, quiz);
-    console.log('[miniQuizService] Quiz result saved:', { points, correctAnswers, totalBlanks: blanks.length });
   } catch (error) {
     console.error('[miniQuizService] Error saving quiz result:', error);
     throw error;

@@ -70,8 +70,6 @@ function splitIntoSentences(text: string): string[] {
  */
 export async function getRandomMiniExercise(userId: string): Promise<MiniExerciseData | null> {
   try {
-    console.log('[miniExerciseService] Fetching submissions for userId:', userId);
-
     // Fetch user's submissions (both submitted and reviewed)
     const submissionsRef = collection(db, 'writing-submissions');
     const q = query(
@@ -82,10 +80,8 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
     );
 
     const snapshot = await getDocs(q);
-    console.log('[miniExerciseService] Found submissions:', snapshot.size);
 
     if (snapshot.empty) {
-      console.log('[miniExerciseService] No submissions found');
       return null;
     }
 
@@ -98,19 +94,6 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
 
     for (const doc of snapshot.docs) {
       const submission = { submissionId: doc.id, ...doc.data() } as WritingSubmission;
-
-      console.log('[miniExerciseService] Checking submission:', {
-        id: submission.submissionId,
-        exerciseId: submission.exerciseId,
-        exerciseType: submission.exerciseType,
-        submittedAt: submission.submittedAt,
-        hasTeacherCorrection: !!submission.teacherCorrectedVersion,
-        hasAICorrection: !!submission.aiCorrectedVersion,
-        hasAIFeedback: !!submission.aiFeedback,
-        grammarErrorsCount: submission.aiFeedback?.grammarErrors?.length || 0,
-        status: submission.status,
-        allFields: Object.keys(submission),
-      });
 
       // Prioritize: teacher correction > AI corrected version > AI feedback with corrections
       if (submission.teacherCorrectedVersion) {
@@ -139,10 +122,7 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
       }
     }
 
-    console.log('[miniExerciseService] Submissions with corrections:', submissionsWithCorrections.length);
-
     if (submissionsWithCorrections.length === 0) {
-      console.log('[miniExerciseService] No submissions have corrections (AI or teacher)');
       return null;
     }
 
