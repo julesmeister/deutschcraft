@@ -11,6 +11,7 @@ interface SubmissionDisplayProps {
     version: number;
     submittedAt?: number;
     userId: string;
+    aiCorrectedVersion?: string;
   };
   userName?: string;
   referenceTranslation?: string;
