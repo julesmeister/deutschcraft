@@ -24,7 +24,7 @@ export default function TeacherGradingPage() {
   const router = useRouter();
   const { data: session } = useSession();
   const submissionId = params.submissionId as string;
-  const { showToast } = useToast();
+  const toast = useToast();
 
   const [activeTab, setActiveTab] = useState<'grading' | 'history'>('grading');
   const [correctedVersion, setCorrectedVersion] = useState('');
@@ -62,26 +62,20 @@ export default function TeacherGradingPage() {
           reviewId: existingReview.reviewId,
           updates: reviewData,
         });
-        showToast({
+        toast.success('Your review has been updated successfully', {
           title: 'Review Updated',
-          message: 'Your review has been updated successfully',
-          variant: 'success',
         });
       } else {
         await createReview.mutateAsync(reviewData);
-        showToast({
+        toast.success('Your review has been submitted successfully', {
           title: 'Review Submitted',
-          message: 'Your review has been submitted successfully',
-          variant: 'success',
         });
       }
       router.push('/dashboard/teacher/writing');
     } catch (error) {
       console.error('Failed to submit review:', error);
-      showToast({
+      toast.error('Failed to submit review. Please try again.', {
         title: 'Error',
-        message: 'Failed to submit review. Please try again.',
-        variant: 'error',
       });
     }
   };
