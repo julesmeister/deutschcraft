@@ -1,6 +1,7 @@
-import { useState, useMemo } from 'react';
-import { CEFRLevel } from '@/lib/models/cefr';
-import { calculateSRSData } from '@/lib/utils/srsAlgorithm';
+import { useState, useMemo } from "react";
+import { CEFRLevel } from "@/lib/models/cefr";
+import { calculateSRSData } from "@/lib/utils/srsAlgorithm";
+import { shuffleArray } from "@/lib/utils/array";
 
 interface GrammarReview {
   sentenceId: string;
@@ -46,15 +47,17 @@ export function useGrammarPracticeSession({
   // Calculate due sentences count
   const dueSentencesCount = useMemo(() => {
     const now = Date.now();
-    return reviews.filter(review => {
+    return reviews.filter((review) => {
       if (!review.nextReviewDate) return false;
       return review.nextReviewDate <= now;
     }).length;
   }, [reviews]);
 
-  const handlePracticeComplete = async (results: { sentenceId: string; difficulty: string }[]) => {
+  const handlePracticeComplete = async (
+    results: { sentenceId: string; difficulty: string }[]
+  ) => {
     if (!session?.user?.email) {
-      console.error('Cannot save: No user session');
+      console.error("Cannot save: No user session");
       setIsPracticeMode(false);
       setPracticeSentences([]);
       return null;
@@ -69,33 +72,45 @@ export function useGrammarPracticeSession({
         const { sentenceId, difficulty } = result;
 
         // Get existing review or create new one
-        const existingReview = reviews.find(r => r.sentenceId === sentenceId);
+        const existingReview = reviews.find((r) => r.sentenceId === sentenceId);
 
         // Find the actual sentence to get its ruleId
         const sentenceData = sentenceDataMap[selectedLevel];
-        const sentence = sentenceData?.sentences?.find((s: any) => s.sentenceId === sentenceId);
-        const actualRuleId = sentence?.ruleId || '';
+        const sentence = sentenceData?.sentences?.find(
+          (s: any) => s.sentenceId === sentenceId
+        );
+        const actualRuleId = sentence?.ruleId || "";
 
         // Prepare current progress object for SRS calculation
-        const currentProgress = existingReview ? {
-          masteryLevel: existingReview.masteryLevel || 0,
-          nextReviewDate: existingReview.nextReviewDate || Date.now(),
-          repetitions: existingReview.repetitions || 0,
-          easeFactor: existingReview.easeFactor || 2.5,
-          interval: existingReview.interval || 0,
-          consecutiveCorrect: 0,
-          consecutiveIncorrect: 0,
-          lapseCount: 0,
-          lastLapseDate: null,
-          state: 'review' as const,
-        } : null;
+        const currentProgress = existingReview
+          ? {
+              masteryLevel: existingReview.masteryLevel || 0,
+              nextReviewDate: existingReview.nextReviewDate || Date.now(),
+              repetitions: existingReview.repetitions || 0,
+              easeFactor: existingReview.easeFactor || 2.5,
+              interval: existingReview.interval || 0,
+              consecutiveCorrect: 0,
+              consecutiveIncorrect: 0,
+              lapseCount: 0,
+              lastLapseDate: null,
+              state: "review" as const,
+            }
+          : null;
 
         // Calculate SRS interval based on difficulty
-        const srsResult = calculateSRSData(currentProgress, difficulty as any, selectedLevel);
+        const srsResult = calculateSRSData(
+          currentProgress,
+          difficulty as any,
+          selectedLevel
+        );
 
         // Validate SRS result
-        if (!srsResult || typeof srsResult.interval !== 'number' || isNaN(srsResult.interval)) {
-          console.error('Invalid SRS result:', srsResult);
+        if (
+          !srsResult ||
+          typeof srsResult.interval !== "number" ||
+          isNaN(srsResult.interval)
+        ) {
+          console.error("Invalid SRS result:", srsResult);
           continue; // Skip this sentence
         }
 
@@ -104,7 +119,10 @@ export function useGrammarPracticeSession({
 
         // Validate the date
         if (isNaN(nextReviewDate.getTime())) {
-          console.error('Invalid date from SRS result:', srsResult.nextReviewDate);
+          console.error(
+            "Invalid date from SRS result:",
+            srsResult.nextReviewDate
+          );
           continue;
         }
 
@@ -113,8 +131,11 @@ export function useGrammarPracticeSession({
         const now = Date.now();
 
         // Determine if this is correct or incorrect based on difficulty
-        const isCorrect = difficulty === 'easy' || difficulty === 'good' || difficulty === 'expert';
-        const isIncorrect = difficulty === 'again' || difficulty === 'hard';
+        const isCorrect =
+          difficulty === "easy" ||
+          difficulty === "good" ||
+          difficulty === "expert";
+        const isIncorrect = difficulty === "again" || difficulty === "hard";
 
         // Track totals for daily progress
         if (isCorrect) totalCorrect++;
@@ -133,10 +154,16 @@ export function useGrammarPracticeSession({
           lastReviewDate: now, // timestamp
 
           // Performance tracking
-          correctCount: (existingReview?.correctCount || 0) + (isCorrect ? 1 : 0),
-          incorrectCount: (existingReview?.incorrectCount || 0) + (isIncorrect ? 1 : 0),
-          consecutiveCorrect: isCorrect ? (existingReview?.consecutiveCorrect || 0) + 1 : 0,
-          consecutiveIncorrect: isIncorrect ? (existingReview?.consecutiveIncorrect || 0) + 1 : 0,
+          correctCount:
+            (existingReview?.correctCount || 0) + (isCorrect ? 1 : 0),
+          incorrectCount:
+            (existingReview?.incorrectCount || 0) + (isIncorrect ? 1 : 0),
+          consecutiveCorrect: isCorrect
+            ? (existingReview?.consecutiveCorrect || 0) + 1
+            : 0,
+          consecutiveIncorrect: isIncorrect
+            ? (existingReview?.consecutiveIncorrect || 0) + 1
+            : 0,
 
           // First seen tracking
           firstSeenAt: existingReview?.firstSeenAt || now,
@@ -150,25 +177,31 @@ export function useGrammarPracticeSession({
       // Update daily progress to contribute to streak
       if (results.length > 0) {
         try {
-          const { saveDailyProgress } = await import('@/lib/services/flashcards/progress');
+          const { saveDailyProgress } = await import(
+            "@/lib/services/flashcards/progress"
+          );
           await saveDailyProgress(session.user.email, {
             cardsReviewed: results.length,
             timeSpent: Math.ceil((results.length * 30) / 60), // Convert seconds to minutes (30 sec per sentence)
             correctCount: totalCorrect,
             incorrectCount: totalIncorrect,
           });
-          console.log('Daily progress updated for grammatik session');
+          console.log("Daily progress updated for grammatik session");
         } catch (error) {
-          console.error('Failed to update daily progress:', error);
+          console.error("Failed to update daily progress:", error);
         }
       }
 
       // Refetch reviews to update UI
       await refetchReviews();
 
-      console.log('Practice session saved successfully:', results.length, 'sentences');
+      console.log(
+        "Practice session saved successfully:",
+        results.length,
+        "sentences"
+      );
     } catch (error) {
-      console.error('Failed to save practice session:', error);
+      console.error("Failed to save practice session:", error);
     }
 
     // Return to rules list
@@ -179,7 +212,7 @@ export function useGrammarPracticeSession({
 
   const handleStartPractice = () => {
     if (!session?.user?.email) {
-      alert('Please log in to practice');
+      alert("Please log in to practice");
       return null;
     }
 
@@ -191,41 +224,45 @@ export function useGrammarPracticeSession({
     });
 
     if (dueReviews.length === 0) {
-      alert('No sentences due for review! Practice some grammar rules first.');
+      alert("No sentences due for review! Practice some grammar rules first.");
       return null;
     }
 
     // Load all sentence data for the current level
     const sentenceData = sentenceDataMap[selectedLevel];
     if (!sentenceData || !sentenceData.sentences) {
-      alert('No sentence data available for this level');
+      alert("No sentence data available for this level");
       return null;
     }
 
     // Get the actual sentence objects for due reviews
     const dueSentenceObjects = dueReviews
-      .map(review => {
-        return sentenceData.sentences.find((s: any) => s.sentenceId === review.sentenceId);
+      .map((review) => {
+        return sentenceData.sentences.find(
+          (s: any) => s.sentenceId === review.sentenceId
+        );
       })
       .filter(Boolean); // Remove any undefined
 
     if (dueSentenceObjects.length === 0) {
-      alert('Could not load due sentences');
+      alert("Could not load due sentences");
       return null;
     }
 
     // Shuffle for variety
-    const shuffled = [...dueSentenceObjects].sort(() => Math.random() - 0.5);
+    const shuffled = shuffleArray(dueSentenceObjects);
 
-    // Limit to 20 sentences per session
-    const sessionSentences = shuffled.slice(0, 20);
+    // Limit to 10 sentences per session
+    const sessionSentences = shuffled.slice(0, 10);
 
     // Set practice sentences
     setPracticeSentences(sessionSentences);
     setIsPracticeMode(true);
 
-    console.log(`Starting practice with ${sessionSentences.length} due sentences`);
-    return 'practice-mode'; // Return a dummy rule ID
+    console.log(
+      `Starting practice with ${sessionSentences.length} due sentences`
+    );
+    return "practice-mode"; // Return a dummy rule ID
   };
 
   return {

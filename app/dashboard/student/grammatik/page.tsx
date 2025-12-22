@@ -1,30 +1,34 @@
-'use client';
+"use client";
 
-import { useState, useMemo } from 'react';
-import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
-import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
-import { CEFRLevel } from '@/lib/models/cefr';
-import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { useGrammarReviews, useSaveGrammarReview } from '@/lib/hooks/useGrammarExercises';
-import { usePersistedLevel } from '@/lib/hooks/usePersistedLevel';
-import { useGrammarPracticeSession } from '@/lib/hooks/useGrammarPracticeSession';
-import { GrammarSentencePractice } from '@/components/grammar/GrammarSentencePractice';
-import { GrammarRuleCard } from '@/components/grammar/GrammarRuleCard';
-import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
+import { useState, useMemo } from "react";
+import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
+import { CEFRLevelSelector } from "@/components/ui/CEFRLevelSelector";
+import { CEFRLevel } from "@/lib/models/cefr";
+import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
+import {
+  useGrammarReviews,
+  useSaveGrammarReview,
+} from "@/lib/hooks/useGrammarExercises";
+import { usePersistedLevel } from "@/lib/hooks/usePersistedLevel";
+import { useGrammarPracticeSession } from "@/lib/hooks/useGrammarPracticeSession";
+import { GrammarSentencePractice } from "@/components/grammar/GrammarSentencePractice";
+import { GrammarRuleCard } from "@/components/grammar/GrammarRuleCard";
+import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
+import { shuffleArray } from "@/lib/utils/array";
 
 // Import existing grammar data from grammar guide
-import a1Data from '@/lib/data/grammar/levels/a1.json';
-import a2Data from '@/lib/data/grammar/levels/a2.json';
-import b1Data from '@/lib/data/grammar/levels/b1.json';
-import b2Data from '@/lib/data/grammar/levels/b2.json';
-import c1Data from '@/lib/data/grammar/levels/c1.json';
-import c2Data from '@/lib/data/grammar/levels/c2.json';
+import a1Data from "@/lib/data/grammar/levels/a1.json";
+import a2Data from "@/lib/data/grammar/levels/a2.json";
+import b1Data from "@/lib/data/grammar/levels/b1.json";
+import b2Data from "@/lib/data/grammar/levels/b2.json";
+import c1Data from "@/lib/data/grammar/levels/c1.json";
+import c2Data from "@/lib/data/grammar/levels/c2.json";
 
 // Import sentence data
-import a1Sentences from '@/lib/data/grammar/sentences/a1.json';
-import a2Sentences from '@/lib/data/grammar/sentences/a2.json';
-import b1Sentences from '@/lib/data/grammar/sentences/b1.json';
-import b2Sentences from '@/lib/data/grammar/sentences/b2.json';
+import a1Sentences from "@/lib/data/grammar/sentences/a1.json";
+import a2Sentences from "@/lib/data/grammar/sentences/a2.json";
+import b1Sentences from "@/lib/data/grammar/sentences/b1.json";
+import b2Sentences from "@/lib/data/grammar/sentences/b2.json";
 
 const levelDataMap = {
   [CEFRLevel.A1]: a1Data,
@@ -56,18 +60,47 @@ interface GrammarRule {
 
 // Color schemes for grammar rule cards (same as grammar guide)
 const CARD_COLOR_SCHEMES = [
-  { bg: 'hover:bg-blue-100', text: 'group-hover:text-blue-900', badge: 'group-hover:bg-blue-500' },
-  { bg: 'hover:bg-emerald-100', text: 'group-hover:text-emerald-900', badge: 'group-hover:bg-emerald-500' },
-  { bg: 'hover:bg-amber-100', text: 'group-hover:text-amber-900', badge: 'group-hover:bg-amber-500' },
-  { bg: 'hover:bg-purple-100', text: 'group-hover:text-purple-900', badge: 'group-hover:bg-purple-500' },
-  { bg: 'hover:bg-pink-100', text: 'group-hover:text-pink-900', badge: 'group-hover:bg-pink-500' },
-  { bg: 'hover:bg-indigo-100', text: 'group-hover:text-indigo-900', badge: 'group-hover:bg-indigo-500' },
+  {
+    bg: "hover:bg-blue-100",
+    text: "group-hover:text-blue-900",
+    badge: "group-hover:bg-blue-500",
+  },
+  {
+    bg: "hover:bg-emerald-100",
+    text: "group-hover:text-emerald-900",
+    badge: "group-hover:bg-emerald-500",
+  },
+  {
+    bg: "hover:bg-amber-100",
+    text: "group-hover:text-amber-900",
+    badge: "group-hover:bg-amber-500",
+  },
+  {
+    bg: "hover:bg-purple-100",
+    text: "group-hover:text-purple-900",
+    badge: "group-hover:bg-purple-500",
+  },
+  {
+    bg: "hover:bg-pink-100",
+    text: "group-hover:text-pink-900",
+    badge: "group-hover:bg-pink-500",
+  },
+  {
+    bg: "hover:bg-indigo-100",
+    text: "group-hover:text-indigo-900",
+    badge: "group-hover:bg-indigo-500",
+  },
 ];
 
 export default function GrammatikPracticePage() {
   const { session } = useFirebaseAuth();
-  const [selectedLevel, setSelectedLevel] = usePersistedLevel('grammatik-last-level');
+  const [selectedLevel, setSelectedLevel] = usePersistedLevel(
+    "grammatik-last-level"
+  );
   const [selectedRule, setSelectedRule] = useState<string | null>(null);
+  const [currentSessionResults, setCurrentSessionResults] = useState<
+    { sentenceId: string; difficulty: string }[]
+  >([]);
 
   // Load grammar rules from JSON files
   const rules = useMemo(() => {
@@ -76,7 +109,11 @@ export default function GrammatikPracticePage() {
   }, [selectedLevel]);
 
   // Fetch user's progress
-  const { reviews, isLoading: reviewsLoading, refetch: refetchReviews } = useGrammarReviews(session?.user?.email);
+  const {
+    reviews,
+    isLoading: reviewsLoading,
+    refetch: refetchReviews,
+  } = useGrammarReviews(session?.user?.email);
   const { saveReview } = useSaveGrammarReview();
 
   // Practice session hook
@@ -114,21 +151,23 @@ export default function GrammatikPracticePage() {
   const getRuleProgress = (ruleId: string) => {
     // Get total available sentences for this rule
     const sentenceData = sentenceDataMap[selectedLevel];
-    const totalSentences = sentenceData?.sentences?.filter(
-      (s: any) => s.ruleId === ruleId && !s.english.includes('[TODO')
-    ).length || 0;
+    const totalSentences =
+      sentenceData?.sentences?.filter(
+        (s: any) => s.ruleId === ruleId && !s.english.includes("[TODO")
+      ).length || 0;
 
     // Get reviewed sentences
     const ruleReviews = reviews.filter((r) => r.ruleId === ruleId);
     const practiced = ruleReviews.length;
     const completed = ruleReviews.filter((r) => r.masteryLevel >= 80).length;
-    const percentage = totalSentences > 0 ? Math.round((practiced / totalSentences) * 100) : 0;
+    const percentage =
+      totalSentences > 0 ? Math.round((practiced / totalSentences) * 100) : 0;
 
     return {
       practiced,
       total: totalSentences,
       completed,
-      percentage
+      percentage,
     };
   };
 
@@ -151,48 +190,87 @@ export default function GrammatikPracticePage() {
     if (!sentenceData || !sentenceData.sentences) return [];
 
     // Filter sentences for this rule (exclude [TODO] placeholders)
-    return sentenceData.sentences.filter(
-      (s: any) => s.ruleId === selectedRule && !s.english.includes('[TODO]')
+    const ruleSentences = sentenceData.sentences.filter(
+      (s: any) => s.ruleId === selectedRule && !s.english.includes("[TODO]")
     );
+
+    // Shuffle and limit to 10 sentences for bite-sized practice
+    // This ensures sessions aren't too long (e.g. 100+ sentences)
+    return shuffleArray(ruleSentences).slice(0, 10);
   }, [selectedRule, selectedLevel, isPracticeMode, practiceSentences]);
 
   const handleStartPractice = () => {
     const ruleId = startPractice();
     if (ruleId) {
       setSelectedRule(ruleId);
+      setCurrentSessionResults([]);
     }
   };
 
-  const onPracticeComplete = async (results: { sentenceId: string; difficulty: string }[]) => {
+  const onPracticeComplete = async (
+    results: { sentenceId: string; difficulty: string }[]
+  ) => {
     await handlePracticeComplete(results);
     setSelectedRule(null);
+    setCurrentSessionResults([]);
   };
 
   if (selectedRule) {
     // Determine title based on mode
     const practiceTitle = isPracticeMode
-      ? 'SRS Practice Session'
-      : selectedRuleData?.title || 'Grammar Practice';
+      ? "SRS Practice Session"
+      : selectedRuleData?.title || "Grammar Practice";
 
     return (
       <div className="min-h-screen bg-gray-50 pb-16">
         <DashboardHeader
           title="Grammar Practice"
-          subtitle={isPracticeMode ? `Reviewing ${selectedRuleSentences.length} due sentences` : `Practicing: ${practiceTitle}`}
+          subtitle={
+            isPracticeMode
+              ? `Reviewing ${selectedRuleSentences.length} due sentences`
+              : `Practicing: ${practiceTitle}`
+          }
           backButton={{
             label: "Back to Rules",
             onClick: () => {
               setSelectedRule(null);
               setIsPracticeMode(false);
               setPracticeSentences([]);
+              setCurrentSessionResults([]);
             },
           }}
+          actions={
+            <ActionButton
+              onClick={() => {
+                if (currentSessionResults.length > 0) {
+                  onPracticeComplete(currentSessionResults);
+                } else {
+                  // Just exit if no progress
+                  setSelectedRule(null);
+                  setIsPracticeMode(false);
+                  setPracticeSentences([]);
+                  setCurrentSessionResults([]);
+                }
+              }}
+              variant={currentSessionResults.length > 0 ? "mint" : "gray"}
+              icon={
+                currentSessionResults.length > 0 ? (
+                  <ActionButtonIcons.Check />
+                ) : undefined
+              }
+            >
+              {currentSessionResults.length > 0
+                ? `End Session (${currentSessionResults.length})`
+                : "End Session"}
+            </ActionButton>
+          }
         />
         <div className="container mx-auto px-6 mt-8">
           <GrammarSentencePractice
             sentences={selectedRuleSentences}
             ruleTitle={practiceTitle}
             onComplete={onPracticeComplete}
+            onProgress={setCurrentSessionResults}
           />
         </div>
       </div>
@@ -247,14 +325,19 @@ export default function GrammatikPracticePage() {
                 <div key={category}>
                   {/* Category Header */}
                   <div className="bg-gray-50 px-6 py-3 border-b border-gray-200">
-                    <h2 className="text-sm font-bold text-gray-700 uppercase tracking-wide">{category}</h2>
+                    <h2 className="text-sm font-bold text-gray-700 uppercase tracking-wide">
+                      {category}
+                    </h2>
                   </div>
 
                   {/* Rules List */}
                   <div className="divide-y divide-gray-100">
                     {rulesByCategory[category].map((rule, ruleIndex) => {
                       const progress = getRuleProgress(rule.id);
-                      const colorScheme = CARD_COLOR_SCHEMES[ruleIndex % CARD_COLOR_SCHEMES.length];
+                      const colorScheme =
+                        CARD_COLOR_SCHEMES[
+                          ruleIndex % CARD_COLOR_SCHEMES.length
+                        ];
 
                       return (
                         <GrammarRuleCard

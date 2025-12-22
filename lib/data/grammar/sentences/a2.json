@@ -1,8 +1,8 @@
 {
   "level": "A2",
   "totalRules": 17,
-  "totalSentences": 340,
-  "targetSentences": 340,
+  "totalSentences": 451,
+  "targetSentences": 451,
   "completionPercentage": 100,
   "sentences": [
     {
@@ -4995,6 +4995,1608 @@
         "wirst"
       ],
       "difficulty": 7
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-021",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I go into the park",
+      "german": "Ich gehe in den Park",
+      "hints": [
+        "in + Accusative (Wohin?)",
+        "der Park → den Park"
+      ],
+      "keywords": [
+        "in",
+        "Park"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-022",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She walks into the school",
+      "german": "Sie geht in die Schule",
+      "hints": [
+        "in + Accusative",
+        "die Schule (remains die)"
+      ],
+      "keywords": [
+        "in",
+        "Schule"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-023",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We drive into the city",
+      "german": "Wir fahren in die Stadt",
+      "hints": [
+        "in + Accusative",
+        "die Stadt"
+      ],
+      "keywords": [
+        "in",
+        "Stadt"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-024",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He runs into the house",
+      "german": "Er rennt in das Haus",
+      "hints": [
+        "in + Accusative",
+        "das Haus (or ins Haus)"
+      ],
+      "keywords": [
+        "in",
+        "Haus"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-025",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "They go into the cinema",
+      "german": "Sie gehen ins Kino",
+      "hints": [
+        "ins = in das",
+        "Kino is neuter"
+      ],
+      "keywords": [
+        "ins",
+        "Kino"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-026",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I put the book in the bag",
+      "german": "Ich lege das Buch in die Tasche",
+      "hints": [
+        "legen implies motion → Acc",
+        "die Tasche"
+      ],
+      "keywords": [
+        "in",
+        "Tasche"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-027",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He jumps into the water",
+      "german": "Er springt ins Wasser",
+      "hints": [
+        "ins = in das",
+        "Wasser is neuter"
+      ],
+      "keywords": [
+        "ins",
+        "Wasser"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-028",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She climbs into the car",
+      "german": "Sie steigt in das Auto",
+      "hints": [
+        "einsteigen/steigen in",
+        "das Auto"
+      ],
+      "keywords": [
+        "in",
+        "Auto"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-029",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We move into a new apartment",
+      "german": "Wir ziehen in eine neue Wohnung",
+      "hints": [
+        "einziehen in + Acc",
+        "eine Wohnung"
+      ],
+      "keywords": [
+        "in",
+        "Wohnung"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-030",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The dog runs into the garden",
+      "german": "Der Hund läuft in den Garten",
+      "hints": [
+        "in + Accusative",
+        "der Garten → den Garten"
+      ],
+      "keywords": [
+        "in",
+        "Garten"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-031",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I climb onto the roof",
+      "german": "Ich klettere auf das Dach",
+      "hints": [
+        "auf + Accusative (Wohin?)",
+        "das Dach"
+      ],
+      "keywords": [
+        "auf",
+        "Dach"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-032",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "Put the glass on the table",
+      "german": "Stell das Glas auf den Tisch",
+      "hints": [
+        "stellen = to place (upright)",
+        "auf den Tisch (Acc)"
+      ],
+      "keywords": [
+        "auf",
+        "Tisch"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-033",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She sits on the chair",
+      "german": "Sie setzt sich auf den Stuhl",
+      "hints": [
+        "sich setzen (action) → Acc",
+        "der Stuhl → den Stuhl"
+      ],
+      "keywords": [
+        "auf",
+        "Stuhl"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-034",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We go to the party",
+      "german": "Wir gehen auf die Party",
+      "hints": [
+        "auf eine Party gehen",
+        "die Party"
+      ],
+      "keywords": [
+        "auf",
+        "Party"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-035",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He lays the paper on the desk",
+      "german": "Er legt das Papier auf den Schreibtisch",
+      "hints": [
+        "legen (action) → Acc",
+        "der Schreibtisch"
+      ],
+      "keywords": [
+        "auf",
+        "Schreibtisch"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-036",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The cat jumps onto the bed",
+      "german": "Die Katze springt auf das Bett",
+      "hints": [
+        "auf + Accusative",
+        "das Bett"
+      ],
+      "keywords": [
+        "auf",
+        "Bett"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-037",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I go to the market",
+      "german": "Ich gehe auf den Markt",
+      "hints": [
+        "auf den Markt",
+        "der Markt → den Markt"
+      ],
+      "keywords": [
+        "auf",
+        "Markt"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-038",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "They climb up the mountain",
+      "german": "Sie steigen auf den Berg",
+      "hints": [
+        "auf den Berg",
+        "der Berg"
+      ],
+      "keywords": [
+        "auf",
+        "Berg"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-039",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She writes on the paper",
+      "german": "Sie schreibt auf das Papier",
+      "hints": [
+        "auf das Papier"
+      ],
+      "keywords": [
+        "auf",
+        "Papier"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-040",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We drive onto the highway",
+      "german": "Wir fahren auf die Autobahn",
+      "hints": [
+        "auf die Autobahn",
+        "die Autobahn"
+      ],
+      "keywords": [
+        "auf",
+        "Autobahn"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-041",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I go to the window",
+      "german": "Ich gehe ans Fenster",
+      "hints": [
+        "ans = an das",
+        "Fenster is neuter"
+      ],
+      "keywords": [
+        "ans",
+        "Fenster"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-042",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He hangs the picture on the wall",
+      "german": "Er hängt das Bild an die Wand",
+      "hints": [
+        "hängen (action) → Acc",
+        "die Wand"
+      ],
+      "keywords": [
+        "an",
+        "Wand"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-043",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We go to the beach",
+      "german": "Wir gehen an den Strand",
+      "hints": [
+        "an den Strand (water edge)",
+        "der Strand"
+      ],
+      "keywords": [
+        "an",
+        "Strand"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-044",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She sits at the table",
+      "german": "Sie setzt sich an den Tisch",
+      "hints": [
+        "sich setzen → Acc",
+        "der Tisch"
+      ],
+      "keywords": [
+        "an",
+        "Tisch"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-045",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "Write it on the board",
+      "german": "Schreib es an die Tafel",
+      "hints": [
+        "an die Tafel",
+        "die Tafel"
+      ],
+      "keywords": [
+        "an",
+        "Tafel"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-046",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He walks to the door",
+      "german": "Er geht an die Tür",
+      "hints": [
+        "an die Tür",
+        "die Tür"
+      ],
+      "keywords": [
+        "an",
+        "Tür"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-047",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I lean the bike against the tree",
+      "german": "Ich lehne das Fahrrad an den Baum",
+      "hints": [
+        "lehnen an + Acc",
+        "der Baum"
+      ],
+      "keywords": [
+        "an",
+        "Baum"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-048",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "They go to the sea",
+      "german": "Sie fahren ans Meer",
+      "hints": [
+        "ans Meer",
+        "das Meer"
+      ],
+      "keywords": [
+        "ans",
+        "Meer"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-049",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "Put your hand on your heart",
+      "german": "Leg die Hand aufs Herz",
+      "hints": [
+        "aufs = auf das",
+        "idiomatic"
+      ],
+      "keywords": [
+        "aufs",
+        "Herz"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-050",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She goes to the phone",
+      "german": "Sie geht ans Telefon",
+      "hints": [
+        "ans Telefon",
+        "das Telefon"
+      ],
+      "keywords": [
+        "ans",
+        "Telefon"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-051",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I go to the doctor",
+      "german": "Ich gehe zum Arzt",
+      "hints": [
+        "zum = zu dem (Dative)",
+        "der Arzt"
+      ],
+      "keywords": [
+        "zum",
+        "Arzt"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-052",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We drive to the station",
+      "german": "Wir fahren zum Bahnhof",
+      "hints": [
+        "zum Bahnhof",
+        "der Bahnhof"
+      ],
+      "keywords": [
+        "zum",
+        "Bahnhof"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-053",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She goes to her mother",
+      "german": "Sie geht zu ihrer Mutter",
+      "hints": [
+        "zu + Dative",
+        "ihre Mutter → ihrer"
+      ],
+      "keywords": [
+        "zu",
+        "Mutter"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-054",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "Come to me",
+      "german": "Komm zu mir",
+      "hints": [
+        "zu + Dative pronoun",
+        "ich → mir"
+      ],
+      "keywords": [
+        "zu",
+        "mir"
+      ],
+      "difficulty": 1
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-055",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He goes to school (institution)",
+      "german": "Er geht zur Schule",
+      "hints": [
+        "zur = zu der",
+        "die Schule"
+      ],
+      "keywords": [
+        "zur",
+        "Schule"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-056",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "Let's go to the bakery",
+      "german": "Lass uns zur Bäckerei gehen",
+      "hints": [
+        "zur Bäckerei",
+        "die Bäckerei"
+      ],
+      "keywords": [
+        "zur",
+        "Bäckerei"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-057",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I drive to work",
+      "german": "Ich fahre zur Arbeit",
+      "hints": [
+        "zur Arbeit",
+        "die Arbeit"
+      ],
+      "keywords": [
+        "zur",
+        "Arbeit"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-058",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "They go to the university",
+      "german": "Sie gehen zur Universität",
+      "hints": [
+        "zur Universität",
+        "die Universität"
+      ],
+      "keywords": [
+        "zur",
+        "Universität"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-059",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We go to the airport",
+      "german": "Wir fahren zum Flughafen",
+      "hints": [
+        "zum Flughafen",
+        "der Flughafen"
+      ],
+      "keywords": [
+        "zum",
+        "Flughafen"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-060",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He runs to the bus",
+      "german": "Er rennt zum Bus",
+      "hints": [
+        "zum Bus",
+        "der Bus"
+      ],
+      "keywords": [
+        "zum",
+        "Bus"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-061",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I fly to Germany",
+      "german": "Ich fliege nach Deutschland",
+      "hints": [
+        "nach for countries w/o article"
+      ],
+      "keywords": [
+        "nach",
+        "Deutschland"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-062",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We go home",
+      "german": "Wir gehen nach Hause",
+      "hints": [
+        "nach Hause (fixed expression)"
+      ],
+      "keywords": [
+        "nach",
+        "Hause"
+      ],
+      "difficulty": 1
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-063",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She drives to Berlin",
+      "german": "Sie fährt nach Berlin",
+      "hints": [
+        "nach for cities"
+      ],
+      "keywords": [
+        "nach",
+        "Berlin"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-064",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "Turn to the left",
+      "german": "Bieg nach links ab",
+      "hints": [
+        "nach links"
+      ],
+      "keywords": [
+        "nach",
+        "links"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-065",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "Look to the right",
+      "german": "Schau nach rechts",
+      "hints": [
+        "nach rechts"
+      ],
+      "keywords": [
+        "nach",
+        "rechts"
+      ],
+      "difficulty": 1
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-066",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "They travel to Spain",
+      "german": "Sie reisen nach Spanien",
+      "hints": [
+        "nach Spanien"
+      ],
+      "keywords": [
+        "nach",
+        "Spanien"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-067",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He goes upstairs",
+      "german": "Er geht nach oben",
+      "hints": [
+        "nach oben"
+      ],
+      "keywords": [
+        "nach",
+        "oben"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-068",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She goes downstairs",
+      "german": "Sie geht nach unten",
+      "hints": [
+        "nach unten"
+      ],
+      "keywords": [
+        "nach",
+        "unten"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-069",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We drive to Munich",
+      "german": "Wir fahren nach München",
+      "hints": [
+        "nach München"
+      ],
+      "keywords": [
+        "nach",
+        "München"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-070",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I travel to Europe",
+      "german": "Ich reise nach Europa",
+      "hints": [
+        "nach Europa"
+      ],
+      "keywords": [
+        "nach",
+        "Europa"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-071",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We walk across the street",
+      "german": "Wir gehen über die Straße",
+      "hints": [
+        "über + Acc (across)",
+        "die Straße"
+      ],
+      "keywords": [
+        "über",
+        "Straße"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-072",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He jumps over the fence",
+      "german": "Er springt über den Zaun",
+      "hints": [
+        "über + Acc",
+        "der Zaun → den Zaun"
+      ],
+      "keywords": [
+        "über",
+        "Zaun"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-073",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We drive over the bridge",
+      "german": "Wir fahren über die Brücke",
+      "hints": [
+        "über die Brücke"
+      ],
+      "keywords": [
+        "über",
+        "Brücke"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-074",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She climbs over the wall",
+      "german": "Sie klettert über die Mauer",
+      "hints": [
+        "über die Mauer"
+      ],
+      "keywords": [
+        "über",
+        "Mauer"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-075",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I hang the lamp over the table",
+      "german": "Ich hänge die Lampe über den Tisch",
+      "hints": [
+        "hängen (action) → Acc",
+        "der Tisch"
+      ],
+      "keywords": [
+        "über",
+        "Tisch"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-076",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "They walk across the square",
+      "german": "Sie gehen über den Platz",
+      "hints": [
+        "über den Platz"
+      ],
+      "keywords": [
+        "über",
+        "Platz"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-077",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The plane flies over the ocean",
+      "german": "Das Flugzeug fliegt über den Ozean",
+      "hints": [
+        "über den Ozean"
+      ],
+      "keywords": [
+        "über",
+        "Ozean"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-078",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He throws the ball over the net",
+      "german": "Er wirft den Ball über das Netz",
+      "hints": [
+        "über das Netz"
+      ],
+      "keywords": [
+        "über",
+        "Netz"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-079",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We go over the hill",
+      "german": "Wir gehen über den Hügel",
+      "hints": [
+        "über den Hügel"
+      ],
+      "keywords": [
+        "über",
+        "Hügel"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-080",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The cat crawls under the sofa",
+      "german": "Die Katze kriecht unter das Sofa",
+      "hints": [
+        "unter + Acc (motion)",
+        "das Sofa"
+      ],
+      "keywords": [
+        "unter",
+        "Sofa"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-081",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I put the shoes under the bed",
+      "german": "Ich stelle die Schuhe unter das Bett",
+      "hints": [
+        "stellen → Acc",
+        "das Bett"
+      ],
+      "keywords": [
+        "unter",
+        "Bett"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-082",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He swims under the bridge",
+      "german": "Er schwimmt unter die Brücke",
+      "hints": [
+        "motion towards under → Acc",
+        "die Brücke"
+      ],
+      "keywords": [
+        "unter",
+        "Brücke"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-083",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The dog runs under the table",
+      "german": "Der Hund läuft unter den Tisch",
+      "hints": [
+        "unter den Tisch"
+      ],
+      "keywords": [
+        "unter",
+        "Tisch"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-084",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She hides under the blanket",
+      "german": "Sie versteckt sich unter der Decke",
+      "hints": [
+        "Wait, hide usually implies location (Dat), but motion to hide is Acc. 'Sich unter der Decke verstecken' (Dat) vs 'unter die Decke kriechen' (Acc). Let's use 'crawls under'"
+      ],
+      "keywords": [
+        "unter"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-085",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She crawls under the blanket",
+      "german": "Sie kriecht unter die Decke",
+      "hints": [
+        "unter die Decke"
+      ],
+      "keywords": [
+        "unter",
+        "Decke"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-086",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We drive under the tunnel",
+      "german": "Wir fahren durch den Tunnel",
+      "hints": [
+        "Use 'durch' for tunnel usually, but 'unter der Brücke durch' is mixed. Let's stick to simple unter"
+      ],
+      "keywords": [
+        "unter"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-087",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The ball rolls under the car",
+      "german": "Der Ball rollt unter das Auto",
+      "hints": [
+        "unter das Auto"
+      ],
+      "keywords": [
+        "unter",
+        "Auto"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-088",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I push the letter under the door",
+      "german": "Ich schiebe den Brief unter die Tür",
+      "hints": [
+        "unter die Tür"
+      ],
+      "keywords": [
+        "unter",
+        "Tür"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-089",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He dives under the water",
+      "german": "Er taucht unter das Wasser",
+      "hints": [
+        "unter das Wasser"
+      ],
+      "keywords": [
+        "unter",
+        "Wasser"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-090",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "Put the box under the shelf",
+      "german": "Stell die Kiste unter das Regal",
+      "hints": [
+        "unter das Regal"
+      ],
+      "keywords": [
+        "unter",
+        "Regal"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-091",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I step in front of the mirror",
+      "german": "Ich trete vor den Spiegel",
+      "hints": [
+        "vor + Acc (motion)",
+        "der Spiegel"
+      ],
+      "keywords": [
+        "vor",
+        "Spiegel"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-092",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He drives the car in front of the house",
+      "german": "Er fährt das Auto vor das Haus",
+      "hints": [
+        "vor das Haus"
+      ],
+      "keywords": [
+        "vor",
+        "Haus"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-093",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She stands in front of the class (moves there)",
+      "german": "Sie stellt sich vor die Klasse",
+      "hints": [
+        "sich stellen → Acc",
+        "die Klasse"
+      ],
+      "keywords": [
+        "vor",
+        "Klasse"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-094",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We go in front of the building",
+      "german": "Wir gehen vor das Gebäude",
+      "hints": [
+        "vor das Gebäude"
+      ],
+      "keywords": [
+        "vor",
+        "Gebäude"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-095",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "Put the chair in front of the desk",
+      "german": "Stell den Stuhl vor den Schreibtisch",
+      "hints": [
+        "vor den Schreibtisch"
+      ],
+      "keywords": [
+        "vor",
+        "Schreibtisch"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-096",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The dog runs in front of the car",
+      "german": "Der Hund läuft vor das Auto",
+      "hints": [
+        "vor das Auto"
+      ],
+      "keywords": [
+        "vor",
+        "Auto"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-097",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I plant a tree in front of the window",
+      "german": "Ich pflanze einen Baum vor das Fenster",
+      "hints": [
+        "vor das Fenster"
+      ],
+      "keywords": [
+        "vor",
+        "Fenster"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-098",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He jumps in front of the camera",
+      "german": "Er springt vor die Kamera",
+      "hints": [
+        "vor die Kamera"
+      ],
+      "keywords": [
+        "vor",
+        "Kamera"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-099",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She walks in front of the screen",
+      "german": "Sie läuft vor den Bildschirm",
+      "hints": [
+        "vor den Bildschirm"
+      ],
+      "keywords": [
+        "vor",
+        "Bildschirm"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-100",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "They move in front of the stage",
+      "german": "Sie bewegen sich vor die Bühne",
+      "hints": [
+        "vor die Bühne"
+      ],
+      "keywords": [
+        "vor",
+        "Bühne"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-101",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I go behind the house",
+      "german": "Ich gehe hinter das Haus",
+      "hints": [
+        "hinter + Acc (motion)",
+        "das Haus"
+      ],
+      "keywords": [
+        "hinter",
+        "Haus"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-102",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He hides behind the tree (moves there)",
+      "german": "Er läuft hinter den Baum",
+      "hints": [
+        "hinter den Baum"
+      ],
+      "keywords": [
+        "hinter",
+        "Baum"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-103",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "Put the broom behind the door",
+      "german": "Stell den Besen hinter die Tür",
+      "hints": [
+        "hinter die Tür"
+      ],
+      "keywords": [
+        "hinter",
+        "Tür"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-104",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The cat runs behind the sofa",
+      "german": "Die Katze läuft hinter das Sofa",
+      "hints": [
+        "hinter das Sofa"
+      ],
+      "keywords": [
+        "hinter",
+        "Sofa"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-105",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She throws the ball behind the fence",
+      "german": "Sie wirft den Ball hinter den Zaun",
+      "hints": [
+        "hinter den Zaun"
+      ],
+      "keywords": [
+        "hinter",
+        "Zaun"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-106",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We drive behind the truck",
+      "german": "Wir fahren hinter den LKW",
+      "hints": [
+        "hinter den LKW"
+      ],
+      "keywords": [
+        "hinter",
+        "LKW"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-107",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I put the bag behind the seat",
+      "german": "Ich lege die Tasche hinter den Sitz",
+      "hints": [
+        "hinter den Sitz"
+      ],
+      "keywords": [
+        "hinter",
+        "Sitz"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-108",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He steps behind the curtain",
+      "german": "Er tritt hinter den Vorhang",
+      "hints": [
+        "hinter den Vorhang"
+      ],
+      "keywords": [
+        "hinter",
+        "Vorhang"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-109",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The sun goes behind the clouds",
+      "german": "Die Sonne geht hinter die Wolken",
+      "hints": [
+        "hinter die Wolken"
+      ],
+      "keywords": [
+        "hinter",
+        "Wolken"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-110",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She walks behind the counter",
+      "german": "Sie geht hinter die Theke",
+      "hints": [
+        "hinter die Theke"
+      ],
+      "keywords": [
+        "hinter",
+        "Theke"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-111",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "Sit next to me",
+      "german": "Setz dich neben mich",
+      "hints": [
+        "neben + Acc (motion)",
+        "mich (Acc)"
+      ],
+      "keywords": [
+        "neben",
+        "mich"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-112",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He puts the glass next to the plate",
+      "german": "Er stellt das Glas neben den Teller",
+      "hints": [
+        "neben den Teller"
+      ],
+      "keywords": [
+        "neben",
+        "Teller"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-113",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We park next to the entrance",
+      "german": "Wir parken neben dem Eingang",
+      "hints": [
+        "Parken implies location (Dat) usually. Driving to park is Acc. 'Wir fahren neben den Eingang'"
+      ],
+      "keywords": [
+        "neben"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-114",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I drive the car next to the garage",
+      "german": "Ich fahre das Auto neben die Garage",
+      "hints": [
+        "neben die Garage"
+      ],
+      "keywords": [
+        "neben",
+        "Garage"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-115",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She stands next to her friend (moves there)",
+      "german": "Sie stellt sich neben ihre Freundin",
+      "hints": [
+        "neben ihre Freundin"
+      ],
+      "keywords": [
+        "neben",
+        "Freundin"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-116",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "Put the key next to the book",
+      "german": "Leg den Schlüssel neben das Buch",
+      "hints": [
+        "neben das Buch"
+      ],
+      "keywords": [
+        "neben",
+        "Buch"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-117",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The dog lies down next to the cat",
+      "german": "Der Hund legt sich neben die Katze",
+      "hints": [
+        "sich legen → Acc",
+        "neben die Katze"
+      ],
+      "keywords": [
+        "neben",
+        "Katze"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-118",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I hang the picture next to the mirror",
+      "german": "Ich hänge das Bild neben den Spiegel",
+      "hints": [
+        "neben den Spiegel"
+      ],
+      "keywords": [
+        "neben",
+        "Spiegel"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-119",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He walks next to the river",
+      "german": "Er geht neben den Fluss",
+      "hints": [
+        "Assuming motion towards beside? 'Along' is 'am Fluss entlang'. 'Next to' implies positioning."
+      ],
+      "keywords": [
+        "neben",
+        "Fluss"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-120",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She moves next to him",
+      "german": "Sie zieht neben ihn",
+      "hints": [
+        "neben ihn"
+      ],
+      "keywords": [
+        "neben",
+        "ihn"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-121",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We put the sofa next to the window",
+      "german": "Wir stellen das Sofa neben das Fenster",
+      "hints": [
+        "neben das Fenster"
+      ],
+      "keywords": [
+        "neben",
+        "Fenster"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-122",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "Sit between us",
+      "german": "Setz dich zwischen uns",
+      "hints": [
+        "zwischen + Acc (motion)",
+        "uns"
+      ],
+      "keywords": [
+        "zwischen",
+        "uns"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-123",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "Put the table between the chairs",
+      "german": "Stell den Tisch zwischen die Stühle",
+      "hints": [
+        "zwischen die Stühle"
+      ],
+      "keywords": [
+        "zwischen",
+        "Stühle"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-124",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He drives between the cars",
+      "german": "Er fährt zwischen die Autos",
+      "hints": [
+        "zwischen die Autos"
+      ],
+      "keywords": [
+        "zwischen",
+        "Autos"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-125",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "I squeeze between the people",
+      "german": "Ich zwänge mich zwischen die Leute",
+      "hints": [
+        "zwischen die Leute"
+      ],
+      "keywords": [
+        "zwischen",
+        "Leute"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-126",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The ball rolls between the feet",
+      "german": "Der Ball rollt zwischen die Füße",
+      "hints": [
+        "zwischen die Füße"
+      ],
+      "keywords": [
+        "zwischen",
+        "Füße"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-127",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "She stands between her parents (moves there)",
+      "german": "Sie stellt sich zwischen ihre Eltern",
+      "hints": [
+        "zwischen ihre Eltern"
+      ],
+      "keywords": [
+        "zwischen",
+        "Eltern"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-128",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "Insert the paper between the pages",
+      "german": "Steck das Papier zwischen die Seiten",
+      "hints": [
+        "zwischen die Seiten"
+      ],
+      "keywords": [
+        "zwischen",
+        "Seiten"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-129",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "The cat jumps between the beds",
+      "german": "Die Katze springt zwischen die Betten",
+      "hints": [
+        "zwischen die Betten"
+      ],
+      "keywords": [
+        "zwischen",
+        "Betten"
+      ],
+      "difficulty": 2
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-130",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "We build a house between the trees",
+      "german": "Wir bauen ein Haus zwischen die Bäume",
+      "hints": [
+        "zwischen die Bäume"
+      ],
+      "keywords": [
+        "zwischen",
+        "Bäume"
+      ],
+      "difficulty": 3
+    },
+    {
+      "sentenceId": "a2-two-way-prepositions-131",
+      "ruleId": "a2-two-way-prepositions",
+      "english": "He throws the ball between the posts",
+      "german": "Er wirft den Ball zwischen die Pfosten",
+      "hints": [
+        "zwischen die Pfosten"
+      ],
+      "keywords": [
+        "zwischen",
+        "Pfosten"
+      ],
+      "difficulty": 3
     }
   ]
 }
