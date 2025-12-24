@@ -98,6 +98,7 @@ export default function GrammatikPracticePage() {
     "grammatik-last-level"
   );
   const [selectedRule, setSelectedRule] = useState<string | null>(null);
+  const [isViewMode, setIsViewMode] = useState(false);
   const [currentSessionResults, setCurrentSessionResults] = useState<
     { sentenceId: string; difficulty: string }[]
   >([]);
@@ -171,6 +172,47 @@ export default function GrammatikPracticePage() {
     };
   };
 
+  // Check if a rule has mistakes (failed reviews)
+  const ruleHasMistakes = (ruleId: string) => {
+    const ruleReviews = reviews.filter((r) => r.ruleId === ruleId);
+    return ruleReviews.some((r) => r.masteryLevel < 50); // Consider < 50 as mistakes
+  };
+
+  // Start practice with only failed sentences for a rule
+  const handleRetryMistakes = (ruleId: string) => {
+    const sentenceData = sentenceDataMap[selectedLevel];
+    if (!sentenceData || !sentenceData.sentences) return;
+
+    // Get sentence IDs that were failed (masteryLevel < 50)
+    const failedSentenceIds = reviews
+      .filter((r) => r.ruleId === ruleId && r.masteryLevel < 50)
+      .map((r) => r.sentenceId);
+
+    // Get the actual sentence objects
+    const failedSentences = sentenceData.sentences.filter(
+      (s: any) => failedSentenceIds.includes(s.sentenceId) && !s.english.includes("[TODO]")
+    );
+
+    if (failedSentences.length > 0) {
+      // Shuffle the failed sentences
+      const shuffledSentences = shuffleArray(failedSentences);
+      setSelectedRule(ruleId);
+      setPracticeSentences(shuffledSentences);
+      setIsPracticeMode(true);
+      setIsViewMode(false);
+      setCurrentSessionResults([]);
+    }
+  };
+
+  // View all sentences without practicing
+  const handleViewRule = (ruleId: string) => {
+    setSelectedRule(ruleId);
+    setIsViewMode(true);
+    setIsPracticeMode(false);
+    setPracticeSentences([]);
+    setCurrentSessionResults([]);
+  };
+
   // Get sentences for selected rule or practice mode
   const selectedRuleData = useMemo(() => {
     if (!selectedRule) return null;
@@ -216,7 +258,58 @@ export default function GrammatikPracticePage() {
   };
 
   if (selectedRule) {
-    // Determine title based on mode
+    // View Mode - just display sentences
+    if (isViewMode) {
+      const sentenceData = sentenceDataMap[selectedLevel];
+      const allSentences = sentenceData?.sentences?.filter(
+        (s: any) => s.ruleId === selectedRule && !s.english.includes("[TODO]")
+      ) || [];
+
+      return (
+        <div className="min-h-screen bg-gray-50 pb-16">
+          <DashboardHeader
+            title={selectedRuleData?.title || "Grammar Rule"}
+            subtitle={`Viewing ${allSentences.length} sentences`}
+            backButton={{
+              label: "Back to Rules",
+              onClick: () => {
+                setSelectedRule(null);
+                setIsViewMode(false);
+              },
+            }}
+          />
+          <div className="container mx-auto px-6 mt-8">
+            <div className="bg-white shadow-sm overflow-hidden">
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-gray-900 mb-4">All Sentences</h3>
+                <div className="space-y-4">
+                  {allSentences.map((sentence: any, index: number) => (
+                    <div key={sentence.sentenceId} className="border-b border-gray-200 pb-4 last:border-b-0">
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
+                          <span className="text-sm font-bold text-gray-600">{index + 1}</span>
+                        </div>
+                        <div className="flex-1">
+                          <p className="text-sm text-gray-600 mb-2">{sentence.english}</p>
+                          <p className="text-base font-semibold text-gray-900">{sentence.german}</p>
+                          {sentence.hints && sentence.hints.length > 0 && (
+                            <div className="mt-2 text-xs text-gray-500">
+                              💡 {sentence.hints.join(' • ')}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Practice Mode
     const practiceTitle = isPracticeMode
       ? "SRS Practice Session"
       : selectedRuleData?.title || "Grammar Practice";
@@ -235,6 +328,7 @@ export default function GrammatikPracticePage() {
             onClick: () => {
               setSelectedRule(null);
               setIsPracticeMode(false);
+              setIsViewMode(false);
               setPracticeSentences([]);
               setCurrentSessionResults([]);
             },
@@ -248,6 +342,7 @@ export default function GrammatikPracticePage() {
                   // Just exit if no progress
                   setSelectedRule(null);
                   setIsPracticeMode(false);
+                  setIsViewMode(false);
                   setPracticeSentences([]);
                   setCurrentSessionResults([]);
                 }
@@ -285,6 +380,10 @@ export default function GrammatikPracticePage() {
       <DashboardHeader
         title="Grammatik Practice"
         subtitle="Practice German grammar with sentence exercises"
+        backButton={{
+          label: "Back to Dashboard",
+          onClick: () => window.location.href = '/dashboard/student',
+        }}
         actions={
           dueSentencesCount > 0 ? (
             <ActionButton
@@ -336,6 +435,7 @@ export default function GrammatikPracticePage() {
                   <div className="divide-y divide-gray-100">
                     {rulesByCategory[category].map((rule, ruleIndex) => {
                       const progress = getRuleProgress(rule.id);
+                      const hasMistakes = ruleHasMistakes(rule.id);
                       const colorScheme =
                         CARD_COLOR_SCHEMES[
                           ruleIndex % CARD_COLOR_SCHEMES.length
@@ -348,6 +448,9 @@ export default function GrammatikPracticePage() {
                           progress={progress}
                           colorScheme={colorScheme}
                           onClick={() => setSelectedRule(rule.id)}
+                          onView={() => handleViewRule(rule.id)}
+                          onRetryMistakes={() => handleRetryMistakes(rule.id)}
+                          hasMistakes={hasMistakes}
                         />
                       );
                     })}

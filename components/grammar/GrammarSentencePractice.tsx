@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import { DifficultyButtons } from "@/components/flashcards/DifficultyButtons";
 import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
 import { GermanCharAutocomplete } from "@/components/writing/GermanCharAutocomplete";
+import { GrammarSessionSummary } from "@/components/grammar/GrammarSessionSummary";
+import { Button } from "@/components/ui/Button";
 
 interface GrammarSentence {
   sentenceId: string;
@@ -36,6 +38,8 @@ export function GrammarSentencePractice({
   const [sessionResults, setSessionResults] = useState<
     { sentenceId: string; difficulty: string }[]
   >([]);
+  const [showSummary, setShowSummary] = useState(false);
+  const [sessionStartTime] = useState(() => Date.now());
   const inputRef = useRef<HTMLInputElement>(null);
 
   const currentSentence = sentences[currentIndex];
@@ -106,16 +110,90 @@ export function GrammarSentencePractice({
     setSessionResults(newResults);
     onProgress?.(newResults);
 
-    // Move to next sentence or complete
+    // Move to next sentence or show summary
     if (currentIndex < sentences.length - 1) {
       setCurrentIndex(currentIndex + 1);
       setUserAnswer("");
       setIsRevealed(false);
     } else {
-      // Session complete
-      onComplete(newResults);
+      // Session complete - show summary
+      setShowSummary(true);
     }
   };
+
+  const handleEndPractice = () => {
+    // End practice early and show summary
+    setShowSummary(true);
+  };
+
+  const calculateStats = () => {
+    const stats = {
+      again: 0,
+      hard: 0,
+      good: 0,
+      easy: 0,
+      expert: 0,
+    };
+
+    sessionResults.forEach((result) => {
+      if (result.difficulty in stats) {
+        stats[result.difficulty as keyof typeof stats]++;
+      }
+    });
+
+    return stats;
+  };
+
+  const handleReviewMistakes = () => {
+    // Filter sentences that were marked as "again"
+    const mistakeSentenceIds = sessionResults
+      .filter((r) => r.difficulty === "again")
+      .map((r) => r.sentenceId);
+
+    // Reset to first mistake
+    const firstMistakeIndex = sentences.findIndex((s) =>
+      mistakeSentenceIds.includes(s.sentenceId)
+    );
+
+    if (firstMistakeIndex !== -1) {
+      setCurrentIndex(firstMistakeIndex);
+      setUserAnswer("");
+      setIsRevealed(false);
+      setShowSummary(false);
+      setSessionResults([]);
+    }
+  };
+
+  const handleReviewAll = () => {
+    // Reset to first sentence to review all
+    setCurrentIndex(0);
+    setUserAnswer("");
+    setIsRevealed(false);
+    setShowSummary(false);
+    setSessionResults([]);
+  };
+
+  const handleFinishSession = () => {
+    // Save results and exit
+    onComplete(sessionResults);
+  };
+
+  // Show summary if flagged
+  if (showSummary) {
+    const stats = calculateStats();
+    const timeSpent = Math.floor((Date.now() - sessionStartTime) / 1000); // in seconds
+
+    return (
+      <GrammarSessionSummary
+        stats={stats}
+        totalSentences={sentences.length}
+        timeSpent={timeSpent}
+        onReviewMistakes={handleReviewMistakes}
+        onReviewAll={handleReviewAll}
+        onFinish={handleFinishSession}
+      />
+    );
+  }
 
   if (!currentSentence) {
     return (
@@ -132,13 +210,24 @@ export function GrammarSentencePractice({
 
   return (
     <div>
-      {/* Progress Bar */}
+      {/* Progress Bar and End Button */}
       <div className="mb-6">
         <div className="flex items-center justify-between text-sm text-gray-600 mb-2">
           <span className="font-semibold">{ruleTitle}</span>
-          <span>
-            {currentIndex + 1} / {sentences.length}
-          </span>
+          <div className="flex items-center gap-4">
+            <span>
+              {currentIndex + 1} / {sentences.length}
+            </span>
+            {sessionResults.length > 0 && (
+              <Button
+                onClick={handleEndPractice}
+                variant="secondary"
+                size="sm"
+              >
+                End Practice
+              </Button>
+            )}
+          </div>
         </div>
         <div className="w-full bg-gray-200 h-2">
           <div

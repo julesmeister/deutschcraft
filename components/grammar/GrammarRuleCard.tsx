@@ -25,13 +25,15 @@ interface GrammarRuleCardProps {
     badge: string;
   };
   onClick: () => void;
+  onView?: () => void;
+  onRetryMistakes?: () => void;
+  hasMistakes?: boolean;
 }
 
-export function GrammarRuleCard({ rule, progress, colorScheme, onClick }: GrammarRuleCardProps) {
+export function GrammarRuleCard({ rule, progress, colorScheme, onClick, onView, onRetryMistakes, hasMistakes }: GrammarRuleCardProps) {
   return (
     <div
-      className={`group ${colorScheme.bg} px-6 py-4 transition-all duration-200 cursor-pointer`}
-      onClick={onClick}
+      className={`group ${colorScheme.bg} px-6 py-4 transition-all duration-200`}
     >
       <div className="flex items-start justify-between gap-4">
         <div className="flex-1 min-w-0">
@@ -59,7 +61,7 @@ export function GrammarRuleCard({ rule, progress, colorScheme, onClick }: Gramma
           )}
         </div>
 
-        {/* Action Badge and Count */}
+        {/* Action Buttons */}
         <div className="flex-shrink-0 flex items-center gap-2">
           {/* Practice Count Badge */}
           {progress.total > 0 && (
@@ -67,9 +69,34 @@ export function GrammarRuleCard({ rule, progress, colorScheme, onClick }: Gramma
               {progress.practiced}/{progress.total}
             </span>
           )}
-          <span className={`inline-flex items-center px-3 py-1 text-xs font-bold bg-gray-100 text-gray-600 ${colorScheme.badge} group-hover:text-white transition-all duration-200`}>
-            {progress.practiced === 0 ? 'START' : progress.practiced === progress.total ? 'REVIEW' : 'CONTINUE'}
-          </span>
+
+          {/* Retry Mistakes Button - only show if there are mistakes */}
+          {hasMistakes && onRetryMistakes && (
+            <button
+              onClick={onRetryMistakes}
+              className="inline-flex items-center px-3 py-1 text-xs font-bold bg-red-100 text-red-700 hover:bg-red-500 hover:text-white transition-all duration-200"
+            >
+              RETRY
+            </button>
+          )}
+
+          {/* View/Scan Button - ALWAYS SHOW */}
+          {onView && (
+            <button
+              onClick={onView}
+              className="inline-flex items-center px-3 py-1 text-xs font-bold bg-blue-100 text-blue-700 hover:bg-blue-500 hover:text-white transition-all duration-200"
+            >
+              VIEW
+            </button>
+          )}
+
+          {/* Practice Button - ALWAYS SHOW */}
+          <button
+            onClick={onClick}
+            className={`inline-flex items-center px-3 py-1 text-xs font-bold bg-gray-100 text-gray-600 ${colorScheme.badge} hover:text-white transition-all duration-200`}
+          >
+            {progress.practiced === 0 ? 'START' : 'PRACTICE'}
+          </button>
         </div>
       </div>
     </div>
