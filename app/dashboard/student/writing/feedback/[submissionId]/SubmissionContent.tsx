@@ -6,7 +6,8 @@
 import { WritingSubmission, TeacherReview } from '@/lib/models/writing';
 import { CopyForAIButton } from '@/components/writing/CopyForAIButton';
 import { AICorrectionsPanel } from '@/components/writing/AICorrectionsPanel';
-import { DiffTextCorrectedOnly } from '@/components/writing/DiffText';
+import { SectionHeader } from '@/components/writing/SectionHeader';
+import { CorrectedTextSection } from '@/components/writing/CorrectedTextSection';
 import { ReviewQuiz } from '@/components/writing/ReviewQuiz';
 
 interface SubmissionContentProps {
@@ -90,19 +91,20 @@ export function SubmissionContent({
 
           {/* Student's Translation */}
           <div>
-            <div className="flex items-center justify-between mb-3">
-              <div className="flex items-center gap-2">
-                <span className="text-sm">✍️</span>
-                <h3 className="text-xs font-semibold text-gray-700 uppercase tracking-wide">Your Translation</h3>
-              </div>
-              {!hasTeacherReview && (
-                <CopyForAIButton
-                  studentText={submission.content}
-                  originalText={submission.originalText}
-                  exerciseType={submission.exerciseType}
-                />
-              )}
-            </div>
+            <SectionHeader
+              icon="✍️"
+              label="Your Translation"
+              labelColor="text-gray-700"
+              action={
+                !hasTeacherReview && (
+                  <CopyForAIButton
+                    studentText={submission.content}
+                    originalText={submission.originalText}
+                    exerciseType={submission.exerciseType}
+                  />
+                )
+              }
+            />
             <p className="text-lg md:text-xl lg:text-2xl text-gray-900 leading-relaxed whitespace-pre-wrap"
                style={{
                  lineHeight: '1.6',
@@ -117,23 +119,22 @@ export function SubmissionContent({
             <>
               <div className="w-full h-px bg-gray-200 my-6" />
               <div>
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm">✨</span>
-                    <h3 className="text-xs font-semibold text-purple-700 uppercase tracking-wide">AI-Corrected Version</h3>
-                    {hasTeacherReview && submission.aiCorrectedVersion && (
-                      <span className="text-xs text-gray-500 font-normal">(for comparison)</span>
-                    )}
-                  </div>
-                  {submission.aiCorrectedVersion && (
-                    <button
-                      onClick={() => onStartQuiz('ai', submission.aiCorrectedVersion!)}
-                      className="text-xs text-purple-600 hover:text-purple-800 font-semibold flex items-center gap-1 transition-colors"
-                    >
-                      <span>📝</span> Test Yourself
-                    </button>
-                  )}
-                </div>
+                <SectionHeader
+                  icon="✨"
+                  label="AI-Corrected Version"
+                  labelColor="text-purple-700"
+                  badge={hasTeacherReview && submission.aiCorrectedVersion ? '(for comparison)' : undefined}
+                  action={
+                    submission.aiCorrectedVersion && (
+                      <button
+                        onClick={() => onStartQuiz('ai', submission.aiCorrectedVersion!)}
+                        className="text-xs text-purple-600 hover:text-purple-800 font-semibold flex items-center gap-1 transition-colors"
+                      >
+                        <span>📝</span> Test Yourself
+                      </button>
+                    )
+                  }
+                />
                 <AICorrectionsPanel
                   submissionId={submission.submissionId}
                   currentAICorrection={submission.aiCorrectedVersion}
@@ -149,25 +150,15 @@ export function SubmissionContent({
           {hasTeacherReview && teacherReview?.correctedVersion && (
             <>
               <div className="w-full h-px bg-gray-200 my-6" />
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm">✏️</span>
-                    <h3 className="text-xs font-semibold text-blue-700 uppercase tracking-wide">Teacher's Corrected Version</h3>
-                  </div>
-                  <button
-                    onClick={() => onStartQuiz('teacher', teacherReview.correctedVersion!)}
-                    className="text-xs text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-1 transition-colors"
-                  >
-                    <span>📝</span> Test Yourself
-                  </button>
-                </div>
-                <DiffTextCorrectedOnly
-                  originalText={submission.content}
-                  correctedText={teacherReview.correctedVersion}
-                  className="text-base"
-                />
-              </div>
+              <CorrectedTextSection
+                icon="✏️"
+                label="Teacher's Corrected Version"
+                labelColor="text-blue-700"
+                originalText={submission.content}
+                correctedText={teacherReview.correctedVersion}
+                onStartQuiz={() => onStartQuiz('teacher', teacherReview.correctedVersion!)}
+                className="text-base"
+              />
             </>
           )}
 
@@ -175,25 +166,15 @@ export function SubmissionContent({
           {referenceTranslation && (
             <>
               <div className="w-full h-px bg-gray-200 my-6" />
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm">✅</span>
-                    <h3 className="text-xs font-semibold text-green-700 uppercase tracking-wide">Reference Translation</h3>
-                  </div>
-                  <button
-                    onClick={() => onStartQuiz('reference', referenceTranslation)}
-                    className="text-xs text-green-600 hover:text-green-800 font-semibold flex items-center gap-1 transition-colors"
-                  >
-                    <span>📝</span> Test Yourself
-                  </button>
-                </div>
-                <DiffTextCorrectedOnly
-                  originalText={submission.content}
-                  correctedText={referenceTranslation}
-                  className="text-base"
-                />
-              </div>
+              <CorrectedTextSection
+                icon="✅"
+                label="Reference Translation"
+                labelColor="text-green-700"
+                originalText={submission.content}
+                correctedText={referenceTranslation}
+                onStartQuiz={() => onStartQuiz('reference', referenceTranslation)}
+                className="text-base"
+              />
             </>
           )}
         </>

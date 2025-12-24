@@ -3,6 +3,9 @@
  * Displays student submission with optional reference/corrected version
  */
 
+import { SectionHeader } from '@/components/writing/SectionHeader';
+import { CorrectedTextSection } from '@/components/writing/CorrectedTextSection';
+
 interface SubmissionDisplayProps {
   submission: {
     content: string;
@@ -65,11 +68,7 @@ export function SubmissionDisplay({
       <div className="flex-1 p-8 overflow-y-auto">
         {/* Student's Original Answer */}
         <div className="mb-8">
-          <div className="flex items-center gap-2 mb-3">
-            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
-              Student's Answer
-            </div>
-          </div>
+          <SectionHeader label="Student's Answer" />
           <div className="prose max-w-none">
             <p className="text-gray-900 whitespace-pre-wrap leading-relaxed text-lg">
               {submission.content}
@@ -77,24 +76,38 @@ export function SubmissionDisplay({
           </div>
         </div>
 
+        {/* AI Corrected Version */}
+        {submission.aiCorrectedVersion && (
+          <div className="mb-8 pb-8 border-b border-gray-200">
+            <CorrectedTextSection
+              icon="✨"
+              label="AI-Corrected Version"
+              labelColor="text-purple-700"
+              badge="(for reference)"
+              originalText={submission.content}
+              correctedText={submission.aiCorrectedVersion}
+            />
+          </div>
+        )}
+
         {/* Reference Translation (for translation exercises) OR Corrected Version (for creative exercises) */}
         <div className="pt-8 border-t border-gray-200">
-          <div className="flex items-center justify-between mb-3">
-            <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">
-              {submission.exerciseType === 'translation' ? 'Reference Translation' : 'Corrected Version (Optional)'}
-            </div>
-            {submission.exerciseType !== 'translation' && !correctedVersion && (
-              <button
-                onClick={() => onCorrectedVersionChange(submission.content)}
-                className="text-xs text-blue-600 hover:text-blue-700 font-medium flex items-center gap-1"
-              >
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                </svg>
-                Copy student's text
-              </button>
-            )}
-          </div>
+          <SectionHeader
+            label={submission.exerciseType === 'translation' ? 'Reference Translation' : 'Corrected Version (Optional)'}
+            action={
+              submission.exerciseType !== 'translation' && !correctedVersion && (
+                <button
+                  onClick={() => onCorrectedVersionChange(submission.content)}
+                  className="text-xs text-blue-600 hover:text-blue-700 font-medium flex items-center gap-1"
+                >
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                  Copy student's text
+                </button>
+              )
+            }
+          />
           {submission.exerciseType === 'translation' ? (
             // Show reference translation (read-only)
             <div className="prose max-w-none">
