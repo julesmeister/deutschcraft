@@ -96,7 +96,14 @@
       "Bash(do echo \"=== $level ===\")",
       "Bash(git rm:*)",
       "Bash(Select-String -Pattern \"(error|ReviewQuiz)\" -Context 0,2)",
-      "Bash(Select-Object -First 30)"
+      "Bash(Select-Object -First 30)",
+      "Bash(timeout 10 npm run dev:*)",
+      "Bash(Select-String -Pattern \"(error|Error|ERROR|warning|Warning|compiled|Compiled|Ready)\")",
+      "Bash(Select-Object -First 20)",
+      "Bash(Select-String -Pattern \"BaseSessionSummary|SessionSummary|GrammarSessionSummary|error\" -Context 0,2)",
+      "Bash(Select-String -Pattern \"(Local:|error|Error|compiled|ready)\")",
+      "Bash(Select-Object -First 10)",
+      "Bash(sqlite3:*)"
     ],
     "deny": [],
     "ask": []
