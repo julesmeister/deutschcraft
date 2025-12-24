@@ -8478,7 +8478,7 @@
     },
     {
       "id": "b1-daily-routines-miv8iuogk7d0p",
-      "german": "Staub saugen",
+      "german": "den Staub saugen",
       "english": "to vacuum",
       "category": "Daily Routines",
       "level": "B1",
@@ -8518,7 +8518,7 @@
     },
     {
       "id": "b1-daily-routines-miv8iuogwkab4",
-      "german": "Wäsche waschen",
+      "german": "die Wäsche waschen",
       "english": "to do laundry",
       "category": "Daily Routines",
       "level": "B1",
@@ -8798,7 +8798,7 @@
     },
     {
       "id": "b1-wschebgeln-827791",
-      "german": "Wäsche bügeln",
+      "german": "die Wäsche bügeln",
       "english": "to iron",
       "category": "Daily Routines",
       "level": "B1",
@@ -9138,7 +9138,7 @@
     },
     {
       "id": "syllabus-b1-10969",
-      "german": "Hausaufgaben machen",
+      "german": "die Hausaufgaben machen",
       "english": "to do homework",
       "category": "Daily Routines",
       "level": "B1",
@@ -9158,7 +9158,7 @@
     },
     {
       "id": "syllabus-b1-10974",
-      "german": "Zähne putzen",
+      "german": "die Zähne putzen",
       "english": "to brush teeth",
       "category": "Daily Routines",
       "level": "B1",
@@ -17090,7 +17090,7 @@
     {
       "id": "b1-beifahren-207233",
       "german": "beifahren",
-      "english": "to accompany (beifährt, befuhr, beigefahren)",
+      "english": "to accompany",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17110,7 +17110,7 @@
     {
       "id": "b1-bekennen-207234",
       "german": "bekennen",
-      "english": "to confess / to admit (bekennt, bekannte, bekannt)",
+      "english": "to confess / to admit",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17150,7 +17150,7 @@
     {
       "id": "b1-beladen-207234",
       "german": "beladen",
-      "english": "to load / to burden (belädt, belud, beladen)",
+      "english": "to load / to burden",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17170,7 +17170,7 @@
     {
       "id": "b1-irregular-befehlen-gtqp2c",
       "german": "befehlen",
-      "english": "to command (befiehlt, befahl, befohlen)",
+      "english": "to command",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17190,7 +17190,7 @@
     {
       "id": "b1-irregular-beraten-xa1bc2",
       "german": "beraten",
-      "english": "to advise / to consult (berät, beriet, beraten)",
+      "english": "to advise / to consult",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17210,7 +17210,7 @@
     {
       "id": "b1-irregular-bergen-mz6f7w",
       "german": "bergen",
-      "english": "to salvage / to rescue (birgt, barg, geborgen)",
+      "english": "to salvage / to rescue",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17230,7 +17230,7 @@
     {
       "id": "b1-irregular-bersten-44r4cq",
       "german": "bersten",
-      "english": "to burst (birst, barst, geborsten)",
+      "english": "to burst",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17250,7 +17250,7 @@
     {
       "id": "b1-irregular-beschieen-xd3ef4",
       "german": "beschießen",
-      "english": "to shoot at / to fire at (beschießt, beschoss, beschossen)",
+      "english": "to shoot at / to fire at",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17270,7 +17270,7 @@
     {
       "id": "b1-irregular-betragen-xg5hi6",
       "german": "betragen",
-      "english": "to amount to / to behave (beträgt, betrug, betragen)",
+      "english": "to amount to / to behave",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17290,7 +17290,7 @@
     {
       "id": "b1-irregular-betrgen-xj7kl8",
       "german": "betrügen",
-      "english": "to deceive / to cheat (betrügt, betrog, betrogen)",
+      "english": "to deceive / to cheat",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17310,7 +17310,7 @@
     {
       "id": "b1-irregular-beweisen-y5z6a7",
       "german": "beweisen",
-      "english": "to prove (beweist, bewies, bewiesen)",
+      "english": "to prove",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17330,7 +17330,7 @@
     {
       "id": "b1-irregular-bieten-jxdrqk",
       "german": "bieten",
-      "english": "to offer (bietet, bot, geboten)",
+      "english": "to offer",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17350,7 +17350,7 @@
     {
       "id": "b1-irregular-braten-espifx",
       "german": "braten",
-      "english": "to fry / to roast (brät, briet, gebraten)",
+      "english": "to fry / to roast",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17370,7 +17370,7 @@
     {
       "id": "b1-irregular-erwerben-xp1qr2",
       "german": "erwerben",
-      "english": "to acquire / to obtain (erwirbt, erwarb, erworben)",
+      "english": "to acquire / to obtain",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17390,7 +17390,7 @@
     {
       "id": "b1-irregular-flieen-c4qyvk",
       "german": "fließen",
-      "english": "to flow (fließt, floss, geflossen)",
+      "english": "to flow",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17410,7 +17410,7 @@
     {
       "id": "b1-irregular-gedeihen-xs3tu4",
       "german": "gedeihen",
-      "english": "to thrive / to prosper (gedeiht, gedieh, gediehen)",
+      "english": "to thrive / to prosper",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17430,7 +17430,7 @@
     {
       "id": "b1-irregular-genieen-zyo633",
       "german": "genießen",
-      "english": "to enjoy (genießt, genoss, genossen)",
+      "english": "to enjoy",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17450,7 +17450,7 @@
     {
       "id": "b1-irregular-gieen-149f6r",
       "german": "gießen",
-      "english": "to pour / to water (gießt, goss, gegossen)",
+      "english": "to pour / to water",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17470,7 +17470,7 @@
     {
       "id": "b1-irregular-gleichen-xv5wx6",
       "german": "gleichen",
-      "english": "to resemble / to be like (gleicht, glich, geglichen)",
+      "english": "to resemble / to be like",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17490,7 +17490,7 @@
     {
       "id": "b1-irregular-gleiten-xy7za8",
       "german": "gleiten",
-      "english": "to glide / to slide (gleitet, glitt, geglitten)",
+      "english": "to glide / to slide",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17510,7 +17510,7 @@
     {
       "id": "b1-irregular-lgen-d4e5f6",
       "german": "lügen",
-      "english": "to lie / to tell a lie (lügt, log, gelogen)",
+      "english": "to lie / to tell a lie",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17530,7 +17530,7 @@
     {
       "id": "b1-irregular-meiden-1yg1pg",
       "german": "meiden",
-      "english": "to avoid (meidet, mied, gemieden)",
+      "english": "to avoid",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17550,7 +17550,7 @@
     {
       "id": "b1-irregular-pfeifen-e1f2g3",
       "german": "pfeifen",
-      "english": "to whistle (pfeift, pfiff, gepfiffen)",
+      "english": "to whistle",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17570,7 +17570,7 @@
     {
       "id": "b1-irregular-schweigen-a1b2c3",
       "german": "schweigen",
-      "english": "to be silent (schweigt, schwieg, geschwiegen)",
+      "english": "to be silent",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17590,7 +17590,7 @@
     {
       "id": "b1-irregular-schwren-xe1fg2",
       "german": "schwören",
-      "english": "to swear / to take an oath (schwört, schwor, geschworen)",
+      "english": "to swear / to take an oath",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17610,7 +17610,7 @@
     {
       "id": "b1-irregular-stechen-m3n4o5",
       "german": "stechen",
-      "english": "to sting / to prick (sticht, stach, gestochen)",
+      "english": "to sting / to prick",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17630,7 +17630,7 @@
     {
       "id": "b1-irregular-verbieten-s9t0u1",
       "german": "verbieten",
-      "english": "to forbid (verbietet, verbot, verboten)",
+      "english": "to forbid",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -17670,7 +17670,7 @@
     {
       "id": "b1-irregular-verbs-miv8hiwoafidm",
       "german": "treiben",
-      "english": "to drive / to do (sports)",
+      "english": "to drive / to do",
       "category": "Irregular Verbs",
       "level": "B1",
       "tags": [
@@ -18775,7 +18775,7 @@
     },
     {
       "id": "syllabus-b1-11088",
-      "german": "Krücke",
+      "german": "die Krücke",
       "english": "crutch",
       "category": "Medical Health",
       "level": "B1",
@@ -18795,7 +18795,7 @@
     },
     {
       "id": "syllabus-b1-11089",
-      "german": "Rollstuhl",
+      "german": "der Rollstuhl",
       "english": "wheelchair",
       "category": "Medical Health",
       "level": "B1",
@@ -18815,7 +18815,7 @@
     },
     {
       "id": "syllabus-b1-11090",
-      "german": "Brille",
+      "german": "die Brille",
       "english": "glasses",
       "category": "Medical Health",
       "level": "B1",
@@ -18835,7 +18835,7 @@
     },
     {
       "id": "syllabus-b1-11091",
-      "german": "Bruch",
+      "german": "der Bruch",
       "english": "fracture / break",
       "category": "Medical Health",
       "level": "B1",
@@ -18855,7 +18855,7 @@
     },
     {
       "id": "syllabus-b1-11092",
-      "german": "Prellung",
+      "german": "die Prellung",
       "english": "bruise / contusion",
       "category": "Medical Health",
       "level": "B1",
@@ -18875,7 +18875,7 @@
     },
     {
       "id": "syllabus-b1-11094",
-      "german": "Narbe",
+      "german": "die Narbe",
       "english": "scar",
       "category": "Medical Health",
       "level": "B1",
@@ -18895,7 +18895,7 @@
     },
     {
       "id": "syllabus-b1-11095",
-      "german": "Blutung",
+      "german": "die Blutung",
       "english": "bleeding",
       "category": "Medical Health",
       "level": "B1",
@@ -18915,7 +18915,7 @@
     },
     {
       "id": "syllabus-b1-11096",
-      "german": "Schwellung",
+      "german": "die Schwellung",
       "english": "swelling",
       "category": "Medical Health",
       "level": "B1",
@@ -18935,7 +18935,7 @@
     },
     {
       "id": "syllabus-b1-11097",
-      "german": "Atemnot",
+      "german": "die Atemnot",
       "english": "shortness of breath",
       "category": "Medical Health",
       "level": "B1",
@@ -18955,7 +18955,7 @@
     },
     {
       "id": "syllabus-b1-11098",
-      "german": "Bewusstlosigkeit",
+      "german": "die Bewusstlosigkeit",
       "english": "unconsciousness",
       "category": "Medical Health",
       "level": "B1",
@@ -18975,7 +18975,7 @@
     },
     {
       "id": "syllabus-b1-11099",
-      "german": "Genesung",
+      "german": "die Genesung",
       "english": "recovery",
       "category": "Medical Health",
       "level": "B1",
@@ -18995,7 +18995,7 @@
     },
     {
       "id": "syllabus-b1-11100",
-      "german": "Rehabilitation",
+      "german": "die Rehabilitation",
       "english": "rehabilitation",
       "category": "Medical Health",
       "level": "B1",
@@ -19015,7 +19015,7 @@
     },
     {
       "id": "syllabus-b1-11101",
-      "german": "Physiotherapie",
+      "german": "die Physiotherapie",
       "english": "physiotherapy",
       "category": "Medical Health",
       "level": "B1",
@@ -19035,7 +19035,7 @@
     },
     {
       "id": "syllabus-b1-11103",
-      "german": "Vorsorge",
+      "german": "die Vorsorge",
       "english": "prevention / preventive care",
       "category": "Medical Health",
       "level": "B1",
@@ -19380,8 +19380,8 @@
     },
     {
       "id": "remnote-298",
-      "german": "I would like to...",
-      "english": "Ich {{würde}} gerne...",
+      "german": "Ich {{würde}} gerne...",
+      "english": "I would like to...",
       "category": "Passiv",
       "_meta": {
         "source": "RemNote German.md",
@@ -19394,8 +19394,8 @@
     },
     {
       "id": "remnote-299",
-      "german": "What would have happened",
-      "english": "Was {{wäre}} passiert",
+      "german": "Was {{wäre}} passiert",
+      "english": "What would have happened",
       "category": "Passiv",
       "_meta": {
         "source": "RemNote German.md",
@@ -19408,8 +19408,8 @@
     },
     {
       "id": "remnote-300",
-      "german": "What would happen...",
-      "english": "Was {{würde}} passieren",
+      "german": "Was {{würde}} passieren",
+      "english": "What would happen...",
       "category": "Passiv",
       "_meta": {
         "source": "RemNote German.md",
@@ -21717,8 +21717,8 @@
     },
     {
       "id": "remnote-942",
-      "german": "to my knowledge",
-      "english": "meines Wissens",
+      "german": "meines Wissens",
+      "english": "to my knowledge",
       "category": "Redemittel",
       "level": "B1",
       "_meta": {
@@ -21732,8 +21732,8 @@
     },
     {
       "id": "remnote-943",
-      "german": "to my delight",
-      "english": "zu meiner Freude",
+      "german": "zu meiner Freude",
+      "english": "to my delight",
       "category": "Redemittel",
       "level": "B1",
       "_meta": {
