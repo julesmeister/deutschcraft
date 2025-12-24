@@ -93,7 +93,7 @@ export function GrammarRuleCard({ rule, progress, colorScheme, onClick, onView, 
           {/* Practice Button - ALWAYS SHOW */}
           <button
             onClick={onClick}
-            className={`inline-flex items-center px-3 py-1 text-xs font-bold bg-gray-100 text-gray-600 ${colorScheme.badge} hover:text-white transition-all duration-200`}
+            className={`inline-flex items-center px-3 py-1 text-xs font-bold bg-gray-100 text-gray-600 group-hover:text-white ${colorScheme.badge} transition-all duration-200`}
           >
             {progress.practiced === 0 ? 'START' : 'PRACTICE'}
           </button>
