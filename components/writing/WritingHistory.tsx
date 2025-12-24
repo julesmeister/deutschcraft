@@ -108,17 +108,19 @@ export function WritingHistory({
         metadata: (
           <div className="mt-2">
             {/* Content Preview */}
-            <p className="text-xs text-gray-600 line-clamp-2 mb-3">
+            <p className="text-xs text-gray-600 line-clamp-2 mb-3 text-left">
               {submission.content.substring(0, 150)}
               {submission.content.length > 150 && '...'}
             </p>
 
-            <button
-              onClick={() => onViewSubmission(submission.submissionId)}
-              className="text-xs font-medium text-blue-600 hover:text-blue-700 transition-colors"
-            >
-              View Details →
-            </button>
+            <div className="flex items-start">
+              <button
+                onClick={() => onViewSubmission(submission.submissionId)}
+                className="text-xs font-medium text-blue-600 hover:text-blue-700 transition-colors text-left"
+              >
+                View Details →
+              </button>
+            </div>
           </div>
         ),
       };
@@ -162,7 +164,7 @@ export function WritingHistory({
       ],
       metadata: (
         <div className="mt-2">
-          <p className="text-xs text-gray-600 mb-2">
+          <p className="text-xs text-gray-600 mb-2 text-left">
             Review quiz completed
           </p>
         </div>

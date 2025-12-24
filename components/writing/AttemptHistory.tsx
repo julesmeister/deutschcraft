@@ -78,22 +78,22 @@ export function AttemptHistory({
       metadata: (
         <div className="mt-2">
           {attempt.teacherFeedback && (
-            <p className="text-xs text-gray-600 italic line-clamp-2 mb-2">
+            <p className="text-xs text-gray-600 italic line-clamp-2 mb-2 text-left">
               "{attempt.teacherFeedback}"
             </p>
           )}
-          <div className="flex items-center gap-3">
+          <div className="flex items-start gap-3">
             {onViewContent && (
               <button
                 onClick={() => onViewContent(attempt)}
-                className="text-xs font-medium text-purple-600 hover:text-purple-700 transition-colors"
+                className="text-xs font-medium text-purple-600 hover:text-purple-700 transition-colors text-left"
               >
                 View Content
               </button>
             )}
             <button
               onClick={() => onViewAttempt(attempt.submissionId)}
-              className="text-xs font-medium text-blue-600 hover:text-blue-700 transition-colors"
+              className="text-xs font-medium text-blue-600 hover:text-blue-700 transition-colors text-left"
             >
               View Details →
             </button>
