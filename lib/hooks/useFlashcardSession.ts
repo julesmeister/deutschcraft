@@ -167,8 +167,8 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
 
     // Calculate session stats
     const timeSpent = Math.floor((Date.now() - sessionStartTime) / 1000); // in seconds
-    const totalReviewed = finalStats.again + finalStats.hard + finalStats.good + finalStats.easy;
-    const correctCount = finalStats.hard + finalStats.good + finalStats.easy; // hard/good/easy all count as correct
+    const totalReviewed = finalStats.again + finalStats.hard + finalStats.good + finalStats.easy + finalStats.expert;
+    const correctCount = finalStats.hard + finalStats.good + finalStats.easy + finalStats.expert; // hard/good/easy/expert all count as correct
     const incorrectCount = finalStats.again; // only "again" is incorrect (forgot the card)
 
     // Save daily progress
@@ -203,7 +203,7 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
       setShowSummary(false);
       setIsFlipped(false);
       // Reset stats for new session
-      setMasteryStats({ again: 0, hard: 0, good: 0, easy: 0 });
+      setMasteryStats({ again: 0, hard: 0, good: 0, easy: 0, expert: 0 });
     }
   };
 
