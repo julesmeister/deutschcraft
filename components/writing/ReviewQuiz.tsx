@@ -1,16 +1,17 @@
 /**
  * ReviewQuiz Component
  * Fill-in-the-blanks quiz for reviewing corrections
+ * Shows one blank at a time like the quiz page
  */
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { QuizBlank } from '@/lib/models/writing';
 import { generateQuizBlanks, checkAnswer, calculateQuizScore } from '@/lib/utils/quizGenerator';
-import { getDiff } from '@/lib/utils/textDiff';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { calculateQuizPoints } from '@/lib/hooks/useQuizStats';
+import { GermanCharAutocomplete } from './GermanCharAutocomplete';
 
 interface ReviewQuizProps {
   originalText: string;
@@ -28,9 +29,11 @@ export function ReviewQuiz({
   onCancel
 }: ReviewQuizProps) {
   const [blanks, setBlanks] = useState<QuizBlank[]>([]);
+  const [currentBlankIndex, setCurrentBlankIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [showResults, setShowResults] = useState(false);
   const [results, setResults] = useState<{ points: number; correctAnswers: number; totalBlanks: number } | null>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     // Generate quiz blanks on mount
@@ -45,6 +48,18 @@ export function ReviewQuiz({
     }));
   };
 
+  const handleNext = () => {
+    if (currentBlankIndex < blanks.length - 1) {
+      setCurrentBlankIndex(currentBlankIndex + 1);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentBlankIndex > 0) {
+      setCurrentBlankIndex(currentBlankIndex - 1);
+    }
+  };
+
   const handleSubmit = () => {
     const quizResults = calculateQuizScore(answers, blanks);
     const points = calculateQuizPoints(quizResults.correctAnswers, quizResults.totalBlanks);
@@ -54,6 +69,7 @@ export function ReviewQuiz({
       totalBlanks: quizResults.totalBlanks
     });
     setShowResults(true);
+    setCurrentBlankIndex(0); // Reset to first blank for review
   };
 
   const handleFinish = () => {
@@ -79,193 +95,210 @@ export function ReviewQuiz({
     );
   }
 
+  const currentBlank = blanks[currentBlankIndex];
+  const allBlanksFilled = blanks.every((blank) => (answers[blank.index] || '').trim().length > 0);
+
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       {/* Quiz Header */}
-      <div className="py-4">
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">📝</span>
-            <h3 className="text-lg font-bold text-gray-900">Review Quiz</h3>
+      <div className="mb-6 pb-6 border-b border-gray-200">
+        <div className="flex items-start gap-3">
+          <span className="text-2xl">💡</span>
+          <div>
+            <h3 className="text-base font-bold text-gray-900 mb-1">
+              {showResults ? 'Quiz Results' : 'Review Quiz'}
+            </h3>
+            <p className="text-sm text-gray-600">
+              {showResults
+                ? `You earned ${results?.points} points • ${results?.correctAnswers}/${results?.totalBlanks} correct`
+                : `Fill in the blanks with the corrected words from the ${sourceType === 'teacher' ? "teacher's" : sourceType === 'ai' ? "AI" : "reference"} correction.`
+              }
+            </p>
           </div>
-          {!showResults && (
-            <div className="text-sm text-gray-600 font-medium">
-              {blanks.length} {blanks.length === 1 ? 'blank' : 'blanks'} to fill
-            </div>
-          )}
         </div>
-        <p className="text-sm text-gray-600">
-          Fill in the blanks with the corrected words from the {sourceType === 'teacher' ? "teacher's" : sourceType === 'ai' ? "AI" : "reference"} correction.
-        </p>
       </div>
 
-      {/* Quiz Content */}
-      <div>
-        <QuizText
+      {/* Current Blank */}
+      <div className="pb-6 border-b border-gray-100">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="flex items-center justify-center w-7 h-7 bg-gray-100 text-gray-700 text-sm font-bold rounded-full">
+            {currentBlankIndex + 1}
+          </span>
+          <span className="text-xs text-gray-500">
+            Question {currentBlankIndex + 1} of {blanks.length}
+          </span>
+        </div>
+
+        {/* Display the sentence with the blank */}
+        <BlankQuestion
           correctedText={correctedText}
-          blanks={blanks}
-          answers={answers}
-          onAnswerChange={handleAnswerChange}
+          blank={currentBlank}
+          answer={answers[currentBlank.index] || ''}
+          onAnswerChange={(value) => handleAnswerChange(currentBlank.index, value)}
           showResults={showResults}
-          disabled={showResults}
+          inputRef={inputRef}
         />
       </div>
 
-      {/* Results */}
-      {showResults && results && (
-        <div className="py-6">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-4xl">
-              {results.points >= 8 ? '🎉' : results.points >= 6 ? '👍' : '💪'}
-            </span>
-            <div>
-              <h3 className="text-xl font-bold text-gray-900">
-                +{results.points} Points
-              </h3>
-              <p className="text-sm text-gray-600">
-                {results.correctAnswers} out of {results.totalBlanks} correct
-              </p>
-            </div>
-          </div>
-          {results.points >= 8 ? (
-            <p className="text-sm text-gray-700">Excellent work! You've mastered these corrections.</p>
-          ) : results.points >= 6 ? (
-            <p className="text-sm text-gray-700">Good effort! Review the highlighted corrections and try again.</p>
+      {/* Navigation & Actions */}
+      {!showResults ? (
+        <div className="flex gap-3">
+          <button
+            onClick={handlePrevious}
+            disabled={currentBlankIndex === 0}
+            className="px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          >
+            Previous
+          </button>
+
+          {currentBlankIndex < blanks.length - 1 ? (
+            <button
+              onClick={handleNext}
+              className="flex-1 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-brand-purple to-pastel-ocean rounded-lg hover:opacity-90 transition-opacity"
+            >
+              Next
+            </button>
           ) : (
-            <p className="text-sm text-gray-700">Keep practicing! Review the corrections carefully.</p>
+            <ActionButton
+              onClick={handleSubmit}
+              disabled={!allBlanksFilled}
+              variant="purple"
+              icon={<ActionButtonIcons.Check />}
+              className="flex-1"
+            >
+              Check Answers
+            </ActionButton>
           )}
+
+          <button
+            onClick={onCancel}
+            className="px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+          >
+            Cancel
+          </button>
+        </div>
+      ) : (
+        <div className="flex gap-3">
+          <button
+            onClick={handlePrevious}
+            disabled={currentBlankIndex === 0}
+            className="px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          >
+            Previous
+          </button>
+
+          <button
+            onClick={handleNext}
+            disabled={currentBlankIndex === blanks.length - 1}
+            className="px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          >
+            Next
+          </button>
+
+          <div className="flex-1" />
+
+          <ActionButton
+            onClick={handleFinish}
+            variant="mint"
+            icon={<ActionButtonIcons.Check />}
+            className="min-w-[180px]"
+          >
+            Finish & Save Score
+          </ActionButton>
         </div>
       )}
-
-      {/* Actions */}
-      <div className="flex gap-3 mb-8">
-        {!showResults ? (
-          <>
-            <div className="flex-1">
-              <ActionButton
-                onClick={handleSubmit}
-                disabled={Object.keys(answers).length !== blanks.length}
-                variant="purple"
-                icon={<ActionButtonIcons.Check />}
-              >
-                Submit Answers
-              </ActionButton>
-            </div>
-            <div className="w-40">
-              <ActionButton onClick={onCancel} variant="gray" icon={<ActionButtonIcons.X />}>
-                Cancel
-              </ActionButton>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="flex-1">
-              <ActionButton onClick={handleFinish} variant="mint" icon={<ActionButtonIcons.Check />}>
-                Finish & Save Score
-              </ActionButton>
-            </div>
-            <div className="w-40">
-              <ActionButton
-                onClick={() => {
-                  setAnswers({});
-                  setShowResults(false);
-                  setResults(null);
-                }}
-                variant="cyan"
-                icon={<ActionButtonIcons.Play />}
-              >
-                Try Again
-              </ActionButton>
-            </div>
-          </>
-        )}
-      </div>
     </div>
   );
 }
 
 /**
- * QuizText Component
- * Displays text with input fields for blanks
+ * BlankQuestion Component
+ * Displays a single blank question with context
  */
-interface QuizTextProps {
+interface BlankQuestionProps {
   correctedText: string;
-  blanks: QuizBlank[];
-  answers: Record<number, string>;
-  onAnswerChange: (blankIndex: number, value: string) => void;
+  blank: QuizBlank;
+  answer: string;
+  onAnswerChange: (value: string) => void;
   showResults: boolean;
-  disabled: boolean;
+  inputRef: React.RefObject<HTMLInputElement>;
 }
 
-function QuizText({ correctedText, blanks, answers, onAnswerChange, showResults, disabled }: QuizTextProps) {
-  const parts: Array<{ type: 'text' | 'blank'; content: string; blankIndex?: number }> = [];
-  let lastPosition = 0;
+function BlankQuestion({
+  correctedText,
+  blank,
+  answer,
+  onAnswerChange,
+  showResults,
+  inputRef
+}: BlankQuestionProps) {
+  const parts: Array<{ type: 'text' | 'blank'; content: string }> = [];
 
-  // Sort blanks by position
-  const sortedBlanks = [...blanks].sort((a, b) => a.position - b.position);
-
-  for (const blank of sortedBlanks) {
-    // Add text before the blank
-    if (blank.position > lastPosition) {
-      parts.push({
-        type: 'text',
-        content: correctedText.substring(lastPosition, blank.position)
-      });
-    }
-
-    // Add the blank
-    parts.push({
-      type: 'blank',
-      content: blank.correctAnswer,
-      blankIndex: blank.index
-    });
-
-    lastPosition = blank.position + blank.correctAnswer.length;
-  }
-
-  // Add remaining text
-  if (lastPosition < correctedText.length) {
+  // Add text before blank
+  if (blank.position > 0) {
     parts.push({
       type: 'text',
-      content: correctedText.substring(lastPosition)
+      content: correctedText.substring(0, blank.position),
     });
   }
 
+  // Add blank
+  parts.push({
+    type: 'blank',
+    content: blank.correctAnswer,
+  });
+
+  // Add remaining text
+  // Skip past the word AND any trailing punctuation
+  let endPosition = blank.position + blank.correctAnswer.length;
+  // Skip punctuation that was part of the original word
+  while (endPosition < correctedText.length && /[^\w\s]/.test(correctedText[endPosition])) {
+    endPosition++;
+  }
+
+  if (endPosition < correctedText.length) {
+    parts.push({
+      type: 'text',
+      content: correctedText.substring(endPosition),
+    });
+  }
+
+  const isCorrect = showResults && checkAnswer(answer, blank.correctAnswer);
+  const isIncorrect = showResults && !checkAnswer(answer, blank.correctAnswer);
+
   return (
-    <div className="text-xl leading-relaxed"
-         style={{
-           lineHeight: '2.5',
-           fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
-         }}>
+    <div className="text-base leading-relaxed">
       {parts.map((part, index) => {
         if (part.type === 'text') {
           return <span key={index} className="text-gray-900">{part.content}</span>;
         } else {
-          const blankIndex = part.blankIndex!;
-          const studentAnswer = answers[blankIndex] || '';
-          const isCorrect = showResults && checkAnswer(studentAnswer, part.content);
-          const isIncorrect = showResults && !checkAnswer(studentAnswer, part.content);
-
           return (
-            <span key={index} className="inline-block mx-1">
+            <span key={index} className="inline-flex items-center gap-1 mx-1 my-1 relative">
               <input
+                ref={inputRef}
                 type="text"
-                value={studentAnswer}
-                onChange={(e) => onAnswerChange(blankIndex, e.target.value)}
-                disabled={disabled}
-                placeholder={`(${part.content.length})`}
-                className={`px-3 py-1 border-b-2 bg-transparent rounded-none text-base font-medium text-center transition-all outline-none ${
+                value={answer}
+                onChange={(e) => onAnswerChange(e.target.value)}
+                disabled={showResults}
+                className={`text-sm font-bold text-center transition-all outline-none ${
                   isCorrect
-                    ? 'border-green-500 text-green-900'
+                    ? 'bg-piku-mint text-gray-900 px-1.5 py-1 rounded-md'
                     : isIncorrect
-                    ? 'border-red-500 text-red-900'
-                    : 'border-gray-300 focus:border-blue-500'
+                    ? 'bg-red-100 text-red-700 px-1.5 py-1 rounded-l-md'
+                    : 'bg-gray-100 hover:bg-gray-150 focus:bg-white focus:ring-2 focus:ring-blue-400 rounded-md px-1.5 py-1'
                 }`}
-                style={{ width: `${Math.max(part.content.length * 12, 80)}px` }}
+                style={{ width: `${Math.max(part.content.length * 9, 50)}px` }}
               />
-              {showResults && isIncorrect && (
-                <span className="ml-2 text-sm text-green-700">
-                  → {part.content}
+              {!showResults && inputRef.current && (
+                <GermanCharAutocomplete
+                  textareaRef={{ current: inputRef.current }}
+                  content={answer}
+                  onContentChange={onAnswerChange}
+                />
+              )}
+              {isIncorrect && (
+                <span className="inline-flex items-center justify-center px-1.5 py-1 bg-piku-mint text-gray-900 text-sm font-bold rounded-r-md">
+                  {part.content}
                 </span>
               )}
             </span>

@@ -67,7 +67,7 @@ export function SubmissionDisplay({
       {/* Student's Writing Content */}
       <div className="flex-1 p-8 overflow-y-auto">
         {/* Student's Original Answer */}
-        <div className="mb-8">
+        <div>
           <SectionHeader label="Student's Answer" />
           <div className="prose max-w-none">
             <p className="text-gray-900 whitespace-pre-wrap leading-relaxed text-lg">
@@ -76,22 +76,30 @@ export function SubmissionDisplay({
           </div>
         </div>
 
+        {/* Separator */}
+        <div className="w-full h-px bg-gray-200 my-6" />
+
         {/* AI Corrected Version */}
         {submission.aiCorrectedVersion && (
-          <div className="mb-8 pb-8 border-b border-gray-200">
-            <CorrectedTextSection
-              icon="✨"
-              label="AI-Corrected Version"
-              labelColor="text-purple-700"
-              badge="(for reference)"
-              originalText={submission.content}
-              correctedText={submission.aiCorrectedVersion}
-            />
-          </div>
+          <>
+            <div>
+              <CorrectedTextSection
+                icon="✨"
+                label="AI-Corrected Version"
+                labelColor="text-purple-700"
+                badge="(for reference)"
+                originalText={submission.content}
+                correctedText={submission.aiCorrectedVersion}
+              />
+            </div>
+
+            {/* Separator */}
+            <div className="w-full h-px bg-gray-200 my-6" />
+          </>
         )}
 
         {/* Reference Translation (for translation exercises) OR Corrected Version (for creative exercises) */}
-        <div className="pt-8 border-t border-gray-200">
+        <div>
           <SectionHeader
             label={submission.exerciseType === 'translation' ? 'Reference Translation' : 'Corrected Version (Optional)'}
             action={

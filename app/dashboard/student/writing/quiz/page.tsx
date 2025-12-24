@@ -170,7 +170,13 @@ export default function WritingQuizPage() {
     });
 
     // Add remaining text
-    const endPosition = blank.position + blank.correctAnswer.length;
+    // Skip past the word AND any trailing punctuation
+    let endPosition = blank.position + blank.correctAnswer.length;
+    // Skip punctuation that was part of the original word
+    while (endPosition < sentenceText.length && /[^\w\s]/.test(sentenceText[endPosition])) {
+      endPosition++;
+    }
+
     if (endPosition < sentenceText.length) {
       parts.push({
         type: 'text',

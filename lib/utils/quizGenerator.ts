@@ -117,25 +117,46 @@ export function generateQuizBlanks(originalText: string, correctedText: string):
   }
 
   // Step 3: Calculate actual character positions in the corrected text
+  // Build the position map by walking through the corrected text word by word
   const blanks: QuizBlank[] = [];
-  let charPosition = 0;
   let blankIndex = 0;
+  let charPosition = 0;
 
   for (let i = 0; i < correctedWords.length; i++) {
     const word = correctedWords[i];
     const wordClean = stripPunctuation(word);
+
+    // Check if this word is a blank
     const isBlank = filteredBlanks.some(b => b.wordIndex === i);
 
     if (isBlank) {
+      // This word should be a blank
+      // Use the clean word (without punctuation) as the answer
       blanks.push({
         index: blankIndex++,
-        correctAnswer: wordClean, // Use word WITHOUT punctuation as the answer
+        correctAnswer: wordClean,
         position: charPosition,
         hint: `${wordClean.length} ${wordClean.length === 1 ? 'character' : 'characters'}`,
       });
     }
 
-    charPosition += word.length + 1; // +1 for space
+    // Move position forward by the FULL word length (with punctuation) plus space
+    // But we need to find the actual position in the text, not calculate it
+    // Find where this word appears in the text starting from charPosition
+    const foundPos = correctedText.indexOf(word, charPosition);
+    if (foundPos !== -1) {
+      charPosition = foundPos + word.length;
+      // Add 1 for the space after, unless it's the last word
+      if (i < correctedWords.length - 1) {
+        // Skip any whitespace characters
+        while (charPosition < correctedText.length && /\s/.test(correctedText[charPosition])) {
+          charPosition++;
+        }
+      }
+    } else {
+      // Fallback: just increment by word length + 1
+      charPosition += word.length + 1;
+    }
   }
 
   return blanks;

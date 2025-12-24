@@ -10,6 +10,7 @@
  * - Oe → Ö
  * - Ue → Ü
  * - ss → ß
+ * - Ss → ß (for capitalized input fields)
  */
 
 'use client';
@@ -30,6 +31,7 @@ const GERMAN_SUGGESTIONS: Suggestion[] = [
   { trigger: 'Oe', replacement: 'Ö', display: 'Oe → Ö' },
   { trigger: 'Ue', replacement: 'Ü', display: 'Ue → Ü' },
   { trigger: 'ss', replacement: 'ß', display: 'ss → ß' },
+  { trigger: 'Ss', replacement: 'ß', display: 'Ss → ß' },
 ];
 
 interface GermanCharAutocompleteProps {

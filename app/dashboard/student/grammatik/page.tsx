@@ -256,7 +256,9 @@ export default function GrammatikPracticePage() {
               icon={
                 currentSessionResults.length > 0 ? (
                   <ActionButtonIcons.Check />
-                ) : undefined
+                ) : (
+                  <ActionButtonIcons.X />
+                )
               }
             >
               {currentSessionResults.length > 0
