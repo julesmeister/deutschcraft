@@ -94,7 +94,9 @@
       "Bash(Select-Object -First 12)",
       "Bash(for level in a1 a2 b1 b2)",
       "Bash(do echo \"=== $level ===\")",
-      "Bash(git rm:*)"
+      "Bash(git rm:*)",
+      "Bash(Select-String -Pattern \"(error|ReviewQuiz)\" -Context 0,2)",
+      "Bash(Select-Object -First 30)"
     ],
     "deny": [],
     "ask": []

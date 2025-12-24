@@ -5,8 +5,8 @@
   "flashcards": [
     {
       "id": "remnote-297",
-      "german": "I would like to be...",
-      "english": "Ich {{wäre}} gerne...",
+      "german": "Ich {{wäre}} gerne...",
+      "english": "I would like to be...",
       "category": "Passiv",
       "_meta": {
         "source": "RemNote German.md",
@@ -19,8 +19,8 @@
     },
     {
       "id": "remnote-298",
-      "german": "I would like to...",
-      "english": "Ich {{würde}} gerne...",
+      "german": "Ich {{würde}} gerne...",
+      "english": "I would like to...",
       "category": "Passiv",
       "_meta": {
         "source": "RemNote German.md",
@@ -33,8 +33,8 @@
     },
     {
       "id": "remnote-299",
-      "german": "What would have happened",
-      "english": "Was {{wäre}} passiert",
+      "german": "Was {{wäre}} passiert",
+      "english": "What would have happened",
       "category": "Passiv",
       "_meta": {
         "source": "RemNote German.md",
@@ -47,8 +47,8 @@
     },
     {
       "id": "remnote-300",
-      "german": "What would happen...",
-      "english": "Was {{würde}} passieren",
+      "german": "Was {{würde}} passieren",
+      "english": "What would happen...",
       "category": "Passiv",
       "_meta": {
         "source": "RemNote German.md",
