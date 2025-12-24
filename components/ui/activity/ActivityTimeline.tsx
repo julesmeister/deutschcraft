@@ -133,7 +133,7 @@ function ActivityTimelineItem({
       </div>
 
       {/* Content column */}
-      <div className={`ml-4 w-full ${isLast ? 'pt-0.5' : 'pt-0.5 pb-6'}`}>
+      <div className={`ml-4 w-full text-left ${isLast ? 'pt-0.5' : 'pt-0.5 pb-6'}`}>
         {/* Title */}
         <h5 className="text-neutral-900 font-bold text-sm mb-1">
           {item.title}
