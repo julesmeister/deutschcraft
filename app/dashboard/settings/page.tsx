@@ -29,6 +29,9 @@ export default function SettingsPage() {
     setSaveMessage,
   } = useSettingsData();
 
+  // Show info bar if user is pending OR if they might have stale session data
+  const showRedirectInfo = isPending || (currentUser && currentUser.role === 'STUDENT' && typeof window !== 'undefined');
+
   const {
     formData,
     setFormData,
@@ -81,6 +84,53 @@ export default function SettingsPage() {
           </div>
         </div>
       </div>
+
+      {/* Info Bar - Show when user is pending approval or has stale session */}
+      {showRedirectInfo && (
+        <div className="bg-blue-50 border-b border-blue-200">
+          <div className="container mx-auto px-6 py-3">
+            <div className="flex items-start gap-3">
+              <svg className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div className="flex-1">
+                {isPending ? (
+                  <>
+                    <p className="text-sm font-medium text-blue-800">
+                      {currentUser?.enrollmentStatus === 'pending'
+                        ? 'Your enrollment is pending teacher approval.'
+                        : 'Your account is pending approval.'}
+                    </p>
+                    <p className="text-sm text-blue-700 mt-0.5">
+                      {currentUser?.enrollmentStatus === 'pending'
+                        ? 'Your teacher will review your enrollment soon. You will be notified once approved.'
+                        : 'Please complete your enrollment in the Enrollment tab to access all dashboard features.'}
+                    </p>
+                  </>
+                ) : currentUser?.role === 'STUDENT' ? (
+                  <>
+                    <p className="text-sm font-medium text-blue-800">
+                      You were redirected to Settings because your session data is outdated.
+                    </p>
+                    <p className="text-sm text-blue-700 mt-0.5">
+                      Please sign out and sign back in to refresh your session and access the Student Dashboard.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-sm font-medium text-blue-800">
+                      You were redirected to Settings.
+                    </p>
+                    <p className="text-sm text-blue-700 mt-0.5">
+                      If you're having trouble accessing the dashboard, try signing out and signing back in.
+                    </p>
+                  </>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Main Content */}
       <div className="container mx-auto px-6 py-8">
