@@ -7,6 +7,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import { QuizBlank } from '@/lib/models/writing';
 import { checkAnswer } from '@/lib/utils/quizGenerator';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
@@ -37,6 +38,7 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
   const [isCorrect, setIsCorrect] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const toast = useToast();
+  const router = useRouter();
 
   // Fetch quiz stats
   const { data: quizStats } = useUserQuizStats(userId || null);
@@ -159,6 +161,16 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
               <span className="text-sm font-bold text-gray-900">{quizStats.totalPoints}</span>
             </div>
           )}
+          <div className="w-40">
+            <ActionButton
+              onClick={() => router.push('/dashboard/student/writing/quiz')}
+              variant="cyan"
+              icon={<ActionButtonIcons.Document />}
+              size="compact"
+            >
+              Full Quiz
+            </ActionButton>
+          </div>
           {!showResult ? (
             <div className="w-48">
               <ActionButton
@@ -254,6 +266,15 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
 
       {/* Mobile Actions */}
       <div className="lg:hidden flex justify-end gap-3">
+        <div className="w-32">
+          <ActionButton
+            onClick={() => router.push('/dashboard/student/writing/quiz')}
+            variant="cyan"
+            icon={<ActionButtonIcons.Document />}
+          >
+            Full Quiz
+          </ActionButton>
+        </div>
         {!showResult ? (
           <div className="w-48">
             <ActionButton
