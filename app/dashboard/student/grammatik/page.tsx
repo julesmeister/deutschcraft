@@ -413,6 +413,7 @@ export default function GrammatikPracticePage() {
                 selectedLevel={selectedLevel}
                 onLevelChange={setSelectedLevel}
                 size="md"
+                showDescription={true}
               />
             </div>
           </div>
