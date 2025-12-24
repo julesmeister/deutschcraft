@@ -15,6 +15,7 @@ import { GrammarSentencePractice } from "@/components/grammar/GrammarSentencePra
 import { GrammarRuleCard } from "@/components/grammar/GrammarRuleCard";
 import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
 import { shuffleArray } from "@/lib/utils/array";
+import { applyGrammarSettings } from "@/lib/utils/grammarSelection";
 
 // Import existing grammar data from grammar guide
 import a1Data from "@/lib/data/grammar/levels/a1.json";
@@ -102,6 +103,8 @@ export default function GrammatikPracticePage() {
   const [currentSessionResults, setCurrentSessionResults] = useState<
     { sentenceId: string; difficulty: string }[]
   >([]);
+  const [nextDueInfo, setNextDueInfo] = useState<{ count: number; nextDueDate: number } | undefined>();
+  const [upcomingSentences, setUpcomingSentences] = useState<any[]>([]);
 
   // Load grammar rules from JSON files
   const rules = useMemo(() => {
@@ -178,7 +181,7 @@ export default function GrammatikPracticePage() {
     return ruleReviews.some((r) => r.masteryLevel < 50); // Consider < 50 as mistakes
   };
 
-  // Start practice with only failed sentences for a rule
+  // Start practice with only failed sentences for a rule (respecting SRS intervals)
   const handleRetryMistakes = (ruleId: string) => {
     const sentenceData = sentenceDataMap[selectedLevel];
     if (!sentenceData || !sentenceData.sentences) return;
@@ -194,10 +197,23 @@ export default function GrammatikPracticePage() {
     );
 
     if (failedSentences.length > 0) {
-      // Shuffle the failed sentences
-      const shuffledSentences = shuffleArray(failedSentences);
+      // Apply SRS filtering - only show failed sentences that are actually due now
+      const { sentences: dueSentences } = applyGrammarSettings(
+        failedSentences,
+        reviews,
+        {
+          randomizeOrder: true,
+          sentencesPerSession: -1, // No limit, show all due failed sentences
+        }
+      );
+
+      if (dueSentences.length === 0) {
+        alert("No failed sentences are due for review yet. They're still in the SRS queue!");
+        return;
+      }
+
       setSelectedRule(ruleId);
-      setPracticeSentences(shuffledSentences);
+      setPracticeSentences(dueSentences);
       setIsPracticeMode(true);
       setIsViewMode(false);
       setCurrentSessionResults([]);
@@ -236,10 +252,18 @@ export default function GrammatikPracticePage() {
       (s: any) => s.ruleId === selectedRule && !s.english.includes("[TODO]")
     );
 
-    // Shuffle and limit to 10 sentences for bite-sized practice
-    // This ensures sessions aren't too long (e.g. 100+ sentences)
-    return shuffleArray(ruleSentences).slice(0, 10);
-  }, [selectedRule, selectedLevel, isPracticeMode, practiceSentences]);
+    // Apply STRICT SRS filtering - only show sentences that are due now or new
+    const { sentences } = applyGrammarSettings(
+      ruleSentences,
+      reviews,
+      {
+        randomizeOrder: true,
+        sentencesPerSession: 10, // Limit to 10 for bite-sized practice
+      }
+    );
+
+    return sentences;
+  }, [selectedRule, selectedLevel, isPracticeMode, practiceSentences, reviews]);
 
   const handleStartPractice = () => {
     const ruleId = startPractice();

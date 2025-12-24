@@ -135,3 +135,39 @@ export interface FlashcardReviewHistory {
   stateAfter: CardState;
   timestamp: number;
 }
+
+/**
+ * Grammar Review Model (Sentence Practice Progress)
+ * Path: grammar-reviews/{userId}_{sentenceId}
+ * Student's progress on grammar sentence exercises with SRS
+ */
+export interface GrammarReview {
+  // Identity
+  sentenceId: string;
+  userId: string; // Student's email
+  ruleId: string; // Reference to grammar rule
+  level?: string; // CEFR level (A1, A2, etc.)
+
+  // SRS (Spaced Repetition System) data
+  repetitions: number;
+  easeFactor: number;
+  interval: number; // days until next review
+  nextReviewDate?: number; // INDEXED for efficient queries
+  lastReviewDate?: number; // INDEXED for decay calculations
+  masteryLevel: number; // 0-100
+
+  // Performance tracking
+  correctCount?: number;
+  incorrectCount?: number;
+  consecutiveCorrect?: number;
+  consecutiveIncorrect?: number;
+
+  // Timestamps
+  firstSeenAt?: number; // When sentence was first encountered
+  createdAt?: number;
+}
+
+/**
+ * Flashcard Review - Alias for FlashcardProgress for backward compatibility
+ */
+export type FlashcardReview = FlashcardProgress;

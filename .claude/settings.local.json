@@ -103,7 +103,8 @@
       "Bash(Select-String -Pattern \"BaseSessionSummary|SessionSummary|GrammarSessionSummary|error\" -Context 0,2)",
       "Bash(Select-String -Pattern \"(Local:|error|Error|compiled|ready)\")",
       "Bash(Select-Object -First 10)",
-      "Bash(sqlite3:*)"
+      "Bash(sqlite3:*)",
+      "Bash(Select-String -Pattern \"(error|Error|ERROR|Type|compiled|Compiled)\")"
     ],
     "deny": [],
     "ask": []
