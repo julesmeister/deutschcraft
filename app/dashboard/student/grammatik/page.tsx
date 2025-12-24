@@ -412,7 +412,7 @@ export default function GrammatikPracticePage() {
               <CEFRLevelSelector
                 selectedLevel={selectedLevel}
                 onLevelChange={setSelectedLevel}
-                size="sm"
+                size="md"
               />
             </div>
           </div>
