@@ -4,39 +4,481 @@
   "bookType": "AB",
   "lessons": [
     {
-      "lessonNumber": 8,
-      "title": "Lektion 8: Unter Freunden",
-      "exercises": []
+      "lessonNumber": 1,
+      "title": "Lektion 1",
+      "exercises": [
+        {
+          "exerciseId": "B1.2-L1-AB-5",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "5",
+          "title": "Übung 5",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "einen  c"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "es  e"
+            },
+            {
+              "itemNumber": "f",
+              "correctAnswer": "habe"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-7",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "7",
+          "title": "Übung 7",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Grenzen   c"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "zugesagt   e"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-15",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "15",
+          "title": "Übung 15",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "den   c"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "die   e"
+            },
+            {
+              "itemNumber": "f",
+              "correctAnswer": "das   g"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-23",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "23",
+          "title": "Übung 23",
+          "answers": [
+            {
+              "itemNumber": "B",
+              "correctAnswer": "Kollege   C"
+            },
+            {
+              "itemNumber": "D",
+              "correctAnswer": "Franzosen"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-24",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "24",
+          "title": "Übung 24",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Gedichte   c"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "monatelang   e"
+            },
+            {
+              "itemNumber": "f",
+              "correctAnswer": "Atmosphäre   g"
+            }
+          ],
+          "difficulty": "medium"
+        }
+      ]
     },
     {
-      "lessonNumber": 9,
-      "title": "Lektion 9: Technik im Alltag",
-      "exercises": []
+      "lessonNumber": 2,
+      "title": "Lektion 2",
+      "exercises": [
+        {
+          "exerciseId": "B1.2-L2-AB-10",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "10",
+          "title": "Übung 10",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "anschließen   c"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "herunterladen   e"
+            },
+            {
+              "itemNumber": "f",
+              "correctAnswer": "Ordner   g"
+            },
+            {
+              "itemNumber": "h",
+              "correctAnswer": "Virus"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-11",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "11",
+          "title": "Übung 11",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "hätte  c"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "könnte  e"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-13",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "13",
+          "title": "Übung 13",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "lernen w"
+            },
+            {
+              "itemNumber": "c",
+              "correctAnswer": "hätte  d"
+            },
+            {
+              "itemNumber": "e",
+              "correctAnswer": "kennen"
+            }
+          ],
+          "difficulty": "medium"
+        }
+      ]
     },
     {
-      "lessonNumber": 10,
-      "title": "Lektion 10: Gut, dass wir uns kennen",
-      "exercises": []
+      "lessonNumber": 3,
+      "title": "Lektion 3",
+      "exercises": [
+        {
+          "exerciseId": "B1.2-L3-AB-1",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 3,
+          "exerciseNumber": "1",
+          "title": "Übung 1",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "gerecht   c"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "Sieger   e"
+            },
+            {
+              "itemNumber": "f",
+              "correctAnswer": "weder"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L3-AB-8",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 3,
+          "exerciseNumber": "8",
+          "title": "Übung 8",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "wo   c"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "wo   e"
+            },
+            {
+              "itemNumber": "f",
+              "correctAnswer": "wo   g"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L3-AB-17",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 3,
+          "exerciseNumber": "17",
+          "title": "Übung 17",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Verbraucher  c"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "z"
+            }
+          ],
+          "difficulty": "medium"
+        }
+      ]
     },
     {
-      "lessonNumber": 11,
-      "title": "Lektion 11: Wie die Zeit vergeht!",
-      "exercises": []
+      "lessonNumber": 4,
+      "title": "Lektion 4",
+      "exercises": [
+        {
+          "exerciseId": "B1.2-L4-AB-9",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 4,
+          "exerciseNumber": "9",
+          "title": "Übung 9",
+          "answers": [
+            {
+              "itemNumber": "a",
+              "correctAnswer": "falsch   b"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L4-AB-10",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 4,
+          "exerciseNumber": "10",
+          "title": "Übung 10",
+          "answers": [
+            {
+              "itemNumber": "B",
+              "correctAnswer": "Ausnahme   C"
+            },
+            {
+              "itemNumber": "D",
+              "correctAnswer": "stundenlang   E"
+            },
+            {
+              "itemNumber": "f",
+              "correctAnswer": "Generation   g"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L4-AB-12",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 4,
+          "exerciseNumber": "12",
+          "title": "Übung 12",
+          "answers": [
+            {
+              "itemNumber": "a",
+              "correctAnswer": "eilig   c"
+            }
+          ],
+          "difficulty": "medium"
+        }
+      ]
     },
     {
-      "lessonNumber": 12,
-      "title": "Lektion 12: Neue Heimat",
-      "exercises": []
+      "lessonNumber": 5,
+      "title": "Lektion 5",
+      "exercises": [
+        {
+          "exerciseId": "B1.2-L5-AB-4",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "4",
+          "title": "Übung 4",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "seit   c"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "Seit   e"
+            },
+            {
+              "itemNumber": "f",
+              "correctAnswer": "bis   g"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-10",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "10",
+          "title": "Übung 10",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "bekommen  c"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "sein  e"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-18",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "18",
+          "title": "Übung 18",
+          "answers": [
+            {
+              "itemNumber": "a",
+              "correctAnswer": "anerkannt   b"
+            }
+          ],
+          "difficulty": "medium"
+        }
+      ]
     },
     {
-      "lessonNumber": 13,
-      "title": "Lektion 13: Auf Reisen",
-      "exercises": []
+      "lessonNumber": 6,
+      "title": "Lektion 6",
+      "exercises": [
+        {
+          "exerciseId": "B1.2-L6-AB-4",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 6,
+          "exerciseNumber": "4",
+          "title": "Übung 4",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "wurde   c"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "wurde   e"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L6-AB-11",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 6,
+          "exerciseNumber": "11",
+          "title": "Übung 11",
+          "answers": [
+            {
+              "itemNumber": "a",
+              "correctAnswer": "höchsten   c"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "erfolgreicheren   e"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L6-AB-19",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 6,
+          "exerciseNumber": "19",
+          "title": "Übung 19",
+          "answers": [
+            {
+              "itemNumber": "a",
+              "correctAnswer": "zonen   b"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "Regierung   e"
+            },
+            {
+              "itemNumber": "f",
+              "correctAnswer": "streiken   g"
+            },
+            {
+              "itemNumber": "h",
+              "correctAnswer": "protest"
+            }
+          ],
+          "difficulty": "medium"
+        }
+      ]
     },
     {
-      "lessonNumber": 14,
-      "title": "Lektion 14: Zusammen leben",
-      "exercises": []
+      "lessonNumber": 7,
+      "title": "Lektion 7",
+      "exercises": [
+        {
+          "exerciseId": "B1.2-L7-AB-6",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 7,
+          "exerciseNumber": "6",
+          "title": "Übung 6",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "daran   c"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "darauf   e"
+            }
+          ],
+          "difficulty": "medium"
+        }
+      ]
     }
   ]
 }

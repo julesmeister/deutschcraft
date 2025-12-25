@@ -29,6 +29,9 @@ export function ExerciseCard({
 }: ExerciseCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
+  // Check if current user is a teacher
+  const isTeacher = currentUser?.role === 'teacher';
+
   // Difficulty colors
   const difficultyColors = {
     easy: 'bg-emerald-100 text-emerald-800 border-emerald-300',
@@ -147,12 +150,13 @@ export function ExerciseCard({
                 />
               </svg>
               <h4 className="font-bold text-sm text-gray-900">
-                Correct Answers
+                {isTeacher ? 'Correct Answers' : 'Exercise Items'}
               </h4>
             </div>
             <AnswersList
               answers={exercise.answers}
               showExplanations={true}
+              isTeacher={isTeacher}
             />
           </div>
 
