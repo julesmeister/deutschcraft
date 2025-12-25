@@ -130,20 +130,30 @@ export default function AnswerHubPage() {
 
         {/* Lessons List */}
         {!isLoading && !error && hasExercises && lessons.length > 0 && (
-          <div className="bg-white border border-gray-200 overflow-hidden">
+          <div className="bg-white shadow-sm overflow-hidden">
             <div className="divide-y divide-gray-100">
-              {lessons.map((lesson, index) => {
-                const colorScheme = CARD_COLOR_SCHEMES[index % CARD_COLOR_SCHEMES.length];
-                return (
-                  <LessonCard
-                    key={lesson.lessonNumber}
-                    lesson={lesson}
-                    level={selectedLevel}
-                    bookType={selectedBookType}
-                    colorScheme={colorScheme}
-                  />
-                );
-              })}
+              {/* Category Header */}
+              <div className="bg-gray-50 px-6 py-3 border-b border-gray-200">
+                <h2 className="text-sm font-bold text-gray-700 uppercase tracking-wide">
+                  Schritte International Neu - {selectedLevel}
+                </h2>
+              </div>
+
+              {/* Lessons List */}
+              <div className="divide-y divide-gray-100">
+                {lessons.map((lesson, index) => {
+                  const colorScheme = CARD_COLOR_SCHEMES[index % CARD_COLOR_SCHEMES.length];
+                  return (
+                    <LessonCard
+                      key={lesson.lessonNumber}
+                      lesson={lesson}
+                      level={selectedLevel}
+                      bookType={selectedBookType}
+                      colorScheme={colorScheme}
+                    />
+                  );
+                })}
+              </div>
             </div>
           </div>
         )}
