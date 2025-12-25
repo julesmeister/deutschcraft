@@ -11,9 +11,12 @@ import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { AnswersList } from '@/components/answer-hub/AnswersList';
 import { ExerciseDiscussion } from '@/components/answer-hub/ExerciseDiscussion';
+import { StudentAnswersDisplay } from '@/components/answer-hub/StudentAnswersDisplay';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useCurrentStudent } from '@/lib/hooks/useUsers';
+import { getUserInfo } from '@/lib/utils/userHelpers';
 import { useExercises } from '@/lib/hooks/useExercises';
+import { useExerciseProgress } from '@/lib/hooks/useExerciseProgress';
 import { CEFRLevel } from '@/lib/models/cefr';
 
 export default function ExerciseDetailPage() {
@@ -21,11 +24,12 @@ export default function ExerciseDetailPage() {
   const params = useParams();
   const { session } = useFirebaseAuth();
   const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
+  const { userId } = getUserInfo(currentUser, session);
 
-  // Parse URL params
+  // Parse URL params (exerciseNumber param is actually exerciseId now)
   const levelBook = params.levelBook as string;
   const lessonId = params.lessonId as string;
-  const exerciseNumber = params.exerciseNumber as string;
+  const exerciseId = decodeURIComponent(params.exerciseNumber as string);
 
   // Parse level and book type
   const [levelPart, bookType] = levelBook.split('-') as [string, 'AB' | 'KB'];
@@ -37,15 +41,22 @@ export default function ExerciseDetailPage() {
   // Load exercises
   const { exerciseBook, lessons, isLoading, error } = useExercises(level, bookType);
 
-  // Find the lesson and exercise
+  // Find the lesson and exercise (using exerciseId which is unique)
   const lesson = lessons.find(l => l.lessonNumber === lessonNumber);
-  const exercise = lesson?.exercises.find(e => e.exerciseNumber === exerciseNumber);
+  const exercise = lesson?.exercises.find(e => e.exerciseId === exerciseId);
 
   // Check if user is a teacher
   const isTeacher = currentUser?.role === 'teacher';
 
   // Get current user's batch ID
   const currentUserBatchId = currentUser?.batchId;
+
+  // Get exercise progress
+  const exerciseProgress = useExerciseProgress(
+    exercise?.exerciseId || '',
+    exercise?.answers.length || 0,
+    userId
+  );
 
   if (isLoading) {
     return (
@@ -77,11 +88,11 @@ export default function ExerciseDetailPage() {
           }}
         />
         <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
-          <div className="bg-white border border-red-200 rounded-xl shadow-sm p-12 text-center">
+          <div className="bg-white border border-red-200 shadow-sm p-12 text-center">
             <div className="text-6xl mb-4">⚠️</div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">Exercise Not Found</h3>
             <p className="text-gray-600 mb-4">
-              {error || `Could not find Exercise ${exerciseNumber} in ${lesson?.title || `Lektion ${lessonNumber}`}`}
+              {error || `Could not find this exercise in ${lesson?.title || `Lektion ${lessonNumber}`}`}
             </p>
             <Link
               href={`/dashboard/student/answer-hub/${levelBook}/${lessonId}`}
@@ -97,9 +108,9 @@ export default function ExerciseDetailPage() {
 
   // Difficulty colors
   const difficultyColors = {
-    easy: 'bg-emerald-100 text-emerald-800 border-emerald-300',
-    medium: 'bg-amber-100 text-amber-800 border-amber-300',
-    hard: 'bg-red-100 text-red-800 border-red-300',
+    easy: 'bg-emerald-100 text-emerald-700',
+    medium: 'bg-amber-100 text-amber-700',
+    hard: 'bg-red-100 text-red-700',
   };
 
   const difficultyColor = exercise.difficulty
@@ -121,7 +132,7 @@ export default function ExerciseDetailPage() {
       {/* Main Content */}
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
         {/* Exercise Card */}
-        <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden mb-6">
+        <div className="bg-white border border-gray-200 shadow-sm overflow-hidden mb-6">
           {/* Exercise Header */}
           <div className="p-6 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-gray-100">
             <div className="flex items-start justify-between gap-4 mb-3">
@@ -139,23 +150,42 @@ export default function ExerciseDetailPage() {
 
                 {/* Metadata */}
                 <div className="flex flex-wrap items-center gap-2">
+                  {/* Status Badge */}
+                  {exerciseProgress && !isTeacher && (
+                    <span
+                      className={`inline-flex items-center px-3 py-1 text-xs font-bold ${
+                        exerciseProgress.status === 'completed'
+                          ? 'bg-emerald-100 text-emerald-700'
+                          : exerciseProgress.status === 'in_progress'
+                          ? 'bg-amber-100 text-amber-700'
+                          : 'bg-gray-100 text-gray-600'
+                      }`}
+                    >
+                      {exerciseProgress.status === 'completed'
+                        ? '✓ COMPLETED'
+                        : exerciseProgress.status === 'in_progress'
+                        ? `IN PROGRESS (${exerciseProgress.itemsCompleted}/${exerciseProgress.totalItems})`
+                        : 'NEW'}
+                    </span>
+                  )}
+
                   {/* Difficulty Badge */}
                   {exercise.difficulty && (
                     <span
-                      className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border ${difficultyColor}`}
+                      className={`inline-flex items-center px-3 py-1 text-xs font-bold ${difficultyColor}`}
                     >
                       {exercise.difficulty.charAt(0).toUpperCase() + exercise.difficulty.slice(1)}
                     </span>
                   )}
 
                   {/* Book Type Badge */}
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 border border-blue-300">
+                  <span className="inline-flex items-center px-3 py-1 text-xs font-bold bg-blue-100 text-blue-700">
                     {bookType}
                   </span>
 
                   {/* Topic Badge */}
                   {exercise.topic && (
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-700 border border-gray-300">
+                    <span className="inline-flex items-center px-3 py-1 text-xs font-bold bg-gray-100 text-gray-600">
                       {exercise.topic}
                     </span>
                   )}
@@ -199,21 +229,23 @@ export default function ExerciseDetailPage() {
 
             <AnswersList
               answers={exercise.answers}
+              exerciseId={exercise.exerciseId}
               showExplanations={true}
               isTeacher={isTeacher}
             />
           </div>
         </div>
 
+        {/* Student Answers Section */}
+        <StudentAnswersDisplay exerciseId={exercise.exerciseId} />
+
         {/* Discussion Section */}
-        <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
-          <div className="p-6">
-            <ExerciseDiscussion
-              exerciseId={exercise.exerciseId}
-              currentUser={currentUser}
-              currentUserBatchId={currentUserBatchId}
-            />
-          </div>
+        <div className="bg-white border border-gray-200 shadow-sm overflow-hidden mt-6">
+          <ExerciseDiscussion
+            exerciseId={exercise.exerciseId}
+            currentUser={currentUser}
+            currentUserBatchId={currentUserBatchId}
+          />
         </div>
 
         {/* Navigation Footer */}

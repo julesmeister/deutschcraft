@@ -10,6 +10,7 @@ import { useRouter } from 'next/navigation';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
 import { CatLoader } from '@/components/ui/CatLoader';
+import { CategoryList } from '@/components/ui/CategoryList';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useCurrentStudent } from '@/lib/hooks/useUsers';
 import { usePersistedLevel } from '@/lib/hooks/usePersistedLevel';
@@ -130,18 +131,12 @@ export default function AnswerHubPage() {
 
         {/* Lessons List */}
         {!isLoading && !error && hasExercises && lessons.length > 0 && (
-          <div className="bg-white shadow-sm overflow-hidden">
-            <div className="divide-y divide-gray-100">
-              {/* Category Header */}
-              <div className="bg-gray-50 px-6 py-3 border-b border-gray-200">
-                <h2 className="text-sm font-bold text-gray-700 uppercase tracking-wide">
-                  Schritte International Neu - {selectedLevel}
-                </h2>
-              </div>
-
-              {/* Lessons List */}
-              <div className="divide-y divide-gray-100">
-                {lessons.map((lesson, index) => {
+          <CategoryList
+            categories={[
+              {
+                key: `${selectedLevel}-${selectedBookType}`,
+                header: `Schritte International Neu - ${selectedLevel}`,
+                items: lessons.map((lesson, index) => {
                   const colorScheme = CARD_COLOR_SCHEMES[index % CARD_COLOR_SCHEMES.length];
                   return (
                     <LessonCard
@@ -152,10 +147,10 @@ export default function AnswerHubPage() {
                       colorScheme={colorScheme}
                     />
                   );
-                })}
-              </div>
-            </div>
-          </div>
+                }),
+              },
+            ]}
+          />
         )}
 
         {/* Footer Info */}

@@ -5,13 +5,18 @@
 
 'use client';
 
+import { useState, useMemo } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CatLoader } from '@/components/ui/CatLoader';
+import { CategoryList } from '@/components/ui/CategoryList';
+import { ExerciseFilters, FilterState } from '@/components/answer-hub/ExerciseFilters';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useCurrentStudent } from '@/lib/hooks/useUsers';
+import { getUserInfo } from '@/lib/utils/userHelpers';
 import { useExercises } from '@/lib/hooks/useExercises';
+import { useExerciseProgress } from '@/lib/hooks/useExerciseProgress';
 import { CEFRLevel } from '@/lib/models/cefr';
 import { Exercise } from '@/lib/models/exercises';
 
@@ -49,6 +54,7 @@ export default function LessonDetailPage() {
   const params = useParams();
   const { session } = useFirebaseAuth();
   const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
+  const { userId } = getUserInfo(currentUser, session);
 
   // Parse URL params
   // Format: levelBook = "B1-AB", lessonId = "L1"
@@ -70,6 +76,14 @@ export default function LessonDetailPage() {
 
   // Check if user is a teacher
   const isTeacher = currentUser?.role === 'teacher';
+
+  // Filter state
+  const [filters, setFilters] = useState<FilterState>({
+    search: '',
+    difficulty: 'all',
+    status: 'all',
+    hasDiscussion: 'all',
+  });
 
   if (isLoading) {
     return (
@@ -121,6 +135,35 @@ export default function LessonDetailPage() {
 
   const exerciseCount = lesson.exercises.length;
 
+  // Filter exercises based on filters
+  const filteredExercises = useMemo(() => {
+    return lesson.exercises.filter((exercise) => {
+      // Search filter
+      if (filters.search) {
+        const searchLower = filters.search.toLowerCase();
+        const matchesNumber = exercise.exerciseNumber.toLowerCase().includes(searchLower);
+        const matchesTitle = exercise.title?.toLowerCase().includes(searchLower);
+        const matchesQuestion = exercise.question?.toLowerCase().includes(searchLower);
+        if (!matchesNumber && !matchesTitle && !matchesQuestion) {
+          return false;
+        }
+      }
+
+      // Difficulty filter
+      if (filters.difficulty !== 'all' && exercise.difficulty !== filters.difficulty) {
+        return false;
+      }
+
+      // Status filter (requires progress data)
+      if (filters.status !== 'all' && userId) {
+        // We'll need to get progress for each exercise
+        // This is handled in the rendering below
+      }
+
+      return true;
+    });
+  }, [lesson.exercises, filters, userId]);
+
   return (
     <div className="min-h-screen bg-gray-50 pb-16">
       {/* Header */}
@@ -135,14 +178,25 @@ export default function LessonDetailPage() {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
+        {/* Filters */}
+        {exerciseCount > 0 && (
+          <div className="mb-6">
+            <ExerciseFilters
+              filters={filters}
+              onFilterChange={setFilters}
+              totalCount={exerciseCount}
+              filteredCount={filteredExercises.length}
+            />
+          </div>
+        )}
+
         {/* Exercises List */}
         {exerciseCount > 0 ? (
-          <div className="bg-white shadow-sm overflow-hidden">
-            {/* Group exercises by section */}
-            {(() => {
+          filteredExercises.length > 0 ? (
+            (() => {
               // Group exercises by section
               const exercisesBySection: Record<string, typeof lesson.exercises> = {};
-              lesson.exercises.forEach(ex => {
+              filteredExercises.forEach(ex => {
                 const section = ex.section || 'Übungen';
                 if (!exercisesBySection[section]) {
                   exercisesBySection[section] = [];
@@ -150,39 +204,57 @@ export default function LessonDetailPage() {
                 exercisesBySection[section].push(ex);
               });
 
-              const sections = Object.keys(exercisesBySection);
-              let colorIndex = 0;
+            const sections = Object.keys(exercisesBySection);
+            let colorIndex = 0;
 
-              return sections.map((section) => (
-                <div key={section}>
-                  {/* Section Header */}
-                  <div className="bg-gray-50 px-6 py-3 border-b border-gray-200">
-                    <h2 className="text-sm font-bold text-gray-700 uppercase tracking-wide">
-                      {section}
-                    </h2>
-                  </div>
+            // Transform into CategoryList format
+            const categories = sections.map((section) => {
+              const items = exercisesBySection[section].map((exercise) => {
+                const colorScheme = CARD_COLOR_SCHEMES[colorIndex % CARD_COLOR_SCHEMES.length];
+                colorIndex++;
+                return (
+                  <ExerciseListCard
+                    key={exercise.exerciseId}
+                    exercise={exercise}
+                    levelBook={levelBook}
+                    lessonId={lessonId}
+                    colorScheme={colorScheme}
+                  />
+                );
+              });
 
-                  {/* Exercises in this section */}
-                  <div className="divide-y divide-gray-100">
-                    {exercisesBySection[section].map((exercise) => {
-                      const colorScheme = CARD_COLOR_SCHEMES[colorIndex % CARD_COLOR_SCHEMES.length];
-                      colorIndex++;
-                      return (
-                        <ExerciseListCard
-                          key={exercise.exerciseId}
-                          exercise={exercise}
-                          levelBook={levelBook}
-                          lessonId={lessonId}
-                          colorScheme={colorScheme}
-                        />
-                      );
-                    })}
-                  </div>
-                </div>
-              ));
-            })()}
-          </div>
+              return {
+                key: section,
+                header: section,
+                items,
+              };
+            });
+
+            return <CategoryList categories={categories} />;
+          })()
         ) : (
+          <div className="bg-white border border-gray-200 shadow-sm p-12 text-center">
+            <div className="text-6xl mb-4">🔍</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">
+              No Exercises Match Your Filters
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Try adjusting your search or filter criteria.
+            </p>
+            <button
+              onClick={() => setFilters({
+                search: '',
+                difficulty: 'all',
+                status: 'all',
+                hasDiscussion: 'all',
+              })}
+              className="inline-block px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 text-sm font-medium transition-colors"
+            >
+              Clear Filters
+            </button>
+          </div>
+        )
+      ) : (
           <div className="bg-white border border-gray-200 shadow-sm p-12 text-center">
             <div className="text-6xl mb-4">📝</div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -216,8 +288,8 @@ function ExerciseListCard({
     badge: string;
   };
 }) {
-  // Construct exercise detail URL
-  const exerciseUrl = `/dashboard/student/answer-hub/${levelBook}/${lessonId}/${exercise.exerciseNumber}`;
+  // Construct exercise detail URL using exerciseId (unique identifier)
+  const exerciseUrl = `/dashboard/student/answer-hub/${levelBook}/${lessonId}/${encodeURIComponent(exercise.exerciseId)}`;
 
   const answerCount = exercise.answers.length;
 
@@ -243,11 +315,11 @@ function ExerciseListCard({
             </span>
 
             {/* View Button */}
-            <button
+            <span
               className={`inline-flex items-center px-3 py-1 text-xs font-bold bg-gray-100 text-gray-600 group-hover:text-white ${colorScheme.badge} transition-all duration-200`}
             >
               VIEW
-            </button>
+            </span>
           </div>
         </div>
       </div>

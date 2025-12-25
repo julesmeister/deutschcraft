@@ -155,6 +155,7 @@ export function ExerciseCard({
             </div>
             <AnswersList
               answers={exercise.answers}
+              exerciseId={exercise.exerciseId}
               showExplanations={true}
               isTeacher={isTeacher}
             />
