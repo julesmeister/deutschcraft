@@ -119,7 +119,7 @@ export default function ExerciseDetailPage() {
       />
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8 max-w-4xl">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
         {/* Exercise Card */}
         <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden mb-6">
           {/* Exercise Header */}
