@@ -1,0 +1,159 @@
+{
+  "level": "A1",
+  "subLevel": "1",
+  "bookType": "AB",
+  "lessons": [
+    {
+      "lessonNumber": 1,
+      "title": "Lektion 1: Guten Tag",
+      "exercises": [
+        {
+          "exerciseId": "A1.1-L1-AB-1a",
+          "level": "A1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "1a",
+          "title": "Konjugation: sein",
+          "question": "Ergänzen Sie die richtige Form von 'sein'",
+          "answers": [
+            {
+              "itemNumber": "1",
+              "correctAnswer": "bin",
+              "explanation": "1. Person Singular"
+            },
+            {
+              "itemNumber": "2",
+              "correctAnswer": "ist",
+              "explanation": "3. Person Singular"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "sind",
+              "explanation": "1./3. Person Plural"
+            }
+          ],
+          "topic": "Verben",
+          "difficulty": "easy",
+          "pageNumber": 5
+        },
+        {
+          "exerciseId": "A1.1-L1-AB-1b",
+          "level": "A1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "1b",
+          "title": "Konjugation: haben",
+          "question": "Ergänzen Sie die richtige Form von 'haben'",
+          "answers": [
+            {
+              "itemNumber": "1",
+              "correctAnswer": "habe"
+            },
+            {
+              "itemNumber": "2",
+              "correctAnswer": "hat"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "haben"
+            }
+          ],
+          "topic": "Verben",
+          "difficulty": "easy",
+          "pageNumber": 5
+        },
+        {
+          "exerciseId": "A1.1-L1-AB-2",
+          "level": "A1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "2",
+          "title": "Personalpronomen",
+          "question": "Wählen Sie das richtige Personalpronomen",
+          "answers": [
+            {
+              "itemNumber": "a",
+              "correctAnswer": "ich"
+            },
+            {
+              "itemNumber": "b",
+              "correctAnswer": "du"
+            },
+            {
+              "itemNumber": "c",
+              "correctAnswer": "er/sie/es"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "wir"
+            }
+          ],
+          "topic": "Pronomen",
+          "difficulty": "easy",
+          "pageNumber": 6
+        }
+      ]
+    },
+    {
+      "lessonNumber": 2,
+      "title": "Lektion 2: Familie und Freunde",
+      "exercises": [
+        {
+          "exerciseId": "A1.1-L2-AB-1",
+          "level": "A1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "1",
+          "title": "Familienwörter",
+          "question": "Ergänzen Sie die Familienwörter",
+          "answers": [
+            {
+              "itemNumber": "1",
+              "correctAnswer": "der Vater"
+            },
+            {
+              "itemNumber": "2",
+              "correctAnswer": "die Mutter"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "der Bruder"
+            },
+            {
+              "itemNumber": "4",
+              "correctAnswer": "die Schwester"
+            }
+          ],
+          "topic": "Wortschatz",
+          "difficulty": "easy",
+          "pageNumber": 12
+        }
+      ]
+    },
+    {
+      "lessonNumber": 3,
+      "title": "Lektion 3: Essen und Trinken",
+      "exercises": []
+    },
+    {
+      "lessonNumber": 4,
+      "title": "Lektion 4: Meine Wohnung",
+      "exercises": []
+    },
+    {
+      "lessonNumber": 5,
+      "title": "Lektion 5: Mein Tag",
+      "exercises": []
+    },
+    {
+      "lessonNumber": 6,
+      "title": "Lektion 6: Freizeit",
+      "exercises": []
+    },
+    {
+      "lessonNumber": 7,
+      "title": "Lektion 7: Lernen - ein Leben lang",
+      "exercises": []
+    }
+  ]
+}

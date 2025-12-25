@@ -116,6 +116,7 @@ function DashboardNavbar() {
                   title: 'Progress',
                   items: [
                     { label: 'Achievements', href: session?.user?.email ? `/dashboard/teacher/students/${encodeURIComponent(session.user.email)}` : '/dashboard/achievements' },
+                    { label: 'Answer Hub', href: '/dashboard/student/answer-hub' },
                     { label: 'Writings', href: '/dashboard/student/writings' },
                     { label: 'Syllabus', href: '/dashboard/student/syllabus' },
                     { label: 'Schedule', href: '/dashboard/schedule' },
@@ -264,6 +265,9 @@ function DashboardNavbar() {
                   </Link>
                   <Link href="/dashboard/student/audios" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
                     Audios
+                  </Link>
+                  <Link href="/dashboard/student/answer-hub" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
+                    Answer Hub
                   </Link>
                   <Link href="/dashboard/dictionary" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
                     Dictionary
