@@ -1,0 +1,505 @@
+{
+  "level": "B1",
+  "subLevel": "1",
+  "bookType": "KB",
+  "lessons": [
+    {
+      "lessonNumber": 1,
+      "title": "Lektion 1 - Glück im Alltag",
+      "exercises": [
+        {
+          "exerciseId": "B1.1-L1-KB-Folge1-1",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "1",
+          "section": "Folge 1: Ellas Glückstag",
+          "title": "Foto-Hörgeschichte",
+          "answers": [
+            {
+              "itemNumber": "correct",
+              "correctAnswer": "a, d, e"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-Folge1-2",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "2",
+          "section": "Folge 1: Ellas Glückstag",
+          "title": "Foto-Hörgeschichte",
+          "answers": [
+            {
+              "itemNumber": "Musterlösung",
+              "correctAnswer": "Sie freut sich, weil sie einen prima Tipp von einer netten Frau bekommen hat, weil sie eine Schreibtischlampe geschenkt bekommt, weil sie einen interessanten Interviewpartner findet und weil Sami zehn Minuten Angst hat."
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-Folge1-3",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "3",
+          "section": "Folge 1: Ellas Glückstag",
+          "title": "Foto-Hörgeschichte",
+          "answers": [
+            {
+              "itemNumber": "corrections",
+              "correctAnswer": "100.000 → eine Million, mehrmals → einmal, viel Geld → das ganze Geld"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-A1",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "A1",
+          "section": "Schritt A",
+          "title": "A1",
+          "answers": [
+            {
+              "itemNumber": "verbs",
+              "correctAnswer": "spielte, gewann, kam"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-A2a",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "A2a",
+          "section": "Schritt A",
+          "title": "A2a",
+          "answers": [
+            {
+              "itemNumber": "A",
+              "correctAnswer": "4"
+            },
+            {
+              "itemNumber": "B",
+              "correctAnswer": "3"
+            },
+            {
+              "itemNumber": "C",
+              "correctAnswer": "1"
+            },
+            {
+              "itemNumber": "D",
+              "correctAnswer": "2"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-A2c",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "A2c",
+          "section": "Schritt A",
+          "title": "A2c",
+          "answers": [
+            {
+              "itemNumber": "A",
+              "correctAnswer": "Wer? 71-jähriger Wiener Wann? am vergangenen Wochenende Wo? bei Linz Was passierte? Renter ließ seine Frau auf Autobahnraststätte zurück"
+            },
+            {
+              "itemNumber": "B",
+              "correctAnswer": "Wer? Werner H. (61) und Florian H. (30) Wann? letzten Monat Wo? Sidney (USA) Was passierte? Vater verwechselte bei Online-Buchung Sidney (USA) mit Sydney (Australien) und buchte falschen Flug"
+            },
+            {
+              "itemNumber": "C",
+              "correctAnswer": "Wer? Tess (58) und Finn K. (57) Wann? letzte Woche Wo? Neapel Was passierte? nach Streit verlor sich Ehepaar aus den Augen, Tess sprang ins Wasser und schwamm Schiff hinterher, Finn war auf dem Weg zum Flughafen"
+            },
+            {
+              "itemNumber": "D",
+              "correctAnswer": "Wer? Giovanni R. (45) Wann? am Valentinstag Wo? Bad Ems bei Koblenz Was passierte? Giovanni kaufte Rosen für seine Frau, hatte nicht mehr genügend Geld für seinen Lottotipp, am Abend wurden „seine" Zahlen gezogen"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-A3",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "A3",
+          "section": "Schritt A",
+          "title": "A3",
+          "answers": [
+            {
+              "itemNumber": "verbs",
+              "correctAnswer": "sollte, dachte, lud … ein, bemerkte, standen, störte, feierten, riefen, sperrte … ab, schickte, gingen, kam"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-B1",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "B1",
+          "section": "Schritt B",
+          "title": "B1",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "… als ich ins Spielcasino gegangen bin."
+            },
+            {
+              "itemNumber": "c",
+              "correctAnswer": "… als ich oft unglücklich war."
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "… als ich nur wenige Freunde hatte."
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-B2a",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "B2a",
+          "section": "Schritt B",
+          "title": "B2a",
+          "answers": [
+            {
+              "itemNumber": "correct",
+              "correctAnswer": "2, 3, 5"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-B2b",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "B2b",
+          "section": "Schritt B",
+          "title": "B2b",
+          "answers": [
+            {
+              "itemNumber": "einmal",
+              "correctAnswer": "2, 3"
+            },
+            {
+              "itemNumber": "öfter",
+              "correctAnswer": "1, 4"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-B3",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "B3",
+          "section": "Schritt B",
+          "title": "B3",
+          "answers": [
+            {
+              "itemNumber": "Musterlösung",
+              "correctAnswer": "Ich war als Kind immer sehr glücklich, wenn ich abends lange wach bleiben durfte. Ich war im Sommer sehr froh, wenn die Sonne schien. Ich war an Weihnachten sehr froh, wenn es schneite. Ich habe mir einmal sehr wehgetan, als ich von der Schaukel herunterfiel..."
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-C1",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "C1",
+          "section": "Schritt C",
+          "title": "C1",
+          "answers": [
+            {
+              "itemNumber": "explanation",
+              "correctAnswer": "Das ist passiert. Ich habe wirklich gewonnen. Das war vorher. Ich hatte so lange … gewartet."
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-C2a",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "C2a",
+          "section": "Schritt C",
+          "title": "C2a",
+          "answers": [
+            {
+              "itemNumber": "1",
+              "correctAnswer": "Gewonnen"
+            },
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Angekommen"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-C2b",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "C2b",
+          "section": "Schritt C",
+          "title": "C2b",
+          "answers": [
+            {
+              "itemNumber": "1",
+              "correctAnswer": "vorher: Fuß gebrochen, viel trainiert"
+            },
+            {
+              "itemNumber": "2",
+              "correctAnswer": "vorher: Hannahs Schwester war nach Brasilien gezogen, hatte dort geheiratet und Kinder bekommen, sie hatten sich nur gesehen, wenn Hannahs Schwester an Weihnachten zu Besuch in Zürich war"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-D1",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "D1",
+          "section": "Schritt D",
+          "title": "D1",
+          "answers": [
+            {
+              "itemNumber": "Musterlösung",
+              "correctAnswer": "Aufgaben: Kinder betreuen, im Haushalt unterstützen, kochen, Kinder in den Kindergarten/in die Schule bringen, mit den Kindern spielen, bei den Hausaufgaben helfen, … Positives: Möglichkeit, günstig im Ausland zu leben, neue Erfahrungen, neue Kulturen, neue Menschen kennenlernen, Sprachkenntnisse verbessern, … Negatives: billige Arbeitskraft, kein Mitglied der Familie, wenig Freizeit, Heimweh, …"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-D2",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "D2",
+          "section": "Schritt D",
+          "title": "D2",
+          "answers": [
+            {
+              "itemNumber": "Musterlösung",
+              "correctAnswer": "Als Oma-Aupair im Ausland / Als Oma-Aupair in Indien"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-D3",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "D3",
+          "section": "Schritt D",
+          "title": "D3",
+          "answers": [
+            {
+              "itemNumber": "order",
+              "correctAnswer": "3, 1, 2, 5, 4"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-D4",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "D4",
+          "section": "Schritt D",
+          "title": "D4",
+          "answers": [
+            {
+              "itemNumber": "correct",
+              "correctAnswer": "c, d, f"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-D5a",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "D5a",
+          "section": "Schritt D",
+          "title": "D5a",
+          "answers": [
+            {
+              "itemNumber": "Musterlösung",
+              "correctAnswer": "zwei Semester in Rom studiert; geheiratet, nach Dubai gezogen; einen berühmten Schauspieler kennengelernt; ein halbes Jahr um die Welt gereist; Kinder bekommen. Als ich 23 war, habe ich zwei Semester in Rom studiert. Dort habe ich deine Oma kennengelernt und sie ein Jahr später geheiratet..."
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-E2a",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "E2a",
+          "section": "Schritt E",
+          "title": "E2a",
+          "answers": [
+            {
+              "itemNumber": "1",
+              "correctAnswer": "C"
+            },
+            {
+              "itemNumber": "2",
+              "correctAnswer": "A"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "B"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-E2b",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "E2b",
+          "section": "Schritt E",
+          "title": "E2b",
+          "answers": [
+            {
+              "itemNumber": "1",
+              "correctAnswer": "Brigitte hat den Schutzengel in Graz geschenkt bekommen (not: gekauft). Ein paar Monate (not: Zehn Minuten) später hat sie einen Mann kennengelernt."
+            },
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Wenn es Paul in einer Stadt nicht so richtig gut gefällt (not: nicht), wirft er eine Münze in einen Brunnen. Er war mit seiner Frau schon dreimal (not: zweimal) in Rom."
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "Julia hat immer einen (not: keinen) Glücksbringer bei sich. Der Stein in ihrem Büro erinnert sie an einen Wald (not: ihren Sohn)."
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-Grammatik-2",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "2",
+          "section": "Grammatik und Kommunikation",
+          "title": "2",
+          "answers": [
+            {
+              "itemNumber": "Musterlösung",
+              "correctAnswer": "Als ich fünf Jahre alt war, wollte ich unbedingt in die Schule gehen. Als ich zehn Jahre alt war, wünschte ich mir, dass ich nie mehr zur Schule gehen muss. Als ich 18 Jahre alt war, wollte ich Lehrer werden."
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-Grammatik-3",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "3",
+          "section": "Grammatik und Kommunikation",
+          "title": "3",
+          "answers": [
+            {
+              "itemNumber": "Musterlösung",
+              "correctAnswer": "1 Ich hatte zu viele Kirschen gegessen. 2 Meine Schwester hatte Saft auf meine Hausaufgaben verschüttet. 3 Ich hatte faul in der Sonne gelegen. 4 Ich hatte eine 1 in Mathe bekommen. 5 Ich hatte einen anstrengenden Tag gehabt."
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-Projekt-1",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "1",
+          "section": "Zwischendurch mal … - Projekt",
+          "title": "Projekt 1",
+          "answers": [
+            {
+              "itemNumber": "matches",
+              "correctAnswer": "1 B 2 D 4 F 5 E 6 C"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-Projekt-2",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "2",
+          "section": "Zwischendurch mal … - Projekt",
+          "title": "Projekt 2",
+          "answers": [
+            {
+              "itemNumber": "answer",
+              "correctAnswer": "Hab einen guten Tag! Spaß im Unterricht. Gute Laune…"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-Horen-1",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "1",
+          "section": "Zwischendurch mal … - Hören",
+          "title": "Hören 1",
+          "answers": [
+            {
+              "itemNumber": "keywords",
+              "correctAnswer": "… – allein sein wollen – Plan funktionierte überhaupt nicht – wütend und traurig – schmale, steile Stelle auf dem Weg – Mädchen auf Fahrrad stürzt – Benno am Boden – Lachtränen – verknallt"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.1-L1-KB-Gedicht-1",
+          "level": "B1",
+          "bookType": "KB",
+          "lessonNumber": 1,
+          "exerciseNumber": "1",
+          "section": "Zwischendurch mal … - Gedicht",
+          "title": "Gedicht 1",
+          "answers": [
+            {
+              "itemNumber": "answer",
+              "correctAnswer": "lächeln, geben und zurückbekommen, teilen"
+            }
+          ],
+          "difficulty": "medium"
+        }
+      ]
+    }
+  ]
+}

@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
 import { CEFRLevelSelector } from "@/components/ui/CEFRLevelSelector";
+import { CategoryList } from "@/components/ui/CategoryList";
 import { CEFRLevel } from "@/lib/models/cefr";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import {
@@ -11,10 +12,11 @@ import {
 } from "@/lib/hooks/useGrammarExercises";
 import { usePersistedLevel } from "@/lib/hooks/usePersistedLevel";
 import { useGrammarPracticeSession } from "@/lib/hooks/useGrammarPracticeSession";
-import { GrammarSentencePractice } from "@/components/grammar/GrammarSentencePractice";
-import { GrammarRuleCard } from "@/components/grammar/GrammarRuleCard";
+import { useFilteredSentences } from "@/lib/hooks/useFilteredSentences";
+import { GrammarRuleCardWithProgress } from "@/components/grammar/GrammarRuleCardWithProgress";
+import { GrammarPracticeView } from "@/components/grammar/GrammarPracticeView";
+import { GrammarSentencesView } from "@/components/grammar/GrammarSentencesView";
 import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
-import { shuffleArray } from "@/lib/utils/array";
 import { applyGrammarSettings } from "@/lib/utils/grammarSelection";
 
 // Import existing grammar data from grammar guide
@@ -151,36 +153,6 @@ export default function GrammatikPracticePage() {
 
   const categories = Object.keys(rulesByCategory).sort();
 
-  // Calculate progress for each rule
-  const getRuleProgress = (ruleId: string) => {
-    // Get total available sentences for this rule
-    const sentenceData = sentenceDataMap[selectedLevel];
-    const totalSentences =
-      sentenceData?.sentences?.filter(
-        (s: any) => s.ruleId === ruleId && !s.english.includes("[TODO")
-      ).length || 0;
-
-    // Get reviewed sentences
-    const ruleReviews = reviews.filter((r) => r.ruleId === ruleId);
-    const practiced = ruleReviews.length;
-    const completed = ruleReviews.filter((r) => r.masteryLevel >= 80).length;
-    const percentage =
-      totalSentences > 0 ? Math.round((practiced / totalSentences) * 100) : 0;
-
-    return {
-      practiced,
-      total: totalSentences,
-      completed,
-      percentage,
-    };
-  };
-
-  // Check if a rule has mistakes (failed reviews)
-  const ruleHasMistakes = (ruleId: string) => {
-    const ruleReviews = reviews.filter((r) => r.ruleId === ruleId);
-    return ruleReviews.some((r) => r.masteryLevel < 50); // Consider < 50 as mistakes
-  };
-
   // Start practice with only failed sentences for a rule (respecting SRS intervals)
   const handleRetryMistakes = (ruleId: string) => {
     const sentenceData = sentenceDataMap[selectedLevel];
@@ -235,35 +207,14 @@ export default function GrammatikPracticePage() {
     return rules.find((r) => r.id === selectedRule);
   }, [selectedRule, rules]);
 
-  const selectedRuleSentences = useMemo(() => {
-    // Practice mode: return the practice sentences we set
-    if (isPracticeMode && practiceSentences.length > 0) {
-      return practiceSentences;
-    }
-
-    // Regular mode: filter by selected rule
-    if (!selectedRule) return [];
-
-    const sentenceData = sentenceDataMap[selectedLevel];
-    if (!sentenceData || !sentenceData.sentences) return [];
-
-    // Filter sentences for this rule (exclude [TODO] placeholders)
-    const ruleSentences = sentenceData.sentences.filter(
-      (s: any) => s.ruleId === selectedRule && !s.english.includes("[TODO]")
-    );
-
-    // Apply STRICT SRS filtering - only show sentences that are due now or new
-    const { sentences } = applyGrammarSettings(
-      ruleSentences,
-      reviews,
-      {
-        randomizeOrder: true,
-        sentencesPerSession: 10, // Limit to 10 for bite-sized practice
-      }
-    );
-
-    return sentences;
-  }, [selectedRule, selectedLevel, isPracticeMode, practiceSentences, reviews]);
+  const selectedRuleSentences = useFilteredSentences({
+    selectedRule,
+    selectedLevel,
+    isPracticeMode,
+    practiceSentences,
+    sentenceDataMap,
+    reviews,
+  });
 
   const handleStartPractice = () => {
     const ruleId = startPractice();
@@ -281,6 +232,15 @@ export default function GrammatikPracticePage() {
     setCurrentSessionResults([]);
   };
 
+  // Handle back from practice/view mode
+  const handleBackToRules = () => {
+    setSelectedRule(null);
+    setIsPracticeMode(false);
+    setIsViewMode(false);
+    setPracticeSentences([]);
+    setCurrentSessionResults([]);
+  };
+
   if (selectedRule) {
     // View Mode - just display sentences
     if (isViewMode) {
@@ -290,111 +250,25 @@ export default function GrammatikPracticePage() {
       ) || [];
 
       return (
-        <div className="min-h-screen bg-gray-50 pb-16">
-          <DashboardHeader
-            title={selectedRuleData?.title || "Grammar Rule"}
-            subtitle={`Viewing ${allSentences.length} sentences`}
-            backButton={{
-              label: "Back to Rules",
-              onClick: () => {
-                setSelectedRule(null);
-                setIsViewMode(false);
-              },
-            }}
-          />
-          <div className="container mx-auto px-6 mt-8">
-            <div className="bg-white shadow-sm overflow-hidden">
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4">All Sentences</h3>
-                <div className="space-y-4">
-                  {allSentences.map((sentence: any, index: number) => (
-                    <div key={sentence.sentenceId} className="border-b border-gray-200 pb-4 last:border-b-0">
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-                          <span className="text-sm font-bold text-gray-600">{index + 1}</span>
-                        </div>
-                        <div className="flex-1">
-                          <p className="text-sm text-gray-600 mb-2">{sentence.english}</p>
-                          <p className="text-base font-semibold text-gray-900">{sentence.german}</p>
-                          {sentence.hints && sentence.hints.length > 0 && (
-                            <div className="mt-2 text-xs text-gray-500">
-                              💡 {sentence.hints.join(' • ')}
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <GrammarSentencesView
+          selectedRuleData={selectedRuleData}
+          allSentences={allSentences}
+          onBack={handleBackToRules}
+        />
       );
     }
 
     // Practice Mode
-    const practiceTitle = isPracticeMode
-      ? "SRS Practice Session"
-      : selectedRuleData?.title || "Grammar Practice";
-
     return (
-      <div className="min-h-screen bg-gray-50 pb-16">
-        <DashboardHeader
-          title="Grammar Practice"
-          subtitle={
-            isPracticeMode
-              ? `Reviewing ${selectedRuleSentences.length} due sentences`
-              : `Practicing: ${practiceTitle}`
-          }
-          backButton={{
-            label: "Back to Rules",
-            onClick: () => {
-              setSelectedRule(null);
-              setIsPracticeMode(false);
-              setIsViewMode(false);
-              setPracticeSentences([]);
-              setCurrentSessionResults([]);
-            },
-          }}
-          actions={
-            <ActionButton
-              onClick={() => {
-                if (currentSessionResults.length > 0) {
-                  onPracticeComplete(currentSessionResults);
-                } else {
-                  // Just exit if no progress
-                  setSelectedRule(null);
-                  setIsPracticeMode(false);
-                  setIsViewMode(false);
-                  setPracticeSentences([]);
-                  setCurrentSessionResults([]);
-                }
-              }}
-              variant={currentSessionResults.length > 0 ? "mint" : "gray"}
-              icon={
-                currentSessionResults.length > 0 ? (
-                  <ActionButtonIcons.Check />
-                ) : (
-                  <ActionButtonIcons.X />
-                )
-              }
-            >
-              {currentSessionResults.length > 0
-                ? `End Session (${currentSessionResults.length})`
-                : "End Session"}
-            </ActionButton>
-          }
-        />
-        <div className="container mx-auto px-6 mt-8">
-          <GrammarSentencePractice
-            sentences={selectedRuleSentences}
-            ruleTitle={practiceTitle}
-            onComplete={onPracticeComplete}
-            onProgress={setCurrentSessionResults}
-          />
-        </div>
-      </div>
+      <GrammarPracticeView
+        selectedRuleData={selectedRuleData}
+        selectedRuleSentences={selectedRuleSentences}
+        isPracticeMode={isPracticeMode}
+        currentSessionResults={currentSessionResults}
+        onComplete={onPracticeComplete}
+        onProgress={setCurrentSessionResults}
+        onBack={handleBackToRules}
+      />
     );
   }
 
@@ -423,7 +297,7 @@ export default function GrammatikPracticePage() {
 
       <div className="container mx-auto px-6 mt-8">
         {/* Controls Section */}
-        <div className="bg-white shadow-sm mb-6">
+        <div className="bg-white border border-gray-200 shadow-sm mb-6">
           <div className="space-y-3 p-4">
             <div className="flex items-center justify-between">
               <h5 className="text-neutral-700 uppercase text-sm font-medium leading-snug">
@@ -445,45 +319,36 @@ export default function GrammatikPracticePage() {
 
         {/* Grammar Rules by Category */}
         {rules.length > 0 && (
-          <div className="bg-white shadow-sm overflow-hidden">
-            <div className="divide-y divide-gray-100">
-              {categories.map((category, catIndex) => (
-                <div key={category}>
-                  {/* Category Header */}
-                  <div className="bg-gray-50 px-6 py-3 border-b border-gray-200">
-                    <h2 className="text-sm font-bold text-gray-700 uppercase tracking-wide">
-                      {category}
-                    </h2>
-                  </div>
+          <CategoryList
+            categories={categories.map((category) => {
+              const items = rulesByCategory[category].map((rule, ruleIndex) => {
+                const colorScheme =
+                  CARD_COLOR_SCHEMES[
+                    ruleIndex % CARD_COLOR_SCHEMES.length
+                  ];
 
-                  {/* Rules List */}
-                  <div className="divide-y divide-gray-100">
-                    {rulesByCategory[category].map((rule, ruleIndex) => {
-                      const progress = getRuleProgress(rule.id);
-                      const hasMistakes = ruleHasMistakes(rule.id);
-                      const colorScheme =
-                        CARD_COLOR_SCHEMES[
-                          ruleIndex % CARD_COLOR_SCHEMES.length
-                        ];
+                return (
+                  <GrammarRuleCardWithProgress
+                    key={rule.id}
+                    rule={rule}
+                    reviews={reviews}
+                    sentenceDataMap={sentenceDataMap}
+                    selectedLevel={selectedLevel}
+                    colorScheme={colorScheme}
+                    onClick={() => setSelectedRule(rule.id)}
+                    onView={() => handleViewRule(rule.id)}
+                    onRetryMistakes={() => handleRetryMistakes(rule.id)}
+                  />
+                );
+              });
 
-                      return (
-                        <GrammarRuleCard
-                          key={rule.id}
-                          rule={rule}
-                          progress={progress}
-                          colorScheme={colorScheme}
-                          onClick={() => setSelectedRule(rule.id)}
-                          onView={() => handleViewRule(rule.id)}
-                          onRetryMistakes={() => handleRetryMistakes(rule.id)}
-                          hasMistakes={hasMistakes}
-                        />
-                      );
-                    })}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+              return {
+                key: category,
+                header: category,
+                items,
+              };
+            })}
+          />
         )}
       </div>
     </div>

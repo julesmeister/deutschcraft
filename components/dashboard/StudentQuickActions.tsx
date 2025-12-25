@@ -17,8 +17,8 @@ export function StudentQuickActions({ cardsReady, wordsToReview, writingExercise
         icon={<ActionButtonIcons.Document />}
         variant="purple"
       >
-        <span className="md:hidden lg:inline">Practice Flashcards</span>
-        <span className="hidden md:inline lg:hidden">Practice</span>
+        <span className="md:hidden 2xl:inline">Practice Flashcards</span>
+        <span className="hidden md:inline 2xl:hidden">Practice</span>
       </ActionButton>
 
       <ActionButton
@@ -26,8 +26,8 @@ export function StudentQuickActions({ cardsReady, wordsToReview, writingExercise
         icon={<ActionButtonIcons.Message />}
         variant="cyan"
       >
-        <span className="md:hidden lg:inline">Write Exercises</span>
-        <span className="hidden md:inline lg:hidden">Write</span>
+        <span className="md:hidden 2xl:inline">Write Exercises</span>
+        <span className="hidden md:inline 2xl:hidden">Write</span>
       </ActionButton>
 
       <ActionButton
@@ -35,8 +35,8 @@ export function StudentQuickActions({ cardsReady, wordsToReview, writingExercise
         icon={<ActionButtonIcons.ArrowRight />}
         variant="mint"
       >
-        <span className="md:hidden lg:inline">Review Cards</span>
-        <span className="hidden md:inline lg:hidden">Review</span>
+        <span className="md:hidden 2xl:inline">Review Cards</span>
+        <span className="hidden md:inline 2xl:hidden">Review</span>
       </ActionButton>
 
       <ActionButton
@@ -44,8 +44,8 @@ export function StudentQuickActions({ cardsReady, wordsToReview, writingExercise
         icon={<ActionButtonIcons.Message />}
         variant="yellow"
       >
-        <span className="md:hidden lg:inline">Social Feed</span>
-        <span className="hidden md:inline lg:hidden">Social</span>
+        <span className="md:hidden 2xl:inline">Social Feed</span>
+        <span className="hidden md:inline 2xl:hidden">Social</span>
       </ActionButton>
     </div>
   );
