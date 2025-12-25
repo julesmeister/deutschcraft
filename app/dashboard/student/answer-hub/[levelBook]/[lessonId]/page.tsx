@@ -138,27 +138,49 @@ export default function LessonDetailPage() {
         {/* Exercises List */}
         {exerciseCount > 0 ? (
           <div className="bg-white shadow-sm overflow-hidden">
-            <div className="divide-y divide-gray-100">
-              {/* Category Header */}
-              <div className="bg-gray-50 px-6 py-3 border-b border-gray-200">
-                <h2 className="text-sm font-bold text-gray-700 uppercase tracking-wide">
-                  {lesson.title} - Übungen ({exerciseCount})
-                </h2>
-              </div>
+            {/* Group exercises by section */}
+            {(() => {
+              // Group exercises by section
+              const exercisesBySection: Record<string, typeof lesson.exercises> = {};
+              lesson.exercises.forEach(ex => {
+                const section = ex.section || 'Übungen';
+                if (!exercisesBySection[section]) {
+                  exercisesBySection[section] = [];
+                }
+                exercisesBySection[section].push(ex);
+              });
 
-              {/* Exercises List */}
-              <div className="divide-y divide-gray-100">
-                {lesson.exercises.map((exercise, index) => (
-                  <ExerciseListCard
-                    key={exercise.exerciseId}
-                    exercise={exercise}
-                    levelBook={levelBook}
-                    lessonId={lessonId}
-                    colorScheme={CARD_COLOR_SCHEMES[index % CARD_COLOR_SCHEMES.length]}
-                  />
-                ))}
-              </div>
-            </div>
+              const sections = Object.keys(exercisesBySection);
+              let colorIndex = 0;
+
+              return sections.map((section) => (
+                <div key={section}>
+                  {/* Section Header */}
+                  <div className="bg-gray-50 px-6 py-3 border-b border-gray-200">
+                    <h2 className="text-sm font-bold text-gray-700 uppercase tracking-wide">
+                      {section}
+                    </h2>
+                  </div>
+
+                  {/* Exercises in this section */}
+                  <div className="divide-y divide-gray-100">
+                    {exercisesBySection[section].map((exercise) => {
+                      const colorScheme = CARD_COLOR_SCHEMES[colorIndex % CARD_COLOR_SCHEMES.length];
+                      colorIndex++;
+                      return (
+                        <ExerciseListCard
+                          key={exercise.exerciseId}
+                          exercise={exercise}
+                          levelBook={levelBook}
+                          lessonId={lessonId}
+                          colorScheme={colorScheme}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
+              ));
+            })()}
           </div>
         ) : (
           <div className="bg-white border border-gray-200 shadow-sm p-12 text-center">
@@ -205,7 +227,7 @@ function ExerciseListCard({
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1 min-w-0">
             <h3 className={`text-lg font-bold text-gray-900 ${colorScheme.text} transition-colors duration-200 mb-1`}>
-              Übung {exercise.exerciseNumber}
+              {exercise.exerciseNumber}
             </h3>
             <p className="text-sm text-gray-600 mb-0">
               {answerCount} item{answerCount !== 1 ? 's' : ''}

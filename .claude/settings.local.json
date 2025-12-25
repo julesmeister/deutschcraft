@@ -116,7 +116,8 @@
       "Bash(node scripts/test-pattern.js:*)",
       "Bash(node scripts/count-lektions.js:*)",
       "Bash(node scripts/extract-b1-final.js:*)",
-      "Bash(Select-String -Pattern \"(error|Error|ERROR|warning|Warning|compiled|Compiled|Route|✓)\")"
+      "Bash(Select-String -Pattern \"(error|Error|ERROR|warning|Warning|compiled|Compiled|Route|✓)\")",
+      "Bash(node scripts/extract-b1-with-sections.js:*)"
     ],
     "deny": [],
     "ask": []

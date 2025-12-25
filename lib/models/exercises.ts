@@ -25,6 +25,7 @@ export interface Exercise {
   bookType: 'AB' | 'KB';         // Arbeitsbuch or Kursbuch
   lessonNumber: number;          // 1-7
   exerciseNumber: string;        // "1a", "2b", "3", etc.
+  section?: string;              // "Schritt A", "Schritt B", "Fokus Beruf", etc.
 
   title: string;                 // Exercise title/description
   question?: string;             // Optional question text
