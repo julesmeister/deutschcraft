@@ -113,6 +113,270 @@
             }
           ],
           "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-8",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "8",
+          "title": "Übung 8",
+          "answers": [
+            {
+              "itemNumber": "a",
+              "correctAnswer": "a   wenn"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-1b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "1b",
+          "title": "Übung 1b",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Ines telefoniert"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-3",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "3",
+          "title": "Übung 3",
+          "answers": [
+            {
+              "itemNumber": "a",
+              "correctAnswer": "Ich habe"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-4",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "4",
+          "title": "Übung 4",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Ich muss"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-8a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "8a",
+          "title": "Übung 8a",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "erfolgreicher"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-8b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "8b",
+          "title": "Übung 8b",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Je  erfolgrei"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-9",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "9",
+          "title": "Übung 9",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Je"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-2",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "2",
+          "title": "Übung 2",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Je netter"
+            },
+            {
+              "itemNumber": "c",
+              "correctAnswer": "Je ruhig"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-11a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "11a",
+          "title": "Übung 11a",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "c"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "d"
+            },
+            {
+              "itemNumber": "4",
+              "correctAnswer": "b"
+            },
+            {
+              "itemNumber": "5",
+              "correctAnswer": "a"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-11b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "11b",
+          "title": "Übung 11b",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Je freundlicher"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-17",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "17",
+          "title": "Übung 17",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "an die"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-18",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "18",
+          "title": "Übung 18",
+          "answers": [
+            {
+              "itemNumber": "B",
+              "correctAnswer": "auf die"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-20a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "20a",
+          "title": "Übung 20a",
+          "answers": [
+            {
+              "itemNumber": "e",
+              "correctAnswer": "Bekannt e"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-21",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "21",
+          "title": "Übung 21",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Erwachsen en"
+            },
+            {
+              "itemNumber": "c",
+              "correctAnswer": "Jugendliche   d"
+            },
+            {
+              "itemNumber": "e",
+              "correctAnswer": "Erwachsener   f"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-22a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "22a",
+          "title": "Übung 22a",
+          "answers": [
+            {
+              "itemNumber": "3",
+              "correctAnswer": "kein en"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L1-AB-25a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "25a",
+          "title": "Übung 25a",
+          "answers": [
+            {
+              "itemNumber": "a",
+              "correctAnswer": "von uns"
+            }
+          ],
+          "difficulty": "medium"
         }
       ]
     },
@@ -188,6 +452,324 @@
             }
           ],
           "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-1",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "1",
+          "title": "Übung 1",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Finn macht"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-2a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "2a",
+          "title": "Übung 2a",
+          "answers": [
+            {
+              "itemNumber": "3",
+              "correctAnswer": "Lesen Sie"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-2b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "2b",
+          "title": "Übung 2b",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Bevor Sie"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-2",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "2",
+          "title": "Übung 2",
+          "answers": [
+            {
+              "itemNumber": "3",
+              "correctAnswer": "Termine"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-3b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "3b",
+          "title": "Übung 3b",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Ich habe"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-6",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "6",
+          "title": "Übung 6",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "b evor"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-7",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "7",
+          "title": "Übung 7",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Nachdem Tom"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-8",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "8",
+          "title": "Übung 8",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Während ich"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-9a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "9a",
+          "title": "Übung 9a",
+          "answers": [
+            {
+              "itemNumber": "1",
+              "correctAnswer": "jemandem eine"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-12a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "12a",
+          "title": "Übung 12a",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "d"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "c"
+            },
+            {
+              "itemNumber": "4",
+              "correctAnswer": "a"
+            },
+            {
+              "itemNumber": "5",
+              "correctAnswer": "b"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-12b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "12b",
+          "title": "Übung 12b",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Er tut"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-14",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "14",
+          "title": "Übung 14",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Noemi   tut"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-15",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "15",
+          "title": "Übung 15",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "sie eine"
+            },
+            {
+              "itemNumber": "c",
+              "correctAnswer": "sie viel"
+            },
+            {
+              "itemNumber": "r",
+              "correctAnswer": "Kleidung ausgeben"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-17b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "17b",
+          "title": "Übung 17b",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Dann"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-18",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "18",
+          "title": "Übung 18",
+          "answers": [
+            {
+              "itemNumber": "E",
+              "correctAnswer": "Schritt D"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-19a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "19a",
+          "title": "Übung 19a",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Irgendwie"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "irgendwelche"
+            },
+            {
+              "itemNumber": "4",
+              "correctAnswer": "irgendwer"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-22a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "22a",
+          "title": "Übung 22a",
+          "answers": [
+            {
+              "itemNumber": "1",
+              "correctAnswer": "Ich rate"
+            },
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Ehrlich gesagt"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L2-AB-24a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 2,
+          "exerciseNumber": "24a",
+          "title": "Übung 24a",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Verständnis"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "Erstaunen"
+            },
+            {
+              "itemNumber": "4",
+              "correctAnswer": "Ratschlag"
+            },
+            {
+              "itemNumber": "5",
+              "correctAnswer": "Kritik"
+            },
+            {
+              "itemNumber": "6",
+              "correctAnswer": "Ärger   Fokus"
+            }
+          ],
+          "difficulty": "medium"
         }
       ]
     },
@@ -259,6 +841,182 @@
             }
           ],
           "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L3-AB-2",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 3,
+          "exerciseNumber": "2",
+          "title": "Übung 2",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "weder liegen"
+            },
+            {
+              "itemNumber": "c",
+              "correctAnswer": "sowohl Arme"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "weder Licht"
+            },
+            {
+              "itemNumber": "e",
+              "correctAnswer": "sowohl   neue"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L3-AB-4",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 3,
+          "exerciseNumber": "4",
+          "title": "Übung 4",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "weder Fleisch"
+            },
+            {
+              "itemNumber": "c",
+              "correctAnswer": "sowohl praktische"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "sowohl der"
+            },
+            {
+              "itemNumber": "g",
+              "correctAnswer": "als auch"
+            },
+            {
+              "itemNumber": "e",
+              "correctAnswer": "weder zu"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L3-AB-5a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 3,
+          "exerciseNumber": "5a",
+          "title": "Übung 5a",
+          "answers": [
+            {
+              "itemNumber": "1",
+              "correctAnswer": "Es war"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L3-AB-7",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 3,
+          "exerciseNumber": "7",
+          "title": "Übung 7",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "da"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L3-AB-9",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 3,
+          "exerciseNumber": "9",
+          "title": "Übung 9",
+          "answers": [
+            {
+              "itemNumber": "11",
+              "correctAnswer": "b"
+            },
+            {
+              "itemNumber": "4",
+              "correctAnswer": "c"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "d"
+            },
+            {
+              "itemNumber": "1",
+              "correctAnswer": "Schritt"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L3-AB-12b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 3,
+          "exerciseNumber": "12b",
+          "title": "Übung 12b",
+          "answers": [
+            {
+              "itemNumber": "e",
+              "correctAnswer": "in schlafender"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "er s"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L3-AB-13",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 3,
+          "exerciseNumber": "13",
+          "title": "Übung 13",
+          "answers": [
+            {
+              "itemNumber": "B",
+              "correctAnswer": "feine"
+            },
+            {
+              "itemNumber": "C",
+              "correctAnswer": "fris che"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L3-AB-15",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 3,
+          "exerciseNumber": "15",
+          "title": "Übung 15",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "sowohl kochen"
+            },
+            {
+              "itemNumber": "c",
+              "correctAnswer": "Das   ist"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "Unglaublich   e"
+            }
+          ],
+          "difficulty": "medium"
         }
       ]
     },
@@ -315,6 +1073,239 @@
             {
               "itemNumber": "a",
               "correctAnswer": "eilig   c"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L4-AB-1a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 4,
+          "exerciseNumber": "1a",
+          "title": "Übung 1a",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Mit"
+            },
+            {
+              "itemNumber": "35",
+              "correctAnswer": "Jahren"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L4-AB-1b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 4,
+          "exerciseNumber": "1b",
+          "title": "Übung 1b",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Kamil"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L4-AB-2",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 4,
+          "exerciseNumber": "2",
+          "title": "Übung 2",
+          "answers": [
+            {
+              "itemNumber": "B",
+              "correctAnswer": "Vorsatz"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L4-AB-6",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 4,
+          "exerciseNumber": "6",
+          "title": "Übung 6",
+          "answers": [
+            {
+              "itemNumber": "a",
+              "correctAnswer": "Ab morgen"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L4-AB-7",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 4,
+          "exerciseNumber": "7",
+          "title": "Übung 7",
+          "answers": [
+            {
+              "itemNumber": "a",
+              "correctAnswer": "Vor"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L4-AB-8",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 4,
+          "exerciseNumber": "8",
+          "title": "Übung 8",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "weil"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L4-AB-13a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 4,
+          "exerciseNumber": "13a",
+          "title": "Übung 13a",
+          "answers": [
+            {
+              "itemNumber": "a",
+              "correctAnswer": "tut mir"
+            },
+            {
+              "itemNumber": "c",
+              "correctAnswer": "nicht in"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "geht doch"
+            },
+            {
+              "itemNumber": "e",
+              "correctAnswer": "ja   vollkommen"
+            },
+            {
+              "itemNumber": "f",
+              "correctAnswer": "bestimmt  nie"
+            },
+            {
+              "itemNumber": "b",
+              "correctAnswer": "doch nur"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L4-AB-17a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 4,
+          "exerciseNumber": "17a",
+          "title": "Übung 17a",
+          "answers": [
+            {
+              "itemNumber": "A",
+              "correctAnswer": "B    C"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L4-AB-19",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 4,
+          "exerciseNumber": "19",
+          "title": "Übung 19",
+          "answers": [
+            {
+              "itemNumber": "1",
+              "correctAnswer": "a"
+            },
+            {
+              "itemNumber": "2",
+              "correctAnswer": "c"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "b"
+            },
+            {
+              "itemNumber": "4",
+              "correctAnswer": "a"
+            },
+            {
+              "itemNumber": "5",
+              "correctAnswer": "a"
+            },
+            {
+              "itemNumber": "6",
+              "correctAnswer": "b"
+            },
+            {
+              "itemNumber": "7",
+              "correctAnswer": "a"
+            },
+            {
+              "itemNumber": "8",
+              "correctAnswer": "a"
+            },
+            {
+              "itemNumber": "9",
+              "correctAnswer": "c"
+            },
+            {
+              "itemNumber": "10",
+              "correctAnswer": "a"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L4-AB-20a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 4,
+          "exerciseNumber": "20a",
+          "title": "Übung 20a",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Essen"
+            },
+            {
+              "itemNumber": "4",
+              "correctAnswer": "ein Erlebni"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "Ziele"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L4-AB-14",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 4,
+          "exerciseNumber": "14",
+          "title": "Übung 14",
+          "answers": [
+            {
+              "itemNumber": "21",
+              "correctAnswer": "b"
             }
           ],
           "difficulty": "medium"
@@ -378,6 +1369,291 @@
             {
               "itemNumber": "a",
               "correctAnswer": "anerkannt   b"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-12",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "12",
+          "title": "Übung 12",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "meine Eltern"
+            },
+            {
+              "itemNumber": "c",
+              "correctAnswer": "ich Mitglied"
+            },
+            {
+              "itemNumber": "d",
+              "correctAnswer": "ich Zeit"
+            },
+            {
+              "itemNumber": "e",
+              "correctAnswer": "ich Geld"
+            },
+            {
+              "itemNumber": "r",
+              "correctAnswer": "die Organisation"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-2a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "2a",
+          "title": "Übung 2a",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "c"
+            },
+            {
+              "itemNumber": "4",
+              "correctAnswer": "a"
+            },
+            {
+              "itemNumber": "5",
+              "correctAnswer": "e"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-3a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "3a",
+          "title": "Übung 3a",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Seitdem wir"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-3b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "3b",
+          "title": "Übung 3b",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Bis sie"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-6",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "6",
+          "title": "Übung 6",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Fundsach en"
+            },
+            {
+              "itemNumber": "c",
+              "correctAnswer": "Rollstuhl   d"
+            },
+            {
+              "itemNumber": "e",
+              "correctAnswer": "ausgestellt   f"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-11a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "11a",
+          "title": "Übung 11a",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "a"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "b"
+            },
+            {
+              "itemNumber": "4",
+              "correctAnswer": "e"
+            },
+            {
+              "itemNumber": "5",
+              "correctAnswer": "c"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-11b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "11b",
+          "title": "Übung 11b",
+          "answers": [
+            {
+              "itemNumber": "t",
+              "correctAnswer": "Frau Sosic"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-14a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "14a",
+          "title": "Übung 14a",
+          "answers": [
+            {
+              "itemNumber": "r",
+              "correctAnswer": "ihre Nachbarin"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-14b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "14b",
+          "title": "Übung 14b",
+          "answers": [
+            {
+              "itemNumber": "3",
+              "correctAnswer": "Thomas"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-17",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "17",
+          "title": "Übung 17",
+          "answers": [
+            {
+              "itemNumber": "a",
+              "correctAnswer": "Schritt C"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-19",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "19",
+          "title": "Übung 19",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Das Restaurant"
+            },
+            {
+              "itemNumber": "h",
+              "correctAnswer": "immer geöffnet"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-20a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "20a",
+          "title": "Übung 20a",
+          "answers": [
+            {
+              "itemNumber": "1915",
+              "correctAnswer": "sehr guter"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-1932",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "1932",
+          "title": "Übung 1932",
+          "answers": [
+            {
+              "itemNumber": "1920",
+              "correctAnswer": "zum ersten"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-1937",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "1937",
+          "title": "Übung 1937",
+          "answers": [
+            {
+              "itemNumber": "1921",
+              "correctAnswer": "erstes Flugzeug"
+            },
+            {
+              "itemNumber": "2010",
+              "correctAnswer": "Film"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L5-AB-21c",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 5,
+          "exerciseNumber": "21c",
+          "title": "Übung 21c",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "B"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "A"
+            },
+            {
+              "itemNumber": "4",
+              "correctAnswer": "B"
             }
           ],
           "difficulty": "medium"
@@ -452,6 +1728,180 @@
             }
           ],
           "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L6-AB-13",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 6,
+          "exerciseNumber": "13",
+          "title": "Übung 13",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "werden im"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L6-AB-2a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 6,
+          "exerciseNumber": "2a",
+          "title": "Übung 2a",
+          "answers": [
+            {
+              "itemNumber": "r",
+              "correctAnswer": "mehr Bewegung"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L6-AB-3a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 6,
+          "exerciseNumber": "3a",
+          "title": "Übung 3a",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "wurde"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L6-AB-3b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 6,
+          "exerciseNumber": "3b",
+          "title": "Übung 3b",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "wurde"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L6-AB-6",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 6,
+          "exerciseNumber": "6",
+          "title": "Übung 6",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Zuerst"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L6-AB-7",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 6,
+          "exerciseNumber": "7",
+          "title": "Übung 7",
+          "answers": [
+            {
+              "itemNumber": "c",
+              "correctAnswer": "Schritt   B"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L6-AB-9a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 6,
+          "exerciseNumber": "9a",
+          "title": "Übung 9a",
+          "answers": [
+            {
+              "itemNumber": "1",
+              "correctAnswer": "längste"
+            },
+            {
+              "itemNumber": "2",
+              "correctAnswer": "kälteste"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "kleinste"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L6-AB-1",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 6,
+          "exerciseNumber": "1",
+          "title": "Übung 1",
+          "answers": [
+            {
+              "itemNumber": "e",
+              "correctAnswer": "Eisenbahntunnel"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L6-AB-3",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 6,
+          "exerciseNumber": "3",
+          "title": "Übung 3",
+          "answers": [
+            {
+              "itemNumber": "e",
+              "correctAnswer": "Stadt"
+            },
+            {
+              "itemNumber": "t",
+              "correctAnswer": "en   Städte"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L6-AB-15a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 6,
+          "exerciseNumber": "15a",
+          "title": "Übung 15a",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Ich finde"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "halte ich"
+            },
+            {
+              "itemNumber": "4",
+              "correctAnswer": "Meiner Ansicht"
+            },
+            {
+              "itemNumber": "5",
+              "correctAnswer": "kann ich"
+            }
+          ],
+          "difficulty": "medium"
         }
       ]
     },
@@ -474,6 +1924,244 @@
             {
               "itemNumber": "d",
               "correctAnswer": "darauf   e"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L7-AB-1a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 7,
+          "exerciseNumber": "1a",
+          "title": "Übung 1a",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "das"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L7-AB-1b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 7,
+          "exerciseNumber": "1b",
+          "title": "Übung 1b",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "das"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L7-AB-3",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 7,
+          "exerciseNumber": "3",
+          "title": "Übung 3",
+          "answers": [
+            {
+              "itemNumber": "4",
+              "correctAnswer": "der"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L7-AB-21",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 7,
+          "exerciseNumber": "21",
+          "title": "Übung 21",
+          "answers": [
+            {
+              "itemNumber": "3",
+              "correctAnswer": "Musterlösung"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L7-AB-8",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 7,
+          "exerciseNumber": "8",
+          "title": "Übung 8",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Mit wem"
+            },
+            {
+              "itemNumber": "c",
+              "correctAnswer": "Wovon   d"
+            },
+            {
+              "itemNumber": "e",
+              "correctAnswer": "Worüber"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L7-AB-11a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 7,
+          "exerciseNumber": "11a",
+          "title": "Übung 11a",
+          "answers": [
+            {
+              "itemNumber": "1",
+              "correctAnswer": "Naomi"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L7-AB-11b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 7,
+          "exerciseNumber": "11b",
+          "title": "Übung 11b",
+          "answers": [
+            {
+              "itemNumber": "1",
+              "correctAnswer": "c"
+            },
+            {
+              "itemNumber": "2",
+              "correctAnswer": "a"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "b"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L7-AB-12a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 7,
+          "exerciseNumber": "12a",
+          "title": "Übung 12a",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "d"
+            },
+            {
+              "itemNumber": "3",
+              "correctAnswer": "a"
+            },
+            {
+              "itemNumber": "4",
+              "correctAnswer": "c"
+            },
+            {
+              "itemNumber": "5",
+              "correctAnswer": "b"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L7-AB-12b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 7,
+          "exerciseNumber": "12b",
+          "title": "Übung 12b",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "Im Vergleich"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L7-AB-13",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 7,
+          "exerciseNumber": "13",
+          "title": "Übung 13",
+          "answers": [
+            {
+              "itemNumber": "b",
+              "correctAnswer": "Bei dem"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L7-AB-16a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 7,
+          "exerciseNumber": "16a",
+          "title": "Übung 16a",
+          "answers": [
+            {
+              "itemNumber": "1",
+              "correctAnswer": "der"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L7-AB-2",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 7,
+          "exerciseNumber": "2",
+          "title": "Übung 2",
+          "answers": [
+            {
+              "itemNumber": "3",
+              "correctAnswer": "die"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L7-AB-17",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 7,
+          "exerciseNumber": "17",
+          "title": "Übung 17",
+          "answers": [
+            {
+              "itemNumber": "D",
+              "correctAnswer": "Fokus Beruf"
+            }
+          ],
+          "difficulty": "medium"
+        },
+        {
+          "exerciseId": "B1.2-L7-AB-2b",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 7,
+          "exerciseNumber": "2b",
+          "title": "Übung 2b",
+          "answers": [
+            {
+              "itemNumber": "2",
+              "correctAnswer": "lange mit"
             }
           ],
           "difficulty": "medium"

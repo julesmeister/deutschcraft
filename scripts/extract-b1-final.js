@@ -60,10 +60,26 @@ function parseAllExercises(text, level, subLevel, lessonOffset = 0) {
     };
 
     // Find exercises in this lesson text
-    // Pattern: number (with optional letter) followed by letter-answer pairs
-    // Example: "1 b war c konnten d wollte"
-    const exercisePattern = /\b(\d+[a-z]?)\s+([a-z]\s+[a-zäöüß]+(?:\s+[a-z]\s+[a-zäöüß]+)+)/gi;
-    const exerciseMatches = [...lessonText.matchAll(exercisePattern)];
+    // Pattern 1: Exercise number followed by letter-answer pairs
+    // Examples: "1 b war c konnten", "A2a b war c ist"
+    const exercisePattern1 = /\b([A-Z]?\d+[a-z]?)\s+([a-z]\s+[a-zäöüß]+(?:\s+[a-z]\s+[a-zäöüß]+)+)/gi;
+
+    // Pattern 2: Exercise number followed by numbered/lettered answers (more flexible)
+    // Examples: "A1 1 answer 2 answer", "2a a answer b answer"
+    const exercisePattern2 = /\b([A-Z]?\d+[a-z]?)\s+((?:[a-z0-9]+\s+[a-zäöüß]+[,\s]*)+)/gi;
+
+    const exerciseMatches1 = [...lessonText.matchAll(exercisePattern1)];
+    const exerciseMatches2 = [...lessonText.matchAll(exercisePattern2)];
+
+    // Combine both patterns and deduplicate by exercise number
+    const allMatches = [...exerciseMatches1, ...exerciseMatches2];
+    const seenExercises = new Set();
+    const exerciseMatches = allMatches.filter(match => {
+      const exNum = match[1];
+      if (seenExercises.has(exNum)) return false;
+      seenExercises.add(exNum);
+      return true;
+    });
 
     for (const exMatch of exerciseMatches) {
       const exerciseNum = exMatch[1];
@@ -101,7 +117,7 @@ function parseAnswers(text) {
   const answers = [];
   const seen = new Set();
 
-  // Pattern: letter followed by German word(s)
+  // Pattern 1: Letter followed by German word(s)
   // Example: "b war" or "c konnten"
   const letterPattern = /\b([a-z])\s+([a-zäöüß]+(?:\s+[a-zäöüß]+)?)/gi;
   let match;
@@ -116,6 +132,23 @@ function parseAnswers(text) {
         correctAnswer: answer,
       });
       seen.add(letter);
+    }
+  }
+
+  // Pattern 2: Number followed by answer (if no letter matches found)
+  if (answers.length === 0) {
+    const numberPattern = /\b(\d+)\s+([a-zäöüß]+(?:\s+[a-zäöüß]+)?)/gi;
+    while ((match = numberPattern.exec(text)) !== null) {
+      const num = match[1];
+      const answer = match[2].trim();
+
+      if (!seen.has(num) && answer.length > 0 && answer.length < 100) {
+        answers.push({
+          itemNumber: num,
+          correctAnswer: answer,
+        });
+        seen.add(num);
+      }
     }
   }
 
