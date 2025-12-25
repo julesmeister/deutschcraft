@@ -9,8 +9,11 @@ import { ExerciseBook, Lesson } from '@/lib/models/exercises';
 
 // Import exercise data files
 import a11AB from '@/lib/data/exercises/a1-1-arbeitsbuch.json';
+import b11AB from '@/lib/data/exercises/b1-1-arbeitsbuch.json';
+import b12AB from '@/lib/data/exercises/b1-2-arbeitsbuch.json';
 // import a12AB from '@/lib/data/exercises/a1-2-arbeitsbuch.json';
 // import a21AB from '@/lib/data/exercises/a2-1-arbeitsbuch.json';
+// import a22AB from '@/lib/data/exercises/a2-2-arbeitsbuch.json';
 // TODO: Add more imports as JSON files are created
 
 /**
@@ -19,8 +22,11 @@ import a11AB from '@/lib/data/exercises/a1-1-arbeitsbuch.json';
  */
 const exerciseDataMap: Record<string, ExerciseBook> = {
   'A1-1-AB': a11AB as ExerciseBook,
+  'B1-1-AB': b11AB as ExerciseBook,
+  'B1-2-AB': b12AB as ExerciseBook,
   // 'A1-2-AB': a12AB as ExerciseBook,
   // 'A2-1-AB': a21AB as ExerciseBook,
+  // 'A2-2-AB': a22AB as ExerciseBook,
   // TODO: Add more mappings as files are created
 };
 

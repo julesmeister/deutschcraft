@@ -6,7 +6,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useBatchFilteredComments } from '@/lib/hooks/useBatchFilteredComments';
 import { User } from '@/lib/models/user';
 import CommentItem from '@/components/social/CommentItem';
@@ -28,6 +28,7 @@ export function ExerciseDiscussion({
   const [newComment, setNewComment] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [showAll, setShowAll] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const {
     comments,
@@ -180,13 +181,22 @@ export function ExerciseDiscussion({
             <UserAvatar user={currentUser} size="sm" />
           </div>
           <div className="flex-1">
-            <GermanCharAutocomplete
-              value={newComment}
-              onChange={(e) => setNewComment(e.target.value)}
-              placeholder="Share your thoughts or ask a question..."
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
-              disabled={submitting}
-            />
+            <div className="relative">
+              <input
+                ref={inputRef}
+                type="text"
+                value={newComment}
+                onChange={(e) => setNewComment(e.target.value)}
+                placeholder="Share your thoughts or ask a question..."
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
+                disabled={submitting}
+              />
+              <GermanCharAutocomplete
+                textareaRef={inputRef}
+                content={newComment}
+                onContentChange={setNewComment}
+              />
+            </div>
             <div className="mt-2 flex justify-end gap-2">
               <button
                 type="button"

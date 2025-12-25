@@ -1,0 +1,102 @@
+{
+  "level": "B1",
+  "subLevel": "1",
+  "bookType": "AB",
+  "lessons": [
+    {
+      "lessonNumber": 1,
+      "title": "Lektion 1: Glück im Alltag",
+      "exercises": [
+        {
+          "exerciseId": "B1.1-L1-AB-1",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "1",
+          "title": "Modalverben im Präteritum",
+          "question": "Ergänzen Sie die richtige Form",
+          "answers": [
+            { "itemNumber": "b", "correctAnswer": "war" },
+            { "itemNumber": "c", "correctAnswer": "konnten" },
+            { "itemNumber": "d", "correctAnswer": "wollte" },
+            { "itemNumber": "e", "correctAnswer": "hatte" },
+            { "itemNumber": "f", "correctAnswer": "musste" },
+            { "itemNumber": "g", "correctAnswer": "hatte" },
+            { "itemNumber": "h", "correctAnswer": "war" },
+            { "itemNumber": "i", "correctAnswer": "wollte" },
+            { "itemNumber": "j", "correctAnswer": "musste" },
+            { "itemNumber": "k", "correctAnswer": "konntet" }
+          ],
+          "topic": "Verben",
+          "difficulty": "medium",
+          "pageNumber": 1
+        },
+        {
+          "exerciseId": "B1.1-L1-AB-6a",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "6a",
+          "title": "Ordnen Sie zu",
+          "answers": [
+            { "itemNumber": "2", "correctAnswer": "a" },
+            { "itemNumber": "3", "correctAnswer": "e" },
+            { "itemNumber": "4", "correctAnswer": "f" },
+            { "itemNumber": "5", "correctAnswer": "c" },
+            { "itemNumber": "6", "correctAnswer": "b" }
+          ],
+          "topic": "Grammatik",
+          "difficulty": "easy",
+          "pageNumber": 2
+        },
+        {
+          "exerciseId": "B1.1-L1-AB-8",
+          "level": "B1",
+          "bookType": "AB",
+          "lessonNumber": 1,
+          "exerciseNumber": "8",
+          "title": "als oder wenn?",
+          "answers": [
+            { "itemNumber": "a", "correctAnswer": "Als" },
+            { "itemNumber": "b", "correctAnswer": "als" },
+            { "itemNumber": "c", "correctAnswer": "wenn" },
+            { "itemNumber": "d", "correctAnswer": "Als" }
+          ],
+          "topic": "Konjunktionen",
+          "difficulty": "medium",
+          "pageNumber": 2
+        }
+      ]
+    },
+    {
+      "lessonNumber": 2,
+      "title": "Lektion 2: Unterhaltung und Fernsehen",
+      "exercises": []
+    },
+    {
+      "lessonNumber": 3,
+      "title": "Lektion 3: Wir könnten montags joggen gehen",
+      "exercises": []
+    },
+    {
+      "lessonNumber": 4,
+      "title": "Lektion 4: Sprache und Regeln",
+      "exercises": []
+    },
+    {
+      "lessonNumber": 5,
+      "title": "Lektion 5: Miteinander leben",
+      "exercises": []
+    },
+    {
+      "lessonNumber": 6,
+      "title": "Lektion 6: Was wäre, wenn ...?",
+      "exercises": []
+    },
+    {
+      "lessonNumber": 7,
+      "title": "Lektion 7: Wie geht es denn so?",
+      "exercises": []
+    }
+  ]
+}

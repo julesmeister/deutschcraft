@@ -1,0 +1,42 @@
+{
+  "level": "B1",
+  "subLevel": "2",
+  "bookType": "AB",
+  "lessons": [
+    {
+      "lessonNumber": 8,
+      "title": "Lektion 8: Unter Freunden",
+      "exercises": []
+    },
+    {
+      "lessonNumber": 9,
+      "title": "Lektion 9: Technik im Alltag",
+      "exercises": []
+    },
+    {
+      "lessonNumber": 10,
+      "title": "Lektion 10: Gut, dass wir uns kennen",
+      "exercises": []
+    },
+    {
+      "lessonNumber": 11,
+      "title": "Lektion 11: Wie die Zeit vergeht!",
+      "exercises": []
+    },
+    {
+      "lessonNumber": 12,
+      "title": "Lektion 12: Neue Heimat",
+      "exercises": []
+    },
+    {
+      "lessonNumber": 13,
+      "title": "Lektion 13: Auf Reisen",
+      "exercises": []
+    },
+    {
+      "lessonNumber": 14,
+      "title": "Lektion 14: Zusammen leben",
+      "exercises": []
+    }
+  ]
+}
