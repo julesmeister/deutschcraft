@@ -1,6 +1,7 @@
 /**
  * Lesson Card Component (Clickable)
  * Shows lesson overview with click to view exercises
+ * Matches grammatik page design
  */
 
 'use client';
@@ -13,9 +14,14 @@ interface LessonCardProps {
   lesson: Lesson;
   level: CEFRLevel;
   bookType: 'AB' | 'KB';
+  colorScheme: {
+    bg: string;
+    text: string;
+    badge: string;
+  };
 }
 
-export function LessonCard({ lesson, level, bookType }: LessonCardProps) {
+export function LessonCard({ lesson, level, bookType, colorScheme }: LessonCardProps) {
   const exerciseCount = lesson.exercises.length;
   const hasExercises = exerciseCount > 0;
 
@@ -24,59 +30,35 @@ export function LessonCard({ lesson, level, bookType }: LessonCardProps) {
 
   return (
     <Link href={lessonUrl}>
-      <div className="group bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-blue-300 transition-all duration-200 overflow-hidden cursor-pointer">
-        <div className="flex items-center justify-between px-6 py-5 bg-gradient-to-r from-gray-50 to-gray-100 group-hover:from-blue-50 group-hover:to-blue-100 transition-all duration-200">
-          <div className="flex items-center gap-4">
-            {/* Lesson Number Badge */}
-            <div className="flex-shrink-0 w-14 h-14 rounded-full bg-blue-600 group-hover:bg-blue-700 flex items-center justify-center transition-colors duration-200">
-              <span className="text-white font-black text-xl">
-                {lesson.lessonNumber}
-              </span>
-            </div>
-
-            {/* Lesson Info */}
-            <div className="text-left">
-              <h2 className="text-xl font-black text-gray-900 group-hover:text-blue-700 transition-colors duration-200">
-                {lesson.title}
-              </h2>
-              <p className="text-sm text-gray-600 mt-1">
-                {exerciseCount} exercise{exerciseCount !== 1 ? 's' : ''}
-                {!hasExercises && ' (empty)'}
-              </p>
-            </div>
-          </div>
-
-          {/* Arrow Icon */}
-          <div className="flex items-center gap-3">
-            {hasExercises && (
-              <span className="hidden sm:block text-xs font-medium text-gray-500 bg-white px-3 py-1.5 rounded-full border border-gray-300 group-hover:border-blue-300 group-hover:text-blue-700 transition-all duration-200">
-                View Exercises
-              </span>
-            )}
-            <svg
-              className="w-6 h-6 text-gray-600 group-hover:text-blue-700 group-hover:translate-x-1 transition-all duration-200"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </div>
-        </div>
-
-        {/* Quick Preview Footer */}
-        {hasExercises && (
-          <div className="px-6 py-3 bg-white border-t border-gray-100">
-            <p className="text-xs text-gray-500">
-              Click to view all exercises and discuss with your batch
+      <div className={`group ${colorScheme.bg} px-6 py-4 transition-all duration-200 cursor-pointer`}>
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex-1 min-w-0">
+            <h3 className={`text-lg font-bold text-gray-900 ${colorScheme.text} transition-colors duration-200 mb-1`}>
+              {lesson.title}
+            </h3>
+            <p className="text-sm text-gray-600 mb-0">
+              {exerciseCount} exercise{exerciseCount !== 1 ? 's' : ''}
+              {!hasExercises && ' (empty)'}
             </p>
           </div>
-        )}
+
+          {/* Action Buttons */}
+          <div className="flex-shrink-0 flex items-center gap-2">
+            {/* Exercise Count Badge */}
+            {exerciseCount > 0 && (
+              <span className="inline-flex items-center px-2 py-1 text-xs font-bold bg-gray-100 text-gray-600">
+                {exerciseCount}
+              </span>
+            )}
+
+            {/* View Button */}
+            <button
+              className={`inline-flex items-center px-3 py-1 text-xs font-bold bg-gray-100 text-gray-600 group-hover:text-white ${colorScheme.badge} transition-all duration-200`}
+            >
+              VIEW
+            </button>
+          </div>
+        </div>
       </div>
     </Link>
   );
