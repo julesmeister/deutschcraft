@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { SettingsSidebar } from '@/components/ui/settings/SettingsSidebar';
 import { ProfileTab } from '@/components/ui/settings/ProfileTab';
 import { SecurityTab } from '@/components/ui/settings/SecurityTab';
@@ -17,6 +19,7 @@ import { useSettingsRefresh } from '@/lib/hooks/useSettingsRefresh';
 import { getSettingsMenuItems } from '@/components/ui/settings/getSettingsMenuItems';
 
 export default function SettingsPage() {
+  const router = useRouter();
   const {
     session,
     status,
@@ -27,10 +30,63 @@ export default function SettingsPage() {
     setActiveTab,
     saveMessage,
     setSaveMessage,
+    redirectInfo,
+    sessionComparison,
   } = useSettingsData();
 
-  // Show info bar if user is pending OR if they might have stale session data
-  const showRedirectInfo = isPending || (currentUser && currentUser.role === 'STUDENT' && typeof window !== 'undefined');
+  // Determine if we should show info bar based on actual conditions
+  const shouldShowInfoBar = isPending || redirectInfo.wasRedirected || sessionComparison.isStale;
+
+  // Function to get info bar content based on priority
+  const getInfoBarContent = () => {
+    // Priority 1: Pending approval (most important)
+    if (isPending) {
+      return {
+        type: 'pending' as const,
+        title: currentUser?.enrollmentStatus === 'pending'
+          ? 'Your enrollment is pending teacher approval.'
+          : 'Your account is pending approval.',
+        message: currentUser?.enrollmentStatus === 'pending'
+          ? 'Your teacher will review your enrollment soon. You will be notified once approved.'
+          : 'Please complete your enrollment in the Enrollment tab to access all dashboard features.',
+        showDebug: false,
+      };
+    }
+
+    // Priority 2: Redirect due to role mismatch
+    if (redirectInfo.wasRedirected && redirectInfo.reason === 'role_mismatch') {
+      return {
+        type: 'redirected' as const,
+        title: 'Access Restricted - Auto-refreshing...',
+        message: `You were redirected from ${redirectInfo.intendedPath || 'a restricted page'}. Refreshing session automatically...`,
+        showDebug: true,
+        debugInfo: `JWT: ${sessionComparison.jwtRole || 'unknown'} → Firestore: ${sessionComparison.firestoreRole || 'unknown'}`,
+      };
+    }
+
+    // Priority 3: Stale session (detected but not redirected yet)
+    if (sessionComparison.isStale) {
+      return {
+        type: 'stale' as const,
+        title: 'Session Stale - Auto-refreshing...',
+        message: 'Your session data is outdated. Refreshing automatically...',
+        showDebug: true,
+        debugInfo: `JWT: ${sessionComparison.jwtRole || 'unknown'} → Firestore: ${sessionComparison.firestoreRole || 'unknown'}`,
+      };
+    }
+
+    return null;
+  };
+
+  const infoBarContent = getInfoBarContent();
+
+  // Function to clear redirect parameters from URL
+  const clearRedirectParams = () => {
+    const url = new URL(window.location.href);
+    url.searchParams.delete('redirect_reason');
+    url.searchParams.delete('intended_path');
+    router.replace(url.pathname + url.search);
+  };
 
   const {
     formData,
@@ -46,6 +102,17 @@ export default function SettingsPage() {
   } = useEnrollmentForm(session);
 
   const { handleRefresh } = useSettingsRefresh();
+
+  // Auto-refresh when stale session detected
+  useEffect(() => {
+    if (sessionComparison.isStale && !isPending && !isLoading) {
+      console.log('[Settings] Stale session detected, auto-refreshing in 2s...');
+      const timer = setTimeout(() => {
+        handleRefresh(session?.user?.email);
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [sessionComparison.isStale, isPending, isLoading, session?.user?.email, handleRefresh]);
 
   // Build menu items
   const menuItems = getSettingsMenuItems(isPending, activeTab, setActiveTab);
@@ -85,8 +152,8 @@ export default function SettingsPage() {
         </div>
       </div>
 
-      {/* Info Bar - Show when user is pending approval or has stale session */}
-      {showRedirectInfo && (
+      {/* Enhanced Info Bar - Shows only when needed with debug info */}
+      {shouldShowInfoBar && infoBarContent && (
         <div className="bg-blue-50 border-b border-blue-200">
           <div className="container mx-auto px-6 py-3">
             <div className="flex items-start gap-3">
@@ -94,37 +161,28 @@ export default function SettingsPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <div className="flex-1">
-                {isPending ? (
-                  <>
-                    <p className="text-sm font-medium text-blue-800">
-                      {currentUser?.enrollmentStatus === 'pending'
-                        ? 'Your enrollment is pending teacher approval.'
-                        : 'Your account is pending approval.'}
-                    </p>
-                    <p className="text-sm text-blue-700 mt-0.5">
-                      {currentUser?.enrollmentStatus === 'pending'
-                        ? 'Your teacher will review your enrollment soon. You will be notified once approved.'
-                        : 'Please complete your enrollment in the Enrollment tab to access all dashboard features.'}
-                    </p>
-                  </>
-                ) : currentUser?.role === 'STUDENT' ? (
-                  <>
-                    <p className="text-sm font-medium text-blue-800">
-                      You were redirected to Settings because your session data is outdated.
-                    </p>
-                    <p className="text-sm text-blue-700 mt-0.5">
-                      Please sign out and sign back in to refresh your session and access the Student Dashboard.
-                    </p>
-                  </>
-                ) : (
-                  <>
-                    <p className="text-sm font-medium text-blue-800">
-                      You were redirected to Settings.
-                    </p>
-                    <p className="text-sm text-blue-700 mt-0.5">
-                      If you're having trouble accessing the dashboard, try signing out and signing back in.
-                    </p>
-                  </>
+                <p className="text-sm font-medium text-blue-800">
+                  {infoBarContent.title}
+                </p>
+                <p className="text-sm text-blue-700 mt-0.5">
+                  {infoBarContent.message}
+                </p>
+
+                {/* Debug Info - Shows role comparison */}
+                {infoBarContent.showDebug && infoBarContent.debugInfo && (
+                  <p className="text-xs text-blue-600 mt-2 font-mono bg-blue-100 px-2 py-1 rounded inline-block">
+                    🔍 {infoBarContent.debugInfo}
+                  </p>
+                )}
+
+                {/* Dismiss button for redirects */}
+                {redirectInfo.wasRedirected && (
+                  <button
+                    onClick={clearRedirectParams}
+                    className="text-sm font-medium text-blue-600 hover:text-blue-700 mt-2 block"
+                  >
+                    Dismiss
+                  </button>
                 )}
               </div>
             </div>

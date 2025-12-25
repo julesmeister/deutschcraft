@@ -29,7 +29,10 @@ export default withAuth(
     if (pathname.startsWith('/dashboard/student')) {
       // Student dashboard - accessible by approved students OR teachers (admin access)
       if (isPending || (userRole !== 'STUDENT' && userRole !== 'TEACHER')) {
-        return NextResponse.redirect(new URL('/dashboard/settings', req.url));
+        const settingsUrl = new URL('/dashboard/settings', req.url);
+        settingsUrl.searchParams.set('redirect_reason', isPending ? 'pending' : 'role_mismatch');
+        settingsUrl.searchParams.set('intended_path', pathname);
+        return NextResponse.redirect(settingsUrl);
       }
     } else if (pathname.startsWith('/dashboard/teacher')) {
       // Allow students to view their own detail page
@@ -38,12 +41,18 @@ export default withAuth(
 
       // Teacher dashboard - only for teachers (except students viewing their own detail page)
       if (isPending || (userRole !== 'TEACHER' && !isOwnDetailPage)) {
-        return NextResponse.redirect(new URL('/dashboard/settings', req.url));
+        const settingsUrl = new URL('/dashboard/settings', req.url);
+        settingsUrl.searchParams.set('redirect_reason', isPending ? 'pending' : 'role_mismatch');
+        settingsUrl.searchParams.set('intended_path', pathname);
+        return NextResponse.redirect(settingsUrl);
       }
     } else if (pathname === '/dashboard') {
       // Main dashboard - redirect based on role
       if (isPending) {
-        return NextResponse.redirect(new URL('/dashboard/settings', req.url));
+        const settingsUrl = new URL('/dashboard/settings', req.url);
+        settingsUrl.searchParams.set('redirect_reason', 'pending');
+        settingsUrl.searchParams.set('intended_path', pathname);
+        return NextResponse.redirect(settingsUrl);
       } else if (userRole === 'TEACHER') {
         return NextResponse.redirect(new URL('/dashboard/teacher', req.url));
       } else if (userRole === 'STUDENT') {

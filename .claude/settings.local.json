@@ -104,7 +104,19 @@
       "Bash(Select-String -Pattern \"(Local:|error|Error|compiled|ready)\")",
       "Bash(Select-Object -First 10)",
       "Bash(sqlite3:*)",
-      "Bash(Select-String -Pattern \"(error|Error|ERROR|Type|compiled|Compiled)\")"
+      "Bash(Select-String -Pattern \"(error|Error|ERROR|Type|compiled|Compiled)\")",
+      "Bash(node scripts/extract-schritte-exercises.js:*)",
+      "Bash(node scripts/test-pdf.js:*)",
+      "Bash(node scripts/extract-schritte-exercises-v2.js:*)",
+      "Bash(node debug-pdf-text.js:*)",
+      "Bash(node scripts/extract-b1-complete.js:*)",
+      "Bash(node scripts/debug-pdf-text.js:*)",
+      "Bash(node scripts/extract-b1-improved.js:*)",
+      "Bash(node scripts/extract-b1-stream.js:*)",
+      "Bash(node scripts/test-pattern.js:*)",
+      "Bash(node scripts/count-lektions.js:*)",
+      "Bash(node scripts/extract-b1-final.js:*)",
+      "Bash(Select-String -Pattern \"(error|Error|ERROR|warning|Warning|compiled|Compiled|Route|✓)\")"
     ],
     "deny": [],
     "ask": []

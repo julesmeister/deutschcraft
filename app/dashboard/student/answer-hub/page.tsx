@@ -16,7 +16,7 @@ import { usePersistedLevel } from '@/lib/hooks/usePersistedLevel';
 import { useExercises, useHasExercises } from '@/lib/hooks/useExercises';
 import { CEFRLevel } from '@/lib/models/cefr';
 import { BookTypeSelector } from '@/components/answer-hub/BookTypeSelector';
-import { LessonSection } from '@/components/answer-hub/LessonSection';
+import { LessonCard } from '@/components/answer-hub/LessonCard';
 
 export default function AnswerHubPage() {
   const router = useRouter();
@@ -166,14 +166,13 @@ export default function AnswerHubPage() {
 
         {/* Lessons List */}
         {!isLoading && !error && hasExercises && lessons.length > 0 && (
-          <div className="space-y-6">
-            {lessons.map((lesson, index) => (
-              <LessonSection
+          <div className="space-y-4">
+            {lessons.map((lesson) => (
+              <LessonCard
                 key={lesson.lessonNumber}
                 lesson={lesson}
-                currentUser={currentUser}
-                currentUserBatchId={currentUserBatchId}
-                defaultExpanded={index === 0}  // First lesson expanded by default
+                level={selectedLevel}
+                bookType={selectedBookType}
               />
             ))}
           </div>
