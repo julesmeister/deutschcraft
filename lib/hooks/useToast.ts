@@ -52,7 +52,30 @@ export function useToast() {
     }, duration);
   }, []);
 
-  return { showToast };
+  // Convenience methods
+  const success = useCallback((message: string, duration?: number) => {
+    showToast(message, 'success', duration);
+  }, [showToast]);
+
+  const error = useCallback((message: string, duration?: number) => {
+    showToast(message, 'error', duration);
+  }, [showToast]);
+
+  const warning = useCallback((message: string, duration?: number) => {
+    showToast(message, 'warning', duration);
+  }, [showToast]);
+
+  const info = useCallback((message: string, duration?: number) => {
+    showToast(message, 'info', duration);
+  }, [showToast]);
+
+  return {
+    showToast,
+    success,
+    error,
+    warning,
+    info,
+  };
 }
 
 function createToastContainer() {
