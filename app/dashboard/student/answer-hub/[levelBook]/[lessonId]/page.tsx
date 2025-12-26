@@ -24,9 +24,11 @@ import { useActiveBatches } from '@/lib/hooks/useBatches';
 import { getUserInfo } from '@/lib/utils/userHelpers';
 import { Batch } from '@/lib/models';
 import { useLessonWithOverrides } from '@/lib/hooks/useExercisesWithOverrides';
-import { useTeacherOverrides } from '@/lib/hooks/useExerciseOverrides';
 import { useLessonHandlers } from '@/lib/hooks/useLessonHandlers';
 import { useLessonPageHandlers } from '@/lib/hooks/useLessonPageHandlers';
+import { useDuplicateDetection } from '@/lib/hooks/useDuplicateDetection';
+import { useExerciseFilters } from '@/lib/hooks/useExerciseFilters';
+import { useHiddenExercises } from '@/lib/hooks/useHiddenExercises';
 import { CEFRLevel } from '@/lib/models/cefr';
 import {
   ExerciseWithOverrideMetadata,
@@ -67,25 +69,13 @@ export default function LessonDetailPage() {
   const { batches } = useActiveBatches(isTeacher ? userEmail : undefined);
   const [selectedBatch, setSelectedBatch] = useState<Batch | null>(null);
 
-  // Hidden exercises modal state
-  const [isHiddenModalOpen, setIsHiddenModalOpen] = useState(false);
-
-  // Get hidden exercises from overrides
-  const { overrides: allOverrides } = useTeacherOverrides(
-    isTeacher ? userEmail : undefined,
-    level,
-    lessonNumber
-  );
-
-  const hiddenExercises = useMemo(() => {
-    if (!allOverrides) return [];
-    return allOverrides
-      .filter(o => o.overrideType === 'hide' && o.isHidden)
-      .map(o => ({
-        exerciseId: o.exerciseId,
-        overrideId: o.overrideId,
-      }));
-  }, [allOverrides]);
+  // Hidden exercises modal and data
+  const {
+    hiddenExercises,
+    isHiddenModalOpen,
+    openHiddenModal,
+    closeHiddenModal
+  } = useHiddenExercises(isTeacher, userEmail, level, lessonNumber);
 
   // Filter state
   const [filters, setFilters] = useState<FilterState>({
@@ -95,58 +85,11 @@ export default function LessonDetailPage() {
     hasDiscussion: 'all',
   });
 
-  // Filter exercises based on filters (before early returns to avoid hook order issues)
-  const filteredExercises = useMemo(() => {
-    if (!lesson) return [];
-
-    return lesson.exercises.filter((exercise) => {
-      // Search filter
-      if (filters.search) {
-        const searchLower = filters.search.toLowerCase();
-        const matchesNumber = exercise.exerciseNumber.toLowerCase().includes(searchLower);
-        const matchesTitle = exercise.title?.toLowerCase().includes(searchLower);
-        const matchesQuestion = exercise.question?.toLowerCase().includes(searchLower);
-        if (!matchesNumber && !matchesTitle && !matchesQuestion) {
-          return false;
-        }
-      }
-
-      // Difficulty filter
-      if (filters.difficulty !== 'all' && exercise.difficulty !== filters.difficulty) {
-        return false;
-      }
-
-      return true;
-    });
-  }, [lesson, filters]);
+  // Filter exercises based on filters
+  const filteredExercises = useExerciseFilters(lesson, filters);
 
   // Detect duplicate exerciseIds and create index map
-  const { duplicateExerciseIds, exerciseIndexMap } = useMemo(() => {
-    if (!lesson) return { duplicateExerciseIds: new Set<string>(), exerciseIndexMap: new Map<string, number>() };
-
-    const idCounts = new Map<string, number>();
-    const idIndices = new Map<string, number>();
-    const indexMap = new Map<string, number>();
-
-    lesson.exercises.forEach((ex, globalIndex) => {
-      const currentCount = idCounts.get(ex.exerciseId) || 0;
-      idCounts.set(ex.exerciseId, currentCount + 1);
-
-      // Track which occurrence this is (0-indexed)
-      const occurrenceIndex = idIndices.get(ex.exerciseId) || 0;
-      idIndices.set(ex.exerciseId, occurrenceIndex + 1);
-
-      // Store mapping from globalIndex to occurrenceIndex
-      indexMap.set(`${globalIndex}`, occurrenceIndex);
-    });
-
-    const duplicates = new Set<string>();
-    idCounts.forEach((count, id) => {
-      if (count > 1) duplicates.add(id);
-    });
-
-    return { duplicateExerciseIds: duplicates, exerciseIndexMap: indexMap };
-  }, [lesson]);
+  const { duplicateExerciseIds, exerciseIndexMap, visibleDuplicateIds } = useDuplicateDetection(lesson);
 
 
   // Teacher handlers (create, hide, reorder, dialog)
@@ -237,7 +180,7 @@ export default function LessonDetailPage() {
         hiddenExercisesCount={hiddenExercises.length}
         batches={batches}
         selectedBatch={selectedBatch}
-        onOpenHiddenModal={() => setIsHiddenModalOpen(true)}
+        onOpenHiddenModal={openHiddenModal}
         onSelectBatch={setSelectedBatch}
         onCreateBatch={() => {
           console.log('Batch creation - redirect to teacher dashboard');
@@ -276,6 +219,7 @@ export default function LessonDetailPage() {
               lessonId={lessonId}
               isTeacher={isTeacher}
               duplicateExerciseIds={duplicateExerciseIds}
+              visibleDuplicateIds={visibleDuplicateIds}
               onReorder={handleReorder}
               onEditExercise={handleEditExercise}
               onToggleHide={handleToggleHide}
@@ -352,7 +296,7 @@ export default function LessonDetailPage() {
       {/* Hidden Exercises Modal */}
       <HiddenExercisesModal
         isOpen={isHiddenModalOpen}
-        onClose={() => setIsHiddenModalOpen(false)}
+        onClose={closeHiddenModal}
         hiddenExercises={hiddenExercises}
         onUnhide={(exerciseId) => handleToggleHide(exerciseId, false)}
       />

@@ -18,8 +18,9 @@ interface ExerciseListSectionProps {
   lessonId: string;
   isTeacher: boolean;
   duplicateExerciseIds: Set<string>;
+  visibleDuplicateIds: Set<string>;
   onReorder: (exercises: ExerciseWithOverrideMetadata[]) => void;
-  onEditExercise: (exercise: ExerciseWithOverrideMetadata) => void;
+  onEditExercise: (exercise: ExerciseWithOverrideMetadata, globalIndex?: number) => void;
   onToggleHide: (exerciseId: string, isHidden: boolean, exerciseIndex?: number) => void;
   onReorderSections?: (sectionOrder: string[]) => void;
   onAddToSection?: (sectionName: string) => void;
@@ -37,6 +38,7 @@ export function ExerciseListSection({
   lessonId,
   isTeacher,
   duplicateExerciseIds,
+  visibleDuplicateIds,
   onReorder,
   onEditExercise,
   onToggleHide,
@@ -87,18 +89,25 @@ export function ExerciseListSection({
         exercises={sectionExercises}
         onReorder={onReorder}
         onEdit={onEditExercise}
-        onToggleHide={(exerciseId, isHidden) => {
-          // Find global index for this exercise
-          const item = exercisesBySection[section].find(item => item.exercise.exerciseId === exerciseId);
+        onToggleHide={(exerciseId, isHidden, sectionIndex) => {
+          // Use the section index to get the correct globalIndex for duplicates
+          const item = sectionIndex !== undefined ? exercisesBySection[section][sectionIndex] : undefined;
           onToggleHide(exerciseId, isHidden, item?.globalIndex);
         }}
         isTeacher={true}
-        renderExercise={(exercise) => {
+        renderExercise={(exercise, sectionIndex) => {
           const colorScheme = CARD_COLOR_SCHEMES[colorIndex % CARD_COLOR_SCHEMES.length];
           colorIndex++;
 
-          // Check if this exercise is being edited inline
-          const isBeingEdited = editingExerciseId === exercise.exerciseId;
+          // Use section index to get correct globalIndex for duplicates
+          const item = sectionIndex !== undefined ? exercisesBySection[section][sectionIndex] : undefined;
+          const globalIndex = item?.globalIndex;
+
+          // Check if this specific exercise instance is being edited
+          const uniqueKey = globalIndex !== undefined
+            ? `${exercise.exerciseId}-${globalIndex}`
+            : exercise.exerciseId;
+          const isBeingEdited = editingExerciseId === uniqueKey;
 
           if (isBeingEdited && onSaveInlineEdit && onCancelInlineEdit) {
             return (
@@ -119,8 +128,6 @@ export function ExerciseListSection({
             );
           }
 
-          // Find global index for this exercise
-          const item = exercisesBySection[section].find(item => item.exercise.exerciseId === exercise.exerciseId);
           return (
             <ExerciseListCard
               exercise={exercise}
@@ -129,11 +136,11 @@ export function ExerciseListSection({
               colorScheme={colorScheme}
               isTeacher={true}
               isDraggable={true}
-              isDuplicate={duplicateExerciseIds.has(exercise.exerciseId)}
+              isDuplicate={visibleDuplicateIds.has(exercise.exerciseId)}
               onEdit={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                onEditExercise(exercise);
+                onEditExercise(exercise, globalIndex);
               }}
               onToggleHide={(e) => {
                 e.preventDefault();
@@ -145,12 +152,12 @@ export function ExerciseListSection({
         }}
       />
     ) : (
-      sectionExercises.map((exercise) => {
+      sectionExercises.map((exercise, index) => {
         const colorScheme = CARD_COLOR_SCHEMES[colorIndex % CARD_COLOR_SCHEMES.length];
         colorIndex++;
         return (
           <ExerciseListCard
-            key={exercise.exerciseId}
+            key={`${exercise.exerciseId}-${index}`}
             exercise={exercise}
             levelBook={levelBook}
             lessonId={lessonId}

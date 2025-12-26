@@ -7,8 +7,8 @@ interface DraggableExerciseListProps {
   exercises: ExerciseWithOverrideMetadata[];
   onReorder: (reorderedExercises: ExerciseWithOverrideMetadata[]) => void;
   onEdit: (exercise: ExerciseWithOverrideMetadata) => void;
-  onToggleHide: (exerciseId: string, isHidden: boolean) => void;
-  renderExercise: (exercise: ExerciseWithOverrideMetadata) => ReactNode;
+  onToggleHide: (exerciseId: string, isHidden: boolean, index?: number) => void;
+  renderExercise: (exercise: ExerciseWithOverrideMetadata, index: number) => ReactNode;
   isTeacher?: boolean;
 }
 
@@ -31,9 +31,9 @@ export function DraggableExerciseList({
   if (!isTeacher) {
     return (
       <div className="space-y-3">
-        {exercises.map((exercise) => (
-          <div key={exercise.exerciseId}>
-            {renderExercise(exercise)}
+        {exercises.map((exercise, index) => (
+          <div key={`${exercise.exerciseId}-${index}`}>
+            {renderExercise(exercise, index)}
           </div>
         ))}
       </div>
@@ -118,7 +118,7 @@ export function DraggableExerciseList({
 
         return (
           <div
-            key={exercise.exerciseId}
+            key={`${exercise.exerciseId}-${index}`}
             draggable={isTeacher}
             onDragStart={(e) => handleDragStart(e, index)}
             onDragEnd={handleDragEnd}
@@ -133,7 +133,7 @@ export function DraggableExerciseList({
             `}
           >
             {/* Exercise Content */}
-            {renderExercise(exercise)}
+            {renderExercise(exercise, index)}
 
             {/* Drag indicator line */}
             {isOver && draggedIndex !== null && draggedIndex < index && (

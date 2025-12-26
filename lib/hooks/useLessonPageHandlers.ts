@@ -100,8 +100,12 @@ export function useLessonPageHandlers(
   };
 
   // Handle editing exercise inline
-  const handleEditExercise = (exercise: ExerciseWithOverrideMetadata) => {
-    setEditingExerciseId(exercise.exerciseId);
+  const handleEditExercise = (exercise: ExerciseWithOverrideMetadata, globalIndex?: number) => {
+    // For duplicates, use unique key with globalIndex
+    const uniqueKey = globalIndex !== undefined
+      ? `${exercise.exerciseId}-${globalIndex}`
+      : exercise.exerciseId;
+    setEditingExerciseId(uniqueKey);
   };
 
   // Handle saving inline edit
@@ -109,7 +113,12 @@ export function useLessonPageHandlers(
     if (!userEmail || !editingExerciseId) return;
 
     try {
-      const overrideId = `${userEmail}_${editingExerciseId}`;
+      // Extract base exerciseId (remove globalIndex suffix if present)
+      const baseExerciseId = editingExerciseId.includes('-')
+        ? editingExerciseId.split('-')[0]
+        : editingExerciseId;
+
+      const overrideId = `${userEmail}_${baseExerciseId}`;
 
       // Build exercise data without undefined fields
       const exerciseData: any = {
@@ -128,7 +137,7 @@ export function useLessonPageHandlers(
       }
 
       // Check if this is a custom exercise or a modification
-      const existingExercise = lesson?.exercises.find(ex => ex.exerciseId === editingExerciseId);
+      const existingExercise = lesson?.exercises.find(ex => ex.exerciseId === baseExerciseId);
       const isCustomExercise = existingExercise?._isCreated;
 
       if (isCustomExercise) {
