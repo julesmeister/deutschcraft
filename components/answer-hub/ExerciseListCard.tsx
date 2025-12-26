@@ -6,7 +6,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Edit3, Sparkles, GripVertical } from 'lucide-react';
+import { Edit3 } from 'lucide-react';
 import { ExerciseWithOverrideMetadata } from '@/lib/models/exerciseOverride';
 
 interface ExerciseListCardProps {
@@ -61,28 +61,15 @@ export function ExerciseListCard({
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1">
-              {/* Drag handle icon for teachers */}
-              {isDraggable && (
-                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-gray-100 text-gray-600">
-                  <GripVertical className="w-3 h-3" />
-                </span>
-              )}
-
               <h3 className={`text-lg font-bold text-gray-900 ${colorScheme.text} transition-colors duration-200`}>
                 {exercise.exerciseNumber}
               </h3>
 
-              {/* Override Badges */}
+              {/* Modified Badge (keep on left) */}
               {exercise._isModified && (
                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 border border-blue-300">
                   <Edit3 className="w-3 h-3" />
                   Modified
-                </span>
-              )}
-              {exercise._isCreated && (
-                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800 border border-green-300">
-                  <Sparkles className="w-3 h-3" />
-                  Custom
                 </span>
               )}
             </div>
@@ -94,6 +81,13 @@ export function ExerciseListCard({
 
           {/* Action Buttons */}
           <div className="flex-shrink-0 flex items-center gap-2">
+            {/* Custom Badge */}
+            {exercise._isCreated && (
+              <span className="inline-flex items-center px-3 py-1 text-xs font-bold bg-green-100 text-green-800">
+                CUSTOM
+              </span>
+            )}
+
             {/* Duplicate Warning Badge */}
             {isDuplicate && (
               <span className="inline-flex items-center px-3 py-1 text-xs font-bold bg-yellow-100 text-yellow-800">

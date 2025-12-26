@@ -6,7 +6,8 @@ import { FormField } from '../ui/FormField';
 import { Input } from '../ui/Input';
 import { Label } from '../ui/Label';
 import { Select, SelectOption } from '../ui/Select';
-import { Plus, X, Edit3, FileText } from 'lucide-react';
+import { Edit3, FileText } from 'lucide-react';
+import { AnswerFieldsManager } from './AnswerFieldsManager';
 import { Exercise, ExerciseAnswer } from '@/lib/models/exercises';
 import { CEFRLevel } from '@/lib/models/cefr';
 import { CreateExerciseOverrideInput } from '@/lib/models/exerciseOverride';
@@ -281,52 +282,12 @@ export function ExerciseOverrideDialog({
 
             {/* Answers Section */}
             <div className="border-t pt-4">
-              <div className="flex items-center justify-between mb-3">
-                <Label>Answers *</Label>
-                <button
-                  type="button"
-                  onClick={handleAddAnswer}
-                  className="flex items-center gap-1 text-sm text-piku-purple hover:text-piku-purple/80 font-semibold transition-colors"
-                >
-                  <Plus className="w-4 h-4" />
-                  Add Answer
-                </button>
-              </div>
-
-              <div className="space-y-2">
-                {answers.map((answer, index) => (
-                  <div key={index} className="flex gap-2 items-start">
-                    <div className="w-24">
-                      <Input
-                        type="text"
-                        value={answer.itemNumber}
-                        onChange={(e) => handleUpdateAnswer(index, 'itemNumber', e.target.value)}
-                        placeholder="Item #"
-                        className="text-center"
-                      />
-                    </div>
-                    <div className="flex-1">
-                      <Input
-                        type="text"
-                        value={answer.correctAnswer}
-                        onChange={(e) => handleUpdateAnswer(index, 'correctAnswer', e.target.value)}
-                        placeholder="Correct answer"
-                        required
-                      />
-                    </div>
-                    {answers.length > 1 && (
-                      <button
-                        type="button"
-                        onClick={() => handleRemoveAnswer(index)}
-                        className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
-                        aria-label="Remove answer"
-                      >
-                        <X className="w-4 h-4" />
-                      </button>
-                    )}
-                  </div>
-                ))}
-              </div>
+              <AnswerFieldsManager
+                answers={answers}
+                onUpdateAnswer={handleUpdateAnswer}
+                onAddAnswer={handleAddAnswer}
+                onRemoveAnswer={handleRemoveAnswer}
+              />
             </div>
 
             {/* Footer Buttons */}

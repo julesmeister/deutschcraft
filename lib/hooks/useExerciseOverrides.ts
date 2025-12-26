@@ -195,12 +195,81 @@ export function useReorderExercises() {
 
   return useMutation({
     mutationFn: async (
-      orderUpdates: { overrideId: string; displayOrder: number }[]
+      orderUpdates: Array<{
+        overrideId: string;
+        displayOrder: number;
+        exerciseId: string;
+        teacherEmail: string;
+        level: CEFRLevel;
+        lessonNumber: number;
+      }>
     ) => {
-      await bulkUpdateDisplayOrder(orderUpdates);
+      // Extract only what bulkUpdateDisplayOrder needs
+      const updates = orderUpdates.map(({ overrideId, displayOrder }) => ({
+        overrideId,
+        displayOrder,
+      }));
+      await bulkUpdateDisplayOrder(updates);
     },
-    onSuccess: () => {
-      // Invalidate all override queries
+    onMutate: async (orderUpdates) => {
+      // Cancel outgoing refetches
+      await queryClient.cancelQueries({
+        predicate: (query) =>
+          Array.isArray(query.queryKey) &&
+          query.queryKey[0] === 'exercise-overrides',
+      });
+
+      // Snapshot previous values
+      const previousData = new Map();
+      queryClient
+        .getQueryCache()
+        .findAll({
+          predicate: (query) =>
+            Array.isArray(query.queryKey) &&
+            query.queryKey[0] === 'exercise-overrides',
+        })
+        .forEach((query) => {
+          previousData.set(query.queryKey, query.state.data);
+        });
+
+      // Optimistically update cache
+      if (orderUpdates.length > 0) {
+        const { teacherEmail, level, lessonNumber } = orderUpdates[0];
+        const queryKey = ['exercise-overrides', teacherEmail, level, lessonNumber];
+
+        queryClient.setQueryData(queryKey, (old: ExerciseOverride[] | undefined) => {
+          if (!old) return old;
+
+          // Create a map of new display orders
+          const orderMap = new Map(
+            orderUpdates.map((u) => [u.exerciseId, u.displayOrder])
+          );
+
+          // Update display orders
+          return old.map((override) => {
+            const newOrder = orderMap.get(override.exerciseId);
+            if (newOrder !== undefined) {
+              return { ...override, displayOrder: newOrder };
+            }
+            return override;
+          });
+        });
+      }
+
+      return { previousData };
+    },
+    onError: (error, _, context) => {
+      console.error('[useReorderExercises] Error:', error);
+
+      // Rollback on error
+      if (context?.previousData) {
+        context.previousData.forEach((data, queryKey) => {
+          queryClient.setQueryData(queryKey, data);
+        });
+      }
+    },
+    onSettled: () => {
+      // Refetch to ensure sync with server
       queryClient.invalidateQueries({
         predicate: (query) => {
           return (
@@ -209,9 +278,6 @@ export function useReorderExercises() {
           );
         },
       });
-    },
-    onError: (error) => {
-      console.error('[useReorderExercises] Error:', error);
     },
   });
 }

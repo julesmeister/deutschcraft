@@ -9,10 +9,10 @@
 import { useState, useMemo } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
-import { EyeOff } from 'lucide-react';
+import { Plus } from 'lucide-react';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CatLoader } from '@/components/ui/CatLoader';
-import { BatchSelector } from '@/components/ui/BatchSelector';
+import { LessonDetailHeader } from '@/components/answer-hub/LessonDetailHeader';
 import { ExerciseFilters, FilterState } from '@/components/answer-hub/ExerciseFilters';
 import { ExerciseOverrideDialog } from '@/components/answer-hub/ExerciseOverrideDialog';
 import { HiddenExercisesModal } from '@/components/answer-hub/HiddenExercisesModal';
@@ -26,6 +26,7 @@ import { Batch } from '@/lib/models';
 import { useLessonWithOverrides } from '@/lib/hooks/useExercisesWithOverrides';
 import { useTeacherOverrides } from '@/lib/hooks/useExerciseOverrides';
 import { useLessonHandlers } from '@/lib/hooks/useLessonHandlers';
+import { useLessonPageHandlers } from '@/lib/hooks/useLessonPageHandlers';
 import { CEFRLevel } from '@/lib/models/cefr';
 import {
   ExerciseWithOverrideMetadata,
@@ -148,7 +149,7 @@ export default function LessonDetailPage() {
   }, [lesson]);
 
 
-  // Teacher handlers (create, edit, hide, reorder)
+  // Teacher handlers (create, hide, reorder, dialog)
   const {
     isOverrideDialogOpen,
     setIsOverrideDialogOpen,
@@ -156,11 +157,23 @@ export default function LessonDetailPage() {
     editingExercise,
     setEditingExercise,
     handleCreateExercise,
-    handleEditExercise,
     handleToggleHide,
     handleReorder,
     handleSubmitOverride,
   } = useLessonHandlers(userEmail, level, lessonNumber, duplicateExerciseIds, exerciseIndexMap);
+
+  // Inline editing and section management handlers
+  const {
+    editingSectionName,
+    editingExerciseId,
+    handleReorderSections,
+    handleAddToSection,
+    handleSaveInlineExercise,
+    handleCancelInlineExercise,
+    handleEditExercise,
+    handleSaveInlineEdit,
+    handleCancelInlineEdit,
+  } = useLessonPageHandlers(userEmail, level, lessonNumber, lesson, handleReorder);
 
   if (isLoading) {
     return (
@@ -215,36 +228,20 @@ export default function LessonDetailPage() {
   return (
     <div className="min-h-screen bg-gray-50 pb-16">
       {/* Header */}
-      <DashboardHeader
-        title={`${lesson?.title || 'Lesson'} - ${level} ${bookType}`}
-        subtitle={`${exerciseCount} exercise${exerciseCount !== 1 ? 's' : ''}`}
-        backButton={{
-          label: 'Back to Lessons',
-          onClick: () => router.push('/dashboard/student/answer-hub'),
+      <LessonDetailHeader
+        lessonTitle={lesson?.title || 'Lesson'}
+        level={level}
+        bookType={bookType}
+        exerciseCount={exerciseCount}
+        isTeacher={isTeacher}
+        hiddenExercisesCount={hiddenExercises.length}
+        batches={batches}
+        selectedBatch={selectedBatch}
+        onOpenHiddenModal={() => setIsHiddenModalOpen(true)}
+        onSelectBatch={setSelectedBatch}
+        onCreateBatch={() => {
+          console.log('Batch creation - redirect to teacher dashboard');
         }}
-        actions={
-          isTeacher ? (
-            <div className="flex items-center gap-3">
-              <button
-                onClick={() => setIsHiddenModalOpen(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-amber-100 text-amber-800 rounded-lg hover:bg-amber-200 transition-colors font-semibold border border-amber-300"
-              >
-                <EyeOff className="w-4 h-4" />
-                Hidden ({hiddenExercises.length})
-              </button>
-              <BatchSelector
-                batches={batches}
-                selectedBatch={selectedBatch}
-                onSelectBatch={setSelectedBatch}
-                onCreateBatch={() => {
-                  // Note: Batch creation is handled in teacher dashboard
-                  // For now, we'll just show info message
-                  console.log('Batch creation - redirect to teacher dashboard');
-                }}
-              />
-            </div>
-          ) : undefined
-        }
       />
 
       {/* Main Content */}
@@ -282,6 +279,14 @@ export default function LessonDetailPage() {
               onReorder={handleReorder}
               onEditExercise={handleEditExercise}
               onToggleHide={handleToggleHide}
+              onReorderSections={isTeacher ? handleReorderSections : undefined}
+              onAddToSection={isTeacher ? handleAddToSection : undefined}
+              onSaveInlineExercise={isTeacher ? handleSaveInlineExercise : undefined}
+              onCancelInlineExercise={isTeacher ? handleCancelInlineExercise : undefined}
+              editingSectionName={editingSectionName}
+              onSaveInlineEdit={isTeacher ? handleSaveInlineEdit : undefined}
+              onCancelInlineEdit={isTeacher ? handleCancelInlineEdit : undefined}
+              editingExerciseId={editingExerciseId}
             />
           ) : (
             <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-12 text-center">

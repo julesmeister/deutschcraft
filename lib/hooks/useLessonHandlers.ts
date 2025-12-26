@@ -46,14 +46,8 @@ export function useLessonHandlers(
   // Handle hiding/unhiding exercise (with duplicate support)
   const handleToggleHide = async (exerciseId: string, isHidden: boolean, exerciseIndex?: number) => {
     if (!userEmail) {
-      console.log('❌ No userEmail');
       return;
     }
-
-    console.log('=== HIDE CLICKED ===');
-    console.log('exerciseId:', exerciseId);
-    console.log('isHidden:', isHidden);
-    console.log('exerciseIndex:', exerciseIndex);
 
     // For duplicates, append occurrence index to make unique override ID
     const isDuplicate = duplicateExerciseIds.has(exerciseId);
@@ -62,15 +56,12 @@ export function useLessonHandlers(
     if (isDuplicate && exerciseIndex !== undefined) {
       const occurrenceIndex = exerciseIndexMap.get(`${exerciseIndex}`) || 0;
       uniqueExerciseId = `${exerciseId}_dup${occurrenceIndex}`;
-      console.log('📌 Duplicate detected, unique ID:', uniqueExerciseId);
     }
 
     const overrideId = `${userEmail}_${uniqueExerciseId}`;
-    console.log('Override ID:', overrideId);
 
     try {
       // Try to update first
-      console.log('Attempting update...');
       await updateOverride.mutateAsync({
         overrideId,
         updates: {
@@ -81,13 +72,10 @@ export function useLessonHandlers(
           exerciseId: uniqueExerciseId, // Store the unique ID
         },
       });
-      console.log('✅ Update successful');
     } catch (error: any) {
-      console.log('Update failed:', error?.message);
       // If document doesn't exist, create it
       if (error?.message?.includes('No document to update')) {
         try {
-          console.log('Creating new override...');
           await createOverride.mutateAsync({
             teacherEmail: userEmail,
             override: {
@@ -98,12 +86,11 @@ export function useLessonHandlers(
               lessonNumber,
             },
           });
-          console.log('✅ Create successful');
         } catch (createError) {
-          console.error('❌ Error creating hide override:', createError);
+          console.error('Error creating hide override:', createError);
         }
       } else {
-        console.error('❌ Error toggling hide:', error);
+        console.error('Error toggling hide:', error);
       }
     }
   };

@@ -42,23 +42,16 @@ function mergeExercisesWithOverrides(
   jsonExercises: Exercise[],
   overrides: ExerciseOverride[]
 ): ExerciseWithOverrideMetadata[] {
-  console.log('🔄 MERGE CALLED');
-  console.log('Overrides:', overrides.length);
-
   // Step 1: Filter out hidden exercises
   const hideOverrides = overrides.filter(o => o.overrideType === 'hide' && o.isHidden);
-  console.log('Hide overrides:', hideOverrides);
 
   // Build set of hidden exercise IDs (extract base ID from duplicates)
   const hiddenIds = new Set(
     hideOverrides.map(o => {
       // For duplicates like "L2-B2_dup0", extract base ID "L2-B2"
-      const baseId = o.exerciseId.replace(/_dup\d+$/, '');
-      console.log(`Hiding: ${o.exerciseId} → base: ${baseId}`);
       return o.exerciseId; // Keep the full unique ID for now
     })
   );
-  console.log('Hidden IDs:', Array.from(hiddenIds));
 
   // Track which duplicate occurrence to hide (for exercises with _dup suffix)
   const hiddenDuplicates = new Map<string, Set<number>>();
@@ -91,14 +84,9 @@ function mergeExercisesWithOverrides(
 
       const isHidden = isDuplicateHidden || isDirectlyHidden;
 
-      if (isHidden) {
-        console.log(`🚫 Filtering out: ${ex.exerciseId} (occurrence ${currentOccurrence})`);
-      }
       return !isHidden;
     })
     .map(ex => ({ ...ex })); // Clone to avoid mutations
-
-  console.log('Exercises after hiding:', exercises.length);
 
   // Step 2: Apply modifications to existing exercises
   const modificationMap = new Map(
