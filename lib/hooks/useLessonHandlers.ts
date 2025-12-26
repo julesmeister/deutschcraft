@@ -11,6 +11,7 @@ import {
   useUpdateOverride,
   useReorderExercises,
 } from './useExerciseOverrides';
+import { useToast } from '@/components/ui/toast/ToastProvider';
 
 export function useLessonHandlers(
   userEmail: string | null,
@@ -19,6 +20,9 @@ export function useLessonHandlers(
   duplicateExerciseIds: Set<string>,
   exerciseIndexMap: Map<string, number>
 ) {
+  // Toast notifications
+  const toast = useToast();
+
   // Dialog state
   const [isOverrideDialogOpen, setIsOverrideDialogOpen] = useState(false);
   const [dialogMode, setDialogMode] = useState<'create' | 'edit'>('create');
@@ -46,6 +50,7 @@ export function useLessonHandlers(
   // Handle hiding/unhiding exercise (with duplicate support)
   const handleToggleHide = async (exerciseId: string, isHidden: boolean, exerciseIndex?: number) => {
     if (!userEmail) {
+      toast.error('You must be logged in to hide exercises');
       return;
     }
 
@@ -72,6 +77,15 @@ export function useLessonHandlers(
           exerciseId: uniqueExerciseId, // Store the unique ID
         },
       });
+
+      // Show success toast
+      toast.success(
+        isHidden
+          ? `Exercise ${exerciseId} hidden successfully`
+          : `Exercise ${exerciseId} is now visible`,
+        { duration: 3000 }
+      );
+
     } catch (error: any) {
       // If document doesn't exist, create it
       if (error?.message?.includes('No document to update')) {
@@ -86,11 +100,22 @@ export function useLessonHandlers(
               lessonNumber,
             },
           });
+
+          // Show success toast
+          toast.success(
+            isHidden
+              ? `Exercise ${exerciseId} hidden successfully`
+              : `Exercise ${exerciseId} is now visible`,
+            { duration: 3000 }
+          );
+
         } catch (createError) {
           console.error('Error creating hide override:', createError);
+          toast.error('Failed to update exercise visibility');
         }
       } else {
         console.error('Error toggling hide:', error);
+        toast.error('Failed to update exercise visibility');
       }
     }
   };
