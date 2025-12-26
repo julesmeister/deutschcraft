@@ -1,6 +1,7 @@
 'use client';
 
 import { Card } from '@/components/ui/Card';
+import { Bookmark, BookmarkCheck } from 'lucide-react';
 
 interface Flashcard {
   id: string;
@@ -15,9 +16,25 @@ interface FlashcardCardProps {
   onFlip: () => void;
   showExamples?: boolean;
   showEnglishFirst?: boolean;
+  isSaved?: boolean;
+  isCompleted?: boolean;
+  timesUsed?: number;
+  targetUses?: number;
+  onToggleSave?: () => void;
 }
 
-export function FlashcardCard({ card, isFlipped, onFlip, showExamples = true, showEnglishFirst = false }: FlashcardCardProps) {
+export function FlashcardCard({
+  card,
+  isFlipped,
+  onFlip,
+  showExamples = true,
+  showEnglishFirst = false,
+  isSaved = false,
+  isCompleted = false,
+  timesUsed = 0,
+  targetUses = 5,
+  onToggleSave,
+}: FlashcardCardProps) {
   const masteryLevel = card.masteryLevel ?? 0;
 
   // Determine color based on mastery level
@@ -52,6 +69,40 @@ export function FlashcardCard({ card, isFlipped, onFlip, showExamples = true, sh
           {/* Battery nub */}
           <div className="absolute -right-0.5 top-1/2 -translate-y-1/2 w-1 h-3 bg-gray-300 rounded-r-sm" />
         </div>
+
+        {/* Save for Later Button - Top Left */}
+        {onToggleSave && (
+          <div className="absolute top-4 left-4 z-10">
+            <button
+              onClick={(e) => {
+                e.stopPropagation(); // Prevent card flip
+                onToggleSave();
+              }}
+              className={`relative px-3 py-2 rounded-lg shadow-sm transition-all hover:scale-105 ${
+                isCompleted
+                  ? 'bg-green-500 text-white'
+                  : isSaved
+                  ? 'bg-blue-500 text-white'
+                  : 'bg-white/90 backdrop-blur-sm border-2 border-gray-300 text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              <div className="flex items-center gap-1.5">
+                {isCompleted ? (
+                  <BookmarkCheck className="w-4 h-4" />
+                ) : isSaved ? (
+                  <Bookmark className="w-4 h-4 fill-current" />
+                ) : (
+                  <Bookmark className="w-4 h-4" />
+                )}
+                {isSaved && (
+                  <span className="text-xs font-bold">
+                    {timesUsed}/{targetUses}
+                  </span>
+                )}
+              </div>
+            </button>
+          </div>
+        )}
 
         {/* Card Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center p-12">

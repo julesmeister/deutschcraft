@@ -48,3 +48,18 @@ export {
   getPracticeStats,
   getStudyStats,
 } from './stats';
+
+// ============================================================================
+// RE-EXPORTS - Saved Vocabulary Operations
+// ============================================================================
+
+export {
+  getSavedVocabulary,
+  getSavedVocabularyEntry,
+  isWordSaved,
+  detectSavedWordsInText,
+  saveVocabularyForLater,
+  incrementVocabularyUsage,
+  bulkIncrementVocabularyUsage,
+  removeSavedVocabulary,
+} from './savedVocabulary';

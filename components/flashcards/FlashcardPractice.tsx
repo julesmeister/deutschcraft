@@ -8,6 +8,10 @@ import { FlashcardCard } from './FlashcardCard';
 import { DifficultyButtons } from './DifficultyButtons';
 import { KeyboardShortcutsLegend } from './KeyboardShortcutsLegend';
 import { useFlashcardSession } from '@/lib/hooks/useFlashcardSession';
+import { useSavedVocabulary, useSaveVocabularyMutation, useRemoveSavedVocabularyMutation } from '@/lib/hooks/useSavedVocabulary';
+import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
+import { CEFRLevel } from '@/lib/models/cefr';
+import { useToast } from '@/lib/hooks/useToast';
 
 interface Flashcard {
   id: string;
@@ -76,6 +80,52 @@ export function FlashcardPractice({
     handlePrevious,
     handleReviewAgainCards,
   } = useFlashcardSession(flashcards);
+
+  // Saved vocabulary hooks
+  const { session } = useFirebaseAuth();
+  const toast = useToast();
+  const { data: savedVocabulary = [] } = useSavedVocabulary(session?.user?.email);
+  const saveMutation = useSaveVocabularyMutation();
+  const removeMutation = useRemoveSavedVocabularyMutation();
+
+  // Find saved status for current card
+  const currentSaved = currentCard ? savedVocabulary.find(sv => sv.wordId === currentCard.id) : undefined;
+  const isSaved = !!currentSaved;
+  const isCompleted = currentSaved?.completed || false;
+  const timesUsed = currentSaved?.timesUsed || 0;
+  const targetUses = currentSaved?.targetUses || 5;
+
+  // Handle save/unsave
+  const handleToggleSave = async () => {
+    if (!session?.user?.email || !currentCard) return;
+
+    try {
+      if (isSaved) {
+        await removeMutation.mutateAsync({
+          userId: session.user.email,
+          wordId: currentCard.id,
+        });
+        toast.success('Removed from saved vocabulary');
+      } else {
+        await saveMutation.mutateAsync({
+          userId: session.user.email,
+          wordData: {
+            wordId: currentCard.id,
+            flashcardId: currentCard.id,
+            german: currentCard.german,
+            english: currentCard.english,
+            level: level as CEFRLevel,
+            category: currentCard.category,
+            examples: currentCard.examples,
+          },
+        });
+        toast.success('Saved! Track progress in writing exercises.');
+      }
+    } catch (error) {
+      console.error('Error toggling save:', error);
+      toast.error('Failed to save word. Please try again.');
+    }
+  };
 
   // Helper functions for formatting
   const formatTimeUntilDue = (dueDate: number) => {
@@ -239,6 +289,11 @@ export function FlashcardPractice({
         onFlip={handleFlip}
         showExamples={showExamples}
         showEnglishFirst={showEnglishFirst}
+        isSaved={isSaved}
+        isCompleted={isCompleted}
+        timesUsed={timesUsed}
+        targetUses={targetUses}
+        onToggleSave={handleToggleSave}
       />
 
       {/* Button Layout: Changes based on whether card is flipped */}

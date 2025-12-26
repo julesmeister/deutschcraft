@@ -6,13 +6,10 @@ import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { AlertDialog } from '@/components/ui/Dialog';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useWritingExerciseState } from '@/lib/hooks/useWritingExerciseState';
+import { useWritingWordDetection } from '@/lib/hooks/useWritingWordDetection';
 import { CEFRLevelInfo } from '@/lib/models/cefr';
-import { AttemptHistory } from '@/components/writing/AttemptHistory';
-import { TranslationWorkspace } from '@/components/writing/TranslationWorkspace';
-import { CreativeWritingArea } from '@/components/writing/CreativeWritingArea';
-import { EmailWritingForm } from '@/components/writing/EmailWritingForm';
-import { LetterWritingArea } from '@/components/writing/LetterWritingArea';
 import { WritingHub } from './WritingHub';
+import { WritingWorkspaceRenderer } from './WritingWorkspaceRenderer';
 import { FloatingRedemittelWidget } from '@/components/writing/FloatingRedemittelWidget';
 import { TRANSLATION_EXERCISES } from '@/lib/data/translationExercises';
 import { CREATIVE_EXERCISES } from '@/lib/data/creativeExercises';
@@ -22,6 +19,14 @@ import { LETTER_TEMPLATES } from '@/lib/data/letterTemplates';
 export default function WritingExercisesPage() {
   const router = useRouter();
   const { session } = useFirebaseAuth();
+
+  // Word detection hook
+  const {
+    detectedWords,
+    detectWords,
+    confirmUsedWords,
+    clearDetectedWords,
+  } = useWritingWordDetection();
 
   const {
     selectedLevel,
@@ -45,7 +50,7 @@ export default function WritingExercisesPage() {
     attempts,
     isSaving,
     handleSaveDraft,
-    handleSubmit,
+    handleSubmit: originalHandleSubmit,
     dialogState,
     closeDialog,
     optimisticSaveState,
@@ -63,6 +68,20 @@ export default function WritingExercisesPage() {
     handleLevelChange,
     handleToggleHistory,
   } = useWritingExerciseState({ userEmail: session?.user?.email });
+
+  // Wrapper for handleSubmit to detect saved words
+  const handleSubmit = async () => {
+    await originalHandleSubmit();
+
+    // After successful submission, detect saved words
+    const textToAnalyze = selectedEmail ? emailContent.body : writingText;
+    await detectWords(session?.user?.email, textToAnalyze);
+  };
+
+  // Handler for confirming used words
+  const handleConfirmUsedWords = async (wordIds: string[]) => {
+    await confirmUsedWords(session?.user?.email, wordIds);
+  };
 
   const handleViewSubmission = (submissionId: string) => {
     router.push(`/dashboard/student/writing/feedback/${submissionId}`);
@@ -102,155 +121,61 @@ export default function WritingExercisesPage() {
               }
         }
         actions={
-          hasSelectedExercise ? (
-            <div className="flex gap-2">
+          hasSelectedExercise && !viewingAttempt ? (
+            <div className="flex items-center gap-3">
               <ActionButton
                 onClick={handleSaveDraft}
                 disabled={isSaving || !hasContent}
-                variant="cyan"
-                icon={<ActionButtonIcons.Document />}
-                className="min-w-[140px]"
+                variant="gray"
+                icon={<ActionButtonIcons.Save />}
               >
-                {isSaving ? 'Saving...' : 'Save Draft'}
+                {isSaving ? 'Saving...' : 'Draft'}
               </ActionButton>
               <ActionButton
                 onClick={handleSubmit}
                 disabled={isSaving || !hasContent}
                 variant="purple"
                 icon={<ActionButtonIcons.Check />}
-                className="min-w-[200px]"
               >
-                {isSaving ? 'Submitting...' : 'Submit for Review'}
+                Submit
               </ActionButton>
             </div>
-          ) : (
-            <ActionButton
-              onClick={() => router.push('/dashboard/student/writing/quiz')}
-              variant="purple"
-              icon={<ActionButtonIcons.Play />}
-            >
-              Review Quiz
-            </ActionButton>
-          )
+          ) : undefined
+        }
+        levelSelector={
+          !hasSelectedExercise
+            ? {
+                selectedLevel,
+                onLevelChange: handleLevelChange,
+                isPending: isPendingLevelChange,
+              }
+            : undefined
         }
       />
 
-      {/* Loading indicator for level transitions */}
-      {isPendingLevelChange && (
-        <div className="fixed top-20 right-6 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in-down">
-          <div className="flex items-center gap-2">
-            <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
-            <span className="font-medium">Updating exercises...</span>
-          </div>
-        </div>
-      )}
-
-      {/* Optimistic save feedback */}
-      {optimisticSaveState.saved && (
-        <div className="fixed bottom-6 right-6 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in-up">
-          <div className="flex items-center gap-2">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            <span className="font-medium">{optimisticSaveState.message}</span>
-          </div>
-        </div>
-      )}
-
       {/* Main Content */}
       <div className={hasSelectedExercise ? '' : 'lg:container lg:mx-auto lg:px-6 py-8'}>
-        {selectedTranslation ? (
-          <div className="lg:container lg:mx-auto">
-            <TranslationWorkspace
-              exercise={selectedTranslation}
-              translationText={viewingAttempt ? viewingAttempt.content : writingText}
-              onChange={setWritingText}
-              attemptCount={attempts.length}
-              readOnly={!!viewingAttempt}
-              viewingAttempt={viewingAttempt ? {
-                attemptNumber: viewingAttempt.attemptNumber,
-                status: viewingAttempt.status
-              } : undefined}
-              onBackToCurrentDraft={viewingAttempt ? handleBackToCurrentDraft : undefined}
-              attemptHistory={
-                <AttemptHistory
-                  attempts={attempts}
-                  onViewAttempt={handleViewSubmission}
-                  onViewContent={handleViewAttemptContent}
-                  currentAttemptId={undefined}
-                />
-              }
-            />
-          </div>
-        ) : selectedCreative ? (
-          <div className="lg:container lg:mx-auto">
-            <CreativeWritingArea
-              exercise={selectedCreative}
-              content={viewingAttempt ? viewingAttempt.content : writingText}
-              wordCount={viewingAttempt ? viewingAttempt.wordCount : wordCount}
-              onChange={setWritingText}
-              attemptCount={attempts.length}
-              readOnly={!!viewingAttempt}
-              viewingAttempt={viewingAttempt ? {
-                attemptNumber: viewingAttempt.attemptNumber,
-                status: viewingAttempt.status
-              } : undefined}
-              attemptHistory={
-                <AttemptHistory
-                  attempts={attempts}
-                  onViewAttempt={handleViewSubmission}
-                  onViewContent={handleViewAttemptContent}
-                  currentAttemptId={undefined}
-                />
-              }
-            />
-          </div>
-        ) : selectedEmail ? (
-          <div className="lg:container lg:mx-auto">
-            <EmailWritingForm
-              template={selectedEmail}
-              emailContent={viewingAttempt ? { to: '', subject: '', body: viewingAttempt.content } : emailContent}
-              wordCount={viewingAttempt ? viewingAttempt.wordCount : emailWordCount}
-              onChange={setEmailContent}
-              attemptCount={attempts.length}
-              readOnly={!!viewingAttempt}
-              viewingAttempt={viewingAttempt ? {
-                attemptNumber: viewingAttempt.attemptNumber,
-                status: viewingAttempt.status
-              } : undefined}
-              attemptHistory={
-                <AttemptHistory
-                  attempts={attempts}
-                  onViewAttempt={handleViewSubmission}
-                  onViewContent={handleViewAttemptContent}
-                  currentAttemptId={undefined}
-                />
-              }
-            />
-          </div>
-        ) : selectedLetter ? (
-          <div className="lg:container lg:mx-auto">
-            <LetterWritingArea
-              template={selectedLetter}
-              content={viewingAttempt ? viewingAttempt.content : writingText}
-              wordCount={viewingAttempt ? viewingAttempt.wordCount : wordCount}
-              onChange={setWritingText}
-              attemptCount={attempts.length}
-              readOnly={!!viewingAttempt}
-              viewingAttempt={viewingAttempt ? {
-                attemptNumber: viewingAttempt.attemptNumber,
-                status: viewingAttempt.status
-              } : undefined}
-              attemptHistory={
-                <AttemptHistory
-                  attempts={attempts}
-                  onViewAttempt={handleViewSubmission}
-                  onViewContent={handleViewAttemptContent}
-                  currentAttemptId={undefined}
-                />
-              }
-            />
-          </div>
+        {hasSelectedExercise ? (
+          <WritingWorkspaceRenderer
+            selectedTranslation={selectedTranslation}
+            selectedCreative={selectedCreative}
+            selectedEmail={selectedEmail}
+            selectedLetter={selectedLetter}
+            writingText={writingText}
+            emailContent={emailContent}
+            wordCount={wordCount}
+            emailWordCount={emailWordCount}
+            viewingAttempt={viewingAttempt}
+            attempts={attempts}
+            setWritingText={setWritingText}
+            setEmailContent={setEmailContent}
+            handleBackToCurrentDraft={handleBackToCurrentDraft}
+            handleViewSubmission={handleViewSubmission}
+            handleViewAttemptContent={handleViewAttemptContent}
+            detectedWords={detectedWords}
+            onConfirmUsedWords={handleConfirmUsedWords}
+            onDismissDetectedWords={clearDetectedWords}
+          />
         ) : (
           <div className="px-6">
             <WritingHub

@@ -49,6 +49,13 @@ export type {
   FlashcardReviewHistory,
 } from './progress';
 
+// Saved Vocabulary Models
+export type {
+  SavedVocabulary,
+  SavedVocabularyInput,
+  IncrementResult,
+} from './savedVocabulary';
+
 // Extended Types
 export type {
   BatchWithStats,
