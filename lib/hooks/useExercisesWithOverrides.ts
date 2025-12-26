@@ -32,7 +32,7 @@ import {
  * Priority: Teacher overrides > JSON base data
  *
  * Algorithm:
- * 1. Filter out hidden exercises
+ * 1. Mark hidden exercises with _isHidden metadata (DON'T remove them)
  * 2. Apply modifications to existing exercises
  * 3. Add newly created exercises
  * 4. Sort by custom display order
@@ -40,9 +40,10 @@ import {
  */
 function mergeExercisesWithOverrides(
   jsonExercises: Exercise[],
-  overrides: ExerciseOverride[]
+  overrides: ExerciseOverride[],
+  isTeacherView: boolean = false
 ): ExerciseWithOverrideMetadata[] {
-  // Step 1: Filter out hidden exercises
+  // Step 1: Mark hidden exercises with metadata
   const hideOverrides = overrides.filter(o => o.overrideType === 'hide' && o.isHidden);
 
   // Build set of hidden exercise IDs (extract base ID from duplicates)
@@ -66,11 +67,11 @@ function mergeExercisesWithOverrides(
     }
   });
 
-  // Track occurrence index for each exerciseId as we filter
+  // Track occurrence index for each exerciseId
   const occurrenceMap = new Map<string, number>();
 
   let exercises: ExerciseWithOverrideMetadata[] = jsonExercises
-    .filter((ex, index) => {
+    .map((ex, index) => {
       // Track which occurrence this is
       const currentOccurrence = occurrenceMap.get(ex.exerciseId) || 0;
       occurrenceMap.set(ex.exerciseId, currentOccurrence + 1);
@@ -84,9 +85,15 @@ function mergeExercisesWithOverrides(
 
       const isHidden = isDuplicateHidden || isDirectlyHidden;
 
-      return !isHidden;
+      // Clone and add _isHidden metadata
+      return {
+        ...ex,
+        _isHidden: isHidden,
+      };
     })
-    .map(ex => ({ ...ex })); // Clone to avoid mutations
+    // For students, filter out hidden exercises
+    // For teachers, keep them visible (just marked)
+    .filter(ex => isTeacherView || !ex._isHidden);
 
   // Step 2: Apply modifications to existing exercises
   const modificationMap = new Map(
@@ -173,6 +180,9 @@ export function useExercisesWithOverrides(
   // Get current user to determine teacher
   const { student: currentUser } = useCurrentStudent(userEmail);
 
+  // Check if current view is teacher (they can see hidden exercises)
+  const isTeacherView = currentUser?.role === 'TEACHER';
+
   // Get base JSON exercises
   const { exerciseBook, lessons, isLoading: jsonLoading, error } = useExercises(level, bookType);
 
@@ -204,10 +214,11 @@ export function useExercisesWithOverrides(
         o => o.lessonNumber === lesson.lessonNumber || o.exerciseData?.lessonNumber === lesson.lessonNumber
       );
 
-      // Merge exercises
+      // Merge exercises (teachers see hidden ones, students don't)
       const mergedExercises = mergeExercisesWithOverrides(
         lesson.exercises,
-        lessonOverrides
+        lessonOverrides,
+        isTeacherView
       );
 
       return {
@@ -215,7 +226,7 @@ export function useExercisesWithOverrides(
         exercises: mergedExercises,
       };
     });
-  }, [lessons, overrides]);
+  }, [lessons, overrides, isTeacherView]);
 
   return {
     exerciseBook,
