@@ -135,7 +135,21 @@
       "Bash(node scripts/extract-a1-with-items.js:*)",
       "Bash(Select-String -Pattern \"(SUMMARY|Total|Lektion [0-9]:|exercises with)\" -Context 0,0)",
       "Bash(node scripts/split-comma-answers.js:*)",
-      "Bash(move /Y:*)"
+      "Bash(move /Y:*)",
+      "Bash(wc:*)",
+      "Bash(node scripts/extract-a2-final.js:*)",
+      "Bash(node scripts/extract-a2-all-lessons.js:*)",
+      "Bash(node scripts/extract-a1.2-all-lessons.js:*)",
+      "Bash(node scripts/extract-a2.2-all-lessons.js:*)",
+      "Bash(node scripts/consolidate-to-arbeitsbuch.js:*)",
+      "Bash(Select-String -Pattern \"error|Error\")",
+      "Bash(timeout 15 npm run dev:*)",
+      "Bash(Select-String -Pattern \"Local:|Ready|compiled|error|Error\")",
+      "Bash(Select-Object -First 15)",
+      "Bash(node scripts/summarize-exercises.js:*)",
+      "Bash(node scripts/test-combined-lessons.js:*)",
+      "Bash(git diff:*)",
+      "Bash(Select-String -Pattern \"\\(error|Error|ERROR|warning|Warning|compiled|Compiled|Build completed|✓\\)\" -Context 0,2)"
     ],
     "deny": [],
     "ask": []
