@@ -20,11 +20,12 @@ interface Flashcard {
   wordId?: string;
 }
 
-export function useFlashcardSession(flashcards: Flashcard[]) {
+export function useFlashcardSession(initialFlashcards: Flashcard[]) {
   const { session } = useFirebaseAuth();
   const { saveReview, saveDailyProgress } = useFlashcardMutations();
   const toast = useToast();
 
+  const [activeFlashcards, setActiveFlashcards] = useState(initialFlashcards);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [reviewedCards, setReviewedCards] = useState<Record<string, DifficultyLevel>>({});
@@ -39,13 +40,17 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
   const [showSummary, setShowSummary] = useState(false);
   const [sessionStartTime] = useState(Date.now());
 
+  // Update active flashcards when initial flashcards change
+  useEffect(() => {
+    setActiveFlashcards(initialFlashcards);
+  }, [initialFlashcards]);
 
-  const currentCard = {
-    ...flashcards[currentIndex],
-    masteryLevel: cardMasteryLevels[flashcards[currentIndex]?.id] ?? flashcards[currentIndex]?.masteryLevel ?? 0,
-  };
-  const progress = ((currentIndex + 1) / flashcards.length) * 100;
-  const isLastCard = currentIndex === flashcards.length - 1;
+  const currentCard = activeFlashcards[currentIndex] ? {
+    ...activeFlashcards[currentIndex],
+    masteryLevel: cardMasteryLevels[activeFlashcards[currentIndex]?.id] ?? activeFlashcards[currentIndex]?.masteryLevel ?? 0,
+  } : null;
+  const progress = activeFlashcards.length > 0 ? ((currentIndex + 1) / activeFlashcards.length) * 100 : 0;
+  const isLastCard = currentIndex === activeFlashcards.length - 1;
 
   // Keyboard shortcuts
   useEffect(() => {
@@ -194,21 +199,27 @@ export function useFlashcardSession(flashcards: Flashcard[]) {
   };
 
   const handleReviewAgainCards = () => {
-    // Filter cards marked as "again"
-    const againCards = flashcards.filter(card => reviewedCards[card.id] === 'again');
+    // Filter out cards marked as "expert" - they don't need review
+    // Include cards marked as: again, hard, good, easy, or not yet reviewed
+    const cardsToReview = initialFlashcards.filter(card => {
+      const difficulty = reviewedCards[card.id];
+      return !difficulty || difficulty !== 'expert';
+    });
 
-    if (againCards.length > 0) {
+    if (cardsToReview.length > 0) {
+      // Update active cards to only cards that need review
+      setActiveFlashcards(cardsToReview);
       // Reset for review session
       setCurrentIndex(0);
       setShowSummary(false);
       setIsFlipped(false);
-      // Reset stats for new session
+      // Keep reviewed cards record but reset stats for new session
       setMasteryStats({ again: 0, hard: 0, good: 0, easy: 0, expert: 0 });
     }
   };
 
   const handleNext = () => {
-    if (currentIndex < flashcards.length - 1) {
+    if (currentIndex < activeFlashcards.length - 1) {
       setCurrentIndex(currentIndex + 1);
       setIsFlipped(false);
     }

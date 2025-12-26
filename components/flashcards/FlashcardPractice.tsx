@@ -245,6 +245,20 @@ export function FlashcardPractice({
     );
   }
 
+  // Safety check - no cards to review
+  if (!currentCard) {
+    return (
+      <div className="text-center py-12">
+        <div className="text-6xl mb-4">🎉</div>
+        <h3 className="text-xl font-bold text-gray-900 mb-2">All cards mastered!</h3>
+        <p className="text-gray-600 mb-6">You've marked all cards as expert. Great job!</p>
+        <Button onClick={onBack} variant="primary">
+          Back to Categories
+        </Button>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-4 sm:space-y-6">
       {/* Header */}
