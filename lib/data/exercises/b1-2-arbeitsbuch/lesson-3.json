@@ -1,0 +1,290 @@
+{
+  "lessonNumber": 3,
+  "title": "Lektion 3",
+  "exercises": [
+    {
+      "exerciseId": "B1.2-L3-AB-1",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 3,
+      "exerciseNumber": "1",
+      "section": "Schritt  A",
+      "title": "1",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "gerecht   c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "Sieger   e"
+        },
+        {
+          "itemNumber": "f",
+          "correctAnswer": "weder"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L3-AB-2",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 3,
+      "exerciseNumber": "2",
+      "section": "Schritt  A",
+      "title": "2",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "weder liegen"
+        },
+        {
+          "itemNumber": "c",
+          "correctAnswer": "sowohl Arme"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "weder Licht"
+        },
+        {
+          "itemNumber": "e",
+          "correctAnswer": "sowohl   neue"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L3-AB-4",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 3,
+      "exerciseNumber": "4",
+      "section": "Schritt  A",
+      "title": "4",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "weder Fleisch"
+        },
+        {
+          "itemNumber": "c",
+          "correctAnswer": "sowohl praktische"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "sowohl der"
+        },
+        {
+          "itemNumber": "g",
+          "correctAnswer": "als auch"
+        },
+        {
+          "itemNumber": "e",
+          "correctAnswer": "weder zu"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L3-AB-5a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 3,
+      "exerciseNumber": "5a",
+      "section": "Schritt  A",
+      "title": "5a",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "Es war"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L3-AB-8",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 3,
+      "exerciseNumber": "8",
+      "section": "Schritt B",
+      "title": "8",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "wo   c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "wo   e"
+        },
+        {
+          "itemNumber": "f",
+          "correctAnswer": "wo   g"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L3-AB-7",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 3,
+      "exerciseNumber": "7",
+      "section": "Schritt B",
+      "title": "7",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "da"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L3-AB-10",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 3,
+      "exerciseNumber": "10",
+      "section": "Schritt B",
+      "title": "10",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "richtig"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "richtig"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "falsch"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "falsch"
+        },
+        {
+          "itemNumber": "5",
+          "correctAnswer": "richtig"
+        },
+        {
+          "itemNumber": "6",
+          "correctAnswer": "falsch   \n  Schritte"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L3-AB-9",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 3,
+      "exerciseNumber": "9",
+      "section": "Schritt B",
+      "title": "9",
+      "answers": [
+        {
+          "itemNumber": "11",
+          "correctAnswer": "b"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "c"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "d"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L3-AB-12b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 3,
+      "exerciseNumber": "12b",
+      "section": "Schritt C",
+      "title": "12b",
+      "answers": [
+        {
+          "itemNumber": "e",
+          "correctAnswer": "in schlafender"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "er s"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L3-AB-13",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 3,
+      "exerciseNumber": "13",
+      "section": "Schritt C",
+      "title": "13",
+      "answers": [
+        {
+          "itemNumber": "B",
+          "correctAnswer": "feine"
+        },
+        {
+          "itemNumber": "C",
+          "correctAnswer": "fris che"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L3-AB-15",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 3,
+      "exerciseNumber": "15",
+      "section": "Schritt C",
+      "title": "15",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "sowohl kochen"
+        },
+        {
+          "itemNumber": "c",
+          "correctAnswer": "Das   ist"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "Unglaublich   e"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L3-AB-17",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 3,
+      "exerciseNumber": "17",
+      "section": "Schritt D",
+      "title": "17",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Verbraucher  c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "z"
+        }
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

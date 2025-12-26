@@ -45,8 +45,8 @@ export default function ExerciseDetailPage() {
   const lesson = lessons.find(l => l.lessonNumber === lessonNumber);
   const exercise = lesson?.exercises.find(e => e.exerciseId === exerciseId);
 
-  // Check if user is a teacher
-  const isTeacher = currentUser?.role === 'teacher';
+  // Check if user is a teacher (role is uppercase in database)
+  const isTeacher = currentUser?.role === 'TEACHER';
 
   // Get current user's batch ID
   const currentUserBatchId = currentUser?.batchId;

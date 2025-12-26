@@ -1,0 +1,642 @@
+{
+  "lessonNumber": 1,
+  "title": "Lektion 1 - Glück im Alltag",
+  "exercises": [
+    {
+      "exerciseId": "B1.1-L1-AB-Folge1-1",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "1",
+      "section": "Folge 1: Ellas Glückstag",
+      "title": "Foto-Hörgeschichte",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "a"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "d"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "e"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-Folge1-2",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "2",
+      "section": "Folge 1: Ellas Glückstag",
+      "title": "Foto-Hörgeschichte",
+      "answers": [
+        {
+          "itemNumber": "Musterlösung",
+          "correctAnswer": "Sie freut sich, weil sie einen prima Tipp von einer netten Frau bekommen hat, weil sie eine Schreibtischlampe geschenkt bekommt, weil sie einen interessanten Interviewpartner findet und weil Sami zehn Minuten Angst hat."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-Folge1-3",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "3",
+      "section": "Folge 1: Ellas Glückstag",
+      "title": "Foto-Hörgeschichte",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "100.000 → eine Million"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "mehrmals → einmal"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "viel Geld → das ganze Geld"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-A1",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "A1",
+      "section": "Schritt A",
+      "title": "A1",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "spielte"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "gewann"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "kam"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-A2a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "A2a",
+      "section": "Schritt A",
+      "title": "A2a",
+      "answers": [
+        {
+          "itemNumber": "A",
+          "correctAnswer": "4"
+        },
+        {
+          "itemNumber": "B",
+          "correctAnswer": "3"
+        },
+        {
+          "itemNumber": "C",
+          "correctAnswer": "1"
+        },
+        {
+          "itemNumber": "D",
+          "correctAnswer": "2"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-A2c",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "A2c",
+      "section": "Schritt A",
+      "title": "A2c",
+      "answers": [
+        {
+          "itemNumber": "A",
+          "correctAnswer": "Wer? 71-jähriger Wiener Wann? am vergangenen Wochenende Wo? bei Linz Was passierte? Renter ließ seine Frau auf Autobahnraststätte zurück"
+        },
+        {
+          "itemNumber": "B",
+          "correctAnswer": "Wer? Werner H. (61) und Florian H. (30) Wann? letzten Monat Wo? Sidney (USA) Was passierte? Vater verwechselte bei Online-Buchung Sidney (USA) mit Sydney (Australien) und buchte falschen Flug"
+        },
+        {
+          "itemNumber": "C",
+          "correctAnswer": "Wer? Tess (58) und Finn K. (57) Wann? letzte Woche Wo? Neapel Was passierte? nach Streit verlor sich Ehepaar aus den Augen, Tess sprang ins Wasser und schwamm Schiff hinterher, Finn war auf dem Weg zum Flughafen"
+        },
+        {
+          "itemNumber": "D",
+          "correctAnswer": "Wer? Giovanni R. (45) Wann? am Valentinstag Wo? Bad Ems bei Koblenz Was passierte? Giovanni kaufte Rosen für seine Frau, hatte nicht mehr genügend Geld für seinen Lottotipp, am Abend wurden seine Zahlen gezogen"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-A3",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "A3",
+      "section": "Schritt A",
+      "title": "A3",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "sollte"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "dachte"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "lud … ein"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "bemerkte"
+        },
+        {
+          "itemNumber": "5",
+          "correctAnswer": "standen"
+        },
+        {
+          "itemNumber": "6",
+          "correctAnswer": "störte"
+        },
+        {
+          "itemNumber": "7",
+          "correctAnswer": "feierten"
+        },
+        {
+          "itemNumber": "8",
+          "correctAnswer": "riefen"
+        },
+        {
+          "itemNumber": "9",
+          "correctAnswer": "sperrte … ab"
+        },
+        {
+          "itemNumber": "10",
+          "correctAnswer": "schickte"
+        },
+        {
+          "itemNumber": "11",
+          "correctAnswer": "gingen"
+        },
+        {
+          "itemNumber": "12",
+          "correctAnswer": "kam"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-B1",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "B1",
+      "section": "Schritt B",
+      "title": "B1",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "… als ich ins Spielcasino gegangen bin."
+        },
+        {
+          "itemNumber": "c",
+          "correctAnswer": "… als ich oft unglücklich war."
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "… als ich nur wenige Freunde hatte."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-B2a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "B2a",
+      "section": "Schritt B",
+      "title": "B2a",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "2"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "3"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "5"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-B2b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "B2b",
+      "section": "Schritt B",
+      "title": "B2b",
+      "answers": [
+        {
+          "itemNumber": "einmal-1",
+          "correctAnswer": "2"
+        },
+        {
+          "itemNumber": "einmal-2",
+          "correctAnswer": "3"
+        },
+        {
+          "itemNumber": "öfter-1",
+          "correctAnswer": "1"
+        },
+        {
+          "itemNumber": "öfter-2",
+          "correctAnswer": "4"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-C1",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "C1",
+      "section": "Schritt C",
+      "title": "C1",
+      "answers": [
+        {
+          "itemNumber": "explanation",
+          "correctAnswer": "Das ist passiert. Ich habe wirklich gewonnen. Das war vorher. Ich hatte so lange … gewartet."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-C2a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "C2a",
+      "section": "Schritt C",
+      "title": "C2a",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "Gewonnen"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "Angekommen"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-C2b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "C2b",
+      "section": "Schritt C",
+      "title": "C2b",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "vorher: Fuß gebrochen, viel trainiert"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "vorher: Hannahs Schwester war nach Brasilien gezogen, hatte dort geheiratet und Kinder bekommen"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-D1",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "D1",
+      "section": "Schritt D",
+      "title": "D1 - Musterlösung",
+      "answers": [
+        {
+          "itemNumber": "tasks",
+          "correctAnswer": "Aufgaben: Kinder betreuen, im Haushalt unterstützen, kochen, Kinder in den Kindergarten/in die Schule bringen, mit den Kindern spielen, bei den Hausaufgaben helfen"
+        },
+        {
+          "itemNumber": "positive",
+          "correctAnswer": "Positives: Möglichkeit, günstig im Ausland zu leben, neue Erfahrungen, neue Kulturen, neue Menschen kennenlernen, Sprachkenntnisse verbessern"
+        },
+        {
+          "itemNumber": "negative",
+          "correctAnswer": "Negatives: billige Arbeitskraft, kein Mitglied der Familie, wenig Freizeit, Heimweh"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-D2",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "D2",
+      "section": "Schritt D",
+      "title": "D2 - Musterlösung",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "Als Oma-Aupair im Ausland"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "Als Oma-Aupair in Indien"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-D3",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "D3",
+      "section": "Schritt D",
+      "title": "D3",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "3"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "1"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "2"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "5"
+        },
+        {
+          "itemNumber": "5",
+          "correctAnswer": "4"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-D4",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "D4",
+      "section": "Schritt D",
+      "title": "D4",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "c"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "d"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "f"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-E2a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "E2a",
+      "section": "Schritt E",
+      "title": "E2a",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "C"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "A"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "B"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-Grammatik-2",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "2",
+      "section": "Grammatik und Kommunikation",
+      "title": "Grammatik 2",
+      "answers": [
+        {
+          "itemNumber": "Musterlösung",
+          "correctAnswer": "Als ich fünf Jahre alt war, wollte ich unbedingt in die Schule gehen. Als ich zehn Jahre alt war, wünschte ich mir, dass ich nie mehr zur Schule gehen muss. Als ich 18 Jahre alt war, wollte ich Lehrer werden."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-AB-Grammatik-3",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 1,
+      "exerciseNumber": "3",
+      "section": "Grammatik und Kommunikation",
+      "title": "Grammatik 3",
+      "answers": [
+        {
+          "itemNumber": "Musterlösung",
+          "correctAnswer": "1 Ich hatte zu viele Kirschen gegessen. 2 Meine Schwester hatte Saft auf meine Hausaufgaben verschüttet. 3 Ich hatte faul in der Sonne gelegen. 4 Ich hatte eine 1 in Mathe bekommen. 5 Ich hatte einen anstrengenden Tag gehabt."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-KB-A2",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 1,
+      "exerciseNumber": "A2",
+      "section": "Schritt A",
+      "title": "A2",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "A"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-KB-2",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 1,
+      "exerciseNumber": "2",
+      "section": "Schritt A",
+      "title": "2",
+      "answers": [
+        {
+          "itemNumber": "c",
+          "correctAnswer": "A   Wer"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-KB-A4",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 1,
+      "exerciseNumber": "A4",
+      "section": "Schritt A",
+      "title": "A4",
+      "answers": [
+        {
+          "itemNumber": "A",
+          "correctAnswer": "Musterlösung"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-KB-D5",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 1,
+      "exerciseNumber": "D5",
+      "section": "Schritt D",
+      "title": "D5",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "Musterlösung"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-KB-E2a",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 1,
+      "exerciseNumber": "E2a",
+      "section": "Schritt E",
+      "title": "E2a",
+      "answers": [
+        {
+          "itemNumber": "B",
+          "correctAnswer": "Schritte international"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-KB-E2b",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 1,
+      "exerciseNumber": "E2b",
+      "section": "Schritt E",
+      "title": "E2b",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "Brigitte hat"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-KB-1",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 1,
+      "exerciseNumber": "1",
+      "section": "Zwischendurch mal … - Projekt",
+      "title": "1",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "B"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "D"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "F"
+        },
+        {
+          "itemNumber": "5",
+          "correctAnswer": "E"
+        },
+        {
+          "itemNumber": "6",
+          "correctAnswer": "C"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L1-KB-Gedicht-1",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 1,
+      "exerciseNumber": "1",
+      "section": "Zwischendurch mal … - Gedicht",
+      "title": "Gedicht 1",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "lächeln, geben und zurückbekommen, teilen"
+        }
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

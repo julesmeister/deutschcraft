@@ -81,6 +81,22 @@
         { "fieldPath": "userId", "order": "ASCENDING" },
         { "fieldPath": "date", "order": "DESCENDING" }
       ]
+    },
+    {
+      "collectionGroup": "exercise-overrides",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "teacherEmail", "order": "ASCENDING" },
+        { "fieldPath": "displayOrder", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "exercise-overrides",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "teacherEmail", "order": "ASCENDING" },
+        { "fieldPath": "updatedAt", "order": "DESCENDING" }
+      ]
     }
   ],
   "fieldOverrides": []

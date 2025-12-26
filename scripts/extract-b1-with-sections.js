@@ -7,8 +7,9 @@ const fs = require('fs');
 const path = require('path');
 const PDFParser = require('pdf2json');
 
-const B1_1_PDF = 'C:\\Users\\User\\Documents\\Schritte\\Schritte International Neu 5 B1.1\\extras from website\\301086_Loesungen_AB.pdf';
-const B1_2_PDF = 'C:\\Users\\User\\Documents\\Schritte\\Schritte International Neu 6 B1.2\\extras von website\\601086_SiN_6_Loesungen_AB.pdf';
+const B1_1_AB_PDF = 'C:\\Users\\User\\Documents\\Schritte\\Schritte International Neu 5 B1.1\\extras from website\\301086_Loesungen_AB.pdf';
+const B1_1_KB_PDF = 'C:\\Users\\User\\Documents\\Schritte\\Schritte International Neu 5 B1.1\\extras from website\\301086 Loesungen_KB.190066.pdf';
+const B1_2_AB_PDF = 'C:\\Users\\User\\Documents\\Schritte\\Schritte International Neu 6 B1.2\\extras von website\\601086_SiN_6_Loesungen_AB.pdf';
 const OUTPUT_DIR = path.join(__dirname, '..', 'lib', 'data', 'exercises');
 
 async function parsePDF(pdfPath) {
@@ -20,7 +21,12 @@ async function parsePDF(pdfPath) {
       let text = '';
       pdfData.Pages.forEach(page => {
         page.Texts.forEach(textItem => {
-          text += decodeURIComponent(textItem.R[0].T) + ' ';
+          try {
+            text += decodeURIComponent(textItem.R[0].T) + ' ';
+          } catch (e) {
+            // Handle malformed URI, skip this text item
+            text += textItem.R[0].T + ' ';
+          }
         });
         text += '\n';
       });
@@ -60,10 +66,14 @@ function parseAllExercises(text, level, subLevel, lessonOffset = 0) {
     // Find all Schritt sections within this Lektion
     // Pattern: "Schritt A", "Schritt B", "Schritt C", "Schritt D", "Schritt E"
     // Also: "Fokus Beruf", "Fokus Familie", etc.
-    const sectionPattern = /(Schritt\s+[A-E]|Fokus\s+[A-Za-zäöüß]+)/gi;
+    // Also: "Zwischendurch mal … - Projekt", "Zwischendurch mal … - Hören", etc.
+    const sectionPattern = /(Schritt\s+[A-E]|Fokus\s+[A-Za-zäöüß]+|Zwischendurch\s+mal\s+[.…–-]\s*-?\s*(Projekt|Hören|Gedicht|Lesen|Lied))/gi;
     const sectionMatches = [...lessonText.matchAll(sectionPattern)];
 
     console.log(`    Found ${sectionMatches.length} sections`);
+    if (lessonNum === 1) {
+      console.log(`    DEBUG Lektion 1 sections:`, sectionMatches.map(m => m[0]));
+    }
 
     if (sectionMatches.length === 0) {
       // No sections found, treat entire lesson as one section
@@ -84,6 +94,9 @@ function parseAllExercises(text, level, subLevel, lessonOffset = 0) {
         if (exercises.length > 0) {
           console.log(`      ${sectionName}: ${exercises.length} exercises`);
           lesson.exercises.push(...exercises);
+        } else if (lessonNum === 1 && sectionName.includes('Gedicht')) {
+          console.log(`      ⚠️ DEBUG: Gedicht section found but NO exercises extracted`);
+          console.log(`      First 200 chars of section text:`, sectionText.substring(0, 200));
         }
       }
     }
@@ -107,8 +120,21 @@ function extractExercisesFromText(text, level, subLevel, lessonNum, section) {
   // Pattern 2: Exercise number followed by numbered/lettered answers (more flexible)
   const exercisePattern2 = /\b([A-Z]?\d+[a-z]?)\s+((?:[a-z0-9]+\s+[a-zäöüß]+[,\s]*)+)/gi;
 
+  // Pattern 3: Exercise number followed by comma-separated words (for Gedicht, etc.)
+  const exercisePattern3 = /\b(\d+)\s+([a-zäöüß]+(?:,?\s+(?:und\s+)?[a-zäöüß]+)+)/gi;
+
   const exerciseMatches1 = [...text.matchAll(exercisePattern1)];
   const exerciseMatches2 = [...text.matchAll(exercisePattern2)];
+  const exerciseMatches3 = [...text.matchAll(exercisePattern3)];
+
+  if (lessonNum === 1 && section && section.includes('Gedicht')) {
+    console.log(`      DEBUG: Pattern 1 matches: ${exerciseMatches1.length}`);
+    console.log(`      DEBUG: Pattern 2 matches: ${exerciseMatches2.length}`);
+    console.log(`      DEBUG: Pattern 3 matches: ${exerciseMatches3.length}`);
+    if (exerciseMatches3.length > 0) {
+      console.log(`      DEBUG: Pattern 3 first match:`, exerciseMatches3[0]);
+    }
+  }
 
   // Combine both patterns and deduplicate
   const allMatches = [...exerciseMatches1, ...exerciseMatches2];
@@ -185,57 +211,152 @@ function parseAnswers(text) {
   return answers;
 }
 
+function mergeLessons(existingLessons, newLessons) {
+  const merged = [...existingLessons];
+
+  for (const newLesson of newLessons) {
+    const existingLesson = merged.find(l => l.lessonNumber === newLesson.lessonNumber);
+
+    if (existingLesson) {
+      // Merge exercises, avoiding duplicates by exerciseId
+      const existingIds = new Set(existingLesson.exercises.map(e => e.exerciseId));
+      const newExercises = newLesson.exercises.filter(e => !existingIds.has(e.exerciseId));
+      existingLesson.exercises.push(...newExercises);
+      console.log(`    ➕ Added ${newExercises.length} new exercises to Lektion ${newLesson.lessonNumber}`);
+    } else {
+      // New lesson, add it
+      merged.push(newLesson);
+      console.log(`    ➕ Added new Lektion ${newLesson.lessonNumber} with ${newLesson.exercises.length} exercises`);
+    }
+  }
+
+  return merged.sort((a, b) => a.lessonNumber - b.lessonNumber);
+}
+
+function loadExistingLessons(folderPath) {
+  if (!fs.existsSync(folderPath)) {
+    return [];
+  }
+
+  const lessonFiles = fs.readdirSync(folderPath)
+    .filter(f => f.startsWith('lesson-') && f.endsWith('.json'))
+    .sort();
+
+  const lessons = [];
+  for (const file of lessonFiles) {
+    const filePath = path.join(folderPath, file);
+    const lesson = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    lessons.push(lesson);
+  }
+
+  return lessons;
+}
+
+function saveToSplitFormat(folderName, level, subLevel, bookType, lessons) {
+  const folderPath = path.join(OUTPUT_DIR, folderName);
+
+  // Create folder if doesn't exist
+  if (!fs.existsSync(folderPath)) {
+    fs.mkdirSync(folderPath, { recursive: true });
+  }
+
+  // Save metadata
+  const metadata = {
+    level,
+    subLevel,
+    bookType,
+    totalLessons: lessons.length,
+    generatedAt: new Date().toISOString(),
+  };
+
+  fs.writeFileSync(
+    path.join(folderPath, 'metadata.json'),
+    JSON.stringify(metadata, null, 2),
+    'utf8'
+  );
+
+  // Save each lesson
+  for (const lesson of lessons) {
+    const lessonFile = `lesson-${lesson.lessonNumber}.json`;
+    fs.writeFileSync(
+      path.join(folderPath, lessonFile),
+      JSON.stringify(lesson, null, 2),
+      'utf8'
+    );
+  }
+
+  console.log(`💾 Saved to ${folderName}/ (${lessons.length} lesson files)`);
+}
+
 async function extractB1() {
   console.log('🚀 Extracting B1 exercises with sections...\n');
 
-  // Extract B1.1
-  console.log('📖 Processing B1.1 (Schritte International Neu 5)...');
-  const b11 = await parsePDF(B1_1_PDF);
-  console.log(`  PDF: ${b11.pages} pages, ${b11.text.length} characters`);
+  // ========== B1.1 Arbeitsbuch (AB) ==========
+  console.log('📖 Processing B1.1 Arbeitsbuch...');
+  const b11AB = await parsePDF(B1_1_AB_PDF);
+  console.log(`  PDF: ${b11AB.pages} pages, ${b11AB.text.length} characters`);
 
-  const b11Lessons = parseAllExercises(b11.text, 'B1', '1', 0);
-  const b11ExerciseCount = b11Lessons.reduce((sum, l) => sum + l.exercises.length, 0);
+  const b11ABLessons = parseAllExercises(b11AB.text, 'B1', '1', 0);
+  const b11ABCount = b11ABLessons.reduce((sum, l) => sum + l.exercises.length, 0);
+  console.log(`  ✅ Extracted ${b11ABCount} exercises from AB`);
 
-  console.log(`\n✅ B1.1: ${b11Lessons.length} lessons, ${b11ExerciseCount} exercises`);
+  // ========== B1.1 Kursbuch (KB) ==========
+  console.log('\n📖 Processing B1.1 Kursbuch...');
+  const b11KB = await parsePDF(B1_1_KB_PDF);
+  console.log(`  PDF: ${b11KB.pages} pages, ${b11KB.text.length} characters`);
 
-  const b11Data = {
-    level: 'B1',
-    subLevel: '1',
-    bookType: 'AB',
-    lessons: b11Lessons,
-  };
+  const b11KBLessons = parseAllExercises(b11KB.text, 'B1', '1', 0);
+  // Update bookType to KB
+  b11KBLessons.forEach(lesson => {
+    lesson.exercises.forEach(ex => {
+      ex.bookType = 'KB';
+      ex.exerciseId = ex.exerciseId.replace('-AB-', '-KB-');
+    });
+  });
+  const b11KBCount = b11KBLessons.reduce((sum, l) => sum + l.exercises.length, 0);
+  console.log(`  ✅ Extracted ${b11KBCount} exercises from KB`);
 
-  fs.writeFileSync(
-    path.join(OUTPUT_DIR, 'b1-1-arbeitsbuch.json'),
-    JSON.stringify(b11Data, null, 2)
-  );
-  console.log('💾 Saved b1-1-arbeitsbuch.json\n');
+  // ========== Load existing lessons and merge ==========
+  console.log('\n🔄 Merging with existing lessons...');
+  const existingLessons = loadExistingLessons(path.join(OUTPUT_DIR, 'b1-1-arbeitsbuch'));
 
-  // Extract B1.2
-  console.log('📖 Processing B1.2 (Schritte International Neu 6)...');
-  const b12 = await parsePDF(B1_2_PDF);
-  console.log(`  PDF: ${b12.pages} pages, ${b12.text.length} characters`);
+  let mergedLessons = existingLessons.length > 0 ? existingLessons : b11ABLessons;
 
-  const b12Lessons = parseAllExercises(b12.text, 'B1', '2', -7);
-  const b12ExerciseCount = b12Lessons.reduce((sum, l) => sum + l.exercises.length, 0);
+  if (existingLessons.length > 0) {
+    console.log(`  📂 Loaded ${existingLessons.length} existing lessons`);
+  }
 
-  console.log(`\n✅ B1.2: ${b12Lessons.length} lessons, ${b12ExerciseCount} exercises`);
+  // Merge KB exercises
+  mergedLessons = mergeLessons(mergedLessons, b11KBLessons);
 
-  const b12Data = {
-    level: 'B1',
-    subLevel: '2',
-    bookType: 'AB',
-    lessons: b12Lessons,
-  };
+  const totalExercises = mergedLessons.reduce((sum, l) => sum + l.exercises.length, 0);
+  console.log(`\n✅ B1.1: ${mergedLessons.length} lessons, ${totalExercises} total exercises`);
 
-  fs.writeFileSync(
-    path.join(OUTPUT_DIR, 'b1-2-arbeitsbuch.json'),
-    JSON.stringify(b12Data, null, 2)
-  );
-  console.log('💾 Saved b1-2-arbeitsbuch.json\n');
+  // Save to split format
+  saveToSplitFormat('b1-1-arbeitsbuch', 'B1', '1', 'AB+KB', mergedLessons);
 
-  console.log('✨ Extraction complete!');
-  console.log(`📊 Total: ${b11ExerciseCount + b12ExerciseCount} exercises across ${b11Lessons.length + b12Lessons.length} lessons`);
+  // ========== B1.2 Arbeitsbuch ==========
+  console.log('\n📖 Processing B1.2 Arbeitsbuch...');
+  const b12AB = await parsePDF(B1_2_AB_PDF);
+  console.log(`  PDF: ${b12AB.pages} pages, ${b12AB.text.length} characters`);
+
+  const b12ABLessons = parseAllExercises(b12AB.text, 'B1', '2', -7);
+  const b12ABCount = b12ABLessons.reduce((sum, l) => sum + l.exercises.length, 0);
+  console.log(`  ✅ Extracted ${b12ABCount} exercises from AB`);
+
+  // Load existing B1.2 lessons and merge
+  const existingB12Lessons = loadExistingLessons(path.join(OUTPUT_DIR, 'b1-2-arbeitsbuch'));
+  const mergedB12Lessons = existingB12Lessons.length > 0
+    ? mergeLessons(existingB12Lessons, b12ABLessons)
+    : b12ABLessons;
+
+  const totalB12Exercises = mergedB12Lessons.reduce((sum, l) => sum + l.exercises.length, 0);
+  console.log(`\n✅ B1.2: ${mergedB12Lessons.length} lessons, ${totalB12Exercises} total exercises`);
+
+  saveToSplitFormat('b1-2-arbeitsbuch', 'B1', '2', 'AB', mergedB12Lessons);
+
+  console.log('\n✨ Extraction complete!');
+  console.log(`📊 Total: ${totalExercises + totalB12Exercises} exercises across ${mergedLessons.length + mergedB12Lessons.length} lessons`);
 }
 
 extractB1().catch(console.error);

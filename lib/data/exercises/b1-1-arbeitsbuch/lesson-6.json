@@ -1,0 +1,646 @@
+{
+  "lessonNumber": 6,
+  "title": "Lektion 6 - Dienstleistung",
+  "exercises": [
+    {
+      "exerciseId": "B1.1-L6-AB-4",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "4",
+      "section": "Schritt A",
+      "title": "4",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "kürzlich  c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "Zweifel   e"
+        },
+        {
+          "itemNumber": "f",
+          "correctAnswer": "überzeugt  g"
+        },
+        {
+          "itemNumber": "h",
+          "correctAnswer": "gespürt  i"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-1",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "1",
+      "section": "Schritt A",
+      "title": "1",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Es ist"
+        },
+        {
+          "itemNumber": "c",
+          "correctAnswer": "regnet es"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "es ist"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-12",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "12",
+      "section": "Schritt B",
+      "title": "12",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "um  c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "damit  e"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-14",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "14",
+      "section": "Schritt B",
+      "title": "14",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "möglichst   c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "Kompromisse   e"
+        },
+        {
+          "itemNumber": "f",
+          "correctAnswer": "Sandwiches  g"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-7",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "7",
+      "section": "Schritt B",
+      "title": "7",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "möchte"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-8",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "8",
+      "section": "Schritt B",
+      "title": "8",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "um als"
+        },
+        {
+          "itemNumber": "c",
+          "correctAnswer": "um frische"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "um  einen"
+        },
+        {
+          "itemNumber": "e",
+          "correctAnswer": "um bessere"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-9a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "9a",
+      "section": "Schritt B",
+      "title": "9a",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "in einer"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "eine gute"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "in"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-10",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "10",
+      "section": "Schritt B",
+      "title": "10",
+      "answers": [
+        {
+          "itemNumber": "A",
+          "correctAnswer": "damit er"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-11",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "11",
+      "section": "Schritt B",
+      "title": "11",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "Ich mache"
+        },
+        {
+          "itemNumber": "G",
+          "correctAnswer": "roßeinkauf"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-17",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "17",
+      "section": "Schritt B",
+      "title": "17",
+      "answers": [
+        {
+          "itemNumber": "r",
+          "correctAnswer": "die Familie"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-13a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "13a",
+      "section": "Schritt B",
+      "title": "13a",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "Er"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-18",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "18",
+      "section": "Schritt   C",
+      "title": "18",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "statt   c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "ohne   e"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-15b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "15b",
+      "section": "Schritt   C",
+      "title": "15b",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "statt mich"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-16",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "16",
+      "section": "Schritt   C",
+      "title": "16",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "statt"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-20a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "20a",
+      "section": "Schritt   C",
+      "title": "20a",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "solltest du"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "Wie findest"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "An deiner"
+        },
+        {
+          "itemNumber": "5",
+          "correctAnswer": "Ich kann"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-8",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "8",
+      "section": "Schritt D",
+      "title": "8",
+      "answers": [
+        {
+          "itemNumber": "K",
+          "correctAnswer": "a   K"
+        },
+        {
+          "itemNumber": "b",
+          "correctAnswer": "V  c"
+        },
+        {
+          "itemNumber": "e",
+          "correctAnswer": "V  f"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-21a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "21a",
+      "section": "Schritt D",
+      "title": "21a",
+      "answers": [
+        {
+          "itemNumber": "K",
+          "correctAnswer": "a   K"
+        },
+        {
+          "itemNumber": "b",
+          "correctAnswer": "V  c"
+        },
+        {
+          "itemNumber": "e",
+          "correctAnswer": "V  f"
+        },
+        {
+          "itemNumber": "h",
+          "correctAnswer": "V"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-21b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "21b",
+      "section": "Schritt D",
+      "title": "21b",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "e"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "f"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "b"
+        },
+        {
+          "itemNumber": "5",
+          "correctAnswer": "d"
+        },
+        {
+          "itemNumber": "6",
+          "correctAnswer": "g"
+        },
+        {
+          "itemNumber": "7",
+          "correctAnswer": "h"
+        },
+        {
+          "itemNumber": "8",
+          "correctAnswer": "a"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-22",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "22",
+      "section": "Schritt D",
+      "title": "22",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "c"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "a"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "b"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "c"
+        },
+        {
+          "itemNumber": "5",
+          "correctAnswer": "b"
+        },
+        {
+          "itemNumber": "23",
+          "correctAnswer": "b"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-AB-24a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "24a",
+      "section": "Schritt D",
+      "title": "24a",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "a"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "g"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "e"
+        },
+        {
+          "itemNumber": "5",
+          "correctAnswer": "d"
+        },
+        {
+          "itemNumber": "6",
+          "correctAnswer": "c"
+        },
+        {
+          "itemNumber": "7",
+          "correctAnswer": "f"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-KB-A1",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 6,
+      "exerciseNumber": "A1",
+      "section": "Schritt A",
+      "title": "A1",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "Ella   b"
+        },
+        {
+          "itemNumber": "c",
+          "correctAnswer": "Leon   d"
+        },
+        {
+          "itemNumber": "e",
+          "correctAnswer": "Ella"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-KB-3",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 6,
+      "exerciseNumber": "3",
+      "section": "Schritt A",
+      "title": "3",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "Hung Nguyen"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-KB-1",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 6,
+      "exerciseNumber": "1",
+      "section": "Schritt B",
+      "title": "1",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "Leon will"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-KB-C1",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 6,
+      "exerciseNumber": "C1",
+      "section": "Schritt C",
+      "title": "C1",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Man"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-KB-C2b",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 6,
+      "exerciseNumber": "C2b",
+      "section": "Schritt C",
+      "title": "C2b",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "Man sollte"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-KB-3",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 6,
+      "exerciseNumber": "3",
+      "section": "Schritt D",
+      "title": "3",
+      "answers": [
+        {
+          "itemNumber": "A",
+          "correctAnswer": "Schritte international"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-KB-1",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 6,
+      "exerciseNumber": "1",
+      "section": "Schritt E",
+      "title": "1",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "B     E"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-KB-1",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 6,
+      "exerciseNumber": "1",
+      "section": "Zwischendurch mal …   Hören",
+      "title": "1",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "C"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "D"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "B"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "A"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L6-KB-2",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 6,
+      "exerciseNumber": "2",
+      "section": "Zwischendurch mal …   Hören",
+      "title": "2",
+      "answers": [
+        {
+          "itemNumber": "3",
+          "correctAnswer": "Musterlösung"
+        }
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

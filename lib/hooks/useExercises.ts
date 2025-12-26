@@ -18,7 +18,7 @@ import b12AB from '@/lib/data/exercises/b1-2-arbeitsbuch.json';
 
 /**
  * Map of exercise data by level-sublevel-bookType
- * Key format: "A1-1-AB", "A1-2-AB", etc.
+ * Key format: "A1-1-AB", "A1-2-AB", "A1-1-UP", etc.
  */
 const exerciseDataMap: Record<string, ExerciseBook> = {
   'A1-1-AB': a11AB as ExerciseBook,

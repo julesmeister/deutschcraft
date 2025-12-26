@@ -1,0 +1,518 @@
+{
+  "lessonNumber": 4,
+  "title": "Lektion 4 - Sprachen",
+  "exercises": [
+    {
+      "exerciseId": "B1.1-L4-AB-1",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "1",
+      "section": "Schritt A",
+      "title": "1",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "wäre   c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "würde   e"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-5",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "5",
+      "section": "Schritt A",
+      "title": "5",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "müsste  b"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-2a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "2a",
+      "section": "Schritt A",
+      "title": "2a",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "müsste ich"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-2b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "2b",
+      "section": "Schritt A",
+      "title": "2b",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "Ich"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-4",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "4",
+      "section": "Schritt A",
+      "title": "4",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Wenn er"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-6",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "6",
+      "section": "Schritt A",
+      "title": "6",
+      "answers": [
+        {
+          "itemNumber": "M",
+          "correctAnswer": "u"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-10",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "10",
+      "section": "Schritt B",
+      "title": "10",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "wegen  c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "darum"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-11",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "11",
+      "section": "Schritt B",
+      "title": "11",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "weil  c"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-9",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "9",
+      "section": "Schritt B",
+      "title": "9",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Weil meine"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-13",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "13",
+      "section": "Schritt C",
+      "title": "13",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Was bedeutet"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-14",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "14",
+      "section": "Schritt C",
+      "title": "14",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "habe ich"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-15",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "15",
+      "section": "Schritt C",
+      "title": "15",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "lü gen"
+        },
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Portemonnaie   c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "Wiederholung   e"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-18",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "18",
+      "section": "Schritt D",
+      "title": "18",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Autorin   c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "wählen   e"
+        },
+        {
+          "itemNumber": "f",
+          "correctAnswer": "Fremdsprachen   g"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-6A",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "6A",
+      "section": "Schritt D",
+      "title": "6A",
+      "answers": [
+        {
+          "itemNumber": "16",
+          "correctAnswer": "b"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "Wortkarten   einer"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "Grammatikübungen   MP"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-4",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "4",
+      "section": "Schritt D",
+      "title": "4",
+      "answers": [
+        {
+          "itemNumber": "5",
+          "correctAnswer": "seit drei"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-6",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "6",
+      "section": "Schritt D",
+      "title": "6",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "Sprechangst großes"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-17",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "17",
+      "section": "Schritt D",
+      "title": "17",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Musterlösung"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-19a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "19a",
+      "section": "Schritt E",
+      "title": "19a",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "Janusz"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "Julie"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "Amira"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-20a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "20a",
+      "section": "Schritt E",
+      "title": "20a",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "Lesesessel"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "Sternschnuppe"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "Streichholzschächtelchen     \n  Schritte"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-20d",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "20d",
+      "section": "Schritt E",
+      "title": "20d",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "Streichholzschächtelchen"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-9",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "9",
+      "section": "Fokus Beruf",
+      "title": "9",
+      "answers": [
+        {
+          "itemNumber": "12",
+          "correctAnswer": "Stunden"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-12",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "12",
+      "section": "Fokus Beruf",
+      "title": "12",
+      "answers": [
+        {
+          "itemNumber": "20",
+          "correctAnswer": "Stunden"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-AB-2",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 4,
+      "exerciseNumber": "2",
+      "section": "Fokus Beruf",
+      "title": "2",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "Deutschlernen mit"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-KB-A1",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 4,
+      "exerciseNumber": "A1",
+      "section": "Schritt A",
+      "title": "A1",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "a"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-KB-3a",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 4,
+      "exerciseNumber": "3a",
+      "section": "Schritt A",
+      "title": "3a",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "Sagen"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-KB-B2",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 4,
+      "exerciseNumber": "B2",
+      "section": "Schritt B",
+      "title": "B2",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "Fremdsprachen"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-KB-B2b",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 4,
+      "exerciseNumber": "B2b",
+      "section": "Schritt B",
+      "title": "B2b",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "Business"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-KB-C1",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 4,
+      "exerciseNumber": "C1",
+      "section": "Schritt C",
+      "title": "C1",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "A"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L4-KB-E2",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 4,
+      "exerciseNumber": "E2",
+      "section": "Schritt E",
+      "title": "E2",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Sie spricht"
+        }
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 /**
  * Lesson Detail Page
  * Shows all exercises in a specific lesson
+ * Teachers can create, edit, hide, and reorder exercises
  */
 
 'use client';
@@ -8,53 +9,35 @@
 import { useState, useMemo } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
+import { EyeOff } from 'lucide-react';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { CatLoader } from '@/components/ui/CatLoader';
-import { CategoryList } from '@/components/ui/CategoryList';
+import { BatchSelector } from '@/components/ui/BatchSelector';
 import { ExerciseFilters, FilterState } from '@/components/answer-hub/ExerciseFilters';
+import { ExerciseOverrideDialog } from '@/components/answer-hub/ExerciseOverrideDialog';
+import { HiddenExercisesModal } from '@/components/answer-hub/HiddenExercisesModal';
+import { ExerciseListSection } from '@/components/answer-hub/ExerciseListSection';
+import { TeacherControls } from '@/components/answer-hub/TeacherControls';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useCurrentStudent } from '@/lib/hooks/useUsers';
+import { useActiveBatches } from '@/lib/hooks/useBatches';
 import { getUserInfo } from '@/lib/utils/userHelpers';
-import { useExercises } from '@/lib/hooks/useExercises';
-import { useExerciseProgress } from '@/lib/hooks/useExerciseProgress';
+import { Batch } from '@/lib/models';
+import { useLessonWithOverrides } from '@/lib/hooks/useExercisesWithOverrides';
+import { useTeacherOverrides } from '@/lib/hooks/useExerciseOverrides';
+import { useLessonHandlers } from '@/lib/hooks/useLessonHandlers';
 import { CEFRLevel } from '@/lib/models/cefr';
-import { Exercise } from '@/lib/models/exercises';
-
-// Color schemes matching grammatik page
-const CARD_COLOR_SCHEMES = [
-  {
-    bg: "hover:bg-blue-100",
-    text: "group-hover:text-blue-900",
-    badge: "group-hover:bg-blue-500",
-  },
-  {
-    bg: "hover:bg-emerald-100",
-    text: "group-hover:text-emerald-900",
-    badge: "group-hover:bg-emerald-500",
-  },
-  {
-    bg: "hover:bg-amber-100",
-    text: "group-hover:text-amber-900",
-    badge: "group-hover:bg-amber-500",
-  },
-  {
-    bg: "hover:bg-purple-100",
-    text: "group-hover:text-purple-900",
-    badge: "group-hover:bg-purple-500",
-  },
-  {
-    bg: "hover:bg-pink-100",
-    text: "group-hover:text-pink-900",
-    badge: "group-hover:bg-pink-500",
-  },
-];
+import {
+  ExerciseWithOverrideMetadata,
+  CreateExerciseOverrideInput,
+} from '@/lib/models/exerciseOverride';
 
 export default function LessonDetailPage() {
   const router = useRouter();
   const params = useParams();
   const { session } = useFirebaseAuth();
   const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
-  const { userId } = getUserInfo(currentUser, session);
+  const { userId, userEmail } = getUserInfo(currentUser, session);
 
   // Parse URL params
   // Format: levelBook = "B1-AB", lessonId = "L1"
@@ -68,14 +51,40 @@ export default function LessonDetailPage() {
   // Parse lesson number from lessonId
   const lessonNumber = parseInt(lessonId.replace('L', ''));
 
-  // Load exercises
-  const { exerciseBook, lessons, isLoading, error } = useExercises(level, bookType);
+  // Load exercises with teacher overrides merged
+  const { lesson, isLoading, error, hasOverrides, overrideCount } = useLessonWithOverrides(
+    level,
+    bookType,
+    lessonNumber,
+    userEmail
+  );
 
-  // Find the specific lesson
-  const lesson = lessons.find(l => l.lessonNumber === lessonNumber);
+  // Check if user is a teacher (role is uppercase in database)
+  const isTeacher = currentUser?.role === 'TEACHER';
 
-  // Check if user is a teacher
-  const isTeacher = currentUser?.role === 'teacher';
+  // Load teacher's batches (only for teachers)
+  const { batches } = useActiveBatches(isTeacher ? userEmail : undefined);
+  const [selectedBatch, setSelectedBatch] = useState<Batch | null>(null);
+
+  // Hidden exercises modal state
+  const [isHiddenModalOpen, setIsHiddenModalOpen] = useState(false);
+
+  // Get hidden exercises from overrides
+  const { overrides: allOverrides } = useTeacherOverrides(
+    isTeacher ? userEmail : undefined,
+    level,
+    lessonNumber
+  );
+
+  const hiddenExercises = useMemo(() => {
+    if (!allOverrides) return [];
+    return allOverrides
+      .filter(o => o.overrideType === 'hide' && o.isHidden)
+      .map(o => ({
+        exerciseId: o.exerciseId,
+        overrideId: o.overrideId,
+      }));
+  }, [allOverrides]);
 
   // Filter state
   const [filters, setFilters] = useState<FilterState>({
@@ -84,6 +93,74 @@ export default function LessonDetailPage() {
     status: 'all',
     hasDiscussion: 'all',
   });
+
+  // Filter exercises based on filters (before early returns to avoid hook order issues)
+  const filteredExercises = useMemo(() => {
+    if (!lesson) return [];
+
+    return lesson.exercises.filter((exercise) => {
+      // Search filter
+      if (filters.search) {
+        const searchLower = filters.search.toLowerCase();
+        const matchesNumber = exercise.exerciseNumber.toLowerCase().includes(searchLower);
+        const matchesTitle = exercise.title?.toLowerCase().includes(searchLower);
+        const matchesQuestion = exercise.question?.toLowerCase().includes(searchLower);
+        if (!matchesNumber && !matchesTitle && !matchesQuestion) {
+          return false;
+        }
+      }
+
+      // Difficulty filter
+      if (filters.difficulty !== 'all' && exercise.difficulty !== filters.difficulty) {
+        return false;
+      }
+
+      return true;
+    });
+  }, [lesson, filters]);
+
+  // Detect duplicate exerciseIds and create index map
+  const { duplicateExerciseIds, exerciseIndexMap } = useMemo(() => {
+    if (!lesson) return { duplicateExerciseIds: new Set<string>(), exerciseIndexMap: new Map<string, number>() };
+
+    const idCounts = new Map<string, number>();
+    const idIndices = new Map<string, number>();
+    const indexMap = new Map<string, number>();
+
+    lesson.exercises.forEach((ex, globalIndex) => {
+      const currentCount = idCounts.get(ex.exerciseId) || 0;
+      idCounts.set(ex.exerciseId, currentCount + 1);
+
+      // Track which occurrence this is (0-indexed)
+      const occurrenceIndex = idIndices.get(ex.exerciseId) || 0;
+      idIndices.set(ex.exerciseId, occurrenceIndex + 1);
+
+      // Store mapping from globalIndex to occurrenceIndex
+      indexMap.set(`${globalIndex}`, occurrenceIndex);
+    });
+
+    const duplicates = new Set<string>();
+    idCounts.forEach((count, id) => {
+      if (count > 1) duplicates.add(id);
+    });
+
+    return { duplicateExerciseIds: duplicates, exerciseIndexMap: indexMap };
+  }, [lesson]);
+
+
+  // Teacher handlers (create, edit, hide, reorder)
+  const {
+    isOverrideDialogOpen,
+    setIsOverrideDialogOpen,
+    dialogMode,
+    editingExercise,
+    setEditingExercise,
+    handleCreateExercise,
+    handleEditExercise,
+    handleToggleHide,
+    handleReorder,
+    handleSubmitOverride,
+  } = useLessonHandlers(userEmail, level, lessonNumber, duplicateExerciseIds, exerciseIndexMap);
 
   if (isLoading) {
     return (
@@ -133,51 +210,54 @@ export default function LessonDetailPage() {
     );
   }
 
-  const exerciseCount = lesson.exercises.length;
-
-  // Filter exercises based on filters
-  const filteredExercises = useMemo(() => {
-    return lesson.exercises.filter((exercise) => {
-      // Search filter
-      if (filters.search) {
-        const searchLower = filters.search.toLowerCase();
-        const matchesNumber = exercise.exerciseNumber.toLowerCase().includes(searchLower);
-        const matchesTitle = exercise.title?.toLowerCase().includes(searchLower);
-        const matchesQuestion = exercise.question?.toLowerCase().includes(searchLower);
-        if (!matchesNumber && !matchesTitle && !matchesQuestion) {
-          return false;
-        }
-      }
-
-      // Difficulty filter
-      if (filters.difficulty !== 'all' && exercise.difficulty !== filters.difficulty) {
-        return false;
-      }
-
-      // Status filter (requires progress data)
-      if (filters.status !== 'all' && userId) {
-        // We'll need to get progress for each exercise
-        // This is handled in the rendering below
-      }
-
-      return true;
-    });
-  }, [lesson.exercises, filters, userId]);
+  const exerciseCount = lesson?.exercises.length || 0;
 
   return (
     <div className="min-h-screen bg-gray-50 pb-16">
       {/* Header */}
       <DashboardHeader
-        title={`${lesson.title} - ${level} ${bookType}`}
+        title={`${lesson?.title || 'Lesson'} - ${level} ${bookType}`}
         subtitle={`${exerciseCount} exercise${exerciseCount !== 1 ? 's' : ''}`}
         backButton={{
           label: 'Back to Lessons',
           onClick: () => router.push('/dashboard/student/answer-hub'),
         }}
+        actions={
+          isTeacher ? (
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => setIsHiddenModalOpen(true)}
+                className="flex items-center gap-2 px-4 py-2 bg-amber-100 text-amber-800 rounded-lg hover:bg-amber-200 transition-colors font-semibold border border-amber-300"
+              >
+                <EyeOff className="w-4 h-4" />
+                Hidden ({hiddenExercises.length})
+              </button>
+              <BatchSelector
+                batches={batches}
+                selectedBatch={selectedBatch}
+                onSelectBatch={setSelectedBatch}
+                onCreateBatch={() => {
+                  // Note: Batch creation is handled in teacher dashboard
+                  // For now, we'll just show info message
+                  console.log('Batch creation - redirect to teacher dashboard');
+                }}
+              />
+            </div>
+          ) : undefined
+        }
       />
 
       {/* Main Content */}
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
+        {/* Teacher Controls */}
+        {isTeacher && (
+          <TeacherControls
+            hasOverrides={hasOverrides}
+            overrideCount={overrideCount}
+            onCreateExercise={handleCreateExercise}
+          />
+        )}
+
         {/* Filters */}
         {exerciseCount > 0 && (
           <div className="mb-6">
@@ -193,136 +273,84 @@ export default function LessonDetailPage() {
         {/* Exercises List */}
         {exerciseCount > 0 ? (
           filteredExercises.length > 0 ? (
-            (() => {
-              // Group exercises by section
-              const exercisesBySection: Record<string, typeof lesson.exercises> = {};
-              filteredExercises.forEach(ex => {
-                const section = ex.section || 'Übungen';
-                if (!exercisesBySection[section]) {
-                  exercisesBySection[section] = [];
-                }
-                exercisesBySection[section].push(ex);
-              });
-
-            const sections = Object.keys(exercisesBySection);
-            let colorIndex = 0;
-
-            // Transform into CategoryList format
-            const categories = sections.map((section) => {
-              const items = exercisesBySection[section].map((exercise) => {
-                const colorScheme = CARD_COLOR_SCHEMES[colorIndex % CARD_COLOR_SCHEMES.length];
-                colorIndex++;
-                return (
-                  <ExerciseListCard
-                    key={exercise.exerciseId}
-                    exercise={exercise}
-                    levelBook={levelBook}
-                    lessonId={lessonId}
-                    colorScheme={colorScheme}
-                  />
-                );
-              });
-
-              return {
-                key: section,
-                header: section,
-                items,
-              };
-            });
-
-            return <CategoryList categories={categories} />;
-          })()
+            <ExerciseListSection
+              filteredExercises={filteredExercises}
+              levelBook={levelBook}
+              lessonId={lessonId}
+              isTeacher={isTeacher}
+              duplicateExerciseIds={duplicateExerciseIds}
+              onReorder={handleReorder}
+              onEditExercise={handleEditExercise}
+              onToggleHide={handleToggleHide}
+            />
+          ) : (
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-12 text-center">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">
+                No Exercises Match Your Filters
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Try adjusting your search or filter criteria.
+              </p>
+              <button
+                onClick={() => setFilters({
+                  search: '',
+                  difficulty: 'all',
+                  status: 'all',
+                  hasDiscussion: 'all',
+                })}
+                className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm font-medium transition-colors"
+              >
+                Clear Filters
+              </button>
+            </div>
+          )
         ) : (
-          <div className="bg-white border border-gray-200 shadow-sm p-12 text-center">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
-              No Exercises Match Your Filters
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Try adjusting your search or filter criteria.
-            </p>
-            <button
-              onClick={() => setFilters({
-                search: '',
-                difficulty: 'all',
-                status: 'all',
-                hasDiscussion: 'all',
-              })}
-              className="inline-block px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 text-sm font-medium transition-colors"
-            >
-              Clear Filters
-            </button>
-          </div>
-        )
-      ) : (
-          <div className="bg-white border border-gray-200 shadow-sm p-12 text-center">
+          <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-12 text-center">
             <div className="text-6xl mb-4">📝</div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">
               No Exercises Yet
             </h3>
-            <p className="text-gray-600">
-              Exercises for this lesson will be added soon.
+            <p className="text-gray-600 mb-4">
+              {isTeacher
+                ? 'Get started by creating your first custom exercise!'
+                : 'Exercises for this lesson will be added soon.'}
             </p>
+            {isTeacher && (
+              <button
+                onClick={handleCreateExercise}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-semibold"
+              >
+                <Plus className="w-4 h-4" />
+                Create Exercise
+              </button>
+            )}
           </div>
         )}
       </div>
+
+      {/* Exercise Override Dialog */}
+      <ExerciseOverrideDialog
+        isOpen={isOverrideDialogOpen}
+        onClose={() => {
+          setIsOverrideDialogOpen(false);
+          setEditingExercise(null);
+        }}
+        onSubmit={handleSubmitOverride}
+        mode={dialogMode}
+        exercise={editingExercise || undefined}
+        level={level}
+        bookType={bookType}
+        lessonNumber={lessonNumber}
+      />
+
+      {/* Hidden Exercises Modal */}
+      <HiddenExercisesModal
+        isOpen={isHiddenModalOpen}
+        onClose={() => setIsHiddenModalOpen(false)}
+        hiddenExercises={hiddenExercises}
+        onUnhide={(exerciseId) => handleToggleHide(exerciseId, false)}
+      />
     </div>
-  );
-}
-
-/**
- * Exercise List Card - Flat row style matching GrammarRuleCard
- */
-function ExerciseListCard({
-  exercise,
-  levelBook,
-  lessonId,
-  colorScheme,
-}: {
-  exercise: Exercise;
-  levelBook: string;
-  lessonId: string;
-  colorScheme: {
-    bg: string;
-    text: string;
-    badge: string;
-  };
-}) {
-  // Construct exercise detail URL using exerciseId (unique identifier)
-  const exerciseUrl = `/dashboard/student/answer-hub/${levelBook}/${lessonId}/${encodeURIComponent(exercise.exerciseId)}`;
-
-  const answerCount = exercise.answers.length;
-
-  return (
-    <Link href={exerciseUrl}>
-      <div className={`group ${colorScheme.bg} px-6 py-4 transition-all duration-200 cursor-pointer`}>
-        <div className="flex items-start justify-between gap-4">
-          <div className="flex-1 min-w-0">
-            <h3 className={`text-lg font-bold text-gray-900 ${colorScheme.text} transition-colors duration-200 mb-1`}>
-              {exercise.exerciseNumber}
-            </h3>
-            <p className="text-sm text-gray-600 mb-0">
-              {answerCount} item{answerCount !== 1 ? 's' : ''}
-              {exercise.question && ` - ${exercise.question.substring(0, 60)}${exercise.question.length > 60 ? '...' : ''}`}
-            </p>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="flex-shrink-0 flex items-center gap-2">
-            {/* Answer Count Badge */}
-            <span className="inline-flex items-center px-2 py-1 text-xs font-bold bg-gray-100 text-gray-600">
-              {answerCount}
-            </span>
-
-            {/* View Button */}
-            <span
-              className={`inline-flex items-center px-3 py-1 text-xs font-bold bg-gray-100 text-gray-600 group-hover:text-white ${colorScheme.badge} transition-all duration-200`}
-            >
-              VIEW
-            </span>
-          </div>
-        </div>
-      </div>
-    </Link>
   );
 }

@@ -1,0 +1,334 @@
+{
+  "lessonNumber": 6,
+  "title": "Lektion 6",
+  "exercises": [
+    {
+      "exerciseId": "B1.2-L6-AB-4",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "4",
+      "section": "Schritt  A",
+      "title": "4",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "wurde   c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "wurde   e"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L6-AB-1",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "1",
+      "section": "Schritt  A",
+      "title": "1",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "werden im"
+        },
+        {
+          "itemNumber": "c",
+          "correctAnswer": "werden   asiatische"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "Müll  wird"
+        },
+        {
+          "itemNumber": "e",
+          "correctAnswer": "werden"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L6-AB-2a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "2a",
+      "section": "Schritt  A",
+      "title": "2a",
+      "answers": [
+        {
+          "itemNumber": "r",
+          "correctAnswer": "mehr Bewegung"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L6-AB-3a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "3a",
+      "section": "Schritt  A",
+      "title": "3a",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "wurde"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L6-AB-3b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "3b",
+      "section": "Schritt  A",
+      "title": "3b",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "wurde"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L6-AB-6",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "6",
+      "section": "Schritt  A",
+      "title": "6",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Zuerst"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L6-AB-7",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "7",
+      "section": "Schritt  A",
+      "title": "7",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "a"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "c"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "a"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "c"
+        },
+        {
+          "itemNumber": "5",
+          "correctAnswer": "c"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L6-AB-11",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "11",
+      "section": "Schritt   B",
+      "title": "11",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "höchsten   c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "erfolgreicheren   e"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L6-AB-8",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "8",
+      "section": "Schritt   B",
+      "title": "8",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "kleiner"
+        },
+        {
+          "itemNumber": "c",
+          "correctAnswer": "älter"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "teurer"
+        },
+        {
+          "itemNumber": "e",
+          "correctAnswer": "kälter"
+        },
+        {
+          "itemNumber": "f",
+          "correctAnswer": "höher"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L6-AB-9a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "9a",
+      "section": "Schritt   B",
+      "title": "9a",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "längste"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "kälteste"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "kleinste"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L6-AB-1",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "1",
+      "section": "Schritt   B",
+      "title": "1",
+      "answers": [
+        {
+          "itemNumber": "e",
+          "correctAnswer": "Eisenbahntunnel"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L6-AB-3",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "3",
+      "section": "Schritt   B",
+      "title": "3",
+      "answers": [
+        {
+          "itemNumber": "e",
+          "correctAnswer": "Stadt"
+        },
+        {
+          "itemNumber": "t",
+          "correctAnswer": "en   Städte"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L6-AB-15a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "15a",
+      "section": "Schritt   B",
+      "title": "15a",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "Ich finde"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "halte ich"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "Meiner Ansicht"
+        },
+        {
+          "itemNumber": "5",
+          "correctAnswer": "kann ich"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L6-AB-19",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "19",
+      "section": "Schritt C",
+      "title": "19",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "zonen   b"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "Regierung   e"
+        },
+        {
+          "itemNumber": "f",
+          "correctAnswer": "streiken   g"
+        },
+        {
+          "itemNumber": "h",
+          "correctAnswer": "protest"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L6-AB-7",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 6,
+      "exerciseNumber": "7",
+      "section": "Schritt C",
+      "title": "7",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "zonen   b"
+        }
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

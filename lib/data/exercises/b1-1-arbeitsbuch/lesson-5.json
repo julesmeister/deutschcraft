@@ -1,0 +1,514 @@
+{
+  "lessonNumber": 5,
+  "title": "Lektion 5 - Unterwegs",
+  "exercises": [
+    {
+      "exerciseId": "B1.1-L5-AB-6",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "6",
+      "section": "Schritt A",
+      "title": "6",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "brauchst   c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "müssen"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-1c",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "1c",
+      "section": "Schritt A",
+      "title": "1c",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "Vergesst bitte"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-8",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "8",
+      "section": "Schritt A",
+      "title": "8",
+      "answers": [
+        {
+          "itemNumber": "A",
+          "correctAnswer": "befristet"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-14",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "14",
+      "section": "Schritt A",
+      "title": "14",
+      "answers": [
+        {
+          "itemNumber": "c",
+          "correctAnswer": "Musterlösung"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-11",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "11",
+      "section": "Schritt B",
+      "title": "11",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "während  b"
+        },
+        {
+          "itemNumber": "c",
+          "correctAnswer": "während  e"
+        },
+        {
+          "itemNumber": "f",
+          "correctAnswer": "von"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-13",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "13",
+      "section": "Schritt B",
+      "title": "13",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "richtig  b"
+        },
+        {
+          "itemNumber": "c",
+          "correctAnswer": "richtig   d"
+        },
+        {
+          "itemNumber": "e",
+          "correctAnswer": "richtig  f"
+        },
+        {
+          "itemNumber": "g",
+          "correctAnswer": "falsch"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-10",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "10",
+      "section": "Schritt B",
+      "title": "10",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "innerhalb weniger"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-12",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "12",
+      "section": "Schritt B",
+      "title": "12",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "richtig  b"
+        },
+        {
+          "itemNumber": "c",
+          "correctAnswer": "richtig   d"
+        },
+        {
+          "itemNumber": "e",
+          "correctAnswer": "richtig  f"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-4",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "4",
+      "section": "Schritt B",
+      "title": "4",
+      "answers": [
+        {
+          "itemNumber": "15",
+          "correctAnswer": "Musterlösung"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-17",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "17",
+      "section": "Schritt C",
+      "title": "17",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Es"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-4",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "4",
+      "section": "Schritt C",
+      "title": "4",
+      "answers": [
+        {
+          "itemNumber": "c",
+          "correctAnswer": "Ich habe"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-1",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "1",
+      "section": "Schritt C",
+      "title": "1",
+      "answers": [
+        {
+          "itemNumber": "d",
+          "correctAnswer": "Es ma"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-5",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "5",
+      "section": "Schritt C",
+      "title": "5",
+      "answers": [
+        {
+          "itemNumber": "e",
+          "correctAnswer": "Ich habe"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-18a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "18a",
+      "section": "Schritt C",
+      "title": "18a",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "die"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-3",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "3",
+      "section": "Schritt C",
+      "title": "3",
+      "answers": [
+        {
+          "itemNumber": "5",
+          "correctAnswer": "die"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-18c",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "18c",
+      "section": "Schritt C",
+      "title": "18c",
+      "answers": [
+        {
+          "itemNumber": "A",
+          "correctAnswer": "ng estellter"
+        },
+        {
+          "itemNumber": "a",
+          "correctAnswer": "ng enehm"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-19",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "19",
+      "section": "Schritt D",
+      "title": "19",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Forschung   c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "überlegen   e"
+        },
+        {
+          "itemNumber": "f",
+          "correctAnswer": "Reihe   g"
+        },
+        {
+          "itemNumber": "h",
+          "correctAnswer": "querdenken   i"
+        },
+        {
+          "itemNumber": "j",
+          "correctAnswer": "Projekte   k"
+        },
+        {
+          "itemNumber": "n",
+          "correctAnswer": "en"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-67",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "67",
+      "section": "Fokus Beruf",
+      "title": "67",
+      "answers": [
+        {
+          "itemNumber": "000",
+          "correctAnswer": "Euro   im"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-3",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "3",
+      "section": "Fokus Beruf",
+      "title": "3",
+      "answers": [
+        {
+          "itemNumber": "4200",
+          "correctAnswer": "Euro im"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-AB-2b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 5,
+      "exerciseNumber": "2b",
+      "section": "Fokus Beruf",
+      "title": "2b",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "e"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-KB-A1",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 5,
+      "exerciseNumber": "A1",
+      "section": "Schritt A",
+      "title": "A1",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "B  Fang"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-KB-A2a",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 5,
+      "exerciseNumber": "A2a",
+      "section": "Schritt A",
+      "title": "A2a",
+      "answers": [
+        {
+          "itemNumber": "B",
+          "correctAnswer": "Hotel"
+        },
+        {
+          "itemNumber": "C",
+          "correctAnswer": "Dienstleistung   D"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-KB-A3",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 5,
+      "exerciseNumber": "A3",
+      "section": "Schritt A",
+      "title": "A3",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "Bewerbung  bei"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-KB-B1",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 5,
+      "exerciseNumber": "B1",
+      "section": "Schritt B",
+      "title": "B1",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "Tobias hat"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-KB-B2",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 5,
+      "exerciseNumber": "B2",
+      "section": "Schritt B",
+      "title": "B2",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "beim"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-KB-C1",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 5,
+      "exerciseNumber": "C1",
+      "section": "Schritt C",
+      "title": "C1",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "an"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-KB-C2",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 5,
+      "exerciseNumber": "C2",
+      "section": "Schritt C",
+      "title": "C2",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "weitere"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L5-KB-2",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 5,
+      "exerciseNumber": "2",
+      "section": "Schritt D",
+      "title": "2",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "Um"
+        }
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

@@ -544,6 +544,26 @@ service cloud.firestore {
     }
 
     // ============================================================================
+    // EXERCISE OVERRIDES (Teacher customizations to Answer Hub exercises)
+    // ============================================================================
+
+    // Exercise overrides - teachers can customize exercises globally
+    match /exercise-overrides/{overrideId} {
+      // Teachers can read/write their own overrides
+      allow read, write: if isTeacher() &&
+                            resource.data.teacherEmail == request.auth.token.email;
+
+      // Teachers can create overrides for themselves
+      allow create: if isTeacher() &&
+                      request.resource.data.teacherEmail == request.auth.token.email;
+
+      // Students can read their teacher's overrides
+      allow read: if isStudent() &&
+                    exists(/databases/$(database)/documents/users/$(request.auth.token.email)) &&
+                    resource.data.teacherEmail == get(/databases/$(database)/documents/users/$(request.auth.token.email)).data.teacherId;
+    }
+
+    // ============================================================================
     // ALLOW ALL FOR DEVELOPMENT (Comment out in production)
     // ============================================================================
 

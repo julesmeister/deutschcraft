@@ -35,7 +35,11 @@
     "dict:populate": "tsx scripts/populate-dictionary.ts",
     "migrate:add-name": "tsx scripts/migrate-add-name-field.ts",
     "grammar:generate-templates": "tsx scripts/generate-grammar-sentence-templates.ts",
-    "grammar:fill": "tsx scripts/fill-grammar-sentences.ts"
+    "grammar:fill": "tsx scripts/fill-grammar-sentences.ts",
+    "exercises:manage": "node scripts/exercise-manager.js",
+    "exercises:split": "node scripts/split-exercises.js",
+    "exercises:merge": "node scripts/merge-exercises.js",
+    "exercises:merge:all": "node scripts/merge-exercises.js --all"
   },
   "dependencies": {
     "@libsql/client": "^0.15.15",
@@ -57,6 +61,7 @@
     "lucide-react": "^0.553.0",
     "next": "^16.0.7",
     "next-auth": "^4.24.13",
+    "pdf-parse": "^1.1.1",
     "pdf2json": "^4.0.0",
     "peerjs": "^1.5.5",
     "react": "^19.0.0",

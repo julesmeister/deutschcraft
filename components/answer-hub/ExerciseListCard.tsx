@@ -1,0 +1,144 @@
+/**
+ * Exercise List Card - Flat row style matching GrammarRuleCard
+ * Supports override metadata badges and teacher actions
+ */
+
+'use client';
+
+import Link from 'next/link';
+import { Edit3, Sparkles, GripVertical } from 'lucide-react';
+import { ExerciseWithOverrideMetadata } from '@/lib/models/exerciseOverride';
+
+interface ExerciseListCardProps {
+  exercise: ExerciseWithOverrideMetadata;
+  levelBook: string;
+  lessonId: string;
+  colorScheme: {
+    bg: string;
+    text: string;
+    badge: string;
+  };
+  isTeacher?: boolean;
+  onEdit?: (e: React.MouseEvent) => void;
+  onToggleHide?: (e: React.MouseEvent) => void;
+  isDraggable?: boolean;
+  isDuplicate?: boolean;
+}
+
+export function ExerciseListCard({
+  exercise,
+  levelBook,
+  lessonId,
+  colorScheme,
+  isTeacher,
+  onEdit,
+  onToggleHide,
+  isDraggable,
+  isDuplicate,
+}: ExerciseListCardProps) {
+  // Construct exercise detail URL using exerciseId (unique identifier)
+  const exerciseUrl = `/dashboard/student/answer-hub/${levelBook}/${lessonId}/${encodeURIComponent(exercise.exerciseId)}`;
+
+  const answerCount = exercise.answers.length;
+
+  const handleCardClick = (e: React.MouseEvent) => {
+    // Prevent navigation if dragging
+    if ((e.currentTarget as HTMLElement).getAttribute('data-dragging') === 'true') {
+      e.preventDefault();
+      return;
+    }
+
+    // If clicking on a button, don't navigate
+    if ((e.target as HTMLElement).closest('button')) {
+      e.preventDefault();
+      return;
+    }
+  };
+
+  return (
+    <Link href={exerciseUrl} onClick={handleCardClick} draggable={false}>
+      <div className={`group ${colorScheme.bg} px-6 py-4 transition-all duration-200 ${isDraggable ? 'cursor-grab active:cursor-grabbing' : 'cursor-pointer'}`}>
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 mb-1">
+              {/* Drag handle icon for teachers */}
+              {isDraggable && (
+                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-semibold bg-gray-100 text-gray-600">
+                  <GripVertical className="w-3 h-3" />
+                </span>
+              )}
+
+              <h3 className={`text-lg font-bold text-gray-900 ${colorScheme.text} transition-colors duration-200`}>
+                {exercise.exerciseNumber}
+              </h3>
+
+              {/* Override Badges */}
+              {exercise._isModified && (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 border border-blue-300">
+                  <Edit3 className="w-3 h-3" />
+                  Modified
+                </span>
+              )}
+              {exercise._isCreated && (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800 border border-green-300">
+                  <Sparkles className="w-3 h-3" />
+                  Custom
+                </span>
+              )}
+            </div>
+            <p className="text-sm text-gray-600 mb-0">
+              {answerCount} item{answerCount !== 1 ? 's' : ''}
+              {exercise.question && ` - ${exercise.question.substring(0, 60)}${exercise.question.length > 60 ? '...' : ''}`}
+            </p>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex-shrink-0 flex items-center gap-2">
+            {/* Duplicate Warning Badge */}
+            {isDuplicate && (
+              <span className="inline-flex items-center px-3 py-1 text-xs font-bold bg-yellow-100 text-yellow-800">
+                DUPLICATE
+              </span>
+            )}
+
+            {/* Teacher Action Badges */}
+            {isTeacher && (
+              <>
+                <button
+                  onClick={onEdit}
+                  className="inline-flex items-center px-3 py-1 text-xs font-bold bg-orange-100 text-orange-700 hover:bg-orange-200 transition-colors"
+                  title="Edit exercise"
+                >
+                  EDIT
+                </button>
+                <button
+                  onClick={onToggleHide}
+                  className={`inline-flex items-center px-3 py-1 text-xs font-bold transition-colors ${
+                    exercise._isHidden
+                      ? 'bg-green-100 text-green-700 hover:bg-green-200'
+                      : 'bg-red-100 text-red-700 hover:bg-red-200'
+                  }`}
+                  title={exercise._isHidden ? 'Unhide exercise' : 'Hide exercise'}
+                >
+                  {exercise._isHidden ? 'SHOW' : 'HIDE'}
+                </button>
+              </>
+            )}
+
+            {/* Answer Count Badge */}
+            <span className="inline-flex items-center px-2 py-1 text-xs font-bold bg-gray-100 text-gray-600">
+              {answerCount}
+            </span>
+
+            {/* View Button */}
+            <span
+              className={`inline-flex items-center px-3 py-1 text-xs font-bold bg-gray-100 text-gray-600 group-hover:text-white ${colorScheme.badge} transition-all duration-200`}
+            >
+              VIEW
+            </span>
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+}

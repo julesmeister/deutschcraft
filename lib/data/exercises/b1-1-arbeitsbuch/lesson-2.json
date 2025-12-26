@@ -1,0 +1,838 @@
+{
+  "lessonNumber": 2,
+  "title": "Lektion 2 - Unterhaltung",
+  "exercises": [
+    {
+      "exerciseId": "B1.1-L2-AB-Folge2-1a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "1a",
+      "section": "Folge 2: Ein Abend, der nicht so toll war",
+      "title": "Foto-Hörgeschichte 1a",
+      "answers": [
+        {
+          "itemNumber": "Musterlösung",
+          "correctAnswer": "1 Ella, Vivi und Max wollen einen Film zusammen sehen. Max darf den Film aussuchen. 2 Max findet die Darsteller lustig, aber Ella und Vivi langweilen sich. 3 Die Freundinnen gehen nach Hause und diskutieren über den Film. 4 Zuhause schauen Max, Vivi und Ella ihre Lieblingsserien."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-Folge2-2a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "2a",
+      "section": "Folge 2: Ein Abend, der nicht so toll war",
+      "title": "Foto-Hörgeschichte 2a",
+      "answers": [
+        {
+          "itemNumber": "Musterlösung",
+          "correctAnswer": "Ella möchte wissen, welche Serie die Leute selbst gerne machen würden. In Dianas Serie geht es um einen Mann, der immer Pech hat, aber trotzdem immer optimistisch bleibt. In Slavojs Serie geht es um eine Köchin in einem tollen Restaurant, deren Essen die Leute am liebsten täglich essen möchten."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-Folge2-2b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "2b",
+      "section": "Folge 2: Ein Abend, der nicht so toll war",
+      "title": "Foto-Hörgeschichte 2b",
+      "answers": [
+        {
+          "itemNumber": "Diana",
+          "correctAnswer": "2"
+        },
+        {
+          "itemNumber": "Slavoj",
+          "correctAnswer": "1"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-A1",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "A1",
+      "section": "Schritt A",
+      "title": "A1",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "Max sieht die Serie an, obwohl er sie schon dreimal gesehen hat."
+        },
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Ella und Vivi gehen, weil sie die Serie nicht lustig finden."
+        },
+        {
+          "itemNumber": "c",
+          "correctAnswer": "Ella und Vivi streiten sich, obwohl sie gute Freundinnen sind."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-A2a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "A2a",
+      "section": "Schritt A",
+      "title": "A2a",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "B"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "C"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "A"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-A2b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "A2b",
+      "section": "Schritt A",
+      "title": "A2b",
+      "answers": [
+        {
+          "itemNumber": "Jonas-1",
+          "correctAnswer": "3"
+        },
+        {
+          "itemNumber": "Jonas-2",
+          "correctAnswer": "4"
+        },
+        {
+          "itemNumber": "Julia-1",
+          "correctAnswer": "2"
+        },
+        {
+          "itemNumber": "Julia-2",
+          "correctAnswer": "6"
+        },
+        {
+          "itemNumber": "Sarah-1",
+          "correctAnswer": "1"
+        },
+        {
+          "itemNumber": "Sarah-2",
+          "correctAnswer": "5"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-A2c",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "A2c",
+      "section": "Schritt A",
+      "title": "A2c",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "Meine Lieblingsserie ist eine Krankenhausserie, obwohl ich kein Blut sehen kann."
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "Weil ich Krimis liebe, ist meine Lieblingsserie natürlich eine Kriminalserie."
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "Obwohl sich das nicht besonders interessant anhört, ist die Serie wahnsinnig lustig."
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "Obwohl ich alle Folgen schon kenne, sehe ich sie immer noch regelmäßig an."
+        },
+        {
+          "itemNumber": "5",
+          "correctAnswer": "Watson veröffentlicht alle Fälle im Internet, obwohl Holmes das nicht möchte."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-A3a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "A3a",
+      "section": "Schritt A",
+      "title": "A3a",
+      "answers": [
+        {
+          "itemNumber": "words-1",
+          "correctAnswer": "echt"
+        },
+        {
+          "itemNumber": "words-2",
+          "correctAnswer": "überhaupt nicht"
+        },
+        {
+          "itemNumber": "words-3",
+          "correctAnswer": "total"
+        },
+        {
+          "itemNumber": "words-4",
+          "correctAnswer": "nicht besonders"
+        },
+        {
+          "itemNumber": "words-5",
+          "correctAnswer": "ziemlich"
+        },
+        {
+          "itemNumber": "words-6",
+          "correctAnswer": "gar nicht"
+        },
+        {
+          "itemNumber": "words-7",
+          "correctAnswer": "besonders"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-A3b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "A3b",
+      "section": "Schritt A",
+      "title": "A3b",
+      "answers": [
+        {
+          "itemNumber": "++",
+          "correctAnswer": "total"
+        },
+        {
+          "itemNumber": "+",
+          "correctAnswer": "echt"
+        },
+        {
+          "itemNumber": "-",
+          "correctAnswer": "nicht besonders"
+        },
+        {
+          "itemNumber": "--1",
+          "correctAnswer": "überhaupt nicht"
+        },
+        {
+          "itemNumber": "--2",
+          "correctAnswer": "gar nicht"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-B1a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "B1a",
+      "section": "Schritt B",
+      "title": "B1a",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "Mein Serienheld wäre ein Mann, der immer optimistisch bleibt."
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "Meine Hauptfigur wäre eine Köchin, die unglaublich gut kochen kann."
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "In meiner Serie geht es um ein Ehepaar, das eine Flüchtlingsfamilie bei sich aufnimmt."
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "Meine Hauptfiguren wären Hip-Hop-Musiker, die zusammen durch die ganze Welt reisen."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-B2b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "B2b",
+      "section": "Schritt B",
+      "title": "B2b",
+      "answers": [
+        {
+          "itemNumber": "Die fantastischen Vier",
+          "correctAnswer": "singen auf Deutsch, Texte lustig und positiv, Neue Schule, Wortwitz und Humor, Partymusik, soll Spaß machen"
+        },
+        {
+          "itemNumber": "Kollegah",
+          "correctAnswer": "Gangsta-Rapper, Gewalt, Geld, Kriminalität, sprechen schlecht über Frauen oder Homosexuelle, werden kritisiert, verdienen viel Geld, 2015 erfolgreichster deutscher Musiker"
+        },
+        {
+          "itemNumber": "Megaloh",
+          "correctAnswer": "ausländische Wurzeln, holländisch-nigerianisch, soziale Themen: Arbeitslosigkeit, Rassismus, Leben auf der Straße, Probleme von Migranten, Job als Lagerarbeiter, Traum: von der Musik zu leben, schwieriger Weg"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-B3",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "B3",
+      "section": "Schritt B",
+      "title": "B3",
+      "answers": [
+        {
+          "itemNumber": "a-1",
+          "correctAnswer": "dem"
+        },
+        {
+          "itemNumber": "a-2",
+          "correctAnswer": "der"
+        },
+        {
+          "itemNumber": "b-1",
+          "correctAnswer": "die"
+        },
+        {
+          "itemNumber": "b-2",
+          "correctAnswer": "die"
+        },
+        {
+          "itemNumber": "b-3",
+          "correctAnswer": "der"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-B4",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "B4",
+      "section": "Schritt B",
+      "title": "B4",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "die"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "die"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "der"
+        },
+        {
+          "itemNumber": "5",
+          "correctAnswer": "der"
+        },
+        {
+          "itemNumber": "6",
+          "correctAnswer": "dem"
+        },
+        {
+          "itemNumber": "7",
+          "correctAnswer": "das"
+        },
+        {
+          "itemNumber": "8",
+          "correctAnswer": "die"
+        },
+        {
+          "itemNumber": "9",
+          "correctAnswer": "der"
+        },
+        {
+          "itemNumber": "10",
+          "correctAnswer": "den"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-C1",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "C1",
+      "section": "Schritt C",
+      "title": "C1",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "B"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "A"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "C"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-C2",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "C2",
+      "section": "Schritt C",
+      "title": "C2",
+      "answers": [
+        {
+          "itemNumber": "etwas vorschlagen",
+          "correctAnswer": "Habt ihr Lust auf …?"
+        },
+        {
+          "itemNumber": "etwas ablehnen",
+          "correctAnswer": "Nein auf keinen Fall!"
+        },
+        {
+          "itemNumber": "einen Gegenvorschlag machen-1",
+          "correctAnswer": "Nein"
+        },
+        {
+          "itemNumber": "einen Gegenvorschlag machen-2",
+          "correctAnswer": "auf keinen Fall."
+        },
+        {
+          "itemNumber": "zustimmen / sich einigen",
+          "correctAnswer": "Habt ihr Lust auf …? Ich bin (auch) dafür. Gute Idee!"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-D1b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "D1b",
+      "section": "Schritt D",
+      "title": "D1b",
+      "answers": [
+        {
+          "itemNumber": "list-1",
+          "correctAnswer": "Fernsehen"
+        },
+        {
+          "itemNumber": "list-2",
+          "correctAnswer": "Rundfunk"
+        },
+        {
+          "itemNumber": "list-3",
+          "correctAnswer": "Internet"
+        },
+        {
+          "itemNumber": "list-4",
+          "correctAnswer": "CD/MP3"
+        },
+        {
+          "itemNumber": "list-5",
+          "correctAnswer": "Bücher"
+        },
+        {
+          "itemNumber": "list-6",
+          "correctAnswer": "Zeitungen/Zeitschriften"
+        },
+        {
+          "itemNumber": "list-7",
+          "correctAnswer": "DVD"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-D2a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "D2a",
+      "section": "Schritt D",
+      "title": "D2a - Musterlösung",
+      "answers": [
+        {
+          "itemNumber": "Musterlösung",
+          "correctAnswer": "Fernsehen: Krimis, am Wochenende, abends zu Hause. Rundfunk: Musik und Nachrichten, montags bis freitags etwa eine Stunde, morgens und abends im Auto. Internet: soziale Netzwerke, Suchmaschine, jeden Tag, immer wieder zwischendurch, überall..."
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-Grammatik-3",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "3",
+      "section": "Grammatik und Kommunikation",
+      "title": "Grammatik 3",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "die"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "den"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "das"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-Lesen-1",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "1",
+      "section": "Zwischendurch mal … - Lesen",
+      "title": "Lesen 1",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "c"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "e"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-Lesen-2",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "2",
+      "section": "Zwischendurch mal … - Lesen",
+      "title": "Lesen 2",
+      "answers": [
+        {
+          "itemNumber": "puzzle",
+          "correctAnswer": "8 I, 6 A, 9 E, 7 R, 3 L, 4 D. Lösung: Goldmarie"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-AB-Lied-1",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 2,
+      "exerciseNumber": "1",
+      "section": "Zwischendurch mal … - Lied",
+      "title": "Lied 1",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "A"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "C"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "D"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "G"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-KB-A1",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 2,
+      "exerciseNumber": "A1",
+      "section": "Schritt A",
+      "title": "A1",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "Max sieht"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-KB-3",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 2,
+      "exerciseNumber": "3",
+      "section": "Schritt A",
+      "title": "3",
+      "answers": [
+        {
+          "itemNumber": "A",
+          "correctAnswer": "A"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-KB-A2c",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 2,
+      "exerciseNumber": "A2c",
+      "section": "Schritt A",
+      "title": "A2c",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "Meine Lieblingsserie"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-KB-4",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 2,
+      "exerciseNumber": "4",
+      "section": "Schritt A",
+      "title": "4",
+      "answers": [
+        {
+          "itemNumber": "i",
+          "correctAnswer": "g"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-KB-5",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 2,
+      "exerciseNumber": "5",
+      "section": "Schritt A",
+      "title": "5",
+      "answers": [
+        {
+          "itemNumber": "t",
+          "correctAnswer": "alle"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-KB-3",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 2,
+      "exerciseNumber": "3",
+      "section": "Schritt B",
+      "title": "3",
+      "answers": [
+        {
+          "itemNumber": "I",
+          "correctAnswer": "n meiner"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-KB-B3",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 2,
+      "exerciseNumber": "B3",
+      "section": "Schritt B",
+      "title": "B3",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "dem"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-KB-B4",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 2,
+      "exerciseNumber": "B4",
+      "section": "Schritt B",
+      "title": "B4",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "die"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "die"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "der"
+        },
+        {
+          "itemNumber": "5",
+          "correctAnswer": "der"
+        },
+        {
+          "itemNumber": "6",
+          "correctAnswer": "dem"
+        },
+        {
+          "itemNumber": "7",
+          "correctAnswer": "das"
+        },
+        {
+          "itemNumber": "8",
+          "correctAnswer": "die"
+        },
+        {
+          "itemNumber": "9",
+          "correctAnswer": "der"
+        },
+        {
+          "itemNumber": "10",
+          "correctAnswer": "den"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-KB-C1",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 2,
+      "exerciseNumber": "C1",
+      "section": "Schritt C",
+      "title": "C1",
+      "answers": [
+        {
+          "itemNumber": "C",
+          "correctAnswer": "C"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-KB-D1",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 2,
+      "exerciseNumber": "D1",
+      "section": "Schritt D",
+      "title": "D1",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Fernsehen"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-KB-D2",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 2,
+      "exerciseNumber": "D2",
+      "section": "Schritt D",
+      "title": "D2",
+      "answers": [
+        {
+          "itemNumber": "a",
+          "correctAnswer": "Musterlösung"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-KB-2",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 2,
+      "exerciseNumber": "2",
+      "section": "Schritt D",
+      "title": "2",
+      "answers": [
+        {
+          "itemNumber": "3",
+          "correctAnswer": "die"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.1-L2-KB-2",
+      "level": "B1",
+      "bookType": "KB",
+      "lessonNumber": 2,
+      "exerciseNumber": "2",
+      "section": "Zwischendurch mal …     Lesen",
+      "title": "2",
+      "answers": [
+        {
+          "itemNumber": "8",
+          "correctAnswer": "I"
+        },
+        {
+          "itemNumber": "6",
+          "correctAnswer": "A"
+        },
+        {
+          "itemNumber": "9",
+          "correctAnswer": "E"
+        },
+        {
+          "itemNumber": "7",
+          "correctAnswer": "R"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "L"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "D"
+        }
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

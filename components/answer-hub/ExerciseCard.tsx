@@ -7,12 +7,14 @@
 
 import { useState } from 'react';
 import { Exercise } from '@/lib/models/exercises';
+import { ExerciseWithOverrideMetadata } from '@/lib/models/exerciseOverride';
 import { User } from '@/lib/models/user';
 import { AnswersList } from './AnswersList';
 import { ExerciseDiscussion } from './ExerciseDiscussion';
+import { Edit3, Sparkles } from 'lucide-react';
 
 interface ExerciseCardProps {
-  exercise: Exercise;
+  exercise: Exercise | ExerciseWithOverrideMetadata;
   currentUser: User | null;
   currentUserBatchId: string | null | undefined;
   colorScheme: {
@@ -29,8 +31,8 @@ export function ExerciseCard({
 }: ExerciseCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  // Check if current user is a teacher
-  const isTeacher = currentUser?.role === 'teacher';
+  // Check if current user is a teacher (role is uppercase in database)
+  const isTeacher = currentUser?.role === 'TEACHER';
 
   // Difficulty colors
   const difficultyColors = {
@@ -73,6 +75,22 @@ export function ExerciseCard({
 
             {/* Metadata */}
             <div className="flex flex-wrap items-center gap-2">
+              {/* Modified by Teacher Badge */}
+              {('_isModified' in exercise) && exercise._isModified && (
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 border border-blue-300">
+                  <Edit3 className="w-3 h-3" />
+                  Modified
+                </span>
+              )}
+
+              {/* Custom Exercise Badge */}
+              {('_isCreated' in exercise) && exercise._isCreated && (
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800 border border-green-300">
+                  <Sparkles className="w-3 h-3" />
+                  Custom
+                </span>
+              )}
+
               {/* Difficulty Badge */}
               {exercise.difficulty && (
                 <span

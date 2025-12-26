@@ -1,0 +1,346 @@
+{
+  "lessonNumber": 7,
+  "title": "Lektion 7",
+  "exercises": [
+    {
+      "exerciseId": "B1.2-L7-AB-1a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "1a",
+      "section": "Schritt  A",
+      "title": "1a",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "das"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-1b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "1b",
+      "section": "Schritt  A",
+      "title": "1b",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "das"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-3",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "3",
+      "section": "Schritt  A",
+      "title": "3",
+      "answers": [
+        {
+          "itemNumber": "4",
+          "correctAnswer": "der"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-21",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "21",
+      "section": "Schritt  A",
+      "title": "21",
+      "answers": [
+        {
+          "itemNumber": "3",
+          "correctAnswer": "Musterlösung"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-6",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "6",
+      "section": "Schritt B",
+      "title": "6",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "daran   c"
+        },
+        {
+          "itemNumber": "d",
+          "correctAnswer": "darauf   e"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-5",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "5",
+      "section": "Schritt B",
+      "title": "5",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Dann lass"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-8",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "8",
+      "section": "Schritt B",
+      "title": "8",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Mit wem"
+        },
+        {
+          "itemNumber": "c",
+          "correctAnswer": "Wovon   d"
+        },
+        {
+          "itemNumber": "e",
+          "correctAnswer": "Worüber"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-11a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "11a",
+      "section": "Schritt B",
+      "title": "11a",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "Naomi"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-11b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "11b",
+      "section": "Schritt B",
+      "title": "11b",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "c"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "a"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "b"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-12a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "12a",
+      "section": "Schritt B",
+      "title": "12a",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "d"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "a"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "c"
+        },
+        {
+          "itemNumber": "5",
+          "correctAnswer": "b"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-12b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "12b",
+      "section": "Schritt B",
+      "title": "12b",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "Im Vergleich"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-13",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "13",
+      "section": "Schritt B",
+      "title": "13",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "Bei dem"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-14",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "14",
+      "section": "Schritt B",
+      "title": "14",
+      "answers": [
+        {
+          "itemNumber": "b",
+          "correctAnswer": "die"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-16a",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "16a",
+      "section": "Schritt C",
+      "title": "16a",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "der"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-2",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "2",
+      "section": "Schritt C",
+      "title": "2",
+      "answers": [
+        {
+          "itemNumber": "3",
+          "correctAnswer": "die"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-17",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "17",
+      "section": "Schritt D",
+      "title": "17",
+      "answers": [
+        {
+          "itemNumber": "1",
+          "correctAnswer": "B"
+        },
+        {
+          "itemNumber": "2",
+          "correctAnswer": "E"
+        },
+        {
+          "itemNumber": "3",
+          "correctAnswer": "X"
+        },
+        {
+          "itemNumber": "4",
+          "correctAnswer": "F"
+        },
+        {
+          "itemNumber": "5",
+          "correctAnswer": "D"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-2b",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "2b",
+      "section": "Fokus Beruf",
+      "title": "2b",
+      "answers": [
+        {
+          "itemNumber": "2",
+          "correctAnswer": "lange mit"
+        }
+      ],
+      "difficulty": "medium"
+    },
+    {
+      "exerciseId": "B1.2-L7-AB-4",
+      "level": "B1",
+      "bookType": "AB",
+      "lessonNumber": 7,
+      "exerciseNumber": "4",
+      "section": "Fokus Beruf",
+      "title": "4",
+      "answers": [
+        {
+          "itemNumber": "D",
+          "correctAnswer": "ie   Auszubildende"
+        },
+        {
+          "itemNumber": "e",
+          "correctAnswer": "Arbeit leisten"
+        }
+      ],
+      "difficulty": "medium"
+    }
+  ]
+}

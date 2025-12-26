@@ -93,7 +93,6 @@ function DashboardNavbar() {
             <MegaDropdown
               trigger="Student"
               icon="📚"
-              onNavigate={() => handleRoleSwitch('STUDENT')}
               highlight={{
                 badge: 'Learning Dashboard',
                 title: 'Track Your Progress!',
@@ -142,7 +141,6 @@ function DashboardNavbar() {
             <MegaDropdown
               trigger="Teacher"
               icon="👨‍🏫"
-              onNavigate={() => handleRoleSwitch('TEACHER')}
               highlight={{
                 badge: 'Teacher Dashboard',
                 title: 'Manage Your Students!',
@@ -157,6 +155,7 @@ function DashboardNavbar() {
                     { label: 'Students', href: '/dashboard/teacher' },
                     { label: 'Enrollments', href: '/dashboard/teacher/enrollments' },
                     { label: 'Writing Review', href: '/dashboard/teacher/writing' },
+                    { label: 'Answer Hub', href: '/dashboard/student/answer-hub' },
                     { label: 'Analytics', href: '/dashboard/analytics' },
                     { label: 'Assignments', href: '/dashboard/assignments' },
                     { label: 'Playground', href: '/dashboard/playground' },
@@ -246,13 +245,10 @@ function DashboardNavbar() {
             <div className="py-4 px-3 space-y-4">
               {/* Student Section */}
               <div>
-                <button
-                  onClick={() => handleRoleSwitch('STUDENT')}
-                  className="flex items-center gap-2 font-bold text-sm text-piku-cyan-accent mb-2 px-3"
-                >
+                <div className="flex items-center gap-2 font-bold text-sm text-piku-cyan-accent mb-2 px-3">
                   <span>📚</span>
                   <span>Student Dashboard</span>
-                </button>
+                </div>
                 <div className="space-y-1">
                   <Link href="/dashboard/student/flashcards" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
                     Flashcards
@@ -286,13 +282,10 @@ function DashboardNavbar() {
 
               {/* Teacher Section */}
               <div className="pt-2 border-t border-gray-700/50">
-                <button
-                  onClick={() => handleRoleSwitch('TEACHER')}
-                  className="flex items-center gap-2 font-bold text-sm text-piku-purple mb-2 mt-2 px-3"
-                >
+                <div className="flex items-center gap-2 font-bold text-sm text-piku-purple mb-2 mt-2 px-3">
                   <span>👨‍🏫</span>
                   <span>Teacher Dashboard</span>
-                </button>
+                </div>
                 <div className="space-y-1">
                   <Link href="/dashboard/teacher" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
                     Students
@@ -302,6 +295,9 @@ function DashboardNavbar() {
                   </Link>
                   <Link href="/dashboard/teacher/writing" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
                     Writing Review
+                  </Link>
+                  <Link href="/dashboard/student/answer-hub" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
+                    Answer Hub
                   </Link>
                   <Link href="/dashboard/dictionary" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
                     Dictionary

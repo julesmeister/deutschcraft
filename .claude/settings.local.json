@@ -120,7 +120,22 @@
       "Bash(node scripts/extract-b1-with-sections.js:*)",
       "Bash(copy:*)",
       "Bash(ForEach-Object { $_exercises.Count })",
-      "Bash(Measure-Object -Sum)"
+      "Bash(Measure-Object -Sum)",
+      "Bash(node --version:*)",
+      "Bash(node scripts/test-a1-pdf.js:*)",
+      "Bash(node scripts/explore-a1-structure.js:*)",
+      "Bash(node scripts/extract-a1-exercises.js:*)",
+      "Bash(node scripts/debug-a1-pattern.js:*)",
+      "Bash(node scripts/extract-a1-final.js:*)",
+      "Bash(node scripts/extract-a1-all-lessons.js:*)",
+      "Bash(node scripts/consolidate-a1-unterrichtsplan.js:*)",
+      "Bash(Select-String -Pattern \"exerciseId|section|title|itemNumber|correctAnswer\")",
+      "Bash(node scripts/merge-exercises.js:*)",
+      "Bash(node scripts/merge-exercises-to-arbeitsbuch.js:*)",
+      "Bash(node scripts/extract-a1-with-items.js:*)",
+      "Bash(Select-String -Pattern \"(SUMMARY|Total|Lektion [0-9]:|exercises with)\" -Context 0,0)",
+      "Bash(node scripts/split-comma-answers.js:*)",
+      "Bash(move /Y:*)"
     ],
     "deny": [],
     "ask": []
