@@ -1,20 +1,28 @@
 const fs = require('fs');
 const pdf = require('pdf-parse');
-const path = require('path');
 
-const basePath = 'C:\\Users\\User\\Documents\\Schritte\\Schritte International Neu A1.1\\Schritte International neu 1_Unterichtsplan';
-const outputDir = 'C:\\Users\\User\\Documents\\testmanship-web-v2\\lib\\data\\exercises';
+const basePath = 'C:\\Users\\User\\Documents\\Schritte\\Schritte International Neu A1.2\\Schritte International neu 2_Unterichtsplan';
 
-async function extractFromPdf(pdfPath, lessonNumber) {
+const lessons = [
+  { number: 8, file: '611082_Unterrichtsplan_L8.pdf', title: 'Lektion 8' },
+  { number: 9, file: '611082_Unterrichtsplan_L9.pdf', title: 'Lektion 9' },
+  { number: 10, file: '611082_Unterrichtsplan_L10.pdf', title: 'Lektion 10' },
+  { number: 11, file: '611082_Unterrichtsplan_L11.pdf', title: 'Lektion 11' },
+  { number: 12, file: '611082_Unterrichtsplan_L12.pdf', title: 'Lektion 12' },
+  { number: 13, file: '611082_Unterrichtsplan_L13.pdf', title: 'Lektion 13' },
+  { number: 14, file: '611082_Unterrichtsplan_L14.pdf', title: 'Lektion 14' },
+];
+
+async function extractLesson(lessonNumber, pdfPath, lessonTitle) {
   try {
+    console.log(`\n\n========== EXTRACTING ${lessonTitle} ==========`);
     const dataBuffer = fs.readFileSync(pdfPath);
     const data = await pdf(dataBuffer);
 
     const lines = data.text.split('\n');
+
     const exercises = [];
     let currentMainExercise = null;
-
-    console.log(`\n========== Processing Lektion ${lessonNumber} ==========`);
 
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trim();
@@ -41,7 +49,7 @@ async function extractFromPdf(pdfPath, lessonNumber) {
         };
 
         exercises.push(currentMainExercise);
-        console.log(`  Exercise ${currentMainExercise.exerciseNumber}: ${title}`);
+        console.log(`Exercise ${currentMainExercise.exerciseNumber}: ${title}`);
         continue;
       }
 
@@ -82,81 +90,62 @@ async function extractFromPdf(pdfPath, lessonNumber) {
         };
 
         exercises.push(subExercise);
-        console.log(`    Sub-exercise ${subExercise.exerciseNumber}: ${subTitle}`);
+        console.log(`  Sub-exercise ${subExercise.exerciseNumber}: ${subTitle}`);
       }
     }
 
-    console.log(`  ✓ Found ${exercises.length} exercises (${exercises.filter(e => !e.parent).length} main, ${exercises.filter(e => e.parent).length} sub)`);
+    console.log(`\n${lessonTitle} - Total exercises: ${exercises.length} (${exercises.filter(e => !e.parent).length} main, ${exercises.filter(e => e.parent).length} sub)`);
 
     return exercises;
 
   } catch (error) {
-    console.error(`Error processing Lektion ${lessonNumber}:`, error.message);
+    console.error(`Error extracting ${lessonTitle}:`, error.message);
     return [];
   }
 }
 
-async function extractAllLessons() {
+async function extractAll() {
   const allLessons = [];
 
-  console.log('===== Extracting exercises from all lessons =====');
+  for (const lesson of lessons) {
+    const pdfPath = `${basePath}\\${lesson.file}`;
+    const exercises = await extractLesson(lesson.number, pdfPath, lesson.title);
 
-  for (let lessonNum = 1; lessonNum <= 7; lessonNum++) {
-    const pdfPath = path.join(basePath, `Schritte_international_Neu_1_UP_L${lessonNum}.pdf`);
-
-    if (!fs.existsSync(pdfPath)) {
-      console.log(`Skipping Lektion ${lessonNum} - file not found`);
-      continue;
-    }
-
-    const exercises = await extractFromPdf(pdfPath, lessonNum);
-
-    const lessonData = {
-      lessonNumber: lessonNum,
-      title: `Lektion ${lessonNum}`,
+    allLessons.push({
+      lessonNumber: lesson.number,
+      title: lesson.title,
       exercises: exercises,
-    };
-
-    allLessons.push(lessonData);
+    });
   }
 
-  // Create the final output structure
+  // Save combined output
   const output = {
     level: 'A1',
-    book: 'Schritte International Neu 1',
-    bookType: 'UP',
+    subLevel: '2',
+    bookType: 'UP', // Unterrichtsplan
     lessons: allLessons,
   };
 
-  // Save combined file
-  const combinedPath = path.join(outputDir, 'a1-1-unterrichtsplan-all.json');
-  fs.writeFileSync(combinedPath, JSON.stringify(output, null, 2));
+  const outputPath = 'C:\\Users\\User\\Documents\\testmanship-web-v2\\lib\\data\\exercises\\a1-2-unterrichtsplan.json';
+  fs.writeFileSync(outputPath, JSON.stringify(output, null, 2));
 
-  console.log(`\n\n===== SUMMARY =====`);
-  console.log(`Total lessons processed: ${allLessons.length}`);
-  console.log(`\nExercises per lesson:`);
+  // Print final summary
+  console.log(`\n\n========== FINAL SUMMARY ==========`);
+  let totalExercises = 0;
+  let totalMain = 0;
+  let totalSub = 0;
+
   allLessons.forEach(lesson => {
-    console.log(`  Lektion ${lesson.lessonNumber}: ${lesson.exercises.length} exercises`);
+    const main = lesson.exercises.filter(e => !e.parent).length;
+    const sub = lesson.exercises.filter(e => e.parent).length;
+    console.log(`${lesson.title}: ${lesson.exercises.length} exercises (${main} main, ${sub} sub)`);
+    totalExercises += lesson.exercises.length;
+    totalMain += main;
+    totalSub += sub;
   });
 
-  const totalExercises = allLessons.reduce((sum, lesson) => sum + lesson.exercises.length, 0);
-  console.log(`\nTotal exercises: ${totalExercises}`);
-
-  console.log(`\n✓ Saved combined file: ${combinedPath}`);
-
-  // Also save individual lesson files
-  allLessons.forEach(lesson => {
-    const individualPath = path.join(outputDir, `a1-1-unterrichtsplan-L${lesson.lessonNumber}.json`);
-    const individualOutput = {
-      level: 'A1',
-      book: 'Schritte International Neu 1',
-      bookType: 'UP',
-      lesson: lesson,
-    };
-    fs.writeFileSync(individualPath, JSON.stringify(individualOutput, null, 2));
-  });
-
-  console.log(`✓ Saved individual lesson files (L1-L${allLessons.length})`);
+  console.log(`\nTOTAL: ${totalExercises} exercises (${totalMain} main, ${totalSub} sub)`);
+  console.log(`\nSaved to: ${outputPath}`);
 }
 
-extractAllLessons();
+extractAll();
