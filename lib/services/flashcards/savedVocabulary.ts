@@ -180,7 +180,12 @@ export async function saveVocabularyForLater(
       updatedAt: now,
     };
 
-    await setDoc(savedVocabRef, savedVocabulary);
+    // Filter out undefined fields (Firestore doesn't accept undefined)
+    const cleanedData = Object.fromEntries(
+      Object.entries(savedVocabulary).filter(([_, value]) => value !== undefined)
+    );
+
+    await setDoc(savedVocabRef, cleanedData);
   } catch (error) {
     console.error('[savedVocabularyService] Error saving vocabulary:', error);
     throw error;
