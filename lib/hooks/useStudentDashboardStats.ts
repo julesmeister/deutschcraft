@@ -88,7 +88,7 @@ export function useStudentDashboardStats({
     { label: 'Current Level', value: 0, displayValue: currentLevelDisplay, icon: '🎯', color: 'text-amber-600', isText: true },
     { label: 'Answer Hub Last Active', value: 0, displayValue: answerHubLastActive, icon: '🕐', color: 'text-indigo-600', isText: true },
     { label: 'Answer Hub Answers', value: answerHubStats.totalAnswersSubmitted || 0, icon: '💡', color: 'text-cyan-600' },
-    { label: 'Grammar Rules', value: grammarStats.rulesPracticed, icon: '📖', color: 'text-teal-600' },
+    { label: 'Grammar Rules Practiced', value: grammarStats.rulesPracticed, icon: '📖', color: 'text-teal-600' },
   ];
 
   return {
