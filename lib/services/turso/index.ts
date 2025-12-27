@@ -238,9 +238,40 @@ export {
 } from './videoService';
 
 // ============================================================================
+// REVIEW QUIZ SERVICE (NEW - 2025-12-28)
+// ============================================================================
+export {
+  getReviewQuiz,
+  getUserReviewQuizzes,
+  getUserQuizStats,
+  getSubmissionQuizzes,
+  createReviewQuiz,
+  updateQuizAnswers,
+  completeQuiz,
+  deleteReviewQuiz,
+} from './reviewQuizService';
+
+// ============================================================================
+// STUDENT ANSWER SERVICE (NEW - 2025-12-28)
+// ============================================================================
+export {
+  getExerciseAnswers,
+  getExerciseAnswersGrouped,
+  getStudentAnswers,
+  getAnswer,
+  getAnswerHubStats,
+  saveStudentAnswer,
+  gradeAnswer,
+  deleteStudentAnswer,
+  deleteExerciseAnswers,
+} from './studentAnswerService';
+
+// ============================================================================
 // TYPE EXPORTS
 // ============================================================================
 export type { Session } from './sessionService';
 export type { DailyProgress, WeeklyProgressData } from './progressService';
 export type { MediaFile, UploadOptions } from './mediaService';
 export type { LearningVideo, VideoUploadData, VideoCategory, CEFRLevel } from './videoService';
+export type { QuizStats } from './reviewQuizService';
+export type { AnswerHubStats } from './studentAnswerService';
