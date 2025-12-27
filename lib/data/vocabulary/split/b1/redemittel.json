@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Redemittel",
-  "totalCards": 52,
+  "totalCards": 34,
   "flashcards": [
     {
       "id": "remnote-903",
@@ -45,36 +45,6 @@
         "hierarchy": [
           "Redemittel",
           "Ich behaupte"
-        ]
-      }
-    },
-    {
-      "id": "remnote-907",
-      "german": "Ich gebe zu",
-      "english": "I admit",
-      "category": "Redemittel",
-      "level": "B1",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 4193,
-        "hierarchy": [
-          "Redemittel",
-          "Ich gebe zu"
-        ]
-      }
-    },
-    {
-      "id": "remnote-908",
-      "german": "Ich stimme zu",
-      "english": "I agree",
-      "category": "Redemittel",
-      "level": "B1",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 4194,
-        "hierarchy": [
-          "Redemittel",
-          "Ich stimme zu"
         ]
       }
     },
@@ -135,21 +105,6 @@
         "hierarchy": [
           "Redemittel",
           "abgesehen davon"
-        ]
-      }
-    },
-    {
-      "id": "remnote-926",
-      "german": "für immer",
-      "english": "for good",
-      "category": "Redemittel",
-      "level": "B1",
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 4216,
-        "hierarchy": [
-          "Redemittel",
-          "für immer"
         ]
       }
     },
@@ -502,106 +457,6 @@
       }
     },
     {
-      "id": "b1-dasinteres-827792",
-      "german": "Das interessiert mich nicht.",
-      "english": "I'm not interested.",
-      "category": "Redemittel",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 3,
-        "hierarchy": [
-          "B1",
-          "Redemittel",
-          "Das"
-        ]
-      }
-    },
-    {
-      "id": "b1-dasgehtmir-827792",
-      "german": "Das geht mir am Arsch vorbei.",
-      "english": "I don't give a damn (vulgar).",
-      "category": "Redemittel",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 4,
-        "hierarchy": [
-          "B1",
-          "Redemittel",
-          "Das"
-        ]
-      }
-    },
-    {
-      "id": "b1-leckmicham-827792",
-      "german": "Leck mich am Arsch!",
-      "english": "Kiss my ass! (vulgar)",
-      "category": "Redemittel",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 5,
-        "hierarchy": [
-          "B1",
-          "Redemittel",
-          "Leck"
-        ]
-      }
-    },
-    {
-      "id": "b1-scheiegal-827792",
-      "german": "Scheißegal!",
-      "english": "I don't give a damn! (vulgar)",
-      "category": "Redemittel",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 6,
-        "hierarchy": [
-          "B1",
-          "Redemittel",
-          "Scheißegal!"
-        ]
-      }
-    },
-    {
-      "id": "b1-istmirschn-827792",
-      "german": "Ist mir schnuppe.",
-      "english": "I don't care (colloquial).",
-      "category": "Redemittel",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 7,
-        "hierarchy": [
-          "B1",
-          "Redemittel",
-          "Ist"
-        ]
-      }
-    },
-    {
       "id": "b1-miregal-827792",
       "german": "Mir egal.",
       "english": "I don't care (colloquial).",
@@ -642,146 +497,6 @@
       }
     },
     {
-      "id": "b1-miristdasv-827792",
-      "german": "Mir ist das völlig egal.",
-      "english": "I completely don't care.",
-      "category": "Redemittel",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 10,
-        "hierarchy": [
-          "B1",
-          "Redemittel",
-          "Mir"
-        ]
-      }
-    },
-    {
-      "id": "b1-dasistmirv-827792",
-      "german": "Das ist mir vollkommen egal.",
-      "english": "I completely don't care.",
-      "category": "Redemittel",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 11,
-        "hierarchy": [
-          "B1",
-          "Redemittel",
-          "Das"
-        ]
-      }
-    },
-    {
-      "id": "b1-dasinteres-827792",
-      "german": "Das interessiert mich einen Dreck.",
-      "english": "I don't care a damn (colloquial).",
-      "category": "Redemittel",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 12,
-        "hierarchy": [
-          "B1",
-          "Redemittel",
-          "Das"
-        ]
-      }
-    },
-    {
-      "id": "b1-daskmmertm-827792",
-      "german": "Das kümmert mich einen Dreck.",
-      "english": "I don't care a damn (colloquial).",
-      "category": "Redemittel",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 13,
-        "hierarchy": [
-          "B1",
-          "Redemittel",
-          "Das"
-        ]
-      }
-    },
-    {
-      "id": "b1-mirschnupp-827792",
-      "german": "Mir schnuppe, was du denkst.",
-      "english": "I don't care what you think (colloquial).",
-      "category": "Redemittel",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 14,
-        "hierarchy": [
-          "B1",
-          "Redemittel",
-          "Mir"
-        ]
-      }
-    },
-    {
-      "id": "b1-achistmire-827792",
-      "german": "Ach, ist mir egal!",
-      "english": "Oh, I don't care!",
-      "category": "Redemittel",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 15,
-        "hierarchy": [
-          "B1",
-          "Redemittel",
-          "Ach,"
-        ]
-      }
-    },
-    {
-      "id": "b1-ichscheied-827792",
-      "german": "Ich scheiße darauf!",
-      "english": "I don't give a damn! (vulgar)",
-      "category": "Redemittel",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 16,
-        "hierarchy": [
-          "B1",
-          "Redemittel",
-          "Ich"
-        ]
-      }
-    },
-    {
       "id": "b1-dasistmirs-827792",
       "german": "Das ist mir Schnee von gestern.",
       "english": "That's ancient history to me.",
@@ -794,46 +509,6 @@
       "_meta": {
         "source": "B1 Category Expansion 2025",
         "lineNumber": 17,
-        "hierarchy": [
-          "B1",
-          "Redemittel",
-          "Das"
-        ]
-      }
-    },
-    {
-      "id": "b1-dasistmirb-827792",
-      "german": "Das ist mir Bohne.",
-      "english": "I don't give a bean (colloquial).",
-      "category": "Redemittel",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 18,
-        "hierarchy": [
-          "B1",
-          "Redemittel",
-          "Das"
-        ]
-      }
-    },
-    {
-      "id": "b1-dasscheitm-827792",
-      "german": "Das scheißt mich an!",
-      "english": "That pisses me off! (vulgar)",
-      "category": "Redemittel",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 19,
         "hierarchy": [
           "B1",
           "Redemittel",
@@ -878,26 +553,6 @@
           "B1",
           "Redemittel",
           "Ich bin der Meinung, dass"
-        ]
-      }
-    },
-    {
-      "id": "b1-redemittel-miv8iuoi9nm5o",
-      "german": "Ich finde, dass",
-      "english": "I think that / I find that",
-      "category": "Redemittel",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 50,
-        "hierarchy": [
-          "B1",
-          "Redemittel",
-          "Ich finde, dass"
         ]
       }
     },
