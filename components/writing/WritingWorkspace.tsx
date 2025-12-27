@@ -194,9 +194,9 @@ export function WritingWorkspace({
           />
         </div>
 
-        {/* Dictionary Lookup - Expands parent container downward */}
+        {/* Dictionary Lookup - Pushed to bottom when extra space available */}
         {!readOnly && (
-          <>
+          <div className="mt-auto">
             <div className="w-full h-px bg-gray-200" />
             <div className="p-4 md:p-8">
               <DictionaryLookup
@@ -206,7 +206,7 @@ export function WritingWorkspace({
                 onInsertText={handleInsertText}
               />
             </div>
-          </>
+          </div>
         )}
       </div>
 
