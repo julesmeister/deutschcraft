@@ -9,6 +9,8 @@ import { WritingSubmission } from '@/lib/models/writing';
 import { FlashcardActivityTab } from './FlashcardActivityTab';
 import { GrammatikActivityTab } from './GrammatikActivityTab';
 import { WritingActivityTab } from './WritingActivityTab';
+import { AnswerHubActivityTab } from './AnswerHubActivityTab';
+import { ExerciseActivitySummary } from '@/lib/models/answerHub';
 
 interface RecentSession {
   date: string;
@@ -18,9 +20,10 @@ interface RecentSession {
 }
 
 interface RecentActivityTimelineProps {
-  activeTab: 'flashcards' | 'writing' | 'grammatik';
+  activeTab: 'flashcards' | 'writing' | 'grammatik' | 'answerhub';
   recentSessions: RecentSession[];
   writingSubmissions: WritingSubmission[];
+  answerHubExercises?: ExerciseActivitySummary[];
   currentPage?: number;
   onPageChange?: (page: number) => void;
   isLoading?: boolean;
@@ -32,6 +35,7 @@ export function RecentActivityTimeline({
   activeTab,
   recentSessions,
   writingSubmissions,
+  answerHubExercises = [],
   currentPage: externalCurrentPage,
   onPageChange: externalOnPageChange,
   isLoading = false,
@@ -67,6 +71,17 @@ export function RecentActivityTimeline({
     return (
       <GrammatikActivityTab
         grammarSessions={grammarSessions as any}
+        currentPage={currentPage}
+        onPageChange={onPageChange}
+        itemsPerPage={itemsPerPage}
+      />
+    );
+  }
+
+  if (activeTab === 'answerhub') {
+    return (
+      <AnswerHubActivityTab
+        exerciseSummaries={answerHubExercises}
         currentPage={currentPage}
         onPageChange={onPageChange}
         itemsPerPage={itemsPerPage}

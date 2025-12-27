@@ -6,6 +6,7 @@ import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { FlashcardStatsSection } from '@/components/dashboard/FlashcardStatsSection';
 import { WritingStatsSection } from '@/components/dashboard/WritingStatsSection';
 import { GrammarStatsSection } from '@/components/dashboard/GrammarStatsSection';
+import { AnswerHubStatsSection } from '@/components/dashboard/AnswerHubStatsSection';
 import { RecentActivityTimeline } from '@/components/dashboard/RecentActivityTimeline';
 import { CategoryProgressSection } from '@/components/dashboard/CategoryProgressSection';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
@@ -14,6 +15,7 @@ import { useWritingStats, useStudentSubmissions } from '@/lib/hooks/useWritingEx
 import { useGrammarReviews } from '@/lib/hooks/useGrammarExercises';
 import { useSessionPagination } from '@/lib/hooks/useSessionPagination';
 import { useUserQuizzes } from '@/lib/hooks/useReviewQuizzes';
+import { useAnswerHubStats } from '@/lib/hooks/useAnswerHubStats';
 import { getUser } from '@/lib/services/userService';
 import { getBatch } from '@/lib/services/batchService';
 import { User, getUserFullName } from '@/lib/models/user';
@@ -36,7 +38,7 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
   const { session } = useFirebaseAuth();
   const [student, setStudent] = useState<StudentData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<'flashcards' | 'writing' | 'grammatik'>('flashcards');
+  const [activeTab, setActiveTab] = useState<'flashcards' | 'writing' | 'grammatik' | 'answerhub'>('flashcards');
 
   // Get student's study stats
   const { stats } = useStudyStats(student?.email);
@@ -48,6 +50,10 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
 
   // Get student's grammar reviews
   const { reviews: grammarReviews } = useGrammarReviews(student?.email);
+
+  // Get student's Answer Hub stats
+  const { stats: answerHubStats, exerciseSummaries, isLoading: isLoadingAnswerHub } =
+    useAnswerHubStats(student?.email || null);
 
   // Normalize and combine writing submissions with quiz attempts
   const writingSubmissions = useMemo(() => {
@@ -264,6 +270,16 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
             >
               📖 Grammatik
             </button>
+            <button
+              onClick={() => setActiveTab('answerhub')}
+              className={`px-6 py-3 font-bold transition ${
+                activeTab === 'answerhub'
+                  ? 'text-orange-600 border-b-2 border-orange-600'
+                  : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              📝 Answer Hub
+            </button>
           </div>
         </div>
 
@@ -273,9 +289,11 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
             <FlashcardStatsSection stats={stats} />
           ) : activeTab === 'writing' ? (
             <WritingStatsSection writingStats={writingStats} studentEmail={student?.email} />
-          ) : (
+          ) : activeTab === 'grammatik' ? (
             <GrammarStatsSection studentEmail={student?.email} />
-          )}
+          ) : activeTab === 'answerhub' ? (
+            <AnswerHubStatsSection stats={answerHubStats} isLoading={isLoadingAnswerHub} />
+          ) : null}
         </div>
 
         {/* Category Progress (only for flashcards tab) */}
@@ -292,13 +310,18 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
               ? 'Recent Flashcard Sessions'
               : activeTab === 'writing'
               ? 'Recent Writing Submissions'
-              : 'Recent Grammar Practice Sessions'}
+              : activeTab === 'grammatik'
+              ? 'Recent Grammar Practice Sessions'
+              : activeTab === 'answerhub'
+              ? 'Exercise Timeline'
+              : 'Recent Activity'}
           </h2>
 
           <RecentActivityTimeline
             activeTab={activeTab}
             recentSessions={sessionPagination.sessions}
             writingSubmissions={combinedActivity}
+            answerHubExercises={exerciseSummaries}
             currentPage={sessionPagination.currentPage}
             onPageChange={sessionPagination.goToPage}
             isLoading={sessionPagination.isLoading}
