@@ -1,0 +1,2605 @@
+{
+  "level": "B1",
+  "category": "General Verbs",
+  "totalCards": 155,
+  "flashcards": [
+    {
+      "id": "remnote-306",
+      "german": "agieren",
+      "english": "to act [to take a role/to perform a role as an actor] / to operate",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1230,
+        "hierarchy": [
+          "Verbs",
+          "agieren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-308",
+      "german": "akzeptieren",
+      "english": "to accept",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1235,
+        "hierarchy": [
+          "Verbs",
+          "akzeptieren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-312",
+      "german": "lauschen",
+      "english": "to eavesdrop",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "angreifen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1259,
+        "hierarchy": [
+          "Verbs",
+          "angreifen",
+          "lauschen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-342",
+      "german": "bauen",
+      "english": "to build / to construct",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1425,
+        "hierarchy": [
+          "Verbs",
+          "bauen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-394",
+      "german": "der Betrug",
+      "english": "Fraud",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "betrügen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1673,
+        "hierarchy": [
+          "Verbs",
+          "betrügen",
+          "der Betrug"
+        ]
+      }
+    },
+    {
+      "id": "remnote-406",
+      "german": "bilden",
+      "english": "to form",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1736,
+        "hierarchy": [
+          "Verbs",
+          "bilden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-409",
+      "german": "bohren",
+      "english": "to drill",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1750,
+        "hierarchy": [
+          "Verbs",
+          "bohren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-411",
+      "german": "brennen",
+      "english": "to burn / to be on fire",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1764,
+        "hierarchy": [
+          "Verbs",
+          "brennen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-413",
+      "german": "decken",
+      "english": "to blanket / to cover",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1776,
+        "hierarchy": [
+          "Verbs",
+          "decken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-416",
+      "german": "dehnen",
+      "english": "to stretch (stretching)",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1788,
+        "hierarchy": [
+          "Verbs",
+          "dehnen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-419",
+      "german": "drängen",
+      "english": "to urge sb. / to push/shove sb.",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1806,
+        "hierarchy": [
+          "Verbs",
+          "drängen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-427",
+      "german": "ehren",
+      "english": "to honor",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1841,
+        "hierarchy": [
+          "Verbs",
+          "ehren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-428",
+      "german": "Euer Ehren",
+      "english": "your honor",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "ehren"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1842,
+        "hierarchy": [
+          "Verbs",
+          "ehren",
+          "Euer Ehren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-471",
+      "german": "pflücken",
+      "english": "to pluck [flowers] / to pick / to gather [berries] / to harvest",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "ernten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2065,
+        "hierarchy": [
+          "Verbs",
+          "ernten",
+          "pflücken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-495",
+      "german": "fassen",
+      "english": "to seize / to conceive / to grasp / to hold [venue holds people] / to make / to catch",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2195,
+        "hierarchy": [
+          "Verbs",
+          "fassen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-503",
+      "german": "falten",
+      "english": "to fold / to wrinkle / to crease",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2223,
+        "hierarchy": [
+          "Verbs",
+          "falten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-504",
+      "german": "die Falte",
+      "english": "wrinkle / fold / crease",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "falten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2224,
+        "hierarchy": [
+          "Verbs",
+          "falten",
+          "die Falte"
+        ]
+      }
+    },
+    {
+      "id": "remnote-505",
+      "german": "fehlen",
+      "english": "to lack / to miss / to fail",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2232,
+        "hierarchy": [
+          "Verbs",
+          "fehlen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-507",
+      "german": "festlegen",
+      "english": "to determine / to schedule",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2245,
+        "hierarchy": [
+          "Verbs",
+          "festlegen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-508",
+      "german": "flicken",
+      "english": "to patch",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2251,
+        "hierarchy": [
+          "Verbs",
+          "flicken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-511",
+      "german": "fliehen",
+      "english": "to escape",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2259,
+        "hierarchy": [
+          "Verbs",
+          "fliehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-514",
+      "german": "der Anhänger",
+      "english": "follower",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "folgen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2270,
+        "hierarchy": [
+          "Verbs",
+          "folgen",
+          "der Anhänger"
+        ]
+      }
+    },
+    {
+      "id": "remnote-515",
+      "german": "fordern",
+      "english": "to demand sth. from sb. / to claim sth. from sb. / to require sth. from sb.",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2272,
+        "hierarchy": [
+          "Verbs",
+          "fordern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-521",
+      "german": "fördern",
+      "english": "to encourage / to foster / to enhance / to boost",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "fordern"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2297,
+        "hierarchy": [
+          "Verbs",
+          "fordern",
+          "fördern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-522",
+      "german": "fressen",
+      "english": "to eat like a pig / to devour",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2306,
+        "hierarchy": [
+          "Verbs",
+          "fressen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-523",
+      "german": "frittieren",
+      "english": "to deep fry",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2309,
+        "hierarchy": [
+          "Verbs",
+          "frittieren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-524",
+      "german": "füllen",
+      "english": "to fill",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2312,
+        "hierarchy": [
+          "Verbs",
+          "füllen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-527",
+      "german": "garnieren",
+      "english": "to decorate",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2332,
+        "hierarchy": [
+          "Verbs",
+          "garnieren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-528",
+      "german": "garen",
+      "english": "to cook",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2337,
+        "hierarchy": [
+          "Verbs",
+          "garen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-550",
+      "german": "An diesem Abend **beging** ich einen Mord!",
+      "english": "That night, I committed murder.",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "gehen",
+        "ausgehen",
+        "[präteritum]();;Er beging"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2460,
+        "hierarchy": [
+          "Verbs",
+          "gehen",
+          "ausgehen",
+          "[präteritum]();;Er beging",
+          "An diesem Abend **beging** ich einen Mord!"
+        ]
+      }
+    },
+    {
+      "id": "remnote-569",
+      "german": "glühen",
+      "english": "to glow",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2555,
+        "hierarchy": [
+          "Verbs",
+          "glühen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-570",
+      "german": "graben",
+      "english": "to dig",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2556,
+        "hierarchy": [
+          "Verbs",
+          "graben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-572",
+      "german": "greifen",
+      "english": "to grab / to reach / to grasp / to grip",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2566,
+        "hierarchy": [
+          "Verbs",
+          "greifen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-576",
+      "german": "gründen",
+      "english": "to establish / to found / to launch",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2592,
+        "hierarchy": [
+          "Verbs",
+          "gründen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-587",
+      "german": "heben",
+      "english": "to lift / to hoist / to raise",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2658,
+        "hierarchy": [
+          "Verbs",
+          "heben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-608",
+      "german": "impfen",
+      "english": "to vaccinate",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2743,
+        "hierarchy": [
+          "Verbs",
+          "impfen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-609",
+      "german": "irren",
+      "english": "to wander / to stray / to be mistaken",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2746,
+        "hierarchy": [
+          "Verbs",
+          "irren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-610",
+      "german": "jucken",
+      "english": "to itch",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2751,
+        "hierarchy": [
+          "Verbs",
+          "jucken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-611",
+      "german": "kalkulieren",
+      "english": "to calculate",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2755,
+        "hierarchy": [
+          "Verbs",
+          "kalkulieren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-614",
+      "german": "klappen",
+      "english": "to work / to workout",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2770,
+        "hierarchy": [
+          "Verbs",
+          "klappen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-615",
+      "german": "kleben",
+      "english": "to tape / to stick [sticky/stuck]",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2774,
+        "hierarchy": [
+          "Verbs",
+          "kleben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-616",
+      "german": "haften",
+      "english": "to stick / to cling / to adhere / to grip",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "kleben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2779,
+        "hierarchy": [
+          "Verbs",
+          "kleben",
+          "haften"
+        ]
+      }
+    },
+    {
+      "id": "remnote-619",
+      "german": "kneifen",
+      "english": "to pinch / to squeeze",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2793,
+        "hierarchy": [
+          "Verbs",
+          "kneifen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-620",
+      "german": "knüpfen",
+      "english": "to knot / to tie",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2795,
+        "hierarchy": [
+          "Verbs",
+          "knüpfen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-622",
+      "german": "kriegen",
+      "english": "to get [receive] / to catch / to make war",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2817,
+        "hierarchy": [
+          "Verbs",
+          "kriegen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-625",
+      "german": "kürzen",
+      "english": "to cut / to truncate / to trim",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2829,
+        "hierarchy": [
+          "Verbs",
+          "kürzen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-628",
+      "german": "lecken",
+      "english": "to lick",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2846,
+        "hierarchy": [
+          "Verbs",
+          "lecken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-629",
+      "german": "leiden",
+      "english": "to suffer",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2850,
+        "hierarchy": [
+          "Verbs",
+          "leiden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-630",
+      "german": "leidtun",
+      "english": "to feel sorry for",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2853,
+        "hierarchy": [
+          "Verbs",
+          "leidtun"
+        ]
+      }
+    },
+    {
+      "id": "remnote-631",
+      "german": "leihen",
+      "english": "to lend / to loan sb. sth.",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2857,
+        "hierarchy": [
+          "Verbs",
+          "leihen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-633",
+      "german": "leisten",
+      "english": "to achieve / to accomplish / to afford",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2869,
+        "hierarchy": [
+          "Verbs",
+          "leisten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-634",
+      "german": "leiten",
+      "english": "to conduct sth. / to lead / to oversee sth. / to run manage lead sth.",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2874,
+        "hierarchy": [
+          "Verbs",
+          "leiten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-641",
+      "german": "loben",
+      "english": "to praise",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2898,
+        "hierarchy": [
+          "Verbs",
+          "loben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-642",
+      "german": "locken",
+      "english": "to lure / to entice / to attract",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2903,
+        "hierarchy": [
+          "Verbs",
+          "locken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-645",
+      "german": "lösen",
+      "english": "to solve",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2912,
+        "hierarchy": [
+          "Verbs",
+          "lösen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-648",
+      "german": "wecken",
+      "english": "to arouse",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "lösen",
+        "auslösen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2922,
+        "hierarchy": [
+          "Verbs",
+          "lösen",
+          "auslösen",
+          "wecken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-650",
+      "german": "lutschen",
+      "english": "to suck on",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2927,
+        "hierarchy": [
+          "Verbs",
+          "lutschen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-658",
+      "german": "melden",
+      "english": "to report / to register",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2959,
+        "hierarchy": [
+          "Verbs",
+          "melden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-667",
+      "german": "klären",
+      "english": "to clarify / to resolve / to figure out",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "nachfragen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2993,
+        "hierarchy": [
+          "Verbs",
+          "nachfragen",
+          "klären"
+        ]
+      }
+    },
+    {
+      "id": "remnote-673",
+      "german": "festnehmen",
+      "english": "to detain / to arrest / to apprehend",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "nehmen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3035,
+        "hierarchy": [
+          "Verbs",
+          "nehmen",
+          "festnehmen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-679",
+      "german": "nennen",
+      "english": "to dub / to name / to mention",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3067,
+        "hierarchy": [
+          "Verbs",
+          "nennen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-681",
+      "german": "nerven",
+      "english": "to annoy",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3074,
+        "hierarchy": [
+          "Verbs",
+          "nerven"
+        ]
+      }
+    },
+    {
+      "id": "remnote-682",
+      "german": "nicken",
+      "english": "to nod",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3077,
+        "hierarchy": [
+          "Verbs",
+          "nicken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-687",
+      "german": "pinkeln",
+      "english": "to pee / to piss",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3104,
+        "hierarchy": [
+          "Verbs",
+          "pinkeln"
+        ]
+      }
+    },
+    {
+      "id": "remnote-688",
+      "german": "platzieren",
+      "english": "to place / to position",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3110,
+        "hierarchy": [
+          "Verbs",
+          "platzieren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-689",
+      "german": "popeln",
+      "english": "to pick nose",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3115,
+        "hierarchy": [
+          "Verbs",
+          "popeln"
+        ]
+      }
+    },
+    {
+      "id": "remnote-690",
+      "german": "prägen",
+      "english": "to coin / to shape / to characterize",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3119,
+        "hierarchy": [
+          "Verbs",
+          "prägen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-691",
+      "german": "prasseln",
+      "english": "to patter / to pelt / to crackle / to crepitate / to drum / to hail down",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3123,
+        "hierarchy": [
+          "Verbs",
+          "prasseln"
+        ]
+      }
+    },
+    {
+      "id": "remnote-692",
+      "german": "quietschen",
+      "english": "to squeak / to squeal",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3127,
+        "hierarchy": [
+          "Verbs",
+          "quietschen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-693",
+      "german": "rächen",
+      "english": "to avenge",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3128,
+        "hierarchy": [
+          "Verbs",
+          "rächen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-695",
+      "german": "rauschen",
+      "english": "to rustle / to murmur",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3137,
+        "hierarchy": [
+          "Verbs",
+          "rauschen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-697",
+      "german": "reinigen",
+      "english": "to clean",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3148,
+        "hierarchy": [
+          "Verbs",
+          "reinigen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-699",
+      "german": "restaurieren",
+      "english": "to restore",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3154,
+        "hierarchy": [
+          "Verbs",
+          "restaurieren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-700",
+      "german": "richten",
+      "english": "to focus",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3155,
+        "hierarchy": [
+          "Verbs",
+          "richten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-703",
+      "german": "duften",
+      "english": "to smell good",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "riechen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3162,
+        "hierarchy": [
+          "Verbs",
+          "riechen",
+          "duften"
+        ]
+      }
+    },
+    {
+      "id": "remnote-704",
+      "german": "ringen",
+      "english": "to struggle / to strive",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3168,
+        "hierarchy": [
+          "Verbs",
+          "ringen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-705",
+      "german": "rutschen",
+      "english": "to slip / to slide",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3184,
+        "hierarchy": [
+          "Verbs",
+          "rutschen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-706",
+      "german": "rülpsen",
+      "english": "to burp",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3190,
+        "hierarchy": [
+          "Verbs",
+          "rülpsen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-708",
+      "german": "schaffen",
+      "english": "to create / to accomplish",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3195,
+        "hierarchy": [
+          "Verbs",
+          "schaffen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-709",
+      "german": "schalten",
+      "english": "to switch / to shift / to toggle",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3200,
+        "hierarchy": [
+          "Verbs",
+          "schalten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-714",
+      "german": "schätzen",
+      "english": "to estimate / to appreciate / to guess",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3219,
+        "hierarchy": [
+          "Verbs",
+          "schätzen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-715",
+      "german": "würdigen",
+      "english": "to appreciate / to dignify sb./sth. / to acknowledge / to honour / to esteem",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "schätzen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3229,
+        "hierarchy": [
+          "Verbs",
+          "schätzen",
+          "würdigen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-716",
+      "german": "glänzen",
+      "english": "to shine",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "schätzen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3240,
+        "hierarchy": [
+          "Verbs",
+          "schätzen",
+          "glänzen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-717",
+      "german": "schieben",
+      "english": "to shove / to thrust / to push",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3247,
+        "hierarchy": [
+          "Verbs",
+          "schieben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-724",
+      "german": "gönnen",
+      "english": "to treat oneself",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "schonen←to spare / to protect / to save #verben",
+        "sich schonen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3280,
+        "hierarchy": [
+          "Verbs",
+          "schonen←to spare / to protect / to save #verben",
+          "sich schonen",
+          "gönnen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-726",
+      "german": "schmieren",
+      "english": "to smudge / to lubricate / to butter",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3287,
+        "hierarchy": [
+          "Verbs",
+          "schmieren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-729",
+      "german": "schreien",
+      "english": "to shout / to scream",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3306,
+        "hierarchy": [
+          "Verbs",
+          "schreien"
+        ]
+      }
+    },
+    {
+      "id": "remnote-730",
+      "german": "schütteln",
+      "english": "to shake",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3310,
+        "hierarchy": [
+          "Verbs",
+          "schütteln"
+        ]
+      }
+    },
+    {
+      "id": "remnote-731",
+      "german": "schützen",
+      "english": "to protect",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3313,
+        "hierarchy": [
+          "Verbs",
+          "schützen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-732",
+      "german": "schweben",
+      "english": "to float",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3318,
+        "hierarchy": [
+          "Verbs",
+          "schweben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-736",
+      "german": "senken",
+      "english": "to diminish / to reduce / to lower",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3339,
+        "hierarchy": [
+          "Verbs",
+          "senken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-738",
+      "german": "seufzen",
+      "english": "to sigh / to groan",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3353,
+        "hierarchy": [
+          "Verbs",
+          "seufzen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-740",
+      "german": "sorgen",
+      "english": "to care / to cater / to ensure",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3375,
+        "hierarchy": [
+          "Verbs",
+          "sorgen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-745",
+      "german": "sortieren",
+      "english": "to sort",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3392,
+        "hierarchy": [
+          "Verbs",
+          "sortieren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-746",
+      "german": "sparen",
+      "english": "to save (money)",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3396,
+        "hierarchy": [
+          "Verbs",
+          "sparen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-748",
+      "german": "spülen",
+      "english": "to rinse",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3414,
+        "hierarchy": [
+          "Verbs",
+          "spülen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-755",
+      "german": "der Anspruch",
+      "english": "entitlement / claim",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "stehen",
+        "zustehen",
+        "noun"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3443,
+        "hierarchy": [
+          "Verbs",
+          "stehen",
+          "zustehen",
+          "noun",
+          "der Anspruch"
+        ]
+      }
+    },
+    {
+      "id": "remnote-764",
+      "german": "stillen",
+      "english": "to suckle / to breastfeed",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3512,
+        "hierarchy": [
+          "Verbs",
+          "stillen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-765",
+      "german": "stolpern",
+      "english": "to stumble",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3516,
+        "hierarchy": [
+          "Verbs",
+          "stolpern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-766",
+      "german": "stornieren",
+      "english": "to cancel",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3519,
+        "hierarchy": [
+          "Verbs",
+          "stornieren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-767",
+      "german": "stoßen",
+      "english": "to bump / to push / to kick / to butt",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3522,
+        "hierarchy": [
+          "Verbs",
+          "stoßen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-769",
+      "german": "stottern",
+      "english": "to stutter",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3529,
+        "hierarchy": [
+          "Verbs",
+          "stottern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-770",
+      "german": "strahlen",
+      "english": "to beam / to radiate",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3535,
+        "hierarchy": [
+          "Verbs",
+          "strahlen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-771",
+      "german": "streben",
+      "english": "to pursue / to seek / to aspire / to strive",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3538,
+        "hierarchy": [
+          "Verbs",
+          "streben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-772",
+      "german": "tadeln",
+      "english": "to rebuke / to blame",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3555,
+        "hierarchy": [
+          "Verbs",
+          "tadeln"
+        ]
+      }
+    },
+    {
+      "id": "remnote-773",
+      "german": "tauschen",
+      "english": "to swap",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3557,
+        "hierarchy": [
+          "Verbs",
+          "tauschen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-785",
+      "german": "opfern",
+      "english": "to survive",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "überleben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3606,
+        "hierarchy": [
+          "Verbs",
+          "überleben",
+          "opfern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-842",
+      "german": "trügen",
+      "english": "to deceive",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "verraten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3872,
+        "hierarchy": [
+          "Verbs",
+          "verraten",
+          "trügen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-870",
+      "german": "wagen",
+      "english": "to attempt / to dare",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4011,
+        "hierarchy": [
+          "Verbs",
+          "wagen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-873",
+      "german": "wehtun",
+      "english": "to hurt / to ache",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4025,
+        "hierarchy": [
+          "Verbs",
+          "wehtun"
+        ]
+      }
+    },
+    {
+      "id": "remnote-874",
+      "german": "werben",
+      "english": "to advertise / to woo / to recruit",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4028,
+        "hierarchy": [
+          "Verbs",
+          "werben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-878",
+      "german": "widmen",
+      "english": "to devote / to dedicate",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4057,
+        "hierarchy": [
+          "Verbs",
+          "widmen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-881",
+      "german": "winken",
+      "english": "to wave / to beckon",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4072,
+        "hierarchy": [
+          "Verbs",
+          "winken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-885",
+      "german": "wringen",
+      "english": "to wring / piga [tagalog]",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4088,
+        "hierarchy": [
+          "Verbs",
+          "wringen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-894",
+      "german": "zittern",
+      "english": "to tremble / to quiver / to shiver / to jitter",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4139,
+        "hierarchy": [
+          "Verbs",
+          "zittern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-895",
+      "german": "zögern",
+      "english": "to hesitate",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4142,
+        "hierarchy": [
+          "Verbs",
+          "zögern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-314",
+      "german": "der Beschuldigte",
+      "english": "accused",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "anklagen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1265,
+        "hierarchy": [
+          "Verbs",
+          "anklagen",
+          "der Beschuldigte"
+        ]
+      }
+    },
+    {
+      "id": "remnote-319",
+      "german": "der Wettbewerb",
+      "english": "competition",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "antreten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1299,
+        "hierarchy": [
+          "Verbs",
+          "antreten",
+          "der Wettbewerb"
+        ]
+      }
+    },
+    {
+      "id": "remnote-325",
+      "german": "Wenn ich eine Brille aufgehabt hätte",
+      "english": "If I had worn glasses",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "aufhaben",
+        "[perfekt]();;Er hat aufgehabt"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1327,
+        "hierarchy": [
+          "Verbs",
+          "aufhaben",
+          "[perfekt]();;Er hat aufgehabt",
+          "Wenn ich eine Brille aufgehabt hätte"
+        ]
+      }
+    },
+    {
+      "id": "remnote-344",
+      "german": "der Abbau",
+      "english": "dismantling",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "bauen",
+        "anbauen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1430,
+        "hierarchy": [
+          "Verbs",
+          "bauen",
+          "anbauen",
+          "Abbau"
+        ]
+      }
+    },
+    {
+      "id": "remnote-348",
+      "german": "Bitte beachten Sie die Vorschriften.",
+      "english": "Please observe the rules.",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "beachten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1450,
+        "hierarchy": [
+          "Verbs",
+          "beachten",
+          "Bitte beachten Sie die Vorschriften."
+        ]
+      }
+    },
+    {
+      "id": "remnote-376",
+      "german": "Es geht immer ums Bestrafen.",
+      "english": "It's always about punishing",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "bestrafen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1586,
+        "hierarchy": [
+          "Verbs",
+          "bestrafen",
+          "Es geht immer ums Bestrafen."
+        ]
+      }
+    },
+    {
+      "id": "remnote-405",
+      "german": "das Stellenangebot",
+      "english": "job offer",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "bieten",
+        "anbieten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1735,
+        "hierarchy": [
+          "Verbs",
+          "bieten",
+          "anbieten",
+          "das Stellenangebot"
+        ]
+      }
+    },
+    {
+      "id": "remnote-434",
+      "german": "Es muß uns etwas einfallen.",
+      "english": "We have to come up with something.",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "einfallen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1868,
+        "hierarchy": [
+          "Verbs",
+          "einfallen",
+          "Es muß uns etwas einfallen."
+        ]
+      }
+    },
+    {
+      "id": "remnote-462",
+      "german": "etw. bestaunen",
+      "english": "to marvel at sth.",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "erkunden"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2029,
+        "hierarchy": [
+          "Verbs",
+          "erkunden",
+          "etw. bestaunen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-468",
+      "german": "die Erneuerung",
+      "english": "renovation / restoration",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "erneuern"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2052,
+        "hierarchy": [
+          "Verbs",
+          "erneuern",
+          "die Erneuerung"
+        ]
+      }
+    },
+    {
+      "id": "remnote-486",
+      "german": "fangen",
+      "english": "to catch / to capture / to trap",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "erwischen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2135,
+        "hierarchy": [
+          "Verbs",
+          "erwischen",
+          "fangen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-493",
+      "german": "Sein [eigenartiges]() Aussehen fiel mir sofort auf.",
+      "english": "His strange looks struck me immediately.",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "fallen  #verben",
+        "auffallen",
+        "[präteritum]();;Er fiel auf"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2173,
+        "hierarchy": [
+          "Verbs",
+          "fallen  #verben",
+          "auffallen",
+          "[präteritum]();;Er fiel auf",
+          "Sein [eigenartiges]() Aussehen fiel mir sofort auf."
+        ]
+      }
+    },
+    {
+      "id": "remnote-494",
+      "german": "Ist Ihnen etwas [Merkwürdiges]() aufgefallen?",
+      "english": "Have you noticed anything strange?",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "fallen  #verben",
+        "auffallen",
+        "[perfekt]();;Er hat aufgefallen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2176,
+        "hierarchy": [
+          "Verbs",
+          "fallen  #verben",
+          "auffallen",
+          "[perfekt]();;Er hat aufgefallen",
+          "Ist Ihnen etwas [Merkwürdiges]() aufgefallen?"
+        ]
+      }
+    },
+    {
+      "id": "remnote-496",
+      "german": "Mir gelingt so recht zu fassen",
+      "english": "I manage to grasp so rightly",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "fassen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2196,
+        "hierarchy": [
+          "Verbs",
+          "fassen",
+          "Mir gelingt so recht zu fassen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-497",
+      "german": "Erst dann kann ich weitere Pläne fassen",
+      "english": "Only then can I make further plans",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "fassen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2197,
+        "hierarchy": [
+          "Verbs",
+          "fassen",
+          "Erst dann kann ich weitere Pläne fassen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-510",
+      "german": "Rudi überflog den Papierkram.",
+      "english": "Rudi scanned the paperwork.",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "fliegen",
+        "überfliegen",
+        "[präteritum]();;Er überflog"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2257,
+        "hierarchy": [
+          "Verbs",
+          "fliegen",
+          "überfliegen",
+          "[präteritum]();;Er überflog",
+          "Rudi überflog den Papierkram."
+        ]
+      }
+    },
+    {
+      "id": "remnote-536",
+      "german": "Ich werde dir einen [fähigen]() [Verwalter ]() mitgeben.",
+      "english": "I will give you a capable administrator.",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "geben",
+        "mitgeben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2381,
+        "hierarchy": [
+          "Verbs",
+          "geben",
+          "mitgeben",
+          "Ich werde dir einen [fähigen]() [Verwalter ]() mitgeben."
+        ]
+      }
+    },
+    {
+      "id": "remnote-547",
+      "german": "Hier wuchs und gedieh nichts mehr.",
+      "english": "Nothing grew and thrived here.",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "gedeihen",
+        "[präteritum]();;Er gedieh"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2430,
+        "hierarchy": [
+          "Verbs",
+          "gedeihen",
+          "[präteritum]();;Er gedieh",
+          "Hier wuchs und gedieh nichts mehr."
+        ]
+      }
+    },
+    {
+      "id": "remnote-549",
+      "german": "Dann **beging** ich einen Fehler",
+      "english": "Then I made a mistake.",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "gehen",
+        "ausgehen",
+        "[präteritum]();;Er beging"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2459,
+        "hierarchy": [
+          "Verbs",
+          "gehen",
+          "ausgehen",
+          "[präteritum]();;Er beging",
+          "Dann **beging** ich einen Fehler"
+        ]
+      }
+    },
+    {
+      "id": "remnote-551",
+      "german": "Der Fahrer des Wagens **beging** Fahrerflucht.",
+      "english": "The driver of the car committed hit-and-run.",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "gehen",
+        "ausgehen",
+        "[präteritum]();;Er beging"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2461,
+        "hierarchy": [
+          "Verbs",
+          "gehen",
+          "ausgehen",
+          "[präteritum]();;Er beging",
+          "Der Fahrer des Wagens **beging** Fahrerflucht."
+        ]
+      }
+    },
+    {
+      "id": "remnote-561",
+      "german": "werden gerecht",
+      "english": "to satisfy",
+      "category": "General Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2511,
+        "hierarchy": [
+          "Verbs",
+          "werden gerecht"
+        ]
+      }
+    },
+    {
+      "id": "remnote-599",
+      "german": "Füge nach und nach [_] hinzu",
+      "english": "Gradually add _",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "hinzufügen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2712,
+        "hierarchy": [
+          "Verbs",
+          "hinzufügen",
+          "Füge nach und nach [_] hinzu"
+        ]
+      }
+    },
+    {
+      "id": "remnote-617",
+      "german": "[Jegliche ]() Haftung ist [ausgeschlossen  ](German/Verbs/schlie%C3%9Fen/ausschlie%C3%9Fen/perfekt.md).",
+      "english": "Any liability is eliminated.",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "kleben",
+        "haften"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2781,
+        "hierarchy": [
+          "Verbs",
+          "kleben",
+          "haften",
+          null,
+          "[Jegliche ]() Haftung ist [ausgeschlossen  ](German/Verbs/schlie%C3%9Fen/ausschlie%C3%9Fen/perfekt.md)."
+        ]
+      }
+    },
+    {
+      "id": "remnote-618",
+      "german": "haften...für",
+      "english": "to be liable for sth. / to be responsible for sb./sth.",
+      "category": "General Verbs",
+      "level": "B1",
+      "tags": [
+        "kleben",
+        "haften"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2784,
+        "hierarchy": [
+          "Verbs",
+          "kleben",
+          "haften",
+          "haften...für"
+        ]
+      }
+    },
+    {
+      "id": "remnote-623",
+      "german": "schwer zu kriegen",
+      "english": "hard to get",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "kriegen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2820,
+        "hierarchy": [
+          "Verbs",
+          "kriegen",
+          "schwer zu kriegen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-637",
+      "german": "die Postzustellung",
+      "english": "postal delivery",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "lesen",
+        "[präteritum]();;Er lieferte"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2885,
+        "hierarchy": [
+          "Verbs",
+          "lesen",
+          "[präteritum]();;Er lieferte",
+          "die Postzustellung"
+        ]
+      }
+    },
+    {
+      "id": "remnote-640",
+      "german": "die Unterlage",
+      "english": "Document / Pad or Support",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "liegen",
+        "unterliegen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2894,
+        "hierarchy": [
+          "Verbs",
+          "liegen",
+          "unterliegen",
+          "die Unterlage"
+        ]
+      }
+    },
+    {
+      "id": "remnote-651",
+      "german": "am Daumen lutschen",
+      "english": "to suck thumb",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "lutschen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2929,
+        "hierarchy": [
+          "Verbs",
+          "lutschen",
+          "am Daumen lutschen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-659",
+      "german": "der Meldezettel",
+      "english": "registration form",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "melden"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2964,
+        "hierarchy": [
+          "Verbs",
+          "melden",
+          "der Meldezettel"
+        ]
+      }
+    },
+    {
+      "id": "remnote-660",
+      "german": "meldepflichtig",
+      "english": "subject to registration",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "melden"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2965,
+        "hierarchy": [
+          "Verbs",
+          "melden",
+          "meldepflichtig"
+        ]
+      }
+    },
+    {
+      "id": "remnote-707",
+      "german": "sanieren",
+      "english": "to renovate / to refurbish",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3192,
+        "hierarchy": [
+          "Verbs",
+          "sanieren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-721",
+      "german": "Er ist zu allem entschlossen.",
+      "english": "He is determined to do anything.",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "schießen",
+        "entschlossen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3267,
+        "hierarchy": [
+          "Verbs",
+          "schießen",
+          "entschlossen",
+          "Er ist zu allem entschlossen."
+        ]
+      }
+    },
+    {
+      "id": "remnote-812",
+      "german": "das Zusammenhänge",
+      "english": "correlation",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "verbieten",
+        "verknüpfen",
+        "adjektiv→zusammenhängende ← related / connected"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3722,
+        "hierarchy": [
+          "Verbs",
+          "verbieten",
+          "verknüpfen",
+          "adjektiv→zusammenhängende ← related / connected",
+          "das Zusammenhänge"
+        ]
+      }
+    },
+    {
+      "id": "remnote-818",
+      "german": "Vereinbaren wir doch ein Geschäft.",
+      "english": "Let's make a deal.",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "vereinbaren::to arrange / to agree on sth."
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3758,
+        "hierarchy": [
+          "Verbs",
+          "vereinbaren::to arrange / to agree on sth.",
+          "Vereinbaren wir doch ein Geschäft."
+        ]
+      }
+    },
+    {
+      "id": "remnote-843",
+      "german": "sein verrückt",
+      "english": "to be crazy about",
+      "category": "General Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3879,
+        "hierarchy": [
+          "Verbs",
+          "sein verrückt"
+        ]
+      }
+    },
+    {
+      "id": "remnote-866",
+      "german": "So etwas ist mir noch nie vorgekommen!",
+      "english": "I have never encountered anything like this before!",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "vorkommen",
+        "[perfekt]();;Er ist vorgekommen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3993,
+        "hierarchy": [
+          "Verbs",
+          "vorkommen",
+          "[perfekt]();;Er ist vorgekommen",
+          "So etwas ist mir noch nie vorgekommen!"
+        ]
+      }
+    },
+    {
+      "id": "remnote-882",
+      "german": "wirken",
+      "english": "to seem / to appear / to affect",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4075,
+        "hierarchy": [
+          "Verbs",
+          "wirken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-886",
+      "german": "zanken",
+      "english": "to brawl / to bicker",
+      "category": "General Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4091,
+        "hierarchy": [
+          "Verbs",
+          "zanken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-901",
+      "german": "maßgeschneidert",
+      "english": "custom-made",
+      "category": "General Verbs",
+      "level": "B2",
+      "tags": [
+        "zuschneiden",
+        "noun→der Schneider ← tailor"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4165,
+        "hierarchy": [
+          "Verbs",
+          "zuschneiden",
+          "noun→der Schneider ← tailor",
+          "maßgeschneidert"
+        ]
+      }
+    }
+  ]
+}

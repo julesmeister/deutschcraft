@@ -1,0 +1,2658 @@
+{
+  "level": "B1",
+  "category": "Inseparable Prefix Verbs",
+  "totalCards": 162,
+  "flashcards": [
+    {
+      "id": "remnote-346",
+      "german": "erbauen",
+      "english": "to build",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "bauen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1446,
+        "hierarchy": [
+          "Verbs",
+          "bauen",
+          "erbauen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-347",
+      "german": "beachten",
+      "english": "to observe / to respect",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1447,
+        "hierarchy": [
+          "Verbs",
+          "beachten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-349",
+      "german": "bearbeiten",
+      "english": "to process / to edit",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1451,
+        "hierarchy": [
+          "Verbs",
+          "bearbeiten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-351",
+      "german": "bedauern",
+      "english": "to regret / to commisserate",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1457,
+        "hierarchy": [
+          "Verbs",
+          "bedauern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-352",
+      "german": "bedenken",
+      "english": "to consider",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1464,
+        "hierarchy": [
+          "Verbs",
+          "bedenken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-353",
+      "german": "bedrohen",
+      "english": "to threaten",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1469,
+        "hierarchy": [
+          "Verbs",
+          "bedrohen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-354",
+      "german": "befreien",
+      "english": "to set free",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1472,
+        "hierarchy": [
+          "Verbs",
+          "befreien"
+        ]
+      }
+    },
+    {
+      "id": "remnote-355",
+      "german": "begegnen",
+      "english": "to meet",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1473,
+        "hierarchy": [
+          "Verbs",
+          "begegnen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-356",
+      "german": "begehren",
+      "english": "to desire",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1477,
+        "hierarchy": [
+          "Verbs",
+          "begehren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-357",
+      "german": "begeistern",
+      "english": "to inspire / to delight",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1483,
+        "hierarchy": [
+          "Verbs",
+          "begeistern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-358",
+      "german": "begleichen",
+      "english": "to settle",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1486,
+        "hierarchy": [
+          "Verbs",
+          "begleichen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-359",
+      "german": "begreifen",
+      "english": "to grasp / to understand / to realize",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1493,
+        "hierarchy": [
+          "Verbs",
+          "begreifen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-360",
+      "german": "begrüßen",
+      "english": "to welcome",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1500,
+        "hierarchy": [
+          "Verbs",
+          "begrüßen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-361",
+      "german": "behaupten",
+      "english": "to claim",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1504,
+        "hierarchy": [
+          "Verbs",
+          "behaupten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-364",
+      "german": "bestätigen",
+      "english": "to confirm / to verify / to acknowledge / to validate",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "beinhalten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1520,
+        "hierarchy": [
+          "Verbs",
+          "beinhalten",
+          "bestätigen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-368",
+      "german": "belohnen",
+      "english": "to reward",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1549,
+        "hierarchy": [
+          "Verbs",
+          "belohnen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-374",
+      "german": "besetzen",
+      "english": "to occupy sth. / to cast a role / to staff; to fill a position",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1575,
+        "hierarchy": [
+          "Verbs",
+          "besetzen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-375",
+      "german": "bestrafen",
+      "english": "to punish",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1582,
+        "hierarchy": [
+          "Verbs",
+          "bestrafen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-377",
+      "german": "betreten",
+      "english": "to enter",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1592,
+        "hierarchy": [
+          "Verbs",
+          "betreten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-379",
+      "german": "betreiben",
+      "english": "to operate / to conduct th. / to power",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1597,
+        "hierarchy": [
+          "Verbs",
+          "betreiben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-384",
+      "german": "begleiten",
+      "english": "to accompany",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1617,
+        "hierarchy": [
+          "Verbs",
+          "begleiten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-386",
+      "german": "benennen",
+      "english": "to designate / to appoint / to call / to address",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1628,
+        "hierarchy": [
+          "Verbs",
+          "benennen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-387",
+      "german": "benötigen",
+      "english": "to need",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1631,
+        "hierarchy": [
+          "Verbs",
+          "benötigen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-390",
+      "german": "beruhen",
+      "english": "to rest on sth. / to depend on sth. / to be based on sth.",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1649,
+        "hierarchy": [
+          "Verbs",
+          "beruhen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-391",
+      "german": "betreffen",
+      "english": "to concern / to affect / to relate to sth. / to pertain to",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1661,
+        "hierarchy": [
+          "Verbs",
+          "betreffen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-392",
+      "german": "betreuen",
+      "english": "to supervise / to guide / to mentor",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1668,
+        "hierarchy": [
+          "Verbs",
+          "betreuen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-395",
+      "german": "bewältigen",
+      "english": "to cope with",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1678,
+        "hierarchy": [
+          "Verbs",
+          "bewältigen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-396",
+      "german": "bewahren",
+      "english": "to preserve / to retain sth. / to conserve / to keep",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1683,
+        "hierarchy": [
+          "Verbs",
+          "bewahren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-399",
+      "german": "bewundern",
+      "english": "to admire",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1709,
+        "hierarchy": [
+          "Verbs",
+          "bewundern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-400",
+      "german": "bevorzugen",
+      "english": "to prefer",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1714,
+        "hierarchy": [
+          "Verbs",
+          "bevorzugen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-414",
+      "german": "bedecken",
+      "english": "to cover / to cloak / to coat with paint",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "decken"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1780,
+        "hierarchy": [
+          "Verbs",
+          "decken",
+          "bedecken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-417",
+      "german": "bedienen",
+      "english": "to serve sb. / to operate sth. / to handle",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "dehnen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1800,
+        "hierarchy": [
+          "Verbs",
+          "dehnen",
+          "bedienen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-425",
+      "german": "zerdrücken",
+      "english": "to crumple / to crush / to pulp",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "drücken"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1828,
+        "hierarchy": [
+          "Verbs",
+          "drücken",
+          "zerdrücken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-444",
+      "german": "empfinden",
+      "english": "to feel / to sense / to perceive",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1932,
+        "hierarchy": [
+          "Verbs",
+          "empfinden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-445",
+      "german": "entfernen",
+      "english": "to remove",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1936,
+        "hierarchy": [
+          "Verbs",
+          "entfernen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-447",
+      "german": "entziffern",
+      "english": "to decipher",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1947,
+        "hierarchy": [
+          "Verbs",
+          "entziffern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-451",
+      "german": "entsetzen",
+      "english": "to horrify | to shock | to appall",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1963,
+        "hierarchy": [
+          "Verbs",
+          "entsetzen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-452",
+      "german": "entkommen",
+      "english": "to escape / to get away from sb.",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1979,
+        "hierarchy": [
+          "Verbs",
+          "entkommen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-453",
+      "german": "entziehen",
+      "english": "to deprive / to revoke / to escape",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1983,
+        "hierarchy": [
+          "Verbs",
+          "entziehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-454",
+      "german": "erben",
+      "english": "to inhreit",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1990,
+        "hierarchy": [
+          "Verbs",
+          "erben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-455",
+      "german": "erfahren",
+      "english": "to find out / to experience",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1994,
+        "hierarchy": [
+          "Verbs",
+          "erfahren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-456",
+      "german": "erfassen",
+      "english": "to collect / to capture / to record / to gather",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1998,
+        "hierarchy": [
+          "Verbs",
+          "erfassen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-458",
+      "german": "erfolgen",
+      "english": "to take place",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2009,
+        "hierarchy": [
+          "Verbs",
+          "erfolgen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-459",
+      "german": "erhoffen",
+      "english": "to anticipate / to hope / to wish for",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2014,
+        "hierarchy": [
+          "Verbs",
+          "erhoffen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-461",
+      "german": "erkunden",
+      "english": "to explore",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2027,
+        "hierarchy": [
+          "Verbs",
+          "erkunden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-463",
+      "german": "erlauben",
+      "english": "to allow",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2030,
+        "hierarchy": [
+          "Verbs",
+          "erlauben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-464",
+      "german": "erleben",
+      "english": "to experience",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2037,
+        "hierarchy": [
+          "Verbs",
+          "erleben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-467",
+      "german": "erneuern",
+      "english": "to renew / to regenerate",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2051,
+        "hierarchy": [
+          "Verbs",
+          "erneuern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-469",
+      "german": "errichten",
+      "english": "to build / to put up",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "erneuern"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2056,
+        "hierarchy": [
+          "Verbs",
+          "erneuern",
+          "errichten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-470",
+      "german": "ernten",
+      "english": "to pick sth. [apple,potatoes,cotton] / to harvest / to reap",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2062,
+        "hierarchy": [
+          "Verbs",
+          "ernten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-472",
+      "german": "erpressen",
+      "english": "to blackmail",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2069,
+        "hierarchy": [
+          "Verbs",
+          "erpressen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-473",
+      "german": "erröten",
+      "english": "to blush",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2070,
+        "hierarchy": [
+          "Verbs",
+          "erröten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-474",
+      "german": "erscheinen",
+      "english": "to appear / to emerge / to publish",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2074,
+        "hierarchy": [
+          "Verbs",
+          "erscheinen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-477",
+      "german": "ersetzen",
+      "english": "to replace / to substitute",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2086,
+        "hierarchy": [
+          "Verbs",
+          "ersetzen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-478",
+      "german": "ersparen",
+      "english": "to save / to spare sb from sth",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2091,
+        "hierarchy": [
+          "Verbs",
+          "ersparen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-479",
+      "german": "erstaunen",
+      "english": "to amaze",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2098,
+        "hierarchy": [
+          "Verbs",
+          "erstaunen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-480",
+      "german": "ersticken",
+      "english": "to choke / to suffocate / to smother",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2103,
+        "hierarchy": [
+          "Verbs",
+          "ersticken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-481",
+      "german": "ertragen",
+      "english": "to bear",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2108,
+        "hierarchy": [
+          "Verbs",
+          "ertragen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-482",
+      "german": "ertrinken",
+      "english": "to drown",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2112,
+        "hierarchy": [
+          "Verbs",
+          "ertrinken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-484",
+      "german": "erwidern",
+      "english": "to reply / to answer / to retun / to reciprocate / to respond",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2123,
+        "hierarchy": [
+          "Verbs",
+          "erwidern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-485",
+      "german": "erwischen",
+      "english": "to catch sb. sth. / to chase down",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2130,
+        "hierarchy": [
+          "Verbs",
+          "erwischen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-489",
+      "german": "erziehen",
+      "english": "to rear / to nurture / to educate / to discipline",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2148,
+        "hierarchy": [
+          "Verbs",
+          "erziehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-491",
+      "german": "verfallen",
+      "english": "to decay / to expire / to lapse / to deteriorate",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "fallen  #verben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2165,
+        "hierarchy": [
+          "Verbs",
+          "fallen  #verben",
+          "verfallen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-500",
+      "german": "berühren",
+      "english": "to touch / to come in contact with",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "fassen",
+        "anfassen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2203,
+        "hierarchy": [
+          "Verbs",
+          "fassen",
+          "anfassen",
+          "berühren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-502",
+      "german": "verfassen",
+      "english": "to write / to author / to draft / to compose",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "fassen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2218,
+        "hierarchy": [
+          "Verbs",
+          "fassen",
+          "verfassen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-506",
+      "german": "versagen",
+      "english": "to fail",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "fehlen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2240,
+        "hierarchy": [
+          "Verbs",
+          "fehlen",
+          "versagen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-518",
+      "german": "erfordern",
+      "english": "to require / to call for sth.",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "fordern"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2288,
+        "hierarchy": [
+          "Verbs",
+          "fordern",
+          "erfordern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-525",
+      "german": "erfüllen",
+      "english": "to fulfill",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "füllen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2316,
+        "hierarchy": [
+          "Verbs",
+          "füllen",
+          "erfüllen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-532",
+      "german": "verbringen",
+      "english": "to spend",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "geben",
+        "ausgeben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2365,
+        "hierarchy": [
+          "Verbs",
+          "geben",
+          "ausgeben",
+          "verbringen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-534",
+      "german": "ergeben",
+      "english": "to result in / to yield",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "geben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2373,
+        "hierarchy": [
+          "Verbs",
+          "geben",
+          "ergeben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-538",
+      "german": "vergeben",
+      "english": "to forgive",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "geben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2387,
+        "hierarchy": [
+          "Verbs",
+          "geben",
+          "vergeben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-556",
+      "german": "gelingen",
+      "english": "to succeed / to manage / to work out",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2488,
+        "hierarchy": [
+          "Verbs",
+          "gelingen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-557",
+      "german": "gelten",
+      "english": "to apply / to pertain",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2494,
+        "hierarchy": [
+          "Verbs",
+          "gelten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-558",
+      "german": "genehmigen",
+      "english": "to approve / to authorize",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2498,
+        "hierarchy": [
+          "Verbs",
+          "genehmigen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-559",
+      "german": "genesen",
+      "english": "to mend / to recover",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2503,
+        "hierarchy": [
+          "Verbs",
+          "genesen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-562",
+      "german": "geschehen",
+      "english": "to happen",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2518,
+        "hierarchy": [
+          "Verbs",
+          "geschehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-563",
+      "german": "gestalten",
+      "english": "to shape / to mould",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2528,
+        "hierarchy": [
+          "Verbs",
+          "gestalten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-564",
+      "german": "entwerfen",
+      "english": "to design / to draft",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "gestalten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2533,
+        "hierarchy": [
+          "Verbs",
+          "gestalten",
+          "entwerfen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-565",
+      "german": "gestehen",
+      "english": "to confess",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2536,
+        "hierarchy": [
+          "Verbs",
+          "gestehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-566",
+      "german": "gewähren",
+      "english": "to grant / to warrant sth.",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2542,
+        "hierarchy": [
+          "Verbs",
+          "gewähren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-571",
+      "german": "begraben",
+      "english": "to bury",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "graben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2560,
+        "hierarchy": [
+          "Verbs",
+          "graben",
+          "begraben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-574",
+      "german": "ergreifen",
+      "english": "to take/seize [measure / opportunity / chance] / to come over [overcome]",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "greifen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2583,
+        "hierarchy": [
+          "Verbs",
+          "greifen",
+          "ergreifen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-577",
+      "german": "begründen",
+      "english": "to justify / to reason",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "gründen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2593,
+        "hierarchy": [
+          "Verbs",
+          "gründen",
+          "begründen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-581",
+      "german": "behalten",
+      "english": "to hang on to / to retain / to keep",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "halten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2620,
+        "hierarchy": [
+          "Verbs",
+          "halten",
+          "behalten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-583",
+      "german": "erhalten",
+      "english": "to receive",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "halten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2632,
+        "hierarchy": [
+          "Verbs",
+          "halten",
+          "erhalten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-585",
+      "german": "verhalten",
+      "english": "to restrain / to contain",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "halten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2641,
+        "hierarchy": [
+          "Verbs",
+          "halten",
+          "verhalten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-603",
+      "german": "erhören",
+      "english": "to answer someone's prayers",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "hören"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2726,
+        "hierarchy": [
+          "Verbs",
+          "hören",
+          "erhören"
+        ]
+      }
+    },
+    {
+      "id": "remnote-604",
+      "german": "gehören",
+      "english": "to belong",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "hören"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2729,
+        "hierarchy": [
+          "Verbs",
+          "hören",
+          "gehören"
+        ]
+      }
+    },
+    {
+      "id": "remnote-605",
+      "german": "verhören",
+      "english": "to question sb. / to interrogate / to examine",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "hören"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2732,
+        "hierarchy": [
+          "Verbs",
+          "hören",
+          "verhören"
+        ]
+      }
+    },
+    {
+      "id": "remnote-672",
+      "german": "entnehmen",
+      "english": "to infer sth. from sth. / to take out (of) / to understand from somebody's behavior",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "nehmen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3031,
+        "hierarchy": [
+          "Verbs",
+          "nehmen",
+          "entnehmen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-680",
+      "german": "ernennen",
+      "english": "to appoint",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "nennen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3070,
+        "hierarchy": [
+          "Verbs",
+          "nennen",
+          "ernennen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-742",
+      "german": "besorgt",
+      "english": "concerned / worried",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "sorgen",
+        "sich sorgen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3380,
+        "hierarchy": [
+          "Verbs",
+          "sorgen",
+          "sich sorgen",
+          "besorgt"
+        ]
+      }
+    },
+    {
+      "id": "remnote-743",
+      "german": "besorgen",
+      "english": "to go and get / to obtain / to get sb. sth.",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "sorgen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3386,
+        "hierarchy": [
+          "Verbs",
+          "sorgen",
+          "besorgen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-744",
+      "german": "versorgen",
+      "english": "to supply / to look after",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "sorgen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3387,
+        "hierarchy": [
+          "Verbs",
+          "sorgen",
+          "versorgen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-761",
+      "german": "erstellen",
+      "english": "to create",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "stellen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3495,
+        "hierarchy": [
+          "Verbs",
+          "stellen",
+          "erstellen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-809",
+      "german": "verbessern",
+      "english": "to improve",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3705,
+        "hierarchy": [
+          "Verbs",
+          "verbessern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-811",
+      "german": "verknüpfen",
+      "english": "to relate / to associate / to link / to connect / to interlink",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "verbieten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3718,
+        "hierarchy": [
+          "Verbs",
+          "verbieten",
+          "verknüpfen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-814",
+      "german": "verbreiten",
+      "english": "to distribute [info/news] / to disseminate / to spread / to propagate",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3733,
+        "hierarchy": [
+          "Verbs",
+          "verbreiten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-815",
+      "german": "verderben",
+      "english": "to spoil [food/drink]",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3737,
+        "hierarchy": [
+          "Verbs",
+          "verderben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-816",
+      "german": "verdienen",
+      "english": "to deserve / to earn",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3743,
+        "hierarchy": [
+          "Verbs",
+          "verdienen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-817",
+      "german": "verdrängen",
+      "english": "to suppress / to repress / to drive out",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3747,
+        "hierarchy": [
+          "Verbs",
+          "verdrängen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-819",
+      "german": "verfolgen",
+      "english": "to pursue",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3759,
+        "hierarchy": [
+          "Verbs",
+          "verfolgen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-820",
+      "german": "verfügen",
+      "english": "to have",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3762,
+        "hierarchy": [
+          "Verbs",
+          "verfügen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-821",
+      "german": "vergehen",
+      "english": "to vanish / to wither / to decay",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3766,
+        "hierarchy": [
+          "Verbs",
+          "vergehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-825",
+      "german": "verhängen",
+      "english": "to impose",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3776,
+        "hierarchy": [
+          "Verbs",
+          "verhängen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-826",
+      "german": "verhindern",
+      "english": "to prevent",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3779,
+        "hierarchy": [
+          "Verbs",
+          "verhindern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-827",
+      "german": "verkünden",
+      "english": "to announce / to declare / to proclaim",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3786,
+        "hierarchy": [
+          "Verbs",
+          "verkünden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-829",
+      "german": "verlängern",
+      "english": "to extend",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3811,
+        "hierarchy": [
+          "Verbs",
+          "verlängern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-832",
+      "german": "vermeiden",
+      "english": "to avoid",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3831,
+        "hierarchy": [
+          "Verbs",
+          "vermeiden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-833",
+      "german": "vermissen",
+      "english": "to miss sb. / can't find sth.",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "to miss"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3837,
+        "hierarchy": [
+          "Verbs",
+          "to miss",
+          "vermissen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-835",
+      "german": "versaümen",
+      "english": "to miss a chance or opportunity / to neglect",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "to miss"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3846,
+        "hierarchy": [
+          "Verbs",
+          "to miss",
+          "versaümen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-836",
+      "german": "verfehlen",
+      "english": "to miss a goal",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "to miss"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3850,
+        "hierarchy": [
+          "Verbs",
+          "to miss",
+          "verfehlen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-838",
+      "german": "entgehen",
+      "english": "to miss out on sth. / to avoid / to escape",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "to miss"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3857,
+        "hierarchy": [
+          "Verbs",
+          "to miss",
+          "entgehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-840",
+      "german": "verpügeln",
+      "english": "to batter / to beat",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3866,
+        "hierarchy": [
+          "Verbs",
+          "verpügeln"
+        ]
+      }
+    },
+    {
+      "id": "remnote-841",
+      "german": "verraten",
+      "english": "to betray",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3867,
+        "hierarchy": [
+          "Verbs",
+          "verraten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-849",
+      "german": "verteilen",
+      "english": "to distribute",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3912,
+        "hierarchy": [
+          "Verbs",
+          "verteilen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-850",
+      "german": "vertreiben",
+      "english": "to dispel / to banish / to expel / to disperse / to distribute / to sell",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3914,
+        "hierarchy": [
+          "Verbs",
+          "vertreiben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-854",
+      "german": "verweigern",
+      "english": "to refuse / to deny / to disallow",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3935,
+        "hierarchy": [
+          "Verbs",
+          "verweigern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-855",
+      "german": "bestreiten",
+      "english": "to deny / to dispute / to contest",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "verweigern"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3939,
+        "hierarchy": [
+          "Verbs",
+          "verweigern",
+          "bestreiten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-857",
+      "german": "verweisen",
+      "english": "to refer to sb.",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3951,
+        "hierarchy": [
+          "Verbs",
+          "verweisen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-858",
+      "german": "verwenden",
+      "english": "to use",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3958,
+        "hierarchy": [
+          "Verbs",
+          "verwenden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-860",
+      "german": "verwöhnen",
+      "english": "to spoil / to pamper / to indulge",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3969,
+        "hierarchy": [
+          "Verbs",
+          "verwöhnen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-861",
+      "german": "verzeihen",
+      "english": "to forgive",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3973,
+        "hierarchy": [
+          "Verbs",
+          "verzeihen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-862",
+      "german": "verzichten",
+      "english": "to quit",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3978,
+        "hierarchy": [
+          "Verbs",
+          "verzichten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-884",
+      "german": "gewollt",
+      "english": "intended",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "wollen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4087,
+        "hierarchy": [
+          "Verbs",
+          "wollen",
+          "gewollt"
+        ]
+      }
+    },
+    {
+      "id": "remnote-321",
+      "german": "beantragen",
+      "english": "to apply [paperwork]",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "anwenden"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1308,
+        "hierarchy": [
+          "Verbs",
+          "anwenden",
+          "beantragen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-365",
+      "german": "bekräftigen",
+      "english": "to confirm / to reinforce / to affirm",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "tags": [
+        "beinhalten",
+        "bestätigen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1521,
+        "hierarchy": [
+          "Verbs",
+          "beinhalten",
+          "bestätigen",
+          "bekräftigen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-370",
+      "german": "benachrichtigen",
+      "english": "to notify",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1559,
+        "hierarchy": [
+          "Verbs",
+          "benachrichtigen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-371",
+      "german": "beschleunigen",
+      "english": "to accelerate / to speed up",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1563,
+        "hierarchy": [
+          "Verbs",
+          "beschleunigen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-372",
+      "german": "beschließen",
+      "english": "to resolve / to conclude / to decide",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1567,
+        "hierarchy": [
+          "Verbs",
+          "beschließen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-373",
+      "german": "beschränken",
+      "english": "to limit / to restrict / to confine / to constrain",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1571,
+        "hierarchy": [
+          "Verbs",
+          "beschränken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-383",
+      "german": "beeindrucken",
+      "english": "to impress",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1612,
+        "hierarchy": [
+          "Verbs",
+          "beeindrucken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-450",
+      "german": "entsprechen",
+      "english": "to correspond / to match / to conform / to satisfy",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1958,
+        "hierarchy": [
+          "Verbs",
+          "entsprechen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-457",
+      "german": "verzeichnen",
+      "english": "to record / to register / to note down / to list",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "tags": [
+        "erfassen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2002,
+        "hierarchy": [
+          "Verbs",
+          "erfassen",
+          "verzeichnen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-465",
+      "german": "erleichtern",
+      "english": "to facilitate",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2043,
+        "hierarchy": [
+          "Verbs",
+          "erleichtern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-466",
+      "german": "ermöglichen",
+      "english": "to enable",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2048,
+        "hierarchy": [
+          "Verbs",
+          "ermöglichen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-567",
+      "german": "gewährleisten",
+      "english": "to guarantee / to ensure",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2546,
+        "hierarchy": [
+          "Verbs",
+          "gewährleisten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-593",
+      "german": "beherrschen",
+      "english": "to master sth.",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "tags": [
+        "herrschen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2688,
+        "hierarchy": [
+          "Verbs",
+          "herrschen",
+          "beherrschen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-720",
+      "german": "entschlossen",
+      "english": "adj. determined",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "tags": [
+        "schießen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3266,
+        "hierarchy": [
+          "Verbs",
+          "schießen",
+          "entschlossen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-722",
+      "german": "erschließen",
+      "english": "to open up / to reveal / to discover",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "tags": [
+        "schießen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3268,
+        "hierarchy": [
+          "Verbs",
+          "schießen",
+          "erschließen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-760",
+      "german": "bereitstellen",
+      "english": "to supply / to provide / to allocate",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "tags": [
+        "stellen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3481,
+        "hierarchy": [
+          "Verbs",
+          "stellen",
+          "bereitstellen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-808",
+      "german": "veranstalten",
+      "english": "to stage / to host / to arrange / to organize",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3701,
+        "hierarchy": [
+          "Verbs",
+          "veranstalten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-813",
+      "german": "verbrauchen",
+      "english": "to consume",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3727,
+        "hierarchy": [
+          "Verbs",
+          "verbrauchen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-823",
+      "german": "vergewaltigen",
+      "english": "to rape",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3771,
+        "hierarchy": [
+          "Verbs",
+          "vergewaltigen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-828",
+      "german": "verlangen",
+      "english": "to demand / to request / to require / to claim / to ask / to charge",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3800,
+        "hierarchy": [
+          "Verbs",
+          "verlangen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-837",
+      "german": "verschlafen",
+      "english": "to miss out on sth. / to oversleep",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "tags": [
+        "to miss"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3853,
+        "hierarchy": [
+          "Verbs",
+          "to miss",
+          "verschlafen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-839",
+      "german": "vermitteln",
+      "english": "to convey / to impart",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3861,
+        "hierarchy": [
+          "Verbs",
+          "vermitteln"
+        ]
+      }
+    },
+    {
+      "id": "remnote-844",
+      "german": "verschieben",
+      "english": "to postone / to delay / to move or shift / to relocate / to reschedule / to remit",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3881,
+        "hierarchy": [
+          "Verbs",
+          "verschieben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-845",
+      "german": "verschreiben",
+      "english": "to prescribe",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3887,
+        "hierarchy": [
+          "Verbs",
+          "verschreiben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-846",
+      "german": "verschwinden",
+      "english": "to disappear",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3891,
+        "hierarchy": [
+          "Verbs",
+          "verschwinden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-848",
+      "german": "verteidigen",
+      "english": "to defend sb. sth. / to advocate",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3906,
+        "hierarchy": [
+          "Verbs",
+          "verteidigen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-851",
+      "german": "verursachen",
+      "english": "to cause / to bring about",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3920,
+        "hierarchy": [
+          "Verbs",
+          "verursachen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-852",
+      "german": "verschweigen",
+      "english": "to withhold info / to conceal",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3929,
+        "hierarchy": [
+          "Verbs",
+          "verschweigen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-853",
+      "german": "verwandeln",
+      "english": "to transform",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3931,
+        "hierarchy": [
+          "Verbs",
+          "verwandeln"
+        ]
+      }
+    },
+    {
+      "id": "remnote-856",
+      "german": "verwechseln",
+      "english": "to confuse",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3946,
+        "hierarchy": [
+          "Verbs",
+          "verwechseln"
+        ]
+      }
+    },
+    {
+      "id": "remnote-859",
+      "german": "verwirklichen",
+      "english": "to materialize / to achieve / to realize sth. [hopes and dreams]",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3965,
+        "hierarchy": [
+          "Verbs",
+          "verwirklichen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-863",
+      "german": "verzichten...auf",
+      "english": "to forgo / to relinquish / to renounce / do without / to give up",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B2",
+      "tags": [
+        "verzichten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3981,
+        "hierarchy": [
+          "Verbs",
+          "verzichten",
+          "verzichten...auf"
+        ]
+      }
+    },
+    {
+      "id": "b1-bekmpfen-207234",
+      "german": "bekämpfen",
+      "english": "to combat / to fight",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 1,
+        "hierarchy": [
+          "B1",
+          "Intermediate Verbs",
+          "bekämpfen"
+        ]
+      }
+    },
+    {
+      "id": "b1-bekleiden-207234",
+      "german": "bekleiden",
+      "english": "to dress / to clothe",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 3,
+        "hierarchy": [
+          "B1",
+          "Intermediate Verbs",
+          "bekleiden"
+        ]
+      }
+    },
+    {
+      "id": "b1-bekmmern-207234",
+      "german": "bekümmern",
+      "english": "to worry / to be concerned",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 8,
+        "hierarchy": [
+          "B1",
+          "Intermediate Verbs",
+          "bekümmern"
+        ]
+      }
+    },
+    {
+      "id": "b1-belagern-207234",
+      "german": "belagern",
+      "english": "to besiege / to surround",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 13,
+        "hierarchy": [
+          "B1",
+          "Intermediate Verbs",
+          "belagern"
+        ]
+      }
+    },
+    {
+      "id": "b1-belasten-207234",
+      "german": "belasten",
+      "english": "to burden / to stress",
+      "category": "Inseparable Prefix Verbs",
+      "level": "B1",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B1",
+          "Intermediate Verbs",
+          "belasten"
+        ]
+      }
+    }
+  ]
+}

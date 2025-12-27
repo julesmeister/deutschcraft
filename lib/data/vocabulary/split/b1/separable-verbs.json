@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Separable Verbs",
-  "totalCards": 26,
+  "totalCards": 143,
   "flashcards": [
     {
       "id": "b1-anschauen-186184",
@@ -520,6 +520,1997 @@
           "B1",
           "Separable Verbs",
           "auspresser"
+        ]
+      }
+    },
+    {
+      "id": "remnote-297",
+      "german": "umdrehen",
+      "english": "to turn around",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "abbiegen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1174,
+        "hierarchy": [
+          "Verbs",
+          "abbiegen",
+          "umdrehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-362",
+      "german": "beinhalten",
+      "english": "to involve / to contain",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1511,
+        "hierarchy": [
+          "Verbs",
+          "beinhalten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-426",
+      "german": "durchziehen",
+      "english": "to pull off / to swipe [credit card] / to follow through on. with sth. / to see sth. through",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1831,
+        "hierarchy": [
+          "Verbs",
+          "durchziehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-490",
+      "german": "überfahren",
+      "english": "to run over / to knock sb. down",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "fahren"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2155,
+        "hierarchy": [
+          "Verbs",
+          "fahren",
+          "überfahren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-501",
+      "german": "umfassen",
+      "english": "to encompass / to comprise / to contain / to involve / to cover / to embrace",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "fassen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2212,
+        "hierarchy": [
+          "Verbs",
+          "fassen",
+          "umfassen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-509",
+      "german": "überfliegen",
+      "english": "to scan",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "fliegen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2255,
+        "hierarchy": [
+          "Verbs",
+          "fliegen",
+          "überfliegen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-520",
+      "german": "überfordern",
+      "english": "to overwhelm / to overexert / to overstrain / to overcharge",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "fordern"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2295,
+        "hierarchy": [
+          "Verbs",
+          "fordern",
+          "überfordern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-541",
+      "german": "wiedergeben",
+      "english": "to give back / to reproduce",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "geben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2399,
+        "hierarchy": [
+          "Verbs",
+          "geben",
+          "wiedergeben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-542",
+      "german": "übergeben",
+      "english": "to handover",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "geben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2402,
+        "hierarchy": [
+          "Verbs",
+          "geben",
+          "übergeben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-544",
+      "german": "umgeben",
+      "english": "to surround",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "geben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2412,
+        "hierarchy": [
+          "Verbs",
+          "geben",
+          "umgeben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-612",
+      "german": "auf etw. rechnen",
+      "english": "to count on sth.",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "kalkulieren",
+        "rechnen;;<to calculate #verben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2762,
+        "hierarchy": [
+          "Verbs",
+          "kalkulieren",
+          "rechnen;;<to calculate #verben",
+          "auf etw. rechnen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-613",
+      "german": "mit etw. rechnen",
+      "english": "to expect sth. / to take something into account",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "kalkulieren",
+        "rechnen;;<to calculate #verben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2764,
+        "hierarchy": [
+          "Verbs",
+          "kalkulieren",
+          "rechnen;;<to calculate #verben",
+          "mit etw. rechnen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-639",
+      "german": "unterliegen",
+      "english": "to succumb / to be subject to / to be governed by",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "liegen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2893,
+        "hierarchy": [
+          "Verbs",
+          "liegen",
+          "unterliegen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-644",
+      "german": "losrennen",
+      "english": "to run off",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2909,
+        "hierarchy": [
+          "Verbs",
+          "losrennen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-677",
+      "german": "übernehmen",
+      "english": "to adopt / to assume / to take over⇒business, rule, ownership / to cover [cost]",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "nehmen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3055,
+        "hierarchy": [
+          "Verbs",
+          "nehmen",
+          "übernehmen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-737",
+      "german": "durchsetzen",
+      "english": "to implement / to enforce / to assert",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "setzen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3348,
+        "hierarchy": [
+          "Verbs",
+          "setzen",
+          "durchsetzen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-753",
+      "german": "widerstehen",
+      "english": "to resist",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "stehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3429,
+        "hierarchy": [
+          "Verbs",
+          "stehen",
+          "widerstehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-763",
+      "german": "umstellen",
+      "english": "to shift / to organize / to transpose / to move / to reposition",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "stellen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3506,
+        "hierarchy": [
+          "Verbs",
+          "stellen",
+          "umstellen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-783",
+      "german": "überfallen",
+      "english": "to raid / to ambush",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3598,
+        "hierarchy": [
+          "Verbs",
+          "überfallen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-784",
+      "german": "überleben",
+      "english": "to survive",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3603,
+        "hierarchy": [
+          "Verbs",
+          "überleben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-787",
+      "german": "überqueren",
+      "english": "to cross street or road",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3610,
+        "hierarchy": [
+          "Verbs",
+          "überqueren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-788",
+      "german": "überreden",
+      "english": "to persuade / to sway",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3612,
+        "hierarchy": [
+          "Verbs",
+          "überreden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-790",
+      "german": "übertreffen",
+      "english": "to exceed / to surpass / to beat",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "überschreiten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3620,
+        "hierarchy": [
+          "Verbs",
+          "überschreiten",
+          "übertreffen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-791",
+      "german": "übertragen",
+      "english": "to broadcast / to transmit",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3624,
+        "hierarchy": [
+          "Verbs",
+          "übertragen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-792",
+      "german": "übertreiben",
+      "english": "to boast / to exaggerate",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3632,
+        "hierarchy": [
+          "Verbs",
+          "übertreiben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-793",
+      "german": "überwinden",
+      "english": "to overcome",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3637,
+        "hierarchy": [
+          "Verbs",
+          "überwinden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-796",
+      "german": "umarmen",
+      "english": "to hug",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3646,
+        "hierarchy": [
+          "Verbs",
+          "umarmen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-797",
+      "german": "umgehen",
+      "english": "to circumvent / to bypass / to evade / to sidestep / about",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3650,
+        "hierarchy": [
+          "Verbs",
+          "umgehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-798",
+      "german": "mit jdm./etw. umgehen",
+      "english": "to handle / to deal / to interact",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "umgehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3654,
+        "hierarchy": [
+          "Verbs",
+          "umgehen",
+          "mit jdm./etw. umgehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-799",
+      "german": "umkehren",
+      "english": "to reverse / to turn around",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3659,
+        "hierarchy": [
+          "Verbs",
+          "umkehren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-800",
+      "german": "umrühren",
+      "english": "to stir",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3665,
+        "hierarchy": [
+          "Verbs",
+          "umrühren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-802",
+      "german": "unterbrechen",
+      "english": "to interrupt",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3675,
+        "hierarchy": [
+          "Verbs",
+          "unterbrechen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-803",
+      "german": "unterbringen",
+      "english": "to accomodate",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3679,
+        "hierarchy": [
+          "Verbs",
+          "unterbringen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-295",
+      "german": "abbestellen",
+      "english": "to discontinue",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1162,
+        "hierarchy": [
+          "Verbs",
+          "abbestellen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-296",
+      "german": "abbiegen",
+      "english": "to turn",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1168,
+        "hierarchy": [
+          "Verbs",
+          "abbiegen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-300",
+      "german": "abheben",
+      "english": "to withdraw",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1186,
+        "hierarchy": [
+          "Verbs",
+          "abheben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-302",
+      "german": "ablehnen",
+      "english": "to reject / to refuse / to decline",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1209,
+        "hierarchy": [
+          "Verbs",
+          "ablehnen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-303",
+      "german": "abrechnen",
+      "english": "to charge / to invoice / to bill",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1217,
+        "hierarchy": [
+          "Verbs",
+          "abrechnen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-304",
+      "german": "abreißen",
+      "english": "to depart / to leave",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1225,
+        "hierarchy": [
+          "Verbs",
+          "abreißen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-309",
+      "german": "anbraten",
+      "english": "to brown / to sauté (cooking term)",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1237,
+        "hierarchy": [
+          "Verbs",
+          "anbraten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-310",
+      "german": "andeuten",
+      "english": "to imply / to hint",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1240,
+        "hierarchy": [
+          "Verbs",
+          "andeuten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-311",
+      "german": "angreifen",
+      "english": "to attack",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1250,
+        "hierarchy": [
+          "Verbs",
+          "angreifen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-313",
+      "german": "anklagen",
+      "english": "to bring charges against sb. / to accuse sb.",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1262,
+        "hierarchy": [
+          "Verbs",
+          "anklagen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-315",
+      "german": "anpassen",
+      "english": "to adjust / to adapt / to customize",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1281,
+        "hierarchy": [
+          "Verbs",
+          "anpassen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-318",
+      "german": "antreten",
+      "english": "to compete",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1296,
+        "hierarchy": [
+          "Verbs",
+          "antreten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-320",
+      "german": "anwenden",
+      "english": "to apply / to utilize / to use",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1303,
+        "hierarchy": [
+          "Verbs",
+          "anwenden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-322",
+      "german": "anzünden",
+      "english": "to light",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1312,
+        "hierarchy": [
+          "Verbs",
+          "anzünden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-323",
+      "german": "aufführen",
+      "english": "to list",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1317,
+        "hierarchy": [
+          "Verbs",
+          "aufführen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-326",
+      "german": "aufholen",
+      "english": "to catch up",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1329,
+        "hierarchy": [
+          "Verbs",
+          "aufholen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-328",
+      "german": "ausdrucken",
+      "english": "to print out",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1349,
+        "hierarchy": [
+          "Verbs",
+          "ausdrucken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-329",
+      "german": "ausgleichen",
+      "english": "to balance [to even up] / to make up for / to compensate / to settle account",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1362,
+        "hierarchy": [
+          "Verbs",
+          "ausgleichen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-333",
+      "german": "auspressen",
+      "english": "to squeeze",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1381,
+        "hierarchy": [
+          "Verbs",
+          "auspressen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-334",
+      "german": "auspusten",
+      "english": "to blow out",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1386,
+        "hierarchy": [
+          "Verbs",
+          "auspusten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-335",
+      "german": "ausrüsten",
+      "english": "to equip",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1391,
+        "hierarchy": [
+          "Verbs",
+          "ausrüsten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-336",
+      "german": "ausstatten",
+      "english": "to equip [in decorative aspect]",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "ausrüsten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1397,
+        "hierarchy": [
+          "Verbs",
+          "ausrüsten",
+          "ausstatten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-337",
+      "german": "ausscheiden",
+      "english": "to drop out / to eliminate / to resign",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1400,
+        "hierarchy": [
+          "Verbs",
+          "ausscheiden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-340",
+      "german": "auswählen",
+      "english": "to choose",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1419,
+        "hierarchy": [
+          "Verbs",
+          "auswählen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-341",
+      "german": "ausweichen",
+      "english": "to dodge",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1423,
+        "hierarchy": [
+          "Verbs",
+          "ausweichen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-343",
+      "german": "anbauen",
+      "english": "to grow sth. / to cultivate sth. / to raise crops / to extend a house",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "bauen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1426,
+        "hierarchy": [
+          "Verbs",
+          "bauen",
+          "anbauen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-345",
+      "german": "einbauen",
+      "english": "to install / to incorporate / to put sth. into sth.",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "bauen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1443,
+        "hierarchy": [
+          "Verbs",
+          "bauen",
+          "einbauen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-378",
+      "german": "eintreten",
+      "english": "to enter / to step in",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "betreten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1596,
+        "hierarchy": [
+          "Verbs",
+          "betreten",
+          "eintreten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-403",
+      "german": "anbieten",
+      "english": "to provide / to offer / to supply",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "bieten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1731,
+        "hierarchy": [
+          "Verbs",
+          "bieten",
+          "anbieten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-415",
+      "german": "abdecken",
+      "english": "to cover / to conceal / to mask",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "decken"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1783,
+        "hierarchy": [
+          "Verbs",
+          "decken",
+          "abdecken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-421",
+      "german": "aufdrehen",
+      "english": "to turn on [gas/faucet]",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "drehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1816,
+        "hierarchy": [
+          "Verbs",
+          "drehen",
+          "aufdrehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-422",
+      "german": "zudrehen",
+      "english": "to turn off [gas/faucet]",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "drehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1818,
+        "hierarchy": [
+          "Verbs",
+          "drehen",
+          "zudrehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-433",
+      "german": "einfallen",
+      "english": "to come to mind / to come up [thought]",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1865,
+        "hierarchy": [
+          "Verbs",
+          "einfallen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-435",
+      "german": "einführen",
+      "english": "to launch / to introduce / to initiate",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1869,
+        "hierarchy": [
+          "Verbs",
+          "einführen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-438",
+      "german": "einleiten",
+      "english": "to initiate",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1898,
+        "hierarchy": [
+          "Verbs",
+          "einleiten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-440",
+      "german": "einreichen",
+      "english": "to submit / to file",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1909,
+        "hierarchy": [
+          "Verbs",
+          "einreichen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-441",
+      "german": "einrichten",
+      "english": "to establish / to organize / to furnish",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1913,
+        "hierarchy": [
+          "Verbs",
+          "einrichten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-442",
+      "german": "einstufen",
+      "english": "to rank / to grade / to classify / to categorize / to rate",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1918,
+        "hierarchy": [
+          "Verbs",
+          "einstufen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-443",
+      "german": "einzahlen",
+      "english": "to deposit",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1928,
+        "hierarchy": [
+          "Verbs",
+          "einzahlen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-475",
+      "german": "herausgeben",
+      "english": "to publish / to release / to issue",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "erscheinen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2075,
+        "hierarchy": [
+          "Verbs",
+          "erscheinen",
+          "herausgeben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-492",
+      "german": "auffallen",
+      "english": "to attrack sb. attention / to strike / to standout",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "fallen  #verben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2171,
+        "hierarchy": [
+          "Verbs",
+          "fallen  #verben",
+          "auffallen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-499",
+      "german": "anfassen",
+      "english": "to touch",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "fassen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2199,
+        "hierarchy": [
+          "Verbs",
+          "fassen",
+          "anfassen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-516",
+      "german": "anfordern",
+      "english": "to request sth. / to solicit / to order sth. up / to make application for sth.",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "fordern"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2276,
+        "hierarchy": [
+          "Verbs",
+          "fordern",
+          "anfordern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-517",
+      "german": "auffordern",
+      "english": "to summon / to prompt / to request",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "fordern"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2282,
+        "hierarchy": [
+          "Verbs",
+          "fordern",
+          "auffordern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-554",
+      "german": "zurückgehen",
+      "english": "to go back / to decline / to decrease",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "gehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2474,
+        "hierarchy": [
+          "Verbs",
+          "gehen",
+          "zurückgehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-573",
+      "german": "eingreifen",
+      "english": "to interfere / to intervene",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "greifen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2575,
+        "hierarchy": [
+          "Verbs",
+          "greifen",
+          "eingreifen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-575",
+      "german": "zurückgreifen",
+      "english": "to fall back on",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "greifen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2590,
+        "hierarchy": [
+          "Verbs",
+          "greifen",
+          "zurückgreifen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-580",
+      "german": "beibehalten",
+      "english": "to maintain",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "halten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2615,
+        "hierarchy": [
+          "Verbs",
+          "halten",
+          "beibehalten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-588",
+      "german": "aufheben",
+      "english": "to keep / to save / to set aside / to pick up / to cancel / to offset",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "heben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2665,
+        "hierarchy": [
+          "Verbs",
+          "heben",
+          "aufheben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-592",
+      "german": "herrschen",
+      "english": "to reign / to dominate / to govern",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2684,
+        "hierarchy": [
+          "Verbs",
+          "herrschen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-597",
+      "german": "hinsetzen",
+      "english": "to seat",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2705,
+        "hierarchy": [
+          "Verbs",
+          "hinsetzen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-602",
+      "german": "angehören",
+      "english": "to be a member of / belong to",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "hören"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2723,
+        "hierarchy": [
+          "Verbs",
+          "hören",
+          "angehören"
+        ]
+      }
+    },
+    {
+      "id": "remnote-607",
+      "german": "einholen",
+      "english": "to obtain / to get",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "holen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2739,
+        "hierarchy": [
+          "Verbs",
+          "holen",
+          "einholen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-621",
+      "german": "hinwegkommen",
+      "english": "to get over / to recover",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "kommen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2801,
+        "hierarchy": [
+          "Verbs",
+          "kommen",
+          "hinwegkommen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-626",
+      "german": "abladen",
+      "english": "to unload",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "laden"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2834,
+        "hierarchy": [
+          "Verbs",
+          "laden",
+          "abladen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-627",
+      "german": "durchlaufen",
+      "english": "to pass through",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "laufen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2839,
+        "hierarchy": [
+          "Verbs",
+          "laufen",
+          "durchlaufen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-632",
+      "german": "ausleihen",
+      "english": "to borrow",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "leihen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2864,
+        "hierarchy": [
+          "Verbs",
+          "leihen",
+          "ausleihen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-635",
+      "german": "ableiten",
+      "english": "to derive / to deduce / to extrapolate sth. / to derivate",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "leiten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2875,
+        "hierarchy": [
+          "Verbs",
+          "leiten",
+          "ableiten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-646",
+      "german": "auflösen",
+      "english": "to dissolve / to dissipate / to disperse",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "lösen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2913,
+        "hierarchy": [
+          "Verbs",
+          "lösen",
+          "auflösen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-647",
+      "german": "auslösen",
+      "english": "to trigger / to cause / to provoke",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "lösen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2917,
+        "hierarchy": [
+          "Verbs",
+          "lösen",
+          "auslösen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-668",
+      "german": "nachfüllen",
+      "english": "to refill",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2998,
+        "hierarchy": [
+          "Verbs",
+          "nachfüllen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-676",
+      "german": "vornehme",
+      "english": "distinguished",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "nehmen",
+        "vornehmen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3049,
+        "hierarchy": [
+          "Verbs",
+          "nehmen",
+          "vornehmen",
+          "vornehme"
+        ]
+      }
+    },
+    {
+      "id": "remnote-710",
+      "german": "abschalten",
+      "english": "to extinguish / to disconnect / to disable / to switch off / to shut down / to unwind",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "schalten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3205,
+        "hierarchy": [
+          "Verbs",
+          "schalten",
+          "abschalten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-711",
+      "german": "anschalten",
+      "english": "to turn on",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "schalten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3209,
+        "hierarchy": [
+          "Verbs",
+          "schalten",
+          "anschalten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-768",
+      "german": "anstoßen",
+      "english": "to toast",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "stoßen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3527,
+        "hierarchy": [
+          "Verbs",
+          "stoßen",
+          "anstoßen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-774",
+      "german": "austauschen",
+      "english": "to replace broken",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "tauschen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3558,
+        "hierarchy": [
+          "Verbs",
+          "tauschen",
+          "austauschen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-775",
+      "german": "eintauschen",
+      "english": "to trade in [trade bonus points for item]",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "tauschen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3559,
+        "hierarchy": [
+          "Verbs",
+          "tauschen",
+          "eintauschen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-782",
+      "german": "auftreten",
+      "english": "to appear",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "treten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3587,
+        "hierarchy": [
+          "Verbs",
+          "treten",
+          "auftreten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-789",
+      "german": "überschreiten",
+      "english": "to exceed / to transcend / to overspeed",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3615,
+        "hierarchy": [
+          "Verbs",
+          "überschreiten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-801",
+      "german": "umwandeln",
+      "english": "to convert",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3670,
+        "hierarchy": [
+          "Verbs",
+          "umwandeln"
+        ]
+      }
+    },
+    {
+      "id": "remnote-805",
+      "german": "unterscheiden",
+      "english": "to distinguish",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3690,
+        "hierarchy": [
+          "Verbs",
+          "unterscheiden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-806",
+      "german": "unterstreichen",
+      "english": "to underline / to underscore",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3694,
+        "hierarchy": [
+          "Verbs",
+          "unterstreichen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-830",
+      "german": "ausbauen",
+      "english": "to expand / to extend",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "verlängern"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3815,
+        "hierarchy": [
+          "Verbs",
+          "verlängern",
+          "ausbauen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-876",
+      "german": "wegwerfen",
+      "english": "to throw away / to discard",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "werfen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4041,
+        "hierarchy": [
+          "Verbs",
+          "werfen",
+          "wegwerfen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-877",
+      "german": "widersprechen",
+      "english": "to object / to disagree",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4053,
+        "hierarchy": [
+          "Verbs",
+          "widersprechen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-879",
+      "german": "wiederverwerten",
+      "english": "to recycle",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4062,
+        "hierarchy": [
+          "Verbs",
+          "wiederverwerten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-889",
+      "german": "anlocken",
+      "english": "to draw / to allure / to entice / to bait / to attract sb./sth",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "ziehen",
+        "anziehen #verben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4112,
+        "hierarchy": [
+          "Verbs",
+          "ziehen",
+          "anziehen #verben",
+          "anlocken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-890",
+      "german": "zurückziehen",
+      "english": "to withdraw / to retract / to disinvest",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "ziehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4116,
+        "hierarchy": [
+          "Verbs",
+          "ziehen",
+          "zurückziehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-891",
+      "german": "hineinziehen",
+      "english": "to implicate sb. / to involve / to drag in",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "tags": [
+        "ziehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4118,
+        "hierarchy": [
+          "Verbs",
+          "ziehen",
+          "hineinziehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-892",
+      "german": "nachvollziehen",
+      "english": "to be able to relate to sth.",
+      "category": "Separable Verbs",
+      "level": "B2",
+      "tags": [
+        "ziehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4125,
+        "hierarchy": [
+          "Verbs",
+          "ziehen",
+          "nachvollziehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-896",
+      "german": "zubereiten",
+      "english": "to prepare",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4146,
+        "hierarchy": [
+          "Verbs",
+          "zubereiten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-897",
+      "german": "zurückkehren",
+      "english": "to return",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4150,
+        "hierarchy": [
+          "Verbs",
+          "zurückkehren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-899",
+      "german": "zusammengehören",
+      "english": "to belong together",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4158,
+        "hierarchy": [
+          "Verbs",
+          "zusammengehören"
+        ]
+      }
+    },
+    {
+      "id": "remnote-900",
+      "german": "zuschneiden",
+      "english": "to cut to size / to tailor sth to sth",
+      "category": "Separable Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4160,
+        "hierarchy": [
+          "Verbs",
+          "zuschneiden"
         ]
       }
     }

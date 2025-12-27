@@ -1,7 +1,7 @@
 {
   "level": "B2",
   "category": "Academic",
-  "totalCards": 31,
+  "totalCards": 46,
   "flashcards": [
     {
       "id": "syllabus-b2-11161",
@@ -620,6 +620,306 @@
           "B2",
           "Academic",
           "Kontext"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkdn5ubis68",
+      "german": "erweitern",
+      "english": "to expand / to extend",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "erweitern"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkdn5u6umc5",
+      "german": "vereinfachen",
+      "english": "to simplify",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "vereinfachen"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkdn5uut2iw",
+      "german": "komplizieren",
+      "english": "to complicate",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 22,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "komplizieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkdn5utfk8f",
+      "german": "bewerten",
+      "english": "to evaluate / to rate",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 23,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "bewerten"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkdn5ucmh8l",
+      "german": "beeinflussen",
+      "english": "to influence",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 24,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "beeinflussen"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkdn5uc8opj",
+      "german": "hemmen",
+      "english": "to inhibit / to hinder",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 25,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "hemmen"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkdn5upqdp2",
+      "german": "erschweren",
+      "english": "to make difficult / to complicate",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "erschweren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeier6hy02",
+      "german": "analysieren",
+      "english": "to analyze",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "analysieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeieru98ug",
+      "german": "interpretieren",
+      "english": "to interpret",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 28,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "interpretieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeierf6kpg",
+      "german": "definieren",
+      "english": "to define",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 29,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "definieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeier9sfrd",
+      "german": "spezifizieren",
+      "english": "to specify",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 30,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "spezifizieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeier3pzwb",
+      "german": "konkretisieren",
+      "english": "to make concrete / to specify",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "konkretisieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeierr38a1",
+      "german": "optimieren",
+      "english": "to optimize",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 32,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "optimieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeiergksla",
+      "german": "minimieren",
+      "english": "to minimize",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 33,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "minimieren"
+        ]
+      }
+    },
+    {
+      "id": "b2-intermediate-verbs-mivkeierefmwb",
+      "german": "maximieren",
+      "english": "to maximize",
+      "category": "Academic",
+      "level": "B2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 34,
+        "hierarchy": [
+          "B2",
+          "Intermediate Verbs",
+          "maximieren"
         ]
       }
     }

@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Reflexive Verbs",
-  "totalCards": 60,
+  "totalCards": 87,
   "flashcards": [
     {
       "id": "reflexive-b1-001",
@@ -1260,6 +1260,479 @@
           "B1",
           "Reflexive Verbs",
           "sich vergucken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-369",
+      "german": "sich bemühen",
+      "english": "to endeavor / to attempt / to strive",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1555,
+        "hierarchy": [
+          "Verbs",
+          "sich bemühen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-429",
+      "german": "sich eignen",
+      "english": "to qualify / to suit / to be suitable",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1843,
+        "hierarchy": [
+          "Verbs",
+          "sich eignen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-498",
+      "german": "sich fassen",
+      "english": "to compose oneself",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "fassen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2198,
+        "hierarchy": [
+          "Verbs",
+          "fassen",
+          "sich fassen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-643",
+      "german": "sich lohnen",
+      "english": "be worthwhile / be worth it / be profitable / pay off",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2905,
+        "hierarchy": [
+          "Verbs",
+          "sich lohnen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-664",
+      "german": "sich melden",
+      "english": "to answer",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "melden"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2977,
+        "hierarchy": [
+          "Verbs",
+          "melden",
+          "sich melden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-665",
+      "german": "sich nähern",
+      "english": "to approach [time] / to come close [time]",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2985,
+        "hierarchy": [
+          "Verbs",
+          "sich nähern"
+        ]
+      }
+    },
+    {
+      "id": "remnote-723",
+      "german": "sich schonen",
+      "english": "to take it easy",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "schonen←to spare / to protect / to save #verben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3278,
+        "hierarchy": [
+          "Verbs",
+          "schonen←to spare / to protect / to save #verben",
+          "sich schonen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-739",
+      "german": "sich sehnen",
+      "english": "to crave / to yearn",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3358,
+        "hierarchy": [
+          "Verbs",
+          "sich sehnen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-741",
+      "german": "sich sorgen",
+      "english": "to worry / to concern about",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "tags": [
+        "sorgen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3377,
+        "hierarchy": [
+          "Verbs",
+          "sorgen",
+          "sich sorgen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-795",
+      "german": "sich umhören",
+      "english": "to ask around",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3644,
+        "hierarchy": [
+          "Verbs",
+          "sich umhören"
+        ]
+      }
+    },
+    {
+      "id": "remnote-872",
+      "german": "sich wälzen",
+      "english": "to roll",
+      "category": "Reflexive Verbs",
+      "level": "B1",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4021,
+        "hierarchy": [
+          "Verbs",
+          "sich wälzen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-316",
+      "german": "sich anschnallen",
+      "english": "to buckle up / to belt up / to fasten",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1285,
+        "hierarchy": [
+          "Verbs",
+          "sich anschnallen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-366",
+      "german": "berücksichtigen",
+      "english": "to consider / take into account",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "tags": [
+        "beinhalten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1523,
+        "hierarchy": [
+          "Verbs",
+          "beinhalten",
+          "berücksichtigen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-367",
+      "german": "sich bewähren / nachweisen",
+      "english": "to prove",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "tags": [
+        "beinhalten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1529,
+        "hierarchy": [
+          "Verbs",
+          "beinhalten",
+          "sich bewähren / nachweisen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-385",
+      "german": "sich beklagen",
+      "english": "to complain",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1622,
+        "hierarchy": [
+          "Verbs",
+          "sich beklagen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-418",
+      "german": "sich bedienen",
+      "english": "to help oneself / to employ sth. / to make use of sth.",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "tags": [
+        "dehnen",
+        "bedienen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1804,
+        "hierarchy": [
+          "Verbs",
+          "dehnen",
+          "bedienen",
+          "sich bedienen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-430",
+      "german": "sich einbilden",
+      "english": "to imagine",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1851,
+        "hierarchy": [
+          "Verbs",
+          "sich einbilden"
+        ]
+      }
+    },
+    {
+      "id": "remnote-437",
+      "german": "sich entspannen",
+      "english": "to chill out",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1886,
+        "hierarchy": [
+          "Verbs",
+          "sich entspannen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-439",
+      "german": "sich einmischen",
+      "english": "to interfere",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1904,
+        "hierarchy": [
+          "Verbs",
+          "sich einmischen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-448",
+      "german": "sich engagieren",
+      "english": "to campaign / to be committed",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1948,
+        "hierarchy": [
+          "Verbs",
+          "sich engagieren"
+        ]
+      }
+    },
+    {
+      "id": "remnote-487",
+      "german": "sich einfangen",
+      "english": "to catch sth. [fever, cold]",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "tags": [
+        "erwischen",
+        "fangen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2140,
+        "hierarchy": [
+          "Verbs",
+          "erwischen",
+          "fangen",
+          "sich einfangen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-543",
+      "german": "sich übergeben",
+      "english": "to vomit",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "tags": [
+        "geben",
+        "übergeben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2409,
+        "hierarchy": [
+          "Verbs",
+          "geben",
+          "übergeben",
+          "sich übergeben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-586",
+      "german": "sich verhalten",
+      "english": "to behave / to conduct oneself",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "tags": [
+        "halten",
+        "verhalten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2642,
+        "hierarchy": [
+          "Verbs",
+          "halten",
+          "verhalten",
+          "sich verhalten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-594",
+      "german": "sich beherrschen",
+      "english": "to control one's temper / to restrain oneself",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "tags": [
+        "herrschen",
+        "beherrschen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2690,
+        "hierarchy": [
+          "Verbs",
+          "herrschen",
+          "beherrschen",
+          "sich beherrschen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-657",
+      "german": "sich [dat.] merken",
+      "english": "to memorize / to remember",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "tags": [
+        "merken"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2954,
+        "hierarchy": [
+          "Verbs",
+          "merken",
+          "sich [dat.] merken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-678",
+      "german": "sich übernehmen",
+      "english": "to overestimate oneself / to bite more than one can swallow",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "tags": [
+        "nehmen",
+        "übernehmen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3065,
+        "hierarchy": [
+          "Verbs",
+          "nehmen",
+          "übernehmen",
+          "sich übernehmen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-701",
+      "german": "sich richten ... an",
+      "english": "to aim at",
+      "category": "Reflexive Verbs",
+      "level": "B2",
+      "tags": [
+        "richten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3158,
+        "hierarchy": [
+          "Verbs",
+          "richten",
+          "sich richten ... an"
         ]
       }
     }
