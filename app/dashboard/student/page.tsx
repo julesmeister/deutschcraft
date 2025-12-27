@@ -42,6 +42,22 @@ export default function StudentDashboard() {
   const student = fetchedStudent || SAMPLE_STUDENT;
   const userName = session?.user?.name || 'Student';
 
+  // Format the Current Level display with batch name
+  const currentLevelDisplay = () => {
+    const studentData = (fetchedStudent as any) || SAMPLE_STUDENT;
+    const level = studentData.currentLevel || 'A1';
+    if (batch && batch.name) {
+      return `${level} • ${batch.name}`;
+    }
+    return level;
+  };
+
+  // Get consolidated dashboard stats (MUST be called before any conditional returns)
+  const { stats, writingStats } = useStudentDashboardStats({
+    userEmail: session?.user?.email,
+    currentLevelDisplay: currentLevelDisplay(),
+  });
+
   // Fetch today's progress for daily goal
   useEffect(() => {
     if (!session?.user?.email) return;
@@ -63,22 +79,6 @@ export default function StudentDashboard() {
   if (!isFirebaseReady || isLoadingStudent || !session) {
     return <CatLoader message="Loading your dashboard..." size="lg" fullScreen />;
   }
-
-  // Format the Current Level display with batch name
-  const currentLevelDisplay = () => {
-    const studentData = (fetchedStudent as any) || SAMPLE_STUDENT;
-    const level = studentData.currentLevel || 'A1';
-    if (batch && batch.name) {
-      return `${level} • ${batch.name}`;
-    }
-    return level;
-  };
-
-  // Get consolidated dashboard stats
-  const { stats, writingStats } = useStudentDashboardStats({
-    userEmail: session?.user?.email,
-    currentLevelDisplay: currentLevelDisplay(),
-  });
 
   return (
     <div className="min-h-screen bg-gray-50">
