@@ -15,7 +15,10 @@ export {
   getFlashcardProgressByState,
   getDueFlashcards,
   getStrugglingFlashcards,
+  getCategoryProgress,
 } from './progressRead';
+
+export type { CategoryStats } from './progressRead';
 
 // Re-export write operations
 export {

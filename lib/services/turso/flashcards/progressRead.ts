@@ -30,6 +30,54 @@ export async function getFlashcardProgress(userId: string): Promise<FlashcardPro
 }
 
 /**
+ * Category statistics interface
+ */
+export interface CategoryStats {
+  category: string;
+  total: number;
+  learned: number; // repetitions > 0
+  mastered: number; // masteryLevel >= 70
+  percentage: number;
+}
+
+/**
+ * Get flashcard progress grouped by category
+ * Joins progress with vocabulary table to get category information
+ * @param userId - User's email
+ * @returns Array of category statistics
+ */
+export async function getCategoryProgress(userId: string): Promise<CategoryStats[]> {
+  try {
+    const result = await db.execute({
+      sql: `
+        SELECT
+          v.category,
+          COUNT(*) as total,
+          SUM(CASE WHEN fp.repetitions > 0 THEN 1 ELSE 0 END) as learned,
+          SUM(CASE WHEN fp.mastery_level >= 70 THEN 1 ELSE 0 END) as mastered
+        FROM flashcard_progress fp
+        LEFT JOIN vocabulary v ON fp.word_id = v.word_id OR fp.flashcard_id = v.word_id
+        WHERE fp.user_id = ?
+        GROUP BY v.category
+        ORDER BY learned DESC
+      `,
+      args: [userId],
+    });
+
+    return result.rows.map(row => ({
+      category: (row.category as string) || 'Uncategorized',
+      total: row.total as number,
+      learned: row.learned as number,
+      mastered: row.mastered as number,
+      percentage: row.total ? Math.round(((row.learned as number) / (row.total as number)) * 100) : 0,
+    }));
+  } catch (error) {
+    console.error('[flashcardService:turso] Error fetching category progress:', error);
+    throw error;
+  }
+}
+
+/**
  * Get single flashcard progress
  * @param userId - User's email
  * @param flashcardId - Flashcard ID

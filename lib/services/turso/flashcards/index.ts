@@ -34,6 +34,9 @@ export {
   getFlashcardProgressByState,
   getDueFlashcards,
   getStrugglingFlashcards,
+  getCategoryProgress,
   saveFlashcardProgress,
   saveDailyProgress,
 } from './progress';
+
+export type { CategoryStats } from './progressRead';
