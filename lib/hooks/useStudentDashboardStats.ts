@@ -35,12 +35,12 @@ export function useStudentDashboardStats({
   const grammarStats = useMemo(() => {
     if (!grammarReviews || grammarReviews.length === 0) {
       return {
-        sentencesPracticed: 0,
+        rulesPracticed: 0,
         accuracyRate: 0,
       };
     }
 
-    const sentencesPracticed = grammarReviews.filter(r => r.repetitions > 0).length;
+    const rulesPracticed = new Set(grammarReviews.map(r => r.ruleId)).size;
     const totalCorrect = grammarReviews.reduce((sum, r) => sum + r.correctCount, 0);
     const totalIncorrect = grammarReviews.reduce((sum, r) => sum + r.incorrectCount, 0);
     const accuracyRate = totalCorrect + totalIncorrect > 0
@@ -48,7 +48,7 @@ export function useStudentDashboardStats({
       : 0;
 
     return {
-      sentencesPracticed,
+      rulesPracticed,
       accuracyRate,
     };
   }, [grammarReviews]);
@@ -88,7 +88,7 @@ export function useStudentDashboardStats({
     { label: 'Current Level', value: 0, displayValue: currentLevelDisplay, icon: '🎯', color: 'text-amber-600', isText: true },
     { label: 'Answer Hub Last Active', value: 0, displayValue: answerHubLastActive, icon: '🕐', color: 'text-indigo-600', isText: true },
     { label: 'Answer Hub Answers', value: answerHubStats.totalAnswersSubmitted || 0, icon: '💡', color: 'text-cyan-600' },
-    { label: 'Grammar Sentences', value: grammarStats.sentencesPracticed, icon: '📝', color: 'text-teal-600' },
+    { label: 'Grammar Rules', value: grammarStats.rulesPracticed, icon: '📖', color: 'text-teal-600' },
   ];
 
   return {
