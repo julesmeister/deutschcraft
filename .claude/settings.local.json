@@ -149,7 +149,8 @@
       "Bash(node scripts/summarize-exercises.js:*)",
       "Bash(node scripts/test-combined-lessons.js:*)",
       "Bash(git diff:*)",
-      "Bash(Select-String -Pattern \"\\(error|Error|ERROR|warning|Warning|compiled|Compiled|Build completed|✓\\)\" -Context 0,2)"
+      "Bash(Select-String -Pattern \"\\(error|Error|ERROR|warning|Warning|compiled|Compiled|Build completed|✓\\)\" -Context 0,2)",
+      "Bash(timeout /t 10)"
     ],
     "deny": [],
     "ask": []

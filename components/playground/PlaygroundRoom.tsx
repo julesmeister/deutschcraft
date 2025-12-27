@@ -11,6 +11,7 @@ import { AlertDialog } from '@/components/ui/Dialog';
 import { VoicePanel } from '@/components/playground/VoicePanel';
 import { WritingBoard } from '@/components/playground/WritingBoard';
 import { ParticipantsList } from '@/components/playground/ParticipantsList';
+import { FloatingRedemittelWidget } from '@/components/writing/FloatingRedemittelWidget';
 import type {
   PlaygroundRoom as PlaygroundRoomType,
   PlaygroundParticipant,
@@ -178,6 +179,9 @@ export function PlaygroundRoom({
         title={dialogState.title}
         message={dialogState.message}
       />
+
+      {/* Floating Redemittel Widget */}
+      <FloatingRedemittelWidget />
     </div>
   );
 }
