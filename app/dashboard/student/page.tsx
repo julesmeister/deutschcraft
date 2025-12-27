@@ -6,62 +6,25 @@ import { useWeeklyProgress } from '@/lib/hooks/useWeeklyProgress';
 import { usePracticeStats } from '@/lib/hooks/usePracticeStats';
 import { useStudentTasks } from '@/lib/hooks/useWritingTasks';
 import { useBatch } from '@/lib/hooks/useBatches';
-import { useStudyStats } from '@/lib/hooks/useFlashcards';
-import { useWritingStats } from '@/lib/hooks/useWritingExercises';
-import { useGrammarReviews } from '@/lib/hooks/useGrammarExercises';
-import { useAnswerHubStats } from '@/lib/hooks/useAnswerHubStats';
+import { useStudentDashboardStats } from '@/lib/hooks/useStudentDashboardStats';
 import { SAMPLE_STUDENT } from '@/lib/models';
-import { StudentStatsCard, StudentStatCardProps } from '@/components/dashboard/StudentStatsCard';
+import { StudentStatsCard } from '@/components/dashboard/StudentStatsCard';
 import { WeeklyProgressChart } from '@/components/dashboard/WeeklyProgressChart';
 import { StudentQuickActions } from '@/components/dashboard/StudentQuickActions';
 import { DailyGoalCard } from '@/components/dashboard/DailyGoalCard';
 import { StudentRecentTasksCard } from '@/components/dashboard/StudentRecentTasksCard';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { MiniBlankExercise } from '@/components/dashboard/MiniBlankExercise';
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState } from 'react';
 import { getTodayProgress } from '@/lib/services/progressService';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { useMiniExercise } from '@/lib/hooks/useMiniExercise';
 export default function StudentDashboard() {
   const { session, isFirebaseReady } = useFirebaseAuth();
   const { student: fetchedStudent, isLoading: isLoadingStudent } = useCurrentStudent(session?.user?.email || null, isFirebaseReady);
-  const { weeklyData, totalWords, isLoading: isLoadingWeekly } = useWeeklyProgress(session?.user?.email || null);
+  const { weeklyData, totalWords } = useWeeklyProgress(session?.user?.email || null);
   const { cardsReady, wordsToReview } = usePracticeStats(session?.user?.email || null);
   const { tasks: allTasks, isLoading: isLoadingTasks } = useStudentTasks(session?.user?.email || undefined);
-
-  // Get real-time study stats
-  const { stats: studyStats, isLoading: isLoadingStats } = useStudyStats(session?.user?.email || undefined);
-
-  // Get writing stats
-  const { data: writingStats, isLoading: isLoadingWriting } = useWritingStats(session?.user?.email || undefined);
-
-  // Get grammar stats
-  const { reviews: grammarReviews } = useGrammarReviews(session?.user?.email);
-
-  // Get Answer Hub stats
-  const { stats: answerHubStats } = useAnswerHubStats(session?.user?.email || null);
-
-  // Calculate grammar statistics
-  const grammarStats = useMemo(() => {
-    if (!grammarReviews || grammarReviews.length === 0) {
-      return {
-        sentencesPracticed: 0,
-        accuracyRate: 0,
-      };
-    }
-
-    const sentencesPracticed = grammarReviews.filter(r => r.repetitions > 0).length;
-    const totalCorrect = grammarReviews.reduce((sum, r) => sum + r.correctCount, 0);
-    const totalIncorrect = grammarReviews.reduce((sum, r) => sum + r.incorrectCount, 0);
-    const accuracyRate = totalCorrect + totalIncorrect > 0
-      ? Math.round((totalCorrect / (totalCorrect + totalIncorrect)) * 100)
-      : 0;
-
-    return {
-      sentencesPracticed,
-      accuracyRate,
-    };
-  }, [grammarReviews]);
 
   // Get today's progress for daily goal
   const [todayProgress, setTodayProgress] = useState(0);
@@ -73,7 +36,7 @@ export default function StudentDashboard() {
   const { exercise: miniExercise, isLoading: isMiniExerciseLoading, refresh: refreshMiniExercise } = useMiniExercise(session?.user?.email || undefined);
 
   // Fetch batch information
-  const { batch, isLoading: isLoadingBatch } = useBatch(fetchedStudent?.batchId || undefined);
+  const { batch } = useBatch(fetchedStudent?.batchId || undefined);
 
   // Use fetched student data if available, otherwise fall back to sample data
   const student = fetchedStudent || SAMPLE_STUDENT;
@@ -111,17 +74,11 @@ export default function StudentDashboard() {
     return level;
   };
 
-  const stats: StudentStatCardProps[] = [
-    { label: 'Words Learned', value: studyStats.cardsLearned, icon: '📚', color: 'text-violet-600' },
-    { label: 'Words Mastered', value: studyStats.cardsMastered, icon: '✨', color: 'text-emerald-600' },
-    { label: 'Writing Exercises', value: writingStats?.totalExercisesCompleted || 0, icon: '✍️', color: 'text-blue-600' },
-    { label: 'Words Written', value: writingStats?.totalWordsWritten || 0, icon: '📝', color: 'text-purple-600' },
-    { label: 'Current Streak', value: studyStats.streak, icon: '🔥', color: 'text-orange-600', suffix: ' days' },
-    { label: 'Current Level', value: 0, displayValue: currentLevelDisplay(), icon: '🎯', color: 'text-amber-600', isText: true },
-    { label: 'Grammar Accuracy', value: grammarStats.accuracyRate, icon: '📖', color: 'text-green-600', suffix: '%' },
-    { label: 'Answer Hub Answers', value: answerHubStats.totalAnswersSubmitted || 0, icon: '💡', color: 'text-cyan-600' },
-    { label: 'Grammar Sentences', value: grammarStats.sentencesPracticed, icon: '📝', color: 'text-teal-600' },
-  ];
+  // Get consolidated dashboard stats
+  const { stats, writingStats } = useStudentDashboardStats({
+    userEmail: session?.user?.email,
+    currentLevelDisplay: currentLevelDisplay(),
+  });
 
   return (
     <div className="min-h-screen bg-gray-50">
