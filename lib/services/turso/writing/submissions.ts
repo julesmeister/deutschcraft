@@ -274,3 +274,92 @@ export async function deleteWritingSubmission(submissionId: string): Promise<voi
     throw error;
   }
 }
+
+// ============================================================================
+// PAGINATION OPERATIONS
+// ============================================================================
+
+/**
+ * Get writing submissions with server-side pagination
+ * @param options - Pagination and filter options
+ * @returns Paginated submissions with hasMore flag
+ */
+export async function getWritingSubmissionsPaginated(options: {
+  pageSize: number;
+  lastDoc: any | null;
+  statusFilter?: 'submitted' | 'reviewed' | 'all';
+  batchId?: string | null;
+  studentIds?: string[];
+}): Promise<{ submissions: WritingSubmission[]; hasMore: boolean; lastDoc: any | null }> {
+  const { pageSize, statusFilter = 'all', batchId = null, studentIds = [] } = options;
+
+  try {
+    let sql = 'SELECT * FROM writing_submissions WHERE 1=1';
+    const args: any[] = [];
+
+    // Add status filter
+    if (statusFilter === 'submitted') {
+      sql += " AND status = 'submitted'";
+    } else if (statusFilter === 'reviewed') {
+      sql += " AND status = 'reviewed'";
+    }
+
+    // Add batch filter (via studentIds)
+    if (batchId && studentIds.length > 0) {
+      const placeholders = studentIds.map(() => '?').join(',');
+      sql += ` AND user_id IN (${placeholders})`;
+      args.push(...studentIds);
+    }
+
+    // Add ordering and limit
+    sql += ' ORDER BY updated_at DESC LIMIT ?';
+    args.push(pageSize + 1); // Fetch one extra to check if there's more
+
+    const result = await db.execute({ sql, args });
+
+    const hasMore = result.rows.length > pageSize;
+    const submissions = result.rows.slice(0, pageSize).map(rowToSubmission);
+    const lastDoc = hasMore ? submissions[submissions.length - 1] : null;
+
+    return { submissions, hasMore, lastDoc };
+  } catch (error) {
+    console.error('[writingService:turso] Error fetching paginated submissions:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get total count of writing submissions
+ * @param statusFilter - Optional status filter
+ * @param studentIds - Optional student IDs filter
+ * @returns Total count
+ */
+export async function getWritingSubmissionsCount(
+  statusFilter?: 'submitted' | 'reviewed' | 'all',
+  studentIds?: string[]
+): Promise<number> {
+  try {
+    let sql = 'SELECT COUNT(*) as count FROM writing_submissions WHERE 1=1';
+    const args: any[] = [];
+
+    // Add status filter
+    if (statusFilter === 'submitted') {
+      sql += " AND status = 'submitted'";
+    } else if (statusFilter === 'reviewed') {
+      sql += " AND status = 'reviewed'";
+    }
+
+    // Add student IDs filter
+    if (studentIds && studentIds.length > 0) {
+      const placeholders = studentIds.map(() => '?').join(',');
+      sql += ` AND user_id IN (${placeholders})`;
+      args.push(...studentIds);
+    }
+
+    const result = await db.execute({ sql, args });
+    return (result.rows[0]?.count as number) || 0;
+  } catch (error) {
+    console.error('[writingService:turso] Error counting writing submissions:', error);
+    throw error;
+  }
+}

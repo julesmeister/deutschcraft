@@ -1,11 +1,11 @@
 /**
  * React Query hooks for Writing Submissions - Query Operations
- * Read-only hooks for fetching writing submissions and exercises
+ * TURSO MIGRATION: Now uses Turso database instead of Firebase
+ * Database-agnostic implementation using Turso services
  */
 
 import { useQuery } from '@tanstack/react-query';
 import { useState, useEffect } from 'react';
-import { QueryDocumentSnapshot } from 'firebase/firestore';
 import {
   WritingSubmission,
   WritingExerciseType,
@@ -21,7 +21,7 @@ import {
   getPendingWritingCount,
   getWritingSubmissionsPaginated,
   getWritingSubmissionsCount,
-} from '@/lib/services/writingService';
+} from '@/lib/services/turso/writing';
 
 /**
  * Get all writing exercises by level and type
@@ -137,7 +137,7 @@ export function useWritingSubmissionsPaginated(options: {
 } = {}) {
   const { statusFilter = 'all', batchId = null, studentIds = [], pageSize = 10 } = options;
   const [page, setPage] = useState(1);
-  const [lastDocs, setLastDocs] = useState<(QueryDocumentSnapshot | null)[]>([null]);
+  const [lastDocs, setLastDocs] = useState<(WritingSubmission | null)[]>([null]);
 
   // Reset pagination when filters change
   useEffect(() => {

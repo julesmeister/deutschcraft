@@ -23,6 +23,8 @@ export {
   getExerciseSubmissions,
   getAllWritingSubmissions,
   getPendingWritingCount,
+  getWritingSubmissionsPaginated,
+  getWritingSubmissionsCount,
   createWritingSubmission,
   updateWritingSubmission,
   submitWriting,

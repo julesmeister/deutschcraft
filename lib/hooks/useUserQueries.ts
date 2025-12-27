@@ -1,12 +1,11 @@
 /**
  * React Query hooks for fetching User data
- * NEW STRUCTURE: users/{email} - Top-level collection
- * Email IS the document ID
+ * TURSO MIGRATION: Now uses Turso database instead of Firebase
+ * Database-agnostic implementation using Turso services
  */
 
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
-import { QueryDocumentSnapshot } from 'firebase/firestore';
 import {
   getUser,
   getTeacherStudents,
@@ -19,7 +18,7 @@ import {
   getUserCount,
   getPendingEnrollmentsPaginated,
   getPendingEnrollmentsCount,
-} from '../services/userService';
+} from '../services/turso/userService';
 import { User } from '../models';
 import { cacheTimes } from '../queryClient';
 
@@ -230,7 +229,7 @@ export function useUsersPaginated(options: {
 } = {}) {
   const { pageSize = 50, roleFilter = 'all' } = options;
   const [page, setPage] = useState(1);
-  const [lastDocs, setLastDocs] = useState<(QueryDocumentSnapshot | null)[]>([null]);
+  const [lastDocs, setLastDocs] = useState<(User | null)[]>([null]);
 
   // Fetch current page
   const { data, isLoading, isError, error, refetch } = useQuery({
@@ -315,7 +314,7 @@ export function usePendingEnrollmentsPaginated(options: {
 } = {}) {
   const { pageSize = 10 } = options;
   const [page, setPage] = useState(1);
-  const [lastDocs, setLastDocs] = useState<(QueryDocumentSnapshot | null)[]>([null]);
+  const [lastDocs, setLastDocs] = useState<(User | null)[]>([null]);
 
   // Fetch current page
   const { data, isLoading, isError, error, refetch } = useQuery({

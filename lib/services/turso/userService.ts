@@ -139,6 +139,165 @@ export async function getStudentsWithoutTeacher(): Promise<User[]> {
   }
 }
 
+/**
+ * Get all non-teacher users (students and pending)
+ * Useful for transaction management
+ * @returns Array of all non-teacher User objects
+ */
+export async function getAllNonTeachers(): Promise<User[]> {
+  try {
+    const result = await db.execute({
+      sql: `SELECT * FROM users
+            WHERE role != 'TEACHER'
+            ORDER BY first_name ASC`,
+      args: [],
+    });
+
+    return result.rows.map(rowToUser);
+  } catch (error) {
+    console.error('[userService:turso] Error fetching all non-teachers:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get all users (students, teachers, and pending)
+ * @returns Array of all User objects
+ */
+export async function getUsers(): Promise<User[]> {
+  try {
+    const result = await db.execute({
+      sql: `SELECT * FROM users ORDER BY first_name ASC`,
+      args: [],
+    });
+
+    return result.rows.map(rowToUser);
+  } catch (error) {
+    console.error('[userService:turso] Error fetching all users:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get users with server-side pagination
+ * @param options - Pagination options
+ * @returns Paginated users with hasMore flag
+ */
+export async function getUsersPaginated(options: {
+  pageSize: number;
+  lastDoc: any | null;
+  roleFilter?: 'STUDENT' | 'TEACHER' | 'all';
+  orderByField?: string;
+}): Promise<{ users: User[]; hasMore: boolean; lastDoc: any | null }> {
+  const { pageSize, roleFilter = 'all', orderByField = 'user_id' } = options;
+
+  try {
+    let sql = 'SELECT * FROM users';
+    const args: any[] = [];
+
+    // Add role filter
+    if (roleFilter !== 'all') {
+      sql += ' WHERE role = ?';
+      args.push(roleFilter);
+    }
+
+    // Add ordering and limit
+    sql += ` ORDER BY ${orderByField} ASC LIMIT ?`;
+    args.push(pageSize + 1); // Fetch one extra to check if there's more
+
+    const result = await db.execute({ sql, args });
+
+    const hasMore = result.rows.length > pageSize;
+    const users = result.rows.slice(0, pageSize).map(rowToUser);
+    const lastDoc = hasMore ? users[users.length - 1] : null;
+
+    return { users, hasMore, lastDoc };
+  } catch (error) {
+    console.error('[userService:turso] Error fetching paginated users:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get total count of users by role
+ * @param roleFilter - Optional role filter
+ * @returns Total count
+ */
+export async function getUserCount(roleFilter: 'STUDENT' | 'TEACHER' | 'all' = 'all'): Promise<number> {
+  try {
+    let sql = 'SELECT COUNT(*) as count FROM users';
+    const args: any[] = [];
+
+    if (roleFilter !== 'all') {
+      sql += ' WHERE role = ?';
+      args.push(roleFilter);
+    }
+
+    const result = await db.execute({ sql, args });
+    return (result.rows[0]?.count as number) || 0;
+  } catch (error) {
+    console.error('[userService:turso] Error counting users:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get pending enrollment requests with pagination
+ * Pending users have no teacher or batch assigned
+ * @param options - Pagination options
+ * @returns Paginated pending enrollments
+ */
+export async function getPendingEnrollmentsPaginated(options: {
+  pageSize: number;
+  lastDoc: any | null;
+}): Promise<{ users: User[]; hasMore: boolean; lastDoc: any | null }> {
+  const { pageSize } = options;
+
+  try {
+    const sql = `SELECT * FROM users
+                 WHERE role = 'STUDENT'
+                   AND (teacher_id IS NULL OR teacher_id = '')
+                   AND (batch_id IS NULL OR batch_id = '')
+                 ORDER BY created_at DESC
+                 LIMIT ?`;
+
+    const result = await db.execute({
+      sql,
+      args: [pageSize + 1],
+    });
+
+    const hasMore = result.rows.length > pageSize;
+    const users = result.rows.slice(0, pageSize).map(rowToUser);
+    const lastDoc = hasMore ? users[users.length - 1] : null;
+
+    return { users, hasMore, lastDoc };
+  } catch (error) {
+    console.error('[userService:turso] Error fetching pending enrollments:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get count of pending enrollment requests
+ * @returns Total count of pending enrollments
+ */
+export async function getPendingEnrollmentsCount(): Promise<number> {
+  try {
+    const result = await db.execute({
+      sql: `SELECT COUNT(*) as count FROM users
+            WHERE role = 'STUDENT'
+              AND (teacher_id IS NULL OR teacher_id = '')
+              AND (batch_id IS NULL OR batch_id = '')`,
+      args: [],
+    });
+
+    return (result.rows[0]?.count as number) || 0;
+  } catch (error) {
+    console.error('[userService:turso] Error counting pending enrollments:', error);
+    throw error;
+  }
+}
+
 // ============================================================================
 // WRITE OPERATIONS
 // ============================================================================
