@@ -86,6 +86,12 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
     onRefresh();
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && !showResult && isFilled) {
+      handleCheck();
+    }
+  };
+
   if (isLoading) {
     return (
       <div className="bg-white border border-gray-200 p-6">
@@ -236,6 +242,7 @@ export function MiniBlankExercise({ sentence, blanks, onRefresh, onComplete, use
                   type="text"
                   value={answer}
                   onChange={(e) => setAnswer(e.target.value)}
+                  onKeyDown={handleKeyDown}
                   disabled={showResult}
                   className={`text-base font-bold text-center transition-all outline-none ${
                     answerIsCorrect

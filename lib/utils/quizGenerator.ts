@@ -44,10 +44,63 @@ const GERMAN_PRONOUNS = new Set([
 ]);
 
 /**
+ * German verbs to exclude from blanks
+ * Includes: linking verbs (sein, werden), modal verbs, and haben
+ * These are too common/basic and don't make good practice blanks
+ */
+const EXCLUDED_VERBS = new Set([
+  // Linking verb: sein (to be)
+  'sein', 'bin', 'bist', 'ist', 'sind', 'seid',
+  'war', 'warst', 'waren', 'wart',
+  'gewesen',
+
+  // Linking verb: werden (to become)
+  'werden', 'werde', 'wirst', 'wird', 'werdet',
+  'wurde', 'wurdest', 'wurden', 'wurdet',
+  'worden', 'geworden',
+
+  // Modal verb: können (can)
+  'können', 'kann', 'kannst', 'könnt',
+  'konnte', 'konntest', 'konnten', 'konntet',
+  'gekonnt',
+
+  // Modal verb: müssen (must)
+  'müssen', 'muss', 'musst', 'müsst',
+  'musste', 'musstest', 'mussten', 'musstet',
+  'gemusst',
+
+  // Modal verb: sollen (should)
+  'sollen', 'soll', 'sollst', 'sollt',
+  'sollte', 'solltest', 'sollten', 'solltet',
+  'gesollt',
+
+  // Modal verb: wollen (want to)
+  'wollen', 'will', 'willst', 'wollt',
+  'wollte', 'wolltest', 'wollten', 'wolltet',
+  'gewollt',
+
+  // Modal verb: dürfen (may)
+  'dürfen', 'darf', 'darfst', 'dürft',
+  'durfte', 'durftest', 'durften', 'durftet',
+  'gedurft',
+
+  // Modal verb: mögen (like)
+  'mögen', 'mag', 'magst', 'mögt',
+  'mochte', 'mochtest', 'mochten', 'mochtet',
+  'gemocht',
+  'möchte', 'möchtest', 'möchten', 'möchtet', // würde-form
+
+  // Haben (to have)
+  'haben', 'habe', 'hast', 'hat', 'habt',
+  'hatte', 'hattest', 'hatten', 'hattet',
+  'gehabt',
+]);
+
+/**
  * Generate quiz blanks from differences between original and corrected text
  * Uses word-level comparison to find complete word replacements only
  * CRITICAL: Never creates consecutive blanks - ensures at least one word of context between them
- * Filters out basic pronouns to ensure meaningful practice
+ * Filters out basic pronouns, linking verbs, modal verbs, and haben to ensure meaningful practice
  */
 export function generateQuizBlanks(originalText: string, correctedText: string): QuizBlank[] {
   // Split both texts into words (keeping punctuation attached)
@@ -70,11 +123,13 @@ export function generateQuizBlanks(originalText: string, correctedText: string):
 
     // If words are different (ignoring punctuation) and the corrected word exists
     if (origWordClean !== corrWordClean && corrWordClean.length > 0) {
-      // Filter out basic pronouns (case-insensitive)
-      const isBasicPronoun = GERMAN_PRONOUNS.has(corrWordClean.toLowerCase());
+      // Filter out basic pronouns and excluded verbs (case-insensitive)
+      const wordLower = corrWordClean.toLowerCase();
+      const isBasicPronoun = GERMAN_PRONOUNS.has(wordLower);
+      const isExcludedVerb = EXCLUDED_VERBS.has(wordLower);
 
-      // Only include complete words (at least 3 chars) and not basic pronouns
-      if (corrWordClean.length >= 3 && !isBasicPronoun) {
+      // Only include complete words (at least 3 chars) and not basic pronouns or excluded verbs
+      if (corrWordClean.length >= 3 && !isBasicPronoun && !isExcludedVerb) {
         potentialBlanks.push({
           answer: corrWordClean, // Store word WITHOUT punctuation
           wordIndex: i,
