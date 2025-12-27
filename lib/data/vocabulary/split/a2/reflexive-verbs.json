@@ -1,7 +1,7 @@
 {
   "level": "A2",
   "category": "Reflexive Verbs",
-  "totalCards": 73,
+  "totalCards": 76,
   "flashcards": [
     {
       "id": "reflexive-a2-001",
@@ -1519,6 +1519,67 @@
           "A2",
           "Reflexive Verbs",
           "sich einig sein"
+        ]
+      }
+    },
+    {
+      "id": "remnote-728",
+      "german": "sich aufschreiben",
+      "english": "to write down",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "schreiben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3302,
+        "hierarchy": [
+          "Verbs",
+          "schreiben",
+          "sich aufschreiben"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73afamq4",
+      "german": "sich vornehmen",
+      "english": "to intend / to plan / to resolve",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 31,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich vornehmen"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-miujr73aoryng",
+      "german": "sich auskennen",
+      "english": "to know one's way around / to be knowledgeable",
+      "category": "Reflexive Verbs",
+      "level": "A2",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 40,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich auskennen"
         ]
       }
     }

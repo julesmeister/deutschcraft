@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Separable Verbs",
-  "totalCards": 30,
+  "totalCards": 26,
   "flashcards": [
     {
       "id": "b1-anschauen-186184",
@@ -44,26 +44,6 @@
       }
     },
     {
-      "id": "b1-ausbleiben-186185",
-      "german": "ausbleiben",
-      "english": "to be absent / to fail to occur",
-      "category": "Separable Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 2,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "ausbleiben"
-        ]
-      }
-    },
-    {
       "id": "b1-auseinande-186185",
       "german": "auseinandersetzen",
       "english": "to explain / to discuss",
@@ -80,26 +60,6 @@
           "B1",
           "Separable Verbs",
           "auseinandersetzen"
-        ]
-      }
-    },
-    {
-      "id": "b1-ausfahren-186185",
-      "german": "ausfahren",
-      "english": "to drive out",
-      "category": "Separable Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 4,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "ausfahren"
         ]
       }
     },
@@ -184,26 +144,6 @@
       }
     },
     {
-      "id": "b1-aushalten-186185",
-      "german": "aushalten",
-      "english": "to hold out / to endure",
-      "category": "Separable Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 9,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "aushalten"
-        ]
-      }
-    },
-    {
       "id": "b1-aushandeln-186185",
       "german": "aushandeln",
       "english": "to negotiate",
@@ -280,26 +220,6 @@
           "B1",
           "Separable Verbs",
           "ausländer"
-        ]
-      }
-    },
-    {
-      "id": "b1-auslegen-186185",
-      "german": "auslegen",
-      "english": "to lay out / to interpret",
-      "category": "Separable Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 14,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "auslegen"
         ]
       }
     },

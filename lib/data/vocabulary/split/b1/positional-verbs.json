@@ -1,32 +1,26 @@
 {
   "level": "B1",
   "category": "Positional Verbs",
-  "totalCards": 30,
+  "totalCards": 24,
   "flashcards": [
-    {
-      "id": "syllabus-b1-positional-01",
-      "german": "hängen",
-      "english": "to hang / to be hanging",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": ["syllabus", "B1"],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 0,
-        "hierarchy": ["B1", "Positional Verbs", "hängen"]
-      }
-    },
     {
       "id": "syllabus-b1-positional-02",
       "german": "stecken",
       "english": "to put / to stick / to be stuck",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 1,
-        "hierarchy": ["B1", "Positional Verbs", "stecken"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "stecken"
+        ]
       }
     },
     {
@@ -35,11 +29,18 @@
       "english": "to lean",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 2,
-        "hierarchy": ["B1", "Positional Verbs", "lehnen"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "lehnen"
+        ]
       }
     },
     {
@@ -48,11 +49,18 @@
       "english": "to crouch / to squat",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 3,
-        "hierarchy": ["B1", "Positional Verbs", "hocken"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "hocken"
+        ]
       }
     },
     {
@@ -61,11 +69,18 @@
       "english": "to kneel",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 4,
-        "hierarchy": ["B1", "Positional Verbs", "knien"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "knien"
+        ]
       }
     },
     {
@@ -74,24 +89,18 @@
       "english": "to cower / to crouch",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 5,
-        "hierarchy": ["B1", "Positional Verbs", "kauern"]
-      }
-    },
-    {
-      "id": "syllabus-b1-positional-07",
-      "german": "sich anlehnen",
-      "english": "to lean against",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": ["syllabus", "B1"],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 6,
-        "hierarchy": ["B1", "Positional Verbs", "sich anlehnen"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "kauern"
+        ]
       }
     },
     {
@@ -100,11 +109,18 @@
       "english": "to lean (something) against",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 7,
-        "hierarchy": ["B1", "Positional Verbs", "anlehnen"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "anlehnen"
+        ]
       }
     },
     {
@@ -113,50 +129,18 @@
       "english": "to kneel down",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 8,
-        "hierarchy": ["B1", "Positional Verbs", "sich hinknien"]
-      }
-    },
-    {
-      "id": "syllabus-b1-positional-10",
-      "german": "aufhängen",
-      "english": "to hang up",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": ["syllabus", "B1"],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 9,
-        "hierarchy": ["B1", "Positional Verbs", "aufhängen"]
-      }
-    },
-    {
-      "id": "syllabus-b1-positional-11",
-      "german": "abhängen",
-      "english": "to depend on / to hang down",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": ["syllabus", "B1"],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 10,
-        "hierarchy": ["B1", "Positional Verbs", "abhängen"]
-      }
-    },
-    {
-      "id": "syllabus-b1-positional-12",
-      "german": "sich bücken",
-      "english": "to bend down",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": ["syllabus", "B1"],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 11,
-        "hierarchy": ["B1", "Positional Verbs", "sich bücken"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sich hinknien"
+        ]
       }
     },
     {
@@ -165,11 +149,18 @@
       "english": "to bend / to stoop",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 12,
-        "hierarchy": ["B1", "Positional Verbs", "bücken"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "bücken"
+        ]
       }
     },
     {
@@ -178,11 +169,18 @@
       "english": "to duck / to crouch",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 13,
-        "hierarchy": ["B1", "Positional Verbs", "sich ducken"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sich ducken"
+        ]
       }
     },
     {
@@ -191,11 +189,18 @@
       "english": "to duck",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 14,
-        "hierarchy": ["B1", "Positional Verbs", "ducken"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "ducken"
+        ]
       }
     },
     {
@@ -204,11 +209,18 @@
       "english": "to straighten up / to rise",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 15,
-        "hierarchy": ["B1", "Positional Verbs", "sich aufrichten"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sich aufrichten"
+        ]
       }
     },
     {
@@ -217,11 +229,18 @@
       "english": "to erect / to raise",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 16,
-        "hierarchy": ["B1", "Positional Verbs", "aufrichten"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "aufrichten"
+        ]
       }
     },
     {
@@ -230,11 +249,18 @@
       "english": "to rise / to stand up",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 17,
-        "hierarchy": ["B1", "Positional Verbs", "sich erheben"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sich erheben"
+        ]
       }
     },
     {
@@ -243,11 +269,18 @@
       "english": "to raise / to lift",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 18,
-        "hierarchy": ["B1", "Positional Verbs", "erheben"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "erheben"
+        ]
       }
     },
     {
@@ -256,11 +289,18 @@
       "english": "to stretch oneself",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 19,
-        "hierarchy": ["B1", "Positional Verbs", "sich recken"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sich recken"
+        ]
       }
     },
     {
@@ -269,24 +309,18 @@
       "english": "to stretch / to crane",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 20,
-        "hierarchy": ["B1", "Positional Verbs", "recken"]
-      }
-    },
-    {
-      "id": "syllabus-b1-positional-22",
-      "german": "sich strecken",
-      "english": "to stretch",
-      "category": "Positional Verbs",
-      "level": "B1",
-      "tags": ["syllabus", "B1"],
-      "_meta": {
-        "source": "Syllabus B1",
-        "lineNumber": 21,
-        "hierarchy": ["B1", "Positional Verbs", "sich strecken"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "recken"
+        ]
       }
     },
     {
@@ -295,11 +329,18 @@
       "english": "to stretch / to extend",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 22,
-        "hierarchy": ["B1", "Positional Verbs", "strecken"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "strecken"
+        ]
       }
     },
     {
@@ -308,11 +349,18 @@
       "english": "to lean / to bend",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 23,
-        "hierarchy": ["B1", "Positional Verbs", "sich neigen"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sich neigen"
+        ]
       }
     },
     {
@@ -321,11 +369,18 @@
       "english": "to tilt / to incline",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 24,
-        "hierarchy": ["B1", "Positional Verbs", "neigen"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "neigen"
+        ]
       }
     },
     {
@@ -334,11 +389,18 @@
       "english": "to bend / to curve",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 25,
-        "hierarchy": ["B1", "Positional Verbs", "sich krümmen"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sich krümmen"
+        ]
       }
     },
     {
@@ -347,11 +409,18 @@
       "english": "to bend / to curve",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 26,
-        "hierarchy": ["B1", "Positional Verbs", "krümmen"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "krümmen"
+        ]
       }
     },
     {
@@ -360,11 +429,18 @@
       "english": "to stretch out",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 27,
-        "hierarchy": ["B1", "Positional Verbs", "sich ausstrecken"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sich ausstrecken"
+        ]
       }
     },
     {
@@ -373,11 +449,18 @@
       "english": "to stretch out / to extend",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 28,
-        "hierarchy": ["B1", "Positional Verbs", "ausstrecken"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "ausstrecken"
+        ]
       }
     },
     {
@@ -386,11 +469,18 @@
       "english": "to huddle up / to curl up",
       "category": "Positional Verbs",
       "level": "B1",
-      "tags": ["syllabus", "B1"],
+      "tags": [
+        "syllabus",
+        "B1"
+      ],
       "_meta": {
         "source": "Syllabus B1",
         "lineNumber": 29,
-        "hierarchy": ["B1", "Positional Verbs", "sich zusammenkauern"]
+        "hierarchy": [
+          "B1",
+          "Positional Verbs",
+          "sich zusammenkauern"
+        ]
       }
     }
   ]

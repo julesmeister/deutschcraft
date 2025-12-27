@@ -1,7 +1,7 @@
 {
   "level": "A2",
   "category": "Irregular Verbs",
-  "totalCards": 40,
+  "totalCards": 39,
   "flashcards": [
     {
       "id": "syllabus-a2-10565",
@@ -140,26 +140,6 @@
           "A2",
           "Irregular Verbs",
           "laden"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-a2-10574",
-      "german": "lassen",
-      "english": "to let / to leave",
-      "category": "Irregular Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Irregular Verbs",
-          "lassen"
         ]
       }
     },

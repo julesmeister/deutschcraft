@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "State Change Verbs",
-  "totalCards": 46,
+  "totalCards": 45,
   "flashcards": [
     {
       "id": "syllabus-b1-11101",
@@ -860,26 +860,6 @@
           "B1",
           "State Change Verbs",
           "gebären"
-        ]
-      }
-    },
-    {
-      "id": "b1-state-change-verbs-miv8iuogrputl",
-      "german": "zunehmen",
-      "english": "to increase / to gain weight",
-      "category": "State Change Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 43,
-        "hierarchy": [
-          "B1",
-          "State Change Verbs",
-          "zunehmen"
         ]
       }
     },

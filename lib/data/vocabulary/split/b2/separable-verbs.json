@@ -1,7 +1,7 @@
 {
   "level": "B2",
   "category": "Separable Verbs",
-  "totalCards": 33,
+  "totalCards": 25,
   "flashcards": [
     {
       "id": "syllabus-b2-11468",
@@ -64,26 +64,6 @@
       }
     },
     {
-      "id": "syllabus-b2-11480",
-      "german": "ausnutzen",
-      "english": "to exploit / to take advantage of",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "ausnutzen"
-        ]
-      }
-    },
-    {
       "id": "syllabus-b2-11481",
       "german": "ausüben",
       "english": "to practice / to exercise",
@@ -100,46 +80,6 @@
           "B2",
           "Separable Verbs",
           "ausüben"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11483",
-      "german": "ausstellen",
-      "english": "to exhibit / to turn off",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "ausstellen"
-        ]
-      }
-    },
-    {
-      "id": "syllabus-b2-11484",
-      "german": "beitragen",
-      "english": "to contribute",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "syllabus",
-        "B2"
-      ],
-      "_meta": {
-        "source": "Syllabus B2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "beitragen"
         ]
       }
     },
@@ -324,26 +264,6 @@
       }
     },
     {
-      "id": "b2-separable-verbs-mivkfb9qczg6b",
-      "german": "abhalten",
-      "english": "to hold / to prevent",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 16,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "abhalten"
-        ]
-      }
-    },
-    {
       "id": "b2-separable-verbs-mivkfb9qhes8p",
       "german": "ankündigen",
       "english": "to announce",
@@ -400,46 +320,6 @@
           "B2",
           "Separable Verbs",
           "ausrichten"
-        ]
-      }
-    },
-    {
-      "id": "b2-separable-verbs-mivkfb9qeqkts",
-      "german": "ausschließen",
-      "english": "to exclude / to rule out",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 20,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "ausschließen"
-        ]
-      }
-    },
-    {
-      "id": "b2-separable-verbs-mivkfb9qq53el",
-      "german": "beistehen",
-      "english": "to stand by / to assist",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 21,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "beistehen"
         ]
       }
     },
@@ -520,46 +400,6 @@
           "B2",
           "Separable Verbs",
           "hervorrufen"
-        ]
-      }
-    },
-    {
-      "id": "b2-separable-verbs-mivkg2zg9hxw5",
-      "german": "nachkommen",
-      "english": "to comply / to follow",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 26,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "nachkommen"
-        ]
-      }
-    },
-    {
-      "id": "b2-separable-verbs-mivkg2zgrsrwe",
-      "german": "nachlassen",
-      "english": "to decrease / to ease up",
-      "category": "Separable Verbs",
-      "level": "B2",
-      "tags": [
-        "expansion",
-        "B2"
-      ],
-      "_meta": {
-        "source": "B2 Category Expansion 2025",
-        "lineNumber": 27,
-        "hierarchy": [
-          "B2",
-          "Separable Verbs",
-          "nachlassen"
         ]
       }
     },

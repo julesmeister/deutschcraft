@@ -1,7 +1,7 @@
 {
   "level": "A1",
   "category": "Irregular Verbs",
-  "totalCards": 19,
+  "totalCards": 20,
   "flashcards": [
     {
       "id": "syllabus-a1-10204",
@@ -380,6 +380,26 @@
           "A1",
           "Irregular Verbs",
           "verlieren"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10574",
+      "german": "lassen",
+      "english": "to let / to leave",
+      "category": "Irregular Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Irregular Verbs",
+          "lassen"
         ]
       }
     }

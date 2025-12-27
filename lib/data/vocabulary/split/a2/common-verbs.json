@@ -1,28 +1,8 @@
 {
   "level": "A2",
   "category": "Common Verbs",
-  "totalCards": 30,
+  "totalCards": 28,
   "flashcards": [
-    {
-      "id": "syllabus-a2-10328",
-      "german": "bringen",
-      "english": "to bring",
-      "category": "Common Verbs",
-      "level": "A2",
-      "tags": [
-        "syllabus",
-        "A2"
-      ],
-      "_meta": {
-        "source": "Syllabus A2",
-        "lineNumber": 0,
-        "hierarchy": [
-          "A2",
-          "Common Verbs",
-          "bringen"
-        ]
-      }
-    },
     {
       "id": "a2-common-verbs-miuj9qfcyjtvi",
       "german": "versuchen",
@@ -120,26 +100,6 @@
           "A2",
           "Common Verbs",
           "hängen"
-        ]
-      }
-    },
-    {
-      "id": "a2-common-verbs-miujdiwbaiw3f",
-      "german": "tun",
-      "english": "to do",
-      "category": "Common Verbs",
-      "level": "A2",
-      "tags": [
-        "expansion",
-        "A2"
-      ],
-      "_meta": {
-        "source": "A2 Category Expansion 2025",
-        "lineNumber": 6,
-        "hierarchy": [
-          "A2",
-          "Common Verbs",
-          "tun"
         ]
       }
     },

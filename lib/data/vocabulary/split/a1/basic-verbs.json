@@ -1,7 +1,7 @@
 {
   "level": "A1",
   "category": "Basic Verbs",
-  "totalCards": 31,
+  "totalCards": 33,
   "flashcards": [
     {
       "id": "syllabus-a1-10030",
@@ -620,6 +620,46 @@
           "A1",
           "Basic Verbs",
           "putzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-a2-10328",
+      "german": "bringen",
+      "english": "to bring",
+      "category": "Common Verbs",
+      "level": "A1",
+      "tags": [
+        "syllabus",
+        "A2"
+      ],
+      "_meta": {
+        "source": "Syllabus A2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "bringen"
+        ]
+      }
+    },
+    {
+      "id": "a2-common-verbs-miujdiwbaiw3f",
+      "german": "tun",
+      "english": "to do",
+      "category": "Common Verbs",
+      "level": "A1",
+      "tags": [
+        "expansion",
+        "A2"
+      ],
+      "_meta": {
+        "source": "A2 Category Expansion 2025",
+        "lineNumber": 6,
+        "hierarchy": [
+          "A2",
+          "Common Verbs",
+          "tun"
         ]
       }
     }

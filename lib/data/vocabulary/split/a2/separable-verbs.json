@@ -1,7 +1,7 @@
 {
   "level": "A2",
   "category": "Separable Verbs",
-  "totalCards": 88,
+  "totalCards": 140,
   "flashcards": [
     {
       "id": "syllabus-a2-10746",
@@ -1760,6 +1760,958 @@
           "A2",
           "Separable Verbs",
           "zusammenleben"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11480",
+      "german": "ausnutzen",
+      "english": "to exploit / to take advantage of",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "ausnutzen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11483",
+      "german": "ausstellen",
+      "english": "to exhibit / to turn off",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "ausstellen"
+        ]
+      }
+    },
+    {
+      "id": "syllabus-b2-11484",
+      "german": "beitragen",
+      "english": "to contribute",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "syllabus",
+        "B2"
+      ],
+      "_meta": {
+        "source": "Syllabus B2",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "beitragen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkfb9qczg6b",
+      "german": "abhalten",
+      "english": "to hold / to prevent",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 16,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "abhalten"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkfb9qeqkts",
+      "german": "ausschließen",
+      "english": "to exclude / to rule out",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 20,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "ausschließen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkfb9qq53el",
+      "german": "beistehen",
+      "english": "to stand by / to assist",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 21,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "beistehen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zg9hxw5",
+      "german": "nachkommen",
+      "english": "to comply / to follow",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 26,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "nachkommen"
+        ]
+      }
+    },
+    {
+      "id": "b2-separable-verbs-mivkg2zgrsrwe",
+      "german": "nachlassen",
+      "english": "to decrease / to ease up",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "B2"
+      ],
+      "_meta": {
+        "source": "B2 Category Expansion 2025",
+        "lineNumber": 27,
+        "hierarchy": [
+          "B2",
+          "Separable Verbs",
+          "nachlassen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-412",
+      "german": "beibringen",
+      "english": "to teach",
+      "category": "Intermediate Verbs",
+      "level": "A2",
+      "tags": [
+        "bringen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1772,
+        "hierarchy": [
+          "Verbs",
+          "bringen",
+          "beibringen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-696",
+      "german": "erreichen",
+      "english": "to achieve / to accomplish",
+      "category": "Intermediate Verbs",
+      "level": "A2",
+      "tags": [
+        "rauschen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3142,
+        "hierarchy": [
+          "Verbs",
+          "rauschen",
+          "erreichen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-301",
+      "german": "abhören",
+      "english": "to wiretap / to monitor",
+      "category": "Verbs",
+      "level": "A2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1192,
+        "hierarchy": [
+          "Verbs",
+          "abhören"
+        ]
+      }
+    },
+    {
+      "id": "remnote-305",
+      "german": "absagen",
+      "english": "to cancel",
+      "category": "Verbs",
+      "level": "A2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1228,
+        "hierarchy": [
+          "Verbs",
+          "absagen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-324",
+      "german": "aufhaben",
+      "english": "to open / to have on / to wear sth.",
+      "category": "Verbs",
+      "level": "A2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1321,
+        "hierarchy": [
+          "Verbs",
+          "aufhaben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-330",
+      "german": "aushelfen",
+      "english": "to help out",
+      "category": "Verbs",
+      "level": "A2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1369,
+        "hierarchy": [
+          "Verbs",
+          "aushelfen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-331",
+      "german": "auskennen",
+      "english": "to know",
+      "category": "Verbs",
+      "level": "A2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1373,
+        "hierarchy": [
+          "Verbs",
+          "auskennen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-332",
+      "german": "auslesen",
+      "english": "to read out / to finish reading",
+      "category": "Verbs",
+      "level": "A2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1377,
+        "hierarchy": [
+          "Verbs",
+          "auslesen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-339",
+      "german": "austragen",
+      "english": "to hold [event usually sport] / to stage",
+      "category": "Verbs",
+      "level": "A2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1414,
+        "hierarchy": [
+          "Verbs",
+          "austragen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-424",
+      "german": "ausdrücken",
+      "english": "to squeeze / to express / to phrase",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "drücken"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1824,
+        "hierarchy": [
+          "Verbs",
+          "drücken",
+          "ausdrücken"
+        ]
+      }
+    },
+    {
+      "id": "remnote-431",
+      "german": "einbringen",
+      "english": "to introduce / to contribute",
+      "category": "Verbs",
+      "level": "A2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1852,
+        "hierarchy": [
+          "Verbs",
+          "einbringen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-436",
+      "german": "einsehen",
+      "english": "to accept a realization / to view",
+      "category": "Verbs",
+      "level": "A2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 1878,
+        "hierarchy": [
+          "Verbs",
+          "einsehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-529",
+      "german": "angeben",
+      "english": "to state / to quote / to specify / to indicate",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "geben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2352,
+        "hierarchy": [
+          "Verbs",
+          "geben",
+          "angeben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-533",
+      "german": "eingeben",
+      "english": "to type in",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "geben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2371,
+        "hierarchy": [
+          "Verbs",
+          "geben",
+          "eingeben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-535",
+      "german": "mitgeben",
+      "english": "to give away",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "geben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2379,
+        "hierarchy": [
+          "Verbs",
+          "geben",
+          "mitgeben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-537",
+      "german": "nachgeben",
+      "english": "to give in / to yield / to induldge / to succumb to sth./sb. / to budge / to cave in",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "geben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2382,
+        "hierarchy": [
+          "Verbs",
+          "geben",
+          "nachgeben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-539",
+      "german": "vorgeben",
+      "english": "to pretend",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "geben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2390,
+        "hierarchy": [
+          "Verbs",
+          "geben",
+          "vorgeben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-545",
+      "german": "zugeben",
+      "english": "to admit / to confess / to own up to sth. / to concede sth. / to add",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "geben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2419,
+        "hierarchy": [
+          "Verbs",
+          "geben",
+          "zugeben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-548",
+      "german": "angehen",
+      "english": "to tackle / concern / to address",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "gehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2440,
+        "hierarchy": [
+          "Verbs",
+          "gehen",
+          "angehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-552",
+      "german": "eingehen",
+      "english": "to be received / to die / to pay attention",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "gehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2462,
+        "hierarchy": [
+          "Verbs",
+          "gehen",
+          "eingehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-553",
+      "german": "nachgehen",
+      "english": "to keep track / to pursue / to follow up on something / to investigate / to haunt",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "gehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2468,
+        "hierarchy": [
+          "Verbs",
+          "gehen",
+          "nachgehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-555",
+      "german": "vorgehen",
+      "english": "to advance / to proceed",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "gehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2478,
+        "hierarchy": [
+          "Verbs",
+          "gehen",
+          "vorgehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-582",
+      "german": "einhalten",
+      "english": "to comply / to adhere",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "halten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2624,
+        "hierarchy": [
+          "Verbs",
+          "halten",
+          "einhalten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-584",
+      "german": "mithalten",
+      "english": "to keep up",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "halten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2636,
+        "hierarchy": [
+          "Verbs",
+          "halten",
+          "mithalten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-596",
+      "german": "hinnehmen",
+      "english": "to accept / to surrender",
+      "category": "Verbs",
+      "level": "A2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2701,
+        "hierarchy": [
+          "Verbs",
+          "hinnehmen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-601",
+      "german": "anhalten",
+      "english": "to stop",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "hören",
+        "aufhören"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2719,
+        "hierarchy": [
+          "Verbs",
+          "hören",
+          "aufhören",
+          "anhalten"
+        ]
+      }
+    },
+    {
+      "id": "remnote-666",
+      "german": "nachfragen",
+      "english": "to clarify / to check up on sth.",
+      "category": "Verbs",
+      "level": "A2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2988,
+        "hierarchy": [
+          "Verbs",
+          "nachfragen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-675",
+      "german": "vornehmen",
+      "english": "to undertake / to perform / to carry out",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "nehmen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3048,
+        "hierarchy": [
+          "Verbs",
+          "nehmen",
+          "vornehmen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-719",
+      "german": "anschließen",
+      "english": "to join",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "schießen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3264,
+        "hierarchy": [
+          "Verbs",
+          "schießen",
+          "anschließen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-727",
+      "german": "abschreiben",
+      "english": "to copy",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "schreiben"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3295,
+        "hierarchy": [
+          "Verbs",
+          "schreiben",
+          "abschreiben"
+        ]
+      }
+    },
+    {
+      "id": "remnote-754",
+      "german": "zustehen",
+      "english": "to be entitled to",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "stehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3435,
+        "hierarchy": [
+          "Verbs",
+          "stehen",
+          "zustehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-759",
+      "german": "abstellen",
+      "english": "to park [car, bike] / to put down / to set aside / to turn off",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "stellen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3472,
+        "hierarchy": [
+          "Verbs",
+          "stellen",
+          "abstellen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-762",
+      "german": "herstellen",
+      "english": "to produce",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "stellen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3499,
+        "hierarchy": [
+          "Verbs",
+          "stellen",
+          "herstellen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-778",
+      "german": "eintragen",
+      "english": "to input / to enroll / to book",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "tragen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3570,
+        "hierarchy": [
+          "Verbs",
+          "tragen",
+          "eintragen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-867",
+      "german": "vorlegen",
+      "english": "to submit / to present",
+      "category": "Verbs",
+      "level": "A2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 3995,
+        "hierarchy": [
+          "Verbs",
+          "vorlegen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-888",
+      "german": "abziehen",
+      "english": "to deduct / to subtract",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "ziehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4098,
+        "hierarchy": [
+          "Verbs",
+          "ziehen",
+          "abziehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-893",
+      "german": "vorziehen",
+      "english": "to prefer",
+      "category": "Verbs",
+      "level": "A2",
+      "tags": [
+        "ziehen"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4130,
+        "hierarchy": [
+          "Verbs",
+          "ziehen",
+          "vorziehen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-898",
+      "german": "zusagen",
+      "english": "to agree / to confirm",
+      "category": "Verbs",
+      "level": "A2",
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 4153,
+        "hierarchy": [
+          "Verbs",
+          "zusagen"
+        ]
+      }
+    },
+    {
+      "id": "b1-beifahren-207233",
+      "german": "beifahren",
+      "english": "to accompany",
+      "category": "Irregular Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 0,
+        "hierarchy": [
+          "B1",
+          "Irregular Verbs",
+          "beifahren"
+        ]
+      }
+    },
+    {
+      "id": "b1-ausbleiben-186185",
+      "german": "ausbleiben",
+      "english": "to be absent / to fail to occur",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 2,
+        "hierarchy": [
+          "B1",
+          "Separable Verbs",
+          "ausbleiben"
+        ]
+      }
+    },
+    {
+      "id": "b1-ausfahren-186185",
+      "german": "ausfahren",
+      "english": "to drive out",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 4,
+        "hierarchy": [
+          "B1",
+          "Separable Verbs",
+          "ausfahren"
+        ]
+      }
+    },
+    {
+      "id": "b1-aushalten-186185",
+      "german": "aushalten",
+      "english": "to hold out / to endure",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 9,
+        "hierarchy": [
+          "B1",
+          "Separable Verbs",
+          "aushalten"
+        ]
+      }
+    },
+    {
+      "id": "b1-auslegen-186185",
+      "german": "auslegen",
+      "english": "to lay out / to interpret",
+      "category": "Separable Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 14,
+        "hierarchy": [
+          "B1",
+          "Separable Verbs",
+          "auslegen"
+        ]
+      }
+    },
+    {
+      "id": "b1-state-change-verbs-miv8iuogrputl",
+      "german": "zunehmen",
+      "english": "to increase / to gain weight",
+      "category": "State Change Verbs",
+      "level": "A2",
+      "tags": [
+        "expansion",
+        "B1"
+      ],
+      "_meta": {
+        "source": "B1 Category Expansion 2025",
+        "lineNumber": 43,
+        "hierarchy": [
+          "B1",
+          "State Change Verbs",
+          "zunehmen"
         ]
       }
     }

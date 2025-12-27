@@ -1,7 +1,7 @@
 {
   "level": "A1",
   "category": "Reflexive Verbs",
-  "totalCards": 8,
+  "totalCards": 10,
   "flashcards": [
     {
       "id": "reflexive-a1-001",
@@ -168,6 +168,46 @@
           "A1",
           "Reflexive Verbs",
           "sich duschen"
+        ]
+      }
+    },
+    {
+      "id": "remnote-579",
+      "german": "sich halten",
+      "english": "to stick",
+      "category": "Intermediate Verbs",
+      "level": "A1",
+      "tags": [
+        "halten"
+      ],
+      "_meta": {
+        "source": "RemNote German.md",
+        "lineNumber": 2605,
+        "hierarchy": [
+          "Verbs",
+          "halten",
+          "sich halten"
+        ]
+      }
+    },
+    {
+      "id": "b1-reflexive-2-miujsnaq095kp",
+      "german": "sich zeigen",
+      "english": "to show / to appear / to turn out",
+      "category": "Reflexive Verbs",
+      "level": "A1",
+      "tags": [
+        "reflexive",
+        "B1",
+        "expansion"
+      ],
+      "_meta": {
+        "source": "Reflexive Verbs Expansion 2025",
+        "lineNumber": 51,
+        "hierarchy": [
+          "B1",
+          "Reflexive Verbs",
+          "sich zeigen"
         ]
       }
     }

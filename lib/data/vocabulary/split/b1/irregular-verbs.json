@@ -1,28 +1,8 @@
 {
   "level": "B1",
   "category": "Irregular Verbs",
-  "totalCards": 30,
+  "totalCards": 29,
   "flashcards": [
-    {
-      "id": "b1-beifahren-207233",
-      "german": "beifahren",
-      "english": "to accompany",
-      "category": "Irregular Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Irregular Verbs",
-          "beifahren"
-        ]
-      }
-    },
     {
       "id": "b1-bekennen-207234",
       "german": "bekennen",
