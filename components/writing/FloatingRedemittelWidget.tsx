@@ -12,7 +12,7 @@ import {
   type CEFRLevel as RedemittelCEFRLevel,
 } from '@/lib/data/redemittel/redemittel-data';
 import { CEFRLevel } from '@/lib/models/cefr';
-import { useSavedVocabulary, useRemoveSavedVocabularyMutation } from '@/lib/hooks/useSavedVocabulary';
+import { useSavedVocabulary, useRemoveSavedVocabularyMutation, useIncrementVocabularyUsageMutation } from '@/lib/hooks/useSavedVocabulary';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useToast } from '@/lib/hooks/useToast';
 import { RedemittelTab } from './tabs/RedemittelTab';
@@ -39,6 +39,7 @@ export function FloatingRedemittelWidget({ currentLevel }: FloatingRedemittelWid
     true // Include completed words
   );
   const removeMutation = useRemoveSavedVocabularyMutation();
+  const incrementMutation = useIncrementVocabularyUsageMutation();
 
   // Separate incomplete and completed words
   const incompleteWords = savedVocabulary.filter(sv => !sv.completed);
@@ -71,6 +72,26 @@ export function FloatingRedemittelWidget({ currentLevel }: FloatingRedemittelWid
   const handleCopySavedWord = (text: string) => {
     navigator.clipboard.writeText(text);
     toast.success('Copied to clipboard');
+  };
+
+  const handleIncrement = async (wordId: string) => {
+    if (!session?.user?.email) return;
+
+    try {
+      const result = await incrementMutation.mutateAsync({
+        userId: session.user.email,
+        wordId,
+      });
+
+      if (result.completed) {
+        toast.success('🎉 Word completed! Great job!');
+      } else {
+        toast.success(`Used! Progress: ${result.timesUsed}/5`);
+      }
+    } catch (error) {
+      console.error('Error incrementing word usage:', error);
+      toast.error('Failed to increment usage');
+    }
   };
 
   if (!isOpen) {
@@ -178,6 +199,7 @@ export function FloatingRedemittelWidget({ currentLevel }: FloatingRedemittelWid
           completedWords={completedWords}
           handleRemove={handleRemove}
           handleCopySavedWord={handleCopySavedWord}
+          handleIncrement={handleIncrement}
         />
       )}
     </div>

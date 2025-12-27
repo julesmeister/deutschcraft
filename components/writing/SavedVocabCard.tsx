@@ -1,24 +1,34 @@
 'use client';
 
 import { SavedVocabulary } from '@/lib/models/savedVocabulary';
-import { Copy, Check, Trash2 } from 'lucide-react';
+import { Copy, Check, Trash2, Plus } from 'lucide-react';
 import { useState } from 'react';
 
 interface SavedVocabCardProps {
   vocab: SavedVocabulary;
   onRemove: () => void;
   onCopy: () => void;
+  onIncrement?: () => void; // Optional increment handler
   showProgress: boolean; // Hide progress for completed words
 }
 
-export function SavedVocabCard({ vocab, onRemove, onCopy, showProgress }: SavedVocabCardProps) {
+export function SavedVocabCard({ vocab, onRemove, onCopy, onIncrement, showProgress }: SavedVocabCardProps) {
   const [showCopied, setShowCopied] = useState(false);
+  const [showIncremented, setShowIncremented] = useState(false);
   const progressPercentage = Math.min((vocab.timesUsed / vocab.targetUses) * 100, 100);
 
   const handleCopy = () => {
     onCopy();
     setShowCopied(true);
     setTimeout(() => setShowCopied(false), 2000);
+  };
+
+  const handleIncrement = () => {
+    if (onIncrement) {
+      onIncrement();
+      setShowIncremented(true);
+      setTimeout(() => setShowIncremented(false), 2000);
+    }
   };
 
   return (
@@ -51,7 +61,7 @@ export function SavedVocabCard({ vocab, onRemove, onCopy, showProgress }: SavedV
           )}
         </div>
 
-        {/* Copy + Delete Buttons */}
+        {/* Copy + Increment + Delete Buttons */}
         <div className="flex gap-1 flex-shrink-0">
           <button
             onClick={handleCopy}
@@ -64,6 +74,19 @@ export function SavedVocabCard({ vocab, onRemove, onCopy, showProgress }: SavedV
               <Copy className="w-3.5 h-3.5" />
             )}
           </button>
+          {onIncrement && !vocab.completed && (
+            <button
+              onClick={handleIncrement}
+              className="p-1.5 text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded transition-colors"
+              title="Mark as used (+1)"
+            >
+              {showIncremented ? (
+                <Check className="w-3.5 h-3.5 text-green-600" />
+              ) : (
+                <Plus className="w-3.5 h-3.5" />
+              )}
+            </button>
+          )}
           <button
             onClick={onRemove}
             className="p-1.5 text-red-600 hover:text-red-700 hover:bg-red-50 rounded transition-colors"

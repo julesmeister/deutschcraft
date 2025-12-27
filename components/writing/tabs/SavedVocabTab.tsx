@@ -10,6 +10,7 @@ interface SavedVocabTabProps {
   completedWords: SavedVocabulary[];
   handleRemove: (wordId: string) => void;
   handleCopySavedWord: (text: string) => void;
+  handleIncrement: (wordId: string) => void;
 }
 
 export function SavedVocabTab({
@@ -19,6 +20,7 @@ export function SavedVocabTab({
   completedWords,
   handleRemove,
   handleCopySavedWord,
+  handleIncrement,
 }: SavedVocabTabProps) {
   return (
     <>
@@ -47,6 +49,7 @@ export function SavedVocabTab({
                     vocab={vocab}
                     onRemove={() => handleRemove(vocab.wordId)}
                     onCopy={() => handleCopySavedWord(vocab.german)}
+                    onIncrement={() => handleIncrement(vocab.wordId)}
                     showProgress
                   />
                 ))}
@@ -66,6 +69,7 @@ export function SavedVocabTab({
                       vocab={vocab}
                       onRemove={() => handleRemove(vocab.wordId)}
                       onCopy={() => handleCopySavedWord(vocab.german)}
+                      onIncrement={() => handleIncrement(vocab.wordId)}
                       showProgress={false}
                     />
                   ))}
