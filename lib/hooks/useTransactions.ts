@@ -1,10 +1,10 @@
 /**
  * React Query hooks for Transaction management
+ * TURSO MIGRATION: Now uses Turso database instead of Firebase
  */
 
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { useState } from 'react';
-import { QueryDocumentSnapshot } from 'firebase/firestore';
+import { useState, useEffect } from 'react';
 import {
   getUserTransactions,
   getPendingTransactions,
@@ -15,7 +15,7 @@ import {
   getTransactionsPaginated,
   getTransactionsCount,
   getAllTransactions,
-} from '../services/transactionService';
+} from '../services/turso/transactionService';
 import { Transaction } from '../models/transaction';
 
 /**
@@ -154,6 +154,7 @@ export function useAllTransactions() {
 /**
  * Get transactions with server-side pagination
  * Optimized for large transaction datasets
+ * TURSO: Uses offset-based pagination instead of cursor-based
  *
  * @param options - Pagination and filter options
  * @returns Hook with transactions, pagination state, and navigation functions
@@ -165,16 +166,20 @@ export function useTransactionsPaginated(options: {
 } = {}) {
   const { pageSize = 20, statusFilter = 'all', userIdFilter } = options;
   const [page, setPage] = useState(1);
-  const [lastDocs, setLastDocs] = useState<(QueryDocumentSnapshot | null)[]>([null]);
 
-  // Fetch current page
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setPage(1);
+  }, [statusFilter, userIdFilter]);
+
+  // Fetch current page with offset-based pagination
   const { data, isLoading, isError, error, refetch } = useQuery({
     queryKey: ['transactions', 'paginated', page, statusFilter, userIdFilter, pageSize],
     queryFn: async () => {
-      const lastDoc = lastDocs[page - 1] || null;
+      const offset = (page - 1) * pageSize;
       return await getTransactionsPaginated({
         pageSize,
-        lastDoc,
+        offset,
         statusFilter,
         userIdFilter,
       });
@@ -183,27 +188,14 @@ export function useTransactionsPaginated(options: {
     gcTime: 60000, // 1 minute
   });
 
-  // Fetch total count (cached separately)
-  const { data: totalCount = 0 } = useQuery({
-    queryKey: ['transactions', 'count', statusFilter, userIdFilter],
-    queryFn: async () => {
-      return await getTransactionsCount({
-        statusFilter,
-        userIdFilter,
-      });
-    },
-    staleTime: 60000, // 1 minute
-    gcTime: 120000, // 2 minutes
-  });
-
   const transactions = data?.transactions || [];
   const hasMore = data?.hasMore || false;
+  const totalCount = data?.total || 0;
   const totalPages = Math.ceil(totalCount / pageSize);
 
   const goToNextPage = () => {
-    if (hasMore && data?.lastDoc) {
+    if (hasMore && page < totalPages) {
       setPage((prev) => prev + 1);
-      setLastDocs((prev) => [...prev, data.lastDoc]);
     }
   };
 
@@ -215,10 +207,6 @@ export function useTransactionsPaginated(options: {
 
   const goToPage = (newPage: number) => {
     if (newPage >= 1 && newPage <= totalPages) {
-      // Reset pagination if going to page 1
-      if (newPage === 1) {
-        setLastDocs([null]);
-      }
       setPage(newPage);
     }
   };
