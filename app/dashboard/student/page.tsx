@@ -8,6 +8,8 @@ import { useStudentTasks } from '@/lib/hooks/useWritingTasks';
 import { useBatch } from '@/lib/hooks/useBatches';
 import { useStudyStats } from '@/lib/hooks/useFlashcards';
 import { useWritingStats } from '@/lib/hooks/useWritingExercises';
+import { useGrammarReviews } from '@/lib/hooks/useGrammarExercises';
+import { useAnswerHubStats } from '@/lib/hooks/useAnswerHubStats';
 import { SAMPLE_STUDENT } from '@/lib/models';
 import { StudentStatsCard, StudentStatCardProps } from '@/components/dashboard/StudentStatsCard';
 import { WeeklyProgressChart } from '@/components/dashboard/WeeklyProgressChart';
@@ -16,7 +18,7 @@ import { DailyGoalCard } from '@/components/dashboard/DailyGoalCard';
 import { StudentRecentTasksCard } from '@/components/dashboard/StudentRecentTasksCard';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { MiniBlankExercise } from '@/components/dashboard/MiniBlankExercise';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { getTodayProgress } from '@/lib/services/progressService';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { useMiniExercise } from '@/lib/hooks/useMiniExercise';
@@ -32,6 +34,34 @@ export default function StudentDashboard() {
 
   // Get writing stats
   const { data: writingStats, isLoading: isLoadingWriting } = useWritingStats(session?.user?.email || undefined);
+
+  // Get grammar stats
+  const { reviews: grammarReviews } = useGrammarReviews(session?.user?.email);
+
+  // Get Answer Hub stats
+  const { stats: answerHubStats } = useAnswerHubStats(session?.user?.email || null);
+
+  // Calculate grammar statistics
+  const grammarStats = useMemo(() => {
+    if (!grammarReviews || grammarReviews.length === 0) {
+      return {
+        sentencesPracticed: 0,
+        accuracyRate: 0,
+      };
+    }
+
+    const sentencesPracticed = grammarReviews.filter(r => r.repetitions > 0).length;
+    const totalCorrect = grammarReviews.reduce((sum, r) => sum + r.correctCount, 0);
+    const totalIncorrect = grammarReviews.reduce((sum, r) => sum + r.incorrectCount, 0);
+    const accuracyRate = totalCorrect + totalIncorrect > 0
+      ? Math.round((totalCorrect / (totalCorrect + totalIncorrect)) * 100)
+      : 0;
+
+    return {
+      sentencesPracticed,
+      accuracyRate,
+    };
+  }, [grammarReviews]);
 
   // Get today's progress for daily goal
   const [todayProgress, setTodayProgress] = useState(0);
@@ -88,6 +118,9 @@ export default function StudentDashboard() {
     { label: 'Words Written', value: writingStats?.totalWordsWritten || 0, icon: '📝', color: 'text-purple-600' },
     { label: 'Current Streak', value: studyStats.streak, icon: '🔥', color: 'text-orange-600', suffix: ' days' },
     { label: 'Current Level', value: 0, displayValue: currentLevelDisplay(), icon: '🎯', color: 'text-amber-600', isText: true },
+    { label: 'Grammar Accuracy', value: grammarStats.accuracyRate, icon: '📖', color: 'text-green-600', suffix: '%' },
+    { label: 'Answer Hub Answers', value: answerHubStats.totalAnswersSubmitted || 0, icon: '💡', color: 'text-cyan-600' },
+    { label: 'Grammar Sentences', value: grammarStats.sentencesPracticed, icon: '📝', color: 'text-teal-600' },
   ];
 
   return (
@@ -103,8 +136,9 @@ export default function StudentDashboard() {
         <div className="bg-white overflow-hidden border border-gray-200">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {stats.map((stat, index) => {
-              const isLastInRow = (index + 1) % 3 === 0; // Every 3rd item (index 2, 5)
+              const isLastInRow = (index + 1) % 3 === 0; // Every 3rd item in lg view
               const isFirstRow = index < 3; // Items 0, 1, 2
+              const isSecondRow = index >= 3 && index < 6; // Items 3, 4, 5
               const isLastItem = index === stats.length - 1; // Last item overall
               const isRightColInTwoCol = index % 2 === 1; // Right column in 2-col layout
 
@@ -115,7 +149,7 @@ export default function StudentDashboard() {
                     ${!isLastItem ? 'border-b sm:border-b-0' : ''}
                     ${!isRightColInTwoCol ? 'sm:border-r' : ''}
                     ${!isLastInRow ? 'lg:border-r' : ''}
-                    ${isFirstRow ? 'lg:border-b' : ''}
+                    ${isFirstRow || isSecondRow ? 'lg:border-b' : ''}
                     border-gray-200
                   `}
                 >
