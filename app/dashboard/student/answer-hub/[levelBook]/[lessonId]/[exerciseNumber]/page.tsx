@@ -15,7 +15,7 @@ import { StudentAnswersDisplay } from '@/components/answer-hub/StudentAnswersDis
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useCurrentStudent } from '@/lib/hooks/useUsers';
 import { getUserInfo } from '@/lib/utils/userHelpers';
-import { useExercises } from '@/lib/hooks/useExercises';
+import { useLessonWithOverrides } from '@/lib/hooks/useExercisesWithOverrides';
 import { useExerciseProgress } from '@/lib/hooks/useExerciseProgress';
 import { CEFRLevel } from '@/lib/models/cefr';
 
@@ -38,11 +38,15 @@ export default function ExerciseDetailPage() {
   // Parse lesson number
   const lessonNumber = parseInt(lessonId.replace('L', ''));
 
-  // Load exercises
-  const { exerciseBook, lessons, isLoading, error } = useExercises(level, bookType);
+  // Load exercises with teacher overrides (includes custom exercises)
+  const { lesson, isLoading, error } = useLessonWithOverrides(
+    level,
+    bookType,
+    lessonNumber,
+    session?.user?.email || null
+  );
 
-  // Find the lesson and exercise (using exerciseId which is unique)
-  const lesson = lessons.find(l => l.lessonNumber === lessonNumber);
+  // Find the exercise (using exerciseId which is unique)
   const exercise = lesson?.exercises.find(e => e.exerciseId === exerciseId);
 
   // Check if user is a teacher (role is uppercase in database)
