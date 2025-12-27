@@ -6,14 +6,14 @@
 
 ## 📊 Overview
 
-**Turso Services:** 17 implemented
+**Turso Services:** 19 implemented (added reviewQuizService, studentAnswerService)
 **Hooks Migrated:** 5/8 high-priority hooks ✅
 **Migration Progress:** 62% complete (5 of 8 migratable hooks)
-**Remaining:** 3 hooks require new Turso tables (deferred)
+**Services Ready:** 3 hooks ready to migrate (tables + services created)
 
 ---
 
-## ✅ Turso Services Already Implemented (17)
+## ✅ Turso Services Already Implemented (19)
 
 Located in `lib/services/turso/`:
 
@@ -34,6 +34,8 @@ Located in `lib/services/turso/`:
 15. ✅ `writingService.ts` - Writing exercises and submissions
 16. ✅ `writingAttemptService.ts` - Writing attempt tracking
 17. ✅ `writingProgressService.ts` - Writing progress analytics
+18. ✅ **`reviewQuizService.ts`** - Review quizzes (NEW - 2025-12-28)
+19. ✅ **`studentAnswerService.ts`** - Student exercise answers (NEW - 2025-12-28)
 
 ---
 
@@ -67,27 +69,30 @@ Successfully migrated to Turso database:
 
 ---
 
-## 🔴 Hooks Requiring New Turso Tables (3 hooks - DEFERRED)
+## 🟢 Hooks Ready to Migrate (3 hooks - TABLES + SERVICES CREATED)
 
-These hooks require Turso database tables that don't exist yet. Migration deferred until tables are created:
+These hooks now have Turso tables and services ready. Migration pending:
 
-1. **❌ useQuizStats.ts** - Quiz session statistics
+1. **🟢 useQuizStats.ts** - Quiz session statistics
    - **Firebase Collection:** `writing-review-quizzes`
-   - **Missing Turso Table:** `writing_review_quizzes` (not in migrations)
-   - **Status:** DEFERRED - needs migration table creation
-   - **Action:** Create Turso migration for review quizzes OR use sessions table
+   - **Turso Table:** `writing_review_quizzes` ✅ Created (migration 021)
+   - **Turso Service:** `reviewQuizService.ts` ✅ Created
+   - **Status:** READY TO MIGRATE
+   - **Functions Available:** getUserQuizStats, getUserReviewQuizzes, getReviewQuiz
 
-2. **❌ useStudentAnswers.ts** - Student answer retrieval
+2. **🟢 useStudentAnswers.ts** - Student answer retrieval
    - **Firebase Collection:** `studentAnswers`
-   - **Missing Turso Table:** `student_answers` (not in migrations)
-   - **Status:** DEFERRED - needs migration table creation
-   - **Action:** Create Turso migration for student answers
+   - **Turso Table:** `student_answers` ✅ Created (migration 022)
+   - **Turso Service:** `studentAnswerService.ts` ✅ Created
+   - **Status:** READY TO MIGRATE
+   - **Functions Available:** getExerciseAnswers, getStudentAnswers, saveStudentAnswer
 
-3. **❌ useAnswerHubStats.ts** - Student answer statistics
+3. **🟢 useAnswerHubStats.ts** - Student answer statistics
    - **Firebase Collection:** `studentAnswers`
-   - **Missing Turso Table:** `student_answers` (not in migrations)
-   - **Status:** DEFERRED - needs migration table creation
-   - **Action:** Same as useStudentAnswers - create student_answers table
+   - **Turso Table:** `student_answers` ✅ Created (migration 022)
+   - **Turso Service:** `studentAnswerService.ts` ✅ Created
+   - **Status:** READY TO MIGRATE
+   - **Functions Available:** getAnswerHubStats (aggregates by SQL)
 
 ---
 
@@ -135,12 +140,15 @@ These hooks SHOULD stay on Firebase (not migrated):
 - [x] Migrate `useTransactions.ts` → use `transactionService.ts` ✅
 - [x] Migrate `useRecentActivities.ts` → use Turso services ✅
 
-### Phase 2: Deferred (Need Turso Tables)
-- [ ] Create `writing_review_quizzes` table migration
-- [ ] Create `student_answers` table migration
-- [ ] Migrate `useQuizStats.ts` → use new table
-- [ ] Migrate `useStudentAnswers.ts` → use new table
-- [ ] Migrate `useAnswerHubStats.ts` → use new table
+### Phase 2: Ready to Migrate (Tables + Services Created)
+- [x] Create `writing_review_quizzes` table migration ✅
+- [x] Create `student_answers` table migration ✅
+- [x] Create `reviewQuizService.ts` ✅
+- [x] Create `studentAnswerService.ts` ✅
+- [ ] **Run migrations:** `npx tsx turso/migrate.ts`
+- [ ] Migrate `useQuizStats.ts` → use reviewQuizService
+- [ ] Migrate `useStudentAnswers.ts` → use studentAnswerService
+- [ ] Migrate `useAnswerHubStats.ts` → use studentAnswerService
 
 ### Phase 3: Keep on Firebase (No Migration Needed)
 - [x] Keep `useFirebaseAuth.ts` on Firebase (auth provider) ✅
@@ -286,19 +294,25 @@ import { getUser } from '@/lib/services/turso/userService';
 - ✅ useTransactions.ts
 - ✅ useRecentActivities.ts
 
-### Deferred (3 hooks - need Turso tables)
-- ❌ useQuizStats.ts (needs writing_review_quizzes table)
-- ❌ useStudentAnswers.ts (needs student_answers table)
-- ❌ useAnswerHubStats.ts (needs student_answers table)
+### Ready to Migrate (3 hooks - tables + services created)
+- 🟢 useQuizStats.ts (reviewQuizService ready)
+- 🟢 useStudentAnswers.ts (studentAnswerService ready)
+- 🟢 useAnswerHubStats.ts (studentAnswerService ready)
 
 ### Kept on Firebase (3 hooks)
 - 🔵 useFirebaseAuth.ts (auth provider)
 - 🔵 useWebRTCAudio.ts (real-time signaling)
 - 🔵 useWebRTCAudio-new.ts (real-time signaling)
 
-**Status:** Phase 1 complete! 🎉 5/5 migratable hooks migrated (100%)
+**Status:** Phase 1 complete! 🎉 All Turso services created!
 
 **Next Steps:**
-1. Create Turso migrations for missing tables (quiz stats, student answers)
-2. Migrate remaining 3 hooks once tables are ready
-3. Gradual production rollout with `DATABASE_PROVIDER=turso`
+1. ✅ Create Turso migrations for quiz and answer tables (DONE)
+2. ✅ Create reviewQuizService.ts and studentAnswerService.ts (DONE)
+3. **Run migrations:** `npx tsx turso/migrate.ts` to create tables
+4. Migrate remaining 3 hooks (useQuizStats, useStudentAnswers, useAnswerHubStats)
+5. Gradual production rollout with `DATABASE_PROVIDER=turso`
+
+**New Turso Tables Created:**
+- `writing_review_quizzes` - Fill-in-the-blank correction reviews
+- `student_answers` - Exercise answer submissions
