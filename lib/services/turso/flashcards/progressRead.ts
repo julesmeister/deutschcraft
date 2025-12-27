@@ -125,6 +125,26 @@ export async function getStudyProgress(userId: string): Promise<StudyProgress[]>
 }
 
 /**
+ * Get recent study progress entries across all users
+ * Used for activity feeds and dashboard
+ * @param limit - Maximum number of entries to return
+ * @returns Array of study progress objects sorted by date (most recent first)
+ */
+export async function getRecentStudyProgress(limit: number = 20): Promise<StudyProgress[]> {
+  try {
+    const result = await db.execute({
+      sql: 'SELECT * FROM progress ORDER BY date DESC LIMIT ?',
+      args: [limit],
+    });
+
+    return result.rows.map(rowToStudyProgress);
+  } catch (error) {
+    console.error('[flashcardService:turso] Error fetching recent study progress:', error);
+    throw error;
+  }
+}
+
+/**
  * Get flashcard progress by card state
  * @param userId - User's email
  * @param state - Card state to filter by

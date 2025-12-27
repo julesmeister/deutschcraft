@@ -1,15 +1,14 @@
 /**
  * useRecentActivities Hook
- * Aggregates recent activities from existing collections (progress from Firestore, submissions from Turso)
- * This replaces the custom activities collection approach
+ * TURSO MIGRATION: Now uses Turso database for all data sources
+ * Aggregates recent activities from progress and writing submissions
  */
 
 import { useQuery } from '@tanstack/react-query';
-import { collection, query, orderBy, limit, getDocs } from 'firebase/firestore';
-import { db } from '../firebase';
 import { getUserFullName } from '../models/user';
-import { getUser } from '../services/userService';
-import { getAllWritingSubmissions } from '../services/writingService';
+import { getUser } from '../services/turso/userService';
+import { getRecentStudyProgress } from '../services/turso/flashcards';
+import { getAllWritingSubmissions } from '../services/turso/writing';
 
 export interface AggregatedActivity {
   id: string;
@@ -34,24 +33,21 @@ export function useRecentActivities(limitCount: number = 20) {
       console.log('📊 [Config] Limit:', limitCount);
 
       try {
-        // Fetch recent flashcard sessions from Firestore 'progress' collection
-        console.log('📚 [Firestore] Querying progress collection...');
-        const progressRef = collection(db, 'progress');
-        const progressQuery = query(progressRef, orderBy('date', 'desc'), limit(limitCount));
-        const progressSnapshot = await getDocs(progressQuery);
-        console.log('📊 [Firestore] Found progress documents:', progressSnapshot.docs.length);
+        // Fetch recent flashcard sessions from Turso progress table
+        console.log('📚 [Turso] Querying progress table...');
+        const progressEntries = await getRecentStudyProgress(limitCount);
+        console.log('📊 [Turso] Found progress entries:', progressEntries.length);
 
-        for (const doc of progressSnapshot.docs) {
-          const data = doc.data();
-          console.log('📄 [Progress] Document:', {
-            id: doc.id,
-            userId: data.userId,
-            date: data.date,
-            cardsReviewed: data.cardsReviewed,
-            rawData: data
+        for (const entry of progressEntries) {
+          console.log('📄 [Progress] Entry:', {
+            progressId: entry.progressId,
+            userId: entry.userId,
+            date: entry.date,
+            cardsReviewed: entry.cardsReviewed,
+            rawData: entry
           });
 
-          const studentEmail = data.userId;
+          const studentEmail = entry.userId;
 
           // Fetch student name
           const student = await getUser(studentEmail);
@@ -60,12 +56,12 @@ export function useRecentActivities(limitCount: number = 20) {
           console.log('✅ [Name] Resolved name:', studentName);
 
           activities.push({
-            id: doc.id,
+            id: entry.progressId,
             studentEmail,
             studentName,
             type: 'flashcard_session',
-            timestamp: new Date(data.date || Date.now()),
-            description: `Reviewed ${data.cardsReviewed || 0} flashcards`,
+            timestamp: new Date(entry.date),
+            description: `Reviewed ${entry.cardsReviewed || 0} flashcards`,
             icon: '✅',
             color: 'bg-green-500',
           });

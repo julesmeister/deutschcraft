@@ -12,6 +12,7 @@ export {
   getFlashcardProgress,
   getSingleFlashcardProgress,
   getStudyProgress,
+  getRecentStudyProgress,
   getFlashcardProgressByState,
   getDueFlashcards,
   getStrugglingFlashcards,
