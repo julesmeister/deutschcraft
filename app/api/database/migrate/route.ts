@@ -778,6 +778,95 @@ export async function POST(request: Request) {
     }
     stats.playgroundWritings = playgroundCount;
 
+    // 15. Migrate writing-progress
+    console.log('[Migrate] Migrating writing-progress...');
+    const writingProgressSnapshot = await adminDb.collection('writing-progress').get();
+    let writingProgressCount = 0;
+
+    for (const doc of writingProgressSnapshot.docs) {
+      const progress = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO writing_progress (
+            progress_id, user_id, date,
+            exercises_completed, translations_completed, creative_writings_completed,
+            total_words_written, time_spent,
+            average_grammar_score, average_vocabulary_score, average_overall_score,
+            current_streak, longest_streak,
+            created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            progress.progressId || doc.id,
+            progress.userId,
+            progress.date,
+            progress.exercisesCompleted || 0,
+            progress.translationsCompleted || 0,
+            progress.creativeWritingsCompleted || 0,
+            progress.totalWordsWritten || 0,
+            progress.timeSpent || 0,
+            progress.averageGrammarScore || 0,
+            progress.averageVocabularyScore || 0,
+            progress.averageOverallScore || 0,
+            progress.currentStreak || 0,
+            progress.longestStreak || 0,
+            progress.createdAt || Date.now(),
+            progress.updatedAt || Date.now(),
+          ],
+        });
+        writingProgressCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating writing progress:`, error);
+      }
+    }
+    stats.writingProgress = writingProgressCount;
+
+    // 16. Migrate writing-review-quizzes
+    console.log('[Migrate] Migrating writing-review-quizzes...');
+    const reviewQuizzesSnapshot = await adminDb.collection('writing-review-quizzes').get();
+    let reviewQuizCount = 0;
+
+    for (const doc of reviewQuizzesSnapshot.docs) {
+      const quiz = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO writing_review_quizzes (
+            quiz_id, submission_id, user_id, exercise_id, exercise_type,
+            source_type,
+            original_text, corrected_text, blanks,
+            answers,
+            score, correct_answers, total_blanks,
+            status,
+            started_at, completed_at,
+            created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            quiz.quizId || doc.id,
+            quiz.submissionId,
+            quiz.userId,
+            quiz.exerciseId,
+            quiz.exerciseType,
+            quiz.sourceType,
+            quiz.originalText,
+            quiz.correctedText,
+            quiz.blanks ? JSON.stringify(quiz.blanks) : '[]',
+            quiz.answers ? JSON.stringify(quiz.answers) : null,
+            quiz.score || 0,
+            quiz.correctAnswers || 0,
+            quiz.totalBlanks,
+            quiz.status || 'in-progress',
+            quiz.startedAt,
+            quiz.completedAt || null,
+            quiz.createdAt || Date.now(),
+            quiz.updatedAt || Date.now(),
+          ],
+        });
+        reviewQuizCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating review quiz:`, error);
+      }
+    }
+    stats.writingReviewQuizzes = reviewQuizCount;
+
     /*
     // (Previously section 7) Migrate progress (daily stats)
     console.log('[Migrate] Migrating progress...');
