@@ -32,6 +32,12 @@ export async function POST(request: Request) {
 
     console.log('[Migrate] Starting direct migration from Firestore to Turso...');
 
+    // Disable foreign key constraints during migration
+    // This allows us to migrate data even when referenced records don't exist
+    // (e.g., flashcard-progress can reference users that are staying in Firebase)
+    await db.execute('PRAGMA foreign_keys = OFF');
+    console.log('[Migrate] Foreign key constraints disabled');
+
     const stats: any = {};
 
     // 1. Migrate users
@@ -599,6 +605,10 @@ export async function POST(request: Request) {
       0
     );
 
+    // Re-enable foreign key constraints
+    await db.execute('PRAGMA foreign_keys = ON');
+    console.log('[Migrate] Foreign key constraints re-enabled');
+
     console.log('[Migrate] Completed successfully:', stats);
 
     return NextResponse.json({
@@ -607,6 +617,14 @@ export async function POST(request: Request) {
     });
   } catch (error) {
     console.error('[Migrate] Error:', error);
+
+    // Re-enable foreign keys even on error
+    try {
+      await db.execute('PRAGMA foreign_keys = ON');
+    } catch (pragmaError) {
+      console.error('[Migrate] Failed to re-enable foreign keys:', pragmaError);
+    }
+
     return NextResponse.json(
       { error: 'Failed to migrate data', details: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
