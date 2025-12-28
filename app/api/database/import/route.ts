@@ -223,6 +223,226 @@ export async function POST(request: Request) {
       stats.flashcardProgress = count;
     }
 
+    // 5. Import exercise-overrides
+    if (importData.collections.exerciseOverrides) {
+      console.log('[Import] Importing exercise-overrides...');
+      const overrides = importData.collections.exerciseOverrides;
+      let count = 0;
+
+      for (const override of overrides) {
+        try {
+          await db.execute({
+            sql: `INSERT OR REPLACE INTO exercise_overrides (
+              override_id, teacher_email, exercise_id, override_type,
+              level, lesson_number, exercise_data, modifications,
+              display_order, is_hidden, notes, created_at, updated_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            args: [
+              override.overrideId || override.override_id,
+              override.teacherEmail || override.teacher_email,
+              override.exerciseId || override.exercise_id,
+              override.overrideType || override.override_type,
+              override.level || null,
+              override.lessonNumber || override.lesson_number || null,
+              override.exerciseData || override.exercise_data ? JSON.stringify(override.exerciseData || override.exercise_data) : null,
+              override.modifications ? JSON.stringify(override.modifications) : null,
+              override.displayOrder || override.display_order || null,
+              override.isHidden || override.is_hidden ? 1 : 0,
+              override.notes || null,
+              override.createdAt || override.created_at || Date.now(),
+              override.updatedAt || override.updated_at || Date.now(),
+            ],
+          });
+          count++;
+        } catch (error) {
+          console.error(`[Import] Error importing override:`, error);
+        }
+      }
+      stats.exerciseOverrides = count;
+    }
+
+    // 6. Import saved-vocabulary
+    if (importData.collections.savedVocabulary) {
+      console.log('[Import] Importing saved-vocabulary...');
+      const savedVocab = importData.collections.savedVocabulary;
+      let count = 0;
+
+      for (const savedWord of savedVocab) {
+        try {
+          await db.execute({
+            sql: `INSERT OR REPLACE INTO saved_vocabulary (
+              saved_vocab_id, user_id, word_id, flashcard_id,
+              german, english, level, category, examples,
+              times_used, target_uses, completed,
+              saved_at, last_used_at, completed_at, updated_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            args: [
+              savedWord.savedVocabId || savedWord.saved_vocab_id,
+              savedWord.userId || savedWord.user_id,
+              savedWord.wordId || savedWord.word_id,
+              savedWord.flashcardId || savedWord.flashcard_id || null,
+              savedWord.german,
+              savedWord.english,
+              savedWord.level,
+              savedWord.category || null,
+              savedWord.examples ? JSON.stringify(savedWord.examples) : null,
+              savedWord.timesUsed || savedWord.times_used || 0,
+              savedWord.targetUses || savedWord.target_uses || 5,
+              savedWord.completed ? 1 : 0,
+              savedWord.savedAt || savedWord.saved_at,
+              savedWord.lastUsedAt || savedWord.last_used_at || null,
+              savedWord.completedAt || savedWord.completed_at || null,
+              savedWord.updatedAt || savedWord.updated_at || Date.now(),
+            ],
+          });
+          count++;
+        } catch (error) {
+          console.error(`[Import] Error importing saved vocabulary:`, error);
+        }
+      }
+      stats.savedVocabulary = count;
+    }
+
+    // 7. Import activities
+    if (importData.collections.activities) {
+      console.log('[Import] Importing activities...');
+      const activities = importData.collections.activities;
+      let count = 0;
+
+      for (const activity of activities) {
+        try {
+          await db.execute({
+            sql: `INSERT OR REPLACE INTO activities (
+              activity_id, student_email, student_name, type, timestamp, metadata
+            ) VALUES (?, ?, ?, ?, ?, ?)`,
+            args: [
+              activity.activityId || activity.activity_id,
+              activity.studentEmail || activity.student_email,
+              activity.studentName || activity.student_name || null,
+              activity.type,
+              activity.timestamp?.toMillis ? activity.timestamp.toMillis() : activity.timestamp,
+              activity.metadata ? JSON.stringify(activity.metadata) : null,
+            ],
+          });
+          count++;
+        } catch (error) {
+          console.error(`[Import] Error importing activity:`, error);
+        }
+      }
+      stats.activities = count;
+    }
+
+    // 8. Import grammar-rules
+    if (importData.collections.grammarRules) {
+      console.log('[Import] Importing grammar-rules...');
+      const grammarRules = importData.collections.grammarRules;
+      let count = 0;
+
+      for (const rule of grammarRules) {
+        try {
+          await db.execute({
+            sql: `INSERT OR REPLACE INTO grammar_rules (
+              rule_id, title, description, level, category, examples, explanation, "order", created_at, updated_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            args: [
+              rule.ruleId || rule.rule_id,
+              rule.title,
+              rule.description,
+              rule.level,
+              rule.category,
+              rule.examples ? JSON.stringify(rule.examples) : null,
+              rule.explanation || null,
+              rule.order || 0,
+              rule.createdAt || rule.created_at || Date.now(),
+              rule.updatedAt || rule.updated_at || Date.now(),
+            ],
+          });
+          count++;
+        } catch (error) {
+          console.error(`[Import] Error importing grammar rule:`, error);
+        }
+      }
+      stats.grammarRules = count;
+    }
+
+    // 9. Import grammar-sentences
+    if (importData.collections.grammarSentences) {
+      console.log('[Import] Importing grammar-sentences...');
+      const grammarSentences = importData.collections.grammarSentences;
+      let count = 0;
+
+      for (const sentence of grammarSentences) {
+        try {
+          await db.execute({
+            sql: `INSERT OR REPLACE INTO grammar_sentences (
+              sentence_id, rule_id, english, german, level, hints, keywords, difficulty, created_at, updated_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            args: [
+              sentence.sentenceId || sentence.sentence_id,
+              sentence.ruleId || sentence.rule_id,
+              sentence.english,
+              sentence.german,
+              sentence.level,
+              sentence.hints ? JSON.stringify(sentence.hints) : null,
+              sentence.keywords ? JSON.stringify(sentence.keywords) : null,
+              sentence.difficulty || null,
+              sentence.createdAt || sentence.created_at || Date.now(),
+              sentence.updatedAt || sentence.updated_at || Date.now(),
+            ],
+          });
+          count++;
+        } catch (error) {
+          console.error(`[Import] Error importing grammar sentence:`, error);
+        }
+      }
+      stats.grammarSentences = count;
+    }
+
+    // 10. Import grammar-reviews
+    if (importData.collections.grammarReviews) {
+      console.log('[Import] Importing grammar-reviews...');
+      const grammarReviews = importData.collections.grammarReviews;
+      let count = 0;
+
+      for (const review of grammarReviews) {
+        try {
+          await db.execute({
+            sql: `INSERT OR REPLACE INTO grammar_reviews (
+              review_id, user_id, sentence_id, rule_id, level,
+              repetitions, ease_factor, interval, next_review_date,
+              correct_count, incorrect_count, consecutive_correct, consecutive_incorrect,
+              mastery_level, last_review_date, last_attempt, first_seen_at, created_at, updated_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            args: [
+              review.reviewId || review.review_id,
+              review.userId || review.user_id,
+              review.sentenceId || review.sentence_id,
+              review.ruleId || review.rule_id,
+              review.level,
+              review.repetitions || 0,
+              review.easeFactor || review.ease_factor || 2.5,
+              review.interval || 0,
+              review.nextReviewDate || review.next_review_date,
+              review.correctCount || review.correct_count || 0,
+              review.incorrectCount || review.incorrect_count || 0,
+              review.consecutiveCorrect || review.consecutive_correct || 0,
+              review.consecutiveIncorrect || review.consecutive_incorrect || 0,
+              review.masteryLevel || review.mastery_level || 0,
+              review.lastReviewDate || review.last_review_date || null,
+              review.lastAttempt || review.last_attempt ? JSON.stringify(review.lastAttempt || review.last_attempt) : null,
+              review.firstSeenAt || review.first_seen_at || null,
+              review.createdAt || review.created_at || Date.now(),
+              review.updatedAt || review.updated_at || Date.now(),
+            ],
+          });
+          count++;
+        } catch (error) {
+          console.error(`[Import] Error importing grammar review:`, error);
+        }
+      }
+      stats.grammarReviews = count;
+    }
+
     // Calculate total
     stats.total = Object.values(stats).reduce(
       (sum: number, val: any) => sum + (typeof val === 'number' ? val : 0),

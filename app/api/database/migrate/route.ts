@@ -379,6 +379,220 @@ export async function POST(request: Request) {
     }
     stats.flashcardProgress = flashcardProgressCount;
 
+    // 9. Migrate exercise-overrides
+    console.log('[Migrate] Migrating exercise-overrides...');
+    const overridesSnapshot = await adminDb.collection('exercise-overrides').get();
+    let overrideCount = 0;
+
+    for (const doc of overridesSnapshot.docs) {
+      const override = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO exercise_overrides (
+            override_id, teacher_email, exercise_id, override_type,
+            level, lesson_number, exercise_data, modifications,
+            display_order, is_hidden, notes, created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            override.overrideId || doc.id,
+            override.teacherEmail,
+            override.exerciseId,
+            override.overrideType,
+            override.level || null,
+            override.lessonNumber || null,
+            override.exerciseData ? JSON.stringify(override.exerciseData) : null,
+            override.modifications ? JSON.stringify(override.modifications) : null,
+            override.displayOrder || null,
+            override.isHidden ? 1 : 0,
+            override.notes || null,
+            override.createdAt || Date.now(),
+            override.updatedAt || Date.now(),
+          ],
+        });
+        overrideCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating override ${override.overrideId}:`, error);
+      }
+    }
+    stats.exerciseOverrides = overrideCount;
+
+    // 10. Migrate saved-vocabulary
+    console.log('[Migrate] Migrating saved-vocabulary...');
+    const savedVocabSnapshot = await adminDb.collection('saved-vocabulary').get();
+    let savedVocabCount = 0;
+
+    for (const doc of savedVocabSnapshot.docs) {
+      const savedWord = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO saved_vocabulary (
+            saved_vocab_id, user_id, word_id, flashcard_id,
+            german, english, level, category, examples,
+            times_used, target_uses, completed,
+            saved_at, last_used_at, completed_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            savedWord.savedVocabId || doc.id,
+            savedWord.userId,
+            savedWord.wordId,
+            savedWord.flashcardId || null,
+            savedWord.german,
+            savedWord.english,
+            savedWord.level,
+            savedWord.category || null,
+            savedWord.examples ? JSON.stringify(savedWord.examples) : null,
+            savedWord.timesUsed || 0,
+            savedWord.targetUses || 5,
+            savedWord.completed ? 1 : 0,
+            savedWord.savedAt,
+            savedWord.lastUsedAt || null,
+            savedWord.completedAt || null,
+            savedWord.updatedAt || Date.now(),
+          ],
+        });
+        savedVocabCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating saved vocabulary:`, error);
+      }
+    }
+    stats.savedVocabulary = savedVocabCount;
+
+    // 11. Migrate activities
+    console.log('[Migrate] Migrating activities...');
+    const activitiesSnapshot = await adminDb.collection('activities').get();
+    let activityCount = 0;
+
+    for (const doc of activitiesSnapshot.docs) {
+      const activity = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO activities (
+            activity_id, student_email, student_name, type, timestamp, metadata
+          ) VALUES (?, ?, ?, ?, ?, ?)`,
+          args: [
+            activity.activityId || doc.id,
+            activity.studentEmail,
+            activity.studentName || null,
+            activity.type,
+            activity.timestamp?.toMillis ? activity.timestamp.toMillis() : activity.timestamp,
+            activity.metadata ? JSON.stringify(activity.metadata) : null,
+          ],
+        });
+        activityCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating activity:`, error);
+      }
+    }
+    stats.activities = activityCount;
+
+    // 12. Migrate grammar-rules
+    console.log('[Migrate] Migrating grammar-rules...');
+    const grammarRulesSnapshot = await adminDb.collection('grammar-rules').get();
+    let grammarRuleCount = 0;
+
+    for (const doc of grammarRulesSnapshot.docs) {
+      const rule = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO grammar_rules (
+            rule_id, title, description, level, category, examples, explanation, "order", created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            rule.ruleId || doc.id,
+            rule.title,
+            rule.description,
+            rule.level,
+            rule.category,
+            rule.examples ? JSON.stringify(rule.examples) : null,
+            rule.explanation || null,
+            rule.order || 0,
+            rule.createdAt || Date.now(),
+            rule.updatedAt || Date.now(),
+          ],
+        });
+        grammarRuleCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating grammar rule:`, error);
+      }
+    }
+    stats.grammarRules = grammarRuleCount;
+
+    // 13. Migrate grammar-sentences
+    console.log('[Migrate] Migrating grammar-sentences...');
+    const grammarSentencesSnapshot = await adminDb.collection('grammar-sentences').get();
+    let grammarSentenceCount = 0;
+
+    for (const doc of grammarSentencesSnapshot.docs) {
+      const sentence = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO grammar_sentences (
+            sentence_id, rule_id, english, german, level, hints, keywords, difficulty, created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            sentence.sentenceId || doc.id,
+            sentence.ruleId,
+            sentence.english,
+            sentence.german,
+            sentence.level,
+            sentence.hints ? JSON.stringify(sentence.hints) : null,
+            sentence.keywords ? JSON.stringify(sentence.keywords) : null,
+            sentence.difficulty || null,
+            sentence.createdAt || Date.now(),
+            sentence.updatedAt || Date.now(),
+          ],
+        });
+        grammarSentenceCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating grammar sentence:`, error);
+      }
+    }
+    stats.grammarSentences = grammarSentenceCount;
+
+    // 14. Migrate grammar-reviews
+    console.log('[Migrate] Migrating grammar-reviews...');
+    const grammarReviewsSnapshot = await adminDb.collection('grammar-reviews').get();
+    let grammarReviewCount = 0;
+
+    for (const doc of grammarReviewsSnapshot.docs) {
+      const review = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO grammar_reviews (
+            review_id, user_id, sentence_id, rule_id, level,
+            repetitions, ease_factor, interval, next_review_date,
+            correct_count, incorrect_count, consecutive_correct, consecutive_incorrect,
+            mastery_level, last_review_date, last_attempt, first_seen_at, created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            review.reviewId || doc.id,
+            review.userId,
+            review.sentenceId,
+            review.ruleId,
+            review.level,
+            review.repetitions || 0,
+            review.easeFactor || 2.5,
+            review.interval || 0,
+            review.nextReviewDate,
+            review.correctCount || 0,
+            review.incorrectCount || 0,
+            review.consecutiveCorrect || 0,
+            review.consecutiveIncorrect || 0,
+            review.masteryLevel || 0,
+            review.lastReviewDate || null,
+            review.lastAttempt ? JSON.stringify(review.lastAttempt) : null,
+            review.firstSeenAt || null,
+            review.createdAt || Date.now(),
+            review.updatedAt || Date.now(),
+          ],
+        });
+        grammarReviewCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating grammar review:`, error);
+      }
+    }
+    stats.grammarReviews = grammarReviewCount;
+
     // Calculate total
     stats.total = Object.values(stats).reduce(
       (sum: number, val: any) => sum + (typeof val === 'number' ? val : 0),

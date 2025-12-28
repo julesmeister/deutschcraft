@@ -120,6 +120,66 @@ export async function POST(request: Request) {
     exportData.collections.flashcardProgress = flashcardProgress;
     exportData.stats.flashcardProgress = flashcardProgress.length;
 
+    // 9. Export exercise-overrides
+    console.log('[Export] Exporting exercise-overrides...');
+    const overridesSnapshot = await adminDb.collection('exercise-overrides').get();
+    const overrides = overridesSnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    exportData.collections.exerciseOverrides = overrides;
+    exportData.stats.exerciseOverrides = overrides.length;
+
+    // 10. Export saved-vocabulary
+    console.log('[Export] Exporting saved-vocabulary...');
+    const savedVocabSnapshot = await adminDb.collection('saved-vocabulary').get();
+    const savedVocab = savedVocabSnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    exportData.collections.savedVocabulary = savedVocab;
+    exportData.stats.savedVocabulary = savedVocab.length;
+
+    // 11. Export activities
+    console.log('[Export] Exporting activities...');
+    const activitiesSnapshot = await adminDb.collection('activities').get();
+    const activities = activitiesSnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    exportData.collections.activities = activities;
+    exportData.stats.activities = activities.length;
+
+    // 12. Export grammar-rules
+    console.log('[Export] Exporting grammar-rules...');
+    const grammarRulesSnapshot = await adminDb.collection('grammar-rules').get();
+    const grammarRules = grammarRulesSnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    exportData.collections.grammarRules = grammarRules;
+    exportData.stats.grammarRules = grammarRules.length;
+
+    // 13. Export grammar-sentences
+    console.log('[Export] Exporting grammar-sentences...');
+    const grammarSentencesSnapshot = await adminDb.collection('grammar-sentences').get();
+    const grammarSentences = grammarSentencesSnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    exportData.collections.grammarSentences = grammarSentences;
+    exportData.stats.grammarSentences = grammarSentences.length;
+
+    // 14. Export grammar-reviews
+    console.log('[Export] Exporting grammar-reviews...');
+    const grammarReviewsSnapshot = await adminDb.collection('grammar-reviews').get();
+    const grammarReviews = grammarReviewsSnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    exportData.collections.grammarReviews = grammarReviews;
+    exportData.stats.grammarReviews = grammarReviews.length;
+
     // Calculate total
     exportData.stats.total = Object.values(exportData.stats).reduce(
       (sum: number, val: any) => sum + (typeof val === 'number' ? val : 0),
