@@ -3,8 +3,8 @@
  * Database abstraction layer for batch operations using Turso DB
  */
 
-import { db } from '@/turso/client';
-import { Batch, CEFRLevel, BatchLevelHistory } from '@/lib/models';
+import { db } from "@/turso/client";
+import { Batch, CEFRLevel, BatchLevelHistory } from "@/lib/models";
 
 // ============================================================================
 // READ OPERATIONS
@@ -15,16 +15,31 @@ import { Batch, CEFRLevel, BatchLevelHistory } from '@/lib/models';
  * @param teacherEmail - Teacher's email
  * @returns Array of batches
  */
-export async function getBatchesByTeacher(teacherEmail: string): Promise<Batch[]> {
+export async function getBatchesByTeacher(
+  teacherEmail: string
+): Promise<Batch[]> {
   try {
     const result = await db.execute({
-      sql: 'SELECT * FROM batches WHERE teacher_id = ? ORDER BY created_at DESC',
+      sql: "SELECT * FROM batches WHERE teacher_id = ? ORDER BY created_at DESC",
       args: [teacherEmail],
     });
 
-    return result.rows.map(rowToBatch);
+    const batches = result.rows.map(rowToBatch);
+
+    // Populate student counts dynamically
+    const batchesWithCounts = await Promise.all(
+      batches.map(async (batch) => {
+        const studentCount = await getBatchStudentCount(batch.batchId);
+        return { ...batch, studentCount };
+      })
+    );
+
+    return batchesWithCounts;
   } catch (error) {
-    console.error('[batchService:turso] Error fetching batches by teacher:', error);
+    console.error(
+      "[batchService:turso] Error fetching batches by teacher:",
+      error
+    );
     throw error;
   }
 }
@@ -37,7 +52,7 @@ export async function getBatchesByTeacher(teacherEmail: string): Promise<Batch[]
 export async function getBatch(batchId: string): Promise<Batch | null> {
   try {
     const result = await db.execute({
-      sql: 'SELECT * FROM batches WHERE batch_id = ? LIMIT 1',
+      sql: "SELECT * FROM batches WHERE batch_id = ? LIMIT 1",
       args: [batchId],
     });
 
@@ -47,7 +62,7 @@ export async function getBatch(batchId: string): Promise<Batch | null> {
 
     return rowToBatch(result.rows[0]);
   } catch (error) {
-    console.error('[batchService:turso] Error fetching batch:', error);
+    console.error("[batchService:turso] Error fetching batch:", error);
     throw error;
   }
 }
@@ -67,7 +82,10 @@ export async function getBatchStudentCount(batchId: string): Promise<number> {
 
     return (result.rows[0].count as number) || 0;
   } catch (error) {
-    console.error('[batchService:turso] Error fetching batch student count:', error);
+    console.error(
+      "[batchService:turso] Error fetching batch student count:",
+      error
+    );
     throw error;
   }
 }
@@ -141,7 +159,7 @@ export async function createBatch(batchData: {
 
     return batch;
   } catch (error) {
-    console.error('[batchService:turso] Error creating batch:', error);
+    console.error("[batchService:turso] Error creating batch:", error);
     throw error;
   }
 }
@@ -151,42 +169,45 @@ export async function createBatch(batchData: {
  * @param batchId - Batch ID
  * @param updates - Partial batch data to update
  */
-export async function updateBatch(batchId: string, updates: Partial<Batch>): Promise<void> {
+export async function updateBatch(
+  batchId: string,
+  updates: Partial<Batch>
+): Promise<void> {
   try {
     const setClauses: string[] = [];
     const values: any[] = [];
 
     // Build dynamic SET clause
     if (updates.name !== undefined) {
-      setClauses.push('name = ?');
+      setClauses.push("name = ?");
       values.push(updates.name);
     }
     if (updates.description !== undefined) {
-      setClauses.push('description = ?');
+      setClauses.push("description = ?");
       values.push(updates.description);
     }
     if (updates.currentLevel !== undefined) {
-      setClauses.push('current_level = ?');
+      setClauses.push("current_level = ?");
       values.push(updates.currentLevel);
     }
     if (updates.startDate !== undefined) {
-      setClauses.push('start_date = ?');
+      setClauses.push("start_date = ?");
       values.push(updates.startDate);
     }
     if (updates.endDate !== undefined) {
-      setClauses.push('end_date = ?');
+      setClauses.push("end_date = ?");
       values.push(updates.endDate);
     }
     if (updates.isActive !== undefined) {
-      setClauses.push('is_active = ?');
+      setClauses.push("is_active = ?");
       values.push(updates.isActive ? 1 : 0);
     }
     if (updates.studentCount !== undefined) {
-      setClauses.push('student_count = ?');
+      setClauses.push("student_count = ?");
       values.push(updates.studentCount);
     }
     if (updates.levelHistory !== undefined) {
-      setClauses.push('level_history = ?');
+      setClauses.push("level_history = ?");
       values.push(JSON.stringify(updates.levelHistory));
     }
 
@@ -195,17 +216,19 @@ export async function updateBatch(batchId: string, updates: Partial<Batch>): Pro
     }
 
     // Always update updated_at
-    setClauses.push('updated_at = ?');
+    setClauses.push("updated_at = ?");
     values.push(Date.now());
 
     // Add WHERE clause batchId
     values.push(batchId);
 
-    const sql = `UPDATE batches SET ${setClauses.join(', ')} WHERE batch_id = ?`;
+    const sql = `UPDATE batches SET ${setClauses.join(
+      ", "
+    )} WHERE batch_id = ?`;
 
     await db.execute({ sql, args: values });
   } catch (error) {
-    console.error('[batchService:turso] Error updating batch:', error);
+    console.error("[batchService:turso] Error updating batch:", error);
     throw error;
   }
 }
@@ -226,7 +249,7 @@ export async function updateBatchLevel(
   try {
     const currentBatch = await getBatch(batchId);
     if (!currentBatch) {
-      throw new Error('Batch not found');
+      throw new Error("Batch not found");
     }
 
     const now = Date.now();
@@ -258,7 +281,7 @@ export async function updateBatchLevel(
       args: [newLevel, JSON.stringify(updatedLevelHistory), now, batchId],
     });
   } catch (error) {
-    console.error('[batchService:turso] Error updating batch level:', error);
+    console.error("[batchService:turso] Error updating batch level:", error);
     throw error;
   }
 }
@@ -277,7 +300,7 @@ export async function archiveBatch(batchId: string): Promise<void> {
       args: [0, Date.now(), Date.now(), batchId],
     });
   } catch (error) {
-    console.error('[batchService:turso] Error archiving batch:', error);
+    console.error("[batchService:turso] Error archiving batch:", error);
     throw error;
   }
 }
@@ -297,7 +320,9 @@ function rowToBatch(row: any): Batch {
     startDate: row.start_date as number,
     endDate: row.end_date as number | null,
     studentCount: row.student_count as number,
-    levelHistory: row.level_history ? JSON.parse(row.level_history as string) : [],
+    levelHistory: row.level_history
+      ? JSON.parse(row.level_history as string)
+      : [],
     createdAt: row.created_at as number,
     updatedAt: row.updated_at as number,
   };

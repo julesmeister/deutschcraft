@@ -21,7 +21,7 @@ import {
   getPendingWritingCount,
   getWritingSubmissionsPaginated,
   getWritingSubmissionsCount,
-} from '@/lib/services/turso/writing';
+} from '@/lib/services/writing';
 
 /**
  * Get all writing exercises by level and type

@@ -16,8 +16,8 @@ const USE_TURSO = false; // process.env.NEXT_PUBLIC_USE_TURSO === 'true';
 
 // Import from the appropriate implementation
 const implementation = USE_TURSO
-  ? require('../turso/userService')
-  : require('../userService');
+  ? require("../turso/userService")
+  : require("../userService");
 
 // Re-export all functions
 export const {
@@ -49,4 +49,7 @@ export const {
   // Flashcard Settings
   getFlashcardSettings,
   updateFlashcardSettings,
+
+  // Dashboard Settings
+  updateDashboardSettings,
 } = implementation;

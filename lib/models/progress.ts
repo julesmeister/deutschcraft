@@ -171,3 +171,15 @@ export interface GrammarReview {
  * Flashcard Review - Alias for FlashcardProgress for backward compatibility
  */
 export type FlashcardReview = FlashcardProgress;
+
+/**
+ * Category statistics interface
+ * Used for dashboard progress visualization
+ */
+export interface CategoryStats {
+  category: string;
+  total: number;
+  learned: number; // repetitions > 0
+  mastered: number; // masteryLevel >= 70
+  percentage: number;
+}

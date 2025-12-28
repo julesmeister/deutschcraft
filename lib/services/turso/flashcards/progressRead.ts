@@ -3,8 +3,17 @@
  * Handles fetching flashcard progress and study statistics
  */
 
-import { db } from '@/turso/client';
-import { FlashcardProgress, StudyProgress, CardState } from '@/lib/models';
+import { db } from "@/turso/client";
+import {
+  FlashcardProgress,
+  StudyProgress,
+  CardState,
+  CategoryStats,
+} from "@/lib/models";
+import {
+  getVocabularyMetadata,
+  getDisplayCategories,
+} from "@/lib/services/vocabularyData";
 
 // ============================================================================
 // READ OPERATIONS - Progress
@@ -15,29 +24,23 @@ import { FlashcardProgress, StudyProgress, CardState } from '@/lib/models';
  * @param userId - User's email
  * @returns Array of flashcard progress objects
  */
-export async function getFlashcardProgress(userId: string): Promise<FlashcardProgress[]> {
+export async function getFlashcardProgress(
+  userId: string
+): Promise<FlashcardProgress[]> {
   try {
     const result = await db.execute({
-      sql: 'SELECT * FROM flashcard_progress WHERE user_id = ? ORDER BY updated_at DESC',
+      sql: "SELECT * FROM flashcard_progress WHERE user_id = ? ORDER BY updated_at DESC",
       args: [userId],
     });
 
     return result.rows.map(rowToFlashcardProgress);
   } catch (error) {
-    console.error('[flashcardService:turso] Error fetching flashcard progress:', error);
+    console.error(
+      "[flashcardService:turso] Error fetching flashcard progress:",
+      error
+    );
     throw error;
   }
-}
-
-/**
- * Category statistics interface
- */
-export interface CategoryStats {
-  category: string;
-  total: number;
-  learned: number; // repetitions > 0
-  mastered: number; // masteryLevel >= 70
-  percentage: number;
 }
 
 /**
@@ -46,33 +49,74 @@ export interface CategoryStats {
  * @param userId - User's email
  * @returns Array of category statistics
  */
-export async function getCategoryProgress(userId: string): Promise<CategoryStats[]> {
+export async function getCategoryProgress(
+  userId: string
+): Promise<CategoryStats[]> {
   try {
+    // 1. Fetch only progress data from DB (no JOINs)
     const result = await db.execute({
       sql: `
         SELECT
-          v.category,
-          COUNT(*) as total,
-          SUM(CASE WHEN fp.repetitions > 0 THEN 1 ELSE 0 END) as learned,
-          SUM(CASE WHEN fp.mastery_level >= 70 THEN 1 ELSE 0 END) as mastered
-        FROM flashcard_progress fp
-        LEFT JOIN vocabulary v ON fp.word_id = v.word_id OR fp.flashcard_id = v.word_id
-        WHERE fp.user_id = ?
-        GROUP BY v.category
-        ORDER BY learned DESC
+          word_id,
+          repetitions,
+          mastery_level
+        FROM flashcard_progress
+        WHERE user_id = ?
       `,
       args: [userId],
     });
 
-    return result.rows.map(row => ({
-      category: (row.category as string) || 'Uncategorized',
-      total: row.total as number,
-      learned: row.learned as number,
-      mastered: row.mastered as number,
-      percentage: row.total ? Math.round(((row.learned as number) / (row.total as number)) * 100) : 0,
-    }));
+    // 2. Aggregate in memory using static JSON data
+    const statsMap = new Map<
+      string,
+      { total: number; learned: number; mastered: number }
+    >();
+
+    for (const row of result.rows) {
+      const wordId = row.word_id as string;
+      const repetitions = (row.repetitions as number) || 0;
+      const masteryLevel = (row.mastery_level as number) || 0;
+
+      // Look up metadata from JSON file instead of DB
+      const metadata = getVocabularyMetadata(wordId);
+      const tags = getDisplayCategories(metadata);
+
+      // Add stats for EACH tag
+      for (const tag of tags) {
+        const current = statsMap.get(tag) || {
+          total: 0,
+          learned: 0,
+          mastered: 0,
+        };
+
+        current.total++;
+        if (repetitions > 0) current.learned++;
+        if (masteryLevel >= 70) current.mastered++;
+
+        statsMap.set(tag, current);
+      }
+    }
+
+    // 3. Convert to array and sort
+    const statsArray: CategoryStats[] = Array.from(statsMap.entries()).map(
+      ([category, stats]) => ({
+        category,
+        total: stats.total,
+        learned: stats.learned,
+        mastered: stats.mastered,
+        percentage: stats.total
+          ? Math.round((stats.learned / stats.total) * 100)
+          : 0,
+      })
+    );
+
+    // Sort by learned count descending
+    return statsArray.sort((a, b) => b.learned - a.learned);
   } catch (error) {
-    console.error('[flashcardService:turso] Error fetching category progress:', error);
+    console.error(
+      "[flashcardService:turso] Error fetching category progress:",
+      error
+    );
     throw error;
   }
 }
@@ -90,7 +134,7 @@ export async function getSingleFlashcardProgress(
   try {
     const progressId = `${userId}_${flashcardId}`;
     const result = await db.execute({
-      sql: 'SELECT * FROM flashcard_progress WHERE id = ? LIMIT 1',
+      sql: "SELECT * FROM flashcard_progress WHERE id = ? LIMIT 1",
       args: [progressId],
     });
 
@@ -100,7 +144,10 @@ export async function getSingleFlashcardProgress(
 
     return rowToFlashcardProgress(result.rows[0]);
   } catch (error) {
-    console.error('[flashcardService:turso] Error fetching single flashcard progress:', error);
+    console.error(
+      "[flashcardService:turso] Error fetching single flashcard progress:",
+      error
+    );
     throw error;
   }
 }
@@ -110,16 +157,21 @@ export async function getSingleFlashcardProgress(
  * @param userId - User's email
  * @returns Array of study progress objects
  */
-export async function getStudyProgress(userId: string): Promise<StudyProgress[]> {
+export async function getStudyProgress(
+  userId: string
+): Promise<StudyProgress[]> {
   try {
     const result = await db.execute({
-      sql: 'SELECT * FROM progress WHERE user_id = ? ORDER BY date DESC LIMIT 30',
+      sql: "SELECT * FROM progress WHERE user_id = ? ORDER BY date DESC LIMIT 30",
       args: [userId],
     });
 
     return result.rows.map(rowToStudyProgress);
   } catch (error) {
-    console.error('[flashcardService:turso] Error fetching study progress:', error);
+    console.error(
+      "[flashcardService:turso] Error fetching study progress:",
+      error
+    );
     throw error;
   }
 }
@@ -130,16 +182,21 @@ export async function getStudyProgress(userId: string): Promise<StudyProgress[]>
  * @param limit - Maximum number of entries to return
  * @returns Array of study progress objects sorted by date (most recent first)
  */
-export async function getRecentStudyProgress(limit: number = 20): Promise<StudyProgress[]> {
+export async function getRecentStudyProgress(
+  limit: number = 20
+): Promise<StudyProgress[]> {
   try {
     const result = await db.execute({
-      sql: 'SELECT * FROM progress ORDER BY date DESC LIMIT ?',
+      sql: "SELECT * FROM progress ORDER BY date DESC LIMIT ?",
       args: [limit],
     });
 
     return result.rows.map(rowToStudyProgress);
   } catch (error) {
-    console.error('[flashcardService:turso] Error fetching recent study progress:', error);
+    console.error(
+      "[flashcardService:turso] Error fetching recent study progress:",
+      error
+    );
     throw error;
   }
 }
@@ -158,13 +215,16 @@ export async function getFlashcardProgressByState(
 ): Promise<FlashcardProgress[]> {
   try {
     const result = await db.execute({
-      sql: 'SELECT * FROM flashcard_progress WHERE user_id = ? AND state = ? ORDER BY next_review_date ASC LIMIT ?',
+      sql: "SELECT * FROM flashcard_progress WHERE user_id = ? AND state = ? ORDER BY next_review_date ASC LIMIT ?",
       args: [userId, state, limit],
     });
 
     return result.rows.map(rowToFlashcardProgress);
   } catch (error) {
-    console.error('[flashcardService:turso] Error fetching flashcard progress by state:', error);
+    console.error(
+      "[flashcardService:turso] Error fetching flashcard progress by state:",
+      error
+    );
     throw error;
   }
 }
@@ -182,13 +242,16 @@ export async function getDueFlashcards(
   try {
     const now = Date.now();
     const result = await db.execute({
-      sql: 'SELECT * FROM flashcard_progress WHERE user_id = ? AND next_review_date <= ? ORDER BY next_review_date ASC LIMIT ?',
+      sql: "SELECT * FROM flashcard_progress WHERE user_id = ? AND next_review_date <= ? ORDER BY next_review_date ASC LIMIT ?",
       args: [userId, now, limit],
     });
 
     return result.rows.map(rowToFlashcardProgress);
   } catch (error) {
-    console.error('[flashcardService:turso] Error fetching due flashcards:', error);
+    console.error(
+      "[flashcardService:turso] Error fetching due flashcards:",
+      error
+    );
     throw error;
   }
 }
@@ -221,7 +284,10 @@ export async function getStrugglingFlashcards(
 
     return result.rows.map(rowToFlashcardProgress);
   } catch (error) {
-    console.error('[flashcardService:turso] Error fetching struggling flashcards:', error);
+    console.error(
+      "[flashcardService:turso] Error fetching struggling flashcards:",
+      error
+    );
     throw error;
   }
 }
@@ -236,7 +302,7 @@ function rowToFlashcardProgress(row: any): FlashcardProgress {
     userId: row.user_id as string,
     wordId: row.word_id as string,
     level: row.level as string | undefined,
-    state: row.state as 'new' | 'learning' | 'review' | 'relearning' | 'lapsed',
+    state: row.state as "new" | "learning" | "review" | "relearning" | "lapsed",
     repetitions: row.repetitions as number,
     easeFactor: row.ease_factor as number,
     interval: row.interval as number,

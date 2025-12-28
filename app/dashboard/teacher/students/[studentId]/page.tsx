@@ -41,6 +41,9 @@ export default function StudentProfilePage({ params }: StudentProfilePageProps) 
   const [activeTab, setActiveTab] = useState<'flashcards' | 'writing' | 'grammatik' | 'answerhub'>('flashcards');
 
   // Get student's study stats
+  // We need to use the student.email from the loaded data, NOT the state variable which might be stale
+  // or the hook might not react quickly enough to the state change.
+  // Actually, useStudyStats will react to the state change, but let's make sure we pass the correct email.
   const { stats } = useStudyStats(student?.email);
 
   // Get student's writing stats

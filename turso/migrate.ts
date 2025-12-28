@@ -75,14 +75,62 @@ function loadMigrations(): Migration[] {
 }
 
 /**
+ * Split SQL file into individual statements
+ * Handles CREATE TABLE, CREATE INDEX, CREATE TRIGGER, etc.
+ */
+function splitSqlStatements(sql: string): string[] {
+  // Remove comments and empty lines
+  const lines = sql
+    .split('\n')
+    .filter(line => {
+      const trimmed = line.trim();
+      return trimmed && !trimmed.startsWith('--');
+    });
+
+  // Join lines and split by semicolons (but preserve trigger blocks)
+  const joined = lines.join('\n');
+  const statements: string[] = [];
+  let current = '';
+  let inTrigger = false;
+
+  for (const line of joined.split('\n')) {
+    current += line + '\n';
+
+    // Track if we're inside a trigger block
+    if (line.trim().toUpperCase().startsWith('CREATE TRIGGER')) {
+      inTrigger = true;
+    }
+
+    // End of statement
+    if (line.includes(';')) {
+      if (!inTrigger || line.trim() === 'END;') {
+        statements.push(current.trim());
+        current = '';
+        inTrigger = false;
+      }
+    }
+  }
+
+  return statements.filter(s => s.length > 0);
+}
+
+/**
  * Execute a single migration
  */
 async function executeMigration(migration: Migration) {
   console.log(`\n▶ Running migration: ${migration.filename}`);
 
   try {
-    // Execute the migration SQL
-    await db.execute(migration.sql);
+    // Split migration into individual statements
+    const statements = splitSqlStatements(migration.sql);
+    console.log(`  📝 Found ${statements.length} SQL statements`);
+
+    // Execute each statement
+    for (let i = 0; i < statements.length; i++) {
+      const stmt = statements[i];
+      console.log(`  ⚡ Executing statement ${i + 1}/${statements.length}...`);
+      await db.execute(stmt);
+    }
 
     // Record the migration as executed
     await db.execute(

@@ -5,6 +5,19 @@
 
 import { db } from '@/turso/client';
 
+export interface RecentSession {
+  date: string;
+  cardsReviewed: number;
+  accuracy: number;
+  timeSpent: number;
+}
+
+export interface PaginationResult {
+  sessions: RecentSession[];
+  hasMore: boolean;
+  cursor: any; // Database-specific cursor (offset for SQL)
+}
+
 export interface Session {
   sessionId: string;
   userId: string;
@@ -20,6 +33,61 @@ export interface Session {
 // ============================================================================
 // READ OPERATIONS
 // ============================================================================
+
+/**
+ * Fetch paginated sessions (Compatible with Firebase implementation)
+ * Queries the 'progress' table to show daily summaries as sessions
+ * @param userId - User email/ID
+ * @param pageSize - Number of items per page
+ * @param cursor - Offset for SQL pagination
+ */
+export async function fetchSessions(
+  userId: string,
+  pageSize: number = 8,
+  cursor?: any
+): Promise<PaginationResult> {
+  try {
+    const offset = typeof cursor === 'number' ? cursor : 0;
+
+    // Fetch one extra to determine if there are more
+    const limit = pageSize + 1;
+
+    const result = await db.execute({
+      sql: `SELECT * FROM progress 
+            WHERE user_id = ? 
+            ORDER BY date DESC 
+            LIMIT ? OFFSET ?`,
+      args: [userId, limit, offset],
+    });
+
+    const rows = result.rows;
+    const hasMore = rows.length > pageSize;
+    const data = hasMore ? rows.slice(0, pageSize) : rows;
+
+    const sessions: RecentSession[] = data.map(row => {
+      const wordsCorrect = (row.words_correct as number) || 0;
+      const wordsIncorrect = (row.words_incorrect as number) || 0;
+      const total = wordsCorrect + wordsIncorrect;
+      const accuracy = total > 0 ? Math.round((wordsCorrect / total) * 100) : 0;
+
+      return {
+        date: row.date as string,
+        cardsReviewed: (row.cards_reviewed as number) || 0,
+        accuracy,
+        timeSpent: (row.time_spent as number) || 0,
+      };
+    });
+
+    return {
+      sessions,
+      hasMore,
+      cursor: hasMore ? offset + pageSize : null,
+    };
+  } catch (error) {
+    console.error('[sessionService:turso] Error fetching paginated sessions:', error);
+    throw error;
+  }
+}
 
 /**
  * Get session by ID

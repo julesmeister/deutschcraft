@@ -13,7 +13,7 @@
 
 // Re-export all functions for backward compatibility
 export { fetchUserWritingProgress, getTodayWritingProgress } from './read';
-export { updateDailyProgress } from './tracking';
+export { updateDailyProgress, updateDailyProgressForQuiz } from './tracking';
 export { calculateWritingStreak } from './streaks';
 export { updateWritingStats } from './stats';
 export { getTeacherWritingStats } from './analytics';

@@ -3,15 +3,15 @@
  * Generates fill-in-the-blank quizzes from text differences
  */
 
-import { getDiff, DiffPart } from './textDiff';
-import { QuizBlank } from '../models/writing';
+import { getDiff, DiffPart } from "./textDiff";
+import { QuizBlank } from "../models/writing";
 
 /**
  * Helper function to strip trailing punctuation from a word
  * Example: "denke," -> "denke"
  */
 function stripPunctuation(word: string): string {
-  return word.replace(/[^\w\s]+$/g, '');
+  return word.replace(/[^\w\s]+$/g, "");
 }
 
 /**
@@ -20,27 +20,90 @@ function stripPunctuation(word: string): string {
  */
 const GERMAN_PRONOUNS = new Set([
   // Personal pronouns (nominative)
-  'ich', 'du', 'er', 'sie', 'es', 'wir', 'ihr',
+  "ich",
+  "du",
+  "er",
+  "sie",
+  "es",
+  "wir",
+  "ihr",
   // Personal pronouns (accusative)
-  'mich', 'dich', 'ihn', 'uns', 'euch',
+  "mich",
+  "dich",
+  "ihn",
+  "uns",
+  "euch",
   // Personal pronouns (dative)
-  'mir', 'dir', 'ihm', 'ihr', 'ihnen',
+  "mir",
+  "dir",
+  "ihm",
+  "ihr",
+  "ihnen",
   // Possessive pronouns
-  'mein', 'dein', 'sein', 'unser', 'euer',
-  'meine', 'deine', 'seine', 'unsere', 'eure', 'ihre',
-  'meinen', 'deinen', 'seinen', 'unseren', 'euren', 'ihren',
-  'meinem', 'deinem', 'seinem', 'unserem', 'eurem', 'ihrem',
-  'meiner', 'deiner', 'seiner', 'unserer', 'eurer', 'ihrer',
-  'meines', 'deines', 'seines', 'unseres', 'eures', 'ihres',
+  "mein",
+  "dein",
+  "sein",
+  "unser",
+  "euer",
+  "meine",
+  "deine",
+  "seine",
+  "unsere",
+  "eure",
+  "ihre",
+  "meinen",
+  "deinen",
+  "seinen",
+  "unseren",
+  "euren",
+  "ihren",
+  "meinem",
+  "deinem",
+  "seinem",
+  "unserem",
+  "eurem",
+  "ihrem",
+  "meiner",
+  "deiner",
+  "seiner",
+  "unserer",
+  "eurer",
+  "ihrer",
+  "meines",
+  "deines",
+  "seines",
+  "unseres",
+  "eures",
+  "ihres",
   // Demonstrative pronouns
-  'der', 'die', 'das', 'den', 'dem', 'des',
-  'dieser', 'diese', 'dieses', 'diesen', 'diesem', 'dieser',
-  'jener', 'jene', 'jenes', 'jenen', 'jenem', 'jener',
+  "der",
+  "die",
+  "das",
+  "den",
+  "dem",
+  "des",
+  "dieser",
+  "diese",
+  "dieses",
+  "diesen",
+  "diesem",
+  "dieser",
+  "jener",
+  "jene",
+  "jenes",
+  "jenen",
+  "jenem",
+  "jener",
   // Relative pronouns (already covered above)
   // Reflexive pronouns
-  'sich',
+  "sich",
   // Indefinite pronouns (very common ones)
-  'man', 'einer', 'eine', 'eines', 'einen', 'einem',
+  "man",
+  "einer",
+  "eine",
+  "eines",
+  "einen",
+  "einem",
 ]);
 
 /**
@@ -50,50 +113,112 @@ const GERMAN_PRONOUNS = new Set([
  */
 const EXCLUDED_VERBS = new Set([
   // Linking verb: sein (to be)
-  'sein', 'bin', 'bist', 'ist', 'sind', 'seid',
-  'war', 'warst', 'waren', 'wart',
-  'gewesen',
+  "sein",
+  "bin",
+  "bist",
+  "ist",
+  "sind",
+  "seid",
+  "war",
+  "warst",
+  "waren",
+  "wart",
+  "gewesen",
 
   // Linking verb: werden (to become)
-  'werden', 'werde', 'wirst', 'wird', 'werdet',
-  'wurde', 'wurdest', 'wurden', 'wurdet',
-  'worden', 'geworden',
+  "werden",
+  "werde",
+  "wirst",
+  "wird",
+  "werdet",
+  "wurde",
+  "wurdest",
+  "wurden",
+  "wurdet",
+  "worden",
+  "geworden",
 
   // Modal verb: können (can)
-  'können', 'kann', 'kannst', 'könnt',
-  'konnte', 'konntest', 'konnten', 'konntet',
-  'gekonnt',
+  "können",
+  "kann",
+  "kannst",
+  "könnt",
+  "konnte",
+  "konntest",
+  "konnten",
+  "konntet",
+  "gekonnt",
 
   // Modal verb: müssen (must)
-  'müssen', 'muss', 'musst', 'müsst',
-  'musste', 'musstest', 'mussten', 'musstet',
-  'gemusst',
+  "müssen",
+  "muss",
+  "musst",
+  "müsst",
+  "musste",
+  "musstest",
+  "mussten",
+  "musstet",
+  "gemusst",
 
   // Modal verb: sollen (should)
-  'sollen', 'soll', 'sollst', 'sollt',
-  'sollte', 'solltest', 'sollten', 'solltet',
-  'gesollt',
+  "sollen",
+  "soll",
+  "sollst",
+  "sollt",
+  "sollte",
+  "solltest",
+  "sollten",
+  "solltet",
+  "gesollt",
 
   // Modal verb: wollen (want to)
-  'wollen', 'will', 'willst', 'wollt',
-  'wollte', 'wolltest', 'wollten', 'wolltet',
-  'gewollt',
+  "wollen",
+  "will",
+  "willst",
+  "wollt",
+  "wollte",
+  "wolltest",
+  "wollten",
+  "wolltet",
+  "gewollt",
 
   // Modal verb: dürfen (may)
-  'dürfen', 'darf', 'darfst', 'dürft',
-  'durfte', 'durftest', 'durften', 'durftet',
-  'gedurft',
+  "dürfen",
+  "darf",
+  "darfst",
+  "dürft",
+  "durfte",
+  "durftest",
+  "durften",
+  "durftet",
+  "gedurft",
 
   // Modal verb: mögen (like)
-  'mögen', 'mag', 'magst', 'mögt',
-  'mochte', 'mochtest', 'mochten', 'mochtet',
-  'gemocht',
-  'möchte', 'möchtest', 'möchten', 'möchtet', // würde-form
+  "mögen",
+  "mag",
+  "magst",
+  "mögt",
+  "mochte",
+  "mochtest",
+  "mochten",
+  "mochtet",
+  "gemocht",
+  "möchte",
+  "möchtest",
+  "möchten",
+  "möchtet", // würde-form
 
   // Haben (to have)
-  'haben', 'habe', 'hast', 'hat', 'habt',
-  'hatte', 'hattest', 'hatten', 'hattet',
-  'gehabt',
+  "haben",
+  "habe",
+  "hast",
+  "hat",
+  "habt",
+  "hatte",
+  "hattest",
+  "hatten",
+  "hattet",
+  "gehabt",
 ]);
 
 /**
@@ -102,10 +227,13 @@ const EXCLUDED_VERBS = new Set([
  * CRITICAL: Never creates consecutive blanks - ensures at least one word of context between them
  * Filters out basic pronouns, linking verbs, modal verbs, and haben to ensure meaningful practice
  */
-export function generateQuizBlanks(originalText: string, correctedText: string): QuizBlank[] {
+export function generateQuizBlanks(
+  originalText: string,
+  correctedText: string
+): QuizBlank[] {
   // Split both texts into words (keeping punctuation attached)
-  const originalWords = originalText.split(/\s+/).filter(w => w.length > 0);
-  const correctedWords = correctedText.split(/\s+/).filter(w => w.length > 0);
+  const originalWords = originalText.split(/\s+/).filter((w) => w.length > 0);
+  const correctedWords = correctedText.split(/\s+/).filter((w) => w.length > 0);
 
   // Step 1: Identify ALL word differences (comparing words without trailing punctuation)
   const potentialBlanks: Array<{ answer: string; wordIndex: number }> = [];
@@ -114,8 +242,8 @@ export function generateQuizBlanks(originalText: string, correctedText: string):
   const maxLength = Math.max(originalWords.length, correctedWords.length);
 
   for (let i = 0; i < maxLength; i++) {
-    const origWord = originalWords[i] || '';
-    const corrWord = correctedWords[i] || '';
+    const origWord = originalWords[i] || "";
+    const corrWord = correctedWords[i] || "";
 
     // Compare words without trailing punctuation
     const origWordClean = stripPunctuation(origWord);
@@ -182,7 +310,12 @@ export function generateQuizBlanks(originalText: string, correctedText: string):
     const wordClean = stripPunctuation(word);
 
     // Check if this word is a blank
-    const isBlank = filteredBlanks.some(b => b.wordIndex === i);
+    const isBlank = filteredBlanks.some((b) => b.wordIndex === i);
+
+    // Move position forward by the FULL word length (with punctuation) plus space
+    // But we need to find the actual position in the text, not calculate it
+    // Find where this word appears in the text starting from charPosition
+    const foundPos = correctedText.indexOf(word, charPosition);
 
     if (isBlank) {
       // This word should be a blank
@@ -190,21 +323,22 @@ export function generateQuizBlanks(originalText: string, correctedText: string):
       blanks.push({
         index: blankIndex++,
         correctAnswer: wordClean,
-        position: charPosition,
-        hint: `${wordClean.length} ${wordClean.length === 1 ? 'character' : 'characters'}`,
+        position: foundPos !== -1 ? foundPos : charPosition,
+        hint: `${wordClean.length} ${
+          wordClean.length === 1 ? "character" : "characters"
+        }`,
       });
     }
 
-    // Move position forward by the FULL word length (with punctuation) plus space
-    // But we need to find the actual position in the text, not calculate it
-    // Find where this word appears in the text starting from charPosition
-    const foundPos = correctedText.indexOf(word, charPosition);
     if (foundPos !== -1) {
       charPosition = foundPos + word.length;
       // Add 1 for the space after, unless it's the last word
       if (i < correctedWords.length - 1) {
         // Skip any whitespace characters
-        while (charPosition < correctedText.length && /\s/.test(correctedText[charPosition])) {
+        while (
+          charPosition < correctedText.length &&
+          /\s/.test(correctedText[charPosition])
+        ) {
           charPosition++;
         }
       }
@@ -218,10 +352,76 @@ export function generateQuizBlanks(originalText: string, correctedText: string):
 }
 
 /**
+ * Generate random blanks for a sentence
+ * Used as a fallback when no corrections are found (perfect sentences)
+ */
+export function generateRandomBlanks(text: string): QuizBlank[] {
+  const words = text.split(/\s+/).filter((w) => w.length > 0);
+  const blanks: QuizBlank[] = [];
+  let charPosition = 0;
+
+  // Identify candidate words
+  const candidates: Array<{ word: string; index: number; position: number }> =
+    [];
+
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+    const wordClean = stripPunctuation(word);
+
+    // Find position
+    const foundPos = text.indexOf(word, charPosition);
+    const pos = foundPos !== -1 ? foundPos : charPosition;
+
+    // Filter logic
+    const wordLower = wordClean.toLowerCase();
+    const isBasicPronoun = GERMAN_PRONOUNS.has(wordLower);
+    const isExcludedVerb = EXCLUDED_VERBS.has(wordLower);
+
+    if (wordClean.length >= 4 && !isBasicPronoun && !isExcludedVerb) {
+      candidates.push({
+        word: wordClean,
+        index: i,
+        position: pos,
+      });
+    }
+
+    // Update charPosition
+    if (foundPos !== -1) {
+      charPosition = foundPos + word.length;
+      if (i < words.length - 1) {
+        while (charPosition < text.length && /\s/.test(text[charPosition])) {
+          charPosition++;
+        }
+      }
+    } else {
+      charPosition += word.length + 1;
+    }
+  }
+
+  // Pick one random candidate
+  if (candidates.length > 0) {
+    const selected = candidates[Math.floor(Math.random() * candidates.length)];
+    blanks.push({
+      index: 0,
+      correctAnswer: selected.word,
+      position: selected.position,
+      hint: `${selected.word.length} ${
+        selected.word.length === 1 ? "character" : "characters"
+      }`,
+    });
+  }
+
+  return blanks;
+}
+
+/**
  * Generate quiz text with blanks replaced by input placeholders
  * Returns the text with blanks marked
  */
-export function generateQuizText(correctedText: string, blanks: QuizBlank[]): DiffPart[] {
+export function generateQuizText(
+  correctedText: string,
+  blanks: QuizBlank[]
+): DiffPart[] {
   const diffParts: DiffPart[] = [];
   let lastPosition = 0;
 
@@ -232,14 +432,14 @@ export function generateQuizText(correctedText: string, blanks: QuizBlank[]): Di
     // Add text before the blank
     if (blank.position > lastPosition) {
       diffParts.push({
-        type: 'unchanged',
+        type: "unchanged",
         value: correctedText.substring(lastPosition, blank.position),
       });
     }
 
     // Add the blank
     diffParts.push({
-      type: 'added', // Use 'added' type to mark it as a blank
+      type: "added", // Use 'added' type to mark it as a blank
       value: blank.correctAnswer,
     });
 
@@ -249,7 +449,7 @@ export function generateQuizText(correctedText: string, blanks: QuizBlank[]): Di
   // Add remaining text
   if (lastPosition < correctedText.length) {
     diffParts.push({
-      type: 'unchanged',
+      type: "unchanged",
       value: correctedText.substring(lastPosition),
     });
   }
@@ -261,9 +461,12 @@ export function generateQuizText(correctedText: string, blanks: QuizBlank[]): Di
  * Check if an answer is correct (fuzzy matching)
  * Allows for minor differences like capitalization and whitespace
  */
-export function checkAnswer(studentAnswer: string, correctAnswer: string): boolean {
+export function checkAnswer(
+  studentAnswer: string,
+  correctAnswer: string
+): boolean {
   const normalize = (str: string) =>
-    str.trim().toLowerCase().replace(/\s+/g, ' ');
+    str.trim().toLowerCase().replace(/\s+/g, " ");
 
   return normalize(studentAnswer) === normalize(correctAnswer);
 }
@@ -279,13 +482,14 @@ export function calculateQuizScore(
   let correctAnswers = 0;
 
   for (const blank of blanks) {
-    const studentAnswer = answers[blank.index] || '';
+    const studentAnswer = answers[blank.index] || "";
     if (checkAnswer(studentAnswer, blank.correctAnswer)) {
       correctAnswers++;
     }
   }
 
-  const score = totalBlanks > 0 ? Math.round((correctAnswers / totalBlanks) * 100) : 0;
+  const score =
+    totalBlanks > 0 ? Math.round((correctAnswers / totalBlanks) * 100) : 0;
 
   return { score, correctAnswers, totalBlanks };
 }

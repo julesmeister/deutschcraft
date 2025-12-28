@@ -16,9 +16,9 @@ import {
   getWritingStats,
   updateWritingStats,
   updateWritingProgress,
-  updateDailyProgressForQuiz,
 } from '@/lib/services/writingService';
-import { getStudentSubmissions } from '@/lib/services/writing/submissions-queries';
+import { updateDailyProgressForQuiz } from '@/lib/services/writingProgressService';
+import { getStudentSubmissions } from '@/lib/services/writing';
 
 // ============================================================================
 // QUERY HOOKS - Progress and Stats

@@ -3,16 +3,21 @@
  * Reduces complexity in the main dashboard component
  */
 
-import { useState, useEffect } from 'react';
-import { Batch, CEFRLevel } from '../models';
-import { useAllStudentsNested, useStudentsWithoutTeacher } from './useUsers';
-import { useActiveBatches, useCreateBatch } from './useBatches';
-import { useStudentManagement } from './useStudentManagement';
-import { useTableState } from './useTableState';
-import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { getStudyStats } from '../services/flashcardService';
-import { updateStudentLevel } from '../services/studentService';
-import { updateUser } from '../services/user';
+import { useState, useEffect } from "react";
+import { Batch, CEFRLevel } from "../models";
+import {
+  useAllStudentsNested,
+  useStudentsWithoutTeacher,
+  useCurrentStudent,
+} from "./useUsers";
+import { useActiveBatches, useCreateBatch } from "./useBatches";
+import { useStudentManagement } from "./useStudentManagement";
+import { useTableState } from "./useTableState";
+import { useBatchSelection } from "./useBatchSelection";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { getStudyStats } from "../services/flashcardService";
+import { updateStudentLevel } from "../services/studentService";
+import { updateUser } from "../services/user";
 
 interface UseTeacherDashboardProps {
   currentTeacherId: string | undefined;
@@ -30,20 +35,21 @@ export function useTeacherDashboard({
   const queryClient = useQueryClient();
 
   // Data fetching
-  const { students: allStudents, isLoading: studentsLoading, isError: studentsError } = useAllStudentsNested();
+  const {
+    students: allStudents,
+    isLoading: studentsLoading,
+    isError: studentsError,
+  } = useAllStudentsNested();
   const { students: studentsWithoutTeacher } = useStudentsWithoutTeacher();
   const { batches } = useActiveBatches(currentTeacherId);
+  const { student: currentUser } = useCurrentStudent(currentTeacherId);
   const createBatchMutation = useCreateBatch();
 
-  // Batch selection
-  const [selectedBatch, setSelectedBatch] = useState<Batch | null>(null);
-
-  // Auto-select first batch if none selected
-  useEffect(() => {
-    if (batches.length > 0 && !selectedBatch) {
-      setSelectedBatch(batches[0]);
-    }
-  }, [batches, selectedBatch]);
+  // Batch selection with persistence
+  const { selectedBatch, setSelectedBatch, sortedBatches } = useBatchSelection({
+    batches,
+    user: currentUser,
+  });
 
   // Student management
   const studentManagement = useStudentManagement({
@@ -66,23 +72,34 @@ export function useTeacherDashboard({
   const [isChangingRole, setIsChangingRole] = useState(false);
 
   // Filter students by selected batch
-  const myStudents = selectedBatch && currentTeacherId
-    ? allStudents.filter(student =>
-        student.teacherId === currentTeacherId &&
-        student.batchId === selectedBatch.batchId
-      )
-    : [];
+  const myStudents =
+    selectedBatch && currentTeacherId
+      ? allStudents.filter(
+          (student) =>
+            student.teacherId === currentTeacherId &&
+            student.batchId === selectedBatch.batchId
+        )
+      : [];
 
   // Fetch study stats for all students
   const { data: studentsStats } = useQuery({
-    queryKey: ['students-stats', myStudents.map(s => s.userId)],
+    queryKey: ["students-stats", myStudents.map((s) => s.userId)],
     queryFn: async () => {
       const statsPromises = myStudents.map(async (student) => {
         try {
           const stats = await getStudyStats(student.userId);
           return { userId: student.userId, stats };
         } catch (error) {
-          return { userId: student.userId, stats: { cardsLearned: 0, cardsMastered: 0, streak: 0, accuracy: 0, totalCards: 0 } };
+          return {
+            userId: student.userId,
+            stats: {
+              cardsLearned: 0,
+              cardsMastered: 0,
+              streak: 0,
+              accuracy: 0,
+              totalCards: 0,
+            },
+          };
         }
       });
       return await Promise.all(statsPromises);
@@ -93,58 +110,89 @@ export function useTeacherDashboard({
 
   // Create a map for quick lookup
   const statsMap = new Map(
-    (studentsStats || []).map(item => [item.userId, item.stats])
+    (studentsStats || []).map((item) => [item.userId, item.stats])
   );
 
   // Transform students for table display
   const studentsForTable = myStudents.map((student) => {
     // Handle both formats: {name: "Full Name"} OR {firstName: "First", lastName: "Last"}
-    const displayName = (student as any).name || `${student.firstName || ''} ${student.lastName || ''}`.trim() || student.email;
+    const displayName =
+      (student as any).name ||
+      `${student.firstName || ""} ${student.lastName || ""}`.trim() ||
+      student.email;
 
     // Get stats for this student
-    const stats = statsMap.get(student.userId) || { cardsLearned: 0, cardsMastered: 0, streak: 0, accuracy: 0, totalCards: 0 };
+    const stats = statsMap.get(student.userId) || {
+      cardsLearned: 0,
+      cardsMastered: 0,
+      streak: 0,
+      accuracy: 0,
+      totalCards: 0,
+    };
 
     return {
       id: student.userId, // Using email as ID now
       name: displayName,
-      image: student.photoURL || `https://ui-avatars.com/api/?name=${encodeURIComponent(displayName)}&background=667eea&color=fff`,
+      image:
+        student.photoURL ||
+        `https://ui-avatars.com/api/?name=${encodeURIComponent(
+          displayName
+        )}&background=667eea&color=fff`,
       sold: stats.cardsLearned,
       gain: stats.streak, // Show streak as "progress"
-      level: student.cefrLevel || 'A1',
+      level: student.cefrLevel || "A1",
       role: student.role,
-      status: (student.teacherId ? 'in-stock' : 'low-stock') as 'in-stock' | 'low-stock',
-      statusText: student.teacherId ? 'Active learner' : 'No teacher assigned',
+      status: (student.teacherId ? "in-stock" : "low-stock") as
+        | "in-stock"
+        | "low-stock",
+      statusText: student.teacherId ? "Active learner" : "No teacher assigned",
     };
   });
 
   // Paginated students
-  const { data: paginatedStudents, totalPages, totalItems } = tableState.paginateData(studentsForTable);
+  const {
+    data: paginatedStudents,
+    totalPages,
+    totalItems,
+  } = tableState.paginateData(studentsForTable);
 
   // Available members for selection
   // Show students who either have no batch OR have this teacher but are in a different batch
-  const availableStudents = allStudents.filter(student => {
-    const role = (student.role || '').toUpperCase();
-    if (role !== 'STUDENT') return false;
+  const availableStudents = allStudents.filter((student) => {
+    const role = (student.role || "").toUpperCase();
+    if (role !== "STUDENT") return false;
 
     // Must belong to current teacher (or have no teacher)
-    const belongsToTeacher = student.teacherId === currentTeacherId || !student.teacherId;
+    const belongsToTeacher =
+      student.teacherId === currentTeacherId || !student.teacherId;
     if (!belongsToTeacher) return false;
 
     // Show if: no batch OR different batch than selected
-    const hasNoBatch = !student.batchId || student.batchId === null || student.batchId === undefined;
-    const inDifferentBatch = selectedBatch && student.batchId !== selectedBatch.batchId;
+    const hasNoBatch =
+      !student.batchId ||
+      student.batchId === null ||
+      student.batchId === undefined;
+    const inDifferentBatch =
+      selectedBatch && student.batchId !== selectedBatch.batchId;
 
     return hasNoBatch || inDifferentBatch;
   });
 
-  const availableMembers = availableStudents.map(student => {
+  const availableMembers = availableStudents.map((student) => {
     // Handle both formats: {name: "Full Name"} OR {firstName: "First", lastName: "Last"}
-    const displayName = (student as any).name || `${student.firstName || ''} ${student.lastName || ''}`.trim() || student.email;
+    const displayName =
+      (student as any).name ||
+      `${student.firstName || ""} ${student.lastName || ""}`.trim() ||
+      student.email;
 
     return {
       id: student.userId, // Using email as ID now
       name: displayName,
-      avatar: student.photoURL || `https://ui-avatars.com/api/?name=${encodeURIComponent(displayName)}&background=667eea&color=fff`,
+      avatar:
+        student.photoURL ||
+        `https://ui-avatars.com/api/?name=${encodeURIComponent(
+          displayName
+        )}&background=667eea&color=fff`,
       isSelected: studentManagement.selectedStudentIds.has(student.userId),
     };
   });
@@ -178,7 +226,7 @@ export function useTeacherDashboard({
     endDate: number | null;
   }) => {
     if (!currentTeacherId) {
-      onError?.('Unable to identify current teacher');
+      onError?.("Unable to identify current teacher");
       return;
     }
 
@@ -188,11 +236,11 @@ export function useTeacherDashboard({
         ...data,
       });
 
-      onSuccess?.('Batch created successfully!');
+      onSuccess?.("Batch created successfully!");
       setIsCreateBatchOpen(false);
     } catch (error) {
-      console.error('[Create Batch] Error creating batch:', error);
-      onError?.('Failed to create batch. Please try again.');
+      console.error("[Create Batch] Error creating batch:", error);
+      onError?.("Failed to create batch. Please try again.");
     }
   };
 
@@ -205,34 +253,39 @@ export function useTeacherDashboard({
       await updateStudentLevel(studentId, newLevel);
 
       // Invalidate queries to refresh data
-      await queryClient.invalidateQueries({ queryKey: ['students'] });
+      await queryClient.invalidateQueries({ queryKey: ["students"] });
 
       onSuccess?.(`Student level updated to ${newLevel}!`);
     } catch (error) {
-      console.error('[Change Level] Error updating student level:', error);
-      onError?.('Failed to update student level. Please try again.');
+      console.error("[Change Level] Error updating student level:", error);
+      onError?.("Failed to update student level. Please try again.");
     }
   };
 
   /**
    * Handle changing student's role
    */
-  const handleChangeRole = async (studentId: string, newRole: 'STUDENT' | 'PENDING_APPROVAL') => {
+  const handleChangeRole = async (
+    studentId: string,
+    newRole: "STUDENT" | "PENDING_APPROVAL"
+  ) => {
     try {
       setIsChangingRole(true);
-      const actionLabel = newRole === 'STUDENT' ? 'Approving student' : 'Expiring student';
+      const actionLabel =
+        newRole === "STUDENT" ? "Approving student" : "Expiring student";
       onInfo?.(`${actionLabel}...`);
 
       await updateUser(studentId, { role: newRole });
 
       // Invalidate queries to refresh data
-      await queryClient.invalidateQueries({ queryKey: ['students'] });
+      await queryClient.invalidateQueries({ queryKey: ["students"] });
 
-      const successMsg = newRole === 'STUDENT' ? 'Student approved!' : 'Student expired!';
+      const successMsg =
+        newRole === "STUDENT" ? "Student approved!" : "Student expired!";
       onSuccess?.(successMsg);
     } catch (error) {
-      console.error('[Change Role] Error updating student role:', error);
-      onError?.('Failed to update student role. Please try again.');
+      console.error("[Change Role] Error updating student role:", error);
+      onError?.("Failed to update student role. Please try again.");
     } finally {
       setIsChangingRole(false);
     }
@@ -244,7 +297,7 @@ export function useTeacherDashboard({
     isError: studentsError,
 
     // Data
-    batches,
+    batches: sortedBatches,
     selectedBatch,
     myStudents,
     studentsForTable,

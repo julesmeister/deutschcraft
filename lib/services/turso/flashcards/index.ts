@@ -6,8 +6,9 @@
  *
  * - vocabulary.ts (~110 lines) - Flashcard and vocabulary word operations
  * - progress.ts (~320 lines) - Progress tracking and daily progress
+ * - stats.ts (~100 lines) - Practice and study statistics
  *
- * Total: ~430 lines split into 2 focused modules (each under or near 300 lines)
+ * Total: ~530 lines split into 3 focused modules
  *
  * This index maintains backward compatibility - all imports continue to work:
  * import { getFlashcardsByLevel, saveFlashcardProgress } from '@/lib/services/turso/flashcardService';
@@ -40,4 +41,11 @@ export {
   saveDailyProgress,
 } from './progress';
 
-export type { CategoryStats } from './progressRead';
+// ============================================================================
+// RE-EXPORTS - Statistics Operations
+// ============================================================================
+
+export {
+  getPracticeStats,
+  getStudyStats,
+} from './stats';

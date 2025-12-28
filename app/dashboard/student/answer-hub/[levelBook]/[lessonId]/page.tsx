@@ -4,42 +4,48 @@
  * Teachers can create, edit, hide, and reorder exercises
  */
 
-'use client';
+"use client";
 
-import { useState, useMemo } from 'react';
-import { useRouter, useParams } from 'next/navigation';
-import Link from 'next/link';
-import { Plus } from 'lucide-react';
-import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
-import { CatLoader } from '@/components/ui/CatLoader';
-import { LessonDetailHeader } from '@/components/answer-hub/LessonDetailHeader';
-import { ExerciseFilters, FilterState } from '@/components/answer-hub/ExerciseFilters';
-import { ExerciseOverrideDialog } from '@/components/answer-hub/ExerciseOverrideDialog';
-import { HiddenExercisesModal } from '@/components/answer-hub/HiddenExercisesModal';
-import { ExerciseListSection } from '@/components/answer-hub/ExerciseListSection';
-import { TeacherControls } from '@/components/answer-hub/TeacherControls';
-import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { useCurrentStudent } from '@/lib/hooks/useUsers';
-import { useActiveBatches } from '@/lib/hooks/useBatches';
-import { getUserInfo } from '@/lib/utils/userHelpers';
-import { Batch } from '@/lib/models';
-import { useLessonWithOverrides } from '@/lib/hooks/useExercisesWithOverrides';
-import { useLessonHandlers } from '@/lib/hooks/useLessonHandlers';
-import { useLessonPageHandlers } from '@/lib/hooks/useLessonPageHandlers';
-import { useDuplicateDetection } from '@/lib/hooks/useDuplicateDetection';
-import { useExerciseFilters } from '@/lib/hooks/useExerciseFilters';
-import { useHiddenExercises } from '@/lib/hooks/useHiddenExercises';
-import { CEFRLevel } from '@/lib/models/cefr';
+import { useState, useMemo } from "react";
+import { useRouter, useParams } from "next/navigation";
+import Link from "next/link";
+import { Plus } from "lucide-react";
+import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
+import { CatLoader } from "@/components/ui/CatLoader";
+import { LessonDetailHeader } from "@/components/answer-hub/LessonDetailHeader";
+import {
+  ExerciseFilters,
+  FilterState,
+} from "@/components/answer-hub/ExerciseFilters";
+import { ExerciseOverrideDialog } from "@/components/answer-hub/ExerciseOverrideDialog";
+import { HiddenExercisesModal } from "@/components/answer-hub/HiddenExercisesModal";
+import { ExerciseListSection } from "@/components/answer-hub/ExerciseListSection";
+import { TeacherControls } from "@/components/answer-hub/TeacherControls";
+import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
+import { useCurrentStudent } from "@/lib/hooks/useUsers";
+import { useActiveBatches } from "@/lib/hooks/useBatches";
+import { getUserInfo } from "@/lib/utils/userHelpers";
+import { Batch } from "@/lib/models";
+import { useLessonWithOverrides } from "@/lib/hooks/useExercisesWithOverrides";
+import { useLessonHandlers } from "@/lib/hooks/useLessonHandlers";
+import { useLessonPageHandlers } from "@/lib/hooks/useLessonPageHandlers";
+import { useDuplicateDetection } from "@/lib/hooks/useDuplicateDetection";
+import { useExerciseFilters } from "@/lib/hooks/useExerciseFilters";
+import { useHiddenExercises } from "@/lib/hooks/useHiddenExercises";
+import { CEFRLevel } from "@/lib/models/cefr";
+import { useBatchSelection } from "@/lib/hooks/useBatchSelection";
 import {
   ExerciseWithOverrideMetadata,
   CreateExerciseOverrideInput,
-} from '@/lib/models/exerciseOverride';
+} from "@/lib/models/exerciseOverride";
 
 export default function LessonDetailPage() {
   const router = useRouter();
   const params = useParams();
   const { session } = useFirebaseAuth();
-  const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
+  const { student: currentUser } = useCurrentStudent(
+    session?.user?.email || null
+  );
   const { userId, userEmail } = getUserInfo(currentUser, session);
 
   // Parse URL params
@@ -48,49 +54,50 @@ export default function LessonDetailPage() {
   const lessonId = params.lessonId as string;
 
   // Parse level and book type from levelBook
-  const [levelPart, bookType] = levelBook.split('-') as [string, 'AB' | 'KB'];
+  const [levelPart, bookType] = levelBook.split("-") as [string, "AB" | "KB"];
   const level = levelPart as CEFRLevel;
 
   // Parse lesson number from lessonId
-  const lessonNumber = parseInt(lessonId.replace('L', ''));
+  const lessonNumber = parseInt(lessonId.replace("L", ""));
 
   // Load exercises with teacher overrides merged
-  const { lesson, isLoading, error, hasOverrides, overrideCount } = useLessonWithOverrides(
-    level,
-    bookType,
-    lessonNumber,
-    userEmail
-  );
+  const { lesson, isLoading, error, hasOverrides, overrideCount } =
+    useLessonWithOverrides(level, bookType, lessonNumber, userEmail);
 
   // Check if user is a teacher (role is uppercase in database)
-  const isTeacher = currentUser?.role === 'TEACHER';
+  const isTeacher = currentUser?.role === "TEACHER";
 
   // Load teacher's batches (only for teachers)
   const { batches } = useActiveBatches(isTeacher ? userEmail : undefined);
-  const [selectedBatch, setSelectedBatch] = useState<Batch | null>(null);
+
+  // Use persistent batch selection
+  const { selectedBatch, setSelectedBatch, sortedBatches } = useBatchSelection({
+    batches,
+    user: currentUser,
+  });
 
   // Hidden exercises modal and data
   const {
     hiddenExercises,
     isHiddenModalOpen,
     openHiddenModal,
-    closeHiddenModal
+    closeHiddenModal,
   } = useHiddenExercises(isTeacher, userEmail, level, lessonNumber);
 
   // Filter state
   const [filters, setFilters] = useState<FilterState>({
-    search: '',
-    difficulty: 'all',
-    status: 'all',
-    hasDiscussion: 'all',
+    search: "",
+    difficulty: "all",
+    status: "all",
+    hasDiscussion: "all",
   });
 
   // Filter exercises based on filters
   const filteredExercises = useExerciseFilters(lesson, filters);
 
   // Detect duplicate exerciseIds and create index map
-  const { duplicateExerciseIds, exerciseIndexMap, visibleDuplicateIds } = useDuplicateDetection(lesson);
-
+  const { duplicateExerciseIds, exerciseIndexMap, visibleDuplicateIds } =
+    useDuplicateDetection(lesson);
 
   // Teacher handlers (create, hide, reorder, dialog)
   const {
@@ -103,7 +110,13 @@ export default function LessonDetailPage() {
     handleToggleHide,
     handleReorder,
     handleSubmitOverride,
-  } = useLessonHandlers(userEmail, level, lessonNumber, duplicateExerciseIds, exerciseIndexMap);
+  } = useLessonHandlers(
+    userEmail,
+    level,
+    lessonNumber,
+    duplicateExerciseIds,
+    exerciseIndexMap
+  );
 
   // Inline editing and section management handlers
   const {
@@ -116,7 +129,13 @@ export default function LessonDetailPage() {
     handleEditExercise,
     handleSaveInlineEdit,
     handleCancelInlineEdit,
-  } = useLessonPageHandlers(userEmail, level, lessonNumber, lesson, handleReorder);
+  } = useLessonPageHandlers(
+    userEmail,
+    level,
+    lessonNumber,
+    lesson,
+    handleReorder
+  );
 
   if (isLoading) {
     return (
@@ -125,8 +144,8 @@ export default function LessonDetailPage() {
           title="Answer Hub 📝"
           subtitle="Loading lesson..."
           backButton={{
-            label: 'Back to Lessons',
-            onClick: () => router.push('/dashboard/student/answer-hub'),
+            label: "Back to Lessons",
+            onClick: () => router.push("/dashboard/student/answer-hub"),
           }}
         />
         <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
@@ -143,16 +162,19 @@ export default function LessonDetailPage() {
           title="Answer Hub 📝"
           subtitle="Lesson not found"
           backButton={{
-            label: 'Back to Lessons',
-            onClick: () => router.push('/dashboard/student/answer-hub'),
+            label: "Back to Lessons",
+            onClick: () => router.push("/dashboard/student/answer-hub"),
           }}
         />
         <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
           <div className="bg-white border border-red-200 rounded-xl shadow-sm p-12 text-center">
             <div className="text-6xl mb-4">⚠️</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Lesson Not Found</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">
+              Lesson Not Found
+            </h3>
             <p className="text-gray-600 mb-4">
-              {error || `Could not find Lektion ${lessonNumber} for ${level} ${bookType}`}
+              {error ||
+                `Could not find Lektion ${lessonNumber} for ${level} ${bookType}`}
             </p>
             <Link
               href="/dashboard/student/answer-hub"
@@ -172,18 +194,18 @@ export default function LessonDetailPage() {
     <div className="min-h-screen bg-gray-50 pb-16">
       {/* Header */}
       <LessonDetailHeader
-        lessonTitle={lesson?.title || 'Lesson'}
+        lessonTitle={lesson?.title || "Lesson"}
         level={level}
         bookType={bookType}
         exerciseCount={exerciseCount}
         isTeacher={isTeacher}
         hiddenExercisesCount={hiddenExercises.length}
-        batches={batches}
+        batches={sortedBatches}
         selectedBatch={selectedBatch}
         onOpenHiddenModal={openHiddenModal}
         onSelectBatch={setSelectedBatch}
         onCreateBatch={() => {
-          console.log('Batch creation - redirect to teacher dashboard');
+          console.log("Batch creation - redirect to teacher dashboard");
         }}
       />
 
@@ -225,11 +247,17 @@ export default function LessonDetailPage() {
               onToggleHide={handleToggleHide}
               onReorderSections={isTeacher ? handleReorderSections : undefined}
               onAddToSection={isTeacher ? handleAddToSection : undefined}
-              onSaveInlineExercise={isTeacher ? handleSaveInlineExercise : undefined}
-              onCancelInlineExercise={isTeacher ? handleCancelInlineExercise : undefined}
+              onSaveInlineExercise={
+                isTeacher ? handleSaveInlineExercise : undefined
+              }
+              onCancelInlineExercise={
+                isTeacher ? handleCancelInlineExercise : undefined
+              }
               editingSectionName={editingSectionName}
               onSaveInlineEdit={isTeacher ? handleSaveInlineEdit : undefined}
-              onCancelInlineEdit={isTeacher ? handleCancelInlineEdit : undefined}
+              onCancelInlineEdit={
+                isTeacher ? handleCancelInlineEdit : undefined
+              }
               editingExerciseId={editingExerciseId}
             />
           ) : (
@@ -242,12 +270,14 @@ export default function LessonDetailPage() {
                 Try adjusting your search or filter criteria.
               </p>
               <button
-                onClick={() => setFilters({
-                  search: '',
-                  difficulty: 'all',
-                  status: 'all',
-                  hasDiscussion: 'all',
-                })}
+                onClick={() =>
+                  setFilters({
+                    search: "",
+                    difficulty: "all",
+                    status: "all",
+                    hasDiscussion: "all",
+                  })
+                }
                 className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-sm font-medium transition-colors"
               >
                 Clear Filters
@@ -262,8 +292,8 @@ export default function LessonDetailPage() {
             </h3>
             <p className="text-gray-600 mb-4">
               {isTeacher
-                ? 'Get started by creating your first custom exercise!'
-                : 'Exercises for this lesson will be added soon.'}
+                ? "Get started by creating your first custom exercise!"
+                : "Exercises for this lesson will be added soon."}
             </p>
             {isTeacher && (
               <button

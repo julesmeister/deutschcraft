@@ -11,7 +11,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
-import { recalculateWritingStatsAdmin } from '@/lib/services/writing/stats-calculator.admin';
+import { recalculateWritingStatsAdmin } from '@/lib/services/writing/statsCalculatorAdmin';
 
 export async function POST(request: NextRequest) {
   try {

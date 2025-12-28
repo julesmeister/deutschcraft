@@ -6,8 +6,8 @@
  * All user-related database operations use LibSQL/SQLite syntax.
  */
 
-import { db } from '@/turso/client';
-import { User } from '@/lib/models';
+import { db } from "@/turso/client";
+import { User } from "@/lib/models";
 
 // ============================================================================
 // READ OPERATIONS
@@ -21,7 +21,7 @@ import { User } from '@/lib/models';
 export async function getUser(email: string): Promise<User | null> {
   try {
     const result = await db.execute({
-      sql: 'SELECT * FROM users WHERE user_id = ? LIMIT 1',
+      sql: "SELECT * FROM users WHERE user_id = ? LIMIT 1",
       args: [email],
     });
 
@@ -32,7 +32,7 @@ export async function getUser(email: string): Promise<User | null> {
     const row = result.rows[0];
     return rowToUser(row);
   } catch (error) {
-    console.error('[userService:turso] Error fetching user:', error);
+    console.error("[userService:turso] Error fetching user:", error);
     throw error;
   }
 }
@@ -42,7 +42,9 @@ export async function getUser(email: string): Promise<User | null> {
  * @param teacherEmail - Teacher's email
  * @returns Array of student User objects
  */
-export async function getTeacherStudents(teacherEmail: string): Promise<User[]> {
+export async function getTeacherStudents(
+  teacherEmail: string
+): Promise<User[]> {
   try {
     const result = await db.execute({
       sql: `SELECT * FROM users
@@ -53,7 +55,10 @@ export async function getTeacherStudents(teacherEmail: string): Promise<User[]> 
 
     return result.rows.map(rowToUser);
   } catch (error) {
-    console.error('[userService:turso] Error fetching teacher students:', error);
+    console.error(
+      "[userService:turso] Error fetching teacher students:",
+      error
+    );
     throw error;
   }
 }
@@ -74,7 +79,7 @@ export async function getBatchStudents(batchId: string): Promise<User[]> {
 
     return result.rows.map(rowToUser);
   } catch (error) {
-    console.error('[userService:turso] Error fetching batch students:', error);
+    console.error("[userService:turso] Error fetching batch students:", error);
     throw error;
   }
 }
@@ -94,7 +99,7 @@ export async function getAllStudents(): Promise<User[]> {
 
     return result.rows.map(rowToUser);
   } catch (error) {
-    console.error('[userService:turso] Error fetching all students:', error);
+    console.error("[userService:turso] Error fetching all students:", error);
     throw error;
   }
 }
@@ -114,7 +119,7 @@ export async function getAllTeachers(): Promise<User[]> {
 
     return result.rows.map(rowToUser);
   } catch (error) {
-    console.error('[userService:turso] Error fetching all teachers:', error);
+    console.error("[userService:turso] Error fetching all teachers:", error);
     throw error;
   }
 }
@@ -134,7 +139,10 @@ export async function getStudentsWithoutTeacher(): Promise<User[]> {
 
     return result.rows.map(rowToUser);
   } catch (error) {
-    console.error('[userService:turso] Error fetching students without teacher:', error);
+    console.error(
+      "[userService:turso] Error fetching students without teacher:",
+      error
+    );
     throw error;
   }
 }
@@ -155,7 +163,10 @@ export async function getAllNonTeachers(): Promise<User[]> {
 
     return result.rows.map(rowToUser);
   } catch (error) {
-    console.error('[userService:turso] Error fetching all non-teachers:', error);
+    console.error(
+      "[userService:turso] Error fetching all non-teachers:",
+      error
+    );
     throw error;
   }
 }
@@ -173,7 +184,7 @@ export async function getUsers(): Promise<User[]> {
 
     return result.rows.map(rowToUser);
   } catch (error) {
-    console.error('[userService:turso] Error fetching all users:', error);
+    console.error("[userService:turso] Error fetching all users:", error);
     throw error;
   }
 }
@@ -186,18 +197,18 @@ export async function getUsers(): Promise<User[]> {
 export async function getUsersPaginated(options: {
   pageSize: number;
   lastDoc: any | null;
-  roleFilter?: 'STUDENT' | 'TEACHER' | 'all';
+  roleFilter?: "STUDENT" | "TEACHER" | "all";
   orderByField?: string;
 }): Promise<{ users: User[]; hasMore: boolean; lastDoc: any | null }> {
-  const { pageSize, roleFilter = 'all', orderByField = 'user_id' } = options;
+  const { pageSize, roleFilter = "all", orderByField = "user_id" } = options;
 
   try {
-    let sql = 'SELECT * FROM users';
+    let sql = "SELECT * FROM users";
     const args: any[] = [];
 
     // Add role filter
-    if (roleFilter !== 'all') {
-      sql += ' WHERE role = ?';
+    if (roleFilter !== "all") {
+      sql += " WHERE role = ?";
       args.push(roleFilter);
     }
 
@@ -213,7 +224,7 @@ export async function getUsersPaginated(options: {
 
     return { users, hasMore, lastDoc };
   } catch (error) {
-    console.error('[userService:turso] Error fetching paginated users:', error);
+    console.error("[userService:turso] Error fetching paginated users:", error);
     throw error;
   }
 }
@@ -223,20 +234,22 @@ export async function getUsersPaginated(options: {
  * @param roleFilter - Optional role filter
  * @returns Total count
  */
-export async function getUserCount(roleFilter: 'STUDENT' | 'TEACHER' | 'all' = 'all'): Promise<number> {
+export async function getUserCount(
+  roleFilter: "STUDENT" | "TEACHER" | "all" = "all"
+): Promise<number> {
   try {
-    let sql = 'SELECT COUNT(*) as count FROM users';
+    let sql = "SELECT COUNT(*) as count FROM users";
     const args: any[] = [];
 
-    if (roleFilter !== 'all') {
-      sql += ' WHERE role = ?';
+    if (roleFilter !== "all") {
+      sql += " WHERE role = ?";
       args.push(roleFilter);
     }
 
     const result = await db.execute({ sql, args });
     return (result.rows[0]?.count as number) || 0;
   } catch (error) {
-    console.error('[userService:turso] Error counting users:', error);
+    console.error("[userService:turso] Error counting users:", error);
     throw error;
   }
 }
@@ -272,7 +285,10 @@ export async function getPendingEnrollmentsPaginated(options: {
 
     return { users, hasMore, lastDoc };
   } catch (error) {
-    console.error('[userService:turso] Error fetching pending enrollments:', error);
+    console.error(
+      "[userService:turso] Error fetching pending enrollments:",
+      error
+    );
     throw error;
   }
 }
@@ -293,7 +309,10 @@ export async function getPendingEnrollmentsCount(): Promise<number> {
 
     return (result.rows[0]?.count as number) || 0;
   } catch (error) {
-    console.error('[userService:turso] Error counting pending enrollments:', error);
+    console.error(
+      "[userService:turso] Error counting pending enrollments:",
+      error
+    );
     throw error;
   }
 }
@@ -306,7 +325,9 @@ export async function getPendingEnrollmentsCount(): Promise<number> {
  * Create or update a user (upsert)
  * @param user - User object with email required
  */
-export async function upsertUser(user: Partial<User> & { email: string }): Promise<void> {
+export async function upsertUser(
+  user: Partial<User> & { email: string }
+): Promise<void> {
   try {
     const now = Date.now();
 
@@ -333,9 +354,9 @@ export async function upsertUser(user: Partial<User> & { email: string }): Promi
       args: [
         user.email,
         user.email,
-        user.firstName || '',
-        user.lastName || '',
-        user.role || 'STUDENT',
+        user.firstName || "",
+        user.lastName || "",
+        user.role || "STUDENT",
         user.photoURL || null,
         user.cefrLevel || null,
         user.teacherId || null,
@@ -359,7 +380,7 @@ export async function upsertUser(user: Partial<User> & { email: string }): Promi
       ],
     });
   } catch (error) {
-    console.error('[userService:turso] Error upserting user:', error);
+    console.error("[userService:turso] Error upserting user:", error);
     throw error;
   }
 }
@@ -369,54 +390,57 @@ export async function upsertUser(user: Partial<User> & { email: string }): Promi
  * @param email - User's email (primary key)
  * @param updates - Partial user object with fields to update
  */
-export async function updateUser(email: string, updates: Partial<User>): Promise<void> {
+export async function updateUser(
+  email: string,
+  updates: Partial<User>
+): Promise<void> {
   try {
     const setClauses: string[] = [];
     const values: any[] = [];
 
     // Build dynamic SET clause
     if (updates.firstName !== undefined) {
-      setClauses.push('first_name = ?');
+      setClauses.push("first_name = ?");
       values.push(updates.firstName);
     }
     if (updates.lastName !== undefined) {
-      setClauses.push('last_name = ?');
+      setClauses.push("last_name = ?");
       values.push(updates.lastName);
     }
     if (updates.photoURL !== undefined) {
-      setClauses.push('photo_url = ?');
+      setClauses.push("photo_url = ?");
       values.push(updates.photoURL);
     }
     if (updates.cefrLevel !== undefined) {
-      setClauses.push('cefr_level = ?');
+      setClauses.push("cefr_level = ?");
       values.push(updates.cefrLevel);
     }
     if (updates.teacherId !== undefined) {
-      setClauses.push('teacher_id = ?');
+      setClauses.push("teacher_id = ?");
       values.push(updates.teacherId);
     }
     if (updates.batchId !== undefined) {
-      setClauses.push('batch_id = ?');
+      setClauses.push("batch_id = ?");
       values.push(updates.batchId);
     }
     if (updates.wordsLearned !== undefined) {
-      setClauses.push('words_learned = ?');
+      setClauses.push("words_learned = ?");
       values.push(updates.wordsLearned);
     }
     if (updates.wordsMastered !== undefined) {
-      setClauses.push('words_mastered = ?');
+      setClauses.push("words_mastered = ?");
       values.push(updates.wordsMastered);
     }
     if (updates.currentStreak !== undefined) {
-      setClauses.push('current_streak = ?');
+      setClauses.push("current_streak = ?");
       values.push(updates.currentStreak);
     }
     if (updates.longestStreak !== undefined) {
-      setClauses.push('longest_streak = ?');
+      setClauses.push("longest_streak = ?");
       values.push(updates.longestStreak);
     }
     if (updates.flashcardSettings !== undefined) {
-      setClauses.push('flashcard_settings = ?');
+      setClauses.push("flashcard_settings = ?");
       values.push(JSON.stringify(updates.flashcardSettings));
     }
 
@@ -425,17 +449,17 @@ export async function updateUser(email: string, updates: Partial<User>): Promise
     }
 
     // Always update updated_at
-    setClauses.push('updated_at = ?');
+    setClauses.push("updated_at = ?");
     values.push(Date.now());
 
     // Add WHERE clause email
     values.push(email);
 
-    const sql = `UPDATE users SET ${setClauses.join(', ')} WHERE user_id = ?`;
+    const sql = `UPDATE users SET ${setClauses.join(", ")} WHERE user_id = ?`;
 
     await db.execute({ sql, args: values });
   } catch (error) {
-    console.error('[userService:turso] Error updating user:', error);
+    console.error("[userService:turso] Error updating user:", error);
     throw error;
   }
 }
@@ -445,14 +469,17 @@ export async function updateUser(email: string, updates: Partial<User>): Promise
  * @param email - User's email
  * @param photoURL - New photo URL
  */
-export async function updateUserPhoto(email: string, photoURL: string | null): Promise<void> {
+export async function updateUserPhoto(
+  email: string,
+  photoURL: string | null
+): Promise<void> {
   try {
     await db.execute({
-      sql: 'UPDATE users SET photo_url = ?, updated_at = ? WHERE user_id = ?',
+      sql: "UPDATE users SET photo_url = ?, updated_at = ? WHERE user_id = ?",
       args: [photoURL, Date.now(), email],
     });
   } catch (error) {
-    console.error('[userService:turso] Error updating user photo:', error);
+    console.error("[userService:turso] Error updating user photo:", error);
     throw error;
   }
 }
@@ -471,17 +498,20 @@ export async function assignStudentToBatch(
   try {
     if (teacherId) {
       await db.execute({
-        sql: 'UPDATE users SET batch_id = ?, teacher_id = ?, updated_at = ? WHERE user_id = ?',
+        sql: "UPDATE users SET batch_id = ?, teacher_id = ?, updated_at = ? WHERE user_id = ?",
         args: [batchId, teacherId, Date.now(), studentEmail],
       });
     } else {
       await db.execute({
-        sql: 'UPDATE users SET batch_id = ?, updated_at = ? WHERE user_id = ?',
+        sql: "UPDATE users SET batch_id = ?, updated_at = ? WHERE user_id = ?",
         args: [batchId, Date.now(), studentEmail],
       });
     }
   } catch (error) {
-    console.error('[userService:turso] Error assigning student to batch:', error);
+    console.error(
+      "[userService:turso] Error assigning student to batch:",
+      error
+    );
     throw error;
   }
 }
@@ -496,7 +526,10 @@ export async function getFlashcardSettings(email: string): Promise<any | null> {
     const user = await getUser(email);
     return user?.flashcardSettings || null;
   } catch (error) {
-    console.error('[userService:turso] Error getting flashcard settings:', error);
+    console.error(
+      "[userService:turso] Error getting flashcard settings:",
+      error
+    );
     throw error;
   }
 }
@@ -506,14 +539,43 @@ export async function getFlashcardSettings(email: string): Promise<any | null> {
  * @param email - User's email
  * @param settings - Flashcard settings to update
  */
-export async function updateFlashcardSettings(email: string, settings: any): Promise<void> {
+export async function updateFlashcardSettings(
+  email: string,
+  settings: any
+): Promise<void> {
   try {
     await db.execute({
-      sql: 'UPDATE users SET flashcard_settings = ?, updated_at = ? WHERE user_id = ?',
+      sql: "UPDATE users SET flashcard_settings = ?, updated_at = ? WHERE user_id = ?",
       args: [JSON.stringify(settings), Date.now(), email],
     });
   } catch (error) {
-    console.error('[userService:turso] Error updating flashcard settings:', error);
+    console.error(
+      "[userService:turso] Error updating flashcard settings:",
+      error
+    );
+    throw error;
+  }
+}
+
+/**
+ * Update user's dashboard settings
+ * @param email - User's email
+ * @param settings - Dashboard settings to update
+ */
+export async function updateDashboardSettings(
+  email: string,
+  settings: any
+): Promise<void> {
+  try {
+    await db.execute({
+      sql: "UPDATE users SET dashboard_settings = ?, updated_at = ? WHERE user_id = ?",
+      args: [JSON.stringify(settings), Date.now(), email],
+    });
+  } catch (error) {
+    console.error(
+      "[userService:turso] Error updating dashboard settings:",
+      error
+    );
     throw error;
   }
 }
@@ -531,7 +593,7 @@ function rowToUser(row: any): User {
     email: row.email as string,
     firstName: row.first_name as string,
     lastName: row.last_name as string,
-    role: row.role as 'STUDENT' | 'TEACHER',
+    role: row.role as "STUDENT" | "TEACHER",
     photoURL: row.photo_url as string | undefined,
     cefrLevel: row.cefr_level as any,
     teacherId: row.teacher_id as string | null | undefined,
@@ -549,6 +611,9 @@ function rowToUser(row: any): User {
     soundEnabled: Boolean(row.sound_enabled),
     flashcardSettings: row.flashcard_settings
       ? JSON.parse(row.flashcard_settings as string)
+      : undefined,
+    dashboardSettings: row.dashboard_settings
+      ? JSON.parse(row.dashboard_settings as string)
       : undefined,
     totalStudents: row.total_students as number | undefined,
     activeBatches: row.active_batches as number | undefined,

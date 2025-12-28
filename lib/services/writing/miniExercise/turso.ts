@@ -5,7 +5,7 @@
 
 import { db } from '@/turso/client';
 import { QuizBlank, GrammarError } from '@/lib/models/writing';
-import { generateQuizBlanks } from '@/lib/utils/quizGenerator';
+import { generateQuizBlanks, generateRandomBlanks } from '@/lib/utils/quizGenerator';
 
 export interface MiniExerciseData {
   sentence: string;
@@ -192,10 +192,17 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
     // Fallback: return first sentence anyway
     const firstSentence = sentences[0];
     const originalSentences = splitIntoSentences(submission.content);
-    const blanks = generateQuizBlanks(
+    
+    // First try generating blanks from differences
+    let blanks = generateQuizBlanks(
       originalSentences[0] || firstSentence,
       firstSentence
     );
+
+    // If no blanks found (perfect sentence), use random blanks
+    if (blanks.length === 0) {
+      blanks = generateRandomBlanks(firstSentence);
+    }
 
     return {
       sentence: firstSentence,

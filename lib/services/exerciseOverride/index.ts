@@ -15,7 +15,7 @@ const USE_TURSO = process.env.NEXT_PUBLIC_USE_TURSO === 'true';
 
 // Import from the appropriate implementation
 const implementation = USE_TURSO
-  ? require('./turso')
+  ? require('../turso/exerciseOverrideService')
   : require('./firebase');
 
 // Re-export all functions

@@ -8,7 +8,7 @@
  * - writingProgress/helpers.ts (53 lines) - Data conversion utilities
  * - writingProgress/read.ts (72 lines) - Read operations
  * - writingProgress/tracking.ts (129 lines) - Daily progress tracking
- * - writingProgress/streaks.ts (74 lines) - Streak calculations
+ * - streaks.ts (74 lines) - Streak calculations
  * - writingProgress/stats.ts (157 lines) - Overall statistics
  * - writingProgress/analytics.ts (80 lines) - Teacher analytics
  * - writingProgress/index.ts (21 lines) - Re-exports
@@ -20,6 +20,7 @@ export {
   fetchUserWritingProgress,
   getTodayWritingProgress,
   updateDailyProgress,
+  updateDailyProgressForQuiz,
   calculateWritingStreak,
   updateWritingStats,
   getTeacherWritingStats,

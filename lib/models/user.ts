@@ -7,7 +7,7 @@
  * - batches/{batchId}
  */
 
-import { CEFRLevel } from './cefr';
+import { CEFRLevel } from "./cefr";
 
 /**
  * User Model
@@ -23,11 +23,11 @@ export interface User {
   name?: string; // Combined name (backwards compatibility with old data)
   firstName: string;
   lastName: string;
-  role: 'STUDENT' | 'TEACHER' | 'PENDING_APPROVAL';
+  role: "STUDENT" | "TEACHER" | "PENDING_APPROVAL";
   photoURL?: string;
 
   // Enrollment fields (for PENDING_APPROVAL role)
-  enrollmentStatus?: 'pending' | 'approved' | 'rejected';
+  enrollmentStatus?: "pending" | "approved" | "rejected";
   desiredCefrLevel?: CEFRLevel; // Requested CEFR level
   gcashReferenceNumber?: string;
   gcashAmount?: number;
@@ -61,6 +61,12 @@ export interface User {
     autoPlayAudio: boolean;
     showExamples: boolean;
     randomizeOrder: boolean;
+  };
+
+  // Dashboard Settings (e.g., recent batches)
+  dashboardSettings?: {
+    recentBatches?: string[]; // Array of batch IDs
+    lastSelectedBatchId?: string;
   };
 
   // Teacher-specific fields (only if role === 'TEACHER')
@@ -124,10 +130,10 @@ export function getUserFullName(user: User | any): string {
   }
 
   // Handle new firstName/lastName structure
-  const firstName = user.firstName || '';
-  const lastName = user.lastName || '';
+  const firstName = user.firstName || "";
+  const lastName = user.lastName || "";
   const fullName = `${firstName} ${lastName}`.trim();
-  return fullName || user.email || 'Unknown User';
+  return fullName || user.email || "Unknown User";
 }
 
 /**
@@ -143,14 +149,14 @@ export function getStudentSuccessRate(user: User): number {
  * Check if user is a student
  */
 export function isStudent(user: User): boolean {
-  return user.role === 'STUDENT';
+  return user.role === "STUDENT";
 }
 
 /**
  * Check if user is a teacher
  */
 export function isTeacher(user: User): boolean {
-  return user.role === 'TEACHER';
+  return user.role === "TEACHER";
 }
 
 /**
@@ -162,14 +168,16 @@ export function isPendingApproval(user: User): boolean {
   if (!user.role) {
     return true;
   }
-  return user.role === 'PENDING_APPROVAL' || user.enrollmentStatus === 'pending';
+  return (
+    user.role === "PENDING_APPROVAL" || user.enrollmentStatus === "pending"
+  );
 }
 
 /**
  * Check if user has completed enrollment
  */
 export function hasCompletedEnrollment(user: User): boolean {
-  return !!(user.enrollmentStatus === 'approved' && user.role === 'STUDENT');
+  return !!(user.enrollmentStatus === "approved" && user.role === "STUDENT");
 }
 
 // Legacy exports for backwards compatibility

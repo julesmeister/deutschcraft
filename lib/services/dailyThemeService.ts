@@ -1,4 +1,8 @@
-import { DailyTheme, CreateDailyThemeInput, UpdateDailyThemeInput } from '@/lib/models/dailyTheme';
+import {
+  DailyTheme,
+  CreateDailyThemeInput,
+  UpdateDailyThemeInput,
+} from "@/lib/models/dailyTheme";
 
 /**
  * Abstract service interface for daily theme operations
@@ -28,5 +32,11 @@ export interface IDailyThemeService {
 
 // Export the current implementation
 // Can be easily switched to Turso implementation later
-import { FirebaseDailyThemeService } from './firebase/dailyThemeService';
-export const dailyThemeService: IDailyThemeService = new FirebaseDailyThemeService();
+import { FirebaseDailyThemeService } from "./firebase/dailyThemeService";
+import { TursoDailyThemeService } from "./turso/dailyThemeService";
+
+const USE_TURSO = process.env.NEXT_PUBLIC_USE_TURSO === "true";
+
+export const dailyThemeService: IDailyThemeService = USE_TURSO
+  ? new TursoDailyThemeService()
+  : new FirebaseDailyThemeService();
