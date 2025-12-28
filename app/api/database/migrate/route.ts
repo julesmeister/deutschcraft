@@ -635,19 +635,40 @@ export async function POST(request: Request) {
     for (const doc of postsSnapshot.docs) {
       const post = doc.data();
       try {
+        // Convert Firestore Timestamp to number if needed
+        const createdAt = typeof post.createdAt === 'object' && post.createdAt?.toMillis
+          ? post.createdAt.toMillis()
+          : (post.createdAt || Date.now());
+        const updatedAt = typeof post.updatedAt === 'object' && post.updatedAt?.toMillis
+          ? post.updatedAt.toMillis()
+          : (post.updatedAt || Date.now());
+
         await db.execute({
           sql: `INSERT OR REPLACE INTO social_posts (
-            post_id, user_id, content, cefr_level,
-            visibility, created_at, updated_at
-          ) VALUES (?, ?, ?, ?, ?, ?, ?)`,
+            post_id, user_id, user_email, content, cefr_level,
+            media_type, grammar_focus, vocabulary_used,
+            likes_count, comments_count, suggestions_count, shares_count,
+            visibility, is_edited, has_accepted_suggestion,
+            created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
           args: [
             post.postId || doc.id,
             post.userId,
+            post.userEmail || post.userId, // Use userId as fallback for email
             post.content,
-            post.cefrLevel || null,
+            post.cefrLevel || 'A1',
+            post.mediaType || 'none',
+            post.grammarFocus ? JSON.stringify(post.grammarFocus) : null,
+            post.vocabularyUsed ? JSON.stringify(post.vocabularyUsed) : null,
+            post.likesCount || 0,
+            post.commentsCount || 0,
+            post.suggestionsCount || 0,
+            post.sharesCount || 0,
             post.visibility || 'public',
-            post.createdAt || Date.now(),
-            post.updatedAt || Date.now(),
+            post.isEdited ? 1 : 0,
+            post.hasAcceptedSuggestion ? 1 : 0,
+            createdAt,
+            updatedAt,
           ],
         });
         postCount++;
@@ -665,18 +686,28 @@ export async function POST(request: Request) {
     for (const doc of commentsSnapshot.docs) {
       const comment = doc.data();
       try {
+        // Convert Firestore Timestamp to number if needed
+        const createdAt = typeof comment.createdAt === 'object' && comment.createdAt?.toMillis
+          ? comment.createdAt.toMillis()
+          : (comment.createdAt || Date.now());
+        const updatedAt = typeof comment.updatedAt === 'object' && comment.updatedAt?.toMillis
+          ? comment.updatedAt.toMillis()
+          : (comment.updatedAt || Date.now());
+
         await db.execute({
           sql: `INSERT OR REPLACE INTO social_comments (
-            comment_id, post_id, user_id, content,
-            created_at, updated_at
-          ) VALUES (?, ?, ?, ?, ?, ?)`,
+            comment_id, post_id, user_id, parent_comment_id,
+            content, likes_count, created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
           args: [
             comment.commentId || doc.id,
             comment.postId,
             comment.userId,
+            comment.parentCommentId || null,
             comment.content,
-            comment.createdAt || Date.now(),
-            comment.updatedAt || Date.now(),
+            comment.likesCount || 0,
+            createdAt,
+            updatedAt,
           ],
         });
         commentCount++;
@@ -694,15 +725,21 @@ export async function POST(request: Request) {
     for (const doc of likesSnapshot.docs) {
       const like = doc.data();
       try {
+        // Convert Firestore Timestamp to number if needed
+        const createdAt = typeof like.createdAt === 'object' && like.createdAt?.toMillis
+          ? like.createdAt.toMillis()
+          : (like.createdAt || Date.now());
+
         await db.execute({
           sql: `INSERT OR REPLACE INTO social_likes (
-            like_id, post_id, user_id, created_at
-          ) VALUES (?, ?, ?, ?)`,
+            like_id, user_id, target_id, target_type, created_at
+          ) VALUES (?, ?, ?, ?, ?)`,
           args: [
             like.likeId || doc.id,
-            like.postId,
             like.userId,
-            like.createdAt || Date.now(),
+            like.targetId || like.postId, // Use targetId, fallback to postId
+            like.targetType || 'post', // Default to 'post'
+            createdAt,
           ],
         });
         likeCount++;
