@@ -4,7 +4,7 @@ import { useMemo, useState, useEffect } from 'react';
 import { CEFRLevel } from '../models/cefr';
 import { getUserFullName } from '../models/user';
 import { User } from '../models';
-import { getStudyStats } from '../services/flashcards/stats';
+import { getStudyStats } from '../services/flashcards';
 
 interface StudentStats {
   cardsLearned: number;

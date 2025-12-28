@@ -178,7 +178,7 @@ export function useGrammarPracticeSession({
       if (results.length > 0) {
         try {
           const { saveDailyProgress } = await import(
-            "@/lib/services/flashcards/progress"
+            "@/lib/services/flashcards"
           );
           await saveDailyProgress(session.user.email, {
             cardsReviewed: results.length,

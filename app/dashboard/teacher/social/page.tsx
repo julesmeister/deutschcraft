@@ -6,6 +6,7 @@ import { useCurrentUser } from '@/lib/hooks/useUsers';
 import { usePosts, useUserSocialStats } from '@/lib/hooks/useSocial';
 import { usePostAuthors } from '@/lib/hooks/usePostAuthors';
 import { useTeacherBatches } from '@/lib/hooks/useBatches';
+import { useBatchSelection } from '@/lib/hooks/useBatchSelection';
 import { useDailyTheme } from '@/lib/hooks/useDailyTheme';
 import PostCard from '@/components/social/PostCard';
 import CreatePost from '@/components/social/CreatePost';
@@ -19,26 +20,12 @@ import { User } from '@/lib/models/user';
 export default function TeacherSocialPage() {
   const { data: session } = useSession();
   const { user: currentUser, isLoading: userLoading } = useCurrentUser(session?.user?.email || null);
-  const { posts, loading: postsLoading, addPost, refresh: refreshPosts } = usePosts({ limitCount: 20 });
+  // Memoize filters to prevent infinite loops in usePosts
+  const postFilters = useMemo(() => ({ limitCount: 20 }), []);
+  const { posts, loading: postsLoading, addPost, refresh: refreshPosts } = usePosts(postFilters);
+  
   const { stats } = useUserSocialStats(session?.user?.email || '');
   const { batches, loading: batchesLoading } = useTeacherBatches(session?.user?.email || null);
-
-  // State must be declared before it's used in hooks
-  // Load from localStorage on mount
-  const [filterBatch, setFilterBatch] = useState<string>(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('teacher-social-batch-filter') || 'all';
-    }
-    return 'all';
-  });
-  const { theme, loading: themeLoading, createTheme, updateTheme } = useDailyTheme(filterBatch === 'all' ? undefined : filterBatch);
-
-  // Save to localStorage whenever filterBatch changes
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('teacher-social-batch-filter', filterBatch);
-    }
-  }, [filterBatch]);
 
   // Ensure currentUser has photoURL from session if missing (memoized to prevent infinite loops)
   const enrichedCurrentUser = useMemo(() => {
@@ -48,6 +35,17 @@ export default function TeacherSocialPage() {
       photoURL: currentUser.photoURL || session?.user?.image || undefined
     };
   }, [currentUser?.userId, currentUser?.photoURL, session?.user?.image]);
+
+  // Persistent Batch Selection
+  const { selectedBatch, setSelectedBatch, sortedBatches } = useBatchSelection({
+    batches,
+    user: enrichedCurrentUser
+  });
+
+  // Derived filterBatch state for compatibility with existing code
+  const filterBatch = selectedBatch ? selectedBatch.batchId : 'all';
+
+  const { theme, loading: themeLoading, createTheme, updateTheme } = useDailyTheme(filterBatch === 'all' ? undefined : filterBatch);
 
   const { users } = usePostAuthors(posts, enrichedCurrentUser);
 
@@ -108,17 +106,25 @@ export default function TeacherSocialPage() {
     if (filterBatch === 'all') return posts;
 
     // Filter posts where the author's batchId matches the selected batch
+    // IMPORTANT: Check if the user is the teacher themselves - they should see their own posts regardless
     return posts.filter(post => {
+      // If the post author is the current user (teacher), show it
+      if (post.userId === enrichedCurrentUser?.userId) return true;
+
       const author = users[post.userId];
-      return author?.batchId === filterBatch;
+      // If we don't know the author yet (still loading), keep it for now or hide it? 
+      // Better to hide to avoid "ghost" posts if they don't belong to batch
+      if (!author) return false;
+      
+      return author.batchId === filterBatch;
     });
-  }, [posts, filterBatch, users]);
+  }, [posts, filterBatch, users, enrichedCurrentUser?.userId]);
 
   // Create dropdown options from batches
   const batchOptions = useMemo(() => {
     const options = [{ value: 'all', label: 'All Batches' }];
-    if (batches) {
-      batches.forEach(batch => {
+    if (sortedBatches) {
+      sortedBatches.forEach(batch => {
         options.push({
           value: batch.batchId,
           label: batch.name
@@ -126,7 +132,7 @@ export default function TeacherSocialPage() {
       });
     }
     return options;
-  }, [batches]);
+  }, [sortedBatches]);
 
   return (
     <ToastProvider>
@@ -161,17 +167,24 @@ export default function TeacherSocialPage() {
               />
 
               {/* Filter by Batch - Compact */}
-              <div className="flex items-center justify-between gap-3">
-                <span className="text-sm font-medium text-gray-700">Filter by Batch:</span>
-                <CompactButtonDropdown
-                  label={batchOptions.find(opt => opt.value === filterBatch)?.label || 'All Batches'}
-                  icon={<span>📚</span>}
-                  options={batchOptions}
-                  value={filterBatch}
-                  onChange={(value) => setFilterBatch(value as string)}
-                  buttonClassName="bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
-                />
-              </div>
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-sm font-medium text-gray-700">Filter by Batch:</span>
+                  <CompactButtonDropdown
+                    label={batchOptions.find(opt => opt.value === filterBatch)?.label || 'All Batches'}
+                    icon={<span>📚</span>}
+                    options={batchOptions}
+                    value={filterBatch}
+                    onChange={(value) => {
+                      if (value === 'all') {
+                        setSelectedBatch(null);
+                      } else {
+                        const batch = batches.find(b => b.batchId === value) || null;
+                        setSelectedBatch(batch);
+                      }
+                    }}
+                    buttonClassName="bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
+                  />
+                </div>
 
               {/* Posts Feed */}
               {postsLoading ? (
@@ -222,19 +235,27 @@ export default function TeacherSocialPage() {
           <div className="lg:col-span-3">
             <div className="space-y-6">
               {/* Batch Selector - Compact */}
-              <div className="bg-white border border-gray-200">
-                <div className="px-3 py-2 border-b border-gray-200">
-                  <h5 className="font-semibold text-gray-900 text-sm">Select Batch</h5>
-                </div>
-                <div className="p-3">
-                  <CompactButtonDropdown
-                    label={batchOptions.find(opt => opt.value === filterBatch)?.label || 'All Batches'}
-                    icon={<span>📚</span>}
-                    options={batchOptions}
-                    value={filterBatch}
-                    onChange={(value) => setFilterBatch(value as string)}
-                    buttonClassName="bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
-                  />
+              <div className="bg-white border border-gray-200 p-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-gray-700 whitespace-nowrap">Filter:</span>
+                  <div className="min-w-[160px] flex justify-end">
+                    <CompactButtonDropdown
+                      label={batchOptions.find(opt => opt.value === filterBatch)?.label || 'All Batches'}
+                      icon={<span>🎓</span>}
+                      options={batchOptions}
+                      value={filterBatch}
+                      onChange={(value) => {
+                        if (value === 'all') {
+                          setSelectedBatch(null);
+                        } else {
+                          const batch = batches.find(b => b.batchId === value) || null;
+                          setSelectedBatch(batch);
+                        }
+                      }}
+                      buttonClassName="w-full justify-between bg-gray-50 border border-gray-200 text-gray-700 hover:bg-gray-100 py-1.5 px-3 text-xs"
+                      usePortal
+                    />
+                  </div>
                 </div>
               </div>
 

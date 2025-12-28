@@ -29,6 +29,7 @@ export const {
   // Submissions (Mutations)
   createWritingSubmission,
   updateWritingSubmission,
+  saveAICorrectedVersion,
   submitWriting,
   deleteWritingSubmission,
 

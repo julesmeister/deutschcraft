@@ -27,6 +27,7 @@ export {
   getWritingSubmissionsCount,
   createWritingSubmission,
   updateWritingSubmission,
+  saveAICorrectedVersion,
   submitWriting,
   deleteWritingSubmission,
 } from './submissions';

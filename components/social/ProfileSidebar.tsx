@@ -2,6 +2,7 @@
 
 import { User } from '@/lib/models/user';
 import UserAvatar from './UserAvatar';
+import { BorderBeam } from '@/components/ui/border-beam';
 
 interface ProfileSidebarProps {
   user: User;
@@ -54,8 +55,16 @@ export default function ProfileSidebar({ user, batchName, stats }: ProfileSideba
         <div className="pt-0 px-5 pb-5">
           <div className="text-center">
             {/* Avatar */}
-            <div className="-mt-8 mb-3 transform transition-all duration-300 hover:scale-110">
-              <UserAvatar user={user} size="lg" />
+            <div className="-mt-8 mb-3 relative flex items-center justify-center group w-24 h-24 mx-auto">
+              {/* Avatar Image - Ensure it has a solid background border to cover inner beam glitches */}
+              <div className="relative z-10 rounded-full border-[3px] border-white w-full h-full overflow-hidden bg-white">
+                <UserAvatar user={user} size="lg" className="w-full h-full" />
+              </div>
+              
+              {/* Border Beam - Positioned behind slightly */}
+              <div className="absolute -inset-[5px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none overflow-hidden z-0">
+                <BorderBeam size={120} duration={3} borderWidth={3} colorFrom="#24CAFF" colorTo="#9F54FF" />
+              </div>
             </div>
 
             {/* User Info */}

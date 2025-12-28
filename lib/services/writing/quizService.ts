@@ -17,7 +17,7 @@ import {
 import { QuizBlank } from '@/lib/models/writing';
 import { MiniExerciseSentence } from '@/lib/models/miniExercise';
 import { generateQuizBlanks } from '@/lib/utils/quizGenerator';
-import { getRandomMiniExercise } from '@/lib/services/writing/miniExerciseService';
+import { getRandomMiniExercise } from '@/lib/services/writing/miniExercise';
 
 export interface QuizSentence {
   sentence: string;

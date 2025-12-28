@@ -9,7 +9,7 @@
  * - Hooks call these functions instead of using Firestore directly
  */
 
-import { db } from '../firebase';
+import { db } from '@/lib/firebase';
 import {
   collection,
   doc,

@@ -243,6 +243,27 @@ export async function updateWritingSubmission(
 }
 
 /**
+ * Save AI corrected version for a submission
+ * @param submissionId - Submission ID
+ * @param aiCorrectedVersion - The corrected text
+ */
+export async function saveAICorrectedVersion(
+  submissionId: string,
+  aiCorrectedVersion: string
+): Promise<void> {
+  try {
+    const now = Date.now();
+    await db.execute({
+      sql: 'UPDATE writing_submissions SET ai_corrected_version = ?, ai_corrected_at = ?, updated_at = ? WHERE submission_id = ?',
+      args: [aiCorrectedVersion, now, now, submissionId],
+    });
+  } catch (error) {
+    console.error('[writingService:turso] Error saving AI corrected version:', error);
+    throw error;
+  }
+}
+
+/**
  * Submit a writing exercise (change status from draft to submitted)
  * @param submissionId - Submission ID
  */

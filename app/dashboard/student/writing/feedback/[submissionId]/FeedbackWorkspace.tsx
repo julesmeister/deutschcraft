@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { WritingSubmission, TeacherReview } from '@/lib/models/writing';
 import { useToast } from '@/components/ui/toast';
-import { saveAICorrectedVersion } from '@/lib/services/writing/submissions-mutations';
+import { saveAICorrectedVersion } from '@/lib/services/writing';
 import { createReviewQuiz, completeReviewQuiz } from '@/lib/services/writing/reviewQuizService';
 import { generateQuizBlanks } from '@/lib/utils/quizGenerator';
 import { getUser } from '@/lib/services/user';
