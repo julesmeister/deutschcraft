@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { Pagination } from "@/components/ui/Pagination";
 import { WritingSubmission, TeacherReview } from "@/lib/models/writing";
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
 import { CatLoader } from "@/components/ui/CatLoader";
@@ -19,8 +20,9 @@ export default function WritingsPage() {
     submissions,
     teacherReviews,
     isLoading,
-    hasMore,
-    loadMoreRef,
+    currentPage,
+    setCurrentPage,
+    totalPages,
     totalWithCorrections,
   } = useWritingsData(session?.user?.email || null);
 
@@ -74,20 +76,15 @@ export default function WritingsPage() {
               );
             })}
 
-            {/* Infinite Scroll Trigger */}
-            {hasMore && (
-              <div ref={loadMoreRef} className="py-8 text-center">
-                <div className="inline-flex items-center gap-2 text-gray-500">
-                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse"></div>
-                  <div
-                    className="w-2 h-2 bg-gray-400 rounded-full animate-pulse"
-                    style={{ animationDelay: "0.2s" }}
-                  ></div>
-                  <div
-                    className="w-2 h-2 bg-gray-400 rounded-full animate-pulse"
-                    style={{ animationDelay: "0.4s" }}
-                  ></div>
-                </div>
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="mt-8 flex justify-center">
+                <Pagination
+                  currentPage={currentPage}
+                  totalPages={totalPages}
+                  onPageChange={setCurrentPage}
+                  variant="pills"
+                />
               </div>
             )}
           </div>
@@ -143,7 +140,7 @@ function WritingCard({
           <div className="px-3 py-1.5 bg-green-600 text-white text-xs font-bold rounded-lg">
             {!isNaN(Number(teacherReview.overallScore))
               ? `${teacherReview.overallScore}/100`
-              : "N/A"}
+              : "Not graded yet"}
           </div>
         )}
         <div className="w-[140px]">

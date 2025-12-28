@@ -3,38 +3,49 @@
  * Displays comprehensive teacher review with scores and feedback
  */
 
-import { ActivityTimeline, ActivityItem } from '@/components/ui/activity/ActivityTimeline';
-import { TeacherReview } from '@/lib/models/writing';
+import {
+  ActivityTimeline,
+  ActivityItem,
+} from "@/components/ui/activity/ActivityTimeline";
+import { TeacherReview } from "@/lib/models/writing";
 
 interface TeacherFeedbackDisplayProps {
   teacherReview: TeacherReview;
 }
 
-export function TeacherFeedbackDisplay({ teacherReview }: TeacherFeedbackDisplayProps) {
+export function TeacherFeedbackDisplay({
+  teacherReview,
+}: TeacherFeedbackDisplayProps) {
   const feedbackItems: ActivityItem[] = [
     // Overall Score
     {
-      id: 'overall-score',
+      id: "overall-score",
       icon: <span className="text-white text-xs">📊</span>,
-      iconColor: 'bg-blue-500',
-      title: 'Overall Score',
+      iconColor: "bg-blue-500",
+      title: "Overall Score",
       description: !isNaN(Number(teacherReview.overallScore))
         ? `${teacherReview.overallScore}% • Grammar: ${teacherReview.grammarScore}% • Vocabulary: ${teacherReview.vocabularyScore}% • Coherence: ${teacherReview.coherenceScore}%`
-        : 'Score not available',
+        : "Not graded yet",
       tags: [
         {
-          label: !isNaN(Number(teacherReview.overallScore)) ? `${teacherReview.overallScore}%` : 'N/A',
+          label: !isNaN(Number(teacherReview.overallScore))
+            ? `${teacherReview.overallScore}%`
+            : "Not graded yet",
           color: !isNaN(Number(teacherReview.overallScore))
-            ? (teacherReview.overallScore >= 80 ? 'green' : teacherReview.overallScore >= 60 ? 'amber' : 'red')
-            : 'gray',
+            ? teacherReview.overallScore >= 80
+              ? "green"
+              : teacherReview.overallScore >= 60
+              ? "amber"
+              : "red"
+            : "gray",
         },
       ],
     },
     // Teacher's Comment
     {
-      id: 'comment',
+      id: "comment",
       icon: <span className="text-white text-xs">💬</span>,
-      iconColor: 'bg-purple-500',
+      iconColor: "bg-purple-500",
       title: "Teacher's Comments",
       description: teacherReview.overallComment,
     },
@@ -42,11 +53,11 @@ export function TeacherFeedbackDisplay({ teacherReview }: TeacherFeedbackDisplay
     ...(teacherReview.strengths && teacherReview.strengths.length > 0
       ? [
           {
-            id: 'strengths',
+            id: "strengths",
             icon: <span className="text-white text-xs">✓</span>,
-            iconColor: 'bg-emerald-500',
-            title: 'Strengths',
-            description: 'What you did well',
+            iconColor: "bg-emerald-500",
+            title: "Strengths",
+            description: "What you did well",
             metadata: (
               <ul className="space-y-1 mt-2 text-xs text-gray-700">
                 {teacherReview.strengths?.map((strength, idx) => (
@@ -61,14 +72,15 @@ export function TeacherFeedbackDisplay({ teacherReview }: TeacherFeedbackDisplay
         ]
       : []),
     // Areas for Improvement
-    ...(teacherReview.areasForImprovement && teacherReview.areasForImprovement.length > 0
+    ...(teacherReview.areasForImprovement &&
+    teacherReview.areasForImprovement.length > 0
       ? [
           {
-            id: 'improvements',
+            id: "improvements",
             icon: <span className="text-white text-xs">→</span>,
-            iconColor: 'bg-amber-500',
-            title: 'Areas for Improvement',
-            description: 'Focus on these next time',
+            iconColor: "bg-amber-500",
+            title: "Areas for Improvement",
+            description: "Focus on these next time",
             metadata: (
               <ul className="space-y-1 mt-2 text-xs text-gray-700">
                 {teacherReview.areasForImprovement?.map((area, idx) => (
@@ -86,12 +98,14 @@ export function TeacherFeedbackDisplay({ teacherReview }: TeacherFeedbackDisplay
     ...(teacherReview.requiresRevision
       ? [
           {
-            id: 'revision',
+            id: "revision",
             icon: <span className="text-white text-xs">⚠</span>,
-            iconColor: 'bg-red-500',
-            title: 'Revision Required',
-            description: teacherReview.revisionInstructions || 'Please revise and resubmit this work',
-            tags: [{ label: 'Action Required', color: 'red' }],
+            iconColor: "bg-red-500",
+            title: "Revision Required",
+            description:
+              teacherReview.revisionInstructions ||
+              "Please revise and resubmit this work",
+            tags: [{ label: "Action Required", color: "red" }],
           } as ActivityItem,
         ]
       : []),
@@ -99,12 +113,12 @@ export function TeacherFeedbackDisplay({ teacherReview }: TeacherFeedbackDisplay
     ...(teacherReview.meetsCriteria
       ? [
           {
-            id: 'criteria',
+            id: "criteria",
             icon: <span className="text-white text-xs">✓</span>,
-            iconColor: 'bg-emerald-500',
-            title: 'Assessment Complete',
-            description: 'Meets all exercise criteria',
-            tags: [{ label: 'Approved', color: 'green' }],
+            iconColor: "bg-emerald-500",
+            title: "Assessment Complete",
+            description: "Meets all exercise criteria",
+            tags: [{ label: "Approved", color: "green" }],
           } as ActivityItem,
         ]
       : []),
