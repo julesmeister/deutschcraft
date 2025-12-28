@@ -12,6 +12,7 @@ import {
 } from "@/lib/models";
 import {
   getVocabularyMetadata,
+  getAllVocabularyMetadata,
   getDisplayCategories,
 } from "@/lib/services/vocabularyData";
 
@@ -72,13 +73,49 @@ export async function getCategoryProgress(
       { total: number; learned: number; mastered: number }
     >();
 
+    // Load all vocabulary once for fuzzy matching fallback
+    const allVocab = getAllVocabularyMetadata();
+
     for (const row of result.rows) {
       const wordId = row.word_id as string;
       const repetitions = (row.repetitions as number) || 0;
       const masteryLevel = (row.mastery_level as number) || 0;
 
       // Look up metadata from JSON file instead of DB
-      const metadata = getVocabularyMetadata(wordId);
+      let metadata = getVocabularyMetadata(wordId);
+
+      // Fallback for legacy IDs
+      if (!metadata) {
+        // Fuzzy matching logic similar to client-side
+        metadata = allVocab.find((card: any) => {
+          const german = card.german.toLowerCase();
+          const simpleGerman = german.replace(/^(der|die|das)\s+/i, "").trim();
+          return (
+            simpleGerman.length > 2 &&
+            wordId.includes(simpleGerman) &&
+            wordId.startsWith(card.level.toLowerCase())
+          );
+        });
+
+        // If still not found, try category slug match
+        if (!metadata) {
+          const matchingCard = allVocab.find((card: any) => {
+            if (!card.category) return false;
+            const categoryId = card.category
+              .toLowerCase()
+              .replace(/\s+/g, "-")
+              .replace(/[^a-z0-9-]/g, "");
+            return categoryId.length > 3 && wordId.includes(categoryId);
+          });
+          if (matchingCard) {
+            // We only care about the category here
+            metadata = matchingCard;
+            // Note: this metadata object belongs to a DIFFERENT card, but has the correct category.
+            // Since we only use it for getDisplayCategories(metadata), it works!
+          }
+        }
+      }
+
       const tags = getDisplayCategories(metadata);
 
       // Add stats for EACH tag

@@ -153,20 +153,27 @@ export function useRemNoteCategories(level?: CEFRLevel) {
         const levelData = levelDataMap[level];
         const flashcards = levelData.flashcards;
 
-        // Count cards by category for this level
-        const categoryCounts: Record<string, number> = {};
+        // Group cards by normalized category ID to prevent duplicates
+        const categoryGroups: Record<string, { name: string, count: number }> = {};
+        
         flashcards.forEach((card: any) => {
-          const cat = card.category || 'Uncategorized';
-          categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+          const rawCat = card.category || 'Uncategorized';
+          const id = rawCat.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+          
+          if (!categoryGroups[id]) {
+            categoryGroups[id] = { name: rawCat, count: 0 };
+          }
+          
+          categoryGroups[id].count++;
         });
 
         // Convert to category format
-        const categoriesData = Object.entries(categoryCounts).map(([category, count]) => ({
-          id: category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
-          name: category,
-          cardCount: count,
-          icon: categoryIcons[category] || '📝',
-          description: categoryDescriptions[category] || `${count} flashcards`,
+        const categoriesData = Object.entries(categoryGroups).map(([id, data]) => ({
+          id,
+          name: data.name,
+          cardCount: data.count,
+          icon: categoryIcons[data.name] || '📝',
+          description: categoryDescriptions[data.name] || `${data.count} flashcards`,
         }));
 
         setCategories(categoriesData);

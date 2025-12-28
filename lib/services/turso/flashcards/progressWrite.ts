@@ -21,6 +21,19 @@ export async function saveFlashcardProgress(
 ): Promise<void> {
   try {
     const now = Date.now();
+    let flashcardId = progressData.flashcardId || '';
+    let finalProgressId = progressId;
+
+    // Ensure flashcardId has FLASH_ prefix if it looks like a syllabus ID
+    // but doesn't have the prefix yet, to match the flashcards table PK.
+    if (flashcardId.startsWith('syllabus-') && !flashcardId.startsWith('FLASH_')) {
+      flashcardId = `FLASH_${flashcardId}`;
+      
+      // Update the PK to match the new flashcardId
+      if (progressData.userId) {
+        finalProgressId = `${progressData.userId}_${flashcardId}`;
+      }
+    }
 
     await db.execute({
       sql: `INSERT INTO flashcard_progress (
@@ -48,8 +61,8 @@ export async function saveFlashcardProgress(
               last_lapse_date = excluded.last_lapse_date,
               updated_at = excluded.updated_at`,
       args: [
-        progressId,
-        progressData.flashcardId || '',
+        finalProgressId,
+        flashcardId,
         progressData.userId || '',
         progressData.wordId || '',
         progressData.level || null,

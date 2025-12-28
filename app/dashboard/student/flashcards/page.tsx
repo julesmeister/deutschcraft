@@ -4,7 +4,7 @@ import { useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQueryClient } from '@tanstack/react-query';
 import { StatCardSimple } from '@/components/ui/StatCardSimple';
-import { FileCard, FileGrid, FileSection } from '@/components/ui/FileCard';
+import { CategoryButtonGrid } from '@/components/flashcards/CategoryButtonGrid';
 import { FlashcardPractice } from '@/components/flashcards/FlashcardPractice';
 import { FlashcardReviewList } from '@/components/flashcards/FlashcardReviewList';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
@@ -342,7 +342,11 @@ export default function FlashcardsLandingPage() {
               )}
 
               {/* Vocabulary Categories */}
-              <FileSection title={`${selectedLevel} Vocabulary Categories`}>
+              <div className="mb-8">
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-xl font-bold text-gray-900">{selectedLevel} Vocabulary Categories</h2>
+                </div>
+                
                 {categoriesLoading ? (
                   <CatLoader message="Loading categories..." size="md" />
                 ) : categories.length === 0 ? (
@@ -354,28 +358,15 @@ export default function FlashcardsLandingPage() {
                     </p>
                   </div>
                 ) : (
-                  <FileGrid>
-                    {categories.map((category) => {
-                      const completionStatus = categoryCompletionStatus.get(category.id);
-                      const dueCount = categoryDueCounts.get(category.id);
-                      return (
-                        <FileCard
-                          key={category.id}
-                          icon={
-                            <div className="text-4xl">{category.icon}</div>
-                          }
-                          name={category.name}
-                          size={`${category.cardCount} cards`}
-                          onClick={() => handleCategoryClick(category.id, category.name)}
-                          completionStatus={completionStatus}
-                          attemptCount={categoryAttemptCounts.get(category.id)}
-                          dueCount={dueCount}
-                        />
-                      );
-                    })}
-                  </FileGrid>
+                  <CategoryButtonGrid
+                    categories={categories}
+                    onSelect={handleCategoryClick}
+                    categoryCompletionStatus={categoryCompletionStatus}
+                    categoryAttemptCounts={categoryAttemptCounts}
+                    categoryDueCounts={categoryDueCounts}
+                  />
                 )}
-              </FileSection>
+              </div>
 
               {/* Quick Actions */}
               <div className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-6">

@@ -49,7 +49,7 @@ export async function getFlashcardProgress(
     const q = query(
       progressRef,
       where("userId", "==", userId),
-      orderBy("updatedAt", "desc")
+      firestoreLimit(2000) // Increased limit to fetch all progress
     );
 
     const snapshot = await getDocs(q);
