@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { getLessonInteractionStats } from '@/lib/services/turso/studentAnswerService';
+import { getExerciseDiscussionStats } from '@/lib/services/turso/socialService';
 
 export function useExerciseInteractions(studentId: string | undefined, exerciseIds: string[]) {
   const [interactions, setInteractions] = useState<Record<string, { submissionCount: number; lastSubmittedAt: number }>>({});
+  const [discussions, setDiscussions] = useState<Record<string, { commentCount: number; lastCommentAt: number }>>({});
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -11,8 +13,13 @@ export function useExerciseInteractions(studentId: string | undefined, exerciseI
     const fetchStats = async () => {
       setIsLoading(true);
       try {
-        const stats = await getLessonInteractionStats(studentId, exerciseIds);
-        setInteractions(stats);
+        const [interactionStats, discussionStats] = await Promise.all([
+          getLessonInteractionStats(studentId, exerciseIds),
+          getExerciseDiscussionStats(exerciseIds)
+        ]);
+        
+        setInteractions(interactionStats);
+        setDiscussions(discussionStats);
       } catch (error) {
         console.error('Failed to fetch interactions:', error);
       } finally {
@@ -23,5 +30,5 @@ export function useExerciseInteractions(studentId: string | undefined, exerciseI
     fetchStats();
   }, [studentId, JSON.stringify(exerciseIds)]);
 
-  return { interactions, isLoading };
+  return { interactions, discussions, isLoading };
 }

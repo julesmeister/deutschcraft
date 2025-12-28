@@ -20,6 +20,7 @@ interface ExerciseListSectionProps {
   duplicateExerciseIds: Set<string>;
   visibleDuplicateIds: Set<string>;
   interactionStats?: Record<string, { submissionCount: number; lastSubmittedAt: number }>;
+  discussionStats?: Record<string, { commentCount: number; lastCommentAt: number }>;
   onReorder: (exercises: ExerciseWithOverrideMetadata[]) => void;
   onEditExercise: (exercise: ExerciseWithOverrideMetadata, globalIndex?: number) => void;
   onToggleHide: (exerciseId: string, isHidden: boolean, exerciseIndex?: number) => void;
@@ -41,6 +42,7 @@ export function ExerciseListSection({
   duplicateExerciseIds,
   visibleDuplicateIds,
   interactionStats,
+  discussionStats,
   onReorder,
   onEditExercise,
   onToggleHide,
@@ -144,6 +146,7 @@ export function ExerciseListSection({
                 submissionCount: interactionStats[exercise.exerciseId]?.submissionCount || 0,
                 lastSubmittedAt: interactionStats[exercise.exerciseId]?.lastSubmittedAt
               } : undefined}
+              commentCount={discussionStats?.[exercise.exerciseId]?.commentCount}
               onEdit={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -174,6 +177,7 @@ export function ExerciseListSection({
               submissionCount: interactionStats[exercise.exerciseId]?.submissionCount || 0,
               lastSubmittedAt: interactionStats[exercise.exerciseId]?.lastSubmittedAt
             } : undefined}
+            commentCount={discussionStats?.[exercise.exerciseId]?.commentCount}
           />
         );
       })

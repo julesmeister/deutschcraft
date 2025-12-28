@@ -318,6 +318,47 @@ export async function deleteComment(commentId: string, postId: string): Promise<
   }
 }
 
+/**
+ * Get discussion stats for multiple exercises
+ */
+export async function getExerciseDiscussionStats(
+  exerciseIds: string[]
+): Promise<Record<string, { commentCount: number; lastCommentAt: number }>> {
+  if (exerciseIds.length === 0) return {};
+
+  try {
+    const placeholders = exerciseIds.map(() => '?').join(',');
+    
+    const sql = `
+      SELECT 
+        post_id as exercise_id, 
+        COUNT(*) as comment_count,
+        MAX(created_at) as last_comment
+      FROM social_comments 
+      WHERE post_id IN (${placeholders})
+      GROUP BY post_id
+    `;
+
+    const args = [...exerciseIds];
+    const result = await db.execute({ sql, args });
+
+    const stats: Record<string, { commentCount: number; lastCommentAt: number }> = {};
+    
+    for (const row of result.rows) {
+      const exerciseId = row.exercise_id as string;
+      stats[exerciseId] = {
+        commentCount: row.comment_count as number,
+        lastCommentAt: row.last_comment as number
+      };
+    }
+
+    return stats;
+  } catch (error) {
+    console.error('[socialService:turso] Error fetching discussion stats:', error);
+    return {};
+  }
+}
+
 // ============================================================================
 // SUGGESTIONS
 // ============================================================================

@@ -3,11 +3,11 @@
  * Supports override metadata badges and teacher actions
  */
 
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { Edit3 } from 'lucide-react';
-import { ExerciseWithOverrideMetadata } from '@/lib/models/exerciseOverride';
+import Link from "next/link";
+import { Edit3 } from "lucide-react";
+import { ExerciseWithOverrideMetadata } from "@/lib/models/exerciseOverride";
 
 interface ExerciseListCardProps {
   exercise: ExerciseWithOverrideMetadata;
@@ -28,6 +28,7 @@ interface ExerciseListCardProps {
     submissionCount: number;
     lastSubmittedAt?: number;
   };
+  commentCount?: number;
 }
 
 export function ExerciseListCard({
@@ -41,21 +42,26 @@ export function ExerciseListCard({
   isDraggable,
   isDuplicate,
   interactionStats,
+  commentCount,
 }: ExerciseListCardProps) {
   // Construct exercise detail URL using exerciseId (unique identifier)
-  const exerciseUrl = `/dashboard/student/answer-hub/${levelBook}/${lessonId}/${encodeURIComponent(exercise.exerciseId)}`;
+  const exerciseUrl = `/dashboard/student/answer-hub/${levelBook}/${lessonId}/${encodeURIComponent(
+    exercise.exerciseId
+  )}`;
 
   const answerCount = exercise.answers.length;
 
   const handleCardClick = (e: React.MouseEvent) => {
     // Prevent navigation if dragging
-    if ((e.currentTarget as HTMLElement).getAttribute('data-dragging') === 'true') {
+    if (
+      (e.currentTarget as HTMLElement).getAttribute("data-dragging") === "true"
+    ) {
       e.preventDefault();
       return;
     }
 
     // If clicking on a button, don't navigate
-    if ((e.target as HTMLElement).closest('button')) {
+    if ((e.target as HTMLElement).closest("button")) {
       e.preventDefault();
       return;
     }
@@ -63,11 +69,23 @@ export function ExerciseListCard({
 
   return (
     <Link href={exerciseUrl} onClick={handleCardClick} draggable={false}>
-      <div className={`group ${colorScheme.bg} px-6 py-4 transition-all duration-200 ${isDraggable ? 'cursor-grab active:cursor-grabbing' : 'cursor-pointer'} ${exercise._isHidden ? 'opacity-50 bg-gray-100' : ''}`}>
+      <div
+        className={`group ${
+          colorScheme.bg
+        } px-6 py-4 transition-all duration-200 ${
+          isDraggable ? "cursor-grab active:cursor-grabbing" : "cursor-pointer"
+        } ${exercise._isHidden ? "opacity-50 bg-gray-100" : ""}`}
+      >
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1">
-              <h3 className={`text-lg font-bold transition-colors duration-200 ${exercise._isHidden ? 'text-gray-500 line-through' : `text-gray-900 ${colorScheme.text}`}`}>
+              <h3
+                className={`text-lg font-bold transition-colors duration-200 ${
+                  exercise._isHidden
+                    ? "text-gray-500 line-through"
+                    : `text-gray-900 ${colorScheme.text}`
+                }`}
+              >
                 {exercise.exerciseNumber}
               </h3>
 
@@ -86,9 +104,16 @@ export function ExerciseListCard({
                 </span>
               )}
             </div>
-            <p className={`text-sm mb-0 ${exercise._isHidden ? 'text-gray-400' : 'text-gray-600'}`}>
-              {answerCount} item{answerCount !== 1 ? 's' : ''}
-              {exercise.question && ` - ${exercise.question.substring(0, 60)}${exercise.question.length > 60 ? '...' : ''}`}
+            <p
+              className={`text-sm mb-0 ${
+                exercise._isHidden ? "text-gray-400" : "text-gray-600"
+              }`}
+            >
+              {answerCount} item{answerCount !== 1 ? "s" : ""}
+              {exercise.question &&
+                ` - ${exercise.question.substring(0, 60)}${
+                  exercise.question.length > 60 ? "..." : ""
+                }`}
             </p>
           </div>
 
@@ -122,12 +147,14 @@ export function ExerciseListCard({
                   onClick={onToggleHide}
                   className={`inline-flex items-center px-3 py-1 text-xs font-bold transition-colors ${
                     exercise._isHidden
-                      ? 'bg-green-100 text-green-700 hover:bg-green-200'
-                      : 'bg-red-100 text-red-700 hover:bg-red-200'
+                      ? "bg-green-100 text-green-700 hover:bg-green-200"
+                      : "bg-red-100 text-red-700 hover:bg-red-200"
                   }`}
-                  title={exercise._isHidden ? 'Unhide exercise' : 'Hide exercise'}
+                  title={
+                    exercise._isHidden ? "Unhide exercise" : "Hide exercise"
+                  }
                 >
-                  {exercise._isHidden ? 'SHOW' : 'HIDE'}
+                  {exercise._isHidden ? "SHOW" : "HIDE"}
                 </button>
               </>
             )}
@@ -135,7 +162,30 @@ export function ExerciseListCard({
             {/* Interaction Badge */}
             {interactionStats?.hasInteracted && (
               <span className="inline-flex items-center px-2 py-1 text-xs font-bold bg-blue-100 text-blue-700">
-                {interactionStats.submissionCount > 0 ? `${interactionStats.submissionCount} submitted` : 'Viewed'}
+                {interactionStats.submissionCount > 0
+                  ? `${interactionStats.submissionCount} submitted`
+                  : "Viewed"}
+              </span>
+            )}
+
+            {/* Comment Badge */}
+            {commentCount !== undefined && commentCount > 0 && (
+              <span className="inline-flex items-center gap-1 px-2 py-1 text-xs font-bold bg-purple-100 text-purple-700">
+                <svg
+                  className="w-3 h-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                  ></path>
+                </svg>
+                {commentCount}
               </span>
             )}
 

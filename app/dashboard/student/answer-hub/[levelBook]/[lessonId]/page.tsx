@@ -72,7 +72,7 @@ export default function LessonDetailPage() {
     [lesson]
   );
 
-  const { interactions } = useExerciseInteractions(
+  const { interactions, discussions } = useExerciseInteractions(
     userId || userEmail,
     exerciseIds
   );
@@ -256,6 +256,7 @@ export default function LessonDetailPage() {
               duplicateExerciseIds={duplicateExerciseIds}
               visibleDuplicateIds={visibleDuplicateIds}
               interactionStats={interactions}
+              discussionStats={discussions}
               onReorder={handleReorder}
               onEditExercise={handleEditExercise}
               onToggleHide={handleToggleHide}
