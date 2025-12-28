@@ -29,6 +29,8 @@ interface BaseSessionSummaryProps {
   // Optional second review action
   onReviewAll?: () => void;
   reviewAllButtonText?: string;
+  // Override for the review count badge
+  reviewCount?: number;
 }
 
 export function BaseSessionSummary({
@@ -45,6 +47,7 @@ export function BaseSessionSummary({
   hideReviewIfNoMistakes = false,
   onReviewAll,
   reviewAllButtonText = 'Review All',
+  reviewCount,
 }: BaseSessionSummaryProps) {
   const totalReviewed = stats.again + stats.hard + stats.good + stats.easy + stats.expert;
   const accuracy = totalReviewed > 0
@@ -76,8 +79,10 @@ export function BaseSessionSummary({
     }
   }, [accuracy, showConfetti]);
 
-  const hasMistakes = stats.again > 0;
-  const showReviewButton = hideReviewIfNoMistakes ? hasMistakes : true;
+  // Use provided reviewCount or default to stats.again (forgotten)
+  const countToReview = reviewCount !== undefined ? reviewCount : stats.again;
+  const hasReviewableItems = countToReview > 0;
+  const showReviewButton = hideReviewIfNoMistakes ? hasReviewableItems : true;
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -183,7 +188,7 @@ export function BaseSessionSummary({
               size="lg"
               className="flex-1"
             >
-              {hasMistakes ? `${reviewButtonText} (${stats.again})` : reviewButtonText}
+              {hasReviewableItems ? `${reviewButtonText} (${countToReview})` : reviewButtonText}
             </Button>
           )}
           {onReviewAll && (

@@ -17,6 +17,9 @@ export function SessionSummary({
   onReview,
   onFinish,
 }: SessionSummaryProps) {
+  // Count cards that need review (Forgotten + Hard)
+  const reviewCount = stats.again + stats.hard;
+
   return (
     <BaseSessionSummary
       stats={stats}
@@ -26,7 +29,8 @@ export function SessionSummary({
       onFinish={onFinish}
       title="Session Complete!"
       itemLabel="Cards Reviewed"
-      reviewButtonText="Review Forgotten Cards"
+      reviewButtonText="Review Difficult Cards"
+      reviewCount={reviewCount}
       finishButtonText="Finish Session"
       showConfetti={false}
       hideReviewIfNoMistakes={false}

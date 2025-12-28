@@ -199,11 +199,11 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
   };
 
   const handleReviewAgainCards = () => {
-    // Filter out cards marked as "expert" - they don't need review
-    // Include cards marked as: again, hard, good, easy, or not yet reviewed
+    // User request: "only flashcards that should appear are those that i forgot or that was hard"
+    // Filter to include only cards marked as: again (forgot) or hard
     const cardsToReview = initialFlashcards.filter(card => {
       const difficulty = reviewedCards[card.id];
-      return !difficulty || difficulty !== 'expert';
+      return difficulty === 'again' || difficulty === 'hard';
     });
 
     if (cardsToReview.length > 0) {
@@ -215,6 +215,10 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
       setIsFlipped(false);
       // Keep reviewed cards record but reset stats for new session
       setMasteryStats({ again: 0, hard: 0, good: 0, easy: 0, expert: 0 });
+    } else {
+        // If there are no hard/forgotten cards, just finish
+        // This shouldn't happen if the button is conditionally shown, but good for safety
+        toast.success("No cards to review! Great job!");
     }
   };
 
