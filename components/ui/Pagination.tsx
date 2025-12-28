@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export type PaginationVariant = 'rounded' | 'pills';
 
@@ -90,12 +91,12 @@ export function Pagination({
         <Link
           href={getPageUrl(currentPage + 1)}
           onClick={handlePageClick(currentPage + 1)}
-          className="flex items-center justify-center w-[50px] h-[50px] text-[25px] font-normal
+          className="flex items-center justify-center w-[50px] h-[50px]
                      text-[#11316e] bg-transparent border border-[#4e5e7c26] rounded-full
                      transition-all duration-500 hover:bg-[#559adc] hover:text-white"
           aria-label="Next page"
         >
-          <span className="relative top-[0.5px]">→</span>
+          <ArrowRight className="w-6 h-6" />
         </Link>
       ) : null;
     }

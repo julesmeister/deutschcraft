@@ -35,7 +35,7 @@ export default function WritingsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <DashboardHeader
-        title="Your Writings ✍️"
+        title={`Your Writings (${totalWithCorrections}) ✍️`}
         subtitle="Review all your corrected writing submissions"
       />
 
@@ -136,11 +136,15 @@ function WritingCard({
     >
       {/* Top Right: Score Badge and View Button */}
       <div className="absolute top-4 right-4 md:top-[30px] md:right-[25px] flex items-center gap-3">
-        {teacherReview && (
+        {teacherReview ? (
           <div className="px-3 py-1.5 bg-green-600 text-white text-xs font-bold rounded-lg">
             {!isNaN(Number(teacherReview.overallScore))
               ? `${teacherReview.overallScore}/100`
               : "Not graded yet"}
+          </div>
+        ) : (
+          <div className="px-3 py-1.5 bg-amber-500 text-white text-xs font-bold rounded-lg flex items-center gap-1">
+            <span>⏳</span> Pending
           </div>
         )}
         <div className="w-[140px]">

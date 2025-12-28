@@ -108,23 +108,25 @@ export async function getTeacherReviews(
 }
 
 export async function getTeacherReviewsBatch(
-  batchId: string
-): Promise<TeacherReview[]> {
-  // Assuming we filter by submission's batchId, but TeacherReview might not store batchId.
-  // This might require a join or storing batchId in TeacherReview.
-  // For now, standard implementation.
+  submissionIds: string[]
+): Promise<Record<string, TeacherReview>> {
+  if (submissionIds.length === 0) return {};
+
   const ref = collection(db, TEACHER_REVIEWS_COLLECTION);
-  // If no index exists for batchId, this might fail or require client-side filtering.
-  // We'll assume batchId is stored.
-  const q = query(
-    ref,
-    where("batchId", "==", batchId),
-    orderBy("createdAt", "desc")
-  );
+  // Firestore 'in' query is limited to 10 values.
+  // If we have more than 10, we'd need to chunk it.
+  // For now, assuming usage with pagination (5 items), it's safe.
+  const q = query(ref, where("submissionId", "in", submissionIds));
+
   const snapshot = await getDocs(q);
-  return snapshot.docs.map(
-    (doc) => ({ reviewId: doc.id, ...doc.data() } as TeacherReview)
-  );
+
+  const reviewsMap: Record<string, TeacherReview> = {};
+  snapshot.docs.forEach((doc) => {
+    const data = doc.data() as TeacherReview;
+    reviewsMap[data.submissionId] = { reviewId: doc.id, ...data };
+  });
+
+  return reviewsMap;
 }
 
 export async function createTeacherReview(

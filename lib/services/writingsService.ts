@@ -7,7 +7,7 @@
  */
 
 import { WritingSubmission, TeacherReview } from '@/lib/models/writing';
-import { getTeacherReview } from '@/lib/services/writingService';
+import { getTeacherReviewsBatch as fetchTeacherReviewsBatch } from '@/lib/services/writingService';
 
 /**
  * Filter submissions to only include those with corrections
@@ -20,11 +20,8 @@ export function filterSubmissionsWithCorrections(
   submissions: WritingSubmission[]
 ): WritingSubmission[] {
   return submissions.filter(submission => {
-    // Exclude drafts
-    if (submission.status === 'draft') return false;
-
-    // Must have either AI correction or teacher review
-    return submission.aiCorrectedVersion || submission.teacherScore !== undefined;
+    // Exclude drafts, show everything else (submitted, reviewed)
+    return submission.status !== 'draft';
   });
 }
 

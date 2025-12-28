@@ -23,11 +23,10 @@ import {
   paginateSubmissions,
 } from "@/lib/services/writingsService";
 
-const ITEMS_PER_PAGE = 5; // Show 5 at a time for smooth infinite scroll
+const ITEMS_PER_PAGE = 5; // Show 5 items per page
 
 export function useWritingsData(userEmail: string | null) {
   const [currentPage, setCurrentPage] = useState(1);
-  const loadMoreRef = useRef<HTMLDivElement>(null);
 
   // Fetch all submissions for current user (database-agnostic via hook)
   const { data: allSubmissions = [], isLoading } =
