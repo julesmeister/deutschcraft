@@ -100,6 +100,94 @@ export async function POST(request: Request) {
 
     console.log('[Migrate] Grammar tables ready');
 
+    // Create additional tables for new collections
+    console.log('[Migrate] Creating additional tables...');
+
+    // gantt_tasks table
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS gantt_tasks (
+        task_id TEXT PRIMARY KEY NOT NULL,
+        name TEXT NOT NULL,
+        description TEXT,
+        start_date INTEGER NOT NULL,
+        end_date INTEGER NOT NULL,
+        progress INTEGER DEFAULT 0,
+        status TEXT NOT NULL,
+        color TEXT,
+        parent_task_id TEXT,
+        order_index INTEGER NOT NULL,
+        assigned_to TEXT,
+        created_by TEXT NOT NULL,
+        dependencies TEXT,
+        tags TEXT,
+        priority TEXT,
+        created_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000),
+        updated_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000)
+      )
+    `);
+
+    // transactions table
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS transactions (
+        transaction_id TEXT PRIMARY KEY NOT NULL,
+        user_id TEXT NOT NULL,
+        user_email TEXT NOT NULL,
+        payment_method TEXT NOT NULL,
+        amount REAL NOT NULL,
+        reference_number TEXT,
+        status TEXT NOT NULL DEFAULT 'pending',
+        verified_by TEXT,
+        verified_at INTEGER,
+        rejection_reason TEXT,
+        notes TEXT,
+        screenshot_url TEXT,
+        created_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000),
+        updated_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000)
+      )
+    `);
+
+    // dailyThemes table
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS daily_themes (
+        theme_id TEXT PRIMARY KEY NOT NULL,
+        batch_id TEXT NOT NULL,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        created_by TEXT NOT NULL,
+        active INTEGER DEFAULT 1,
+        created_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000),
+        updated_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000)
+      )
+    `);
+
+    // teacher_reviews table (for writing reviews)
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS teacher_reviews (
+        review_id TEXT PRIMARY KEY NOT NULL,
+        submission_id TEXT NOT NULL,
+        student_id TEXT NOT NULL,
+        teacher_id TEXT NOT NULL,
+        review_text TEXT,
+        score INTEGER,
+        created_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000),
+        updated_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000)
+      )
+    `);
+
+    // playground_writings table
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS playground_writings (
+        writing_id TEXT PRIMARY KEY NOT NULL,
+        user_id TEXT NOT NULL,
+        room_id TEXT NOT NULL,
+        content TEXT NOT NULL,
+        created_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000),
+        updated_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000)
+      )
+    `);
+
+    console.log('[Migrate] Additional tables ready');
+
     const stats: any = {};
 
     // =========================================================================
@@ -396,8 +484,265 @@ export async function POST(request: Request) {
     }
     stats.studentAnswers = studentAnswerCount;
 
+    // 7. Migrate gantt_tasks
+    console.log('[Migrate] Migrating gantt_tasks...');
+    const ganttTasksSnapshot = await adminDb.collection('gantt_tasks').get();
+    let ganttTaskCount = 0;
+
+    for (const doc of ganttTasksSnapshot.docs) {
+      const task = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO gantt_tasks (
+            task_id, name, description, start_date, end_date,
+            progress, status, color, parent_task_id, order_index,
+            assigned_to, created_by, dependencies, tags, priority,
+            created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            task.taskId || doc.id,
+            task.name,
+            task.description || null,
+            task.startDate,
+            task.endDate,
+            task.progress || 0,
+            task.status,
+            task.color || null,
+            task.parentTaskId || null,
+            task.orderIndex,
+            task.assignedTo ? JSON.stringify(task.assignedTo) : null,
+            task.createdBy,
+            task.dependencies ? JSON.stringify(task.dependencies) : null,
+            task.tags ? JSON.stringify(task.tags) : null,
+            task.priority || null,
+            task.createdAt || Date.now(),
+            task.updatedAt || Date.now(),
+          ],
+        });
+        ganttTaskCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating gantt task:`, error);
+      }
+    }
+    stats.ganttTasks = ganttTaskCount;
+
+    // 8. Migrate transactions
+    console.log('[Migrate] Migrating transactions...');
+    const transactionsSnapshot = await adminDb.collection('transactions').get();
+    let transactionCount = 0;
+
+    for (const doc of transactionsSnapshot.docs) {
+      const txn = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO transactions (
+            transaction_id, user_id, user_email, payment_method, amount,
+            reference_number, status, verified_by, verified_at,
+            rejection_reason, notes, screenshot_url,
+            created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            txn.transactionId || doc.id,
+            txn.userId,
+            txn.userEmail,
+            txn.paymentMethod,
+            txn.amount,
+            txn.referenceNumber || null,
+            txn.status || 'pending',
+            txn.verifiedBy || null,
+            txn.verifiedAt || null,
+            txn.rejectionReason || null,
+            txn.notes || null,
+            txn.screenshotUrl || null,
+            txn.createdAt || Date.now(),
+            txn.updatedAt || Date.now(),
+          ],
+        });
+        transactionCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating transaction:`, error);
+      }
+    }
+    stats.transactions = transactionCount;
+
+    // 9. Migrate dailyThemes
+    console.log('[Migrate] Migrating dailyThemes...');
+    const dailyThemesSnapshot = await adminDb.collection('dailyThemes').get();
+    let dailyThemeCount = 0;
+
+    for (const doc of dailyThemesSnapshot.docs) {
+      const theme = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO daily_themes (
+            theme_id, batch_id, title, description,
+            created_by, active, created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            theme.themeId || doc.id,
+            theme.batchId,
+            theme.title,
+            theme.description,
+            theme.createdBy,
+            theme.active ? 1 : 0,
+            theme.createdAt || Date.now(),
+            theme.updatedAt || Date.now(),
+          ],
+        });
+        dailyThemeCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating daily theme:`, error);
+      }
+    }
+    stats.dailyThemes = dailyThemeCount;
+
+    // 10. Migrate teacher-reviews
+    console.log('[Migrate] Migrating teacher-reviews...');
+    const teacherReviewsSnapshot = await adminDb.collection('teacher-reviews').get();
+    let teacherReviewCount = 0;
+
+    for (const doc of teacherReviewsSnapshot.docs) {
+      const review = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO teacher_reviews (
+            review_id, submission_id, student_id, teacher_id,
+            review_text, score, created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            review.reviewId || doc.id,
+            review.submissionId,
+            review.studentId,
+            review.teacherId,
+            review.reviewText || null,
+            review.score || null,
+            review.createdAt || Date.now(),
+            review.updatedAt || Date.now(),
+          ],
+        });
+        teacherReviewCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating teacher review:`, error);
+      }
+    }
+    stats.teacherReviews = teacherReviewCount;
+
+    // 11. Migrate posts
+    console.log('[Migrate] Migrating posts...');
+    const postsSnapshot = await adminDb.collection('posts').get();
+    let postCount = 0;
+
+    for (const doc of postsSnapshot.docs) {
+      const post = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO social_posts (
+            post_id, user_id, content, cefr_level,
+            visibility, created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            post.postId || doc.id,
+            post.userId,
+            post.content,
+            post.cefrLevel || null,
+            post.visibility || 'public',
+            post.createdAt || Date.now(),
+            post.updatedAt || Date.now(),
+          ],
+        });
+        postCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating post:`, error);
+      }
+    }
+    stats.posts = postCount;
+
+    // 12. Migrate comments
+    console.log('[Migrate] Migrating comments...');
+    const commentsSnapshot = await adminDb.collection('comments').get();
+    let commentCount = 0;
+
+    for (const doc of commentsSnapshot.docs) {
+      const comment = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO social_comments (
+            comment_id, post_id, user_id, content,
+            created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?)`,
+          args: [
+            comment.commentId || doc.id,
+            comment.postId,
+            comment.userId,
+            comment.content,
+            comment.createdAt || Date.now(),
+            comment.updatedAt || Date.now(),
+          ],
+        });
+        commentCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating comment:`, error);
+      }
+    }
+    stats.comments = commentCount;
+
+    // 13. Migrate likes
+    console.log('[Migrate] Migrating likes...');
+    const likesSnapshot = await adminDb.collection('likes').get();
+    let likeCount = 0;
+
+    for (const doc of likesSnapshot.docs) {
+      const like = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO social_likes (
+            like_id, post_id, user_id, created_at
+          ) VALUES (?, ?, ?, ?)`,
+          args: [
+            like.likeId || doc.id,
+            like.postId,
+            like.userId,
+            like.createdAt || Date.now(),
+          ],
+        });
+        likeCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating like:`, error);
+      }
+    }
+    stats.likes = likeCount;
+
+    // 14. Migrate playground_writings
+    console.log('[Migrate] Migrating playground_writings...');
+    const playgroundSnapshot = await adminDb.collection('playground_writings').get();
+    let playgroundCount = 0;
+
+    for (const doc of playgroundSnapshot.docs) {
+      const writing = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO playground_writings (
+            writing_id, user_id, room_id, content,
+            created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?)`,
+          args: [
+            writing.writingId || doc.id,
+            writing.userId,
+            writing.roomId,
+            writing.content,
+            writing.createdAt || Date.now(),
+            writing.updatedAt || Date.now(),
+          ],
+        });
+        playgroundCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating playground writing:`, error);
+      }
+    }
+    stats.playgroundWritings = playgroundCount;
+
     /*
-    // 7. Migrate progress (daily stats)
+    // (Previously section 7) Migrate progress (daily stats)
     console.log('[Migrate] Migrating progress...');
     const progressSnapshot = await adminDb.collection('progress').get();
     let progressCount = 0;
