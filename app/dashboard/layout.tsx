@@ -119,6 +119,7 @@ function DashboardNavbar() {
                     { label: 'Writings', href: '/dashboard/student/writings' },
                     { label: 'Syllabus', href: '/dashboard/student/syllabus' },
                     { label: 'Schedule', href: '/dashboard/schedule' },
+                    { label: 'Analytics', href: '/dashboard/analytics' },
                   ],
                 },
                 {
@@ -276,6 +277,9 @@ function DashboardNavbar() {
                   </Link>
                   <Link href="/dashboard/student/videos" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
                     Videos
+                  </Link>
+                  <Link href="/dashboard/analytics" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
+                    Analytics
                   </Link>
                 </div>
               </div>
