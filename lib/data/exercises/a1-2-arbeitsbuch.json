@@ -5,7 +5,7 @@
   "lessons": [
     {
       "lessonNumber": 8,
-      "title": "Lektion 8",
+      "title": "Lektion 8 - Beruf und Arbeit",
       "exercises": [
         {
           "exerciseId": "L8-A2",
@@ -421,7 +421,7 @@
     },
     {
       "lessonNumber": 9,
-      "title": "Lektion 9",
+      "title": "Lektion 9 - Ämter und Behörden",
       "exercises": [
         {
           "exerciseId": "L9-A1",
@@ -831,7 +831,7 @@
     },
     {
       "lessonNumber": 10,
-      "title": "Lektion 10",
+      "title": "Lektion 10 - Gesundheit und Krankheit",
       "exercises": [
         {
           "exerciseId": "L10-A1",
@@ -1175,7 +1175,7 @@
     },
     {
       "lessonNumber": 11,
-      "title": "Lektion 11",
+      "title": "Lektion 11 - In der Stadt unterwegs",
       "exercises": [
         {
           "exerciseId": "L11-A1",
@@ -1607,7 +1607,7 @@
     },
     {
       "lessonNumber": 12,
-      "title": "Lektion 12",
+      "title": "Lektion 12 - Kundenservice",
       "exercises": [
         {
           "exerciseId": "L12-A2",
@@ -1893,7 +1893,7 @@
     },
     {
       "lessonNumber": 13,
-      "title": "Lektion 13",
+      "title": "Lektion 13 - Neue Kleider",
       "exercises": [
         {
           "exerciseId": "L13-A1",
@@ -2237,7 +2237,7 @@
     },
     {
       "lessonNumber": 14,
-      "title": "Lektion 14",
+      "title": "Lektion 14 - Feste",
       "exercises": [
         {
           "exerciseId": "L14-A1",

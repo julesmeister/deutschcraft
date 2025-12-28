@@ -5,7 +5,7 @@
   "lessons": [
     {
       "lessonNumber": 1,
-      "title": "Lektion 1",
+      "title": "Lektion 1 - Guten Tag. Mein Name ist ...",
       "exercises": [
         {
           "exerciseId": "L1-A1",
@@ -926,7 +926,7 @@
     },
     {
       "lessonNumber": 2,
-      "title": "Lektion 2",
+      "title": "Lektion 2 - Meine Familie",
       "exercises": [
         {
           "exerciseId": "L2-A1",
@@ -1897,7 +1897,7 @@
     },
     {
       "lessonNumber": 3,
-      "title": "Lektion 3",
+      "title": "Lektion 3 - Einkaufen",
       "exercises": [
         {
           "exerciseId": "L3-A1",
@@ -2839,7 +2839,7 @@
     },
     {
       "lessonNumber": 4,
-      "title": "Lektion 4",
+      "title": "Lektion 4 - Meine Wohnung",
       "exercises": [
         {
           "exerciseId": "L4-A1",
@@ -3684,7 +3684,7 @@
     },
     {
       "lessonNumber": 5,
-      "title": "Lektion 5",
+      "title": "Lektion 5 - Mein Tag",
       "exercises": [
         {
           "exerciseId": "L5-D3",
@@ -4538,7 +4538,7 @@
     },
     {
       "lessonNumber": 6,
-      "title": "Lektion 6",
+      "title": "Lektion 6 - Freizeit",
       "exercises": [
         {
           "exerciseId": "L6-A1",
@@ -5173,7 +5173,7 @@
     },
     {
       "lessonNumber": 7,
-      "title": "Lektion 7",
+      "title": "Lektion 7 - Kinder und Schule",
       "exercises": [
         {
           "exerciseId": "L7-A1",

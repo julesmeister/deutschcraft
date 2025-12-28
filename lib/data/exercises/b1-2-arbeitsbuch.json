@@ -4,14 +4,14 @@
   "bookType": "AB",
   "lessons": [
     {
-      "lessonNumber": 1,
-      "title": "Lektion 1",
+      "lessonNumber": 8,
+      "title": "Lektion 8 - Unter Kollegen",
       "exercises": [
         {
-          "exerciseId": "B1.2-L1-AB-5",
+          "exerciseId": "B1.2-L8-AB-5",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "5",
           "section": "Schritt A",
           "title": "5",
@@ -32,10 +32,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-7",
+          "exerciseId": "B1.2-L8-AB-7",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "7",
           "section": "Schritt A",
           "title": "7",
@@ -52,10 +52,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-1",
+          "exerciseId": "B1.2-L8-AB-1",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "1",
           "section": "Schritt A",
           "title": "1",
@@ -68,10 +68,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-1b",
+          "exerciseId": "B1.2-L8-AB-1b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "1b",
           "section": "Schritt A",
           "title": "1b",
@@ -84,10 +84,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-3",
+          "exerciseId": "B1.2-L8-AB-3",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "3",
           "section": "Schritt A",
           "title": "3",
@@ -100,10 +100,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-4",
+          "exerciseId": "B1.2-L8-AB-4",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "4",
           "section": "Schritt A",
           "title": "4",
@@ -116,10 +116,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-8a",
+          "exerciseId": "B1.2-L8-AB-8a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "8a",
           "section": "Schritt B",
           "title": "8a",
@@ -132,10 +132,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-8b",
+          "exerciseId": "B1.2-L8-AB-8b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "8b",
           "section": "Schritt B",
           "title": "8b",
@@ -148,10 +148,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-9",
+          "exerciseId": "B1.2-L8-AB-9",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "9",
           "section": "Schritt B",
           "title": "9",
@@ -164,10 +164,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-2",
+          "exerciseId": "B1.2-L8-AB-2",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "2",
           "section": "Schritt B",
           "title": "2",
@@ -184,10 +184,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-11a",
+          "exerciseId": "B1.2-L8-AB-11a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "11a",
           "section": "Schritt B",
           "title": "11a",
@@ -212,10 +212,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-11b",
+          "exerciseId": "B1.2-L8-AB-11b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "11b",
           "section": "Schritt B",
           "title": "11b",
@@ -228,10 +228,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-15",
+          "exerciseId": "B1.2-L8-AB-15",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "15",
           "section": "Schritt C",
           "title": "15",
@@ -252,10 +252,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-23",
+          "exerciseId": "B1.2-L8-AB-23",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "23",
           "section": "Schritt C",
           "title": "23",
@@ -272,10 +272,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-24",
+          "exerciseId": "B1.2-L8-AB-24",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "24",
           "section": "Schritt C",
           "title": "24",
@@ -296,10 +296,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-14",
+          "exerciseId": "B1.2-L8-AB-14",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "14",
           "section": "Schritt C",
           "title": "14",
@@ -336,10 +336,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-17",
+          "exerciseId": "B1.2-L8-AB-17",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "17",
           "section": "Schritt C",
           "title": "17",
@@ -352,10 +352,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-18",
+          "exerciseId": "B1.2-L8-AB-18",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "18",
           "section": "Schritt C",
           "title": "18",
@@ -368,10 +368,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-20a",
+          "exerciseId": "B1.2-L8-AB-20a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "20a",
           "section": "Schritt C",
           "title": "20a",
@@ -384,10 +384,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-21",
+          "exerciseId": "B1.2-L8-AB-21",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "21",
           "section": "Schritt C",
           "title": "21",
@@ -408,10 +408,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-22a",
+          "exerciseId": "B1.2-L8-AB-22a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "22a",
           "section": "Schritt C",
           "title": "22a",
@@ -424,10 +424,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-5",
+          "exerciseId": "B1.2-L8-AB-5",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "5",
           "section": "Schritt C",
           "title": "5",
@@ -440,10 +440,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-25a",
+          "exerciseId": "B1.2-L8-AB-25a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "25a",
           "section": "Schritt D",
           "title": "25a",
@@ -456,10 +456,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-2",
+          "exerciseId": "B1.2-L8-AB-2",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "2",
           "section": "Schritt D",
           "title": "2",
@@ -472,10 +472,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-4",
+          "exerciseId": "B1.2-L8-AB-4",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "4",
           "section": "Schritt D",
           "title": "4",
@@ -488,10 +488,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-2",
+          "exerciseId": "B1.2-L8-AB-2",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "2",
           "section": "Fokus Beruf",
           "title": "2",
@@ -504,10 +504,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L1-AB-15",
+          "exerciseId": "B1.2-L8-AB-15",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 1,
+          "lessonNumber": 8,
           "exerciseNumber": "15",
           "section": "Fokus Beruf",
           "title": "15",
@@ -526,14 +526,14 @@
       ]
     },
     {
-      "lessonNumber": 2,
-      "title": "Lektion 2",
+      "lessonNumber": 9,
+      "title": "Lektion 9 - Die digitale Welt",
       "exercises": [
         {
-          "exerciseId": "B1.2-L2-AB-10",
+          "exerciseId": "B1.2-L9-AB-10",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "10",
           "section": "Schritt  A",
           "title": "10",
@@ -558,10 +558,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-1",
+          "exerciseId": "B1.2-L9-AB-1",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "1",
           "section": "Schritt  A",
           "title": "1",
@@ -574,10 +574,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-2a",
+          "exerciseId": "B1.2-L9-AB-2a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "2a",
           "section": "Schritt  A",
           "title": "2a",
@@ -590,10 +590,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-2b",
+          "exerciseId": "B1.2-L9-AB-2b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "2b",
           "section": "Schritt  A",
           "title": "2b",
@@ -606,10 +606,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-2",
+          "exerciseId": "B1.2-L9-AB-2",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "2",
           "section": "Schritt  A",
           "title": "2",
@@ -622,10 +622,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-3b",
+          "exerciseId": "B1.2-L9-AB-3b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "3b",
           "section": "Schritt  A",
           "title": "3b",
@@ -638,10 +638,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-6",
+          "exerciseId": "B1.2-L9-AB-6",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "6",
           "section": "Schritt  A",
           "title": "6",
@@ -654,10 +654,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-7",
+          "exerciseId": "B1.2-L9-AB-7",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "7",
           "section": "Schritt  A",
           "title": "7",
@@ -670,10 +670,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-8",
+          "exerciseId": "B1.2-L9-AB-8",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "8",
           "section": "Schritt  A",
           "title": "8",
@@ -686,10 +686,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-9a",
+          "exerciseId": "B1.2-L9-AB-9a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "9a",
           "section": "Schritt  A",
           "title": "9a",
@@ -702,10 +702,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-11",
+          "exerciseId": "B1.2-L9-AB-11",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "11",
           "section": "Schritt B",
           "title": "11",
@@ -722,10 +722,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-13",
+          "exerciseId": "B1.2-L9-AB-13",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "13",
           "section": "Schritt B",
           "title": "13",
@@ -746,10 +746,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-12a",
+          "exerciseId": "B1.2-L9-AB-12a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "12a",
           "section": "Schritt B",
           "title": "12a",
@@ -774,10 +774,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-12b",
+          "exerciseId": "B1.2-L9-AB-12b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "12b",
           "section": "Schritt B",
           "title": "12b",
@@ -790,10 +790,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-14",
+          "exerciseId": "B1.2-L9-AB-14",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "14",
           "section": "Schritt B",
           "title": "14",
@@ -806,10 +806,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-15",
+          "exerciseId": "B1.2-L9-AB-15",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "15",
           "section": "Schritt B",
           "title": "15",
@@ -830,10 +830,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-17b",
+          "exerciseId": "B1.2-L9-AB-17b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "17b",
           "section": "Schritt C",
           "title": "17b",
@@ -846,10 +846,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-4",
+          "exerciseId": "B1.2-L9-AB-4",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "4",
           "section": "Schritt C",
           "title": "4",
@@ -862,10 +862,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-18",
+          "exerciseId": "B1.2-L9-AB-18",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "18",
           "section": "Schritt C",
           "title": "18",
@@ -894,10 +894,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-19a",
+          "exerciseId": "B1.2-L9-AB-19a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "19a",
           "section": "Schritt D",
           "title": "19a",
@@ -918,10 +918,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-1",
+          "exerciseId": "B1.2-L9-AB-1",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "1",
           "section": "Schritt D",
           "title": "1",
@@ -934,10 +934,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-22a",
+          "exerciseId": "B1.2-L9-AB-22a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "22a",
           "section": "Schritt D",
           "title": "22a",
@@ -954,10 +954,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L2-AB-24a",
+          "exerciseId": "B1.2-L9-AB-24a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 2,
+          "lessonNumber": 9,
           "exerciseNumber": "24a",
           "section": "Schritt E",
           "title": "24a",
@@ -988,14 +988,14 @@
       ]
     },
     {
-      "lessonNumber": 3,
-      "title": "Lektion 3",
+      "lessonNumber": 10,
+      "title": "Lektion 10 - Werbung und Konsum",
       "exercises": [
         {
-          "exerciseId": "B1.2-L3-AB-1",
+          "exerciseId": "B1.2-L10-AB-1",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 3,
+          "lessonNumber": 10,
           "exerciseNumber": "1",
           "section": "Schritt  A",
           "title": "1",
@@ -1016,10 +1016,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L3-AB-2",
+          "exerciseId": "B1.2-L10-AB-2",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 3,
+          "lessonNumber": 10,
           "exerciseNumber": "2",
           "section": "Schritt  A",
           "title": "2",
@@ -1044,10 +1044,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L3-AB-4",
+          "exerciseId": "B1.2-L10-AB-4",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 3,
+          "lessonNumber": 10,
           "exerciseNumber": "4",
           "section": "Schritt  A",
           "title": "4",
@@ -1076,10 +1076,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L3-AB-5a",
+          "exerciseId": "B1.2-L10-AB-5a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 3,
+          "lessonNumber": 10,
           "exerciseNumber": "5a",
           "section": "Schritt  A",
           "title": "5a",
@@ -1092,10 +1092,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L3-AB-8",
+          "exerciseId": "B1.2-L10-AB-8",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 3,
+          "lessonNumber": 10,
           "exerciseNumber": "8",
           "section": "Schritt B",
           "title": "8",
@@ -1116,10 +1116,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L3-AB-7",
+          "exerciseId": "B1.2-L10-AB-7",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 3,
+          "lessonNumber": 10,
           "exerciseNumber": "7",
           "section": "Schritt B",
           "title": "7",
@@ -1132,10 +1132,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L3-AB-10",
+          "exerciseId": "B1.2-L10-AB-10",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 3,
+          "lessonNumber": 10,
           "exerciseNumber": "10",
           "section": "Schritt B",
           "title": "10",
@@ -1168,10 +1168,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L3-AB-9",
+          "exerciseId": "B1.2-L10-AB-9",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 3,
+          "lessonNumber": 10,
           "exerciseNumber": "9",
           "section": "Schritt B",
           "title": "9",
@@ -1192,10 +1192,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L3-AB-12b",
+          "exerciseId": "B1.2-L10-AB-12b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 3,
+          "lessonNumber": 10,
           "exerciseNumber": "12b",
           "section": "Schritt C",
           "title": "12b",
@@ -1212,10 +1212,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L3-AB-13",
+          "exerciseId": "B1.2-L10-AB-13",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 3,
+          "lessonNumber": 10,
           "exerciseNumber": "13",
           "section": "Schritt C",
           "title": "13",
@@ -1232,10 +1232,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L3-AB-15",
+          "exerciseId": "B1.2-L10-AB-15",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 3,
+          "lessonNumber": 10,
           "exerciseNumber": "15",
           "section": "Schritt C",
           "title": "15",
@@ -1256,10 +1256,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L3-AB-17",
+          "exerciseId": "B1.2-L10-AB-17",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 3,
+          "lessonNumber": 10,
           "exerciseNumber": "17",
           "section": "Schritt D",
           "title": "17",
@@ -1278,14 +1278,14 @@
       ]
     },
     {
-      "lessonNumber": 4,
-      "title": "Lektion 4",
+      "lessonNumber": 11,
+      "title": "Lektion 11 - Lebenslanges Lernen",
       "exercises": [
         {
-          "exerciseId": "B1.2-L4-AB-1a",
+          "exerciseId": "B1.2-L11-AB-1a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "1a",
           "section": "Schritt  A",
           "title": "1a",
@@ -1302,10 +1302,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-1b",
+          "exerciseId": "B1.2-L11-AB-1b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "1b",
           "section": "Schritt  A",
           "title": "1b",
@@ -1318,10 +1318,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-2",
+          "exerciseId": "B1.2-L11-AB-2",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "2",
           "section": "Schritt  A",
           "title": "2",
@@ -1334,10 +1334,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-6",
+          "exerciseId": "B1.2-L11-AB-6",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "6",
           "section": "Schritt  A",
           "title": "6",
@@ -1350,10 +1350,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-9",
+          "exerciseId": "B1.2-L11-AB-9",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "9",
           "section": "Schritt B",
           "title": "9",
@@ -1366,10 +1366,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-10",
+          "exerciseId": "B1.2-L11-AB-10",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "10",
           "section": "Schritt B",
           "title": "10",
@@ -1390,10 +1390,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-7",
+          "exerciseId": "B1.2-L11-AB-7",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "7",
           "section": "Schritt B",
           "title": "7",
@@ -1406,10 +1406,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-8",
+          "exerciseId": "B1.2-L11-AB-8",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "8",
           "section": "Schritt B",
           "title": "8",
@@ -1422,10 +1422,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-11",
+          "exerciseId": "B1.2-L11-AB-11",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "11",
           "section": "Schritt B",
           "title": "11",
@@ -1446,10 +1446,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-2018",
+          "exerciseId": "B1.2-L11-AB-2018",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "2018",
           "section": "Schritt B",
           "title": "2018",
@@ -1462,10 +1462,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-12",
+          "exerciseId": "B1.2-L11-AB-12",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "12",
           "section": "Schritt C",
           "title": "12",
@@ -1478,10 +1478,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-13a",
+          "exerciseId": "B1.2-L11-AB-13a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "13a",
           "section": "Schritt C",
           "title": "13a",
@@ -1514,10 +1514,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-17a",
+          "exerciseId": "B1.2-L11-AB-17a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "17a",
           "section": "Schritt D",
           "title": "17a",
@@ -1530,10 +1530,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-19",
+          "exerciseId": "B1.2-L11-AB-19",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "19",
           "section": "Schritt E",
           "title": "19",
@@ -1582,10 +1582,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-20a",
+          "exerciseId": "B1.2-L11-AB-20a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "20a",
           "section": "Schritt E",
           "title": "20a",
@@ -1606,10 +1606,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-4",
+          "exerciseId": "B1.2-L11-AB-4",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "4",
           "section": "Schritt E",
           "title": "4",
@@ -1622,10 +1622,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-8",
+          "exerciseId": "B1.2-L11-AB-8",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "8",
           "section": "Schritt E",
           "title": "8",
@@ -1638,10 +1638,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-14",
+          "exerciseId": "B1.2-L11-AB-14",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "14",
           "section": "Schritt E",
           "title": "14",
@@ -1654,10 +1654,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L4-AB-2",
+          "exerciseId": "B1.2-L11-AB-2",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 4,
+          "lessonNumber": 11,
           "exerciseNumber": "2",
           "section": "Fokus Beruf",
           "title": "2",
@@ -1672,14 +1672,14 @@
       ]
     },
     {
-      "lessonNumber": 5,
-      "title": "Lektion 5",
+      "lessonNumber": 12,
+      "title": "Lektion 12 - Miteinander leben",
       "exercises": [
         {
-          "exerciseId": "B1.2-L5-AB-4",
+          "exerciseId": "B1.2-L12-AB-4",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "4",
           "section": "Schritt  A",
           "title": "4",
@@ -1700,10 +1700,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-1",
+          "exerciseId": "B1.2-L12-AB-1",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "1",
           "section": "Schritt  A",
           "title": "1",
@@ -1728,10 +1728,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-2a",
+          "exerciseId": "B1.2-L12-AB-2a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "2a",
           "section": "Schritt  A",
           "title": "2a",
@@ -1752,10 +1752,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-3a",
+          "exerciseId": "B1.2-L12-AB-3a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "3a",
           "section": "Schritt  A",
           "title": "3a",
@@ -1768,10 +1768,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-3b",
+          "exerciseId": "B1.2-L12-AB-3b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "3b",
           "section": "Schritt  A",
           "title": "3b",
@@ -1784,10 +1784,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-6",
+          "exerciseId": "B1.2-L12-AB-6",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "6",
           "section": "Schritt  A",
           "title": "6",
@@ -1808,10 +1808,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-10",
+          "exerciseId": "B1.2-L12-AB-10",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "10",
           "section": "Schritt B",
           "title": "10",
@@ -1828,10 +1828,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-11a",
+          "exerciseId": "B1.2-L12-AB-11a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "11a",
           "section": "Schritt B",
           "title": "11a",
@@ -1856,10 +1856,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-11b",
+          "exerciseId": "B1.2-L12-AB-11b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "11b",
           "section": "Schritt B",
           "title": "11b",
@@ -1872,10 +1872,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-12",
+          "exerciseId": "B1.2-L12-AB-12",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "12",
           "section": "Schritt B",
           "title": "12",
@@ -1900,10 +1900,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-14a",
+          "exerciseId": "B1.2-L12-AB-14a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "14a",
           "section": "Schritt B",
           "title": "14a",
@@ -1916,10 +1916,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-2018",
+          "exerciseId": "B1.2-L12-AB-2018",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "2018",
           "section": "Schritt B",
           "title": "2018",
@@ -1932,10 +1932,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-14b",
+          "exerciseId": "B1.2-L12-AB-14b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "14b",
           "section": "Schritt B",
           "title": "14b",
@@ -1948,10 +1948,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-15",
+          "exerciseId": "B1.2-L12-AB-15",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "15",
           "section": "Schritt B",
           "title": "15",
@@ -1964,10 +1964,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-17",
+          "exerciseId": "B1.2-L12-AB-17",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "17",
           "section": "Schritt B",
           "title": "17",
@@ -1992,10 +1992,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-18",
+          "exerciseId": "B1.2-L12-AB-18",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "18",
           "section": "Schritt C",
           "title": "18",
@@ -2008,10 +2008,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-19",
+          "exerciseId": "B1.2-L12-AB-19",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "19",
           "section": "Schritt C",
           "title": "19",
@@ -2028,10 +2028,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-20a",
+          "exerciseId": "B1.2-L12-AB-20a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "20a",
           "section": "Schritt D",
           "title": "20a",
@@ -2044,10 +2044,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-1932",
+          "exerciseId": "B1.2-L12-AB-1932",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "1932",
           "section": "Schritt D",
           "title": "1932",
@@ -2060,10 +2060,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-1937",
+          "exerciseId": "B1.2-L12-AB-1937",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "1937",
           "section": "Schritt D",
           "title": "1937",
@@ -2080,10 +2080,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-2",
+          "exerciseId": "B1.2-L12-AB-2",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "2",
           "section": "Schritt E",
           "title": "2",
@@ -2104,10 +2104,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-6",
+          "exerciseId": "B1.2-L12-AB-6",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "6",
           "section": "Schritt E",
           "title": "6",
@@ -2120,10 +2120,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-21c",
+          "exerciseId": "B1.2-L12-AB-21c",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "21c",
           "section": "Schritt E",
           "title": "21c",
@@ -2144,10 +2144,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-2a",
+          "exerciseId": "B1.2-L12-AB-2a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "2a",
           "section": "Fokus Beruf",
           "title": "2a",
@@ -2172,10 +2172,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L5-AB-7",
+          "exerciseId": "B1.2-L12-AB-7",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 5,
+          "lessonNumber": 12,
           "exerciseNumber": "7",
           "section": "Fokus Beruf",
           "title": "7",
@@ -2190,14 +2190,14 @@
       ]
     },
     {
-      "lessonNumber": 6,
-      "title": "Lektion 6",
+      "lessonNumber": 13,
+      "title": "Lektion 13 - Politik und Gesellschaft",
       "exercises": [
         {
-          "exerciseId": "B1.2-L6-AB-4",
+          "exerciseId": "B1.2-L13-AB-4",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 6,
+          "lessonNumber": 13,
           "exerciseNumber": "4",
           "section": "Schritt  A",
           "title": "4",
@@ -2214,10 +2214,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L6-AB-1",
+          "exerciseId": "B1.2-L13-AB-1",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 6,
+          "lessonNumber": 13,
           "exerciseNumber": "1",
           "section": "Schritt  A",
           "title": "1",
@@ -2242,10 +2242,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L6-AB-2a",
+          "exerciseId": "B1.2-L13-AB-2a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 6,
+          "lessonNumber": 13,
           "exerciseNumber": "2a",
           "section": "Schritt  A",
           "title": "2a",
@@ -2258,10 +2258,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L6-AB-3a",
+          "exerciseId": "B1.2-L13-AB-3a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 6,
+          "lessonNumber": 13,
           "exerciseNumber": "3a",
           "section": "Schritt  A",
           "title": "3a",
@@ -2274,10 +2274,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L6-AB-3b",
+          "exerciseId": "B1.2-L13-AB-3b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 6,
+          "lessonNumber": 13,
           "exerciseNumber": "3b",
           "section": "Schritt  A",
           "title": "3b",
@@ -2290,10 +2290,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L6-AB-6",
+          "exerciseId": "B1.2-L13-AB-6",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 6,
+          "lessonNumber": 13,
           "exerciseNumber": "6",
           "section": "Schritt  A",
           "title": "6",
@@ -2306,10 +2306,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L6-AB-7",
+          "exerciseId": "B1.2-L13-AB-7",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 6,
+          "lessonNumber": 13,
           "exerciseNumber": "7",
           "section": "Schritt  A",
           "title": "7",
@@ -2338,10 +2338,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L6-AB-11",
+          "exerciseId": "B1.2-L13-AB-11",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 6,
+          "lessonNumber": 13,
           "exerciseNumber": "11",
           "section": "Schritt   B",
           "title": "11",
@@ -2358,10 +2358,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L6-AB-8",
+          "exerciseId": "B1.2-L13-AB-8",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 6,
+          "lessonNumber": 13,
           "exerciseNumber": "8",
           "section": "Schritt   B",
           "title": "8",
@@ -2390,10 +2390,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L6-AB-9a",
+          "exerciseId": "B1.2-L13-AB-9a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 6,
+          "lessonNumber": 13,
           "exerciseNumber": "9a",
           "section": "Schritt   B",
           "title": "9a",
@@ -2414,10 +2414,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L6-AB-1",
+          "exerciseId": "B1.2-L13-AB-1",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 6,
+          "lessonNumber": 13,
           "exerciseNumber": "1",
           "section": "Schritt   B",
           "title": "1",
@@ -2430,10 +2430,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L6-AB-3",
+          "exerciseId": "B1.2-L13-AB-3",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 6,
+          "lessonNumber": 13,
           "exerciseNumber": "3",
           "section": "Schritt   B",
           "title": "3",
@@ -2450,10 +2450,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L6-AB-15a",
+          "exerciseId": "B1.2-L13-AB-15a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 6,
+          "lessonNumber": 13,
           "exerciseNumber": "15a",
           "section": "Schritt   B",
           "title": "15a",
@@ -2478,10 +2478,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L6-AB-19",
+          "exerciseId": "B1.2-L13-AB-19",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 6,
+          "lessonNumber": 13,
           "exerciseNumber": "19",
           "section": "Schritt C",
           "title": "19",
@@ -2506,10 +2506,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L6-AB-7",
+          "exerciseId": "B1.2-L13-AB-7",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 6,
+          "lessonNumber": 13,
           "exerciseNumber": "7",
           "section": "Schritt C",
           "title": "7",
@@ -2524,14 +2524,14 @@
       ]
     },
     {
-      "lessonNumber": 7,
-      "title": "Lektion 7",
+      "lessonNumber": 14,
+      "title": "Lektion 14 - Alte und neue Heimat",
       "exercises": [
         {
-          "exerciseId": "B1.2-L7-AB-1a",
+          "exerciseId": "B1.2-L14-AB-1a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "1a",
           "section": "Schritt  A",
           "title": "1a",
@@ -2544,10 +2544,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-1b",
+          "exerciseId": "B1.2-L14-AB-1b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "1b",
           "section": "Schritt  A",
           "title": "1b",
@@ -2560,10 +2560,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-3",
+          "exerciseId": "B1.2-L14-AB-3",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "3",
           "section": "Schritt  A",
           "title": "3",
@@ -2576,10 +2576,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-21",
+          "exerciseId": "B1.2-L14-AB-21",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "21",
           "section": "Schritt  A",
           "title": "21",
@@ -2592,10 +2592,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-6",
+          "exerciseId": "B1.2-L14-AB-6",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "6",
           "section": "Schritt B",
           "title": "6",
@@ -2612,10 +2612,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-5",
+          "exerciseId": "B1.2-L14-AB-5",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "5",
           "section": "Schritt B",
           "title": "5",
@@ -2628,10 +2628,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-8",
+          "exerciseId": "B1.2-L14-AB-8",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "8",
           "section": "Schritt B",
           "title": "8",
@@ -2652,10 +2652,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-11a",
+          "exerciseId": "B1.2-L14-AB-11a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "11a",
           "section": "Schritt B",
           "title": "11a",
@@ -2668,10 +2668,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-11b",
+          "exerciseId": "B1.2-L14-AB-11b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "11b",
           "section": "Schritt B",
           "title": "11b",
@@ -2692,10 +2692,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-12a",
+          "exerciseId": "B1.2-L14-AB-12a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "12a",
           "section": "Schritt B",
           "title": "12a",
@@ -2720,10 +2720,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-12b",
+          "exerciseId": "B1.2-L14-AB-12b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "12b",
           "section": "Schritt B",
           "title": "12b",
@@ -2736,10 +2736,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-13",
+          "exerciseId": "B1.2-L14-AB-13",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "13",
           "section": "Schritt B",
           "title": "13",
@@ -2752,10 +2752,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-14",
+          "exerciseId": "B1.2-L14-AB-14",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "14",
           "section": "Schritt B",
           "title": "14",
@@ -2768,10 +2768,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-16a",
+          "exerciseId": "B1.2-L14-AB-16a",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "16a",
           "section": "Schritt C",
           "title": "16a",
@@ -2784,10 +2784,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-2",
+          "exerciseId": "B1.2-L14-AB-2",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "2",
           "section": "Schritt C",
           "title": "2",
@@ -2800,10 +2800,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-17",
+          "exerciseId": "B1.2-L14-AB-17",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "17",
           "section": "Schritt D",
           "title": "17",
@@ -2832,10 +2832,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-2b",
+          "exerciseId": "B1.2-L14-AB-2b",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "2b",
           "section": "Fokus Beruf",
           "title": "2b",
@@ -2848,10 +2848,10 @@
           "difficulty": "medium"
         },
         {
-          "exerciseId": "B1.2-L7-AB-4",
+          "exerciseId": "B1.2-L14-AB-4",
           "level": "B1",
           "bookType": "AB",
-          "lessonNumber": 7,
+          "lessonNumber": 14,
           "exerciseNumber": "4",
           "section": "Fokus Beruf",
           "title": "4",

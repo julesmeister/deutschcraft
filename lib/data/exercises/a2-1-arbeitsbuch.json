@@ -5,7 +5,7 @@
   "lessons": [
     {
       "lessonNumber": 1,
-      "title": "Lektion 1",
+      "title": "Lektion 1 - Ankommen",
       "exercises": [
         {
           "exerciseId": "L1-A1",
@@ -409,7 +409,7 @@
     },
     {
       "lessonNumber": 2,
-      "title": "Lektion 2",
+      "title": "Lektion 2 - Zu Hause",
       "exercises": [
         {
           "exerciseId": "L2-A2",
@@ -835,7 +835,7 @@
     },
     {
       "lessonNumber": 3,
-      "title": "Lektion 3",
+      "title": "Lektion 3 - Essen und Trinken",
       "exercises": [
         {
           "exerciseId": "L3-A1",
@@ -1231,7 +1231,7 @@
     },
     {
       "lessonNumber": 4,
-      "title": "Lektion 4",
+      "title": "Lektion 4 - Arbeitswelt",
       "exercises": [
         {
           "exerciseId": "L4-A2",
@@ -1535,7 +1535,7 @@
     },
     {
       "lessonNumber": 5,
-      "title": "Lektion 5",
+      "title": "Lektion 5 - Sport und Fitness",
       "exercises": [
         {
           "exerciseId": "L5-A1",
@@ -1891,7 +1891,7 @@
     },
     {
       "lessonNumber": 6,
-      "title": "Lektion 6",
+      "title": "Lektion 6 - Schule und Ausbildung",
       "exercises": [
         {
           "exerciseId": "L6-A1",
@@ -2221,7 +2221,7 @@
     },
     {
       "lessonNumber": 7,
-      "title": "Lektion 7",
+      "title": "Lektion 7 - Feste und Geschenke",
       "exercises": [
         {
           "exerciseId": "L7-A1",
