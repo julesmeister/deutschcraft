@@ -14,6 +14,12 @@
 
 import { readFileSync, readdirSync } from 'fs';
 import { join } from 'path';
+import * as dotenv from 'dotenv';
+
+// Load environment variables from .env.local or .env
+dotenv.config({ path: '.env.local' });
+dotenv.config({ path: '.env' });
+
 import { db } from './client';
 
 interface Migration {
