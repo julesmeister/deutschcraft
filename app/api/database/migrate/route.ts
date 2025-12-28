@@ -186,6 +186,77 @@ export async function POST(request: Request) {
       )
     `);
 
+    // peer_reviews table
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS peer_reviews (
+        review_id TEXT PRIMARY KEY NOT NULL,
+        submission_id TEXT NOT NULL,
+        reviewer_id TEXT NOT NULL,
+        author_id TEXT NOT NULL,
+        review_text TEXT,
+        score INTEGER,
+        created_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000),
+        updated_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000)
+      )
+    `);
+
+    // playground_rooms table
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS playground_rooms (
+        room_id TEXT PRIMARY KEY NOT NULL,
+        name TEXT NOT NULL,
+        description TEXT,
+        created_by TEXT NOT NULL,
+        max_participants INTEGER DEFAULT 10,
+        is_active INTEGER DEFAULT 1,
+        room_type TEXT DEFAULT 'public',
+        created_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000),
+        updated_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000)
+      )
+    `);
+
+    // playground_participants table
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS playground_participants (
+        participant_id TEXT PRIMARY KEY NOT NULL,
+        room_id TEXT NOT NULL,
+        user_id TEXT NOT NULL,
+        user_name TEXT NOT NULL,
+        joined_at INTEGER NOT NULL,
+        left_at INTEGER,
+        is_active INTEGER DEFAULT 1,
+        created_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000)
+      )
+    `);
+
+    // playground_messages table
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS playground_messages (
+        message_id TEXT PRIMARY KEY NOT NULL,
+        room_id TEXT NOT NULL,
+        user_id TEXT NOT NULL,
+        user_name TEXT NOT NULL,
+        content TEXT NOT NULL,
+        message_type TEXT DEFAULT 'text',
+        created_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000)
+      )
+    `);
+
+    // students table (separate from users)
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS students (
+        student_id TEXT PRIMARY KEY NOT NULL,
+        user_id TEXT NOT NULL,
+        first_name TEXT,
+        last_name TEXT,
+        cefr_level TEXT,
+        teacher_id TEXT,
+        batch_id TEXT,
+        created_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000),
+        updated_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000)
+      )
+    `);
+
     console.log('[Migrate] Additional tables ready');
 
     const stats: any = {};
@@ -866,6 +937,396 @@ export async function POST(request: Request) {
       }
     }
     stats.writingReviewQuizzes = reviewQuizCount;
+
+    // 17. Migrate suggestions
+    console.log('[Migrate] Migrating suggestions...');
+    const suggestionsSnapshot = await adminDb.collection('suggestions').get();
+    let suggestionCount = 0;
+
+    for (const doc of suggestionsSnapshot.docs) {
+      const suggestion = doc.data();
+      try {
+        const createdAt = typeof suggestion.createdAt === 'object' && suggestion.createdAt?.toMillis
+          ? suggestion.createdAt.toMillis()
+          : (suggestion.createdAt || Date.now());
+        const updatedAt = typeof suggestion.updatedAt === 'object' && suggestion.updatedAt?.toMillis
+          ? suggestion.updatedAt.toMillis()
+          : (suggestion.updatedAt || Date.now());
+
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO social_suggestions (
+            suggestion_id, post_id, suggested_by, suggested_to,
+            original_text, suggested_text, explanation, grammar_rule,
+            position_start, position_end, type, severity, status,
+            accepted_at, upvotes, downvotes,
+            created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            suggestion.suggestionId || doc.id,
+            suggestion.postId,
+            suggestion.suggestedBy,
+            suggestion.suggestedTo,
+            suggestion.originalText,
+            suggestion.suggestedText,
+            suggestion.explanation || null,
+            suggestion.grammarRule || null,
+            suggestion.positionStart || null,
+            suggestion.positionEnd || null,
+            suggestion.type || 'other',
+            suggestion.severity || 'suggestion',
+            suggestion.status || 'pending',
+            suggestion.acceptedAt || null,
+            suggestion.upvotes || 0,
+            suggestion.downvotes || 0,
+            createdAt,
+            updatedAt,
+          ],
+        });
+        suggestionCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating suggestion:`, error);
+      }
+    }
+    stats.suggestions = suggestionCount;
+
+    // 18. Migrate shares
+    console.log('[Migrate] Migrating shares...');
+    const sharesSnapshot = await adminDb.collection('shares').get();
+    let shareCount = 0;
+
+    for (const doc of sharesSnapshot.docs) {
+      const share = doc.data();
+      try {
+        const createdAt = typeof share.createdAt === 'object' && share.createdAt?.toMillis
+          ? share.createdAt.toMillis()
+          : (share.createdAt || Date.now());
+
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO social_shares (
+            share_id, post_id, shared_by, share_type, quote_text, created_at
+          ) VALUES (?, ?, ?, ?, ?, ?)`,
+          args: [
+            share.shareId || doc.id,
+            share.postId,
+            share.sharedBy,
+            share.shareType || 'repost',
+            share.quoteText || null,
+            createdAt,
+          ],
+        });
+        shareCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating share:`, error);
+      }
+    }
+    stats.shares = shareCount;
+
+    // 19. Migrate pollVotes
+    console.log('[Migrate] Migrating pollVotes...');
+    const pollVotesSnapshot = await adminDb.collection('pollVotes').get();
+    let pollVoteCount = 0;
+
+    for (const doc of pollVotesSnapshot.docs) {
+      const vote = doc.data();
+      try {
+        const createdAt = typeof vote.createdAt === 'object' && vote.createdAt?.toMillis
+          ? vote.createdAt.toMillis()
+          : (vote.createdAt || Date.now());
+
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO social_poll_votes (
+            vote_id, poll_id, post_id, user_id, selected_options, created_at
+          ) VALUES (?, ?, ?, ?, ?, ?)`,
+          args: [
+            vote.voteId || doc.id,
+            vote.pollId,
+            vote.postId,
+            vote.userId,
+            vote.selectedOptions ? JSON.stringify(vote.selectedOptions) : '[]',
+            createdAt,
+          ],
+        });
+        pollVoteCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating poll vote:`, error);
+      }
+    }
+    stats.pollVotes = pollVoteCount;
+
+    // 20. Migrate peer-reviews
+    console.log('[Migrate] Migrating peer-reviews...');
+    const peerReviewsSnapshot = await adminDb.collection('peer-reviews').get();
+    let peerReviewCount = 0;
+
+    for (const doc of peerReviewsSnapshot.docs) {
+      const review = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO peer_reviews (
+            review_id, submission_id, reviewer_id, author_id,
+            review_text, score, created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            review.reviewId || doc.id,
+            review.submissionId,
+            review.reviewerId,
+            review.authorId,
+            review.reviewText || null,
+            review.score || null,
+            review.createdAt || Date.now(),
+            review.updatedAt || Date.now(),
+          ],
+        });
+        peerReviewCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating peer review:`, error);
+      }
+    }
+    stats.peerReviews = peerReviewCount;
+
+    // 21. Migrate mini-exercise-sentences
+    console.log('[Migrate] Migrating mini-exercise-sentences...');
+    const miniSentencesSnapshot = await adminDb.collection('mini-exercise-sentences').get();
+    let miniSentenceCount = 0;
+
+    for (const doc of miniSentencesSnapshot.docs) {
+      const sentence = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO mini_exercise_sentences (
+            sentence_id, submission_id, user_id, sentence, original_sentence,
+            sentence_index, exercise_id, exercise_type, exercise_title, source_type,
+            submitted_at, times_shown, times_completed, total_correct_answers,
+            total_blanks, total_points, last_shown_at, last_completed_at,
+            average_accuracy, consecutive_correct, needs_review,
+            created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            sentence.sentenceId || doc.id,
+            sentence.submissionId,
+            sentence.userId,
+            sentence.sentence,
+            sentence.originalSentence,
+            sentence.sentenceIndex,
+            sentence.exerciseId,
+            sentence.exerciseType,
+            sentence.exerciseTitle || null,
+            sentence.sourceType,
+            sentence.submittedAt,
+            sentence.timesShown || 0,
+            sentence.timesCompleted || 0,
+            sentence.totalCorrectAnswers || 0,
+            sentence.totalBlanks || 0,
+            sentence.totalPoints || 0,
+            sentence.lastShownAt || null,
+            sentence.lastCompletedAt || null,
+            sentence.averageAccuracy || 0,
+            sentence.consecutiveCorrect || 0,
+            sentence.needsReview ? 1 : 0,
+            sentence.createdAt || Date.now(),
+            sentence.updatedAt || Date.now(),
+          ],
+        });
+        miniSentenceCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating mini sentence:`, error);
+      }
+    }
+    stats.miniSentences = miniSentenceCount;
+
+    // 22. Migrate mini-exercise-attempts
+    console.log('[Migrate] Migrating mini-exercise-attempts...');
+    const miniAttemptsSnapshot = await adminDb.collection('mini-exercise-attempts').get();
+    let miniAttemptCount = 0;
+
+    for (const doc of miniAttemptsSnapshot.docs) {
+      const attempt = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO mini_exercise_attempts (
+            attempt_id, sentence_id, user_id, answers,
+            correct_answers, total_blanks, points, accuracy,
+            completed_at, created_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            attempt.attemptId || doc.id,
+            attempt.sentenceId,
+            attempt.userId,
+            attempt.answers ? JSON.stringify(attempt.answers) : '{}',
+            attempt.correctAnswers,
+            attempt.totalBlanks,
+            attempt.points,
+            attempt.accuracy,
+            attempt.completedAt,
+            attempt.createdAt || Date.now(),
+          ],
+        });
+        miniAttemptCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating mini attempt:`, error);
+      }
+    }
+    stats.miniAttempts = miniAttemptCount;
+
+    // 23. Migrate playground-rooms
+    console.log('[Migrate] Migrating playground-rooms...');
+    const playgroundRoomsSnapshot = await adminDb.collection('playground-rooms').get();
+    let roomCount = 0;
+
+    for (const doc of playgroundRoomsSnapshot.docs) {
+      const room = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO playground_rooms (
+            room_id, name, description, created_by, max_participants,
+            is_active, room_type, created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            room.roomId || doc.id,
+            room.name,
+            room.description || null,
+            room.createdBy,
+            room.maxParticipants || 10,
+            room.isActive ? 1 : 0,
+            room.roomType || 'public',
+            room.createdAt || Date.now(),
+            room.updatedAt || Date.now(),
+          ],
+        });
+        roomCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating playground room:`, error);
+      }
+    }
+    stats.playgroundRooms = roomCount;
+
+    // 24. Migrate playground-participants
+    console.log('[Migrate] Migrating playground-participants...');
+    const participantsSnapshot = await adminDb.collection('playground-participants').get();
+    let participantCount = 0;
+
+    for (const doc of participantsSnapshot.docs) {
+      const participant = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO playground_participants (
+            participant_id, room_id, user_id, user_name,
+            joined_at, left_at, is_active, created_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            participant.participantId || doc.id,
+            participant.roomId,
+            participant.userId,
+            participant.userName,
+            participant.joinedAt,
+            participant.leftAt || null,
+            participant.isActive ? 1 : 0,
+            participant.createdAt || Date.now(),
+          ],
+        });
+        participantCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating participant:`, error);
+      }
+    }
+    stats.playgroundParticipants = participantCount;
+
+    // 25. Migrate playground-messages
+    console.log('[Migrate] Migrating playground-messages...');
+    const messagesSnapshot = await adminDb.collection('playground-messages').get();
+    let messageCount = 0;
+
+    for (const doc of messagesSnapshot.docs) {
+      const message = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO playground_messages (
+            message_id, room_id, user_id, user_name,
+            content, message_type, created_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            message.messageId || doc.id,
+            message.roomId,
+            message.userId,
+            message.userName,
+            message.content,
+            message.messageType || 'text',
+            message.createdAt || Date.now(),
+          ],
+        });
+        messageCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating message:`, error);
+      }
+    }
+    stats.playgroundMessages = messageCount;
+
+    // 26. Migrate students
+    console.log('[Migrate] Migrating students...');
+    const studentsSnapshot = await adminDb.collection('students').get();
+    let studentCount = 0;
+
+    for (const doc of studentsSnapshot.docs) {
+      const student = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO students (
+            student_id, user_id, first_name, last_name,
+            cefr_level, teacher_id, batch_id,
+            created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            student.studentId || doc.id,
+            student.userId,
+            student.firstName || null,
+            student.lastName || null,
+            student.cefrLevel || null,
+            student.teacherId || null,
+            student.batchId || null,
+            student.createdAt || Date.now(),
+            student.updatedAt || Date.now(),
+          ],
+        });
+        studentCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating student:`, error);
+      }
+    }
+    stats.students = studentCount;
+
+    // 27. Migrate writing-exercises
+    console.log('[Migrate] Migrating writing-exercises...');
+    const writingExercisesSnapshot = await adminDb.collection('writing-exercises').get();
+    let writingExerciseCount = 0;
+
+    for (const doc of writingExercisesSnapshot.docs) {
+      const exercise = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO writing_exercises (
+            exercise_id, title, description, type, level,
+            prompt, content, created_by,
+            created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            exercise.exerciseId || doc.id,
+            exercise.title,
+            exercise.description || null,
+            exercise.type,
+            exercise.level,
+            exercise.prompt || null,
+            exercise.content || null,
+            exercise.createdBy || null,
+            exercise.createdAt || Date.now(),
+            exercise.updatedAt || Date.now(),
+          ],
+        });
+        writingExerciseCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating writing exercise:`, error);
+      }
+    }
+    stats.writingExercises = writingExerciseCount;
 
     /*
     // (Previously section 7) Migrate progress (daily stats)
