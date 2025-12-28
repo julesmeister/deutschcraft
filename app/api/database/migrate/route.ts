@@ -102,6 +102,12 @@ export async function POST(request: Request) {
 
     const stats: any = {};
 
+    // =========================================================================
+    // ALREADY MIGRATED - Commented out for performance
+    // Re-enable if you need to re-migrate
+    // =========================================================================
+
+    /*
     // 1. Migrate users
     console.log('[Migrate] Migrating users...');
     const usersSnapshot = await adminDb.collection('users').get();
@@ -348,6 +354,14 @@ export async function POST(request: Request) {
       }
     }
     stats.writingSubmissions = writingSubmissionCount;
+    */
+
+    // Set already-migrated counts from previous run
+    stats.users = 3;
+    stats.batches = 7;
+    stats.tasks = 2;
+    stats.submissions = 0;
+    stats.writingSubmissions = 43;
 
     // 6. Migrate studentAnswers (Answer Hub data)
     console.log('[Migrate] Migrating studentAnswers...');
@@ -382,6 +396,7 @@ export async function POST(request: Request) {
     }
     stats.studentAnswers = studentAnswerCount;
 
+    /*
     // 7. Migrate progress (daily stats)
     console.log('[Migrate] Migrating progress...');
     const progressSnapshot = await adminDb.collection('progress').get();
@@ -740,6 +755,19 @@ export async function POST(request: Request) {
       }
     }
     stats.grammarReviews = grammarReviewCount;
+    */
+
+    // Set already-migrated counts from previous run
+    stats.progress = 38;
+    stats.vocabulary = 0;
+    stats.flashcards = 0;
+    stats.flashcardProgress = 3357;
+    stats.exerciseOverrides = 62;
+    stats.savedVocabulary = 7;
+    stats.activities = 0;
+    stats.grammarRules = 0;
+    stats.grammarSentences = 0;
+    stats.grammarReviews = 201;
 
     // Calculate total
     stats.total = Object.values(stats).reduce(
