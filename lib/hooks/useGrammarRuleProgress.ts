@@ -48,5 +48,15 @@ export function useGrammarRuleProgress({
     return ruleReviews.some((r) => r.masteryLevel < 50); // Consider < 50 as mistakes
   }, [ruleId, reviews]);
 
-  return { progress, hasMistakes };
+  // Calculate due count for this rule
+  const dueCount = useMemo(() => {
+    const now = Date.now();
+    return reviews.filter((r) => 
+      r.ruleId === ruleId && 
+      r.nextReviewDate && 
+      r.nextReviewDate <= now
+    ).length;
+  }, [ruleId, reviews]);
+
+  return { progress, hasMistakes, dueCount };
 }

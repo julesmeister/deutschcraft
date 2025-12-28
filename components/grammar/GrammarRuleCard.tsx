@@ -28,9 +28,10 @@ interface GrammarRuleCardProps {
   onView?: () => void;
   onRetryMistakes?: () => void;
   hasMistakes?: boolean;
+  dueCount?: number;
 }
 
-export function GrammarRuleCard({ rule, progress, colorScheme, onClick, onView, onRetryMistakes, hasMistakes }: GrammarRuleCardProps) {
+export function GrammarRuleCard({ rule, progress, colorScheme, onClick, onView, onRetryMistakes, hasMistakes, dueCount }: GrammarRuleCardProps) {
   return (
     <div
       className={`group ${colorScheme.bg} px-6 py-4 transition-all duration-200`}
@@ -63,6 +64,13 @@ export function GrammarRuleCard({ rule, progress, colorScheme, onClick, onView, 
 
         {/* Action Buttons */}
         <div className="flex-shrink-0 flex items-center gap-2">
+          {/* Due Count Badge */}
+          {dueCount !== undefined && dueCount > 0 && (
+            <span className="inline-flex items-center px-2 py-1 text-xs font-bold bg-amber-100 text-amber-700">
+              {dueCount} due
+            </span>
+          )}
+
           {/* Practice Count Badge */}
           {progress.total > 0 && (
             <span className="inline-flex items-center px-2 py-1 text-xs font-bold bg-gray-100 text-gray-600">

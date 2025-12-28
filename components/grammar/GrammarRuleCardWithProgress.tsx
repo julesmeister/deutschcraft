@@ -43,7 +43,7 @@ export function GrammarRuleCardWithProgress({
   onView,
   onRetryMistakes,
 }: GrammarRuleCardWithProgressProps) {
-  const { progress, hasMistakes } = useGrammarRuleProgress({
+  const { progress, hasMistakes, dueCount } = useGrammarRuleProgress({
     ruleId: rule.id,
     reviews,
     sentenceDataMap,
@@ -59,6 +59,7 @@ export function GrammarRuleCardWithProgress({
       onView={onView}
       onRetryMistakes={onRetryMistakes}
       hasMistakes={hasMistakes}
+      dueCount={dueCount}
     />
   );
 }
