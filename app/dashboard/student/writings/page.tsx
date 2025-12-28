@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
-import { WritingSubmission, TeacherReview } from '@/lib/models/writing';
-import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
-import { CatLoader } from '@/components/ui/CatLoader';
-import { DiffTextCorrectedOnly } from '@/components/writing/DiffText';
-import { useWritingsData } from '@/lib/hooks/useWritingsData';
-import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
-import Link from 'next/link';
+import { useState } from "react";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { WritingSubmission, TeacherReview } from "@/lib/models/writing";
+import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
+import { CatLoader } from "@/components/ui/CatLoader";
+import { DiffTextCorrectedOnly } from "@/components/writing/DiffText";
+import { useWritingsData } from "@/lib/hooks/useWritingsData";
+import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
+import Link from "next/link";
 
 export default function WritingsPage() {
   const { data: session } = useSession();
@@ -25,7 +25,9 @@ export default function WritingsPage() {
   } = useWritingsData(session?.user?.email || null);
 
   if (isLoading) {
-    return <CatLoader message="Loading your writings..." size="lg" fullScreen />;
+    return (
+      <CatLoader message="Loading your writings..." size="lg" fullScreen />
+    );
   }
 
   return (
@@ -44,7 +46,8 @@ export default function WritingsPage() {
               No Corrected Writings Yet
             </h3>
             <p className="text-gray-600 mb-6">
-              Your corrected writing submissions will appear here once you receive feedback.
+              Your corrected writing submissions will appear here once you
+              receive feedback.
             </p>
             <Link
               href="/dashboard/student/writing"
@@ -57,7 +60,9 @@ export default function WritingsPage() {
           <div className="space-y-6">
             {submissions.map((submission) => {
               const teacherReview = teacherReviews?.[submission.submissionId];
-              const correctedText = teacherReview?.correctedVersion || submission.aiCorrectedVersion;
+              const correctedText =
+                teacherReview?.correctedVersion ||
+                submission.aiCorrectedVersion;
 
               return (
                 <WritingCard
@@ -74,8 +79,14 @@ export default function WritingsPage() {
               <div ref={loadMoreRef} className="py-8 text-center">
                 <div className="inline-flex items-center gap-2 text-gray-500">
                   <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse"></div>
-                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                  <div
+                    className="w-2 h-2 bg-gray-400 rounded-full animate-pulse"
+                    style={{ animationDelay: "0.2s" }}
+                  ></div>
+                  <div
+                    className="w-2 h-2 bg-gray-400 rounded-full animate-pulse"
+                    style={{ animationDelay: "0.4s" }}
+                  ></div>
                 </div>
               </div>
             )}
@@ -92,36 +103,56 @@ interface WritingCardProps {
   correctedText?: string;
 }
 
-function WritingCard({ submission, teacherReview, correctedText }: WritingCardProps) {
+function WritingCard({
+  submission,
+  teacherReview,
+  correctedText,
+}: WritingCardProps) {
   const [showVersions, setShowVersions] = useState(false);
   const router = useRouter();
 
   const submittedDate = submission.submittedAt
-    ? new Date(submission.submittedAt).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
+    ? new Date(submission.submittedAt).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
       })
-    : 'Unknown';
+    : "Unknown";
 
   const hasVersions = (submission.previousVersions?.length || 0) > 0;
 
   // Rotate through background colors similar to service cards
-  const backgrounds = ['bg-[#e2f2f0c4]', 'bg-[#f2f2e5]', 'bg-[#c3e1cd80]', 'bg-[#ece2efc4]'];
-  const bgClass = backgrounds[Math.abs(submission.submissionId.charCodeAt(0)) % backgrounds.length];
+  const backgrounds = [
+    "bg-[#e2f2f0c4]",
+    "bg-[#f2f2e5]",
+    "bg-[#c3e1cd80]",
+    "bg-[#ece2efc4]",
+  ];
+  const bgClass =
+    backgrounds[
+      Math.abs(submission.submissionId.charCodeAt(0)) % backgrounds.length
+    ];
 
   return (
-    <div className={`${bgClass} rounded-[10px] px-6 pt-6 pb-4 md:px-[25px] md:pt-[30px] md:pb-4 relative transition-all duration-500`}>
+    <div
+      className={`${bgClass} rounded-[10px] px-6 pt-6 pb-4 md:px-[25px] md:pt-[30px] md:pb-4 relative transition-all duration-500`}
+    >
       {/* Top Right: Score Badge and View Button */}
       <div className="absolute top-4 right-4 md:top-[30px] md:right-[25px] flex items-center gap-3">
         {teacherReview && (
           <div className="px-3 py-1.5 bg-green-600 text-white text-xs font-bold rounded-lg">
-            {teacherReview.overallScore}/100
+            {!isNaN(Number(teacherReview.overallScore))
+              ? `${teacherReview.overallScore}/100`
+              : "N/A"}
           </div>
         )}
         <div className="w-[140px]">
           <ActionButton
-            onClick={() => router.push(`/dashboard/student/writing/feedback/${submission.submissionId}`)}
+            onClick={() =>
+              router.push(
+                `/dashboard/student/writing/feedback/${submission.submissionId}`
+              )
+            }
             icon={<ActionButtonIcons.Eye />}
             variant="purple"
             size="compact"
@@ -134,23 +165,24 @@ function WritingCard({ submission, teacherReview, correctedText }: WritingCardPr
       {/* Content */}
       <div className="pt-12 md:pt-2">
         {/* Original English (for translations) */}
-        {submission.exerciseType === 'translation' && submission.originalText && (
-          <div className="mb-6">
-            <h4 className="text-xs font-bold text-[#4e5e7c] uppercase tracking-wide mb-2 flex items-center gap-2">
-              <span>🇬🇧</span> Original English
-            </h4>
-            <p className="text-[#4e5e7c] leading-relaxed">
-              {submission.originalText}
-            </p>
-          </div>
-        )}
+        {submission.exerciseType === "translation" &&
+          submission.originalText && (
+            <div className="mb-6">
+              <h4 className="text-xs font-bold text-[#4e5e7c] uppercase tracking-wide mb-2 flex items-center gap-2">
+                <span>🇬🇧</span> Original English
+              </h4>
+              <p className="text-[#4e5e7c] leading-relaxed">
+                {submission.originalText}
+              </p>
+            </div>
+          )}
 
         {/* Corrected Version with Highlights - MAIN/LARGER */}
         {correctedText ? (
           <div className="mb-8">
             <h4 className="text-sm font-bold text-[#11316e] uppercase tracking-wide mb-3 flex items-center gap-2">
-              <span>{teacherReview ? '✏️' : '✨'}</span>
-              {teacherReview ? 'Teacher\'s Correction' : 'AI Correction'}
+              <span>{teacherReview ? "✏️" : "✨"}</span>
+              {teacherReview ? "Teacher's Correction" : "AI Correction"}
             </h4>
             <div className="bg-white/60 rounded-lg border border-[#4e5e7c26] p-4 md:p-5">
               <DiffTextCorrectedOnly
@@ -163,8 +195,12 @@ function WritingCard({ submission, teacherReview, correctedText }: WritingCardPr
             {/* Teacher Feedback */}
             {teacherReview && teacherReview.overallComment && (
               <div className="mt-4 bg-blue-50/80 rounded-lg border border-blue-200 p-4 md:p-5">
-                <h5 className="text-sm font-bold text-blue-900 mb-2">Teacher's Comment:</h5>
-                <p className="text-sm text-blue-800">{teacherReview.overallComment}</p>
+                <h5 className="text-sm font-bold text-blue-900 mb-2">
+                  Teacher's Comment:
+                </h5>
+                <p className="text-sm text-blue-800">
+                  {teacherReview.overallComment}
+                </p>
               </div>
             )}
 
@@ -192,8 +228,12 @@ function WritingCard({ submission, teacherReview, correctedText }: WritingCardPr
             {/* Teacher Feedback (if exists without correction) */}
             {teacherReview && teacherReview.overallComment && (
               <div className="mt-4 bg-blue-50/80 rounded-lg border border-blue-200 p-4 md:p-5">
-                <h5 className="text-sm font-bold text-blue-900 mb-2">Teacher's Comment:</h5>
-                <p className="text-sm text-blue-800">{teacherReview.overallComment}</p>
+                <h5 className="text-sm font-bold text-blue-900 mb-2">
+                  Teacher's Comment:
+                </h5>
+                <p className="text-sm text-blue-800">
+                  {teacherReview.overallComment}
+                </p>
               </div>
             )}
           </div>
@@ -206,8 +246,10 @@ function WritingCard({ submission, teacherReview, correctedText }: WritingCardPr
               onClick={() => setShowVersions(!showVersions)}
               className="flex items-center gap-2 text-sm font-bold text-[#11316e] hover:text-[#559adc] transition-colors duration-500"
             >
-              <span>{showVersions ? '▼' : '▶'}</span>
-              <span>Version History ({submission.previousVersions!.length} versions)</span>
+              <span>{showVersions ? "▼" : "▶"}</span>
+              <span>
+                Version History ({submission.previousVersions!.length} versions)
+              </span>
             </button>
 
             {/* Stacked Versions */}

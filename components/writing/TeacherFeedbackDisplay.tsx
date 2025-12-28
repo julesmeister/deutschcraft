@@ -18,11 +18,15 @@ export function TeacherFeedbackDisplay({ teacherReview }: TeacherFeedbackDisplay
       icon: <span className="text-white text-xs">📊</span>,
       iconColor: 'bg-blue-500',
       title: 'Overall Score',
-      description: `${teacherReview.overallScore}% • Grammar: ${teacherReview.grammarScore}% • Vocabulary: ${teacherReview.vocabularyScore}% • Coherence: ${teacherReview.coherenceScore}%`,
+      description: !isNaN(Number(teacherReview.overallScore))
+        ? `${teacherReview.overallScore}% • Grammar: ${teacherReview.grammarScore}% • Vocabulary: ${teacherReview.vocabularyScore}% • Coherence: ${teacherReview.coherenceScore}%`
+        : 'Score not available',
       tags: [
         {
-          label: `${teacherReview.overallScore}%`,
-          color: teacherReview.overallScore >= 80 ? 'green' : teacherReview.overallScore >= 60 ? 'amber' : 'red',
+          label: !isNaN(Number(teacherReview.overallScore)) ? `${teacherReview.overallScore}%` : 'N/A',
+          color: !isNaN(Number(teacherReview.overallScore))
+            ? (teacherReview.overallScore >= 80 ? 'green' : teacherReview.overallScore >= 60 ? 'amber' : 'red')
+            : 'gray',
         },
       ],
     },
