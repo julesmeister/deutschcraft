@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowLeft } from 'lucide-react';
 
 export type PaginationVariant = 'rounded' | 'pills';
 
@@ -84,22 +84,7 @@ export function Pagination({
   };
 
   const renderPrevNext = () => {
-    if (!showPrevNext) return null;
-
-    if (variant === 'pills') {
-      return currentPage < totalPages ? (
-        <Link
-          href={getPageUrl(currentPage + 1)}
-          onClick={handlePageClick(currentPage + 1)}
-          className="flex items-center justify-center w-[50px] h-[50px]
-                     text-[#11316e] bg-transparent border border-[#4e5e7c26] rounded-full
-                     transition-all duration-500 hover:bg-[#559adc] hover:text-white"
-          aria-label="Next page"
-        >
-          <ArrowRight className="w-6 h-6" />
-        </Link>
-      ) : null;
-    }
+    if (!showPrevNext || variant === 'pills') return null;
 
     return (
       <>
@@ -135,6 +120,40 @@ export function Pagination({
     );
   };
 
+  const renderPillsPrev = () => {
+    if (!showPrevNext || variant !== 'pills' || currentPage <= 1) return null;
+    
+    return (
+      <Link
+        href={getPageUrl(currentPage - 1)}
+        onClick={handlePageClick(currentPage - 1)}
+        className="flex items-center justify-center w-[50px] h-[50px]
+                   text-[#11316e] bg-transparent border border-[#4e5e7c26] rounded-full
+                   transition-all duration-500 hover:bg-[#559adc] hover:text-white"
+        aria-label="Previous page"
+      >
+        <ArrowLeft className="w-6 h-6" />
+      </Link>
+    );
+  };
+
+  const renderPillsNext = () => {
+    if (!showPrevNext || variant !== 'pills' || currentPage >= totalPages) return null;
+    
+    return (
+      <Link
+        href={getPageUrl(currentPage + 1)}
+        onClick={handlePageClick(currentPage + 1)}
+        className="flex items-center justify-center w-[50px] h-[50px]
+                   text-[#11316e] bg-transparent border border-[#4e5e7c26] rounded-full
+                   transition-all duration-500 hover:bg-[#559adc] hover:text-white"
+        aria-label="Next page"
+      >
+        <ArrowRight className="w-6 h-6" />
+      </Link>
+    );
+  };
+
   const containerClasses = variant === 'pills'
     ? `flex items-center justify-center gap-[10px] text-center ${className}`
     : `text-center mt-6 mb-0 ${className}`;
@@ -147,8 +166,9 @@ export function Pagination({
     <div className={containerClasses}>
       {variant === 'pills' ? (
         <>
+          {renderPillsPrev()}
           {renderPageNumbers()}
-          {renderPrevNext()}
+          {renderPillsNext()}
         </>
       ) : (
         <div className={innerClasses}>
