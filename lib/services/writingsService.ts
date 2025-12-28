@@ -102,23 +102,6 @@ export function processSubmissions(
 export async function getTeacherReviewsBatch(
   submissionIds: string[]
 ): Promise<Record<string, TeacherReview>> {
-  const reviewsMap: Record<string, TeacherReview> = {};
-
-  // Fetch reviews for each submission
-  // Note: This could be optimized with a batch query in the database layer
-  await Promise.all(
-    submissionIds.map(async (submissionId) => {
-      try {
-        const review = await getTeacherReview(submissionId);
-        if (review) {
-          reviewsMap[submissionId] = review;
-        }
-      } catch (error) {
-        console.error(`[writingsService] Error fetching review for ${submissionId}:`, error);
-        // Continue with other submissions even if one fails
-      }
-    })
-  );
-
-  return reviewsMap;
+  // Delegate to the database service which now handles batching efficiently
+  return await fetchTeacherReviewsBatch(submissionIds);
 }
