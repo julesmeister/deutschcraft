@@ -11,7 +11,8 @@
  */
 
 // Determine which database to use
-const USE_TURSO = process.env.NEXT_PUBLIC_USE_TURSO === 'true';
+// TEMPORARILY FORCING FIREBASE FOR USER DATA (auth writes to Firebase, so reads should too)
+const USE_TURSO = false; // process.env.NEXT_PUBLIC_USE_TURSO === 'true';
 
 // Import from the appropriate implementation
 const implementation = USE_TURSO
