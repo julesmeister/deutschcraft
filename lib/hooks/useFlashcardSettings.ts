@@ -5,7 +5,7 @@
 
 import { useState, useEffect } from 'react';
 import { useFirebaseAuth } from './useFirebaseAuth';
-import { getFlashcardSettings, updateFlashcardSettings } from '@/lib/services/userService';
+import { getFlashcardSettings, updateFlashcardSettings } from '@/lib/services/user';
 
 export interface FlashcardSettings {
   cardsPerSession: number;

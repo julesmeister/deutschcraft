@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Session } from 'next-auth';
 import { signOut } from 'next-auth/react';
 import { EnrollmentFormData } from '@/components/ui/settings/EnrollmentTab';
-import { updateUser } from '../services/userService';
+import { updateUser } from '../services/user';
 import { createTransaction } from '../services/transactionService';
 
 /**

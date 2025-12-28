@@ -8,7 +8,7 @@ import { WritingSubmission, TeacherReview } from '@/lib/models/writing';
 import { WritingFeedback as WritingFeedbackComponent } from '@/components/writing/WritingFeedback';
 import { TeacherFeedbackDisplay } from '@/components/writing/TeacherFeedbackDisplay';
 import { ActivityTimeline, ActivityItem } from '@/components/ui/activity/ActivityTimeline';
-import { getUser } from '@/lib/services/userService';
+import { getUser } from '@/lib/services/user';
 import { getUserFullName } from '@/lib/models/user';
 
 interface FeedbackPanelProps {

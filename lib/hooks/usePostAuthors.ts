@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Post } from '@/lib/models/social';
 import { User } from '@/lib/models/user';
-import { getUser } from '@/lib/services/userService';
+import { getUser } from '@/lib/services/user';
 
 /**
  * Hook to fetch and cache user data for post authors

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Session } from 'next-auth';
 import { User } from '../models/user';
-import { updateUser } from '../services/userService';
+import { updateUser } from '../services/user';
 
 export interface ProfileFormData {
   firstName: string;

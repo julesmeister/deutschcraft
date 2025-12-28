@@ -16,7 +16,7 @@ import { useGrammarReviews } from '@/lib/hooks/useGrammarExercises';
 import { useSessionPagination } from '@/lib/hooks/useSessionPagination';
 import { useUserQuizzes } from '@/lib/hooks/useReviewQuizzes';
 import { useAnswerHubStats } from '@/lib/hooks/useAnswerHubStats';
-import { getUser } from '@/lib/services/userService';
+import { getUser } from '@/lib/services/user';
 import { getBatch } from '@/lib/services/batchService';
 import { User, getUserFullName } from '@/lib/models/user';
 

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useQueryClient } from '@tanstack/react-query';
 import { User } from '@/lib/models/user';
 import { CEFRLevel } from '@/lib/models/cefr';
-import { updateUser } from '@/lib/services/userService';
+import { updateUser } from '@/lib/services/user';
 import { useToast } from '@/components/ui/toast';
 
 export function useEnrollmentActions(teacherEmail: string | null | undefined) {

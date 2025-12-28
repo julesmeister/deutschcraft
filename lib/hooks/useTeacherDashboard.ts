@@ -12,7 +12,7 @@ import { useTableState } from './useTableState';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { getStudyStats } from '../services/flashcardService';
 import { updateStudentLevel } from '../services/studentService';
-import { updateUser } from '../services/userService';
+import { updateUser } from '../services/user';
 
 interface UseTeacherDashboardProps {
   currentTeacherId: string | undefined;

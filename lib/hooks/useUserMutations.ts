@@ -5,7 +5,7 @@
  */
 
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { upsertUser, updateUser, assignStudentToBatch } from '../services/userService';
+import { upsertUser, updateUser, assignStudentToBatch } from '../services/user';
 import { User } from '../models';
 
 /**

@@ -13,7 +13,7 @@ import { useToast } from '@/components/ui/toast';
 import { saveAICorrectedVersion } from '@/lib/services/writing/submissions-mutations';
 import { createReviewQuiz, completeReviewQuiz } from '@/lib/services/writing/reviewQuizService';
 import { generateQuizBlanks } from '@/lib/utils/quizGenerator';
-import { getUser } from '@/lib/services/userService';
+import { getUser } from '@/lib/services/user';
 import { getUserFullName } from '@/lib/models/user';
 import { useUpdateProgressForQuiz } from '@/lib/hooks/useWritingExercises';
 import { SubmissionContent } from './SubmissionContent';

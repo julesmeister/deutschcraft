@@ -4,7 +4,7 @@
  */
 
 import { useQuery } from '@tanstack/react-query';
-import { getAllStudents, getAllTeachers, getUser } from '../services/userService';
+import { getAllStudents, getAllTeachers, getUser } from '../services/user';
 import { queryKeys, cacheTimes } from '../queryClient';
 
 export interface SimpleUser {

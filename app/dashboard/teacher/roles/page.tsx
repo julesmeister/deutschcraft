@@ -8,7 +8,7 @@ import { RoleActionsDropdown } from '@/components/ui/RoleActionsDropdown';
 import { CompactButtonDropdown } from '@/components/ui/CompactButtonDropdown';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useUsersPaginated } from '@/lib/hooks/useUsers';
-import { updateUser } from '@/lib/services/userService';
+import { updateUser } from '@/lib/services/user';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { EmptyState } from '@/components/ui/EmptyState';
 import { useToast } from '@/components/ui/toast';

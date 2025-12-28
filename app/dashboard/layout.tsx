@@ -4,7 +4,7 @@ import { Navbar } from '@/components/ui/Navbar';
 import { MegaDropdown } from '@/components/ui/MegaDropdown';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
-import { updateUser } from '@/lib/services/userService';
+import { updateUser } from '@/lib/services/user';
 import { useState, useEffect } from 'react';
 import { EnrollmentGuard } from '@/components/dashboard/EnrollmentGuard';
 import { PlaygroundSessionProvider } from '@/lib/contexts/PlaygroundSessionContext';

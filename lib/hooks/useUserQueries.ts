@@ -1,6 +1,6 @@
 /**
  * React Query hooks for fetching User data
- * Uses Firebase database services
+ * Uses hybrid service that switches between Firebase and Turso
  */
 
 import { useQuery } from '@tanstack/react-query';
@@ -17,7 +17,7 @@ import {
   getUserCount,
   getPendingEnrollmentsPaginated,
   getPendingEnrollmentsCount,
-} from '../services/userService';
+} from '../services/user';
 import { User } from '../models';
 import { cacheTimes } from '../queryClient';
 
