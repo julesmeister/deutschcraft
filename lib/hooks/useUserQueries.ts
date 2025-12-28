@@ -1,7 +1,6 @@
 /**
  * React Query hooks for fetching User data
- * TURSO MIGRATION: Now uses Turso database instead of Firebase
- * Database-agnostic implementation using Turso services
+ * Uses Firebase database services
  */
 
 import { useQuery } from '@tanstack/react-query';
@@ -18,7 +17,7 @@ import {
   getUserCount,
   getPendingEnrollmentsPaginated,
   getPendingEnrollmentsCount,
-} from '../services/turso/userService';
+} from '../services/userService';
 import { User } from '../models';
 import { cacheTimes } from '../queryClient';
 
