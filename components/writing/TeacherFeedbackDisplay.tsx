@@ -129,6 +129,7 @@ export function TeacherFeedbackDisplay({
       items={feedbackItems}
       showConnector={true}
       showPagination={false}
+      columns="single" // Force single column for this specific view
     />
   );
 }

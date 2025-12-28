@@ -23,6 +23,7 @@ interface ActivityTimelineProps {
   className?: string;
   itemsPerPage?: number;
   showPagination?: boolean;
+  columns?: 'single' | 'grid'; // Add layout control
 }
 
 export function ActivityTimeline({
@@ -31,6 +32,7 @@ export function ActivityTimeline({
   className = '',
   itemsPerPage = 10,
   showPagination = true,
+  columns = 'grid', // Default to grid to preserve existing behavior
 }: ActivityTimelineProps) {
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -40,9 +42,14 @@ export function ActivityTimeline({
   const endIndex = startIndex + itemsPerPage;
   const currentItems = showPagination ? items.slice(startIndex, endIndex) : items;
 
+  // Determine layout class
+  const layoutClass = columns === 'single'
+    ? 'flex flex-col gap-4'
+    : 'grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6';
+
   return (
     <div className={className}>
-      <div className="flex flex-col gap-4">
+      <div className={layoutClass}>
         {currentItems.map((item, index) => (
           <ActivityTimelineItem
             key={item.id}
