@@ -348,32 +348,25 @@ export async function POST(request: Request) {
       try {
         await db.execute({
           sql: `INSERT OR REPLACE INTO flashcard_progress (
-            flashcard_id, user_id, word_id, level,
-            state, repetitions, ease_factor, interval, next_review_date,
-            correct_count, incorrect_count, consecutive_correct, consecutive_incorrect,
+            id, flashcard_id, user_id, word_id,
+            repetitions, ease_factor, interval, next_review_date,
+            correct_count, incorrect_count,
             last_review_date, mastery_level,
-            lapse_count, last_lapse_date, first_seen_at,
             created_at, updated_at
-          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
           args: [
+            `${progress.userId}_${progress.flashcardId}`, // id
             progress.flashcardId || doc.id,
             progress.userId,
             progress.wordId,
-            progress.level || null,
-            progress.state || 'new',
             progress.repetitions || 0,
             progress.easeFactor || 2.5,
             progress.interval || 0,
             progress.nextReviewDate,
             progress.correctCount || 0,
             progress.incorrectCount || 0,
-            progress.consecutiveCorrect || 0,
-            progress.consecutiveIncorrect || 0,
             progress.lastReviewDate || null,
             progress.masteryLevel || 0,
-            progress.lapseCount || 0,
-            progress.lastLapseDate || null,
-            progress.firstSeenAt || null,
             progress.createdAt || Date.now(),
             progress.updatedAt || Date.now(),
           ],
