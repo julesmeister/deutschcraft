@@ -13,6 +13,7 @@ interface StudentTableProps {
     sold: number;
     gain: number;
     level: string;
+    role?: 'STUDENT' | 'TEACHER' | 'PENDING_APPROVAL';
     status: 'in-stock' | 'low-stock';
     statusText: string;
   }>;
@@ -23,6 +24,7 @@ interface StudentTableProps {
     sold: number;
     gain: number;
     level: string;
+    role?: 'STUDENT' | 'TEACHER' | 'PENDING_APPROVAL';
     status: 'in-stock' | 'low-stock';
     statusText: string;
   }>;
@@ -30,7 +32,9 @@ interface StudentTableProps {
   onAddStudent: () => void;
   onRemoveStudent: (studentId: string) => void;
   onChangeLevel?: (studentId: string, newLevel: CEFRLevel) => void;
+  onChangeRole?: (studentId: string, newRole: 'STUDENT' | 'PENDING_APPROVAL') => void;
   isRemoving: boolean;
+  isChangingRole?: boolean;
   currentPage: number;
   setCurrentPage: (page: number) => void;
   pageSize: number;
@@ -43,7 +47,9 @@ export function StudentTable({
   onAddStudent,
   onRemoveStudent,
   onChangeLevel,
+  onChangeRole,
   isRemoving,
+  isChangingRole = false,
   currentPage,
   setCurrentPage,
   pageSize,
@@ -78,7 +84,9 @@ export function StudentTable({
   const columns = useStudentTableColumns({
     onRemoveStudent,
     onChangeLevel,
+    onChangeRole,
     isRemoving,
+    isChangingRole,
   });
 
   return (

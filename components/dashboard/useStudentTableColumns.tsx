@@ -6,13 +6,17 @@ import { CEFRLevel } from '@/lib/models';
 interface UseStudentTableColumnsProps {
   onRemoveStudent: (studentId: string) => void;
   onChangeLevel?: (studentId: string, newLevel: CEFRLevel) => void;
+  onChangeRole?: (studentId: string, newRole: 'STUDENT' | 'PENDING_APPROVAL') => void;
   isRemoving: boolean;
+  isChangingRole?: boolean;
 }
 
 export function useStudentTableColumns({
   onRemoveStudent,
   onChangeLevel,
+  onChangeRole,
   isRemoving,
+  isChangingRole = false,
 }: UseStudentTableColumnsProps) {
   return [
     {
@@ -70,8 +74,11 @@ export function useStudentTableColumns({
       render: (_: any, row: any) => (
         <StudentActionsDropdown
           studentId={row.id}
+          studentRole={row.role}
           onRemoveStudent={onRemoveStudent}
+          onChangeRole={onChangeRole}
           isRemoving={isRemoving}
+          isChangingRole={isChangingRole}
         />
       ),
     },

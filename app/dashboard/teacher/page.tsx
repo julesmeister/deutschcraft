@@ -137,7 +137,9 @@ export default function TeacherDashboard() {
               onAddStudent={() => dashboard.setIsAddStudentOpen(true)}
               onRemoveStudent={dashboard.handleRemoveStudent}
               onChangeLevel={dashboard.handleChangeLevel}
+              onChangeRole={dashboard.handleChangeRole}
               isRemoving={dashboard.isRemovingStudent}
+              isChangingRole={dashboard.isChangingRole}
               currentPage={dashboard.currentPage}
               setCurrentPage={dashboard.setCurrentPage}
               pageSize={dashboard.pageSize}

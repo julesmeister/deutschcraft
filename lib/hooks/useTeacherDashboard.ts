@@ -12,6 +12,7 @@ import { useTableState } from './useTableState';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { getStudyStats } from '../services/flashcardService';
 import { updateStudentLevel } from '../services/studentService';
+import { updateUser } from '../services/userService';
 
 interface UseTeacherDashboardProps {
   currentTeacherId: string | undefined;
@@ -61,6 +62,9 @@ export function useTeacherDashboard({
   const [isAddStudentOpen, setIsAddStudentOpen] = useState(false);
   const [isCreateBatchOpen, setIsCreateBatchOpen] = useState(false);
 
+  // Role change state
+  const [isChangingRole, setIsChangingRole] = useState(false);
+
   // Filter students by selected batch
   const myStudents = selectedBatch && currentTeacherId
     ? allStudents.filter(student =>
@@ -107,6 +111,7 @@ export function useTeacherDashboard({
       sold: stats.cardsLearned,
       gain: stats.streak, // Show streak as "progress"
       level: student.cefrLevel || 'A1',
+      role: student.role,
       status: (student.teacherId ? 'in-stock' : 'low-stock') as 'in-stock' | 'low-stock',
       statusText: student.teacherId ? 'Active learner' : 'No teacher assigned',
     };
@@ -209,6 +214,30 @@ export function useTeacherDashboard({
     }
   };
 
+  /**
+   * Handle changing student's role
+   */
+  const handleChangeRole = async (studentId: string, newRole: 'STUDENT' | 'PENDING_APPROVAL') => {
+    try {
+      setIsChangingRole(true);
+      const actionLabel = newRole === 'STUDENT' ? 'Approving student' : 'Expiring student';
+      onInfo?.(`${actionLabel}...`);
+
+      await updateUser(studentId, { role: newRole });
+
+      // Invalidate queries to refresh data
+      await queryClient.invalidateQueries({ queryKey: ['students'] });
+
+      const successMsg = newRole === 'STUDENT' ? 'Student approved!' : 'Student expired!';
+      onSuccess?.(successMsg);
+    } catch (error) {
+      console.error('[Change Role] Error updating student role:', error);
+      onError?.('Failed to update student role. Please try again.');
+    } finally {
+      setIsChangingRole(false);
+    }
+  };
+
   return {
     // Loading states
     isLoading: studentsLoading,
@@ -232,9 +261,11 @@ export function useTeacherDashboard({
     handleAddStudents,
     handleRemoveStudent,
     handleChangeLevel,
+    handleChangeRole,
     toggleStudentSelection: studentManagement.toggleStudentSelection,
     isAddingStudents: studentManagement.isAddingStudents,
     isRemovingStudent: studentManagement.isRemovingStudent,
+    isChangingRole,
 
     // Table state
     currentPage: tableState.currentPage,
