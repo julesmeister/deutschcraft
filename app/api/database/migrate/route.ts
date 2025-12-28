@@ -38,6 +38,68 @@ export async function POST(request: Request) {
     await db.execute('PRAGMA foreign_keys = OFF');
     console.log('[Migrate] Foreign key constraints disabled');
 
+    // Ensure grammar tables exist before migrating data
+    console.log('[Migrate] Creating grammar tables if needed...');
+
+    // Create grammar_rules table
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS grammar_rules (
+        rule_id TEXT PRIMARY KEY NOT NULL,
+        title TEXT NOT NULL,
+        description TEXT NOT NULL,
+        level TEXT NOT NULL,
+        category TEXT NOT NULL,
+        examples TEXT,
+        explanation TEXT,
+        order_num INTEGER DEFAULT 0,
+        created_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000),
+        updated_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000)
+      )
+    `);
+
+    // Create grammar_sentences table
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS grammar_sentences (
+        sentence_id TEXT PRIMARY KEY NOT NULL,
+        rule_id TEXT NOT NULL,
+        english TEXT NOT NULL,
+        german TEXT NOT NULL,
+        level TEXT NOT NULL,
+        hints TEXT,
+        keywords TEXT,
+        difficulty INTEGER DEFAULT 5,
+        created_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000),
+        updated_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000)
+      )
+    `);
+
+    // Create grammar_reviews table
+    await db.execute(`
+      CREATE TABLE IF NOT EXISTS grammar_reviews (
+        review_id TEXT PRIMARY KEY NOT NULL,
+        user_id TEXT NOT NULL,
+        sentence_id TEXT NOT NULL,
+        rule_id TEXT NOT NULL,
+        level TEXT NOT NULL,
+        repetitions INTEGER DEFAULT 0,
+        ease_factor REAL DEFAULT 2.5,
+        interval INTEGER DEFAULT 0,
+        next_review_date INTEGER,
+        correct_count INTEGER DEFAULT 0,
+        incorrect_count INTEGER DEFAULT 0,
+        consecutive_correct INTEGER DEFAULT 0,
+        consecutive_incorrect INTEGER DEFAULT 0,
+        mastery_level INTEGER DEFAULT 0,
+        last_review_date INTEGER,
+        last_attempt TEXT,
+        first_seen_at INTEGER,
+        created_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000),
+        updated_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000)
+      )
+    `);
+
+    console.log('[Migrate] Grammar tables ready');
+
     const stats: any = {};
 
     // 1. Migrate users
