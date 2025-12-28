@@ -21,7 +21,7 @@ interface GrammarPracticeViewProps {
   selectedRuleSentences: any[];
   isPracticeMode: boolean;
   currentSessionResults: { sentenceId: string; difficulty: string }[];
-  onComplete: (results: { sentenceId: string; difficulty: string }[]) => Promise<void>;
+  onComplete: (results: { sentenceId: string; difficulty: string }[], shouldExit?: boolean) => Promise<void>;
   onProgress: (results: { sentenceId: string; difficulty: string }[]) => void;
   onBack: () => void;
 }
@@ -41,7 +41,7 @@ export function GrammarPracticeView({
 
   const handleEndSession = () => {
     if (currentSessionResults.length > 0) {
-      onComplete(currentSessionResults);
+      onComplete(currentSessionResults, true);
     } else {
       onBack();
     }

@@ -225,11 +225,14 @@ export default function GrammatikPracticePage() {
   };
 
   const onPracticeComplete = async (
-    results: { sentenceId: string; difficulty: string }[]
+    results: { sentenceId: string; difficulty: string }[],
+    shouldExit: boolean = true
   ) => {
     await handlePracticeComplete(results);
-    setSelectedRule(null);
-    setCurrentSessionResults([]);
+    if (shouldExit) {
+      setSelectedRule(null);
+      setCurrentSessionResults([]);
+    }
   };
 
   // Handle back from practice/view mode

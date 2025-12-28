@@ -20,7 +20,10 @@ interface GrammarSentence {
 interface GrammarSentencePracticeProps {
   sentences: GrammarSentence[];
   ruleTitle: string;
-  onComplete: (results: { sentenceId: string; difficulty: string }[]) => void;
+  onComplete: (
+    results: { sentenceId: string; difficulty: string }[],
+    shouldExit?: boolean
+  ) => void;
   onProgress?: (results: { sentenceId: string; difficulty: string }[]) => void;
 }
 
@@ -32,6 +35,8 @@ export function GrammarSentencePractice({
   onComplete,
   onProgress,
 }: GrammarSentencePracticeProps) {
+  // Use local state for practice sentences to allow filtering (retry mistakes)
+  const [practiceSentences, setPracticeSentences] = useState(sentences);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswer, setUserAnswer] = useState("");
   const [isRevealed, setIsRevealed] = useState(false);
@@ -42,8 +47,18 @@ export function GrammarSentencePractice({
   const [sessionStartTime] = useState(() => Date.now());
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const currentSentence = sentences[currentIndex];
-  const progress = ((currentIndex + 1) / sentences.length) * 100;
+  const currentSentence = practiceSentences[currentIndex];
+  const progress = ((currentIndex + 1) / practiceSentences.length) * 100;
+
+  // Reset practice sentences when prop changes (new session from dashboard)
+  useEffect(() => {
+    setPracticeSentences(sentences);
+    setCurrentIndex(0);
+    setSessionResults([]);
+    setShowSummary(false);
+    setUserAnswer("");
+    setIsRevealed(false);
+  }, [sentences]);
 
   // Focus input when component mounts or sentence changes
   useEffect(() => {
@@ -111,7 +126,7 @@ export function GrammarSentencePractice({
     onProgress?.(newResults);
 
     // Move to next sentence or show summary
-    if (currentIndex < sentences.length - 1) {
+    if (currentIndex < practiceSentences.length - 1) {
       setCurrentIndex(currentIndex + 1);
       setUserAnswer("");
       setIsRevealed(false);
@@ -145,37 +160,41 @@ export function GrammarSentencePractice({
   };
 
   const handleReviewMistakes = () => {
-    // Filter sentences that were marked as "again"
+    // Save progress first! (Important for SRS)
+    onComplete(sessionResults, false); // false = don't exit view
+
+    // Filter sentences that were marked as "again" or "hard" (Difficult items)
     const mistakeSentenceIds = sessionResults
-      .filter((r) => r.difficulty === "again")
+      .filter((r) => r.difficulty === "again" || r.difficulty === "hard")
       .map((r) => r.sentenceId);
 
-    // Reset to first mistake
-    const firstMistakeIndex = sentences.findIndex((s) =>
+    // Find the actual sentence objects from the current practice set
+    const mistakes = practiceSentences.filter((s) =>
       mistakeSentenceIds.includes(s.sentenceId)
     );
 
-    if (firstMistakeIndex !== -1) {
-      setCurrentIndex(firstMistakeIndex);
+    if (mistakes.length > 0) {
+      setPracticeSentences(mistakes);
+      setCurrentIndex(0);
       setUserAnswer("");
       setIsRevealed(false);
       setShowSummary(false);
       setSessionResults([]);
+    } else {
+      // Fallback if no mistakes (shouldn't happen if button is shown correctly)
+      alert("No difficult sentences to review!");
     }
   };
 
   const handleReviewAll = () => {
-    // Reset to first sentence to review all
-    setCurrentIndex(0);
-    setUserAnswer("");
-    setIsRevealed(false);
-    setShowSummary(false);
-    setSessionResults([]);
+    // User Request: "Review All" button should work similarly to Flashcards (Only Again & Hard)
+    // So we map "Review All" to the same logic as "Review Mistakes" (which we enhanced to include Hard)
+    handleReviewMistakes();
   };
 
   const handleFinishSession = () => {
     // Save results and exit
-    onComplete(sessionResults);
+    onComplete(sessionResults, true); // true = exit view
   };
 
   // Show summary if flagged
@@ -186,7 +205,7 @@ export function GrammarSentencePractice({
     return (
       <GrammarSessionSummary
         stats={stats}
-        totalSentences={sentences.length}
+        totalSentences={practiceSentences.length}
         timeSpent={timeSpent}
         onReviewMistakes={handleReviewMistakes}
         onReviewAll={handleReviewAll}
@@ -216,14 +235,10 @@ export function GrammarSentencePractice({
           <span className="font-semibold">{ruleTitle}</span>
           <div className="flex items-center gap-4">
             <span>
-              {currentIndex + 1} / {sentences.length}
+              {currentIndex + 1} / {practiceSentences.length}
             </span>
             {sessionResults.length > 0 && (
-              <Button
-                onClick={handleEndPractice}
-                variant="secondary"
-                size="sm"
-              >
+              <Button onClick={handleEndPractice} variant="secondary" size="sm">
                 End Practice
               </Button>
             )}

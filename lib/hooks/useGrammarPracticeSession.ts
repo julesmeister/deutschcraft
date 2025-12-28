@@ -252,8 +252,8 @@ export function useGrammarPracticeSession({
     // Shuffle for variety
     const shuffled = shuffleArray(dueSentenceObjects);
 
-    // Limit to 10 sentences per session
-    const sessionSentences = shuffled.slice(0, 10);
+    // Limit to 20 sentences max, but allow fewer if fewer are due
+    const sessionSentences = shuffled.slice(0, 20);
 
     // Set practice sentences
     setPracticeSentences(sessionSentences);
