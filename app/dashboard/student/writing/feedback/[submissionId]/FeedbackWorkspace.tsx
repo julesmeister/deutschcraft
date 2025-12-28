@@ -145,9 +145,9 @@ export function FeedbackWorkspace({
   };
 
   return (
-    <div className="bg-white flex flex-col min-h-screen">
-      {/* Tabs Navigation (Sticky) */}
-      <div className="flex border-b border-gray-200 sticky top-0 bg-white z-10">
+    <div className="bg-white flex flex-col lg:flex-row">
+      {/* Mobile/Tablet: Tab Navigation */}
+      <div className="flex border-b border-gray-200 lg:hidden">
         <TabButton
           label="Submission"
           active={activeTab === 'submission'}
@@ -167,39 +167,71 @@ export function FeedbackWorkspace({
         />
       </div>
 
-      {/* Content Area */}
-      <div className="flex-1">
-        {activeTab === 'submission' && (
-          <div className="h-full">
-            <SubmissionContent
-              submission={submission}
-              hasTeacherReview={hasTeacherReview}
-              teacherReview={teacherReview}
-              referenceTranslation={referenceTranslation}
-              quizMode={quizMode}
-              onStartQuiz={handleStartQuiz}
-              onCompleteQuiz={handleCompleteQuiz}
-              onCancelQuiz={handleCancelQuiz}
-              onSaveAICorrection={handleSaveAICorrection}
-            />
-          </div>
-        )}
+      {/* LEFT: Submission Content (always visible on desktop) */}
+      <div className={`flex-1 flex flex-col ${activeTab !== 'submission' ? 'hidden lg:flex' : ''}`}>
+        <SubmissionContent
+          submission={submission}
+          hasTeacherReview={hasTeacherReview}
+          teacherReview={teacherReview}
+          referenceTranslation={referenceTranslation}
+          quizMode={quizMode}
+          onStartQuiz={handleStartQuiz}
+          onCompleteQuiz={handleCompleteQuiz}
+          onCancelQuiz={handleCancelQuiz}
+          onSaveAICorrection={handleSaveAICorrection}
+        />
+      </div>
 
-        {activeTab === 'feedback' && (
-          <div className="p-4 md:p-8 max-w-3xl mx-auto">
-            <FeedbackContent
-              submission={submission}
-              teacherReview={teacherReview}
-              teacherReviewLoading={teacherReviewLoading}
-            />
-          </div>
-        )}
+      {/* SEPARATOR - Desktop only */}
+      <div className="hidden lg:block w-px bg-gray-200" />
 
-        {activeTab === 'history' && (
-          <div className="p-4 md:p-8 max-w-3xl mx-auto">
-            <HistoryContent submission={submission} authorName={authorName} />
+      {/* RIGHT: Feedback/History Panel */}
+      <div className={`flex flex-col lg:w-[400px] ${activeTab === 'submission' ? 'hidden lg:flex' : ''}`}>
+        {/* Tabs Navigation - Desktop only */}
+        <div className="hidden lg:flex border-b border-gray-200">
+          <TabButton
+            label="Feedback"
+            active={activeTab === 'feedback'}
+            badge={teacherReview ? '✓' : undefined}
+            onClick={() => onTabChange('feedback')}
+          />
+          <TabButton
+            label="History"
+            active={activeTab === 'history'}
+            count={submission.previousVersions?.length || 0}
+            onClick={() => onTabChange('history')}
+          />
+        </div>
+
+        {/* Tab Content */}
+        <div className="flex-1 p-4 md:p-8 overflow-y-auto">
+          {/* Mobile/Tablet: Show based on activeTab */}
+          <div className="lg:hidden">
+            {activeTab === 'feedback' && (
+              <FeedbackContent
+                submission={submission}
+                teacherReview={teacherReview}
+                teacherReviewLoading={teacherReviewLoading}
+              />
+            )}
+            {activeTab === 'history' && (
+              <HistoryContent submission={submission} authorName={authorName} />
+            )}
           </div>
-        )}
+
+          {/* Desktop: Show based on desktop tabs */}
+          <div className="hidden lg:block">
+            {activeTab === 'feedback' ? (
+              <FeedbackContent
+                submission={submission}
+                teacherReview={teacherReview}
+                teacherReviewLoading={teacherReviewLoading}
+              />
+            ) : (
+              <HistoryContent submission={submission} authorName={authorName} />
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

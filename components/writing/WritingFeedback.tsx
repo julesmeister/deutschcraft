@@ -26,7 +26,7 @@ export function WritingFeedback({ feedback, studentText, referenceText }: Writin
       </div>
 
       {/* Score Breakdown */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="flex flex-col gap-4">
         <ScoreCard
           label="Grammar"
           score={feedback.grammarScore}
@@ -226,7 +226,7 @@ function GrammarErrorCard({ error }: { error: GrammarError }) {
 function VocabularySuggestionCard({ suggestion }: { suggestion: VocabularySuggestion }) {
   return (
     <div className="bg-purple-50 border border-purple-200 rounded-xl p-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-2">
+      <div className="flex flex-col gap-3 mb-2">
         <div>
           <div className="text-xs text-neutral-600 mb-1">You used:</div>
           <div className="bg-white border border-purple-300 rounded-lg px-3 py-2">
