@@ -349,7 +349,40 @@ export async function POST(request: Request) {
     }
     stats.writingSubmissions = writingSubmissionCount;
 
-    // 6. Migrate progress (daily stats)
+    // 6. Migrate studentAnswers (Answer Hub data)
+    console.log('[Migrate] Migrating studentAnswers...');
+    const studentAnswersSnapshot = await adminDb.collection('studentAnswers').get();
+    let studentAnswerCount = 0;
+
+    for (const doc of studentAnswersSnapshot.docs) {
+      const answer = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO student_answers (
+            answer_id, student_id, student_name,
+            exercise_id, item_number,
+            student_answer, is_correct,
+            submitted_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            doc.id || `${answer.studentId}_${answer.exerciseId}_${answer.itemNumber}`,
+            answer.studentId,
+            answer.studentName,
+            answer.exerciseId,
+            answer.itemNumber,
+            answer.studentAnswer,
+            answer.isCorrect !== undefined ? answer.isCorrect : null,
+            answer.submittedAt,
+          ],
+        });
+        studentAnswerCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating student answer:`, error);
+      }
+    }
+    stats.studentAnswers = studentAnswerCount;
+
+    // 7. Migrate progress (daily stats)
     console.log('[Migrate] Migrating progress...');
     const progressSnapshot = await adminDb.collection('progress').get();
     let progressCount = 0;
@@ -385,7 +418,7 @@ export async function POST(request: Request) {
     }
     stats.progress = progressCount;
 
-    // 7. Migrate vocabulary
+    // 8. Migrate vocabulary
     console.log('[Migrate] Migrating vocabulary...');
     const vocabularySnapshot = await adminDb.collection('vocabulary').get();
     let vocabularyCount = 0;
@@ -423,7 +456,7 @@ export async function POST(request: Request) {
     }
     stats.vocabulary = vocabularyCount;
 
-    // 8. Migrate flashcards
+    // 9. Migrate flashcards
     console.log('[Migrate] Migrating flashcards...');
     const flashcardsSnapshot = await adminDb.collection('flashcards').get();
     let flashcardCount = 0;
@@ -454,7 +487,7 @@ export async function POST(request: Request) {
     }
     stats.flashcards = flashcardCount;
 
-    // 9. Migrate flashcard-progress
+    // 10. Migrate flashcard-progress
     console.log('[Migrate] Migrating flashcard-progress...');
     const flashcardProgressSnapshot = await adminDb.collection('flashcard-progress').get();
     let flashcardProgressCount = 0;
@@ -494,7 +527,7 @@ export async function POST(request: Request) {
     }
     stats.flashcardProgress = flashcardProgressCount;
 
-    // 10. Migrate exercise-overrides
+    // 11. Migrate exercise-overrides
     console.log('[Migrate] Migrating exercise-overrides...');
     const overridesSnapshot = await adminDb.collection('exercise-overrides').get();
     let overrideCount = 0;
@@ -531,7 +564,7 @@ export async function POST(request: Request) {
     }
     stats.exerciseOverrides = overrideCount;
 
-    // 11. Migrate saved-vocabulary
+    // 12. Migrate saved-vocabulary
     console.log('[Migrate] Migrating saved-vocabulary...');
     const savedVocabSnapshot = await adminDb.collection('saved-vocabulary').get();
     let savedVocabCount = 0;
@@ -572,7 +605,7 @@ export async function POST(request: Request) {
     }
     stats.savedVocabulary = savedVocabCount;
 
-    // 12. Migrate activities
+    // 13. Migrate activities
     console.log('[Migrate] Migrating activities...');
     const activitiesSnapshot = await adminDb.collection('activities').get();
     let activityCount = 0;
@@ -600,7 +633,7 @@ export async function POST(request: Request) {
     }
     stats.activities = activityCount;
 
-    // 13. Migrate grammar-rules
+    // 14. Migrate grammar-rules
     console.log('[Migrate] Migrating grammar-rules...');
     const grammarRulesSnapshot = await adminDb.collection('grammar-rules').get();
     let grammarRuleCount = 0;
@@ -632,7 +665,7 @@ export async function POST(request: Request) {
     }
     stats.grammarRules = grammarRuleCount;
 
-    // 14. Migrate grammar-sentences
+    // 15. Migrate grammar-sentences
     console.log('[Migrate] Migrating grammar-sentences...');
     const grammarSentencesSnapshot = await adminDb.collection('grammar-sentences').get();
     let grammarSentenceCount = 0;
@@ -664,7 +697,7 @@ export async function POST(request: Request) {
     }
     stats.grammarSentences = grammarSentenceCount;
 
-    // 15. Migrate grammar-reviews
+    // 16. Migrate grammar-reviews
     console.log('[Migrate] Migrating grammar-reviews...');
     const grammarReviewsSnapshot = await adminDb.collection('grammar-reviews').get();
     let grammarReviewCount = 0;
