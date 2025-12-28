@@ -233,7 +233,61 @@ export async function POST(request: Request) {
     }
     stats.submissions = submissionCount;
 
-    // 5. Migrate progress
+    // 5. Migrate writing-submissions (self-paced writing exercises)
+    console.log('[Migrate] Migrating writing-submissions...');
+    const writingSubmissionsSnapshot = await adminDb.collection('writing-submissions').get();
+    let writingSubmissionCount = 0;
+
+    for (const doc of writingSubmissionsSnapshot.docs) {
+      const submission = doc.data();
+      try {
+        await db.execute({
+          sql: `INSERT OR REPLACE INTO writing_submissions (
+            submission_id, exercise_id, user_id, exercise_type, level,
+            attempt_number,
+            content, word_count, character_count,
+            original_text,
+            status,
+            started_at, submitted_at, last_saved_at,
+            ai_feedback,
+            teacher_feedback, teacher_score, reviewed_by, reviewed_at,
+            version, previous_versions,
+            created_at, updated_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            submission.submissionId || doc.id,
+            submission.exerciseId,
+            submission.userId,
+            submission.exerciseType,
+            submission.level,
+            submission.attemptNumber || 1,
+            submission.content,
+            submission.wordCount || 0,
+            submission.characterCount || 0,
+            submission.originalText || null,
+            submission.status || 'draft',
+            submission.startedAt,
+            submission.submittedAt || null,
+            submission.lastSavedAt,
+            submission.aiFeedback ? JSON.stringify(submission.aiFeedback) : null,
+            submission.teacherFeedback || null,
+            submission.teacherScore || null,
+            submission.reviewedBy || null,
+            submission.reviewedAt || null,
+            submission.version || 1,
+            submission.previousVersions ? JSON.stringify(submission.previousVersions) : null,
+            submission.createdAt || Date.now(),
+            submission.updatedAt || Date.now(),
+          ],
+        });
+        writingSubmissionCount++;
+      } catch (error) {
+        console.error(`[Migrate] Error migrating writing submission ${submission.submissionId}:`, error);
+      }
+    }
+    stats.writingSubmissions = writingSubmissionCount;
+
+    // 6. Migrate progress (daily stats)
     console.log('[Migrate] Migrating progress...');
     const progressSnapshot = await adminDb.collection('progress').get();
     let progressCount = 0;
@@ -269,7 +323,7 @@ export async function POST(request: Request) {
     }
     stats.progress = progressCount;
 
-    // 6. Migrate vocabulary
+    // 7. Migrate vocabulary
     console.log('[Migrate] Migrating vocabulary...');
     const vocabularySnapshot = await adminDb.collection('vocabulary').get();
     let vocabularyCount = 0;
@@ -307,7 +361,7 @@ export async function POST(request: Request) {
     }
     stats.vocabulary = vocabularyCount;
 
-    // 7. Migrate flashcards
+    // 8. Migrate flashcards
     console.log('[Migrate] Migrating flashcards...');
     const flashcardsSnapshot = await adminDb.collection('flashcards').get();
     let flashcardCount = 0;
@@ -338,7 +392,7 @@ export async function POST(request: Request) {
     }
     stats.flashcards = flashcardCount;
 
-    // 8. Migrate flashcard-progress
+    // 9. Migrate flashcard-progress
     console.log('[Migrate] Migrating flashcard-progress...');
     const flashcardProgressSnapshot = await adminDb.collection('flashcard-progress').get();
     let flashcardProgressCount = 0;
@@ -378,7 +432,7 @@ export async function POST(request: Request) {
     }
     stats.flashcardProgress = flashcardProgressCount;
 
-    // 9. Migrate exercise-overrides
+    // 10. Migrate exercise-overrides
     console.log('[Migrate] Migrating exercise-overrides...');
     const overridesSnapshot = await adminDb.collection('exercise-overrides').get();
     let overrideCount = 0;
@@ -415,7 +469,7 @@ export async function POST(request: Request) {
     }
     stats.exerciseOverrides = overrideCount;
 
-    // 10. Migrate saved-vocabulary
+    // 11. Migrate saved-vocabulary
     console.log('[Migrate] Migrating saved-vocabulary...');
     const savedVocabSnapshot = await adminDb.collection('saved-vocabulary').get();
     let savedVocabCount = 0;
@@ -456,7 +510,7 @@ export async function POST(request: Request) {
     }
     stats.savedVocabulary = savedVocabCount;
 
-    // 11. Migrate activities
+    // 12. Migrate activities
     console.log('[Migrate] Migrating activities...');
     const activitiesSnapshot = await adminDb.collection('activities').get();
     let activityCount = 0;
@@ -484,7 +538,7 @@ export async function POST(request: Request) {
     }
     stats.activities = activityCount;
 
-    // 12. Migrate grammar-rules
+    // 13. Migrate grammar-rules
     console.log('[Migrate] Migrating grammar-rules...');
     const grammarRulesSnapshot = await adminDb.collection('grammar-rules').get();
     let grammarRuleCount = 0;
@@ -516,7 +570,7 @@ export async function POST(request: Request) {
     }
     stats.grammarRules = grammarRuleCount;
 
-    // 13. Migrate grammar-sentences
+    // 14. Migrate grammar-sentences
     console.log('[Migrate] Migrating grammar-sentences...');
     const grammarSentencesSnapshot = await adminDb.collection('grammar-sentences').get();
     let grammarSentenceCount = 0;
@@ -548,7 +602,7 @@ export async function POST(request: Request) {
     }
     stats.grammarSentences = grammarSentenceCount;
 
-    // 14. Migrate grammar-reviews
+    // 15. Migrate grammar-reviews
     console.log('[Migrate] Migrating grammar-reviews...');
     const grammarReviewsSnapshot = await adminDb.collection('grammar-reviews').get();
     let grammarReviewCount = 0;
