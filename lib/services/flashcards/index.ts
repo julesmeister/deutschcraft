@@ -50,7 +50,7 @@ export {
 } from './stats';
 
 // ============================================================================
-// RE-EXPORTS - Saved Vocabulary Operations
+// RE-EXPORTS - Saved Vocabulary Operations (Hybrid: Firebase/Turso)
 // ============================================================================
 
 export {
@@ -62,4 +62,4 @@ export {
   incrementVocabularyUsage,
   bulkIncrementVocabularyUsage,
   removeSavedVocabulary,
-} from './savedVocabulary';
+} from './savedVocabulary/index';

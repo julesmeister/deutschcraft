@@ -267,6 +267,108 @@ export {
 } from './studentAnswerService';
 
 // ============================================================================
+// EXERCISE OVERRIDE SERVICE (NEW - 2025-12-28)
+// ============================================================================
+export {
+  createExerciseOverride,
+  getExerciseOverride,
+  getTeacherOverrides,
+  getHiddenExercises,
+  updateExerciseOverride,
+  updateDisplayOrders,
+  deleteExerciseOverride,
+  deleteTeacherOverrides,
+} from './exerciseOverrideService';
+
+// ============================================================================
+// SAVED VOCABULARY SERVICE (NEW - 2025-12-28)
+// ============================================================================
+export {
+  getSavedVocabulary,
+  getSavedVocabularyEntry,
+  isWordSaved,
+  detectSavedWordsInText,
+  saveVocabularyForLater,
+  incrementVocabularyUsage,
+  bulkIncrementVocabularyUsage,
+  removeSavedVocabulary,
+} from './savedVocabularyService';
+
+// ============================================================================
+// MINI EXERCISE SERVICE (NEW - 2025-12-28)
+// ============================================================================
+export {
+  createSentence,
+  getSentence,
+  getUserSentences,
+  getSentencesForReview,
+  updateSentenceStats,
+  deleteSentence,
+  recordAttempt,
+  getSentenceAttempts,
+  getUserAttempts,
+  getUserProgress,
+  initializeUserProgress,
+  updateUserProgress,
+} from './miniExerciseService';
+
+// ============================================================================
+// ACTIVITY SERVICE (NEW - 2025-12-28)
+// ============================================================================
+export {
+  logActivity,
+  getRecentActivities,
+  getStudentActivities,
+  getActivityCountByType,
+  logFlashcardCreated,
+  logFlashcardReviewed,
+  logWritingSubmitted,
+  logLevelChange,
+  logStreakMilestone,
+  logLogin,
+  logPracticeSession,
+} from './activityService';
+
+// ============================================================================
+// EXERCISE PROGRESS SERVICE (NEW - 2025-12-28)
+// ============================================================================
+export {
+  getExerciseProgress,
+  getStudentExerciseProgress,
+  createExerciseProgress,
+  updateExerciseProgress,
+  deleteExerciseProgress,
+  getLessonProgress,
+  getStudentLessonProgress,
+  createLessonProgress,
+  updateLessonProgress,
+  incrementLessonProgress,
+  deleteLessonProgress,
+  getOrCreateExerciseProgress,
+  getOrCreateLessonProgress,
+} from './exerciseProgressService';
+
+// ============================================================================
+// GRAMMAR SERVICE (Organized - 2025-12-28)
+// ============================================================================
+export {
+  getAllGrammarRules,
+  getGrammarRulesByLevel,
+  getGrammarRule,
+  saveGrammarRule,
+  getSentencesByRule,
+  getSentencesByLevel,
+  getSentence as getGrammarSentence,
+  saveGrammarSentence,
+  getGrammarReviews,
+  getSingleGrammarReview,
+  getReviewsByRule,
+  getDueGrammarSentences,
+  saveGrammarReview,
+  saveGrammarReviewHistory,
+} from './grammarService';
+
+// ============================================================================
 // TYPE EXPORTS
 // ============================================================================
 export type { Session } from './sessionService';

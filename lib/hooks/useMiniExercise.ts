@@ -7,7 +7,7 @@
 import { useState, useCallback } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { getSmartMiniExercise } from '@/lib/services/writing/smartMiniExerciseService';
-import { getRandomMiniExercise } from '@/lib/services/writing/miniExerciseService';
+import { getRandomMiniExercise } from '@/lib/services/writing/miniExercise';
 import { QuizBlank } from '@/lib/models/writing';
 
 export interface MiniExerciseData {

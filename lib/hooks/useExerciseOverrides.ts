@@ -14,7 +14,7 @@ import {
   updateExerciseOverride,
   deleteExerciseOverride,
   bulkUpdateDisplayOrder,
-} from '../services/exerciseOverrideService';
+} from '../services/exerciseOverride';
 import {
   ExerciseOverride,
   CreateExerciseOverrideInput,
