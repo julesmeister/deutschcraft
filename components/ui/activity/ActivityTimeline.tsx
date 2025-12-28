@@ -42,7 +42,7 @@ export function ActivityTimeline({
 
   return (
     <div className={className}>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
+      <div className="flex flex-col gap-4">
         {currentItems.map((item, index) => (
           <ActivityTimelineItem
             key={item.id}
