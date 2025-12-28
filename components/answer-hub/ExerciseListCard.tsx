@@ -23,6 +23,11 @@ interface ExerciseListCardProps {
   onToggleHide?: (e: React.MouseEvent) => void;
   isDraggable?: boolean;
   isDuplicate?: boolean;
+  interactionStats?: {
+    hasInteracted: boolean;
+    submissionCount: number;
+    lastSubmittedAt?: number;
+  };
 }
 
 export function ExerciseListCard({
@@ -35,6 +40,7 @@ export function ExerciseListCard({
   onToggleHide,
   isDraggable,
   isDuplicate,
+  interactionStats,
 }: ExerciseListCardProps) {
   // Construct exercise detail URL using exerciseId (unique identifier)
   const exerciseUrl = `/dashboard/student/answer-hub/${levelBook}/${lessonId}/${encodeURIComponent(exercise.exerciseId)}`;
@@ -124,6 +130,13 @@ export function ExerciseListCard({
                   {exercise._isHidden ? 'SHOW' : 'HIDE'}
                 </button>
               </>
+            )}
+
+            {/* Interaction Badge */}
+            {interactionStats?.hasInteracted && (
+              <span className="inline-flex items-center px-2 py-1 text-xs font-bold bg-blue-100 text-blue-700">
+                {interactionStats.submissionCount > 0 ? `${interactionStats.submissionCount} submitted` : 'Viewed'}
+              </span>
             )}
 
             {/* Answer Count Badge */}

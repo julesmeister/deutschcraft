@@ -39,6 +39,8 @@ import {
   CreateExerciseOverrideInput,
 } from "@/lib/models/exerciseOverride";
 
+import { useExerciseInteractions } from "@/lib/hooks/useExerciseInteractions";
+
 export default function LessonDetailPage() {
   const router = useRouter();
   const params = useParams();
@@ -63,6 +65,17 @@ export default function LessonDetailPage() {
   // Load exercises with teacher overrides merged
   const { lesson, isLoading, error, hasOverrides, overrideCount } =
     useLessonWithOverrides(level, bookType, lessonNumber, userEmail);
+
+  // Load interaction stats for all exercises in this lesson
+  const exerciseIds = useMemo(
+    () => lesson?.exercises.map((ex) => ex.exerciseId) || [],
+    [lesson]
+  );
+
+  const { interactions } = useExerciseInteractions(
+    userId || userEmail,
+    exerciseIds
+  );
 
   // Check if user is a teacher (role is uppercase in database)
   const isTeacher = currentUser?.role === "TEACHER";
@@ -242,6 +255,7 @@ export default function LessonDetailPage() {
               isTeacher={isTeacher}
               duplicateExerciseIds={duplicateExerciseIds}
               visibleDuplicateIds={visibleDuplicateIds}
+              interactionStats={interactions}
               onReorder={handleReorder}
               onEditExercise={handleEditExercise}
               onToggleHide={handleToggleHide}

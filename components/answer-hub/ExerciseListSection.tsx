@@ -19,6 +19,7 @@ interface ExerciseListSectionProps {
   isTeacher: boolean;
   duplicateExerciseIds: Set<string>;
   visibleDuplicateIds: Set<string>;
+  interactionStats?: Record<string, { submissionCount: number; lastSubmittedAt: number }>;
   onReorder: (exercises: ExerciseWithOverrideMetadata[]) => void;
   onEditExercise: (exercise: ExerciseWithOverrideMetadata, globalIndex?: number) => void;
   onToggleHide: (exerciseId: string, isHidden: boolean, exerciseIndex?: number) => void;
@@ -39,6 +40,7 @@ export function ExerciseListSection({
   isTeacher,
   duplicateExerciseIds,
   visibleDuplicateIds,
+  interactionStats,
   onReorder,
   onEditExercise,
   onToggleHide,
@@ -137,6 +139,11 @@ export function ExerciseListSection({
               isTeacher={true}
               isDraggable={true}
               isDuplicate={visibleDuplicateIds.has(exercise.exerciseId)}
+              interactionStats={interactionStats ? {
+                hasInteracted: !!interactionStats[exercise.exerciseId],
+                submissionCount: interactionStats[exercise.exerciseId]?.submissionCount || 0,
+                lastSubmittedAt: interactionStats[exercise.exerciseId]?.lastSubmittedAt
+              } : undefined}
               onEdit={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -162,6 +169,11 @@ export function ExerciseListSection({
             levelBook={levelBook}
             lessonId={lessonId}
             colorScheme={colorScheme}
+            interactionStats={interactionStats ? {
+              hasInteracted: !!interactionStats[exercise.exerciseId],
+              submissionCount: interactionStats[exercise.exerciseId]?.submissionCount || 0,
+              lastSubmittedAt: interactionStats[exercise.exerciseId]?.lastSubmittedAt
+            } : undefined}
           />
         );
       })

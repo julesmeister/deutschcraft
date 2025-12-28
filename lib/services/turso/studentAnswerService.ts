@@ -161,6 +161,51 @@ export async function getAnswerHubStats(studentId: string): Promise<AnswerHubSta
   }
 }
 
+/**
+ * Get aggregated exercise interaction stats for a student in a specific lesson
+ */
+export async function getLessonInteractionStats(
+  studentId: string,
+  exerciseIds: string[]
+): Promise<Record<string, { submissionCount: number; lastSubmittedAt: number }>> {
+  if (exerciseIds.length === 0) return {};
+
+  try {
+    // Construct placeholders for IN clause
+    const placeholders = exerciseIds.map(() => '?').join(',');
+    
+    // We want to count distinct items submitted per exercise
+    const sql = `
+      SELECT 
+        exercise_id, 
+        COUNT(*) as submission_count,
+        MAX(submitted_at) as last_submitted
+      FROM student_answers 
+      WHERE student_id = ? 
+      AND exercise_id IN (${placeholders})
+      GROUP BY exercise_id
+    `;
+
+    const args = [studentId, ...exerciseIds];
+    const result = await db.execute({ sql, args });
+
+    const stats: Record<string, { submissionCount: number; lastSubmittedAt: number }> = {};
+    
+    for (const row of result.rows) {
+      const exerciseId = row.exercise_id as string;
+      stats[exerciseId] = {
+        submissionCount: row.submission_count as number,
+        lastSubmittedAt: row.last_submitted as number
+      };
+    }
+
+    return stats;
+  } catch (error) {
+    console.error('[studentAnswerService:turso] Error fetching lesson stats:', error);
+    return {};
+  }
+}
+
 // ============================================================================
 // WRITE OPERATIONS
 // ============================================================================
