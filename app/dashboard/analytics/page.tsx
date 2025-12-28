@@ -13,7 +13,7 @@ import { StreakByLevel } from '@/components/dashboard/analytics/StreakByLevel';
 
 export default function AnalyticsPage() {
   const { students, isLoading } = useAllStudents();
-  const { data: recentActivities = [], isLoading: activitiesLoading } = useRecentActivities(100);
+  const { data: recentActivities = [], isLoading: activitiesLoading } = useRecentActivities(100, students);
   const { analytics } = useAnalytics(students);
 
   if (isLoading) {

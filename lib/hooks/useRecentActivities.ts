@@ -5,7 +5,7 @@
  */
 
 import { useQuery } from '@tanstack/react-query';
-import { getUserFullName } from '../models/user';
+import { getUserFullName, User } from '../models/user';
 import { getUser } from '../services/turso/userService';
 import { getRecentStudyProgress } from '../services/turso/flashcards';
 import { getAllWritingSubmissions } from '../services/turso/writing';
@@ -24,13 +24,34 @@ export interface AggregatedActivity {
 /**
  * Fetch recent activities from all students by aggregating from existing collections
  */
-export function useRecentActivities(limitCount: number = 20) {
+export function useRecentActivities(limitCount: number = 20, students: User[] = []) {
   return useQuery({
-    queryKey: ['recent-activities', limitCount],
+    queryKey: ['recent-activities', limitCount, students.length],
     queryFn: async () => {
       const activities: AggregatedActivity[] = [];
       console.log('🔍 [useRecentActivities] Starting to fetch activities...');
       console.log('📊 [Config] Limit:', limitCount);
+
+      // Helper to resolve student name from provided list or fetch async
+      const resolveStudentName = async (userId: string) => {
+        // 1. Try to find in provided students list (synchronous)
+        const foundStudent = students.find(s => s.userId === userId || s.email === userId);
+        if (foundStudent) {
+          return getUserFullName(foundStudent);
+        }
+
+        // 2. Fallback to async fetch
+        try {
+          const fetchedStudent = await getUser(userId);
+          if (fetchedStudent) {
+            return getUserFullName(fetchedStudent);
+          }
+        } catch (e) {
+          console.warn(`Failed to fetch user ${userId}`, e);
+        }
+
+        return userId; // Fallback to email/ID
+      };
 
       try {
         // Fetch recent flashcard sessions from Turso progress table
@@ -39,21 +60,8 @@ export function useRecentActivities(limitCount: number = 20) {
         console.log('📊 [Turso] Found progress entries:', progressEntries.length);
 
         for (const entry of progressEntries) {
-          console.log('📄 [Progress] Entry:', {
-            progressId: entry.progressId,
-            userId: entry.userId,
-            date: entry.date,
-            cardsReviewed: entry.cardsReviewed,
-            rawData: entry
-          });
-
           const studentEmail = entry.userId;
-
-          // Fetch student name
-          const student = await getUser(studentEmail);
-          console.log('👤 [User] Fetched student for', studentEmail, ':', student);
-          const studentName = student ? getUserFullName(student) : studentEmail;
-          console.log('✅ [Name] Resolved name:', studentName);
+          const studentName = await resolveStudentName(studentEmail);
 
           activities.push({
             id: entry.progressId,
@@ -75,20 +83,7 @@ export function useRecentActivities(limitCount: number = 20) {
         console.log('✍️ [Turso] Found submissions:', submissions.length);
 
         for (const submission of submissions.slice(0, limitCount)) {
-          console.log('📝 [Submission] Document:', {
-            submissionId: submission.submissionId,
-            userId: submission.userId,
-            exerciseType: submission.exerciseType,
-            submittedAt: submission.submittedAt,
-            createdAt: submission.createdAt,
-            rawData: submission
-          });
-
-          // Fetch student name
-          const student = await getUser(submission.userId);
-          console.log('👤 [User] Fetched student for', submission.userId, ':', student);
-          const studentName = student ? getUserFullName(student) : submission.userId;
-          console.log('✅ [Name] Resolved name:', studentName);
+          const studentName = await resolveStudentName(submission.userId);
 
           activities.push({
             id: submission.submissionId,
@@ -110,8 +105,6 @@ export function useRecentActivities(limitCount: number = 20) {
 
         // Return only the requested limit
         const finalActivities = activities.slice(0, limitCount);
-        console.log('✅ [Final] Returning', finalActivities.length, 'activities');
-        console.log('📋 [Final] Activities:', finalActivities);
         return finalActivities;
       } catch (error) {
         console.error('❌ [Error] Error fetching recent activities:', error);

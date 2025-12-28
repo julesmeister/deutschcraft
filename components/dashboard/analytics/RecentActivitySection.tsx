@@ -44,23 +44,25 @@ export function RecentActivitySection({ activities, isLoading }: RecentActivityS
           <span>⚡</span>
           Recent Activity
         </h3>
-        {activityItems.length > 0 && (
-          <Pagination
-            currentPage={activityPage}
-            totalPages={totalActivityPages}
-            onPageChange={setActivityPage}
-            showPageNumbers={false}
-            className="!mt-0 !mb-0"
-          />
-        )}
       </div>
       {isLoading ? (
         <CatLoader message="Loading recent activities..." size="md" />
       ) : paginatedActivities.length > 0 ? (
-        <ActivityTimeline
-          items={paginatedActivities}
-          showPagination={false}
-        />
+        <>
+          <ActivityTimeline
+            items={paginatedActivities}
+            showPagination={false}
+          />
+          {totalActivityPages > 1 && (
+            <div className="mt-6 border-t border-gray-100 pt-4 flex justify-center">
+              <Pagination
+                currentPage={activityPage}
+                totalPages={totalActivityPages}
+                onPageChange={setActivityPage}
+              />
+            </div>
+          )}
+        </>
       ) : (
         <div className="text-center py-12 text-neutral-400">
           <div className="text-4xl mb-2">📋</div>
