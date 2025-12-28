@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
+import { AccountSwitcher } from '@/components/ui/AccountSwitcher';
 
 interface NavItem {
   name: string;
@@ -141,13 +142,12 @@ export function Navbar({
               {/* User Menu for Logged In Users */}
               {!showAuthButton && session && (
                 <div className="flex items-center">
-                  <ActionButton
-                    onClick={() => signOut({ callbackUrl: '/' })}
-                    variant={dark ? 'gray' : 'purple'}
-                    icon={<ActionButtonIcons.Logout />}
-                  >
-                    Sign out
-                  </ActionButton>
+                  <AccountSwitcher
+                    currentUserEmail={session.user?.email}
+                    currentUserName={session.user?.name}
+                    currentUserImage={session.user?.image}
+                    dark={dark}
+                  />
                 </div>
               )}
             </div>
@@ -222,16 +222,11 @@ export function Navbar({
                 <>
                   <div className="h-px bg-gray-200 my-2"></div>
                   <div className="px-3 pt-1">
-                    <ActionButton
-                      onClick={() => {
-                        signOut({ callbackUrl: '/' });
-                        setIsMobileMenuOpen(false);
-                      }}
-                      variant="gray"
-                      icon={<ActionButtonIcons.Logout />}
-                    >
-                      Sign out
-                    </ActionButton>
+                    <AccountSwitcher
+                      currentUserEmail={session.user?.email}
+                      currentUserName={session.user?.name}
+                      currentUserImage={session.user?.image}
+                    />
                   </div>
                 </>
               )}

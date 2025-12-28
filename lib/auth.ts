@@ -17,6 +17,11 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET,
+  session: {
+    strategy: 'jwt',
+    maxAge: 30 * 24 * 60 * 60, // 30 days
+    updateAge: 24 * 60 * 60, // Update session every 24 hours (reduces JWT callback frequency)
+  },
   callbacks: {
     async signIn({ user, account, profile }) {
       try {
@@ -80,10 +85,17 @@ export const authOptions: NextAuthOptions = {
           token.enrollmentStatus = userData?.enrollmentStatus;
           console.log('[JWT] Update - Role:', userData?.role);
         }
-      } catch (error) {
-        console.error('[JWT] Error:', error);
-        // Don't fail the entire auth flow - just continue without role
-        // User will be redirected to settings page by middleware
+      } catch (error: any) {
+        // Check if it's a quota exhaustion error
+        if (error?.code === 8 || error?.message?.includes('Quota exceeded')) {
+          console.warn('[JWT] Quota exhausted - preserving existing token data');
+          // Keep existing token data instead of clearing it
+          // The in-memory cache in getUserAdmin will serve stale data if available
+        } else {
+          console.error('[JWT] Error:', error);
+        }
+        // Don't fail the entire auth flow - preserve existing token or continue without role
+        // User will be redirected to settings page by middleware if role is missing
       }
 
       return token;

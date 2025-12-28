@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { SettingsSidebar } from '@/components/ui/settings/SettingsSidebar';
 import { ProfileTab } from '@/components/ui/settings/ProfileTab';
@@ -103,14 +103,28 @@ export default function SettingsPage() {
 
   const { handleRefresh } = useSettingsRefresh();
 
-  // Auto-refresh when stale session detected
+  // Track last refresh time to prevent infinite loops
+  const lastRefreshTime = useRef<number>(0);
+  const REFRESH_COOLDOWN = 60000; // 60 seconds minimum between auto-refreshes
+
+  // Auto-refresh when stale session detected (with rate limiting)
   useEffect(() => {
     if (sessionComparison.isStale && !isPending && !isLoading) {
-      console.log('[Settings] Stale session detected, auto-refreshing in 2s...');
-      const timer = setTimeout(() => {
-        handleRefresh(session?.user?.email);
-      }, 2000);
-      return () => clearTimeout(timer);
+      const now = Date.now();
+      const timeSinceLastRefresh = now - lastRefreshTime.current;
+
+      // Only auto-refresh if enough time has passed since last refresh
+      if (timeSinceLastRefresh >= REFRESH_COOLDOWN) {
+        console.log('[Settings] Stale session detected, auto-refreshing in 2s...');
+        const timer = setTimeout(() => {
+          lastRefreshTime.current = Date.now();
+          handleRefresh(session?.user?.email);
+        }, 2000);
+        return () => clearTimeout(timer);
+      } else {
+        const remainingTime = Math.ceil((REFRESH_COOLDOWN - timeSinceLastRefresh) / 1000);
+        console.log(`[Settings] Auto-refresh blocked (cooldown: ${remainingTime}s remaining). Please use manual refresh button.`);
+      }
     }
   }, [sessionComparison.isStale, isPending, isLoading, session?.user?.email, handleRefresh]);
 
