@@ -85,10 +85,13 @@ export function CategoryButtonGrid({
             </div>
             
             {/* Progress Bar (if started) */}
-            {attempts > 0 && completionStatus !== 'completed' && (
+            {attempts > 0 && (
               <div className="absolute bottom-3 left-4 right-4 h-1.5 bg-black/10 rounded-full overflow-hidden">
                 <div 
-                  className="h-full bg-black/20 rounded-full" 
+                  className={cn(
+                    "h-full rounded-full",
+                    completionStatus === 'completed' ? "bg-white" : "bg-black/20"
+                  )}
                   style={{ width: `${Math.min((attempts / category.cardCount) * 100, 100)}%` }}
                 />
               </div>
