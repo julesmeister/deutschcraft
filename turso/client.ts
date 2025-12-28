@@ -25,20 +25,31 @@ let _db: Client | null = null;
  * - Automatic replication and sync
  * - Low latency reads from edge locations
  * - Strong consistency for writes
+ * - Works in both server and client (browser) environments
  */
 function getDb(): Client {
   if (_db) return _db;
 
-  // Validate environment variables at runtime
-  const TURSO_DATABASE_URL = process.env.TURSO_DATABASE_URL;
-  const TURSO_AUTH_TOKEN = process.env.TURSO_AUTH_TOKEN;
+  // Check for client-side env vars first (NEXT_PUBLIC_), then server-side
+  // This allows Turso to work in both browser and server contexts
+  const TURSO_DATABASE_URL =
+    process.env.NEXT_PUBLIC_TURSO_DATABASE_URL ||
+    process.env.TURSO_DATABASE_URL;
+
+  const TURSO_AUTH_TOKEN =
+    process.env.NEXT_PUBLIC_TURSO_AUTH_TOKEN ||
+    process.env.TURSO_AUTH_TOKEN;
 
   if (!TURSO_DATABASE_URL) {
-    throw new Error('TURSO_DATABASE_URL environment variable is required');
+    throw new Error(
+      'TURSO_DATABASE_URL or NEXT_PUBLIC_TURSO_DATABASE_URL environment variable is required'
+    );
   }
 
   if (!TURSO_AUTH_TOKEN) {
-    throw new Error('TURSO_AUTH_TOKEN environment variable is required');
+    throw new Error(
+      'TURSO_AUTH_TOKEN or NEXT_PUBLIC_TURSO_AUTH_TOKEN environment variable is required'
+    );
   }
 
   _db = createClient({
