@@ -3,12 +3,12 @@
  * Handles sentence-level practice tracking from corrected writing submissions
  */
 
-import { db } from '@/turso/client';
+import { db } from "@/turso/client";
 import {
   MiniExerciseSentence,
   MiniExerciseAttempt,
   MiniExerciseProgress,
-} from '@/lib/models/miniExercise';
+} from "@/lib/models/miniExercise";
 
 // ============================================================================
 // HELPER FUNCTIONS
@@ -25,7 +25,7 @@ function rowToSentence(row: any): MiniExerciseSentence {
     exerciseId: row.exercise_id as string,
     exerciseType: row.exercise_type as string,
     exerciseTitle: row.exercise_title as string | undefined,
-    sourceType: row.source_type as 'ai' | 'teacher' | 'reference',
+    sourceType: row.source_type as "ai" | "teacher" | "reference",
     submittedAt: row.submitted_at as number,
     timesShown: row.times_shown as number,
     timesCompleted: row.times_completed as number,
@@ -80,7 +80,19 @@ function rowToProgress(row: any): MiniExerciseProgress {
 // ============================================================================
 
 export async function createSentence(
-  sentence: Omit<MiniExerciseSentence, 'timesShown' | 'timesCompleted' | 'totalCorrectAnswers' | 'totalBlanks' | 'totalPoints' | 'averageAccuracy' | 'consecutiveCorrect' | 'needsReview' | 'createdAt' | 'updatedAt'>
+  sentence: Omit<
+    MiniExerciseSentence,
+    | "timesShown"
+    | "timesCompleted"
+    | "totalCorrectAnswers"
+    | "totalBlanks"
+    | "totalPoints"
+    | "averageAccuracy"
+    | "consecutiveCorrect"
+    | "needsReview"
+    | "createdAt"
+    | "updatedAt"
+  >
 ): Promise<MiniExerciseSentence> {
   try {
     const now = Date.now();
@@ -119,28 +131,36 @@ export async function createSentence(
     });
 
     const result = await db.execute({
-      sql: 'SELECT * FROM mini_exercise_sentences WHERE sentence_id = ?',
+      sql: "SELECT * FROM mini_exercise_sentences WHERE sentence_id = ?",
       args: [sentence.sentenceId],
     });
 
     return rowToSentence(result.rows[0]);
   } catch (error) {
-    console.error('[miniExerciseService:turso] Error creating sentence:', error);
+    console.error(
+      "[miniExerciseService:turso] Error creating sentence:",
+      error
+    );
     throw error;
   }
 }
 
-export async function getSentence(sentenceId: string): Promise<MiniExerciseSentence | null> {
+export async function getSentence(
+  sentenceId: string
+): Promise<MiniExerciseSentence | null> {
   try {
     const result = await db.execute({
-      sql: 'SELECT * FROM mini_exercise_sentences WHERE sentence_id = ?',
+      sql: "SELECT * FROM mini_exercise_sentences WHERE sentence_id = ?",
       args: [sentenceId],
     });
 
     if (result.rows.length === 0) return null;
     return rowToSentence(result.rows[0]);
   } catch (error) {
-    console.error('[miniExerciseService:turso] Error fetching sentence:', error);
+    console.error(
+      "[miniExerciseService:turso] Error fetching sentence:",
+      error
+    );
     throw error;
   }
 }
@@ -153,25 +173,28 @@ export async function getUserSentences(
   }
 ): Promise<MiniExerciseSentence[]> {
   try {
-    let sql = 'SELECT * FROM mini_exercise_sentences WHERE user_id = ?';
+    let sql = "SELECT * FROM mini_exercise_sentences WHERE user_id = ?";
     const args: any[] = [userId];
 
     if (filters?.needsReview !== undefined) {
-      sql += ' AND needs_review = ?';
+      sql += " AND needs_review = ?";
       args.push(filters.needsReview ? 1 : 0);
     }
 
-    sql += ' ORDER BY last_shown_at ASC NULLS FIRST';
+    sql += " ORDER BY last_shown_at ASC NULLS FIRST";
 
     if (filters?.limit) {
-      sql += ' LIMIT ?';
+      sql += " LIMIT ?";
       args.push(filters.limit);
     }
 
     const result = await db.execute({ sql, args });
     return result.rows.map(rowToSentence);
   } catch (error) {
-    console.error('[miniExerciseService:turso] Error fetching user sentences:', error);
+    console.error(
+      "[miniExerciseService:turso] Error fetching user sentences:",
+      error
+    );
     throw error;
   }
 }
@@ -196,66 +219,73 @@ export async function updateSentenceStats(
   try {
     // Get current sentence
     const sentence = await getSentence(sentenceId);
-    if (!sentence) throw new Error('Sentence not found');
+    if (!sentence) throw new Error("Sentence not found");
 
     const now = Date.now();
     const setClauses: string[] = [];
     const args: any[] = [];
 
     if (stats.wasShown) {
-      setClauses.push('times_shown = times_shown + 1');
-      setClauses.push('last_shown_at = ?');
+      setClauses.push("times_shown = times_shown + 1");
+      setClauses.push("last_shown_at = ?");
       args.push(now);
     }
 
     if (stats.correctAnswers !== undefined && stats.totalBlanks !== undefined) {
       // Increment completion counter
-      setClauses.push('times_completed = times_completed + 1');
-      setClauses.push('last_completed_at = ?');
+      setClauses.push("times_completed = times_completed + 1");
+      setClauses.push("last_completed_at = ?");
       args.push(now);
 
       // Update totals
-      setClauses.push('total_correct_answers = total_correct_answers + ?');
+      setClauses.push("total_correct_answers = total_correct_answers + ?");
       args.push(stats.correctAnswers);
-      setClauses.push('total_blanks = total_blanks + ?');
+      setClauses.push("total_blanks = total_blanks + ?");
       args.push(stats.totalBlanks);
 
       if (stats.points !== undefined) {
-        setClauses.push('total_points = total_points + ?');
+        setClauses.push("total_points = total_points + ?");
         args.push(stats.points);
       }
 
       // Calculate new average accuracy
-      const newTotalCorrect = sentence.totalCorrectAnswers + stats.correctAnswers;
+      const newTotalCorrect =
+        sentence.totalCorrectAnswers + stats.correctAnswers;
       const newTotalBlanks = sentence.totalBlanks + stats.totalBlanks;
-      const newAccuracy = newTotalBlanks > 0 ? (newTotalCorrect / newTotalBlanks) * 100 : 0;
-      setClauses.push('average_accuracy = ?');
+      const newAccuracy =
+        newTotalBlanks > 0 ? (newTotalCorrect / newTotalBlanks) * 100 : 0;
+      setClauses.push("average_accuracy = ?");
       args.push(newAccuracy);
 
       // Update consecutive correct streak
       if (stats.wasPerfect) {
-        setClauses.push('consecutive_correct = consecutive_correct + 1');
+        setClauses.push("consecutive_correct = consecutive_correct + 1");
         // Mark as mastered if 3+ perfect attempts
         if (sentence.consecutiveCorrect + 1 >= 3) {
-          setClauses.push('needs_review = 0');
+          setClauses.push("needs_review = 0");
         }
       } else {
-        setClauses.push('consecutive_correct = 0');
-        setClauses.push('needs_review = 1');
+        setClauses.push("consecutive_correct = 0");
+        setClauses.push("needs_review = 1");
       }
     }
 
-    setClauses.push('updated_at = ?');
+    setClauses.push("updated_at = ?");
     args.push(now);
 
     args.push(sentenceId);
 
     await db.execute({
-      sql: `UPDATE mini_exercise_sentences SET ${setClauses.join(', ')} WHERE sentence_id = ?`,
+      sql: `UPDATE mini_exercise_sentences SET ${setClauses.join(
+        ", "
+      )} WHERE sentence_id = ?`,
       args,
     });
   } catch (error) {
-    console.error('[miniExerciseService:turso] Error updating sentence stats:', error);
+    console.error(
+      "[miniExerciseService:turso] Error updating sentence stats:",
+      error
+    );
     throw error;
   }
 }
@@ -263,11 +293,14 @@ export async function updateSentenceStats(
 export async function deleteSentence(sentenceId: string): Promise<void> {
   try {
     await db.execute({
-      sql: 'DELETE FROM mini_exercise_sentences WHERE sentence_id = ?',
+      sql: "DELETE FROM mini_exercise_sentences WHERE sentence_id = ?",
       args: [sentenceId],
     });
   } catch (error) {
-    console.error('[miniExerciseService:turso] Error deleting sentence:', error);
+    console.error(
+      "[miniExerciseService:turso] Error deleting sentence:",
+      error
+    );
     throw error;
   }
 }
@@ -277,7 +310,7 @@ export async function deleteSentence(sentenceId: string): Promise<void> {
 // ============================================================================
 
 export async function recordAttempt(
-  attempt: Omit<MiniExerciseAttempt, 'createdAt'>
+  attempt: Omit<MiniExerciseAttempt, "createdAt">
 ): Promise<MiniExerciseAttempt> {
   try {
     const now = Date.now();
@@ -302,18 +335,23 @@ export async function recordAttempt(
     });
 
     const result = await db.execute({
-      sql: 'SELECT * FROM mini_exercise_attempts WHERE attempt_id = ?',
+      sql: "SELECT * FROM mini_exercise_attempts WHERE attempt_id = ?",
       args: [attempt.attemptId],
     });
 
     return rowToAttempt(result.rows[0]);
   } catch (error) {
-    console.error('[miniExerciseService:turso] Error recording attempt:', error);
+    console.error(
+      "[miniExerciseService:turso] Error recording attempt:",
+      error
+    );
     throw error;
   }
 }
 
-export async function getSentenceAttempts(sentenceId: string): Promise<MiniExerciseAttempt[]> {
+export async function getSentenceAttempts(
+  sentenceId: string
+): Promise<MiniExerciseAttempt[]> {
   try {
     const result = await db.execute({
       sql: `SELECT * FROM mini_exercise_attempts
@@ -324,7 +362,10 @@ export async function getSentenceAttempts(sentenceId: string): Promise<MiniExerc
 
     return result.rows.map(rowToAttempt);
   } catch (error) {
-    console.error('[miniExerciseService:turso] Error fetching sentence attempts:', error);
+    console.error(
+      "[miniExerciseService:turso] Error fetching sentence attempts:",
+      error
+    );
     throw error;
   }
 }
@@ -334,18 +375,22 @@ export async function getUserAttempts(
   limit?: number
 ): Promise<MiniExerciseAttempt[]> {
   try {
-    let sql = 'SELECT * FROM mini_exercise_attempts WHERE user_id = ? ORDER BY completed_at DESC';
+    let sql =
+      "SELECT * FROM mini_exercise_attempts WHERE user_id = ? ORDER BY completed_at DESC";
     const args: any[] = [userId];
 
     if (limit) {
-      sql += ' LIMIT ?';
+      sql += " LIMIT ?";
       args.push(limit);
     }
 
     const result = await db.execute({ sql, args });
     return result.rows.map(rowToAttempt);
   } catch (error) {
-    console.error('[miniExerciseService:turso] Error fetching user attempts:', error);
+    console.error(
+      "[miniExerciseService:turso] Error fetching user attempts:",
+      error
+    );
     throw error;
   }
 }
@@ -354,22 +399,29 @@ export async function getUserAttempts(
 // PROGRESS OPERATIONS
 // ============================================================================
 
-export async function getUserProgress(userId: string): Promise<MiniExerciseProgress | null> {
+export async function getUserProgress(
+  userId: string
+): Promise<MiniExerciseProgress | null> {
   try {
     const result = await db.execute({
-      sql: 'SELECT * FROM mini_exercise_progress WHERE user_id = ?',
+      sql: "SELECT * FROM mini_exercise_progress WHERE user_id = ?",
       args: [userId],
     });
 
     if (result.rows.length === 0) return null;
     return rowToProgress(result.rows[0]);
   } catch (error) {
-    console.error('[miniExerciseService:turso] Error fetching user progress:', error);
+    console.error(
+      "[miniExerciseService:turso] Error fetching user progress:",
+      error
+    );
     throw error;
   }
 }
 
-export async function initializeUserProgress(userId: string): Promise<MiniExerciseProgress> {
+export async function initializeUserProgress(
+  userId: string
+): Promise<MiniExerciseProgress> {
   try {
     const now = Date.now();
     await db.execute({
@@ -382,13 +434,16 @@ export async function initializeUserProgress(userId: string): Promise<MiniExerci
     });
 
     const result = await db.execute({
-      sql: 'SELECT * FROM mini_exercise_progress WHERE user_id = ?',
+      sql: "SELECT * FROM mini_exercise_progress WHERE user_id = ?",
       args: [userId],
     });
 
     return rowToProgress(result.rows[0]);
   } catch (error) {
-    console.error('[miniExerciseService:turso] Error initializing user progress:', error);
+    console.error(
+      "[miniExerciseService:turso] Error initializing user progress:",
+      error
+    );
     throw error;
   }
 }
@@ -415,13 +470,15 @@ export async function updateUserProgress(
     const args: any[] = [];
 
     if (updates.sentenceCompleted) {
-      setClauses.push('total_sentences_practiced = total_sentences_practiced + 1');
-      setClauses.push('total_attempts = total_attempts + 1');
-      setClauses.push('today_progress = today_progress + 1');
+      setClauses.push(
+        "total_sentences_practiced = total_sentences_practiced + 1"
+      );
+      setClauses.push("total_attempts = total_attempts + 1");
+      setClauses.push("today_progress = today_progress + 1");
     }
 
     if (updates.points !== undefined) {
-      setClauses.push('total_points = total_points + ?');
+      setClauses.push("total_points = total_points + ?");
       args.push(updates.points);
     }
 
@@ -430,33 +487,40 @@ export async function updateUserProgress(
       const totalAttempts = progress.totalAttempts + 1;
       const currentTotal = progress.averageAccuracy * progress.totalAttempts;
       const newAverage = (currentTotal + updates.accuracy) / totalAttempts;
-      setClauses.push('average_accuracy = ?');
+      setClauses.push("average_accuracy = ?");
       args.push(newAverage);
     }
 
     if (updates.reviewCountChange !== undefined) {
-      setClauses.push('sentences_due_for_review = sentences_due_for_review + ?');
+      setClauses.push(
+        "sentences_due_for_review = sentences_due_for_review + ?"
+      );
       args.push(updates.reviewCountChange);
     }
 
     if (updates.masteredCountChange !== undefined) {
-      setClauses.push('sentences_mastered = sentences_mastered + ?');
+      setClauses.push("sentences_mastered = sentences_mastered + ?");
       args.push(updates.masteredCountChange);
     }
 
-    setClauses.push('last_practice_date = ?');
+    setClauses.push("last_practice_date = ?");
     args.push(now);
-    setClauses.push('updated_at = ?');
+    setClauses.push("updated_at = ?");
     args.push(now);
 
     args.push(userId);
 
     await db.execute({
-      sql: `UPDATE mini_exercise_progress SET ${setClauses.join(', ')} WHERE user_id = ?`,
+      sql: `UPDATE mini_exercise_progress SET ${setClauses.join(
+        ", "
+      )} WHERE user_id = ?`,
       args,
     });
   } catch (error) {
-    console.error('[miniExerciseService:turso] Error updating user progress:', error);
+    console.error(
+      "[miniExerciseService:turso] Error updating user progress:",
+      error
+    );
     throw error;
   }
 }

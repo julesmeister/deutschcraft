@@ -35,7 +35,8 @@ export function DatabaseMigrationTab() {
       });
 
       if (!response.ok) {
-        throw new Error('Export failed');
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || `Export failed: ${response.status} ${response.statusText}`);
       }
 
       const data = await response.json();
@@ -49,16 +50,28 @@ export function DatabaseMigrationTab() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `firestore-export-${Date.now()}.json`;
+      a.download = `ai-corrections-export-${Date.now()}.json`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
 
-      toast.success('Firestore data exported successfully!');
+      toast.success('AI corrections exported successfully!');
     } catch (error) {
       console.error('Export error:', error);
-      toast.error('Failed to export data');
+
+      // Extract clean error message
+      let errorMessage = 'An unexpected error occurred during export';
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      } else if (typeof error === 'string') {
+        errorMessage = error;
+      }
+
+      toast.error('Export Failed', {
+        description: errorMessage,
+        duration: 10000,
+      });
     } finally {
       setIsExporting(false);
     }
@@ -83,16 +96,29 @@ export function DatabaseMigrationTab() {
       });
 
       if (!response.ok) {
-        throw new Error('Import failed');
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || `Import failed: ${response.status} ${response.statusText}`);
       }
 
       const result = await response.json();
       setMigrationStats(result.stats || {});
 
-      toast.success('Data imported to Turso successfully!');
+      toast.success('AI corrections imported to Turso successfully!');
     } catch (error) {
       console.error('Import error:', error);
-      toast.error('Failed to import data');
+
+      // Extract clean error message
+      let errorMessage = 'An unexpected error occurred during import';
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      } else if (typeof error === 'string') {
+        errorMessage = error;
+      }
+
+      toast.error('Import Failed', {
+        description: errorMessage,
+        duration: 10000,
+      });
     } finally {
       setIsImporting(false);
       // Reset file input
@@ -106,21 +132,42 @@ export function DatabaseMigrationTab() {
     setIsMigrating(true);
 
     try {
+      toast.info('Starting AI correction migration... This may take a few minutes.');
+
       const response = await fetch('/api/database/migrate', {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ scope: 'ai_reviews' }),
       });
 
       if (!response.ok) {
-        throw new Error('Migration failed');
+        const errorData = await response.json().catch(() => ({}));
+        const errorMessage = errorData.error || `Migration failed with status ${response.status}`;
+        throw new Error(errorMessage);
       }
 
       const result = await response.json();
       setMigrationStats(result.stats || {});
 
-      toast.success('Data migrated successfully!');
+      toast.success(`AI corrections migrated successfully! ${result.stats?.total || 0} records processed.`);
     } catch (error) {
       console.error('Migration error:', error);
-      toast.error('Failed to migrate data');
+
+      // Extract clean error message without stack trace
+      let errorMessage = 'Failed to migrate AI corrections';
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      } else if (typeof error === 'string') {
+        errorMessage = error;
+      }
+
+      // Show detailed error with title and description
+      toast.error('Migration Failed', {
+        description: errorMessage,
+        duration: 10000, // 10 seconds for errors
+      });
     } finally {
       setIsMigrating(false);
     }

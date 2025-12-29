@@ -151,7 +151,7 @@ export default function StudentDashboard() {
 
                     // If we have a sentenceId, use smart tracking
                     if (sentenceId) {
-                      const { recordMiniExerciseAttempt } = await import('@/lib/services/writing/smartMiniExerciseService');
+                      const { recordMiniExerciseAttempt } = await import('@/lib/services/writing/smartMiniExercise');
                       await recordMiniExerciseAttempt(
                         sentenceId,
                         session.user.email,

@@ -3,15 +3,18 @@
  * Fetches random sentences from user's corrected writing submissions
  */
 
-import { db } from '@/turso/client';
-import { QuizBlank, GrammarError } from '@/lib/models/writing';
-import { generateQuizBlanks, generateRandomBlanks } from '@/lib/utils/quizGenerator';
+import { db } from "@/turso/client";
+import { QuizBlank, GrammarError } from "@/lib/models/writing";
+import {
+  generateQuizBlanks,
+  generateRandomBlanks,
+} from "@/lib/utils/quizGenerator";
 
 export interface MiniExerciseData {
   sentence: string;
   blanks: QuizBlank[];
   submissionId: string;
-  sourceType: 'ai' | 'teacher' | 'reference';
+  sourceType: "ai" | "teacher" | "reference";
   exerciseTitle?: string;
   exerciseType?: string;
   submittedAt?: number;
@@ -22,7 +25,10 @@ export interface MiniExerciseData {
 /**
  * Apply grammar corrections to text
  */
-function applyCorrectionsSentenceLevel(text: string, grammarErrors: GrammarError[]): string {
+function applyCorrectionsSentenceLevel(
+  text: string,
+  grammarErrors: GrammarError[]
+): string {
   let correctedText = text;
 
   const sortedErrors = [...grammarErrors].sort((a, b) => {
@@ -38,7 +44,10 @@ function applyCorrectionsSentenceLevel(text: string, grammarErrors: GrammarError
       const after = correctedText.substring(error.position.end);
       correctedText = before + error.suggestedCorrection + after;
     } else {
-      correctedText = correctedText.replace(error.originalText, error.suggestedCorrection);
+      correctedText = correctedText.replace(
+        error.originalText,
+        error.suggestedCorrection
+      );
     }
   }
 
@@ -51,8 +60,8 @@ function applyCorrectionsSentenceLevel(text: string, grammarErrors: GrammarError
 function splitIntoSentences(text: string): string[] {
   const sentences = text
     .split(/[.!?]+\s+/)
-    .map(s => s.trim())
-    .filter(s => s.length > 20);
+    .map((s) => s.trim())
+    .filter((s) => s.length > 20);
 
   return sentences;
 }
@@ -60,8 +69,15 @@ function splitIntoSentences(text: string): string[] {
 /**
  * Get a random corrected sentence from the user's writing submissions
  */
-export async function getRandomMiniExercise(userId: string): Promise<MiniExerciseData | null> {
+export async function getRandomMiniExercise(
+  userId: string
+): Promise<MiniExerciseData | null> {
   try {
+    console.log(
+      "[miniExercise:turso] Fetching random exercise for user:",
+      userId
+    );
+
     // Fetch user's recent submissions
     const result = await db.execute({
       sql: `SELECT submission_id, content, exercise_title, exercise_type, submitted_at,
@@ -73,7 +89,12 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
       args: [userId],
     });
 
+    console.log("[miniExercise:turso] Found submissions:", result.rows.length);
+
     if (result.rows.length === 0) {
+      console.log(
+        "[miniExercise:turso] No submissions found in database for user"
+      );
       return null;
     }
 
@@ -82,7 +103,7 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
       submissionId: string;
       content: string;
       correctedText: string;
-      sourceType: 'ai' | 'teacher' | 'reference';
+      sourceType: "ai" | "teacher" | "reference";
       exerciseTitle?: string;
       exerciseType?: string;
       submittedAt: number;
@@ -100,7 +121,7 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
           submissionId,
           content,
           correctedText: row.teacher_corrected_version as string,
-          sourceType: 'teacher',
+          sourceType: "teacher",
           exerciseTitle,
           exerciseType,
           submittedAt,
@@ -110,40 +131,68 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
           submissionId,
           content,
           correctedText: row.ai_corrected_version as string,
-          sourceType: 'ai',
+          sourceType: "ai",
           exerciseTitle,
           exerciseType,
           submittedAt,
         });
       } else if (row.ai_feedback) {
-        const aiFeedback = JSON.parse(row.ai_feedback as string);
-        if (aiFeedback.grammarErrors && aiFeedback.grammarErrors.length > 0) {
-          const correctedText = applyCorrectionsSentenceLevel(content, aiFeedback.grammarErrors);
-          submissionsWithCorrections.push({
-            submissionId,
-            content,
-            correctedText,
-            sourceType: 'ai',
-            exerciseTitle,
-            exerciseType,
-            submittedAt,
-          });
+        try {
+          const aiFeedback =
+            typeof row.ai_feedback === "string"
+              ? JSON.parse(row.ai_feedback)
+              : row.ai_feedback;
+          if (aiFeedback.grammarErrors && aiFeedback.grammarErrors.length > 0) {
+            const correctedText = applyCorrectionsSentenceLevel(
+              content,
+              aiFeedback.grammarErrors
+            );
+            submissionsWithCorrections.push({
+              submissionId,
+              content,
+              correctedText,
+              sourceType: "ai",
+              exerciseTitle,
+              exerciseType,
+              submittedAt,
+            });
+          }
+        } catch (e) {
+          console.error("[miniExercise:turso] Error parsing AI feedback:", e);
         }
       }
     }
 
+    console.log(
+      "[miniExercise:turso] Submissions with corrections:",
+      submissionsWithCorrections.length
+    );
+
     if (submissionsWithCorrections.length === 0) {
+      console.log("[miniExercise:turso] No submissions with corrections found");
       return null;
     }
 
     // Pick random submission
-    const randomIndex = Math.floor(Math.random() * submissionsWithCorrections.length);
+    const randomIndex = Math.floor(
+      Math.random() * submissionsWithCorrections.length
+    );
     const submission = submissionsWithCorrections[randomIndex];
+
+    console.log(
+      "[miniExercise:turso] Selected submission:",
+      submission.submissionId,
+      "Source:",
+      submission.sourceType
+    );
 
     // Split into sentences
     const sentences = splitIntoSentences(submission.correctedText);
 
     if (sentences.length === 0) {
+      console.log(
+        "[miniExercise:turso] No valid sentences found in corrected text"
+      );
       return null;
     }
 
@@ -156,12 +205,12 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
       const originalSentences = splitIntoSentences(submission.content);
 
       // Try to match sentence
-      let originalSentence = '';
+      let originalSentence = "";
       for (const origSent of originalSentences) {
         const correctedWords = sentence.toLowerCase().split(/\s+/).slice(0, 3);
         const origWords = origSent.toLowerCase().split(/\s+/).slice(0, 3);
 
-        if (correctedWords.some(w => origWords.includes(w))) {
+        if (correctedWords.some((w) => origWords.includes(w))) {
           originalSentence = origSent;
           break;
         }
@@ -192,7 +241,7 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
     // Fallback: return first sentence anyway
     const firstSentence = sentences[0];
     const originalSentences = splitIntoSentences(submission.content);
-    
+
     // First try generating blanks from differences
     let blanks = generateQuizBlanks(
       originalSentences[0] || firstSentence,
@@ -216,7 +265,10 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
       allSentences: sentences,
     };
   } catch (error) {
-    console.error('[miniExerciseService:turso] Error fetching random mini exercise:', error);
+    console.error(
+      "[miniExerciseService:turso] Error fetching random mini exercise:",
+      error
+    );
     return null;
   }
 }
