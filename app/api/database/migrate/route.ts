@@ -145,19 +145,12 @@ export async function POST(request: Request) {
       console.log(
         `[Migrate] Found ${writingSubmissionsSnapshot.size} documents in writing-submissions`
       );
-      console.log(
-        `[Migrate] Found ${legacyWritingSubmissionsSnapshot.size} documents in writingSubmissions (legacy)`
-      );
 
       let writingSubmissionCount = 0;
 
       // Helper function to process submissions
       const processSubmission = async (doc: any) => {
         const submission = doc.data();
-        // Log userId for debugging
-        console.log(
-          `[Migrate] Processing submission ${doc.id} for user: ${submission.userId}`
-        );
 
         try {
           await db.execute({

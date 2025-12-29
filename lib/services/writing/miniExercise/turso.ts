@@ -73,11 +73,6 @@ export async function getRandomMiniExercise(
   userId: string
 ): Promise<MiniExerciseData | null> {
   try {
-    console.log(
-      "[miniExercise:turso] Fetching random exercise for user:",
-      userId
-    );
-
     // Fetch user's recent submissions
     const result = await db.execute({
       sql: `SELECT submission_id, content, exercise_title, exercise_type, submitted_at,
@@ -89,12 +84,7 @@ export async function getRandomMiniExercise(
       args: [userId],
     });
 
-    console.log("[miniExercise:turso] Found submissions:", result.rows.length);
-
     if (result.rows.length === 0) {
-      console.log(
-        "[miniExercise:turso] No submissions found in database for user"
-      );
       return null;
     }
 
@@ -163,13 +153,7 @@ export async function getRandomMiniExercise(
       }
     }
 
-    console.log(
-      "[miniExercise:turso] Submissions with corrections:",
-      submissionsWithCorrections.length
-    );
-
     if (submissionsWithCorrections.length === 0) {
-      console.log("[miniExercise:turso] No submissions with corrections found");
       return null;
     }
 
@@ -179,20 +163,10 @@ export async function getRandomMiniExercise(
     );
     const submission = submissionsWithCorrections[randomIndex];
 
-    console.log(
-      "[miniExercise:turso] Selected submission:",
-      submission.submissionId,
-      "Source:",
-      submission.sourceType
-    );
-
     // Split into sentences
     const sentences = splitIntoSentences(submission.correctedText);
 
     if (sentences.length === 0) {
-      console.log(
-        "[miniExercise:turso] No valid sentences found in corrected text"
-      );
       return null;
     }
 
