@@ -24,6 +24,8 @@ import { useWeeklyProgress } from '@/lib/hooks/useWeeklyProgress';
 import { WeeklyProgressChart } from '@/components/dashboard/WeeklyProgressChart';
 import { cacheTimes } from '@/lib/queryClient';
 
+const PROGRESS_CHART_COLLAPSED_KEY = 'flashcards-progress-chart-collapsed';
+
 export default function FlashcardsLandingPage() {
   const router = useRouter();
   const queryClient = useQueryClient();
@@ -36,6 +38,14 @@ export default function FlashcardsLandingPage() {
   const [nextDueInfo, setNextDueInfo] = useState<{ count: number; nextDueDate: number } | undefined>();
   const [upcomingCards, setUpcomingCards] = useState<any[]>([]);
   const [isReviewMode, setIsReviewMode] = useState(false);
+  const [isProgressChartCollapsed, setIsProgressChartCollapsed] = useState(() => {
+    // Load collapse state from localStorage on mount
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem(PROGRESS_CHART_COLLAPSED_KEY);
+      return saved === 'true';
+    }
+    return false;
+  });
 
   // Fetch real data from Firestore (with 1-hour cache for flashcards page)
   const { stats, isLoading: statsLoading } = useStudyStats(
@@ -157,6 +167,15 @@ export default function FlashcardsLandingPage() {
       setUpcomingCards(upcomingCards);
       setIsReviewMode(false); // Reset to practice mode
     });
+  };
+
+  const handleToggleProgressChart = () => {
+    const newState = !isProgressChartCollapsed;
+    setIsProgressChartCollapsed(newState);
+    // Save to localStorage
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(PROGRESS_CHART_COLLAPSED_KEY, String(newState));
+    }
   };
 
   const handleToggleReviewMode = () => {
@@ -305,40 +324,103 @@ export default function FlashcardsLandingPage() {
                 <CatLoader message="Loading your stats and vocabulary..." size="md" />
               ) : (
                 <>
-                  {/* Weekly Progress Chart with Stats Button */}
+                  {/* Weekly Progress Chart with Stats Button - Collapsible */}
                   <div className="mb-8">
-                    <div className="bg-white border border-gray-200 relative overflow-hidden min-h-[240px] md:min-h-[280px]">
-                      {/* Use the same chart component from dashboard, but hide the View Details button */}
-                      <WeeklyProgressChart
-                        weeklyData={weeklyData}
-                        totalWords={totalWords}
-                        showViewDetailsButton={false}
-                      />
-
-                      {/* Stats Button replacing "View Details" */}
-                      <div className="absolute top-4 right-4 md:top-6 md:right-6 z-10">
-                        <div className="bg-white px-3 py-2 md:px-4 md:py-2.5 text-xs md:text-sm">
-                          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-1">
-                            <div className="text-right">
-                              <div className="font-bold text-gray-900">{totalRemNoteCards}</div>
+                    {/* Collapsed State - Stats Bar */}
+                    {isProgressChartCollapsed && (
+                      <div className="bg-white border border-gray-200 p-4 md:p-5">
+                        <div className="flex items-center justify-between">
+                          {/* Stats Grid - Horizontal */}
+                          <div className="flex items-center gap-4 md:gap-6">
+                            <div>
+                              <div className="text-xl md:text-2xl font-bold text-gray-900">{totalRemNoteCards}</div>
                               <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Cards</div>
                             </div>
-                            <div className="text-right">
-                              <div className="font-bold text-gray-900">{stats.cardsLearned}</div>
+                            <div>
+                              <div className="text-xl md:text-2xl font-bold text-gray-900">{stats.cardsLearned}</div>
                               <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Learned</div>
                             </div>
-                            <div className="text-right">
-                              <div className="font-bold text-gray-900">{stats.streak}</div>
+                            <div>
+                              <div className="text-xl md:text-2xl font-bold text-gray-900">{stats.streak}</div>
                               <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Streak</div>
                             </div>
-                            <div className="text-right">
-                              <div className="font-bold text-gray-900">{stats.accuracy}%</div>
+                            <div>
+                              <div className="text-xl md:text-2xl font-bold text-gray-900">{stats.accuracy}%</div>
                               <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Accuracy</div>
                             </div>
                           </div>
+
+                          {/* Expand Button */}
+                          <button
+                            onClick={handleToggleProgressChart}
+                            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                            aria-label="Expand progress chart"
+                          >
+                            <svg
+                              className="w-5 h-5 text-gray-600"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </button>
                         </div>
                       </div>
-                    </div>
+                    )}
+
+                    {/* Expanded State - Full Chart */}
+                    {!isProgressChartCollapsed && (
+                      <div className="bg-white border border-gray-200 relative overflow-hidden min-h-[240px] md:min-h-[280px]">
+                        {/* Use the same chart component from dashboard, but hide the View Details button */}
+                        <WeeklyProgressChart
+                          weeklyData={weeklyData}
+                          totalWords={totalWords}
+                          showViewDetailsButton={false}
+                        />
+
+                        {/* Stats Button & Collapse Toggle */}
+                        <div className="absolute top-4 right-4 md:top-6 md:right-6 z-10 flex items-start gap-2">
+                          {/* Stats Display */}
+                          <div className="bg-white px-3 py-2 md:px-4 md:py-2.5 text-xs md:text-sm">
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-1">
+                              <div className="text-right">
+                                <div className="font-bold text-gray-900">{totalRemNoteCards}</div>
+                                <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Cards</div>
+                              </div>
+                              <div className="text-right">
+                                <div className="font-bold text-gray-900">{stats.cardsLearned}</div>
+                                <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Learned</div>
+                              </div>
+                              <div className="text-right">
+                                <div className="font-bold text-gray-900">{stats.streak}</div>
+                                <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Streak</div>
+                              </div>
+                              <div className="text-right">
+                                <div className="font-bold text-gray-900">{stats.accuracy}%</div>
+                                <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Accuracy</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Collapse Button */}
+                          <button
+                            onClick={handleToggleProgressChart}
+                            className="bg-white p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                            aria-label="Collapse progress chart"
+                          >
+                            <svg
+                              className="w-5 h-5 text-gray-600"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </>
               )}
