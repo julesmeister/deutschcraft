@@ -11,9 +11,10 @@ import { getStudyStats } from '../services/flashcardService';
  * - Overall accuracy percentage
  *
  * Uses flashcardService for database abstraction
- * Previously used real-time onSnapshot listeners, now uses React Query with 30-second stale time
+ * Previously used real-time onSnapshot listeners, now uses React Query with configurable stale time
+ * @param cacheTime - Optional cache time in milliseconds (defaults to 1 minute for dashboard, 1 hour for flashcards page)
  */
-export function useStudyStats(userId: string | null | undefined, refreshKey?: number) {
+export function useStudyStats(userId: string | null | undefined, refreshKey?: number, cacheTime?: number) {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['studyStats', userId, refreshKey],
     queryFn: async () => {
@@ -23,8 +24,8 @@ export function useStudyStats(userId: string | null | undefined, refreshKey?: nu
 
       return await getStudyStats(userId);
     },
-    staleTime: cacheTimes.dashboardStats, // 1 minute
-    gcTime: cacheTimes.dashboardStats * 2,
+    staleTime: cacheTime || cacheTimes.dashboardStats, // Use custom cache time or default to 1 minute
+    gcTime: (cacheTime || cacheTimes.dashboardStats) * 2,
     enabled: !!userId,
   });
 

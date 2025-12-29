@@ -58,6 +58,7 @@ export const cacheTimes = {
   vocabulary: 24 * 60 * 60 * 1000, // 24 hours
   studyProgress: 30 * 1000,       // 30 seconds
   dashboardStats: 1 * 60 * 1000,  // 1 minute
+  flashcardStats: 60 * 60 * 1000, // 1 hour (for flashcards page)
   batches: 5 * 60 * 1000,         // 5 minutes
   writingTasks: 2 * 60 * 1000,    // 2 minutes - moderate updates
   taskSubmissions: 1 * 60 * 1000, // 1 minute - more frequent updates

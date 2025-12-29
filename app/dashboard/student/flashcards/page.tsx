@@ -3,7 +3,6 @@
 import { useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
 import { useQueryClient } from '@tanstack/react-query';
-import { StatCardSimple } from '@/components/ui/StatCardSimple';
 import { CategoryButtonGrid } from '@/components/flashcards/CategoryButtonGrid';
 import { FlashcardPractice } from '@/components/flashcards/FlashcardPractice';
 import { FlashcardReviewList } from '@/components/flashcards/FlashcardReviewList';
@@ -21,6 +20,9 @@ import { CatLoader } from '@/components/ui/CatLoader';
 import { applyFlashcardSettings } from '@/lib/utils/flashcardSelection';
 import { calculateCategoryProgress } from '@/lib/utils/categoryProgress';
 import { useVocabularyLevel } from '@/lib/hooks/useVocabulary';
+import { useWeeklyProgress } from '@/lib/hooks/useWeeklyProgress';
+import { WeeklyProgressChart } from '@/components/dashboard/WeeklyProgressChart';
+import { cacheTimes } from '@/lib/queryClient';
 
 export default function FlashcardsLandingPage() {
   const router = useRouter();
@@ -35,8 +37,15 @@ export default function FlashcardsLandingPage() {
   const [upcomingCards, setUpcomingCards] = useState<any[]>([]);
   const [isReviewMode, setIsReviewMode] = useState(false);
 
-  // Fetch real data from Firestore (with refresh key to force re-fetch after session)
-  const { stats, isLoading: statsLoading } = useStudyStats(session?.user?.email || undefined, statsRefreshKey);
+  // Fetch real data from Firestore (with 1-hour cache for flashcards page)
+  const { stats, isLoading: statsLoading } = useStudyStats(
+    session?.user?.email || undefined,
+    statsRefreshKey,
+    cacheTimes.flashcardStats // 1 hour cache
+  );
+
+  // Get weekly progress data
+  const { weeklyData, totalWords } = useWeeklyProgress(session?.user?.email || null);
 
   // Get RemNote categories for selected level
   const { categories, isLoading: categoriesLoading } = useRemNoteCategories(selectedLevel);
@@ -296,36 +305,40 @@ export default function FlashcardsLandingPage() {
                 <CatLoader message="Loading your stats and vocabulary..." size="md" />
               ) : (
                 <>
-                  {/* Stats Grid */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-                    <StatCardSimple
-                      label="Available Cards"
-                      value={totalRemNoteCards}
-                      icon="📚"
-                      bgColor="bg-blue-100"
-                      iconBgColor="bg-blue-500"
-                    />
-                    <StatCardSimple
-                      label="Cards Learned"
-                      value={stats.cardsLearned}
-                      icon="✅"
-                      bgColor="bg-emerald-100"
-                      iconBgColor="bg-emerald-500"
-                    />
-                    <StatCardSimple
-                      label="Day Streak"
-                      value={stats.streak}
-                      icon="🔥"
-                      bgColor="bg-amber-100"
-                      iconBgColor="bg-amber-500"
-                    />
-                    <StatCardSimple
-                      label="Accuracy"
-                      value={`${stats.accuracy}%`}
-                      icon="🎯"
-                      bgColor="bg-purple-100"
-                      iconBgColor="bg-purple-500"
-                    />
+                  {/* Weekly Progress Chart with Stats Button */}
+                  <div className="mb-8">
+                    <div className="bg-white border border-gray-200 relative overflow-hidden min-h-[240px] md:min-h-[280px]">
+                      {/* Use the same chart component from dashboard, but hide the View Details button */}
+                      <WeeklyProgressChart
+                        weeklyData={weeklyData}
+                        totalWords={totalWords}
+                        showViewDetailsButton={false}
+                      />
+
+                      {/* Stats Button replacing "View Details" */}
+                      <div className="absolute top-4 right-4 md:top-6 md:right-6 z-10">
+                        <div className="border border-gray-900 bg-white px-3 py-2 md:px-4 md:py-2.5 text-xs md:text-sm">
+                          <div className="grid grid-cols-2 gap-x-4 gap-y-1">
+                            <div className="text-right">
+                              <div className="font-bold text-gray-900">{totalRemNoteCards}</div>
+                              <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Cards</div>
+                            </div>
+                            <div className="text-right">
+                              <div className="font-bold text-gray-900">{stats.cardsLearned}</div>
+                              <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Learned</div>
+                            </div>
+                            <div className="text-right">
+                              <div className="font-bold text-gray-900">{stats.streak}</div>
+                              <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Streak</div>
+                            </div>
+                            <div className="text-right">
+                              <div className="font-bold text-gray-900">{stats.accuracy}%</div>
+                              <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Accuracy</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </>
               )}

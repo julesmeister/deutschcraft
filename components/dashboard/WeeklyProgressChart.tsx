@@ -7,9 +7,10 @@ const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 interface WeeklyProgressChartProps {
   weeklyData: number[];
   totalWords: number;
+  showViewDetailsButton?: boolean; // Optional prop to hide the button
 }
 
-export function WeeklyProgressChart({ weeklyData, totalWords }: WeeklyProgressChartProps) {
+export function WeeklyProgressChart({ weeklyData, totalWords, showViewDetailsButton = true }: WeeklyProgressChartProps) {
   const { data: session } = useSession();
 
   // Generate a slightly varied secondary series for visual interest
@@ -92,14 +93,16 @@ export function WeeklyProgressChart({ weeklyData, totalWords }: WeeklyProgressCh
       </div>
 
       {/* View Details Button - Top Right */}
-      <div className="absolute top-4 right-4 md:top-6 md:right-6 z-10">
-        <Link
-          href={achievementsLink}
-          className="border border-gray-900 px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-bold uppercase hover:bg-gray-900 hover:text-white transition inline-block"
-        >
-          View Details →
-        </Link>
-      </div>
+      {showViewDetailsButton && (
+        <div className="absolute top-4 right-4 md:top-6 md:right-6 z-10">
+          <Link
+            href={achievementsLink}
+            className="border border-gray-900 px-3 py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-bold uppercase hover:bg-gray-900 hover:text-white transition inline-block"
+          >
+            View Details →
+          </Link>
+        </div>
+      )}
 
       {/* Content Overlay */}
       <div className="relative p-4 md:p-6 w-full md:w-2/3">
