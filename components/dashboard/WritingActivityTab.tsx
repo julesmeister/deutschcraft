@@ -70,7 +70,8 @@ export function WritingActivityTab({
           const exerciseIcon = isQuiz ? '📝' :
             submission.exerciseType === 'creative' ? '✨' :
             submission.exerciseType === 'translation' ? '🔄' :
-            submission.exerciseType === 'email' ? '✉️' : '📨';
+            submission.exerciseType === 'email' ? '✉️' :
+            submission.exerciseType === 'freestyle' ? '🖊️' : '📨';
 
           // Handle teacherScore - could be number or object
           const teacherScore = typeof submission.teacherScore === 'number'
