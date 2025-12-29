@@ -317,8 +317,8 @@ export default function FlashcardsLandingPage() {
 
                       {/* Stats Button replacing "View Details" */}
                       <div className="absolute top-4 right-4 md:top-6 md:right-6 z-10">
-                        <div className="border border-gray-900 bg-white px-3 py-2 md:px-4 md:py-2.5 text-xs md:text-sm">
-                          <div className="grid grid-cols-2 gap-x-4 gap-y-1">
+                        <div className="bg-white px-3 py-2 md:px-4 md:py-2.5 text-xs md:text-sm">
+                          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-1">
                             <div className="text-right">
                               <div className="font-bold text-gray-900">{totalRemNoteCards}</div>
                               <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Cards</div>
