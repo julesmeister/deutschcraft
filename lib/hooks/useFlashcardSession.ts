@@ -207,8 +207,15 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
     });
 
     if (cardsToReview.length > 0) {
-      // Update active cards to only cards that need review
-      setActiveFlashcards(cardsToReview);
+      // Shuffle the cards to randomize order (Fisher-Yates shuffle)
+      const shuffledCards = [...cardsToReview];
+      for (let i = shuffledCards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledCards[i], shuffledCards[j]] = [shuffledCards[j], shuffledCards[i]];
+      }
+
+      // Update active cards to only cards that need review (shuffled)
+      setActiveFlashcards(shuffledCards);
       // Reset for review session
       setCurrentIndex(0);
       setShowSummary(false);
