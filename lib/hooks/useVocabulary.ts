@@ -12,6 +12,7 @@ export interface Flashcard {
 
 export interface LevelData {
   level: string;
+  totalCards: number;
   flashcards: Flashcard[];
 }
 

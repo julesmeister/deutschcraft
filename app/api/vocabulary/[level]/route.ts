@@ -5,10 +5,11 @@ import { CEFRLevel } from '@/lib/models/cefr';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { level: string } }
+  { params }: { params: Promise<{ level: string }> }
 ) {
   try {
-    const level = params.level.toUpperCase();
+    const { level: levelParam } = await params;
+    const level = levelParam.toUpperCase();
 
     // Validate level
     if (!Object.values(CEFRLevel).includes(level as CEFRLevel)) {
