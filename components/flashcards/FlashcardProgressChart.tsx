@@ -63,20 +63,32 @@ export function FlashcardProgressChart({
             </button>
           </div>
           <div className="bg-white border border-gray-200 p-4 md:p-5">
-            {/* Stats Grid - Horizontal with Wide Spacing */}
-            <div className="flex items-center justify-center gap-8 md:gap-16 lg:gap-20">
+            {/* Stats Grid - Horizontal with Wide Spacing and Separators */}
+            <div className="flex items-center justify-center gap-12 md:gap-20 lg:gap-28 xl:gap-32">
               <div className="text-center">
                 <div className="text-xl md:text-2xl font-bold text-gray-900">{totalRemNoteCards}</div>
                 <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Cards</div>
               </div>
+
+              {/* Separator */}
+              <div className="h-10 md:h-12 w-px bg-gray-200" />
+
               <div className="text-center">
                 <div className="text-xl md:text-2xl font-bold text-gray-900">{stats.cardsLearned}</div>
                 <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Learned</div>
               </div>
+
+              {/* Separator */}
+              <div className="h-10 md:h-12 w-px bg-gray-200" />
+
               <div className="text-center">
                 <div className="text-xl md:text-2xl font-bold text-gray-900">{stats.streak}</div>
                 <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Streak</div>
               </div>
+
+              {/* Separator */}
+              <div className="h-10 md:h-12 w-px bg-gray-200" />
+
               <div className="text-center">
                 <div className="text-xl md:text-2xl font-bold text-gray-900">{stats.accuracy}%</div>
                 <div className="text-[10px] md:text-xs text-gray-600 uppercase font-bold">Accuracy</div>
