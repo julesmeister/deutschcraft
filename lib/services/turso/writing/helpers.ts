@@ -33,6 +33,7 @@ export function rowToSubmission(row: any): WritingSubmission {
     submittedAt: row.submitted_at ? Number(row.submitted_at) : undefined,
     lastSavedAt: Number(row.updated_at),
     aiFeedback: row.ai_feedback ? JSON.parse(row.ai_feedback as string) : undefined,
+    aiCorrectedVersion: row.ai_corrected_version as string | undefined,
     teacherFeedback: row.teacher_feedback as string | undefined,
     teacherScore: row.teacher_score ? Number(row.teacher_score) : undefined,
     reviewedBy: row.reviewed_by as string | undefined,

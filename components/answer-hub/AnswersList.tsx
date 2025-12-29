@@ -97,13 +97,15 @@ interface AnswersListProps {
   exerciseId: string;
   showExplanations?: boolean;
   isTeacher?: boolean;
+  onAnswerSaved?: () => void;
 }
 
 export function AnswersList({
   answers,
   exerciseId,
   showExplanations = true,
-  isTeacher = false
+  isTeacher = false,
+  onAnswerSaved
 }: AnswersListProps) {
   const { session } = useFirebaseAuth();
   const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
@@ -157,13 +159,16 @@ export function AnswersList({
 
       if (success) {
         showToast(`Answer for Item ${itemNumber} saved!`, 'success');
+        if (onAnswerSaved) {
+          onAnswerSaved();
+        }
       } else {
         showToast(`Failed to save answer for Item ${itemNumber}`, 'error');
       }
     }, 500);
 
     setSaveTimers(prev => ({ ...prev, [itemNumber]: timer }));
-  }, [canSave, userId, userName, exerciseId, saveAnswer, showToast, saveTimers]);
+  }, [canSave, userId, userName, exerciseId, saveAnswer, showToast, saveTimers, onAnswerSaved]);
 
   // Cleanup timers on unmount
   useEffect(() => {

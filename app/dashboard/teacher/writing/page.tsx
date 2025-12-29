@@ -8,6 +8,7 @@
 import { useState, useMemo, useDeferredValue, useEffect } from 'react';
 import { useWritingSubmissionsPaginated, useUpdateWritingSubmission } from '@/lib/hooks/useWritingSubmissions';
 import { useActiveBatches } from '@/lib/hooks/useBatches';
+import { useBatchSelection } from '@/lib/hooks/useBatchSelection';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { Card } from '@/components/ui/Card';
 import { EmptyState } from '@/components/ui/EmptyState';
@@ -15,7 +16,7 @@ import { BatchSelector } from '@/components/ui/BatchSelector';
 import { Batch } from '@/lib/models';
 import { WritingSubmission, WritingExerciseType } from '@/lib/models/writing';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { useTeacherStudents } from '@/lib/hooks/useUsers';
+import { useTeacherStudents, useCurrentStudent } from '@/lib/hooks/useUsers';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { StatsOverview } from '@/components/teacher/writing/StatsOverview';
 import { FilterControls } from '@/components/teacher/writing/FilterControls';
@@ -32,13 +33,19 @@ export default function TeacherWritingDashboard() {
   const [exerciseTypeFilter, setExerciseTypeFilter] = useState<ExerciseTypeFilter>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const deferredQuery = useDeferredValue(searchQuery);
-  const [selectedBatch, setSelectedBatch] = useState<Batch | null>(null);
 
   // Fetch batches and students
   const { batches } = useActiveBatches(currentTeacherId);
   const { students: allStudents } = useTeacherStudents(currentTeacherId);
+  
+  // Get current user for preferences
+  const { student: currentUser } = useCurrentStudent(currentTeacherId);
 
-  // Don't auto-select a batch - default to "All Batches" (null)
+  // Use standardized batch selection logic (with history and persistence)
+  const { selectedBatch, setSelectedBatch, sortedBatches } = useBatchSelection({
+    batches,
+    user: currentUser,
+  });
 
   // Get student IDs for selected batch
   // OPTIMIZATION: Only calculate when a specific batch is selected
@@ -167,7 +174,7 @@ export default function TeacherWritingDashboard() {
               All Batches
             </button>
             <BatchSelector
-              batches={batches}
+              batches={sortedBatches}
               selectedBatch={selectedBatch}
               onSelectBatch={setSelectedBatch}
               onCreateBatch={() => {}} // Not needed on this page

@@ -1,27 +1,12 @@
-'use client';
+"use client";
 
-import { useState, useMemo } from 'react';
-import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
-import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
-import { CEFRLevel } from '@/lib/models/cefr';
-import { useRemNoteCategories } from '@/lib/hooks/useRemNoteCategories';
-
-// Import level data
-import a1Data from '@/lib/data/vocabulary/levels/a1.json';
-import a2Data from '@/lib/data/vocabulary/levels/a2.json';
-import b1Data from '@/lib/data/vocabulary/levels/b1.json';
-import b2Data from '@/lib/data/vocabulary/levels/b2.json';
-import c1Data from '@/lib/data/vocabulary/levels/c1.json';
-import c2Data from '@/lib/data/vocabulary/levels/c2.json';
-
-const levelDataMap = {
-  [CEFRLevel.A1]: a1Data,
-  [CEFRLevel.A2]: a2Data,
-  [CEFRLevel.B1]: b1Data,
-  [CEFRLevel.B2]: b2Data,
-  [CEFRLevel.C1]: c1Data,
-  [CEFRLevel.C2]: c2Data,
-};
+import { useState, useMemo } from "react";
+import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
+import { CEFRLevelSelector } from "@/components/ui/CEFRLevelSelector";
+import { CEFRLevel } from "@/lib/models/cefr";
+import { useRemNoteCategories } from "@/lib/hooks/useRemNoteCategories";
+import { useVocabularyLevel } from "@/lib/hooks/useVocabulary";
+import { CatLoader } from "@/components/ui/CatLoader";
 
 interface VocabularyEntry {
   id: string;
@@ -33,15 +18,23 @@ interface VocabularyEntry {
 
 export default function VocabularyPage() {
   const [selectedLevel, setSelectedLevel] = useState<CEFRLevel>(CEFRLevel.A1);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
   // Get categories for selected level
   const { categories } = useRemNoteCategories(selectedLevel);
 
+  // Fetch vocabulary data
+  const {
+    data: levelData,
+    isLoading,
+    isError,
+  } = useVocabularyLevel(selectedLevel);
+
   // Get all vocabulary entries for selected level
   const vocabularyEntries = useMemo(() => {
-    const levelData = levelDataMap[selectedLevel];
+    if (!levelData || !levelData.flashcards) return [];
+
     return levelData.flashcards.map((card: any) => ({
       id: card.id,
       german: card.german,
@@ -49,7 +42,7 @@ export default function VocabularyPage() {
       category: card.category,
       level: selectedLevel,
     })) as VocabularyEntry[];
-  }, [selectedLevel]);
+  }, [levelData, selectedLevel]);
 
   // Filter and sort vocabulary
   const filteredVocabulary = useMemo(() => {
@@ -66,12 +59,14 @@ export default function VocabularyPage() {
     }
 
     // Filter by category
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter((entry) => entry.category === selectedCategory);
+    if (selectedCategory !== "all") {
+      filtered = filtered.filter(
+        (entry) => entry.category === selectedCategory
+      );
     }
 
     // Sort by German (A-Z)
-    filtered.sort((a, b) => a.german.localeCompare(b.german, 'de'));
+    filtered.sort((a, b) => a.german.localeCompare(b.german, "de"));
 
     return filtered;
   }, [vocabularyEntries, searchQuery, selectedCategory]);
@@ -123,11 +118,11 @@ export default function VocabularyPage() {
             {/* Category Chips */}
             <div className="flex flex-wrap gap-2">
               <button
-                onClick={() => setSelectedCategory('all')}
+                onClick={() => setSelectedCategory("all")}
                 className={`px-3 py-1.5 text-sm font-semibold transition-colors ${
-                  selectedCategory === 'all'
-                    ? 'bg-gray-900 text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  selectedCategory === "all"
+                    ? "bg-gray-900 text-white"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
                 All
@@ -138,8 +133,8 @@ export default function VocabularyPage() {
                   onClick={() => setSelectedCategory(cat.name)}
                   className={`px-3 py-1.5 text-sm font-semibold transition-colors ${
                     selectedCategory === cat.name
-                      ? 'bg-gray-900 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      ? "bg-gray-900 text-white"
+                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
                 >
                   {cat.name}
@@ -175,7 +170,11 @@ export default function VocabularyPage() {
 
         {/* Dictionary Content */}
         <div className="bg-white shadow-sm overflow-hidden">
-          {filteredVocabulary.length === 0 ? (
+          {isLoading ? (
+            <div className="p-12 flex justify-center">
+              <CatLoader message="Loading vocabulary..." size="md" />
+            </div>
+          ) : filteredVocabulary.length === 0 ? (
             <div className="p-12 text-center">
               <svg
                 className="mx-auto w-16 h-16 text-gray-300 mb-4"
@@ -190,19 +189,31 @@ export default function VocabularyPage() {
                   d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <h3 className="text-lg font-semibold text-gray-700 mb-2">No results found</h3>
-              <p className="text-gray-500">Try adjusting your search or filters</p>
+              <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                No results found
+              </h3>
+              <p className="text-gray-500">
+                Try adjusting your search or filters
+              </p>
             </div>
           ) : (
             <div>
               {alphabeticalKeys.map((letter) => (
-                <div key={letter} className="border-b border-gray-200 last:border-b-0">
+                <div
+                  key={letter}
+                  className="border-b border-gray-200 last:border-b-0"
+                >
                   {/* Letter Header */}
                   <div className="bg-gradient-to-r from-gray-100 to-gray-50 px-6 py-3 border-b border-gray-200">
                     <div className="flex items-center">
-                      <span className="text-2xl font-black text-brand-purple mr-3">{letter}</span>
+                      <span className="text-2xl font-black text-brand-purple mr-3">
+                        {letter}
+                      </span>
                       <span className="text-sm text-gray-500 font-medium">
-                        {groupedVocabulary[letter].length} {groupedVocabulary[letter].length === 1 ? 'word' : 'words'}
+                        {groupedVocabulary[letter].length}{" "}
+                        {groupedVocabulary[letter].length === 1
+                          ? "word"
+                          : "words"}
                       </span>
                     </div>
                   </div>
@@ -210,7 +221,11 @@ export default function VocabularyPage() {
                   {/* Word List */}
                   <div className="divide-y divide-gray-100">
                     {groupedVocabulary[letter].map((entry, index) => (
-                      <VocabularyRow key={entry.id} entry={entry} colorIndex={index} />
+                      <VocabularyRow
+                        key={entry.id}
+                        entry={entry}
+                        colorIndex={index}
+                      />
                     ))}
                   </div>
                 </div>
@@ -225,37 +240,75 @@ export default function VocabularyPage() {
 
 // Color schemes for vocabulary rows (similar to CEFR selector)
 const ROW_COLOR_SCHEMES = [
-  { bg: 'hover:bg-blue-100', text: 'group-hover:text-blue-900', badge: 'group-hover:bg-blue-500' },
-  { bg: 'hover:bg-emerald-100', text: 'group-hover:text-emerald-900', badge: 'group-hover:bg-emerald-500' },
-  { bg: 'hover:bg-amber-100', text: 'group-hover:text-amber-900', badge: 'group-hover:bg-amber-500' },
-  { bg: 'hover:bg-purple-100', text: 'group-hover:text-purple-900', badge: 'group-hover:bg-purple-500' },
-  { bg: 'hover:bg-pink-100', text: 'group-hover:text-pink-900', badge: 'group-hover:bg-pink-500' },
-  { bg: 'hover:bg-indigo-100', text: 'group-hover:text-indigo-900', badge: 'group-hover:bg-indigo-500' },
+  {
+    bg: "hover:bg-blue-100",
+    text: "group-hover:text-blue-900",
+    badge: "group-hover:bg-blue-500",
+  },
+  {
+    bg: "hover:bg-emerald-100",
+    text: "group-hover:text-emerald-900",
+    badge: "group-hover:bg-emerald-500",
+  },
+  {
+    bg: "hover:bg-amber-100",
+    text: "group-hover:text-amber-900",
+    badge: "group-hover:bg-amber-500",
+  },
+  {
+    bg: "hover:bg-purple-100",
+    text: "group-hover:text-purple-900",
+    badge: "group-hover:bg-purple-500",
+  },
+  {
+    bg: "hover:bg-pink-100",
+    text: "group-hover:text-pink-900",
+    badge: "group-hover:bg-pink-500",
+  },
+  {
+    bg: "hover:bg-indigo-100",
+    text: "group-hover:text-indigo-900",
+    badge: "group-hover:bg-indigo-500",
+  },
 ];
 
-function VocabularyRow({ entry, colorIndex }: { entry: VocabularyEntry; colorIndex: number }) {
+function VocabularyRow({
+  entry,
+  colorIndex,
+}: {
+  entry: VocabularyEntry;
+  colorIndex: number;
+}) {
   const colorScheme = ROW_COLOR_SCHEMES[colorIndex % ROW_COLOR_SCHEMES.length];
 
   return (
-    <div className={`group ${colorScheme.bg} px-6 py-3 transition-all duration-200 cursor-pointer`}>
+    <div
+      className={`group ${colorScheme.bg} px-6 py-3 transition-all duration-200 cursor-pointer`}
+    >
       <div className="grid grid-cols-[200px,1fr,auto] gap-16 items-center">
         {/* German Word */}
         <div className="min-w-0">
-          <span className={`text-base font-bold text-gray-900 ${colorScheme.text} transition-colors duration-200`}>
+          <span
+            className={`text-base font-bold text-gray-900 ${colorScheme.text} transition-colors duration-200`}
+          >
             {entry.german}
           </span>
         </div>
 
         {/* English Translation */}
         <div className="min-w-0">
-          <span className={`text-sm text-gray-600 ${colorScheme.text} transition-colors duration-200`}>
+          <span
+            className={`text-sm text-gray-600 ${colorScheme.text} transition-colors duration-200`}
+          >
             {entry.english}
           </span>
         </div>
 
         {/* Category Badge */}
         <div className="flex-shrink-0">
-          <span className={`inline-flex items-center px-2.5 py-1 text-xs font-medium bg-gray-100 text-gray-600 ${colorScheme.badge} group-hover:text-white transition-all duration-200`}>
+          <span
+            className={`inline-flex items-center px-2.5 py-1 text-xs font-medium bg-gray-100 text-gray-600 ${colorScheme.badge} group-hover:text-white transition-all duration-200`}
+          >
             {entry.category}
           </span>
         </div>

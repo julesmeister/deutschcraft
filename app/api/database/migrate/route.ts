@@ -459,6 +459,7 @@ export async function POST(request: Request) {
       }
     }
     stats.submissions = submissionCount;
+    */
 
     // 5. Migrate writing-submissions (self-paced writing exercises)
     console.log('[Migrate] Migrating writing-submissions...');
@@ -477,10 +478,11 @@ export async function POST(request: Request) {
             status,
             started_at, submitted_at, last_saved_at,
             ai_feedback,
+            ai_corrected_version,
             teacher_feedback, teacher_score, reviewed_by, reviewed_at,
             version, previous_versions,
             created_at, updated_at
-          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
           args: [
             submission.submissionId || doc.id,
             submission.exerciseId,
@@ -497,6 +499,7 @@ export async function POST(request: Request) {
             submission.submittedAt || null,
             submission.lastSavedAt,
             submission.aiFeedback ? JSON.stringify(submission.aiFeedback) : null,
+            submission.aiCorrectedVersion || null,
             submission.teacherFeedback || null,
             submission.teacherScore || null,
             submission.reviewedBy || null,
@@ -513,14 +516,13 @@ export async function POST(request: Request) {
       }
     }
     stats.writingSubmissions = writingSubmissionCount;
-    */
 
     // Set already-migrated counts from previous run
     stats.users = 3;
     stats.batches = 7;
     stats.tasks = 2;
     stats.submissions = 0;
-    stats.writingSubmissions = 43;
+    // stats.writingSubmissions = 43;
 
     // 6. Migrate studentAnswers (Answer Hub data)
     console.log('[Migrate] Migrating studentAnswers...');

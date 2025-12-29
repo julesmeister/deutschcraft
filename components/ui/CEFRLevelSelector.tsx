@@ -12,6 +12,7 @@ interface CEFRLevelSelectorProps {
   showDescription?: boolean;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
+  unavailableLevels?: CEFRLevel[];
 }
 
 // Color scheme definitions - Flatter, more muted colors
@@ -87,6 +88,7 @@ export function CEFRLevelSelector({
   showDescription = false,
   size = 'md',
   className = '',
+  unavailableLevels = [],
 }: CEFRLevelSelectorProps) {
   const colors = COLOR_SCHEMES[colorScheme];
   const sizeConfig = SIZE_CLASSES[size];
@@ -99,6 +101,7 @@ export function CEFRLevelSelector({
           const isSelected = selectedLevel === level;
           const isFirst = index === 0;
           const isLast = index === Object.values(CEFRLevel).length - 1;
+          const isUnavailable = unavailableLevels.includes(level);
 
           // Determine border radius based on position - Less rounded for flatter design
           let borderRadius = '';
@@ -113,22 +116,32 @@ export function CEFRLevelSelector({
           // Get color scheme for this level
           const colorSet = colors[index % colors.length];
 
+          // Determine styles based on state
+          let buttonStyles = '';
+          if (isUnavailable) {
+            buttonStyles = 'bg-gray-100 text-gray-400 cursor-not-allowed border-gray-200';
+          } else if (isSelected) {
+            buttonStyles = `${colorSet.icon} text-white shadow-md transform scale-105 z-10`;
+          } else {
+            buttonStyles = `${colorSet.bg} ${colorSet.text} ${colorSet.hover} hover:shadow-sm`;
+          }
+
           return (
             <button
               key={level}
-              onClick={() => onLevelChange(level)}
+              onClick={() => !isUnavailable && onLevelChange(level)}
+              disabled={isUnavailable}
               className={`
-                flex-1 ${sizeConfig.padding} transition-all duration-200 active:scale-95
+                flex-1 ${sizeConfig.padding} transition-all duration-200 
+                ${!isUnavailable && 'active:scale-95'}
                 ${borderRadius}
-                ${
-                  isSelected
-                    ? `${colorSet.icon} text-white`
-                    : `${colorSet.bg} ${colorSet.text} ${colorSet.hover}`
-                }
-                min-w-0
+                ${buttonStyles}
+                min-w-0 relative group
               `}
             >
-              <div className={`${sizeConfig.fontSize} font-black ${showDescription ? sizeConfig.gap : ''} leading-tight`}>{level}</div>
+              <div className={`${sizeConfig.fontSize} font-black ${showDescription ? sizeConfig.gap : ''} leading-tight`}>
+                {level}
+              </div>
               {showDescription && (
                 <div
                   className={`${sizeConfig.descSize} font-medium ${
@@ -136,6 +149,13 @@ export function CEFRLevelSelector({
                   } hidden sm:block leading-tight`}
                 >
                   {info.displayName}
+                </div>
+              )}
+              
+              {/* Tooltip for unavailable levels */}
+              {isUnavailable && (
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/5 rounded">
+                   <span className="sr-only">Not available</span>
                 </div>
               )}
             </button>

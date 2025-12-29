@@ -265,15 +265,26 @@ export async function hasGanttEditPermission(userId: string): Promise<boolean> {
   try {
     // Check if user is a teacher
     const result = await db.execute({
-      sql: 'SELECT role, gantt_edit_permission FROM users WHERE email = ?',
+      sql: 'SELECT role, gantt_edit_permission, gantt_edit_expires_at FROM users WHERE email = ?',
       args: [userId],
     });
 
     if (result.rows.length === 0) return false;
 
     const row = result.rows[0];
-    // Teacher always has permission, or user has explicit permission
-    return row.role === 'TEACHER' || row.gantt_edit_permission === 1;
+    // Teacher always has permission
+    if (row.role === 'TEACHER') return true;
+
+    // Check explicit permission
+    if (row.gantt_edit_permission === 1) {
+      // Check expiration if set
+      if (row.gantt_edit_expires_at) {
+        return (row.gantt_edit_expires_at as number) > Date.now();
+      }
+      return true;
+    }
+
+    return false;
   } catch (error) {
     console.error('[ganttService:turso] Error checking edit permission:', error);
     return false;
@@ -283,11 +294,11 @@ export async function hasGanttEditPermission(userId: string): Promise<boolean> {
 /**
  * Grant gantt edit permission to a user (teacher only)
  */
-export async function grantGanttEditPermission(userId: string): Promise<void> {
+export async function grantGanttEditPermission(userId: string, expiresAt?: number): Promise<void> {
   try {
     await db.execute({
-      sql: 'UPDATE users SET gantt_edit_permission = 1 WHERE email = ?',
-      args: [userId],
+      sql: 'UPDATE users SET gantt_edit_permission = 1, gantt_edit_expires_at = ? WHERE email = ?',
+      args: [expiresAt || null, userId],
     });
   } catch (error) {
     console.error('[ganttService:turso] Error granting edit permission:', error);
@@ -301,11 +312,34 @@ export async function grantGanttEditPermission(userId: string): Promise<void> {
 export async function revokeGanttEditPermission(userId: string): Promise<void> {
   try {
     await db.execute({
-      sql: 'UPDATE users SET gantt_edit_permission = 0 WHERE email = ?',
+      sql: 'UPDATE users SET gantt_edit_permission = 0, gantt_edit_expires_at = NULL WHERE email = ?',
       args: [userId],
     });
   } catch (error) {
     console.error('[ganttService:turso] Error revoking edit permission:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get all users with active permissions
+ */
+export async function getUsersWithGanttPermission(): Promise<Array<{ userId: string; expiresAt: number }>> {
+  try {
+    const now = Date.now();
+    const result = await db.execute({
+      sql: 'SELECT email, gantt_edit_expires_at FROM users WHERE gantt_edit_permission = 1',
+      args: [],
+    });
+
+    return result.rows
+      .map((row) => ({
+        userId: row.email as string,
+        expiresAt: (row.gantt_edit_expires_at as number) || Infinity,
+      }))
+      .filter((u) => u.expiresAt > now);
+  } catch (error) {
+    console.error('[ganttService:turso] Error fetching permissions:', error);
     throw error;
   }
 }

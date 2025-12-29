@@ -20,23 +20,7 @@ import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { applyFlashcardSettings } from '@/lib/utils/flashcardSelection';
 import { calculateCategoryProgress } from '@/lib/utils/categoryProgress';
-
-// Import level data
-import a1Data from '@/lib/data/vocabulary/levels/a1.json';
-import a2Data from '@/lib/data/vocabulary/levels/a2.json';
-import b1Data from '@/lib/data/vocabulary/levels/b1.json';
-import b2Data from '@/lib/data/vocabulary/levels/b2.json';
-import c1Data from '@/lib/data/vocabulary/levels/c1.json';
-import c2Data from '@/lib/data/vocabulary/levels/c2.json';
-
-const levelDataMap = {
-  [CEFRLevel.A1]: a1Data,
-  [CEFRLevel.A2]: a2Data,
-  [CEFRLevel.B1]: b1Data,
-  [CEFRLevel.B2]: b2Data,
-  [CEFRLevel.C1]: c1Data,
-  [CEFRLevel.C2]: c2Data,
-};
+import { useVocabularyLevel } from '@/lib/hooks/useVocabulary';
 
 export default function FlashcardsLandingPage() {
   const router = useRouter();
@@ -64,32 +48,37 @@ export default function FlashcardsLandingPage() {
   // Fetch user's flashcard progress to identify attempted categories
   const { data: flashcardReviews = [], refetch: refetchReviews } = useFlashcardReviews(session?.user?.email);
 
+  // Fetch vocabulary data
+  const { data: levelData, isLoading: isVocabularyLoading } = useVocabularyLevel(selectedLevel);
+
   // Calculate category progress
-  const levelData = levelDataMap[selectedLevel];
-  const { categoryAttemptCounts, categoryCompletionStatus } = calculateCategoryProgress(
+  const { categoryAttemptCounts, categoryCompletionStatus } = levelData ? calculateCategoryProgress(
     levelData.flashcards,
     flashcardReviews
-  );
+  ) : { categoryAttemptCounts: {}, categoryCompletionStatus: {} };
 
   // Calculate due cards per category
   const categoryDueCounts = new Map<string, number>();
   const now = Date.now();
 
-  levelData.flashcards.forEach((card: any) => {
-    const categoryId = card.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-    const progress = flashcardReviews.find(r => r.flashcardId === card.id || r.wordId === card.id);
+  if (levelData) {
+    levelData.flashcards.forEach((card: any) => {
+      const categoryId = card.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+      const progress = flashcardReviews.find(r => r.flashcardId === card.id || r.wordId === card.id);
 
-    // Count if card is new (never seen) OR due for review now
-    const isDue = !progress || (progress.nextReviewDate || 0) <= now;
+      // Count if card is new (never seen) OR due for review now
+      const isDue = !progress || (progress.nextReviewDate || 0) <= now;
 
-    if (isDue) {
-      categoryDueCounts.set(categoryId, (categoryDueCounts.get(categoryId) || 0) + 1);
-    }
-  });
+      if (isDue) {
+        categoryDueCounts.set(categoryId, (categoryDueCounts.get(categoryId) || 0) + 1);
+      }
+    });
+  }
 
   const handleCategoryClick = (categoryId: string, categoryName: string) => {
+    if (!levelData) return;
+
     // Get flashcards for this category and level
-    const levelData = levelDataMap[selectedLevel];
     let categoryFlashcards = levelData.flashcards.filter(
       (card: any) => card.category.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') === categoryId
     ).map((card: any) => {
@@ -130,8 +119,9 @@ export default function FlashcardsLandingPage() {
   };
 
   const handleStartPractice = () => {
+    if (!levelData) return;
+
     // Get all flashcards for the selected level
-    const levelData = levelDataMap[selectedLevel];
     let flashcardsWithWordId = levelData.flashcards.map((card: any) => {
       // Find progress for this card
       const progress = flashcardReviews.find(r => r.flashcardId === card.id || r.wordId === card.id);
@@ -161,12 +151,11 @@ export default function FlashcardsLandingPage() {
   };
 
   const handleToggleReviewMode = () => {
-    if (!selectedCategory) return;
+    if (!selectedCategory || !levelData) return;
 
     const newReviewMode = !isReviewMode;
 
     // Get the current category flashcards
-    const levelData = levelDataMap[selectedLevel];
     let categoryFlashcards: any[];
 
     if (selectedCategory === 'All Categories') {
@@ -250,9 +239,9 @@ export default function FlashcardsLandingPage() {
                 onClick={handleStartPractice}
                 variant="purple"
                 icon={<ActionButtonIcons.ArrowRight />}
-                disabled={isPending}
+                disabled={isPending || isVocabularyLoading}
               >
-                {isPending ? 'Loading...' : 'Start Practice'}
+                {isPending || isVocabularyLoading ? 'Loading...' : 'Start Practice'}
               </ActionButton>
             )
           }
@@ -303,8 +292,8 @@ export default function FlashcardsLandingPage() {
               </div>
 
               {/* Loading State */}
-              {statsLoading ? (
-                <CatLoader message="Loading your stats..." size="md" />
+              {statsLoading || isVocabularyLoading ? (
+                <CatLoader message="Loading your stats and vocabulary..." size="md" />
               ) : (
                 <>
                   {/* Stats Grid */}
@@ -382,8 +371,9 @@ export default function FlashcardsLandingPage() {
                       onClick={handleStartPractice}
                       variant="purple"
                       icon={<ActionButtonIcons.ArrowRight />}
+                      disabled={isPending || isVocabularyLoading}
                     >
-                      Start Practice Session
+                      {isVocabularyLoading ? 'Loading Data...' : 'Start Practice Session'}
                     </ActionButton>
                   </div>
                 </div>

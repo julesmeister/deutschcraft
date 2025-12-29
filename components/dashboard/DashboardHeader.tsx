@@ -117,7 +117,7 @@ export function DashboardHeader({
           </div>
 
           {/* Right Side: Actions */}
-          {actions && <div className="flex-shrink-0 w-full sm:w-auto">{actions}</div>}
+          {actions && <div className="flex-shrink-0 w-full sm:w-auto relative z-20">{actions}</div>}
         </div>
       </div>
     </div>

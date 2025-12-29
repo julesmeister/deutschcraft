@@ -217,9 +217,8 @@ export default function LessonDetailPage() {
         selectedBatch={selectedBatch}
         onOpenHiddenModal={openHiddenModal}
         onSelectBatch={setSelectedBatch}
-        onCreateBatch={() => {
-          console.log("Batch creation - redirect to teacher dashboard");
-        }}
+        onCreateBatch={() => router.push("/dashboard/teacher/batches")}
+        onBack={() => router.push("/dashboard/student/answer-hub")}
       />
 
       {/* Main Content */}

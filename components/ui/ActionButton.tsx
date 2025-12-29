@@ -6,7 +6,7 @@ interface ActionButtonProps {
   children: string;
   onClick?: () => void;
   icon?: ReactNode;
-  variant?: 'purple' | 'cyan' | 'mint' | 'yellow' | 'orange' | 'gold' | 'gray' | 'red';
+  variant?: 'purple' | 'cyan' | 'mint' | 'yellow' | 'orange' | 'gold' | 'gray' | 'red' | 'white';
   className?: string;
   disabled?: boolean;
   size?: 'default' | 'compact';
@@ -21,6 +21,7 @@ const variantStyles = {
   gold: 'bg-piku-gold text-gray-900 hover:brightness-95 hover:shadow-lg',
   gray: 'bg-gray-500 text-white hover:bg-gray-600 hover:shadow-lg',
   red: 'bg-red-500 text-white hover:bg-red-600 hover:shadow-lg',
+  white: 'bg-white text-gray-900 hover:bg-gray-100 hover:shadow-lg',
 };
 
 const iconBgStyles = {
@@ -32,6 +33,7 @@ const iconBgStyles = {
   gold: 'bg-white/30 group-hover:bg-white/40',
   gray: 'bg-white/20 group-hover:bg-white/30',
   red: 'bg-white/20 group-hover:bg-white/30',
+  white: 'bg-gray-100 group-hover:bg-gray-200',
 };
 
 export function ActionButton({

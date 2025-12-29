@@ -15,6 +15,7 @@ interface StudentAnswerBubbleProps {
   isSaving?: boolean;
   submittedAt?: number;
   onEdit?: (value: string) => void;
+  onDelete?: () => void;
 }
 
 // Helper function to format time ago
@@ -42,6 +43,7 @@ export function StudentAnswerBubble({
   isSaving = false,
   submittedAt,
   onEdit,
+  onDelete,
 }: StudentAnswerBubbleProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [value, setValue] = useState(answer);
@@ -77,13 +79,27 @@ export function StudentAnswerBubble({
 
   return (
     <div className="mb-4">
-      <div className="flex items-center gap-2 ml-2 mb-1">
+      <div className="flex items-center ml-2 mb-1">
         <span className={`text-xs font-medium ${isOwnAnswer ? 'text-blue-700 font-bold' : 'text-gray-500'}`}>
           {studentName}
           {isOwnAnswer && ' (You)'}
         </span>
         {timeAgo && (
-          <span className="text-xs text-gray-400">• {timeAgo}</span>
+          <>
+            <span className="text-xs text-gray-400 mx-2">•</span>
+            <span className="text-xs text-gray-400">{timeAgo}</span>
+          </>
+        )}
+        {isOwnAnswer && onDelete && (
+          <>
+            <span className="text-xs text-gray-400 mx-2">•</span>
+            <button
+              onClick={onDelete}
+              className="text-xs text-gray-400 hover:text-red-600 transition-colors"
+            >
+              delete
+            </button>
+          </>
         )}
       </div>
 

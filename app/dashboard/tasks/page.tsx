@@ -6,6 +6,7 @@ import { BatchSelector } from '@/components/ui/BatchSelector';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useActiveBatches } from '@/lib/hooks/useBatches';
+import { useBatchSelection } from '@/lib/hooks/useBatchSelection';
 import { useAllStudentsNested } from '@/lib/hooks/useUsers';
 import { useTeacherBatchTasks, useCreateWritingTask, useUpdateWritingTask, useDeleteWritingTask, useStudentTasks } from '@/lib/hooks/useWritingTasks';
 import { useCurrentStudent } from '@/lib/hooks/useUsers';
@@ -32,15 +33,13 @@ export default function TasksPage() {
   );
 
   // Teacher-specific data
-  const [selectedBatch, setSelectedBatch] = useState<Batch | null>(null);
   const { batches } = useActiveBatches(currentTeacherId || undefined);
 
-  // Auto-select first batch (teachers only)
-  useEffect(() => {
-    if (userRole === 'TEACHER' && batches.length > 0 && !selectedBatch) {
-      setSelectedBatch(batches[0]);
-    }
-  }, [batches, selectedBatch, userRole]);
+  // Use standardized batch selection logic (with history and persistence)
+  const { selectedBatch, setSelectedBatch, sortedBatches } = useBatchSelection({
+    batches,
+    user: currentUser,
+  });
 
   // Fetch all students (teachers only)
   const { students: allStudents } = useAllStudentsNested();
@@ -199,7 +198,7 @@ export default function TasksPage() {
         actions={
           userRole === 'TEACHER' ? (
             <BatchSelector
-              batches={batches}
+              batches={sortedBatches}
               selectedBatch={selectedBatch}
               onSelectBatch={setSelectedBatch}
               onCreateBatch={handleCreateBatch}

@@ -131,6 +131,7 @@ export async function getTeacherOverrides(
       args.push(filters.overrideType);
     }
 
+    // Explicitly sort by display_order, then fallback to created_at
     sql += ' ORDER BY display_order ASC, created_at ASC';
 
     const result = await db.execute({ sql, args });
@@ -247,6 +248,53 @@ export async function updateDisplayOrders(
     }
   } catch (error) {
     console.error('[exerciseOverrideService:turso] Error updating display orders:', error);
+    throw error;
+  }
+}
+
+export async function bulkUpdateDisplayOrder(
+  orderUpdates: { overrideId: string; displayOrder: number; exerciseId?: string; teacherEmail?: string; level?: CEFRLevel; lessonNumber?: number }[]
+): Promise<void> {
+  try {
+    const now = Date.now();
+    
+    // Use db.batch with UPSERT for better performance and reliability
+    const statements = orderUpdates.map(({ overrideId, displayOrder, exerciseId, teacherEmail, level, lessonNumber }) => {
+      // If we don't have enough info to create, we can only update if exists (though usually we should have info)
+      if (!exerciseId || !teacherEmail) {
+        return {
+          sql: 'UPDATE exercise_overrides SET display_order = ?, updated_at = ? WHERE override_id = ?',
+          args: [displayOrder, now, overrideId],
+        };
+      }
+
+      // UPSERT: Insert if new, Update display_order if exists
+      return {
+        sql: `INSERT INTO exercise_overrides (
+                override_id, teacher_email, exercise_id, override_type,
+                level, lesson_number, display_order, created_at, updated_at
+              ) VALUES (?, ?, ?, 'modify', ?, ?, ?, ?, ?)
+              ON CONFLICT(override_id) DO UPDATE SET
+                display_order = excluded.display_order,
+                updated_at = excluded.updated_at`,
+        args: [
+          overrideId,
+          teacherEmail,
+          exerciseId,
+          level || null,
+          lessonNumber || null,
+          displayOrder,
+          now,
+          now,
+        ],
+      };
+    });
+
+    if (statements.length > 0) {
+      await db.batch(statements);
+    }
+  } catch (error) {
+    console.error('[exerciseOverrideService:turso] Error bulk updating orders:', error);
     throw error;
   }
 }

@@ -2,7 +2,7 @@
  * Hooks for managing student exercise answers
  */
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import {
   collection,
   doc,
@@ -47,10 +47,16 @@ export function useSaveStudentAnswer() {
         submittedAt: Date.now()
       };
 
-      await setDoc(
-        doc(db, 'studentAnswers', submissionId),
-        submission
-      );
+      // Check if we're using Turso or Firestore
+      if (process.env.NEXT_PUBLIC_USE_TURSO === 'true') {
+        const { saveStudentAnswer } = await import('@/lib/services/turso/studentAnswerService');
+        await saveStudentAnswer(submission);
+      } else {
+        await setDoc(
+          doc(db, 'studentAnswers', submissionId),
+          submission
+        );
+      }
 
       setIsSaving(false);
       return true;
@@ -62,7 +68,38 @@ export function useSaveStudentAnswer() {
     }
   };
 
-  return { saveAnswer, isSaving, error };
+  const deleteAnswer = async (
+    studentId: string,
+    exerciseId: string,
+    itemNumber: string
+  ): Promise<boolean> => {
+    setIsSaving(true);
+    setError(null);
+
+    try {
+      const submissionId = `${studentId}_${exerciseId}_${itemNumber}`;
+      
+      // Check if we're using Turso or Firestore
+      if (process.env.NEXT_PUBLIC_USE_TURSO === 'true') {
+        const { deleteStudentAnswer } = await import('@/lib/services/turso/studentAnswerService');
+        await deleteStudentAnswer(studentId, exerciseId, itemNumber);
+      } else {
+        const { deleteDoc, doc } = await import('firebase/firestore');
+        const { db } = await import('@/lib/firebase');
+        await deleteDoc(doc(db, 'studentAnswers', submissionId));
+      }
+
+      setIsSaving(false);
+      return true;
+    } catch (err) {
+      console.error('Error deleting student answer:', err);
+      setError(err instanceof Error ? err.message : 'Failed to delete answer');
+      setIsSaving(false);
+      return false;
+    }
+  };
+
+  return { saveAnswer, deleteAnswer, isSaving, error };
 }
 
 /**
@@ -73,17 +110,26 @@ export function useStudentAnswers(exerciseId: string | null) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
+  const fetchAnswers = useCallback(async () => {
     if (!exerciseId) {
       setAnswers([]);
       return;
     }
 
-    const fetchAnswers = async () => {
-      setIsLoading(true);
-      setError(null);
+    setIsLoading(true);
+    setError(null);
 
-      try {
+    try {
+      // Check if we're using Turso or Firestore
+      if (process.env.NEXT_PUBLIC_USE_TURSO === 'true') {
+        const { getExerciseAnswersGrouped } = await import('@/lib/services/turso/studentAnswerService');
+        const grouped = await getExerciseAnswersGrouped(exerciseId);
+        setAnswers(grouped);
+      } else {
+        const { query, collection, where, getDocs } = await import('firebase/firestore');
+        const { db } = await import('@/lib/firebase');
+        const { groupAnswersByStudent } = await import('@/lib/models/studentAnswers');
+        
         const q = query(
           collection(db, 'studentAnswers'),
           where('exerciseId', '==', exerciseId)
@@ -99,16 +145,19 @@ export function useStudentAnswers(exerciseId: string | null) {
         // Group by student
         const grouped = groupAnswersByStudent(submissions);
         setAnswers(grouped);
-        setIsLoading(false);
-      } catch (err) {
-        console.error('Error fetching student answers:', err);
-        setError(err instanceof Error ? err.message : 'Failed to fetch answers');
-        setIsLoading(false);
       }
-    };
-
-    fetchAnswers();
+      
+      setIsLoading(false);
+    } catch (err) {
+      console.error('Error fetching student answers:', err);
+      setError(err instanceof Error ? err.message : 'Failed to fetch answers');
+      setIsLoading(false);
+    }
   }, [exerciseId]);
 
-  return { answers, isLoading, error };
+  useEffect(() => {
+    fetchAnswers();
+  }, [fetchAnswers]);
+
+  return { answers, isLoading, error, refresh: fetchAnswers };
 }

@@ -5,6 +5,7 @@
 
 'use client';
 
+import { useState } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
@@ -25,6 +26,9 @@ export default function ExerciseDetailPage() {
   const { session } = useFirebaseAuth();
   const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
   const { userId } = getUserInfo(currentUser, session);
+
+  // State to trigger refresh of student answers
+  const [answersRefreshTrigger, setAnswersRefreshTrigger] = useState(0);
 
   // Parse URL params (exerciseNumber param is actually exerciseId now)
   const levelBook = params.levelBook as string;
@@ -236,12 +240,16 @@ export default function ExerciseDetailPage() {
               exerciseId={exercise.exerciseId}
               showExplanations={true}
               isTeacher={isTeacher}
+              onAnswerSaved={() => setAnswersRefreshTrigger(prev => prev + 1)}
             />
           </div>
         </div>
 
         {/* Student Answers Section */}
-        <StudentAnswersDisplay exerciseId={exercise.exerciseId} />
+        <StudentAnswersDisplay 
+          exerciseId={exercise.exerciseId} 
+          refreshTrigger={answersRefreshTrigger}
+        />
 
         {/* Discussion Section */}
         <div className="bg-white border border-gray-200 shadow-sm overflow-hidden mt-6">

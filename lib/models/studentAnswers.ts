@@ -53,5 +53,11 @@ export function groupAnswersByStudent(
     return acc;
   }, {} as Record<string, StudentExerciseAnswers>);
 
-  return Object.values(grouped);
+  return Object.values(grouped).map(group => {
+    // Sort answers by itemNumber using natural sort (handles "1", "2", "10" correctly)
+    group.answers.sort((a, b) => 
+      a.itemNumber.localeCompare(b.itemNumber, undefined, { numeric: true, sensitivity: 'base' })
+    );
+    return group;
+  });
 }

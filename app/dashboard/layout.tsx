@@ -2,6 +2,7 @@
 
 import { Navbar } from '@/components/ui/Navbar';
 import { MegaDropdown } from '@/components/ui/MegaDropdown';
+import { AccountSwitcher } from '@/components/ui/AccountSwitcher';
 import Link from 'next/link';
 import { useSession } from 'next-auth/react';
 import { updateUser } from '@/lib/services/user';
@@ -67,8 +68,8 @@ function DashboardNavbar() {
   // Pending users will be redirected to /dashboard/settings when clicking protected links
 
   return (
-    <header className="pt-3 lg:pt-3">
-      <div className="container mx-auto px-4 sm:px-6">
+    <header className="pt-3 lg:pt-3 relative z-[100]">
+      <div className="container mx-auto px-4 sm:px-6 relative z-[100]">
         {/* Modern floating navbar with backdrop blur */}
         <div className={`w-full flex items-center justify-between transition-all duration-500 ease-out bg-gray-900/95 text-white backdrop-blur-md border rounded-2xl py-2.5 px-4 lg:py-3 lg:px-8
           ${isScrolled
@@ -84,7 +85,7 @@ function DashboardNavbar() {
           </Link>
 
           {/* Desktop Navigation with separator */}
-          <div className="hidden lg:flex items-center flex-1 justify-end gap-8">
+          <div className="hidden lg:flex items-center flex-1 justify-end gap-8 z-[100]">
             {/* Vertical separator */}
             <div className="h-4 w-px bg-gray-600/60"></div>
 
@@ -206,19 +207,12 @@ function DashboardNavbar() {
 
             {/* Desktop Sign Out Button */}
             <div className="flex items-center">
-              <button
-                onClick={() => import('next-auth/react').then(({ signOut }) => signOut({ callbackUrl: '/' }))}
-                className="theme-btn-dark group inline-flex items-center font-black text-[14px] py-1.5 pl-5 pr-1.5 rounded-full bg-white text-gray-900"
-              >
-                <span className="relative z-10 transition-colors duration-300">
-                  Sign out
-                </span>
-                <span className="relative z-10 ml-4 w-9 h-9 flex items-center justify-center rounded-full transition-all duration-400 bg-gray-900 text-white">
-                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                  </svg>
-                </span>
-              </button>
+              <AccountSwitcher
+                currentUserEmail={session?.user?.email}
+                currentUserName={session?.user?.name}
+                currentUserImage={session?.user?.image}
+                dark={true}
+              />
             </div>
           </div>
 

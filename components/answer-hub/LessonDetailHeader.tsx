@@ -67,14 +67,12 @@ export function LessonDetailHeader({
       }}
       actions={
         isTeacher ? (
-          <div className="flex items-center gap-3">
-            <BatchSelector
-              batches={batches}
-              selectedBatch={selectedBatch}
-              onSelectBatch={onSelectBatch}
-              onCreateBatch={onCreateBatch}
-            />
-          </div>
+          <BatchSelector
+            batches={batches}
+            selectedBatch={selectedBatch}
+            onSelectBatch={onSelectBatch}
+            onCreateBatch={onCreateBatch}
+          />
         ) : undefined
       }
     />

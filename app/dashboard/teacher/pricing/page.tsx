@@ -116,6 +116,13 @@ export default function TeacherPricingPage() {
     setEditingLevel(null);
   };
 
+  const handleLevelEditCancel = () => {
+    // Just close the edit mode. 
+    // Changes made during edit are already in pricingData via onFieldChange.
+    // They will be persisted to DB only when "Save Changes" is clicked.
+    setEditingLevel(null);
+  };
+
   const handleFieldChange = (
     level: CEFRLevel,
     field: keyof LevelPricingData,
@@ -125,6 +132,22 @@ export default function TeacherPricingPage() {
       prev.map((item) =>
         item.level === level ? { ...item, [field]: value } : item
       )
+    );
+    setHasChanges(true);
+  };
+
+  const handleToggleAvailability = (level: CEFRLevel) => {
+    setPricingData((prev) =>
+      prev.map((item) => {
+        if (item.level !== level) return item;
+        
+        // If currently > 0, set to 0 (unavailable). 
+        // If 0, set to default/previous value or just a sensible default like 1000
+        const currentPrice = item.basePrice;
+        const newPrice = currentPrice > 0 ? 0 : (CEFR_LEVEL_DATA[level].basePrice || 2499);
+        
+        return { ...item, basePrice: newPrice };
+      })
     );
     setHasChanges(true);
   };
@@ -225,6 +248,8 @@ export default function TeacherPricingPage() {
                 isEditing={isEditing}
                 preview={preview}
                 onEdit={handleEdit}
+                onCancel={handleLevelEditCancel}
+                onToggleAvailability={handleToggleAvailability}
                 onFieldChange={handleFieldChange}
               />
             );

@@ -5,37 +5,37 @@ import { CEFRLevel } from "@/lib/models/cefr";
  */
 export const CEFR_LEVEL_DATA = {
   [CEFRLevel.A1]: {
-    flashcardCount: 417,
+    flashcardCount: 585,
     syllabusWeeks: 12,
     basePrice: 2499, // ₱2,499 for A1
     description: "Perfect for absolute beginners",
   },
   [CEFRLevel.A2]: {
-    flashcardCount: 433,
+    flashcardCount: 1124,
     syllabusWeeks: 16,
     basePrice: 3999, // ₱3,999 for A2
     description: "Build on your basics",
   },
   [CEFRLevel.B1]: {
-    flashcardCount: 1026,
+    flashcardCount: 1524,
     syllabusWeeks: 20,
     basePrice: 4999, // ₱4,999 for B1
     description: "Reach conversational fluency",
   },
   [CEFRLevel.B2]: {
-    flashcardCount: 640,
+    flashcardCount: 573,
     syllabusWeeks: 24,
     basePrice: 6499, // ₱6,499 for B2
     description: "Master complex topics",
   },
   [CEFRLevel.C1]: {
-    flashcardCount: 69,
+    flashcardCount: 116,
     syllabusWeeks: 28,
     basePrice: 7499, // ₱7,499 for C1
     description: "Near-native proficiency",
   },
   [CEFRLevel.C2]: {
-    flashcardCount: 20,
+    flashcardCount: 72,
     syllabusWeeks: 32,
     basePrice: 8499, // ₱8,499 for C2
     description: "Complete mastery",

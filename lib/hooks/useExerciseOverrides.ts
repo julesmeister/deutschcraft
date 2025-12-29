@@ -204,12 +204,9 @@ export function useReorderExercises() {
         lessonNumber: number;
       }>
     ) => {
-      // Extract only what bulkUpdateDisplayOrder needs
-      const updates = orderUpdates.map(({ overrideId, displayOrder }) => ({
-        overrideId,
-        displayOrder,
-      }));
-      await bulkUpdateDisplayOrder(updates);
+      // Pass the full orderUpdates object to bulkUpdateDisplayOrder
+      // This ensures that new overrides can be created if they don't exist
+      await bulkUpdateDisplayOrder(orderUpdates);
     },
     onMutate: async (orderUpdates) => {
       // Cancel outgoing refetches

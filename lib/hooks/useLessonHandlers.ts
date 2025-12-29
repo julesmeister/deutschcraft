@@ -136,7 +136,7 @@ export function useLessonHandlers(
     try {
       await reorderExercises.mutateAsync(orderUpdates);
     } catch (error) {
-      console.error('Error reordering exercises:', error);
+      console.error('[useLessonHandlers] Error reordering exercises:', error);
     }
   };
 

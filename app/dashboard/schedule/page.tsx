@@ -7,6 +7,7 @@ import { BatchSelector } from '@/components/ui/BatchSelector';
 import { BatchForm } from '@/components/ui/BatchForm';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { useActiveBatches, useCreateBatch } from '@/lib/hooks/useBatches';
+import { useBatchSelection } from '@/lib/hooks/useBatchSelection';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useToast } from '@/components/ui/toast';
 import { Batch } from '@/lib/models';
@@ -60,7 +61,6 @@ export default function SchedulePage() {
   const revokePermissionMutation = useRevokeGanttPermission();
 
   // Local state
-  const [selectedBatch, setSelectedBatch] = useState<Batch | null>(null);
   const [isCreateBatchOpen, setIsCreateBatchOpen] = useState(false);
   const [isPermissionDialogOpen, setIsPermissionDialogOpen] = useState(false);
   const [tasks, setTasks] = useState<GanttChartTask[]>([]);
@@ -68,12 +68,11 @@ export default function SchedulePage() {
   const [currentView, setCurrentView] = useState<ScheduleViewType>('gantt');
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
 
-  // Auto-select first batch
-  useEffect(() => {
-    if (batches.length > 0 && !selectedBatch) {
-      setSelectedBatch(batches[0]);
-    }
-  }, [batches, selectedBatch]);
+  // Use standardized batch selection logic
+  const { selectedBatch, setSelectedBatch, sortedBatches } = useBatchSelection({
+    batches,
+    user: currentUser,
+  });
 
   // Generate curriculum suggestions from all CEFR levels (memoized)
   const curriculumSuggestions = useMemo(() => {
@@ -306,7 +305,7 @@ export default function SchedulePage() {
               onViewChange={setCurrentView}
             />
             <BatchSelector
-              batches={batches}
+              batches={sortedBatches}
               selectedBatch={selectedBatch}
               onSelectBatch={setSelectedBatch}
               onCreateBatch={() => setIsCreateBatchOpen(true)}

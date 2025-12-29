@@ -278,6 +278,7 @@ export {
   updateDisplayOrders,
   deleteExerciseOverride,
   deleteTeacherOverrides,
+  bulkUpdateDisplayOrder,
 } from './exerciseOverrideService';
 
 // ============================================================================
@@ -367,6 +368,24 @@ export {
   saveGrammarReview,
   saveGrammarReviewHistory,
 } from './grammarService';
+
+// ============================================================================
+// GANTT SERVICE (NEW - 2025-12-29)
+// ============================================================================
+export {
+  createGanttTask,
+  getGanttTask,
+  getAllGanttTasks,
+  getChildGanttTasks,
+  updateGanttTask,
+  deleteGanttTask,
+  updateGanttTaskDates,
+  updateGanttTaskProgress,
+  hasGanttEditPermission,
+  grantGanttEditPermission,
+  revokeGanttEditPermission,
+  getUsersWithGanttPermission,
+} from './ganttService';
 
 // ============================================================================
 // TYPE EXPORTS

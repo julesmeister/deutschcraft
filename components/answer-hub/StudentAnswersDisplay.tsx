@@ -12,23 +12,36 @@ import { useCurrentStudent } from '@/lib/hooks/useUsers';
 import { getUserInfo } from '@/lib/utils/userHelpers';
 import { useToast } from '@/lib/hooks/useToast';
 import { StudentAnswerBubble } from './StudentAnswerBubble';
+import { ConfirmDialog } from '@/components/ui/Dialog';
 
 interface StudentAnswersDisplayProps {
   exerciseId: string;
+  refreshTrigger?: number;
 }
 
-export function StudentAnswersDisplay({ exerciseId }: StudentAnswersDisplayProps) {
+export function StudentAnswersDisplay({ exerciseId, refreshTrigger }: StudentAnswersDisplayProps) {
   const { session } = useFirebaseAuth();
   const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
   const { userId } = getUserInfo(currentUser, session);
 
-  const { answers: allStudentAnswers, isLoading } = useStudentAnswers(exerciseId);
-  const { saveAnswer } = useSaveStudentAnswer();
+  const { answers: allStudentAnswers, isLoading, refresh } = useStudentAnswers(exerciseId);
+  
+  // Listen for external refresh triggers
+  useEffect(() => {
+    if (refreshTrigger !== undefined && refreshTrigger > 0) {
+      refresh();
+    }
+  }, [refreshTrigger, refresh]);
+
+  const { saveAnswer, deleteAnswer, isSaving: isDeleting } = useSaveStudentAnswer();
   const { showToast } = useToast();
 
   // Track saving states for auto-save
   const [savingStates, setSavingStates] = useState<Record<string, boolean>>({});
   const [saveTimers, setSaveTimers] = useState<Record<string, NodeJS.Timeout>>({});
+  
+  // Track delete target for confirmation dialog
+  const [deleteTarget, setDeleteTarget] = useState<{studentId: string, itemNumber: string} | null>(null);
 
   // Auto-save with debouncing
   const handleEditChange = useCallback((
@@ -71,6 +84,28 @@ export function StudentAnswersDisplay({ exerciseId }: StudentAnswersDisplayProps
 
     setSaveTimers(prev => ({ ...prev, [key]: timer }));
   }, [exerciseId, saveAnswer, showToast, saveTimers]);
+
+  const handleDeleteClick = useCallback((
+    studentId: string,
+    itemNumber: string
+  ) => {
+    setDeleteTarget({ studentId, itemNumber });
+  }, []);
+
+  const handleConfirmDelete = useCallback(async () => {
+    if (!deleteTarget) return;
+    
+    const { studentId, itemNumber } = deleteTarget;
+    const success = await deleteAnswer(studentId, exerciseId, itemNumber);
+    
+    if (success) {
+      showToast(`Answer for Item ${itemNumber} deleted`, 'success');
+      refresh();
+      setDeleteTarget(null);
+    } else {
+      showToast(`Failed to delete answer for Item ${itemNumber}`, 'error');
+    }
+  }, [deleteTarget, exerciseId, deleteAnswer, showToast, refresh]);
 
   // Cleanup timers on unmount
   useEffect(() => {
@@ -177,11 +212,27 @@ export function StudentAnswersDisplay({ exerciseId }: StudentAnswersDisplayProps
                         )
                     : undefined
                 }
+                onDelete={
+                  isOwnAnswer
+                    ? () => handleDeleteClick(studentAnswers.studentId, ans.itemNumber)
+                    : undefined
+                }
               />
             );
           })
         ))}
       </div>
+
+      <ConfirmDialog
+        open={!!deleteTarget}
+        onClose={() => !isDeleting && setDeleteTarget(null)}
+        onConfirm={handleConfirmDelete}
+        title="Delete Answer"
+        message="Are you sure you want to delete this answer? This action cannot be undone."
+        confirmText="Delete"
+        variant="danger"
+        isLoading={isDeleting}
+      />
     </div>
   );
 }
