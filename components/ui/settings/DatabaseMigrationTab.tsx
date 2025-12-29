@@ -130,17 +130,16 @@ export function DatabaseMigrationTab() {
     <div className="max-w-4xl">
       {/* Header */}
       <div className="mb-8">
-        <h2 className="text-2xl font-black text-gray-900 mb-2">Database Migration</h2>
+        <h2 className="text-2xl font-black text-gray-900 mb-2">AI Correction Migration</h2>
         <p className="text-gray-600">
-          Migrate data between Firestore and Turso databases. Use export/import for backup or direct migration for quick transfer.
+          Migrate AI corrections from Firestore to Turso. Export, import, or directly migrate AI correction data.
         </p>
       </div>
 
       {/* Migration Options */}
       <div className="space-y-6">
-        {/* COMMENTED OUT: General migration options - Not AI correction specific */}
-        {/* Option 1: Export from Firestore */}
-        {/* <div className="bg-white border border-gray-200 rounded-xl p-6">
+        {/* Option 1: Export AI Corrections from Firestore */}
+        <div className="bg-white border border-gray-200 rounded-xl p-6">
           <div className="flex items-start gap-4">
             <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
               <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -148,9 +147,9 @@ export function DatabaseMigrationTab() {
               </svg>
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Export from Firestore</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Export AI Corrections</h3>
               <p className="text-gray-600 mb-4">
-                Export all data from Firestore to a JSON file. This creates a backup that you can import later.
+                Export AI correction data from Firestore to a JSON file for backup or review.
               </p>
               <div className="max-w-xs">
                 <ActionButton
@@ -159,15 +158,15 @@ export function DatabaseMigrationTab() {
                   variant="cyan"
                   icon={<ActionButtonIcons.Document />}
                 >
-                  {isExporting ? 'Exporting...' : 'Export Data'}
+                  {isExporting ? 'Exporting...' : 'Export AI Corrections'}
                 </ActionButton>
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        {/* Option 2: Import to Turso */}
-        {/* <div className="bg-white border border-gray-200 rounded-xl p-6">
+        {/* Option 2: Import AI Corrections to Turso */}
+        <div className="bg-white border border-gray-200 rounded-xl p-6">
           <div className="flex items-start gap-4">
             <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
               <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -175,9 +174,9 @@ export function DatabaseMigrationTab() {
               </svg>
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Import to Turso</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Import AI Corrections</h3>
               <p className="text-gray-600 mb-4">
-                Import data from a JSON file into Turso database. Select a previously exported file.
+                Import AI correction data from a JSON file into Turso database.
               </p>
               <div className="max-w-xs">
                 <label className="block">
@@ -186,7 +185,7 @@ export function DatabaseMigrationTab() {
                     variant="mint"
                     icon={<ActionButtonIcons.Plus />}
                   >
-                    {isImporting ? 'Importing...' : 'Select File to Import'}
+                    {isImporting ? 'Importing...' : 'Import AI Corrections'}
                   </ActionButton>
                   <input
                     type="file"
@@ -199,10 +198,10 @@ export function DatabaseMigrationTab() {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        {/* Option 3: Direct Migration */}
-        {/* <div className="bg-white border border-gray-200 rounded-xl p-6">
+        {/* Option 3: Direct AI Correction Migration */}
+        <div className="bg-white border border-gray-200 rounded-xl p-6">
           <div className="flex items-start gap-4">
             <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
               <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -210,9 +209,9 @@ export function DatabaseMigrationTab() {
               </svg>
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Direct Migration</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Direct AI Correction Migration</h3>
               <p className="text-gray-600 mb-4">
-                Directly migrate all data from Firestore to Turso without creating an intermediate file. This is the fastest option.
+                Directly migrate AI correction data from Firestore to Turso. This is the fastest option.
               </p>
               <div className="max-w-xs">
                 <ActionButton
@@ -221,33 +220,7 @@ export function DatabaseMigrationTab() {
                   variant="purple"
                   icon={<ActionButtonIcons.ArrowRight />}
                 >
-                  {isMigrating ? 'Migrating...' : 'Migrate Now'}
-                </ActionButton>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-        {/* TODO: Add AI Correction Migration functionality here */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6">
-          <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center">
-              <svg className="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </svg>
-            </div>
-            <div className="flex-1">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">AI Correction Migration</h3>
-              <p className="text-gray-600 mb-4">
-                Migrate AI corrections from Firestore to Turso. This feature is under development.
-              </p>
-              <div className="max-w-xs">
-                <ActionButton
-                  disabled={true}
-                  variant="amber"
-                  icon={<ActionButtonIcons.Document />}
-                >
-                  Coming Soon
+                  {isMigrating ? 'Migrating...' : 'Migrate AI Corrections'}
                 </ActionButton>
               </div>
             </div>
@@ -279,8 +252,9 @@ export function DatabaseMigrationTab() {
           <div>
             <h4 className="text-sm font-bold text-yellow-900 mb-1">Important Notes</h4>
             <ul className="text-sm text-yellow-800 space-y-1">
+              <li>• This migrates ONLY AI correction data (writing submissions with AI feedback)</li>
               <li>• Always backup your data before performing migrations</li>
-              <li>• Direct migration will overwrite existing data in Turso</li>
+              <li>• Direct migration will overwrite existing AI corrections in Turso</li>
               <li>• Large datasets may take several minutes to migrate</li>
               <li>• Ensure you have proper permissions to access both databases</li>
             </ul>
@@ -293,9 +267,9 @@ export function DatabaseMigrationTab() {
         open={showMigrateConfirm}
         onClose={() => setShowMigrateConfirm(false)}
         onConfirm={handleDirectMigration}
-        title="Confirm Migration"
-        message="This will migrate all data from Firestore to Turso. Existing data in Turso will be overwritten. Are you sure you want to continue?"
-        confirmText="Yes, Migrate"
+        title="Confirm AI Correction Migration"
+        message="This will migrate AI correction data from Firestore to Turso. Existing AI corrections in Turso will be overwritten. Are you sure you want to continue?"
+        confirmText="Yes, Migrate AI Corrections"
         cancelText="Cancel"
         variant="danger"
         isLoading={isMigrating}
