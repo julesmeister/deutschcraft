@@ -8,21 +8,22 @@
  * - writing-prompts/{promptId}
  */
 
-import { CEFRLevel } from './cefr';
+import { CEFRLevel } from "./cefr";
 
 /**
  * Writing Exercise Types
  */
 export type WritingExerciseType =
-  | 'creative' // Free writing, story, personal narrative
-  | 'translation' // Translate from English to German
-  | 'guided' // Structured with prompts
-  | 'descriptive' // Describe a scene, person, place
-  | 'dialogue' // Conversation writing
-  | 'formal-letter' // Formal correspondence
-  | 'informal-letter' // Casual correspondence
-  | 'email' // Email writing
-  | 'essay'; // Structured essay
+  | "creative" // Free writing, story, personal narrative
+  | "freestyle" // Custom topic
+  | "translation" // Translate from English to German
+  | "guided" // Structured with prompts
+  | "descriptive" // Describe a scene, person, place
+  | "dialogue" // Conversation writing
+  | "formal-letter" // Formal correspondence
+  | "informal-letter" // Casual correspondence
+  | "email" // Email writing
+  | "essay"; // Structured essay
 
 /**
  * Translation Exercise Model
@@ -31,7 +32,7 @@ export type WritingExerciseType =
  */
 export interface TranslationExercise {
   exerciseId: string;
-  type: 'translation';
+  type: "translation";
   level: CEFRLevel;
 
   // Exercise content
@@ -41,7 +42,7 @@ export interface TranslationExercise {
 
   // Metadata
   category: string; // e.g., 'daily-life', 'business', 'travel'
-  difficulty: 'easy' | 'medium' | 'hard';
+  difficulty: "easy" | "medium" | "hard";
   estimatedTime: number; // minutes
 
   // Learning focus
@@ -64,7 +65,7 @@ export interface TranslationExercise {
  */
 export interface CreativeWritingExercise {
   exerciseId: string;
-  type: 'creative' | 'guided' | 'descriptive' | 'dialogue' | 'essay';
+  type: "creative" | "guided" | "descriptive" | "dialogue" | "essay";
   level: CEFRLevel;
 
   // Exercise content
@@ -79,13 +80,13 @@ export interface CreativeWritingExercise {
 
   // Guidance
   category: string;
-  tone?: 'formal' | 'informal' | 'neutral';
+  tone?: "formal" | "informal" | "neutral";
   targetGrammar?: string[]; // Grammar to practice
   suggestedVocabulary?: string[]; // Vocabulary suggestions
   exampleResponse?: string; // Optional example
 
   // Metadata
-  difficulty: 'easy' | 'medium' | 'hard';
+  difficulty: "easy" | "medium" | "hard";
   estimatedTime: number; // minutes
 
   // Stats
@@ -146,7 +147,7 @@ export interface WritingSubmission {
   originalText?: string; // English text (for translations)
 
   // Status
-  status: 'draft' | 'submitted' | 'reviewed';
+  status: "draft" | "submitted" | "reviewed";
 
   // Timestamps
   startedAt: number;
@@ -167,6 +168,10 @@ export interface WritingSubmission {
   // Version history
   version: number;
   previousVersions?: WritingVersion[];
+
+  // Visibility
+  isPublic?: boolean;
+  exerciseTitle?: string;
 
   createdAt: number;
   updatedAt: number;
@@ -243,7 +248,7 @@ export interface WritingVersion {
  * Track specific text edits (word/phrase changes)
  */
 export interface TextChange {
-  type: 'insert' | 'delete' | 'replace';
+  type: "insert" | "delete" | "replace";
   position: number; // Character position in text
   oldText?: string; // For delete/replace
   newText?: string; // For insert/replace
@@ -273,7 +278,7 @@ export interface PeerReview {
   vocabularyRating?: number; // 1-5 stars
   creativityRating?: number; // 1-5 stars
 
-  status: 'in-progress' | 'submitted' | 'acknowledged';
+  status: "in-progress" | "submitted" | "acknowledged";
 
   createdAt: number;
   submittedAt?: number;
@@ -390,7 +395,7 @@ export interface ReviewQuiz {
   exerciseType: WritingExerciseType;
 
   // Quiz source (which correction to test)
-  sourceType: 'ai' | 'teacher' | 'reference';
+  sourceType: "ai" | "teacher" | "reference";
 
   // Quiz content
   originalText: string; // Student's original text
@@ -406,7 +411,7 @@ export interface ReviewQuiz {
   totalBlanks: number;
 
   // Status
-  status: 'in-progress' | 'completed';
+  status: "in-progress" | "completed";
 
   // Timestamps
   startedAt: number;

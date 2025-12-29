@@ -76,6 +76,7 @@ export async function POST(request: Request) {
         reviewed_at INTEGER,
         version INTEGER DEFAULT 1,
         previous_versions TEXT,
+        is_public BOOLEAN DEFAULT 0,
         created_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000),
         updated_at INTEGER NOT NULL DEFAULT (unixepoch('now') * 1000)
       )
@@ -165,9 +166,9 @@ export async function POST(request: Request) {
             ai_corrected_version,
             ai_corrected_at,
             teacher_feedback, teacher_corrected_version, teacher_score, reviewed_by, reviewed_at,
-            version, previous_versions,
+            version, previous_versions, is_public,
             created_at, updated_at
-          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
             args: [
               submission.submissionId || doc.id,
               submission.exerciseId,
@@ -198,6 +199,7 @@ export async function POST(request: Request) {
               submission.previousVersions
                 ? JSON.stringify(submission.previousVersions)
                 : null,
+              submission.isPublic || false,
               submission.createdAt || Date.now(),
               submission.updatedAt || Date.now(),
             ],

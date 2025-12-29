@@ -3,23 +3,33 @@
  * Main hub for selecting exercise types and viewing stats/history
  */
 
-import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
-import { TabBar } from '@/components/ui/TabBar';
-import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
-import { WritingHistory } from '@/components/writing/WritingHistory';
-import { WritingTipsCard } from '@/components/writing/WritingTipsCard';
-import { TranslationExerciseSelector } from '@/components/writing/TranslationExerciseSelector';
-import { CreativeExerciseSelector } from '@/components/writing/CreativeExerciseSelector';
-import { EmailTemplateSelector } from '@/components/writing/EmailTemplateSelector';
-import { LetterTemplateSelector } from '@/components/writing/LetterTemplateSelector';
-import { TranslationExercise, CreativeWritingExercise } from '@/lib/models/writing';
-import { EmailTemplate } from '@/lib/data/emailTemplates';
-import { LetterTemplate } from '@/lib/data/letterTemplates';
-import { WritingSubmission } from '@/lib/models/writing';
-import { useUserQuizStats, useUserQuizzes } from '@/lib/hooks/useReviewQuizzes';
-import { useMemo } from 'react';
+import { CEFRLevel, CEFRLevelInfo } from "@/lib/models/cefr";
+import { TabBar } from "@/components/ui/TabBar";
+import { CEFRLevelSelector } from "@/components/ui/CEFRLevelSelector";
+import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
+import { WritingHistory } from "@/components/writing/WritingHistory";
+import { WritingTipsCard } from "@/components/writing/WritingTipsCard";
+import { TranslationExerciseSelector } from "@/components/writing/TranslationExerciseSelector";
+import { CreativeExerciseSelector } from "@/components/writing/CreativeExerciseSelector";
+import { EmailTemplateSelector } from "@/components/writing/EmailTemplateSelector";
+import { LetterTemplateSelector } from "@/components/writing/LetterTemplateSelector";
+import {
+  TranslationExercise,
+  CreativeWritingExercise,
+} from "@/lib/models/writing";
+import { EmailTemplate } from "@/lib/data/emailTemplates";
+import { LetterTemplate } from "@/lib/data/letterTemplates";
+import { WritingSubmission } from "@/lib/models/writing";
+import { useUserQuizStats, useUserQuizzes } from "@/lib/hooks/useReviewQuizzes";
+import { useMemo } from "react";
 
-type ExerciseType = 'translation' | 'creative' | 'email' | 'letters' | null;
+type ExerciseType =
+  | "translation"
+  | "creative"
+  | "email"
+  | "letters"
+  | "freestyle"
+  | null;
 
 interface WritingStats {
   totalExercisesCompleted: number;
@@ -48,6 +58,7 @@ interface WritingHubProps {
   onCreativeSelect: (exercise: CreativeWritingExercise) => void;
   onEmailSelect: (template: EmailTemplate) => void;
   onLetterSelect: (template: LetterTemplate) => void;
+  onFreestyleSelect: () => void;
   userEmail?: string | null;
 }
 
@@ -71,6 +82,7 @@ export function WritingHub({
   onCreativeSelect,
   onEmailSelect,
   onLetterSelect,
+  onFreestyleSelect,
   userEmail,
 }: WritingHubProps) {
   const { data: quizStats } = useUserQuizStats(userEmail || null);
@@ -82,17 +94,17 @@ export function WritingHub({
       ...submissions,
       // Only include completed quizzes
       ...userQuizzes
-        .filter(quiz => quiz.status === 'completed')
-        .map(quiz => ({
+        .filter((quiz) => quiz.status === "completed")
+        .map((quiz) => ({
           ...quiz,
           isQuiz: true,
           submissionId: quiz.quizId,
-          exerciseType: 'quiz' as const,
-          status: 'reviewed' as const,
+          exerciseType: "quiz" as const,
+          status: "reviewed" as const,
           wordCount: quiz.totalBlanks,
           submittedAt: quiz.completedAt || quiz.startedAt,
           updatedAt: quiz.updatedAt,
-        }))
+        })),
     ];
 
     // Sort by date (most recent first)
@@ -105,7 +117,9 @@ export function WritingHub({
 
   // Create a Set of attempted exercise IDs from submissions (exclude quizzes)
   const attemptedExerciseIds = new Set(
-    submissions.map(submission => submission.exerciseId).filter((id): id is string => !!id)
+    submissions
+      .map((submission) => submission.exerciseId)
+      .filter((id): id is string => !!id)
   );
 
   return (
@@ -135,32 +149,38 @@ export function WritingHub({
             variant="stats"
             tabs={[
               {
-                id: 'exercises',
-                label: 'Total Exercises',
+                id: "exercises",
+                label: "Total Exercises",
                 icon: undefined,
-                value: (writingStats?.totalExercisesCompleted || 0) + (quizStats?.totalQuizzes || 0),
+                value:
+                  (writingStats?.totalExercisesCompleted || 0) +
+                  (quizStats?.totalQuizzes || 0),
               },
               {
-                id: 'score',
-                label: 'Avg Writing Score',
+                id: "score",
+                label: "Avg Writing Score",
                 icon: undefined,
                 value: `${writingStats?.averageOverallScore || 0}%`,
               },
-              ...(quizStats && quizStats.totalQuizzes > 0 ? [{
-                id: 'quiz-points',
-                label: 'Quiz Points',
-                icon: undefined,
-                value: quizStats.totalPoints,
-              }] : []),
+              ...(quizStats && quizStats.totalQuizzes > 0
+                ? [
+                    {
+                      id: "quiz-points",
+                      label: "Quiz Points",
+                      icon: undefined,
+                      value: quizStats.totalPoints,
+                    },
+                  ]
+                : []),
               {
-                id: 'streak',
-                label: 'Day Streak',
+                id: "streak",
+                label: "Day Streak",
                 icon: undefined,
                 value: writingStats?.currentStreak || 0,
               },
               {
-                id: 'words',
-                label: 'Words Written',
+                id: "words",
+                label: "Words Written",
                 icon: undefined,
                 value: (writingStats?.totalWordsWritten || 0).toLocaleString(),
               },
@@ -171,7 +191,9 @@ export function WritingHub({
 
       {/* Exercise Types - TabBar Style */}
       <div className="mb-8">
-        <h2 className="text-lg font-bold text-neutral-900 mb-4">Choose Exercise Type</h2>
+        <h2 className="text-lg font-bold text-neutral-900 mb-4">
+          Choose Exercise Type
+        </h2>
         <TabBar
           variant="tabs"
           size="compact"
@@ -179,35 +201,63 @@ export function WritingHub({
           onTabChange={(tabId) => onExerciseTypeSelect(tabId as ExerciseType)}
           tabs={[
             {
-              id: 'creative',
-              label: 'Creative Writing',
+              id: "creative",
+              label: "Creative Writing",
               icon: null,
               value: filteredCreativeExercises.length,
             },
             {
-              id: 'translation',
-              label: 'Translation',
+              id: "translation",
+              label: "Translation",
               icon: null,
               value: filteredTranslationExercises.length,
             },
             {
-              id: 'email',
-              label: 'Email Writing',
+              id: "email",
+              label: "Email Writing",
               icon: null,
               value: filteredEmailTemplates.length,
             },
             {
-              id: 'letters',
-              label: 'Letter Writing',
+              id: "letters",
+              label: "Letter Writing",
               icon: null,
               value: filteredLetterTemplates.length,
+            },
+            {
+              id: "freestyle",
+              label: "Freestyle",
+              icon: null,
+              value: "∞", // Always available
             },
           ]}
         />
       </div>
 
       {/* Show Exercise Selector Below When Type is Selected */}
-      {selectedExerciseType === 'translation' && (
+      {selectedExerciseType === "freestyle" && (
+        <div className="mt-8 bg-white p-6 rounded-2xl border border-gray-200 text-center">
+          <div className="text-4xl mb-4">✍️</div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">
+            Freestyle Writing
+          </h3>
+          <p className="text-gray-600 mb-6 max-w-lg mx-auto">
+            Write about any topic you like! You can choose to share your writing
+            publicly or keep it private for teacher review only.
+          </p>
+          <div className="max-w-[200px] mx-auto">
+            <ActionButton
+              onClick={onFreestyleSelect}
+              icon={<ActionButtonIcons.Play />}
+              variant="purple"
+            >
+              Start Writing
+            </ActionButton>
+          </div>
+        </div>
+      )}
+
+      {selectedExerciseType === "translation" && (
         <div className="mt-8">
           <TranslationExerciseSelector
             exercises={filteredTranslationExercises}
@@ -217,7 +267,7 @@ export function WritingHub({
         </div>
       )}
 
-      {selectedExerciseType === 'creative' && (
+      {selectedExerciseType === "creative" && (
         <div className="mt-8">
           <CreativeExerciseSelector
             exercises={filteredCreativeExercises}
@@ -227,7 +277,7 @@ export function WritingHub({
         </div>
       )}
 
-      {selectedExerciseType === 'email' && (
+      {selectedExerciseType === "email" && (
         <div className="mt-8">
           <EmailTemplateSelector
             templates={filteredEmailTemplates}
@@ -237,7 +287,7 @@ export function WritingHub({
         </div>
       )}
 
-      {selectedExerciseType === 'letters' && (
+      {selectedExerciseType === "letters" && (
         <div className="mt-8">
           <LetterTemplateSelector
             templates={filteredLetterTemplates}
@@ -250,19 +300,23 @@ export function WritingHub({
       {/* Recent Activity / History */}
       <div className="mt-8">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-bold text-neutral-900">Recent Submissions</h2>
+          <h2 className="text-lg font-bold text-neutral-900">
+            Recent Submissions
+          </h2>
           {combinedSubmissions.length > 3 && (
             <button
               onClick={onToggleHistory}
               className="text-sm font-medium text-blue-600 hover:text-blue-700"
             >
-              {showHistory ? 'Show Less' : 'View All'}
+              {showHistory ? "Show Less" : "View All"}
             </button>
           )}
         </div>
 
         <WritingHistory
-          submissions={showHistory ? combinedSubmissions : combinedSubmissions.slice(0, 3)}
+          submissions={
+            showHistory ? combinedSubmissions : combinedSubmissions.slice(0, 3)
+          }
           onViewSubmission={onViewSubmission}
           isLoading={submissionsLoading}
         />

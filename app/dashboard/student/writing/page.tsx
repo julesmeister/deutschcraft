@@ -1,32 +1,28 @@
-'use client';
+"use client";
 
-import { useRouter } from 'next/navigation';
-import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
-import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
-import { AlertDialog } from '@/components/ui/Dialog';
-import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { useWritingExerciseState } from '@/lib/hooks/useWritingExerciseState';
-import { useWritingWordDetection } from '@/lib/hooks/useWritingWordDetection';
-import { CEFRLevelInfo } from '@/lib/models/cefr';
-import { WritingHub } from './WritingHub';
-import { WritingWorkspaceRenderer } from './WritingWorkspaceRenderer';
-import { FloatingRedemittelWidget } from '@/components/writing/FloatingRedemittelWidget';
-import { TRANSLATION_EXERCISES } from '@/lib/data/translationExercises';
-import { CREATIVE_EXERCISES } from '@/lib/data/creativeExercises';
-import { EMAIL_TEMPLATES } from '@/lib/data/emailTemplates';
-import { LETTER_TEMPLATES } from '@/lib/data/letterTemplates';
+import { useRouter } from "next/navigation";
+import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
+import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
+import { AlertDialog } from "@/components/ui/Dialog";
+import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
+import { useWritingExerciseState } from "@/lib/hooks/useWritingExerciseState";
+import { useWritingWordDetection } from "@/lib/hooks/useWritingWordDetection";
+import { CEFRLevelInfo } from "@/lib/models/cefr";
+import { WritingHub } from "./WritingHub";
+import { WritingWorkspaceRenderer } from "./WritingWorkspaceRenderer";
+import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
+import { TRANSLATION_EXERCISES } from "@/lib/data/translationExercises";
+import { CREATIVE_EXERCISES } from "@/lib/data/creativeExercises";
+import { EMAIL_TEMPLATES } from "@/lib/data/emailTemplates";
+import { LETTER_TEMPLATES } from "@/lib/data/letterTemplates";
 
 export default function WritingExercisesPage() {
   const router = useRouter();
   const { session } = useFirebaseAuth();
 
   // Word detection hook
-  const {
-    detectedWords,
-    detectWords,
-    confirmUsedWords,
-    clearDetectedWords,
-  } = useWritingWordDetection();
+  const { detectedWords, detectWords, confirmUsedWords, clearDetectedWords } =
+    useWritingWordDetection();
 
   const {
     selectedLevel,
@@ -61,17 +57,31 @@ export default function WritingExercisesPage() {
     handleCreativeSelect,
     handleEmailSelect,
     handleLetterSelect,
+    handleFreestyleSelect,
     handleBackToExerciseTypes,
     handleBackToExerciseList,
     handleViewAttemptContent,
     handleBackToCurrentDraft,
     handleLevelChange,
     handleToggleHistory,
+    isFreestyle,
+    freestyleTopic,
+    setFreestyleTopic,
+    isPublic,
+    setIsPublic,
   } = useWritingExerciseState({ userEmail: session?.user?.email });
 
   // Wrapper for handleSubmit to detect saved words
   const handleSubmit = async () => {
-    await originalHandleSubmit();
+    // Collect additional fields for freestyle
+    const additionalFields = isFreestyle
+      ? {
+          isPublic,
+          exerciseTitle: freestyleTopic,
+        }
+      : undefined;
+
+    await originalHandleSubmit(additionalFields);
 
     // After successful submission, detect saved words
     const textToAnalyze = selectedEmail ? emailContent.body : writingText;
@@ -88,12 +98,26 @@ export default function WritingExercisesPage() {
   };
 
   // Filter exercises by selected level
-  const filteredTranslationExercises = TRANSLATION_EXERCISES.filter(ex => ex.level === selectedLevel);
-  const filteredCreativeExercises = CREATIVE_EXERCISES.filter(ex => ex.level === selectedLevel);
-  const filteredEmailTemplates = EMAIL_TEMPLATES.filter(ex => ex.level === selectedLevel);
-  const filteredLetterTemplates = LETTER_TEMPLATES.filter(ex => ex.level === selectedLevel);
+  const filteredTranslationExercises = TRANSLATION_EXERCISES.filter(
+    (ex) => ex.level === selectedLevel
+  );
+  const filteredCreativeExercises = CREATIVE_EXERCISES.filter(
+    (ex) => ex.level === selectedLevel
+  );
+  const filteredEmailTemplates = EMAIL_TEMPLATES.filter(
+    (ex) => ex.level === selectedLevel
+  );
+  const filteredLetterTemplates = LETTER_TEMPLATES.filter(
+    (ex) => ex.level === selectedLevel
+  );
 
-  const hasSelectedExercise = !!(selectedTranslation || selectedCreative || selectedEmail || selectedLetter);
+  const hasSelectedExercise = !!(
+    selectedTranslation ||
+    selectedCreative ||
+    selectedEmail ||
+    selectedLetter ||
+    isFreestyle
+  );
 
   // Check if content is filled based on exercise type
   const hasContent = selectedEmail
@@ -103,33 +127,53 @@ export default function WritingExercisesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <DashboardHeader
-        title={currentExercise ? (currentExercise.title || (currentExercise as any).name) : "Writing Exercises ✍️"}
+        title={
+          currentExercise
+            ? currentExercise.title || (currentExercise as any).name
+            : isFreestyle
+            ? freestyleTopic || "Freestyle Writing"
+            : "Writing Exercises ✍️"
+        }
         subtitle={
           currentExercise
-            ? `${CEFRLevelInfo[selectedLevel].displayName} • ${(currentExercise as any).difficulty || 'Exercise'}`
+            ? `${CEFRLevelInfo[selectedLevel].displayName} • ${
+                (currentExercise as any).difficulty || "Exercise"
+              }`
+            : isFreestyle
+            ? "Write freely about any topic you like"
             : "Practice your German writing skills through creative and translation exercises"
         }
         backButton={
           selectedExerciseType
             ? {
-                label: hasSelectedExercise ? 'Back to Exercise List' : 'Back to Exercise Types',
-                onClick: hasSelectedExercise ? handleBackToExerciseList : handleBackToExerciseTypes
+                label: hasSelectedExercise
+                  ? "Back to Exercise List"
+                  : "Back to Exercise Types",
+                onClick: hasSelectedExercise
+                  ? handleBackToExerciseList
+                  : handleBackToExerciseTypes,
               }
             : {
-                label: 'Back to Dashboard',
-                onClick: () => router.push('/dashboard/student')
+                label: "Back to Dashboard",
+                onClick: () => router.push("/dashboard/student"),
               }
         }
         actions={
           hasSelectedExercise && !viewingAttempt ? (
             <div className="flex items-center gap-3">
               <ActionButton
-                onClick={handleSaveDraft}
+                onClick={() =>
+                  handleSaveDraft(
+                    isFreestyle
+                      ? { isPublic, exerciseTitle: freestyleTopic }
+                      : undefined
+                  )
+                }
                 disabled={isSaving || !hasContent}
                 variant="gray"
                 icon={<ActionButtonIcons.Save />}
               >
-                {isSaving ? 'Saving...' : 'Draft'}
+                {isSaving ? "Saving..." : "Draft"}
               </ActionButton>
               <ActionButton
                 onClick={handleSubmit}
@@ -154,13 +198,22 @@ export default function WritingExercisesPage() {
       />
 
       {/* Main Content */}
-      <div className={hasSelectedExercise ? '' : 'lg:container lg:mx-auto lg:px-6 py-8'}>
+      <div
+        className={
+          hasSelectedExercise ? "" : "lg:container lg:mx-auto lg:px-6 py-8"
+        }
+      >
         {hasSelectedExercise ? (
           <WritingWorkspaceRenderer
             selectedTranslation={selectedTranslation}
             selectedCreative={selectedCreative}
             selectedEmail={selectedEmail}
             selectedLetter={selectedLetter}
+            isFreestyle={isFreestyle}
+            freestyleTopic={freestyleTopic}
+            setFreestyleTopic={setFreestyleTopic}
+            isPublic={isPublic}
+            setIsPublic={setIsPublic}
             writingText={writingText}
             emailContent={emailContent}
             wordCount={wordCount}
@@ -198,6 +251,7 @@ export default function WritingExercisesPage() {
               onCreativeSelect={handleCreativeSelect}
               onEmailSelect={handleEmailSelect}
               onLetterSelect={handleLetterSelect}
+              onFreestyleSelect={handleFreestyleSelect}
               userEmail={session?.user?.email}
             />
           </div>

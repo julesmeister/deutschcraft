@@ -348,8 +348,9 @@ export async function createWritingSubmission(
         content, word_count, character_count, original_text, status,
         started_at, submitted_at, last_saved_at, ai_feedback, teacher_feedback,
         teacher_score, reviewed_by, reviewed_at, version, previous_versions,
-        created_at, updated_at
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        created_at, updated_at,
+        is_public
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       args: [
         submissionId,
         submissionData.userId,
@@ -374,6 +375,7 @@ export async function createWritingSubmission(
         submissionData.previousVersions ? JSON.stringify(submissionData.previousVersions) : null,
         now,
         now,
+        submissionData.isPublic ? 1 : 0
       ],
     });
 
@@ -391,7 +393,7 @@ export async function createWritingSubmission(
 }
 
 /**
- * Update a writing submission
+ * Update an existing writing submission
  * @param submissionId - Submission ID
  * @param updates - Partial submission data to update
  */
@@ -400,37 +402,63 @@ export async function updateWritingSubmission(
   updates: Partial<WritingSubmission>
 ): Promise<void> {
   try {
-    const setClauses: string[] = [];
-    const args: any[] = [];
+    const now = Date.now();
+    const sets: string[] = ['updated_at = ?'];
+    const args: any[] = [now];
 
     if (updates.content !== undefined) {
-      setClauses.push('content = ?');
+      sets.push('content = ?');
       args.push(updates.content);
     }
+    if (updates.wordCount !== undefined) {
+      sets.push('word_count = ?');
+      args.push(updates.wordCount);
+    }
+    if (updates.characterCount !== undefined) {
+      sets.push('character_count = ?');
+      args.push(updates.characterCount);
+    }
     if (updates.status !== undefined) {
-      setClauses.push('status = ?');
+      sets.push('status = ?');
       args.push(updates.status);
     }
     if (updates.submittedAt !== undefined) {
-      setClauses.push('submitted_at = ?');
+      sets.push('submitted_at = ?');
       args.push(updates.submittedAt);
     }
-    if (updates.teacherScore !== undefined) {
-      setClauses.push('teacher_score = ?');
-      args.push(updates.teacherScore);
+    if (updates.lastSavedAt !== undefined) {
+      sets.push('last_saved_at = ?');
+      args.push(updates.lastSavedAt);
+    }
+    if (updates.aiFeedback !== undefined) {
+      sets.push('ai_feedback = ?');
+      args.push(JSON.stringify(updates.aiFeedback));
     }
     if (updates.teacherFeedback !== undefined) {
-      setClauses.push('teacher_feedback = ?');
+      sets.push('teacher_feedback = ?');
       args.push(updates.teacherFeedback);
     }
-
-    setClauses.push('updated_at = ?');
-    args.push(Date.now());
+    if (updates.teacherScore !== undefined) {
+      sets.push('teacher_score = ?');
+      args.push(updates.teacherScore);
+    }
+    if (updates.reviewedBy !== undefined) {
+      sets.push('reviewed_by = ?');
+      args.push(updates.reviewedBy);
+    }
+    if (updates.reviewedAt !== undefined) {
+      sets.push('reviewed_at = ?');
+      args.push(updates.reviewedAt);
+    }
+    if (updates.isPublic !== undefined) {
+      sets.push('is_public = ?');
+      args.push(updates.isPublic ? 1 : 0);
+    }
 
     args.push(submissionId);
 
     await db.execute({
-      sql: `UPDATE writing_submissions SET ${setClauses.join(', ')} WHERE submission_id = ?`,
+      sql: `UPDATE writing_submissions SET ${sets.join(', ')} WHERE submission_id = ?`,
       args,
     });
   } catch (error) {

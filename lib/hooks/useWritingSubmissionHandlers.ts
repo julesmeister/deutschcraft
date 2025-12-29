@@ -3,25 +3,36 @@
  * Extracted from student writing page to reduce file size
  */
 
-import { useState, useOptimistic } from 'react';
-import { useRouter } from 'next/navigation';
-import { useQueryClient } from '@tanstack/react-query';
+import { useState, useOptimistic } from "react";
+import { useRouter } from "next/navigation";
+import { useQueryClient } from "@tanstack/react-query";
 import {
   useCreateWritingSubmission,
   useUpdateWritingSubmission,
-} from './useWritingExercises';
-import { WritingSubmission, WritingExerciseType, TranslationExercise, CreativeWritingExercise } from '@/lib/models/writing';
-import { CEFRLevel } from '@/lib/models/cefr';
-import { updateDailyProgress, updateWritingStats } from '@/lib/services/writingProgressService';
-import { getNextAttemptNumber, hasDraftAttempt } from '@/lib/services/writingAttemptService';
-import { EmailTemplate } from '@/lib/data/emailTemplates';
-import { LetterTemplate } from '@/lib/data/letterTemplates';
+} from "./useWritingExercises";
+import {
+  WritingSubmission,
+  WritingExerciseType,
+  TranslationExercise,
+  CreativeWritingExercise,
+} from "@/lib/models/writing";
+import { CEFRLevel } from "@/lib/models/cefr";
+import {
+  updateDailyProgress,
+  updateWritingStats,
+} from "@/lib/services/writingProgressService";
+import {
+  getNextAttemptNumber,
+  hasDraftAttempt,
+} from "@/lib/services/writingAttemptService";
+import { EmailTemplate } from "@/lib/data/emailTemplates";
+import { LetterTemplate } from "@/lib/data/letterTemplates";
 
 interface DialogState {
   isOpen: boolean;
   title: string;
   message: string;
-  type: 'alert' | 'confirm';
+  type: "alert" | "confirm";
   onConfirm?: () => void;
 }
 
@@ -46,7 +57,6 @@ export function useWritingSubmissionHandlers({
   emailContent,
   userEmail,
 }: UseWritingSubmissionHandlersProps) {
-
   // Get actual content based on exercise type
   const getContent = () => {
     if (selectedEmail && emailContent) {
@@ -62,63 +72,85 @@ export function useWritingSubmissionHandlers({
   const [currentDraftId, setCurrentDraftId] = useState<string | null>(null);
   const [dialogState, setDialogState] = useState<DialogState>({
     isOpen: false,
-    title: '',
-    message: '',
-    type: 'alert',
+    title: "",
+    message: "",
+    type: "alert",
   });
 
   // Optimistic UI state for draft saving
   const [optimisticSaveState, setOptimisticSaveState] = useOptimistic(
-    { saved: false, message: '', timestamp: 0 },
+    { saved: false, message: "", timestamp: 0 },
     (state, newMessage: string) => ({
       saved: true,
       message: newMessage,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     })
   );
 
   const createSubmission = useCreateWritingSubmission();
   const updateSubmission = useUpdateWritingSubmission();
 
-  const showDialog = (title: string, message: string, type: 'alert' | 'confirm' = 'alert', onConfirm?: () => void) => {
+  const showDialog = (
+    title: string,
+    message: string,
+    type: "alert" | "confirm" = "alert",
+    onConfirm?: () => void
+  ) => {
     setDialogState({ isOpen: true, title, message, type, onConfirm });
   };
 
   const closeDialog = () => {
-    setDialogState({ isOpen: false, title: '', message: '', type: 'alert' });
+    setDialogState({ isOpen: false, title: "", message: "", type: "alert" });
   };
 
   const handleSaveDraft = async () => {
     if (!userEmail) {
-      showDialog('Authentication Required', 'You must be logged in to save a draft');
+      showDialog(
+        "Authentication Required",
+        "You must be logged in to save a draft"
+      );
       return;
     }
 
     if (!content.trim()) {
-      showDialog('Empty Content', 'Please write something before saving');
+      showDialog("Empty Content", "Please write something before saving");
       return;
     }
 
     setIsSaving(true);
 
     // Show optimistic feedback immediately
-    setOptimisticSaveState('Draft saved!');
+    setOptimisticSaveState("Draft saved!");
 
     try {
-      const currentExercise = selectedTranslation || selectedCreative || selectedEmail || selectedLetter;
-      if (!currentExercise) {
-        showDialog('No Exercise', 'No exercise selected');
+      const currentExercise =
+        selectedTranslation ||
+        selectedCreative ||
+        selectedEmail ||
+        selectedLetter;
+
+      // If freestyle mode, we don't need a selected exercise object, but we construct minimal info
+      if (!currentExercise && !additionalFields?.exerciseTitle) {
+        showDialog("No Exercise", "No exercise selected");
         return;
       }
 
-      const exerciseId = (currentExercise as any).exerciseId || (currentExercise as any).id || (currentExercise as any).templateId;
+      const exerciseId = currentExercise
+        ? (currentExercise as any).exerciseId ||
+          (currentExercise as any).id ||
+          (currentExercise as any).templateId
+        : "freestyle"; // Use a constant ID for freestyle or generate one? Better to use 'freestyle' as base
+
       const exerciseType: WritingExerciseType = selectedTranslation
-        ? 'translation'
+        ? "translation"
         : selectedCreative
-        ? 'creative'
+        ? "creative"
         : selectedEmail
-        ? 'email'
-        : ((selectedLetter as any)?.type || 'formal-letter') as WritingExerciseType;
+        ? "email"
+        : selectedLetter
+        ? (((selectedLetter as any)?.type ||
+            "formal-letter") as WritingExerciseType)
+        : "freestyle";
 
       const wordCount = content.trim().split(/\s+/).length;
 
@@ -131,15 +163,18 @@ export function useWritingSubmissionHandlers({
             wordCount,
             lastSavedAt: Date.now(),
             updatedAt: Date.now(),
+            ...(additionalFields || {}),
           },
         });
-        showDialog('Draft Saved', 'Draft updated successfully!');
+        showDialog("Draft Saved", "Draft updated successfully!");
       } else {
         // Check if there's already a draft for this exercise
+        // For freestyle, we might want to allow multiple drafts? For now treat same as others
         const existingDraft = await hasDraftAttempt(userEmail, exerciseId);
 
-        if (existingDraft) {
-          // Resume existing draft
+        if (existingDraft && exerciseType !== "freestyle") {
+          // Resume existing draft (except freestyle where we might want multiple?)
+          // Actually let's keep it consistent: one active draft per exercise ID
           setCurrentDraftId(existingDraft.submissionId);
           await updateSubmission.mutateAsync({
             submissionId: existingDraft.submissionId,
@@ -148,14 +183,22 @@ export function useWritingSubmissionHandlers({
               wordCount,
               lastSavedAt: Date.now(),
               updatedAt: Date.now(),
+              ...(additionalFields || {}),
             },
           });
-          showDialog('Draft Saved', 'Draft updated successfully!');
+          showDialog("Draft Saved", "Draft updated successfully!");
         } else {
           // Create new draft (get next attempt number)
-          const attemptNumber = await getNextAttemptNumber(userEmail, exerciseId);
+          // For freestyle, attempt number might just be sequential for "freestyle" exercise ID
+          const attemptNumber = await getNextAttemptNumber(
+            userEmail,
+            exerciseId
+          );
 
-          const submissionData: Omit<WritingSubmission, 'submissionId' | 'createdAt' | 'updatedAt' | 'version'> = {
+          const submissionData: Omit<
+            WritingSubmission,
+            "submissionId" | "createdAt" | "updatedAt" | "version"
+          > = {
             userId: userEmail,
             exerciseId,
             exerciseType,
@@ -164,60 +207,87 @@ export function useWritingSubmissionHandlers({
             wordCount,
             characterCount: content.length,
             attemptNumber,
-            status: 'draft',
+            status: "draft",
             startedAt: Date.now(),
             lastSavedAt: Date.now(),
+            ...(additionalFields || {}),
           };
 
           const result = await createSubmission.mutateAsync(submissionData);
           setCurrentDraftId(result.submissionId);
-          showDialog('Draft Saved', `Draft saved successfully! (Attempt ${attemptNumber})`);
+          showDialog(
+            "Draft Saved",
+            `Draft saved successfully! (Attempt ${attemptNumber})`
+          );
         }
       }
     } catch (error) {
-      console.error('Error saving draft:', error);
-      showDialog('Save Failed', 'Failed to save draft. Please try again.');
+      console.error("Error saving draft:", error);
+      showDialog("Save Failed", "Failed to save draft. Please try again.");
     } finally {
       setIsSaving(false);
     }
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (additionalFields?: any) => {
     if (!userEmail) {
-      showDialog('Authentication Required', 'You must be logged in to submit');
+      showDialog("Authentication Required", "You must be logged in to submit");
       return;
     }
 
     if (!content.trim()) {
-      showDialog('Empty Content', 'Please write your response before submitting.');
+      showDialog(
+        "Empty Content",
+        "Please write your response before submitting."
+      );
       return;
     }
 
     setIsSaving(true);
 
     try {
-      const currentExercise = selectedTranslation || selectedCreative || selectedEmail || selectedLetter;
-      if (!currentExercise) {
-        showDialog('No Exercise', 'No exercise selected');
+      const currentExercise =
+        selectedTranslation ||
+        selectedCreative ||
+        selectedEmail ||
+        selectedLetter;
+
+      // If freestyle mode, check for title
+      if (!currentExercise && !additionalFields?.exerciseTitle) {
+        showDialog("No Exercise", "No exercise selected");
         setIsSaving(false);
         return;
       }
 
-      const exerciseId = (currentExercise as any).exerciseId || (currentExercise as any).id || (currentExercise as any).templateId;
+      const exerciseId = currentExercise
+        ? (currentExercise as any).exerciseId ||
+          (currentExercise as any).id ||
+          (currentExercise as any).templateId
+        : "freestyle";
+
       const exerciseType: WritingExerciseType = selectedTranslation
-        ? 'translation'
+        ? "translation"
         : selectedCreative
-        ? 'creative'
+        ? "creative"
         : selectedEmail
-        ? 'email'
-        : ((selectedLetter as any)?.type || 'formal-letter') as WritingExerciseType;
+        ? "email"
+        : selectedLetter
+        ? (((selectedLetter as any)?.type ||
+            "formal-letter") as WritingExerciseType)
+        : "freestyle";
 
       const wordCount = content.trim().split(/\s+/).length;
 
       // Check min word count requirement (if exists)
-      const minWords = (currentExercise as any).wordCountRange?.min || (currentExercise as any).minWords || 0;
+      const minWords =
+        (currentExercise as any)?.wordCountRange?.min ||
+        (currentExercise as any)?.minWords ||
+        0;
       if (minWords > 0 && wordCount < minWords) {
-        showDialog('Insufficient Word Count', `Please write at least ${minWords} words. Current: ${wordCount} words.`);
+        showDialog(
+          "Insufficient Word Count",
+          `Please write at least ${minWords} words. Current: ${wordCount} words.`
+        );
         setIsSaving(false);
         return;
       }
@@ -234,10 +304,11 @@ export function useWritingSubmissionHandlers({
             content: content,
             wordCount,
             characterCount: content.length,
-            status: 'submitted',
+            status: "submitted",
             submittedAt: Date.now(),
             lastSavedAt: Date.now(),
             updatedAt: Date.now(),
+            ...(additionalFields || {}),
           },
         });
         submissionId = currentDraftId;
@@ -253,7 +324,7 @@ export function useWritingSubmissionHandlers({
           wordCount,
           characterCount: content.length,
           attemptNumber: 1, // Will be updated from actual data
-          status: 'submitted',
+          status: "submitted",
           submissionId: currentDraftId,
           startedAt: Date.now(),
           submittedAt: Date.now(),
@@ -261,12 +332,16 @@ export function useWritingSubmissionHandlers({
           updatedAt: Date.now(),
           createdAt: Date.now(),
           version: 1,
+          ...(additionalFields || {}),
         };
       } else {
         // Create new submission (get next attempt number)
         attemptNumber = await getNextAttemptNumber(userEmail, exerciseId);
 
-        const submissionData: Omit<WritingSubmission, 'submissionId' | 'createdAt' | 'updatedAt' | 'version'> = {
+        const submissionData: Omit<
+          WritingSubmission,
+          "submissionId" | "createdAt" | "updatedAt" | "version"
+        > = {
           userId: userEmail,
           exerciseId,
           exerciseType,
@@ -275,10 +350,11 @@ export function useWritingSubmissionHandlers({
           wordCount,
           characterCount: content.length,
           attemptNumber,
-          status: 'submitted',
+          status: "submitted",
           startedAt: Date.now(),
           submittedAt: Date.now(),
           lastSavedAt: Date.now(),
+          ...(additionalFields || {}),
         };
 
         const result = await createSubmission.mutateAsync(submissionData);
@@ -294,19 +370,28 @@ export function useWritingSubmissionHandlers({
         ]);
 
         // Invalidate React Query cache to refresh stats display
-        queryClient.invalidateQueries({ queryKey: ['writing-stats', userEmail] });
-        queryClient.invalidateQueries({ queryKey: ['writing-progress', userEmail] });
-        queryClient.invalidateQueries({ queryKey: ['student-submissions', userEmail] });
+        queryClient.invalidateQueries({
+          queryKey: ["writing-stats", userEmail],
+        });
+        queryClient.invalidateQueries({
+          queryKey: ["writing-progress", userEmail],
+        });
+        queryClient.invalidateQueries({
+          queryKey: ["student-submissions", userEmail],
+        });
       } catch (progressError) {
-        console.error('[useWritingSubmissionHandlers] Failed to update progress stats:', progressError);
+        console.error(
+          "[useWritingSubmissionHandlers] Failed to update progress stats:",
+          progressError
+        );
         // Don't block navigation if stats update fails
       }
 
       // Navigate to feedback page (will show "Awaiting teacher review")
       router.push(`/dashboard/student/writing/feedback/${submissionId}`);
     } catch (error) {
-      console.error('Error submitting writing:', error);
-      showDialog('Submission Failed', 'Failed to submit. Please try again.');
+      console.error("Error submitting writing:", error);
+      showDialog("Submission Failed", "Failed to submit. Please try again.");
       setIsSaving(false);
     }
   };
