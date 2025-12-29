@@ -10,7 +10,7 @@ import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { useToast } from '@/components/ui/toast';
 import { calculateQuizPoints } from '@/lib/hooks/useQuizStats';
-import { recordMiniExerciseAttempt } from '@/lib/services/writing/smartMiniExerciseService';
+import { recordMiniExerciseAttempt } from '@/lib/services/writing/smartMiniExercise';
 import { saveMiniQuizResult } from '@/lib/services/writing/miniQuizService';
 import { useUserQuizStats } from '@/lib/hooks/useReviewQuizzes';
 import { GermanCharAutocomplete } from '@/components/writing/GermanCharAutocomplete';
