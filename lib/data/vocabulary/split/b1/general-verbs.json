@@ -1676,7 +1676,7 @@
     {
       "id": "remnote-785",
       "german": "opfern",
-      "english": "to survive",
+      "english": "to sacrifice",
       "category": "General Verbs",
       "level": "B1",
       "tags": [
@@ -1789,7 +1789,7 @@
     {
       "id": "remnote-885",
       "german": "wringen",
-      "english": "to wring / piga [tagalog]",
+      "english": "to wring",
       "category": "General Verbs",
       "level": "B1",
       "_meta": {
@@ -2048,7 +2048,7 @@
     },
     {
       "id": "remnote-493",
-      "german": "Sein [eigenartiges]() Aussehen fiel mir sofort auf.",
+      "german": "Sein eigenartiges Aussehen fiel mir sofort auf.",
       "english": "His strange looks struck me immediately.",
       "category": "General Verbs",
       "level": "B2",
@@ -2071,7 +2071,7 @@
     },
     {
       "id": "remnote-494",
-      "german": "Ist Ihnen etwas [Merkwürdiges]() aufgefallen?",
+      "german": "Ist Ihnen etwas Merkwürdiges aufgefallen?",
       "english": "Have you noticed anything strange?",
       "category": "General Verbs",
       "level": "B2",
@@ -2089,25 +2089,6 @@
           "auffallen",
           "[perfekt]();;Er hat aufgefallen",
           "Ist Ihnen etwas [Merkwürdiges]() aufgefallen?"
-        ]
-      }
-    },
-    {
-      "id": "remnote-496",
-      "german": "Mir gelingt so recht zu fassen",
-      "english": "I manage to grasp so rightly",
-      "category": "General Verbs",
-      "level": "B2",
-      "tags": [
-        "fassen"
-      ],
-      "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 2196,
-        "hierarchy": [
-          "Verbs",
-          "fassen",
-          "Mir gelingt so recht zu fassen"
         ]
       }
     },
@@ -2155,7 +2136,7 @@
     },
     {
       "id": "remnote-536",
-      "german": "Ich werde dir einen [fähigen]() [Verwalter ]() mitgeben.",
+      "german": "Ich werde dir einen fähigen Verwalter mitgeben.",
       "english": "I will give you a capable administrator.",
       "category": "General Verbs",
       "level": "B2",
@@ -2277,7 +2258,7 @@
     },
     {
       "id": "remnote-617",
-      "german": "[Jegliche ]() Haftung ist [ausgeschlossen  ](German/Verbs/schlie%C3%9Fen/ausschlie%C3%9Fen/perfekt.md).",
+      "german": "Jegliche Haftung ist ausgeschlossen.",
       "english": "Any liability is eliminated.",
       "category": "General Verbs",
       "level": "B2",
@@ -2458,7 +2439,6 @@
       "category": "General Verbs",
       "level": "B2",
       "tags": [
-        "schießen",
         "entschlossen"
       ],
       "_meta": {
@@ -2474,7 +2454,7 @@
     },
     {
       "id": "remnote-812",
-      "german": "das Zusammenhänge",
+      "german": "der Zusammenhang",
       "english": "correlation",
       "category": "General Verbs",
       "level": "B2",
@@ -2516,7 +2496,7 @@
     },
     {
       "id": "remnote-843",
-      "german": "sein verrückt",
+      "german": "verrückt sein",
       "english": "to be crazy about",
       "category": "General Verbs",
       "level": "B2",
