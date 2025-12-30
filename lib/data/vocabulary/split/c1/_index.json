@@ -1,47 +1,175 @@
 {
   "level": "C1",
-  "totalCards": 124,
+  "totalCards": 112,
   "totalCategories": 8,
   "categories": [
     {
       "name": "Abstract Concepts",
-      "count": 10,
-      "file": "abstract-concepts.json"
+      "count": 9,
+      "file": "abstract-concepts.json",
+      "ids": [
+        "syllabus-c1-11548",
+        "syllabus-c1-11549",
+        "syllabus-c1-11550",
+        "syllabus-c1-11552",
+        "syllabus-c1-11553",
+        "syllabus-c1-11554",
+        "syllabus-c1-11555",
+        "syllabus-c1-11556",
+        "syllabus-c1-11557"
+      ]
     },
     {
       "name": "Body Parts",
       "count": 15,
-      "file": "body-parts.json"
+      "file": "body-parts.json",
+      "ids": [
+        "body-c1-001",
+        "body-c1-002",
+        "body-c1-003",
+        "body-c1-004",
+        "body-c1-005",
+        "body-c1-006",
+        "body-c1-007",
+        "body-c1-008",
+        "body-c1-009",
+        "body-c1-010",
+        "body-c1-011",
+        "body-c1-012",
+        "body-c1-013",
+        "body-c1-014",
+        "body-c1-015"
+      ]
     },
     {
       "name": "Economics Finance",
-      "count": 15,
-      "file": "economics-finance.json"
+      "count": 12,
+      "file": "economics-finance.json",
+      "ids": [
+        "syllabus-c1-11558",
+        "syllabus-c1-11559",
+        "syllabus-c1-11560",
+        "syllabus-c1-11561",
+        "syllabus-c1-11562",
+        "syllabus-c1-11563",
+        "syllabus-c1-11564",
+        "syllabus-c1-11565",
+        "syllabus-c1-11566",
+        "syllabus-c1-11567",
+        "syllabus-c1-11568",
+        "syllabus-c1-11569"
+      ]
     },
     {
       "name": "Formal Language",
       "count": 10,
-      "file": "formal-language.json"
+      "file": "formal-language.json",
+      "ids": [
+        "syllabus-c1-11573",
+        "syllabus-c1-11574",
+        "syllabus-c1-11575",
+        "syllabus-c1-11576",
+        "syllabus-c1-11578",
+        "syllabus-c1-11581",
+        "c1-bezueglich-044830",
+        "c1-angesichts-044830",
+        "c1-mittels-044830",
+        "c1-infolge-044830"
+      ]
     },
     {
       "name": "Legal Administrative",
-      "count": 15,
-      "file": "legal-administrative.json"
+      "count": 12,
+      "file": "legal-administrative.json",
+      "ids": [
+        "syllabus-c1-11583",
+        "syllabus-c1-11584",
+        "syllabus-c1-11586",
+        "syllabus-c1-11588",
+        "syllabus-c1-11589",
+        "syllabus-c1-11590",
+        "syllabus-c1-11591",
+        "syllabus-c1-11592",
+        "syllabus-c1-11594",
+        "syllabus-c1-11595",
+        "syllabus-c1-11596",
+        "syllabus-c1-11597"
+      ]
     },
     {
       "name": "Professional Communication",
-      "count": 15,
-      "file": "professional-communication.json"
+      "count": 12,
+      "file": "professional-communication.json",
+      "ids": [
+        "syllabus-c1-11598",
+        "syllabus-c1-11599",
+        "syllabus-c1-11603",
+        "syllabus-c1-11604",
+        "syllabus-c1-11607",
+        "syllabus-c1-11608",
+        "syllabus-c1-11610",
+        "c1-vereinbarung-044831",
+        "c1-zustaendigkeit-044831",
+        "c1-vorgehensweise-044831",
+        "c1-abwicklung-044831",
+        "c1-durchfuehrung-044831"
+      ]
     },
     {
       "name": "Redemittel",
       "count": 4,
-      "file": "redemittel.json"
+      "file": "redemittel.json",
+      "ids": [
+        "remnote-918",
+        "remnote-931",
+        "remnote-933",
+        "remnote-939"
+      ]
     },
     {
       "name": "Reflexive Verbs",
-      "count": 40,
-      "file": "reflexive-verbs.json"
+      "count": 38,
+      "file": "reflexive-verbs.json",
+      "ids": [
+        "reflexive-c1-001",
+        "reflexive-c1-002",
+        "reflexive-c1-003",
+        "reflexive-c1-004",
+        "reflexive-c1-005",
+        "reflexive-c1-006",
+        "reflexive-c1-007",
+        "reflexive-c1-008",
+        "reflexive-c1-009",
+        "reflexive-c1-010",
+        "reflexive-c1-011",
+        "reflexive-c1-012",
+        "reflexive-c1-013",
+        "reflexive-c1-015",
+        "reflexive-c1-016",
+        "reflexive-c1-017",
+        "reflexive-c1-018",
+        "reflexive-c1-019",
+        "reflexive-c1-020",
+        "reflexive-c1-021",
+        "reflexive-c1-022",
+        "reflexive-c1-023",
+        "reflexive-c1-024",
+        "reflexive-c1-025",
+        "reflexive-c1-026",
+        "reflexive-c1-027",
+        "reflexive-c1-028",
+        "reflexive-c1-029",
+        "reflexive-c1-030",
+        "reflexive-c1-031",
+        "reflexive-c1-032",
+        "reflexive-c1-033",
+        "reflexive-c1-035",
+        "reflexive-c1-036",
+        "reflexive-c1-037",
+        "reflexive-c1-038",
+        "reflexive-c1-039",
+        "reflexive-c1-040"
+      ]
     }
   ]
 }

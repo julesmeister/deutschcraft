@@ -159,45 +159,50 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
       duration: toastConfig.duration,
     });
 
-    // Save review to Firestore if user is logged in
-    if (!session?.user?.email) {
-      console.warn("⚠️ [handleDifficulty] Cannot save: No user email");
-    } else if (!currentCard.wordId) {
-      console.warn(
-        "⚠️ [handleDifficulty] Cannot save: No wordId on card:",
-        currentCard
-      );
-    } else {
-      try {
-        const srsResult = await saveReview(
-          session.user.email,
-          currentCard.id,
-          currentCard.wordId,
-          difficulty,
-          currentCard.level,
-          currentCard // Pass full card data for DB sync
-        );
-
-        // Update mastery level for this card in state
-        if (srsResult) {
-          setCardMasteryLevels((prev) => ({
-            ...prev,
-            [currentCard.id]: srsResult.masteryLevel,
-          }));
-        }
-      } catch (error) {
-        console.error("❌ [handleDifficulty] Failed to save review:", error);
-        // Continue anyway - don't block user flow
-      }
-    }
-
     // Check if this is the last card
     if (isLastCard) {
       // Show summary with updated stats
-      await handleSessionComplete(updatedStats);
+      handleSessionComplete(updatedStats);
     } else {
-      // Move to next card
+      // Move to next card immediately (optimistic UI)
       handleNext();
+    }
+
+    // Save review to Firestore/Turso in background if user is logged in
+    if (session?.user?.email && currentCard.wordId) {
+      // Non-blocking save
+      saveReview(
+        session.user.email,
+        currentCard.id,
+        currentCard.wordId,
+        difficulty,
+        currentCard.level,
+        currentCard, // Pass full card data for DB sync
+        true // Skip invalidation for performance during session
+      )
+        .then((srsResult) => {
+          // Update mastery level for this card in state
+          if (srsResult) {
+            setCardMasteryLevels((prev) => ({
+              ...prev,
+              [currentCard.id]: srsResult.masteryLevel,
+            }));
+          }
+        })
+        .catch((error) => {
+          console.error("❌ [handleDifficulty] Failed to save review:", error);
+          // Silent fail or maybe show a delayed toast if really critical
+          // But preventing the next card from showing is worse.
+        });
+    } else {
+      if (!session?.user?.email) {
+        console.warn("⚠️ [handleDifficulty] Cannot save: No user email");
+      } else {
+        console.warn(
+          "⚠️ [handleDifficulty] Cannot save: No wordId on card:",
+          currentCard
+        );
+      }
     }
   };
 

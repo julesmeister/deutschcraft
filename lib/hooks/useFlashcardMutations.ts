@@ -7,6 +7,8 @@
 import { useState } from "react";
 import { FlashcardProgress } from "@/lib/models";
 import { useToast } from "@/components/ui/toast";
+import { useQueryClient } from "@tanstack/react-query";
+import { queryKeys } from "@/lib/queryClient";
 import {
   getSingleFlashcardProgress,
   saveFlashcardProgress,
@@ -23,6 +25,7 @@ export function useFlashcardMutations() {
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const toast = useToast();
+  const queryClient = useQueryClient();
 
   /**
    * Save a flashcard review
@@ -116,6 +119,17 @@ export function useFlashcardMutations() {
       // Save using service layer
       await saveFlashcardProgress(progressId, updateData, flashcardData);
 
+      // Invalidate queries to ensure UI updates (unless skipped)
+      if (!skipInvalidation) {
+        queryClient.invalidateQueries({
+          queryKey: queryKeys.flashcardProgress(userId),
+        });
+        queryClient.invalidateQueries({ queryKey: ["studyStats", userId] });
+        queryClient.invalidateQueries({
+          queryKey: ["category-progress", userId],
+        });
+      }
+
       // Log save confirmation for debugging
       if (process.env.NODE_ENV === "development") {
         console.log(
@@ -166,6 +180,9 @@ export function useFlashcardMutations() {
 
       // Save using service layer
       await saveDailyProgress(userId, stats);
+
+      // Invalidate queries
+      queryClient.invalidateQueries({ queryKey: ["study-progress", userId] });
 
       // Success - no toast needed, handled by session complete
     } catch (err) {

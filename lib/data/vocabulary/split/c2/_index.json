@@ -1,27 +1,104 @@
 {
   "level": "C2",
-  "totalCards": 65,
+  "totalCards": 69,
   "totalCategories": 4,
   "categories": [
     {
       "name": "Body Parts",
       "count": 15,
-      "file": "body-parts.json"
+      "file": "body-parts.json",
+      "ids": [
+        "body-c2-001",
+        "body-c2-002",
+        "body-c2-003",
+        "body-c2-004",
+        "body-c2-005",
+        "body-c2-006",
+        "body-c2-007",
+        "body-c2-008",
+        "body-c2-009",
+        "body-c2-010",
+        "body-c2-011",
+        "body-c2-012",
+        "body-c2-013",
+        "body-c2-014",
+        "body-c2-015"
+      ]
     },
     {
       "name": "Literary Language",
-      "count": 8,
-      "file": "literary-language.json"
+      "count": 14,
+      "file": "literary-language.json",
+      "ids": [
+        "syllabus-c2-11613",
+        "syllabus-c2-11614",
+        "syllabus-c2-11615",
+        "syllabus-c2-11616",
+        "syllabus-c2-11617",
+        "syllabus-c2-11618",
+        "syllabus-c2-11619",
+        "syllabus-c2-11620",
+        "c2-ambiguitaet-044832",
+        "c2-metapher-044832",
+        "c2-nuance-044832",
+        "c2-subtilitaet-044832",
+        "c2-eloquenz-044832",
+        "c2-paradoxon-044832"
+      ]
     },
     {
       "name": "Philosophical Concepts",
-      "count": 12,
-      "file": "philosophical-concepts.json"
+      "count": 11,
+      "file": "philosophical-concepts.json",
+      "ids": [
+        "syllabus-c2-11621",
+        "syllabus-c2-11622",
+        "syllabus-c2-11623",
+        "syllabus-c2-11624",
+        "syllabus-c2-11625",
+        "syllabus-c2-11627",
+        "syllabus-c2-11628",
+        "syllabus-c2-11629",
+        "syllabus-c2-11630",
+        "syllabus-c2-11631",
+        "syllabus-c2-11632"
+      ]
     },
     {
       "name": "Reflexive Verbs",
-      "count": 30,
-      "file": "reflexive-verbs.json"
+      "count": 29,
+      "file": "reflexive-verbs.json",
+      "ids": [
+        "reflexive-c2-001",
+        "reflexive-c2-002",
+        "reflexive-c2-003",
+        "reflexive-c2-004",
+        "reflexive-c2-005",
+        "reflexive-c2-006",
+        "reflexive-c2-007",
+        "reflexive-c2-008",
+        "reflexive-c2-009",
+        "reflexive-c2-010",
+        "reflexive-c2-011",
+        "reflexive-c2-012",
+        "reflexive-c2-013",
+        "reflexive-c2-014",
+        "reflexive-c2-015",
+        "reflexive-c2-016",
+        "reflexive-c2-017",
+        "reflexive-c2-018",
+        "reflexive-c2-019",
+        "reflexive-c2-020",
+        "reflexive-c2-021",
+        "reflexive-c2-022",
+        "reflexive-c2-023",
+        "reflexive-c2-024",
+        "reflexive-c2-025",
+        "reflexive-c2-026",
+        "reflexive-c2-027",
+        "reflexive-c2-028",
+        "reflexive-c2-030"
+      ]
     }
   ]
 }

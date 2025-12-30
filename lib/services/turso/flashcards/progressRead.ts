@@ -169,7 +169,16 @@ export async function getSingleFlashcardProgress(
   flashcardId: string
 ): Promise<FlashcardProgress | null> {
   try {
-    const progressId = `${userId}_${flashcardId}`;
+    // Handle FLASH_ prefix for syllabus IDs to match saveFlashcardProgress logic
+    let finalFlashcardId = flashcardId;
+    if (
+      flashcardId.startsWith("syllabus-") &&
+      !flashcardId.startsWith("FLASH_")
+    ) {
+      finalFlashcardId = `FLASH_${flashcardId}`;
+    }
+
+    const progressId = `${userId}_${finalFlashcardId}`;
     const result = await db.execute({
       sql: "SELECT * FROM flashcard_progress WHERE id = ? LIMIT 1",
       args: [progressId],
@@ -334,8 +343,14 @@ export async function getStrugglingFlashcards(
 // ============================================================================
 
 function rowToFlashcardProgress(row: any): FlashcardProgress {
+  // Strip FLASH_ prefix if present to match domain model IDs
+  const rawId = row.flashcard_id as string;
+  const flashcardId = rawId.startsWith("FLASH_")
+    ? rawId.replace("FLASH_", "")
+    : rawId;
+
   return {
-    flashcardId: row.flashcard_id as string,
+    flashcardId,
     userId: row.user_id as string,
     wordId: row.word_id as string,
     level: row.level as string | undefined,

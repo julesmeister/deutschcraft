@@ -112,15 +112,31 @@ function sortFlashcards(flashcards: Flashcard[]): Flashcard[] {
 /**
  * Remove duplicate IDs, keeping the preferred category
  * Priority: Family > Others (alphabetical)
+ * Also validates ID consistency
  */
 function ensureUniqueIds(flashcards: Flashcard[]): Flashcard[] {
   const idMap = new Map<string, Flashcard>();
   let duplicatesRemoved = 0;
+  let seriousCollisions = 0;
 
   for (const card of flashcards) {
+    // Validate ID format
+    if (card.id.startsWith('FLASH_')) {
+      console.warn(`   ⚠️  ID contains FLASH_ prefix, stripping: ${card.id}`);
+      card.id = card.id.replace('FLASH_', '');
+    }
+
     const existing = idMap.get(card.id);
 
     if (existing) {
+      // Check for content mismatch
+      if (existing.german !== card.german || existing.english !== card.english) {
+        console.warn(`   🚨 CONTENT MISMATCH for ID ${card.id}:`);
+        console.warn(`      Existing: ${existing.german} = ${existing.english} (${existing.category})`);
+        console.warn(`      New:      ${card.german} = ${card.english} (${card.category})`);
+        seriousCollisions++;
+      }
+
       // Duplicate found - keep the preferred one
       const preferNew = card.category === 'Family' && existing.category !== 'Family';
 
@@ -138,6 +154,9 @@ function ensureUniqueIds(flashcards: Flashcard[]): Flashcard[] {
 
   if (duplicatesRemoved > 0) {
     console.log(`   ⚠️  Removed ${duplicatesRemoved} duplicate cards`);
+  }
+  if (seriousCollisions > 0) {
+    console.error(`   ❌ Found ${seriousCollisions} ID collisions with different content! Please fix manually.`);
   }
 
   return Array.from(idMap.values());

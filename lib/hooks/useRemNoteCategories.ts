@@ -19,7 +19,7 @@ export interface RemNoteCategory {
 /**
  * Category icons mapping
  */
-const categoryIcons: Record<string, string> = {
+export const categoryIcons: Record<string, string> = {
   // RemNote categories
   Verbs: "🔀",
   Adverbs: "⚡",
