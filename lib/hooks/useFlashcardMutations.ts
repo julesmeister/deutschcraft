@@ -36,7 +36,8 @@ export function useFlashcardMutations() {
     wordId: string,
     difficulty: DifficultyLevel,
     level?: string,
-    flashcardData?: any // Optional flashcard data for syncing to DB
+    flashcardData?: any, // Optional flashcard data for syncing to DB
+    skipInvalidation: boolean = false
   ) => {
     try {
       setIsSaving(true);
