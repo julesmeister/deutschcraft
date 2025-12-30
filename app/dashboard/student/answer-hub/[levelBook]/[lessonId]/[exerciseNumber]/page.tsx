@@ -3,28 +3,32 @@
  * Shows single exercise with answers and batch-filtered discussion
  */
 
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { useRouter, useParams } from 'next/navigation';
-import Link from 'next/link';
-import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
-import { CatLoader } from '@/components/ui/CatLoader';
-import { AnswersList } from '@/components/answer-hub/AnswersList';
-import { ExerciseDiscussion } from '@/components/answer-hub/ExerciseDiscussion';
-import { StudentAnswersDisplay } from '@/components/answer-hub/StudentAnswersDisplay';
-import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { useCurrentStudent } from '@/lib/hooks/useUsers';
-import { getUserInfo } from '@/lib/utils/userHelpers';
-import { useLessonWithOverrides } from '@/lib/hooks/useExercisesWithOverrides';
-import { useExerciseProgress } from '@/lib/hooks/useExerciseProgress';
-import { CEFRLevel } from '@/lib/models/cefr';
+import { useState } from "react";
+import { useRouter, useParams } from "next/navigation";
+import Link from "next/link";
+import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
+import { CatLoader } from "@/components/ui/CatLoader";
+import { AnswersList } from "@/components/answer-hub/AnswersList";
+import { ExerciseDiscussion } from "@/components/answer-hub/ExerciseDiscussion";
+import { StudentAnswersDisplay } from "@/components/answer-hub/StudentAnswersDisplay";
+import { DictionaryLookup } from "@/components/dictionary/DictionaryLookup";
+import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
+import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
+import { useCurrentStudent } from "@/lib/hooks/useUsers";
+import { getUserInfo } from "@/lib/utils/userHelpers";
+import { useLessonWithOverrides } from "@/lib/hooks/useExercisesWithOverrides";
+import { useExerciseProgress } from "@/lib/hooks/useExerciseProgress";
+import { CEFRLevel } from "@/lib/models/cefr";
 
 export default function ExerciseDetailPage() {
   const router = useRouter();
   const params = useParams();
   const { session } = useFirebaseAuth();
-  const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
+  const { student: currentUser } = useCurrentStudent(
+    session?.user?.email || null
+  );
   const { userId } = getUserInfo(currentUser, session);
 
   // State to trigger refresh of student answers
@@ -36,11 +40,11 @@ export default function ExerciseDetailPage() {
   const exerciseId = decodeURIComponent(params.exerciseNumber as string);
 
   // Parse level and book type
-  const [levelPart, bookType] = levelBook.split('-') as [string, 'AB' | 'KB'];
+  const [levelPart, bookType] = levelBook.split("-") as [string, "AB" | "KB"];
   const level = levelPart as CEFRLevel;
 
   // Parse lesson number
-  const lessonNumber = parseInt(lessonId.replace('L', ''));
+  const lessonNumber = parseInt(lessonId.replace("L", ""));
 
   // Load exercises with teacher overrides (includes custom exercises)
   const { lesson, isLoading, error } = useLessonWithOverrides(
@@ -51,17 +55,17 @@ export default function ExerciseDetailPage() {
   );
 
   // Find the exercise (using exerciseId which is unique)
-  const exercise = lesson?.exercises.find(e => e.exerciseId === exerciseId);
+  const exercise = lesson?.exercises.find((e) => e.exerciseId === exerciseId);
 
   // Check if user is a teacher (role is uppercase in database)
-  const isTeacher = currentUser?.role === 'TEACHER';
+  const isTeacher = currentUser?.role === "TEACHER";
 
   // Get current user's batch ID
   const currentUserBatchId = currentUser?.batchId;
 
   // Get exercise progress
   const exerciseProgress = useExerciseProgress(
-    exercise?.exerciseId || '',
+    exercise?.exerciseId || "",
     exercise?.answers.length || 0,
     userId
   );
@@ -73,8 +77,11 @@ export default function ExerciseDetailPage() {
           title="Answer Hub 📝"
           subtitle="Loading exercise..."
           backButton={{
-            label: 'Back to Lesson',
-            onClick: () => router.push(`/dashboard/student/answer-hub/${levelBook}/${lessonId}`),
+            label: "Back to Lesson",
+            onClick: () =>
+              router.push(
+                `/dashboard/student/answer-hub/${levelBook}/${lessonId}`
+              ),
           }}
         />
         <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
@@ -91,16 +98,24 @@ export default function ExerciseDetailPage() {
           title="Answer Hub 📝"
           subtitle="Exercise not found"
           backButton={{
-            label: 'Back to Lesson',
-            onClick: () => router.push(`/dashboard/student/answer-hub/${levelBook}/${lessonId}`),
+            label: "Back to Lesson",
+            onClick: () =>
+              router.push(
+                `/dashboard/student/answer-hub/${levelBook}/${lessonId}`
+              ),
           }}
         />
         <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
           <div className="bg-white border border-red-200 shadow-sm p-12 text-center">
             <div className="text-6xl mb-4">⚠️</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Exercise Not Found</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">
+              Exercise Not Found
+            </h3>
             <p className="text-gray-600 mb-4">
-              {error || `Could not find this exercise in ${lesson?.title || `Lektion ${lessonNumber}`}`}
+              {error ||
+                `Could not find this exercise in ${
+                  lesson?.title || `Lektion ${lessonNumber}`
+                }`}
             </p>
             <Link
               href={`/dashboard/student/answer-hub/${levelBook}/${lessonId}`}
@@ -116,9 +131,9 @@ export default function ExerciseDetailPage() {
 
   // Difficulty colors
   const difficultyColors = {
-    easy: 'bg-emerald-100 text-emerald-700',
-    medium: 'bg-amber-100 text-amber-700',
-    hard: 'bg-red-100 text-red-700',
+    easy: "bg-emerald-100 text-emerald-700",
+    medium: "bg-amber-100 text-amber-700",
+    hard: "bg-red-100 text-red-700",
   };
 
   const difficultyColor = exercise.difficulty
@@ -132,8 +147,11 @@ export default function ExerciseDetailPage() {
         title={`${lesson.title} - Übung ${exercise.exerciseNumber}`}
         subtitle={`${level} ${bookType}`}
         backButton={{
-          label: 'Back to Lesson',
-          onClick: () => router.push(`/dashboard/student/answer-hub/${levelBook}/${lessonId}`),
+          label: "Back to Lesson",
+          onClick: () =>
+            router.push(
+              `/dashboard/student/answer-hub/${levelBook}/${lessonId}`
+            ),
         }}
       />
 
@@ -162,18 +180,18 @@ export default function ExerciseDetailPage() {
                   {exerciseProgress && !isTeacher && (
                     <span
                       className={`inline-flex items-center px-3 py-1 text-xs font-bold ${
-                        exerciseProgress.status === 'completed'
-                          ? 'bg-emerald-100 text-emerald-700'
-                          : exerciseProgress.status === 'in_progress'
-                          ? 'bg-amber-100 text-amber-700'
-                          : 'bg-gray-100 text-gray-600'
+                        exerciseProgress.status === "completed"
+                          ? "bg-emerald-100 text-emerald-700"
+                          : exerciseProgress.status === "in_progress"
+                          ? "bg-amber-100 text-amber-700"
+                          : "bg-gray-100 text-gray-600"
                       }`}
                     >
-                      {exerciseProgress.status === 'completed'
-                        ? '✓ COMPLETED'
-                        : exerciseProgress.status === 'in_progress'
+                      {exerciseProgress.status === "completed"
+                        ? "✓ COMPLETED"
+                        : exerciseProgress.status === "in_progress"
                         ? `IN PROGRESS (${exerciseProgress.itemsCompleted}/${exerciseProgress.totalItems})`
-                        : 'NEW'}
+                        : "NEW"}
                     </span>
                   )}
 
@@ -182,7 +200,8 @@ export default function ExerciseDetailPage() {
                     <span
                       className={`inline-flex items-center px-3 py-1 text-xs font-bold ${difficultyColor}`}
                     >
-                      {exercise.difficulty.charAt(0).toUpperCase() + exercise.difficulty.slice(1)}
+                      {exercise.difficulty.charAt(0).toUpperCase() +
+                        exercise.difficulty.slice(1)}
                     </span>
                   )}
 
@@ -207,7 +226,8 @@ export default function ExerciseDetailPage() {
 
                   {/* Item Count */}
                   <span className="text-xs text-gray-500">
-                    {exercise.answers.length} item{exercise.answers.length !== 1 ? 's' : ''}
+                    {exercise.answers.length} item
+                    {exercise.answers.length !== 1 ? "s" : ""}
                   </span>
                 </div>
               </div>
@@ -218,7 +238,9 @@ export default function ExerciseDetailPage() {
           <div className="p-6">
             <div className="flex items-center gap-2 mb-4">
               <svg
-                className={`w-5 h-5 ${isTeacher ? 'text-emerald-600' : 'text-gray-400'}`}
+                className={`w-5 h-5 ${
+                  isTeacher ? "text-emerald-600" : "text-gray-400"
+                }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -227,11 +249,15 @@ export default function ExerciseDetailPage() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d={isTeacher ? "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" : "M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"}
+                  d={
+                    isTeacher
+                      ? "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      : "M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  }
                 />
               </svg>
               <h2 className="font-black text-lg text-gray-900">
-                {isTeacher ? 'Correct Answers' : 'Exercise Items'}
+                {isTeacher ? "Correct Answers" : "Exercise Items"}
               </h2>
             </div>
 
@@ -240,14 +266,14 @@ export default function ExerciseDetailPage() {
               exerciseId={exercise.exerciseId}
               showExplanations={true}
               isTeacher={isTeacher}
-              onAnswerSaved={() => setAnswersRefreshTrigger(prev => prev + 1)}
+              onAnswerSaved={() => setAnswersRefreshTrigger((prev) => prev + 1)}
             />
           </div>
         </div>
 
         {/* Student Answers Section */}
-        <StudentAnswersDisplay 
-          exerciseId={exercise.exerciseId} 
+        <StudentAnswersDisplay
+          exerciseId={exercise.exerciseId}
           refreshTrigger={answersRefreshTrigger}
         />
 
@@ -258,6 +284,17 @@ export default function ExerciseDetailPage() {
             currentUser={currentUser}
             currentUserBatchId={currentUserBatchId}
           />
+        </div>
+
+        {/* Dictionary Section */}
+        <div className="bg-white border border-gray-200 shadow-sm rounded-lg mt-6 p-6">
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-2xl">📚</span>
+            <h2 className="font-black text-lg text-gray-900">
+              Dictionary Lookup
+            </h2>
+          </div>
+          <DictionaryLookup className="w-full" />
         </div>
 
         {/* Navigation Footer */}
@@ -290,6 +327,8 @@ export default function ExerciseDetailPage() {
           </Link>
         </div>
       </div>
+
+      <FloatingRedemittelWidget currentLevel={level} />
     </div>
   );
 }

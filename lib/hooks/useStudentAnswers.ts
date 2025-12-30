@@ -161,3 +161,71 @@ export function useStudentAnswers(exerciseId: string | null) {
 
   return { answers, isLoading, error, refresh: fetchAnswers };
 }
+
+/**
+ * Hook to fetch all student answers for a list of exercises (e.g. a lesson)
+ */
+export function useStudentLessonAnswers(studentId: string | undefined, exerciseIds: string[]) {
+  const [answers, setAnswers] = useState<StudentAnswerSubmission[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchAnswers = useCallback(async () => {
+    if (!studentId || exerciseIds.length === 0) {
+      setAnswers([]);
+      return;
+    }
+
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      if (process.env.NEXT_PUBLIC_USE_TURSO === 'true') {
+        const { getStudentAnswersForExercises } = await import('@/lib/services/turso/studentAnswerService');
+        const results = await getStudentAnswersForExercises(studentId, exerciseIds);
+        setAnswers(results);
+      } else {
+        const { query, collection, where, getDocs, documentId } = await import('firebase/firestore');
+        const { db } = await import('@/lib/firebase');
+        
+        // Firestore 'in' query supports max 10 values. 
+        // We'll fetch in batches or just fetch all student answers if list is long.
+        // For simplicity and lesson size (usually < 50), we'll do parallel requests if needed
+        // or just fetch all answers for student if that's easier.
+        // Let's try batching by 10.
+        
+        const chunks = [];
+        for (let i = 0; i < exerciseIds.length; i += 10) {
+            chunks.push(exerciseIds.slice(i, i + 10));
+        }
+
+        let allAnswers: StudentAnswerSubmission[] = [];
+
+        for (const chunk of chunks) {
+            const q = query(
+                collection(db, 'studentAnswers'),
+                where('studentId', '==', studentId),
+                where('exerciseId', 'in', chunk)
+            );
+            const snapshot = await getDocs(q);
+            snapshot.forEach(doc => {
+                allAnswers.push(doc.data() as StudentAnswerSubmission);
+            });
+        }
+        
+        setAnswers(allAnswers);
+      }
+    } catch (err) {
+      console.error('Error fetching student lesson answers:', err);
+      setError(err instanceof Error ? err.message : 'Failed to fetch answers');
+    } finally {
+      setIsLoading(false);
+    }
+  }, [studentId, JSON.stringify(exerciseIds)]);
+
+  useEffect(() => {
+    fetchAnswers();
+  }, [fetchAnswers]);
+
+  return { answers, isLoading, error, refresh: fetchAnswers };
+}

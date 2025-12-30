@@ -219,6 +219,14 @@ export default function LessonDetailPage() {
         onSelectBatch={setSelectedBatch}
         onCreateBatch={() => router.push("/dashboard/teacher/batches")}
         onBack={() => router.push("/dashboard/student/answer-hub")}
+        onViewSummary={
+          !isTeacher
+            ? () =>
+                router.push(
+                  `/dashboard/student/answer-hub/${levelBook}/${lessonId}/summary`
+                )
+            : undefined
+        }
       />
 
       {/* Main Content */}

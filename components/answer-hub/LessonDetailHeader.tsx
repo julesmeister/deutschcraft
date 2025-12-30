@@ -3,19 +3,20 @@
  * Displays lesson title, exercise count, and hidden exercises info
  */
 
-'use client';
+"use client";
 
-import { useRouter } from 'next/navigation';
-import { EyeOff } from 'lucide-react';
-import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
-import { BatchSelector } from '@/components/ui/BatchSelector';
-import { Batch } from '@/lib/models';
-import { CEFRLevel } from '@/lib/models/cefr';
+import { useRouter } from "next/navigation";
+import { EyeOff } from "lucide-react";
+import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
+import { BatchSelector } from "@/components/ui/BatchSelector";
+import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
+import { Batch } from "@/lib/models";
+import { CEFRLevel } from "@/lib/models/cefr";
 
 interface LessonDetailHeaderProps {
   lessonTitle: string;
   level: CEFRLevel;
-  bookType: 'AB' | 'KB';
+  bookType: "AB" | "KB";
   exerciseCount: number;
   isTeacher: boolean;
   hiddenExercisesCount: number;
@@ -24,6 +25,7 @@ interface LessonDetailHeaderProps {
   onOpenHiddenModal: () => void;
   onSelectBatch: (batch: Batch | null) => void;
   onCreateBatch: () => void;
+  onViewSummary?: () => void;
 }
 
 export function LessonDetailHeader({
@@ -38,6 +40,7 @@ export function LessonDetailHeader({
   onOpenHiddenModal,
   onSelectBatch,
   onCreateBatch,
+  onViewSummary,
 }: LessonDetailHeaderProps) {
   const router = useRouter();
 
@@ -46,10 +49,10 @@ export function LessonDetailHeader({
       title={`${lessonTitle} - ${level} ${bookType}`}
       subtitle={
         <>
-          {exerciseCount} exercise{exerciseCount !== 1 ? 's' : ''}
+          {exerciseCount} exercise{exerciseCount !== 1 ? "s" : ""}
           {isTeacher && hiddenExercisesCount > 0 && (
             <>
-              {' • '}
+              {" • "}
               <button
                 onClick={onOpenHiddenModal}
                 className="text-gray-600 hover:text-amber-700 transition-colors inline-flex items-center gap-1.5 align-middle"
@@ -62,18 +65,32 @@ export function LessonDetailHeader({
         </>
       }
       backButton={{
-        label: 'Back to Lessons',
-        onClick: () => router.push('/dashboard/student/answer-hub'),
+        label: "Back to Lessons",
+        onClick: () => router.push("/dashboard/student/answer-hub"),
       }}
       actions={
-        isTeacher ? (
-          <BatchSelector
-            batches={batches}
-            selectedBatch={selectedBatch}
-            onSelectBatch={onSelectBatch}
-            onCreateBatch={onCreateBatch}
-          />
-        ) : undefined
+        <div className="flex items-center gap-3">
+          {onViewSummary && (
+            <div className="w-auto">
+              <ActionButton
+                onClick={onViewSummary}
+                variant="purple"
+                size="default"
+                icon={<ActionButtonIcons.Document />}
+              >
+                View Summary
+              </ActionButton>
+            </div>
+          )}
+          {isTeacher && (
+            <BatchSelector
+              batches={batches}
+              selectedBatch={selectedBatch}
+              onSelectBatch={onSelectBatch}
+              onCreateBatch={onCreateBatch}
+            />
+          )}
+        </div>
       }
     />
   );
