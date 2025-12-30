@@ -3,29 +3,41 @@
  * Shows all student submissions for an exercise
  */
 
-'use client';
+"use client";
 
-import { useState, useCallback, useEffect } from 'react';
-import { useStudentAnswers, useSaveStudentAnswer } from '@/lib/hooks/useStudentAnswers';
-import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { useCurrentStudent } from '@/lib/hooks/useUsers';
-import { getUserInfo } from '@/lib/utils/userHelpers';
-import { useToast } from '@/lib/hooks/useToast';
-import { StudentAnswerBubble } from './StudentAnswerBubble';
-import { ConfirmDialog } from '@/components/ui/Dialog';
+import { useState, useCallback, useEffect } from "react";
+import {
+  useStudentAnswers,
+  useSaveStudentAnswer,
+} from "@/lib/hooks/useStudentAnswers";
+import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
+import { useCurrentStudent } from "@/lib/hooks/useUsers";
+import { getUserInfo } from "@/lib/utils/userHelpers";
+import { useToast } from "@/lib/hooks/useToast";
+import { StudentAnswerBubble } from "./StudentAnswerBubble";
+import { ConfirmDialog } from "@/components/ui/Dialog";
 
 interface StudentAnswersDisplayProps {
   exerciseId: string;
   refreshTrigger?: number;
 }
 
-export function StudentAnswersDisplay({ exerciseId, refreshTrigger }: StudentAnswersDisplayProps) {
+export function StudentAnswersDisplay({
+  exerciseId,
+  refreshTrigger,
+}: StudentAnswersDisplayProps) {
   const { session } = useFirebaseAuth();
-  const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
+  const { student: currentUser } = useCurrentStudent(
+    session?.user?.email || null
+  );
   const { userId } = getUserInfo(currentUser, session);
 
-  const { answers: allStudentAnswers, isLoading, refresh } = useStudentAnswers(exerciseId);
-  
+  const {
+    answers: allStudentAnswers,
+    isLoading,
+    refresh,
+  } = useStudentAnswers(exerciseId);
+
   // Listen for external refresh triggers
   useEffect(() => {
     if (refreshTrigger !== undefined && refreshTrigger > 0) {
@@ -33,84 +45,131 @@ export function StudentAnswersDisplay({ exerciseId, refreshTrigger }: StudentAns
     }
   }, [refreshTrigger, refresh]);
 
-  const { saveAnswer, deleteAnswer, isSaving: isDeleting } = useSaveStudentAnswer();
+  const {
+    saveAnswer,
+    deleteAnswer,
+    isSaving: isDeleting,
+  } = useSaveStudentAnswer();
   const { showToast } = useToast();
 
   // Track saving states for auto-save
   const [savingStates, setSavingStates] = useState<Record<string, boolean>>({});
-  const [saveTimers, setSaveTimers] = useState<Record<string, NodeJS.Timeout>>({});
-  
+  const [saveTimers, setSaveTimers] = useState<Record<string, NodeJS.Timeout>>(
+    {}
+  );
+
   // Track delete target for confirmation dialog
-  const [deleteTarget, setDeleteTarget] = useState<{studentId: string, itemNumber: string} | null>(null);
+  const [deleteTarget, setDeleteTarget] = useState<{
+    studentId: string;
+    itemNumber: string;
+  } | null>(null);
 
   // Auto-save with debouncing
-  const handleEditChange = useCallback((
-    studentId: string,
-    studentName: string,
-    itemNumber: string,
-    value: string
-  ) => {
-    const key = `${studentId}_${itemNumber}`;
+  const handleEditChange = useCallback(
+    (
+      studentId: string,
+      studentName: string,
+      itemNumber: string,
+      value: string
+    ) => {
+      const key = `${studentId}_${itemNumber}`;
 
-    // Clear existing timer
-    if (saveTimers[key]) {
-      clearTimeout(saveTimers[key]);
-    }
-
-    // Set new timer for auto-save
-    const timer = setTimeout(async () => {
-      if (!value || value.trim() === '') {
-        return;
+      // Clear existing timer
+      if (saveTimers[key]) {
+        clearTimeout(saveTimers[key]);
       }
 
-      setSavingStates(prev => ({ ...prev, [key]: true }));
+      // Set new timer for auto-save
+      const timer = setTimeout(async () => {
+        if (!value || value.trim() === "") {
+          return;
+        }
 
-      const success = await saveAnswer(
-        studentId,
-        studentName,
-        exerciseId,
-        itemNumber,
-        value.trim()
-      );
+        setSavingStates((prev) => ({ ...prev, [key]: true }));
 
-      setSavingStates(prev => ({ ...prev, [key]: false }));
+        const success = await saveAnswer(
+          studentId,
+          studentName,
+          exerciseId,
+          itemNumber,
+          value.trim()
+        );
 
-      if (success) {
-        showToast(`Answer updated for Item ${itemNumber}`, 'success');
-      } else {
-        showToast(`Failed to update answer for Item ${itemNumber}`, 'error');
-      }
-    }, 500);
+        setSavingStates((prev) => ({ ...prev, [key]: false }));
 
-    setSaveTimers(prev => ({ ...prev, [key]: timer }));
-  }, [exerciseId, saveAnswer, showToast, saveTimers]);
+        if (success) {
+          showToast(`Answer updated for Item ${itemNumber}`, "success");
+        } else {
+          showToast(`Failed to update answer for Item ${itemNumber}`, "error");
+        }
+      }, 500);
 
-  const handleDeleteClick = useCallback((
-    studentId: string,
-    itemNumber: string
-  ) => {
-    setDeleteTarget({ studentId, itemNumber });
-  }, []);
+      setSaveTimers((prev) => ({ ...prev, [key]: timer }));
+    },
+    [exerciseId, saveAnswer, showToast, saveTimers]
+  );
+
+  const handleDeleteClick = useCallback(
+    (studentId: string, itemNumber: string) => {
+      setDeleteTarget({ studentId, itemNumber });
+    },
+    []
+  );
 
   const handleConfirmDelete = useCallback(async () => {
     if (!deleteTarget) return;
-    
+
     const { studentId, itemNumber } = deleteTarget;
     const success = await deleteAnswer(studentId, exerciseId, itemNumber);
-    
+
     if (success) {
-      showToast(`Answer for Item ${itemNumber} deleted`, 'success');
+      showToast(`Answer for Item ${itemNumber} deleted`, "success");
       refresh();
       setDeleteTarget(null);
     } else {
-      showToast(`Failed to delete answer for Item ${itemNumber}`, 'error');
+      showToast(`Failed to delete answer for Item ${itemNumber}`, "error");
     }
   }, [deleteTarget, exerciseId, deleteAnswer, showToast, refresh]);
+
+  // Copy for AI Review handler
+  const [isCopying, setIsCopying] = useState(false);
+
+  const handleCopyForAI = async () => {
+    try {
+      setIsCopying(true);
+      let prompt =
+        "I'm reviewing student answers. Please check the following answers and provide corrections/feedback.\n\n";
+
+      allStudentAnswers.forEach((student) => {
+        prompt += `Student: ${student.studentName}\n`;
+        // Sort answers by item number
+        const sortedAnswers = [...student.answers].sort((a, b) =>
+          a.itemNumber.localeCompare(b.itemNumber, undefined, { numeric: true })
+        );
+
+        sortedAnswers.forEach((ans) => {
+          prompt += `Item ${ans.itemNumber}: ${ans.studentAnswer}\n`;
+        });
+        prompt += "\n";
+      });
+
+      prompt +=
+        "\nPlease provide corrected versions for any incorrect answers.";
+
+      await navigator.clipboard.writeText(prompt);
+      showToast("Copied to clipboard for AI review!", "success");
+      setTimeout(() => setIsCopying(false), 2000);
+    } catch (error) {
+      console.error("Failed to copy:", error);
+      showToast("Failed to copy to clipboard", "error");
+      setIsCopying(false);
+    }
+  };
 
   // Cleanup timers on unmount
   useEffect(() => {
     return () => {
-      Object.values(saveTimers).forEach(timer => clearTimeout(timer));
+      Object.values(saveTimers).forEach((timer) => clearTimeout(timer));
     };
   }, [saveTimers]);
 
@@ -151,7 +210,8 @@ export function StudentAnswersDisplay({ exerciseId, refreshTrigger }: StudentAns
           No Student Answers Yet
         </h3>
         <p className="text-sm text-gray-600">
-          Student answers will appear here once they start submitting their work.
+          Student answers will appear here once they start submitting their
+          work.
         </p>
       </div>
     );
@@ -175,18 +235,35 @@ export function StudentAnswersDisplay({ exerciseId, refreshTrigger }: StudentAns
               d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
             />
           </svg>
-          <h2 className="text-lg font-black text-gray-900">
-            Student Answers
-          </h2>
+          <h2 className="text-lg font-black text-gray-900">Student Answers</h2>
           <span className="text-sm text-gray-600">
-            ({allStudentAnswers.length} student{allStudentAnswers.length !== 1 ? 's' : ''})
+            ({allStudentAnswers.length} student
+            {allStudentAnswers.length !== 1 ? "s" : ""})
           </span>
+
+          <button
+            onClick={handleCopyForAI}
+            disabled={isCopying}
+            className="ml-auto text-xs text-purple-600 hover:text-purple-800 font-medium flex items-center gap-1.5 transition-colors bg-white px-3 py-1.5 rounded-md border border-purple-100 shadow-sm hover:shadow hover:bg-purple-50"
+          >
+            <svg
+              className="w-3.5 h-3.5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2.5}
+              viewBox="0 0 24 24"
+            >
+              <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+              <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+            </svg>
+            <span>{isCopying ? "Copied!" : "Copy for AI Review"}</span>
+          </button>
         </div>
       </div>
 
       {/* Student Answers List */}
       <div className="p-6">
-        {allStudentAnswers.map((studentAnswers, idx) => (
+        {allStudentAnswers.map((studentAnswers, idx) =>
           studentAnswers.answers.map((ans, ansIdx) => {
             const key = `${studentAnswers.studentId}_${ans.itemNumber}`;
             const isSaving = savingStates[key];
@@ -214,13 +291,17 @@ export function StudentAnswersDisplay({ exerciseId, refreshTrigger }: StudentAns
                 }
                 onDelete={
                   isOwnAnswer
-                    ? () => handleDeleteClick(studentAnswers.studentId, ans.itemNumber)
+                    ? () =>
+                        handleDeleteClick(
+                          studentAnswers.studentId,
+                          ans.itemNumber
+                        )
                     : undefined
                 }
               />
             );
           })
-        ))}
+        )}
       </div>
 
       <ConfirmDialog
