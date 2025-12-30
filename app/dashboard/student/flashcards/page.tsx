@@ -27,7 +27,7 @@ import {
 } from "@/lib/hooks/useVocabulary";
 import { useWeeklyProgress } from "@/lib/hooks/useWeeklyProgress";
 import { FlashcardProgressChart } from "@/components/flashcards/FlashcardProgressChart";
-import { cacheTimes } from "@/lib/queryClient";
+import { cacheTimes, queryKeys } from "@/lib/queryClient";
 
 export default function FlashcardsLandingPage() {
   const router = useRouter();
@@ -216,9 +216,15 @@ export default function FlashcardsLandingPage() {
     setPracticeFlashcards([]);
     setIsReviewMode(false); // Reset review mode
     // Invalidate queries to force fresh data after completing session
-    queryClient.invalidateQueries({
-      queryKey: ["flashcard-reviews", session?.user?.email],
-    });
+    if (session?.user?.email) {
+      queryClient.invalidateQueries({
+        queryKey: queryKeys.flashcardProgress(session.user.email),
+      });
+      // Also invalidate weekly progress as it might have changed
+      queryClient.invalidateQueries({
+        queryKey: queryKeys.weeklyProgress(session.user.email),
+      });
+    }
     setStatsRefreshKey((prev) => prev + 1);
   };
 
