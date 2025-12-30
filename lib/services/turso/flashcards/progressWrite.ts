@@ -17,7 +17,8 @@ import { FlashcardProgress } from '@/lib/models';
  */
 export async function saveFlashcardProgress(
   progressId: string,
-  progressData: Partial<FlashcardProgress>
+  progressData: Partial<FlashcardProgress>,
+  flashcardData?: any // Optional data to ensure referential integrity
 ): Promise<void> {
   try {
     const now = Date.now();
@@ -32,6 +33,48 @@ export async function saveFlashcardProgress(
       // Update the PK to match the new flashcardId
       if (progressData.userId) {
         finalProgressId = `${progressData.userId}_${flashcardId}`;
+      }
+    }
+
+    // If flashcardData is provided, ensure referenced records exist (Lazy Sync)
+    if (flashcardData) {
+      try {
+        const wordId = progressData.wordId || flashcardData.wordId || flashcardData.id;
+        const level = progressData.level || flashcardData.level || 'A1';
+        
+        // 1. Ensure Vocabulary exists
+        await db.execute({
+          sql: `INSERT OR IGNORE INTO vocabulary (
+            word_id, german_word, english_translation, level, created_at
+          ) VALUES (?, ?, ?, ?, ?)`,
+          args: [
+            wordId,
+            flashcardData.german || 'Unknown',
+            flashcardData.english || 'Unknown',
+            level,
+            now
+          ]
+        });
+
+        // 2. Ensure Flashcard exists
+        await db.execute({
+          sql: `INSERT OR IGNORE INTO flashcards (
+            id, word_id, question, correct_answer, wrong_answers, type, level, created_at
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+          args: [
+            flashcardId,
+            wordId,
+            flashcardData.german || 'Unknown', // Question
+            flashcardData.english || 'Unknown', // Answer
+            '[]', // wrong_answers
+            'translation', // type
+            level,
+            now
+          ]
+        });
+      } catch (syncError) {
+        console.warn('[flashcardService:turso] Failed to sync flashcard data, proceeding with progress save:', syncError);
+        // Continue to try saving progress, though it might fail with FK error if sync failed
       }
     }
 

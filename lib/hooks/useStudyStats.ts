@@ -14,7 +14,7 @@ import { getStudyStats } from '../services/flashcardService';
  * Previously used real-time onSnapshot listeners, now uses React Query with configurable stale time
  * @param cacheTime - Optional cache time in milliseconds (defaults to 1 minute for dashboard, 1 hour for flashcards page)
  */
-export function useStudyStats(userId: string | null | undefined, refreshKey?: number, cacheTime?: number) {
+export function useStudyStats(userId: string | null | undefined, refreshKey: number = 0, cacheTime?: number) {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['studyStats', userId, refreshKey],
     queryFn: async () => {

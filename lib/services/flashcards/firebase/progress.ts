@@ -295,7 +295,8 @@ export async function getCategoryProgress(
  */
 export async function saveFlashcardProgress(
   progressId: string,
-  progressData: Partial<FlashcardProgress>
+  progressData: Partial<FlashcardProgress>,
+  flashcardData?: any // Added for compatibility with Turso impl (unused here)
 ): Promise<void> {
   try {
     const progressRef = doc(db, "flashcard-progress", progressId);

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState, useTransition, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { useQueryClient } from "@tanstack/react-query";
 import { CategoryButtonGrid } from "@/components/flashcards/CategoryButtonGrid";
@@ -69,6 +69,16 @@ export default function FlashcardsLandingPage() {
   const { data: flashcardReviews = [], refetch: refetchReviews } =
     useFlashcardReviews(session?.user?.email);
 
+  // Optimization: Create a memoized map for O(1) lookups
+  const reviewsMap = useMemo(() => {
+    const map = new Map();
+    flashcardReviews.forEach((r) => {
+      if (r.flashcardId) map.set(r.flashcardId, r);
+      if (r.wordId) map.set(r.wordId, r);
+    });
+    return map;
+  }, [flashcardReviews]);
+
   // Fetch vocabulary data
   const {
     data: levelData,
@@ -77,35 +87,43 @@ export default function FlashcardsLandingPage() {
   } = useVocabularyLevel(selectedLevel);
 
   // Calculate category progress
-  const { categoryAttemptCounts, categoryCompletionStatus } = levelData
-    ? calculateCategoryProgress(levelData.flashcards, flashcardReviews)
-    : { categoryAttemptCounts: {}, categoryCompletionStatus: {} };
+  const { categoryAttemptCounts, categoryCompletionStatus } = useMemo(() => {
+    return levelData
+      ? calculateCategoryProgress(levelData.flashcards, flashcardReviews)
+      : {
+          attemptedCategories: new Set(),
+          categoryAttemptCounts: new Map(),
+          categoryTotalCounts: new Map(),
+          categoryCompletionStatus: new Map(),
+        };
+  }, [levelData, flashcardReviews]);
 
   // Calculate due cards per category
-  const categoryDueCounts = new Map<string, number>();
-  const now = Date.now();
+  const categoryDueCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    const now = Date.now();
 
-  if (levelData) {
-    levelData.flashcards.forEach((card: any) => {
-      const categoryId = card.category
-        .toLowerCase()
-        .replace(/\s+/g, "-")
-        .replace(/[^a-z0-9-]/g, "");
-      const progress = flashcardReviews.find(
-        (r) => r.flashcardId === card.id || r.wordId === card.id
-      );
+    if (levelData) {
+      levelData.flashcards.forEach((card: any) => {
+        const categoryId = card.category
+          .toLowerCase()
+          .replace(/\s+/g, "-")
+          .replace(/[^a-z0-9-]/g, "");
 
-      // Count if card is new (never seen) OR due for review now
-      const isDue = !progress || (progress.nextReviewDate || 0) <= now;
+        const progress = reviewsMap.get(card.id);
 
-      if (isDue) {
-        categoryDueCounts.set(
-          categoryId,
-          (categoryDueCounts.get(categoryId) || 0) + 1
-        );
-      }
-    });
-  }
+        // Count if card is new (never seen) OR due for review now
+        const isDue = !progress || (progress.nextReviewDate || 0) <= now;
+
+        if (isDue) {
+          counts.set(categoryId, (counts.get(categoryId) || 0) + 1);
+        }
+      });
+    }
+    return counts;
+  }, [levelData, reviewsMap]);
+
+  const isPageLoading = isVocabularyLoading || categoriesLoading;
 
   const handleCategoryClick = (categoryId: string, categoryName: string) => {
     if (!levelData) return;
@@ -121,9 +139,7 @@ export default function FlashcardsLandingPage() {
       )
       .map((card: any) => {
         // Find progress for this card
-        const progress = flashcardReviews.find(
-          (r) => r.flashcardId === card.id || r.wordId === card.id
-        );
+        const progress = reviewsMap.get(card.id);
         return {
           ...card,
           wordId: card.id, // Use flashcard id as wordId for now
@@ -166,9 +182,7 @@ export default function FlashcardsLandingPage() {
     // Get all flashcards for the selected level
     let flashcardsWithWordId = levelData.flashcards.map((card: any) => {
       // Find progress for this card
-      const progress = flashcardReviews.find(
-        (r) => r.flashcardId === card.id || r.wordId === card.id
-      );
+      const progress = reviewsMap.get(card.id);
       return {
         ...card,
         wordId: card.id, // Use flashcard id as wordId for now
@@ -220,9 +234,7 @@ export default function FlashcardsLandingPage() {
 
     // Map with progress data
     let flashcardsWithWordId = categoryFlashcards.map((card: any) => {
-      const progress = flashcardReviews.find(
-        (r) => r.flashcardId === card.id || r.wordId === card.id
-      );
+      const progress = reviewsMap.get(card.id);
       return {
         ...card,
         wordId: card.id,
@@ -353,103 +365,122 @@ export default function FlashcardsLandingPage() {
               </div>
 
               {/* Loading State */}
-              {statsLoading || isVocabularyLoading ? (
-                <CatLoader
-                  message="Loading your stats and vocabulary..."
-                  size="md"
-                />
-              ) : isVocabularyError ? (
-                <div className="text-center py-12 bg-white border border-red-200 rounded-2xl">
-                  <div className="text-6xl mb-4">⚠️</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    Unable to load vocabulary
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    There was a problem loading the vocabulary data. Please try
-                    again.
-                  </p>
-                  <ActionButton
-                    onClick={() => window.location.reload()}
-                    variant="purple"
-                    icon={<ActionButtonIcons.Refresh />}
-                  >
-                    Retry
-                  </ActionButton>
+              {isPageLoading ? (
+                <div className="space-y-8">
+                  {/* Progress Chart Skeleton */}
+                  <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 animate-pulse">
+                    <div className="h-24 bg-gray-100 rounded-lg w-full"></div>
+                  </div>
+
+                  {/* Categories Grid Skeleton */}
+                  <div className="mb-8">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="h-8 w-64 bg-gray-200 rounded animate-pulse"></div>
+                    </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                      {[...Array(10)].map((_, i) => (
+                        <div
+                          key={i}
+                          className="h-[120px] bg-gray-100 rounded-xl animate-pulse"
+                        />
+                      ))}
+                    </div>
+                  </div>
                 </div>
               ) : (
                 <>
-                  {/* Weekly Progress Chart with Stats Button - Collapsible */}
-                  <FlashcardProgressChart
-                    weeklyData={weeklyData}
-                    totalWords={totalWords}
-                    totalRemNoteCards={totalRemNoteCards}
-                    stats={{
-                      cardsLearned: stats.cardsLearned,
-                      streak: stats.streak,
-                      accuracy: stats.accuracy,
-                    }}
-                  />
+                  {isVocabularyError ? (
+                    <div className="text-center py-12 bg-white border border-red-200 rounded-2xl">
+                      <div className="text-6xl mb-4">⚠️</div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        Unable to load vocabulary
+                      </h3>
+                      <p className="text-gray-600 mb-4">
+                        There was a problem loading the vocabulary data. Please
+                        try again.
+                      </p>
+                      <ActionButton
+                        onClick={() => window.location.reload()}
+                        variant="purple"
+                        icon={<ActionButtonIcons.Refresh />}
+                      >
+                        Retry
+                      </ActionButton>
+                    </div>
+                  ) : (
+                    <>
+                      {/* Weekly Progress Chart with Stats Button - Collapsible */}
+                      <FlashcardProgressChart
+                        weeklyData={weeklyData}
+                        totalWords={totalWords}
+                        totalRemNoteCards={totalRemNoteCards}
+                        stats={{
+                          cardsLearned: stats.cardsLearned,
+                          streak: stats.streak,
+                          accuracy: stats.accuracy,
+                        }}
+                      />
+                    </>
+                  )}
+
+                  {/* Vocabulary Categories */}
+                  <div className="mb-8">
+                    <div className="flex items-center justify-between mb-4">
+                      <h2 className="text-xl font-bold text-gray-900">
+                        {selectedLevel} Vocabulary Categories
+                      </h2>
+                    </div>
+
+                    {categories.length === 0 ? (
+                      <div className="text-center py-12 bg-white border border-gray-200 rounded-2xl">
+                        <div className="text-6xl mb-4">📝</div>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">
+                          No vocabulary yet
+                        </h3>
+                        <p className="text-gray-600">
+                          Vocabulary categories will appear here once you start
+                          learning
+                        </p>
+                      </div>
+                    ) : (
+                      <CategoryButtonGrid
+                        categories={categories}
+                        onSelect={handleCategoryClick}
+                        categoryCompletionStatus={categoryCompletionStatus}
+                        categoryAttemptCounts={categoryAttemptCounts}
+                        categoryDueCounts={categoryDueCounts}
+                      />
+                    )}
+                  </div>
+
+                  {/* Quick Actions */}
+                  <div className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-6">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                      <div>
+                        <h3 className="text-xl font-bold text-neutral-900 mb-2">
+                          Ready to practice?
+                        </h3>
+                        <p className="text-sm text-neutral-600">
+                          Start a flashcard session with all vocabulary or
+                          choose a specific category
+                        </p>
+                      </div>
+                      <div className="md:w-64">
+                        <ActionButton
+                          onClick={handleStartPractice}
+                          variant="purple"
+                          icon={<ActionButtonIcons.ArrowRight />}
+                          disabled={isPending || isVocabularyLoading}
+                        >
+                          {isVocabularyLoading
+                            ? "Loading Data..."
+                            : "Start Practice Session"}
+                        </ActionButton>
+                      </div>
+                    </div>
+                  </div>
                 </>
               )}
-
-              {/* Vocabulary Categories */}
-              <div className="mb-8">
-                <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-xl font-bold text-gray-900">
-                    {selectedLevel} Vocabulary Categories
-                  </h2>
-                </div>
-
-                {categoriesLoading ? (
-                  <CatLoader message="Loading categories..." size="md" />
-                ) : categories.length === 0 ? (
-                  <div className="text-center py-12 bg-white border border-gray-200 rounded-2xl">
-                    <div className="text-6xl mb-4">📝</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      No vocabulary yet
-                    </h3>
-                    <p className="text-gray-600">
-                      Vocabulary categories will appear here once you start
-                      learning
-                    </p>
-                  </div>
-                ) : (
-                  <CategoryButtonGrid
-                    categories={categories}
-                    onSelect={handleCategoryClick}
-                    categoryCompletionStatus={categoryCompletionStatus}
-                    categoryAttemptCounts={categoryAttemptCounts}
-                    categoryDueCounts={categoryDueCounts}
-                  />
-                )}
-              </div>
-
-              {/* Quick Actions */}
-              <div className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-6">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-neutral-900 mb-2">
-                      Ready to practice?
-                    </h3>
-                    <p className="text-sm text-neutral-600">
-                      Start a flashcard session with all vocabulary or choose a
-                      specific category
-                    </p>
-                  </div>
-                  <div className="md:w-64">
-                    <ActionButton
-                      onClick={handleStartPractice}
-                      variant="purple"
-                      icon={<ActionButtonIcons.ArrowRight />}
-                      disabled={isPending || isVocabularyLoading}
-                    >
-                      {isVocabularyLoading
-                        ? "Loading Data..."
-                        : "Start Practice Session"}
-                    </ActionButton>
-                  </div>
-                </div>
-              </div>
             </>
           )}
         </div>

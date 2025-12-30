@@ -179,13 +179,52 @@ export function calculateStreak(progressDocs: StudyProgress[]): number {
   let streak = 0;
   const today = formatDateISO(new Date());
 
-  for (let i = 0; i < sorted.length; i++) {
-    const expectedDate = new Date();
-    expectedDate.setDate(expectedDate.getDate() - i);
-    const expectedDateStr = formatDateISO(expectedDate);
+  // Optimization: Check if the most recent activity is today or yesterday to keep streak alive
+  // If the most recent activity is older than yesterday, streak is broken (0)
+  if (sorted.length > 0) {
+    const lastActivityDate = sorted[0].date;
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    const yesterdayStr = formatDateISO(yesterday);
+    
+    if (lastActivityDate !== today && lastActivityDate !== yesterdayStr) {
+      return 0;
+    }
+  }
+  
+  // Use a Set for O(1) lookups of study dates
+  const studyDates = new Set(sorted.map(s => s.date));
+  
+  // Check consecutively backwards
+  let currentCheckDate = new Date();
+  let daysChecked = 0;
+  
+  // If today is not studied, but yesterday is, we start checking from yesterday
+  if (!studyDates.has(formatDateISO(currentCheckDate))) {
+    // Check if yesterday exists
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    const yesterdayStr = formatDateISO(yesterday);
+    
+    if (studyDates.has(yesterdayStr)) {
+      // Streak is alive, start counting from yesterday
+      currentCheckDate = yesterday;
+    } else {
+      // No study today or yesterday -> streak broken
+      return 0;
+    }
+  }
 
-    if (sorted[i].date === expectedDateStr) {
+  while (true) {
+    const dateStr = formatDateISO(currentCheckDate);
+    if (studyDates.has(dateStr)) {
       streak++;
+      // Move to previous day
+      currentCheckDate.setDate(currentCheckDate.getDate() - 1);
+      daysChecked++;
+      
+      // Safety break to prevent infinite loops
+      if (daysChecked > 3650) break; 
     } else {
       break;
     }

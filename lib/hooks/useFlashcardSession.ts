@@ -3,12 +3,12 @@
  * Manages flashcard practice session state and logic
  */
 
-import { useState, useEffect } from 'react';
-import { useFlashcardMutations } from './useFlashcardMutations';
-import { useFirebaseAuth } from './useFirebaseAuth';
-import { useToast } from '@/components/ui/toast';
+import { useState, useEffect } from "react";
+import { useFlashcardMutations } from "./useFlashcardMutations";
+import { useFirebaseAuth } from "./useFirebaseAuth";
+import { useToast } from "@/components/ui/toast";
 
-type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy' | 'expert';
+type DifficultyLevel = "again" | "hard" | "good" | "easy" | "expert";
 
 interface Flashcard {
   id: string;
@@ -28,8 +28,12 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
   const [activeFlashcards, setActiveFlashcards] = useState(initialFlashcards);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
-  const [reviewedCards, setReviewedCards] = useState<Record<string, DifficultyLevel>>({});
-  const [cardMasteryLevels, setCardMasteryLevels] = useState<Record<string, number>>({});
+  const [reviewedCards, setReviewedCards] = useState<
+    Record<string, DifficultyLevel>
+  >({});
+  const [cardMasteryLevels, setCardMasteryLevels] = useState<
+    Record<string, number>
+  >({});
   const [masteryStats, setMasteryStats] = useState({
     again: 0,
     hard: 0,
@@ -45,65 +49,76 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
     setActiveFlashcards(initialFlashcards);
   }, [initialFlashcards]);
 
-  const currentCard = activeFlashcards[currentIndex] ? {
-    ...activeFlashcards[currentIndex],
-    masteryLevel: cardMasteryLevels[activeFlashcards[currentIndex]?.id] ?? activeFlashcards[currentIndex]?.masteryLevel ?? 0,
-  } : null;
-  const progress = activeFlashcards.length > 0 ? ((currentIndex + 1) / activeFlashcards.length) * 100 : 0;
+  const currentCard = activeFlashcards[currentIndex]
+    ? {
+        ...activeFlashcards[currentIndex],
+        masteryLevel:
+          cardMasteryLevels[activeFlashcards[currentIndex]?.id] ??
+          activeFlashcards[currentIndex]?.masteryLevel ??
+          0,
+      }
+    : null;
+  const progress =
+    activeFlashcards.length > 0
+      ? ((currentIndex + 1) / activeFlashcards.length) * 100
+      : 0;
   const isLastCard = currentIndex === activeFlashcards.length - 1;
 
   // Keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Prevent shortcuts if typing in input
-      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+      if (
+        e.target instanceof HTMLInputElement ||
+        e.target instanceof HTMLTextAreaElement
+      ) {
         return;
       }
 
       switch (e.key) {
-        case ' ':
-        case 'Enter':
+        case " ":
+        case "Enter":
           e.preventDefault();
           handleFlip();
           break;
-        case '1':
+        case "1":
           e.preventDefault();
-          if (isFlipped) handleDifficulty('again');
+          if (isFlipped) handleDifficulty("again");
           break;
-        case '2':
+        case "2":
           e.preventDefault();
-          if (isFlipped) handleDifficulty('hard');
+          if (isFlipped) handleDifficulty("hard");
           break;
-        case '3':
+        case "3":
           e.preventDefault();
-          if (isFlipped) handleDifficulty('good');
+          if (isFlipped) handleDifficulty("good");
           break;
-        case '4':
+        case "4":
           e.preventDefault();
-          if (isFlipped) handleDifficulty('easy');
+          if (isFlipped) handleDifficulty("easy");
           break;
-        case '5':
+        case "5":
           e.preventDefault();
-          if (isFlipped) handleDifficulty('expert');
+          if (isFlipped) handleDifficulty("expert");
           break;
-        case 'ArrowLeft':
+        case "ArrowLeft":
           e.preventDefault();
           handlePrevious();
           break;
-        case 'ArrowRight':
+        case "ArrowRight":
           e.preventDefault();
           handleNext();
           break;
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isFlipped, currentIndex]);
 
   const handleDifficulty = async (difficulty: DifficultyLevel) => {
     // Record the review
-    setReviewedCards(prev => ({ ...prev, [currentCard.id]: difficulty }));
+    setReviewedCards((prev) => ({ ...prev, [currentCard.id]: difficulty }));
 
     // Calculate updated mastery stats (for passing to handleSessionComplete)
     const updatedStats = {
@@ -116,11 +131,27 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
 
     // Show toast based on difficulty
     const toastMessages = {
-      again: { message: 'Will review again soon', method: toast.error, duration: 800 },
-      hard: { message: 'Keep practicing!', method: toast.warning, duration: 800 },
-      good: { message: 'Good recall!', method: toast.success, duration: 800 },
-      easy: { message: 'Perfect! Mastered!', method: toast.success, duration: 800 },
-      expert: { message: 'Expert! Won\'t see this for a year!', method: toast.success, duration: 1000 },
+      again: {
+        message: "Will review again soon",
+        method: toast.error,
+        duration: 800,
+      },
+      hard: {
+        message: "Keep practicing!",
+        method: toast.warning,
+        duration: 800,
+      },
+      good: { message: "Good recall!", method: toast.success, duration: 800 },
+      easy: {
+        message: "Perfect! Mastered!",
+        method: toast.success,
+        duration: 800,
+      },
+      expert: {
+        message: "Expert! Won't see this for a year!",
+        method: toast.success,
+        duration: 1000,
+      },
     };
 
     const toastConfig = toastMessages[difficulty];
@@ -130,9 +161,12 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
 
     // Save review to Firestore if user is logged in
     if (!session?.user?.email) {
-      console.warn('⚠️ [handleDifficulty] Cannot save: No user email');
+      console.warn("⚠️ [handleDifficulty] Cannot save: No user email");
     } else if (!currentCard.wordId) {
-      console.warn('⚠️ [handleDifficulty] Cannot save: No wordId on card:', currentCard);
+      console.warn(
+        "⚠️ [handleDifficulty] Cannot save: No wordId on card:",
+        currentCard
+      );
     } else {
       try {
         const srsResult = await saveReview(
@@ -140,18 +174,19 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
           currentCard.id,
           currentCard.wordId,
           difficulty,
-          currentCard.level
+          currentCard.level,
+          currentCard // Pass full card data for DB sync
         );
 
         // Update mastery level for this card in state
         if (srsResult) {
-          setCardMasteryLevels(prev => ({
+          setCardMasteryLevels((prev) => ({
             ...prev,
             [currentCard.id]: srsResult.masteryLevel,
           }));
         }
       } catch (error) {
-        console.error('❌ [handleDifficulty] Failed to save review:', error);
+        console.error("❌ [handleDifficulty] Failed to save review:", error);
         // Continue anyway - don't block user flow
       }
     }
@@ -172,14 +207,22 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
 
     // Calculate session stats
     const timeSpent = Math.floor((Date.now() - sessionStartTime) / 1000); // in seconds
-    const totalReviewed = finalStats.again + finalStats.hard + finalStats.good + finalStats.easy + finalStats.expert;
-    const correctCount = finalStats.hard + finalStats.good + finalStats.easy + finalStats.expert; // hard/good/easy/expert all count as correct
+    const totalReviewed =
+      finalStats.again +
+      finalStats.hard +
+      finalStats.good +
+      finalStats.easy +
+      finalStats.expert;
+    const correctCount =
+      finalStats.hard + finalStats.good + finalStats.easy + finalStats.expert; // hard/good/easy/expert all count as correct
     const incorrectCount = finalStats.again; // only "again" is incorrect (forgot the card)
 
     // Save daily progress
     if (!session?.user?.email) {
-      console.error('❌ [handleSessionComplete] Cannot save: No user session found');
-      toast.addToast('Error: Not logged in. Progress not saved.', 'error');
+      console.error(
+        "❌ [handleSessionComplete] Cannot save: No user session found"
+      );
+      toast.addToast("Error: Not logged in. Progress not saved.", "error");
     } else {
       try {
         await saveDailyProgress(session.user.email, {
@@ -189,8 +232,14 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
           incorrectCount,
         });
       } catch (error) {
-        console.error('❌ [handleSessionComplete] Failed to save daily progress:', error);
-        toast.addToast('Failed to save progress. Please check your connection.', 'error');
+        console.error(
+          "❌ [handleSessionComplete] Failed to save daily progress:",
+          error
+        );
+        toast.addToast(
+          "Failed to save progress. Please check your connection.",
+          "error"
+        );
       }
     }
 
@@ -201,9 +250,9 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
   const handleReviewAgainCards = () => {
     // User request: "only flashcards that should appear are those that i forgot or that was hard"
     // Filter to include only cards marked as: again (forgot) or hard
-    const cardsToReview = initialFlashcards.filter(card => {
+    const cardsToReview = initialFlashcards.filter((card) => {
       const difficulty = reviewedCards[card.id];
-      return difficulty === 'again' || difficulty === 'hard';
+      return difficulty === "again" || difficulty === "hard";
     });
 
     if (cardsToReview.length > 0) {
@@ -211,7 +260,10 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
       const shuffledCards = [...cardsToReview];
       for (let i = shuffledCards.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [shuffledCards[i], shuffledCards[j]] = [shuffledCards[j], shuffledCards[i]];
+        [shuffledCards[i], shuffledCards[j]] = [
+          shuffledCards[j],
+          shuffledCards[i],
+        ];
       }
 
       // Update active cards to only cards that need review (shuffled)
@@ -223,9 +275,9 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
       // Keep reviewed cards record but reset stats for new session
       setMasteryStats({ again: 0, hard: 0, good: 0, easy: 0, expert: 0 });
     } else {
-        // If there are no hard/forgotten cards, just finish
-        // This shouldn't happen if the button is conditionally shown, but good for safety
-        toast.success("No cards to review! Great job!");
+      // If there are no hard/forgotten cards, just finish
+      // This shouldn't happen if the button is conditionally shown, but good for safety
+      toast.success("No cards to review! Great job!");
     }
   };
 

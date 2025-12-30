@@ -4,17 +4,17 @@
  * Now uses improved SRS algorithm with card states and mastery decay
  */
 
-import { useState } from 'react';
-import { FlashcardProgress } from '@/lib/models';
-import { useToast } from '@/components/ui/toast';
+import { useState } from "react";
+import { FlashcardProgress } from "@/lib/models";
+import { useToast } from "@/components/ui/toast";
 import {
   getSingleFlashcardProgress,
   saveFlashcardProgress,
   saveDailyProgress,
-} from '@/lib/services/flashcardService';
-import { calculateSRSData } from '@/lib/utils/srsAlgorithm';
+} from "@/lib/services/flashcardService";
+import { calculateSRSData } from "@/lib/utils/srsAlgorithm";
 
-type DifficultyLevel = 'again' | 'hard' | 'good' | 'easy' | 'expert';
+type DifficultyLevel = "again" | "hard" | "good" | "easy" | "expert";
 
 /**
  * Hook for saving flashcard reviews
@@ -32,7 +32,8 @@ export function useFlashcardMutations() {
     flashcardId: string,
     wordId: string,
     difficulty: DifficultyLevel,
-    level?: string
+    level?: string,
+    flashcardData?: any // Optional flashcard data for syncing to DB
   ) => {
     try {
       setIsSaving(true);
@@ -40,15 +41,15 @@ export function useFlashcardMutations() {
 
       // Validate inputs
       if (!userId) {
-        const errorMsg = 'Cannot save review: userId is undefined';
+        const errorMsg = "Cannot save review: userId is undefined";
         console.error(errorMsg);
-        toast.error('Error: User not logged in');
+        toast.error("Error: User not logged in");
         throw new Error(errorMsg);
       }
       if (!flashcardId) {
-        const errorMsg = 'Cannot save review: flashcardId is undefined';
+        const errorMsg = "Cannot save review: flashcardId is undefined";
         console.error(errorMsg);
-        toast.error('Error: Invalid flashcard');
+        toast.error("Error: Invalid flashcard");
         throw new Error(errorMsg);
       }
 
@@ -56,13 +57,20 @@ export function useFlashcardMutations() {
       const progressId = `${userId}_${flashcardId}`;
 
       // Get existing progress using service layer
-      const currentProgress = await getSingleFlashcardProgress(userId, flashcardId);
+      const currentProgress = await getSingleFlashcardProgress(
+        userId,
+        flashcardId
+      );
 
       // Get current level from parameter, existing progress, or undefined
       const currentLevel = level || currentProgress?.level;
 
       // Calculate new SRS data with enhanced algorithm
-      const srsData = calculateSRSData(currentProgress, difficulty, currentLevel);
+      const srsData = calculateSRSData(
+        currentProgress,
+        difficulty,
+        currentLevel
+      );
 
       // Prepare update data with all enhanced fields
       const updateData: Partial<FlashcardProgress> = {
@@ -97,7 +105,7 @@ export function useFlashcardMutations() {
       };
 
       // Update correct/incorrect counts
-      if (difficulty === 'again') {
+      if (difficulty === "again") {
         updateData.incorrectCount = (currentProgress?.incorrectCount || 0) + 1;
         updateData.correctCount = currentProgress?.correctCount || 0;
       } else {
@@ -106,17 +114,22 @@ export function useFlashcardMutations() {
       }
 
       // Save using service layer
-      await saveFlashcardProgress(progressId, updateData);
+      await saveFlashcardProgress(progressId, updateData, flashcardData);
 
       // Log save confirmation for debugging
-      if (process.env.NODE_ENV === 'development') {
-        console.log(`💾 [Save] Card: ${flashcardId} | Mastery: ${srsData.masteryLevel}% | Next: ${new Date(srsData.nextReviewDate).toLocaleDateString()}`);
+      if (process.env.NODE_ENV === "development") {
+        console.log(
+          `💾 [Save] Card: ${flashcardId} | Mastery: ${
+            srsData.masteryLevel
+          }% | Next: ${new Date(srsData.nextReviewDate).toLocaleDateString()}`
+        );
       }
 
       return srsData;
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Failed to save review';
-      console.error('❌ [saveReview] Error:', {
+      const errorMessage =
+        err instanceof Error ? err.message : "Failed to save review";
+      console.error("❌ [saveReview] Error:", {
         error: err,
         message: errorMessage,
         userId,
@@ -145,9 +158,9 @@ export function useFlashcardMutations() {
     try {
       // Validate inputs
       if (!userId) {
-        const errorMsg = 'Cannot save daily progress: userId is undefined';
+        const errorMsg = "Cannot save daily progress: userId is undefined";
         console.error(errorMsg);
-        toast.error('Error: User not logged in');
+        toast.error("Error: User not logged in");
         throw new Error(errorMsg);
       }
 
@@ -156,8 +169,9 @@ export function useFlashcardMutations() {
 
       // Success - no toast needed, handled by session complete
     } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Failed to save progress';
-      console.error('❌ [saveDailyProgress] Error:', {
+      const errorMessage =
+        err instanceof Error ? err.message : "Failed to save progress";
+      console.error("❌ [saveDailyProgress] Error:", {
         error: err,
         message: errorMessage,
         userId,
