@@ -4,12 +4,12 @@
  * Designed to look like the exercise workspace
  */
 
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { ActionButton } from '@/components/ui/ActionButton';
-import { useToast } from '@/components/ui/toast';
-import { DiffTextCorrectedOnly } from './DiffText';
+import { useState } from "react";
+import { ActionButton } from "@/components/ui/ActionButton";
+import { useToast } from "@/components/ui/toast";
+import { DiffTextCorrectedOnly } from "./DiffText";
 
 interface AICorrectionsPanelProps {
   submissionId: string;
@@ -17,6 +17,8 @@ interface AICorrectionsPanelProps {
   currentAICorrectedAt?: number;
   originalText: string; // Student's original text for comparison
   onSave: (correctedText: string) => Promise<void>;
+  isEditing?: boolean;
+  onEditChange?: (isEditing: boolean) => void;
 }
 
 export function AICorrectionsPanel({
@@ -24,10 +26,23 @@ export function AICorrectionsPanel({
   currentAICorrection,
   currentAICorrectedAt,
   originalText,
-  onSave
+  onSave,
+  isEditing: externalIsEditing,
+  onEditChange,
 }: AICorrectionsPanelProps) {
-  const [isEditing, setIsEditing] = useState(false);
-  const [correctedText, setCorrectedText] = useState(currentAICorrection || '');
+  const [internalIsEditing, setInternalIsEditing] = useState(false);
+
+  const isEditing =
+    externalIsEditing !== undefined ? externalIsEditing : internalIsEditing;
+  const setIsEditing = (value: boolean) => {
+    if (onEditChange) {
+      onEditChange(value);
+    } else {
+      setInternalIsEditing(value);
+    }
+  };
+
+  const [correctedText, setCorrectedText] = useState(currentAICorrection || "");
   const [isSaving, setIsSaving] = useState(false);
   const toast = useToast();
 
@@ -38,17 +53,19 @@ export function AICorrectionsPanel({
       setIsSaving(true);
       await onSave(correctedText);
       setIsEditing(false);
-      toast.success('AI correction saved successfully!', { duration: 3000 });
+      toast.success("AI correction saved successfully!", { duration: 3000 });
     } catch (err) {
-      console.error('Error saving AI correction:', err);
-      toast.error('Failed to save AI correction. Please try again.', { duration: 5000 });
+      console.error("Error saving AI correction:", err);
+      toast.error("Failed to save AI correction. Please try again.", {
+        duration: 5000,
+      });
     } finally {
       setIsSaving(false);
     }
   };
 
   const handleCancel = () => {
-    setCorrectedText(currentAICorrection || '');
+    setCorrectedText(currentAICorrection || "");
     setIsEditing(false);
   };
 
@@ -73,9 +90,10 @@ export function AICorrectionsPanel({
             placeholder="Paste the AI-corrected version here..."
             className="w-full bg-transparent border-none outline-none resize-none text-base leading-relaxed text-gray-900 placeholder-gray-400"
             style={{
-              minHeight: '120px',
-              lineHeight: '1.6',
-              fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+              minHeight: "120px",
+              lineHeight: "1.6",
+              fontFamily:
+                'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
             }}
             autoFocus
           />
@@ -85,7 +103,7 @@ export function AICorrectionsPanel({
               disabled={isSaving || !correctedText.trim()}
               className="px-3 py-1.5 bg-purple-600 text-white text-xs font-medium rounded hover:bg-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
-              {isSaving ? 'Saving...' : 'Save'}
+              {isSaving ? "Saving..." : "Save"}
             </button>
             <button
               onClick={handleCancel}
@@ -103,24 +121,19 @@ export function AICorrectionsPanel({
             correctedText={currentAICorrection!}
             className="text-base"
           />
-          {currentAICorrectedAt && (
-            <div className="flex items-center justify-between mt-2 pt-2 border-t border-gray-100">
+          <div className="flex items-center justify-between mt-2 pt-2 border-t border-gray-100">
+            {currentAICorrectedAt && (
               <p className="text-xs text-gray-500">
-                Saved {new Date(currentAICorrectedAt).toLocaleDateString('en-US', {
-                  month: 'short',
-                  day: 'numeric',
-                  hour: '2-digit',
-                  minute: '2-digit'
+                Saved{" "}
+                {new Date(currentAICorrectedAt).toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                  hour: "2-digit",
+                  minute: "2-digit",
                 })}
               </p>
-              <button
-                onClick={() => setIsEditing(true)}
-                className="text-xs text-purple-600 hover:text-purple-800 font-medium"
-              >
-                Edit
-              </button>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       )}
     </div>

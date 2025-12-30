@@ -6,6 +6,94 @@ import { Redemittel } from './types';
 
 export const a1Redemittel: Redemittel[] = [
   // ============================================
+  // Greetings
+  // ============================================
+  {
+    id: 'a1-greet-1',
+    german: 'Hallo!',
+    english: 'Hello!',
+    context: 'greetings',
+    level: 'A1',
+    tags: ['basic', 'informal'],
+  },
+  {
+    id: 'a1-greet-2',
+    german: 'Guten Morgen!',
+    english: 'Good morning!',
+    context: 'greetings',
+    level: 'A1',
+    tags: ['basic', 'time-specific'],
+  },
+  {
+    id: 'a1-greet-3',
+    german: 'Guten Tag!',
+    english: 'Good day / Hello!',
+    context: 'greetings',
+    level: 'A1',
+    tags: ['basic', 'formal'],
+  },
+  {
+    id: 'a1-greet-4',
+    german: 'Guten Abend!',
+    english: 'Good evening!',
+    context: 'greetings',
+    level: 'A1',
+    tags: ['basic', 'time-specific'],
+  },
+  {
+    id: 'a1-greet-5',
+    german: 'Wie geht es dir?',
+    english: 'How are you? (informal)',
+    context: 'greetings',
+    level: 'A1',
+    example: 'Hallo Anna, wie geht es dir?',
+    exampleTranslation: 'Hello Anna, how are you?',
+    tags: ['basic', 'question', 'informal'],
+  },
+  {
+    id: 'a1-greet-6',
+    german: 'Wie geht es Ihnen?',
+    english: 'How are you? (formal)',
+    context: 'greetings',
+    level: 'A1',
+    example: 'Guten Tag Herr Müller, wie geht es Ihnen?',
+    exampleTranslation: 'Good day Mr. Müller, how are you?',
+    tags: ['basic', 'question', 'formal'],
+  },
+  {
+    id: 'a1-greet-7',
+    german: 'Auf Wiedersehen!',
+    english: 'Goodbye! (formal)',
+    context: 'greetings',
+    level: 'A1',
+    tags: ['basic', 'farewell', 'formal'],
+  },
+  {
+    id: 'a1-greet-8',
+    german: 'Tschüss!',
+    english: 'Bye!',
+    context: 'greetings',
+    level: 'A1',
+    tags: ['basic', 'farewell', 'informal'],
+  },
+  {
+    id: 'a1-greet-9',
+    german: 'Bis später!',
+    english: 'See you later!',
+    context: 'greetings',
+    level: 'A1',
+    tags: ['basic', 'farewell'],
+  },
+  {
+    id: 'a1-greet-10',
+    german: 'Alles Gute!',
+    english: 'All the best!',
+    context: 'greetings',
+    level: 'A1',
+    tags: ['basic', 'wishes'],
+  },
+
+  // ============================================
   // Introduction & Personal Information
   // ============================================
   {
