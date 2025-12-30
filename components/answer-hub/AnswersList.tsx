@@ -4,17 +4,21 @@
  * Students can input and save their answers
  */
 
-'use client';
+"use client";
 
-import { useState, useEffect, useCallback, useRef } from 'react';
-import { ExerciseAnswer } from '@/lib/models/exercises';
-import { TeacherAnswerDisplay } from './TeacherAnswerDisplay';
-import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { useCurrentStudent } from '@/lib/hooks/useUsers';
-import { getUserInfo } from '@/lib/utils/userHelpers';
-import { useSaveStudentAnswer, useStudentAnswers } from '@/lib/hooks/useStudentAnswers';
-import { useToast } from '@/lib/hooks/useToast';
-import { GermanCharAutocomplete } from '@/components/writing/GermanCharAutocomplete';
+import { useState, useEffect, useCallback, useRef } from "react";
+import { ExerciseAnswer } from "@/lib/models/exercises";
+import { TeacherAnswerDisplay } from "./TeacherAnswerDisplay";
+import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
+import { useCurrentStudent } from "@/lib/hooks/useUsers";
+import { getUserInfo } from "@/lib/utils/userHelpers";
+import {
+  useSaveStudentAnswer,
+  useStudentAnswers,
+} from "@/lib/hooks/useStudentAnswers";
+import { useToast } from "@/lib/hooks/useToast";
+import { GermanCharAutocomplete } from "@/components/writing/GermanCharAutocomplete";
+import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
 
 interface AnswerInputRowProps {
   answer: ExerciseAnswer;
@@ -24,16 +28,26 @@ interface AnswerInputRowProps {
   isSaving: boolean;
 }
 
-function AnswerInputRow({ answer, value, onChange, canSave, isSaving }: AnswerInputRowProps) {
+function AnswerInputRow({
+  answer,
+  value,
+  onChange,
+  canSave,
+  isSaving,
+}: AnswerInputRowProps) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
-    <div className={`bg-gray-50 border border-gray-200 p-4 ${!canSave ? 'opacity-70' : ''}`}>
+    <div
+      className={`bg-gray-50 border border-gray-200 p-4 ${
+        !canSave ? "opacity-70" : ""
+      }`}
+    >
       <div className="flex items-start gap-3">
         {/* Pencil Icon */}
         <div className="flex-shrink-0 mt-1">
           <svg
-            className={`w-5 h-5 ${canSave ? 'text-blue-600' : 'text-gray-400'}`}
+            className={`w-5 h-5 ${canSave ? "text-blue-600" : "text-gray-400"}`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -57,14 +71,18 @@ function AnswerInputRow({ answer, value, onChange, canSave, isSaving }: AnswerIn
             <input
               ref={inputRef}
               type="text"
-              placeholder={canSave ? "Type your answer here..." : "Saving disabled - type for practice only"}
+              placeholder={
+                canSave
+                  ? "Type your answer here..."
+                  : "Saving disabled - type for practice only"
+              }
               value={value}
               onChange={(e) => onChange(e.target.value)}
               disabled={!canSave}
               className={`w-full px-3 py-2 border border-gray-300 outline-none transition-colors text-sm ${
                 canSave
-                  ? 'focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-white'
-                  : 'bg-gray-100 cursor-not-allowed'
+                  ? "focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-white"
+                  : "bg-gray-100 cursor-not-allowed"
               }`}
             />
             <GermanCharAutocomplete
@@ -80,7 +98,7 @@ function AnswerInputRow({ answer, value, onChange, canSave, isSaving }: AnswerIn
               isSaving ? (
                 <span className="text-blue-600 font-medium">Saving...</span>
               ) : (
-                'Your answer will be saved automatically'
+                'Press "Save Answers" to submit'
               )
             ) : (
               <span className="text-amber-600">Saving disabled</span>
@@ -105,14 +123,18 @@ export function AnswersList({
   exerciseId,
   showExplanations = true,
   isTeacher = false,
-  onAnswerSaved
+  onAnswerSaved,
 }: AnswersListProps) {
   const { session } = useFirebaseAuth();
-  const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
+  const { student: currentUser } = useCurrentStudent(
+    session?.user?.email || null
+  );
   const { userId, userName } = getUserInfo(currentUser, session);
 
   const [isCollapsed, setIsCollapsed] = useState(!isTeacher);
-  const [studentInputs, setStudentInputs] = useState<Record<string, string>>({});
+  const [studentInputs, setStudentInputs] = useState<Record<string, string>>(
+    {}
+  );
   const [savingStates, setSavingStates] = useState<Record<string, boolean>>({});
 
   const { saveAnswer } = useSaveStudentAnswer();
@@ -121,72 +143,124 @@ export function AnswersList({
   // Check if saving is enabled (requires exerciseId and authenticated user)
   const canSave = Boolean(exerciseId && userId && userName);
 
-  // Debounce timer for auto-save
-  const [saveTimers, setSaveTimers] = useState<Record<string, NodeJS.Timeout>>({});
+  // Global saving state for manual save
+  const [isGlobalSaving, setIsGlobalSaving] = useState(false);
 
-  // Auto-save with debouncing (500ms delay)
+  // Handle input change (update local state only)
   const handleInputChange = useCallback((itemNumber: string, value: string) => {
-    setStudentInputs(prev => ({ ...prev, [itemNumber]: value }));
+    setStudentInputs((prev) => ({ ...prev, [itemNumber]: value }));
+  }, []);
 
-    // Don't save if prerequisites aren't met
-    if (!canSave) {
+  // Manual save handler
+  const handleManualSave = async () => {
+    if (!canSave || !userId || !userName) return;
+
+    const inputsToSave = Object.entries(studentInputs).filter(
+      ([_, value]) => value && value.trim() !== ""
+    );
+
+    if (inputsToSave.length === 0) {
+      showToast("No answers to save", "info");
       return;
     }
 
-    // Clear existing timer
-    if (saveTimers[itemNumber]) {
-      clearTimeout(saveTimers[itemNumber]);
-    }
+    setIsGlobalSaving(true);
+    setSavingStates((prev) => {
+      const newStates = { ...prev };
+      inputsToSave.forEach(([itemNumber]) => {
+        newStates[itemNumber] = true;
+      });
+      return newStates;
+    });
 
-    // Set new timer
-    const timer = setTimeout(async () => {
-      if (!value || value.trim() === '') {
-        // Don't save empty answers
-        return;
-      }
-
-      setSavingStates(prev => ({ ...prev, [itemNumber]: true }));
-
-      const success = await saveAnswer(
-        userId!,
-        userName!,
-        exerciseId!,
-        itemNumber,
-        value.trim()
+    try {
+      // Save all changed inputs in parallel
+      const savePromises = inputsToSave.map(([itemNumber, value]) =>
+        saveAnswer(userId, userName, exerciseId, itemNumber, value.trim())
       );
 
-      setSavingStates(prev => ({ ...prev, [itemNumber]: false }));
+      const results = await Promise.all(savePromises);
+      const allSuccess = results.every(Boolean);
 
-      if (success) {
-        showToast(`Answer for Item ${itemNumber} saved!`, 'success');
+      if (allSuccess) {
+        showToast(
+          `Saved ${inputsToSave.length} answer${
+            inputsToSave.length !== 1 ? "s" : ""
+          }!`,
+          "success"
+        );
         if (onAnswerSaved) {
           onAnswerSaved();
         }
       } else {
-        showToast(`Failed to save answer for Item ${itemNumber}`, 'error');
+        const successCount = results.filter(Boolean).length;
+        showToast(
+          `Saved ${successCount} of ${inputsToSave.length} answers. Some failed.`,
+          "warning"
+        );
+        if (successCount > 0 && onAnswerSaved) {
+          onAnswerSaved();
+        }
       }
-    }, 500);
+    } catch (error) {
+      console.error("Error saving answers:", error);
+      showToast("Failed to save answers", "error");
+    } finally {
+      setIsGlobalSaving(false);
+      setSavingStates({});
+    }
+  };
 
-    setSaveTimers(prev => ({ ...prev, [itemNumber]: timer }));
-  }, [canSave, userId, userName, exerciseId, saveAnswer, showToast, saveTimers, onAnswerSaved]);
+  // Copy for AI Review handler
+  const [isCopying, setIsCopying] = useState(false);
 
-  // Cleanup timers on unmount
-  useEffect(() => {
-    return () => {
-      Object.values(saveTimers).forEach(timer => clearTimeout(timer));
-    };
-  }, [saveTimers]);
+  const handleCopyForAI = async () => {
+    try {
+      setIsCopying(true);
+      let prompt =
+        "I'm practicing German. Please check my answers for the following exercise items. Provide corrections if needed.\n\n";
+
+      // Sort answers by item number
+      const sortedAnswers = [...answers].sort((a, b) => {
+        return a.itemNumber.localeCompare(b.itemNumber, undefined, {
+          numeric: true,
+        });
+      });
+
+      sortedAnswers.forEach((ans) => {
+        const studentAnswer =
+          studentInputs[ans.itemNumber] || "(No answer provided)";
+        prompt += `Item ${ans.itemNumber}: ${studentAnswer}\n`;
+      });
+
+      prompt +=
+        "\nPlease provide corrected versions for any incorrect answers.";
+
+      await navigator.clipboard.writeText(prompt);
+      showToast("Copied to clipboard for AI review!", "success");
+
+      // Reset copying state after a moment
+      setTimeout(() => setIsCopying(false), 2000);
+    } catch (error) {
+      console.error("Failed to copy:", error);
+      showToast("Failed to copy to clipboard", "error");
+      setIsCopying(false);
+    }
+  };
 
   // Teacher view: Show correct answers (always visible, NOT collapsible)
   if (isTeacher) {
-    return <TeacherAnswerDisplay answers={answers} showExplanations={showExplanations} />;
+    return (
+      <TeacherAnswerDisplay
+        answers={answers}
+        showExplanations={showExplanations}
+      />
+    );
   }
 
   if (answers.length === 0) {
     return (
-      <div className="text-sm text-gray-500 italic">
-        No answers available
-      </div>
+      <div className="text-sm text-gray-500 italic">No answers available</div>
     );
   }
 
@@ -200,10 +274,13 @@ export function AnswersList({
           className="w-full flex items-center justify-between px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 border border-gray-200 transition-colors duration-200 mb-2"
         >
           <span className="text-sm font-semibold">
-            {isCollapsed ? 'Show Exercise Items' : 'Hide Exercise Items'} ({answers.length} item{answers.length !== 1 ? 's' : ''})
+            {isCollapsed ? "Show Exercise Items" : "Hide Exercise Items"} (
+            {answers.length} item{answers.length !== 1 ? "s" : ""})
           </span>
           <svg
-            className={`w-4 h-4 transition-transform duration-200 ${isCollapsed ? '' : 'rotate-180'}`}
+            className={`w-4 h-4 transition-transform duration-200 ${
+              isCollapsed ? "" : "rotate-180"
+            }`}
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -235,11 +312,17 @@ export function AnswersList({
               </svg>
               <div className="flex-1">
                 <p className="text-sm text-blue-800 mb-2">
-                  <span className="font-semibold">Exercise has {answers.length} item{answers.length !== 1 ? 's' : ''}:</span>
+                  <span className="font-semibold">
+                    Exercise has {answers.length} item
+                    {answers.length !== 1 ? "s" : ""}:
+                  </span>
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {answers.map((answer, index) => (
-                    <span key={index} className="inline-flex items-center px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded">
+                    <span
+                      key={index}
+                      className="inline-flex items-center px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded"
+                    >
                       Item {answer.itemNumber}
                     </span>
                   ))}
@@ -252,9 +335,41 @@ export function AnswersList({
 
       {/* Section 2: Your Answers - NOT Collapsible (input fields) */}
       <div>
-        <h3 className="text-lg font-semibold text-gray-800 mb-4">
-          Your Answers
-        </h3>
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-semibold text-gray-800">Your Answers</h3>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={handleCopyForAI}
+              disabled={isCopying}
+              className="text-xs text-purple-600 hover:text-purple-800 font-medium flex items-center gap-1.5 transition-colors"
+            >
+              <svg
+                className="w-3.5 h-3.5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2.5}
+                viewBox="0 0 24 24"
+              >
+                <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+              </svg>
+              <span>{isCopying ? "Copied!" : "Copy for AI Review"}</span>
+            </button>
+
+            {canSave && (
+              <ActionButton
+                onClick={handleManualSave}
+                disabled={isGlobalSaving}
+                icon={<ActionButtonIcons.Save />}
+                size="compact"
+                variant="purple"
+                className="!w-auto"
+              >
+                {isGlobalSaving ? "Saving..." : "Save Answers"}
+              </ActionButton>
+            )}
+          </div>
+        </div>
 
         {/* Warning if saving is disabled */}
         {!canSave && (
@@ -278,8 +393,10 @@ export function AnswersList({
                   Answer saving is disabled
                 </p>
                 <p className="text-xs text-amber-700">
-                  {!exerciseId && 'Exercise ID is missing. '}
-                  {!userId && !userName && 'Please log in to save your answers. '}
+                  {!exerciseId && "Exercise ID is missing. "}
+                  {!userId &&
+                    !userName &&
+                    "Please log in to save your answers. "}
                   You can still type your answers for practice.
                 </p>
               </div>
@@ -292,8 +409,10 @@ export function AnswersList({
             <AnswerInputRow
               key={index}
               answer={answer}
-              value={studentInputs[answer.itemNumber] || ''}
-              onChange={(newValue) => handleInputChange(answer.itemNumber, newValue)}
+              value={studentInputs[answer.itemNumber] || ""}
+              onChange={(newValue) =>
+                handleInputChange(answer.itemNumber, newValue)
+              }
               canSave={canSave}
               isSaving={!!savingStates[answer.itemNumber]}
             />
