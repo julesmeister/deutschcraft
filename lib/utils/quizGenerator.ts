@@ -99,11 +99,19 @@ const GERMAN_PRONOUNS = new Set([
   "sich",
   // Indefinite pronouns (very common ones)
   "man",
+  "ein",
   "einer",
   "eine",
   "eines",
   "einen",
   "einem",
+  // Negative articles
+  "kein",
+  "keine",
+  "keines",
+  "keinen",
+  "keinem",
+  "keiner",
 ]);
 
 /**
