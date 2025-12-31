@@ -3,7 +3,7 @@
  * Fetches multiple sentences for comprehensive review quizzes
  */
 
-import { db } from '@/lib/firebase';
+import { db } from "@/lib/firebase";
 import {
   collection,
   query,
@@ -13,11 +13,11 @@ import {
   getDoc,
   updateDoc,
   limit as firestoreLimit,
-} from 'firebase/firestore';
-import { QuizBlank } from '@/lib/models/writing';
-import { MiniExerciseSentence } from '@/lib/models/miniExercise';
-import { generateQuizBlanks } from '@/lib/utils/quizGenerator';
-import { getRandomMiniExercise } from '@/lib/services/writing/miniExercise';
+} from "firebase/firestore";
+import { QuizBlank } from "@/lib/models/writing";
+import { MiniExerciseSentence } from "@/lib/models/miniExercise";
+import { generateQuizBlanks } from "@/lib/utils/quizGenerator";
+import { getRandomMiniExercise } from "@/lib/services/writing/miniExercise";
 
 export interface QuizSentence {
   sentence: string;
@@ -25,11 +25,13 @@ export interface QuizSentence {
   blanks: QuizBlank[];
   sentenceId: string;
   submissionId: string;
-  sourceType: 'ai' | 'teacher' | 'reference';
+  sourceType: "ai" | "teacher" | "reference";
+  exerciseId?: string;
+  exerciseTitle?: string;
   exerciseType: string;
   submittedAt: number;
   contextBefore?: string; // Previous sentence for context
-  contextAfter?: string;  // Next sentence for context
+  contextAfter?: string; // Next sentence for context
 }
 
 /**
@@ -38,8 +40,8 @@ export interface QuizSentence {
 function splitIntoSentences(text: string): string[] {
   return text
     .split(/[.!?]+\s+/)
-    .map(s => s.trim())
-    .filter(s => s.length > 20);
+    .map((s) => s.trim())
+    .filter((s) => s.length > 20);
 }
 
 /**
@@ -51,15 +53,15 @@ async function getContextSentences(
   sentenceIndex: number
 ): Promise<{ before?: string; after?: string }> {
   try {
-    const sentencesRef = collection(db, 'mini-exercise-sentences');
+    const sentencesRef = collection(db, "mini-exercise-sentences");
 
     // Query for previous sentence (sentenceIndex - 1)
     let beforeSentence: string | undefined;
     if (sentenceIndex > 0) {
       const beforeQuery = query(
         sentencesRef,
-        where('submissionId', '==', submissionId),
-        where('sentenceIndex', '==', sentenceIndex - 1)
+        where("submissionId", "==", submissionId),
+        where("sentenceIndex", "==", sentenceIndex - 1)
       );
       const beforeSnapshot = await getDocs(beforeQuery);
       if (!beforeSnapshot.empty) {
@@ -70,18 +72,23 @@ async function getContextSentences(
     // Query for next sentence (sentenceIndex + 1)
     const afterQuery = query(
       sentencesRef,
-      where('submissionId', '==', submissionId),
-      where('sentenceIndex', '==', sentenceIndex + 1)
+      where("submissionId", "==", submissionId),
+      where("sentenceIndex", "==", sentenceIndex + 1)
     );
     const afterSnapshot = await getDocs(afterQuery);
-    const afterSentence = afterSnapshot.empty ? undefined : afterSnapshot.docs[0].data().sentence;
+    const afterSentence = afterSnapshot.empty
+      ? undefined
+      : afterSnapshot.docs[0].data().sentence;
 
     return {
       before: beforeSentence,
       after: afterSentence,
     };
   } catch (error) {
-    console.error('[getContextSentences] Error getting context sentences:', error);
+    console.error(
+      "[getContextSentences] Error getting context sentences:",
+      error
+    );
     return {};
   }
 }
@@ -109,7 +116,8 @@ function calculatePriority(sentence: MiniExerciseSentence): number {
 
   if (sentence.consecutiveCorrect === 0) priority += 20;
 
-  const daysSinceSubmission = (now - sentence.submittedAt) / (1000 * 60 * 60 * 24);
+  const daysSinceSubmission =
+    (now - sentence.submittedAt) / (1000 * 60 * 60 * 24);
   if (daysSinceSubmission < 7) priority += 15;
 
   return priority;
@@ -124,17 +132,16 @@ export async function getQuizSentences(
   count: number = 10
 ): Promise<QuizSentence[]> {
   try {
-    const sentencesRef = collection(db, 'mini-exercise-sentences');
+    const sentencesRef = collection(db, "mini-exercise-sentences");
     const q = query(
       sentencesRef,
-      where('userId', '==', userId),
+      where("userId", "==", userId),
       firestoreLimit(100) // Get a large pool of candidates
     );
 
     const snapshot = await getDocs(q);
 
     if (snapshot.empty) {
-
       // Fall back to random sentences
       const randomSentences: QuizSentence[] = [];
       for (let i = 0; i < Math.min(count, 5); i++) {
@@ -154,10 +161,16 @@ export async function getQuizSentences(
             sentenceId: `random_${i}`,
             submissionId: randomResult.submissionId,
             sourceType: randomResult.sourceType,
-            exerciseType: randomResult.exerciseType || 'translation',
+            exerciseId: randomResult.exerciseId,
+            exerciseTitle: randomResult.exerciseTitle,
+            exerciseType: randomResult.exerciseType || "translation",
             submittedAt: randomResult.submittedAt || Date.now(),
-            contextBefore: sentenceIdx > 0 ? allSentences[sentenceIdx - 1] : undefined,
-            contextAfter: sentenceIdx < allSentences.length - 1 ? allSentences[sentenceIdx + 1] : undefined,
+            contextBefore:
+              sentenceIdx > 0 ? allSentences[sentenceIdx - 1] : undefined,
+            contextAfter:
+              sentenceIdx < allSentences.length - 1
+                ? allSentences[sentenceIdx + 1]
+                : undefined,
           });
         }
       }
@@ -165,8 +178,11 @@ export async function getQuizSentences(
     }
 
     // Calculate priority for each sentence
-    const sentencesWithPriority = snapshot.docs.map(doc => {
-      const sentence = { sentenceId: doc.id, ...doc.data() } as MiniExerciseSentence;
+    const sentencesWithPriority = snapshot.docs.map((doc) => {
+      const sentence = {
+        sentenceId: doc.id,
+        ...doc.data(),
+      } as MiniExerciseSentence;
       return {
         sentence,
         priority: calculatePriority(sentence),
@@ -186,7 +202,10 @@ export async function getQuizSentences(
     // Process each selected sentence
     for (const { sentence } of selectedSentences) {
       // Generate blanks
-      const allBlanks = generateQuizBlanks(sentence.originalSentence, sentence.sentence);
+      const allBlanks = generateQuizBlanks(
+        sentence.originalSentence,
+        sentence.sentence
+      );
 
       // Only include sentences with blanks
       if (allBlanks.length === 0) {
@@ -197,7 +216,10 @@ export async function getQuizSentences(
       const blanks = [allBlanks[0]];
 
       // Get context sentences
-      const context = await getContextSentences(sentence.submissionId, sentence.sentenceIndex);
+      const context = await getContextSentences(
+        sentence.submissionId,
+        sentence.sentenceIndex
+      );
 
       quizSentences.push({
         sentence: sentence.sentence,
@@ -206,6 +228,8 @@ export async function getQuizSentences(
         sentenceId: sentence.sentenceId,
         submissionId: sentence.submissionId,
         sourceType: sentence.sourceType,
+        exerciseId: sentence.exerciseId,
+        exerciseTitle: sentence.exerciseTitle,
         exerciseType: sentence.exerciseType,
         submittedAt: sentence.submittedAt,
         contextBefore: context.before,
@@ -213,7 +237,11 @@ export async function getQuizSentences(
       });
 
       // Update timesShown
-      const sentenceDocRef = doc(db, 'mini-exercise-sentences', sentence.sentenceId);
+      const sentenceDocRef = doc(
+        db,
+        "mini-exercise-sentences",
+        sentence.sentenceId
+      );
       await updateDoc(sentenceDocRef, {
         timesShown: sentence.timesShown + 1,
         lastShownAt: now,
@@ -223,7 +251,7 @@ export async function getQuizSentences(
 
     return quizSentences;
   } catch (error) {
-    console.error('[quizService] Error getting quiz sentences:', error);
+    console.error("[quizService] Error getting quiz sentences:", error);
     return [];
   }
 }

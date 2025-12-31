@@ -132,7 +132,9 @@ export default function WritingQuizPage() {
           sentence.blanks,
           sentenceAnswers,
           sentencePoints,
-          isCorrect ? 1 : 0
+          isCorrect ? 1 : 0,
+          sentence.exerciseId,
+          sentence.exerciseTitle
         );
       }
     } catch (error) {

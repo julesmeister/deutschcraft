@@ -3,17 +3,29 @@
  * Provides random sentences from corrected writing exercises for quick practice
  */
 
-import { db } from '@/lib/firebase';
-import { collection, query, where, getDocs, limit, orderBy } from 'firebase/firestore';
-import { WritingSubmission, QuizBlank, GrammarError } from '@/lib/models/writing';
-import { generateQuizBlanks } from '@/lib/utils/quizGenerator';
+import { db } from "@/lib/firebase";
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+  limit,
+  orderBy,
+} from "firebase/firestore";
+import {
+  WritingSubmission,
+  QuizBlank,
+  GrammarError,
+} from "@/lib/models/writing";
+import { generateQuizBlanks } from "@/lib/utils/quizGenerator";
 
 export interface MiniExerciseData {
   sentence: string;
   blanks: QuizBlank[];
   submissionId: string;
-  sourceType: 'ai' | 'teacher' | 'reference';
+  sourceType: "ai" | "teacher" | "reference";
   exerciseTitle?: string;
+  exerciseId?: string;
   exerciseType?: string;
   submittedAt?: number;
   sentenceIndex?: number; // Index of this sentence in the original submission
@@ -24,7 +36,10 @@ export interface MiniExerciseData {
  * Apply grammar corrections to text
  * Replaces originalText with suggestedCorrection for each grammar error
  */
-function applyCorrectionsSentenceLevel(text: string, grammarErrors: GrammarError[]): string {
+function applyCorrectionsSentenceLevel(
+  text: string,
+  grammarErrors: GrammarError[]
+): string {
   let correctedText = text;
 
   // Sort errors by position (if available) to apply from end to start
@@ -44,7 +59,10 @@ function applyCorrectionsSentenceLevel(text: string, grammarErrors: GrammarError
       correctedText = before + error.suggestedCorrection + after;
     } else {
       // Fallback: simple string replacement
-      correctedText = correctedText.replace(error.originalText, error.suggestedCorrection);
+      correctedText = correctedText.replace(
+        error.originalText,
+        error.suggestedCorrection
+      );
     }
   }
 
@@ -58,8 +76,8 @@ function splitIntoSentences(text: string): string[] {
   // Split on sentence-ending punctuation followed by space or end of string
   const sentences = text
     .split(/[.!?]+\s+/)
-    .map(s => s.trim())
-    .filter(s => s.length > 20); // Only sentences with at least 20 chars
+    .map((s) => s.trim())
+    .filter((s) => s.length > 20); // Only sentences with at least 20 chars
 
   return sentences;
 }
@@ -68,14 +86,16 @@ function splitIntoSentences(text: string): string[] {
  * Get a random corrected sentence from the user's writing submissions
  * Returns a sentence with blanks for fill-in practice
  */
-export async function getRandomMiniExercise(userId: string): Promise<MiniExerciseData | null> {
+export async function getRandomMiniExercise(
+  userId: string
+): Promise<MiniExerciseData | null> {
   try {
     // Fetch user's submissions (both submitted and reviewed)
-    const submissionsRef = collection(db, 'writing-submissions');
+    const submissionsRef = collection(db, "writing-submissions");
     const q = query(
       submissionsRef,
-      where('userId', '==', userId),
-      orderBy('submittedAt', 'desc'),
+      where("userId", "==", userId),
+      orderBy("submittedAt", "desc"),
       limit(20) // Get recent 20 submissions
     );
 
@@ -89,26 +109,32 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
     const submissionsWithCorrections: Array<{
       submission: WritingSubmission;
       correctedText: string;
-      sourceType: 'ai' | 'teacher' | 'reference';
+      sourceType: "ai" | "teacher" | "reference";
     }> = [];
 
     for (const doc of snapshot.docs) {
-      const submission = { submissionId: doc.id, ...doc.data() } as WritingSubmission;
+      const submission = {
+        submissionId: doc.id,
+        ...doc.data(),
+      } as WritingSubmission;
 
       // Prioritize: teacher correction > AI corrected version > AI feedback with corrections
       if (submission.teacherCorrectedVersion) {
         submissionsWithCorrections.push({
           submission,
           correctedText: submission.teacherCorrectedVersion,
-          sourceType: 'teacher',
+          sourceType: "teacher",
         });
       } else if (submission.aiCorrectedVersion) {
         submissionsWithCorrections.push({
           submission,
           correctedText: submission.aiCorrectedVersion,
-          sourceType: 'ai',
+          sourceType: "ai",
         });
-      } else if (submission.aiFeedback && submission.aiFeedback.grammarErrors.length > 0) {
+      } else if (
+        submission.aiFeedback &&
+        submission.aiFeedback.grammarErrors.length > 0
+      ) {
         // Build corrected version from grammar errors
         const correctedText = applyCorrectionsSentenceLevel(
           submission.content,
@@ -117,7 +143,7 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
         submissionsWithCorrections.push({
           submission,
           correctedText,
-          sourceType: 'ai',
+          sourceType: "ai",
         });
       }
     }
@@ -127,8 +153,11 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
     }
 
     // Pick a random submission
-    const randomIndex = Math.floor(Math.random() * submissionsWithCorrections.length);
-    const { submission, correctedText, sourceType } = submissionsWithCorrections[randomIndex];
+    const randomIndex = Math.floor(
+      Math.random() * submissionsWithCorrections.length
+    );
+    const { submission, correctedText, sourceType } =
+      submissionsWithCorrections[randomIndex];
 
     // Split corrected text into sentences
     const sentences = splitIntoSentences(correctedText);
@@ -149,13 +178,13 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
       const originalSentences = splitIntoSentences(submission.content);
 
       // Try to match sentence by finding similar content
-      let originalSentence = '';
+      let originalSentence = "";
       for (const origSent of originalSentences) {
         // Simple matching: if sentences share some words, they might be the same
         const correctedWords = sentence.toLowerCase().split(/\s+/).slice(0, 3);
         const origWords = origSent.toLowerCase().split(/\s+/).slice(0, 3);
 
-        if (correctedWords.some(w => origWords.includes(w))) {
+        if (correctedWords.some((w) => origWords.includes(w))) {
           originalSentence = origSent;
           break;
         }
@@ -177,6 +206,7 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
           submissionId: submission.submissionId,
           sourceType,
           exerciseTitle: submission.exerciseTitle,
+          exerciseId: submission.exerciseId,
           exerciseType: submission.exerciseType,
           submittedAt: submission.submittedAt,
           sentenceIndex: sentenceIdx,
@@ -200,13 +230,14 @@ export async function getRandomMiniExercise(userId: string): Promise<MiniExercis
       submissionId: submission.submissionId,
       sourceType,
       exerciseTitle: submission.exerciseTitle,
+      exerciseId: submission.exerciseId,
       exerciseType: submission.exerciseType,
       submittedAt: submission.submittedAt,
       sentenceIndex: 0,
       allSentences: sentences,
     };
   } catch (error) {
-    console.error('Error fetching random mini exercise:', error);
+    console.error("Error fetching random mini exercise:", error);
     return null;
   }
 }

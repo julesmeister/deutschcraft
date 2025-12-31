@@ -15,6 +15,7 @@ export interface MiniExerciseData {
   blanks: QuizBlank[];
   submissionId: string;
   sourceType: "ai" | "teacher" | "reference";
+  exerciseId?: string;
   exerciseTitle?: string;
   exerciseType?: string;
   submittedAt?: number;
@@ -75,7 +76,7 @@ export async function getRandomMiniExercise(
   try {
     // Fetch user's recent submissions
     const result = await db.execute({
-      sql: `SELECT submission_id, content, exercise_title, exercise_type, submitted_at,
+      sql: `SELECT submission_id, content, exercise_id, exercise_title, exercise_type, submitted_at,
                    ai_corrected_version, teacher_corrected_version, ai_feedback
             FROM writing_submissions
             WHERE user_id = ?
@@ -94,6 +95,7 @@ export async function getRandomMiniExercise(
       content: string;
       correctedText: string;
       sourceType: "ai" | "teacher" | "reference";
+      exerciseId?: string;
       exerciseTitle?: string;
       exerciseType?: string;
       submittedAt: number;
@@ -102,6 +104,7 @@ export async function getRandomMiniExercise(
     for (const row of result.rows) {
       const submissionId = row.submission_id as string;
       const content = row.content as string;
+      const exerciseId = row.exercise_id as string | undefined;
       const exerciseTitle = row.exercise_title as string | undefined;
       const exerciseType = row.exercise_type as string | undefined;
       const submittedAt = row.submitted_at as number;
@@ -112,6 +115,7 @@ export async function getRandomMiniExercise(
           content,
           correctedText: row.teacher_corrected_version as string,
           sourceType: "teacher",
+          exerciseId,
           exerciseTitle,
           exerciseType,
           submittedAt,
@@ -122,6 +126,7 @@ export async function getRandomMiniExercise(
           content,
           correctedText: row.ai_corrected_version as string,
           sourceType: "ai",
+          exerciseId,
           exerciseTitle,
           exerciseType,
           submittedAt,
@@ -142,6 +147,7 @@ export async function getRandomMiniExercise(
               content,
               correctedText,
               sourceType: "ai",
+              exerciseId,
               exerciseTitle,
               exerciseType,
               submittedAt,
@@ -203,6 +209,7 @@ export async function getRandomMiniExercise(
           blanks,
           submissionId: submission.submissionId,
           sourceType: submission.sourceType,
+          exerciseId: submission.exerciseId,
           exerciseTitle: submission.exerciseTitle,
           exerciseType: submission.exerciseType,
           submittedAt: submission.submittedAt,
@@ -232,6 +239,7 @@ export async function getRandomMiniExercise(
       blanks,
       submissionId: submission.submissionId,
       sourceType: submission.sourceType,
+      exerciseId: submission.exerciseId,
       exerciseTitle: submission.exerciseTitle,
       exerciseType: submission.exerciseType,
       submittedAt: submission.submittedAt,

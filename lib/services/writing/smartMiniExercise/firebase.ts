@@ -269,6 +269,8 @@ export async function getSmartMiniExercise(userId: string): Promise<{
       sentenceId: sentence.sentenceId,
       submissionId: sentence.submissionId,
       sourceType: sentence.sourceType,
+      exerciseId: sentence.exerciseId,
+      exerciseTitle: sentence.exerciseTitle,
       exerciseType: sentence.exerciseType,
       submittedAt: sentence.submittedAt,
     };

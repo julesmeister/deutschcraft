@@ -4,11 +4,11 @@
  * Falls back to random selection if no indexed sentences available
  */
 
-import { useState, useCallback } from 'react';
-import { useQuery } from '@tanstack/react-query';
-import { getSmartMiniExercise } from '@/lib/services/writing/smartMiniExercise';
-import { getRandomMiniExercise } from '@/lib/services/writing/miniExercise';
-import { QuizBlank } from '@/lib/models/writing';
+import { useState, useCallback } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { getSmartMiniExercise } from "@/lib/services/writing/smartMiniExercise";
+import { getRandomMiniExercise } from "@/lib/services/writing/miniExercise";
+import { QuizBlank } from "@/lib/models/writing";
 
 export interface MiniExerciseData {
   sentence: string;
@@ -16,7 +16,9 @@ export interface MiniExerciseData {
   blanks: QuizBlank[];
   sentenceId?: string;
   submissionId: string;
-  sourceType: 'ai' | 'teacher' | 'reference';
+  sourceType: "ai" | "teacher" | "reference";
+  exerciseId?: string;
+  exerciseTitle?: string;
   exerciseType: string;
   submittedAt: number;
 }
@@ -25,40 +27,47 @@ export function useMiniExercise(userId?: string) {
   const [refreshKey, setRefreshKey] = useState(0);
 
   const query = useQuery({
-    queryKey: ['mini-exercise', userId, refreshKey],
+    queryKey: ["mini-exercise", userId, refreshKey],
     queryFn: async () => {
       if (!userId) {
-        console.log('[useMiniExercise] No userId provided');
+        console.log("[useMiniExercise] No userId provided");
         return null;
       }
 
       // Try smart selection first
-      console.log('[useMiniExercise] Attempting smart mini exercise for user:', userId);
+      console.log(
+        "[useMiniExercise] Attempting smart mini exercise for user:",
+        userId
+      );
       const smartResult = await getSmartMiniExercise(userId);
 
       if (smartResult) {
-        console.log('[useMiniExercise] Smart result:', smartResult);
+        console.log("[useMiniExercise] Smart result:", smartResult);
         return smartResult;
       }
 
       // Fall back to random selection
-      console.log('[useMiniExercise] No indexed sentences, falling back to random selection');
+      console.log(
+        "[useMiniExercise] No indexed sentences, falling back to random selection"
+      );
       const randomResult = await getRandomMiniExercise(userId);
 
       if (randomResult) {
-        console.log('[useMiniExercise] Random result:', randomResult);
+        console.log("[useMiniExercise] Random result:", randomResult);
         // Convert to expected format
         return {
           sentence: randomResult.sentence,
           blanks: randomResult.blanks,
           submissionId: randomResult.submissionId,
           sourceType: randomResult.sourceType,
-          exerciseType: randomResult.exerciseType || 'translation',
+          exerciseId: randomResult.exerciseId,
+          exerciseTitle: randomResult.exerciseTitle,
+          exerciseType: randomResult.exerciseType || "translation",
           submittedAt: randomResult.submittedAt || Date.now(),
         };
       }
 
-      console.log('[useMiniExercise] No exercises available');
+      console.log("[useMiniExercise] No exercises available");
       return null;
     },
     enabled: !!userId,
@@ -67,8 +76,8 @@ export function useMiniExercise(userId?: string) {
   });
 
   const refresh = useCallback(() => {
-    console.log('[useMiniExercise] Refreshing exercise');
-    setRefreshKey(prev => prev + 1);
+    console.log("[useMiniExercise] Refreshing exercise");
+    setRefreshKey((prev) => prev + 1);
   }, []);
 
   return {

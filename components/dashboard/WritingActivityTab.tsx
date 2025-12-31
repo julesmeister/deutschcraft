@@ -90,7 +90,7 @@ export function WritingActivityTab({
             icon: <span className="text-white text-sm">{exerciseIcon}</span>,
             iconColor: isQuiz ? 'bg-blue-500' : 'bg-purple-500',
             title: isQuiz
-              ? `Review Quiz - ${(submission as any).sourceType === 'ai' ? 'AI' : (submission as any).sourceType === 'teacher' ? 'Teacher' : 'Reference'} Correction`
+              ? ((submission as any).exerciseTitle ? `Review Quiz: ${(submission as any).exerciseTitle}` : `Review Quiz - ${(submission as any).sourceType === 'ai' ? 'AI' : (submission as any).sourceType === 'teacher' ? 'Teacher' : 'Reference'} Correction`)
               : ((submission as any).exerciseTitle || `${submission.exerciseType} exercise`),
             description: isQuiz
               ? `${submission.wordCount} blanks${quizScore !== null ? ` • Score: ${quizScore}%` : ''}`

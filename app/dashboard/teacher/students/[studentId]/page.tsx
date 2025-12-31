@@ -25,6 +25,25 @@ import { useAnswerHubStats } from "@/lib/hooks/useAnswerHubStats";
 import { getUser } from "@/lib/services/user";
 import { getBatch } from "@/lib/services/batchService";
 import { User, getUserFullName } from "@/lib/models/user";
+import { CREATIVE_EXERCISES } from "@/lib/data/creativeExercises";
+import { EMAIL_TEMPLATES } from "@/lib/data/emailTemplates";
+import { LETTER_TEMPLATES } from "@/lib/data/letterTemplates";
+import { TRANSLATION_EXERCISES } from "@/lib/data/translationExercises";
+import grammarA1 from "@/lib/data/grammar/levels/a1.json";
+import grammarA2 from "@/lib/data/grammar/levels/a2.json";
+import grammarB1 from "@/lib/data/grammar/levels/b1.json";
+import grammarB2 from "@/lib/data/grammar/levels/b2.json";
+import grammarC1 from "@/lib/data/grammar/levels/c1.json";
+import grammarC2 from "@/lib/data/grammar/levels/c2.json";
+
+// Import textbook exercises
+import textbookA1_1 from "@/lib/data/exercises/a1-1-arbeitsbuch.json";
+import textbookA1_2 from "@/lib/data/exercises/a1-2-arbeitsbuch.json";
+import textbookA2_1 from "@/lib/data/exercises/a2-1-arbeitsbuch.json";
+import textbookA2_2 from "@/lib/data/exercises/a2-2-arbeitsbuch.json";
+import textbookB1_1 from "@/lib/data/exercises/b1-1-arbeitsbuch.json";
+import textbookB1_2 from "@/lib/data/exercises/b1-2-arbeitsbuch.json";
+import textbookB1_1_KB from "@/lib/data/exercises/b1-1-kursbuch.json";
 
 interface StudentProfilePageProps {
   params: Promise<{ studentId: string }>;
@@ -74,6 +93,52 @@ export default function StudentProfilePage({
     isLoading: isLoadingAnswerHub,
   } = useAnswerHubStats(student?.email || null);
 
+  // Create a map of all exercise titles for quick lookup
+  const exerciseTitleMap = useMemo(() => {
+    const map = new Map<string, string>();
+
+    // Add Creative Exercises
+    CREATIVE_EXERCISES.forEach((ex) => {
+      if (ex.exerciseId) map.set(ex.exerciseId, ex.title);
+    });
+
+    // Add Email Templates (use id)
+    EMAIL_TEMPLATES.forEach((ex) => {
+      if (ex.id) map.set(ex.id, ex.title);
+    });
+
+    // Add Letter Templates (use id)
+    LETTER_TEMPLATES.forEach((ex) => {
+      if (ex.id) map.set(ex.id, ex.title);
+    });
+
+    // Add Translation Exercises
+    TRANSLATION_EXERCISES.forEach((ex) => {
+      if (ex.exerciseId) map.set(ex.exerciseId, ex.title);
+    });
+
+    return map;
+  }, []);
+
+  // Create a map of all grammar rule titles from static JSONs
+  const grammarRuleTitleMap = useMemo(() => {
+    const map = new Map<string, string>();
+    const allRules = [
+      ...(grammarA1.rules || []),
+      ...(grammarA2.rules || []),
+      ...(grammarB1.rules || []),
+      ...(grammarB2.rules || []),
+      ...(grammarC1.rules || []),
+      ...(grammarC2.rules || []),
+    ];
+
+    allRules.forEach((rule: any) => {
+      if (rule.id) map.set(rule.id, rule.title);
+    });
+
+    return map;
+  }, []);
+
   // Normalize and combine writing submissions with quiz attempts
   const writingSubmissions = useMemo(() => {
     if (!rawWritingSubmissions || rawWritingSubmissions.length === 0) {
@@ -91,9 +156,18 @@ export default function StudentProfilePage({
       ) {
         submission.teacherScore = submission.teacherScore.overallScore || 0;
       }
+
+      // Enrich with title from map if missing
+      if (!submission.exerciseTitle && submission.exerciseId) {
+        const foundTitle = exerciseTitleMap.get(submission.exerciseId);
+        if (foundTitle) {
+          submission.exerciseTitle = foundTitle;
+        }
+      }
+
       return submission;
     });
-  }, [rawWritingSubmissions]);
+  }, [rawWritingSubmissions, exerciseTitleMap]);
 
   // Convert grammar reviews to activity items (grouped by date)
   const grammarSessions = useMemo(() => {
@@ -118,7 +192,12 @@ export default function StudentProfilePage({
       const topics = ruleIds
         .map((id) => {
           if (!id) return undefined;
-          // Try to match by ruleId or id (in case of data format mismatch)
+
+          // 1. Try static map first (Primary source)
+          const staticTitle = grammarRuleTitleMap.get(id);
+          if (staticTitle) return staticTitle;
+
+          // 2. Try to match by ruleId or id (in case of data format mismatch)
           const rule = grammarRules.find(
             (r) => r.ruleId === id || (r as any).id === id
           );
@@ -161,7 +240,7 @@ export default function StudentProfilePage({
         topics: topics.length > 0 ? topics : undefined,
       };
     });
-  }, [grammarReviews, grammarRules]);
+  }, [grammarReviews, grammarRules, grammarRuleTitleMap]);
 
   // Combine submissions, quizzes, and grammar sessions, sorted by date
   const combinedActivity = useMemo(() => {
@@ -170,16 +249,41 @@ export default function StudentProfilePage({
       // Only include completed quizzes
       ...userQuizzes
         .filter((quiz) => quiz.status === "completed")
-        .map((quiz) => ({
-          ...quiz,
-          isQuiz: true,
-          submissionId: quiz.quizId,
-          exerciseType: "quiz" as const,
-          status: "reviewed" as const,
-          wordCount: quiz.totalBlanks,
-          submittedAt: quiz.completedAt || quiz.startedAt,
-          updatedAt: quiz.updatedAt,
-        })),
+        .map((quiz) => {
+          // Find the original submission to get the title
+          // 1. Try exact submission match
+          let submission = writingSubmissions.find(
+            (s: any) => s.submissionId === quiz.submissionId
+          );
+
+          // 2. If not found, try to find ANY submission for this exercise (fallback)
+          if (!submission && quiz.exerciseId) {
+            submission = writingSubmissions.find(
+              (s: any) => s.exerciseId === quiz.exerciseId
+            );
+          }
+
+          // 3. Look up title from static exercise definitions (Ultimate fallback/Primary source if submission missing)
+          const staticTitle = quiz.exerciseId
+            ? exerciseTitleMap.get(quiz.exerciseId)
+            : undefined;
+
+          const title =
+            staticTitle || submission?.exerciseTitle || submission?.title;
+
+          return {
+            ...quiz,
+            isQuiz: true,
+            submissionId: quiz.quizId,
+            exerciseType: "quiz" as const,
+            status: "reviewed" as const,
+            wordCount: quiz.totalBlanks,
+            submittedAt: quiz.completedAt || quiz.startedAt,
+            updatedAt: quiz.updatedAt,
+            // Pass the original exercise title to the quiz object
+            exerciseTitle: title,
+          };
+        }),
       ...grammarSessions,
     ];
 
@@ -189,7 +293,7 @@ export default function StudentProfilePage({
       const dateB = b.submittedAt || b.updatedAt || 0;
       return dateB - dateA;
     });
-  }, [writingSubmissions, userQuizzes, grammarSessions]);
+  }, [writingSubmissions, userQuizzes, grammarSessions, exerciseTitleMap]);
 
   // Pagination for flashcard sessions
   const sessionPagination = useSessionPagination(student?.email, 8);

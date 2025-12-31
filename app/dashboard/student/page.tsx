@@ -170,7 +170,9 @@ export default function StudentDashboard() {
                       miniExercise.blanks,
                       answers,
                       points,
-                      correctAnswers
+                      correctAnswers,
+                      miniExercise.exerciseId,
+                      miniExercise.exerciseTitle
                     );
                   } catch (error) {
                     console.error('Failed to save mini quiz result:', error);
