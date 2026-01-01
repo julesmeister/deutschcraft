@@ -59,13 +59,24 @@ export function StudentAnswerBubble({
     }
   }, [value, isEditing]);
 
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent) => {
+    // Prevent editing if clicking buttons or links
+    if ((e.target as HTMLElement).closest("button")) {
+      return;
+    }
+
+    // Don't trigger edit if user is selecting text
+    const selection = window.getSelection();
+    if (selection && selection.toString().length > 0) {
+      return;
+    }
+
     if (isOwnAnswer && onEdit) {
       setIsEditing(true);
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newValue = e.target.value;
     setValue(newValue);
     if (onEdit) {
@@ -77,107 +88,118 @@ export function StudentAnswerBubble({
     setIsEditing(false);
   };
 
+  const [isCopied, setIsCopied] = useState(false);
+
+  const handleCopy = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    try {
+      await navigator.clipboard.writeText(value);
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+    }
+  };
+
   const timeAgo = getTimeAgo(submittedAt);
 
-  // Different colors for own answers vs others
-  const bubbleColors = isOwnAnswer
-    ? "bg-gradient-to-br from-blue-500 to-blue-700"
-    : "bg-gradient-to-br from-gray-500 to-gray-700";
-
-  const hoverColors = isOwnAnswer
-    ? "hover:from-blue-600 hover:to-blue-800"
-    : "";
-
   return (
-    <div className="mb-4">
-      <div className="flex items-center ml-2 mb-1">
-        <span
-          className={`text-xs font-medium ${
-            isOwnAnswer ? "text-blue-700 font-bold" : "text-gray-500"
-          }`}
-        >
-          {studentName}
-          {isOwnAnswer && " (You)"}
-        </span>
-        {timeAgo && (
-          <>
-            <span className="text-xs text-gray-400 mx-2">•</span>
-            <span className="text-xs text-gray-400">{timeAgo}</span>
-          </>
-        )}
-        {isOwnAnswer && onDelete && (
-          <>
-            <span className="text-xs text-gray-400 mx-2">•</span>
-            <button
-              onClick={onDelete}
-              className="text-xs text-gray-400 hover:text-red-600 transition-colors"
-            >
-              delete
-            </button>
-          </>
-        )}
+    <div
+      className={`px-6 py-3 flex gap-4 hover:bg-gray-50 transition-colors group ${
+        isOwnAnswer && onEdit ? "cursor-pointer" : ""
+      }`}
+      onClick={handleClick}
+    >
+      <div className="font-mono text-sm font-semibold text-gray-500 w-8 pt-0.5 flex-shrink-0">
+        {itemNumber}
       </div>
 
-      <div className="w-full">
-        {isEditing && isOwnAnswer ? (
-          <div className="relative w-full">
-            <div className="absolute left-4 top-1/2 -translate-y-1/2 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center z-10">
-              <span className="text-xs font-bold text-blue-700">
-                {itemNumber}
-              </span>
-            </div>
-            <textarea
-              ref={textareaRef}
-              value={value}
-              onChange={(e) => {
-                const newValue = e.target.value;
-                setValue(newValue);
-                if (onEdit) {
-                  onEdit(newValue);
-                }
-              }}
-              onBlur={handleBlur}
-              autoFocus
-              className={`w-full pl-12 sm:pl-16 pr-4 sm:pr-8 py-3 sm:py-5 text-sm text-white ${bubbleColors} border border-blue-700 focus:outline-none focus:border-blue-800 focus:ring-2 focus:ring-blue-300 transition-all duration-150 ease-in-out placeholder-blue-200 resize-none overflow-hidden`}
-              style={{ borderRadius: "0 30px 30px 40px", minHeight: "60px" }}
-            />
-            {isEditing && (
-              <GermanCharAutocomplete
-                textareaRef={textareaRef}
-                content={value}
-                onContentChange={(newContent) => {
-                  setValue(newContent);
-                  if (onEdit) {
-                    onEdit(newContent);
-                  }
-                }}
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center justify-between mb-1">
+          <div className="flex items-center gap-2">
+            <span
+              className={`text-xs font-medium ${
+                isOwnAnswer ? "text-blue-700 font-bold" : "text-gray-900"
+              }`}
+            >
+              {studentName}
+              {isOwnAnswer && " (You)"}
+            </span>
+            {timeAgo && (
+              <>
+                <span className="text-xs text-gray-400">•</span>
+                <span className="text-xs text-gray-400">{timeAgo}</span>
+              </>
+            )}
+          </div>
+          <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+            <button
+              onClick={handleCopy}
+              className="text-xs text-gray-400 hover:text-blue-600 transition-colors"
+            >
+              {isCopied ? "copied!" : "copy"}
+            </button>
+            {isOwnAnswer && onDelete && (
+              <>
+                <span className="text-xs text-gray-300">•</span>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onDelete();
+                  }}
+                  className="text-xs text-gray-400 hover:text-red-600 transition-colors"
+                >
+                  delete
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+
+        <div className="w-full">
+          {isEditing && isOwnAnswer ? (
+            <div className="relative w-full">
+              <textarea
+                ref={textareaRef}
+                value={value}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                autoFocus
+                className="w-full p-0 text-sm text-gray-900 bg-transparent border-0 focus:ring-0 focus:outline-none resize-none overflow-hidden font-medium leading-normal"
+                style={{ minHeight: "24px" }}
+                onClick={(e) => e.stopPropagation()}
               />
-            )}
-            {isSaving && (
-              <span className="text-xs text-blue-600 mt-2 ml-2 block">
-                Saving...
-              </span>
-            )}
-          </div>
-        ) : (
-          <div
-            onClick={handleClick}
-            className={`inline-flex items-center gap-2 sm:gap-3 pl-2 sm:pl-4 pr-4 sm:pr-8 py-3 sm:py-5 text-sm text-white ${bubbleColors} transition-all duration-150 ease-in-out ${
-              isOwnAnswer && onEdit
-                ? `cursor-pointer ${hoverColors} hover:shadow-md`
-                : ""
-            }`}
-            style={{ borderRadius: "0 30px 30px 40px" }}
-            title={isOwnAnswer && onEdit ? "Click to edit" : ""}
-          >
-            <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center flex-shrink-0">
-              <span className="text-xs font-bold text-blue-700">
-                {itemNumber}
-              </span>
+              {isEditing && (
+                <GermanCharAutocomplete
+                  textareaRef={textareaRef}
+                  content={value}
+                  onContentChange={(newContent) => {
+                    setValue(newContent);
+                    if (onEdit) {
+                      onEdit(newContent);
+                    }
+                  }}
+                />
+              )}
+              {isSaving && (
+                <span className="text-xs text-blue-600 mt-1 block">
+                  Saving...
+                </span>
+              )}
             </div>
-            <span>{value}</span>
-          </div>
-        )}
+          ) : (
+            <div
+              className={`text-sm text-gray-900 font-medium whitespace-pre-wrap leading-normal ${
+                isOwnAnswer && onEdit
+                  ? "group-hover:text-blue-700 transition-colors"
+                  : ""
+              }`}
+              title={isOwnAnswer && onEdit ? "Click to edit" : ""}
+            >
+              {value}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

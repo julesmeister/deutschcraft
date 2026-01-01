@@ -218,7 +218,7 @@ export function StudentAnswersDisplay({
   }
 
   return (
-    <div className="bg-white border border-gray-200 shadow-sm overflow-hidden">
+    <div className="bg-white border border-gray-200 shadow-sm overflow-hidden rounded-xl">
       {/* Header */}
       <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
         <div className="flex items-center gap-3">
@@ -262,7 +262,7 @@ export function StudentAnswersDisplay({
       </div>
 
       {/* Student Answers List */}
-      <div className="p-6">
+      <div className="divide-y divide-gray-100">
         {allStudentAnswers.map((studentAnswers, idx) =>
           studentAnswers.answers.map((ans, ansIdx) => {
             const key = `${studentAnswers.studentId}_${ans.itemNumber}`;
@@ -284,7 +284,7 @@ export function StudentAnswersDisplay({
                         handleEditChange(
                           studentAnswers.studentId,
                           studentAnswers.studentName,
-                          ans.itemNumber,
+                          ans.itemNumber, // Use original itemNumber from ans
                           value
                         )
                     : undefined

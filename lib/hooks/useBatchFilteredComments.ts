@@ -42,34 +42,25 @@ export function useBatchFilteredComments(
   const batchFilteredComments = useMemo(() => {
     // No batch = no comments (privacy rule)
     if (!currentUserBatchId) {
-      console.log('[useBatchFilteredComments] No batch ID - showing 0 comments');
       return [];
     }
 
     // Still loading students
     if (studentsLoading || students.length === 0) {
-      console.log('[useBatchFilteredComments] Loading students or empty batch');
       return [];
     }
 
     // Create set of batch-mate emails for O(1) lookup
     const batchEmails = new Set(students.map(s => s.userId || s.email));
 
-    console.log('[useBatchFilteredComments] Batch has', batchEmails.size, 'students');
-    console.log('[useBatchFilteredComments] Total comments:', allComments.length);
-
     // Filter: only show comments from batch-mates
     const filtered = allComments.filter(comment => {
       const isInBatch = batchEmails.has(comment.userId);
-      if (!isInBatch) {
-        console.log('[useBatchFilteredComments] Filtered out comment from:', comment.userId);
-      }
       return isInBatch;
     });
 
-    console.log('[useBatchFilteredComments] Showing', filtered.length, 'batch-filtered comments');
     return filtered;
-  }, [allComments, students, studentsLoading, currentUserBatchId]);
+  }, [allComments, students.length, studentsLoading, currentUserBatchId]);
 
   // Loading state: true if either comments or students are loading
   const isLoading = commentsLoading || (currentUserBatchId ? studentsLoading : false);

@@ -4,12 +4,12 @@
  * Provides seamless inline editing experience
  */
 
-'use client';
+"use client";
 
-import { useState, KeyboardEvent } from 'react';
-import { Check, X, Plus, Trash2 } from 'lucide-react';
-import { ExerciseAnswer } from '@/lib/models/exercises';
-import { CreateExerciseOverrideInput } from '@/lib/models/exerciseOverride';
+import { useState, KeyboardEvent } from "react";
+import { Check, X, Plus, Trash2 } from "lucide-react";
+import { ExerciseAnswer } from "@/lib/models/exercises";
+import { CreateExerciseOverrideInput } from "@/lib/models/exerciseOverride";
 
 interface InlineEditableExerciseCardProps {
   initialData?: Partial<CreateExerciseOverrideInput>;
@@ -30,18 +30,20 @@ export function InlineEditableExerciseCard({
   onCancel,
   colorScheme,
 }: InlineEditableExerciseCardProps) {
-  const [exerciseNumber, setExerciseNumber] = useState(initialData?.exerciseNumber || '');
-  const [question, setQuestion] = useState(initialData?.question || '');
+  const [exerciseNumber, setExerciseNumber] = useState(
+    initialData?.exerciseNumber || ""
+  );
+  const [question, setQuestion] = useState(initialData?.question || "");
   const [answers, setAnswers] = useState<ExerciseAnswer[]>(
     initialData?.answers && initialData.answers.length > 0
       ? initialData.answers
-      : [{ itemNumber: '1', correctAnswer: '' }]
+      : [{ itemNumber: "1", correctAnswer: "" }]
   );
   const [isSaving, setIsSaving] = useState(false);
 
   const handleAddAnswer = () => {
     const nextNumber = (answers.length + 1).toString();
-    setAnswers([...answers, { itemNumber: nextNumber, correctAnswer: '' }]);
+    setAnswers([...answers, { itemNumber: nextNumber, correctAnswer: "" }]);
   };
 
   const handleRemoveAnswer = (index: number) => {
@@ -55,8 +57,14 @@ export function InlineEditableExerciseCard({
     setAnswers(updated);
   };
 
+  const handleUpdateAnswerNumber = (index: number, value: string) => {
+    const updated = [...answers];
+    updated[index] = { ...updated[index], itemNumber: value };
+    setAnswers(updated);
+  };
+
   const handleKeyDown = (e: KeyboardEvent, callback: () => void) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       callback();
     }
@@ -64,12 +72,12 @@ export function InlineEditableExerciseCard({
 
   const handleSave = async () => {
     if (!exerciseNumber.trim()) {
-      alert('Exercise number is required');
+      alert("Exercise number is required");
       return;
     }
 
     if (answers.length === 0) {
-      alert('At least one answer slot is required');
+      alert("At least one answer slot is required");
       return;
     }
 
@@ -81,8 +89,13 @@ export function InlineEditableExerciseCard({
       if (!exerciseId) {
         // Generate unique exerciseId from section, exercise number, and timestamp
         const timestamp = Date.now();
-        const sanitizedSection = sectionName.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
-        const sanitizedNumber = exerciseNumber.trim().replace(/[^a-zA-Z0-9]/g, '-').toLowerCase();
+        const sanitizedSection = sectionName
+          .replace(/[^a-zA-Z0-9]/g, "-")
+          .toLowerCase();
+        const sanitizedNumber = exerciseNumber
+          .trim()
+          .replace(/[^a-zA-Z0-9]/g, "-")
+          .toLowerCase();
         exerciseId = `${sanitizedSection}-${sanitizedNumber}-${timestamp}`;
       }
 
@@ -92,8 +105,8 @@ export function InlineEditableExerciseCard({
         exerciseNumber: exerciseNumber.trim(),
         section: sectionName,
         answers: answers,
-        overrideType: 'create',
-        difficulty: initialData?.difficulty || 'medium',
+        overrideType: "create",
+        difficulty: initialData?.difficulty || "medium",
       };
 
       // Only add question if it's not empty
@@ -103,13 +116,15 @@ export function InlineEditableExerciseCard({
 
       await onSave(overrideData);
     } catch (error) {
-      console.error('Error saving exercise:', error);
+      console.error("Error saving exercise:", error);
       setIsSaving(false);
     }
   };
 
   return (
-    <div className={`${colorScheme.bg} px-6 py-4 border-2 border-dashed border-gray-300`}>
+    <div
+      className={`${colorScheme.bg} px-6 py-4 border-2 border-dashed border-gray-300`}
+    >
       <div className="space-y-3">
         {/* Exercise Number & Question */}
         <div className="flex items-start gap-3">
@@ -133,7 +148,9 @@ export function InlineEditableExerciseCard({
         {/* Answers */}
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-semibold text-gray-600 uppercase">Answers</span>
+            <span className="text-xs font-semibold text-gray-600 uppercase">
+              Answers
+            </span>
             <button
               onClick={handleAddAnswer}
               className="p-1 text-green-600 hover:bg-green-50 rounded transition-colors"
@@ -145,15 +162,21 @@ export function InlineEditableExerciseCard({
 
           {answers.map((answer, index) => (
             <div key={index} className="flex items-center gap-2">
-              <span className="flex-shrink-0 w-8 text-xs font-semibold text-gray-500">
-                {answer.itemNumber}.
-              </span>
+              <input
+                type="text"
+                value={answer.itemNumber}
+                onChange={(e) =>
+                  handleUpdateAnswerNumber(index, e.target.value)
+                }
+                placeholder="#"
+                className="flex-shrink-0 w-10 px-1 py-1.5 text-xs font-semibold text-center border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
+              />
               <input
                 type="text"
                 value={answer.correctAnswer}
                 onChange={(e) => handleUpdateAnswer(index, e.target.value)}
                 onKeyDown={(e) => {
-                  if (e.key === 'Enter' && index === answers.length - 1) {
+                  if (e.key === "Enter" && index === answers.length - 1) {
                     handleAddAnswer();
                   }
                 }}
@@ -189,7 +212,7 @@ export function InlineEditableExerciseCard({
             className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-white bg-green-600 hover:bg-green-700 rounded transition-colors disabled:opacity-50"
           >
             <Check className="w-3 h-3" />
-            {isSaving ? 'SAVING...' : 'SAVE'}
+            {isSaving ? "SAVING..." : "SAVE"}
           </button>
         </div>
       </div>

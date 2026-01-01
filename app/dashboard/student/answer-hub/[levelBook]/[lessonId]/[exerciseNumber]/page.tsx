@@ -17,6 +17,8 @@ import { DictionaryLookup } from "@/components/dictionary/DictionaryLookup";
 import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { useCurrentStudent } from "@/lib/hooks/useUsers";
+import { useActiveBatches } from "@/lib/hooks/useBatches";
+import { useBatchSelection } from "@/lib/hooks/useBatchSelection";
 import { getUserInfo } from "@/lib/utils/userHelpers";
 import { useLessonWithOverrides } from "@/lib/hooks/useExercisesWithOverrides";
 import { useExerciseProgress } from "@/lib/hooks/useExerciseProgress";
@@ -60,8 +62,23 @@ export default function ExerciseDetailPage() {
   // Check if user is a teacher (role is uppercase in database)
   const isTeacher = currentUser?.role === "TEACHER";
 
+  // Load teacher's batches (only for teachers)
+  const { batches } = useActiveBatches(
+    isTeacher ? session?.user?.email : undefined
+  );
+
+  // Use persistent batch selection
+  const { selectedBatch } = useBatchSelection({
+    batches,
+    user: currentUser,
+  });
+
   // Get current user's batch ID
-  const currentUserBatchId = currentUser?.batchId;
+  // If teacher: use selected batch from dropdown/persistence
+  // If student: use their assigned batch
+  const currentUserBatchId = isTeacher
+    ? selectedBatch?.batchId
+    : currentUser?.batchId;
 
   // Get exercise progress
   const exerciseProgress = useExerciseProgress(

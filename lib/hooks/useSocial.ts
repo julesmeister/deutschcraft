@@ -183,7 +183,11 @@ export function useSuggestions(postId: string) {
     try {
       setLoading(true);
       const suggestionsData = await fetchSuggestions(postId);
-      setSuggestions(suggestionsData);
+      setSuggestions(prev => {
+        // Prevent unnecessary updates if data hasn't changed
+        if (JSON.stringify(prev) === JSON.stringify(suggestionsData)) return prev;
+        return suggestionsData;
+      });
       setLoading(false);
     } catch (err) {
       setError(err as Error);
