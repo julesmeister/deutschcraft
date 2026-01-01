@@ -54,9 +54,6 @@ export function StudentAnswersDisplay({
 
   // Track saving states for auto-save
   const [savingStates, setSavingStates] = useState<Record<string, boolean>>({});
-  const [saveTimers, setSaveTimers] = useState<Record<string, NodeJS.Timeout>>(
-    {}
-  );
 
   // Track delete target for confirmation dialog
   const [deleteTarget, setDeleteTarget] = useState<{
@@ -64,9 +61,9 @@ export function StudentAnswersDisplay({
     itemNumber: string;
   } | null>(null);
 
-  // Auto-save with debouncing
+  // Save answer immediately (triggered on blur/save click)
   const handleEditChange = useCallback(
-    (
+    async (
       studentId: string,
       studentName: string,
       itemNumber: string,
@@ -74,39 +71,31 @@ export function StudentAnswersDisplay({
     ) => {
       const key = `${studentId}_${itemNumber}`;
 
-      // Clear existing timer
-      if (saveTimers[key]) {
-        clearTimeout(saveTimers[key]);
+      if (!value || value.trim() === "") {
+        return;
       }
 
-      // Set new timer for auto-save
-      const timer = setTimeout(async () => {
-        if (!value || value.trim() === "") {
-          return;
-        }
+      setSavingStates((prev) => ({ ...prev, [key]: true }));
 
-        setSavingStates((prev) => ({ ...prev, [key]: true }));
+      const success = await saveAnswer(
+        studentId,
+        studentName,
+        exerciseId,
+        itemNumber,
+        value.trim()
+      );
 
-        const success = await saveAnswer(
-          studentId,
-          studentName,
-          exerciseId,
-          itemNumber,
-          value.trim()
-        );
+      setSavingStates((prev) => ({ ...prev, [key]: false }));
 
-        setSavingStates((prev) => ({ ...prev, [key]: false }));
-
-        if (success) {
-          showToast(`Answer updated for Item ${itemNumber}`, "success");
-        } else {
-          showToast(`Failed to update answer for Item ${itemNumber}`, "error");
-        }
-      }, 500);
-
-      setSaveTimers((prev) => ({ ...prev, [key]: timer }));
+      if (success) {
+        showToast(`Answer updated for Item ${itemNumber}`, "success");
+        // Silent refresh to update local state without loading spinner
+        refresh(true);
+      } else {
+        showToast(`Failed to update answer for Item ${itemNumber}`, "error");
+      }
     },
-    [exerciseId, saveAnswer, showToast, saveTimers]
+    [exerciseId, saveAnswer, showToast]
   );
 
   const handleDeleteClick = useCallback(
@@ -124,7 +113,7 @@ export function StudentAnswersDisplay({
 
     if (success) {
       showToast(`Answer for Item ${itemNumber} deleted`, "success");
-      refresh();
+      refresh(true);
       setDeleteTarget(null);
     } else {
       showToast(`Failed to delete answer for Item ${itemNumber}`, "error");
@@ -165,13 +154,6 @@ export function StudentAnswersDisplay({
       setIsCopying(false);
     }
   };
-
-  // Cleanup timers on unmount
-  useEffect(() => {
-    return () => {
-      Object.values(saveTimers).forEach((timer) => clearTimeout(timer));
-    };
-  }, [saveTimers]);
 
   if (isLoading) {
     return (

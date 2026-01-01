@@ -110,13 +110,15 @@ export function useStudentAnswers(exerciseId: string | null) {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchAnswers = useCallback(async () => {
+  const fetchAnswers = useCallback(async (silent = false) => {
     if (!exerciseId) {
       setAnswers([]);
       return;
     }
 
-    setIsLoading(true);
+    if (!silent) {
+      setIsLoading(true);
+    }
     setError(null);
 
     try {

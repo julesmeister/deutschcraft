@@ -49,6 +49,15 @@ export function StudentAnswerBubble({
   const [isEditing, setIsEditing] = useState(false);
   const [value, setValue] = useState(answer);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const prevAnswerRef = useRef(answer);
+
+  // Sync value with answer prop only when prop changes
+  useEffect(() => {
+    if (answer !== prevAnswerRef.current) {
+      setValue(answer);
+      prevAnswerRef.current = answer;
+    }
+  }, [answer]);
 
   // Auto-resize textarea when content changes
   useEffect(() => {
@@ -79,12 +88,21 @@ export function StudentAnswerBubble({
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newValue = e.target.value;
     setValue(newValue);
-    if (onEdit) {
-      onEdit(newValue);
-    }
   };
 
   const handleBlur = () => {
+    if (onEdit && value !== answer) {
+      onEdit(value);
+    }
+    setIsEditing(false);
+  };
+
+  const handleSave = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (onEdit && value !== answer) {
+      onEdit(value);
+    }
     setIsEditing(false);
   };
 
@@ -132,7 +150,22 @@ export function StudentAnswerBubble({
               </>
             )}
           </div>
-          <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+          <div
+            className={`flex items-center gap-2 transition-opacity ${
+              isEditing ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+            }`}
+          >
+            {isEditing && (
+              <>
+                <button
+                  onMouseDown={handleSave}
+                  className="text-xs text-blue-600 hover:text-blue-800 font-bold transition-colors"
+                >
+                  save
+                </button>
+                <span className="text-xs text-gray-300">•</span>
+              </>
+            )}
             <button
               onClick={handleCopy}
               className="text-xs text-gray-400 hover:text-blue-600 transition-colors"
@@ -175,9 +208,6 @@ export function StudentAnswerBubble({
                   content={value}
                   onContentChange={(newContent) => {
                     setValue(newContent);
-                    if (onEdit) {
-                      onEdit(newContent);
-                    }
                   }}
                 />
               )}
