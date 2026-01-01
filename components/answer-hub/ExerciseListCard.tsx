@@ -89,21 +89,6 @@ export function ExerciseListCard({
             >
               {exercise.exerciseNumber}
             </h3>
-
-            {/* Modified Badge (keep on left) */}
-            {exercise._isModified && (
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 border border-blue-300">
-                <Edit3 className="w-3 h-3" />
-                Modified
-              </span>
-            )}
-
-            {/* Hidden Badge */}
-            {exercise._isHidden && (
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold bg-gray-200 text-gray-700 border border-gray-400">
-                Hidden
-              </span>
-            )}
           </div>
           <p
             className={`text-sm mb-0 ${
@@ -120,10 +105,21 @@ export function ExerciseListCard({
 
         {/* Action Buttons */}
         <div className="flex-shrink-0 flex items-center gap-2">
-          {/* Custom Badge */}
-          {exercise._isCreated && (
+          {/* Status Badges (Custom > Modified) */}
+          {exercise._isCreated ? (
             <span className="inline-flex items-center px-3 py-1 text-xs font-bold bg-green-100 text-green-800">
               CUSTOM
+            </span>
+          ) : exercise._isModified ? (
+            <span className="inline-flex items-center px-3 py-1 text-xs font-bold bg-blue-100 text-blue-800">
+              MODIFIED
+            </span>
+          ) : null}
+
+          {/* Hidden Badge */}
+          {exercise._isHidden && (
+            <span className="inline-flex items-center px-3 py-1 text-xs font-bold bg-gray-200 text-gray-700">
+              HIDDEN
             </span>
           )}
 

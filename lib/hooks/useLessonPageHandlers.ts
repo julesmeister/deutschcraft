@@ -3,13 +3,13 @@
  * Consolidates all inline editing, section management, and exercise operations
  */
 
-import { useState } from 'react';
-import { CEFRLevel } from '../models/cefr';
+import { useState } from "react";
+import { CEFRLevel } from "../models/cefr";
 import {
   ExerciseWithOverrideMetadata,
   CreateExerciseOverrideInput,
-} from '../models/exerciseOverride';
-import { useCreateOverride, useUpdateOverride } from './useExerciseOverrides';
+} from "../models/exerciseOverride";
+import { useCreateOverride, useUpdateOverride } from "./useExerciseOverrides";
 
 export function useLessonPageHandlers(
   userEmail: string | null,
@@ -19,10 +19,14 @@ export function useLessonPageHandlers(
   handleReorder: (exercises: ExerciseWithOverrideMetadata[]) => void
 ) {
   // Inline exercise creation state
-  const [editingSectionName, setEditingSectionName] = useState<string | null>(null);
+  const [editingSectionName, setEditingSectionName] = useState<string | null>(
+    null
+  );
 
   // Inline exercise editing state
-  const [editingExerciseId, setEditingExerciseId] = useState<string | null>(null);
+  const [editingExerciseId, setEditingExerciseId] = useState<string | null>(
+    null
+  );
 
   // Direct access to create/update override mutations
   const createOverrideMutation = useCreateOverride();
@@ -38,7 +42,7 @@ export function useLessonPageHandlers(
     // For each section in the new order, add all its exercises
     newSectionOrder.forEach((sectionName) => {
       const sectionExercises = lesson.exercises.filter(
-        (ex) => (ex.section || 'Übungen') === sectionName
+        (ex) => (ex.section || "Übungen") === sectionName
       );
       reorderedExercises.push(...sectionExercises);
     });
@@ -53,7 +57,9 @@ export function useLessonPageHandlers(
   };
 
   // Handle saving inline exercise
-  const handleSaveInlineExercise = async (data: CreateExerciseOverrideInput) => {
+  const handleSaveInlineExercise = async (
+    data: CreateExerciseOverrideInput
+  ) => {
     if (!userEmail) return;
 
     try {
@@ -63,7 +69,7 @@ export function useLessonPageHandlers(
         exerciseNumber: data.exerciseNumber,
         section: data.section,
         answers: data.answers,
-        difficulty: data.difficulty || 'medium',
+        difficulty: data.difficulty || "medium",
         level,
         lessonNumber,
       };
@@ -76,7 +82,7 @@ export function useLessonPageHandlers(
       // For 'create' type overrides, exercise data must be in exerciseData field
       const override: CreateExerciseOverrideInput = {
         exerciseId: data.exerciseId,
-        overrideType: 'create',
+        overrideType: "create",
         level,
         lessonNumber,
         exerciseData,
@@ -89,8 +95,8 @@ export function useLessonPageHandlers(
 
       setEditingSectionName(null);
     } catch (error) {
-      console.error('Error creating inline exercise:', error);
-      alert('Failed to create exercise. Please try again.');
+      console.error("Error creating inline exercise:", error);
+      alert("Failed to create exercise. Please try again.");
     }
   };
 
@@ -100,11 +106,16 @@ export function useLessonPageHandlers(
   };
 
   // Handle editing exercise inline
-  const handleEditExercise = (exercise: ExerciseWithOverrideMetadata, globalIndex?: number) => {
+  const handleEditExercise = (
+    exercise: ExerciseWithOverrideMetadata,
+    globalIndex?: number
+  ) => {
     // For duplicates, use unique key with globalIndex
-    const uniqueKey = globalIndex !== undefined
-      ? `${exercise.exerciseId}-${globalIndex}`
-      : exercise.exerciseId;
+    // Use a unique separator that won't conflict with exercise ID hyphens
+    const uniqueKey =
+      globalIndex !== undefined
+        ? `${exercise.exerciseId}_idx_${globalIndex}`
+        : exercise.exerciseId;
     setEditingExerciseId(uniqueKey);
   };
 
@@ -114,8 +125,8 @@ export function useLessonPageHandlers(
 
     try {
       // Extract base exerciseId (remove globalIndex suffix if present)
-      const baseExerciseId = editingExerciseId.includes('-')
-        ? editingExerciseId.split('-')[0]
+      const baseExerciseId = editingExerciseId.includes("_idx_")
+        ? editingExerciseId.split("_idx_")[0]
         : editingExerciseId;
 
       const overrideId = `${userEmail}_${baseExerciseId}`;
@@ -126,7 +137,7 @@ export function useLessonPageHandlers(
         exerciseNumber: data.exerciseNumber,
         section: data.section,
         answers: data.answers,
-        difficulty: data.difficulty || 'medium',
+        difficulty: data.difficulty || "medium",
         level,
         lessonNumber,
       };
@@ -137,7 +148,9 @@ export function useLessonPageHandlers(
       }
 
       // Check if this is a custom exercise or a modification
-      const existingExercise = lesson?.exercises.find(ex => ex.exerciseId === baseExerciseId);
+      const existingExercise = lesson?.exercises.find(
+        (ex) => ex.exerciseId === baseExerciseId
+      );
       const isCustomExercise = existingExercise?._isCreated;
 
       if (isCustomExercise) {
@@ -145,8 +158,12 @@ export function useLessonPageHandlers(
         await updateOverrideMutation.mutateAsync({
           overrideId,
           updates: {
-            overrideType: 'create',
+            overrideType: "create",
             exerciseData,
+            teacherEmail: userEmail,
+            exerciseId: baseExerciseId,
+            level,
+            lessonNumber,
           },
         });
       } else {
@@ -154,16 +171,20 @@ export function useLessonPageHandlers(
         await updateOverrideMutation.mutateAsync({
           overrideId,
           updates: {
-            overrideType: 'modify',
+            overrideType: "modify",
             modifications: exerciseData,
+            teacherEmail: userEmail,
+            exerciseId: baseExerciseId,
+            level,
+            lessonNumber,
           },
         });
       }
 
       setEditingExerciseId(null);
     } catch (error) {
-      console.error('Error saving inline edit:', error);
-      alert('Failed to save changes. Please try again.');
+      console.error("Error saving inline edit:", error);
+      alert("Failed to save changes. Please try again.");
     }
   };
 

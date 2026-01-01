@@ -3,15 +3,18 @@
  * Manages exercise override operations (create, edit, hide, reorder)
  */
 
-import { useState } from 'react';
-import { CEFRLevel } from '../models/cefr';
-import { ExerciseWithOverrideMetadata, CreateExerciseOverrideInput } from '../models/exerciseOverride';
+import { useState } from "react";
+import { CEFRLevel } from "../models/cefr";
+import {
+  ExerciseWithOverrideMetadata,
+  CreateExerciseOverrideInput,
+} from "../models/exerciseOverride";
 import {
   useCreateOverride,
   useUpdateOverride,
   useReorderExercises,
-} from './useExerciseOverrides';
-import { useToast } from '@/components/ui/toast/ToastProvider';
+} from "./useExerciseOverrides";
+import { useToast } from "@/components/ui/toast/ToastProvider";
 
 export function useLessonHandlers(
   userEmail: string | null,
@@ -25,8 +28,9 @@ export function useLessonHandlers(
 
   // Dialog state
   const [isOverrideDialogOpen, setIsOverrideDialogOpen] = useState(false);
-  const [dialogMode, setDialogMode] = useState<'create' | 'edit'>('create');
-  const [editingExercise, setEditingExercise] = useState<ExerciseWithOverrideMetadata | null>(null);
+  const [dialogMode, setDialogMode] = useState<"create" | "edit">("create");
+  const [editingExercise, setEditingExercise] =
+    useState<ExerciseWithOverrideMetadata | null>(null);
 
   // Mutations
   const createOverride = useCreateOverride();
@@ -35,22 +39,26 @@ export function useLessonHandlers(
 
   // Handle creating new exercise
   const handleCreateExercise = () => {
-    setDialogMode('create');
+    setDialogMode("create");
     setEditingExercise(null);
     setIsOverrideDialogOpen(true);
   };
 
   // Handle editing exercise
   const handleEditExercise = (exercise: ExerciseWithOverrideMetadata) => {
-    setDialogMode('edit');
+    setDialogMode("edit");
     setEditingExercise(exercise);
     setIsOverrideDialogOpen(true);
   };
 
   // Handle hiding/unhiding exercise (with duplicate support)
-  const handleToggleHide = async (exerciseId: string, isHidden: boolean, exerciseIndex?: number) => {
+  const handleToggleHide = async (
+    exerciseId: string,
+    isHidden: boolean,
+    exerciseIndex?: number
+  ) => {
     if (!userEmail) {
-      toast.error('You must be logged in to hide exercises');
+      toast.error("You must be logged in to hide exercises");
       return;
     }
 
@@ -70,11 +78,12 @@ export function useLessonHandlers(
       await updateOverride.mutateAsync({
         overrideId,
         updates: {
-          overrideType: 'hide',
+          overrideType: "hide",
           isHidden,
           level,
           lessonNumber,
           exerciseId: uniqueExerciseId, // Store the unique ID
+          teacherEmail: userEmail,
         },
       });
 
@@ -85,16 +94,15 @@ export function useLessonHandlers(
           : `Exercise ${exerciseId} is now visible`,
         { duration: 3000 }
       );
-
     } catch (error: any) {
       // If document doesn't exist, create it
-      if (error?.message?.includes('No document to update')) {
+      if (error?.message?.includes("No document to update")) {
         try {
           await createOverride.mutateAsync({
             teacherEmail: userEmail,
             override: {
               exerciseId: uniqueExerciseId, // Use unique ID for duplicates
-              overrideType: 'hide',
+              overrideType: "hide",
               isHidden,
               level,
               lessonNumber,
@@ -108,20 +116,21 @@ export function useLessonHandlers(
               : `Exercise ${exerciseId} is now visible`,
             { duration: 3000 }
           );
-
         } catch (createError) {
-          console.error('Error creating hide override:', createError);
-          toast.error('Failed to update exercise visibility');
+          console.error("Error creating hide override:", createError);
+          toast.error("Failed to update exercise visibility");
         }
       } else {
-        console.error('Error toggling hide:', error);
-        toast.error('Failed to update exercise visibility');
+        console.error("Error toggling hide:", error);
+        toast.error("Failed to update exercise visibility");
       }
     }
   };
 
   // Handle reordering exercises
-  const handleReorder = async (reorderedExercises: ExerciseWithOverrideMetadata[]) => {
+  const handleReorder = async (
+    reorderedExercises: ExerciseWithOverrideMetadata[]
+  ) => {
     if (!userEmail) return;
 
     const orderUpdates = reorderedExercises.map((ex, idx) => ({
@@ -136,16 +145,18 @@ export function useLessonHandlers(
     try {
       await reorderExercises.mutateAsync(orderUpdates);
     } catch (error) {
-      console.error('[useLessonHandlers] Error reordering exercises:', error);
+      console.error("[useLessonHandlers] Error reordering exercises:", error);
     }
   };
 
   // Handle submitting override (create or edit)
-  const handleSubmitOverride = async (override: CreateExerciseOverrideInput) => {
+  const handleSubmitOverride = async (
+    override: CreateExerciseOverrideInput
+  ) => {
     if (!userEmail) return;
 
     try {
-      if (dialogMode === 'create') {
+      if (dialogMode === "create") {
         await createOverride.mutateAsync({
           teacherEmail: userEmail,
           override,
@@ -154,14 +165,17 @@ export function useLessonHandlers(
         const overrideId = `${userEmail}_${editingExercise.exerciseId}`;
         await updateOverride.mutateAsync({
           overrideId,
-          updates: override,
+          updates: {
+            ...override,
+            teacherEmail: userEmail,
+          },
         });
       }
 
       setIsOverrideDialogOpen(false);
       setEditingExercise(null);
     } catch (error) {
-      console.error('Error submitting override:', error);
+      console.error("Error submitting override:", error);
     }
   };
 

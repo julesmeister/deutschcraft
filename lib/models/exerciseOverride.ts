@@ -71,5 +71,5 @@ export type CreateExerciseOverrideInput = Omit<
  * Input type for updating an existing override
  */
 export type UpdateExerciseOverrideInput = Partial<
-  Omit<ExerciseOverride, 'overrideId' | 'teacherEmail' | 'exerciseId' | 'createdAt'>
+  Omit<ExerciseOverride, 'overrideId' | 'createdAt'>
 >;

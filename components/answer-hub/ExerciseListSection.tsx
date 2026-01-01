@@ -109,7 +109,7 @@ export function ExerciseListSection({
 
           // Check if this specific exercise instance is being edited
           const uniqueKey = globalIndex !== undefined
-            ? `${exercise.exerciseId}-${globalIndex}`
+            ? `${exercise.exerciseId}_idx_${globalIndex}`
             : exercise.exerciseId;
           const isBeingEdited = editingExerciseId === uniqueKey;
 

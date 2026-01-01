@@ -179,71 +179,120 @@ export async function getHiddenExercises(
 // ============================================================================
 
 export async function updateExerciseOverride(
-  teacherEmail: string,
-  exerciseId: string,
+  overrideId: string,
   updates: UpdateExerciseOverrideInput
 ): Promise<ExerciseOverride> {
   try {
-    const overrideId = `${teacherEmail}_${exerciseId}`;
-    const setClauses: string[] = [];
-    const args: any[] = [];
-
-    if (updates.overrideType !== undefined) {
-      setClauses.push("override_type = ?");
-      args.push(updates.overrideType);
-    }
-
-    if (updates.level !== undefined) {
-      setClauses.push("level = ?");
-      args.push(updates.level);
-    }
-
-    if (updates.lessonNumber !== undefined) {
-      setClauses.push("lesson_number = ?");
-      args.push(updates.lessonNumber);
-    }
-
-    if (updates.exerciseData !== undefined) {
-      setClauses.push("exercise_data = ?");
-      args.push(JSON.stringify(updates.exerciseData));
-    }
-
-    if (updates.modifications !== undefined) {
-      setClauses.push("modifications = ?");
-      args.push(JSON.stringify(updates.modifications));
-    }
-
-    if (updates.displayOrder !== undefined) {
-      setClauses.push("display_order = ?");
-      args.push(updates.displayOrder);
-    }
-
-    if (updates.isHidden !== undefined) {
-      setClauses.push("is_hidden = ?");
-      args.push(updates.isHidden ? 1 : 0);
-    }
-
-    if (updates.notes !== undefined) {
-      setClauses.push("notes = ?");
-      args.push(updates.notes);
-    }
-
-    setClauses.push("updated_at = ?");
-    args.push(Date.now());
-
-    args.push(overrideId);
-
-    await db.execute({
-      sql: `UPDATE exercise_overrides SET ${setClauses.join(
-        ", "
-      )} WHERE override_id = ?`,
-      args,
+    // Check if override exists
+    const checkResult = await db.execute({
+      sql: "SELECT override_id FROM exercise_overrides WHERE override_id = ?",
+      args: [overrideId],
     });
+
+    const now = Date.now();
+
+    if (checkResult.rows.length === 0) {
+      // Record does not exist - attempt INSERT (Upsert behavior)
+      if (
+        !updates.teacherEmail ||
+        !updates.exerciseId ||
+        !updates.overrideType
+      ) {
+        throw new Error(
+          `Cannot create new override ${overrideId}: missing teacherEmail, exerciseId, or overrideType in updates`
+        );
+      }
+
+      await db.execute({
+        sql: `INSERT INTO exercise_overrides (
+              override_id, teacher_email, exercise_id, override_type,
+              level, lesson_number, exercise_data, modifications,
+              display_order, is_hidden, notes, created_at, updated_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        args: [
+          overrideId,
+          updates.teacherEmail,
+          updates.exerciseId,
+          updates.overrideType,
+          updates.level || null,
+          updates.lessonNumber || null,
+          updates.exerciseData ? JSON.stringify(updates.exerciseData) : null,
+          updates.modifications ? JSON.stringify(updates.modifications) : null,
+          updates.displayOrder || null,
+          updates.isHidden ? 1 : 0,
+          updates.notes || null,
+          now,
+          now,
+        ],
+      });
+    } else {
+      // Record exists - UPDATE
+      const setClauses: string[] = [];
+      const args: any[] = [];
+
+      if (updates.overrideType !== undefined) {
+        setClauses.push("override_type = ?");
+        args.push(updates.overrideType);
+      }
+
+      if (updates.level !== undefined) {
+        setClauses.push("level = ?");
+        args.push(updates.level);
+      }
+
+      if (updates.lessonNumber !== undefined) {
+        setClauses.push("lesson_number = ?");
+        args.push(updates.lessonNumber);
+      }
+
+      if (updates.exerciseData !== undefined) {
+        setClauses.push("exercise_data = ?");
+        args.push(JSON.stringify(updates.exerciseData));
+      }
+
+      if (updates.modifications !== undefined) {
+        setClauses.push("modifications = ?");
+        args.push(JSON.stringify(updates.modifications));
+      }
+
+      if (updates.displayOrder !== undefined) {
+        setClauses.push("display_order = ?");
+        args.push(updates.displayOrder);
+      }
+
+      if (updates.isHidden !== undefined) {
+        setClauses.push("is_hidden = ?");
+        args.push(updates.isHidden ? 1 : 0);
+      }
+
+      if (updates.notes !== undefined) {
+        setClauses.push("notes = ?");
+        args.push(updates.notes);
+      }
+
+      setClauses.push("updated_at = ?");
+      args.push(now);
+
+      args.push(overrideId);
+
+      await db.execute({
+        sql: `UPDATE exercise_overrides SET ${setClauses.join(
+          ", "
+        )} WHERE override_id = ?`,
+        args,
+      });
+    }
 
     const result = await db.execute({
       sql: "SELECT * FROM exercise_overrides WHERE override_id = ?",
       args: [overrideId],
     });
+
+    if (result.rows.length === 0) {
+      throw new Error(
+        `Exercise override with ID ${overrideId} not found after upsert`
+      );
+    }
 
     return rowToExerciseOverride(result.rows[0]);
   } catch (error) {
