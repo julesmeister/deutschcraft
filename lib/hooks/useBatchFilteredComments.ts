@@ -3,10 +3,10 @@
  * Filters comments to only show those from batch-mates (privacy layer)
  */
 
-import { useMemo } from 'react';
-import { useComments } from '@/lib/hooks/useSocial';
-import { useBatchStudents } from '@/lib/hooks/useUserQueries';
-import { Comment } from '@/lib/models/social';
+import { useMemo } from "react";
+import { useComments } from "@/lib/hooks/useSocial";
+import { useBatchStudents } from "@/lib/hooks/useUserQueries";
+import { Comment } from "@/lib/models/social";
 
 /**
  * Hook: Load comments for an exercise, filtered by batch
@@ -29,14 +29,13 @@ export function useBatchFilteredComments(
     loading: commentsLoading,
     error: commentsError,
     addComment,
-    refresh
+    refresh,
   } = useComments(exerciseId);
 
   // Load batch students (only if user has a batch)
-  const {
-    students,
-    isLoading: studentsLoading
-  } = useBatchStudents(currentUserBatchId || undefined);
+  const { students, isLoading: studentsLoading } = useBatchStudents(
+    currentUserBatchId || undefined
+  );
 
   // Filter comments to only batch-mates
   const batchFilteredComments = useMemo(() => {
@@ -51,10 +50,10 @@ export function useBatchFilteredComments(
     }
 
     // Create set of batch-mate emails for O(1) lookup
-    const batchEmails = new Set(students.map(s => s.userId || s.email));
+    const batchEmails = new Set(students.map((s) => s.userId || s.email));
 
     // Filter: only show comments from batch-mates
-    const filtered = allComments.filter(comment => {
+    const filtered = allComments.filter((comment) => {
       const isInBatch = batchEmails.has(comment.userId);
       return isInBatch;
     });
@@ -63,14 +62,15 @@ export function useBatchFilteredComments(
   }, [allComments, students.length, studentsLoading, currentUserBatchId]);
 
   // Loading state: true if either comments or students are loading
-  const isLoading = commentsLoading || (currentUserBatchId ? studentsLoading : false);
+  const isLoading =
+    commentsLoading || (currentUserBatchId ? studentsLoading : false);
 
   // Helper: Check if user can comment (must have a batch)
   const canComment = !!currentUserBatchId && students.length > 0;
 
   return {
     comments: batchFilteredComments,
-    allCommentsCount: allComments.length,  // Total comments (before filtering)
+    allCommentsCount: allComments.length, // Total comments (before filtering)
     loading: isLoading,
     error: commentsError,
     addComment,
@@ -90,18 +90,17 @@ export function useCommentStats(
   exerciseId: string,
   currentUserBatchId: string | null | undefined
 ) {
-  const {
-    comments,
-    allCommentsCount,
-    batchMatesCount,
-    loading
-  } = useBatchFilteredComments(exerciseId, currentUserBatchId);
+  const { comments, allCommentsCount, batchMatesCount, loading } =
+    useBatchFilteredComments(exerciseId, currentUserBatchId);
 
-  return useMemo(() => ({
-    visibleComments: comments.length,
-    totalComments: allCommentsCount,
-    batchMates: batchMatesCount,
-    hasDiscussion: comments.length > 0,
-    loading,
-  }), [comments.length, allCommentsCount, batchMatesCount, loading]);
+  return useMemo(
+    () => ({
+      visibleComments: comments.length,
+      totalComments: allCommentsCount,
+      batchMates: batchMatesCount,
+      hasDiscussion: comments.length > 0,
+      loading,
+    }),
+    [comments.length, allCommentsCount, batchMatesCount, loading]
+  );
 }

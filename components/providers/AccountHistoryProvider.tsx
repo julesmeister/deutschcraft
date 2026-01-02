@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import { useSession } from 'next-auth/react';
-import { saveAccount } from '@/lib/utils/accountHistory';
+import { useEffect, useRef } from "react";
+import { useSession } from "next-auth/react";
+import { saveAccount } from "@/lib/utils/accountHistory";
 
 /**
  * AccountHistoryProvider
@@ -10,13 +10,23 @@ import { saveAccount } from '@/lib/utils/accountHistory';
  * Automatically saves user accounts to localStorage when they sign in.
  * This enables the account switcher dropdown to show previously used accounts.
  */
-export function AccountHistoryProvider({ children }: { children: React.ReactNode }) {
+export function AccountHistoryProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const { data: session, status } = useSession();
+  const lastSavedEmailRef = useRef<string | null>(null);
 
   useEffect(() => {
     // Only save if we have an authenticated session
-    if (status === 'authenticated' && session?.user?.email) {
+    if (status === "authenticated" && session?.user?.email) {
       const { email, name, image } = session.user;
+
+      // Prevent duplicate saves/logs for the same session
+      if (lastSavedEmailRef.current === email) {
+        return;
+      }
 
       // Save account to history
       saveAccount(
@@ -25,7 +35,8 @@ export function AccountHistoryProvider({ children }: { children: React.ReactNode
         image || undefined
       );
 
-      console.info('✅ Account saved to history:', email);
+      console.info("✅ Account saved to history:", email);
+      lastSavedEmailRef.current = email;
     }
   }, [session, status]);
 

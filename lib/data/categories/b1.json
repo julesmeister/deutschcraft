@@ -160,6 +160,14 @@
       "description": "Gemeinschaft, Beziehung, Vertrauen, Toleranz, social connections",
       "examples": ["Gemeinschaft", "Beziehung", "Vertrauen", "Toleranz", "Respekt", "Solidarität"],
       "priority": 20
+    },
+    {
+      "id": "separable-verbs",
+      "name": "Separable Verbs",
+      "icon": "✂️",
+      "description": "anfangen, aufhören, mitmachen, zurückkommen, verb prefixes",
+      "examples": ["anfangen", "aufhören", "mitmachen", "zurückkommen", "einladen", "aussehen"],
+      "priority": 21
     }
   ]
 }

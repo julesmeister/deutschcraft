@@ -112,9 +112,9 @@ export function applyFlashcardSettings(
     const progressA = reviewsMap.get(a.id);
     const progressB = reviewsMap.get(b.id);
 
-    // New cards first
-    if (!progressA && progressB) return -1;
-    if (progressA && !progressB) return 1;
+    // Due reviews first (prioritize clearing backlog)
+    if (progressA && !progressB) return -1;
+    if (!progressA && progressB) return 1;
     if (!progressA && !progressB) return 0;
 
     // Among due cards, prioritize by next review date (earlier = higher priority)
@@ -135,8 +135,8 @@ export function applyFlashcardSettings(
 
     // Randomize each group separately
     processedCards = [
-      ...newCards.sort(() => Math.random() - 0.5),
       ...dueReviewCards.sort(() => Math.random() - 0.5),
+      ...newCards.sort(() => Math.random() - 0.5),
     ];
   }
 

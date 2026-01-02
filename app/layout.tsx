@@ -19,12 +19,15 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: "Testmanship - Learn German Together",
-  description: "A unique approach to learning German with AI-powered flashcards, peer collaboration, and personalized teacher feedback.",
-  keywords: "German learning, language learning, flashcards, AI tutor, peer learning, teacher feedback",
+  description:
+    "A unique approach to learning German with AI-powered flashcards, peer collaboration, and personalized teacher feedback.",
+  keywords:
+    "German learning, language learning, flashcards, AI tutor, peer learning, teacher feedback",
   authors: [{ name: "Testmanship" }],
   openGraph: {
     title: "Testmanship - Learn German Together",
-    description: "A unique approach to learning German with AI-powered flashcards, peer collaboration, and personalized teacher feedback.",
+    description:
+      "A unique approach to learning German with AI-powered flashcards, peer collaboration, and personalized teacher feedback.",
     type: "website",
   },
 };
@@ -41,9 +44,7 @@ export default function RootLayout({
       >
         <SessionProvider>
           <AccountHistoryProvider>
-            <ToastProvider>
-              {children}
-            </ToastProvider>
+            <ToastProvider>{children}</ToastProvider>
           </AccountHistoryProvider>
         </SessionProvider>
       </body>

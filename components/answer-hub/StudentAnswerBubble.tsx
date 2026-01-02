@@ -68,15 +68,10 @@ export function StudentAnswerBubble({
     }
   }, [value, isEditing]);
 
-  const handleClick = (e: React.MouseEvent) => {
+  // Handle double click to edit
+  const handleDoubleClick = (e: React.MouseEvent) => {
     // Prevent editing if clicking buttons or links
     if ((e.target as HTMLElement).closest("button")) {
-      return;
-    }
-
-    // Don't trigger edit if user is selecting text
-    const selection = window.getSelection();
-    if (selection && selection.toString().length > 0) {
       return;
     }
 
@@ -126,7 +121,7 @@ export function StudentAnswerBubble({
       className={`px-6 py-3 flex gap-4 hover:bg-gray-50 transition-colors group ${
         isOwnAnswer && onEdit ? "cursor-pointer" : ""
       }`}
-      onClick={handleClick}
+      onDoubleClick={handleDoubleClick}
     >
       <div className="font-mono text-sm font-semibold text-gray-500 w-8 pt-0.5 flex-shrink-0">
         {itemNumber}
@@ -161,7 +156,7 @@ export function StudentAnswerBubble({
                   onMouseDown={handleSave}
                   className="text-xs text-blue-600 hover:text-blue-800 font-bold transition-colors"
                 >
-                  save
+                  Save
                 </button>
                 <span className="text-xs text-gray-300">•</span>
               </>
@@ -170,8 +165,22 @@ export function StudentAnswerBubble({
               onClick={handleCopy}
               className="text-xs text-gray-400 hover:text-blue-600 transition-colors"
             >
-              {isCopied ? "copied!" : "copy"}
+              {isCopied ? "Copied!" : "Copy"}
             </button>
+            {isOwnAnswer && !isEditing && onEdit && (
+              <>
+                <span className="text-xs text-gray-300">•</span>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsEditing(true);
+                  }}
+                  className="text-xs text-gray-400 hover:text-blue-600 transition-colors"
+                >
+                  Edit
+                </button>
+              </>
+            )}
             {isOwnAnswer && onDelete && (
               <>
                 <span className="text-xs text-gray-300">•</span>
