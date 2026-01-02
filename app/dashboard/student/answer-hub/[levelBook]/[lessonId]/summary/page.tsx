@@ -1,30 +1,46 @@
-'use client';
+"use client";
 
-import { useMemo } from 'react';
-import { useRouter, useParams } from 'next/navigation';
-import Link from 'next/link';
-import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
-import { CatLoader } from '@/components/ui/CatLoader';
-import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { useCurrentStudent } from '@/lib/hooks/useUsers';
-import { getUserInfo } from '@/lib/utils/userHelpers';
-import { useLessonWithOverrides } from '@/lib/hooks/useExercisesWithOverrides';
-import { useStudentLessonAnswers } from '@/lib/hooks/useStudentAnswers';
-import { CEFRLevel } from '@/lib/models/cefr';
+import { useMemo } from "react";
+import { useRouter, useParams } from "next/navigation";
+import Link from "next/link";
+import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
+import { CatLoader } from "@/components/ui/CatLoader";
+import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
+import { BatchSelector } from "@/components/ui/BatchSelector";
+import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
+import { useCurrentStudent } from "@/lib/hooks/useUsers";
+import { getUserInfo } from "@/lib/utils/userHelpers";
+import { useLessonWithOverrides } from "@/lib/hooks/useExercisesWithOverrides";
+import {
+  useStudentLessonAnswers,
+  useAllLessonAnswers,
+} from "@/lib/hooks/useStudentAnswers";
+import { useActiveBatches } from "@/lib/hooks/useBatches";
+import { useBatchSelection } from "@/lib/hooks/useBatchSelection";
+import {
+  useBatchStudents,
+  useTeacherStudents,
+} from "@/lib/hooks/useUserQueries";
+import { CEFRLevel } from "@/lib/models/cefr";
+import { FloatingExerciseNavigator } from "@/components/answer-hub/FloatingExerciseNavigator";
+import { SummaryExerciseItem } from "@/components/answer-hub/SummaryExerciseItem";
 
 export default function LessonSummaryPage() {
   const router = useRouter();
   const params = useParams();
   const { session } = useFirebaseAuth();
-  const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
-  const { userId } = getUserInfo(currentUser, session);
+  const { student: currentUser } = useCurrentStudent(
+    session?.user?.email || null
+  );
+  const { userId, userRole } = getUserInfo(currentUser, session);
+  const isTeacher = userRole === "teacher";
 
   // Parse URL params
   const levelBook = params.levelBook as string;
   const lessonId = params.lessonId as string;
-  const [levelPart, bookType] = levelBook.split('-') as [string, 'AB' | 'KB'];
+  const [levelPart, bookType] = levelBook.split("-") as [string, "AB" | "KB"];
   const level = levelPart as CEFRLevel;
-  const lessonNumber = parseInt(lessonId.replace('L', ''));
+  const lessonNumber = parseInt(lessonId.replace("L", ""));
 
   // Fetch lesson data
   const { lesson, isLoading: isLessonLoading } = useLessonWithOverrides(
@@ -35,43 +51,125 @@ export default function LessonSummaryPage() {
   );
 
   // Get all exercise IDs in this lesson
-  const exerciseIds = useMemo(() => 
-    lesson?.exercises.map(e => e.exerciseId) || [], 
+  const exerciseIds = useMemo(
+    () => lesson?.exercises.map((e) => e.exerciseId) || [],
     [lesson]
   );
 
-  // Fetch all student answers for these exercises
-  const { answers, isLoading: isAnswersLoading } = useStudentLessonAnswers(userId, exerciseIds);
+  // --- Teacher Logic ---
+  const { batches: teacherBatches } = useActiveBatches(
+    isTeacher ? currentUser?.email : undefined
+  );
+  const { selectedBatch, setSelectedBatch } = useBatchSelection({
+    batches: teacherBatches,
+    user: currentUser,
+  });
+  const { students: batchStudents, isLoading: isBatchStudentsLoading } =
+    useBatchStudents(selectedBatch?.batchId);
+  const {
+    students: allTeacherStudents,
+    isLoading: isAllTeacherStudentsLoading,
+  } = useTeacherStudents(isTeacher ? currentUser?.email : undefined);
 
-  // Group answers by exerciseId
+  // --- Data Fetching ---
+  // Student: Fetch own answers
+  const { answers: studentAnswers, isLoading: isStudentAnswersLoading } =
+    useStudentLessonAnswers(!isTeacher ? userId : null, exerciseIds);
+
+  // Teacher: Fetch all answers
+  const { answers: allAnswers, isLoading: isAllAnswersLoading } =
+    useAllLessonAnswers(exerciseIds, isTeacher);
+
+  // --- Data Processing ---
+  const displayAnswers = useMemo(() => {
+    if (!isTeacher) return studentAnswers;
+
+    // Determine which students to filter by
+    let allowedStudents = [];
+    if (selectedBatch) {
+      allowedStudents = batchStudents;
+    } else {
+      // Fallback to all teacher students if no batch selected
+      allowedStudents = allTeacherStudents;
+    }
+
+    // If no students found, return empty (or handle "View All" if we want to show everything)
+    if (!allowedStudents.length) return [];
+
+    const studentIds = new Set(allowedStudents.map((s) => s.userId));
+    // Also check emails as fallback if userId doesn't match
+    const studentEmails = new Set(allowedStudents.map((s) => s.email));
+
+    return allAnswers.filter(
+      (a) => studentIds.has(a.studentId) || studentEmails.has(a.studentId)
+    );
+  }, [
+    isTeacher,
+    studentAnswers,
+    allAnswers,
+    selectedBatch,
+    batchStudents,
+    allTeacherStudents,
+  ]);
+
   const answersByExercise = useMemo(() => {
-    const map = new Map<string, typeof answers>();
-    answers.forEach(a => {
-        if (!map.has(a.exerciseId)) map.set(a.exerciseId, []);
-        map.get(a.exerciseId)?.push(a);
+    const map = new Map<string, typeof displayAnswers>();
+    displayAnswers.forEach((a) => {
+      if (!map.has(a.exerciseId)) map.set(a.exerciseId, []);
+      map.get(a.exerciseId)?.push(a);
     });
     return map;
-  }, [answers]);
+  }, [displayAnswers]);
 
-  // Filter exercises to only those with at least one answer
-  const attemptedExercises = useMemo(() => 
-    lesson?.exercises.filter(ex => answersByExercise.has(ex.exerciseId)) || [],
-    [lesson, answersByExercise]
-  );
+  // For students: only show attempted. For teachers: show all exercises
+  const displayExercises = useMemo(() => {
+    if (isTeacher) return lesson?.exercises || [];
+    return (
+      lesson?.exercises.filter((ex) => answersByExercise.has(ex.exerciseId)) ||
+      []
+    );
+  }, [lesson, answersByExercise, isTeacher]);
 
-  if (isLessonLoading || isAnswersLoading) {
+  const isLoading =
+    isLessonLoading ||
+    (!isTeacher && isStudentAnswersLoading) ||
+    (isTeacher &&
+      (isAllAnswersLoading ||
+        isBatchStudentsLoading ||
+        (selectedBatch === null && isAllTeacherStudentsLoading)));
+
+  // Helper for scrolling
+  const scrollToExercise = (exerciseId: string, index: number) => {
+    const element = document.getElementById(`exercise-${exerciseId}-${index}`);
+    if (element) {
+      const headerOffset = 100; // Account for sticky headers
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 pb-16">
         <DashboardHeader
           title="Lesson Summary"
           subtitle="Loading answers..."
           backButton={{
-            label: 'Back to Lesson',
-            onClick: () => router.push(`/dashboard/student/answer-hub/${levelBook}/${lessonId}`),
+            label: "Back to Lesson",
+            onClick: () =>
+              router.push(
+                `/dashboard/student/answer-hub/${levelBook}/${lessonId}`
+              ),
           }}
         />
         <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
-          <CatLoader message="Loading your answers..." size="md" />
+          <CatLoader message="Loading answers..." size="md" />
         </div>
       </div>
     );
@@ -79,86 +177,106 @@ export default function LessonSummaryPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-16">
-      <DashboardHeader 
-        title={`${lesson?.title || 'Lesson'} - Summary`}
-        subtitle={`Your answers for ${level} ${bookType} Lektion ${lessonNumber}`}
+      <DashboardHeader
+        title={`${lesson?.title || "Lesson"} - Summary`}
+        subtitle={
+          isTeacher
+            ? `Student answers for ${level} ${bookType} Lektion ${lessonNumber}`
+            : `Your answers for ${level} ${bookType} Lektion ${lessonNumber}`
+        }
         backButton={{
-            label: 'Back to Lesson',
-            onClick: () => router.push(`/dashboard/student/answer-hub/${levelBook}/${lessonId}`)
+          label: "Back to Lesson",
+          onClick: () =>
+            router.push(
+              `/dashboard/student/answer-hub/${levelBook}/${lessonId}`
+            ),
         }}
+        actions={
+          isTeacher && (
+            <BatchSelector
+              batches={teacherBatches}
+              selectedBatch={selectedBatch}
+              onSelectBatch={setSelectedBatch}
+              onCreateBatch={() => router.push("/dashboard/teacher/batches")}
+            />
+          )
+        }
       />
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
-        {attemptedExercises.length === 0 ? (
-            <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-12 text-center">
-                <div className="text-6xl mb-4">📝</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">No Answers Yet</h3>
-                <p className="text-gray-600 mb-6">
-                    You haven't submitted any answers for this lesson yet.
-                </p>
-                <button
-                    onClick={() => router.push(`/dashboard/student/answer-hub/${levelBook}/${lessonId}`)}
-                    className="inline-block px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-medium transition-colors"
-                >
-                    Start Practicing
-                </button>
-            </div>
-        ) : (
-            <div className="space-y-8">
-                <div className="flex items-center justify-between mb-2">
-                    <h2 className="text-xl font-bold text-gray-900">
-                        {attemptedExercises.length} Exercise{attemptedExercises.length !== 1 ? 's' : ''} Attempted
-                    </h2>
-                    <span className="text-sm text-gray-500">
-                        Total Answers: {answers.length}
-                    </span>
-                </div>
 
-                {attemptedExercises.map(ex => {
-                    const exAnswers = answersByExercise.get(ex.exerciseId) || [];
-                    // Sort answers by item number
-                    exAnswers.sort((a, b) => a.itemNumber.localeCompare(b.itemNumber, undefined, { numeric: true }));
-                    
-                    return (
-                        <div key={ex.exerciseId} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-                            <div className="bg-gray-50 px-6 py-4 border-b border-gray-100 flex items-start justify-between">
-                                <div>
-                                    <div className="flex items-center gap-2 mb-1">
-                                        <span className="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-0.5 rounded">
-                                            {ex.exerciseNumber}
-                                        </span>
-                                        <h3 className="font-bold text-gray-900">{ex.title}</h3>
-                                    </div>
-                                    {ex.question && (
-                                        <p className="text-sm text-gray-600 mt-1 line-clamp-2">{ex.question}</p>
-                                    )}
-                                </div>
-                                <Link 
-                                    href={`/dashboard/student/answer-hub/${levelBook}/${lessonId}/${encodeURIComponent(ex.exerciseId)}`}
-                                    className="text-xs font-medium text-blue-600 hover:text-blue-800 hover:underline whitespace-nowrap"
-                                >
-                                    Edit Answers
-                                </Link>
-                            </div>
-                            
-                            <div className="divide-y divide-gray-100">
-                                {exAnswers.map(ans => (
-                                    <div key={ans.itemNumber} className="px-6 py-3 flex gap-4 hover:bg-gray-50 transition-colors">
-                                        <div className="font-mono text-sm font-semibold text-gray-500 w-8 pt-0.5">
-                                            {ans.itemNumber}
-                                        </div>
-                                        <div className="flex-1">
-                                            <div className="text-gray-900 font-medium">{ans.studentAnswer}</div>
-                                            <div className="text-xs text-gray-400 mt-1">
-                                                {new Date(ans.submittedAt).toLocaleString()}
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    );
-                })}
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
+        {displayExercises.length === 0 ? (
+          <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-12 text-center">
+            <div className="text-6xl mb-4">📝</div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">
+              No Answers Found
+            </h3>
+            <p className="text-gray-600 mb-6">
+              {isTeacher
+                ? "No student answers found for this batch yet."
+                : "You haven't submitted any answers for this lesson yet."}
+            </p>
+            {!isTeacher && (
+              <div className="flex justify-center">
+                <div className="w-48">
+                  <ActionButton
+                    variant="purple"
+                    onClick={() =>
+                      router.push(
+                        `/dashboard/student/answer-hub/${levelBook}/${lessonId}`
+                      )
+                    }
+                    icon={<ActionButtonIcons.ArrowRight />}
+                  >
+                    Start Practicing
+                  </ActionButton>
+                </div>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="space-y-8">
+            <div className="flex items-center justify-between mb-2">
+              <h2 className="text-xl font-bold text-gray-900">
+                {displayExercises.length} Exercise
+                {displayExercises.length !== 1 ? "s" : ""}{" "}
+                {isTeacher ? "Available" : "Attempted"}
+              </h2>
+              <span className="text-sm text-gray-500">
+                Total Answers: {displayAnswers.length}
+              </span>
             </div>
+
+            {/* Floating Exercise Navigator */}
+            {displayExercises.length > 0 && (
+              <div className="fixed right-2 lg:right-4 top-1/2 transform -translate-y-1/2 z-10 hidden lg:flex flex-col gap-1 bg-white/90 backdrop-blur-sm p-1.5 rounded-lg shadow-sm border border-gray-200 max-h-[70vh] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+                {displayExercises.map((ex, idx) => (
+                  <button
+                    key={`nav-${ex.exerciseId}-${idx}`}
+                    onClick={() => scrollToExercise(ex.exerciseId, idx)}
+                    className="h-5 min-w-[20px] px-1 flex items-center justify-center rounded bg-gray-50 border border-gray-200 text-[10px] font-bold text-gray-500 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all"
+                    title={ex.title}
+                  >
+                    {ex.exerciseNumber}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {displayExercises.map((ex, idx) => {
+              const exAnswers = answersByExercise.get(ex.exerciseId) || [];
+              return (
+                <SummaryExerciseItem
+                  key={`${ex.exerciseId}-${idx}`}
+                  exercise={ex}
+                  answers={exAnswers}
+                  index={idx}
+                  levelBook={levelBook}
+                  lessonId={lessonId}
+                  isTeacher={isTeacher}
+                />
+              );
+            })}
+          </div>
         )}
       </div>
     </div>

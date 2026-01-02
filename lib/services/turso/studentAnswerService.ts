@@ -235,6 +235,33 @@ export async function getStudentAnswersForExercises(
   }
 }
 
+/**
+ * Get all answers for a list of exercises (for all students)
+ */
+export async function getAllAnswersForExercises(
+  exerciseIds: string[]
+): Promise<StudentAnswerSubmission[]> {
+  if (exerciseIds.length === 0) return [];
+
+  try {
+    const placeholders = exerciseIds.map(() => '?').join(',');
+    
+    const sql = `
+      SELECT * FROM student_answers 
+      WHERE exercise_id IN (${placeholders})
+      ORDER BY exercise_id, item_number, submitted_at DESC
+    `;
+
+    const args = [...exerciseIds];
+    const result = await db.execute({ sql, args });
+
+    return result.rows.map(rowToStudentAnswer);
+  } catch (error) {
+    console.error('[studentAnswerService:turso] Error fetching all answers for exercises:', error);
+    throw error;
+  }
+}
+
 // ============================================================================
 // WRITE OPERATIONS
 // ============================================================================

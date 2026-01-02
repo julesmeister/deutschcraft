@@ -34,6 +34,7 @@ import { useExerciseFilters } from "@/lib/hooks/useExerciseFilters";
 import { useHiddenExercises } from "@/lib/hooks/useHiddenExercises";
 import { CEFRLevel } from "@/lib/models/cefr";
 import { useBatchSelection } from "@/lib/hooks/useBatchSelection";
+import { useAllLessonAnswers } from "@/lib/hooks/useStudentAnswers";
 import {
   ExerciseWithOverrideMetadata,
   CreateExerciseOverrideInput,
@@ -79,6 +80,10 @@ export default function LessonDetailPage() {
 
   // Check if user is a teacher (role is uppercase in database)
   const isTeacher = currentUser?.role === "TEACHER";
+
+  // Load all answers for teacher to show count
+  const { answers: allAnswers } = useAllLessonAnswers(exerciseIds, isTeacher);
+  const answerCount = allAnswers.length;
 
   // Load teacher's batches (only for teachers)
   const { batches } = useActiveBatches(isTeacher ? userEmail : undefined);
@@ -237,6 +242,12 @@ export default function LessonDetailPage() {
             hasOverrides={hasOverrides}
             overrideCount={overrideCount}
             onCreateExercise={handleCreateExercise}
+            answerCount={answerCount}
+            onViewAllAnswers={() =>
+              router.push(
+                `/dashboard/student/answer-hub/${levelBook}/${lessonId}/summary`
+              )
+            }
           />
         )}
 

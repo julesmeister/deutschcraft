@@ -165,6 +165,68 @@ export function useStudentAnswers(exerciseId: string | null) {
 }
 
 /**
+ * Hook to fetch all student answers for a list of exercises (teacher view)
+ */
+export function useAllLessonAnswers(exerciseIds: string[], isTeacher: boolean = false) {
+  const [answers, setAnswers] = useState<StudentAnswerSubmission[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchAnswers = useCallback(async () => {
+    if (!isTeacher || exerciseIds.length === 0) {
+      setAnswers([]);
+      return;
+    }
+
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      if (process.env.NEXT_PUBLIC_USE_TURSO === 'true') {
+        const { getAllAnswersForExercises } = await import('@/lib/services/turso/studentAnswerService');
+        const results = await getAllAnswersForExercises(exerciseIds);
+        setAnswers(results);
+      } else {
+        const { query, collection, where, getDocs } = await import('firebase/firestore');
+        const { db } = await import('@/lib/firebase');
+        
+        // Firestore batching for 'in' query
+        const chunks = [];
+        for (let i = 0; i < exerciseIds.length; i += 10) {
+            chunks.push(exerciseIds.slice(i, i + 10));
+        }
+
+        let allAnswers: StudentAnswerSubmission[] = [];
+
+        for (const chunk of chunks) {
+            const q = query(
+                collection(db, 'studentAnswers'),
+                where('exerciseId', 'in', chunk)
+            );
+            const snapshot = await getDocs(q);
+            snapshot.forEach(doc => {
+                allAnswers.push(doc.data() as StudentAnswerSubmission);
+            });
+        }
+        
+        setAnswers(allAnswers);
+      }
+    } catch (err) {
+      console.error('Error fetching all lesson answers:', err);
+      setError(err instanceof Error ? err.message : 'Failed to fetch answers');
+    } finally {
+      setIsLoading(false);
+    }
+  }, [isTeacher, JSON.stringify(exerciseIds)]);
+
+  useEffect(() => {
+    fetchAnswers();
+  }, [fetchAnswers]);
+
+  return { answers, isLoading, error, refresh: fetchAnswers };
+}
+
+/**
  * Hook to fetch all student answers for a list of exercises (e.g. a lesson)
  */
 export function useStudentLessonAnswers(studentId: string | undefined, exerciseIds: string[]) {
