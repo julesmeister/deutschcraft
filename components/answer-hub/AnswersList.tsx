@@ -99,6 +99,7 @@ export function AnswersList({
           }!`,
           "success"
         );
+        setStudentInputs({});
         if (onAnswerSaved) {
           onAnswerSaved();
         }
