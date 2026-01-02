@@ -1,9 +1,9 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { ExerciseAnswer } from "@/lib/models/exercises";
 import { GermanCharAutocomplete } from "@/components/writing/GermanCharAutocomplete";
-import { Clipboard, X } from "lucide-react";
+import { Clipboard, X, Maximize2, Minimize2 } from "lucide-react";
 import { useToast } from "@/lib/hooks/useToast";
 
 export interface AnswerInputRowProps {
@@ -21,7 +21,9 @@ export function AnswerInputRow({
   canSave,
   isSaving,
 }: AnswerInputRowProps) {
-  const inputRef = useRef<HTMLInputElement>(null);
+  const [isMultiline, setIsMultiline] = useState(false);
+  // We use a specific ref type that works for both but we'll cast when passing to specific elements
+  const inputRef = useRef<HTMLInputElement | HTMLTextAreaElement>(null);
   const { showToast } = useToast();
 
   const handlePaste = async () => {
@@ -30,7 +32,10 @@ export function AnswerInputRow({
       const text = await navigator.clipboard.readText();
       if (text) {
         onChange(text);
-        setTimeout(() => inputRef.current?.focus(), 0);
+        // Focus the current element
+        setTimeout(() => {
+          (inputRef.current as HTMLElement)?.focus();
+        }, 0);
       }
     } catch (error) {
       console.error("Failed to paste:", error);
@@ -42,13 +47,15 @@ export function AnswerInputRow({
       );
 
       // Fallback: Focus the input so they can manually paste easily
-      inputRef.current?.focus();
+      (inputRef.current as HTMLElement)?.focus();
     }
   };
 
   const handleClear = () => {
     onChange("");
-    setTimeout(() => inputRef.current?.focus(), 0);
+    setTimeout(() => {
+      (inputRef.current as HTMLElement)?.focus();
+    }, 0);
   };
 
   return (
@@ -82,30 +89,73 @@ export function AnswerInputRow({
           </label>
 
           <div className="relative">
-            <input
-              ref={inputRef}
-              type="text"
-              autoComplete="off"
-              spellCheck={false}
-              data-lpignore="true"
-              placeholder={
-                canSave
-                  ? "Type your answer here..."
-                  : "Saving disabled - type for practice only"
-              }
-              value={value}
-              onChange={(e) => onChange(e.target.value)}
-              disabled={!canSave}
-              className={`w-full px-3 py-2 border border-gray-300 outline-none transition-colors text-sm pr-16 ${
-                canSave
-                  ? "focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-white"
-                  : "bg-gray-100 cursor-not-allowed"
-              }`}
-            />
+            {isMultiline ? (
+              <textarea
+                ref={inputRef as React.RefObject<HTMLTextAreaElement>}
+                autoComplete="off"
+                spellCheck={false}
+                data-lpignore="true"
+                placeholder={
+                  canSave
+                    ? "Type your answer here..."
+                    : "Saving disabled - type for practice only"
+                }
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
+                disabled={!canSave}
+                rows={3}
+                className={`w-full px-3 py-2 border border-gray-300 outline-none transition-colors text-sm pr-20 rounded-none resize-y min-h-[80px] ${
+                  canSave
+                    ? "focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-white"
+                    : "bg-gray-100 cursor-not-allowed"
+                }`}
+              />
+            ) : (
+              <input
+                ref={inputRef as React.RefObject<HTMLInputElement>}
+                type="text"
+                autoComplete="off"
+                spellCheck={false}
+                data-lpignore="true"
+                placeholder={
+                  canSave
+                    ? "Type your answer here..."
+                    : "Saving disabled - type for practice only"
+                }
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
+                disabled={!canSave}
+                className={`w-full px-3 py-2 border border-gray-300 outline-none transition-colors text-sm pr-24 rounded-none ${
+                  canSave
+                    ? "focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-white"
+                    : "bg-gray-100 cursor-not-allowed"
+                }`}
+              />
+            )}
 
             {/* Action Buttons */}
             {canSave && (
-              <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
+              <div
+                className={`absolute right-2 flex items-center gap-1 ${
+                  isMultiline ? "top-2" : "top-1/2 -translate-y-1/2"
+                }`}
+              >
+                <button
+                  onClick={() => setIsMultiline(!isMultiline)}
+                  className="p-1 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
+                  title={
+                    isMultiline
+                      ? "Switch to single line"
+                      : "Switch to multi-line"
+                  }
+                  type="button"
+                >
+                  {isMultiline ? (
+                    <Minimize2 className="w-3.5 h-3.5" />
+                  ) : (
+                    <Maximize2 className="w-3.5 h-3.5" />
+                  )}
+                </button>
                 <button
                   onClick={handlePaste}
                   className="p-1 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
