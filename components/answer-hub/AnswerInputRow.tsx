@@ -3,6 +3,8 @@
 import { useRef } from "react";
 import { ExerciseAnswer } from "@/lib/models/exercises";
 import { GermanCharAutocomplete } from "@/components/writing/GermanCharAutocomplete";
+import { Clipboard, X } from "lucide-react";
+import { useToast } from "@/lib/hooks/useToast";
 
 export interface AnswerInputRowProps {
   answer: ExerciseAnswer;
@@ -20,6 +22,34 @@ export function AnswerInputRow({
   isSaving,
 }: AnswerInputRowProps) {
   const inputRef = useRef<HTMLInputElement>(null);
+  const { showToast } = useToast();
+
+  const handlePaste = async () => {
+    try {
+      // Try to read from clipboard
+      const text = await navigator.clipboard.readText();
+      if (text) {
+        onChange(text);
+        setTimeout(() => inputRef.current?.focus(), 0);
+      }
+    } catch (error) {
+      console.error("Failed to paste:", error);
+
+      // If permission denied or not supported, inform the user
+      showToast(
+        "Unable to access clipboard. Please use Ctrl+V / Cmd+V to paste.",
+        "warning"
+      );
+
+      // Fallback: Focus the input so they can manually paste easily
+      inputRef.current?.focus();
+    }
+  };
+
+  const handleClear = () => {
+    onChange("");
+    setTimeout(() => inputRef.current?.focus(), 0);
+  };
 
   return (
     <div
@@ -55,6 +85,9 @@ export function AnswerInputRow({
             <input
               ref={inputRef}
               type="text"
+              autoComplete="off"
+              spellCheck={false}
+              data-lpignore="true"
               placeholder={
                 canSave
                   ? "Type your answer here..."
@@ -63,12 +96,37 @@ export function AnswerInputRow({
               value={value}
               onChange={(e) => onChange(e.target.value)}
               disabled={!canSave}
-              className={`w-full px-3 py-2 border border-gray-300 outline-none transition-colors text-sm ${
+              className={`w-full px-3 py-2 border border-gray-300 outline-none transition-colors text-sm pr-16 ${
                 canSave
                   ? "focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-white"
                   : "bg-gray-100 cursor-not-allowed"
               }`}
             />
+
+            {/* Action Buttons */}
+            {canSave && (
+              <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1">
+                <button
+                  onClick={handlePaste}
+                  className="p-1 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
+                  title="Paste from clipboard"
+                  type="button"
+                >
+                  <Clipboard className="w-3.5 h-3.5" />
+                </button>
+                {value && (
+                  <button
+                    onClick={handleClear}
+                    className="p-1 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
+                    title="Clear answer"
+                    type="button"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                )}
+              </div>
+            )}
+
             <GermanCharAutocomplete
               textareaRef={inputRef}
               content={value}

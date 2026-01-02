@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, ReactNode } from 'react';
-import { X, CheckCircle, AlertCircle, Info, AlertTriangle } from 'lucide-react';
+import { X } from 'lucide-react';
 
 export type ToastVariant = 'success' | 'error' | 'warning' | 'info';
 
@@ -21,31 +21,24 @@ export interface ToastProps {
   onClose: (id: string) => void;
   actions?: ToastAction[];
   showIcon?: boolean;
+  timestamp?: string;
 }
 
 const variantConfig = {
   success: {
-    icon: CheckCircle,
-    iconColor: 'text-emerald-500',
-    bgColor: 'bg-white',
+    iconBg: 'bg-emerald-500',
     borderColor: 'border-emerald-200',
   },
   error: {
-    icon: AlertCircle,
-    iconColor: 'text-red-500',
-    bgColor: 'bg-white',
+    iconBg: 'bg-red-500',
     borderColor: 'border-red-200',
   },
   warning: {
-    icon: AlertTriangle,
-    iconColor: 'text-amber-500',
-    bgColor: 'bg-white',
+    iconBg: 'bg-amber-500',
     borderColor: 'border-amber-200',
   },
   info: {
-    icon: Info,
-    iconColor: 'text-blue-500',
-    bgColor: 'bg-white',
+    iconBg: 'bg-blue-500',
     borderColor: 'border-blue-200',
   },
 } as const;
@@ -60,11 +53,11 @@ export function Toast({
   onClose,
   actions,
   showIcon = true,
+  timestamp,
 }: ToastProps) {
   const config = variantConfig[variant];
-  const Icon = config.icon;
   const hasActions = actions && actions.length > 0;
-  const hasTitle = title || description;
+  const hasTitle = !!title;
 
   useEffect(() => {
     if (duration > 0) {
@@ -76,89 +69,81 @@ export function Toast({
     }
   }, [id, duration, onClose]);
 
-  // Action toast with title/description/buttons
-  if (hasTitle || hasActions) {
-    return (
-      <div
-        className={`text-neutral-500 text-sm font-semibold leading-snug flex px-6 py-5 ${config.bgColor} border border-neutral-200 rounded-lg shadow-lg min-w-[300px] max-w-md animate-slide-in-right`}
-        role="alert"
-        aria-live="polite"
-      >
-        <div className="mr-4 flex-1">
-          {/* Title */}
-          {title && (
-            <div className="text-neutral-800 text-base font-bold leading-normal mb-2">
-              {title}
-            </div>
-          )}
+  // Format timestamp - default to "just now" if not provided
+  const displayTime = timestamp || 'just now';
 
-          {/* Description or message */}
-          <div className="text-neutral-500 font-normal">
-            {description || message}
-          </div>
-
-          {/* Action buttons */}
-          {hasActions && (
-            <div className="mt-3 text-right space-x-2">
-              {actions.map((action, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    action.onClick();
-                    onClose(id);
-                  }}
-                  className={`cursor-pointer whitespace-nowrap content-center font-bold transition-all duration-150 ease-in-out active:scale-[0.98] h-10 rounded-xl px-3 py-2 text-sm leading-snug ${
-                    action.variant === 'primary'
-                      ? 'bg-blue-500 text-white hover:bg-blue-600'
-                      : 'border-solid border border-neutral-300 bg-white text-neutral-600 hover:border-blue-500 hover:text-blue-500 hover:shadow-sm'
-                  }`}
-                >
-                  {action.label}
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
-
-        {/* Close button */}
-        <button
-          onClick={() => onClose(id)}
-          className="text-neutral-400 hover:text-neutral-600 transition-colors self-start"
-          aria-label="Close notification"
-        >
-          <X className="h-5 w-5" />
-        </button>
-      </div>
-    );
-  }
-
-  // Simple toast with icon and message
   return (
     <div
-      className={`text-neutral-500 text-sm font-semibold leading-snug flex px-6 py-5 ${config.bgColor} ${config.borderColor} border rounded-lg shadow-lg min-w-[300px] max-w-md animate-slide-in-right`}
+      className={`bg-white/90 backdrop-blur-sm border ${config.borderColor} rounded-lg shadow-lg min-w-[300px] max-w-md animate-slide-in-right`}
       role="alert"
-      aria-live="polite"
+      aria-live="assertive"
+      aria-atomic="true"
     >
-      {/* Icon */}
-      {showIcon && (
-        <div className="mt-0.5 mr-3">
-          <Icon className={`h-6 w-6 ${config.iconColor}`} />
-        </div>
-      )}
+      {/* Toast Header */}
+      <div className="flex items-center px-3 py-2 border-b border-neutral-200/60 bg-white/90 rounded-t-lg">
+        {/* Icon Square */}
+        {showIcon && (
+          <svg
+            className="rounded mr-2"
+            width="20"
+            height="20"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice"
+            focusable="false"
+            role="img"
+            aria-label={`${variant} icon`}
+          >
+            <rect width="100%" height="100%" className={config.iconBg} fill="currentColor" />
+          </svg>
+        )}
 
-      {/* Message */}
-      <div className="mr-4 flex-1">
-        <div className="mt-1 text-neutral-900">{message}</div>
+        {/* Title */}
+        <div className="font-bold text-neutral-800 text-sm mr-auto">
+          {title || 'Testmanship'}
+        </div>
+
+        {/* Timestamp */}
+        <small className="text-neutral-500 text-xs mr-2">
+          {displayTime}
+        </small>
+
+        {/* Close Button */}
+        <button
+          type="button"
+          onClick={() => onClose(id)}
+          className="text-neutral-400 hover:text-neutral-600 transition-colors p-1 rounded hover:bg-neutral-100"
+          aria-label="Close"
+        >
+          <X className="h-4 w-4" />
+        </button>
       </div>
 
-      {/* Close button */}
-      <button
-        onClick={() => onClose(id)}
-        className="text-neutral-400 hover:text-neutral-600 transition-colors ml-2"
-        aria-label="Close notification"
-      >
-        <X className="h-5 w-5" />
-      </button>
+      {/* Toast Body */}
+      <div className="px-3 py-2 text-neutral-700 text-sm break-words">
+        {description || message}
+
+        {/* Action buttons */}
+        {hasActions && (
+          <div className="mt-3 flex gap-2 justify-end">
+            {actions.map((action, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  action.onClick();
+                  onClose(id);
+                }}
+                className={`cursor-pointer whitespace-nowrap font-semibold transition-all duration-150 ease-in-out active:scale-[0.98] rounded-lg px-3 py-1.5 text-xs ${
+                  action.variant === 'primary'
+                    ? 'bg-blue-500 text-white hover:bg-blue-600'
+                    : 'border border-neutral-300 bg-white text-neutral-600 hover:border-blue-500 hover:text-blue-500 hover:shadow-sm'
+                }`}
+              >
+                {action.label}
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

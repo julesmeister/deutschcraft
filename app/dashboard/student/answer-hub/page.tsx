@@ -3,20 +3,21 @@
  * Batch-filtered exercise discussions for Schritte textbook
  */
 
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
-import { CEFRLevelSelector } from '@/components/ui/CEFRLevelSelector';
-import { CatLoader } from '@/components/ui/CatLoader';
-import { CategoryList } from '@/components/ui/CategoryList';
-import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { useCurrentStudent } from '@/lib/hooks/useUsers';
-import { usePersistedLevel } from '@/lib/hooks/usePersistedLevel';
-import { useExercises, useHasExercises } from '@/lib/hooks/useExercises';
-import { CEFRLevel } from '@/lib/models/cefr';
-import { LessonCard } from '@/components/answer-hub/LessonCard';
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
+import { CEFRLevelSelector } from "@/components/ui/CEFRLevelSelector";
+import { CatLoader } from "@/components/ui/CatLoader";
+import { CategoryList } from "@/components/ui/CategoryList";
+import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
+import { useCurrentStudent } from "@/lib/hooks/useUsers";
+import { usePersistedLevel } from "@/lib/hooks/usePersistedLevel";
+import { useExercisesWithOverrides } from "@/lib/hooks/useExercisesWithOverrides";
+import { useHasExercises } from "@/lib/hooks/useExercises";
+import { CEFRLevel } from "@/lib/models/cefr";
+import { LessonCard } from "@/components/answer-hub/LessonCard";
 
 // Color schemes matching grammatik page
 const CARD_COLOR_SCHEMES = [
@@ -50,19 +51,23 @@ const CARD_COLOR_SCHEMES = [
 export default function AnswerHubPage() {
   const router = useRouter();
   const { session } = useFirebaseAuth();
-  const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
+  const { student: currentUser } = useCurrentStudent(
+    session?.user?.email || null
+  );
 
   // State
-  const [selectedLevel, setSelectedLevel] = usePersistedLevel('answer-hub-last-level');
-  const selectedBookType = 'AB'; // Fixed to Arbeitsbuch
+  const [selectedLevel, setSelectedLevel] = usePersistedLevel(
+    "answer-hub-last-level"
+  );
+  const selectedBookType = "AB"; // Fixed to Arbeitsbuch
 
-  // Load exercises for selected level and book type
-  const {
-    exerciseBook,
-    lessons,
-    isLoading,
-    error,
-  } = useExercises(selectedLevel, selectedBookType);
+  // Load exercises for selected level and book type (including teacher overrides)
+  const { exerciseBook, lessons, isLoading, error } = useExercisesWithOverrides(
+    selectedLevel,
+    selectedBookType,
+    undefined,
+    session?.user?.email
+  );
 
   const hasExercises = useHasExercises(selectedLevel, selectedBookType);
 
@@ -76,8 +81,8 @@ export default function AnswerHubPage() {
         title="Answer Hub 📝"
         subtitle="Practice Schritte exercises with your batch"
         backButton={{
-          label: 'Back to Dashboard',
-          onClick: () => router.push('/dashboard/student'),
+          label: "Back to Dashboard",
+          onClick: () => router.push("/dashboard/student"),
         }}
       />
 
@@ -100,15 +105,15 @@ export default function AnswerHubPage() {
         </div>
 
         {/* Loading State */}
-        {isLoading && (
-          <CatLoader message="Loading exercises..." size="md" />
-        )}
+        {isLoading && <CatLoader message="Loading exercises..." size="md" />}
 
         {/* Error State */}
         {error && !isLoading && (
           <div className="bg-white border border-red-200 shadow-sm p-12 text-center">
             <div className="text-6xl mb-4">⚠️</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">Error Loading Exercises</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">
+              Error Loading Exercises
+            </h3>
             <p className="text-gray-600">{error}</p>
           </div>
         )}
@@ -121,7 +126,8 @@ export default function AnswerHubPage() {
               No Exercises Available
             </h3>
             <p className="text-gray-600 mb-4">
-              Exercises for {selectedLevel} {selectedBookType} haven't been added yet.
+              Exercises for {selectedLevel} {selectedBookType} haven't been
+              added yet.
             </p>
             <p className="text-sm text-gray-500">
               Try selecting a different level.
@@ -137,7 +143,8 @@ export default function AnswerHubPage() {
                 key: `${selectedLevel}-${selectedBookType}`,
                 header: `Schritte International Neu - ${selectedLevel}`,
                 items: lessons.map((lesson, index) => {
-                  const colorScheme = CARD_COLOR_SCHEMES[index % CARD_COLOR_SCHEMES.length];
+                  const colorScheme =
+                    CARD_COLOR_SCHEMES[index % CARD_COLOR_SCHEMES.length];
                   return (
                     <LessonCard
                       key={lesson.lessonNumber}
@@ -161,9 +168,10 @@ export default function AnswerHubPage() {
                 Need Help?
               </h3>
               <p className="text-sm text-neutral-700 max-w-2xl mx-auto">
-                These are exercises from the Schritte International Neu textbook series.
-                Use the correct answers to check your work, and discuss tricky questions
-                with your batch-mates in the comments below each exercise.
+                These are exercises from the Schritte International Neu textbook
+                series. Use the correct answers to check your work, and discuss
+                tricky questions with your batch-mates in the comments below
+                each exercise.
               </p>
             </div>
           </div>

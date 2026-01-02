@@ -6,7 +6,7 @@
 'use client';
 
 import { useMemo } from 'react';
-import { useStudentAnswers } from './useStudentAnswers';
+import { useStudentAnswers, useStudentLessonAnswers } from './useStudentAnswers';
 import { Exercise, Lesson } from '@/lib/models/exercises';
 import { ExerciseProgress, LessonProgress } from '@/lib/models/exerciseProgress';
 
@@ -62,12 +62,15 @@ export function useLessonProgress(
   lesson: Lesson,
   studentId: string | null
 ): LessonProgress | null {
-  // For each exercise, get the student's answers
-  const exerciseProgresses = lesson.exercises.map(ex => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { answers } = useStudentAnswers(ex.exerciseId);
-    return { exercise: ex, answers };
-  });
+  // Get all exercise IDs
+  const exerciseIds = useMemo(() => 
+    lesson.exercises.map(ex => ex.exerciseId), 
+    [lesson]
+  );
+
+  // Fetch answers for all exercises at once
+  // This is much better than mapping hooks in a loop!
+  const { answers } = useStudentLessonAnswers(studentId || undefined, exerciseIds);
 
   return useMemo(() => {
     if (!studentId) return null;
@@ -75,19 +78,30 @@ export function useLessonProgress(
     let exercisesCompleted = 0;
     let lastActivityAt = 0;
 
-    exerciseProgresses.forEach(({ exercise, answers }) => {
-      const studentAnswers = answers.find(a => a.studentId === studentId);
+    // Group answers by exerciseId
+    const answersByExercise = new Map<string, typeof answers>();
+    answers.forEach(ans => {
+      const existing = answersByExercise.get(ans.exerciseId) || [];
+      existing.push(ans);
+      answersByExercise.set(ans.exerciseId, existing);
+    });
 
-      if (studentAnswers && studentAnswers.answers.length > 0) {
-        const itemsCompleted = studentAnswers.answers.length;
+    lesson.exercises.forEach(exercise => {
+      const exerciseAnswers = answersByExercise.get(exercise.exerciseId) || [];
+
+      if (exerciseAnswers.length > 0) {
+        const itemsCompleted = exerciseAnswers.length;
         const totalItems = exercise.answers.length;
 
-        if (itemsCompleted === totalItems) {
+        // For custom/override exercises, totalItems might need to come from the exercise object
+        // The check itemsCompleted === totalItems assumes we have all items.
+        // If an exercise has 5 questions and student answered 5, it's complete.
+        if (itemsCompleted >= totalItems && totalItems > 0) {
           exercisesCompleted++;
         }
 
         const lastAttempt = Math.max(
-          ...studentAnswers.answers.map(a => a.submittedAt || 0)
+          ...exerciseAnswers.map(a => a.submittedAt || 0)
         );
         lastActivityAt = Math.max(lastActivityAt, lastAttempt);
       }
@@ -106,5 +120,5 @@ export function useLessonProgress(
       percentage,
       lastActivityAt: lastActivityAt || Date.now(),
     };
-  }, [lesson, studentId, exerciseProgresses]);
+  }, [lesson, studentId, answers]);
 }
