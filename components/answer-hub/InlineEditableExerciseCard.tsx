@@ -156,6 +156,11 @@ export function InlineEditableExerciseCard({
             type="text"
             value={exerciseNumber}
             onChange={(e) => setExerciseNumber(e.target.value)}
+            onClick={() => {
+              if (exerciseNumber === (initialData?.exerciseNumber || "")) {
+                setExerciseNumber("");
+              }
+            }}
             placeholder="Exercise number (e.g., 1, 2a, 3b)"
             className="flex-shrink-0 w-32 px-3 py-2 text-sm font-bold border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
             autoFocus
@@ -208,6 +213,7 @@ export function InlineEditableExerciseCard({
                 onChange={(e) =>
                   handleUpdateAnswerNumber(index, e.target.value)
                 }
+                onClick={() => handleUpdateAnswerNumber(index, "")}
                 placeholder="#"
                 className="flex-shrink-0 w-10 px-1 py-1.5 text-xs font-semibold text-center border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
               />
