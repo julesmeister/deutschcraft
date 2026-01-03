@@ -580,6 +580,22 @@ export async function updateDashboardSettings(
   }
 }
 
+/**
+ * Delete a user account (only for unapproved users)
+ * @param email - User's email (document ID)
+ */
+export async function deleteUser(email: string): Promise<void> {
+  try {
+    await db.execute({
+      sql: "DELETE FROM users WHERE user_id = ?",
+      args: [email],
+    });
+  } catch (error) {
+    console.error("[userService:turso] Error deleting user:", error);
+    throw error;
+  }
+}
+
 // ============================================================================
 // HELPER FUNCTIONS
 // ============================================================================
@@ -588,9 +604,14 @@ export async function updateDashboardSettings(
  * Convert database row to User object
  */
 function rowToUser(row: any): User {
+  const firstName = (row.first_name as string) || "";
+  const lastName = (row.last_name as string) || "";
+  const name = `${firstName} ${lastName}`.trim();
+
   return {
     userId: row.user_id as string,
     email: row.email as string,
+    name: name || undefined,
     firstName: row.first_name as string,
     lastName: row.last_name as string,
     role: row.role as "STUDENT" | "TEACHER",

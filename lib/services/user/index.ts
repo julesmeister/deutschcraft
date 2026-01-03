@@ -11,13 +11,12 @@
  */
 
 // Determine which database to use
-// TEMPORARILY FORCING FIREBASE FOR USER DATA (auth writes to Firebase, so reads should too)
-const USE_TURSO = false; // process.env.NEXT_PUBLIC_USE_TURSO === 'true';
+const USE_TURSO = process.env.NEXT_PUBLIC_USE_TURSO === 'true';
 
 // Import from the appropriate implementation
 const implementation = USE_TURSO
   ? require("../turso/userService")
-  : require("../userService");
+  : require("./firebase");
 
 // Re-export all functions
 export const {
@@ -37,7 +36,7 @@ export const {
   getAllNonTeachers,
   getStudentsWithoutTeacher,
 
-  // Pagination (Turso only, but gracefully handled)
+  // Pagination
   getUsersPaginated,
   getUserCount,
   getPendingEnrollmentsPaginated,

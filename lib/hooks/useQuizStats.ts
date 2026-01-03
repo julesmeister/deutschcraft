@@ -29,6 +29,26 @@ export function calculateQuizPoints(correctAnswers: number, totalBlanks: number)
  * Get user's quiz statistics
  */
 async function getUserQuizStats(userId: string): Promise<QuizStats> {
+  const USE_TURSO = 
+    process.env.NEXT_PUBLIC_DATABASE_PROVIDER === 'turso' || 
+    process.env.NEXT_PUBLIC_DATABASE_TYPE === 'turso' || 
+    process.env.NEXT_PUBLIC_USE_TURSO === 'true';
+
+  if (USE_TURSO) {
+    try {
+      const { getUserQuizStats } = await import('@/lib/services/turso/reviewQuizService');
+      return await getUserQuizStats(userId);
+    } catch (error) {
+      console.error('Error fetching quiz stats from Turso:', error);
+      return {
+        totalQuizzes: 0,
+        totalPoints: 0,
+        totalCorrectAnswers: 0,
+        totalBlanks: 0,
+      };
+    }
+  }
+
   try {
     const quizzesRef = collection(db, 'writing-review-quizzes');
     const q = query(

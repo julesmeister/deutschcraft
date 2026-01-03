@@ -1,29 +1,20 @@
 /**
- * Review Quiz Service
- * Firestore operations for review quizzes
+ * Review Quiz Service - Database Switcher
+ * Automatically switches between Firebase and Turso implementations
  */
 
-import { db } from '../../firebase';
-import {
-  collection,
-  doc,
-  addDoc,
-  updateDoc,
-  getDoc,
-  getDocs,
-  query,
-  where,
-  orderBy,
-  limit,
-} from 'firebase/firestore';
 import { ReviewQuiz, QuizBlank } from '../../models/writing';
+import * as firebaseImpl from './firebase/reviewQuizService';
+import * as tursoImpl from '../turso/reviewQuizService';
 
-const COLLECTION = 'writing-review-quizzes';
+const USE_TURSO = process.env.NEXT_PUBLIC_USE_TURSO === 'true';
 
-/**
- * Create a new review quiz
- */
-export async function createReviewQuiz(
+// ============================================================================
+// TURSO ADAPTERS
+// Adapts Turso implementation to match the existing Firestore API
+// ============================================================================
+
+async function createReviewQuizTurso(
   submissionId: string,
   userId: string,
   exerciseId: string,
@@ -33,197 +24,95 @@ export async function createReviewQuiz(
   correctedText: string,
   blanks: QuizBlank[]
 ): Promise<ReviewQuiz> {
-  try {
-    const now = Date.now();
-    const quizData = {
-      submissionId,
-      userId,
-      exerciseId,
-      exerciseType,
-      sourceType,
-      originalText,
-      correctedText,
-      blanks,
-      answers: {},
-      score: 0,
-      correctAnswers: 0,
-      totalBlanks: blanks.length,
-      status: 'in-progress' as const,
-      startedAt: now,
-      createdAt: now,
-      updatedAt: now,
-    };
+  const now = Date.now();
+  const quizData = {
+    submissionId,
+    userId,
+    exerciseId,
+    exerciseType,
+    sourceType,
+    originalText,
+    correctedText,
+    blanks,
+    answers: {},
+    score: 0,
+    correctAnswers: 0,
+    totalBlanks: blanks.length,
+    status: 'in-progress' as const,
+    startedAt: now,
+    createdAt: now,
+    updatedAt: now,
+  };
 
-    const docRef = await addDoc(collection(db, COLLECTION), quizData);
+  const quizId = await tursoImpl.createReviewQuiz(quizData);
 
-    return {
-      quizId: docRef.id,
-      ...quizData,
-    };
-  } catch (error) {
-    console.error('[reviewQuizService] Error creating quiz:', error);
-    throw error;
-  }
+  return {
+    quizId,
+    ...quizData,
+  };
 }
 
-/**
- * Complete a review quiz with answers and score
- * Returns the completed quiz data for further processing (e.g., progress tracking)
- */
-export async function completeReviewQuiz(
+async function completeReviewQuizTurso(
   quizId: string,
   answers: Record<number, string>,
   score: number,
   correctAnswers: number
 ): Promise<ReviewQuiz | null> {
-  try {
-    const quizRef = doc(db, COLLECTION, quizId);
-    const now = Date.now();
-
-    // Update quiz status
-    await updateDoc(quizRef, {
-      answers,
-      score,
-      correctAnswers,
-      status: 'completed',
-      completedAt: now,
-      updatedAt: now,
-    });
-
-    // Return the updated quiz for caller to handle progress tracking
-    return await getReviewQuiz(quizId);
-  } catch (error) {
-    console.error('[reviewQuizService] Error completing quiz:', error);
-    throw error;
-  }
+  await tursoImpl.updateQuizAnswers(quizId, answers, correctAnswers, score);
+  await tursoImpl.completeQuiz(quizId);
+  return await tursoImpl.getReviewQuiz(quizId);
 }
 
-/**
- * Get a review quiz by ID
- */
-export async function getReviewQuiz(quizId: string): Promise<ReviewQuiz | null> {
-  try {
-    const quizDoc = await getDoc(doc(db, COLLECTION, quizId));
+const getQuizzesForSubmissionTurso = tursoImpl.getSubmissionQuizzes;
 
-    if (!quizDoc.exists()) {
-      return null;
+const getQuizzesForUserTurso = tursoImpl.getUserReviewQuizzes;
+
+async function getCompletedQuizzesForUserTurso(userId: string): Promise<ReviewQuiz[]> {
+  return await tursoImpl.getUserReviewQuizzes(userId, 'completed');
+}
+
+async function getUserQuizStatsTurso(userId: string) {
+  const stats = await tursoImpl.getUserQuizStats(userId);
+  
+  // Calculate bestScore and averageScore manually as Turso optimized stats don't provide them yet
+  const quizzes = await tursoImpl.getUserReviewQuizzes(userId, 'completed');
+  const scores = quizzes.map(q => q.score);
+  const bestScore = scores.length > 0 ? Math.max(...scores) : 0;
+  const averageScore = scores.length > 0
+    ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length)
+    : 0;
+
+  return {
+    totalQuizzes: stats.totalQuizzes,
+    completedQuizzes: stats.totalQuizzes,
+    totalPoints: stats.totalPoints,
+    bestScore,
+    averageScore,
+  };
+}
+
+// ============================================================================
+// EXPORT SWITCHER
+// ============================================================================
+
+const implementation = USE_TURSO
+  ? {
+      createReviewQuiz: createReviewQuizTurso,
+      completeReviewQuiz: completeReviewQuizTurso,
+      getReviewQuiz: tursoImpl.getReviewQuiz,
+      getQuizzesForSubmission: getQuizzesForSubmissionTurso,
+      getQuizzesForUser: getQuizzesForUserTurso,
+      getCompletedQuizzesForUser: getCompletedQuizzesForUserTurso,
+      getUserQuizStats: getUserQuizStatsTurso,
     }
+  : firebaseImpl;
 
-    return {
-      quizId: quizDoc.id,
-      ...quizDoc.data(),
-    } as ReviewQuiz;
-  } catch (error) {
-    console.error('[reviewQuizService] Error getting quiz:', error);
-    throw error;
-  }
-}
-
-/**
- * Get all quizzes for a submission
- */
-export async function getQuizzesForSubmission(submissionId: string): Promise<ReviewQuiz[]> {
-  try {
-    const q = query(
-      collection(db, COLLECTION),
-      where('submissionId', '==', submissionId),
-      orderBy('createdAt', 'desc')
-    );
-
-    const snapshot = await getDocs(q);
-
-    return snapshot.docs.map(doc => ({
-      quizId: doc.id,
-      ...doc.data(),
-    } as ReviewQuiz));
-  } catch (error) {
-    console.error('[reviewQuizService] Error getting quizzes for submission:', error);
-    throw error;
-  }
-}
-
-/**
- * Get all quizzes for a user
- */
-export async function getQuizzesForUser(userId: string, limitCount: number = 50): Promise<ReviewQuiz[]> {
-  try {
-    const q = query(
-      collection(db, COLLECTION),
-      where('userId', '==', userId),
-      orderBy('createdAt', 'desc'),
-      limit(limitCount)
-    );
-
-    const snapshot = await getDocs(q);
-
-    return snapshot.docs.map(doc => ({
-      quizId: doc.id,
-      ...doc.data(),
-    } as ReviewQuiz));
-  } catch (error) {
-    console.error('[reviewQuizService] Error getting quizzes for user:', error);
-    throw error;
-  }
-}
-
-/**
- * Get completed quizzes for a user with scores
- */
-export async function getCompletedQuizzesForUser(userId: string): Promise<ReviewQuiz[]> {
-  try {
-    const q = query(
-      collection(db, COLLECTION),
-      where('userId', '==', userId),
-      where('status', '==', 'completed'),
-      orderBy('completedAt', 'desc')
-    );
-
-    const snapshot = await getDocs(q);
-
-    return snapshot.docs.map(doc => ({
-      quizId: doc.id,
-      ...doc.data(),
-    } as ReviewQuiz));
-  } catch (error) {
-    console.error('[reviewQuizService] Error getting completed quizzes:', error);
-    throw error;
-  }
-}
-
-/**
- * Calculate quiz points for a user
- */
-export async function getUserQuizStats(userId: string): Promise<{
-  totalQuizzes: number;
-  completedQuizzes: number;
-  totalPoints: number;
-  bestScore: number;
-  averageScore: number;
-}> {
-  try {
-    const quizzes = await getCompletedQuizzesForUser(userId);
-
-    const totalQuizzes = quizzes.length;
-    const completedQuizzes = quizzes.filter(q => q.status === 'completed').length;
-    const scores = quizzes.map(q => q.score);
-
-    const totalPoints = scores.length > 0
-      ? scores.reduce((a, b) => a + b, 0)
-      : 0;
-    const bestScore = scores.length > 0 ? Math.max(...scores) : 0;
-    const averageScore = scores.length > 0
-      ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length)
-      : 0;
-
-    return {
-      totalQuizzes,
-      completedQuizzes,
-      totalPoints,
-      bestScore,
-      averageScore,
-    };
-  } catch (error) {
-    console.error('[reviewQuizService] Error calculating quiz stats:', error);
-    throw error;
-  }
-}
+export const {
+  createReviewQuiz,
+  completeReviewQuiz,
+  getReviewQuiz,
+  getQuizzesForSubmission,
+  getQuizzesForUser,
+  getCompletedQuizzesForUser,
+  getUserQuizStats,
+} = implementation;

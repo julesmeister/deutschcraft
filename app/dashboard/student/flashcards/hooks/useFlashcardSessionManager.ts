@@ -12,7 +12,9 @@ interface UseFlashcardSessionManagerProps {
   flashcardReviews: any[];
   settings: any;
   userEmail: string | null | undefined;
-  onSessionComplete: () => void;
+  onSessionComplete: (
+    reviewedCards?: Record<string, { difficulty: string; timestamp: number }>
+  ) => void;
 }
 
 export function useFlashcardSessionManager({
@@ -26,10 +28,12 @@ export function useFlashcardSessionManager({
 }: UseFlashcardSessionManagerProps) {
   const router = useRouter();
   const queryClient = useQueryClient();
-  
+
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [practiceFlashcards, setPracticeFlashcards] = useState<any[]>([]);
-  const [nextDueInfo, setNextDueInfo] = useState<{ count: number; nextDueDate: number } | undefined>();
+  const [nextDueInfo, setNextDueInfo] = useState<
+    { count: number; nextDueDate: number } | undefined
+  >();
   const [upcomingCards, setUpcomingCards] = useState<any[]>([]);
   const [isReviewMode, setIsReviewMode] = useState(false);
   const [isLoadingData, setIsLoadingData] = useState(false);
@@ -42,7 +46,9 @@ export function useFlashcardSessionManager({
     if (!categoryIndex) return;
 
     // Find category info
-    const catInfo = categoryIndex.categories.find((c: any) => c.id === categoryId);
+    const catInfo = categoryIndex.categories.find(
+      (c: any) => c.id === categoryId
+    );
 
     if (!catInfo) return;
 
@@ -86,21 +92,48 @@ export function useFlashcardSessionManager({
     }
   };
 
-  const handleBackToCategories = () => {
+  const handleBackToCategories = (reviewedCards?: Record<string, string>) => {
     setSelectedCategory(null);
     setPracticeFlashcards([]);
     setIsReviewMode(false); // Reset review mode
-    // Invalidate queries to force fresh data after completing session
-    if (userEmail) {
-      queryClient.invalidateQueries({
-        queryKey: queryKeys.flashcardProgress(userEmail),
-      });
-      // Also invalidate weekly progress as it might have changed
-      queryClient.invalidateQueries({
-        queryKey: queryKeys.weeklyProgress(userEmail),
+
+    // Prepare timestamped reviews
+    const timestampedReviews: Record<
+      string,
+      { difficulty: string; timestamp: number }
+    > = {};
+    if (reviewedCards) {
+      const now = Date.now();
+      Object.entries(reviewedCards).forEach(([id, diff]) => {
+        timestampedReviews[id] = { difficulty: diff, timestamp: now };
       });
     }
-    onSessionComplete();
+
+    // Invalidate queries to force fresh data after completing session
+    // Add a small delay to ensure Firestore writes have propagated
+    if (userEmail) {
+      setTimeout(() => {
+        queryClient.invalidateQueries({
+          queryKey: queryKeys.flashcardProgress(userEmail),
+        });
+        // Also invalidate weekly progress as it might have changed
+        queryClient.invalidateQueries({
+          queryKey: queryKeys.weeklyProgress(userEmail),
+        });
+        // Signal that session is complete (triggers stats refresh)
+        onSessionComplete(
+          Object.keys(timestampedReviews).length > 0
+            ? timestampedReviews
+            : undefined
+        );
+      }, 500);
+    } else {
+      onSessionComplete(
+        Object.keys(timestampedReviews).length > 0
+          ? timestampedReviews
+          : undefined
+      );
+    }
   };
 
   const handleStartPractice = async () => {
@@ -302,6 +335,6 @@ export function useFlashcardSessionManager({
     handleCategoryClick,
     handleBackToCategories,
     handleStartPractice,
-    handleToggleReviewMode
+    handleToggleReviewMode,
   };
 }

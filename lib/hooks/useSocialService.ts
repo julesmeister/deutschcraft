@@ -18,7 +18,10 @@ import { Post, Comment, Suggestion, Like, Share } from '@/lib/models/social';
 // CONFIGURATION - Switch between Firebase and Turso here
 // ============================================================================
 
-const USE_TURSO = false; // process.env.NEXT_PUBLIC_DATABASE_PROVIDER === 'turso';
+const USE_TURSO = 
+  process.env.NEXT_PUBLIC_DATABASE_PROVIDER === 'turso' || 
+  process.env.NEXT_PUBLIC_DATABASE_TYPE === 'turso' || 
+  process.env.NEXT_PUBLIC_USE_TURSO === 'true';
 
 // Dynamic imports based on configuration
 const getService = () => {

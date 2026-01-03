@@ -3,10 +3,11 @@
  * For use in API routes and NextAuth callbacks
  */
 
-import { adminDb } from '../firebaseAdmin';
-import { User } from '../models';
-import fs from 'fs';
-import path from 'path';
+import { adminDb } from "../firebaseAdmin";
+import { db } from "@/turso/client";
+import { User } from "../models";
+import fs from "fs";
+import path from "path";
 
 // In-memory cache for getUserAdmin to prevent quota exhaustion
 interface CacheEntry {
@@ -16,21 +17,25 @@ interface CacheEntry {
 
 const userCache = new Map<string, CacheEntry>();
 const CACHE_TTL = 30000; // 30 seconds cache
-const PERSISTENT_CACHE_FILE = path.join(process.cwd(), '.cache', 'users.json');
+const PERSISTENT_CACHE_FILE = path.join(process.cwd(), ".cache", "users.json");
 
 // Load persistent cache on startup
 function loadPersistentCache(): void {
   try {
     if (fs.existsSync(PERSISTENT_CACHE_FILE)) {
-      const data = fs.readFileSync(PERSISTENT_CACHE_FILE, 'utf-8');
+      const data = fs.readFileSync(PERSISTENT_CACHE_FILE, "utf-8");
       const cache = JSON.parse(data);
       Object.entries(cache).forEach(([email, entry]) => {
         userCache.set(email, entry as CacheEntry);
       });
-      console.log('[getUserAdmin] Loaded persistent cache with', userCache.size, 'entries');
+      console.log(
+        "[getUserAdmin] Loaded persistent cache with",
+        userCache.size,
+        "entries"
+      );
     }
   } catch (error) {
-    console.warn('[getUserAdmin] Failed to load persistent cache:', error);
+    console.warn("[getUserAdmin] Failed to load persistent cache:", error);
   }
 }
 
@@ -47,7 +52,7 @@ function savePersistentCache(): void {
     });
     fs.writeFileSync(PERSISTENT_CACHE_FILE, JSON.stringify(cache, null, 2));
   } catch (error) {
-    console.warn('[getUserAdmin] Failed to save persistent cache:', error);
+    console.warn("[getUserAdmin] Failed to save persistent cache:", error);
   }
 }
 
@@ -60,19 +65,22 @@ loadPersistentCache();
  * @param bypassCache - Force fresh fetch from database (default: false)
  * @returns User object or null if not found
  */
-export async function getUserAdmin(email: string, bypassCache: boolean = false): Promise<User | null> {
+export async function getUserAdmin(
+  email: string,
+  bypassCache: boolean = false
+): Promise<User | null> {
   // Check cache first (unless bypass is requested)
   if (!bypassCache) {
     const cached = userCache.get(email);
     if (cached && Date.now() - cached.timestamp < CACHE_TTL) {
-      console.log('[getUserAdmin] Returning cached data for:', email);
+      console.log("[getUserAdmin] Returning cached data for:", email);
       return cached.user;
     }
   }
 
   try {
-    console.log('[getUserAdmin] Fetching from Firestore for:', email);
-    const userDoc = await adminDb.collection('users').doc(email).get();
+    console.log("[getUserAdmin] Fetching from Firestore for:", email);
+    const userDoc = await adminDb.collection("users").doc(email).get();
 
     const user = userDoc.exists
       ? ({ userId: userDoc.id, ...userDoc.data() } as User)
@@ -90,22 +98,31 @@ export async function getUserAdmin(email: string, bypassCache: boolean = false):
     return user;
   } catch (error) {
     // If quota exhausted, try to return cached data even if stale
-    if ((error as any)?.code === 8 || (error as any)?.message?.includes('Quota exceeded')) {
-      console.warn('[getUserAdmin] Quota exhausted, checking for cached data for:', email);
+    if (
+      (error as any)?.code === 8 ||
+      (error as any)?.message?.includes("Quota exceeded")
+    ) {
+      console.warn(
+        "[getUserAdmin] Quota exhausted, checking for cached data for:",
+        email
+      );
       const cached = userCache.get(email);
       if (cached) {
         const age = Math.round((Date.now() - cached.timestamp) / 1000);
-        console.warn(`[getUserAdmin] Using stale cache (${age}s old) for:`, email);
+        console.warn(
+          `[getUserAdmin] Using stale cache (${age}s old) for:`,
+          email
+        );
         return cached.user;
       } else {
-        console.error('[getUserAdmin] No cached data available for:', email);
+        console.error("[getUserAdmin] No cached data available for:", email);
         // Return a default pending user to prevent total failure
         return {
           userId: email,
           email: email,
-          name: email.split('@')[0],
-          role: 'PENDING_APPROVAL',
-          enrollmentStatus: 'not_submitted',
+          name: email.split("@")[0],
+          role: "PENDING_APPROVAL",
+          enrollmentStatus: "not_submitted",
         } as User;
       }
     }
@@ -120,20 +137,66 @@ export async function getUserAdmin(email: string, bypassCache: boolean = false):
  */
 export function invalidateUserCache(email: string): void {
   userCache.delete(email);
-  console.log('[getUserAdmin] Cache invalidated for:', email);
+  console.log("[getUserAdmin] Cache invalidated for:", email);
 }
 
 /**
  * Create or update a user (upsert) - server-side
  * @param user - User object with email required
  */
-export async function upsertUserAdmin(user: Partial<User> & { email: string }): Promise<void> {
+export async function upsertUserAdmin(
+  user: Partial<User> & { email: string }
+): Promise<void> {
   try {
-    await adminDb.collection('users').doc(user.email).set({
-      userId: user.email,
-      ...user,
-      updatedAt: Date.now(),
-    }, { merge: true });
+    // 1. Update Firestore
+    await adminDb
+      .collection("users")
+      .doc(user.email)
+      .set(
+        {
+          userId: user.email,
+          ...user,
+          updatedAt: Date.now(),
+        },
+        { merge: true }
+      );
+
+    // 2. Sync to Turso (Best effort)
+    try {
+      const now = Date.now();
+      // Use COALESCE to preserve existing values if not provided in partial update
+      // For INSERT, we provide defaults or nulls
+      await db.execute({
+        sql: `INSERT INTO users (
+                user_id, email, first_name, last_name, role, photo_url,
+                enrollment_status,
+                created_at, updated_at
+              ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+              ON CONFLICT(user_id) DO UPDATE SET
+                email = excluded.email,
+                first_name = COALESCE(excluded.first_name, users.first_name),
+                last_name = COALESCE(excluded.last_name, users.last_name),
+                role = COALESCE(excluded.role, users.role),
+                photo_url = COALESCE(excluded.photo_url, users.photo_url),
+                enrollment_status = COALESCE(excluded.enrollment_status, users.enrollment_status),
+                updated_at = excluded.updated_at`,
+        args: [
+          user.email,
+          user.email,
+          user.firstName || null,
+          user.lastName || null,
+          user.role || "PENDING_APPROVAL",
+          user.photoURL || null,
+          user.enrollmentStatus || "not_submitted",
+          user.createdAt || now,
+          now,
+        ],
+      });
+      console.log("[upsertUserAdmin] Synced user to Turso:", user.email);
+    } catch (tursoError) {
+      console.error("[upsertUserAdmin] Failed to sync to Turso:", tursoError);
+      // Don't throw, let the Firestore success stand
+    }
 
     // Invalidate cache after update
     invalidateUserCache(user.email);
@@ -147,12 +210,18 @@ export async function upsertUserAdmin(user: Partial<User> & { email: string }): 
  * @param email - User's email (document ID)
  * @param updates - Partial user object with fields to update
  */
-export async function updateUserAdmin(email: string, updates: Partial<User>): Promise<void> {
+export async function updateUserAdmin(
+  email: string,
+  updates: Partial<User>
+): Promise<void> {
   try {
-    await adminDb.collection('users').doc(email).update({
-      ...updates,
-      updatedAt: Date.now(),
-    });
+    await adminDb
+      .collection("users")
+      .doc(email)
+      .update({
+        ...updates,
+        updatedAt: Date.now(),
+      });
 
     // Invalidate cache after update
     invalidateUserCache(email);

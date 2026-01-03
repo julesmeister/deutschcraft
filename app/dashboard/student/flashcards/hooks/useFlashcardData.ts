@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 import { useStudyStats, useFlashcardReviews } from "@/lib/hooks/useFlashcards";
 import {
   useRemNoteCategories,
@@ -14,7 +14,8 @@ import { cacheTimes } from "@/lib/queryClient";
 export function useFlashcardData(
   userEmail: string | null | undefined,
   selectedLevel: string,
-  statsRefreshKey: number
+  statsRefreshKey: number,
+  recentReviews?: Record<string, { difficulty: string; timestamp: number }>
 ) {
   // Fetch real data from Firestore (with 1-hour cache for flashcards page)
   const { stats, isLoading: statsLoading } = useStudyStats(
@@ -24,9 +25,7 @@ export function useFlashcardData(
   );
 
   // Get weekly progress data
-  const { weeklyData, totalWords } = useWeeklyProgress(
-    userEmail || null
-  );
+  const { weeklyData, totalWords } = useWeeklyProgress(userEmail || null);
 
   // Get RemNote categories for selected level
   const { categories: remNoteCategories, isLoading: categoriesLoading } =
@@ -39,6 +38,13 @@ export function useFlashcardData(
   // Fetch user's flashcard progress to identify attempted categories
   const { data: flashcardReviews = [], refetch: refetchReviews } =
     useFlashcardReviews(userEmail);
+
+  // Force refetch reviews when statsRefreshKey changes (e.g. after session)
+  useEffect(() => {
+    if (statsRefreshKey > 0) {
+      refetchReviews();
+    }
+  }, [statsRefreshKey, refetchReviews]);
 
   // Optimization: Create a memoized map for O(1) lookups
   const reviewsMap = useMemo(() => {
@@ -116,11 +122,21 @@ export function useFlashcardData(
         if (cat.ids) {
           cat.ids.forEach((id) => {
             const progress = reviewsMap.get(id);
-            // Count if card is new (never seen) OR due for review now
-            // Note: counting new cards as "due" might be overwhelming if we show badges.
-            // Usually "Due" means scheduled for review.
-            // But for "Start Practice", we want to know if there's anything to do.
-            const isDue = progress && (progress.nextReviewDate || 0) <= now;
+            const recentReview = recentReviews ? recentReviews[id] : undefined;
+
+            let isDue = false;
+
+            // Priority 1: Check recent local reviews (Optimistic UI)
+            // Only use local review if it's fresh (< 1 hour)
+            if (recentReview && now - recentReview.timestamp < 60 * 60 * 1000) {
+              // If marked "again" (forgot), it is considered due immediately
+              // If marked anything else (hard/good/easy/expert), it is NOT due right now
+              isDue = recentReview.difficulty === "again";
+            }
+            // Priority 2: Check server data
+            else {
+              isDue = progress && (progress.nextReviewDate || 0) <= now;
+            }
 
             if (isDue) dueCount++;
           });
@@ -132,7 +148,7 @@ export function useFlashcardData(
       });
     }
     return counts;
-  }, [categoryIndex, reviewsMap]);
+  }, [categoryIndex, reviewsMap, recentReviews]);
 
   // Convert legacy RemNote categories to our CategoryInfo format for the grid
   const displayCategories = useMemo(() => {
@@ -166,6 +182,6 @@ export function useFlashcardData(
     categoryAttemptCounts,
     categoryCompletionStatus,
     categoryDueCounts,
-    displayCategories
+    displayCategories,
   };
 }

@@ -19,6 +19,13 @@ import {
   groupAnswersByStudent
 } from '@/lib/models/studentAnswers';
 
+// Helper to determine if we should use Turso
+const useTurso = () => {
+  return process.env.NEXT_PUBLIC_DATABASE_PROVIDER === 'turso' || 
+         process.env.NEXT_PUBLIC_DATABASE_TYPE === 'turso' || 
+         process.env.NEXT_PUBLIC_USE_TURSO === 'true';
+};
+
 /**
  * Hook to save a student's answer
  */
@@ -48,7 +55,7 @@ export function useSaveStudentAnswer() {
       };
 
       // Check if we're using Turso or Firestore
-      if (process.env.NEXT_PUBLIC_USE_TURSO === 'true') {
+      if (useTurso()) {
         const { saveStudentAnswer } = await import('@/lib/services/turso/studentAnswerService');
         await saveStudentAnswer(submission);
       } else {
@@ -80,7 +87,7 @@ export function useSaveStudentAnswer() {
       const submissionId = `${studentId}_${exerciseId}_${itemNumber}`;
       
       // Check if we're using Turso or Firestore
-      if (process.env.NEXT_PUBLIC_USE_TURSO === 'true') {
+      if (useTurso()) {
         const { deleteStudentAnswer } = await import('@/lib/services/turso/studentAnswerService');
         await deleteStudentAnswer(studentId, exerciseId, itemNumber);
       } else {
@@ -123,7 +130,7 @@ export function useStudentAnswers(exerciseId: string | null) {
 
     try {
       // Check if we're using Turso or Firestore
-      if (process.env.NEXT_PUBLIC_USE_TURSO === 'true') {
+      if (useTurso()) {
         const { getExerciseAnswersGrouped } = await import('@/lib/services/turso/studentAnswerService');
         const grouped = await getExerciseAnswersGrouped(exerciseId);
         setAnswers(grouped);
@@ -182,7 +189,7 @@ export function useAllLessonAnswers(exerciseIds: string[], isTeacher: boolean = 
     setError(null);
 
     try {
-      if (process.env.NEXT_PUBLIC_USE_TURSO === 'true') {
+      if (useTurso()) {
         const { getAllAnswersForExercises } = await import('@/lib/services/turso/studentAnswerService');
         const results = await getAllAnswersForExercises(exerciseIds);
         setAnswers(results);
@@ -244,7 +251,7 @@ export function useStudentLessonAnswers(studentId: string | undefined, exerciseI
     setError(null);
 
     try {
-      if (process.env.NEXT_PUBLIC_USE_TURSO === 'true') {
+      if (useTurso()) {
         const { getStudentAnswersForExercises } = await import('@/lib/services/turso/studentAnswerService');
         const results = await getStudentAnswersForExercises(studentId, exerciseIds);
         setAnswers(results);

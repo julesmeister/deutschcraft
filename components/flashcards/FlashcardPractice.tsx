@@ -1,18 +1,22 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/Button';
-import { SessionSummary } from './SessionSummary';
-import { MasteryStats } from './MasteryStats';
-import { FlashcardCard } from './FlashcardCard';
-import { DifficultyButtons } from './DifficultyButtons';
-import { KeyboardShortcutsLegend } from './KeyboardShortcutsLegend';
-import { useFlashcardSession } from '@/lib/hooks/useFlashcardSession';
-import { useSavedVocabulary, useSaveVocabularyMutation, useRemoveSavedVocabularyMutation } from '@/lib/hooks/useSavedVocabulary';
-import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
-import { CEFRLevel } from '@/lib/models/cefr';
-import { useToast } from '@/lib/hooks/useToast';
-import { FlashcardEmptyState } from './FlashcardEmptyState';
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/Button";
+import { SessionSummary } from "./SessionSummary";
+import { MasteryStats } from "./MasteryStats";
+import { FlashcardCard } from "./FlashcardCard";
+import { DifficultyButtons } from "./DifficultyButtons";
+import { KeyboardShortcutsLegend } from "./KeyboardShortcutsLegend";
+import { useFlashcardSession } from "@/lib/hooks/useFlashcardSession";
+import {
+  useSavedVocabulary,
+  useSaveVocabularyMutation,
+  useRemoveSavedVocabularyMutation,
+} from "@/lib/hooks/useSavedVocabulary";
+import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
+import { CEFRLevel } from "@/lib/models/cefr";
+import { useToast } from "@/lib/hooks/useToast";
+import { FlashcardEmptyState } from "./FlashcardEmptyState";
 
 interface Flashcard {
   id: string;
@@ -30,7 +34,7 @@ interface FlashcardPracticeProps {
   flashcards: Flashcard[];
   categoryName: string;
   level: string;
-  onBack: () => void;
+  onBack: (reviewedCards?: Record<string, string>) => void;
   showExamples?: boolean;
   nextDueInfo?: {
     count: number;
@@ -39,7 +43,7 @@ interface FlashcardPracticeProps {
   upcomingCards?: Flashcard[];
 }
 
-const SHOW_ENGLISH_FIRST_KEY = 'flashcard-show-english-first';
+const SHOW_ENGLISH_FIRST_KEY = "flashcard-show-english-first";
 
 export function FlashcardPractice({
   flashcards,
@@ -56,7 +60,7 @@ export function FlashcardPractice({
   useEffect(() => {
     const saved = localStorage.getItem(SHOW_ENGLISH_FIRST_KEY);
     if (saved !== null) {
-      setShowEnglishFirst(saved === 'true');
+      setShowEnglishFirst(saved === "true");
     }
   }, []);
 
@@ -80,17 +84,22 @@ export function FlashcardPractice({
     handleNext,
     handlePrevious,
     handleReviewAgainCards,
+    reviewedCards,
   } = useFlashcardSession(flashcards);
 
   // Saved vocabulary hooks
   const { session } = useFirebaseAuth();
   const toast = useToast();
-  const { data: savedVocabulary = [] } = useSavedVocabulary(session?.user?.email);
+  const { data: savedVocabulary = [] } = useSavedVocabulary(
+    session?.user?.email
+  );
   const saveMutation = useSaveVocabularyMutation();
   const removeMutation = useRemoveSavedVocabularyMutation();
 
   // Find saved status for current card
-  const currentSaved = currentCard ? savedVocabulary.find(sv => sv.wordId === currentCard.id) : undefined;
+  const currentSaved = currentCard
+    ? savedVocabulary.find((sv) => sv.wordId === currentCard.id)
+    : undefined;
   const isSaved = !!currentSaved;
   const isCompleted = currentSaved?.completed || false;
   const timesUsed = currentSaved?.timesUsed || 0;
@@ -106,7 +115,7 @@ export function FlashcardPractice({
           userId: session.user.email,
           wordId: currentCard.id,
         });
-        toast.success('Removed from saved vocabulary');
+        toast.success("Removed from saved vocabulary");
       } else {
         await saveMutation.mutateAsync({
           userId: session.user.email,
@@ -120,11 +129,11 @@ export function FlashcardPractice({
             examples: currentCard.examples,
           },
         });
-        toast.success('Saved! Track progress in writing exercises.');
+        toast.success("Saved! Track progress in writing exercises.");
       }
     } catch (error) {
-      console.error('Error toggling save:', error);
-      toast.error('Failed to save word. Please try again.');
+      console.error("Error toggling save:", error);
+      toast.error("Failed to save word. Please try again.");
     }
   };
 
@@ -149,7 +158,7 @@ export function FlashcardPractice({
         totalCards={flashcards.length}
         timeSpent={timeSpent}
         onReview={handleReviewAgainCards}
-        onFinish={onBack}
+        onFinish={() => onBack(reviewedCards)}
       />
     );
   }
@@ -159,9 +168,13 @@ export function FlashcardPractice({
     return (
       <div className="text-center py-12">
         <div className="text-6xl mb-4">🎉</div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">All cards mastered!</h3>
-        <p className="text-gray-600 mb-6">You've marked all cards as expert. Great job!</p>
-        <Button onClick={onBack} variant="primary">
+        <h3 className="text-xl font-bold text-gray-900 mb-2">
+          All cards mastered!
+        </h3>
+        <p className="text-gray-600 mb-6">
+          You've marked all cards as expert. Great job!
+        </p>
+        <Button onClick={() => onBack(reviewedCards)} variant="primary">
           Back to Categories
         </Button>
       </div>
@@ -173,7 +186,9 @@ export function FlashcardPractice({
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <div className="min-w-0 flex-1">
-          <h2 className="text-xl sm:text-2xl font-black text-gray-900 truncate">{categoryName}</h2>
+          <h2 className="text-xl sm:text-2xl font-black text-gray-900 truncate">
+            {categoryName}
+          </h2>
           <p className="text-sm sm:text-base text-gray-600">
             {level} • Card {currentIndex + 1} of {flashcards.length}
           </p>
@@ -183,11 +198,19 @@ export function FlashcardPractice({
           <button
             onClick={handleToggleLanguage}
             className="px-3 py-1.5 text-xs font-bold uppercase tracking-wide rounded-lg border-2 border-gray-300 hover:border-gray-400 transition-colors"
-            title={showEnglishFirst ? 'Showing English first' : 'Showing German first'}
+            title={
+              showEnglishFirst
+                ? "Showing English first"
+                : "Showing German first"
+            }
           >
-            {showEnglishFirst ? '🇬🇧 → 🇩🇪' : '🇩🇪 → 🇬🇧'}
+            {showEnglishFirst ? "🇬🇧 → 🇩🇪" : "🇩🇪 → 🇬🇧"}
           </button>
-          <Button onClick={onBack} variant="ghost" size="sm">
+          <Button
+            onClick={() => onBack(reviewedCards)}
+            variant="ghost"
+            size="sm"
+          >
             <span className="hidden sm:inline">← Back to Categories</span>
             <span className="sm:hidden">← Back</span>
           </Button>
@@ -236,7 +259,10 @@ export function FlashcardPractice({
             onClick={handleFlip}
             className="flex-[2] bg-gray-100 hover:bg-gray-200 active:bg-gray-300 text-gray-700 border border-gray-300 rounded-xl px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold transition-all hover:border-gray-400"
           >
-            Show Answer <span className="text-xs opacity-60 ml-2 hidden sm:inline">(Space/Enter)</span>
+            Show Answer{" "}
+            <span className="text-xs opacity-60 ml-2 hidden sm:inline">
+              (Space/Enter)
+            </span>
           </button>
 
           <button

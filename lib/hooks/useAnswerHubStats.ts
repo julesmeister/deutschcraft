@@ -36,17 +36,28 @@ export function useAnswerHubStats(studentId: string | null) {
       setError(null);
 
       try {
-        const q = query(
-          collection(db, 'studentAnswers'),
-          where('studentId', '==', studentId)
-        );
+        const USE_TURSO = 
+          process.env.NEXT_PUBLIC_DATABASE_PROVIDER === 'turso' || 
+          process.env.NEXT_PUBLIC_DATABASE_TYPE === 'turso' || 
+          process.env.NEXT_PUBLIC_USE_TURSO === 'true';
 
-        const querySnapshot = await getDocs(q);
-        const submissions: StudentAnswerSubmission[] = [];
+        let submissions: StudentAnswerSubmission[] = [];
 
-        querySnapshot.forEach((doc) => {
-          submissions.push(doc.data() as StudentAnswerSubmission);
-        });
+        if (USE_TURSO) {
+          const { getStudentAnswers } = await import('@/lib/services/turso/studentAnswerService');
+          submissions = await getStudentAnswers(studentId);
+        } else {
+          const q = query(
+            collection(db, 'studentAnswers'),
+            where('studentId', '==', studentId)
+          );
+
+          const querySnapshot = await getDocs(q);
+          
+          querySnapshot.forEach((doc) => {
+            submissions.push(doc.data() as StudentAnswerSubmission);
+          });
+        }
 
         setAnswers(submissions);
         setIsLoading(false);

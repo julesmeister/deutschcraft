@@ -638,6 +638,53 @@ export async function sharePost(shareData: Omit<Share, 'shareId' | 'createdAt'>)
 }
 
 // ============================================================================
+// POLLS
+// ============================================================================
+
+export async function votePoll(pollVote: Omit<PollVote, 'voteId' | 'createdAt'>): Promise<string> {
+  const voteId = `vote_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  const now = Date.now();
+
+  try {
+    await db.execute({
+      sql: 'INSERT INTO social_poll_votes (vote_id, poll_id, user_id, option_index, created_at) VALUES (?, ?, ?, ?, ?)',
+      args: [
+        voteId,
+        pollVote.pollId,
+        pollVote.userId,
+        pollVote.optionIndex,
+        now,
+      ],
+    });
+
+    return voteId;
+  } catch (error) {
+    console.error('[socialService:turso] Error voting poll:', error);
+    throw error;
+  }
+}
+
+export async function getPollVotes(pollId: string): Promise<PollVote[]> {
+  try {
+    const result = await db.execute({
+      sql: 'SELECT * FROM social_poll_votes WHERE poll_id = ?',
+      args: [pollId],
+    });
+
+    return result.rows.map((row: any) => ({
+      voteId: row.vote_id as string,
+      pollId: row.poll_id as string,
+      userId: row.user_id as string,
+      optionIndex: row.option_index as number,
+      createdAt: row.created_at as number,
+    }));
+  } catch (error) {
+    console.error('[socialService:turso] Error fetching poll votes:', error);
+    throw error;
+  }
+}
+
+// ============================================================================
 // USER STATS
 // ============================================================================
 

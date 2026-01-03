@@ -314,6 +314,7 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
     showSummary,
     sessionStartTime,
     isLastCard,
+    reviewedCards,
 
     // Handlers
     handleDifficulty,

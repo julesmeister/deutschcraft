@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { useToast } from '@/components/ui/toast';
-import { ConfirmDialog } from '@/components/ui/Dialog';
-import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
+import { useState } from "react";
+import { useToast } from "@/components/ui/toast";
+import { ConfirmDialog } from "@/components/ui/Dialog";
+import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
 
 interface MigrationStats {
   users?: number;
@@ -14,157 +14,78 @@ interface MigrationStats {
   vocabulary?: number;
   flashcards?: number;
   flashcardProgress?: number;
+  writingProgress?: number;
+  writingStats?: number;
+  writingSubmissions?: number;
+  reviewQuizzes?: number;
+  studentAnswers?: number;
   total?: number;
 }
 
 export function DatabaseMigrationTab() {
   const toast = useToast();
-  const [isExporting, setIsExporting] = useState(false);
-  const [isImporting, setIsImporting] = useState(false);
   const [isMigrating, setIsMigrating] = useState(false);
   const [showMigrateConfirm, setShowMigrateConfirm] = useState(false);
-  const [exportedData, setExportedData] = useState<any | null>(null);
+  const [showProgressConfirm, setShowProgressConfirm] = useState(false);
+  const [showUsersConfirm, setShowUsersConfirm] = useState(false);
   const [migrationStats, setMigrationStats] = useState<MigrationStats>({});
 
-  // Export Firestore data to JSON
-  const handleExport = async () => {
-    setIsExporting(true);
-    try {
-      const response = await fetch('/api/database/export', {
-        method: 'POST',
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.error || `Export failed: ${response.status} ${response.statusText}`);
-      }
-
-      const data = await response.json();
-      setExportedData(data);
-      setMigrationStats(data.stats || {});
-
-      // Download as JSON file
-      const blob = new Blob([JSON.stringify(data, null, 2)], {
-        type: 'application/json',
-      });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `ai-corrections-export-${Date.now()}.json`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-
-      toast.success('AI corrections exported successfully!');
-    } catch (error) {
-      console.error('Export error:', error);
-
-      // Extract clean error message
-      let errorMessage = 'An unexpected error occurred during export';
-      if (error instanceof Error) {
-        errorMessage = error.message;
-      } else if (typeof error === 'string') {
-        errorMessage = error;
-      }
-
-      toast.error('Export Failed', {
-        description: errorMessage,
-        duration: 10000,
-      });
-    } finally {
-      setIsExporting(false);
-    }
-  };
-
-  // Import JSON file to Turso
-  const handleImport = async (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
-
-    setIsImporting(true);
-    try {
-      const text = await file.text();
-      const data = JSON.parse(text);
-
-      const response = await fetch('/api/database/import', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.error || `Import failed: ${response.status} ${response.statusText}`);
-      }
-
-      const result = await response.json();
-      setMigrationStats(result.stats || {});
-
-      toast.success('AI corrections imported to Turso successfully!');
-    } catch (error) {
-      console.error('Import error:', error);
-
-      // Extract clean error message
-      let errorMessage = 'An unexpected error occurred during import';
-      if (error instanceof Error) {
-        errorMessage = error.message;
-      } else if (typeof error === 'string') {
-        errorMessage = error;
-      }
-
-      toast.error('Import Failed', {
-        description: errorMessage,
-        duration: 10000,
-      });
-    } finally {
-      setIsImporting(false);
-      // Reset file input
-      event.target.value = '';
-    }
-  };
-
   // Direct migration (Firestore → Turso)
-  const handleDirectMigration = async () => {
+  const handleDirectMigration = async (scope: string = "ai_reviews") => {
+    console.log('[Migration] Starting migration with scope:', scope);
     setShowMigrateConfirm(false);
+    setShowProgressConfirm(false);
+    setShowUsersConfirm(false);
     setIsMigrating(true);
 
     try {
-      toast.info('Starting AI correction migration... This may take a few minutes.');
+      const scopeName =
+        scope === "progress"
+          ? "Progress Data"
+          : scope === "users_names"
+          ? "Users"
+          : "AI Corrections";
+      console.log('[Migration] Showing toast for:', scopeName);
+      toast.info(
+        `Starting ${scopeName} migration... This may take a few minutes.`
+      );
 
-      const response = await fetch('/api/database/migrate', {
-        method: 'POST',
+      const response = await fetch("/api/database/migrate", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ scope: 'ai_reviews' }),
+        body: JSON.stringify({ scope }),
       });
 
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
-        const errorMessage = errorData.error || `Migration failed with status ${response.status}`;
+        const errorMessage =
+          errorData.error || `Migration failed with status ${response.status}`;
         throw new Error(errorMessage);
       }
 
       const result = await response.json();
       setMigrationStats(result.stats || {});
 
-      toast.success(`AI corrections migrated successfully! ${result.stats?.total || 0} records processed.`);
+      toast.success(
+        `${scopeName} migrated successfully! ${
+          result.stats?.total || 0
+        } records processed.`
+      );
     } catch (error) {
-      console.error('Migration error:', error);
+      console.error("Migration error:", error);
 
       // Extract clean error message without stack trace
-      let errorMessage = 'Failed to migrate AI corrections';
+      let errorMessage = "Failed to migrate data";
       if (error instanceof Error) {
         errorMessage = error.message;
-      } else if (typeof error === 'string') {
+      } else if (typeof error === "string") {
         errorMessage = error;
       }
 
       // Show detailed error with title and description
-      toast.error('Migration Failed', {
+      toast.error("Migration Failed", {
         description: errorMessage,
         duration: 10000, // 10 seconds for errors
       });
@@ -174,152 +95,230 @@ export function DatabaseMigrationTab() {
   };
 
   return (
-    <div className="max-w-4xl">
-      {/* Header */}
-      <div className="mb-8">
-        <h2 className="text-2xl font-black text-gray-900 mb-2">AI Correction Migration</h2>
-        <p className="text-gray-600">
-          Migrate AI corrections from Firestore to Turso. Export, import, or directly migrate AI correction data.
+    <div className="space-y-6">
+      <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+        <h3 className="text-lg font-medium text-gray-900 mb-4">
+          Database Migration
+        </h3>
+        <p className="text-sm text-gray-500 mb-4">
+          Migrate data from Firebase Firestore to Turso (SQLite). This process
+          will copy existing data to the new database.
         </p>
-      </div>
 
-      {/* Migration Options */}
-      <div className="space-y-6">
-        {/* Option 1: Export AI Corrections from Firestore */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6">
-          <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-              <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        {/* Warning about migration order */}
+        <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
+          <div className="flex">
+            <div className="flex-shrink-0">
+              <svg
+                className="h-5 w-5 text-amber-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+                  clipRule="evenodd"
+                />
               </svg>
             </div>
-            <div className="flex-1">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Export AI Corrections</h3>
-              <p className="text-gray-600 mb-4">
-                Export AI correction data from Firestore to a JSON file for backup or review.
-              </p>
-              <div className="max-w-xs">
-                <ActionButton
-                  onClick={handleExport}
-                  disabled={isExporting}
-                  variant="cyan"
-                  icon={<ActionButtonIcons.Document />}
-                >
-                  {isExporting ? 'Exporting...' : 'Export AI Corrections'}
-                </ActionButton>
+            <div className="ml-3">
+              <h3 className="text-sm font-medium text-amber-800">
+                Important: Migration Order
+              </h3>
+              <div className="mt-2 text-sm text-amber-700">
+                <p>
+                  <strong>Step 1:</strong> Migrate Users first (required for foreign key constraints)
+                  <br />
+                  <strong>Step 2:</strong> Then migrate Progress Data or AI Reviews
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Option 2: Import AI Corrections to Turso */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6">
-          <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-              <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-              </svg>
-            </div>
-            <div className="flex-1">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Import AI Corrections</h3>
-              <p className="text-gray-600 mb-4">
-                Import AI correction data from a JSON file into Turso database.
-              </p>
-              <div className="max-w-xs">
-                <label className="block">
-                  <ActionButton
-                    disabled={isImporting}
-                    variant="mint"
-                    icon={<ActionButtonIcons.Plus />}
-                  >
-                    {isImporting ? 'Importing...' : 'Import AI Corrections'}
-                  </ActionButton>
-                  <input
-                    type="file"
-                    accept=".json"
-                    onChange={handleImport}
-                    disabled={isImporting}
-                    className="hidden"
-                  />
-                </label>
-              </div>
-            </div>
+        <div className="space-y-4">
+          {/* Step 1: Migrate Users */}
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <h4 className="text-sm font-semibold text-blue-900 mb-3">
+              Step 1: Migrate Users
+            </h4>
+            <ActionButton
+              icon={<ActionButtonIcons.Refresh />}
+              onClick={() => {
+                console.log('[Migration] Users button clicked');
+                setShowUsersConfirm(true);
+              }}
+              disabled={isMigrating}
+              variant="mint"
+            >
+              {isMigrating ? "Migrating..." : "Migrate Users"}
+            </ActionButton>
           </div>
-        </div>
 
-        {/* Option 3: Direct AI Correction Migration */}
-        <div className="bg-white border border-gray-200 rounded-xl p-6">
-          <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-              <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <div className="flex-1">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Direct AI Correction Migration</h3>
-              <p className="text-gray-600 mb-4">
-                Directly migrate AI correction data from Firestore to Turso. This is the fastest option.
-              </p>
-              <div className="max-w-xs">
-                <ActionButton
-                  onClick={() => setShowMigrateConfirm(true)}
-                  disabled={isMigrating}
-                  variant="purple"
-                  icon={<ActionButtonIcons.ArrowRight />}
-                >
-                  {isMigrating ? 'Migrating...' : 'Migrate AI Corrections'}
-                </ActionButton>
-              </div>
+          {/* Step 2: Migrate Data */}
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            <h4 className="text-sm font-semibold text-gray-900 mb-3">
+              Step 2: Migrate Writing Data (Progress, Stats, Quizzes, Answers)
+            </h4>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <ActionButton
+                icon={<ActionButtonIcons.Refresh />}
+                onClick={() => {
+                  console.log('[Migration] Progress button clicked');
+                  setShowProgressConfirm(true);
+                }}
+                disabled={isMigrating}
+                variant="cyan"
+              >
+                {isMigrating ? "Migrating..." : "Migrate Progress Data"}
+              </ActionButton>
+
+              <ActionButton
+                icon={<ActionButtonIcons.Refresh />}
+                onClick={() => setShowMigrateConfirm(true)}
+                disabled={isMigrating}
+                variant="purple"
+              >
+                {isMigrating ? "Migrating..." : "Migrate AI Reviews"}
+              </ActionButton>
             </div>
           </div>
+
+          {Object.keys(migrationStats).length > 0 && (
+            <div className="mt-6 p-4 bg-gray-50 rounded-md">
+              <h4 className="text-sm font-medium text-gray-900 mb-2">
+                Last Migration Results:
+              </h4>
+              <div className="grid grid-cols-2 gap-2 text-sm">
+                {migrationStats.submissions !== undefined && (
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">Submissions:</span>
+                    <span className="font-mono">
+                      {migrationStats.submissions}
+                    </span>
+                  </div>
+                )}
+                {migrationStats.progress !== undefined && (
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">Daily Progress:</span>
+                    <span className="font-mono">{migrationStats.progress}</span>
+                  </div>
+                )}
+                {migrationStats.flashcardProgress !== undefined && (
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">Flashcard Progress:</span>
+                    <span className="font-mono">
+                      {migrationStats.flashcardProgress}
+                    </span>
+                  </div>
+                )}
+                {migrationStats.writingProgress !== undefined && (
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">Writing Progress:</span>
+                    <span className="font-mono">
+                      {migrationStats.writingProgress}
+                    </span>
+                  </div>
+                )}
+                {migrationStats.writingStats !== undefined && (
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">Writing Stats:</span>
+                    <span className="font-mono">
+                      {migrationStats.writingStats}
+                    </span>
+                  </div>
+                )}
+                {migrationStats.reviewQuizzes !== undefined && (
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">Review Quizzes:</span>
+                    <span className="font-mono">
+                      {migrationStats.reviewQuizzes}
+                    </span>
+                  </div>
+                )}
+                {migrationStats.studentAnswers !== undefined && (
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">Student Answers:</span>
+                    <span className="font-mono">
+                      {migrationStats.studentAnswers}
+                    </span>
+                  </div>
+                )}
+                {migrationStats.writingSubmissions !== undefined && (
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">Writing Submissions:</span>
+                    <span className="font-mono">
+                      {migrationStats.writingSubmissions}
+                    </span>
+                  </div>
+                )}
+                {migrationStats.users !== undefined && (
+                  <div className="flex justify-between">
+                    <span className="text-gray-500">Users:</span>
+                    <span className="font-mono">
+                      {migrationStats.users}
+                    </span>
+                  </div>
+                )}
+                <div className="flex justify-between border-t border-gray-200 pt-2 mt-2 font-medium">
+                  <span>Total Records:</span>
+                  <span>
+                    {(migrationStats.progress || 0) +
+                      (migrationStats.flashcardProgress || 0) +
+                      (migrationStats.writingProgress || 0) +
+                      (migrationStats.writingStats || 0) +
+                      (migrationStats.reviewQuizzes || 0) +
+                      (migrationStats.studentAnswers || 0) +
+                      (migrationStats.users || 0) +
+                      (migrationStats.writingSubmissions || 0)}
+                  </span>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
-      {/* Migration Statistics */}
-      {Object.keys(migrationStats).length > 0 && (
-        <div className="mt-8 bg-gray-50 border border-gray-200 rounded-xl p-6">
-          <h3 className="text-lg font-bold text-gray-900 mb-4">Migration Statistics</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {Object.entries(migrationStats).map(([key, value]) => (
-              <div key={key} className="text-center">
-                <div className="text-2xl font-black text-gray-900">{value}</div>
-                <div className="text-sm text-gray-600 capitalize">{key}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Warning Notice */}
-      <div className="mt-8 bg-yellow-50 border border-yellow-200 rounded-xl p-4">
-        <div className="flex gap-3">
-          <svg className="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-          </svg>
-          <div>
-            <h4 className="text-sm font-bold text-yellow-900 mb-1">Important Notes</h4>
-            <ul className="text-sm text-yellow-800 space-y-1">
-              <li>• This migrates ONLY AI correction data (writing submissions with AI feedback)</li>
-              <li>• Always backup your data before performing migrations</li>
-              <li>• Direct migration will overwrite existing AI corrections in Turso</li>
-              <li>• Large datasets may take several minutes to migrate</li>
-              <li>• Ensure you have proper permissions to access both databases</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Confirmation Dialog */}
       <ConfirmDialog
         open={showMigrateConfirm}
         onClose={() => setShowMigrateConfirm(false)}
-        onConfirm={handleDirectMigration}
-        title="Confirm AI Correction Migration"
-        message="This will migrate AI correction data from Firestore to Turso. Existing AI corrections in Turso will be overwritten. Are you sure you want to continue?"
-        confirmText="Yes, Migrate AI Corrections"
+        onConfirm={() => handleDirectMigration("ai_reviews")}
+        title="Migrate AI Reviews?"
+        message="This will copy AI corrections and reviews from Firestore to Turso. Existing records with the same ID will be updated. This process may take a few minutes."
+        confirmText="Start Migration"
         cancelText="Cancel"
-        variant="danger"
-        isLoading={isMigrating}
+      />
+
+      <ConfirmDialog
+        open={showProgressConfirm}
+        onClose={() => {
+          console.log('[Migration] Progress confirm dialog closed');
+          setShowProgressConfirm(false);
+        }}
+        onConfirm={() => {
+          console.log('[Migration] Progress confirm clicked');
+          handleDirectMigration("progress");
+        }}
+        title="Migrate Progress Data?"
+        message="This will copy all writing-related data from Firestore to Turso: writing submissions, writing progress, writing stats, review quizzes, student answers, and daily progress. Existing records will be updated (not deleted). Note: Flashcard progress is currently skipped."
+        confirmText="Start Migration"
+        cancelText="Cancel"
+      />
+
+      <ConfirmDialog
+        open={showUsersConfirm}
+        onClose={() => {
+          console.log('[Migration] Users confirm dialog closed');
+          setShowUsersConfirm(false);
+        }}
+        onConfirm={() => {
+          console.log('[Migration] Users confirm clicked');
+          handleDirectMigration("users_names");
+        }}
+        title="Migrate Users?"
+        message="This will copy all user data (names, emails, roles) from Firestore to Turso. This MUST be done before migrating progress data due to foreign key constraints."
+        confirmText="Start Migration"
+        cancelText="Cancel"
       />
     </div>
   );

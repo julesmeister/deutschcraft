@@ -56,3 +56,5 @@ export {
   updateWritingStats,
   updateWritingProgress,
 } from './progress';
+
+export { recalculateWritingStatsAdmin as calculateWritingStats } from './statsCalculatorAdmin';

@@ -280,8 +280,8 @@ export default function SettingsPage() {
               {/* Integration Tab - Only for approved users */}
               {activeTab === 'integration' && !isPending && <IntegrationTab />}
 
-              {/* Database Migration Tab - Only for approved users */}
-              {activeTab === 'migration' && !isPending && <DatabaseMigrationTab />}
+              {/* Database Migration Tab - Always visible for data recovery */}
+              {activeTab === 'migration' && <DatabaseMigrationTab />}
             </div>
           </div>
         </div>

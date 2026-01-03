@@ -22,6 +22,9 @@ export default function FlashcardsLandingPage() {
     "flashcards-last-level"
   );
   const [statsRefreshKey, setStatsRefreshKey] = useState(0);
+  const [recentReviews, setRecentReviews] = useState<
+    Record<string, { difficulty: string; timestamp: number }>
+  >({});
 
   // 1. Fetch and process data
   const {
@@ -41,7 +44,12 @@ export default function FlashcardsLandingPage() {
     categoryCompletionStatus,
     categoryDueCounts,
     displayCategories,
-  } = useFlashcardData(session?.user?.email, selectedLevel, statsRefreshKey);
+  } = useFlashcardData(
+    session?.user?.email,
+    selectedLevel,
+    statsRefreshKey,
+    recentReviews
+  );
 
   // 2. Manage session state and actions
   const {
@@ -63,7 +71,12 @@ export default function FlashcardsLandingPage() {
     flashcardReviews,
     settings,
     userEmail: session?.user?.email,
-    onSessionComplete: () => setStatsRefreshKey((prev) => prev + 1),
+    onSessionComplete: (reviewedCards) => {
+      if (reviewedCards) {
+        setRecentReviews((prev) => ({ ...prev, ...reviewedCards }));
+      }
+      setStatsRefreshKey((prev) => prev + 1);
+    },
   });
 
   const isPageLoading = isVocabularyLoading || categoriesLoading;
@@ -78,7 +91,7 @@ export default function FlashcardsLandingPage() {
             selectedCategory
               ? {
                   label: "Back to Categories",
-                  onClick: handleBackToCategories,
+                  onClick: () => handleBackToCategories(),
                 }
               : {
                   label: "Back to Dashboard",
@@ -141,7 +154,7 @@ export default function FlashcardsLandingPage() {
                 flashcards={practiceFlashcards}
                 categoryName={selectedCategory}
                 level={selectedLevel}
-                onBack={handleBackToCategories}
+                onBack={(reviews) => handleBackToCategories(reviews)}
                 showExamples={settings.showExamples}
                 nextDueInfo={nextDueInfo}
                 upcomingCards={upcomingCards}
