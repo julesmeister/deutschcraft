@@ -16,11 +16,12 @@ import { StudentRecentTasksCard } from "@/components/dashboard/StudentRecentTask
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
 import { MiniBlankExercise } from "@/components/dashboard/MiniBlankExercise";
 import { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { getTodayProgress } from "@/lib/services/progressService";
 import { CatLoader } from "@/components/ui/CatLoader";
 import { useMiniExercise } from "@/lib/hooks/useMiniExercise";
 export default function StudentDashboard() {
+  const queryClient = useQueryClient();
   const { session, isFirebaseReady } = useFirebaseAuth();
   const { student: fetchedStudent, isLoading: isLoadingStudent } =
     useCurrentStudent(session?.user?.email || null, isFirebaseReady);
@@ -193,6 +194,11 @@ export default function StudentDashboard() {
                       miniExercise.exerciseId,
                       miniExercise.exerciseTitle
                     );
+
+                    // Invalidate quiz stats to update points immediately
+                    queryClient.invalidateQueries({
+                      queryKey: ["user-quiz-stats", session.user.email],
+                    });
                   } catch (error) {
                     console.error("Failed to save mini quiz result:", error);
                   }
