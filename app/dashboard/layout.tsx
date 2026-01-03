@@ -1,6 +1,5 @@
 'use client';
 
-import { Navbar } from '@/components/ui/Navbar';
 import { MegaDropdown } from '@/components/ui/MegaDropdown';
 import { AccountSwitcher } from '@/components/ui/AccountSwitcher';
 import Link from 'next/link';
@@ -10,6 +9,9 @@ import { useState, useEffect } from 'react';
 import { EnrollmentGuard } from '@/components/dashboard/EnrollmentGuard';
 import { PlaygroundSessionProvider } from '@/lib/contexts/PlaygroundSessionContext';
 import { MinimizedPlayground } from '@/components/playground/MinimizedPlayground';
+import { studentMenuConfig, teacherMenuConfig } from './layout/menuConfig';
+import { MobileMenu } from './layout/MobileMenu';
+import { NavbarLogo } from './layout/NavbarLogo';
 
 export default function DashboardLayout({
   children,
@@ -19,17 +21,14 @@ export default function DashboardLayout({
   return (
     <PlaygroundSessionProvider>
       <div className="min-h-screen bg-gray-50">
-        {/* Main navbar with dashboard items - Use DashboardNavbar for mega dropdowns */}
         <DashboardNavbar />
 
-        {/* Main Content with Enrollment Protection */}
         <main>
           <EnrollmentGuard>
             {children}
           </EnrollmentGuard>
         </main>
 
-        {/* Minimized Playground - shows when session is active and minimized */}
         <MinimizedPlayground />
       </div>
     </PlaygroundSessionProvider>
@@ -45,17 +44,13 @@ function DashboardNavbar() {
     if (!session?.user?.email) return;
 
     try {
-      // Update user role using service layer
       await updateUser(session.user.email, { role: newRole });
-
-      // Refresh session and redirect to appropriate dashboard
       window.location.href = newRole === 'STUDENT' ? '/dashboard/student' : '/dashboard/teacher';
     } catch (error) {
-      // Error handling - silent fail
+      // Silent fail
     }
   };
 
-  // Track scroll position
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -64,139 +59,44 @@ function DashboardNavbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Note: Menu items are always visible in navbar, but routes are protected by EnrollmentGuard
-  // Pending users will be redirected to /dashboard/settings when clicking protected links
+  // Update achievements href with session email
+  const updatedStudentConfig = {
+    ...studentMenuConfig,
+    columns: studentMenuConfig.columns.map(col => ({
+      ...col,
+      items: col.items.map(item =>
+        item.label === 'Achievements' && session?.user?.email
+          ? { ...item, href: `/dashboard/teacher/students/${encodeURIComponent(session.user.email)}` }
+          : item
+      )
+    }))
+  };
 
   return (
     <header className="pt-3 lg:pt-3 relative z-[100]">
       <div className="container mx-auto px-4 sm:px-6 relative z-[100]">
-        {/* Modern floating navbar with backdrop blur */}
         <div className={`w-full flex items-center justify-between transition-all duration-500 ease-out bg-gray-900/95 text-white backdrop-blur-md border rounded-2xl py-2.5 px-4 lg:py-3 lg:px-8
           ${isScrolled
             ? 'border-gray-700/60 shadow-lg'
             : 'border-transparent shadow-none'
           }`}>
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-1.5 sm:space-x-2 group">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span className="font-black text-lg sm:text-xl text-gray-900">T</span>
-            </div>
-            <span className="font-black text-base sm:text-lg lg:text-xl text-white">Testmanship</span>
-          </Link>
+          <NavbarLogo />
 
-          {/* Desktop Navigation with separator */}
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center flex-1 justify-end gap-8 z-[100]">
-            {/* Vertical separator */}
             <div className="h-4 w-px bg-gray-600/60"></div>
 
             <nav className="flex items-center space-x-10">
-            {/* Student Mega Dropdown */}
-            <MegaDropdown
-              trigger="Student"
-              icon="📚"
-              highlight={{
-                badge: 'Learning Dashboard',
-                title: 'Track Your Progress!',
-                description: 'Manage your German learning journey with AI-powered flashcards and progress tracking.',
-                buttonText: 'View Dashboard',
-                buttonHref: '/dashboard/student',
-              }}
-              columns={[
-                {
-                  title: 'Practice',
-                  items: [
-                    { label: 'Flashcards', href: '/dashboard/student/flashcards' },
-                    { label: 'Grammatik', href: '/dashboard/student/grammatik' },
-                    { label: 'Writing', href: '/dashboard/student/writing' },
-                    { label: 'Audios', href: '/dashboard/student/audios' },
-                    { label: 'Playground', href: '/dashboard/playground' },
-                  ],
-                },
-                {
-                  title: 'Progress',
-                  items: [
-                    { label: 'Achievements', href: session?.user?.email ? `/dashboard/teacher/students/${encodeURIComponent(session.user.email)}` : '/dashboard/achievements' },
-                    { label: 'Answer Hub', href: '/dashboard/student/answer-hub' },
-                    { label: 'Writings', href: '/dashboard/student/writings' },
-                    { label: 'Syllabus', href: '/dashboard/student/syllabus' },
-                    { label: 'Schedule', href: '/dashboard/schedule' },
-                    { label: 'Analytics', href: '/dashboard/analytics' },
-                  ],
-                },
-                {
-                  title: 'Resources',
-                  items: [
-                    { label: 'Dictionary', href: '/dashboard/dictionary' },
-                    { label: 'Grammar Guide', href: '/dashboard/student/grammar' },
-                    { label: 'Vocabulary', href: '/dashboard/student/vocabulary' },
-                    { label: 'Redemittel', href: '/dashboard/student/redemittel' },
-                    { label: 'Prepositions', href: '/dashboard/student/prepositions' },
-                    { label: 'Letter Writing', href: '/dashboard/student/letters' },
-                    { label: 'Videos', href: '/dashboard/student/videos' },
-                    { label: 'Help Center', href: '/help', external: true },
-                  ],
-                },
-              ]}
-            />
+              <MegaDropdown {...updatedStudentConfig} />
+              <MegaDropdown {...teacherMenuConfig} />
 
-            {/* Teacher Mega Dropdown */}
-            <MegaDropdown
-              trigger="Teacher"
-              icon="👨‍🏫"
-              highlight={{
-                badge: 'Teacher Dashboard',
-                title: 'Manage Your Students!',
-                description: 'Monitor student progress, create assignments, and view detailed analytics.',
-                buttonText: 'View Dashboard',
-                buttonHref: '/dashboard/teacher',
-              }}
-              columns={[
-                {
-                  title: 'Management',
-                  items: [
-                    { label: 'Students', href: '/dashboard/teacher' },
-                    { label: 'Enrollments', href: '/dashboard/teacher/enrollments' },
-                    { label: 'Writing Review', href: '/dashboard/teacher/writing' },
-                    { label: 'Answer Hub', href: '/dashboard/student/answer-hub' },
-                    { label: 'Analytics', href: '/dashboard/analytics' },
-                    { label: 'Assignments', href: '/dashboard/assignments' },
-                    { label: 'Playground', href: '/dashboard/playground' },
-                  ],
-                },
-                {
-                  title: 'Planning',
-                  items: [
-                    { label: 'Tasks', href: '/dashboard/tasks' },
-                    { label: 'Schedule', href: '/dashboard/schedule' },
-                    { label: 'Calendar', href: '/dashboard/calendar' },
-                    { label: 'Course Pricing', href: '/dashboard/teacher/pricing' },
-                    { label: 'Reports', href: '/dashboard/reports' },
-                    { label: 'Role Management', href: '/dashboard/teacher/roles' },
-                  ],
-                },
-                {
-                  title: 'Resources',
-                  items: [
-                    { label: 'Dictionary', href: '/dashboard/dictionary' },
-                    { label: 'Redemittel', href: '/dashboard/student/redemittel' },
-                    { label: 'Videos', href: '/dashboard/student/videos' },
-                    { label: 'Materials', href: '/resources/materials' },
-                    { label: 'Templates', href: '/resources/templates' },
-                    { label: 'Help Center', href: '/help', external: true },
-                  ],
-                },
-              ]}
-            />
-
-              {/* Social Link */}
               <Link
-                href={session?.user ? (session.user.email && session.user.email.includes('@') ? '/dashboard/social' : '/dashboard/social') : '/dashboard/social'}
+                href="/dashboard/social"
                 className="font-semibold text-sm text-gray-300 hover:text-piku-mint transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-mint after:transition-all after:duration-300 hover:after:w-full"
               >
                 Social
               </Link>
 
-              {/* Settings Link */}
               <Link
                 href="/dashboard/settings"
                 className="font-semibold text-sm text-gray-300 hover:text-piku-cyan-accent transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-cyan-accent after:transition-all after:duration-300 hover:after:w-full"
@@ -205,7 +105,6 @@ function DashboardNavbar() {
               </Link>
             </nav>
 
-            {/* Desktop Sign Out Button */}
             <div className="flex items-center">
               <AccountSwitcher
                 currentUserEmail={session?.user?.email}
@@ -233,104 +132,7 @@ function DashboardNavbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="lg:hidden mt-3 bg-gray-900/95 text-white backdrop-blur-md border border-gray-700/60 rounded-2xl shadow-lg overflow-hidden animate-slide-down">
-            <div className="py-4 px-3 space-y-4">
-              {/* Student Section */}
-              <div>
-                <div className="flex items-center gap-2 font-bold text-sm text-piku-cyan-accent mb-2 px-3">
-                  <span>📚</span>
-                  <span>Student Dashboard</span>
-                </div>
-                <div className="space-y-1">
-                  <Link href="/dashboard/student/flashcards" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Flashcards
-                  </Link>
-                  <Link href="/dashboard/student/grammatik" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Grammatik
-                  </Link>
-                  <Link href="/dashboard/student/writing" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Writing
-                  </Link>
-                  <Link href="/dashboard/student/audios" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Audios
-                  </Link>
-                  <Link href="/dashboard/student/answer-hub" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Answer Hub
-                  </Link>
-                  <Link href="/dashboard/dictionary" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Dictionary
-                  </Link>
-                  <Link href="/dashboard/student/vocabulary" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Vocabulary
-                  </Link>
-                  <Link href="/dashboard/student/redemittel" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Redemittel
-                  </Link>
-                  <Link href="/dashboard/student/videos" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Videos
-                  </Link>
-                  <Link href="/dashboard/analytics" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Analytics
-                  </Link>
-                </div>
-              </div>
-
-              {/* Teacher Section */}
-              <div className="pt-2 border-t border-gray-700/50">
-                <div className="flex items-center gap-2 font-bold text-sm text-piku-purple mb-2 mt-2 px-3">
-                  <span>👨‍🏫</span>
-                  <span>Teacher Dashboard</span>
-                </div>
-                <div className="space-y-1">
-                  <Link href="/dashboard/teacher" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Students
-                  </Link>
-                  <Link href="/dashboard/teacher/enrollments" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Enrollments
-                  </Link>
-                  <Link href="/dashboard/teacher/writing" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Writing Review
-                  </Link>
-                  <Link href="/dashboard/student/answer-hub" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Answer Hub
-                  </Link>
-                  <Link href="/dashboard/dictionary" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Dictionary
-                  </Link>
-                  <Link href="/dashboard/student/videos" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Videos
-                  </Link>
-                  <Link href="/dashboard/analytics" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Analytics
-                  </Link>
-                  <Link href="/dashboard/tasks" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                    Tasks
-                  </Link>
-                </div>
-              </div>
-
-              {/* Settings & Sign Out */}
-              <div className="pt-2 border-t border-gray-700/50 space-y-1 mt-2">
-                <Link href="/dashboard/social" className="block font-semibold text-sm text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                  Social
-                </Link>
-                <Link href="/dashboard/settings" className="block font-semibold text-sm text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
-                  Settings
-                </Link>
-                <button
-                  onClick={() => import('next-auth/react').then(({ signOut }) => signOut({ callbackUrl: '/' }))}
-                  className="w-full text-left font-semibold text-sm text-white hover:bg-red-900/30 rounded-lg py-2.5 px-3 transition-colors"
-                >
-                  Sign out
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <MobileMenu isOpen={mobileMenuOpen} />
     </header>
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import { useSession } from 'next-auth/react';
 import { useCurrentUser } from '@/lib/hooks/useUsers';
 import { usePosts, useUserSocialStats } from '@/lib/hooks/useSocial';
@@ -12,22 +12,27 @@ import PostCard from '@/components/social/PostCard';
 import CreatePost from '@/components/social/CreatePost';
 import ProfileSidebar from '@/components/social/ProfileSidebar';
 import { DailyThemeEditor } from '@/components/social/DailyTheme';
-import { CompactButtonDropdown } from '@/components/ui/CompactButtonDropdown';
 import { ToastProvider } from '@/components/ui/toast';
 import { Post } from '@/lib/models/social';
 import { User } from '@/lib/models/user';
+import {
+  LoadingSpinner,
+  PostsLoadingSpinner,
+  NoUserWarning,
+  EmptyPostsState,
+} from './LoadingStates';
+import { TeachingImpact, CommonMistakes, TeachingTips } from './TeacherSidebar';
+import { BatchFilterDropdown } from './BatchFilterDropdown';
 
 export default function TeacherSocialPage() {
   const { data: session } = useSession();
   const { user: currentUser, isLoading: userLoading } = useCurrentUser(session?.user?.email || null);
-  // Memoize filters to prevent infinite loops in usePosts
   const postFilters = useMemo(() => ({ limitCount: 20 }), []);
   const { posts, loading: postsLoading, addPost, refresh: refreshPosts } = usePosts(postFilters);
-  
+
   const { stats } = useUserSocialStats(session?.user?.email || '');
   const { batches, loading: batchesLoading } = useTeacherBatches(session?.user?.email || null);
 
-  // Ensure currentUser has photoURL from session if missing (memoized to prevent infinite loops)
   const enrichedCurrentUser = useMemo(() => {
     if (!currentUser) return undefined;
     return {
@@ -36,13 +41,11 @@ export default function TeacherSocialPage() {
     };
   }, [currentUser?.userId, currentUser?.photoURL, session?.user?.image]);
 
-  // Persistent Batch Selection
   const { selectedBatch, setSelectedBatch, sortedBatches } = useBatchSelection({
     batches,
     user: enrichedCurrentUser
   });
 
-  // Derived filterBatch state for compatibility with existing code
   const filterBatch = selectedBatch ? selectedBatch.batchId : 'all';
 
   const { theme, loading: themeLoading, createTheme, updateTheme } = useDailyTheme(filterBatch === 'all' ? undefined : filterBatch);
@@ -67,10 +70,8 @@ export default function TeacherSocialPage() {
     if (!enrichedCurrentUser || filterBatch === 'all') return;
 
     if (theme) {
-      // Update existing theme
       await updateTheme(theme.themeId, { title, description });
     } else {
-      // Create new theme
       await createTheme({
         batchId: filterBatch,
         title,
@@ -81,46 +82,31 @@ export default function TeacherSocialPage() {
   };
 
   const handleSuggestCorrection = (post: Post) => {
-    // Placeholder for suggestion functionality
     console.log('Suggest correction for post:', post.postId);
   };
 
-  if (userLoading) {
-    return (
-      <div className="flex justify-center items-center min-h-[400px]">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-      </div>
-    );
-  }
+  const handleBatchChange = (value: string) => {
+    if (value === 'all') {
+      setSelectedBatch(null);
+    } else {
+      const batch = batches.find(b => b.batchId === value) || null;
+      setSelectedBatch(batch);
+    }
+  };
 
-  if (!enrichedCurrentUser) {
-    return (
-      <div className="max-w-2xl mx-auto mt-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-        <p className="text-yellow-800">Please complete your profile to access social features.</p>
-      </div>
-    );
-  }
-
-  // Filter posts by batch (filter by student's batchId)
   const filteredPosts = useMemo(() => {
     if (filterBatch === 'all') return posts;
 
-    // Filter posts where the author's batchId matches the selected batch
-    // IMPORTANT: Check if the user is the teacher themselves - they should see their own posts regardless
     return posts.filter(post => {
-      // If the post author is the current user (teacher), show it
       if (post.userId === enrichedCurrentUser?.userId) return true;
 
       const author = users[post.userId];
-      // If we don't know the author yet (still loading), keep it for now or hide it? 
-      // Better to hide to avoid "ghost" posts if they don't belong to batch
       if (!author) return false;
-      
+
       return author.batchId === filterBatch;
     });
   }, [posts, filterBatch, users, enrichedCurrentUser?.userId]);
 
-  // Create dropdown options from batches
   const batchOptions = useMemo(() => {
     const options = [{ value: 'all', label: 'All Batches' }];
     if (sortedBatches) {
@@ -133,6 +119,14 @@ export default function TeacherSocialPage() {
     }
     return options;
   }, [sortedBatches]);
+
+  if (userLoading) {
+    return <LoadingSpinner />;
+  }
+
+  if (!enrichedCurrentUser) {
+    return <NoUserWarning />;
+  }
 
   return (
     <ToastProvider>
@@ -158,7 +152,6 @@ export default function TeacherSocialPage() {
           {/* Main Feed */}
           <div className="lg:col-span-6">
             <div className="space-y-6">
-              {/* Create Post */}
               <CreatePost
                 currentUserId={enrichedCurrentUser.userId}
                 userLevel="B2"
@@ -166,40 +159,17 @@ export default function TeacherSocialPage() {
                 onSubmit={handleCreatePost}
               />
 
-              {/* Filter by Batch - Compact */}
-                <div className="flex items-center justify-between gap-3">
-                  <span className="text-sm font-medium text-gray-700">Filter by Batch:</span>
-                  <CompactButtonDropdown
-                    label={batchOptions.find(opt => opt.value === filterBatch)?.label || 'All Batches'}
-                    icon={<span>📚</span>}
-                    options={batchOptions}
-                    value={filterBatch}
-                    onChange={(value) => {
-                      if (value === 'all') {
-                        setSelectedBatch(null);
-                      } else {
-                        const batch = batches.find(b => b.batchId === value) || null;
-                        setSelectedBatch(batch);
-                      }
-                    }}
-                    buttonClassName="bg-white border border-gray-300 text-gray-700 hover:bg-gray-50"
-                  />
-                </div>
+              <BatchFilterDropdown
+                filterBatch={filterBatch}
+                batchOptions={batchOptions}
+                onChange={handleBatchChange}
+                variant="main"
+              />
 
-              {/* Posts Feed */}
               {postsLoading ? (
-                <div className="flex justify-center py-12">
-                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-                </div>
+                <PostsLoadingSpinner />
               ) : filteredPosts.length === 0 ? (
-                <div className="bg-white border border-gray-200 p-8 text-center">
-                  <h5 className="text-lg font-semibold text-gray-700 mb-2">No posts yet</h5>
-                  <p className="text-gray-500">
-                    {filterBatch === 'all'
-                      ? 'Be the first to share something in German!'
-                      : `No posts found for the selected batch.`}
-                  </p>
-                </div>
+                <EmptyPostsState filterBatch={filterBatch} />
               ) : (
                 filteredPosts.map(post => (
                   <PostCard
@@ -222,7 +192,6 @@ export default function TeacherSocialPage() {
                 ))
               )}
 
-              {/* Load More */}
               {filteredPosts.length >= 20 && (
                 <button className="w-full py-3 px-4 bg-white border border-gray-200 text-blue-600 font-semibold hover:bg-blue-50 transition-colors">
                   Load More Posts
@@ -234,32 +203,13 @@ export default function TeacherSocialPage() {
           {/* Right Sidebar - Teacher Insights */}
           <div className="lg:col-span-3">
             <div className="space-y-6">
-              {/* Batch Selector - Compact */}
-              <div className="bg-white border border-gray-200 p-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700 whitespace-nowrap">Filter:</span>
-                  <div className="min-w-[160px] flex justify-end">
-                    <CompactButtonDropdown
-                      label={batchOptions.find(opt => opt.value === filterBatch)?.label || 'All Batches'}
-                      icon={<span>🎓</span>}
-                      options={batchOptions}
-                      value={filterBatch}
-                      onChange={(value) => {
-                        if (value === 'all') {
-                          setSelectedBatch(null);
-                        } else {
-                          const batch = batches.find(b => b.batchId === value) || null;
-                          setSelectedBatch(batch);
-                        }
-                      }}
-                      buttonClassName="w-full justify-between bg-gray-50 border border-gray-200 text-gray-700 hover:bg-gray-100 py-1.5 px-3 text-xs"
-                      usePortal
-                    />
-                  </div>
-                </div>
-              </div>
+              <BatchFilterDropdown
+                filterBatch={filterBatch}
+                batchOptions={batchOptions}
+                onChange={handleBatchChange}
+                variant="sidebar"
+              />
 
-              {/* Daily Theme Editor */}
               {filterBatch !== 'all' && enrichedCurrentUser && (
                 <DailyThemeEditor
                   theme={theme}
@@ -269,95 +219,9 @@ export default function TeacherSocialPage() {
                 />
               )}
 
-              {/* Teaching Impact */}
-              <div className="bg-white border border-gray-200">
-                <div className="px-4 py-3 border-b border-gray-200">
-                  <h5 className="font-semibold text-gray-900">Your Teaching Impact</h5>
-                </div>
-                <div className="p-4 space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Posts Created:</span>
-                    <strong className="text-blue-600">{stats.postsCount}</strong>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Corrections Given:</span>
-                    <strong className="text-green-600">{stats.suggestionsGiven}</strong>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Corrections Received:</span>
-                    <strong className="text-cyan-600">{stats.suggestionsReceived}</strong>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">Acceptance Rate:</span>
-                    <strong className="text-amber-600">{stats.acceptanceRate.toFixed(1)}%</strong>
-                  </div>
-                </div>
-              </div>
-
-              {/* Common Mistakes */}
-              <div className="bg-white border border-gray-200">
-                <div className="px-4 py-3 border-b border-gray-200">
-                  <h5 className="font-semibold text-gray-900">Common Mistakes</h5>
-                </div>
-                <div className="p-4">
-                  <p className="text-sm text-gray-600 mb-3">
-                    Track patterns across student posts to identify areas needing focus.
-                  </p>
-                  <div className="space-y-3">
-                    <div>
-                      <div className="flex justify-between text-sm mb-1">
-                        <span className="text-gray-600">Article usage (der/die/das)</span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-1">
-                        <div className="bg-red-600 h-1 rounded-full" style={{ width: '75%' }}></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex justify-between text-sm mb-1">
-                        <span className="text-gray-600">Verb conjugation</span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-1">
-                        <div className="bg-amber-600 h-1 rounded-full" style={{ width: '60%' }}></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex justify-between text-sm mb-1">
-                        <span className="text-gray-600">Word order</span>
-                      </div>
-                      <div className="w-full bg-gray-200 rounded-full h-1">
-                        <div className="bg-cyan-600 h-1 rounded-full" style={{ width: '45%' }}></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Teaching Tips */}
-              <div className="bg-white border border-gray-200">
-                <div className="px-4 py-3 border-b border-gray-200">
-                  <h5 className="font-semibold text-gray-900">Teaching Tips</h5>
-                </div>
-                <div className="p-4">
-                  <ul className="space-y-2 text-sm text-gray-600">
-                    <li className="flex items-start">
-                      <span className="mr-2">👨‍🏫</span>
-                      <span>Focus on constructive feedback</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">📚</span>
-                      <span>Reference grammar rules in suggestions</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">🎯</span>
-                      <span>Prioritize common error patterns</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="mr-2">💬</span>
-                      <span>Encourage peer-to-peer learning</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <TeachingImpact stats={stats} />
+              <CommonMistakes />
+              <TeachingTips />
             </div>
           </div>
         </div>

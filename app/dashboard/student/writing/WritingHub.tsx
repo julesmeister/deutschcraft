@@ -3,16 +3,10 @@
  * Main hub for selecting exercise types and viewing stats/history
  */
 
-import { CEFRLevel, CEFRLevelInfo } from "@/lib/models/cefr";
-import { TabBar } from "@/components/ui/TabBar";
+import { CEFRLevel } from "@/lib/models/cefr";
 import { CEFRLevelSelector } from "@/components/ui/CEFRLevelSelector";
-import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
 import { WritingHistory } from "@/components/writing/WritingHistory";
 import { WritingTipsCard } from "@/components/writing/WritingTipsCard";
-import { TranslationExerciseSelector } from "@/components/writing/TranslationExerciseSelector";
-import { CreativeExerciseSelector } from "@/components/writing/CreativeExerciseSelector";
-import { EmailTemplateSelector } from "@/components/writing/EmailTemplateSelector";
-import { LetterTemplateSelector } from "@/components/writing/LetterTemplateSelector";
 import {
   TranslationExercise,
   CreativeWritingExercise,
@@ -22,6 +16,10 @@ import { LetterTemplate } from "@/lib/data/letterTemplates";
 import { WritingSubmission } from "@/lib/models/writing";
 import { useUserQuizStats, useUserQuizzes } from "@/lib/hooks/useReviewQuizzes";
 import { useMemo } from "react";
+import { WritingStatsBar } from "./hub/WritingStatsBar";
+import { ExerciseTypeSelector } from "./hub/ExerciseTypeSelector";
+import { FreestyleSection } from "./hub/FreestyleSection";
+import { ExerciseSelectorWrapper } from "./hub/ExerciseSelectorWrapper";
 
 type ExerciseType =
   | "translation"
@@ -88,11 +86,10 @@ export function WritingHub({
   const { data: quizStats } = useUserQuizStats(userEmail || null);
   const { data: userQuizzes = [] } = useUserQuizzes(userEmail || null);
 
-  // Combine submissions and quizzes, sorted by date (similar to teacher page)
+  // Combine submissions and quizzes, sorted by date
   const combinedSubmissions = useMemo(() => {
     const items = [
       ...submissions,
-      // Only include completed quizzes
       ...userQuizzes
         .filter((quiz) => quiz.status === "completed")
         .map((quiz) => ({
@@ -107,7 +104,6 @@ export function WritingHub({
         })),
     ];
 
-    // Sort by date (most recent first)
     return items.sort((a, b) => {
       const dateA = a.submittedAt || a.updatedAt || 0;
       const dateB = b.submittedAt || b.updatedAt || 0;
@@ -115,7 +111,6 @@ export function WritingHub({
     });
   }, [submissions, userQuizzes]);
 
-  // Create a Set of attempted exercise IDs from submissions (exclude quizzes)
   const attemptedExerciseIds = new Set(
     submissions
       .map((submission) => submission.exerciseId)
@@ -124,7 +119,6 @@ export function WritingHub({
 
   return (
     <>
-      {/* Level Selector - Split Button Style */}
       <div className="mb-8">
         <CEFRLevelSelector
           selectedLevel={selectedLevel}
@@ -135,169 +129,38 @@ export function WritingHub({
         />
       </div>
 
-      {/* Stats - TabBar Style (like flashcard practice) */}
-      {statsLoading ? (
-        <div className="flex items-center justify-center py-12">
-          <div className="text-center">
-            <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-            <p className="mt-2 text-gray-600">Loading your stats...</p>
-          </div>
-        </div>
-      ) : (
-        <div className="mb-8">
-          <TabBar
-            variant="stats"
-            tabs={[
-              {
-                id: "exercises",
-                label: "Total Exercises",
-                icon: undefined,
-                value:
-                  (writingStats?.totalExercisesCompleted || 0) +
-                  (quizStats?.totalQuizzes || 0),
-              },
-              {
-                id: "score",
-                label: "Avg Writing Score",
-                icon: undefined,
-                value: `${writingStats?.averageOverallScore || 0}%`,
-              },
-              ...(quizStats && quizStats.totalQuizzes > 0
-                ? [
-                    {
-                      id: "quiz-points",
-                      label: "Quiz Points",
-                      icon: undefined,
-                      value: quizStats.totalPoints,
-                    },
-                  ]
-                : []),
-              {
-                id: "streak",
-                label: "Day Streak",
-                icon: undefined,
-                value: writingStats?.currentStreak || 0,
-              },
-              {
-                id: "words",
-                label: "Words Written",
-                icon: undefined,
-                value: (writingStats?.totalWordsWritten || 0).toLocaleString(),
-              },
-            ]}
-          />
-        </div>
-      )}
+      <WritingStatsBar
+        writingStats={writingStats}
+        quizStats={quizStats}
+        isLoading={statsLoading}
+      />
 
-      {/* Exercise Types - TabBar Style */}
-      <div className="mb-8">
-        <h2 className="text-lg font-bold text-neutral-900 mb-4">
-          Choose Exercise Type
-        </h2>
-        <TabBar
-          variant="tabs"
-          size="compact"
-          activeTabId={selectedExerciseType || undefined}
-          onTabChange={(tabId) => onExerciseTypeSelect(tabId as ExerciseType)}
-          tabs={[
-            {
-              id: "creative",
-              label: "Creative Writing",
-              icon: null,
-              value: filteredCreativeExercises.length,
-            },
-            {
-              id: "translation",
-              label: "Translation",
-              icon: null,
-              value: filteredTranslationExercises.length,
-            },
-            {
-              id: "email",
-              label: "Email Writing",
-              icon: null,
-              value: filteredEmailTemplates.length,
-            },
-            {
-              id: "letters",
-              label: "Letter Writing",
-              icon: null,
-              value: filteredLetterTemplates.length,
-            },
-            {
-              id: "freestyle",
-              label: "Freestyle",
-              icon: null,
-              value: "∞", // Always available
-            },
-          ]}
-        />
-      </div>
+      <ExerciseTypeSelector
+        selectedType={selectedExerciseType}
+        onTypeSelect={onExerciseTypeSelect}
+        translationCount={filteredTranslationExercises.length}
+        creativeCount={filteredCreativeExercises.length}
+        emailCount={filteredEmailTemplates.length}
+        letterCount={filteredLetterTemplates.length}
+      />
 
-      {/* Show Exercise Selector Below When Type is Selected */}
       {selectedExerciseType === "freestyle" && (
-        <div className="mt-8 bg-white p-6 rounded-2xl border border-gray-200 text-center">
-          <div className="text-4xl mb-4">✍️</div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">
-            Freestyle Writing
-          </h3>
-          <p className="text-gray-600 mb-6 max-w-lg mx-auto">
-            Write about any topic you like! You can choose to share your writing
-            publicly or keep it private for teacher review only.
-          </p>
-          <div className="max-w-[200px] mx-auto">
-            <ActionButton
-              onClick={onFreestyleSelect}
-              icon={<ActionButtonIcons.Play />}
-              variant="purple"
-            >
-              Start Writing
-            </ActionButton>
-          </div>
-        </div>
+        <FreestyleSection onStart={onFreestyleSelect} />
       )}
 
-      {selectedExerciseType === "translation" && (
-        <div className="mt-8">
-          <TranslationExerciseSelector
-            exercises={filteredTranslationExercises}
-            onSelect={onTranslationSelect}
-            attemptedExerciseIds={attemptedExerciseIds}
-          />
-        </div>
-      )}
+      <ExerciseSelectorWrapper
+        selectedType={selectedExerciseType}
+        translationExercises={filteredTranslationExercises}
+        creativeExercises={filteredCreativeExercises}
+        emailTemplates={filteredEmailTemplates}
+        letterTemplates={filteredLetterTemplates}
+        attemptedExerciseIds={attemptedExerciseIds}
+        onTranslationSelect={onTranslationSelect}
+        onCreativeSelect={onCreativeSelect}
+        onEmailSelect={onEmailSelect}
+        onLetterSelect={onLetterSelect}
+      />
 
-      {selectedExerciseType === "creative" && (
-        <div className="mt-8">
-          <CreativeExerciseSelector
-            exercises={filteredCreativeExercises}
-            onSelect={onCreativeSelect}
-            attemptedExerciseIds={attemptedExerciseIds}
-          />
-        </div>
-      )}
-
-      {selectedExerciseType === "email" && (
-        <div className="mt-8">
-          <EmailTemplateSelector
-            templates={filteredEmailTemplates}
-            onSelect={onEmailSelect}
-            attemptedExerciseIds={attemptedExerciseIds}
-          />
-        </div>
-      )}
-
-      {selectedExerciseType === "letters" && (
-        <div className="mt-8">
-          <LetterTemplateSelector
-            templates={filteredLetterTemplates}
-            onSelect={onLetterSelect}
-            attemptedExerciseIds={attemptedExerciseIds}
-          />
-        </div>
-      )}
-
-      {/* Recent Activity / History */}
       <div className="mt-8">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-bold text-neutral-900">
@@ -322,7 +185,6 @@ export function WritingHub({
         />
       </div>
 
-      {/* Writing Tips */}
       <div className="mt-8">
         <WritingTipsCard />
       </div>
