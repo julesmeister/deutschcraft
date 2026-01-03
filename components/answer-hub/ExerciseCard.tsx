@@ -3,15 +3,17 @@
  * Display exercise with answers and batch-filtered discussion
  */
 
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Exercise } from '@/lib/models/exercises';
-import { ExerciseWithOverrideMetadata } from '@/lib/models/exerciseOverride';
-import { User } from '@/lib/models/user';
-import { AnswersList } from './AnswersList';
-import { ExerciseDiscussion } from './ExerciseDiscussion';
-import { Edit3, Sparkles } from 'lucide-react';
+import { useState } from "react";
+import { Exercise } from "@/lib/models/exercises";
+import { ExerciseWithOverrideMetadata } from "@/lib/models/exerciseOverride";
+import { User } from "@/lib/models/user";
+import { AnswersList } from "./AnswersList";
+import { ExerciseDiscussion } from "./ExerciseDiscussion";
+import { ExerciseStatusBadge } from "./ExerciseStatusBadge";
+import { getBookTypeColor, getDifficultyColor } from "./ui-utils";
+import { getExerciseTitle } from "@/lib/models/exercises";
 
 interface ExerciseCardProps {
   exercise: Exercise | ExerciseWithOverrideMetadata;
@@ -32,26 +34,10 @@ export function ExerciseCard({
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Check if current user is a teacher (role is uppercase in database)
-  const isTeacher = currentUser?.role === 'TEACHER';
+  const isTeacher = currentUser?.role === "TEACHER";
 
-  // Difficulty colors
-  const difficultyColors = {
-    easy: 'bg-emerald-100 text-emerald-800 border-emerald-300',
-    medium: 'bg-amber-100 text-amber-800 border-amber-300',
-    hard: 'bg-red-100 text-red-800 border-red-300',
-  };
-
-  const difficultyColor = exercise.difficulty
-    ? difficultyColors[exercise.difficulty]
-    : difficultyColors.easy;
-
-  // Book type colors
-  const bookTypeColors = {
-    AB: 'bg-blue-100 text-blue-800 border-blue-300',
-    KB: 'bg-purple-100 text-purple-800 border-purple-300',
-  };
-
-  const bookTypeColor = bookTypeColors[exercise.bookType];
+  const difficultyColor = getDifficultyColor(exercise.difficulty);
+  const bookTypeColor = getBookTypeColor(exercise.bookType);
 
   return (
     <div
@@ -63,40 +49,26 @@ export function ExerciseCard({
           <div className="flex-1 min-w-0">
             {/* Exercise Title */}
             <h3 className="text-lg font-bold text-gray-900 mb-2">
-              Übung {exercise.exerciseNumber}: {exercise.title}
+              {getExerciseTitle(exercise)}
             </h3>
 
             {/* Question (if available) */}
             {exercise.question && (
-              <p className="text-sm text-gray-600 mb-3">
-                {exercise.question}
-              </p>
+              <p className="text-sm text-gray-600 mb-3">{exercise.question}</p>
             )}
 
             {/* Metadata */}
             <div className="flex flex-wrap items-center gap-2">
-              {/* Modified by Teacher Badge */}
-              {('_isModified' in exercise) && exercise._isModified && (
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100 text-blue-800 border border-blue-300">
-                  <Edit3 className="w-3 h-3" />
-                  Modified
-                </span>
-              )}
-
-              {/* Custom Exercise Badge */}
-              {('_isCreated' in exercise) && exercise._isCreated && (
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800 border border-green-300">
-                  <Sparkles className="w-3 h-3" />
-                  Custom
-                </span>
-              )}
+              {/* Status Badges */}
+              <ExerciseStatusBadge exercise={exercise} variant="default" />
 
               {/* Difficulty Badge */}
               {exercise.difficulty && (
                 <span
                   className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold border ${difficultyColor}`}
                 >
-                  {exercise.difficulty.charAt(0).toUpperCase() + exercise.difficulty.slice(1)}
+                  {exercise.difficulty.charAt(0).toUpperCase() +
+                    exercise.difficulty.slice(1)}
                 </span>
               )}
 
@@ -127,11 +99,11 @@ export function ExerciseCard({
           <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="flex-shrink-0 p-2 rounded-lg hover:bg-gray-100 transition-colors"
-            aria-label={isExpanded ? 'Collapse' : 'Expand'}
+            aria-label={isExpanded ? "Collapse" : "Expand"}
           >
             <svg
               className={`w-5 h-5 text-gray-600 transition-transform duration-200 ${
-                isExpanded ? 'rotate-180' : ''
+                isExpanded ? "rotate-180" : ""
               }`}
               fill="none"
               stroke="currentColor"
@@ -168,7 +140,7 @@ export function ExerciseCard({
                 />
               </svg>
               <h4 className="font-bold text-sm text-gray-900">
-                {isTeacher ? 'Correct Answers' : 'Exercise Items'}
+                {isTeacher ? "Correct Answers" : "Exercise Items"}
               </h4>
             </div>
             <AnswersList

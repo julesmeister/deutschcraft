@@ -6,8 +6,9 @@
 "use client";
 
 import Link from "next/link";
-import { Edit3, GripVertical } from "lucide-react";
+import { GripVertical } from "lucide-react";
 import { ExerciseWithOverrideMetadata } from "@/lib/models/exerciseOverride";
+import { ExerciseStatusBadge } from "./ExerciseStatusBadge";
 
 interface ExerciseListCardProps {
   exercise: ExerciseWithOverrideMetadata;
@@ -105,30 +106,12 @@ export function ExerciseListCard({
 
         {/* Action Buttons */}
         <div className="flex-shrink-0 flex items-center gap-2">
-          {/* Status Badges (Custom > Modified) */}
-          {exercise._isCreated ? (
-            <span className="inline-flex items-center px-3 py-1 text-xs font-bold bg-green-100 text-green-800">
-              CUSTOM
-            </span>
-          ) : exercise._isModified ? (
-            <span className="inline-flex items-center px-3 py-1 text-xs font-bold bg-blue-100 text-blue-800">
-              MODIFIED
-            </span>
-          ) : null}
-
-          {/* Hidden Badge */}
-          {exercise._isHidden && (
-            <span className="inline-flex items-center px-3 py-1 text-xs font-bold bg-gray-200 text-gray-700">
-              HIDDEN
-            </span>
-          )}
-
-          {/* Duplicate Warning Badge */}
-          {isDuplicate && (
-            <span className="inline-flex items-center px-3 py-1 text-xs font-bold bg-yellow-100 text-yellow-800">
-              DUPLICATE
-            </span>
-          )}
+          {/* Status Badges (Custom, Modified, Hidden, Duplicate) */}
+          <ExerciseStatusBadge
+            exercise={exercise}
+            variant="list"
+            isDuplicate={isDuplicate}
+          />
 
           {/* Teacher Action Badges */}
           {isTeacher && (
