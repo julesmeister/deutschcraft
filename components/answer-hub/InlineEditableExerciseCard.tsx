@@ -6,8 +6,8 @@
 
 "use client";
 
-import { useState, KeyboardEvent } from "react";
-import { Check, X, Plus, Trash2 } from "lucide-react";
+import { useState, KeyboardEvent, useRef } from "react";
+import { Check, X, Plus, Trash2, GripVertical } from "lucide-react";
 import { ExerciseAnswer } from "@/lib/models/exercises";
 import { CreateExerciseOverrideInput } from "@/lib/models/exerciseOverride";
 
@@ -40,6 +40,7 @@ export function InlineEditableExerciseCard({
       : [{ itemNumber: "1", correctAnswer: "" }]
   );
   const [isSaving, setIsSaving] = useState(false);
+  const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
 
   const handleAddAnswer = () => {
     const nextNumber = (answers.length + 1).toString();
@@ -49,6 +50,29 @@ export function InlineEditableExerciseCard({
   const handleRemoveAnswer = (index: number) => {
     if (answers.length === 1) return;
     setAnswers(answers.filter((_, i) => i !== index));
+  };
+
+  const handleDragStart = (e: React.DragEvent, index: number) => {
+    e.dataTransfer.effectAllowed = "move";
+    setDraggedIndex(index);
+    // Add transparent drag image or styling here if needed
+  };
+
+  const handleDragOver = (e: React.DragEvent, index: number) => {
+    e.preventDefault();
+    if (draggedIndex === null || draggedIndex === index) return;
+
+    const newAnswers = [...answers];
+    const draggedItem = newAnswers[draggedIndex];
+    newAnswers.splice(draggedIndex, 1);
+    newAnswers.splice(index, 0, draggedItem);
+
+    setAnswers(newAnswers);
+    setDraggedIndex(index);
+  };
+
+  const handleDragEnd = () => {
+    setDraggedIndex(null);
   };
 
   const handleUpdateAnswer = (index: number, value: string) => {
@@ -161,7 +185,23 @@ export function InlineEditableExerciseCard({
           </div>
 
           {answers.map((answer, index) => (
-            <div key={index} className="flex items-center gap-2">
+            <div
+              key={index}
+              className={`flex items-center gap-2 transition-all ${
+                draggedIndex === index ? "opacity-50" : "opacity-100"
+              }`}
+              draggable
+              onDragStart={(e) => handleDragStart(e, index)}
+              onDragOver={(e) => handleDragOver(e, index)}
+              onDragEnd={handleDragEnd}
+            >
+              <div
+                className="cursor-grab active:cursor-grabbing text-gray-400 hover:text-gray-600 p-1"
+                title="Drag to reorder"
+              >
+                <GripVertical className="w-4 h-4" />
+              </div>
+
               <input
                 type="text"
                 value={answer.itemNumber}
