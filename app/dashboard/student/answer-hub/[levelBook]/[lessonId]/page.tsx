@@ -39,6 +39,7 @@ import {
   ExerciseWithOverrideMetadata,
   CreateExerciseOverrideInput,
 } from "@/lib/models/exerciseOverride";
+import { FloatingExerciseNavigator } from "@/components/answer-hub/FloatingExerciseNavigator";
 
 import { useExerciseInteractions } from "@/lib/hooks/useExerciseInteractions";
 
@@ -155,6 +156,22 @@ export default function LessonDetailPage() {
     handleReorder
   );
 
+  // Helper for scrolling
+  const scrollToExercise = (exerciseId: string, index: number) => {
+    const element = document.getElementById(`exercise-${exerciseId}-${index}`);
+    if (element) {
+      const headerOffset = 100; // Account for sticky headers
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 pb-16">
@@ -266,33 +283,42 @@ export default function LessonDetailPage() {
         {/* Exercises List */}
         {exerciseCount > 0 ? (
           filteredExercises.length > 0 ? (
-            <ExerciseListSection
-              filteredExercises={filteredExercises}
-              levelBook={levelBook}
-              lessonId={lessonId}
-              isTeacher={isTeacher}
-              duplicateExerciseIds={duplicateExerciseIds}
-              visibleDuplicateIds={visibleDuplicateIds}
-              interactionStats={interactions}
-              discussionStats={discussions}
-              onReorder={handleReorder}
-              onEditExercise={handleEditExercise}
-              onToggleHide={handleToggleHide}
-              onReorderSections={isTeacher ? handleReorderSections : undefined}
-              onAddToSection={isTeacher ? handleAddToSection : undefined}
-              onSaveInlineExercise={
-                isTeacher ? handleSaveInlineExercise : undefined
-              }
-              onCancelInlineExercise={
-                isTeacher ? handleCancelInlineExercise : undefined
-              }
-              editingSectionName={editingSectionName}
-              onSaveInlineEdit={isTeacher ? handleSaveInlineEdit : undefined}
-              onCancelInlineEdit={
-                isTeacher ? handleCancelInlineEdit : undefined
-              }
-              editingExerciseId={editingExerciseId}
-            />
+            <>
+              {/* Floating Navigator */}
+              <FloatingExerciseNavigator
+                exercises={filteredExercises}
+                onScrollToExercise={scrollToExercise}
+              />
+              <ExerciseListSection
+                filteredExercises={filteredExercises}
+                levelBook={levelBook}
+                lessonId={lessonId}
+                isTeacher={isTeacher}
+                duplicateExerciseIds={duplicateExerciseIds}
+                visibleDuplicateIds={visibleDuplicateIds}
+                interactionStats={interactions}
+                discussionStats={discussions}
+                onReorder={handleReorder}
+                onEditExercise={handleEditExercise}
+                onToggleHide={handleToggleHide}
+                onReorderSections={
+                  isTeacher ? handleReorderSections : undefined
+                }
+                onAddToSection={isTeacher ? handleAddToSection : undefined}
+                onSaveInlineExercise={
+                  isTeacher ? handleSaveInlineExercise : undefined
+                }
+                onCancelInlineExercise={
+                  isTeacher ? handleCancelInlineExercise : undefined
+                }
+                editingSectionName={editingSectionName}
+                onSaveInlineEdit={isTeacher ? handleSaveInlineEdit : undefined}
+                onCancelInlineEdit={
+                  isTeacher ? handleCancelInlineEdit : undefined
+                }
+                editingExerciseId={editingExerciseId}
+              />
+            </>
           ) : (
             <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-12 text-center">
               <div className="text-6xl mb-4">🔍</div>

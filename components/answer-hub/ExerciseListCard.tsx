@@ -30,6 +30,7 @@ interface ExerciseListCardProps {
     lastSubmittedAt?: number;
   };
   commentCount?: number;
+  id?: string;
 }
 
 export function ExerciseListCard({
@@ -44,6 +45,7 @@ export function ExerciseListCard({
   isDuplicate,
   interactionStats,
   commentCount,
+  id,
 }: ExerciseListCardProps) {
   // Construct exercise detail URL using exerciseId (unique identifier)
   const exerciseUrl = `/dashboard/student/answer-hub/${levelBook}/${lessonId}/${encodeURIComponent(
@@ -186,6 +188,7 @@ export function ExerciseListCard({
   if (isDraggable) {
     return (
       <div
+        id={id}
         className={`flex items-stretch rounded-lg overflow-hidden ${
           exercise._isHidden ? "opacity-50" : ""
         }`}
@@ -209,7 +212,12 @@ export function ExerciseListCard({
   }
 
   return (
-    <Link href={exerciseUrl} onClick={handleCardClick} draggable={false}>
+    <Link
+      id={id}
+      href={exerciseUrl}
+      onClick={handleCardClick}
+      draggable={false}
+    >
       {cardContent}
     </Link>
   );

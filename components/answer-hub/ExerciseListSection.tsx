@@ -3,14 +3,17 @@
  * Handles both teacher (draggable) and student (static) views
  */
 
-'use client';
+"use client";
 
-import { CategoryList } from '@/components/ui/CategoryList';
-import { DraggableExerciseList } from './DraggableExerciseList';
-import { ExerciseListCard } from './ExerciseListCard';
-import { InlineEditableExerciseCard } from './InlineEditableExerciseCard';
-import { ExerciseWithOverrideMetadata, CreateExerciseOverrideInput } from '@/lib/models/exerciseOverride';
-import { CARD_COLOR_SCHEMES } from '@/lib/constants/answerHubColors';
+import { CategoryList } from "@/components/ui/CategoryList";
+import { DraggableExerciseList } from "./DraggableExerciseList";
+import { ExerciseListCard } from "./ExerciseListCard";
+import { InlineEditableExerciseCard } from "./InlineEditableExerciseCard";
+import {
+  ExerciseWithOverrideMetadata,
+  CreateExerciseOverrideInput,
+} from "@/lib/models/exerciseOverride";
+import { CARD_COLOR_SCHEMES } from "@/lib/constants/answerHubColors";
 
 interface ExerciseListSectionProps {
   filteredExercises: ExerciseWithOverrideMetadata[];
@@ -19,11 +22,24 @@ interface ExerciseListSectionProps {
   isTeacher: boolean;
   duplicateExerciseIds: Set<string>;
   visibleDuplicateIds: Set<string>;
-  interactionStats?: Record<string, { submissionCount: number; lastSubmittedAt: number }>;
-  discussionStats?: Record<string, { commentCount: number; lastCommentAt: number }>;
+  interactionStats?: Record<
+    string,
+    { submissionCount: number; lastSubmittedAt: number }
+  >;
+  discussionStats?: Record<
+    string,
+    { commentCount: number; lastCommentAt: number }
+  >;
   onReorder: (exercises: ExerciseWithOverrideMetadata[]) => void;
-  onEditExercise: (exercise: ExerciseWithOverrideMetadata, globalIndex?: number) => void;
-  onToggleHide: (exerciseId: string, isHidden: boolean, exerciseIndex?: number) => void;
+  onEditExercise: (
+    exercise: ExerciseWithOverrideMetadata,
+    globalIndex?: number
+  ) => void;
+  onToggleHide: (
+    exerciseId: string,
+    isHidden: boolean,
+    exerciseIndex?: number
+  ) => void;
   onReorderSections?: (sectionOrder: string[]) => void;
   onAddToSection?: (sectionName: string) => void;
   onSaveInlineExercise?: (data: CreateExerciseOverrideInput) => Promise<void>;
@@ -56,9 +72,12 @@ export function ExerciseListSection({
   editingExerciseId,
 }: ExerciseListSectionProps) {
   // Group exercises by section and track global indices
-  const exercisesBySection: Record<string, Array<{ exercise: ExerciseWithOverrideMetadata; globalIndex: number }>> = {};
+  const exercisesBySection: Record<
+    string,
+    Array<{ exercise: ExerciseWithOverrideMetadata; globalIndex: number }>
+  > = {};
   filteredExercises.forEach((ex, globalIndex) => {
-    const section = ex.section || 'Übungen';
+    const section = ex.section || "Übungen";
     if (!exercisesBySection[section]) {
       exercisesBySection[section] = [];
     }
@@ -72,20 +91,28 @@ export function ExerciseListSection({
   const handleMoveSectionUp = (index: number) => {
     if (index === 0 || !onReorderSections) return;
     const newOrder = [...sections];
-    [newOrder[index - 1], newOrder[index]] = [newOrder[index], newOrder[index - 1]];
+    [newOrder[index - 1], newOrder[index]] = [
+      newOrder[index],
+      newOrder[index - 1],
+    ];
     onReorderSections(newOrder);
   };
 
   const handleMoveSectionDown = (index: number) => {
     if (index === sections.length - 1 || !onReorderSections) return;
     const newOrder = [...sections];
-    [newOrder[index], newOrder[index + 1]] = [newOrder[index + 1], newOrder[index]];
+    [newOrder[index], newOrder[index + 1]] = [
+      newOrder[index + 1],
+      newOrder[index],
+    ];
     onReorderSections(newOrder);
   };
 
   // Transform into CategoryList format
   const categories = sections.map((section) => {
-    const sectionExercises = exercisesBySection[section].map(item => item.exercise);
+    const sectionExercises = exercisesBySection[section].map(
+      (item) => item.exercise
+    );
 
     // Render exercises differently for teachers vs students
     const exerciseItems = isTeacher ? (
@@ -95,22 +122,30 @@ export function ExerciseListSection({
         onEdit={onEditExercise}
         onToggleHide={(exerciseId, isHidden, sectionIndex) => {
           // Use the section index to get the correct globalIndex for duplicates
-          const item = sectionIndex !== undefined ? exercisesBySection[section][sectionIndex] : undefined;
+          const item =
+            sectionIndex !== undefined
+              ? exercisesBySection[section][sectionIndex]
+              : undefined;
           onToggleHide(exerciseId, isHidden, item?.globalIndex);
         }}
         isTeacher={true}
         renderExercise={(exercise, sectionIndex) => {
-          const colorScheme = CARD_COLOR_SCHEMES[colorIndex % CARD_COLOR_SCHEMES.length];
+          const colorScheme =
+            CARD_COLOR_SCHEMES[colorIndex % CARD_COLOR_SCHEMES.length];
           colorIndex++;
 
           // Use section index to get correct globalIndex for duplicates
-          const item = sectionIndex !== undefined ? exercisesBySection[section][sectionIndex] : undefined;
+          const item =
+            sectionIndex !== undefined
+              ? exercisesBySection[section][sectionIndex]
+              : undefined;
           const globalIndex = item?.globalIndex;
 
           // Check if this specific exercise instance is being edited
-          const uniqueKey = globalIndex !== undefined
-            ? `${exercise.exerciseId}_idx_${globalIndex}`
-            : exercise.exerciseId;
+          const uniqueKey =
+            globalIndex !== undefined
+              ? `${exercise.exerciseId}_idx_${globalIndex}`
+              : exercise.exerciseId;
           const isBeingEdited = editingExerciseId === uniqueKey;
 
           if (isBeingEdited && onSaveInlineEdit && onCancelInlineEdit) {
@@ -124,7 +159,7 @@ export function ExerciseListSection({
                   answers: exercise.answers,
                   difficulty: exercise.difficulty,
                 }}
-                sectionName={exercise.section || 'Übungen'}
+                sectionName={exercise.section || "Übungen"}
                 onSave={onSaveInlineEdit}
                 onCancel={onCancelInlineEdit}
                 colorScheme={colorScheme}
@@ -134,6 +169,11 @@ export function ExerciseListSection({
 
           return (
             <ExerciseListCard
+              id={
+                globalIndex !== undefined
+                  ? `exercise-${exercise.exerciseId}-${globalIndex}`
+                  : undefined
+              }
               exercise={exercise}
               levelBook={levelBook}
               lessonId={lessonId}
@@ -141,12 +181,21 @@ export function ExerciseListSection({
               isTeacher={true}
               isDraggable={true}
               isDuplicate={visibleDuplicateIds.has(exercise.exerciseId)}
-              interactionStats={interactionStats ? {
-                hasInteracted: !!interactionStats[exercise.exerciseId],
-                submissionCount: interactionStats[exercise.exerciseId]?.submissionCount || 0,
-                lastSubmittedAt: interactionStats[exercise.exerciseId]?.lastSubmittedAt
-              } : undefined}
-              commentCount={discussionStats?.[exercise.exerciseId]?.commentCount}
+              interactionStats={
+                interactionStats
+                  ? {
+                      hasInteracted: !!interactionStats[exercise.exerciseId],
+                      submissionCount:
+                        interactionStats[exercise.exerciseId]
+                          ?.submissionCount || 0,
+                      lastSubmittedAt:
+                        interactionStats[exercise.exerciseId]?.lastSubmittedAt,
+                    }
+                  : undefined
+              }
+              commentCount={
+                discussionStats?.[exercise.exerciseId]?.commentCount
+              }
               onEdit={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -155,7 +204,11 @@ export function ExerciseListSection({
               onToggleHide={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                onToggleHide(exercise.exerciseId, !exercise._isHidden, item?.globalIndex);
+                onToggleHide(
+                  exercise.exerciseId,
+                  !exercise._isHidden,
+                  item?.globalIndex
+                );
               }}
             />
           );
@@ -163,20 +216,38 @@ export function ExerciseListSection({
       />
     ) : (
       sectionExercises.map((exercise, index) => {
-        const colorScheme = CARD_COLOR_SCHEMES[colorIndex % CARD_COLOR_SCHEMES.length];
+        const colorScheme =
+          CARD_COLOR_SCHEMES[colorIndex % CARD_COLOR_SCHEMES.length];
         colorIndex++;
+
+        // Get global index for student view
+        const item = exercisesBySection[section][index];
+        const globalIndex = item?.globalIndex;
+
         return (
           <ExerciseListCard
+            id={
+              globalIndex !== undefined
+                ? `exercise-${exercise.exerciseId}-${globalIndex}`
+                : undefined
+            }
             key={`${exercise.exerciseId}-${index}`}
             exercise={exercise}
             levelBook={levelBook}
             lessonId={lessonId}
             colorScheme={colorScheme}
-            interactionStats={interactionStats ? {
-              hasInteracted: !!interactionStats[exercise.exerciseId],
-              submissionCount: interactionStats[exercise.exerciseId]?.submissionCount || 0,
-              lastSubmittedAt: interactionStats[exercise.exerciseId]?.lastSubmittedAt
-            } : undefined}
+            interactionStats={
+              interactionStats
+                ? {
+                    hasInteracted: !!interactionStats[exercise.exerciseId],
+                    submissionCount:
+                      interactionStats[exercise.exerciseId]?.submissionCount ||
+                      0,
+                    lastSubmittedAt:
+                      interactionStats[exercise.exerciseId]?.lastSubmittedAt,
+                  }
+                : undefined
+            }
             commentCount={discussionStats?.[exercise.exerciseId]?.commentCount}
           />
         );
@@ -187,8 +258,13 @@ export function ExerciseListSection({
     const items: any[] = [exerciseItems];
 
     // Add inline editable card if this section is being edited
-    if (editingSectionName === section && onSaveInlineExercise && onCancelInlineExercise) {
-      const colorScheme = CARD_COLOR_SCHEMES[colorIndex % CARD_COLOR_SCHEMES.length];
+    if (
+      editingSectionName === section &&
+      onSaveInlineExercise &&
+      onCancelInlineExercise
+    ) {
+      const colorScheme =
+        CARD_COLOR_SCHEMES[colorIndex % CARD_COLOR_SCHEMES.length];
       items.push(
         <InlineEditableExerciseCard
           key="inline-editor"
@@ -216,9 +292,15 @@ export function ExerciseListSection({
   return (
     <CategoryList
       categories={categories}
-      onMoveSectionUp={isTeacher && onReorderSections ? handleMoveSectionUp : undefined}
-      onMoveSectionDown={isTeacher && onReorderSections ? handleMoveSectionDown : undefined}
-      onAddToSection={isTeacher && onAddToSection ? handleAddToSection : undefined}
+      onMoveSectionUp={
+        isTeacher && onReorderSections ? handleMoveSectionUp : undefined
+      }
+      onMoveSectionDown={
+        isTeacher && onReorderSections ? handleMoveSectionDown : undefined
+      }
+      onAddToSection={
+        isTeacher && onAddToSection ? handleAddToSection : undefined
+      }
     />
   );
 }
