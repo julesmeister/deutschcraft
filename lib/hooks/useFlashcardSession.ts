@@ -222,7 +222,7 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
       finalStats.hard + finalStats.good + finalStats.easy + finalStats.expert; // hard/good/easy/expert all count as correct
     const incorrectCount = finalStats.again; // only "again" is incorrect (forgot the card)
 
-    // Save daily progress
+    // Save daily progress (Time only - counts are updated per card now)
     if (!session?.user?.email) {
       console.error(
         "❌ [handleSessionComplete] Cannot save: No user session found"
@@ -231,10 +231,10 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
     } else {
       try {
         await saveDailyProgress(session.user.email, {
-          cardsReviewed: totalReviewed,
+          cardsReviewed: 0, // Already updated per card
           timeSpent: Math.ceil(timeSpent / 60), // Convert to minutes
-          correctCount,
-          incorrectCount,
+          correctCount: 0, // Already updated per card
+          incorrectCount: 0, // Already updated per card
         });
       } catch (error) {
         console.error(

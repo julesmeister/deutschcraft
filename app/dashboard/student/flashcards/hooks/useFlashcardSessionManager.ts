@@ -120,6 +120,10 @@ export function useFlashcardSessionManager({
         queryClient.invalidateQueries({
           queryKey: queryKeys.weeklyProgress(userEmail),
         });
+        // Invalidate today's progress (Daily Goal)
+        queryClient.invalidateQueries({
+          queryKey: ["todayProgress", userEmail],
+        });
         // Signal that session is complete (triggers stats refresh)
         onSessionComplete(
           Object.keys(timestampedReviews).length > 0

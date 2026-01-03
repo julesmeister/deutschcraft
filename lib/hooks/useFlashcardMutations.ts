@@ -120,6 +120,21 @@ export function useFlashcardMutations() {
       // Save using service layer
       await saveFlashcardProgress(progressId, updateData, flashcardData);
 
+      // Update daily progress immediately (so points/goal updates in real-time)
+      // We don't track time spent per card here, that's done at session end
+      try {
+        const isCorrect = difficulty !== "again";
+        await saveDailyProgress(userId, {
+          cardsReviewed: 1,
+          correctCount: isCorrect ? 1 : 0,
+          incorrectCount: isCorrect ? 0 : 1,
+          timeSpent: 0
+        });
+      } catch (statsError) {
+        console.error("Failed to update daily stats:", statsError);
+        // Don't fail the whole review if stats fail
+      }
+
       // Invalidate queries to ensure UI updates (unless skipped)
       if (!skipInvalidation) {
         queryClient.invalidateQueries({

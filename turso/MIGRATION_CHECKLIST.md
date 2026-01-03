@@ -57,13 +57,35 @@ These files will be executed in order:
 - [x] `013_create_config_table.sql` - App configuration
 
 ### New Social Media Migrations (14-20)
-- [ ] `014_create_social_posts_table.sql` - Social media posts
-- [ ] `015_create_social_media_table.sql` - Media files (base64)
-- [ ] `016_create_social_comments_table.sql` - Comments with threading
-- [ ] `017_create_social_suggestions_table.sql` - Grammar corrections
-- [ ] `018_create_social_likes_table.sql` - Like tracking
-- [ ] `019_create_social_shares_table.sql` - Share tracking
-- [ ] `020_create_social_polls_table.sql` - Polls and voting
+- [x] `014_create_social_posts_table.sql` - Social media posts
+- [x] `015_create_social_media_table.sql` - Media files (base64)
+- [x] `016_create_social_comments_table.sql` - Comments with threading
+- [x] `017_create_social_suggestions_table.sql` - Grammar corrections
+- [x] `018_create_social_likes_table.sql` - Like tracking
+- [x] `019_create_social_shares_table.sql` - Share tracking
+- [x] `020_create_social_polls_table.sql` - Polls and voting
+
+### Additional Migrations (21-40)
+- [x] `021_create_writing_review_quizzes_table.sql` - Writing review quizzes
+- [x] `022_create_student_answers_table.sql` - Student answers
+- [x] `023_create_exercise_overrides_table.sql` - Exercise overrides
+- [x] `024_create_saved_vocabulary_table.sql` - Saved vocabulary
+- [x] `025_create_mini_exercise_tables.sql` - Mini exercises
+- [x] `026_create_activities_table.sql` - User activities
+- [x] `027_create_exercise_progress_table.sql` - Exercise progress
+- [x] `028_create_grammar_rules_table.sql` - Grammar rules
+- [x] `029_create_grammar_sentences_table.sql` - Grammar sentences
+- [x] `030_create_grammar_reviews_table.sql` - Grammar reviews
+- [x] `031_create_writing_stats_table.sql` - Writing statistics
+- [x] `032_add_exercise_title_to_writing_submissions.sql` - Add exercise title
+- [x] `033_add_ai_corrected_version_to_writing_submissions.sql` - Add AI corrections
+- [x] `034_add_teacher_corrected_version_to_writing_submissions.sql` - Add teacher corrections
+- [x] `035_create_teacher_reviews_table.sql` - Teacher reviews
+- [x] `036_remove_fk_from_social_comments.sql` - Remove FK from comments
+- [x] `037_add_gantt_permissions_to_users.sql` - Gantt permissions
+- [x] `038_migrate_pricing_data.sql` - Migrate pricing data
+- [x] `039_update_pricing_data.sql` - Update pricing data
+- [x] `040_add_dashboard_settings_to_users.sql` - Add dashboard settings
 
 ## Run Migrations
 
