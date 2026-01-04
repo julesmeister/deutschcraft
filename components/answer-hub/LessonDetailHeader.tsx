@@ -88,7 +88,7 @@ export function LessonDetailHeader({
                 <div className="w-auto">
                   <ActionButton
                     onClick={onRefresh}
-                    variant="default"
+                    variant="cyan"
                     size="default"
                     icon={<ActionButtonIcons.Refresh />}
                   >
