@@ -180,9 +180,6 @@ export default function ExerciseDetailPage() {
           <div className="p-6 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-gray-100">
             <div className="flex items-start justify-between gap-4 mb-3">
               <div className="flex-1">
-                <h1 className="text-2xl font-black text-gray-900 mb-2">
-                  {exercise.title}
-                </h1>
 
                 {/* Question */}
                 {exercise.question && (
