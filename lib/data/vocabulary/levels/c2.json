@@ -3,7 +3,7 @@
   "totalCards": 72,
   "flashcards": [
     {
-      "id": "c2-auf-der-hand-liegen-044833",
+      "id": "c2-advanced-idiomatic-auf-der-hand-liegen-to-be-obvious-to-be-evident",
       "german": "auf der Hand liegen",
       "english": "to be obvious / to be evident",
       "category": "Advanced Idiomatic",
@@ -23,7 +23,7 @@
       }
     },
     {
-      "id": "c2-ins-gewicht-fallen-044833",
+      "id": "c2-advanced-idiomatic-ins-gewicht-fallen-to-carry-weight-to-be-significant",
       "german": "ins Gewicht fallen",
       "english": "to carry weight / to be significant",
       "category": "Advanced Idiomatic",
@@ -43,7 +43,7 @@
       }
     },
     {
-      "id": "c2-seinen-senf-dazugeben-044833",
+      "id": "c2-advanced-idiomatic-seinen-senf-dazugeben-to-put-in-ones-two-cents-to-give-unsolicite-1fxh23",
       "german": "seinen Senf dazugeben",
       "english": "to put in one's two cents / to give unsolicited opinion",
       "category": "Advanced Idiomatic",
@@ -63,7 +63,7 @@
       }
     },
     {
-      "id": "body-c2-001",
+      "id": "c2-body-parts-die-hirnhaut-meninges-brain-membrane",
       "german": "die Hirnhaut",
       "english": "meninges / brain membrane",
       "category": "Body Parts",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "id": "body-c2-002",
+      "id": "c2-body-parts-der-liquor-cerebrospinal-fluid",
       "german": "der Liquor",
       "english": "cerebrospinal fluid",
       "category": "Body Parts",
@@ -107,7 +107,7 @@
       }
     },
     {
-      "id": "body-c2-003",
+      "id": "c2-body-parts-das-striatum-striatum",
       "german": "das Striatum",
       "english": "striatum",
       "category": "Body Parts",
@@ -129,7 +129,7 @@
       }
     },
     {
-      "id": "body-c2-004",
+      "id": "c2-body-parts-der-hippocampus-hippocampus",
       "german": "der Hippocampus",
       "english": "hippocampus",
       "category": "Body Parts",
@@ -151,7 +151,7 @@
       }
     },
     {
-      "id": "body-c2-005",
+      "id": "c2-body-parts-die-amygdala-amygdala",
       "german": "die Amygdala",
       "english": "amygdala",
       "category": "Body Parts",
@@ -173,7 +173,7 @@
       }
     },
     {
-      "id": "body-c2-006",
+      "id": "c2-body-parts-die-epiphyse-pineal-gland-epiphysis",
       "german": "die Epiphyse",
       "english": "pineal gland / epiphysis",
       "category": "Body Parts",
@@ -195,7 +195,7 @@
       }
     },
     {
-      "id": "body-c2-007",
+      "id": "c2-body-parts-die-zirbeldruese-pineal-gland",
       "german": "die Zirbeldrüse",
       "english": "pineal gland",
       "category": "Body Parts",
@@ -217,7 +217,7 @@
       }
     },
     {
-      "id": "body-c2-008",
+      "id": "c2-body-parts-das-endokard-endocardium",
       "german": "das Endokard",
       "english": "endocardium",
       "category": "Body Parts",
@@ -239,7 +239,7 @@
       }
     },
     {
-      "id": "body-c2-009",
+      "id": "c2-body-parts-das-perikard-pericardium",
       "german": "das Perikard",
       "english": "pericardium",
       "category": "Body Parts",
@@ -261,7 +261,7 @@
       }
     },
     {
-      "id": "body-c2-010",
+      "id": "c2-body-parts-das-myokard-myocardium-heart-muscle",
       "german": "das Myokard",
       "english": "myocardium / heart muscle",
       "category": "Body Parts",
@@ -283,7 +283,7 @@
       }
     },
     {
-      "id": "body-c2-011",
+      "id": "c2-body-parts-der-oesophagus-esophagus-medical-term",
       "german": "der Ösophagus",
       "english": "esophagus (medical term)",
       "category": "Body Parts",
@@ -305,7 +305,7 @@
       }
     },
     {
-      "id": "body-c2-012",
+      "id": "c2-body-parts-die-epiglottis-epiglottis",
       "german": "die Epiglottis",
       "english": "epiglottis",
       "category": "Body Parts",
@@ -327,7 +327,7 @@
       }
     },
     {
-      "id": "body-c2-013",
+      "id": "c2-body-parts-die-glomeruli-glomeruli-kidney-filtration-units",
       "german": "die Glomeruli",
       "english": "glomeruli (kidney filtration units)",
       "category": "Body Parts",
@@ -349,7 +349,7 @@
       }
     },
     {
-      "id": "body-c2-014",
+      "id": "c2-body-parts-das-nephron-nephron",
       "german": "das Nephron",
       "english": "nephron",
       "category": "Body Parts",
@@ -371,7 +371,7 @@
       }
     },
     {
-      "id": "body-c2-015",
+      "id": "c2-body-parts-die-plazenta-placenta",
       "german": "die Plazenta",
       "english": "placenta",
       "category": "Body Parts",
@@ -393,7 +393,7 @@
       }
     },
     {
-      "id": "c2-ambiguitaet-044832",
+      "id": "c2-literary-language-die-ambiguitaet-ambiguity",
       "german": "die Ambiguität",
       "english": "ambiguity",
       "category": "Literary Language",
@@ -413,7 +413,7 @@
       }
     },
     {
-      "id": "c2-eloquenz-044832",
+      "id": "c2-literary-language-die-eloquenz-eloquence",
       "german": "die Eloquenz",
       "english": "eloquence",
       "category": "Literary Language",
@@ -433,7 +433,7 @@
       }
     },
     {
-      "id": "c2-metapher-044832",
+      "id": "c2-literary-language-die-metapher-metaphor",
       "german": "die Metapher",
       "english": "metaphor",
       "category": "Literary Language",
@@ -453,7 +453,7 @@
       }
     },
     {
-      "id": "c2-nuance-044832",
+      "id": "c2-literary-language-die-nuance-nuance",
       "german": "die Nuance",
       "english": "nuance",
       "category": "Literary Language",
@@ -473,7 +473,7 @@
       }
     },
     {
-      "id": "c2-paradoxon-044832",
+      "id": "c2-literary-language-das-paradoxon-paradox",
       "german": "das Paradoxon",
       "english": "paradox",
       "category": "Literary Language",
@@ -493,7 +493,7 @@
       }
     },
     {
-      "id": "c2-subtilitaet-044832",
+      "id": "c2-literary-language-die-subtilitaet-subtlety",
       "german": "die Subtilität",
       "english": "subtlety",
       "category": "Literary Language",
@@ -513,7 +513,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11613",
+      "id": "c2-literary-language-die-sehnsucht-longing-yearning",
       "german": "die Sehnsucht",
       "english": "longing / yearning",
       "category": "Literary Language",
@@ -533,7 +533,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11614",
+      "id": "c2-literary-language-das-gemuet-disposition-temperament",
       "german": "das Gemüt",
       "english": "disposition / temperament",
       "category": "Literary Language",
@@ -553,7 +553,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11615",
+      "id": "c2-literary-language-der-weltschmerz-world-weariness-melancholy",
       "german": "der Weltschmerz",
       "english": "world-weariness / melancholy",
       "category": "Literary Language",
@@ -573,7 +573,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11616",
+      "id": "c2-literary-language-der-zeitgeist-spirit-of-the-times",
       "german": "der Zeitgeist",
       "english": "spirit of the times",
       "category": "Literary Language",
@@ -593,7 +593,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11617",
+      "id": "c2-literary-language-das-fernweh-wanderlust-desire-to-travel",
       "german": "das Fernweh",
       "english": "wanderlust / desire to travel",
       "category": "Literary Language",
@@ -613,7 +613,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11618",
+      "id": "c2-literary-language-die-schadenfreude-pleasure-at-others-misfortune",
       "german": "die Schadenfreude",
       "english": "pleasure at others' misfortune",
       "category": "Literary Language",
@@ -633,7 +633,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11619",
+      "id": "c2-literary-language-das-heimweh-homesickness",
       "german": "das Heimweh",
       "english": "homesickness",
       "category": "Literary Language",
@@ -653,7 +653,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11620",
+      "id": "c2-literary-language-die-torschlusspanik-fear-of-missing-opportunities",
       "german": "die Torschlusspanik",
       "english": "fear of missing opportunities",
       "category": "Literary Language",
@@ -673,7 +673,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11621",
+      "id": "c2-philosophical-concepts-die-erkenntnis-knowledge-cognition-insight",
       "german": "die Erkenntnis",
       "english": "knowledge / cognition / insight",
       "category": "Philosophical Concepts",
@@ -693,7 +693,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11622",
+      "id": "c2-philosophical-concepts-die-wahrheit-truth",
       "german": "die Wahrheit",
       "english": "truth",
       "category": "Philosophical Concepts",
@@ -713,7 +713,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11623",
+      "id": "c2-philosophical-concepts-die-vernunft-reason-rationality",
       "german": "die Vernunft",
       "english": "reason / rationality",
       "category": "Philosophical Concepts",
@@ -733,7 +733,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11624",
+      "id": "c2-philosophical-concepts-das-dasein-existence-being",
       "german": "das Dasein",
       "english": "existence / being",
       "category": "Philosophical Concepts",
@@ -753,7 +753,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11625",
+      "id": "c2-philosophical-concepts-das-wesen-essence-nature-being",
       "german": "das Wesen",
       "english": "essence / nature / being",
       "category": "Philosophical Concepts",
@@ -773,7 +773,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11627",
+      "id": "c2-philosophical-concepts-die-freiheit-freedom-liberty",
       "german": "die Freiheit",
       "english": "freedom / liberty",
       "category": "Philosophical Concepts",
@@ -793,7 +793,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11628",
+      "id": "c2-philosophical-concepts-die-notwendigkeit-necessity",
       "german": "die Notwendigkeit",
       "english": "necessity",
       "category": "Philosophical Concepts",
@@ -813,7 +813,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11629",
+      "id": "c2-philosophical-concepts-die-wirklichkeit-reality-actuality",
       "german": "die Wirklichkeit",
       "english": "reality / actuality",
       "category": "Philosophical Concepts",
@@ -833,7 +833,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11630",
+      "id": "c2-philosophical-concepts-die-erscheinung-appearance-phenomenon",
       "german": "die Erscheinung",
       "english": "appearance / phenomenon",
       "category": "Philosophical Concepts",
@@ -853,7 +853,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11631",
+      "id": "c2-philosophical-concepts-die-bestimmung-determination-destiny-purpose",
       "german": "die Bestimmung",
       "english": "determination / destiny / purpose",
       "category": "Philosophical Concepts",
@@ -873,7 +873,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11632",
+      "id": "c2-philosophical-concepts-die-vergaenglichkeit-transience-impermanence",
       "german": "die Vergänglichkeit",
       "english": "transience / impermanence",
       "category": "Philosophical Concepts",
@@ -893,7 +893,7 @@
       }
     },
     {
-      "id": "reflexive-c2-001",
+      "id": "c2-reflexive-verbs-sich-ermannen-to-pluck-up-courage-to-summon-ones-strength",
       "german": "sich ermannen",
       "english": "to pluck up courage, to summon one's strength",
       "category": "Reflexive Verbs",
@@ -914,7 +914,7 @@
       }
     },
     {
-      "id": "reflexive-c2-002",
+      "id": "c2-reflexive-verbs-sich-erdreisten-to-have-the-audacity-to-presume",
       "german": "sich erdreisten",
       "english": "to have the audacity, to presume",
       "category": "Reflexive Verbs",
@@ -935,7 +935,7 @@
       }
     },
     {
-      "id": "reflexive-c2-003",
+      "id": "c2-reflexive-verbs-sich-ereifern-to-get-worked-up-to-become-agitated",
       "german": "sich ereifern",
       "english": "to get worked up, to become agitated",
       "category": "Reflexive Verbs",
@@ -956,7 +956,7 @@
       }
     },
     {
-      "id": "reflexive-c2-004",
+      "id": "c2-reflexive-verbs-sich-erkecken-to-dare-to-venture",
       "german": "sich erkecken",
       "english": "to dare, to venture",
       "category": "Reflexive Verbs",
@@ -977,7 +977,7 @@
       }
     },
     {
-      "id": "reflexive-c2-005",
+      "id": "c2-reflexive-verbs-sich-gebaerden-to-behave-to-act-in-a-certain-manner",
       "german": "sich gebärden",
       "english": "to behave, to act (in a certain manner)",
       "category": "Reflexive Verbs",
@@ -998,7 +998,7 @@
       }
     },
     {
-      "id": "reflexive-c2-006",
+      "id": "c2-reflexive-verbs-sich-haermen-to-grieve-to-pine",
       "german": "sich härmen",
       "english": "to grieve, to pine",
       "category": "Reflexive Verbs",
@@ -1019,7 +1019,7 @@
       }
     },
     {
-      "id": "reflexive-c2-007",
+      "id": "c2-reflexive-verbs-sich-verzehren-to-pine-away-to-consume-oneself",
       "german": "sich verzehren",
       "english": "to pine away, to consume oneself",
       "category": "Reflexive Verbs",
@@ -1040,7 +1040,7 @@
       }
     },
     {
-      "id": "reflexive-c2-008",
+      "id": "c2-reflexive-verbs-sich-verausgaben-to-exhaust-oneself-to-overextend",
       "german": "sich verausgaben",
       "english": "to exhaust oneself, to overextend",
       "category": "Reflexive Verbs",
@@ -1061,7 +1061,7 @@
       }
     },
     {
-      "id": "reflexive-c2-009",
+      "id": "c2-reflexive-verbs-sich-verbittern-to-become-embittered",
       "german": "sich verbittern",
       "english": "to become embittered",
       "category": "Reflexive Verbs",
@@ -1082,7 +1082,7 @@
       }
     },
     {
-      "id": "reflexive-c2-010",
+      "id": "c2-reflexive-verbs-sich-verfestigen-to-solidify-to-become-fixed",
       "german": "sich verfestigen",
       "english": "to solidify, to become fixed",
       "category": "Reflexive Verbs",
@@ -1103,7 +1103,7 @@
       }
     },
     {
-      "id": "reflexive-c2-011",
+      "id": "c2-reflexive-verbs-sich-verfluechtigen-to-evaporate-to-vanish",
       "german": "sich verflüchtigen",
       "english": "to evaporate, to vanish",
       "category": "Reflexive Verbs",
@@ -1124,7 +1124,7 @@
       }
     },
     {
-      "id": "reflexive-c2-012",
+      "id": "c2-reflexive-verbs-sich-verhaerten-to-harden-to-become-obdurate",
       "german": "sich verhärten",
       "english": "to harden, to become obdurate",
       "category": "Reflexive Verbs",
@@ -1145,7 +1145,7 @@
       }
     },
     {
-      "id": "reflexive-c2-013",
+      "id": "c2-reflexive-verbs-sich-verkrampfen-to-tense-up-to-become-cramped",
       "german": "sich verkrampfen",
       "english": "to tense up, to become cramped",
       "category": "Reflexive Verbs",
@@ -1166,7 +1166,7 @@
       }
     },
     {
-      "id": "reflexive-c2-014",
+      "id": "c2-reflexive-verbs-sich-versinnbildlichen-to-be-symbolized-to-be-embodied",
       "german": "sich versinnbildlichen",
       "english": "to be symbolized, to be embodied",
       "category": "Reflexive Verbs",
@@ -1187,7 +1187,7 @@
       }
     },
     {
-      "id": "reflexive-c2-015",
+      "id": "c2-reflexive-verbs-sich-verstiegen-haben-to-have-overreached-oneself",
       "german": "sich verstiegen haben",
       "english": "to have overreached oneself",
       "category": "Reflexive Verbs",
@@ -1208,7 +1208,7 @@
       }
     },
     {
-      "id": "reflexive-c2-016",
+      "id": "c2-reflexive-verbs-sich-verwahren-gegen-to-protest-against-to-object-to",
       "german": "sich verwahren gegen",
       "english": "to protest against, to object to",
       "category": "Reflexive Verbs",
@@ -1229,7 +1229,7 @@
       }
     },
     {
-      "id": "reflexive-c2-017",
+      "id": "c2-reflexive-verbs-sich-verwinden-to-come-to-terms-with-to-get-over",
       "german": "sich verwinden",
       "english": "to come to terms with, to get over",
       "category": "Reflexive Verbs",
@@ -1250,7 +1250,7 @@
       }
     },
     {
-      "id": "reflexive-c2-018",
+      "id": "c2-reflexive-verbs-sich-wappnen-to-arm-oneself-to-prepare-oneself",
       "german": "sich wappnen",
       "english": "to arm oneself, to prepare oneself",
       "category": "Reflexive Verbs",
@@ -1271,7 +1271,7 @@
       }
     },
     {
-      "id": "reflexive-c2-019",
+      "id": "c2-reflexive-verbs-sich-windend-to-wriggle-to-writhe",
       "german": "sich windend",
       "english": "to wriggle, to writhe",
       "category": "Reflexive Verbs",
@@ -1292,7 +1292,7 @@
       }
     },
     {
-      "id": "reflexive-c2-020",
+      "id": "c2-reflexive-verbs-sich-zutragen-to-occur-to-happen-literary",
       "german": "sich zutragen",
       "english": "to occur, to happen (literary)",
       "category": "Reflexive Verbs",
@@ -1313,7 +1313,7 @@
       }
     },
     {
-      "id": "reflexive-c2-021",
+      "id": "c2-reflexive-verbs-sich-befleissigen-to-apply-oneself-to-to-endeavor",
       "german": "sich befleißigen",
       "english": "to apply oneself to, to endeavor",
       "category": "Reflexive Verbs",
@@ -1334,7 +1334,7 @@
       }
     },
     {
-      "id": "reflexive-c2-022",
+      "id": "c2-reflexive-verbs-sich-bruesten-to-boast-to-brag",
       "german": "sich brüsten",
       "english": "to boast, to brag",
       "category": "Reflexive Verbs",
@@ -1355,7 +1355,7 @@
       }
     },
     {
-      "id": "reflexive-c2-023",
+      "id": "c2-reflexive-verbs-sich-duenken-to-seem-to-oneself-to-fancy-archaic",
       "german": "sich dünken",
       "english": "to seem to oneself, to fancy (archaic)",
       "category": "Reflexive Verbs",
@@ -1376,7 +1376,7 @@
       }
     },
     {
-      "id": "reflexive-c2-024",
+      "id": "c2-reflexive-verbs-sich-gedulden-to-be-patient-to-wait-patiently",
       "german": "sich gedulden",
       "english": "to be patient, to wait patiently",
       "category": "Reflexive Verbs",
@@ -1397,7 +1397,7 @@
       }
     },
     {
-      "id": "reflexive-c2-025",
+      "id": "c2-reflexive-verbs-sich-hueten-to-beware-to-guard-against",
       "german": "sich hüten",
       "english": "to beware, to guard against",
       "category": "Reflexive Verbs",
@@ -1418,7 +1418,7 @@
       }
     },
     {
-      "id": "reflexive-c2-026",
+      "id": "c2-reflexive-verbs-sich-regen-to-stir-to-move",
       "german": "sich regen",
       "english": "to stir, to move",
       "category": "Reflexive Verbs",
@@ -1439,7 +1439,7 @@
       }
     },
     {
-      "id": "reflexive-c2-027",
+      "id": "c2-reflexive-verbs-sich-schicken-to-be-fitting-to-be-proper",
       "german": "sich schicken",
       "english": "to be fitting, to be proper",
       "category": "Reflexive Verbs",
@@ -1460,7 +1460,7 @@
       }
     },
     {
-      "id": "reflexive-c2-028",
+      "id": "c2-reflexive-verbs-sich-tummeln-to-romp-about-to-bustle",
       "german": "sich tummeln",
       "english": "to romp about, to bustle",
       "category": "Reflexive Verbs",
@@ -1481,7 +1481,7 @@
       }
     },
     {
-      "id": "reflexive-c2-030",
+      "id": "c2-reflexive-verbs-sich-vermessen-to-presume-to-be-presumptuous",
       "german": "sich vermessen",
       "english": "to presume, to be presumptuous",
       "category": "Reflexive Verbs",
