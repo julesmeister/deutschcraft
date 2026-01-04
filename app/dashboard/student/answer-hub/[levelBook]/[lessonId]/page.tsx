@@ -90,6 +90,34 @@ export default function LessonDetailPage() {
   const { answers: allAnswers } = useAllLessonAnswers(exerciseIds, isTeacher);
   const answerCount = allAnswers.length;
 
+  // Calculate teacher interactions (submission counts per exercise)
+  const teacherInteractions = useMemo(() => {
+    if (!isTeacher) return interactions;
+
+    const stats: Record<
+      string,
+      { submissionCount: number; lastSubmittedAt: number }
+    > = {};
+
+    // Group answers by exerciseId
+    allAnswers.forEach((answer) => {
+      if (!stats[answer.exerciseId]) {
+        stats[answer.exerciseId] = {
+          submissionCount: 0,
+          lastSubmittedAt: 0,
+        };
+      }
+      stats[answer.exerciseId].submissionCount++;
+      // We can track latest submission if needed, though mostly used for count > 0 check
+      stats[answer.exerciseId].lastSubmittedAt = Math.max(
+        stats[answer.exerciseId].lastSubmittedAt,
+        answer.submittedAt
+      );
+    });
+
+    return stats;
+  }, [isTeacher, interactions, allAnswers]);
+
   // Load teacher's batches (only for teachers)
   const { batches } = useActiveBatches(isTeacher ? userEmail : undefined);
 
@@ -181,39 +209,32 @@ export default function LessonDetailPage() {
     try {
       // Invalidate exercise overrides to refetch teacher's changes
       await queryClient.invalidateQueries({
-        predicate: (query) => {
-          return (
-            Array.isArray(query.queryKey) &&
-            query.queryKey[0] === 'exercise-overrides'
-          );
-        },
+        queryKey: ["exercise-overrides"],
       });
 
       // Invalidate student answers
       await queryClient.invalidateQueries({
-        predicate: (query) => {
-          return (
-            Array.isArray(query.queryKey) &&
-            query.queryKey[0] === 'student-answers'
-          );
-        },
+        queryKey: ["student-answers"],
       });
 
       // Invalidate exercise interactions
       await queryClient.invalidateQueries({
-        predicate: (query) => {
-          return (
-            Array.isArray(query.queryKey) &&
-            query.queryKey[0] === 'exercise-interactions'
-          );
-        },
+        queryKey: ["exercise-interactions"],
       });
 
       // Show success toast
-      toast.success('Exercise list refreshed successfully!', 3000, 'Refresh Complete');
+      toast.success(
+        "Exercise list refreshed successfully!",
+        3000,
+        "Refresh Complete"
+      );
     } catch (error) {
-      console.error('Failed to refresh exercises:', error);
-      toast.error('Failed to refresh exercises. Please try again.', 5000, 'Refresh Failed');
+      console.error("Failed to refresh exercises:", error);
+      toast.error(
+        "Failed to refresh exercises. Please try again.",
+        5000,
+        "Refresh Failed"
+      );
     }
   };
 
@@ -334,7 +355,7 @@ export default function LessonDetailPage() {
               <FloatingExerciseNavigator
                 exercises={filteredExercises}
                 onScrollToExercise={scrollToExercise}
-                interactions={interactions}
+                interactions={isTeacher ? teacherInteractions : interactions}
               />
               <ExerciseListSection
                 filteredExercises={filteredExercises}
