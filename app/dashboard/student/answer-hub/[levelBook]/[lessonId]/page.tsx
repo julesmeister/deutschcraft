@@ -43,11 +43,13 @@ import {
 import { FloatingExerciseNavigator } from "@/components/answer-hub/FloatingExerciseNavigator";
 
 import { useExerciseInteractions } from "@/lib/hooks/useExerciseInteractions";
+import { useToast } from "@/lib/hooks/useToast";
 
 export default function LessonDetailPage() {
   const router = useRouter();
   const params = useParams();
   const queryClient = useQueryClient();
+  const toast = useToast();
   const { session } = useFirebaseAuth();
   const { student: currentUser } = useCurrentStudent(
     session?.user?.email || null
@@ -175,36 +177,44 @@ export default function LessonDetailPage() {
   };
 
   // Refresh handler - invalidate React Query cache to refetch all data
-  const handleRefresh = () => {
-    // Invalidate exercise overrides to refetch teacher's changes
-    queryClient.invalidateQueries({
-      predicate: (query) => {
-        return (
-          Array.isArray(query.queryKey) &&
-          query.queryKey[0] === 'exercise-overrides'
-        );
-      },
-    });
+  const handleRefresh = async () => {
+    try {
+      // Invalidate exercise overrides to refetch teacher's changes
+      await queryClient.invalidateQueries({
+        predicate: (query) => {
+          return (
+            Array.isArray(query.queryKey) &&
+            query.queryKey[0] === 'exercise-overrides'
+          );
+        },
+      });
 
-    // Invalidate student answers
-    queryClient.invalidateQueries({
-      predicate: (query) => {
-        return (
-          Array.isArray(query.queryKey) &&
-          query.queryKey[0] === 'student-answers'
-        );
-      },
-    });
+      // Invalidate student answers
+      await queryClient.invalidateQueries({
+        predicate: (query) => {
+          return (
+            Array.isArray(query.queryKey) &&
+            query.queryKey[0] === 'student-answers'
+          );
+        },
+      });
 
-    // Invalidate exercise interactions
-    queryClient.invalidateQueries({
-      predicate: (query) => {
-        return (
-          Array.isArray(query.queryKey) &&
-          query.queryKey[0] === 'exercise-interactions'
-        );
-      },
-    });
+      // Invalidate exercise interactions
+      await queryClient.invalidateQueries({
+        predicate: (query) => {
+          return (
+            Array.isArray(query.queryKey) &&
+            query.queryKey[0] === 'exercise-interactions'
+          );
+        },
+      });
+
+      // Show success toast
+      toast.success('Exercise list refreshed successfully!', 3000, 'Refresh Complete');
+    } catch (error) {
+      console.error('Failed to refresh exercises:', error);
+      toast.error('Failed to refresh exercises. Please try again.', 5000, 'Refresh Failed');
+    }
   };
 
   if (isLoading) {
