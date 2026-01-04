@@ -52,6 +52,8 @@ export function usePosts(filters?: {
           console.log("[usePosts] Loaded", postsData.length, "posts");
         if (postsData.length > 0 && !silent) {
           console.log("[usePosts] First post content:", postsData[0].content);
+          console.log("[usePosts] First post mediaUrls:", postsData[0].mediaUrls);
+          console.log("[usePosts] First post mediaType:", postsData[0].mediaType);
         }
         setPosts((prev) => {
           // Prevent unnecessary updates if data hasn't changed
@@ -99,11 +101,16 @@ export function usePosts(filters?: {
       >
     ) => {
       try {
+        console.log('[addPost] Called with mediaUrls:', postData.mediaUrls?.length || 0);
+        console.log('[addPost] Calling createPost...');
         const postId = await createPost(postData);
+        console.log('[addPost] Post created with ID:', postId);
         // Refresh posts after adding
         await loadPosts();
+        console.log('[addPost] Posts refreshed');
         return postId;
       } catch (err) {
+        console.error('[addPost] Error:', err);
         setError(err as Error);
         throw err;
       }

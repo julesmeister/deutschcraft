@@ -34,6 +34,9 @@ export async function createPost(postData: Omit<Post, 'postId' | 'createdAt' | '
   const postRef = doc(collection(db, 'posts'));
   const postId = postRef.id;
 
+  console.log('[createPost] Received postData.mediaUrls:', postData.mediaUrls?.length || 0);
+  console.log('[createPost] First URL length:', postData.mediaUrls?.[0]?.length || 0);
+
   const newPost: Post = {
     ...postData,
     postId,
@@ -47,7 +50,15 @@ export async function createPost(postData: Omit<Post, 'postId' | 'createdAt' | '
     updatedAt: Date.now(),
   };
 
+  console.log('[createPost] Saving newPost.mediaUrls:', newPost.mediaUrls?.length || 0);
+
   await setDoc(postRef, newPost);
+
+  console.log('[createPost] Post saved, verifying...');
+  const savedPost = await getDoc(postRef);
+  const savedData = savedPost.data() as Post;
+  console.log('[createPost] Verified mediaUrls after save:', savedData.mediaUrls?.length || 0);
+
   return postId;
 }
 

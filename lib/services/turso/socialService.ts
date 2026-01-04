@@ -19,7 +19,7 @@ function rowToPost(row: any): Post {
     userId: row.user_id as string,
     userEmail: row.user_email as string,
     content: row.content as string,
-    mediaUrls: row.media_type !== 'none' ? [] : undefined, // Will be populated separately
+    mediaUrls: row.media_urls ? JSON.parse(row.media_urls as string) : undefined,
     mediaType: (row.media_type as 'image' | 'video' | 'poll' | 'none') || 'none',
     cefrLevel: row.cefr_level as any,
     grammarFocus: row.grammar_focus ? JSON.parse(row.grammar_focus as string) : undefined,
@@ -103,21 +103,27 @@ export async function createPost(postData: Omit<Post, 'postId' | 'createdAt' | '
   const postId = `post_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   const now = Date.now();
 
+  console.log('[socialService:turso] Creating post with mediaUrls:', postData.mediaUrls?.length || 0);
+  if (postData.mediaUrls && postData.mediaUrls.length > 0) {
+    console.log('[socialService:turso] First URL length:', postData.mediaUrls[0]?.length || 0);
+  }
+
   try {
     await db.execute({
       sql: `INSERT INTO social_posts (
-        post_id, user_id, user_email, content, media_type,
+        post_id, user_id, user_email, content, media_type, media_urls,
         cefr_level, grammar_focus, vocabulary_used,
         likes_count, comments_count, suggestions_count, shares_count,
         visibility, is_edited, has_accepted_suggestion,
         created_at, updated_at
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       args: [
         postId,
         postData.userId,
         postData.userEmail,
         postData.content,
         postData.mediaType || 'none',
+        postData.mediaUrls && postData.mediaUrls.length > 0 ? JSON.stringify(postData.mediaUrls) : null,
         postData.cefrLevel,
         postData.grammarFocus ? JSON.stringify(postData.grammarFocus) : null,
         postData.vocabularyUsed ? JSON.stringify(postData.vocabularyUsed) : null,
@@ -132,6 +138,8 @@ export async function createPost(postData: Omit<Post, 'postId' | 'createdAt' | '
         now,
       ],
     });
+
+    console.log('[socialService:turso] Post created successfully, ID:', postId);
 
     return postId;
   } catch (error) {

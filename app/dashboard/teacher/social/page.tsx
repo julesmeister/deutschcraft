@@ -157,6 +157,8 @@ export default function TeacherSocialPage() {
                 userLevel="B2"
                 currentUser={enrichedCurrentUser}
                 onSubmit={handleCreatePost}
+                batchName={selectedBatch?.name}
+                postFilter={filterBatch === 'all' ? 'all' : 'batch'}
               />
 
               <BatchFilterDropdown

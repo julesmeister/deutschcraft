@@ -24,39 +24,125 @@ export async function saveFlashcardProgress(
     const now = Date.now();
     let flashcardId = progressData.flashcardId || '';
     let finalProgressId = progressId;
+    let wordId = progressData.wordId || flashcardData?.id || flashcardData?.wordId || '';
 
-    // Ensure flashcardId has FLASH_ prefix if it looks like a syllabus ID
-    // but doesn't have the prefix yet, to match the flashcards table PK.
-    if (flashcardId.startsWith('syllabus-') && !flashcardId.startsWith('FLASH_')) {
-      flashcardId = `FLASH_${flashcardId}`;
-      
-      // Update the PK to match the new flashcardId
-      if (progressData.userId) {
-        finalProgressId = `${progressData.userId}_${flashcardId}`;
+    // ========================================================================
+    // ID NORMALIZATION LAYER - Handle multiple ID formats
+    // ========================================================================
+
+    // 1. Ensure user exists in Turso (critical for FK constraint)
+    if (progressData.userId) {
+      try {
+        const userCheck = await db.execute({
+          sql: `SELECT user_id FROM users WHERE user_id = ? LIMIT 1`,
+          args: [progressData.userId],
+        });
+
+        if (!userCheck.rows || userCheck.rows.length === 0) {
+          // User doesn't exist - create minimal user record
+          await db.execute({
+            sql: `INSERT OR IGNORE INTO users (user_id, email, created_at) VALUES (?, ?, ?)`,
+            args: [progressData.userId, progressData.userId, now],
+          });
+          if (process.env.NODE_ENV === 'development') {
+            console.log(`➕ [Created] User: ${progressData.userId}`);
+          }
+        } else {
+          if (process.env.NODE_ENV === 'development') {
+            console.log(`📍 [ID Match] Found user: ${progressData.userId}`);
+          }
+        }
+      } catch (userError) {
+        console.error('[flashcardService:turso] User check/create failed:', userError);
+        throw new Error(`Cannot save progress: User validation failed. ${userError instanceof Error ? userError.message : String(userError)}`);
       }
     }
 
-    // If flashcardData is provided, ensure referenced records exist (Lazy Sync)
-    if (flashcardData) {
-      try {
-        const wordId = progressData.wordId || flashcardData.wordId || flashcardData.id;
-        const level = progressData.level || flashcardData.level || 'A1';
-        
-        // 1. Ensure Vocabulary exists
-        await db.execute({
-          sql: `INSERT OR IGNORE INTO vocabulary (
-            word_id, german_word, english_translation, level, created_at
-          ) VALUES (?, ?, ?, ?, ?)`,
-          args: [
-            wordId,
-            flashcardData.german || 'Unknown',
-            flashcardData.english || 'Unknown',
-            level,
-            now
-          ]
-        });
+    // 2. Normalize flashcard ID
+    if (flashcardId.startsWith('syllabus-') && !flashcardId.startsWith('FLASH_')) {
+      flashcardId = `FLASH_${flashcardId}`;
+    }
 
-        // 2. Ensure Flashcard exists
+    // 3. Check if flashcard already exists in Turso (try multiple ID formats)
+    let existingFlashcard = null;
+    const idVariations = [
+      flashcardId,
+      `FLASH_${flashcardId}`,
+      flashcardId.replace('FLASH_', ''),
+      wordId,
+      `FLASH_${wordId}`,
+    ].filter(id => id && id.length > 0);
+
+    for (const idVariant of idVariations) {
+      try {
+        const checkResult = await db.execute({
+          sql: `SELECT id FROM flashcards WHERE id = ? LIMIT 1`,
+          args: [idVariant],
+        });
+        if (checkResult.rows && checkResult.rows.length > 0) {
+          existingFlashcard = checkResult.rows[0];
+          flashcardId = idVariant; // Use the ID that exists in DB
+          if (process.env.NODE_ENV === 'development') {
+            console.log(`📍 [ID Match] Found flashcard with ID: ${idVariant}`);
+          }
+          break;
+        }
+      } catch (e) {
+        // Continue trying other variants
+      }
+    }
+
+    // 4. Update final progress ID with normalized flashcard ID
+    if (progressData.userId) {
+      finalProgressId = `${progressData.userId}_${flashcardId}`;
+    }
+
+    // If flashcardData is provided AND flashcard doesn't exist, ensure referenced records exist (Lazy Sync)
+    if (flashcardData && !existingFlashcard) {
+      try {
+        const level = progressData.level || flashcardData.level || 'A1';
+
+        // 5. Check if vocabulary exists (try multiple ID formats)
+        let existingVocab = null;
+        for (const wordIdVariant of [wordId, `VOCAB_${wordId}`, wordId.replace('VOCAB_', '')].filter(Boolean)) {
+          try {
+            const vocabCheck = await db.execute({
+              sql: `SELECT word_id FROM vocabulary WHERE word_id = ? LIMIT 1`,
+              args: [wordIdVariant],
+            });
+            if (vocabCheck.rows && vocabCheck.rows.length > 0) {
+              existingVocab = vocabCheck.rows[0];
+              wordId = wordIdVariant; // Use the ID that exists
+              if (process.env.NODE_ENV === 'development') {
+                console.log(`📍 [ID Match] Found vocabulary with ID: ${wordIdVariant}`);
+              }
+              break;
+            }
+          } catch (e) {
+            // Continue trying
+          }
+        }
+
+        // 6. Ensure Vocabulary exists (only if not found)
+        if (!existingVocab) {
+          await db.execute({
+            sql: `INSERT OR IGNORE INTO vocabulary (
+              word_id, german_word, english_translation, level, created_at
+            ) VALUES (?, ?, ?, ?, ?)`,
+            args: [
+              wordId,
+              flashcardData.german || 'Unknown',
+              flashcardData.english || 'Unknown',
+              level,
+              now
+            ]
+          });
+          if (process.env.NODE_ENV === 'development') {
+            console.log(`➕ [Created] Vocabulary: ${wordId}`);
+          }
+        }
+
+        // 7. Ensure Flashcard exists (only if not found earlier)
         await db.execute({
           sql: `INSERT OR IGNORE INTO flashcards (
             id, word_id, question, correct_answer, wrong_answers, type, level, created_at
@@ -72,12 +158,17 @@ export async function saveFlashcardProgress(
             now
           ]
         });
+        if (process.env.NODE_ENV === 'development') {
+          console.log(`➕ [Created] Flashcard: ${flashcardId} -> ${wordId}`);
+        }
       } catch (syncError) {
-        console.warn('[flashcardService:turso] Failed to sync flashcard data, proceeding with progress save:', syncError);
-        // Continue to try saving progress, though it might fail with FK error if sync failed
+        console.error('[flashcardService:turso] Failed to sync flashcard data:', syncError);
+        // Throw error instead of continuing - this prevents FK constraint failures
+        throw new Error(`Cannot save progress: Failed to sync flashcard data. ${syncError instanceof Error ? syncError.message : String(syncError)}`);
       }
     }
 
+    // Save progress with verification layer
     await db.execute({
       sql: `INSERT INTO flashcard_progress (
               id, flashcard_id, user_id, word_id, level,
@@ -105,9 +196,9 @@ export async function saveFlashcardProgress(
               updated_at = excluded.updated_at`,
       args: [
         finalProgressId,
-        flashcardId,
+        flashcardId, // Using normalized flashcard ID
         progressData.userId || '',
-        progressData.wordId || '',
+        wordId, // Using normalized word ID
         progressData.level || null,
         progressData.state || 'new',
         progressData.repetitions || 0,
@@ -127,6 +218,20 @@ export async function saveFlashcardProgress(
         now,
       ],
     });
+
+    // Verification layer: Confirm the save actually worked
+    const verifyResult = await db.execute({
+      sql: `SELECT id, next_review_date, mastery_level FROM flashcard_progress WHERE id = ?`,
+      args: [finalProgressId],
+    });
+
+    if (!verifyResult.rows || verifyResult.rows.length === 0) {
+      throw new Error(`Progress save verification failed: Record not found after save (ID: ${finalProgressId})`);
+    }
+
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`✅ [flashcardService:turso] Progress verified: ${finalProgressId} | Mastery: ${progressData.masteryLevel}% | Next: ${new Date(progressData.nextReviewDate || now).toLocaleDateString()}`);
+    }
   } catch (error) {
     console.error('[flashcardService:turso] Error saving flashcard progress:', error);
     throw error;

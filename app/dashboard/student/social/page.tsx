@@ -54,17 +54,35 @@ export default function StudentSocialPage() {
   }, [posts, postFilter, users, currentUser?.batchId]);
 
   const handleCreatePost = async (content: string, mediaUrls?: string[]) => {
-    if (!enrichedCurrentUser) return;
+    console.log('[handleCreatePost] Called with content:', content.substring(0, 20));
+    console.log('[handleCreatePost] enrichedCurrentUser exists?', !!enrichedCurrentUser);
 
-    await addPost({
-      userId: enrichedCurrentUser.userId,
-      userEmail: enrichedCurrentUser.email,
-      content,
-      mediaUrls: mediaUrls || [],
-      mediaType: mediaUrls && mediaUrls.length > 0 ? 'image' : 'none',
-      cefrLevel: enrichedCurrentUser.cefrLevel || 'A1',
-      visibility: 'public',
-    });
+    if (!enrichedCurrentUser) {
+      console.log('[handleCreatePost] No enrichedCurrentUser, aborting');
+      return;
+    }
+
+    console.log('[handleCreatePost] Creating post with mediaUrls:', mediaUrls?.length || 0);
+    console.log('[handleCreatePost] First URL length:', mediaUrls?.[0]?.length || 0);
+    console.log('[handleCreatePost] First URL starts with:', mediaUrls?.[0]?.substring(0, 50) || 'none');
+
+    try {
+      const postData = {
+        userId: enrichedCurrentUser.userId,
+        userEmail: enrichedCurrentUser.email,
+        content,
+        mediaUrls: mediaUrls || [],
+        mediaType: mediaUrls && mediaUrls.length > 0 ? 'image' : 'none',
+        cefrLevel: enrichedCurrentUser.cefrLevel || 'A1',
+        visibility: 'public' as const,
+      };
+      console.log('[handleCreatePost] Post data prepared, calling addPost...');
+      await addPost(postData);
+      console.log('[handleCreatePost] addPost completed');
+    } catch (error) {
+      console.error('[handleCreatePost] Error:', error);
+      throw error;
+    }
   };
 
   if (userLoading) {
@@ -117,6 +135,8 @@ export default function StudentSocialPage() {
                 userLevel={enrichedCurrentUser.cefrLevel || 'A1'}
                 currentUser={enrichedCurrentUser}
                 onSubmit={handleCreatePost}
+                batchName={batch?.name}
+                postFilter={postFilter}
               />
 
               {/* Posts Feed */}
