@@ -26,6 +26,7 @@ interface LessonDetailHeaderProps {
   onSelectBatch: (batch: Batch | null) => void;
   onCreateBatch: () => void;
   onViewSummary?: () => void;
+  onRefresh?: () => void;
 }
 
 export function LessonDetailHeader({
@@ -41,6 +42,7 @@ export function LessonDetailHeader({
   onSelectBatch,
   onCreateBatch,
   onViewSummary,
+  onRefresh,
 }: LessonDetailHeaderProps) {
   const router = useRouter();
 
@@ -71,16 +73,30 @@ export function LessonDetailHeader({
       actions={
         <div className="flex items-center gap-3">
           {onViewSummary && (
-            <div className="w-auto">
-              <ActionButton
-                onClick={onViewSummary}
-                variant="purple"
-                size="default"
-                icon={<ActionButtonIcons.Document />}
-              >
-                View Summary
-              </ActionButton>
-            </div>
+            <>
+              <div className="w-auto">
+                <ActionButton
+                  onClick={onViewSummary}
+                  variant="purple"
+                  size="default"
+                  icon={<ActionButtonIcons.Document />}
+                >
+                  View Summary
+                </ActionButton>
+              </div>
+              {onRefresh && (
+                <div className="w-auto">
+                  <ActionButton
+                    onClick={onRefresh}
+                    variant="default"
+                    size="default"
+                    icon={<ActionButtonIcons.Refresh />}
+                  >
+                    Refresh
+                  </ActionButton>
+                </div>
+              )}
+            </>
           )}
           {isTeacher && (
             <BatchSelector

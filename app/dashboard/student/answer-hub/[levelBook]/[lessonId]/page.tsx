@@ -172,6 +172,11 @@ export default function LessonDetailPage() {
     }
   };
 
+  // Refresh handler
+  const handleRefresh = () => {
+    router.refresh();
+  };
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 pb-16">
@@ -249,6 +254,7 @@ export default function LessonDetailPage() {
                 )
             : undefined
         }
+        onRefresh={!isTeacher ? handleRefresh : undefined}
       />
 
       {/* Main Content */}
