@@ -39,8 +39,14 @@ async function generateMapping() {
     const data = JSON.parse(content);
     const flashcards = data.flashcards || [];
 
+    // Add level field to each flashcard (inferred from filename)
+    const flashcardsWithLevel = flashcards.map((card: any) => ({
+      ...card,
+      level: level.toUpperCase()
+    }));
+
     levelStats[level.toUpperCase()] = flashcards.length;
-    allFlashcards.push(...flashcards);
+    allFlashcards.push(...flashcardsWithLevel);
 
     console.log(`✅ ${level.toUpperCase()}: ${flashcards.length} flashcards`);
   }
