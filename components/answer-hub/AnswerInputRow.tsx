@@ -26,12 +26,22 @@ export function AnswerInputRow({
   const inputRef = useRef<HTMLInputElement | HTMLTextAreaElement>(null);
   const { showToast } = useToast();
 
+  const handleValueChange = (newValue: string) => {
+    if (newValue.length > 0) {
+      const firstChar = newValue.charAt(0);
+      if (firstChar !== firstChar.toUpperCase()) {
+        newValue = firstChar.toUpperCase() + newValue.slice(1);
+      }
+    }
+    onChange(newValue);
+  };
+
   const handlePaste = async () => {
     try {
       // Try to read from clipboard
       const text = await navigator.clipboard.readText();
       if (text) {
-        onChange(text);
+        handleValueChange(text);
         // Focus the current element
         setTimeout(() => {
           (inputRef.current as HTMLElement)?.focus();
@@ -52,7 +62,7 @@ export function AnswerInputRow({
   };
 
   const handleClear = () => {
-    onChange("");
+    handleValueChange("");
     setTimeout(() => {
       (inputRef.current as HTMLElement)?.focus();
     }, 0);
@@ -101,7 +111,7 @@ export function AnswerInputRow({
                     : "Saving disabled - type for practice only"
                 }
                 value={value}
-                onChange={(e) => onChange(e.target.value)}
+                onChange={(e) => handleValueChange(e.target.value)}
                 disabled={!canSave}
                 rows={3}
                 className={`w-full px-3 py-2 border border-gray-300 outline-none transition-colors text-sm pr-20 rounded-none resize-y min-h-[80px] ${
@@ -123,7 +133,7 @@ export function AnswerInputRow({
                     : "Saving disabled - type for practice only"
                 }
                 value={value}
-                onChange={(e) => onChange(e.target.value)}
+                onChange={(e) => handleValueChange(e.target.value)}
                 disabled={!canSave}
                 className={`w-full px-3 py-2 border border-gray-300 outline-none transition-colors text-sm pr-24 rounded-none ${
                   canSave
@@ -180,7 +190,7 @@ export function AnswerInputRow({
             <GermanCharAutocomplete
               textareaRef={inputRef}
               content={value}
-              onContentChange={onChange}
+              onContentChange={handleValueChange}
             />
           </div>
 
