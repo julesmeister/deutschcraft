@@ -288,6 +288,7 @@ export default function LessonDetailPage() {
               <FloatingExerciseNavigator
                 exercises={filteredExercises}
                 onScrollToExercise={scrollToExercise}
+                interactions={interactions}
               />
               <ExerciseListSection
                 filteredExercises={filteredExercises}

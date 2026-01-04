@@ -121,6 +121,21 @@ export default function LessonSummaryPage() {
     return map;
   }, [displayAnswers]);
 
+  // Create interactions object for FloatingExerciseNavigator
+  const interactions = useMemo(() => {
+    const result: Record<
+      string,
+      { submissionCount: number; lastSubmittedAt: number }
+    > = {};
+    answersByExercise.forEach((answers, exerciseId) => {
+      result[exerciseId] = {
+        submissionCount: answers.length,
+        lastSubmittedAt: 0,
+      };
+    });
+    return result;
+  }, [answersByExercise]);
+
   // For students: only show attempted. For teachers: show all exercises
   const displayExercises = useMemo(() => {
     if (isTeacher) return lesson?.exercises || [];
@@ -247,20 +262,11 @@ export default function LessonSummaryPage() {
             </div>
 
             {/* Floating Exercise Navigator */}
-            {displayExercises.length > 0 && (
-              <div className="fixed right-2 lg:right-4 top-1/2 transform -translate-y-1/2 z-10 hidden lg:flex flex-col gap-1 bg-white/90 backdrop-blur-sm p-1.5 rounded-lg shadow-sm border border-gray-200 max-h-[70vh] overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
-                {displayExercises.map((ex, idx) => (
-                  <button
-                    key={`nav-${ex.exerciseId}-${idx}`}
-                    onClick={() => scrollToExercise(ex.exerciseId, idx)}
-                    className="h-5 min-w-[20px] px-1 flex items-center justify-center rounded bg-gray-50 border border-gray-200 text-[10px] font-bold text-gray-500 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all"
-                    title={ex.title}
-                  >
-                    {ex.exerciseNumber}
-                  </button>
-                ))}
-              </div>
-            )}
+            <FloatingExerciseNavigator
+              exercises={displayExercises}
+              onScrollToExercise={scrollToExercise}
+              interactions={interactions}
+            />
 
             {displayExercises.map((ex, idx) => {
               const exAnswers = answersByExercise.get(ex.exerciseId) || [];
