@@ -10,6 +10,7 @@ import { useState, useMemo } from "react";
 import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
 import { Plus } from "lucide-react";
+import { useQueryClient } from "@tanstack/react-query";
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
 import { CatLoader } from "@/components/ui/CatLoader";
 import { LessonDetailHeader } from "@/components/answer-hub/LessonDetailHeader";
@@ -46,6 +47,7 @@ import { useExerciseInteractions } from "@/lib/hooks/useExerciseInteractions";
 export default function LessonDetailPage() {
   const router = useRouter();
   const params = useParams();
+  const queryClient = useQueryClient();
   const { session } = useFirebaseAuth();
   const { student: currentUser } = useCurrentStudent(
     session?.user?.email || null
@@ -172,9 +174,37 @@ export default function LessonDetailPage() {
     }
   };
 
-  // Refresh handler
+  // Refresh handler - invalidate React Query cache to refetch all data
   const handleRefresh = () => {
-    router.refresh();
+    // Invalidate exercise overrides to refetch teacher's changes
+    queryClient.invalidateQueries({
+      predicate: (query) => {
+        return (
+          Array.isArray(query.queryKey) &&
+          query.queryKey[0] === 'exercise-overrides'
+        );
+      },
+    });
+
+    // Invalidate student answers
+    queryClient.invalidateQueries({
+      predicate: (query) => {
+        return (
+          Array.isArray(query.queryKey) &&
+          query.queryKey[0] === 'student-answers'
+        );
+      },
+    });
+
+    // Invalidate exercise interactions
+    queryClient.invalidateQueries({
+      predicate: (query) => {
+        return (
+          Array.isArray(query.queryKey) &&
+          query.queryKey[0] === 'exercise-interactions'
+        );
+      },
+    });
   };
 
   if (isLoading) {
