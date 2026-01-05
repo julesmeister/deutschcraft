@@ -39,12 +39,17 @@ export function useFlashcardData(
   const { data: flashcardReviews = [], refetch: refetchReviews } =
     useFlashcardReviews(userEmail);
 
-  // Force refetch reviews when statsRefreshKey changes (e.g. after session)
-  // OPTIMIZED: Ensure refetch bypasses cache for immediate fresh data
+  // OPTIMIZATION: Refetch is now handled directly in handleBackToCategories
+  // with explicit loading states and parallel queries. This effect is kept
+  // as a fallback for manual refresh triggers outside the session flow.
   useEffect(() => {
     if (statsRefreshKey > 0) {
-      // Cancel cache and force fresh fetch
-      refetchReviews({ cancelRefetch: true });
+      // Only refetch if we're not already in a refetching state
+      // (prevents double refetch when session manager already triggered one)
+      const isAlreadyRefreshing = document.querySelector('[data-refreshing="true"]');
+      if (!isAlreadyRefreshing) {
+        refetchReviews({ cancelRefetch: true });
+      }
     }
   }, [statsRefreshKey, refetchReviews]);
 
@@ -101,6 +106,8 @@ export function useFlashcardData(
   }, [rawCategoryIndex]);
 
   // Calculate category progress and due counts (combined for efficiency)
+  // This useMemo will automatically recalculate when flashcardReviews changes
+  // (which happens after the refetch in handleBackToCategories completes)
   const {
     categoryAttemptCounts,
     categoryCompletionStatus,
@@ -154,6 +161,11 @@ export function useFlashcardData(
         dueCounts.set(categoryId, dueCount);
       }
     });
+
+    if (process.env.NODE_ENV === 'development') {
+      const totalDue = Array.from(dueCounts.values()).reduce((sum, count) => sum + count, 0);
+      console.log(`[FlashcardData] 📊 Due counts recalculated: ${totalDue} cards across ${dueCounts.size} categories`);
+    }
 
     return {
       ...progressData,

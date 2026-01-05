@@ -117,10 +117,20 @@ export function useFlashcardSessionManager({
       });
     }
 
-    // OPTIMIZED: Force immediate refetch instead of just invalidating
-    // This ensures due counts update immediately without manual refresh
+    // MULTI-LAYERED CACHE INVALIDATION SYSTEM
+    // Layer 1: Force immediate refetch (not just invalidate)
+    // Layer 2: Bypass cache with parallel queries
+    // Layer 3: Loading state management
+    // Layer 4: Deduplication prevention via data-refreshing attribute
+    // Layer 5: Optimistic UI updates via recentReviews state
+    // Layer 6: Automatic due count recalculation via useMemo dependencies
     if (userEmail) {
       setIsRefreshingData(true);
+
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[SessionManager] 🔄 Starting cache refresh after session complete');
+      }
+
       try {
         // Use refetchQueries to FORCE immediate data fetch (not just mark as stale)
         await Promise.all([
@@ -137,6 +147,12 @@ export function useFlashcardSessionManager({
             type: 'active',
           }),
         ]);
+
+        if (process.env.NODE_ENV === 'development') {
+          console.log('[SessionManager] ✅ Cache refresh complete - fresh data loaded');
+        }
+      } catch (error) {
+        console.error('[SessionManager] ❌ Cache refresh failed:', error);
       } finally {
         setIsRefreshingData(false);
       }

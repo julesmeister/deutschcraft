@@ -21,19 +21,37 @@ German language learning platform with AI-powered flashcards and adaptive learni
 - **Fonts**: Inter & Manrope (Google Fonts)
 - **Deployment**: Optimized for Vercel
 
-## Getting Started
+## Quick Start
 
-1. Install dependencies:
 ```bash
+# 1. Install dependencies
 npm install
-```
 
-2. Run the development server:
-```bash
+# 2. Set up environment variables
+cp .env.example .env.local
+# Edit .env.local with your Turso and Firebase credentials
+
+# 3. Run database migrations
+npm run turso:migrate
+
+# 4. Start development server
 npm run dev
+# Opens at http://localhost:3001
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000)
+**First time setup?** Read the complete [Getting Started Guide](./docs/guides/GETTING_STARTED.md)
+
+## 📚 Documentation
+
+Comprehensive documentation is available in the [`docs/`](./docs/) folder:
+
+- **[Getting Started](./docs/guides/GETTING_STARTED.md)** - Complete setup guide for developers, teachers, and students
+- **[Database Setup](./docs/guides/DATABASE_SETUP.md)** - Turso + Firestore dual-database configuration
+- **[Flashcards System](./docs/guides/FLASHCARDS_SYSTEM.md)** - Flashcard management & SRS algorithm
+- **[Cache Invalidation](./docs/technical/CACHE_INVALIDATION.md)** - Multi-layered cache strategy
+- **[Architecture](./docs/technical/COMPONENTS.md)** - Component structure and patterns
+
+**View all documentation**: [docs/README.md](./docs/README.md)
 
 ## Design System
 

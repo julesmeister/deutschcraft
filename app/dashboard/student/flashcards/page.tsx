@@ -59,6 +59,7 @@ export default function FlashcardsLandingPage() {
     upcomingCards,
     isReviewMode,
     isLoadingData,
+    isRefreshingData,
     isPending,
     handleCategoryClick,
     handleBackToCategories,
@@ -135,6 +136,19 @@ export default function FlashcardsLandingPage() {
             <div className="flex items-center gap-2">
               <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
               <span className="font-medium">Loading flashcards...</span>
+            </div>
+          </div>
+        )}
+
+        {/* Data refresh indicator (after completing practice session) */}
+        {isRefreshingData && (
+          <div
+            data-refreshing="true"
+            className="fixed top-20 right-6 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in-down"
+          >
+            <div className="flex items-center gap-2">
+              <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
+              <span className="font-medium">Updating progress...</span>
             </div>
           </div>
         )}
