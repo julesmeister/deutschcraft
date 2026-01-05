@@ -1,25 +1,26 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Dialog, DialogButton, DialogFooter } from '../ui/Dialog';
-import { FormField } from '../ui/FormField';
-import { Input } from '../ui/Input';
-import { Label } from '../ui/Label';
-import { Select, SelectOption } from '../ui/Select';
-import { Edit3, FileText } from 'lucide-react';
-import { AnswerFieldsManager } from './AnswerFieldsManager';
-import { Exercise, ExerciseAnswer } from '@/lib/models/exercises';
-import { CEFRLevel } from '@/lib/models/cefr';
-import { CreateExerciseOverrideInput } from '@/lib/models/exerciseOverride';
+import { useState, useEffect, useRef } from "react";
+import { Dialog, DialogButton, DialogFooter } from "../ui/Dialog";
+import { FormField } from "../ui/FormField";
+import { Input } from "../ui/Input";
+import { Label } from "../ui/Label";
+import { Select, SelectOption } from "../ui/Select";
+import { Edit3, FileText } from "lucide-react";
+import { AnswerFieldsManager } from "./AnswerFieldsManager";
+import { Exercise, ExerciseAnswer } from "@/lib/models/exercises";
+import { CEFRLevel } from "@/lib/models/cefr";
+import { CreateExerciseOverrideInput } from "@/lib/models/exerciseOverride";
+import { GermanCharAutocomplete } from "@/components/writing/GermanCharAutocomplete";
 
 interface ExerciseOverrideDialogProps {
   isOpen: boolean;
   onClose: () => void;
   onSubmit: (override: CreateExerciseOverrideInput) => Promise<void>;
-  mode: 'create' | 'edit';
+  mode: "create" | "edit";
   exercise?: Exercise; // For edit mode
   level: CEFRLevel;
-  bookType: 'AB' | 'KB';
+  bookType: "AB" | "KB";
   lessonNumber: number;
 }
 
@@ -34,56 +35,65 @@ export function ExerciseOverrideDialog({
   lessonNumber,
 }: ExerciseOverrideDialogProps) {
   // Form state
-  const [title, setTitle] = useState('');
-  const [question, setQuestion] = useState('');
-  const [exerciseNumber, setExerciseNumber] = useState('');
-  const [section, setSection] = useState('');
-  const [topic, setTopic] = useState('');
-  const [pageNumber, setPageNumber] = useState('');
-  const [difficulty, setDifficulty] = useState<'easy' | 'medium' | 'hard'>('medium');
+  const [title, setTitle] = useState("");
+  const [question, setQuestion] = useState("");
+  const [exerciseNumber, setExerciseNumber] = useState("");
+  const [section, setSection] = useState("");
+  const [topic, setTopic] = useState("");
+  const [pageNumber, setPageNumber] = useState("");
+  const [difficulty, setDifficulty] = useState<"easy" | "medium" | "hard">(
+    "medium"
+  );
   const [answers, setAnswers] = useState<ExerciseAnswer[]>([
-    { itemNumber: '1', correctAnswer: '' },
+    { itemNumber: "1", correctAnswer: "" },
   ]);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Refs for autocomplete
+  const questionRef = useRef<HTMLTextAreaElement>(null);
+  const titleRef = useRef<HTMLInputElement>(null);
+  const sectionRef = useRef<HTMLInputElement>(null);
+  const topicRef = useRef<HTMLInputElement>(null);
+  const exerciseNumberRef = useRef<HTMLInputElement>(null);
+
   // Populate form with initial data in edit mode
   useEffect(() => {
-    if (isOpen && mode === 'edit' && exercise) {
-      setTitle(exercise.title || '');
-      setQuestion(exercise.question || '');
-      setExerciseNumber(exercise.exerciseNumber || '');
-      setSection(exercise.section || '');
-      setTopic(exercise.topic || '');
-      setPageNumber(exercise.pageNumber?.toString() || '');
-      setDifficulty(exercise.difficulty || 'medium');
+    if (isOpen && mode === "edit" && exercise) {
+      setTitle(exercise.title || "");
+      setQuestion(exercise.question || "");
+      setExerciseNumber(exercise.exerciseNumber || "");
+      setSection(exercise.section || "");
+      setTopic(exercise.topic || "");
+      setPageNumber(exercise.pageNumber?.toString() || "");
+      setDifficulty(exercise.difficulty || "medium");
       setAnswers(
         exercise.answers.length > 0
           ? exercise.answers
-          : [{ itemNumber: '1', correctAnswer: '' }]
+          : [{ itemNumber: "1", correctAnswer: "" }]
       );
-    } else if (isOpen && mode === 'create') {
+    } else if (isOpen && mode === "create") {
       // Reset to defaults for create mode
-      setTitle('');
-      setQuestion('');
-      setExerciseNumber('');
-      setSection('Übungen');
-      setTopic('');
-      setPageNumber('');
-      setDifficulty('medium');
-      setAnswers([{ itemNumber: '1', correctAnswer: '' }]);
+      setTitle("");
+      setQuestion("");
+      setExerciseNumber("");
+      setSection("Übungen");
+      setTopic("");
+      setPageNumber("");
+      setDifficulty("medium");
+      setAnswers([{ itemNumber: "1", correctAnswer: "" }]);
     }
   }, [isOpen, mode, exercise]);
 
   const difficultyOptions: SelectOption[] = [
-    { value: 'easy', label: 'Easy' },
-    { value: 'medium', label: 'Medium' },
-    { value: 'hard', label: 'Hard' },
+    { value: "easy", label: "Easy" },
+    { value: "medium", label: "Medium" },
+    { value: "hard", label: "Hard" },
   ];
 
   // Add new answer item
   const handleAddAnswer = () => {
     const nextNumber = (answers.length + 1).toString();
-    setAnswers([...answers, { itemNumber: nextNumber, correctAnswer: '' }]);
+    setAnswers([...answers, { itemNumber: nextNumber, correctAnswer: "" }]);
   };
 
   // Remove answer item
@@ -93,7 +103,11 @@ export function ExerciseOverrideDialog({
   };
 
   // Update answer item
-  const handleUpdateAnswer = (index: number, field: 'itemNumber' | 'correctAnswer', value: string) => {
+  const handleUpdateAnswer = (
+    index: number,
+    field: "itemNumber" | "correctAnswer",
+    value: string
+  ) => {
     const updated = [...answers];
     updated[index] = { ...updated[index], [field]: value };
     setAnswers(updated);
@@ -105,12 +119,13 @@ export function ExerciseOverrideDialog({
 
     try {
       const override: CreateExerciseOverrideInput = {
-        exerciseId: mode === 'edit' && exercise
-          ? exercise.exerciseId
-          : `CUSTOM_${Date.now()}_${level}_${lessonNumber}`,
-        overrideType: mode === 'edit' ? 'modify' : 'create',
-        teacherEmail: '', // Will be set by parent component
-        ...(mode === 'create'
+        exerciseId:
+          mode === "edit" && exercise
+            ? exercise.exerciseId
+            : `CUSTOM_${Date.now()}_${level}_${lessonNumber}`,
+        overrideType: mode === "edit" ? "modify" : "create",
+        teacherEmail: "", // Will be set by parent component
+        ...(mode === "create"
           ? {
               // Create: Full exercise data
               exerciseData: {
@@ -125,7 +140,7 @@ export function ExerciseOverrideDialog({
                 topic: topic || undefined,
                 pageNumber: pageNumber ? parseInt(pageNumber) : undefined,
                 difficulty,
-                answers: answers.filter(a => a.correctAnswer.trim() !== ''),
+                answers: answers.filter((a) => a.correctAnswer.trim() !== ""),
               },
             }
           : {
@@ -138,7 +153,7 @@ export function ExerciseOverrideDialog({
                 topic: topic || undefined,
                 pageNumber: pageNumber ? parseInt(pageNumber) : undefined,
                 difficulty,
-                answers: answers.filter(a => a.correctAnswer.trim() !== ''),
+                answers: answers.filter((a) => a.correctAnswer.trim() !== ""),
               },
             }),
       };
@@ -147,16 +162,16 @@ export function ExerciseOverrideDialog({
       onClose();
 
       // Reset form
-      setTitle('');
-      setQuestion('');
-      setExerciseNumber('');
-      setSection('');
-      setTopic('');
-      setPageNumber('');
-      setDifficulty('medium');
-      setAnswers([{ itemNumber: '1', correctAnswer: '' }]);
+      setTitle("");
+      setQuestion("");
+      setExerciseNumber("");
+      setSection("");
+      setTopic("");
+      setPageNumber("");
+      setDifficulty("medium");
+      setAnswers([{ itemNumber: "1", correctAnswer: "" }]);
     } catch (error) {
-      console.error('Error submitting exercise override:', error);
+      console.error("Error submitting exercise override:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -169,7 +184,7 @@ export function ExerciseOverrideDialog({
         <div className="bg-gray-900 px-6 py-5 mb-6">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-piku-purple flex items-center justify-center">
-              {mode === 'edit' ? (
+              {mode === "edit" ? (
                 <Edit3 className="w-5 h-5 text-white" />
               ) : (
                 <FileText className="w-5 h-5 text-white" />
@@ -177,11 +192,11 @@ export function ExerciseOverrideDialog({
             </div>
             <div>
               <h2 className="text-2xl font-black text-white">
-                {mode === 'edit' ? 'Edit Exercise' : 'Create Custom Exercise'}
+                {mode === "edit" ? "Edit Exercise" : "Create Custom Exercise"}
               </h2>
               <p className="text-gray-400 text-sm">
-                {mode === 'edit'
-                  ? 'Modify exercise for all your students'
+                {mode === "edit"
+                  ? "Modify exercise for all your students"
                   : `Custom exercise for ${level} - Lesson ${lessonNumber}`}
               </p>
             </div>
@@ -193,14 +208,22 @@ export function ExerciseOverrideDialog({
             {/* Title */}
             <FormField>
               <Label htmlFor="exercise-title">Exercise Title *</Label>
-              <Input
-                id="exercise-title"
-                type="text"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                placeholder="e.g., A1a - Fill in the blanks"
-                required
-              />
+              <div className="relative">
+                <Input
+                  ref={titleRef}
+                  id="exercise-title"
+                  type="text"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  placeholder="e.g., A1a - Fill in the blanks"
+                  required
+                />
+                <GermanCharAutocomplete
+                  textareaRef={titleRef}
+                  content={title}
+                  onContentChange={setTitle}
+                />
+              </div>
             </FormField>
 
             {/* Two-column layout */}
@@ -208,13 +231,21 @@ export function ExerciseOverrideDialog({
               {/* Exercise Number */}
               <FormField>
                 <Label htmlFor="exercise-number">Exercise Number</Label>
-                <Input
-                  id="exercise-number"
-                  type="text"
-                  value={exerciseNumber}
-                  onChange={(e) => setExerciseNumber(e.target.value)}
-                  placeholder="e.g., 1a, 2b"
-                />
+                <div className="relative">
+                  <Input
+                    ref={exerciseNumberRef}
+                    id="exercise-number"
+                    type="text"
+                    value={exerciseNumber}
+                    onChange={(e) => setExerciseNumber(e.target.value)}
+                    placeholder="e.g., 1a, 2b"
+                  />
+                  <GermanCharAutocomplete
+                    textareaRef={exerciseNumberRef}
+                    content={exerciseNumber}
+                    onContentChange={setExerciseNumber}
+                  />
+                </div>
               </FormField>
 
               {/* Difficulty */}
@@ -223,7 +254,9 @@ export function ExerciseOverrideDialog({
                 <Select
                   id="difficulty"
                   value={difficulty}
-                  onChange={(value) => setDifficulty(value as 'easy' | 'medium' | 'hard')}
+                  onChange={(value) =>
+                    setDifficulty(value as "easy" | "medium" | "hard")
+                  }
                   options={difficultyOptions}
                 />
               </FormField>
@@ -233,24 +266,40 @@ export function ExerciseOverrideDialog({
             <div className="grid grid-cols-2 gap-4">
               <FormField>
                 <Label htmlFor="section">Section</Label>
-                <Input
-                  id="section"
-                  type="text"
-                  value={section}
-                  onChange={(e) => setSection(e.target.value)}
-                  placeholder="e.g., Schritt A"
-                />
+                <div className="relative">
+                  <Input
+                    ref={sectionRef}
+                    id="section"
+                    type="text"
+                    value={section}
+                    onChange={(e) => setSection(e.target.value)}
+                    placeholder="e.g., Schritt A"
+                  />
+                  <GermanCharAutocomplete
+                    textareaRef={sectionRef}
+                    content={section}
+                    onContentChange={setSection}
+                  />
+                </div>
               </FormField>
 
               <FormField>
                 <Label htmlFor="topic">Topic</Label>
-                <Input
-                  id="topic"
-                  type="text"
-                  value={topic}
-                  onChange={(e) => setTopic(e.target.value)}
-                  placeholder="e.g., Verben, Grammatik"
-                />
+                <div className="relative">
+                  <Input
+                    ref={topicRef}
+                    id="topic"
+                    type="text"
+                    value={topic}
+                    onChange={(e) => setTopic(e.target.value)}
+                    placeholder="e.g., Verben, Grammatik"
+                  />
+                  <GermanCharAutocomplete
+                    textareaRef={topicRef}
+                    content={topic}
+                    onContentChange={setTopic}
+                  />
+                </div>
               </FormField>
             </div>
 
@@ -270,14 +319,22 @@ export function ExerciseOverrideDialog({
             {/* Question */}
             <FormField>
               <Label htmlFor="question">Question / Instructions</Label>
-              <textarea
-                id="question"
-                value={question}
-                onChange={(e) => setQuestion(e.target.value)}
-                placeholder="Optional question or instructions..."
-                className="w-full px-3 py-2 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-piku-purple focus:border-transparent transition-all duration-150 resize-none"
-                rows={3}
-              />
+              <div className="relative">
+                <textarea
+                  ref={questionRef}
+                  id="question"
+                  value={question}
+                  onChange={(e) => setQuestion(e.target.value)}
+                  placeholder="Optional question or instructions..."
+                  className="w-full px-3 py-2 bg-gray-100 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-piku-purple focus:border-transparent transition-all duration-150 resize-none"
+                  rows={3}
+                />
+                <GermanCharAutocomplete
+                  textareaRef={questionRef}
+                  content={question}
+                  onContentChange={setQuestion}
+                />
+              </div>
             </FormField>
 
             {/* Answers Section */}
@@ -305,10 +362,10 @@ export function ExerciseOverrideDialog({
                 disabled={isSubmitting}
               >
                 {isSubmitting
-                  ? 'Saving...'
-                  : mode === 'edit'
-                  ? 'Save Changes'
-                  : 'Create Exercise'}
+                  ? "Saving..."
+                  : mode === "edit"
+                  ? "Save Changes"
+                  : "Create Exercise"}
               </DialogButton>
             </div>
           </form>

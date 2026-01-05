@@ -81,29 +81,56 @@ export function ExerciseListCard({
       }`}
     >
       <div className="flex items-start justify-between gap-4">
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-1">
-            <h3
-              className={`text-lg font-bold transition-colors duration-200 ${
-                exercise._isHidden
-                  ? "text-gray-500 line-through"
-                  : `text-gray-900 ${colorScheme.text}`
+        <div className="flex-1 min-w-0 flex flex-col md:flex-row gap-4">
+          {/* Column 1: Exercise Name */}
+          <div className="md:w-1/4 min-w-0">
+            <div className="flex items-center gap-2 mb-1">
+              <h3
+                className={`text-lg font-bold transition-colors duration-200 ${
+                  exercise._isHidden
+                    ? "text-gray-500 line-through"
+                    : `text-gray-900 ${colorScheme.text}`
+                }`}
+              >
+                {exercise.exerciseNumber}
+              </h3>
+            </div>
+            <p
+              className={`text-sm mb-0 ${
+                exercise._isHidden ? "text-gray-400" : "text-gray-600"
               }`}
             >
-              {exercise.exerciseNumber}
-            </h3>
+              {exercise.question || `${answerCount} item${answerCount !== 1 ? "s" : ""}`}
+            </p>
           </div>
-          <p
-            className={`text-sm mb-0 ${
-              exercise._isHidden ? "text-gray-400" : "text-gray-600"
-            }`}
-          >
-            {answerCount} item{answerCount !== 1 ? "s" : ""}
-            {exercise.question &&
-              ` - ${exercise.question.substring(0, 60)}${
-                exercise.question.length > 60 ? "..." : ""
-              }`}
-          </p>
+
+          {/* Column 2: Exercise Items */}
+          <div className="md:w-3/4 min-w-0">
+            <div className="flex flex-wrap gap-2">
+              {exercise.answers.slice(0, 10).map((answer, idx) => (
+                <span
+                  key={idx}
+                  className="inline-flex items-center px-2 py-1 rounded text-xs bg-white/60 border border-black/5 text-gray-700 shadow-sm"
+                  title={answer.correctAnswer}
+                >
+                  <span className="font-bold mr-1 text-gray-900">
+                    {answer.itemNumber}
+                  </span>
+                  <span className="truncate max-w-[120px]">
+                    {answer.correctAnswer}
+                  </span>
+                </span>
+              ))}
+              {exercise.answers.length > 10 && (
+                <span className="inline-flex items-center px-2 py-1 rounded text-xs bg-gray-100 text-gray-500">
+                  +{exercise.answers.length - 10} more
+                </span>
+              )}
+              {exercise.answers.length === 0 && (
+                <span className="text-sm text-gray-400 italic">No items</span>
+              )}
+            </div>
+          </div>
         </div>
 
         {/* Action Buttons */}

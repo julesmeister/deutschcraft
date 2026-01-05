@@ -10,6 +10,9 @@ import { useState, KeyboardEvent, useRef } from "react";
 import { Check, X, Plus, Trash2, GripVertical } from "lucide-react";
 import { ExerciseAnswer } from "@/lib/models/exercises";
 import { CreateExerciseOverrideInput } from "@/lib/models/exerciseOverride";
+import { GermanCharAutocomplete } from "@/components/writing/GermanCharAutocomplete";
+import { InlineAnswerInput } from "./InlineAnswerInput";
+import { InlineItemNumberInput } from "./InlineItemNumberInput";
 
 interface InlineEditableExerciseCardProps {
   initialData?: Partial<CreateExerciseOverrideInput>;
@@ -41,6 +44,9 @@ export function InlineEditableExerciseCard({
   );
   const [isSaving, setIsSaving] = useState(false);
   const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
+
+  const questionRef = useRef<HTMLInputElement>(null);
+  const exerciseNumberRef = useRef<HTMLInputElement>(null);
 
   const handleAddAnswer = () => {
     const nextNumber = (answers.length + 1).toString();
@@ -152,26 +158,42 @@ export function InlineEditableExerciseCard({
       <div className="space-y-3">
         {/* Exercise Number & Question */}
         <div className="flex items-start gap-3">
-          <input
-            type="text"
-            value={exerciseNumber}
-            onChange={(e) => setExerciseNumber(e.target.value)}
-            onClick={() => {
-              if (exerciseNumber === (initialData?.exerciseNumber || "")) {
-                setExerciseNumber("");
-              }
-            }}
-            placeholder="Exercise number (e.g., 1, 2a, 3b)"
-            className="flex-shrink-0 w-32 px-3 py-2 text-sm font-bold border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
-            autoFocus
-          />
-          <input
-            type="text"
-            value={question}
-            onChange={(e) => setQuestion(e.target.value)}
-            placeholder="Question/instructions (optional)"
-            className="flex-1 px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
-          />
+          <div className="relative flex-shrink-0">
+            <input
+              ref={exerciseNumberRef}
+              type="text"
+              value={exerciseNumber}
+              onChange={(e) => setExerciseNumber(e.target.value)}
+              onClick={() => {
+                if (exerciseNumber === (initialData?.exerciseNumber || "")) {
+                  setExerciseNumber("");
+                }
+              }}
+              placeholder="Exercise number (e.g., 1, 2a, 3b)"
+              className="flex-shrink-0 w-32 px-3 py-2 text-sm font-bold border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
+              autoFocus
+            />
+            <GermanCharAutocomplete
+              textareaRef={exerciseNumberRef}
+              content={exerciseNumber}
+              onContentChange={setExerciseNumber}
+            />
+          </div>
+          <div className="flex-1 relative">
+            <input
+              ref={questionRef}
+              type="text"
+              value={question}
+              onChange={(e) => setQuestion(e.target.value)}
+              placeholder="Question/instructions (optional)"
+              className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
+            />
+            <GermanCharAutocomplete
+              textareaRef={questionRef}
+              content={question}
+              onContentChange={setQuestion}
+            />
+          </div>
         </div>
 
         {/* Answers */}
@@ -207,27 +229,23 @@ export function InlineEditableExerciseCard({
                 <GripVertical className="w-4 h-4" />
               </div>
 
-              <input
-                type="text"
+              <InlineItemNumberInput
                 value={answer.itemNumber}
-                onChange={(e) =>
-                  handleUpdateAnswerNumber(index, e.target.value)
-                }
+                onValueChange={(val) => handleUpdateAnswerNumber(index, val)}
                 onClick={() => handleUpdateAnswerNumber(index, "")}
                 placeholder="#"
                 className="flex-shrink-0 w-10 px-1 py-1.5 text-xs font-semibold text-center border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
               />
-              <input
-                type="text"
+              <InlineAnswerInput
                 value={answer.correctAnswer}
-                onChange={(e) => handleUpdateAnswer(index, e.target.value)}
+                onValueChange={(val) => handleUpdateAnswer(index, val)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" && index === answers.length - 1) {
                     handleAddAnswer();
                   }
                 }}
                 placeholder="Enter answer"
-                className="flex-1 px-3 py-1.5 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
+                className="w-full px-3 py-1.5 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
               />
               {answers.length > 1 && (
                 <button

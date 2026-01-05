@@ -3,17 +3,21 @@
  * Manages answer items for exercise creation/editing
  */
 
-'use client';
+"use client";
 
-import { Plus, X } from 'lucide-react';
-import { FormField } from '../ui/FormField';
-import { Input } from '../ui/Input';
-import { Label } from '../ui/Label';
-import { ExerciseAnswer } from '@/lib/models/exercises';
+import { Plus } from "lucide-react";
+import { FormField } from "../ui/FormField";
+import { Label } from "../ui/Label";
+import { ExerciseAnswer } from "@/lib/models/exercises";
+import { AnswerEditorRow } from "./AnswerEditorRow";
 
 interface AnswerFieldsManagerProps {
   answers: ExerciseAnswer[];
-  onUpdateAnswer: (index: number, field: 'itemNumber' | 'correctAnswer', value: string) => void;
+  onUpdateAnswer: (
+    index: number,
+    field: "itemNumber" | "correctAnswer",
+    value: string
+  ) => void;
   onAddAnswer: () => void;
   onRemoveAnswer: (index: number) => void;
 }
@@ -40,34 +44,14 @@ export function AnswerFieldsManager({
 
       <div className="space-y-3">
         {answers.map((answer, index) => (
-          <div key={index} className="flex items-start gap-2">
-            <div className="w-24">
-              <Input
-                type="text"
-                value={answer.itemNumber}
-                onChange={(e) => onUpdateAnswer(index, 'itemNumber', e.target.value)}
-                placeholder="Item #"
-              />
-            </div>
-            <div className="flex-1">
-              <Input
-                type="text"
-                value={answer.correctAnswer}
-                onChange={(e) => onUpdateAnswer(index, 'correctAnswer', e.target.value)}
-                placeholder="Correct answer"
-              />
-            </div>
-            {answers.length > 1 && (
-              <button
-                type="button"
-                onClick={() => onRemoveAnswer(index)}
-                className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
-                title="Remove answer"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            )}
-          </div>
+          <AnswerEditorRow
+            key={index}
+            answer={answer}
+            index={index}
+            onUpdate={onUpdateAnswer}
+            onRemove={onRemoveAnswer}
+            canRemove={answers.length > 1}
+          />
         ))}
       </div>
 
