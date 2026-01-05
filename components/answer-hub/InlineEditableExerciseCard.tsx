@@ -158,7 +158,7 @@ export function InlineEditableExerciseCard({
       <div className="space-y-3">
         {/* Exercise Number & Question */}
         <div className="flex items-start gap-3">
-          <div className="relative flex-shrink-0">
+          <div className="relative flex-shrink-0 group">
             <input
               ref={exerciseNumberRef}
               type="text"
@@ -170,24 +170,50 @@ export function InlineEditableExerciseCard({
                 }
               }}
               placeholder="Exercise number (e.g., 1, 2a, 3b)"
-              className="flex-shrink-0 w-32 px-3 py-2 text-sm font-bold border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
+              className="flex-shrink-0 w-32 px-3 py-2 pr-8 text-sm font-bold border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
               autoFocus
             />
+            {exerciseNumber && (
+              <button
+                onClick={() => {
+                  setExerciseNumber("");
+                  exerciseNumberRef.current?.focus();
+                }}
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-gray-300 hover:text-gray-500 rounded-full hover:bg-gray-100 transition-colors"
+                tabIndex={-1}
+                type="button"
+              >
+                <X className="w-3 h-3" />
+              </button>
+            )}
             <GermanCharAutocomplete
               textareaRef={exerciseNumberRef}
               content={exerciseNumber}
               onContentChange={setExerciseNumber}
             />
           </div>
-          <div className="flex-1 relative">
+          <div className="flex-1 relative group">
             <input
               ref={questionRef}
               type="text"
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
               placeholder="Question/instructions (optional)"
-              className="w-full px-3 py-2 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
+              className="w-full px-3 py-2 pr-8 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
             />
+            {question && (
+              <button
+                onClick={() => {
+                  setQuestion("");
+                  questionRef.current?.focus();
+                }}
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-gray-300 hover:text-gray-500 rounded-full hover:bg-gray-100 transition-colors"
+                tabIndex={-1}
+                type="button"
+              >
+                <X className="w-3 h-3" />
+              </button>
+            )}
             <GermanCharAutocomplete
               textareaRef={questionRef}
               content={question}
