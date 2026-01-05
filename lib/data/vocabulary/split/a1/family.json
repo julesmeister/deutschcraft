@@ -4,7 +4,7 @@
   "totalCards": 30,
   "flashcards": [
     {
-      "id": "syllabus-a1-10101",
+      "id": "a1-family-die-mutter-mother",
       "german": "die Mutter",
       "english": "mother",
       "category": "Family",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10102",
+      "id": "a1-family-der-vater-father",
       "german": "der Vater",
       "english": "father",
       "category": "Family",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10103",
+      "id": "a1-family-der-bruder-brother",
       "german": "der Bruder",
       "english": "brother",
       "category": "Family",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10104",
+      "id": "a1-family-die-schwester-sister",
       "german": "die Schwester",
       "english": "sister",
       "category": "Family",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10105",
+      "id": "a1-family-das-kind-child",
       "german": "das Kind",
       "english": "child",
       "category": "Family",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10106",
+      "id": "a1-family-die-eltern-parents",
       "german": "die Eltern",
       "english": "parents",
       "category": "Family",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10107",
+      "id": "a1-family-die-familie-family",
       "german": "die Familie",
       "english": "family",
       "category": "Family",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10108",
+      "id": "a1-family-die-grossmutter-grandmother",
       "german": "die Großmutter",
       "english": "grandmother",
       "category": "Family",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10109",
+      "id": "a1-family-der-grossvater-grandfather",
       "german": "der Großvater",
       "english": "grandfather",
       "category": "Family",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10110",
+      "id": "a1-family-die-oma-grandma",
       "german": "die Oma",
       "english": "grandma",
       "category": "Family",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10111",
+      "id": "a1-family-der-opa-grandpa",
       "german": "der Opa",
       "english": "grandpa",
       "category": "Family",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10112",
+      "id": "a1-family-die-tante-aunt",
       "german": "die Tante",
       "english": "aunt",
       "category": "Family",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10113",
+      "id": "a1-family-der-onkel-uncle",
       "german": "der Onkel",
       "english": "uncle",
       "category": "Family",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10114",
+      "id": "a1-family-der-cousin-cousin-male",
       "german": "der Cousin",
       "english": "cousin (male)",
       "category": "Family",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10115",
+      "id": "a1-family-die-cousine-cousin-female",
       "german": "die Cousine",
       "english": "cousin (female)",
       "category": "Family",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10116",
+      "id": "a1-family-der-sohn-son",
       "german": "der Sohn",
       "english": "son",
       "category": "Family",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10117",
+      "id": "a1-family-die-tochter-daughter",
       "german": "die Tochter",
       "english": "daughter",
       "category": "Family",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10118",
+      "id": "a1-family-die-mama-mom-mommy",
       "german": "die Mama",
       "english": "mom / mommy",
       "category": "Family",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10119",
+      "id": "a1-family-der-papa-dad-daddy",
       "german": "der Papa",
       "english": "dad / daddy",
       "category": "Family",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10120",
+      "id": "a1-family-der-ehemann-husband",
       "german": "der Ehemann",
       "english": "husband",
       "category": "Family",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10121",
+      "id": "a1-family-die-ehefrau-wife",
       "german": "die Ehefrau",
       "english": "wife",
       "category": "Family",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10122",
+      "id": "a1-family-der-mann-man-husband",
       "german": "der Mann",
       "english": "man / husband",
       "category": "Family",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10123",
+      "id": "a1-family-die-frau-woman-wife",
       "german": "die Frau",
       "english": "woman / wife",
       "category": "Family",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10124",
+      "id": "a1-family-die-grosseltern-grandparents",
       "german": "die Großeltern",
       "english": "grandparents",
       "category": "Family",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10125",
+      "id": "a1-family-die-geschwister-siblings",
       "german": "die Geschwister",
       "english": "siblings",
       "category": "Family",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10126",
+      "id": "a1-family-die-kinder-children",
       "german": "die Kinder",
       "english": "children",
       "category": "Family",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10127",
+      "id": "a1-family-das-baby-baby",
       "german": "das Baby",
       "english": "baby",
       "category": "Family",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10128",
+      "id": "a1-family-der-junge-boy",
       "german": "der Junge",
       "english": "boy",
       "category": "Family",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10129",
+      "id": "a1-family-das-maedchen-girl",
       "german": "das Mädchen",
       "english": "girl",
       "category": "Family",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10130",
+      "id": "a1-family-der-enkel-grandson",
       "german": "der Enkel",
       "english": "grandson",
       "category": "Family",

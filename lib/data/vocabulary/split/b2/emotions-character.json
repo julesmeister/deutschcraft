@@ -4,7 +4,7 @@
   "totalCards": 35,
   "flashcards": [
     {
-      "id": "syllabus-b2-11253",
+      "id": "b2-emotions-character-erleichtert-relieved",
       "german": "erleichtert",
       "english": "relieved",
       "category": "Emotions Character",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11259",
+      "id": "b2-emotions-character-neidisch-envious-jealous",
       "german": "neidisch",
       "english": "envious / jealous",
       "category": "Emotions Character",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11263",
+      "id": "b2-emotions-character-ehrgeizig-ambitious",
       "german": "ehrgeizig",
       "english": "ambitious",
       "category": "Emotions Character",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11267",
+      "id": "b2-emotions-character-gewissenhaft-conscientious",
       "german": "gewissenhaft",
       "english": "conscientious",
       "category": "Emotions Character",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11268",
+      "id": "b2-emotions-character-nachlaessig-negligent-careless",
       "german": "nachlässig",
       "english": "negligent / careless",
       "category": "Emotions Character",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11270",
+      "id": "b2-emotions-character-arrogant-arrogant",
       "german": "arrogant",
       "english": "arrogant",
       "category": "Emotions Character",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11276",
+      "id": "b2-emotions-character-unvernuenftig-unreasonable",
       "german": "unvernünftig",
       "english": "unreasonable",
       "category": "Emotions Character",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11277",
+      "id": "b2-emotions-character-spontan-spontaneous",
       "german": "spontan",
       "english": "spontaneous",
       "category": "Emotions Character",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11279",
+      "id": "b2-emotions-character-aufgeschlossen-open-minded",
       "german": "aufgeschlossen",
       "english": "open-minded",
       "category": "Emotions Character",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11280",
+      "id": "b2-emotions-character-stur-stubborn-obstinate",
       "german": "stur",
       "english": "stubborn / obstinate",
       "category": "Emotions Character",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5s5e941",
+      "id": "b2-emotions-character-die-begeisterung-enthusiasm-excitement",
       "german": "die Begeisterung",
       "english": "enthusiasm / excitement",
       "category": "Emotions Character",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5sc5rhe",
+      "id": "b2-emotions-character-die-verzweiflung-despair-desperation",
       "german": "die Verzweiflung",
       "english": "despair / desperation",
       "category": "Emotions Character",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5sr3rxu",
+      "id": "b2-emotions-character-die-erleichterung-relief",
       "german": "die Erleichterung",
       "english": "relief",
       "category": "Emotions Character",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5s6e2dn",
+      "id": "b2-emotions-character-die-genugtuung-satisfaction-gratification",
       "german": "die Genugtuung",
       "english": "satisfaction / gratification",
       "category": "Emotions Character",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5s1dnhc",
+      "id": "b2-emotions-character-die-bewunderung-admiration",
       "german": "die Bewunderung",
       "english": "admiration",
       "category": "Emotions Character",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5scoha5",
+      "id": "b2-emotions-character-die-verachtung-contempt-disdain",
       "german": "die Verachtung",
       "english": "contempt / disdain",
       "category": "Emotions Character",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5sam9e6",
+      "id": "b2-emotions-character-die-reue-remorse-regret",
       "german": "die Reue",
       "english": "remorse / regret",
       "category": "Emotions Character",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5s85hom",
+      "id": "b2-emotions-character-die-scham-shame",
       "german": "die Scham",
       "english": "shame",
       "category": "Emotions Character",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5s79nvx",
+      "id": "b2-emotions-character-der-neid-envy",
       "german": "der Neid",
       "english": "envy",
       "category": "Emotions Character",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5ssz8zi",
+      "id": "b2-emotions-character-die-eifersucht-jealousy",
       "german": "die Eifersucht",
       "english": "jealousy",
       "category": "Emotions Character",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5s00h3a",
+      "id": "b2-emotions-character-die-gelassenheit-composure-serenity",
       "german": "die Gelassenheit",
       "english": "composure / serenity",
       "category": "Emotions Character",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5sjn62x",
+      "id": "b2-emotions-character-die-ungeduld-impatience",
       "german": "die Ungeduld",
       "english": "impatience",
       "category": "Emotions Character",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5s6kopi",
+      "id": "b2-emotions-character-die-geduld-patience",
       "german": "die Geduld",
       "english": "patience",
       "category": "Emotions Character",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5szjpeg",
+      "id": "b2-emotions-character-die-hingabe-devotion-dedication",
       "german": "die Hingabe",
       "english": "devotion / dedication",
       "category": "Emotions Character",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5si98ly",
+      "id": "b2-emotions-character-die-dankbarkeit-gratitude-thankfulness",
       "german": "die Dankbarkeit",
       "english": "gratitude / thankfulness",
       "category": "Emotions Character",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5smeapr",
+      "id": "b2-emotions-character-die-grosszuegigkeit-generosity",
       "german": "die Großzügigkeit",
       "english": "generosity",
       "category": "Emotions Character",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5s1xn7t",
+      "id": "b2-emotions-character-der-geiz-stinginess-greed",
       "german": "der Geiz",
       "english": "stinginess / greed",
       "category": "Emotions Character",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5stpuua",
+      "id": "b2-emotions-character-die-bescheidenheit-modesty-humility",
       "german": "die Bescheidenheit",
       "english": "modesty / humility",
       "category": "Emotions Character",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5sue2rg",
+      "id": "b2-emotions-character-die-arroganz-arrogance",
       "german": "die Arroganz",
       "english": "arrogance",
       "category": "Emotions Character",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5sczm87",
+      "id": "b2-emotions-character-die-vorsicht-caution-carefulness",
       "german": "die Vorsicht",
       "english": "caution / carefulness",
       "category": "Emotions Character",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5smxnep",
+      "id": "b2-emotions-character-die-ruecksichtslosigkeit-recklessness-ruthlessness",
       "german": "die Rücksichtslosigkeit",
       "english": "recklessness / ruthlessness",
       "category": "Emotions Character",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5s0w7ww",
+      "id": "b2-emotions-character-die-entschlossenheit-determination-resolution",
       "german": "die Entschlossenheit",
       "english": "determination / resolution",
       "category": "Emotions Character",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5skhqce",
+      "id": "b2-emotions-character-die-zoegerlichkeit-hesitation-reluctance",
       "german": "die Zögerlichkeit",
       "english": "hesitation / reluctance",
       "category": "Emotions Character",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5s8k4yq",
+      "id": "b2-emotions-character-die-hartnaeckigkeit-stubbornness-persistence",
       "german": "die Hartnäckigkeit",
       "english": "stubbornness / persistence",
       "category": "Emotions Character",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "b2-emotions-character-mivkdn5s8dviz",
+      "id": "b2-emotions-character-die-flexibilitaet-flexibility",
       "german": "die Flexibilität",
       "english": "flexibility",
       "category": "Emotions Character",

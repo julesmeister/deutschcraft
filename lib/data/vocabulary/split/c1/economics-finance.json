@@ -4,7 +4,7 @@
   "totalCards": 12,
   "flashcards": [
     {
-      "id": "syllabus-c1-11558",
+      "id": "c1-economics-finance-die-wirtschaft-economy",
       "german": "die Wirtschaft",
       "english": "economy",
       "category": "Economics Finance",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11559",
+      "id": "c1-economics-finance-die-konjunktur-economic-situation-business-cycle",
       "german": "die Konjunktur",
       "english": "economic situation / business cycle",
       "category": "Economics Finance",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11560",
+      "id": "c1-economics-finance-die-inflation-inflation",
       "german": "die Inflation",
       "english": "inflation",
       "category": "Economics Finance",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11561",
+      "id": "c1-economics-finance-die-rezession-recession",
       "german": "die Rezession",
       "english": "recession",
       "category": "Economics Finance",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11562",
+      "id": "c1-economics-finance-die-investition-investment",
       "german": "die Investition",
       "english": "investment",
       "category": "Economics Finance",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11563",
+      "id": "c1-economics-finance-die-rendite-return-yield",
       "german": "die Rendite",
       "english": "return / yield",
       "category": "Economics Finance",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11564",
+      "id": "c1-economics-finance-die-verschuldung-debt-indebtedness",
       "german": "die Verschuldung",
       "english": "debt / indebtedness",
       "category": "Economics Finance",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11565",
+      "id": "c1-economics-finance-der-haushalt-budget-household",
       "german": "der Haushalt",
       "english": "budget / household",
       "category": "Economics Finance",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11566",
+      "id": "c1-economics-finance-die-steuer-tax",
       "german": "die Steuer",
       "english": "tax",
       "category": "Economics Finance",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11567",
+      "id": "c1-economics-finance-der-umsatz-turnover-revenue",
       "german": "der Umsatz",
       "english": "turnover / revenue",
       "category": "Economics Finance",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11568",
+      "id": "c1-economics-finance-der-gewinn-profit-gain",
       "german": "der Gewinn",
       "english": "profit / gain",
       "category": "Economics Finance",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11569",
+      "id": "c1-economics-finance-der-verlust-loss",
       "german": "der Verlust",
       "english": "loss",
       "category": "Economics Finance",

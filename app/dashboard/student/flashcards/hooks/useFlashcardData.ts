@@ -40,9 +40,11 @@ export function useFlashcardData(
     useFlashcardReviews(userEmail);
 
   // Force refetch reviews when statsRefreshKey changes (e.g. after session)
+  // OPTIMIZED: Ensure refetch bypasses cache for immediate fresh data
   useEffect(() => {
     if (statsRefreshKey > 0) {
-      refetchReviews();
+      // Cancel cache and force fresh fetch
+      refetchReviews({ cancelRefetch: true });
     }
   }, [statsRefreshKey, refetchReviews]);
 
@@ -50,22 +52,9 @@ export function useFlashcardData(
   const reviewsMap = useMemo(() => {
     const map = new Map();
     flashcardReviews.forEach((r) => {
-      // Clean IDs
-      const cleanFlashcardId = r.flashcardId?.replace(/-dup\d+$/, "");
-      const cleanWordId = r.wordId?.replace(/-dup\d+$/, "");
-
+      // Use ID directly (Semantic IDs)
       if (r.flashcardId) map.set(r.flashcardId, r);
-      if (cleanFlashcardId) map.set(cleanFlashcardId, r);
       if (r.wordId) map.set(r.wordId, r);
-      if (cleanWordId) map.set(cleanWordId, r);
-
-      // Also map with FLASH_ prefix if not present, and without if present
-      if (cleanFlashcardId && !cleanFlashcardId.startsWith("FLASH_")) {
-        map.set(`FLASH_${cleanFlashcardId}`, r);
-      }
-      if (cleanFlashcardId && cleanFlashcardId.startsWith("FLASH_")) {
-        map.set(cleanFlashcardId.replace("FLASH_", ""), r);
-      }
     });
     return map;
   }, [flashcardReviews]);
@@ -77,92 +66,100 @@ export function useFlashcardData(
     isError: isVocabularyError,
   } = useVocabularyCategories(selectedLevel);
 
-  // Enhance category index to ensure IDs are present
-  const categoryIndex = useMemo(() => {
-    if (!rawCategoryIndex) return null;
-    return {
+  // Enhance category index and prepare display categories (combined for efficiency)
+  const { categoryIndex, displayCategories } = useMemo(() => {
+    if (!rawCategoryIndex) {
+      return { categoryIndex: null, displayCategories: [] };
+    }
+
+    const enhancedCategories = rawCategoryIndex.categories.map((cat) => ({
+      ...cat,
+      // Use existing ID or generate one from name (consistent with categoryDueCounts logic)
+      id:
+        (cat as any).id ||
+        cat.name
+          .toLowerCase()
+          .replace(/\s+/g, "-")
+          .replace(/[^a-z0-9-]/g, ""),
+      icon: (cat as any).icon || "📝", // Default icon if missing
+    }));
+
+    const index = {
       ...rawCategoryIndex,
-      categories: rawCategoryIndex.categories.map((cat) => ({
-        ...cat,
-        // Use existing ID or generate one from name (consistent with categoryDueCounts logic)
-        id:
-          (cat as any).id ||
-          cat.name
-            .toLowerCase()
-            .replace(/\s+/g, "-")
-            .replace(/[^a-z0-9-]/g, ""),
-        icon: (cat as any).icon || "📝", // Default icon if missing
-      })),
+      categories: enhancedCategories,
     };
+
+    // Also prepare display categories in same pass
+    const display = enhancedCategories.map((cat) => ({
+      id: cat.id,
+      name: cat.name,
+      icon: cat.icon || categoryIcons[cat.name] || "📚",
+      cardCount: cat.count,
+    }));
+
+    return { categoryIndex: index, displayCategories: display };
   }, [rawCategoryIndex]);
 
-  // Calculate category progress using IDs
-  const { categoryAttemptCounts, categoryCompletionStatus } = useMemo(() => {
-    return categoryIndex
-      ? calculateCategoryProgressFromIds(categoryIndex, flashcardReviews)
-      : {
-          attemptedCategories: new Set(),
-          categoryAttemptCounts: new Map(),
-          categoryTotalCounts: new Map(),
-          categoryCompletionStatus: new Map(),
-        };
-  }, [categoryIndex, flashcardReviews]);
+  // Calculate category progress and due counts (combined for efficiency)
+  const {
+    categoryAttemptCounts,
+    categoryCompletionStatus,
+    categoryDueCounts,
+  } = useMemo(() => {
+    if (!categoryIndex) {
+      return {
+        attemptedCategories: new Set(),
+        categoryAttemptCounts: new Map(),
+        categoryTotalCounts: new Map(),
+        categoryCompletionStatus: new Map(),
+        categoryDueCounts: new Map(),
+      };
+    }
 
-  // Calculate due cards per category
-  const categoryDueCounts = useMemo(() => {
-    const counts = new Map<string, number>();
+    // Calculate progress stats
+    const progressData = calculateCategoryProgressFromIds(
+      categoryIndex,
+      flashcardReviews
+    );
+
+    // Calculate due counts in same pass
+    const dueCounts = new Map<string, number>();
     const now = Date.now();
 
-    if (categoryIndex) {
-      categoryIndex.categories.forEach((cat) => {
-        // Use the ID from our enhanced index which is guaranteed to be consistent
-        const categoryId = cat.id;
+    categoryIndex.categories.forEach((cat) => {
+      const categoryId = cat.id;
+      let dueCount = 0;
 
-        let dueCount = 0;
-        if (cat.ids) {
-          cat.ids.forEach((id) => {
-            const progress = reviewsMap.get(id);
-            const recentReview = recentReviews ? recentReviews[id] : undefined;
+      if (cat.ids) {
+        cat.ids.forEach((id) => {
+          const progress = reviewsMap.get(id);
+          const recentReview = recentReviews ? recentReviews[id] : undefined;
 
-            let isDue = false;
+          let isDue = false;
 
-            // Priority 1: Check recent local reviews (Optimistic UI)
-            // Only use local review if it's fresh (< 1 hour)
-            if (recentReview && now - recentReview.timestamp < 60 * 60 * 1000) {
-              // If marked "again" (forgot), it is considered due immediately
-              // If marked anything else (hard/good/easy/expert), it is NOT due right now
-              isDue = recentReview.difficulty === "again";
-            }
-            // Priority 2: Check server data
-            else {
-              isDue = progress && (progress.nextReviewDate || 0) <= now;
-            }
+          // Priority 1: Check recent local reviews (Optimistic UI)
+          if (recentReview && now - recentReview.timestamp < 60 * 60 * 1000) {
+            isDue = recentReview.difficulty === "again";
+          }
+          // Priority 2: Check server data
+          else {
+            isDue = progress && (progress.nextReviewDate || 0) <= now;
+          }
 
-            if (isDue) dueCount++;
-          });
-        }
+          if (isDue) dueCount++;
+        });
+      }
 
-        if (dueCount > 0) {
-          counts.set(categoryId, dueCount);
-        }
-      });
-    }
-    return counts;
-  }, [categoryIndex, reviewsMap, recentReviews]);
-
-  // Convert legacy RemNote categories to our CategoryInfo format for the grid
-  const displayCategories = useMemo(() => {
-    if (!categoryIndex) return [];
-
-    return categoryIndex.categories.map((cat) => {
-      return {
-        id: cat.id,
-        name: cat.name,
-        icon: (cat as any).icon || categoryIcons[cat.name] || "📚",
-        cardCount: cat.count,
-      };
+      if (dueCount > 0) {
+        dueCounts.set(categoryId, dueCount);
+      }
     });
-  }, [categoryIndex]);
+
+    return {
+      ...progressData,
+      categoryDueCounts: dueCounts,
+    };
+  }, [categoryIndex, flashcardReviews, reviewsMap, recentReviews]);
 
   return {
     stats,

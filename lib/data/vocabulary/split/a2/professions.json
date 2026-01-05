@@ -4,7 +4,7 @@
   "totalCards": 105,
   "flashcards": [
     {
-      "id": "syllabus-a2-10667",
+      "id": "a2-professions-der-koch-cook",
       "german": "der Koch",
       "english": "cook",
       "category": "Professions",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10668",
+      "id": "a2-professions-der-verkaeufer-seller",
       "german": "der Verkäufer",
       "english": "seller",
       "category": "Professions",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10669",
+      "id": "a2-professions-der-ingenieur-engineer",
       "german": "der Ingenieur",
       "english": "engineer",
       "category": "Professions",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10670",
+      "id": "a2-professions-die-krankenschwester-nurse",
       "german": "die Krankenschwester",
       "english": "nurse",
       "category": "Professions",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10671",
+      "id": "a2-professions-der-polizist-police-officer",
       "german": "der Polizist",
       "english": "police officer",
       "category": "Professions",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10672",
+      "id": "a2-professions-der-anwalt-lawyer",
       "german": "der Anwalt",
       "english": "lawyer",
       "category": "Professions",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10673",
+      "id": "a2-professions-der-friseur-hairdresser",
       "german": "der Friseur",
       "english": "hairdresser",
       "category": "Professions",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10674",
+      "id": "a2-professions-der-mechaniker-mechanic",
       "german": "der Mechaniker",
       "english": "mechanic",
       "category": "Professions",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10675",
+      "id": "a2-professions-der-bauer-farmer",
       "german": "der Bauer",
       "english": "farmer",
       "category": "Professions",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10677",
+      "id": "a2-professions-der-kellner-waiter",
       "german": "der Kellner",
       "english": "waiter",
       "category": "Professions",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10678",
+      "id": "a2-professions-der-musiker-musician",
       "german": "der Musiker",
       "english": "musician",
       "category": "Professions",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10679",
+      "id": "a2-professions-der-kuenstler-artist",
       "german": "der Künstler",
       "english": "artist",
       "category": "Professions",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10680",
+      "id": "a2-professions-die-aerztin-doctor-female",
       "german": "die Ärztin",
       "english": "doctor (female)",
       "category": "Professions",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10681",
+      "id": "a2-professions-der-zahnarzt-dentist",
       "german": "der Zahnarzt",
       "english": "dentist",
       "category": "Professions",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10682",
+      "id": "a2-professions-der-tierarzt-veterinarian",
       "german": "der Tierarzt",
       "english": "veterinarian",
       "category": "Professions",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10683",
+      "id": "a2-professions-der-chirurg-surgeon",
       "german": "der Chirurg",
       "english": "surgeon",
       "category": "Professions",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10684",
+      "id": "a2-professions-der-krankenpfleger-nurse-male",
       "german": "der Krankenpfleger",
       "english": "nurse (male)",
       "category": "Professions",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10685",
+      "id": "a2-professions-der-apotheker-pharmacist",
       "german": "der Apotheker",
       "english": "pharmacist",
       "category": "Professions",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10689",
+      "id": "a2-professions-der-erzieher-educatorchildcare-worker",
       "german": "der Erzieher",
       "english": "educator/childcare worker",
       "category": "Professions",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10690",
+      "id": "a2-professions-der-architekt-architect",
       "german": "der Architekt",
       "english": "architect",
       "category": "Professions",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10691",
+      "id": "a2-professions-der-programmierer-programmer",
       "german": "der Programmierer",
       "english": "programmer",
       "category": "Professions",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10692",
+      "id": "a2-professions-der-it-spezialist-it-specialist",
       "german": "der IT-Spezialist",
       "english": "IT specialist",
       "category": "Professions",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10693",
+      "id": "a2-professions-der-informatiker-computer-scientist",
       "german": "der Informatiker",
       "english": "computer scientist",
       "category": "Professions",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10694",
+      "id": "a2-professions-der-wissenschaftler-scientist",
       "german": "der Wissenschaftler",
       "english": "scientist",
       "category": "Professions",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10695",
+      "id": "a2-professions-der-forscher-researcher",
       "german": "der Forscher",
       "english": "researcher",
       "category": "Professions",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10696",
+      "id": "a2-professions-der-rechtsanwalt-attorney",
       "german": "der Rechtsanwalt",
       "english": "attorney",
       "category": "Professions",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10697",
+      "id": "a2-professions-der-richter-judge",
       "german": "der Richter",
       "english": "judge",
       "category": "Professions",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10698",
+      "id": "a2-professions-der-notar-notary",
       "german": "der Notar",
       "english": "notary",
       "category": "Professions",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10699",
+      "id": "a2-professions-der-feuerwehrmann-firefighter",
       "german": "der Feuerwehrmann",
       "english": "firefighter",
       "category": "Professions",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10700",
+      "id": "a2-professions-der-soldat-soldier",
       "german": "der Soldat",
       "english": "soldier",
       "category": "Professions",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10701",
+      "id": "a2-professions-der-kassierer-cashier",
       "german": "der Kassierer",
       "english": "cashier",
       "category": "Professions",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10702",
+      "id": "a2-professions-der-einzelhaendler-retailer",
       "german": "der Einzelhändler",
       "english": "retailer",
       "category": "Professions",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10703",
+      "id": "a2-professions-der-kaufmann-merchantbusinessman",
       "german": "der Kaufmann",
       "english": "merchant/businessman",
       "category": "Professions",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10704",
+      "id": "a2-professions-der-geschaeftsmann-businessman",
       "german": "der Geschäftsmann",
       "english": "businessman",
       "category": "Professions",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10705",
+      "id": "a2-professions-der-unternehmer-entrepreneur",
       "german": "der Unternehmer",
       "english": "entrepreneur",
       "category": "Professions",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10706",
+      "id": "a2-professions-der-manager-manager",
       "german": "der Manager",
       "english": "manager",
       "category": "Professions",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10707",
+      "id": "a2-professions-der-chef-bosschief",
       "german": "der Chef",
       "english": "boss/chief",
       "category": "Professions",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10708",
+      "id": "a2-professions-der-direktor-director",
       "german": "der Direktor",
       "english": "director",
       "category": "Professions",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10709",
+      "id": "a2-professions-der-sekretaer-secretary",
       "german": "der Sekretär",
       "english": "secretary",
       "category": "Professions",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10710",
+      "id": "a2-professions-der-assistent-assistant",
       "german": "der Assistent",
       "english": "assistant",
       "category": "Professions",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10711",
+      "id": "a2-professions-der-buchhalter-accountant",
       "german": "der Buchhalter",
       "english": "accountant",
       "category": "Professions",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10712",
+      "id": "a2-professions-der-banker-banker",
       "german": "der Banker",
       "english": "banker",
       "category": "Professions",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10713",
+      "id": "a2-professions-der-finanzberater-financial-advisor",
       "german": "der Finanzberater",
       "english": "financial advisor",
       "category": "Professions",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10714",
+      "id": "a2-professions-der-baecker-baker",
       "german": "der Bäcker",
       "english": "baker",
       "category": "Professions",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10715",
+      "id": "a2-professions-der-metzger-butcher",
       "german": "der Metzger",
       "english": "butcher",
       "category": "Professions",
@@ -904,7 +904,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10716",
+      "id": "a2-professions-die-kellnerin-waitress",
       "german": "die Kellnerin",
       "english": "waitress",
       "category": "Professions",
@@ -924,7 +924,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10717",
+      "id": "a2-professions-der-barkeeper-bartender",
       "german": "der Barkeeper",
       "english": "bartender",
       "category": "Professions",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10718",
+      "id": "a2-professions-der-kosmetiker-beauticiancosmetologist",
       "german": "der Kosmetiker",
       "english": "beautician/cosmetologist",
       "category": "Professions",
@@ -964,7 +964,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10719",
+      "id": "a2-professions-der-masseur-massage-therapist",
       "german": "der Masseur",
       "english": "massage therapist",
       "category": "Professions",
@@ -984,7 +984,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10720",
+      "id": "a2-professions-der-elektriker-electrician",
       "german": "der Elektriker",
       "english": "electrician",
       "category": "Professions",
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10721",
+      "id": "a2-professions-der-klempner-plumber",
       "german": "der Klempner",
       "english": "plumber",
       "category": "Professions",
@@ -1024,7 +1024,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10722",
+      "id": "a2-professions-der-schreiner-carpenter",
       "german": "der Schreiner",
       "english": "carpenter",
       "category": "Professions",
@@ -1044,7 +1044,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10723",
+      "id": "a2-professions-der-maler-painter",
       "german": "der Maler",
       "english": "painter",
       "category": "Professions",
@@ -1064,7 +1064,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10724",
+      "id": "a2-professions-der-maurer-bricklayermason",
       "german": "der Maurer",
       "english": "bricklayer/mason",
       "category": "Professions",
@@ -1084,7 +1084,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10725",
+      "id": "a2-professions-der-bauarbeiter-construction-worker",
       "german": "der Bauarbeiter",
       "english": "construction worker",
       "category": "Professions",
@@ -1104,7 +1104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10726",
+      "id": "a2-professions-der-gaertner-gardener",
       "german": "der Gärtner",
       "english": "gardener",
       "category": "Professions",
@@ -1124,7 +1124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10727",
+      "id": "a2-professions-der-landwirt-farmeragriculturist",
       "german": "der Landwirt",
       "english": "farmer/agriculturist",
       "category": "Professions",
@@ -1144,7 +1144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10728",
+      "id": "a2-professions-der-fischer-fisherman",
       "german": "der Fischer",
       "english": "fisherman",
       "category": "Professions",
@@ -1164,7 +1164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10729",
+      "id": "a2-professions-der-jaeger-hunter",
       "german": "der Jäger",
       "english": "hunter",
       "category": "Professions",
@@ -1184,7 +1184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10730",
+      "id": "a2-professions-der-flugbegleiter-flight-attendant",
       "german": "der Flugbegleiter",
       "english": "flight attendant",
       "category": "Professions",
@@ -1204,7 +1204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10731",
+      "id": "a2-professions-der-busfahrer-bus-driver",
       "german": "der Busfahrer",
       "english": "bus driver",
       "category": "Professions",
@@ -1224,7 +1224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10732",
+      "id": "a2-professions-der-taxifahrer-taxi-driver",
       "german": "der Taxifahrer",
       "english": "taxi driver",
       "category": "Professions",
@@ -1244,7 +1244,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10733",
+      "id": "a2-professions-der-lkw-fahrer-truck-driver",
       "german": "der LKW-Fahrer",
       "english": "truck driver",
       "category": "Professions",
@@ -1264,7 +1264,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10734",
+      "id": "a2-professions-der-lokfuehrer-train-driver",
       "german": "der Lokführer",
       "english": "train driver",
       "category": "Professions",
@@ -1284,7 +1284,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10735",
+      "id": "a2-professions-der-matrose-sailor",
       "german": "der Matrose",
       "english": "sailor",
       "category": "Professions",
@@ -1304,7 +1304,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10736",
+      "id": "a2-professions-der-kapitaen-captain",
       "german": "der Kapitän",
       "english": "captain",
       "category": "Professions",
@@ -1324,7 +1324,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10737",
+      "id": "a2-professions-der-journalist-journalist",
       "german": "der Journalist",
       "english": "journalist",
       "category": "Professions",
@@ -1344,7 +1344,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10738",
+      "id": "a2-professions-der-reporter-reporter",
       "german": "der Reporter",
       "english": "reporter",
       "category": "Professions",
@@ -1364,7 +1364,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10739",
+      "id": "a2-professions-der-redakteur-editor",
       "german": "der Redakteur",
       "english": "editor",
       "category": "Professions",
@@ -1384,7 +1384,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10740",
+      "id": "a2-professions-der-autor-author",
       "german": "der Autor",
       "english": "author",
       "category": "Professions",
@@ -1404,7 +1404,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10741",
+      "id": "a2-professions-der-schriftsteller-writer",
       "german": "der Schriftsteller",
       "english": "writer",
       "category": "Professions",
@@ -1424,7 +1424,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10742",
+      "id": "a2-professions-der-dichter-poet",
       "german": "der Dichter",
       "english": "poet",
       "category": "Professions",
@@ -1444,7 +1444,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10743",
+      "id": "a2-professions-der-uebersetzer-translator",
       "german": "der Übersetzer",
       "english": "translator",
       "category": "Professions",
@@ -1464,7 +1464,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10744",
+      "id": "a2-professions-der-dolmetscher-interpreter",
       "german": "der Dolmetscher",
       "english": "interpreter",
       "category": "Professions",
@@ -1484,7 +1484,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10745",
+      "id": "a2-professions-der-saenger-singer",
       "german": "der Sänger",
       "english": "singer",
       "category": "Professions",
@@ -1504,7 +1504,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10746",
+      "id": "a2-professions-der-schauspieler-actor",
       "german": "der Schauspieler",
       "english": "actor",
       "category": "Professions",
@@ -1524,7 +1524,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10747",
+      "id": "a2-professions-der-regisseur-director-film",
       "german": "der Regisseur",
       "english": "director (film)",
       "category": "Professions",
@@ -1544,7 +1544,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10748",
+      "id": "a2-professions-der-designer-designer",
       "german": "der Designer",
       "english": "designer",
       "category": "Professions",
@@ -1564,7 +1564,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10749",
+      "id": "a2-professions-der-fotograf-photographer",
       "german": "der Fotograf",
       "english": "photographer",
       "category": "Professions",
@@ -1584,7 +1584,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10750",
+      "id": "a2-professions-der-bibliothekar-librarian",
       "german": "der Bibliothekar",
       "english": "librarian",
       "category": "Professions",
@@ -1604,7 +1604,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10751",
+      "id": "a2-professions-der-sozialarbeiter-social-worker",
       "german": "der Sozialarbeiter",
       "english": "social worker",
       "category": "Professions",
@@ -1624,7 +1624,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10752",
+      "id": "a2-professions-der-psychologe-psychologist",
       "german": "der Psychologe",
       "english": "psychologist",
       "category": "Professions",
@@ -1644,7 +1644,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10753",
+      "id": "a2-professions-der-therapeut-therapist",
       "german": "der Therapeut",
       "english": "therapist",
       "category": "Professions",
@@ -1664,7 +1664,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10754",
+      "id": "a2-professions-der-sportler-athlete",
       "german": "der Sportler",
       "english": "athlete",
       "category": "Professions",
@@ -1684,7 +1684,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10755",
+      "id": "a2-professions-der-trainer-trainercoach",
       "german": "der Trainer",
       "english": "trainer/coach",
       "category": "Professions",
@@ -1704,7 +1704,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10756",
+      "id": "a2-professions-der-postbote-mail-carrier",
       "german": "der Postbote",
       "english": "mail carrier",
       "category": "Professions",
@@ -1724,7 +1724,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10757",
+      "id": "a2-professions-der-muellmann-garbage-collector",
       "german": "der Müllmann",
       "english": "garbage collector",
       "category": "Professions",
@@ -1744,7 +1744,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10758",
+      "id": "a2-professions-die-reinigungskraft-cleaner",
       "german": "die Reinigungskraft",
       "english": "cleaner",
       "category": "Professions",
@@ -1764,7 +1764,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10759",
+      "id": "a2-professions-der-hausmeister-janitorcaretaker",
       "german": "der Hausmeister",
       "english": "janitor/caretaker",
       "category": "Professions",
@@ -1784,7 +1784,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10760",
+      "id": "a2-professions-der-waechter-guardwatchman",
       "german": "der Wächter",
       "english": "guard/watchman",
       "category": "Professions",
@@ -1804,7 +1804,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10761",
+      "id": "a2-professions-der-beruf-professionoccupation",
       "german": "der Beruf",
       "english": "profession/occupation",
       "category": "Professions",
@@ -1824,7 +1824,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10762",
+      "id": "a2-professions-die-arbeit-workjob",
       "german": "die Arbeit",
       "english": "work/job",
       "category": "Professions",
@@ -1844,7 +1844,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10763",
+      "id": "a2-professions-die-stelle-positionjob",
       "german": "die Stelle",
       "english": "position/job",
       "category": "Professions",
@@ -1864,7 +1864,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10764",
+      "id": "a2-professions-der-arbeitsplatz-workplace",
       "german": "der Arbeitsplatz",
       "english": "workplace",
       "category": "Professions",
@@ -1884,7 +1884,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10765",
+      "id": "a2-professions-der-arbeitgeber-employer",
       "german": "der Arbeitgeber",
       "english": "employer",
       "category": "Professions",
@@ -1904,7 +1904,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10766",
+      "id": "a2-professions-der-arbeitnehmer-employee",
       "german": "der Arbeitnehmer",
       "english": "employee",
       "category": "Professions",
@@ -1924,7 +1924,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10767",
+      "id": "a2-professions-der-kollege-colleague",
       "german": "der Kollege",
       "english": "colleague",
       "category": "Professions",
@@ -1944,7 +1944,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10768",
+      "id": "a2-professions-der-mitarbeiter-coworker",
       "german": "der Mitarbeiter",
       "english": "coworker",
       "category": "Professions",
@@ -1964,7 +1964,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10769",
+      "id": "a2-professions-der-praktikant-intern",
       "german": "der Praktikant",
       "english": "intern",
       "category": "Professions",
@@ -1984,7 +1984,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10770",
+      "id": "a2-professions-der-auszubildende-apprenticetrainee",
       "german": "der Auszubildende",
       "english": "apprentice/trainee",
       "category": "Professions",
@@ -2004,7 +2004,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10771",
+      "id": "a2-professions-der-azubi-apprentice-informal",
       "german": "der Azubi",
       "english": "apprentice (informal)",
       "category": "Professions",
@@ -2024,7 +2024,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10773",
+      "id": "a2-professions-arbeitslos-unemployed",
       "german": "arbeitslos",
       "english": "unemployed",
       "category": "Professions",
@@ -2044,7 +2044,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10774",
+      "id": "a2-professions-selbststaendig-self-employed",
       "german": "selbstständig",
       "english": "self-employed",
       "category": "Professions",
@@ -2064,7 +2064,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10775",
+      "id": "a2-professions-die-vollzeit-full-time",
       "german": "die Vollzeit",
       "english": "full-time",
       "category": "Professions",
@@ -2084,7 +2084,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10776",
+      "id": "a2-professions-die-teilzeit-part-time",
       "german": "die Teilzeit",
       "english": "part-time",
       "category": "Professions",

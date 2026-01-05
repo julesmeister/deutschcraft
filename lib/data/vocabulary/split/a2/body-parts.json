@@ -4,7 +4,7 @@
   "totalCards": 30,
   "flashcards": [
     {
-      "id": "body-a2-001",
+      "id": "a2-body-parts-die-brust-chest-breast",
       "german": "die Brust",
       "english": "chest / breast",
       "category": "Body Parts",
@@ -25,7 +25,7 @@
       }
     },
     {
-      "id": "body-a2-002",
+      "id": "a2-body-parts-der-ellbogen-elbow",
       "german": "der Ellbogen",
       "english": "elbow",
       "category": "Body Parts",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "body-a2-003",
+      "id": "a2-body-parts-das-handgelenk-wrist",
       "german": "das Handgelenk",
       "english": "wrist",
       "category": "Body Parts",
@@ -67,7 +67,7 @@
       }
     },
     {
-      "id": "body-a2-004",
+      "id": "a2-body-parts-der-daumen-thumb",
       "german": "der Daumen",
       "english": "thumb",
       "category": "Body Parts",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "body-a2-005",
+      "id": "a2-body-parts-der-knoechel-ankle",
       "german": "der Knöchel",
       "english": "ankle",
       "category": "Body Parts",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "body-a2-006",
+      "id": "a2-body-parts-die-haut-skin",
       "german": "die Haut",
       "english": "skin",
       "category": "Body Parts",
@@ -130,7 +130,7 @@
       }
     },
     {
-      "id": "body-a2-007",
+      "id": "a2-body-parts-der-knochen-bone",
       "german": "der Knochen",
       "english": "bone",
       "category": "Body Parts",
@@ -151,7 +151,7 @@
       }
     },
     {
-      "id": "body-a2-008",
+      "id": "a2-body-parts-das-blut-blood",
       "german": "das Blut",
       "english": "blood",
       "category": "Body Parts",
@@ -172,7 +172,7 @@
       }
     },
     {
-      "id": "body-a2-009",
+      "id": "a2-body-parts-die-zunge-tongue",
       "german": "die Zunge",
       "english": "tongue",
       "category": "Body Parts",
@@ -193,7 +193,7 @@
       }
     },
     {
-      "id": "body-a2-010",
+      "id": "a2-body-parts-die-lippe-lip",
       "german": "die Lippe",
       "english": "lip",
       "category": "Body Parts",
@@ -214,7 +214,7 @@
       }
     },
     {
-      "id": "body-a2-011",
+      "id": "a2-body-parts-die-stirn-forehead",
       "german": "die Stirn",
       "english": "forehead",
       "category": "Body Parts",
@@ -235,7 +235,7 @@
       }
     },
     {
-      "id": "body-a2-012",
+      "id": "a2-body-parts-die-wange-cheek",
       "german": "die Wange",
       "english": "cheek",
       "category": "Body Parts",
@@ -256,7 +256,7 @@
       }
     },
     {
-      "id": "body-a2-013",
+      "id": "a2-body-parts-das-kinn-chin",
       "german": "das Kinn",
       "english": "chin",
       "category": "Body Parts",
@@ -277,7 +277,7 @@
       }
     },
     {
-      "id": "body-a2-014",
+      "id": "a2-body-parts-die-augenbraue-eyebrow",
       "german": "die Augenbraue",
       "english": "eyebrow",
       "category": "Body Parts",
@@ -298,7 +298,7 @@
       }
     },
     {
-      "id": "body-a2-015",
+      "id": "a2-body-parts-die-wimper-eyelash",
       "german": "die Wimper",
       "english": "eyelash",
       "category": "Body Parts",
@@ -319,7 +319,7 @@
       }
     },
     {
-      "id": "a2-body-parts-miujdiwe6eii2",
+      "id": "a2-body-parts-der-zeigefinger-index-finger",
       "german": "der Zeigefinger",
       "english": "index finger",
       "category": "Body Parts",
@@ -339,7 +339,7 @@
       }
     },
     {
-      "id": "a2-body-parts-miujdiwee6xa8",
+      "id": "a2-body-parts-der-mittelfinger-middle-finger",
       "german": "der Mittelfinger",
       "english": "middle finger",
       "category": "Body Parts",
@@ -359,7 +359,7 @@
       }
     },
     {
-      "id": "a2-body-parts-miujdiwez3fmc",
+      "id": "a2-body-parts-der-ringfinger-ring-finger",
       "german": "der Ringfinger",
       "english": "ring finger",
       "category": "Body Parts",
@@ -379,7 +379,7 @@
       }
     },
     {
-      "id": "a2-body-parts-miujdiwe8q3b1",
+      "id": "a2-body-parts-der-kleine-finger-pinky-finger",
       "german": "der kleine Finger",
       "english": "pinky finger",
       "category": "Body Parts",
@@ -399,7 +399,7 @@
       }
     },
     {
-      "id": "a2-body-parts-miujdiweu8xqq",
+      "id": "a2-body-parts-die-faust-fist",
       "german": "die Faust",
       "english": "fist",
       "category": "Body Parts",
@@ -419,7 +419,7 @@
       }
     },
     {
-      "id": "a2-body-parts-miujdiwecfxsi",
+      "id": "a2-body-parts-die-sohle-sole",
       "german": "die Sohle",
       "english": "sole",
       "category": "Body Parts",
@@ -439,7 +439,7 @@
       }
     },
     {
-      "id": "a2-body-parts-miujdiwesdono",
+      "id": "a2-body-parts-der-nagel-nail",
       "german": "der Nagel",
       "english": "nail",
       "category": "Body Parts",
@@ -459,7 +459,7 @@
       }
     },
     {
-      "id": "a2-body-parts-miujf2no23gng",
+      "id": "a2-body-parts-der-koerperteil-body-part",
       "german": "der Körperteil",
       "english": "body part",
       "category": "Body Parts",
@@ -479,7 +479,7 @@
       }
     },
     {
-      "id": "a2-body-parts-miujf2noxcphk",
+      "id": "a2-body-parts-das-glied-limb",
       "german": "das Glied",
       "english": "limb",
       "category": "Body Parts",
@@ -499,7 +499,7 @@
       }
     },
     {
-      "id": "a2-body-parts-miujg5ffgctkz",
+      "id": "a2-body-parts-der-bizeps-bicep",
       "german": "der Bizeps",
       "english": "bicep",
       "category": "Body Parts",
@@ -519,7 +519,7 @@
       }
     },
     {
-      "id": "a2-body-parts-miujg5ff5mcxz",
+      "id": "a2-body-parts-der-trizeps-tricep",
       "german": "der Trizeps",
       "english": "tricep",
       "category": "Body Parts",
@@ -539,7 +539,7 @@
       }
     },
     {
-      "id": "a2-body-parts-miujg5ffqwrq9",
+      "id": "a2-body-parts-die-achsel-armpit",
       "german": "die Achsel",
       "english": "armpit",
       "category": "Body Parts",
@@ -559,7 +559,7 @@
       }
     },
     {
-      "id": "a2-body-parts-miujg5ffdpngd",
+      "id": "a2-body-parts-der-bauchnabel-belly-button-navel",
       "german": "der Bauchnabel",
       "english": "belly button / navel",
       "category": "Body Parts",
@@ -579,7 +579,7 @@
       }
     },
     {
-      "id": "a2-body-parts-miujg5ffznps9",
+      "id": "a2-body-parts-der-nacken-nape-back-of-neck",
       "german": "der Nacken",
       "english": "nape / back of neck",
       "category": "Body Parts",
@@ -599,7 +599,7 @@
       }
     },
     {
-      "id": "a2-body-parts-miujhqq6ilxqc",
+      "id": "a2-body-parts-die-pore-pore",
       "german": "die Pore",
       "english": "pore",
       "category": "Body Parts",

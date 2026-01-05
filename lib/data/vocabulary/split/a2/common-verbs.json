@@ -4,7 +4,7 @@
   "totalCards": 28,
   "flashcards": [
     {
-      "id": "a2-common-verbs-miuj9qfcyjtvi",
+      "id": "a2-common-verbs-versuchen-to-try",
       "german": "versuchen",
       "english": "to try",
       "category": "Common Verbs",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miuj9qfcpn2vc",
+      "id": "a2-common-verbs-passieren-to-happen",
       "german": "passieren",
       "english": "to happen",
       "category": "Common Verbs",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miuj9qfcypqlb",
+      "id": "a2-common-verbs-benutzen-to-use",
       "german": "benutzen",
       "english": "to use",
       "category": "Common Verbs",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miuj9qfck2kvk",
+      "id": "a2-common-verbs-hoffen-to-hope",
       "german": "hoffen",
       "english": "to hope",
       "category": "Common Verbs",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miuj9qfcjo2il",
+      "id": "a2-common-verbs-haengen-to-hang",
       "german": "hängen",
       "english": "to hang",
       "category": "Common Verbs",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujf2nlp4z2s",
+      "id": "a2-common-verbs-zumachen-to-close",
       "german": "zumachen",
       "english": "to close",
       "category": "Common Verbs",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujf2nlez2xi",
+      "id": "a2-common-verbs-wegraeumen-to-put-away-to-clear-away",
       "german": "wegräumen",
       "english": "to put away / to clear away",
       "category": "Common Verbs",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujf2nlnt69u",
+      "id": "a2-common-verbs-loswerden-to-get-rid-of",
       "german": "loswerden",
       "english": "to get rid of",
       "category": "Common Verbs",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujf2nleat8g",
+      "id": "a2-common-verbs-abgeben-to-hand-in-to-submit",
       "german": "abgeben",
       "english": "to hand in / to submit",
       "category": "Common Verbs",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujf2nl58qfg",
+      "id": "a2-common-verbs-nachpruefen-to-check-to-verify",
       "german": "nachprüfen",
       "english": "to check / to verify",
       "category": "Common Verbs",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujf2nl8mpv3",
+      "id": "a2-common-verbs-ueberpruefen-to-check-to-inspect",
       "german": "überprüfen",
       "english": "to check / to inspect",
       "category": "Common Verbs",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujf2nl2rat5",
+      "id": "a2-common-verbs-befolgen-to-follow-to-obey",
       "german": "befolgen",
       "english": "to follow / to obey",
       "category": "Common Verbs",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujf2nl7zxxb",
+      "id": "a2-common-verbs-verstossen-gegen-to-violate",
       "german": "verstoßen gegen",
       "english": "to violate",
       "category": "Common Verbs",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujg5fdp5a1d",
+      "id": "a2-common-verbs-vorbeikommen-to-come-by-to-drop-by",
       "german": "vorbeikommen",
       "english": "to come by / to drop by",
       "category": "Common Verbs",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujg5fdikhga",
+      "id": "a2-common-verbs-vorbeigehen-to-pass-by-to-walk-past",
       "german": "vorbeigehen",
       "english": "to pass by / to walk past",
       "category": "Common Verbs",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujg5fdrmqlt",
+      "id": "a2-common-verbs-herausgehen-to-go-out-to-leave",
       "german": "herausgehen",
       "english": "to go out / to leave",
       "category": "Common Verbs",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujh1kkn1uqy",
+      "id": "a2-common-verbs-nachdenken-ueber-to-think-about-to-reflect-on",
       "german": "nachdenken über",
       "english": "to think about / to reflect on",
       "category": "Common Verbs",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujh1kkn123c",
+      "id": "a2-common-verbs-sich-gedanken-machen-ueber-to-worry-about-to-think-about",
       "german": "sich Gedanken machen über",
       "english": "to worry about / to think about",
       "category": "Common Verbs",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujh1kktl5px",
+      "id": "a2-common-verbs-achten-auf-to-pay-attention-to",
       "german": "achten auf",
       "english": "to pay attention to",
       "category": "Common Verbs",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujh1kktp1tz",
+      "id": "a2-common-verbs-sorgen-fuer-to-provide-for-to-take-care-of",
       "german": "sorgen für",
       "english": "to provide for / to take care of",
       "category": "Common Verbs",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujh1kknwfiu",
+      "id": "a2-common-verbs-sich-sorgen-machen-um-to-worry-about",
       "german": "sich Sorgen machen um",
       "english": "to worry about",
       "category": "Common Verbs",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujh1kk06uvb",
+      "id": "a2-common-verbs-rechnen-mit-to-expect-to-count-on",
       "german": "rechnen mit",
       "english": "to expect / to count on",
       "category": "Common Verbs",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujh1kkbme96",
+      "id": "a2-common-verbs-sich-verlassen-auf-to-rely-on",
       "german": "sich verlassen auf",
       "english": "to rely on",
       "category": "Common Verbs",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujh1kkj1ula",
+      "id": "a2-common-verbs-abhaengen-von-to-depend-on",
       "german": "abhängen von",
       "english": "to depend on",
       "category": "Common Verbs",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujh1kktscbh",
+      "id": "a2-common-verbs-bestehen-aus-to-consist-of",
       "german": "bestehen aus",
       "english": "to consist of",
       "category": "Common Verbs",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujh1kkclzc0",
+      "id": "a2-common-verbs-sich-handeln-um-to-be-about-to-concern",
       "german": "sich handeln um",
       "english": "to be about / to concern",
       "category": "Common Verbs",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujh1kk2c368",
+      "id": "a2-common-verbs-etwas-unternehmen-to-do-something-to-undertake",
       "german": "etwas unternehmen",
       "english": "to do something / to undertake",
       "category": "Common Verbs",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujhqq5sneab",
+      "id": "a2-common-verbs-umgehen-mit-to-deal-with-to-handle",
       "german": "umgehen mit",
       "english": "to deal with / to handle",
       "category": "Common Verbs",

@@ -4,7 +4,7 @@
   "totalCards": 86,
   "flashcards": [
     {
-      "id": "syllabus-a1-10398",
+      "id": "a1-weather-die-sonne-sun",
       "german": "die Sonne",
       "english": "sun",
       "category": "Weather",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10399",
+      "id": "a1-weather-der-regen-rain",
       "german": "der Regen",
       "english": "rain",
       "category": "Weather",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10400",
+      "id": "a1-weather-kalt-cold",
       "german": "kalt",
       "english": "cold",
       "category": "Weather",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10401",
+      "id": "a1-weather-warm-warm",
       "german": "warm",
       "english": "warm",
       "category": "Weather",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10402",
+      "id": "a1-weather-der-schnee-snow",
       "german": "der Schnee",
       "english": "snow",
       "category": "Weather",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10403",
+      "id": "a1-weather-der-wind-wind",
       "german": "der Wind",
       "english": "wind",
       "category": "Weather",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10404",
+      "id": "a1-weather-die-wolke-cloud",
       "german": "die Wolke",
       "english": "cloud",
       "category": "Weather",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10405",
+      "id": "a1-weather-das-gewitter-thunderstorm",
       "german": "das Gewitter",
       "english": "thunderstorm",
       "category": "Weather",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10406",
+      "id": "a1-weather-das-wetter-weather",
       "german": "das Wetter",
       "english": "weather",
       "category": "Weather",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10407",
+      "id": "a1-weather-heiss-hot",
       "german": "heiß",
       "english": "hot",
       "category": "Weather",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10408",
+      "id": "a1-weather-kuehl-cool",
       "german": "kühl",
       "english": "cool",
       "category": "Weather",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10409",
+      "id": "a1-weather-sonnig-sunny",
       "german": "sonnig",
       "english": "sunny",
       "category": "Weather",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10410",
+      "id": "a1-weather-bewoelkt-cloudy",
       "german": "bewölkt",
       "english": "cloudy",
       "category": "Weather",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10411",
+      "id": "a1-weather-regnerisch-rainy",
       "german": "regnerisch",
       "english": "rainy",
       "category": "Weather",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10412",
+      "id": "a1-weather-windig-windy",
       "german": "windig",
       "english": "windy",
       "category": "Weather",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10517",
+      "id": "a1-weather-der-blitz-lightning",
       "german": "der Blitz",
       "english": "lightning",
       "category": "Weather",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10518",
+      "id": "a1-weather-der-donner-thunder",
       "german": "der Donner",
       "english": "thunder",
       "category": "Weather",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10519",
+      "id": "a1-weather-der-nebel-fog",
       "german": "der Nebel",
       "english": "fog",
       "category": "Weather",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10520",
+      "id": "a1-weather-der-hagel-hail",
       "german": "der Hagel",
       "english": "hail",
       "category": "Weather",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10522",
+      "id": "a1-weather-der-frost-frost",
       "german": "der Frost",
       "english": "frost",
       "category": "Weather",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10523",
+      "id": "a1-weather-der-tau-dew",
       "german": "der Tau",
       "english": "dew",
       "category": "Weather",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10524",
+      "id": "a1-weather-der-regenbogen-rainbow",
       "german": "der Regenbogen",
       "english": "rainbow",
       "category": "Weather",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10525",
+      "id": "a1-weather-der-himmel-sky",
       "german": "der Himmel",
       "english": "sky",
       "category": "Weather",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10526",
+      "id": "a1-weather-die-luft-air",
       "german": "die Luft",
       "english": "air",
       "category": "Weather",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10527",
+      "id": "a1-weather-der-sturm-storm",
       "german": "der Sturm",
       "english": "storm",
       "category": "Weather",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10528",
+      "id": "a1-weather-der-orkan-hurricane",
       "german": "der Orkan",
       "english": "hurricane",
       "category": "Weather",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10529",
+      "id": "a1-weather-die-temperatur-temperature",
       "german": "die Temperatur",
       "english": "temperature",
       "category": "Weather",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10530",
+      "id": "a1-weather-der-grad-degree",
       "german": "der Grad",
       "english": "degree",
       "category": "Weather",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10531",
+      "id": "a1-weather-das-celsius-celsius",
       "german": "das Celsius",
       "english": "Celsius",
       "category": "Weather",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10532",
+      "id": "a1-weather-das-klima-climate",
       "german": "das Klima",
       "english": "climate",
       "category": "Weather",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10533",
+      "id": "a1-weather-die-jahreszeit-season",
       "german": "die Jahreszeit",
       "english": "season",
       "category": "Weather",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10534",
+      "id": "a1-weather-die-wettervorhersage-weather-forecast",
       "german": "die Wettervorhersage",
       "english": "weather forecast",
       "category": "Weather",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10535",
+      "id": "a1-weather-der-wetterbericht-weather-report",
       "german": "der Wetterbericht",
       "english": "weather report",
       "category": "Weather",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10536",
+      "id": "a1-weather-der-regenschauer-rain-shower",
       "german": "der Regenschauer",
       "english": "rain shower",
       "category": "Weather",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10537",
+      "id": "a1-weather-der-schneesturm-snowstorm-blizzard",
       "german": "der Schneesturm",
       "english": "snowstorm / blizzard",
       "category": "Weather",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10538",
+      "id": "a1-weather-die-schneeflocke-snowflake",
       "german": "die Schneeflocke",
       "english": "snowflake",
       "category": "Weather",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10539",
+      "id": "a1-weather-der-regentropfen-raindrop",
       "german": "der Regentropfen",
       "english": "raindrop",
       "category": "Weather",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10540",
+      "id": "a1-weather-die-feuchtigkeit-humidity-moisture",
       "german": "die Feuchtigkeit",
       "english": "humidity / moisture",
       "category": "Weather",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10541",
+      "id": "a1-weather-die-trockenheit-drought-dryness",
       "german": "die Trockenheit",
       "english": "drought / dryness",
       "category": "Weather",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10542",
+      "id": "a1-weather-die-pfuetze-puddle",
       "german": "die Pfütze",
       "english": "puddle",
       "category": "Weather",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10543",
+      "id": "a1-weather-der-regenschirm-umbrella",
       "german": "der Regenschirm",
       "english": "umbrella",
       "category": "Weather",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10544",
+      "id": "a1-weather-der-regenmantel-raincoat",
       "german": "der Regenmantel",
       "english": "raincoat",
       "category": "Weather",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10545",
+      "id": "a1-weather-die-regenjacke-rain-jacket",
       "german": "die Regenjacke",
       "english": "rain jacket",
       "category": "Weather",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10546",
+      "id": "a1-weather-die-gummistiefel-rain-boots-rubber-boots",
       "german": "die Gummistiefel",
       "english": "rain boots / rubber boots",
       "category": "Weather",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10547",
+      "id": "a1-weather-die-sonnenbrille-sunglasses",
       "german": "die Sonnenbrille",
       "english": "sunglasses",
       "category": "Weather",
@@ -904,7 +904,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10548",
+      "id": "a1-weather-die-sonnencreme-sunscreen-sun-cream",
       "german": "die Sonnencreme",
       "english": "sunscreen / sun cream",
       "category": "Weather",
@@ -924,7 +924,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10554",
+      "id": "a1-weather-regnen-to-rain",
       "german": "regnen",
       "english": "to rain",
       "category": "Weather",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10555",
+      "id": "a1-weather-schneien-to-snow",
       "german": "schneien",
       "english": "to snow",
       "category": "Weather",
@@ -964,7 +964,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10556",
+      "id": "a1-weather-hageln-to-hail",
       "german": "hageln",
       "english": "to hail",
       "category": "Weather",
@@ -984,7 +984,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10557",
+      "id": "a1-weather-donnern-to-thunder",
       "german": "donnern",
       "english": "to thunder",
       "category": "Weather",
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10558",
+      "id": "a1-weather-blitzen-to-lightning-to-flash",
       "german": "blitzen",
       "english": "to lightning / to flash",
       "category": "Weather",
@@ -1024,7 +1024,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10559",
+      "id": "a1-weather-scheinen-to-shine",
       "german": "scheinen",
       "english": "to shine",
       "category": "Weather",
@@ -1044,7 +1044,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10560",
+      "id": "a1-weather-wehen-to-blow-wind",
       "german": "wehen",
       "english": "to blow (wind)",
       "category": "Weather",
@@ -1064,7 +1064,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10561",
+      "id": "a1-weather-frieren-to-freeze-to-be-cold",
       "german": "frieren",
       "english": "to freeze / to be cold",
       "category": "Weather",
@@ -1084,7 +1084,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10562",
+      "id": "a1-weather-schwitzen-to-sweat",
       "german": "schwitzen",
       "english": "to sweat",
       "category": "Weather",
@@ -1104,7 +1104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10563",
+      "id": "a1-weather-schmelzen-to-melt",
       "german": "schmelzen",
       "english": "to melt",
       "category": "Weather",
@@ -1124,7 +1124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10564",
+      "id": "a1-weather-gefrieren-to-freeze-into-ice",
       "german": "gefrieren",
       "english": "to freeze (into ice)",
       "category": "Weather",
@@ -1144,7 +1144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10565",
+      "id": "a1-weather-trocken-dry",
       "german": "trocken",
       "english": "dry",
       "category": "Weather",
@@ -1164,7 +1164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10566",
+      "id": "a1-weather-nass-wet",
       "german": "nass",
       "english": "wet",
       "category": "Weather",
@@ -1184,7 +1184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10567",
+      "id": "a1-weather-feucht-humid-damp",
       "german": "feucht",
       "english": "humid / damp",
       "category": "Weather",
@@ -1204,7 +1204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10568",
+      "id": "a1-weather-neblig-foggy",
       "german": "neblig",
       "english": "foggy",
       "category": "Weather",
@@ -1224,7 +1224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10569",
+      "id": "a1-weather-stuermisch-stormy",
       "german": "stürmisch",
       "english": "stormy",
       "category": "Weather",
@@ -1244,7 +1244,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10570",
+      "id": "a1-weather-eisig-icy-freezing",
       "german": "eisig",
       "english": "icy / freezing",
       "category": "Weather",
@@ -1264,7 +1264,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10571",
+      "id": "a1-weather-frostig-frosty",
       "german": "frostig",
       "english": "frosty",
       "category": "Weather",
@@ -1284,7 +1284,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10572",
+      "id": "a1-weather-mild-mild",
       "german": "mild",
       "english": "mild",
       "category": "Weather",
@@ -1304,7 +1304,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10573",
+      "id": "a1-weather-angenehm-pleasant",
       "german": "angenehm",
       "english": "pleasant",
       "category": "Weather",
@@ -1324,7 +1324,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10574",
+      "id": "a1-weather-unangenehm-unpleasant",
       "german": "unangenehm",
       "english": "unpleasant",
       "category": "Weather",
@@ -1344,7 +1344,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10577",
+      "id": "a1-weather-herrlich-wonderful-glorious",
       "german": "herrlich",
       "english": "wonderful / glorious",
       "category": "Weather",
@@ -1364,7 +1364,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10578",
+      "id": "a1-weather-furchtbar-terrible-awful",
       "german": "furchtbar",
       "english": "terrible / awful",
       "category": "Weather",
@@ -1384,7 +1384,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10579",
+      "id": "a1-weather-wechselhaft-changeable-variable",
       "german": "wechselhaft",
       "english": "changeable / variable",
       "category": "Weather",
@@ -1404,7 +1404,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10580",
+      "id": "a1-weather-bestaendig-steady-stable",
       "german": "beständig",
       "english": "steady / stable",
       "category": "Weather",
@@ -1424,7 +1424,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10581",
+      "id": "a1-weather-klar-clear",
       "german": "klar",
       "english": "clear",
       "category": "Weather",
@@ -1444,7 +1444,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10582",
+      "id": "a1-weather-heiter-fair-bright",
       "german": "heiter",
       "english": "fair / bright",
       "category": "Weather",
@@ -1464,7 +1464,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10583",
+      "id": "a1-weather-trueb-dull-overcast",
       "german": "trüb",
       "english": "dull / overcast",
       "category": "Weather",
@@ -1484,7 +1484,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10586",
+      "id": "a1-weather-schwuel-muggy-sultry",
       "german": "schwül",
       "english": "muggy / sultry",
       "category": "Weather",
@@ -1504,7 +1504,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10587",
+      "id": "a1-weather-drueckend-oppressive-heat",
       "german": "drückend",
       "english": "oppressive (heat)",
       "category": "Weather",
@@ -1524,7 +1524,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10588",
+      "id": "a1-weather-glatt-slippery-icy-roads",
       "german": "glatt",
       "english": "slippery / icy (roads)",
       "category": "Weather",
@@ -1544,7 +1544,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10589",
+      "id": "a1-weather-rutschig-slippery",
       "german": "rutschig",
       "english": "slippery",
       "category": "Weather",
@@ -1564,7 +1564,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10590",
+      "id": "a1-weather-wie-ist-das-wetter-whats-the-weather-like",
       "german": "Wie ist das Wetter?",
       "english": "What's the weather like?",
       "category": "Weather",
@@ -1584,7 +1584,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10591",
+      "id": "a1-weather-es-ist-sonnig-its-sunny",
       "german": "Es ist sonnig",
       "english": "It's sunny",
       "category": "Weather",
@@ -1604,7 +1604,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10592",
+      "id": "a1-weather-es-regnet-its-raining",
       "german": "Es regnet",
       "english": "It's raining",
       "category": "Weather",
@@ -1624,7 +1624,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10593",
+      "id": "a1-weather-es-schneit-its-snowing",
       "german": "Es schneit",
       "english": "It's snowing",
       "category": "Weather",
@@ -1644,7 +1644,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10594",
+      "id": "a1-weather-es-ist-kalt-its-cold",
       "german": "Es ist kalt",
       "english": "It's cold",
       "category": "Weather",
@@ -1664,7 +1664,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10595",
+      "id": "a1-weather-es-ist-warm-its-warm",
       "german": "Es ist warm",
       "english": "It's warm",
       "category": "Weather",
@@ -1684,7 +1684,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10596",
+      "id": "a1-weather-es-ist-heiss-its-hot",
       "german": "Es ist heiß",
       "english": "It's hot",
       "category": "Weather",
@@ -1704,7 +1704,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10597",
+      "id": "a1-weather-es-ist-windig-its-windy",
       "german": "Es ist windig",
       "english": "It's windy",
       "category": "Weather",

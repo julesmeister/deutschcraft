@@ -4,7 +4,7 @@
   "totalCards": 31,
   "flashcards": [
     {
-      "id": "syllabus-a2-10601",
+      "id": "a2-modal-verbs-moechten-would-like-to",
       "german": "möchten",
       "english": "would like to",
       "category": "Modal Verbs",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10605",
+      "id": "a2-modal-verbs-darf-nicht-must-not-not-allowed-to",
       "german": "darf nicht",
       "english": "must not / not allowed to",
       "category": "Modal Verbs",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10606",
+      "id": "a2-modal-verbs-muss-nicht-dont-have-to",
       "german": "muss nicht",
       "english": "don't have to",
       "category": "Modal Verbs",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10607",
+      "id": "a2-modal-verbs-kann-nicht-cannot-unable-to",
       "german": "kann nicht",
       "english": "cannot / unable to",
       "category": "Modal Verbs",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10608",
+      "id": "a2-modal-verbs-will-nicht-dont-want-to",
       "german": "will nicht",
       "english": "don't want to",
       "category": "Modal Verbs",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10609",
+      "id": "a2-modal-verbs-soll-nicht-should-not",
       "german": "soll nicht",
       "english": "should not",
       "category": "Modal Verbs",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qffzx2d6",
+      "id": "a2-modal-verbs-ich-kann-i-can",
       "german": "ich kann",
       "english": "I can",
       "category": "Modal Verbs",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qffojr8g",
+      "id": "a2-modal-verbs-du-kannst-you-can",
       "german": "du kannst",
       "english": "you can",
       "category": "Modal Verbs",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qff7syjk",
+      "id": "a2-modal-verbs-er-kann-he-can",
       "german": "er kann",
       "english": "he can",
       "category": "Modal Verbs",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qff87hiu",
+      "id": "a2-modal-verbs-wir-koennen-we-can",
       "german": "wir können",
       "english": "we can",
       "category": "Modal Verbs",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qffodhdk",
+      "id": "a2-modal-verbs-ihr-koennt-you-pl-can",
       "german": "ihr könnt",
       "english": "you (pl.) can",
       "category": "Modal Verbs",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qffzlab6",
+      "id": "a2-modal-verbs-sie-koennen-they-can",
       "german": "sie können",
       "english": "they can",
       "category": "Modal Verbs",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qff560t7",
+      "id": "a2-modal-verbs-ich-muss-i-must",
       "german": "ich muss",
       "english": "I must",
       "category": "Modal Verbs",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qffvi5oo",
+      "id": "a2-modal-verbs-du-musst-you-must",
       "german": "du musst",
       "english": "you must",
       "category": "Modal Verbs",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qff9sz72",
+      "id": "a2-modal-verbs-er-muss-he-must",
       "german": "er muss",
       "english": "he must",
       "category": "Modal Verbs",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qffbuoho",
+      "id": "a2-modal-verbs-wir-muessen-we-must",
       "german": "wir müssen",
       "english": "we must",
       "category": "Modal Verbs",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qffgo59j",
+      "id": "a2-modal-verbs-ihr-muesst-you-pl-must",
       "german": "ihr müsst",
       "english": "you (pl.) must",
       "category": "Modal Verbs",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qff80hjp",
+      "id": "a2-modal-verbs-sie-muessen-they-must",
       "german": "sie müssen",
       "english": "they must",
       "category": "Modal Verbs",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qff6bosp",
+      "id": "a2-modal-verbs-ich-darf-i-may",
       "german": "ich darf",
       "english": "I may",
       "category": "Modal Verbs",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qff4i88k",
+      "id": "a2-modal-verbs-du-darfst-you-may",
       "german": "du darfst",
       "english": "you may",
       "category": "Modal Verbs",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qff1ok74",
+      "id": "a2-modal-verbs-er-darf-he-may",
       "german": "er darf",
       "english": "he may",
       "category": "Modal Verbs",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qffn81h6",
+      "id": "a2-modal-verbs-wir-duerfen-we-may",
       "german": "wir dürfen",
       "english": "we may",
       "category": "Modal Verbs",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qffod9ex",
+      "id": "a2-modal-verbs-ihr-duerft-you-pl-may",
       "german": "ihr dürft",
       "english": "you (pl.) may",
       "category": "Modal Verbs",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qffdq9ir",
+      "id": "a2-modal-verbs-sie-duerfen-they-may",
       "german": "sie dürfen",
       "english": "they may",
       "category": "Modal Verbs",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qffwvka9",
+      "id": "a2-modal-verbs-ich-will-i-want",
       "german": "ich will",
       "english": "I want",
       "category": "Modal Verbs",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qffqupj3",
+      "id": "a2-modal-verbs-du-willst-you-want",
       "german": "du willst",
       "english": "you want",
       "category": "Modal Verbs",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qff5h9hu",
+      "id": "a2-modal-verbs-er-will-he-wants",
       "german": "er will",
       "english": "he wants",
       "category": "Modal Verbs",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qffmicz6",
+      "id": "a2-modal-verbs-wir-wollen-we-want",
       "german": "wir wollen",
       "english": "we want",
       "category": "Modal Verbs",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miuj9qff5enp2",
+      "id": "a2-modal-verbs-sie-wollen-they-want",
       "german": "sie wollen",
       "english": "they want",
       "category": "Modal Verbs",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miujdiwjg6daj",
+      "id": "a2-modal-verbs-ich-moechte-i-would-like",
       "german": "ich möchte",
       "english": "I would like",
       "category": "Modal Verbs",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "a2-modal-verbs-miujdiwjm3jwp",
+      "id": "a2-modal-verbs-du-moechtest-you-would-like",
       "german": "du möchtest",
       "english": "you would like",
       "category": "Modal Verbs",

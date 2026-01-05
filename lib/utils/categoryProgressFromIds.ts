@@ -27,9 +27,9 @@ export function calculateCategoryProgressFromIds(
   // Create a set of reviewed IDs for fast lookup
   const reviewedIds = new Set<string>();
   flashcardReviews.forEach(r => {
-    // Normalize IDs by removing potential suffixes like -dupN
-    if (r.flashcardId) reviewedIds.add(r.flashcardId.replace(/-dup\d+$/, ""));
-    if (r.wordId) reviewedIds.add(r.wordId.replace(/-dup\d+$/, ""));
+    // Use ID directly (Semantic IDs)
+    if (r.flashcardId) reviewedIds.add(r.flashcardId);
+    if (r.wordId) reviewedIds.add(r.wordId);
   });
 
   categoryIndex.categories.forEach(cat => {
@@ -46,8 +46,7 @@ export function calculateCategoryProgressFromIds(
     if (cat.ids) {
         cat.ids.forEach(id => {
             // Check if the ID exists in reviews
-            // Reviews might have FLASH_ prefix or be raw IDs
-            if (reviewedIds.has(id) || reviewedIds.has(`FLASH_${id}`)) {
+            if (reviewedIds.has(id)) {
                 attempts++;
             }
         });

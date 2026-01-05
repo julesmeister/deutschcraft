@@ -4,7 +4,7 @@
   "totalCards": 48,
   "flashcards": [
     {
-      "id": "syllabus-a2-10680",
+      "id": "a2-redemittel-meiner-meinung-nach-in-my-opinion",
       "german": "Meiner Meinung nach...",
       "english": "In my opinion...",
       "category": "Redemittel",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10681",
+      "id": "a2-redemittel-ich-bin-der-meinung-dass-i-am-of-the-opinion-that",
       "german": "Ich bin der Meinung, dass...",
       "english": "I am of the opinion that...",
       "category": "Redemittel",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10682",
+      "id": "a2-redemittel-ich-denke-dass-i-think-that",
       "german": "Ich denke, dass...",
       "english": "I think that...",
       "category": "Redemittel",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10683",
+      "id": "a2-redemittel-ich-glaube-dass-i-believe-that",
       "german": "Ich glaube, dass...",
       "english": "I believe that...",
       "category": "Redemittel",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10684",
+      "id": "a2-redemittel-es-gefaellt-mir-nicht-i-dont-like-it",
       "german": "Es gefällt mir (nicht)...",
       "english": "I (don't) like it...",
       "category": "Redemittel",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10685",
+      "id": "a2-redemittel-das-finde-ich-gutschlecht-i-find-that-goodbad",
       "german": "Das finde ich gut/schlecht",
       "english": "I find that good/bad",
       "category": "Redemittel",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10686",
+      "id": "a2-redemittel-das-ist-interessantlangweilig-that-is-interestingboring",
       "german": "Das ist interessant/langweilig",
       "english": "That is interesting/boring",
       "category": "Redemittel",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10687",
+      "id": "a2-redemittel-ich-stimme-nicht-zu-i-dont-agree",
       "german": "Ich stimme (nicht) zu",
       "english": "I (don't) agree",
       "category": "Redemittel",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10688",
+      "id": "a2-redemittel-das-stimmt-nicht-thats-not-correct",
       "german": "Das stimmt (nicht)",
       "english": "That's (not) correct",
       "category": "Redemittel",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10689",
+      "id": "a2-redemittel-du-hast-recht-youre-right",
       "german": "Du hast Recht",
       "english": "You're right",
       "category": "Redemittel",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10690",
+      "id": "a2-redemittel-auf-jeden-fall-definitely-in-any-case",
       "german": "Auf jeden Fall!",
       "english": "Definitely! / In any case!",
       "category": "Redemittel",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10691",
+      "id": "a2-redemittel-natuerlich-of-course",
       "german": "Natürlich!",
       "english": "Of course!",
       "category": "Redemittel",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10692",
+      "id": "a2-redemittel-genau-exactly",
       "german": "Genau!",
       "english": "Exactly!",
       "category": "Redemittel",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10693",
+      "id": "a2-redemittel-kein-problem-no-problem",
       "german": "Kein Problem!",
       "english": "No problem!",
       "category": "Redemittel",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10694",
+      "id": "a2-redemittel-keine-ahnung-no-idea",
       "german": "Keine Ahnung",
       "english": "No idea",
       "category": "Redemittel",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10696",
+      "id": "a2-redemittel-egal-whatever-doesnt-matter",
       "german": "Egal",
       "english": "Whatever / doesn't matter",
       "category": "Redemittel",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10697",
+      "id": "a2-redemittel-wie-gehts-dir-how-are-you",
       "german": "Wie geht's dir?",
       "english": "How are you?",
       "category": "Redemittel",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10698",
+      "id": "a2-redemittel-es-geht-mir-gutschlecht-im-doing-wellbadly",
       "german": "Es geht mir gut/schlecht",
       "english": "I'm doing well/badly",
       "category": "Redemittel",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10699",
+      "id": "a2-redemittel-was-gibts-neues-whats-new",
       "german": "Was gibt's Neues?",
       "english": "What's new?",
       "category": "Redemittel",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10700",
+      "id": "a2-redemittel-nichts-besonderes-nothing-special",
       "german": "Nichts Besonderes",
       "english": "Nothing special",
       "category": "Redemittel",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10701",
+      "id": "a2-redemittel-alles-klar-all-clear-everythings-fine",
       "german": "Alles klar!",
       "english": "All clear! / Everything's fine!",
       "category": "Redemittel",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10702",
+      "id": "a2-redemittel-viel-glueck-good-luck",
       "german": "Viel Glück!",
       "english": "Good luck!",
       "category": "Redemittel",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10703",
+      "id": "a2-redemittel-viel-spass-have-fun",
       "german": "Viel Spaß!",
       "english": "Have fun!",
       "category": "Redemittel",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10704",
+      "id": "a2-redemittel-gute-besserung-get-well-soon",
       "german": "Gute Besserung!",
       "english": "Get well soon!",
       "category": "Redemittel",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10705",
+      "id": "a2-redemittel-herzlichen-glueckwunsch-congratulations",
       "german": "Herzlichen Glückwunsch!",
       "english": "Congratulations!",
       "category": "Redemittel",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10706",
+      "id": "a2-redemittel-tut-mir-leid-im-sorry",
       "german": "Tut mir leid",
       "english": "I'm sorry",
       "category": "Redemittel",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10708",
+      "id": "a2-redemittel-kein-problem-no-problem",
       "german": "Kein Problem",
       "english": "No problem",
       "category": "Redemittel",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10710",
+      "id": "a2-redemittel-koennten-sie-mir-helfen-could-you-help-me",
       "german": "Könnten Sie mir helfen?",
       "english": "Could you help me?",
       "category": "Redemittel",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10711",
+      "id": "a2-redemittel-koennen-sie-das-bitte-wiederholen-can-you-please-repeat-that",
       "german": "Können Sie das bitte wiederholen?",
       "english": "Can you please repeat that?",
       "category": "Redemittel",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10712",
+      "id": "a2-redemittel-wie-bitte-pardon-sorry",
       "german": "Wie bitte?",
       "english": "Pardon? / Sorry?",
       "category": "Redemittel",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10713",
+      "id": "a2-redemittel-ich-verstehe-nicht-i-dont-understand",
       "german": "Ich verstehe (nicht)",
       "english": "I (don't) understand",
       "category": "Redemittel",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10714",
+      "id": "a2-redemittel-was-bedeutet-das-what-does-that-mean",
       "german": "Was bedeutet das?",
       "english": "What does that mean?",
       "category": "Redemittel",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10715",
+      "id": "a2-redemittel-wie-sagt-man-auf-deutsch-how-do-you-say-in-german",
       "german": "Wie sagt man... auf Deutsch?",
       "english": "How do you say... in German?",
       "category": "Redemittel",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10716",
+      "id": "a2-redemittel-koennten-sie-langsamer-sprechen-could-you-speak-more-slowly",
       "german": "Könnten Sie langsamer sprechen?",
       "english": "Could you speak more slowly?",
       "category": "Redemittel",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10717",
+      "id": "a2-redemittel-einen-moment-bitte-one-moment-please",
       "german": "Einen Moment, bitte",
       "english": "One moment, please",
       "category": "Redemittel",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10718",
+      "id": "a2-redemittel-ich-haette-gern-i-would-like",
       "german": "Ich hätte gern...",
       "english": "I would like...",
       "category": "Redemittel",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10719",
+      "id": "a2-redemittel-was-kostet-das-how-much-does-that-cost",
       "german": "Was kostet das?",
       "english": "How much does that cost?",
       "category": "Redemittel",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10720",
+      "id": "a2-redemittel-die-rechnung-bitte-the-bill-please",
       "german": "Die Rechnung, bitte",
       "english": "The bill, please",
       "category": "Redemittel",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10721",
+      "id": "a2-redemittel-wo-ist-where-is",
       "german": "Wo ist...?",
       "english": "Where is...?",
       "category": "Redemittel",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10722",
+      "id": "a2-redemittel-wie-komme-ich-zu-how-do-i-get-to",
       "german": "Wie komme ich zu...?",
       "english": "How do I get to...?",
       "category": "Redemittel",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10723",
+      "id": "a2-redemittel-das-ist-zu-teuer-thats-too-expensive",
       "german": "Das ist zu teuer",
       "english": "That's too expensive",
       "category": "Redemittel",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10724",
+      "id": "a2-redemittel-ich-nehme-das-ill-take-that",
       "german": "Ich nehme das",
       "english": "I'll take that",
       "category": "Redemittel",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10725",
+      "id": "a2-redemittel-haben-sie-do-you-have",
       "german": "Haben Sie...?",
       "english": "Do you have...?",
       "category": "Redemittel",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10726",
+      "id": "a2-redemittel-wann-faehrt-der-zug-when-does-the-train-leave",
       "german": "Wann fährt der Zug?",
       "english": "When does the train leave?",
       "category": "Redemittel",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10727",
+      "id": "a2-redemittel-welche-linie-faehrt-nach-which-line-goes-to",
       "german": "Welche Linie fährt nach...?",
       "english": "Which line goes to...?",
       "category": "Redemittel",
@@ -904,7 +904,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10728",
+      "id": "a2-redemittel-ich-habe-einen-termin-i-have-an-appointment",
       "german": "Ich habe einen Termin",
       "english": "I have an appointment",
       "category": "Redemittel",
@@ -924,7 +924,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10729",
+      "id": "a2-redemittel-es-tut-mir-leid-ich-kann-nicht-im-sorry-i-cant",
       "german": "Es tut mir leid, ich kann nicht",
       "english": "I'm sorry, I can't",
       "category": "Redemittel",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "id": "remnote-966",
+      "id": "a2-redemittel-weil-because",
       "german": "Weil",
       "english": "Because",
       "category": "Redemittel",

@@ -1,0 +1,356 @@
+
+● User approved Claude's plan
+  ⎿  Plan saved to: ~\.claude\plans\precious-sauteeing-emerson.md ·       
+     /plan to edit
+     Flashcard ID System Migration Plan
+
+     Problem Summary
+
+     The current flashcard ID system uses unpredictable sequential IDs    
+      (syllabus-a1-10000) with multiple normalization issues:
+
+     1. Dual ID Formats: Same flashcard can have syllabus-a1-10000 OR     
+     FLASH_syllabus-a1-10000
+     2. Duplicate Suffix Handling: IDs like syllabus-a1-10000-dup2        
+     require constant cleanup
+     3. Fragile Lookups: 6+ ID variations checked per flashcard to        
+     handle inconsistencies
+     4. Progress Save Failures: ID mismatches cause "due cards not        
+     saving" bug
+     5. wordId vs flashcardId Conflation: Same value used for both,       
+     causing FK issues
+
+     Current ID Format
+
+     Format: syllabus-{level}-{sequence}
+     Example: syllabus-a1-10000 (for "groß")
+     Problems:
+     - No semantic meaning
+     - Sequential numbers break when merging categories
+     - Prefix normalization (FLASH_) inconsistent
+     - Duplicate detection requires suffix tracking
+
+     Impact on Progress Tracking
+
+     Progress ID: ${userId}_${flashcardId}
+     Example: user@email.com_syllabus-a1-10000
+
+     Issue: If flashcardId format changes between:
+     - JSON load: syllabus-a1-10000
+     - Database save: FLASH_syllabus-a1-10000
+     - Progress lookup: syllabus-a1-10000
+
+     Result: Progress not found → card treated as new → "due cards not    
+      saving"
+
+     Proposed Solution: Deterministic Semantic IDs
+
+     New ID Format
+
+     Format: {level}-{category}-{identifier}
+     Examples:
+     - a1-greetings-hallo
+     - b1-verbs-sein
+     - c2-adjectives-ausgezeichnet
+
+     Benefits:
+     ✅ Predictable - always generate same ID for same word
+     ✅ Debuggable - see level/category from ID alone
+     ✅ No FLASH_ prefix needed
+     ✅ No sequential dependencies
+     ✅ Self-documenting
+
+     ID Generation Rules (To Be Confirmed)
+
+     Option A: German Word
+     ID: {level}-{category}-{germanWord}
+     Example: a1-greetings-hallo
+     Pro: Matches primary learning content
+     Con: Special characters (ä,ö,ü,ß) need normalization
+
+     Option B: English Translation
+     ID: {level}-{category}-{englishWord}
+     Example: a1-greetings-hello
+     Pro: URL-safe, no special chars
+     Con: Loses connection to primary content
+
+     Option C: Hybrid (German-English)
+     ID: {level}-{category}-{german}-{english}
+     Example: a1-greetings-hallo-hello
+     Pro: Guaranteed unique
+     Con: Very long IDs
+
+     Handling Edge Cases
+
+     Multi-word phrases:
+     "Guten Tag" → guten-tag OR gutentag
+     "Wie geht's?" → wie-gehts OR wiegehts
+
+     Special characters:
+     ä → ae
+     ö → oe
+     ü → ue
+     ß → ss
+
+     Duplicates in same category:
+     Strategy 1: Add index suffix
+     - a1-verbs-sein
+     - a1-verbs-sein-2
+
+     Strategy 2: Include English distinction
+     - a1-verbs-sein-to-be
+     - a1-verbs-sein-his (possessive)
+
+     Strategy 3: Generate hash from full flashcard data
+     - a1-verbs-sein-abc123 (deterministic hash)
+
+     Migration Strategy
+
+     Phase 1: ID Generation & Mapping
+
+     1. Generate new IDs for all flashcards
+       - Script: scripts/generate-semantic-ids.ts
+       - Input: Current JSON files in
+     lib/data/vocabulary/levels/*.json
+       - Output: Mapping file old-id → new-id
+     2. Update JSON files
+       - Rewrite all flashcard.id fields
+       - Preserve all other data
+       - Backup old files
+
+     Phase 2: Database Migration
+
+     3. Migrate Turso tables
+       - Table: flashcards - Update id column
+       - Table: flashcard_progress - Update flashcard_id column
+       - Table: vocabulary - Update word_id column
+       - Use mapping file for FK updates
+     4. Migrate Firebase collections
+       - Collection: flashcard-progress
+       - Document IDs: ${userId}_${oldFlashcardId} →
+     ${userId}_${newFlashcardId}
+       - Batch updates to preserve progress data
+
+     Phase 3: Code Updates
+
+     5. Remove ID normalization code
+       - Delete FLASH_ prefix logic in
+     lib/services/turso/flashcards/progressWrite.ts
+       - Simplify reviewsMap creation in lib/hooks/useFlashcardData.ts    
+       - Remove multi-variant ID lookups
+     6. Update ID generation
+       - Create lib/utils/flashcardIdGenerator.ts
+       - Export generateFlashcardId(level, category, german, english)     
+     function
+       - Use consistently across system
+     7. Update validation
+       - Validate ID format: /^[a-z0-9]+-[a-z0-9-]+-[a-z0-9-]+$/
+       - Reject old syllabus-* format
+       - Enforce lowercase alphanumeric only
+
+     Phase 4: Testing & Rollout
+
+     8. Verification scripts
+       - Check no orphaned progress records
+       - Verify all flashcards have valid new IDs
+       - Confirm category progress calculations work
+     9. Gradual rollout
+       - Deploy database migrations first (backward compatible)
+       - Update JSON files
+       - Deploy code changes
+       - Run verification
+       - Monitor error logs for 48 hours
+
+     Critical Files to Modify
+
+     Data Files (Phase 1)
+
+     - lib/data/vocabulary/levels/a1.json
+     - lib/data/vocabulary/levels/a2.json
+     - lib/data/vocabulary/levels/b1.json
+     - lib/data/vocabulary/levels/b2.json
+     - lib/data/vocabulary/levels/c1.json
+     - lib/data/vocabulary/levels/c2.json
+
+     Migration Scripts (Phase 2)
+
+     - scripts/generate-semantic-ids.ts (NEW)
+     - scripts/migrate-flashcard-ids.ts (NEW)
+     - scripts/migrate-firebase-progress.ts (NEW)
+     - turso/migrations/0XX_migrate_flashcard_ids.sql (NEW)
+
+     Services (Phase 3)
+
+     - lib/services/turso/flashcards/progressWrite.ts - Remove FLASH_     
+     normalization
+     - lib/services/turso/flashcards/progressRead.ts - Simplify
+     lookups
+     - lib/services/flashcards/firebase/progress.ts - Remove ID
+     variations
+
+     Hooks (Phase 3)
+
+     - lib/hooks/useFlashcardData.ts - Simplify reviewsMap (remove 6+     
+     key storage)
+     - lib/hooks/useFlashcardMutations.ts - Use new ID format
+     - lib/hooks/useFlashcardSession.ts - Pass semantic IDs
+
+     Utils (Phase 3)
+
+     - lib/utils/flashcardIdGenerator.ts (NEW)
+     - lib/utils/categoryProgressFromIds.ts - Remove suffix cleanup       
+     - lib/utils/flashcardSelection.ts - Simplified matching
+
+     Models (Phase 3)
+
+     - lib/models/progress.ts - Update ID validation
+
+     Rollback Plan
+
+     If migration fails:
+     1. Restore JSON backups
+     2. Revert database using migration down script
+     3. Revert code to previous commit
+     4. Old IDs still work due to mapping table preservation
+
+     User Decisions (Confirmed)
+
+     ✅ ID identifier: Both German-English (a1-greetings-hallo-hello)     
+     ✅ Duplicate handling: Include English distinction (sein-to-be,      
+     sein-his)
+     ✅ Migration approach: One-time forced migration (no backward        
+     compatibility)
+     ✅ Formatting: Hyphenate + transliterate (guten-tag, groess for      
+     größ)
+
+     Estimated Impact
+
+     - JSON Files: ~6 files, ~5000 flashcards total
+     - Database Records:
+       - Turso: flashcards + flashcard_progress + vocabulary tables       
+       - Firebase: flashcard-progress collection (per-user)
+     - Code Changes: ~15 files
+     - Migration Time: ~2-4 hours for full execution
+     - Risk Level: HIGH (touches all progress data)
+
+     Success Criteria
+
+     ✅ All flashcards have deterministic semantic IDs
+     ✅ No FLASH_ prefix normalization needed
+     ✅ No multi-variant ID lookups
+     ✅ Progress saves/loads work 100% of time
+     ✅ No orphaned progress records
+     ✅ Category completion tracking accurate
+     ✅ Due card filtering works correctly
+     ✅ 82% performance improvement in progress saves (63ms → 11ms)       
+
+     Implementation Steps (WITH BACKUPS & TESTING AT EACH PHASE)
+
+     Phase 1: ID Generation
+
+     1. Create lib/utils/flashcardIdGenerator.ts
+     2. Create scripts/migration/01-generate-id-mapping.ts
+     3. BACKUP: Commit all current code to git
+     4. Run mapping: npx tsx
+     scripts/migration/01-generate-id-mapping.ts
+     5. TEST: Review migration-mapping.json - verify no duplicate IDs     
+     6. TEST: Spot-check 20 random mappings for correctness
+     7. ✅ CHECKPOINT: Mapping verified before proceeding
+
+     Phase 2a: JSON File Migration
+
+     8. Create scripts/migration/02-migrate-json-files.ts
+     9. BACKUP: Script automatically creates .backup-{timestamp}.json     
+     for each file
+     10. Run migration: npx tsx
+     scripts/migration/02-migrate-json-files.ts
+     11. TEST: Manually open 2-3 JSON files, verify IDs look correct      
+     12. TEST: Check no data loss (flashcard count unchanged)
+     13. ✅ CHECKPOINT: JSON files verified, backups created
+
+     Phase 2b: Turso Database Migration
+
+     14. Create scripts/migration/03-migrate-turso-database.ts
+     15. BACKUP: Export Turso database using turso db dump
+     16. TEST: Run migration in DRY RUN mode first (read-only
+     verification)
+     17. Run migration: npx tsx
+     scripts/migration/03-migrate-turso-database.ts
+     18. TEST: Verify foreign key integrity: PRAGMA foreign_key_check     
+     19. TEST: Count records before/after (must match)
+     20. TEST: Query 10 random flashcards by new ID
+     21. ✅ CHECKPOINT: Turso migration verified
+
+     Phase 3: Code Cleanup
+
+     29. Simplify lib/services/turso/flashcards/progressWrite.ts
+     30. Simplify lib/hooks/useFlashcardData.ts
+     31. Simplify lib/utils/categoryProgressFromIds.ts
+     32. Simplify lib/services/vocabularyData.ts
+     33. Create lib/utils/flashcardValidation.ts
+     34. BACKUP: Commit code changes
+     35. TEST: Run dev server, check for compile errors
+     36. TEST: Navigate to flashcards page, verify no console errors      
+     37. ✅ CHECKPOINT: Code cleanup verified
+
+     Phase 4: End-to-End Verification
+
+     38. Create scripts/migration/05-verify-migration.ts
+     39. Create scripts/migration/rollback.ts
+     40. Run verification: npx tsx
+     scripts/migration/05-verify-migration.ts
+     41. TEST: Must show "ALL CHECKS PASSED"
+     42. TEST PLAN:
+       - Log in as test user
+       - Open flashcards page - verify categories load
+       - Start practice session - review 10 cards
+       - Mark cards with different difficulties
+       - CRITICAL: Verify progress saves (check database directly)        
+       - Refresh page - verify progress persists
+       - Check due card count updates correctly
+     43. ✅ FINAL CHECKPOINT: All tests pass
+
+     Backup Strategy
+
+     Automatic Backups (Script-Generated):
+     - JSON files: .backup-{timestamp}.json suffix (auto-created in       
+     step 9)
+     - Git: Commit before each phase
+     - Migration mapping: migration-mapping.json saved for reference      
+
+     Manual Backups (You Must Do):
+     - Turso: turso db dump testmanship-db > backup-{date}.sql
+     - Firebase: gcloud firestore export gs://bucket/backups/{date}       
+
+     Rollback Triggers:
+     - Verification script fails
+     - Foreign key integrity errors
+     - Progress save test fails
+     - User-reported issues post-migration
+
+     Key Technical Details
+
+     New ID Format Examples:
+     - Simple: a1-greetings-hallo-hello
+     - Multi-word: a1-phrases-guten-tag-good-day
+     - Special chars: b1-adjectives-gross-big-tall (ö→oe, ß→ss)
+     - Duplicates: b1-verbs-sein-to-be, b1-verbs-sein-his
+
+     Performance Gains:
+     - Before: 6 database queries per save = 63ms overhead
+     - After: 1 database query per save = 11ms overhead
+     - Result: 82% faster progress saves
+
+     Migration Window: 20-40 minutes total
+     Risk Level: HIGH (touches all progress data)
+     Rollback: Automatic backups + rollback script
+
+     Next Steps After Approval
+
+     1. Create backup of production database (Turso + Firebase)
+     2. Run migration in staging environment first
+     3. Test thoroughly in staging
+     4. Schedule maintenance window for production
+     5. Execute migration in production
+     6. Monitor for 48 hours post-migration
+

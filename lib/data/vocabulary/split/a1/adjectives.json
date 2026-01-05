@@ -4,7 +4,7 @@
   "totalCards": 41,
   "flashcards": [
     {
-      "id": "syllabus-a1-10000",
+      "id": "a1-adjectives-gross-big-tall",
       "german": "groß",
       "english": "big / tall",
       "category": "Adjectives",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10001",
+      "id": "a1-adjectives-klein-small",
       "german": "klein",
       "english": "small",
       "category": "Adjectives",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10002",
+      "id": "a1-adjectives-neu-new",
       "german": "neu",
       "english": "new",
       "category": "Adjectives",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10003",
+      "id": "a1-adjectives-alt-old",
       "german": "alt",
       "english": "old",
       "category": "Adjectives",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10004",
+      "id": "a1-adjectives-gut-good",
       "german": "gut",
       "english": "good",
       "category": "Adjectives",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10005",
+      "id": "a1-adjectives-schlecht-bad",
       "german": "schlecht",
       "english": "bad",
       "category": "Adjectives",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10006",
+      "id": "a1-adjectives-schoen-beautiful",
       "german": "schön",
       "english": "beautiful",
       "category": "Adjectives",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10007",
+      "id": "a1-adjectives-haesslich-ugly",
       "german": "hässlich",
       "english": "ugly",
       "category": "Adjectives",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10008",
+      "id": "a1-adjectives-jung-young",
       "german": "jung",
       "english": "young",
       "category": "Adjectives",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10009",
+      "id": "a1-adjectives-schnell-fast",
       "german": "schnell",
       "english": "fast",
       "category": "Adjectives",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10010",
+      "id": "a1-adjectives-langsam-slow",
       "german": "langsam",
       "english": "slow",
       "category": "Adjectives",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10011",
+      "id": "a1-adjectives-lang-long",
       "german": "lang",
       "english": "long",
       "category": "Adjectives",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10012",
+      "id": "a1-adjectives-kurz-short",
       "german": "kurz",
       "english": "short",
       "category": "Adjectives",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10013",
+      "id": "a1-adjectives-viel-much-many",
       "german": "viel",
       "english": "much / many",
       "category": "Adjectives",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10014",
+      "id": "a1-adjectives-wenig-little-few",
       "german": "wenig",
       "english": "little / few",
       "category": "Adjectives",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10015",
+      "id": "a1-adjectives-teuer-expensive",
       "german": "teuer",
       "english": "expensive",
       "category": "Adjectives",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10016",
+      "id": "a1-adjectives-billig-cheap",
       "german": "billig",
       "english": "cheap",
       "category": "Adjectives",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10017",
+      "id": "a1-adjectives-hoch-high",
       "german": "hoch",
       "english": "high",
       "category": "Adjectives",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10018",
+      "id": "a1-adjectives-niedrig-low",
       "german": "niedrig",
       "english": "low",
       "category": "Adjectives",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10019",
+      "id": "a1-adjectives-leicht-light-easy",
       "german": "leicht",
       "english": "light / easy",
       "category": "Adjectives",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10020",
+      "id": "a1-adjectives-schwer-heavy-difficult",
       "german": "schwer",
       "english": "heavy / difficult",
       "category": "Adjectives",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10021",
+      "id": "a1-adjectives-einfach-simple-easy",
       "german": "einfach",
       "english": "simple / easy",
       "category": "Adjectives",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10022",
+      "id": "a1-adjectives-richtig-correct-right",
       "german": "richtig",
       "english": "correct / right",
       "category": "Adjectives",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10023",
+      "id": "a1-adjectives-falsch-wrong-false",
       "german": "falsch",
       "english": "wrong / false",
       "category": "Adjectives",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10024",
+      "id": "a1-adjectives-voll-full",
       "german": "voll",
       "english": "full",
       "category": "Adjectives",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10025",
+      "id": "a1-adjectives-leer-empty",
       "german": "leer",
       "english": "empty",
       "category": "Adjectives",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10026",
+      "id": "a1-adjectives-offen-open",
       "german": "offen",
       "english": "open",
       "category": "Adjectives",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10027",
+      "id": "a1-adjectives-geschlossen-closed",
       "german": "geschlossen",
       "english": "closed",
       "category": "Adjectives",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10028",
+      "id": "a1-adjectives-frei-free",
       "german": "frei",
       "english": "free",
       "category": "Adjectives",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10029",
+      "id": "a1-adjectives-besetzt-occupied-taken",
       "german": "besetzt",
       "english": "occupied / taken",
       "category": "Adjectives",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10030",
+      "id": "a1-adjectives-frueh-early",
       "german": "früh",
       "english": "early",
       "category": "Adjectives",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10031",
+      "id": "a1-adjectives-spaet-late",
       "german": "spät",
       "english": "late",
       "category": "Adjectives",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10032",
+      "id": "a1-adjectives-nah-near-close",
       "german": "nah",
       "english": "near / close",
       "category": "Adjectives",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10033",
+      "id": "a1-adjectives-weit-far",
       "german": "weit",
       "english": "far",
       "category": "Adjectives",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10034",
+      "id": "a1-adjectives-links-left",
       "german": "links",
       "english": "left",
       "category": "Adjectives",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10035",
+      "id": "a1-adjectives-rechts-right",
       "german": "rechts",
       "english": "right",
       "category": "Adjectives",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10036",
+      "id": "a1-adjectives-gerade-straight",
       "german": "gerade",
       "english": "straight",
       "category": "Adjectives",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10037",
+      "id": "a1-adjectives-rund-round",
       "german": "rund",
       "english": "round",
       "category": "Adjectives",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10038",
+      "id": "a1-adjectives-eckig-angular-square",
       "german": "eckig",
       "english": "angular / square",
       "category": "Adjectives",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10039",
+      "id": "a1-adjectives-weich-soft",
       "german": "weich",
       "english": "soft",
       "category": "Adjectives",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10040",
+      "id": "a1-adjectives-hart-hard",
       "german": "hart",
       "english": "hard",
       "category": "Adjectives",

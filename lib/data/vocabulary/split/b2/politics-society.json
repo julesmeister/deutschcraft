@@ -4,7 +4,7 @@
   "totalCards": 32,
   "flashcards": [
     {
-      "id": "syllabus-b2-11388",
+      "id": "b2-politics-society-die-regierung-government",
       "german": "die Regierung",
       "english": "government",
       "category": "Politics Society",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11389",
+      "id": "b2-politics-society-das-parlament-parliament",
       "german": "das Parlament",
       "english": "parliament",
       "category": "Politics Society",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11390",
+      "id": "b2-politics-society-die-wahl-election",
       "german": "die Wahl",
       "english": "election",
       "category": "Politics Society",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11391",
+      "id": "b2-politics-society-die-partei-political-party",
       "german": "die Partei",
       "english": "political party",
       "category": "Politics Society",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11392",
+      "id": "b2-politics-society-das-gesetz-law",
       "german": "das Gesetz",
       "english": "law",
       "category": "Politics Society",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11393",
+      "id": "b2-politics-society-die-demokratie-democracy",
       "german": "die Demokratie",
       "english": "democracy",
       "category": "Politics Society",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11394",
+      "id": "b2-politics-society-der-buerger-citizen",
       "german": "der Bürger",
       "english": "citizen",
       "category": "Politics Society",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11395",
+      "id": "b2-politics-society-die-gesellschaft-society",
       "german": "die Gesellschaft",
       "english": "society",
       "category": "Politics Society",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11396",
+      "id": "b2-politics-society-die-integration-integration",
       "german": "die Integration",
       "english": "integration",
       "category": "Politics Society",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11397",
+      "id": "b2-politics-society-die-diskriminierung-discrimination",
       "german": "die Diskriminierung",
       "english": "discrimination",
       "category": "Politics Society",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11398",
+      "id": "b2-politics-society-die-gleichberechtigung-equal-rights",
       "german": "die Gleichberechtigung",
       "english": "equal rights",
       "category": "Politics Society",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11399",
+      "id": "b2-politics-society-der-umweltschutz-environmental-protection",
       "german": "der Umweltschutz",
       "english": "environmental protection",
       "category": "Politics Society",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11400",
+      "id": "b2-politics-society-der-bundestag-german-federal-parliament",
       "german": "der Bundestag",
       "english": "German Federal Parliament",
       "category": "Politics Society",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11401",
+      "id": "b2-politics-society-der-bundesrat-federal-council",
       "german": "der Bundesrat",
       "english": "Federal Council",
       "category": "Politics Society",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11402",
+      "id": "b2-politics-society-der-kanzler-chancellor",
       "german": "der Kanzler",
       "english": "chancellor",
       "category": "Politics Society",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11403",
+      "id": "b2-politics-society-der-minister-minister",
       "german": "der Minister",
       "english": "minister",
       "category": "Politics Society",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11404",
+      "id": "b2-politics-society-der-abgeordnete-member-of-parliament",
       "german": "der Abgeordnete",
       "english": "member of parliament",
       "category": "Politics Society",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11405",
+      "id": "b2-politics-society-die-verfassung-constitution",
       "german": "die Verfassung",
       "english": "constitution",
       "category": "Politics Society",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11406",
+      "id": "b2-politics-society-das-grundgesetz-basic-law-german-constitution",
       "german": "das Grundgesetz",
       "english": "Basic Law (German constitution)",
       "category": "Politics Society",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11407",
+      "id": "b2-politics-society-die-menschenrechte-human-rights",
       "german": "die Menschenrechte",
       "english": "human rights",
       "category": "Politics Society",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11408",
+      "id": "b2-politics-society-der-rechtsstaat-constitutional-state-rule-of-law",
       "german": "der Rechtsstaat",
       "english": "constitutional state / rule of law",
       "category": "Politics Society",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11409",
+      "id": "b2-politics-society-das-wahlrecht-voting-right-suffrage",
       "german": "das Wahlrecht",
       "english": "voting right / suffrage",
       "category": "Politics Society",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11410",
+      "id": "b2-politics-society-die-mehrheit-majority",
       "german": "die Mehrheit",
       "english": "majority",
       "category": "Politics Society",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11411",
+      "id": "b2-politics-society-die-minderheit-minority",
       "german": "die Minderheit",
       "english": "minority",
       "category": "Politics Society",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11412",
+      "id": "b2-politics-society-die-opposition-opposition",
       "german": "die Opposition",
       "english": "opposition",
       "category": "Politics Society",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11413",
+      "id": "b2-politics-society-die-koalition-coalition",
       "german": "die Koalition",
       "english": "coalition",
       "category": "Politics Society",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11414",
+      "id": "b2-politics-society-die-debatte-debate",
       "german": "die Debatte",
       "english": "debate",
       "category": "Politics Society",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11415",
+      "id": "b2-politics-society-die-abstimmung-vote-ballot",
       "german": "die Abstimmung",
       "english": "vote / ballot",
       "category": "Politics Society",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11416",
+      "id": "b2-politics-society-die-volksabstimmung-referendum",
       "german": "die Volksabstimmung",
       "english": "referendum",
       "category": "Politics Society",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11417",
+      "id": "b2-politics-society-die-sozialpolitik-social-policy",
       "german": "die Sozialpolitik",
       "english": "social policy",
       "category": "Politics Society",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "b2-bevoelkerung-044828",
+      "id": "b2-politics-society-die-bevoelkerung-population",
       "german": "die Bevölkerung",
       "english": "population",
       "category": "Politics Society",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "b2-globalisierung-044828",
+      "id": "b2-politics-society-die-globalisierung-globalization",
       "german": "die Globalisierung",
       "english": "globalization",
       "category": "Politics Society",

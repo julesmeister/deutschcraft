@@ -4,7 +4,7 @@
   "totalCards": 98,
   "flashcards": [
     {
-      "id": "syllabus-a2-10828",
+      "id": "a2-workplace-das-buero-office",
       "german": "das Büro",
       "english": "office",
       "category": "Workplace",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10829",
+      "id": "a2-workplace-die-firma-company",
       "german": "die Firma",
       "english": "company",
       "category": "Workplace",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10835",
+      "id": "a2-workplace-das-gehalt-salary",
       "german": "das Gehalt",
       "english": "salary",
       "category": "Workplace",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10836",
+      "id": "a2-workplace-der-vertrag-contract",
       "german": "der Vertrag",
       "english": "contract",
       "category": "Workplace",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10837",
+      "id": "a2-workplace-die-besprechung-meeting",
       "german": "die Besprechung",
       "english": "meeting",
       "category": "Workplace",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10838",
+      "id": "a2-workplace-das-projekt-project",
       "german": "das Projekt",
       "english": "project",
       "category": "Workplace",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10840",
+      "id": "a2-workplace-der-termin-appointment",
       "german": "der Termin",
       "english": "appointment",
       "category": "Workplace",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10843",
+      "id": "a2-workplace-der-schreibtisch-desk",
       "german": "der Schreibtisch",
       "english": "desk",
       "category": "Workplace",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10854",
+      "id": "a2-workplace-der-vorgesetzte-supervisor",
       "german": "der Vorgesetzte",
       "english": "supervisor",
       "category": "Workplace",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10855",
+      "id": "a2-workplace-der-geschaeftsfuehrer-managing-director-ceo",
       "german": "der Geschäftsführer",
       "english": "managing director / CEO",
       "category": "Workplace",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10858",
+      "id": "a2-workplace-die-teamarbeit-teamwork",
       "german": "die Teamarbeit",
       "english": "teamwork",
       "category": "Workplace",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10862",
+      "id": "a2-workplace-die-arbeitszeit-working-hours",
       "german": "die Arbeitszeit",
       "english": "working hours",
       "category": "Workplace",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10863",
+      "id": "a2-workplace-die-ueberstunden-overtime",
       "german": "die Überstunden",
       "english": "overtime",
       "category": "Workplace",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10868",
+      "id": "a2-workplace-die-heimarbeit-home-work-work-from-home",
       "german": "die Heimarbeit",
       "english": "home work / work from home",
       "category": "Workplace",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10869",
+      "id": "a2-workplace-das-homeoffice-home-office-remote-work",
       "german": "das Homeoffice",
       "english": "home office / remote work",
       "category": "Workplace",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10870",
+      "id": "a2-workplace-die-bewerbung-application",
       "german": "die Bewerbung",
       "english": "application",
       "category": "Workplace",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10871",
+      "id": "a2-workplace-bewerben-to-apply",
       "german": "bewerben",
       "english": "to apply",
       "category": "Workplace",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10873",
+      "id": "a2-workplace-der-lebenslauf-cv-resume",
       "german": "der Lebenslauf",
       "english": "CV / resume",
       "category": "Workplace",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10874",
+      "id": "a2-workplace-das-anschreiben-cover-letter",
       "german": "das Anschreiben",
       "english": "cover letter",
       "category": "Workplace",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10876",
+      "id": "a2-workplace-die-qualifikation-qualification",
       "german": "die Qualifikation",
       "english": "qualification",
       "category": "Workplace",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10877",
+      "id": "a2-workplace-die-erfahrung-experience",
       "german": "die Erfahrung",
       "english": "experience",
       "category": "Workplace",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10878",
+      "id": "a2-workplace-die-berufserfahrung-professional-experience",
       "german": "die Berufserfahrung",
       "english": "professional experience",
       "category": "Workplace",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10879",
+      "id": "a2-workplace-die-ausbildung-training-apprenticeship",
       "german": "die Ausbildung",
       "english": "training / apprenticeship",
       "category": "Workplace",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10880",
+      "id": "a2-workplace-das-praktikum-internship",
       "german": "das Praktikum",
       "english": "internship",
       "category": "Workplace",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10882",
+      "id": "a2-workplace-einstellen-to-hire-to-employ",
       "german": "einstellen",
       "english": "to hire / to employ",
       "category": "Workplace",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10883",
+      "id": "a2-workplace-kuendigen-to-quit-to-give-notice",
       "german": "kündigen",
       "english": "to quit / to give notice",
       "category": "Workplace",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10885",
+      "id": "a2-workplace-entlassen-to-fire-to-dismiss",
       "german": "entlassen",
       "english": "to fire / to dismiss",
       "category": "Workplace",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10886",
+      "id": "a2-workplace-die-entlassung-dismissal-layoff",
       "german": "die Entlassung",
       "english": "dismissal / layoff",
       "category": "Workplace",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10887",
+      "id": "a2-workplace-die-befoerderung-promotion",
       "german": "die Beförderung",
       "english": "promotion",
       "category": "Workplace",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10888",
+      "id": "a2-workplace-befoerdern-to-promote",
       "german": "befördern",
       "english": "to promote",
       "category": "Workplace",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10890",
+      "id": "a2-workplace-das-einkommen-income",
       "german": "das Einkommen",
       "english": "income",
       "category": "Workplace",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10891",
+      "id": "a2-workplace-der-bonus-bonus",
       "german": "der Bonus",
       "english": "bonus",
       "category": "Workplace",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10892",
+      "id": "a2-workplace-der-zuschlag-surcharge-extra-pay",
       "german": "der Zuschlag",
       "english": "surcharge / extra pay",
       "category": "Workplace",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10893",
+      "id": "a2-workplace-die-sozialleistungen-benefits-social-benefits",
       "german": "die Sozialleistungen",
       "english": "benefits / social benefits",
       "category": "Workplace",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10894",
+      "id": "a2-workplace-die-krankenversicherung-health-insurance",
       "german": "die Krankenversicherung",
       "english": "health insurance",
       "category": "Workplace",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10896",
+      "id": "a2-workplace-der-krankheitstag-sick-day",
       "german": "der Krankheitstag",
       "english": "sick day",
       "category": "Workplace",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10897",
+      "id": "a2-workplace-die-krankschreibung-sick-note-medical-certificate",
       "german": "die Krankschreibung",
       "english": "sick note / medical certificate",
       "category": "Workplace",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10898",
+      "id": "a2-workplace-der-urlaubstag-vacation-day",
       "german": "der Urlaubstag",
       "english": "vacation day",
       "category": "Workplace",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10900",
+      "id": "a2-workplace-das-meeting-meeting",
       "german": "das Meeting",
       "english": "meeting",
       "category": "Workplace",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10901",
+      "id": "a2-workplace-die-konferenz-conference",
       "german": "die Konferenz",
       "english": "conference",
       "category": "Workplace",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10903",
+      "id": "a2-workplace-die-tagesordnung-agenda",
       "german": "die Tagesordnung",
       "english": "agenda",
       "category": "Workplace",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10904",
+      "id": "a2-workplace-das-protokoll-minutes-protocol",
       "german": "das Protokoll",
       "english": "minutes / protocol",
       "category": "Workplace",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10906",
+      "id": "a2-workplace-praesentieren-to-present",
       "german": "präsentieren",
       "english": "to present",
       "category": "Workplace",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10907",
+      "id": "a2-workplace-die-deadline-deadline",
       "german": "die Deadline",
       "english": "deadline",
       "category": "Workplace",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10909",
+      "id": "a2-workplace-der-zeitplan-schedule-timeline",
       "german": "der Zeitplan",
       "english": "schedule / timeline",
       "category": "Workplace",
@@ -904,7 +904,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10910",
+      "id": "a2-workplace-planen-to-plan",
       "german": "planen",
       "english": "to plan",
       "category": "Workplace",
@@ -924,7 +924,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10911",
+      "id": "a2-workplace-organisieren-to-organize",
       "german": "organisieren",
       "english": "to organize",
       "category": "Workplace",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10912",
+      "id": "a2-workplace-koordinieren-to-coordinate",
       "german": "koordinieren",
       "english": "to coordinate",
       "category": "Workplace",
@@ -964,7 +964,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10913",
+      "id": "a2-workplace-delegieren-to-delegate",
       "german": "delegieren",
       "english": "to delegate",
       "category": "Workplace",
@@ -984,7 +984,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10914",
+      "id": "a2-workplace-verantwortlich-responsible",
       "german": "verantwortlich",
       "english": "responsible",
       "category": "Workplace",
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10916",
+      "id": "a2-workplace-zustaendig-in-charge-responsible",
       "german": "zuständig",
       "english": "in charge / responsible",
       "category": "Workplace",
@@ -1024,7 +1024,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10917",
+      "id": "a2-workplace-das-bueromaterial-office-supplies",
       "german": "das Büromaterial",
       "english": "office supplies",
       "category": "Workplace",
@@ -1044,7 +1044,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10919",
+      "id": "a2-workplace-der-kugelschreiber-ballpoint-pen",
       "german": "der Kugelschreiber",
       "english": "ballpoint pen",
       "category": "Workplace",
@@ -1064,7 +1064,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10921",
+      "id": "a2-workplace-der-marker-marker-highlighter",
       "german": "der Marker",
       "english": "marker / highlighter",
       "category": "Workplace",
@@ -1084,7 +1084,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10922",
+      "id": "a2-workplace-das-papier-paper",
       "german": "das Papier",
       "english": "paper",
       "category": "Workplace",
@@ -1104,7 +1104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10923",
+      "id": "a2-workplace-der-notizblock-notepad",
       "german": "der Notizblock",
       "english": "notepad",
       "category": "Workplace",
@@ -1124,7 +1124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10924",
+      "id": "a2-workplace-die-heftklammer-staple",
       "german": "die Heftklammer",
       "english": "staple",
       "category": "Workplace",
@@ -1144,7 +1144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10925",
+      "id": "a2-workplace-der-tacker-stapler",
       "german": "der Tacker",
       "english": "stapler",
       "category": "Workplace",
@@ -1164,7 +1164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10926",
+      "id": "a2-workplace-die-bueroklammer-paper-clip",
       "german": "die Büroklammer",
       "english": "paper clip",
       "category": "Workplace",
@@ -1184,7 +1184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10928",
+      "id": "a2-workplace-die-akte-file-record",
       "german": "die Akte",
       "english": "file / record",
       "category": "Workplace",
@@ -1204,7 +1204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10929",
+      "id": "a2-workplace-die-ablage-filing-storage",
       "german": "die Ablage",
       "english": "filing / storage",
       "category": "Workplace",
@@ -1224,7 +1224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10931",
+      "id": "a2-workplace-das-telefon-telephone",
       "german": "das Telefon",
       "english": "telephone",
       "category": "Workplace",
@@ -1244,7 +1244,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10932",
+      "id": "a2-workplace-telefonieren-to-make-a-phone-call",
       "german": "telefonieren",
       "english": "to make a phone call",
       "category": "Workplace",
@@ -1264,7 +1264,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10933",
+      "id": "a2-workplace-das-telefonat-phone-call",
       "german": "das Telefonat",
       "english": "phone call",
       "category": "Workplace",
@@ -1284,7 +1284,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10934",
+      "id": "a2-workplace-der-anruf-call",
       "german": "der Anruf",
       "english": "call",
       "category": "Workplace",
@@ -1304,7 +1304,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10935",
+      "id": "a2-workplace-nachricht-hinterlassen-to-leave-a-message",
       "german": "Nachricht hinterlassen",
       "english": "to leave a message",
       "category": "Workplace",
@@ -1324,7 +1324,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10936",
+      "id": "a2-workplace-zurueckrufen-to-call-back",
       "german": "zurückrufen",
       "english": "to call back",
       "category": "Workplace",
@@ -1344,7 +1344,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10937",
+      "id": "a2-workplace-die-kopie-copy",
       "german": "die Kopie",
       "english": "copy",
       "category": "Workplace",
@@ -1364,7 +1364,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10938",
+      "id": "a2-workplace-der-kopierer-copier",
       "german": "der Kopierer",
       "english": "copier",
       "category": "Workplace",
@@ -1384,7 +1384,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10940",
+      "id": "a2-workplace-faxen-to-fax",
       "german": "faxen",
       "english": "to fax",
       "category": "Workplace",
@@ -1404,7 +1404,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10941",
+      "id": "a2-workplace-das-fax-fax",
       "german": "das Fax",
       "english": "fax",
       "category": "Workplace",
@@ -1424,7 +1424,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10942",
+      "id": "a2-workplace-das-formular-form",
       "german": "das Formular",
       "english": "form",
       "category": "Workplace",
@@ -1444,7 +1444,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10943",
+      "id": "a2-workplace-ausfuellen-to-fill-out",
       "german": "ausfüllen",
       "english": "to fill out",
       "category": "Workplace",
@@ -1464,7 +1464,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10944",
+      "id": "a2-workplace-unterschreiben-to-sign",
       "german": "unterschreiben",
       "english": "to sign",
       "category": "Workplace",
@@ -1484,7 +1484,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10945",
+      "id": "a2-workplace-die-unterschrift-signature",
       "german": "die Unterschrift",
       "english": "signature",
       "category": "Workplace",
@@ -1504,7 +1504,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10946",
+      "id": "a2-workplace-der-stempel-stamp",
       "german": "der Stempel",
       "english": "stamp",
       "category": "Workplace",
@@ -1524,7 +1524,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10947",
+      "id": "a2-workplace-stempeln-to-stamp",
       "german": "stempeln",
       "english": "to stamp",
       "category": "Workplace",
@@ -1544,7 +1544,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10949",
+      "id": "a2-workplace-die-quittung-receipt",
       "german": "die Quittung",
       "english": "receipt",
       "category": "Workplace",
@@ -1564,7 +1564,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10952",
+      "id": "a2-workplace-die-lieferung-delivery",
       "german": "die Lieferung",
       "english": "delivery",
       "category": "Workplace",
@@ -1584,7 +1584,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10953",
+      "id": "a2-workplace-liefern-to-deliver",
       "german": "liefern",
       "english": "to deliver",
       "category": "Workplace",
@@ -1604,7 +1604,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10954",
+      "id": "a2-workplace-der-kunde-customer-client",
       "german": "der Kunde",
       "english": "customer / client",
       "category": "Workplace",
@@ -1624,7 +1624,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10955",
+      "id": "a2-workplace-die-kundin-customer-female",
       "german": "die Kundin",
       "english": "customer (female)",
       "category": "Workplace",
@@ -1644,7 +1644,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10956",
+      "id": "a2-workplace-der-kundendienst-customer-service",
       "german": "der Kundendienst",
       "english": "customer service",
       "category": "Workplace",
@@ -1664,7 +1664,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10957",
+      "id": "a2-workplace-der-auftraggeber-client-principal",
       "german": "der Auftraggeber",
       "english": "client / principal",
       "category": "Workplace",
@@ -1684,7 +1684,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10958",
+      "id": "a2-workplace-der-auftrag-order-assignment",
       "german": "der Auftrag",
       "english": "order / assignment",
       "category": "Workplace",
@@ -1704,7 +1704,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10959",
+      "id": "a2-workplace-termin-vereinbaren-to-make-an-appointment",
       "german": "Termin vereinbaren",
       "english": "to make an appointment",
       "category": "Workplace",
@@ -1724,7 +1724,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10960",
+      "id": "a2-workplace-termin-verschieben-to-postpone-an-appointment",
       "german": "Termin verschieben",
       "english": "to postpone an appointment",
       "category": "Workplace",
@@ -1744,7 +1744,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10961",
+      "id": "a2-workplace-termin-absagen-to-cancel-an-appointment",
       "german": "Termin absagen",
       "english": "to cancel an appointment",
       "category": "Workplace",
@@ -1764,7 +1764,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10963",
+      "id": "a2-workplace-verspaetet-delayed-late",
       "german": "verspätet",
       "english": "delayed / late",
       "category": "Workplace",
@@ -1784,7 +1784,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10965",
+      "id": "a2-workplace-beschaeftigt-busy",
       "german": "beschäftigt",
       "english": "busy",
       "category": "Workplace",
@@ -1804,7 +1804,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10966",
+      "id": "a2-workplace-verfuegbar-available",
       "german": "verfügbar",
       "english": "available",
       "category": "Workplace",
@@ -1824,7 +1824,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10967",
+      "id": "a2-workplace-erreichbar-reachable",
       "german": "erreichbar",
       "english": "reachable",
       "category": "Workplace",
@@ -1844,7 +1844,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10968",
+      "id": "a2-workplace-dringend-urgent",
       "german": "dringend",
       "english": "urgent",
       "category": "Workplace",
@@ -1864,7 +1864,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10970",
+      "id": "a2-workplace-die-prioritaet-priority",
       "german": "die Priorität",
       "english": "priority",
       "category": "Workplace",
@@ -1884,7 +1884,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10971",
+      "id": "a2-workplace-erledigen-to-complete-to-take-care-of",
       "german": "erledigen",
       "english": "to complete / to take care of",
       "category": "Workplace",
@@ -1904,7 +1904,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10972",
+      "id": "a2-workplace-fertig-finished-done",
       "german": "fertig",
       "english": "finished / done",
       "category": "Workplace",
@@ -1924,7 +1924,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10974",
+      "id": "a2-workplace-der-erfolg-success",
       "german": "der Erfolg",
       "english": "success",
       "category": "Workplace",
@@ -1944,7 +1944,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10975",
+      "id": "a2-workplace-erfolgreich-successful",
       "german": "erfolgreich",
       "english": "successful",
       "category": "Workplace",

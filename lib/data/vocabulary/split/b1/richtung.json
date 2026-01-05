@@ -4,7 +4,7 @@
   "totalCards": 45,
   "flashcards": [
     {
-      "id": "remnote-1",
+      "id": "b1-richtung-gleichdirekt-hinter-right-behind",
       "german": "gleich/direkt hinter",
       "english": "right behind",
       "category": "Richtung",
@@ -19,7 +19,7 @@
       }
     },
     {
-      "id": "remnote-2",
+      "id": "b1-richtung-gleichdirekt-vor-right-before",
       "german": "gleich/direkt vor",
       "english": "right before",
       "category": "Richtung",
@@ -34,7 +34,7 @@
       }
     },
     {
-      "id": "remnote-3",
+      "id": "b1-richtung-gleichdirekt-neben-right-beside",
       "german": "gleich/direkt neben",
       "english": "right beside",
       "category": "Richtung",
@@ -49,7 +49,7 @@
       }
     },
     {
-      "id": "remnote-4",
+      "id": "b1-richtung-gleich-links-just-to-the-left",
       "german": "gleich links",
       "english": "just to the left",
       "category": "Richtung",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "remnote-5",
+      "id": "b1-richtung-gleich-rechts-just-to-the-right",
       "german": "gleich rechts",
       "english": "just to the right",
       "category": "Richtung",
@@ -79,7 +79,7 @@
       }
     },
     {
-      "id": "remnote-6",
+      "id": "b1-richtung-ganz-unten-right-at-the-bottom",
       "german": "ganz unten",
       "english": "right at the bottom",
       "category": "Richtung",
@@ -94,7 +94,7 @@
       }
     },
     {
-      "id": "remnote-7",
+      "id": "b1-richtung-ganz-oben-right-at-the-top",
       "german": "ganz oben",
       "english": "right at the top",
       "category": "Richtung",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "remnote-8",
+      "id": "b1-richtung-ganz-am-ende-right-at-the-end",
       "german": "ganz am Ende",
       "english": "right at the end",
       "category": "Richtung",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "remnote-9",
+      "id": "b1-richtung-ganz-am-beginnanfang-right-from-the-start",
       "german": "ganz am Beginn/Anfang",
       "english": "right from the start",
       "category": "Richtung",
@@ -139,7 +139,7 @@
       }
     },
     {
-      "id": "remnote-10",
+      "id": "b1-richtung-schon-ueber-30-jahre-more-than-30-years-already",
       "german": "schon über 30 Jahre",
       "english": "more than 30 years already",
       "category": "Richtung",
@@ -154,7 +154,7 @@
       }
     },
     {
-      "id": "remnote-11",
+      "id": "b1-richtung-schon-seit-einem-jahr-for-a-year-now",
       "german": "schon seit einem Jahr",
       "english": "for a year now",
       "category": "Richtung",
@@ -169,7 +169,7 @@
       }
     },
     {
-      "id": "remnote-12",
+      "id": "b1-richtung-schon-seit-zwei-monaten-for-two-months-now",
       "german": "schon seit zwei Monaten",
       "english": "for two months now",
       "category": "Richtung",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "b1-oben-827787",
+      "id": "b1-richtung-oben-above-up",
       "german": "oben",
       "english": "above / up",
       "category": "Richtung",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "b1-unten-827787",
+      "id": "b1-richtung-unten-below-down",
       "german": "unten",
       "english": "below / down",
       "category": "Richtung",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "b1-vorne-827787",
+      "id": "b1-richtung-vorne-in-front-ahead",
       "german": "vorne",
       "english": "in front / ahead",
       "category": "Richtung",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "b1-hinten-827787",
+      "id": "b1-richtung-hinten-behind-at-the-back",
       "german": "hinten",
       "english": "behind / at the back",
       "category": "Richtung",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "b1-berall-827787",
+      "id": "b1-richtung-ueberall-everywhere",
       "german": "überall",
       "english": "everywhere",
       "category": "Richtung",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "b1-irgendwo-827787",
+      "id": "b1-richtung-irgendwo-somewhere",
       "german": "irgendwo",
       "english": "somewhere",
       "category": "Richtung",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "b1-nirgends-827787",
+      "id": "b1-richtung-nirgends-nowhere",
       "german": "nirgends",
       "english": "nowhere",
       "category": "Richtung",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "b1-dort-827787",
+      "id": "b1-richtung-dort-there",
       "german": "dort",
       "english": "there",
       "category": "Richtung",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "b1-dorthin-827787",
+      "id": "b1-richtung-dorthin-to-there-there",
       "german": "dorthin",
       "english": "to there / there",
       "category": "Richtung",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "b1-dahin-827787",
+      "id": "b1-richtung-dahin-to-there",
       "german": "dahin",
       "english": "to there",
       "category": "Richtung",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "b1-hin-827787",
+      "id": "b1-richtung-hin-toward-to",
       "german": "hin",
       "english": "toward / to",
       "category": "Richtung",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "b1-her-827787",
+      "id": "b1-richtung-her-here-toward-here",
       "german": "her",
       "english": "here / toward here",
       "category": "Richtung",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "b1-herauf-827787",
+      "id": "b1-richtung-herauf-up-upward",
       "german": "herauf",
       "english": "up / upward",
       "category": "Richtung",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "b1-herab-827787",
+      "id": "b1-richtung-herab-down-downward",
       "german": "herab",
       "english": "down / downward",
       "category": "Richtung",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "b1-herber-827787",
+      "id": "b1-richtung-herueber-over-across",
       "german": "herüber",
       "english": "over / across",
       "category": "Richtung",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "b1-hinber-827787",
+      "id": "b1-richtung-hinueber-over-across",
       "german": "hinüber",
       "english": "over / across",
       "category": "Richtung",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "b1-herum-827787",
+      "id": "b1-richtung-herum-around",
       "german": "herum",
       "english": "around",
       "category": "Richtung",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "b1-hinein-827787",
+      "id": "b1-richtung-hinein-in-inside",
       "german": "hinein",
       "english": "in / inside",
       "category": "Richtung",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "b1-heraus-827787",
+      "id": "b1-richtung-heraus-out-outside",
       "german": "heraus",
       "english": "out / outside",
       "category": "Richtung",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "b1-hinaus-827787",
+      "id": "b1-richtung-hinaus-out-outside",
       "german": "hinaus",
       "english": "out / outside",
       "category": "Richtung",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "b1-hervor-827787",
+      "id": "b1-richtung-hervor-out-forth",
       "german": "hervor",
       "english": "out / forth",
       "category": "Richtung",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "b1-jenseits-827787",
+      "id": "b1-richtung-jenseits-beyond-on-the-other-side",
       "german": "jenseits",
       "english": "beyond / on the other side",
       "category": "Richtung",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "b1-diesseits-827787",
+      "id": "b1-richtung-diesseits-on-this-side-this-side-of",
       "german": "diesseits",
       "english": "on this side / this side of",
       "category": "Richtung",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "b1-richtung-miv8hiwqshznv",
+      "id": "b1-richtung-rueckwaerts-backwards",
       "german": "rückwärts",
       "english": "backwards",
       "category": "Richtung",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "b1-richtung-miv8hiwq5fyva",
+      "id": "b1-richtung-vorwaerts-forwards",
       "german": "vorwärts",
       "english": "forwards",
       "category": "Richtung",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "b1-richtung-miv8hiwqy6cj9",
+      "id": "b1-richtung-seitwaerts-sideways",
       "german": "seitwärts",
       "english": "sideways",
       "category": "Richtung",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "b1-richtung-miv8hiwqkt317",
+      "id": "b1-richtung-aufwaerts-upwards",
       "german": "aufwärts",
       "english": "upwards",
       "category": "Richtung",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "b1-richtung-miv8hiwq9huai",
+      "id": "b1-richtung-abwaerts-downwards",
       "german": "abwärts",
       "english": "downwards",
       "category": "Richtung",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "b1-richtung-miv8hiwqxjekc",
+      "id": "b1-richtung-hinunter-down-away-from-speaker",
       "german": "hinunter",
       "english": "down (away from speaker)",
       "category": "Richtung",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "b1-richtung-miv8hiwqusfdw",
+      "id": "b1-richtung-herunter-down-towards-speaker",
       "german": "herunter",
       "english": "down (towards speaker)",
       "category": "Richtung",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "b1-richtung-miv8hiwqsdtgf",
+      "id": "b1-richtung-herein-in-into-towards-speaker",
       "german": "herein",
       "english": "in / into (towards speaker)",
       "category": "Richtung",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "b1-richtung-miv8hiwqgudvg",
+      "id": "b1-richtung-rundherum-all-around",
       "german": "rundherum",
       "english": "all around",
       "category": "Richtung",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "b1-richtung-miv8hiwqxoppi",
+      "id": "b1-richtung-mitten-in-the-middle",
       "german": "mitten",
       "english": "in the middle",
       "category": "Richtung",

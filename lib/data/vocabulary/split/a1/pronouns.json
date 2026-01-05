@@ -4,7 +4,7 @@
   "totalCards": 9,
   "flashcards": [
     {
-      "id": "syllabus-a1-10268",
+      "id": "a1-pronouns-ich-i",
       "german": "ich",
       "english": "I",
       "category": "Pronouns",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10269",
+      "id": "a1-pronouns-du-you-informal",
       "german": "du",
       "english": "you (informal)",
       "category": "Pronouns",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10270",
+      "id": "a1-pronouns-er-he",
       "german": "er",
       "english": "he",
       "category": "Pronouns",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10272",
+      "id": "a1-pronouns-es-it",
       "german": "es",
       "english": "it",
       "category": "Pronouns",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10273",
+      "id": "a1-pronouns-wir-we",
       "german": "wir",
       "english": "we",
       "category": "Pronouns",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10276",
+      "id": "a1-pronouns-mein-my",
       "german": "mein",
       "english": "my",
       "category": "Pronouns",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10277",
+      "id": "a1-pronouns-dein-your-informal",
       "german": "dein",
       "english": "your (informal)",
       "category": "Pronouns",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10280",
+      "id": "a1-pronouns-unser-our",
       "german": "unser",
       "english": "our",
       "category": "Pronouns",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10281",
+      "id": "a1-pronouns-euer-your-plural-informal",
       "german": "euer",
       "english": "your (plural informal)",
       "category": "Pronouns",

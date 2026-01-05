@@ -4,7 +4,7 @@
   "totalCards": 38,
   "flashcards": [
     {
-      "id": "reflexive-c1-001",
+      "id": "c1-reflexive-verbs-sich-abzeichnen-to-emerge-to-become-apparent",
       "german": "sich abzeichnen",
       "english": "to emerge, to become apparent",
       "category": "Reflexive Verbs",
@@ -25,7 +25,7 @@
       }
     },
     {
-      "id": "reflexive-c1-002",
+      "id": "c1-reflexive-verbs-sich-aufdraengen-to-impose-oneself-to-force-oneself-upon",
       "german": "sich aufdrängen",
       "english": "to impose oneself, to force oneself upon",
       "category": "Reflexive Verbs",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "reflexive-c1-003",
+      "id": "c1-reflexive-verbs-sich-behaupten-to-assert-oneself-to-hold-ones-own",
       "german": "sich behaupten",
       "english": "to assert oneself, to hold one's own",
       "category": "Reflexive Verbs",
@@ -67,7 +67,7 @@
       }
     },
     {
-      "id": "reflexive-c1-004",
+      "id": "c1-reflexive-verbs-sich-belaufen-auf-to-amount-to",
       "german": "sich belaufen auf",
       "english": "to amount to",
       "category": "Reflexive Verbs",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "reflexive-c1-005",
+      "id": "c1-reflexive-verbs-sich-einstellen-auf-to-prepare-for-to-adjust-to",
       "german": "sich einstellen auf",
       "english": "to prepare for, to adjust to",
       "category": "Reflexive Verbs",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "reflexive-c1-006",
+      "id": "c1-reflexive-verbs-sich-entfalten-to-unfold-to-develop",
       "german": "sich entfalten",
       "english": "to unfold, to develop",
       "category": "Reflexive Verbs",
@@ -130,7 +130,7 @@
       }
     },
     {
-      "id": "reflexive-c1-007",
+      "id": "c1-reflexive-verbs-sich-entpuppen-als-to-turn-out-to-be-to-reveal-oneself-as",
       "german": "sich entpuppen als",
       "english": "to turn out to be, to reveal oneself as",
       "category": "Reflexive Verbs",
@@ -151,7 +151,7 @@
       }
     },
     {
-      "id": "reflexive-c1-008",
+      "id": "c1-reflexive-verbs-sich-erbarmen-to-have-mercy-on",
       "german": "sich erbarmen",
       "english": "to have mercy on",
       "category": "Reflexive Verbs",
@@ -172,7 +172,7 @@
       }
     },
     {
-      "id": "reflexive-c1-009",
+      "id": "c1-reflexive-verbs-sich-ergeben-to-surrender-to-result-from",
       "german": "sich ergeben",
       "english": "to surrender, to result from",
       "category": "Reflexive Verbs",
@@ -193,7 +193,7 @@
       }
     },
     {
-      "id": "reflexive-c1-010",
+      "id": "c1-reflexive-verbs-sich-erkuehnen-to-dare-to-have-the-audacity",
       "german": "sich erkühnen",
       "english": "to dare, to have the audacity",
       "category": "Reflexive Verbs",
@@ -214,7 +214,7 @@
       }
     },
     {
-      "id": "reflexive-c1-011",
+      "id": "c1-reflexive-verbs-sich-erstrecken-to-extend-to-stretch",
       "german": "sich erstrecken",
       "english": "to extend, to stretch",
       "category": "Reflexive Verbs",
@@ -235,7 +235,7 @@
       }
     },
     {
-      "id": "reflexive-c1-012",
+      "id": "c1-reflexive-verbs-sich-hervortun-to-distinguish-oneself-to-excel",
       "german": "sich hervortun",
       "english": "to distinguish oneself, to excel",
       "category": "Reflexive Verbs",
@@ -256,7 +256,7 @@
       }
     },
     {
-      "id": "reflexive-c1-013",
+      "id": "c1-reflexive-verbs-sich-hinwegsetz-en-ueber-to-disregard-to-ignore",
       "german": "sich hinwegsetz en über",
       "english": "to disregard, to ignore",
       "category": "Reflexive Verbs",
@@ -277,7 +277,7 @@
       }
     },
     {
-      "id": "reflexive-c1-015",
+      "id": "c1-reflexive-verbs-sich-ruehmen-to-boast-to-pride-oneself-on",
       "german": "sich rühmen",
       "english": "to boast, to pride oneself on",
       "category": "Reflexive Verbs",
@@ -298,7 +298,7 @@
       }
     },
     {
-      "id": "reflexive-c1-016",
+      "id": "c1-reflexive-verbs-sich-straeuben-to-resist-to-balk-at",
       "german": "sich sträuben",
       "english": "to resist, to balk at",
       "category": "Reflexive Verbs",
@@ -319,7 +319,7 @@
       }
     },
     {
-      "id": "reflexive-c1-017",
+      "id": "c1-reflexive-verbs-sich-verfangen-to-get-caught-to-become-entangled",
       "german": "sich verfangen",
       "english": "to get caught, to become entangled",
       "category": "Reflexive Verbs",
@@ -340,7 +340,7 @@
       }
     },
     {
-      "id": "reflexive-c1-018",
+      "id": "c1-reflexive-verbs-sich-verkruemeln-to-slink-away-to-make-oneself-scarce",
       "german": "sich verkrümeln",
       "english": "to slink away, to make oneself scarce",
       "category": "Reflexive Verbs",
@@ -361,7 +361,7 @@
       }
     },
     {
-      "id": "reflexive-c1-019",
+      "id": "c1-reflexive-verbs-sich-verschaerfen-to-intensify-to-worsen",
       "german": "sich verschärfen",
       "english": "to intensify, to worsen",
       "category": "Reflexive Verbs",
@@ -382,7 +382,7 @@
       }
     },
     {
-      "id": "reflexive-c1-020",
+      "id": "c1-reflexive-verbs-sich-verschreiben-to-dedicate-oneself-to",
       "german": "sich verschreiben",
       "english": "to dedicate oneself to",
       "category": "Reflexive Verbs",
@@ -403,7 +403,7 @@
       }
     },
     {
-      "id": "reflexive-c1-021",
+      "id": "c1-reflexive-verbs-sich-verselbstaendigen-to-become-independent",
       "german": "sich verselbständigen",
       "english": "to become independent",
       "category": "Reflexive Verbs",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "reflexive-c1-022",
+      "id": "c1-reflexive-verbs-sich-verwirklichen-to-fulfill-oneself-to-realize-ones-potential",
       "german": "sich verwirklichen",
       "english": "to fulfill oneself, to realize one's potential",
       "category": "Reflexive Verbs",
@@ -445,7 +445,7 @@
       }
     },
     {
-      "id": "reflexive-c1-023",
+      "id": "c1-reflexive-verbs-sich-vollziehen-to-take-place-to-be-carried-out",
       "german": "sich vollziehen",
       "english": "to take place, to be carried out",
       "category": "Reflexive Verbs",
@@ -466,7 +466,7 @@
       }
     },
     {
-      "id": "reflexive-c1-024",
+      "id": "c1-reflexive-verbs-sich-zieren-to-be-coy-to-act-reluctant",
       "german": "sich zieren",
       "english": "to be coy, to act reluctant",
       "category": "Reflexive Verbs",
@@ -487,7 +487,7 @@
       }
     },
     {
-      "id": "reflexive-c1-025",
+      "id": "c1-reflexive-verbs-sich-zurechtfinden-to-find-ones-way-to-get-oriented",
       "german": "sich zurechtfinden",
       "english": "to find one's way, to get oriented",
       "category": "Reflexive Verbs",
@@ -508,7 +508,7 @@
       }
     },
     {
-      "id": "reflexive-c1-026",
+      "id": "c1-reflexive-verbs-sich-zusammenreissen-to-pull-oneself-together",
       "german": "sich zusammenreißen",
       "english": "to pull oneself together",
       "category": "Reflexive Verbs",
@@ -529,7 +529,7 @@
       }
     },
     {
-      "id": "reflexive-c1-027",
+      "id": "c1-reflexive-verbs-sich-ausnehmen-to-appear-to-look-in-a-certain-way",
       "german": "sich ausnehmen",
       "english": "to appear, to look (in a certain way)",
       "category": "Reflexive Verbs",
@@ -550,7 +550,7 @@
       }
     },
     {
-      "id": "reflexive-c1-028",
+      "id": "c1-reflexive-verbs-sich-bewahrheiten-to-come-true-to-be-confirmed",
       "german": "sich bewahrheiten",
       "english": "to come true, to be confirmed",
       "category": "Reflexive Verbs",
@@ -571,7 +571,7 @@
       }
     },
     {
-      "id": "reflexive-c1-029",
+      "id": "c1-reflexive-verbs-sich-einbuergern-to-become-naturalized-to-become-established",
       "german": "sich einbürgern",
       "english": "to become naturalized, to become established",
       "category": "Reflexive Verbs",
@@ -592,7 +592,7 @@
       }
     },
     {
-      "id": "reflexive-c1-030",
+      "id": "c1-reflexive-verbs-sich-etablieren-to-establish-oneself",
       "german": "sich etablieren",
       "english": "to establish oneself",
       "category": "Reflexive Verbs",
@@ -613,7 +613,7 @@
       }
     },
     {
-      "id": "reflexive-c1-031",
+      "id": "c1-reflexive-verbs-sich-herausbilden-to-develop-to-emerge",
       "german": "sich herausbilden",
       "english": "to develop, to emerge",
       "category": "Reflexive Verbs",
@@ -634,7 +634,7 @@
       }
     },
     {
-      "id": "reflexive-c1-032",
+      "id": "c1-reflexive-verbs-sich-herauskristallisieren-to-crystallize-to-become-clear",
       "german": "sich herauskristallisieren",
       "english": "to crystallize, to become clear",
       "category": "Reflexive Verbs",
@@ -655,7 +655,7 @@
       }
     },
     {
-      "id": "reflexive-c1-033",
+      "id": "c1-reflexive-verbs-sich-manifestieren-to-manifest-to-become-evident",
       "german": "sich manifestieren",
       "english": "to manifest, to become evident",
       "category": "Reflexive Verbs",
@@ -676,7 +676,7 @@
       }
     },
     {
-      "id": "reflexive-c1-035",
+      "id": "c1-reflexive-verbs-sich-rekrutieren-to-be-recruited-from-to-be-drawn-from",
       "german": "sich rekrutieren",
       "english": "to be recruited from, to be drawn from",
       "category": "Reflexive Verbs",
@@ -697,7 +697,7 @@
       }
     },
     {
-      "id": "reflexive-c1-036",
+      "id": "c1-reflexive-verbs-sich-formieren-to-form-to-organize",
       "german": "sich formieren",
       "english": "to form, to organize",
       "category": "Reflexive Verbs",
@@ -718,7 +718,7 @@
       }
     },
     {
-      "id": "reflexive-c1-037",
+      "id": "c1-reflexive-verbs-sich-konstituieren-to-constitute-oneself-to-be-formed",
       "german": "sich konstituieren",
       "english": "to constitute oneself, to be formed",
       "category": "Reflexive Verbs",
@@ -739,7 +739,7 @@
       }
     },
     {
-      "id": "reflexive-c1-038",
+      "id": "c1-reflexive-verbs-sich-abgrenzen-to-distinguish-oneself-from-to-set-oneself-apart",
       "german": "sich abgrenzen",
       "english": "to distinguish oneself from, to set oneself apart",
       "category": "Reflexive Verbs",
@@ -760,7 +760,7 @@
       }
     },
     {
-      "id": "reflexive-c1-039",
+      "id": "c1-reflexive-verbs-sich-distanzieren-to-distance-oneself-from",
       "german": "sich distanzieren",
       "english": "to distance oneself from",
       "category": "Reflexive Verbs",
@@ -781,7 +781,7 @@
       }
     },
     {
-      "id": "reflexive-c1-040",
+      "id": "c1-reflexive-verbs-sich-solidarisieren-to-show-solidarity-with",
       "german": "sich solidarisieren",
       "english": "to show solidarity with",
       "category": "Reflexive Verbs",

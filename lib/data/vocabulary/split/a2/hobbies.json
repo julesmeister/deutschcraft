@@ -4,7 +4,7 @@
   "totalCards": 31,
   "flashcards": [
     {
-      "id": "syllabus-a2-10551",
+      "id": "a2-hobbies-schwimmen-to-swim",
       "german": "schwimmen",
       "english": "to swim",
       "category": "Hobbies",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10554",
+      "id": "a2-hobbies-singen-to-sing",
       "german": "singen",
       "english": "to sing",
       "category": "Hobbies",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10555",
+      "id": "a2-hobbies-malen-to-paint",
       "german": "malen",
       "english": "to paint",
       "category": "Hobbies",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10556",
+      "id": "a2-hobbies-zeichnen-to-draw",
       "german": "zeichnen",
       "english": "to draw",
       "category": "Hobbies",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10557",
+      "id": "a2-hobbies-fotografieren-to-photograph",
       "german": "fotografieren",
       "english": "to photograph",
       "category": "Hobbies",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10558",
+      "id": "a2-hobbies-der-fussball-soccer-football",
       "german": "der Fußball",
       "english": "soccer / football",
       "category": "Hobbies",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10559",
+      "id": "a2-hobbies-die-gitarre-guitar",
       "german": "die Gitarre",
       "english": "guitar",
       "category": "Hobbies",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10560",
+      "id": "a2-hobbies-das-klavier-piano",
       "german": "das Klavier",
       "english": "piano",
       "category": "Hobbies",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10562",
+      "id": "a2-hobbies-backen-to-bake",
       "german": "backen",
       "english": "to bake",
       "category": "Hobbies",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10563",
+      "id": "a2-hobbies-wandern-to-hike",
       "german": "wandern",
       "english": "to hike",
       "category": "Hobbies",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10565",
+      "id": "a2-hobbies-joggen-to-jog",
       "german": "joggen",
       "english": "to jog",
       "category": "Hobbies",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10566",
+      "id": "a2-hobbies-das-radfahren-cycling",
       "german": "das Radfahren",
       "english": "cycling",
       "category": "Hobbies",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10567",
+      "id": "a2-hobbies-das-tennis-tennis",
       "german": "das Tennis",
       "english": "tennis",
       "category": "Hobbies",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10568",
+      "id": "a2-hobbies-der-basketball-basketball",
       "german": "der Basketball",
       "english": "basketball",
       "category": "Hobbies",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10569",
+      "id": "a2-hobbies-der-volleyball-volleyball",
       "german": "der Volleyball",
       "english": "volleyball",
       "category": "Hobbies",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10570",
+      "id": "a2-hobbies-das-yoga-yoga",
       "german": "das Yoga",
       "english": "yoga",
       "category": "Hobbies",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10571",
+      "id": "a2-hobbies-die-fitness-fitness",
       "german": "die Fitness",
       "english": "fitness",
       "category": "Hobbies",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10573",
+      "id": "a2-hobbies-gaertnern-to-garden",
       "german": "gärtnern",
       "english": "to garden",
       "category": "Hobbies",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10574",
+      "id": "a2-hobbies-basteln-to-do-crafts-to-tinker",
       "german": "basteln",
       "english": "to do crafts / to tinker",
       "category": "Hobbies",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10575",
+      "id": "a2-hobbies-sammeln-to-collect",
       "german": "sammeln",
       "english": "to collect",
       "category": "Hobbies",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10576",
+      "id": "a2-hobbies-das-hobby-the-hobby",
       "german": "das Hobby",
       "english": "the hobby",
       "category": "Hobbies",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10577",
+      "id": "a2-hobbies-die-freizeit-free-time-leisure-time",
       "german": "die Freizeit",
       "english": "free time / leisure time",
       "category": "Hobbies",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10578",
+      "id": "a2-hobbies-das-kino-the-cinema",
       "german": "das Kino",
       "english": "the cinema",
       "category": "Hobbies",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10579",
+      "id": "a2-hobbies-das-theater-the-theater",
       "german": "das Theater",
       "english": "the theater",
       "category": "Hobbies",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10580",
+      "id": "a2-hobbies-das-konzert-the-concert",
       "german": "das Konzert",
       "english": "the concert",
       "category": "Hobbies",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10581",
+      "id": "a2-hobbies-das-museum-the-museum",
       "german": "das Museum",
       "english": "the museum",
       "category": "Hobbies",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10583",
+      "id": "a2-hobbies-naehen-to-sew",
       "german": "nähen",
       "english": "to sew",
       "category": "Hobbies",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10584",
+      "id": "a2-hobbies-stricken-to-knit",
       "german": "stricken",
       "english": "to knit",
       "category": "Hobbies",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10585",
+      "id": "a2-hobbies-schach-spielen-to-play-chess",
       "german": "Schach spielen",
       "english": "to play chess",
       "category": "Hobbies",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10586",
+      "id": "a2-hobbies-karten-spielen-to-play-cards",
       "german": "Karten spielen",
       "english": "to play cards",
       "category": "Hobbies",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10587",
+      "id": "a2-hobbies-campen-to-camp",
       "german": "campen",
       "english": "to camp",
       "category": "Hobbies",

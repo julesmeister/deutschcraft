@@ -4,7 +4,7 @@
   "totalCards": 58,
   "flashcards": [
     {
-      "id": "syllabus-b1-11025",
+      "id": "b1-medical-health-das-rezept-prescription",
       "german": "das Rezept",
       "english": "prescription",
       "category": "Medical Health",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11028",
+      "id": "b1-medical-health-die-schmerzen-pain-aches",
       "german": "die Schmerzen",
       "english": "pain / aches",
       "category": "Medical Health",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11029",
+      "id": "b1-medical-health-das-fieber-fever",
       "german": "das Fieber",
       "english": "fever",
       "category": "Medical Health",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11030",
+      "id": "b1-medical-health-die-erkaeltung-cold",
       "german": "die Erkältung",
       "english": "cold",
       "category": "Medical Health",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11031",
+      "id": "b1-medical-health-die-grippe-flu-influenza",
       "german": "die Grippe",
       "english": "flu / influenza",
       "category": "Medical Health",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11034",
+      "id": "b1-medical-health-die-verletzung-injury",
       "german": "die Verletzung",
       "english": "injury",
       "category": "Medical Health",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11035",
+      "id": "b1-medical-health-die-untersuchung-examination-checkup",
       "german": "die Untersuchung",
       "english": "examination / checkup",
       "category": "Medical Health",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11038",
+      "id": "b1-medical-health-die-versicherung-insurance",
       "german": "die Versicherung",
       "english": "insurance",
       "category": "Medical Health",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11039",
+      "id": "b1-medical-health-die-sprechstunde-consultation-hours",
       "german": "die Sprechstunde",
       "english": "consultation hours",
       "category": "Medical Health",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11040",
+      "id": "b1-medical-health-die-behandlung-treatment",
       "german": "die Behandlung",
       "english": "treatment",
       "category": "Medical Health",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11044",
+      "id": "b1-medical-health-die-zahnaerztin-dentist-female",
       "german": "die Zahnärztin",
       "english": "dentist (female)",
       "category": "Medical Health",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11048",
+      "id": "b1-medical-health-die-klinik-clinic",
       "german": "die Klinik",
       "english": "clinic",
       "category": "Medical Health",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11051",
+      "id": "b1-medical-health-die-operation-operation-surgery",
       "german": "die Operation",
       "english": "operation / surgery",
       "category": "Medical Health",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11052",
+      "id": "b1-medical-health-die-diagnose-diagnosis",
       "german": "die Diagnose",
       "english": "diagnosis",
       "category": "Medical Health",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11053",
+      "id": "b1-medical-health-das-symptom-symptom",
       "german": "das Symptom",
       "english": "symptom",
       "category": "Medical Health",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11054",
+      "id": "b1-medical-health-die-krankheit-illness-disease",
       "german": "die Krankheit",
       "english": "illness / disease",
       "category": "Medical Health",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11055",
+      "id": "b1-medical-health-die-allergie-allergy",
       "german": "die Allergie",
       "english": "allergy",
       "category": "Medical Health",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11056",
+      "id": "b1-medical-health-die-infektion-infection",
       "german": "die Infektion",
       "english": "infection",
       "category": "Medical Health",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11057",
+      "id": "b1-medical-health-die-entzuendung-inflammation",
       "german": "die Entzündung",
       "english": "inflammation",
       "category": "Medical Health",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11058",
+      "id": "b1-medical-health-die-kopfschmerzen-headache",
       "german": "die Kopfschmerzen",
       "english": "headache",
       "category": "Medical Health",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11059",
+      "id": "b1-medical-health-die-bauchschmerzen-stomach-ache",
       "german": "die Bauchschmerzen",
       "english": "stomach ache",
       "category": "Medical Health",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11060",
+      "id": "b1-medical-health-die-zahnschmerzen-toothache",
       "german": "die Zahnschmerzen",
       "english": "toothache",
       "category": "Medical Health",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11061",
+      "id": "b1-medical-health-die-rueckenschmerzen-back-pain",
       "german": "die Rückenschmerzen",
       "english": "back pain",
       "category": "Medical Health",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11062",
+      "id": "b1-medical-health-die-halsschmerzen-sore-throat",
       "german": "die Halsschmerzen",
       "english": "sore throat",
       "category": "Medical Health",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11063",
+      "id": "b1-medical-health-der-durchfall-diarrhea",
       "german": "der Durchfall",
       "english": "diarrhea",
       "category": "Medical Health",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11064",
+      "id": "b1-medical-health-die-verstopfung-constipation",
       "german": "die Verstopfung",
       "english": "constipation",
       "category": "Medical Health",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11065",
+      "id": "b1-medical-health-die-uebelkeit-nausea",
       "german": "die Übelkeit",
       "english": "nausea",
       "category": "Medical Health",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11066",
+      "id": "b1-medical-health-das-erbrechen-vomiting",
       "german": "das Erbrechen",
       "english": "vomiting",
       "category": "Medical Health",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11067",
+      "id": "b1-medical-health-der-schwindel-dizziness",
       "german": "der Schwindel",
       "english": "dizziness",
       "category": "Medical Health",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11068",
+      "id": "b1-medical-health-die-muedigkeit-fatigue-tiredness",
       "german": "die Müdigkeit",
       "english": "fatigue / tiredness",
       "category": "Medical Health",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11069",
+      "id": "b1-medical-health-der-ausschlag-rash",
       "german": "der Ausschlag",
       "english": "rash",
       "category": "Medical Health",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11070",
+      "id": "b1-medical-health-der-blutdruck-blood-pressure",
       "german": "der Blutdruck",
       "english": "blood pressure",
       "category": "Medical Health",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11071",
+      "id": "b1-medical-health-der-puls-pulse",
       "german": "der Puls",
       "english": "pulse",
       "category": "Medical Health",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11072",
+      "id": "b1-medical-health-die-blutprobe-blood-sample-blood-test",
       "german": "die Blutprobe",
       "english": "blood sample / blood test",
       "category": "Medical Health",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11074",
+      "id": "b1-medical-health-der-ultraschall-ultrasound",
       "german": "der Ultraschall",
       "english": "ultrasound",
       "category": "Medical Health",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11078",
+      "id": "b1-medical-health-die-kapsel-capsule",
       "german": "die Kapsel",
       "english": "capsule",
       "category": "Medical Health",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11081",
+      "id": "b1-medical-health-das-antibiotikum-antibiotic",
       "german": "das Antibiotikum",
       "english": "antibiotic",
       "category": "Medical Health",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11082",
+      "id": "b1-medical-health-das-schmerzmittel-painkiller",
       "german": "das Schmerzmittel",
       "english": "painkiller",
       "category": "Medical Health",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11084",
+      "id": "b1-medical-health-die-dosierung-dosage",
       "german": "die Dosierung",
       "english": "dosage",
       "category": "Medical Health",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11087",
+      "id": "b1-medical-health-der-gips-cast-plaster",
       "german": "der Gips",
       "english": "cast / plaster",
       "category": "Medical Health",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11088",
+      "id": "b1-medical-health-die-kruecke-crutch",
       "german": "die Krücke",
       "english": "crutch",
       "category": "Medical Health",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11089",
+      "id": "b1-medical-health-der-rollstuhl-wheelchair",
       "german": "der Rollstuhl",
       "english": "wheelchair",
       "category": "Medical Health",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11090",
+      "id": "b1-medical-health-die-brille-glasses",
       "german": "die Brille",
       "english": "glasses",
       "category": "Medical Health",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11091",
+      "id": "b1-medical-health-der-bruch-fracture-break",
       "german": "der Bruch",
       "english": "fracture / break",
       "category": "Medical Health",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11092",
+      "id": "b1-medical-health-die-prellung-bruise-contusion",
       "german": "die Prellung",
       "english": "bruise / contusion",
       "category": "Medical Health",
@@ -904,7 +904,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11094",
+      "id": "b1-medical-health-die-narbe-scar",
       "german": "die Narbe",
       "english": "scar",
       "category": "Medical Health",
@@ -924,7 +924,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11095",
+      "id": "b1-medical-health-die-blutung-bleeding",
       "german": "die Blutung",
       "english": "bleeding",
       "category": "Medical Health",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11096",
+      "id": "b1-medical-health-die-schwellung-swelling",
       "german": "die Schwellung",
       "english": "swelling",
       "category": "Medical Health",
@@ -964,7 +964,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11097",
+      "id": "b1-medical-health-die-atemnot-shortness-of-breath",
       "german": "die Atemnot",
       "english": "shortness of breath",
       "category": "Medical Health",
@@ -984,7 +984,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11098",
+      "id": "b1-medical-health-die-bewusstlosigkeit-unconsciousness",
       "german": "die Bewusstlosigkeit",
       "english": "unconsciousness",
       "category": "Medical Health",
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11099",
+      "id": "b1-medical-health-die-genesung-recovery",
       "german": "die Genesung",
       "english": "recovery",
       "category": "Medical Health",
@@ -1024,7 +1024,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11100",
+      "id": "b1-medical-health-die-rehabilitation-rehabilitation",
       "german": "die Rehabilitation",
       "english": "rehabilitation",
       "category": "Medical Health",
@@ -1044,7 +1044,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11101",
+      "id": "b1-medical-health-die-physiotherapie-physiotherapy",
       "german": "die Physiotherapie",
       "english": "physiotherapy",
       "category": "Medical Health",
@@ -1064,7 +1064,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11103",
+      "id": "b1-medical-health-die-vorsorge-prevention-preventive-care",
       "german": "die Vorsorge",
       "english": "prevention / preventive care",
       "category": "Medical Health",
@@ -1084,7 +1084,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11104",
+      "id": "b1-medical-health-untersuchen-to-examine",
       "german": "untersuchen",
       "english": "to examine",
       "category": "Medical Health",
@@ -1104,7 +1104,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11105",
+      "id": "b1-medical-health-behandeln-to-treat",
       "german": "behandeln",
       "english": "to treat",
       "category": "Medical Health",
@@ -1124,7 +1124,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11108",
+      "id": "b1-medical-health-heilen-to-heal-to-cure",
       "german": "heilen",
       "english": "to heal / to cure",
       "category": "Medical Health",
@@ -1144,7 +1144,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11111",
+      "id": "b1-medical-health-operieren-to-operate-on",
       "german": "operieren",
       "english": "to operate on",
       "category": "Medical Health",

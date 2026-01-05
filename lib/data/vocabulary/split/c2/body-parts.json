@@ -4,7 +4,7 @@
   "totalCards": 15,
   "flashcards": [
     {
-      "id": "body-c2-001",
+      "id": "c2-body-parts-die-hirnhaut-meninges-brain-membrane",
       "german": "die Hirnhaut",
       "english": "meninges / brain membrane",
       "category": "Body Parts",
@@ -26,7 +26,7 @@
       }
     },
     {
-      "id": "body-c2-002",
+      "id": "c2-body-parts-der-liquor-cerebrospinal-fluid",
       "german": "der Liquor",
       "english": "cerebrospinal fluid",
       "category": "Body Parts",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "body-c2-003",
+      "id": "c2-body-parts-das-striatum-striatum",
       "german": "das Striatum",
       "english": "striatum",
       "category": "Body Parts",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "id": "body-c2-004",
+      "id": "c2-body-parts-der-hippocampus-hippocampus",
       "german": "der Hippocampus",
       "english": "hippocampus",
       "category": "Body Parts",
@@ -92,7 +92,7 @@
       }
     },
     {
-      "id": "body-c2-005",
+      "id": "c2-body-parts-die-amygdala-amygdala",
       "german": "die Amygdala",
       "english": "amygdala",
       "category": "Body Parts",
@@ -114,7 +114,7 @@
       }
     },
     {
-      "id": "body-c2-006",
+      "id": "c2-body-parts-die-epiphyse-pineal-gland-epiphysis",
       "german": "die Epiphyse",
       "english": "pineal gland / epiphysis",
       "category": "Body Parts",
@@ -136,7 +136,7 @@
       }
     },
     {
-      "id": "body-c2-007",
+      "id": "c2-body-parts-die-zirbeldruese-pineal-gland",
       "german": "die Zirbeldrüse",
       "english": "pineal gland",
       "category": "Body Parts",
@@ -158,7 +158,7 @@
       }
     },
     {
-      "id": "body-c2-008",
+      "id": "c2-body-parts-das-endokard-endocardium",
       "german": "das Endokard",
       "english": "endocardium",
       "category": "Body Parts",
@@ -180,7 +180,7 @@
       }
     },
     {
-      "id": "body-c2-009",
+      "id": "c2-body-parts-das-perikard-pericardium",
       "german": "das Perikard",
       "english": "pericardium",
       "category": "Body Parts",
@@ -202,7 +202,7 @@
       }
     },
     {
-      "id": "body-c2-010",
+      "id": "c2-body-parts-das-myokard-myocardium-heart-muscle",
       "german": "das Myokard",
       "english": "myocardium / heart muscle",
       "category": "Body Parts",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "body-c2-011",
+      "id": "c2-body-parts-der-oesophagus-esophagus-medical-term",
       "german": "der Ösophagus",
       "english": "esophagus (medical term)",
       "category": "Body Parts",
@@ -246,7 +246,7 @@
       }
     },
     {
-      "id": "body-c2-012",
+      "id": "c2-body-parts-die-epiglottis-epiglottis",
       "german": "die Epiglottis",
       "english": "epiglottis",
       "category": "Body Parts",
@@ -268,7 +268,7 @@
       }
     },
     {
-      "id": "body-c2-013",
+      "id": "c2-body-parts-die-glomeruli-glomeruli-kidney-filtration-units",
       "german": "die Glomeruli",
       "english": "glomeruli (kidney filtration units)",
       "category": "Body Parts",
@@ -290,7 +290,7 @@
       }
     },
     {
-      "id": "body-c2-014",
+      "id": "c2-body-parts-das-nephron-nephron",
       "german": "das Nephron",
       "english": "nephron",
       "category": "Body Parts",
@@ -312,7 +312,7 @@
       }
     },
     {
-      "id": "body-c2-015",
+      "id": "c2-body-parts-die-plazenta-placenta",
       "german": "die Plazenta",
       "english": "placenta",
       "category": "Body Parts",

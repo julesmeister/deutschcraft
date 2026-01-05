@@ -4,7 +4,7 @@
   "totalCards": 46,
   "flashcards": [
     {
-      "id": "syllabus-b2-11161",
+      "id": "b2-academic-die-forschung-research",
       "german": "die Forschung",
       "english": "research",
       "category": "Academic",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11162",
+      "id": "b2-academic-die-theorie-theory",
       "german": "die Theorie",
       "english": "theory",
       "category": "Academic",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11163",
+      "id": "b2-academic-die-hypothese-hypothesis",
       "german": "die Hypothese",
       "english": "hypothesis",
       "category": "Academic",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11164",
+      "id": "b2-academic-die-methode-method",
       "german": "die Methode",
       "english": "method",
       "category": "Academic",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11165",
+      "id": "b2-academic-das-ergebnis-result",
       "german": "das Ergebnis",
       "english": "result",
       "category": "Academic",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11166",
+      "id": "b2-academic-die-schlussfolgerung-conclusion",
       "german": "die Schlussfolgerung",
       "english": "conclusion",
       "category": "Academic",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11167",
+      "id": "b2-academic-die-analyse-analysis",
       "german": "die Analyse",
       "english": "analysis",
       "category": "Academic",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11168",
+      "id": "b2-academic-das-argument-argument",
       "german": "das Argument",
       "english": "argument",
       "category": "Academic",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11169",
+      "id": "b2-academic-die-these-thesis",
       "german": "die These",
       "english": "thesis",
       "category": "Academic",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11170",
+      "id": "b2-academic-der-beweis-proof-evidence",
       "german": "der Beweis",
       "english": "proof / evidence",
       "category": "Academic",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11171",
+      "id": "b2-academic-die-quelle-source",
       "german": "die Quelle",
       "english": "source",
       "category": "Academic",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11172",
+      "id": "b2-academic-die-literatur-literature-references",
       "german": "die Literatur",
       "english": "literature / references",
       "category": "Academic",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11173",
+      "id": "b2-academic-die-dissertation-dissertation-thesis",
       "german": "die Dissertation",
       "english": "dissertation / thesis",
       "category": "Academic",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11174",
+      "id": "b2-academic-die-abhandlung-treatise-paper",
       "german": "die Abhandlung",
       "english": "treatise / paper",
       "category": "Academic",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11175",
+      "id": "b2-academic-die-fachzeitschrift-academic-journal",
       "german": "die Fachzeitschrift",
       "english": "academic journal",
       "category": "Academic",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11176",
+      "id": "b2-academic-die-veroeffentlichung-publication",
       "german": "die Veröffentlichung",
       "english": "publication",
       "category": "Academic",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11177",
+      "id": "b2-academic-die-studie-study",
       "german": "die Studie",
       "english": "study",
       "category": "Academic",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11179",
+      "id": "b2-academic-das-experiment-experiment",
       "german": "das Experiment",
       "english": "experiment",
       "category": "Academic",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11181",
+      "id": "b2-academic-die-statistik-statistics",
       "german": "die Statistik",
       "english": "statistics",
       "category": "Academic",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11182",
+      "id": "b2-academic-die-stichprobe-sample",
       "german": "die Stichprobe",
       "english": "sample",
       "category": "Academic",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11183",
+      "id": "b2-academic-die-erhebung-survey-data-collection",
       "german": "die Erhebung",
       "english": "survey / data collection",
       "category": "Academic",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11184",
+      "id": "b2-academic-die-auswertung-evaluation-analysis",
       "german": "die Auswertung",
       "english": "evaluation / analysis",
       "category": "Academic",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11185",
+      "id": "b2-academic-die-interpretation-interpretation",
       "german": "die Interpretation",
       "english": "interpretation",
       "category": "Academic",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11186",
+      "id": "b2-academic-die-darstellung-presentation-representation",
       "german": "die Darstellung",
       "english": "presentation / representation",
       "category": "Academic",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11187",
+      "id": "b2-academic-der-vergleich-comparison",
       "german": "der Vergleich",
       "english": "comparison",
       "category": "Academic",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11188",
+      "id": "b2-academic-die-kritik-criticism-critique",
       "german": "die Kritik",
       "english": "criticism / critique",
       "category": "Academic",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11189",
+      "id": "b2-academic-die-diskussion-discussion",
       "german": "die Diskussion",
       "english": "discussion",
       "category": "Academic",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11190",
+      "id": "b2-academic-die-zusammenfassung-summary-abstract",
       "german": "die Zusammenfassung",
       "english": "summary / abstract",
       "category": "Academic",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "b2-perspektive-044827",
+      "id": "b2-academic-die-perspektive-perspective",
       "german": "die Perspektive",
       "english": "perspective",
       "category": "Academic",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "b2-aspekt-044827",
+      "id": "b2-academic-der-aspekt-aspect",
       "german": "der Aspekt",
       "english": "aspect",
       "category": "Academic",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "b2-kontext-044827",
+      "id": "b2-academic-der-kontext-context",
       "german": "der Kontext",
       "english": "context",
       "category": "Academic",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkdn5ubis68",
+      "id": "b2-academic-erweitern-to-expand-to-extend",
       "german": "erweitern",
       "english": "to expand / to extend",
       "category": "Academic",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkdn5u6umc5",
+      "id": "b2-academic-vereinfachen-to-simplify",
       "german": "vereinfachen",
       "english": "to simplify",
       "category": "Academic",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkdn5uut2iw",
+      "id": "b2-academic-komplizieren-to-complicate",
       "german": "komplizieren",
       "english": "to complicate",
       "category": "Academic",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkdn5utfk8f",
+      "id": "b2-academic-bewerten-to-evaluate-to-rate",
       "german": "bewerten",
       "english": "to evaluate / to rate",
       "category": "Academic",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkdn5ucmh8l",
+      "id": "b2-academic-beeinflussen-to-influence",
       "german": "beeinflussen",
       "english": "to influence",
       "category": "Academic",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkdn5uc8opj",
+      "id": "b2-academic-hemmen-to-inhibit-to-hinder",
       "german": "hemmen",
       "english": "to inhibit / to hinder",
       "category": "Academic",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkdn5upqdp2",
+      "id": "b2-academic-erschweren-to-make-difficult-to-complicate",
       "german": "erschweren",
       "english": "to make difficult / to complicate",
       "category": "Academic",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkeier6hy02",
+      "id": "b2-academic-analysieren-to-analyze",
       "german": "analysieren",
       "english": "to analyze",
       "category": "Academic",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkeieru98ug",
+      "id": "b2-academic-interpretieren-to-interpret",
       "german": "interpretieren",
       "english": "to interpret",
       "category": "Academic",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkeierf6kpg",
+      "id": "b2-academic-definieren-to-define",
       "german": "definieren",
       "english": "to define",
       "category": "Academic",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkeier9sfrd",
+      "id": "b2-academic-spezifizieren-to-specify",
       "german": "spezifizieren",
       "english": "to specify",
       "category": "Academic",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkeier3pzwb",
+      "id": "b2-academic-konkretisieren-to-make-concrete-to-specify",
       "german": "konkretisieren",
       "english": "to make concrete / to specify",
       "category": "Academic",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkeierr38a1",
+      "id": "b2-academic-optimieren-to-optimize",
       "german": "optimieren",
       "english": "to optimize",
       "category": "Academic",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkeiergksla",
+      "id": "b2-academic-minimieren-to-minimize",
       "german": "minimieren",
       "english": "to minimize",
       "category": "Academic",
@@ -904,7 +904,7 @@
       }
     },
     {
-      "id": "b2-intermediate-verbs-mivkeierefmwb",
+      "id": "b2-academic-maximieren-to-maximize",
       "german": "maximieren",
       "english": "to maximize",
       "category": "Academic",

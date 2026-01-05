@@ -4,7 +4,7 @@
   "totalCards": 30,
   "flashcards": [
     {
-      "id": "syllabus-a2-10413",
+      "id": "a2-action-verbs-beginnen-to-begin",
       "german": "beginnen",
       "english": "to begin",
       "category": "Action Verbs",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10414",
+      "id": "a2-action-verbs-enden-to-end",
       "german": "enden",
       "english": "to end",
       "category": "Action Verbs",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10416",
+      "id": "a2-action-verbs-schliessen-to-close",
       "german": "schließen",
       "english": "to close",
       "category": "Action Verbs",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10422",
+      "id": "a2-action-verbs-werfen-to-throw",
       "german": "werfen",
       "english": "to throw",
       "category": "Action Verbs",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10423",
+      "id": "a2-action-verbs-ziehen-to-pull",
       "german": "ziehen",
       "english": "to pull",
       "category": "Action Verbs",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10424",
+      "id": "a2-action-verbs-druecken-to-push-to-press",
       "german": "drücken",
       "english": "to push / to press",
       "category": "Action Verbs",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10425",
+      "id": "a2-action-verbs-drehen-to-turn-to-rotate",
       "german": "drehen",
       "english": "to turn / to rotate",
       "category": "Action Verbs",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10426",
+      "id": "a2-action-verbs-bewegen-to-move",
       "german": "bewegen",
       "english": "to move",
       "category": "Action Verbs",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10427",
+      "id": "a2-action-verbs-aendern-to-change",
       "german": "ändern",
       "english": "to change",
       "category": "Action Verbs",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miuj9qffx4xt8",
+      "id": "a2-action-verbs-springen-to-jump",
       "german": "springen",
       "english": "to jump",
       "category": "Action Verbs",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miuj9qffu5e9z",
+      "id": "a2-action-verbs-stoppen-to-stop",
       "german": "stoppen",
       "english": "to stop",
       "category": "Action Verbs",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miuj9qffdfjnh",
+      "id": "a2-action-verbs-klettern-to-climb",
       "german": "klettern",
       "english": "to climb",
       "category": "Action Verbs",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miuj9qffyryyc",
+      "id": "a2-action-verbs-trainieren-to-train",
       "german": "trainieren",
       "english": "to train",
       "category": "Action Verbs",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miuj9qffdbgug",
+      "id": "a2-action-verbs-kaempfen-to-fight",
       "german": "kämpfen",
       "english": "to fight",
       "category": "Action Verbs",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miuj9qffd9a1n",
+      "id": "a2-action-verbs-reparieren-to-repair",
       "german": "reparieren",
       "english": "to repair",
       "category": "Action Verbs",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miuj9qffpb3ip",
+      "id": "a2-action-verbs-zerstoeren-to-destroy",
       "german": "zerstören",
       "english": "to destroy",
       "category": "Action Verbs",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miuj9qffu9dx8",
+      "id": "a2-action-verbs-ordnen-to-organize-to-arrange",
       "german": "ordnen",
       "english": "to organize / to arrange",
       "category": "Action Verbs",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miuj9qffvyd48",
+      "id": "a2-action-verbs-mischen-to-mix",
       "german": "mischen",
       "english": "to mix",
       "category": "Action Verbs",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miuj9qff34yzf",
+      "id": "a2-action-verbs-verbinden-to-connect",
       "german": "verbinden",
       "english": "to connect",
       "category": "Action Verbs",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miujdiwhi4mmc",
+      "id": "a2-action-verbs-beenden-to-end-to-finish",
       "german": "beenden",
       "english": "to end / to finish",
       "category": "Action Verbs",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miujdiwhjh2hr",
+      "id": "a2-action-verbs-ausruhen-to-rest",
       "german": "ausruhen",
       "english": "to rest",
       "category": "Action Verbs",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miujdiwhxd07i",
+      "id": "a2-action-verbs-entspannen-to-relax",
       "german": "entspannen",
       "english": "to relax",
       "category": "Action Verbs",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miujdiwh9ikmk",
+      "id": "a2-action-verbs-retten-to-save-to-rescue",
       "german": "retten",
       "english": "to save / to rescue",
       "category": "Action Verbs",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miujf2noro3wv",
+      "id": "a2-action-verbs-ausfuehren-to-execute-to-carry-out",
       "german": "ausführen",
       "english": "to execute / to carry out",
       "category": "Action Verbs",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miujf2noxufnl",
+      "id": "a2-action-verbs-vollenden-to-complete-to-finish",
       "german": "vollenden",
       "english": "to complete / to finish",
       "category": "Action Verbs",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miujf2norjim4",
+      "id": "a2-action-verbs-erlangen-to-obtain-to-achieve",
       "german": "erlangen",
       "english": "to obtain / to achieve",
       "category": "Action Verbs",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miujf2no75bmc",
+      "id": "a2-action-verbs-erzielen-to-achieve-to-attain",
       "german": "erzielen",
       "english": "to achieve / to attain",
       "category": "Action Verbs",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miujhqq62m2jd",
+      "id": "a2-action-verbs-anordnen-to-arrange-to-order",
       "german": "anordnen",
       "english": "to arrange / to order",
       "category": "Action Verbs",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miujih7fvf1e9",
+      "id": "a2-action-verbs-fortfuehren-to-continue-to-carry-on",
       "german": "fortführen",
       "english": "to continue / to carry on",
       "category": "Action Verbs",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "a2-action-verbs-miujk6v3y9il7",
+      "id": "a2-action-verbs-verleihen-to-lend-out-to-award",
       "german": "verleihen",
       "english": "to lend out / to award",
       "category": "Action Verbs",

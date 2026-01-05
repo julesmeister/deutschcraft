@@ -54,17 +54,16 @@ export async function getFlashcardsByLevel(level: CEFRLevel): Promise<Flashcard[
  */
 export async function getVocabularyWord(wordId: string): Promise<VocabularyWord | null> {
   try {
-    // 1. Try to infer level from ID to avoid loading all files
-    // Format: syllabus-a1-xxxxx or FLASH_syllabus-a1-xxxxx
-    const cleanId = wordId.replace('FLASH_', '');
-    const match = cleanId.match(/syllabus-([a-z0-9]+)-/i);
+    // 1. Try to infer level from ID (Semantic ID: level-category-german-english)
+    // Example: a1-greetings-hallo-hello
+    const levelMatch = wordId.match(/^([a-z][0-9])-|^([a-z][0-9])$/i);
     
-    if (match && match[1]) {
-      const level = match[1].toUpperCase() as CEFRLevel;
+    if (levelMatch) {
+      const level = (levelMatch[1] || levelMatch[2]).toUpperCase() as CEFRLevel;
       if (levelLoaders[level]) {
         const data = await levelLoaders[level]();
         const fileContent = data.default || data;
-        const found = (fileContent.flashcards || []).find((c: any) => c.id === cleanId);
+        const found = (fileContent.flashcards || []).find((c: any) => c.id === wordId);
         if (found) return jsonToVocabularyWord(found);
       }
     }
@@ -74,7 +73,7 @@ export async function getVocabularyWord(wordId: string): Promise<VocabularyWord 
       const loader = levelLoaders[level];
       const data = await loader();
       const fileContent = data.default || data;
-      const found = (fileContent.flashcards || []).find((c: any) => c.id === cleanId);
+      const found = (fileContent.flashcards || []).find((c: any) => c.id === wordId);
       if (found) return jsonToVocabularyWord(found);
     }
 

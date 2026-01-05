@@ -4,7 +4,7 @@
   "totalCards": 74,
   "flashcards": [
     {
-      "id": "syllabus-a2-10512",
+      "id": "a2-education-die-schule-school",
       "german": "die Schule",
       "english": "school",
       "category": "Education",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10514",
+      "id": "a2-education-studieren-to-study",
       "german": "studieren",
       "english": "to study",
       "category": "Education",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10515",
+      "id": "a2-education-die-pruefung-exam",
       "german": "die Prüfung",
       "english": "exam",
       "category": "Education",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10516",
+      "id": "a2-education-das-buch-book",
       "german": "das Buch",
       "english": "book",
       "category": "Education",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10517",
+      "id": "a2-education-die-universitaet-university",
       "german": "die Universität",
       "english": "university",
       "category": "Education",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10518",
+      "id": "a2-education-der-lehrer-teacher",
       "german": "der Lehrer",
       "english": "teacher",
       "category": "Education",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10519",
+      "id": "a2-education-der-schueler-student-pupil",
       "german": "der Schüler",
       "english": "student / pupil",
       "category": "Education",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10520",
+      "id": "a2-education-die-klasse-class",
       "german": "die Klasse",
       "english": "class",
       "category": "Education",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10521",
+      "id": "a2-education-die-hausaufgabe-homework",
       "german": "die Hausaufgabe",
       "english": "homework",
       "category": "Education",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10522",
+      "id": "a2-education-der-stift-pen",
       "german": "der Stift",
       "english": "pen",
       "category": "Education",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10523",
+      "id": "a2-education-der-bleistift-pencil",
       "german": "der Bleistift",
       "english": "pencil",
       "category": "Education",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10524",
+      "id": "a2-education-das-heft-notebook",
       "german": "das Heft",
       "english": "notebook",
       "category": "Education",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10525",
+      "id": "a2-education-die-tafel-blackboard-whiteboard",
       "german": "die Tafel",
       "english": "blackboard / whiteboard",
       "category": "Education",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10526",
+      "id": "a2-education-die-note-grade-mark",
       "german": "die Note",
       "english": "grade / mark",
       "category": "Education",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10527",
+      "id": "a2-education-das-seminar-seminar",
       "german": "das Seminar",
       "english": "seminar",
       "category": "Education",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10528",
+      "id": "a2-education-die-vorlesung-lecture",
       "german": "die Vorlesung",
       "english": "lecture",
       "category": "Education",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10529",
+      "id": "a2-education-die-lehrerin-teacher-female",
       "german": "die Lehrerin",
       "english": "teacher (female)",
       "category": "Education",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10530",
+      "id": "a2-education-die-schuelerin-student-pupil-female",
       "german": "die Schülerin",
       "english": "student / pupil (female)",
       "category": "Education",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10531",
+      "id": "a2-education-der-student-university-student-male",
       "german": "der Student",
       "english": "university student (male)",
       "category": "Education",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10532",
+      "id": "a2-education-die-studentin-university-student-female",
       "german": "die Studentin",
       "english": "university student (female)",
       "category": "Education",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10533",
+      "id": "a2-education-der-kindergarten-kindergarten-preschool",
       "german": "der Kindergarten",
       "english": "kindergarten / preschool",
       "category": "Education",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10534",
+      "id": "a2-education-die-grundschule-elementary-school-primary-school",
       "german": "die Grundschule",
       "english": "elementary school / primary school",
       "category": "Education",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10535",
+      "id": "a2-education-das-gymnasium-grammar-school-high-school",
       "german": "das Gymnasium",
       "english": "grammar school / high school",
       "category": "Education",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10536",
+      "id": "a2-education-die-hochschule-college-higher-education-institution",
       "german": "die Hochschule",
       "english": "college / higher education institution",
       "category": "Education",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10537",
+      "id": "a2-education-das-fach-subject",
       "german": "das Fach",
       "english": "subject",
       "category": "Education",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10538",
+      "id": "a2-education-die-mathematik-mathematics",
       "german": "die Mathematik",
       "english": "mathematics",
       "category": "Education",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10539",
+      "id": "a2-education-das-deutsch-german-subject",
       "german": "das Deutsch",
       "english": "German (subject)",
       "category": "Education",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10540",
+      "id": "a2-education-das-englisch-english-subject",
       "german": "das Englisch",
       "english": "English (subject)",
       "category": "Education",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10541",
+      "id": "a2-education-die-geschichte-history",
       "german": "die Geschichte",
       "english": "history",
       "category": "Education",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10542",
+      "id": "a2-education-die-geografie-geography",
       "german": "die Geografie",
       "english": "geography",
       "category": "Education",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10543",
+      "id": "a2-education-die-biologie-biology",
       "german": "die Biologie",
       "english": "biology",
       "category": "Education",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10544",
+      "id": "a2-education-die-chemie-chemistry",
       "german": "die Chemie",
       "english": "chemistry",
       "category": "Education",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10545",
+      "id": "a2-education-die-physik-physics",
       "german": "die Physik",
       "english": "physics",
       "category": "Education",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10546",
+      "id": "a2-education-die-kunst-art",
       "german": "die Kunst",
       "english": "art",
       "category": "Education",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10547",
+      "id": "a2-education-die-musik-music",
       "german": "die Musik",
       "english": "music",
       "category": "Education",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10548",
+      "id": "a2-education-der-sport-physical-education-sports",
       "german": "der Sport",
       "english": "physical education / sports",
       "category": "Education",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10549",
+      "id": "a2-education-der-abschluss-degree-graduation",
       "german": "der Abschluss",
       "english": "degree / graduation",
       "category": "Education",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10550",
+      "id": "a2-education-das-diplom-diploma",
       "german": "das Diplom",
       "english": "diploma",
       "category": "Education",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10551",
+      "id": "a2-education-das-zeugnis-report-card-certificate",
       "german": "das Zeugnis",
       "english": "report card / certificate",
       "category": "Education",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10552",
+      "id": "a2-education-der-kurs-course",
       "german": "der Kurs",
       "english": "course",
       "category": "Education",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10553",
+      "id": "a2-education-der-unterricht-lesson-class-instruction",
       "german": "der Unterricht",
       "english": "lesson / class / instruction",
       "category": "Education",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10554",
+      "id": "a2-education-die-pause-break-recess",
       "german": "die Pause",
       "english": "break / recess",
       "category": "Education",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10555",
+      "id": "a2-education-die-ferien-holidays-vacation",
       "german": "die Ferien",
       "english": "holidays / vacation",
       "category": "Education",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10556",
+      "id": "a2-education-der-stundenplan-timetable-schedule",
       "german": "der Stundenplan",
       "english": "timetable / schedule",
       "category": "Education",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10557",
+      "id": "a2-education-die-mensa-cafeteria-canteen",
       "german": "die Mensa",
       "english": "cafeteria / canteen",
       "category": "Education",
@@ -904,7 +904,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10558",
+      "id": "a2-education-die-bibliothek-library",
       "german": "die Bibliothek",
       "english": "library",
       "category": "Education",
@@ -924,7 +924,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10559",
+      "id": "a2-education-das-klassenzimmer-classroom",
       "german": "das Klassenzimmer",
       "english": "classroom",
       "category": "Education",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10560",
+      "id": "a2-education-die-schultasche-school-bag",
       "german": "die Schultasche",
       "english": "school bag",
       "category": "Education",
@@ -964,7 +964,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10562",
+      "id": "a2-education-der-radiergummi-eraser",
       "german": "der Radiergummi",
       "english": "eraser",
       "category": "Education",
@@ -984,7 +984,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10563",
+      "id": "a2-education-das-lineal-ruler",
       "german": "das Lineal",
       "english": "ruler",
       "category": "Education",
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10564",
+      "id": "a2-education-die-schere-scissors",
       "german": "die Schere",
       "english": "scissors",
       "category": "Education",
@@ -1024,7 +1024,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10565",
+      "id": "a2-education-der-kleber-glue",
       "german": "der Kleber",
       "english": "glue",
       "category": "Education",
@@ -1044,7 +1044,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10566",
+      "id": "a2-education-der-spitzer-pencil-sharpener",
       "german": "der Spitzer",
       "english": "pencil sharpener",
       "category": "Education",
@@ -1064,7 +1064,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10567",
+      "id": "a2-education-das-woerterbuch-dictionary",
       "german": "das Wörterbuch",
       "english": "dictionary",
       "category": "Education",
@@ -1084,7 +1084,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10568",
+      "id": "a2-education-das-lehrbuch-textbook",
       "german": "das Lehrbuch",
       "english": "textbook",
       "category": "Education",
@@ -1104,7 +1104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10569",
+      "id": "a2-education-die-uebung-exercise-practice",
       "german": "die Übung",
       "english": "exercise / practice",
       "category": "Education",
@@ -1124,7 +1124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10570",
+      "id": "a2-education-die-aufgabe-task-assignment",
       "german": "die Aufgabe",
       "english": "task / assignment",
       "category": "Education",
@@ -1144,7 +1144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10571",
+      "id": "a2-education-die-antwort-answer",
       "german": "die Antwort",
       "english": "answer",
       "category": "Education",
@@ -1164,7 +1164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10572",
+      "id": "a2-education-die-frage-question",
       "german": "die Frage",
       "english": "question",
       "category": "Education",
@@ -1184,7 +1184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10573",
+      "id": "a2-education-der-fehler-mistake-error",
       "german": "der Fehler",
       "english": "mistake / error",
       "category": "Education",
@@ -1204,7 +1204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10574",
+      "id": "a2-education-unterrichten-to-teach",
       "german": "unterrichten",
       "english": "to teach",
       "category": "Education",
@@ -1224,7 +1224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10577",
+      "id": "a2-education-wiederholen-to-repeat-to-review",
       "german": "wiederholen",
       "english": "to repeat / to review",
       "category": "Education",
@@ -1244,7 +1244,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10578",
+      "id": "a2-education-ueben-to-practice",
       "german": "üben",
       "english": "to practice",
       "category": "Education",
@@ -1264,7 +1264,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10581",
+      "id": "a2-education-rechnen-to-calculate",
       "german": "rechnen",
       "english": "to calculate",
       "category": "Education",
@@ -1284,7 +1284,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10582",
+      "id": "a2-education-korrigieren-to-correct",
       "german": "korrigieren",
       "english": "to correct",
       "category": "Education",
@@ -1304,7 +1304,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10583",
+      "id": "a2-education-bestehen-to-pass-an-exam",
       "german": "bestehen",
       "english": "to pass (an exam)",
       "category": "Education",
@@ -1324,7 +1324,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10584",
+      "id": "a2-education-durchfallen-to-fail-an-exam",
       "german": "durchfallen",
       "english": "to fail (an exam)",
       "category": "Education",
@@ -1344,7 +1344,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10585",
+      "id": "a2-education-absolvieren-to-complete-to-graduate",
       "german": "absolvieren",
       "english": "to complete / to graduate",
       "category": "Education",
@@ -1364,7 +1364,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10586",
+      "id": "a2-education-sich-anmelden-to-register-to-enroll",
       "german": "sich anmelden",
       "english": "to register / to enroll",
       "category": "Education",
@@ -1384,7 +1384,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10587",
+      "id": "a2-education-teilnehmen-to-participate-to-attend",
       "german": "teilnehmen",
       "english": "to participate / to attend",
       "category": "Education",
@@ -1404,7 +1404,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10588",
+      "id": "a2-education-vorbereiten-to-prepare",
       "german": "vorbereiten",
       "english": "to prepare",
       "category": "Education",
@@ -1424,7 +1424,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10589",
+      "id": "a2-education-der-professor-professor",
       "german": "der Professor",
       "english": "professor",
       "category": "Education",
@@ -1444,7 +1444,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10590",
+      "id": "a2-education-die-professorin-professor-female",
       "german": "die Professorin",
       "english": "professor (female)",
       "category": "Education",
@@ -1464,7 +1464,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10591",
+      "id": "a2-education-der-rektor-principal-headmaster",
       "german": "der Rektor",
       "english": "principal / headmaster",
       "category": "Education",

@@ -4,7 +4,7 @@
   "totalCards": 82,
   "flashcards": [
     {
-      "id": "syllabus-a1-10358",
+      "id": "a1-transportation-das-auto-car",
       "german": "das Auto",
       "english": "car",
       "category": "Transportation",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10359",
+      "id": "a1-transportation-der-bus-bus",
       "german": "der Bus",
       "english": "bus",
       "category": "Transportation",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10360",
+      "id": "a1-transportation-der-zug-train",
       "german": "der Zug",
       "english": "train",
       "category": "Transportation",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10361",
+      "id": "a1-transportation-das-fahrrad-bicycle",
       "german": "das Fahrrad",
       "english": "bicycle",
       "category": "Transportation",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10362",
+      "id": "a1-transportation-das-flugzeug-airplane",
       "german": "das Flugzeug",
       "english": "airplane",
       "category": "Transportation",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10363",
+      "id": "a1-transportation-das-taxi-taxi",
       "german": "das Taxi",
       "english": "taxi",
       "category": "Transportation",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10364",
+      "id": "a1-transportation-die-u-bahn-subway-metro",
       "german": "die U-Bahn",
       "english": "subway / metro",
       "category": "Transportation",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10365",
+      "id": "a1-transportation-die-strassenbahn-tram-streetcar",
       "german": "die Straßenbahn",
       "english": "tram / streetcar",
       "category": "Transportation",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10366",
+      "id": "a1-transportation-das-schiff-ship-boat",
       "german": "das Schiff",
       "english": "ship / boat",
       "category": "Transportation",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10367",
+      "id": "a1-transportation-das-motorrad-motorcycle",
       "german": "das Motorrad",
       "english": "motorcycle",
       "category": "Transportation",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10368",
+      "id": "a1-transportation-der-bahnhof-train-station",
       "german": "der Bahnhof",
       "english": "train station",
       "category": "Transportation",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10369",
+      "id": "a1-transportation-die-haltestelle-stop-station",
       "german": "die Haltestelle",
       "english": "stop / station",
       "category": "Transportation",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10370",
+      "id": "a1-transportation-die-strasse-street-road",
       "german": "die Straße",
       "english": "street / road",
       "category": "Transportation",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10439",
+      "id": "a1-transportation-der-flughafen-airport",
       "german": "der Flughafen",
       "english": "airport",
       "category": "Transportation",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10440",
+      "id": "a1-transportation-der-hafen-port-harbor",
       "german": "der Hafen",
       "english": "port / harbor",
       "category": "Transportation",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10441",
+      "id": "a1-transportation-der-parkplatz-parking-lot-parking-space",
       "german": "der Parkplatz",
       "english": "parking lot / parking space",
       "category": "Transportation",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10442",
+      "id": "a1-transportation-die-garage-garage",
       "german": "die Garage",
       "english": "garage",
       "category": "Transportation",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10443",
+      "id": "a1-transportation-die-tankstelle-gas-station",
       "german": "die Tankstelle",
       "english": "gas station",
       "category": "Transportation",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10444",
+      "id": "a1-transportation-die-bruecke-bridge",
       "german": "die Brücke",
       "english": "bridge",
       "category": "Transportation",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10445",
+      "id": "a1-transportation-der-tunnel-tunnel",
       "german": "der Tunnel",
       "english": "tunnel",
       "category": "Transportation",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10446",
+      "id": "a1-transportation-die-kreuzung-intersection-crossroads",
       "german": "die Kreuzung",
       "english": "intersection / crossroads",
       "category": "Transportation",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10447",
+      "id": "a1-transportation-die-ampel-traffic-light",
       "german": "die Ampel",
       "english": "traffic light",
       "category": "Transportation",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10448",
+      "id": "a1-transportation-der-verkehr-traffic",
       "german": "der Verkehr",
       "english": "traffic",
       "category": "Transportation",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10449",
+      "id": "a1-transportation-der-stau-traffic-jam",
       "german": "der Stau",
       "english": "traffic jam",
       "category": "Transportation",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10450",
+      "id": "a1-transportation-die-autobahn-highway-freeway",
       "german": "die Autobahn",
       "english": "highway / freeway",
       "category": "Transportation",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10451",
+      "id": "a1-transportation-der-gehweg-sidewalk-pavement",
       "german": "der Gehweg",
       "english": "sidewalk / pavement",
       "category": "Transportation",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10452",
+      "id": "a1-transportation-der-radweg-bike-path-cycle-lane",
       "german": "der Radweg",
       "english": "bike path / cycle lane",
       "category": "Transportation",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10453",
+      "id": "a1-transportation-der-fuehrerschein-drivers-license",
       "german": "der Führerschein",
       "english": "driver's license",
       "category": "Transportation",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10454",
+      "id": "a1-transportation-das-ticket-ticket",
       "german": "das Ticket",
       "english": "ticket",
       "category": "Transportation",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10455",
+      "id": "a1-transportation-die-fahrkarte-ticket-for-travel",
       "german": "die Fahrkarte",
       "english": "ticket (for travel)",
       "category": "Transportation",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10456",
+      "id": "a1-transportation-der-fahrplan-schedule-timetable",
       "german": "der Fahrplan",
       "english": "schedule / timetable",
       "category": "Transportation",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10457",
+      "id": "a1-transportation-die-reise-journey-trip",
       "german": "die Reise",
       "english": "journey / trip",
       "category": "Transportation",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10458",
+      "id": "a1-transportation-das-gepaeck-luggage-baggage",
       "german": "das Gepäck",
       "english": "luggage / baggage",
       "category": "Transportation",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10459",
+      "id": "a1-transportation-der-koffer-suitcase",
       "german": "der Koffer",
       "english": "suitcase",
       "category": "Transportation",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10460",
+      "id": "a1-transportation-der-rucksack-backpack",
       "german": "der Rucksack",
       "english": "backpack",
       "category": "Transportation",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10461",
+      "id": "a1-transportation-der-passagier-passenger",
       "german": "der Passagier",
       "english": "passenger",
       "category": "Transportation",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10462",
+      "id": "a1-transportation-der-fahrer-driver",
       "german": "der Fahrer",
       "english": "driver",
       "category": "Transportation",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10463",
+      "id": "a1-transportation-der-pilot-pilot",
       "german": "der Pilot",
       "english": "pilot",
       "category": "Transportation",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10464",
+      "id": "a1-transportation-der-motor-engine-motor",
       "german": "der Motor",
       "english": "engine / motor",
       "category": "Transportation",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10465",
+      "id": "a1-transportation-das-rad-wheel",
       "german": "das Rad",
       "english": "wheel",
       "category": "Transportation",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10466",
+      "id": "a1-transportation-der-reifen-tire",
       "german": "der Reifen",
       "english": "tire",
       "category": "Transportation",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10467",
+      "id": "a1-transportation-das-benzin-gasoline-petrol",
       "german": "das Benzin",
       "english": "gasoline / petrol",
       "category": "Transportation",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10468",
+      "id": "a1-transportation-der-diesel-diesel",
       "german": "der Diesel",
       "english": "diesel",
       "category": "Transportation",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10471",
+      "id": "a1-transportation-der-sitz-seat",
       "german": "der Sitz",
       "english": "seat",
       "category": "Transportation",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10472",
+      "id": "a1-transportation-der-sitzplatz-seat-seating-place",
       "german": "der Sitzplatz",
       "english": "seat / seating place",
       "category": "Transportation",
@@ -904,7 +904,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10473",
+      "id": "a1-transportation-der-gurt-belt-seatbelt",
       "german": "der Gurt",
       "english": "belt / seatbelt",
       "category": "Transportation",
@@ -924,7 +924,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10474",
+      "id": "a1-transportation-der-sicherheitsgurt-seatbelt",
       "german": "der Sicherheitsgurt",
       "english": "seatbelt",
       "category": "Transportation",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10475",
+      "id": "a1-transportation-der-helm-helmet",
       "german": "der Helm",
       "english": "helmet",
       "category": "Transportation",
@@ -964,7 +964,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10476",
+      "id": "a1-transportation-der-lkw-truck",
       "german": "der LKW",
       "english": "truck",
       "category": "Transportation",
@@ -984,7 +984,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10477",
+      "id": "a1-transportation-der-lastwagen-truck",
       "german": "der Lastwagen",
       "english": "truck",
       "category": "Transportation",
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10478",
+      "id": "a1-transportation-der-lieferwagen-delivery-van",
       "german": "der Lieferwagen",
       "english": "delivery van",
       "category": "Transportation",
@@ -1024,7 +1024,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10479",
+      "id": "a1-transportation-der-roller-scooter",
       "german": "der Roller",
       "english": "scooter",
       "category": "Transportation",
@@ -1044,7 +1044,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10480",
+      "id": "a1-transportation-das-e-bike-e-bike-electric-bicycle",
       "german": "das E-Bike",
       "english": "e-bike / electric bicycle",
       "category": "Transportation",
@@ -1064,7 +1064,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10481",
+      "id": "a1-transportation-die-faehre-ferry",
       "german": "die Fähre",
       "english": "ferry",
       "category": "Transportation",
@@ -1084,7 +1084,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10482",
+      "id": "a1-transportation-das-boot-boat",
       "german": "das Boot",
       "english": "boat",
       "category": "Transportation",
@@ -1104,7 +1104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10483",
+      "id": "a1-transportation-der-hubschrauber-helicopter",
       "german": "der Hubschrauber",
       "english": "helicopter",
       "category": "Transportation",
@@ -1124,7 +1124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10484",
+      "id": "a1-transportation-das-gleis-track-platform",
       "german": "das Gleis",
       "english": "track / platform",
       "category": "Transportation",
@@ -1144,7 +1144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10485",
+      "id": "a1-transportation-der-bahnsteig-platform",
       "german": "der Bahnsteig",
       "english": "platform",
       "category": "Transportation",
@@ -1164,7 +1164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10486",
+      "id": "a1-transportation-die-abfahrt-departure",
       "german": "die Abfahrt",
       "english": "departure",
       "category": "Transportation",
@@ -1184,7 +1184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10487",
+      "id": "a1-transportation-die-ankunft-arrival",
       "german": "die Ankunft",
       "english": "arrival",
       "category": "Transportation",
@@ -1204,7 +1204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10488",
+      "id": "a1-transportation-die-verspaetung-delay",
       "german": "die Verspätung",
       "english": "delay",
       "category": "Transportation",
@@ -1224,7 +1224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10489",
+      "id": "a1-transportation-umsteigen-transfer-change-transportation",
       "german": "Umsteigen",
       "english": "transfer / change (transportation)",
       "category": "Transportation",
@@ -1244,7 +1244,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10490",
+      "id": "a1-transportation-einsteigen-to-get-in-to-board",
       "german": "einsteigen",
       "english": "to get in / to board",
       "category": "Transportation",
@@ -1264,7 +1264,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10491",
+      "id": "a1-transportation-aussteigen-to-get-out-to-exit",
       "german": "aussteigen",
       "english": "to get out / to exit",
       "category": "Transportation",
@@ -1284,7 +1284,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10492",
+      "id": "a1-transportation-abfahren-to-depart-to-leave",
       "german": "abfahren",
       "english": "to depart / to leave",
       "category": "Transportation",
@@ -1304,7 +1304,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10495",
+      "id": "a1-transportation-fliegen-to-fly",
       "german": "fliegen",
       "english": "to fly",
       "category": "Transportation",
@@ -1324,7 +1324,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10497",
+      "id": "a1-transportation-rennen-to-run",
       "german": "rennen",
       "english": "to run",
       "category": "Transportation",
@@ -1344,7 +1344,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10498",
+      "id": "a1-transportation-parken-to-park",
       "german": "parken",
       "english": "to park",
       "category": "Transportation",
@@ -1364,7 +1364,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10499",
+      "id": "a1-transportation-tanken-to-refuel-to-fill-up",
       "german": "tanken",
       "english": "to refuel / to fill up",
       "category": "Transportation",
@@ -1384,7 +1384,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10501",
+      "id": "a1-transportation-verpassen-to-miss-a-bustrain",
       "german": "verpassen",
       "english": "to miss (a bus/train)",
       "category": "Transportation",
@@ -1404,7 +1404,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10502",
+      "id": "a1-transportation-bremsen-to-brake",
       "german": "bremsen",
       "english": "to brake",
       "category": "Transportation",
@@ -1424,7 +1424,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10503",
+      "id": "a1-transportation-lenken-to-steer",
       "german": "lenken",
       "english": "to steer",
       "category": "Transportation",
@@ -1444,7 +1444,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10504",
+      "id": "a1-transportation-biegen-to-turn",
       "german": "biegen",
       "english": "to turn",
       "category": "Transportation",
@@ -1464,7 +1464,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10505",
+      "id": "a1-transportation-links-abbiegen-to-turn-left",
       "german": "links abbiegen",
       "english": "to turn left",
       "category": "Transportation",
@@ -1484,7 +1484,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10506",
+      "id": "a1-transportation-rechts-abbiegen-to-turn-right",
       "german": "rechts abbiegen",
       "english": "to turn right",
       "category": "Transportation",
@@ -1504,7 +1504,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10507",
+      "id": "a1-transportation-geradeaus-straight-ahead",
       "german": "geradeaus",
       "english": "straight ahead",
       "category": "Transportation",
@@ -1524,7 +1524,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10511",
+      "id": "a1-transportation-zu-fuss-on-foot",
       "german": "zu Fuß",
       "english": "on foot",
       "category": "Transportation",
@@ -1544,7 +1544,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10512",
+      "id": "a1-transportation-mit-dem-auto-by-car",
       "german": "mit dem Auto",
       "english": "by car",
       "category": "Transportation",
@@ -1564,7 +1564,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10513",
+      "id": "a1-transportation-mit-dem-bus-by-bus",
       "german": "mit dem Bus",
       "english": "by bus",
       "category": "Transportation",
@@ -1584,7 +1584,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10514",
+      "id": "a1-transportation-mit-dem-zug-by-train",
       "german": "mit dem Zug",
       "english": "by train",
       "category": "Transportation",
@@ -1604,7 +1604,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10515",
+      "id": "a1-transportation-mit-dem-fahrrad-by-bicycle",
       "german": "mit dem Fahrrad",
       "english": "by bicycle",
       "category": "Transportation",
@@ -1624,7 +1624,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10516",
+      "id": "a1-transportation-mit-dem-flugzeug-by-plane",
       "german": "mit dem Flugzeug",
       "english": "by plane",
       "category": "Transportation",

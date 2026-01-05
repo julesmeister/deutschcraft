@@ -4,7 +4,7 @@
   "totalCards": 89,
   "flashcards": [
     {
-      "id": "remnote-13",
+      "id": "b2-adverbs-allmaehlich-schrittweise-gradually",
       "german": "allmählich / schrittweise",
       "english": "gradually",
       "category": "Adverbs",
@@ -23,7 +23,7 @@
       }
     },
     {
-      "id": "remnote-16",
+      "id": "b2-adverbs-ungenuegend-insufficient",
       "german": "ungenügend",
       "english": "insufficient",
       "category": "Adverbs",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "id": "remnote-18",
+      "id": "b2-adverbs-aeusserst-ueberaus-extremely",
       "german": "äußerst / überaus",
       "english": "extremely",
       "category": "Adverbs",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "remnote-25",
+      "id": "b2-adverbs-erheblich-weitaus-considerably",
       "german": "erheblich / weitaus",
       "english": "considerably",
       "category": "Adverbs",
@@ -83,7 +83,7 @@
       }
     },
     {
-      "id": "remnote-28",
+      "id": "b2-adverbs-groesstenteils-mostly",
       "german": "größtenteils",
       "english": "mostly",
       "category": "Adverbs",
@@ -102,7 +102,7 @@
       }
     },
     {
-      "id": "remnote-30",
+      "id": "b2-adverbs-grundsaetzlich-basically",
       "german": "grundsätzlich",
       "english": "basically",
       "category": "Adverbs",
@@ -121,7 +121,7 @@
       }
     },
     {
-      "id": "remnote-33",
+      "id": "b2-adverbs-jedenfalls-in-any-case",
       "german": "jedenfalls",
       "english": "in any case",
       "category": "Adverbs",
@@ -140,7 +140,7 @@
       }
     },
     {
-      "id": "remnote-37",
+      "id": "b2-adverbs-praezise-konkret-genau-precisely",
       "german": "präzise / konkret / genau",
       "english": "precisely",
       "category": "Adverbs",
@@ -159,7 +159,7 @@
       }
     },
     {
-      "id": "remnote-43",
+      "id": "b2-adverbs-vorwiegend-predominantly-mainly",
       "german": "vorwiegend",
       "english": "predominantly / mainly",
       "category": "Adverbs",
@@ -178,7 +178,7 @@
       }
     },
     {
-      "id": "remnote-46",
+      "id": "b2-adverbs-anschliessend-afterwards-subsequent",
       "german": "anschließend",
       "english": "afterwards / subsequent",
       "category": "Adverbs",
@@ -197,7 +197,7 @@
       }
     },
     {
-      "id": "remnote-49",
+      "id": "b2-adverbs-damals-war-es-nur-einer-at-that-time-there-was-only-one",
       "german": "Damals war es nur einer.",
       "english": "At that time, there was only one.",
       "category": "Adverbs",
@@ -218,7 +218,7 @@
       }
     },
     {
-      "id": "remnote-52",
+      "id": "b2-adverbs-derzeit-momentan-zurzeit-current-present",
       "german": "derzeit / momentan / zurzeit",
       "english": "current / present",
       "category": "Adverbs",
@@ -237,7 +237,7 @@
       }
     },
     {
-      "id": "remnote-55",
+      "id": "b2-adverbs-ehestmoeglich-as-soon-as-possible",
       "german": "ehestmöglich",
       "english": "as soon as possible",
       "category": "Adverbs",
@@ -256,7 +256,7 @@
       }
     },
     {
-      "id": "remnote-56",
+      "id": "b2-adverbs-er-hat-sofort-veranlasst-dass-der-aushang-z-4fs26a-he-had-immediately-arranged-for-the-notice--tpjixd",
       "german": "Er hat sofort veranlasst, dass der Aushang zum ehestmöglichen Zeitpunkt entfernt wird.",
       "english": "He had immediately arranged for the notice to be removed as soon as possible.",
       "category": "Adverbs",
@@ -277,7 +277,7 @@
       }
     },
     {
-      "id": "remnote-58",
+      "id": "b2-adverbs-endgueltig-endlich-finally-in-the-end",
       "german": "endgültig / endlich",
       "english": "finally / in the end",
       "category": "Adverbs",
@@ -296,7 +296,7 @@
       }
     },
     {
-      "id": "remnote-63",
+      "id": "b2-adverbs-mittlerweile-meanwhile-in-the-meantime",
       "german": "mittlerweile",
       "english": "meanwhile / in the meantime",
       "category": "Adverbs",
@@ -317,7 +317,7 @@
       }
     },
     {
-      "id": "remnote-64",
+      "id": "b2-adverbs-unterdessen-meanwhile-in-the-meantime",
       "german": "unterdessen",
       "english": "meanwhile / in the meantime",
       "category": "Adverbs",
@@ -338,7 +338,7 @@
       }
     },
     {
-      "id": "remnote-65",
+      "id": "b2-adverbs-zwischenzeit-interim",
       "german": "zwischenzeit",
       "english": "interim",
       "category": "Adverbs",
@@ -359,7 +359,7 @@
       }
     },
     {
-      "id": "remnote-66",
+      "id": "b2-adverbs-irgendwann-at-some-point",
       "german": "irgendwann",
       "english": "at some point",
       "category": "Adverbs",
@@ -378,7 +378,7 @@
       }
     },
     {
-      "id": "remnote-68",
+      "id": "b2-adverbs-falls-es-jemals-so-weit-ist-if-it-ever-gets-that-far",
       "german": "Falls es jemals so weit ist.",
       "english": "If it ever gets that far.",
       "category": "Adverbs",
@@ -399,7 +399,7 @@
       }
     },
     {
-      "id": "remnote-71",
+      "id": "b2-adverbs-kurzfristig-for-a-short-time",
       "german": "kurzfristig",
       "english": "for a short time",
       "category": "Adverbs",
@@ -418,7 +418,7 @@
       }
     },
     {
-      "id": "remnote-73",
+      "id": "b2-adverbs-jon-sah-sie-lange-an-jon-looked-at-her-for-a-long-time",
       "german": "Jon sah sie **lange** an.",
       "english": "Jon looked at her for a long time",
       "category": "Adverbs",
@@ -439,7 +439,7 @@
       }
     },
     {
-      "id": "remnote-74",
+      "id": "b2-adverbs-langfristig-long-term-in-the-long-run-over-the-long-term",
       "german": "langfristig",
       "english": "long-term / in the long run / over the long term",
       "category": "Adverbs",
@@ -458,7 +458,7 @@
       }
     },
     {
-      "id": "remnote-75",
+      "id": "b2-adverbs-letztendlich-eventually",
       "german": "letztendlich",
       "english": "eventually",
       "category": "Adverbs",
@@ -477,7 +477,7 @@
       }
     },
     {
-      "id": "remnote-79",
+      "id": "b2-adverbs-oefters-haeufig-frequently-often",
       "german": "öfters / häufig",
       "english": "frequently / often",
       "category": "Adverbs",
@@ -496,7 +496,7 @@
       }
     },
     {
-      "id": "remnote-82",
+      "id": "b2-adverbs-seit-kurzem-as-of-late",
       "german": "seit kurzem",
       "english": "as of late",
       "category": "Adverbs",
@@ -515,7 +515,7 @@
       }
     },
     {
-      "id": "remnote-84",
+      "id": "b2-adverbs-sogleich-unmittelbar-immediately-instantly",
       "german": "sogleich / unmittelbar",
       "english": "immediately / instantly",
       "category": "Adverbs",
@@ -534,7 +534,7 @@
       }
     },
     {
-      "id": "remnote-85",
+      "id": "b2-adverbs-unlaengst-neuerdings-recently-lately",
       "german": "unlängst / neuerdings",
       "english": "recently / lately",
       "category": "Adverbs",
@@ -553,7 +553,7 @@
       }
     },
     {
-      "id": "remnote-86",
+      "id": "b2-adverbs-im-voraus-im-vorfeld-in-advance",
       "german": "im Voraus / im Vorfeld",
       "english": "in advance",
       "category": "Adverbs",
@@ -572,7 +572,7 @@
       }
     },
     {
-      "id": "remnote-87",
+      "id": "b2-adverbs-zeitgleich-simultaneously",
       "german": "zeitgleich",
       "english": "simultaneously",
       "category": "Adverbs",
@@ -591,7 +591,7 @@
       }
     },
     {
-      "id": "remnote-90",
+      "id": "b2-adverbs-zeitweise-voruebergehend-temporarily-from-time-to-time",
       "german": "zeitweise / vorübergehend",
       "english": "temporarily / from time to time",
       "category": "Adverbs",
@@ -610,7 +610,7 @@
       }
     },
     {
-      "id": "remnote-91",
+      "id": "b2-adverbs-zugleich-zeitgleich-gleichzeitig-at-the-same-time",
       "german": "zugleich / zeitgleich / gleichzeitig",
       "english": "at the same time",
       "category": "Adverbs",
@@ -629,7 +629,7 @@
       }
     },
     {
-      "id": "remnote-94",
+      "id": "b2-adverbs-auseinander-apart",
       "german": "auseinander",
       "english": "apart",
       "category": "Adverbs",
@@ -648,7 +648,7 @@
       }
     },
     {
-      "id": "remnote-96",
+      "id": "b2-adverbs-benachbarten-neighboring",
       "german": "benachbarten",
       "english": "neighboring",
       "category": "Adverbs",
@@ -667,7 +667,7 @@
       }
     },
     {
-      "id": "remnote-101",
+      "id": "b2-adverbs-auf-und-nieder-up-and-down",
       "german": "auf und nieder",
       "english": "up and down",
       "category": "Adverbs",
@@ -690,7 +690,7 @@
       }
     },
     {
-      "id": "remnote-103",
+      "id": "b2-adverbs-nebeneinander-side-by-side",
       "german": "nebeneinander",
       "english": "side by side",
       "category": "Adverbs",
@@ -709,7 +709,7 @@
       }
     },
     {
-      "id": "remnote-104",
+      "id": "b2-adverbs-nirgendwo-nirgends-nowhere",
       "german": "nirgendwo / nirgends",
       "english": "nowhere",
       "category": "Adverbs",
@@ -728,7 +728,7 @@
       }
     },
     {
-      "id": "remnote-108",
+      "id": "b2-adverbs-voran-vorn-ahead-forward",
       "german": "voran / vorn",
       "english": "ahead / forward",
       "category": "Adverbs",
@@ -747,7 +747,7 @@
       }
     },
     {
-      "id": "remnote-109",
+      "id": "b2-adverbs-sie-nicktegermanverbsnickenmd-und-ging-voran-she-nodded-and-went-ahead",
       "german": "Sie [nickte](German/Verbs/nicken.md) und ging voran.",
       "english": "She nodded and went ahead.",
       "category": "Adverbs",
@@ -768,7 +768,7 @@
       }
     },
     {
-      "id": "remnote-110",
+      "id": "b2-adverbs-abschliessend-finally-afterall-in-conclusion",
       "german": "abschließend",
       "english": "finally / afterall / in conclusion",
       "category": "Adverbs",
@@ -787,7 +787,7 @@
       }
     },
     {
-      "id": "remnote-111",
+      "id": "b2-adverbs-allerdings-however",
       "german": "allerdings",
       "english": "however",
       "category": "Adverbs",
@@ -806,7 +806,7 @@
       }
     },
     {
-      "id": "remnote-112",
+      "id": "b2-adverbs-allerdings-war-es-sehr-knapp-however-it-was-very-close",
       "german": "**Allerdings** war es sehr knapp.",
       "english": "However, it was very close.",
       "category": "Adverbs",
@@ -827,7 +827,7 @@
       }
     },
     {
-      "id": "remnote-118",
+      "id": "b2-adverbs-aussergewoehnlich-exceptionally",
       "german": "außergewöhnlich",
       "english": "exceptionally",
       "category": "Adverbs",
@@ -846,7 +846,7 @@
       }
     },
     {
-      "id": "remnote-119",
+      "id": "b2-adverbs-ausserordentlich-extraordinarily",
       "german": "außerordentlich",
       "english": "extraordinarily",
       "category": "Adverbs",
@@ -865,7 +865,7 @@
       }
     },
     {
-      "id": "remnote-121",
+      "id": "b2-adverbs-ausgerechnet-of-all-people",
       "german": "ausgerechnet",
       "english": "of all people",
       "category": "Adverbs",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "id": "remnote-125",
+      "id": "b2-adverbs-dementsprechend-accordingly",
       "german": "dementsprechend",
       "english": "accordingly",
       "category": "Adverbs",
@@ -903,7 +903,7 @@
       }
     },
     {
-      "id": "remnote-127",
+      "id": "b2-adverbs-demnach-war-also-alles-natuerlich-accordingly-everything-was-natural",
       "german": "Demnach war also alles natürlich.",
       "english": "Accordingly, everything was natural.",
       "category": "Adverbs",
@@ -924,7 +924,7 @@
       }
     },
     {
-      "id": "remnote-130",
+      "id": "b2-adverbs-eindrucksvoll-impressive-spectacular",
       "german": "eindrucksvoll",
       "english": "impressive / spectacular",
       "category": "Adverbs",
@@ -943,7 +943,7 @@
       }
     },
     {
-      "id": "remnote-133",
+      "id": "b2-adverbs-erforderlich-required",
       "german": "erforderlich",
       "english": "required",
       "category": "Adverbs",
@@ -962,7 +962,7 @@
       }
     },
     {
-      "id": "remnote-134",
+      "id": "b2-adverbs-erhaeltlich-available-obtainable",
       "german": "erhältlich",
       "english": "available / obtainable",
       "category": "Adverbs",
@@ -981,7 +981,7 @@
       }
     },
     {
-      "id": "remnote-142",
+      "id": "b2-adverbs-gewissermassen-in-a-way-to-an-extent-in-a-sense",
       "german": "gewissermaßen",
       "english": "in a way / to an extent / in a sense",
       "category": "Adverbs",
@@ -1000,7 +1000,7 @@
       }
     },
     {
-      "id": "remnote-143",
+      "id": "b2-adverbs-gleichermassen-equally-likewise",
       "german": "gleichermaßen",
       "english": "equally / likewise",
       "category": "Adverbs",
@@ -1019,7 +1019,7 @@
       }
     },
     {
-      "id": "remnote-144",
+      "id": "b2-adverbs-gleichmaessig-evenly-even-steady",
       "german": "gleichmäßig",
       "english": "evenly / even / steady",
       "category": "Adverbs",
@@ -1038,7 +1038,7 @@
       }
     },
     {
-      "id": "remnote-147",
+      "id": "b2-adverbs-im-gegenzug-in-return",
       "german": "im gegenzug",
       "english": "in return",
       "category": "Adverbs",
@@ -1057,7 +1057,7 @@
       }
     },
     {
-      "id": "remnote-155",
+      "id": "b2-adverbs-jeweils-beziehungsweise-respectively",
       "german": "jeweils / beziehungsweise",
       "english": "respectively",
       "category": "Adverbs",
@@ -1076,7 +1076,7 @@
       }
     },
     {
-      "id": "remnote-156",
+      "id": "b2-adverbs-kaum-knapp-barely-nearly",
       "german": "kaum / knapp",
       "english": "barely / nearly",
       "category": "Adverbs",
@@ -1095,7 +1095,7 @@
       }
     },
     {
-      "id": "remnote-157",
+      "id": "b2-adverbs-keinesfalls-under-no-circumstances-not-at-all-never-ever",
       "german": "keinesfalls",
       "english": "under no circumstances / not at all / never ever",
       "category": "Adverbs",
@@ -1114,7 +1114,7 @@
       }
     },
     {
-      "id": "remnote-158",
+      "id": "b2-adverbs-keineswegs-by-no-means",
       "german": "keineswegs",
       "english": "by no means",
       "category": "Adverbs",
@@ -1133,7 +1133,7 @@
       }
     },
     {
-      "id": "remnote-159",
+      "id": "b2-adverbs-kontinuierlich-continuously",
       "german": "kontinuierlich",
       "english": "continuously",
       "category": "Adverbs",
@@ -1152,7 +1152,7 @@
       }
     },
     {
-      "id": "remnote-161",
+      "id": "b2-adverbs-kurzerhand-without-further-ado",
       "german": "kurzerhand",
       "english": "without further ado",
       "category": "Adverbs",
@@ -1171,7 +1171,7 @@
       }
     },
     {
-      "id": "remnote-167",
+      "id": "b2-adverbs-nachtraeglich-subsequently-later-afterwards",
       "german": "nachträglich",
       "english": "subsequently / later / afterwards",
       "category": "Adverbs",
@@ -1190,7 +1190,7 @@
       }
     },
     {
-      "id": "remnote-170",
+      "id": "b2-adverbs-nutzbringend-beneficially",
       "german": "nutzbringend",
       "english": "beneficially",
       "category": "Adverbs",
@@ -1209,7 +1209,7 @@
       }
     },
     {
-      "id": "remnote-173",
+      "id": "b2-adverbs-ohnehin-sowieso-anyway",
       "german": "ohnehin / sowieso",
       "english": "anyway",
       "category": "Adverbs",
@@ -1228,7 +1228,7 @@
       }
     },
     {
-      "id": "remnote-174",
+      "id": "b2-adverbs-parat-bereit-ready",
       "german": "parat | bereit",
       "english": "ready",
       "category": "Adverbs",
@@ -1247,7 +1247,7 @@
       }
     },
     {
-      "id": "remnote-175",
+      "id": "b2-adverbs-prinzipiell-on-principle",
       "german": "prinzipiell",
       "english": "on principle",
       "category": "Adverbs",
@@ -1266,7 +1266,7 @@
       }
     },
     {
-      "id": "remnote-177",
+      "id": "b2-adverbs-rechtswidrig-illegally-unlawfully",
       "german": "rechtswidrig",
       "english": "illegally / unlawfully",
       "category": "Adverbs",
@@ -1285,7 +1285,7 @@
       }
     },
     {
-      "id": "remnote-178",
+      "id": "b2-adverbs-reibungslos-smoothly",
       "german": "reibungslos",
       "english": "smoothly",
       "category": "Adverbs",
@@ -1304,7 +1304,7 @@
       }
     },
     {
-      "id": "remnote-180",
+      "id": "b2-adverbs-regelrecht-really-downright-literally",
       "german": "regelrecht",
       "english": "really / downright / literally",
       "category": "Adverbs",
@@ -1323,7 +1323,7 @@
       }
     },
     {
-      "id": "remnote-183",
+      "id": "b2-adverbs-scheinbar-erkennbar-apparently-seemingly",
       "german": "scheinbar / erkennbar",
       "english": "apparently / seemingly",
       "category": "Adverbs",
@@ -1342,7 +1342,7 @@
       }
     },
     {
-      "id": "remnote-185",
+      "id": "b2-adverbs-schliesslich-ultimately-finally-in-the-end-lastly-after-all",
       "german": "schließlich",
       "english": "ultimately / finally / in the end / lastly / after all",
       "category": "Adverbs",
@@ -1361,7 +1361,7 @@
       }
     },
     {
-      "id": "remnote-188",
+      "id": "b2-adverbs-sichtbar-sichtlich-einsehbar-visible",
       "german": "sichtbar / sichtlich / einsehbar",
       "english": "visible",
       "category": "Adverbs",
@@ -1380,7 +1380,7 @@
       }
     },
     {
-      "id": "remnote-194",
+      "id": "b2-adverbs-spielerisch-playfully",
       "german": "spielerisch",
       "english": "playfully",
       "category": "Adverbs",
@@ -1399,7 +1399,7 @@
       }
     },
     {
-      "id": "remnote-197",
+      "id": "b2-adverbs-tatsaechlich-actually-indeed",
       "german": "tatsächlich",
       "english": "actually / indeed",
       "category": "Adverbs",
@@ -1418,7 +1418,7 @@
       }
     },
     {
-      "id": "remnote-200",
+      "id": "b2-adverbs-uebersichtlich-clearly",
       "german": "übersichtlich",
       "english": "clearly",
       "category": "Adverbs",
@@ -1437,7 +1437,7 @@
       }
     },
     {
-      "id": "remnote-203",
+      "id": "b2-adverbs-im-uebrigen-as-a-matter-of-fact",
       "german": "im übrigen",
       "english": "as a matter of fact",
       "category": "Adverbs",
@@ -1458,7 +1458,7 @@
       }
     },
     {
-      "id": "remnote-207",
+      "id": "b2-adverbs-unerlaesslich-indispensable-essential",
       "german": "unerlässlich",
       "english": "indispensable / essential",
       "category": "Adverbs",
@@ -1477,7 +1477,7 @@
       }
     },
     {
-      "id": "remnote-208",
+      "id": "b2-adverbs-unertraeglich-unbearable-unbearably",
       "german": "unerträglich",
       "english": "unbearable / unbearably",
       "category": "Adverbs",
@@ -1496,7 +1496,7 @@
       }
     },
     {
-      "id": "remnote-209",
+      "id": "b2-adverbs-unerwartet-unexpectedly",
       "german": "unerwartet",
       "english": "unexpectedly",
       "category": "Adverbs",
@@ -1515,7 +1515,7 @@
       }
     },
     {
-      "id": "remnote-211",
+      "id": "b2-adverbs-durchaus-unter-allen-umstaenden-by-all-means",
       "german": "durchaus / unter allen Umständen",
       "english": "by all means",
       "category": "Adverbs",
@@ -1534,7 +1534,7 @@
       }
     },
     {
-      "id": "remnote-213",
+      "id": "b2-adverbs-unter-anderem-among-other-things",
       "german": "unter anderem",
       "english": "among other things",
       "category": "Adverbs",
@@ -1553,7 +1553,7 @@
       }
     },
     {
-      "id": "remnote-214",
+      "id": "b2-adverbs-unverzueglich-immediately-without-delay",
       "german": "unverzüglich",
       "english": "immediately / without delay",
       "category": "Adverbs",
@@ -1572,7 +1572,7 @@
       }
     },
     {
-      "id": "remnote-215",
+      "id": "b2-adverbs-vergeblich-in-vain",
       "german": "vergeblich",
       "english": "in vain",
       "category": "Adverbs",
@@ -1591,7 +1591,7 @@
       }
     },
     {
-      "id": "remnote-216",
+      "id": "b2-adverbs-vermeintlich-supposedly",
       "german": "vermeintlich",
       "english": "supposedly",
       "category": "Adverbs",
@@ -1610,7 +1610,7 @@
       }
     },
     {
-      "id": "remnote-218",
+      "id": "b2-adverbs-vertraulich-confidential",
       "german": "vertraulich",
       "english": "confidential",
       "category": "Adverbs",
@@ -1629,7 +1629,7 @@
       }
     },
     {
-      "id": "remnote-219",
+      "id": "b2-adverbs-verzweifelt-desperately",
       "german": "verzweifelt",
       "english": "desperately",
       "category": "Adverbs",
@@ -1648,7 +1648,7 @@
       }
     },
     {
-      "id": "remnote-222",
+      "id": "b2-adverbs-vorsichtig-careful-cautious",
       "german": "vorsichtig",
       "english": "careful / cautious",
       "category": "Adverbs",
@@ -1667,7 +1667,7 @@
       }
     },
     {
-      "id": "remnote-227",
+      "id": "b2-adverbs-zugaenglich-open-accessible",
       "german": "zugänglich",
       "english": "open / accessible",
       "category": "Adverbs",
@@ -1686,7 +1686,7 @@
       }
     },
     {
-      "id": "remnote-229",
+      "id": "b2-adverbs-zwangslaeufig-inevitably",
       "german": "zwangsläufig",
       "english": "inevitably",
       "category": "Adverbs",
@@ -1705,7 +1705,7 @@
       }
     },
     {
-      "id": "remnote-230",
+      "id": "b2-adverbs-zweifellos-undoubtedly",
       "german": "zweifellos",
       "english": "undoubtedly",
       "category": "Adverbs",

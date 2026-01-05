@@ -4,7 +4,7 @@
   "totalCards": 32,
   "flashcards": [
     {
-      "id": "syllabus-b2-11281",
+      "id": "b2-environment-climate-der-klimawandel-climate-change",
       "german": "der Klimawandel",
       "english": "climate change",
       "category": "Environment Climate",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11282",
+      "id": "b2-environment-climate-die-erderwaermung-global-warming",
       "german": "die Erderwärmung",
       "english": "global warming",
       "category": "Environment Climate",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11283",
+      "id": "b2-environment-climate-die-umweltverschmutzung-environmental-pollution",
       "german": "die Umweltverschmutzung",
       "english": "environmental pollution",
       "category": "Environment Climate",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11284",
+      "id": "b2-environment-climate-erneuerbare-energie-renewable-energy",
       "german": "erneuerbare Energie",
       "english": "renewable energy",
       "category": "Environment Climate",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11285",
+      "id": "b2-environment-climate-das-treibhausgas-greenhouse-gas",
       "german": "das Treibhausgas",
       "english": "greenhouse gas",
       "category": "Environment Climate",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11286",
+      "id": "b2-environment-climate-das-recycling-recycling",
       "german": "das Recycling",
       "english": "recycling",
       "category": "Environment Climate",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11287",
+      "id": "b2-environment-climate-der-muell-garbage-waste-trash",
       "german": "der Müll",
       "english": "garbage / waste / trash",
       "category": "Environment Climate",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11288",
+      "id": "b2-environment-climate-der-abfall-waste-refuse",
       "german": "der Abfall",
       "english": "waste / refuse",
       "category": "Environment Climate",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11289",
+      "id": "b2-environment-climate-der-naturschutz-nature-conservation",
       "german": "der Naturschutz",
       "english": "nature conservation",
       "category": "Environment Climate",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11290",
+      "id": "b2-environment-climate-die-artenvielfalt-biodiversity",
       "german": "die Artenvielfalt",
       "english": "biodiversity",
       "category": "Environment Climate",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11291",
+      "id": "b2-environment-climate-das-oekosystem-ecosystem",
       "german": "das Ökosystem",
       "english": "ecosystem",
       "category": "Environment Climate",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11293",
+      "id": "b2-environment-climate-das-umweltbewusstsein-environmental-awareness",
       "german": "das Umweltbewusstsein",
       "english": "environmental awareness",
       "category": "Environment Climate",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11294",
+      "id": "b2-environment-climate-die-ressourcen-resources",
       "german": "die Ressourcen",
       "english": "resources",
       "category": "Environment Climate",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11295",
+      "id": "b2-environment-climate-der-energieverbrauch-energy-consumption",
       "german": "der Energieverbrauch",
       "english": "energy consumption",
       "category": "Environment Climate",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11296",
+      "id": "b2-environment-climate-der-co2-ausstoss-co2-emissions",
       "german": "der CO2-Ausstoß",
       "english": "CO2 emissions",
       "category": "Environment Climate",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11297",
+      "id": "b2-environment-climate-die-luftverschmutzung-air-pollution",
       "german": "die Luftverschmutzung",
       "english": "air pollution",
       "category": "Environment Climate",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11298",
+      "id": "b2-environment-climate-die-wasserverschmutzung-water-pollution",
       "german": "die Wasserverschmutzung",
       "english": "water pollution",
       "category": "Environment Climate",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11299",
+      "id": "b2-environment-climate-die-bodenverschmutzung-soil-pollution",
       "german": "die Bodenverschmutzung",
       "english": "soil pollution",
       "category": "Environment Climate",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11300",
+      "id": "b2-environment-climate-die-abholzung-deforestation",
       "german": "die Abholzung",
       "english": "deforestation",
       "category": "Environment Climate",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11301",
+      "id": "b2-environment-climate-die-wiederaufforstung-reforestation",
       "german": "die Wiederaufforstung",
       "english": "reforestation",
       "category": "Environment Climate",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11302",
+      "id": "b2-environment-climate-aussterben-to-become-extinct",
       "german": "aussterben",
       "english": "to become extinct",
       "category": "Environment Climate",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11303",
+      "id": "b2-environment-climate-gefaehrdet-endangered",
       "german": "gefährdet",
       "english": "endangered",
       "category": "Environment Climate",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11304",
+      "id": "b2-environment-climate-die-muelltrennung-waste-separation",
       "german": "die Mülltrennung",
       "english": "waste separation",
       "category": "Environment Climate",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11305",
+      "id": "b2-environment-climate-der-kompost-compost",
       "german": "der Kompost",
       "english": "compost",
       "category": "Environment Climate",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11306",
+      "id": "b2-environment-climate-die-solarenergie-solar-energy",
       "german": "die Solarenergie",
       "english": "solar energy",
       "category": "Environment Climate",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11307",
+      "id": "b2-environment-climate-die-windenergie-wind-energy",
       "german": "die Windenergie",
       "english": "wind energy",
       "category": "Environment Climate",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11308",
+      "id": "b2-environment-climate-die-wasserkraft-hydropower",
       "german": "die Wasserkraft",
       "english": "hydropower",
       "category": "Environment Climate",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11309",
+      "id": "b2-environment-climate-die-atomkraft-nuclear-power",
       "german": "die Atomkraft",
       "english": "nuclear power",
       "category": "Environment Climate",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-b2-11310",
+      "id": "b2-environment-climate-fossile-brennstoffe-fossil-fuels",
       "german": "fossile Brennstoffe",
       "english": "fossil fuels",
       "category": "Environment Climate",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "b2-environment-climate-mivkdn5vfbdtv",
+      "id": "b2-environment-climate-der-klimawandel-climate-change",
       "german": "der Klimawandel",
       "english": "climate change",
       "category": "Environment Climate",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "b2-environment-climate-mivkdn5v9msdf",
+      "id": "b2-environment-climate-die-erderwaermung-global-warming",
       "german": "die Erderwärmung",
       "english": "global warming",
       "category": "Environment Climate",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "b2-environment-climate-mivkdn5vhwnv6",
+      "id": "b2-environment-climate-der-treibhauseffekt-greenhouse-effect",
       "german": "der Treibhauseffekt",
       "english": "greenhouse effect",
       "category": "Environment Climate",

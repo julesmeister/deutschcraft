@@ -4,7 +4,7 @@
   "totalCards": 20,
   "flashcards": [
     {
-      "id": "body-a1-001",
+      "id": "a1-body-parts-der-koerper-body",
       "german": "der Körper",
       "english": "body",
       "category": "Body Parts",
@@ -25,7 +25,7 @@
       }
     },
     {
-      "id": "body-a1-002",
+      "id": "a1-body-parts-der-kopf-head",
       "german": "der Kopf",
       "english": "head",
       "category": "Body Parts",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "body-a1-003",
+      "id": "a1-body-parts-das-gesicht-face",
       "german": "das Gesicht",
       "english": "face",
       "category": "Body Parts",
@@ -67,7 +67,7 @@
       }
     },
     {
-      "id": "body-a1-004",
+      "id": "a1-body-parts-das-haar-hair",
       "german": "das Haar",
       "english": "hair",
       "category": "Body Parts",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "body-a1-005",
+      "id": "a1-body-parts-das-auge-eye",
       "german": "das Auge",
       "english": "eye",
       "category": "Body Parts",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "body-a1-006",
+      "id": "a1-body-parts-die-nase-nose",
       "german": "die Nase",
       "english": "nose",
       "category": "Body Parts",
@@ -130,7 +130,7 @@
       }
     },
     {
-      "id": "body-a1-007",
+      "id": "a1-body-parts-der-mund-mouth",
       "german": "der Mund",
       "english": "mouth",
       "category": "Body Parts",
@@ -151,7 +151,7 @@
       }
     },
     {
-      "id": "body-a1-008",
+      "id": "a1-body-parts-das-ohr-ear",
       "german": "das Ohr",
       "english": "ear",
       "category": "Body Parts",
@@ -172,7 +172,7 @@
       }
     },
     {
-      "id": "body-a1-009",
+      "id": "a1-body-parts-der-zahn-tooth",
       "german": "der Zahn",
       "english": "tooth",
       "category": "Body Parts",
@@ -193,7 +193,7 @@
       }
     },
     {
-      "id": "body-a1-010",
+      "id": "a1-body-parts-der-hals-neck-throat",
       "german": "der Hals",
       "english": "neck / throat",
       "category": "Body Parts",
@@ -214,7 +214,7 @@
       }
     },
     {
-      "id": "body-a1-011",
+      "id": "a1-body-parts-die-schulter-shoulder",
       "german": "die Schulter",
       "english": "shoulder",
       "category": "Body Parts",
@@ -235,7 +235,7 @@
       }
     },
     {
-      "id": "body-a1-012",
+      "id": "a1-body-parts-der-arm-arm",
       "german": "der Arm",
       "english": "arm",
       "category": "Body Parts",
@@ -256,7 +256,7 @@
       }
     },
     {
-      "id": "body-a1-013",
+      "id": "a1-body-parts-die-hand-hand",
       "german": "die Hand",
       "english": "hand",
       "category": "Body Parts",
@@ -277,7 +277,7 @@
       }
     },
     {
-      "id": "body-a1-014",
+      "id": "a1-body-parts-der-finger-finger",
       "german": "der Finger",
       "english": "finger",
       "category": "Body Parts",
@@ -298,7 +298,7 @@
       }
     },
     {
-      "id": "body-a1-015",
+      "id": "a1-body-parts-der-bauch-stomach-belly",
       "german": "der Bauch",
       "english": "stomach / belly",
       "category": "Body Parts",
@@ -319,7 +319,7 @@
       }
     },
     {
-      "id": "body-a1-016",
+      "id": "a1-body-parts-der-ruecken-back",
       "german": "der Rücken",
       "english": "back",
       "category": "Body Parts",
@@ -340,7 +340,7 @@
       }
     },
     {
-      "id": "body-a1-017",
+      "id": "a1-body-parts-das-bein-leg",
       "german": "das Bein",
       "english": "leg",
       "category": "Body Parts",
@@ -361,7 +361,7 @@
       }
     },
     {
-      "id": "body-a1-018",
+      "id": "a1-body-parts-das-knie-knee",
       "german": "das Knie",
       "english": "knee",
       "category": "Body Parts",
@@ -382,7 +382,7 @@
       }
     },
     {
-      "id": "body-a1-019",
+      "id": "a1-body-parts-der-fuss-foot",
       "german": "der Fuß",
       "english": "foot",
       "category": "Body Parts",
@@ -403,7 +403,7 @@
       }
     },
     {
-      "id": "body-a1-020",
+      "id": "a1-body-parts-die-zehe-toe",
       "german": "die Zehe",
       "english": "toe",
       "category": "Body Parts",

@@ -27,7 +27,7 @@ export async function saveFlashcardProgress(
     let wordId = progressData.wordId || flashcardData?.id || flashcardData?.wordId || '';
 
     // ========================================================================
-    // ID NORMALIZATION LAYER - Handle multiple ID formats
+    // ID NORMALIZATION LAYER - REMOVED (Semantic IDs)
     // ========================================================================
 
     // 1. Ensure user exists in Turso (critical for FK constraint)
@@ -44,13 +44,6 @@ export async function saveFlashcardProgress(
             sql: `INSERT OR IGNORE INTO users (user_id, email, created_at) VALUES (?, ?, ?)`,
             args: [progressData.userId, progressData.userId, now],
           });
-          if (process.env.NODE_ENV === 'development') {
-            console.log(`➕ [Created] User: ${progressData.userId}`);
-          }
-        } else {
-          if (process.env.NODE_ENV === 'development') {
-            console.log(`📍 [ID Match] Found user: ${progressData.userId}`);
-          }
         }
       } catch (userError) {
         console.error('[flashcardService:turso] User check/create failed:', userError);
@@ -58,41 +51,25 @@ export async function saveFlashcardProgress(
       }
     }
 
-    // 2. Normalize flashcard ID
-    if (flashcardId.startsWith('syllabus-') && !flashcardId.startsWith('FLASH_')) {
-      flashcardId = `FLASH_${flashcardId}`;
+    // 2. Use ID directly (Semantic IDs are consistent)
+    // No more FLASH_ prefix or variation checks needed.
+    // We assume the ID passed is correct.
+    
+    // Verify flashcard exists
+    let existingFlashcard = false;
+    if (flashcardId) {
+       try {
+         const fcCheck = await db.execute({
+           sql: 'SELECT id FROM flashcards WHERE id = ?',
+           args: [flashcardId]
+         });
+         existingFlashcard = fcCheck.rows.length > 0;
+       } catch (e) {
+         console.warn('Failed to check flashcard existence', e);
+       }
     }
 
-    // 3. Check if flashcard already exists in Turso (try multiple ID formats)
-    let existingFlashcard = null;
-    const idVariations = [
-      flashcardId,
-      `FLASH_${flashcardId}`,
-      flashcardId.replace('FLASH_', ''),
-      wordId,
-      `FLASH_${wordId}`,
-    ].filter(id => id && id.length > 0);
-
-    for (const idVariant of idVariations) {
-      try {
-        const checkResult = await db.execute({
-          sql: `SELECT id FROM flashcards WHERE id = ? LIMIT 1`,
-          args: [idVariant],
-        });
-        if (checkResult.rows && checkResult.rows.length > 0) {
-          existingFlashcard = checkResult.rows[0];
-          flashcardId = idVariant; // Use the ID that exists in DB
-          if (process.env.NODE_ENV === 'development') {
-            console.log(`📍 [ID Match] Found flashcard with ID: ${idVariant}`);
-          }
-          break;
-        }
-      } catch (e) {
-        // Continue trying other variants
-      }
-    }
-
-    // 4. Update final progress ID with normalized flashcard ID
+    // 3. Update final progress ID
     if (progressData.userId) {
       finalProgressId = `${progressData.userId}_${flashcardId}`;
     }
@@ -102,25 +79,18 @@ export async function saveFlashcardProgress(
       try {
         const level = progressData.level || flashcardData.level || 'A1';
 
-        // 5. Check if vocabulary exists (try multiple ID formats)
+        // 5. Check if vocabulary exists
         let existingVocab = null;
-        for (const wordIdVariant of [wordId, `VOCAB_${wordId}`, wordId.replace('VOCAB_', '')].filter(Boolean)) {
-          try {
-            const vocabCheck = await db.execute({
-              sql: `SELECT word_id FROM vocabulary WHERE word_id = ? LIMIT 1`,
-              args: [wordIdVariant],
-            });
-            if (vocabCheck.rows && vocabCheck.rows.length > 0) {
-              existingVocab = vocabCheck.rows[0];
-              wordId = wordIdVariant; // Use the ID that exists
-              if (process.env.NODE_ENV === 'development') {
-                console.log(`📍 [ID Match] Found vocabulary with ID: ${wordIdVariant}`);
-              }
-              break;
-            }
-          } catch (e) {
-            // Continue trying
+        try {
+          const vocabCheck = await db.execute({
+            sql: `SELECT word_id FROM vocabulary WHERE word_id = ? LIMIT 1`,
+            args: [wordId],
+          });
+          if (vocabCheck.rows && vocabCheck.rows.length > 0) {
+            existingVocab = vocabCheck.rows[0];
           }
+        } catch (e) {
+          // Continue
         }
 
         // 6. Ensure Vocabulary exists (only if not found)

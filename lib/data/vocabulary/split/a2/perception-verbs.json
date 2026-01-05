@@ -4,7 +4,7 @@
   "totalCards": 30,
   "flashcards": [
     {
-      "id": "syllabus-a2-10650",
+      "id": "a2-perception-verbs-schauen-to-look",
       "german": "schauen",
       "english": "to look",
       "category": "Perception Verbs",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10651",
+      "id": "a2-perception-verbs-beobachten-to-observe-to-watch",
       "german": "beobachten",
       "english": "to observe / to watch",
       "category": "Perception Verbs",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10653",
+      "id": "a2-perception-verbs-zuhoeren-to-listen-attentively",
       "german": "zuhören",
       "english": "to listen (attentively)",
       "category": "Perception Verbs",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10654",
+      "id": "a2-perception-verbs-fuehlen-to-feel",
       "german": "fühlen",
       "english": "to feel",
       "category": "Perception Verbs",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10655",
+      "id": "a2-perception-verbs-spueren-to-sense-to-feel",
       "german": "spüren",
       "english": "to sense / to feel",
       "category": "Perception Verbs",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10657",
+      "id": "a2-perception-verbs-schmecken-to-taste",
       "german": "schmecken",
       "english": "to taste",
       "category": "Perception Verbs",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10658",
+      "id": "a2-perception-verbs-merken-to-notice",
       "german": "merken",
       "english": "to notice",
       "category": "Perception Verbs",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10659",
+      "id": "a2-perception-verbs-erkennen-to-recognize",
       "german": "erkennen",
       "english": "to recognize",
       "category": "Perception Verbs",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10660",
+      "id": "a2-perception-verbs-bemerken-to-notice-to-observe",
       "german": "bemerken",
       "english": "to notice / to observe",
       "category": "Perception Verbs",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10661",
+      "id": "a2-perception-verbs-wahrnehmen-to-perceive",
       "german": "wahrnehmen",
       "english": "to perceive",
       "category": "Perception Verbs",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10662",
+      "id": "a2-perception-verbs-betrachten-to-view-to-consider",
       "german": "betrachten",
       "english": "to view / to consider",
       "category": "Perception Verbs",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10663",
+      "id": "a2-perception-verbs-pruefen-to-check-to-examine",
       "german": "prüfen",
       "english": "to check / to examine",
       "category": "Perception Verbs",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujbk04usnd7",
+      "id": "a2-perception-verbs-gucken-to-look-to-watch-colloquial",
       "german": "gucken",
       "english": "to look / to watch (colloquial)",
       "category": "Perception Verbs",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujbk04we6zz",
+      "id": "a2-perception-verbs-entdecken-to-discover",
       "german": "entdecken",
       "english": "to discover",
       "category": "Perception Verbs",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujbk04qed3h",
+      "id": "a2-perception-verbs-schmecken-nach-to-taste-like",
       "german": "schmecken nach",
       "english": "to taste like",
       "category": "Perception Verbs",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujbk047si8i",
+      "id": "a2-perception-verbs-riechen-nach-to-smell-like",
       "german": "riechen nach",
       "english": "to smell like",
       "category": "Perception Verbs",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujdiwf0k19d",
+      "id": "a2-perception-verbs-leuchten-to-glow-to-light-up",
       "german": "leuchten",
       "english": "to glow / to light up",
       "category": "Perception Verbs",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujdiwfoww66",
+      "id": "a2-perception-verbs-blicken-to-look-to-glance",
       "german": "blicken",
       "english": "to look / to glance",
       "category": "Perception Verbs",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujdiwfi22an",
+      "id": "a2-perception-verbs-starren-to-stare",
       "german": "starren",
       "english": "to stare",
       "category": "Perception Verbs",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujdiwf8hcnj",
+      "id": "a2-perception-verbs-horchen-to-listen-carefully",
       "german": "horchen",
       "english": "to listen (carefully)",
       "category": "Perception Verbs",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujdiwfmn94a",
+      "id": "a2-perception-verbs-klingen-to-sound",
       "german": "klingen",
       "english": "to sound",
       "category": "Perception Verbs",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujdiwfq3oi6",
+      "id": "a2-perception-verbs-toenen-to-sound-to-tone",
       "german": "tönen",
       "english": "to sound / to tone",
       "category": "Perception Verbs",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujdiwfcwfji",
+      "id": "a2-perception-verbs-stinken-to-stink-to-smell-bad",
       "german": "stinken",
       "english": "to stink / to smell bad",
       "category": "Perception Verbs",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujdiwfhsz92",
+      "id": "a2-perception-verbs-probieren-to-try-to-taste",
       "german": "probieren",
       "english": "to try / to taste",
       "category": "Perception Verbs",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujf2np96960",
+      "id": "a2-perception-verbs-vernehmen-to-perceive-to-hear",
       "german": "vernehmen",
       "english": "to perceive / to hear",
       "category": "Perception Verbs",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujf2npvvqng",
+      "id": "a2-perception-verbs-mitbekommen-to-notice-to-catch",
       "german": "mitbekommen",
       "english": "to notice / to catch",
       "category": "Perception Verbs",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujf2npyjg81",
+      "id": "a2-perception-verbs-aufmerksam-sein-to-be-attentive",
       "german": "aufmerksam sein",
       "english": "to be attentive",
       "category": "Perception Verbs",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujg5fg3qz27",
+      "id": "a2-perception-verbs-uebersehen-to-overlook-to-miss",
       "german": "übersehen",
       "english": "to overlook / to miss",
       "category": "Perception Verbs",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujg5fgra9mu",
+      "id": "a2-perception-verbs-ueberhoeren-to-not-hear-to-ignore-sound",
       "german": "überhören",
       "english": "to not hear / to ignore (sound)",
       "category": "Perception Verbs",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "a2-perception-verbs-miujg5fg7r3gj",
+      "id": "a2-perception-verbs-vernachlaessigen-to-neglect",
       "german": "vernachlässigen",
       "english": "to neglect",
       "category": "Perception Verbs",

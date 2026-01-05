@@ -4,7 +4,7 @@
   "totalCards": 40,
   "flashcards": [
     {
-      "id": "syllabus-a1-10116",
+      "id": "a1-food-drinks-das-brot-bread",
       "german": "das Brot",
       "english": "bread",
       "category": "Food Drinks",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10117",
+      "id": "a1-food-drinks-das-broetchen-bread-roll",
       "german": "das Brötchen",
       "english": "bread roll",
       "category": "Food Drinks",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10118",
+      "id": "a1-food-drinks-das-wasser-water",
       "german": "das Wasser",
       "english": "water",
       "category": "Food Drinks",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10119",
+      "id": "a1-food-drinks-der-kaffee-coffee",
       "german": "der Kaffee",
       "english": "coffee",
       "category": "Food Drinks",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10120",
+      "id": "a1-food-drinks-der-tee-tea",
       "german": "der Tee",
       "english": "tea",
       "category": "Food Drinks",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10121",
+      "id": "a1-food-drinks-die-milch-milk",
       "german": "die Milch",
       "english": "milk",
       "category": "Food Drinks",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10122",
+      "id": "a1-food-drinks-der-saft-juice",
       "german": "der Saft",
       "english": "juice",
       "category": "Food Drinks",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10123",
+      "id": "a1-food-drinks-das-bier-beer",
       "german": "das Bier",
       "english": "beer",
       "category": "Food Drinks",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10124",
+      "id": "a1-food-drinks-der-wein-wine",
       "german": "der Wein",
       "english": "wine",
       "category": "Food Drinks",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10125",
+      "id": "a1-food-drinks-der-apfel-apple",
       "german": "der Apfel",
       "english": "apple",
       "category": "Food Drinks",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10126",
+      "id": "a1-food-drinks-der-kaese-cheese",
       "german": "der Käse",
       "english": "cheese",
       "category": "Food Drinks",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10127",
+      "id": "a1-food-drinks-das-ei-egg",
       "german": "das Ei",
       "english": "egg",
       "category": "Food Drinks",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10128",
+      "id": "a1-food-drinks-die-butter-butter",
       "german": "die Butter",
       "english": "butter",
       "category": "Food Drinks",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10129",
+      "id": "a1-food-drinks-die-marmelade-jam",
       "german": "die Marmelade",
       "english": "jam",
       "category": "Food Drinks",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10130",
+      "id": "a1-food-drinks-der-honig-honey",
       "german": "der Honig",
       "english": "honey",
       "category": "Food Drinks",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10131",
+      "id": "a1-food-drinks-das-fleisch-meat",
       "german": "das Fleisch",
       "english": "meat",
       "category": "Food Drinks",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10133",
+      "id": "a1-food-drinks-das-haehnchen-chicken",
       "german": "das Hähnchen",
       "english": "chicken",
       "category": "Food Drinks",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10134",
+      "id": "a1-food-drinks-die-wurst-sausage",
       "german": "die Wurst",
       "english": "sausage",
       "category": "Food Drinks",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10135",
+      "id": "a1-food-drinks-der-schinken-ham",
       "german": "der Schinken",
       "english": "ham",
       "category": "Food Drinks",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10136",
+      "id": "a1-food-drinks-der-reis-rice",
       "german": "der Reis",
       "english": "rice",
       "category": "Food Drinks",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10137",
+      "id": "a1-food-drinks-die-nudeln-noodles-pasta",
       "german": "die Nudeln",
       "english": "noodles / pasta",
       "category": "Food Drinks",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10138",
+      "id": "a1-food-drinks-die-kartoffel-potato",
       "german": "die Kartoffel",
       "english": "potato",
       "category": "Food Drinks",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10139",
+      "id": "a1-food-drinks-das-gemuese-vegetables",
       "german": "das Gemüse",
       "english": "vegetables",
       "category": "Food Drinks",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10140",
+      "id": "a1-food-drinks-der-salat-salad-lettuce",
       "german": "der Salat",
       "english": "salad / lettuce",
       "category": "Food Drinks",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10141",
+      "id": "a1-food-drinks-die-suppe-soup",
       "german": "die Suppe",
       "english": "soup",
       "category": "Food Drinks",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10142",
+      "id": "a1-food-drinks-die-pizza-pizza",
       "german": "die Pizza",
       "english": "pizza",
       "category": "Food Drinks",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10143",
+      "id": "a1-food-drinks-der-kuchen-cake",
       "german": "der Kuchen",
       "english": "cake",
       "category": "Food Drinks",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10144",
+      "id": "a1-food-drinks-der-keks-cookie-biscuit",
       "german": "der Keks",
       "english": "cookie / biscuit",
       "category": "Food Drinks",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10145",
+      "id": "a1-food-drinks-die-schokolade-chocolate",
       "german": "die Schokolade",
       "english": "chocolate",
       "category": "Food Drinks",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10146",
+      "id": "a1-food-drinks-das-eis-ice-cream",
       "german": "das Eis",
       "english": "ice cream",
       "category": "Food Drinks",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10147",
+      "id": "a1-food-drinks-der-zucker-sugar",
       "german": "der Zucker",
       "english": "sugar",
       "category": "Food Drinks",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10148",
+      "id": "a1-food-drinks-das-salz-salt",
       "german": "das Salz",
       "english": "salt",
       "category": "Food Drinks",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10149",
+      "id": "a1-food-drinks-der-pfeffer-pepper",
       "german": "der Pfeffer",
       "english": "pepper",
       "category": "Food Drinks",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10150",
+      "id": "a1-food-drinks-das-oel-oil",
       "german": "das Öl",
       "english": "oil",
       "category": "Food Drinks",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10151",
+      "id": "a1-food-drinks-der-essig-vinegar",
       "german": "der Essig",
       "english": "vinegar",
       "category": "Food Drinks",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10152",
+      "id": "a1-food-drinks-der-joghurt-yogurt",
       "german": "der Joghurt",
       "english": "yogurt",
       "category": "Food Drinks",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10153",
+      "id": "a1-food-drinks-das-obst-fruit",
       "german": "das Obst",
       "english": "fruit",
       "category": "Food Drinks",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10154",
+      "id": "a1-food-drinks-das-fruehstueck-breakfast",
       "german": "das Frühstück",
       "english": "breakfast",
       "category": "Food Drinks",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10155",
+      "id": "a1-food-drinks-das-mittagessen-lunch",
       "german": "das Mittagessen",
       "english": "lunch",
       "category": "Food Drinks",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10156",
+      "id": "a1-food-drinks-das-abendessen-dinner",
       "german": "das Abendessen",
       "english": "dinner",
       "category": "Food Drinks",

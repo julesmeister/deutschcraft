@@ -37,7 +37,24 @@ export function useFlashcardSessionManager({
   const [upcomingCards, setUpcomingCards] = useState<any[]>([]);
   const [isReviewMode, setIsReviewMode] = useState(false);
   const [isLoadingData, setIsLoadingData] = useState(false);
+  const [isRefreshingData, setIsRefreshingData] = useState(false);
   const [isPending, startTransition] = useTransition();
+
+  /**
+   * Helper: Enrich flashcards with progress data (mastery level, next review date)
+   * Extracted to avoid duplication across multiple handlers
+   */
+  const enrichFlashcardsWithProgress = (flashcards: any[]) => {
+    return flashcards.map((card: any) => {
+      const progress = reviewsMap.get(card.id);
+      return {
+        ...card,
+        wordId: card.id,
+        masteryLevel: progress?.masteryLevel ?? 0,
+        nextReviewDate: progress?.nextReviewDate,
+      };
+    });
+  };
 
   const handleCategoryClick = async (
     categoryId: string,
@@ -58,17 +75,8 @@ export function useFlashcardSessionManager({
       // Fetch the specific category file
       const data = await fetchVocabularyCategory(selectedLevel, catInfo.file);
 
-      // Process flashcards
-      let categoryFlashcards = data.flashcards.map((card: any) => {
-        // Find progress for this card
-        const progress = reviewsMap.get(card.id);
-        return {
-          ...card,
-          wordId: card.id, // Use flashcard id as wordId for now
-          masteryLevel: progress?.masteryLevel ?? 0, // Add mastery level from progress
-          nextReviewDate: progress?.nextReviewDate,
-        };
-      });
+      // Enrich flashcards with progress data
+      let categoryFlashcards = enrichFlashcardsWithProgress(data.flashcards);
 
       // Apply settings (potentially heavy operation)
       const { cards, nextDueInfo, upcomingCards } = applyFlashcardSettings(
@@ -92,7 +100,7 @@ export function useFlashcardSessionManager({
     }
   };
 
-  const handleBackToCategories = (reviewedCards?: Record<string, string>) => {
+  const handleBackToCategories = async (reviewedCards?: Record<string, string>) => {
     setSelectedCategory(null);
     setPracticeFlashcards([]);
     setIsReviewMode(false); // Reset review mode
@@ -109,28 +117,36 @@ export function useFlashcardSessionManager({
       });
     }
 
-    // Invalidate queries to force fresh data after completing session
-    // Add a small delay to ensure Firestore writes have propagated
+    // OPTIMIZED: Force immediate refetch instead of just invalidating
+    // This ensures due counts update immediately without manual refresh
     if (userEmail) {
-      setTimeout(() => {
-        queryClient.invalidateQueries({
-          queryKey: queryKeys.flashcardProgress(userEmail),
-        });
-        // Also invalidate weekly progress as it might have changed
-        queryClient.invalidateQueries({
-          queryKey: queryKeys.weeklyProgress(userEmail),
-        });
-        // Invalidate today's progress (Daily Goal)
-        queryClient.invalidateQueries({
-          queryKey: ["todayProgress", userEmail],
-        });
-        // Signal that session is complete (triggers stats refresh)
-        onSessionComplete(
-          Object.keys(timestampedReviews).length > 0
-            ? timestampedReviews
-            : undefined
-        );
-      }, 500);
+      setIsRefreshingData(true);
+      try {
+        // Use refetchQueries to FORCE immediate data fetch (not just mark as stale)
+        await Promise.all([
+          queryClient.refetchQueries({
+            queryKey: queryKeys.flashcardProgress(userEmail),
+            type: 'active',
+          }),
+          queryClient.refetchQueries({
+            queryKey: queryKeys.weeklyProgress(userEmail),
+            type: 'active',
+          }),
+          queryClient.refetchQueries({
+            queryKey: ["todayProgress", userEmail],
+            type: 'active',
+          }),
+        ]);
+      } finally {
+        setIsRefreshingData(false);
+      }
+
+      // Signal that session is complete (triggers stats refresh with fresh data)
+      onSessionComplete(
+        Object.keys(timestampedReviews).length > 0
+          ? timestampedReviews
+          : undefined
+      );
     } else {
       onSessionComplete(
         Object.keys(timestampedReviews).length > 0
@@ -189,17 +205,8 @@ export function useFlashcardSessionManager({
       const results = await Promise.all(promises);
       const allFetchedCards = results.flatMap((r) => r.flashcards);
 
-      // Get all flashcards for the selected level
-      let flashcardsWithWordId = allFetchedCards.map((card: any) => {
-        // Find progress for this card
-        const progress = reviewsMap.get(card.id);
-        return {
-          ...card,
-          wordId: card.id, // Use flashcard id as wordId for now
-          masteryLevel: progress?.masteryLevel ?? 0, // Add mastery level from progress
-          nextReviewDate: progress?.nextReviewDate,
-        };
-      });
+      // Enrich all flashcards with progress data
+      let flashcardsWithWordId = enrichFlashcardsWithProgress(allFetchedCards);
 
       // Apply settings (potentially heavy operation)
       const { cards, nextDueInfo, upcomingCards } = applyFlashcardSettings(
@@ -234,30 +241,37 @@ export function useFlashcardSessionManager({
     let flashcardsToUse = practiceFlashcards; // Default to what we have
 
     if (selectedCategory === "All Categories" && newReviewMode) {
-      // "Review All" in "All Categories" mode means showing ALL cards from ALL categories.
-      // This is heavy. We might need to show a warning or load lazily.
-      // For optimization, maybe we just show what we have loaded?
-      // Or we trigger a full fetch?
-      // Let's trigger a full fetch with loading state.
+      // "Review All" with pagination: Load categories incrementally until we have enough cards
+      // This prevents loading 667KB of data at once (B1 level has 1554 cards!)
+      const MAX_CARDS_TO_LOAD = 200; // Reasonable limit for memory/performance
 
       setIsLoadingData(true);
       try {
-        // Fetch all categories
-        const promises = categoryIndex.categories.map((cat: any) =>
-          fetchVocabularyCategory(selectedLevel, cat.file)
-        );
-        const results = await Promise.all(promises);
-        const allCards = results.flatMap((r) => r.flashcards);
+        const loadedCards: any[] = [];
+        let categoriesProcessed = 0;
 
-        flashcardsToUse = allCards.map((card: any) => {
-          const progress = reviewsMap.get(card.id);
-          return {
-            ...card,
-            wordId: card.id,
-            masteryLevel: progress?.masteryLevel ?? 0,
-            nextReviewDate: progress?.nextReviewDate,
-          };
-        });
+        // Load categories one by one until we reach the card limit
+        for (const cat of categoryIndex.categories) {
+          if (loadedCards.length >= MAX_CARDS_TO_LOAD) {
+            break; // Stop loading once we have enough cards
+          }
+
+          try {
+            const data = await fetchVocabularyCategory(selectedLevel, cat.file);
+            loadedCards.push(...data.flashcards);
+            categoriesProcessed++;
+          } catch (e) {
+            console.error(`Failed to load category ${cat.name}:`, e);
+          }
+        }
+
+        if (process.env.NODE_ENV === 'development') {
+          console.log(
+            `[Review All] Loaded ${loadedCards.length} cards from ${categoriesProcessed}/${categoryIndex.categories.length} categories`
+          );
+        }
+
+        flashcardsToUse = enrichFlashcardsWithProgress(loadedCards);
       } catch (error) {
         console.error("Error fetching all cards:", error);
         setIsLoadingData(false);
@@ -282,15 +296,7 @@ export function useFlashcardSessionManager({
             selectedLevel,
             catInfo.file
           );
-          flashcardsToUse = data.flashcards.map((card: any) => {
-            const progress = reviewsMap.get(card.id);
-            return {
-              ...card,
-              wordId: card.id,
-              masteryLevel: progress?.masteryLevel ?? 0,
-              nextReviewDate: progress?.nextReviewDate,
-            };
-          });
+          flashcardsToUse = enrichFlashcardsWithProgress(data.flashcards);
         } catch (e) {
           console.error(e);
         } finally {
@@ -335,6 +341,7 @@ export function useFlashcardSessionManager({
     upcomingCards,
     isReviewMode,
     isLoadingData,
+    isRefreshingData,
     isPending,
     handleCategoryClick,
     handleBackToCategories,

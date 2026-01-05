@@ -4,7 +4,7 @@
   "totalCards": 56,
   "flashcards": [
     {
-      "id": "syllabus-a1-10238",
+      "id": "a1-numbers-null-zero",
       "german": "null",
       "english": "zero",
       "category": "Numbers",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10239",
+      "id": "a1-numbers-eins-one",
       "german": "eins",
       "english": "one",
       "category": "Numbers",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10240",
+      "id": "a1-numbers-zwei-two",
       "german": "zwei",
       "english": "two",
       "category": "Numbers",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10241",
+      "id": "a1-numbers-drei-three",
       "german": "drei",
       "english": "three",
       "category": "Numbers",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10242",
+      "id": "a1-numbers-vier-four",
       "german": "vier",
       "english": "four",
       "category": "Numbers",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10243",
+      "id": "a1-numbers-fuenf-five",
       "german": "fünf",
       "english": "five",
       "category": "Numbers",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10244",
+      "id": "a1-numbers-sechs-six",
       "german": "sechs",
       "english": "six",
       "category": "Numbers",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10245",
+      "id": "a1-numbers-sieben-seven",
       "german": "sieben",
       "english": "seven",
       "category": "Numbers",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10246",
+      "id": "a1-numbers-acht-eight",
       "german": "acht",
       "english": "eight",
       "category": "Numbers",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10247",
+      "id": "a1-numbers-neun-nine",
       "german": "neun",
       "english": "nine",
       "category": "Numbers",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10248",
+      "id": "a1-numbers-zehn-ten",
       "german": "zehn",
       "english": "ten",
       "category": "Numbers",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10249",
+      "id": "a1-numbers-elf-eleven",
       "german": "elf",
       "english": "eleven",
       "category": "Numbers",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10250",
+      "id": "a1-numbers-zwoelf-twelve",
       "german": "zwölf",
       "english": "twelve",
       "category": "Numbers",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10251",
+      "id": "a1-numbers-zwanzig-twenty",
       "german": "zwanzig",
       "english": "twenty",
       "category": "Numbers",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10252",
+      "id": "a1-numbers-hundert-hundred",
       "german": "hundert",
       "english": "hundred",
       "category": "Numbers",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10253",
+      "id": "a1-numbers-dreizehn-thirteen",
       "german": "dreizehn",
       "english": "thirteen",
       "category": "Numbers",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10254",
+      "id": "a1-numbers-vierzehn-fourteen",
       "german": "vierzehn",
       "english": "fourteen",
       "category": "Numbers",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10255",
+      "id": "a1-numbers-fuenfzehn-fifteen",
       "german": "fünfzehn",
       "english": "fifteen",
       "category": "Numbers",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10256",
+      "id": "a1-numbers-sechzehn-sixteen",
       "german": "sechzehn",
       "english": "sixteen",
       "category": "Numbers",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10257",
+      "id": "a1-numbers-siebzehn-seventeen",
       "german": "siebzehn",
       "english": "seventeen",
       "category": "Numbers",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10258",
+      "id": "a1-numbers-achtzehn-eighteen",
       "german": "achtzehn",
       "english": "eighteen",
       "category": "Numbers",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10259",
+      "id": "a1-numbers-neunzehn-nineteen",
       "german": "neunzehn",
       "english": "nineteen",
       "category": "Numbers",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10260",
+      "id": "a1-numbers-dreissig-thirty",
       "german": "dreißig",
       "english": "thirty",
       "category": "Numbers",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10261",
+      "id": "a1-numbers-vierzig-forty",
       "german": "vierzig",
       "english": "forty",
       "category": "Numbers",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10262",
+      "id": "a1-numbers-fuenfzig-fifty",
       "german": "fünfzig",
       "english": "fifty",
       "category": "Numbers",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10263",
+      "id": "a1-numbers-sechzig-sixty",
       "german": "sechzig",
       "english": "sixty",
       "category": "Numbers",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10264",
+      "id": "a1-numbers-siebzig-seventy",
       "german": "siebzig",
       "english": "seventy",
       "category": "Numbers",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10265",
+      "id": "a1-numbers-achtzig-eighty",
       "german": "achtzig",
       "english": "eighty",
       "category": "Numbers",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10266",
+      "id": "a1-numbers-neunzig-ninety",
       "german": "neunzig",
       "english": "ninety",
       "category": "Numbers",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10267",
+      "id": "a1-numbers-tausend-thousand",
       "german": "tausend",
       "english": "thousand",
       "category": "Numbers",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10268",
+      "id": "a1-numbers-eine-million-one-million",
       "german": "eine Million",
       "english": "one million",
       "category": "Numbers",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10269",
+      "id": "a1-numbers-eine-milliarde-one-billion",
       "german": "eine Milliarde",
       "english": "one billion",
       "category": "Numbers",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10270",
+      "id": "a1-numbers-eine-billion-one-trillion",
       "german": "eine Billion",
       "english": "one trillion",
       "category": "Numbers",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10271",
+      "id": "a1-numbers-erste-first",
       "german": "erste",
       "english": "first",
       "category": "Numbers",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10272",
+      "id": "a1-numbers-zweite-second",
       "german": "zweite",
       "english": "second",
       "category": "Numbers",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10273",
+      "id": "a1-numbers-dritte-third",
       "german": "dritte",
       "english": "third",
       "category": "Numbers",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10274",
+      "id": "a1-numbers-vierte-fourth",
       "german": "vierte",
       "english": "fourth",
       "category": "Numbers",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10275",
+      "id": "a1-numbers-fuenfte-fifth",
       "german": "fünfte",
       "english": "fifth",
       "category": "Numbers",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10276",
+      "id": "a1-numbers-sechste-sixth",
       "german": "sechste",
       "english": "sixth",
       "category": "Numbers",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10277",
+      "id": "a1-numbers-siebte-seventh",
       "german": "siebte",
       "english": "seventh",
       "category": "Numbers",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10278",
+      "id": "a1-numbers-achte-eighth",
       "german": "achte",
       "english": "eighth",
       "category": "Numbers",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10279",
+      "id": "a1-numbers-neunte-ninth",
       "german": "neunte",
       "english": "ninth",
       "category": "Numbers",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10280",
+      "id": "a1-numbers-zehnte-tenth",
       "german": "zehnte",
       "english": "tenth",
       "category": "Numbers",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10281",
+      "id": "a1-numbers-elfte-eleventh",
       "german": "elfte",
       "english": "eleventh",
       "category": "Numbers",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10282",
+      "id": "a1-numbers-zwoelfte-twelfth",
       "german": "zwölfte",
       "english": "twelfth",
       "category": "Numbers",
@@ -904,7 +904,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10283",
+      "id": "a1-numbers-zwanzigste-twentieth",
       "german": "zwanzigste",
       "english": "twentieth",
       "category": "Numbers",
@@ -924,7 +924,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10284",
+      "id": "a1-numbers-hundertste-hundredth",
       "german": "hundertste",
       "english": "hundredth",
       "category": "Numbers",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10285",
+      "id": "a1-numbers-halb-half",
       "german": "halb",
       "english": "half",
       "category": "Numbers",
@@ -964,7 +964,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10286",
+      "id": "a1-numbers-ein-drittel-one-third",
       "german": "ein Drittel",
       "english": "one third",
       "category": "Numbers",
@@ -984,7 +984,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10287",
+      "id": "a1-numbers-ein-viertel-one-quarter",
       "german": "ein Viertel",
       "english": "one quarter",
       "category": "Numbers",
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10288",
+      "id": "a1-numbers-drei-viertel-three-quarters",
       "german": "drei Viertel",
       "english": "three quarters",
       "category": "Numbers",
@@ -1024,7 +1024,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10289",
+      "id": "a1-numbers-einmal-once",
       "german": "einmal",
       "english": "once",
       "category": "Numbers",
@@ -1044,7 +1044,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10290",
+      "id": "a1-numbers-zweimal-twice",
       "german": "zweimal",
       "english": "twice",
       "category": "Numbers",
@@ -1064,7 +1064,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10291",
+      "id": "a1-numbers-dreimal-three-times",
       "german": "dreimal",
       "english": "three times",
       "category": "Numbers",
@@ -1084,7 +1084,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10292",
+      "id": "a1-numbers-das-prozent-percent",
       "german": "das Prozent",
       "english": "percent",
       "category": "Numbers",
@@ -1104,7 +1104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10293",
+      "id": "a1-numbers-die-zahl-number",
       "german": "die Zahl",
       "english": "number",
       "category": "Numbers",

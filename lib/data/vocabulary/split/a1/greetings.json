@@ -4,7 +4,7 @@
   "totalCards": 14,
   "flashcards": [
     {
-      "id": "syllabus-a1-10172",
+      "id": "a1-greetings-hallo-hello",
       "german": "Hallo",
       "english": "Hello",
       "category": "Greetings",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10173",
+      "id": "a1-greetings-guten-tag-good-day",
       "german": "Guten Tag",
       "english": "Good day",
       "category": "Greetings",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10174",
+      "id": "a1-greetings-guten-morgen-good-morning",
       "german": "Guten Morgen",
       "english": "Good morning",
       "category": "Greetings",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10175",
+      "id": "a1-greetings-guten-abend-good-evening",
       "german": "Guten Abend",
       "english": "Good evening",
       "category": "Greetings",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10176",
+      "id": "a1-greetings-auf-wiedersehen-goodbye",
       "german": "Auf Wiedersehen",
       "english": "Goodbye",
       "category": "Greetings",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10177",
+      "id": "a1-greetings-tschuess-bye",
       "german": "Tschüss",
       "english": "Bye",
       "category": "Greetings",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10178",
+      "id": "a1-greetings-danke-thank-you",
       "german": "Danke",
       "english": "Thank you",
       "category": "Greetings",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10179",
+      "id": "a1-greetings-bitte-please-youre-welcome",
       "german": "Bitte",
       "english": "Please / You're welcome",
       "category": "Greetings",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10180",
+      "id": "a1-greetings-gute-nacht-good-night",
       "german": "Gute Nacht",
       "english": "Good night",
       "category": "Greetings",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10181",
+      "id": "a1-greetings-entschuldigung-excuse-me-sorry",
       "german": "Entschuldigung",
       "english": "Excuse me / Sorry",
       "category": "Greetings",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10182",
+      "id": "a1-greetings-ja-yes",
       "german": "Ja",
       "english": "Yes",
       "category": "Greetings",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10183",
+      "id": "a1-greetings-nein-no",
       "german": "Nein",
       "english": "No",
       "category": "Greetings",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10184",
+      "id": "a1-greetings-wie-gehts-how-are-you",
       "german": "Wie geht's?",
       "english": "How are you?",
       "category": "Greetings",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10186",
+      "id": "a1-greetings-willkommen-welcome",
       "german": "Willkommen",
       "english": "Welcome",
       "category": "Greetings",

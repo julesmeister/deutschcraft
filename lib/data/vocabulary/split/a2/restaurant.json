@@ -4,7 +4,7 @@
   "totalCards": 33,
   "flashcards": [
     {
-      "id": "syllabus-a2-10730",
+      "id": "a2-restaurant-das-restaurant-restaurant",
       "german": "das Restaurant",
       "english": "restaurant",
       "category": "Restaurant",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10731",
+      "id": "a2-restaurant-die-speisekarte-menu",
       "german": "die Speisekarte",
       "english": "menu",
       "category": "Restaurant",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10732",
+      "id": "a2-restaurant-die-rechnung-bill-check",
       "german": "die Rechnung",
       "english": "bill / check",
       "category": "Restaurant",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10735",
+      "id": "a2-restaurant-bestellen-to-order",
       "german": "bestellen",
       "english": "to order",
       "category": "Restaurant",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10737",
+      "id": "a2-restaurant-das-trinkgeld-tip-gratuity",
       "german": "das Trinkgeld",
       "english": "tip / gratuity",
       "category": "Restaurant",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10741",
+      "id": "a2-restaurant-die-vorspeise-appetizer-starter",
       "german": "die Vorspeise",
       "english": "appetizer / starter",
       "category": "Restaurant",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10742",
+      "id": "a2-restaurant-das-hauptgericht-main-course",
       "german": "das Hauptgericht",
       "english": "main course",
       "category": "Restaurant",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10743",
+      "id": "a2-restaurant-der-nachtisch-dessert",
       "german": "der Nachtisch",
       "english": "dessert",
       "category": "Restaurant",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10744",
+      "id": "a2-restaurant-das-getraenk-drink-beverage",
       "german": "das Getränk",
       "english": "drink / beverage",
       "category": "Restaurant",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miuj9qfgzmk4r",
+      "id": "a2-restaurant-das-caf-caf",
       "german": "das Café",
       "english": "café",
       "category": "Restaurant",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miuj9qfg3hy2o",
+      "id": "a2-restaurant-die-bar-bar",
       "german": "die Bar",
       "english": "bar",
       "category": "Restaurant",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miuj9qfgoa7qx",
+      "id": "a2-restaurant-die-bestellung-order",
       "german": "die Bestellung",
       "english": "order",
       "category": "Restaurant",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miuj9qfgzdkc9",
+      "id": "a2-restaurant-die-hauptspeise-main-course",
       "german": "die Hauptspeise",
       "english": "main course",
       "category": "Restaurant",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miuj9qfg0ih9a",
+      "id": "a2-restaurant-die-nachspeise-dessert",
       "german": "die Nachspeise",
       "english": "dessert",
       "category": "Restaurant",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miuj9qfg98j8t",
+      "id": "a2-restaurant-das-gericht-dish",
       "german": "das Gericht",
       "english": "dish",
       "category": "Restaurant",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miuj9qfgxkngn",
+      "id": "a2-restaurant-die-portion-portion-serving",
       "german": "die Portion",
       "english": "portion / serving",
       "category": "Restaurant",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miuj9qfgmegb1",
+      "id": "a2-restaurant-die-beilage-side-dish",
       "german": "die Beilage",
       "english": "side dish",
       "category": "Restaurant",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miuj9qfggjnih",
+      "id": "a2-restaurant-die-sosse-sauce",
       "german": "die Soße",
       "english": "sauce",
       "category": "Restaurant",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miuj9qfgfgh8i",
+      "id": "a2-restaurant-das-gewuerz-spice",
       "german": "das Gewürz",
       "english": "spice",
       "category": "Restaurant",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miuj9qfgk22r7",
+      "id": "a2-restaurant-die-reservierung-reservation",
       "german": "die Reservierung",
       "english": "reservation",
       "category": "Restaurant",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miuj9qfgs0enn",
+      "id": "a2-restaurant-der-platz-seat-place",
       "german": "der Platz",
       "english": "seat / place",
       "category": "Restaurant",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miuj9qfgfhtq7",
+      "id": "a2-restaurant-lecker-delicious-tasty",
       "german": "lecker",
       "english": "delicious / tasty",
       "category": "Restaurant",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miujdiwivdjxz",
+      "id": "a2-restaurant-die-kantine-canteen-cafeteria",
       "german": "die Kantine",
       "english": "canteen / cafeteria",
       "category": "Restaurant",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miujdiwiuf6xd",
+      "id": "a2-restaurant-der-imbiss-snack-bar-fast-food-stand",
       "german": "der Imbiss",
       "english": "snack bar / fast food stand",
       "category": "Restaurant",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miujdiwiboa2i",
+      "id": "a2-restaurant-die-terrasse-terrace-patio",
       "german": "die Terrasse",
       "english": "terrace / patio",
       "category": "Restaurant",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miujdiwi0p70c",
+      "id": "a2-restaurant-der-garten-garden",
       "german": "der Garten",
       "english": "garden",
       "category": "Restaurant",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miujdiwib6w5c",
+      "id": "a2-restaurant-drinnen-inside",
       "german": "drinnen",
       "english": "inside",
       "category": "Restaurant",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miujdiwik0giv",
+      "id": "a2-restaurant-draussen-outside",
       "german": "draußen",
       "english": "outside",
       "category": "Restaurant",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miujdiwikyx3c",
+      "id": "a2-restaurant-servieren-to-serve",
       "german": "servieren",
       "english": "to serve",
       "category": "Restaurant",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miujdiwiy3sd2",
+      "id": "a2-restaurant-das-tagesgericht-dish-of-the-day",
       "german": "das Tagesgericht",
       "english": "dish of the day",
       "category": "Restaurant",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miujdiwid1eue",
+      "id": "a2-restaurant-das-menue-set-menu",
       "german": "das Menü",
       "english": "set menu",
       "category": "Restaurant",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miujdiwiqbwym",
+      "id": "a2-restaurant-la-carte-la-carte",
       "german": "à la carte",
       "english": "à la carte",
       "category": "Restaurant",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "a2-restaurant-miujdiwiil3jb",
+      "id": "a2-restaurant-die-getraenkekarte-drink-menu",
       "german": "die Getränkekarte",
       "english": "drink menu",
       "category": "Restaurant",

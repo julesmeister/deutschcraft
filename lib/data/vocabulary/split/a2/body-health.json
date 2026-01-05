@@ -4,7 +4,7 @@
   "totalCards": 30,
   "flashcards": [
     {
-      "id": "syllabus-a2-10482",
+      "id": "a2-body-health-das-krankenhaus-hospital",
       "german": "das Krankenhaus",
       "english": "hospital",
       "category": "Body Health",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10491",
+      "id": "a2-body-health-das-herz-heart",
       "german": "das Herz",
       "english": "heart",
       "category": "Body Health",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10494",
+      "id": "a2-body-health-der-schmerz-pain",
       "german": "der Schmerz",
       "english": "pain",
       "category": "Body Health",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10495",
+      "id": "a2-body-health-der-arzt-doctor",
       "german": "der Arzt",
       "english": "doctor",
       "category": "Body Health",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10496",
+      "id": "a2-body-health-das-medikament-medicine-medication",
       "german": "das Medikament",
       "english": "medicine / medication",
       "category": "Body Health",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "a2-body-health-miuj9qfe0qxs6",
+      "id": "a2-body-health-die-gesundheit-health",
       "german": "die Gesundheit",
       "english": "health",
       "category": "Body Health",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "a2-body-health-miuj9qfeln3fy",
+      "id": "a2-body-health-der-husten-cough",
       "german": "der Husten",
       "english": "cough",
       "category": "Body Health",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "a2-body-health-miuj9qfetpnrt",
+      "id": "a2-body-health-der-schnupfen-cold-runny-nose",
       "german": "der Schnupfen",
       "english": "cold / runny nose",
       "category": "Body Health",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "a2-body-health-miuj9qfeycb0a",
+      "id": "a2-body-health-die-tablette-tablet-pill",
       "german": "die Tablette",
       "english": "tablet / pill",
       "category": "Body Health",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "a2-body-health-miuj9qfe1qubo",
+      "id": "a2-body-health-die-spritze-injection-shot",
       "german": "die Spritze",
       "english": "injection / shot",
       "category": "Body Health",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "a2-body-health-miuj9qfeqsssx",
+      "id": "a2-body-health-der-verband-bandage",
       "german": "der Verband",
       "english": "bandage",
       "category": "Body Health",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "a2-body-health-miuj9qfe58kw6",
+      "id": "a2-body-health-das-pflaster-band-aid-plaster",
       "german": "das Pflaster",
       "english": "band-aid / plaster",
       "category": "Body Health",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "a2-body-health-miuj9qfep23iu",
+      "id": "a2-body-health-die-wunde-wound",
       "german": "die Wunde",
       "english": "wound",
       "category": "Body Health",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "a2-body-health-miuj9qfejowqn",
+      "id": "a2-body-health-verletzt-injured",
       "german": "verletzt",
       "english": "injured",
       "category": "Body Health",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "a2-body-health-miuj9qfemus4s",
+      "id": "a2-body-health-bluten-to-bleed",
       "german": "bluten",
       "english": "to bleed",
       "category": "Body Health",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "a2-body-health-miuj9qfe2q0bp",
+      "id": "a2-body-health-gesund-werden-to-get-well",
       "german": "gesund werden",
       "english": "to get well",
       "category": "Body Health",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "a2-body-health-miujdiwe3wwfo",
+      "id": "a2-body-health-die-therapie-therapy",
       "german": "die Therapie",
       "english": "therapy",
       "category": "Body Health",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "a2-body-health-miujdiwe1gted",
+      "id": "a2-body-health-der-notfall-emergency",
       "german": "der Notfall",
       "english": "emergency",
       "category": "Body Health",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "a2-body-health-miujdiwew9t2u",
+      "id": "a2-body-health-die-rettung-rescue",
       "german": "die Rettung",
       "english": "rescue",
       "category": "Body Health",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "a2-body-health-miujdiwekmtub",
+      "id": "a2-body-health-der-krankenwagen-ambulance",
       "german": "der Krankenwagen",
       "english": "ambulance",
       "category": "Body Health",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "a2-body-health-miujdiwe19pc3",
+      "id": "a2-body-health-die-notaufnahme-emergency-room",
       "german": "die Notaufnahme",
       "english": "emergency room",
       "category": "Body Health",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "a2-body-health-miujdiweybhef",
+      "id": "a2-body-health-die-nebenwirkung-side-effect",
       "german": "die Nebenwirkung",
       "english": "side effect",
       "category": "Body Health",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "a2-body-health-miujdiwev8kog",
+      "id": "a2-body-health-die-dosis-dose",
       "german": "die Dosis",
       "english": "dose",
       "category": "Body Health",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "a2-body-health-miujdiwemonnn",
+      "id": "a2-body-health-die-salbe-ointment",
       "german": "die Salbe",
       "english": "ointment",
       "category": "Body Health",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "a2-body-health-miujdiwe7cd93",
+      "id": "a2-body-health-der-tropfen-drop",
       "german": "der Tropfen",
       "english": "drop",
       "category": "Body Health",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "a2-body-health-miujdiweymp2e",
+      "id": "a2-body-health-die-impfung-vaccination",
       "german": "die Impfung",
       "english": "vaccination",
       "category": "Body Health",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "a2-body-health-miujdiweqdyfo",
+      "id": "a2-body-health-der-patient-patient-male",
       "german": "der Patient",
       "english": "patient (male)",
       "category": "Body Health",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "a2-body-health-miujdiwevxo51",
+      "id": "a2-body-health-die-patientin-patient-female",
       "german": "die Patientin",
       "english": "patient (female)",
       "category": "Body Health",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "a2-body-health-miujdiwedspq3",
+      "id": "a2-body-health-schwanger-pregnant",
       "german": "schwanger",
       "english": "pregnant",
       "category": "Body Health",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "a2-body-health-miujf2nrpz6bp",
+      "id": "a2-body-health-chronisch-chronic",
       "german": "chronisch",
       "english": "chronic",
       "category": "Body Health",

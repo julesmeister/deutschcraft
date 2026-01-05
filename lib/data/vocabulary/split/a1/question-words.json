@@ -4,7 +4,7 @@
   "totalCards": 15,
   "flashcards": [
     {
-      "id": "syllabus-a1-10283",
+      "id": "a1-question-words-wer-who",
       "german": "wer",
       "english": "who",
       "category": "Question Words",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10284",
+      "id": "a1-question-words-was-what",
       "german": "was",
       "english": "what",
       "category": "Question Words",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10285",
+      "id": "a1-question-words-wo-where",
       "german": "wo",
       "english": "where",
       "category": "Question Words",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10286",
+      "id": "a1-question-words-woher-where-from",
       "german": "woher",
       "english": "where from",
       "category": "Question Words",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10287",
+      "id": "a1-question-words-wohin-where-to",
       "german": "wohin",
       "english": "where to",
       "category": "Question Words",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10288",
+      "id": "a1-question-words-wann-when",
       "german": "wann",
       "english": "when",
       "category": "Question Words",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10289",
+      "id": "a1-question-words-wie-how",
       "german": "wie",
       "english": "how",
       "category": "Question Words",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10290",
+      "id": "a1-question-words-warum-why",
       "german": "warum",
       "english": "why",
       "category": "Question Words",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10291",
+      "id": "a1-question-words-wie-viel-how-much",
       "german": "wie viel",
       "english": "how much",
       "category": "Question Words",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10292",
+      "id": "a1-question-words-wie-viele-how-many",
       "german": "wie viele",
       "english": "how many",
       "category": "Question Words",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10293",
+      "id": "a1-question-words-welche-which",
       "german": "welche",
       "english": "which",
       "category": "Question Words",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10294",
+      "id": "a1-question-words-wen-whom-accusative",
       "german": "wen",
       "english": "whom (accusative)",
       "category": "Question Words",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10295",
+      "id": "a1-question-words-wem-whom-dative",
       "german": "wem",
       "english": "whom (dative)",
       "category": "Question Words",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10296",
+      "id": "a1-question-words-wessen-whose",
       "german": "wessen",
       "english": "whose",
       "category": "Question Words",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10297",
+      "id": "a1-question-words-wie-lange-how-long",
       "german": "wie lange",
       "english": "how long",
       "category": "Question Words",

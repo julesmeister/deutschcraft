@@ -4,7 +4,7 @@
   "totalCards": 12,
   "flashcards": [
     {
-      "id": "syllabus-c1-11583",
+      "id": "c1-legal-administrative-die-genehmigung-permit-authorization-approval",
       "german": "die Genehmigung",
       "english": "permit / authorization / approval",
       "category": "Legal Administrative",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11584",
+      "id": "c1-legal-administrative-die-vorschrift-regulation-rule-prescription",
       "german": "die Vorschrift",
       "english": "regulation / rule / prescription",
       "category": "Legal Administrative",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11586",
+      "id": "c1-legal-administrative-das-verfahren-procedure-proceedings-process",
       "german": "das Verfahren",
       "english": "procedure / proceedings / process",
       "category": "Legal Administrative",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11588",
+      "id": "c1-legal-administrative-die-behoerde-authority-government-agency",
       "german": "die Behörde",
       "english": "authority / government agency",
       "category": "Legal Administrative",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11589",
+      "id": "c1-legal-administrative-die-bescheinigung-certificate-attestation",
       "german": "die Bescheinigung",
       "english": "certificate / attestation",
       "category": "Legal Administrative",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11590",
+      "id": "c1-legal-administrative-der-antrag-application-request-motion",
       "german": "der Antrag",
       "english": "application / request / motion",
       "category": "Legal Administrative",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11591",
+      "id": "c1-legal-administrative-die-klage-lawsuit-complaint-action",
       "german": "die Klage",
       "english": "lawsuit / complaint / action",
       "category": "Legal Administrative",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11592",
+      "id": "c1-legal-administrative-das-urteil-judgment-verdict-sentence",
       "german": "das Urteil",
       "english": "judgment / verdict / sentence",
       "category": "Legal Administrative",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11594",
+      "id": "c1-legal-administrative-die-vollmacht-power-of-attorney-authorization",
       "german": "die Vollmacht",
       "english": "power of attorney / authorization",
       "category": "Legal Administrative",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11595",
+      "id": "c1-legal-administrative-die-verpflichtung-obligation-commitment-duty",
       "german": "die Verpflichtung",
       "english": "obligation / commitment / duty",
       "category": "Legal Administrative",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11596",
+      "id": "c1-legal-administrative-die-berechtigung-authorization-entitlement-right",
       "german": "die Berechtigung",
       "english": "authorization / entitlement / right",
       "category": "Legal Administrative",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11597",
+      "id": "c1-legal-administrative-die-haftung-liability-responsibility",
       "german": "die Haftung",
       "english": "liability / responsibility",
       "category": "Legal Administrative",

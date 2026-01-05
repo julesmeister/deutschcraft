@@ -4,148 +4,250 @@
   "icon": "🎆",
   "flashcards": [
     {
-      "id": "newyear-b1-001",
+      "id": "b1-new-year-silvester-new-years-eve",
       "german": "Silvester",
       "english": "New Year's Eve",
       "category": "New Year",
       "level": "B1",
-      "tags": ["holidays", "new-year", "B1"],
+      "tags": [
+        "holidays",
+        "new-year",
+        "B1"
+      ],
       "_meta": {
         "source": "New Year B1",
-        "hierarchy": ["B1", "New Year", "Silvester"]
+        "hierarchy": [
+          "B1",
+          "New Year",
+          "Silvester"
+        ]
       }
     },
     {
-      "id": "newyear-b1-002",
+      "id": "b1-new-year-neujahr-new-years-day",
       "german": "Neujahr",
       "english": "New Year's Day",
       "category": "New Year",
       "level": "B1",
-      "tags": ["holidays", "new-year", "B1"],
+      "tags": [
+        "holidays",
+        "new-year",
+        "B1"
+      ],
       "_meta": {
         "source": "New Year B1",
-        "hierarchy": ["B1", "New Year", "Neujahr"]
+        "hierarchy": [
+          "B1",
+          "New Year",
+          "Neujahr"
+        ]
       }
     },
     {
-      "id": "newyear-b1-003",
+      "id": "b1-new-year-das-feuerwerk-fireworks",
       "german": "das Feuerwerk",
       "english": "fireworks",
       "category": "New Year",
       "level": "B1",
-      "tags": ["holidays", "new-year", "B1"],
+      "tags": [
+        "holidays",
+        "new-year",
+        "B1"
+      ],
       "_meta": {
         "source": "New Year B1",
-        "hierarchy": ["B1", "New Year", "das Feuerwerk"]
+        "hierarchy": [
+          "B1",
+          "New Year",
+          "das Feuerwerk"
+        ]
       }
     },
     {
-      "id": "newyear-b1-004",
+      "id": "b1-new-year-der-vorsatz-resolution",
       "german": "der Vorsatz",
       "english": "resolution",
       "category": "New Year",
       "level": "B1",
-      "tags": ["holidays", "new-year", "B1"],
+      "tags": [
+        "holidays",
+        "new-year",
+        "B1"
+      ],
       "_meta": {
         "source": "New Year B1",
-        "hierarchy": ["B1", "New Year", "der Vorsatz"]
+        "hierarchy": [
+          "B1",
+          "New Year",
+          "der Vorsatz"
+        ]
       }
     },
     {
-      "id": "newyear-b1-005",
+      "id": "b1-new-year-der-jahreswechsel-turn-of-the-year",
       "german": "der Jahreswechsel",
       "english": "turn of the year",
       "category": "New Year",
       "level": "B1",
-      "tags": ["holidays", "new-year", "B1"],
+      "tags": [
+        "holidays",
+        "new-year",
+        "B1"
+      ],
       "_meta": {
         "source": "New Year B1",
-        "hierarchy": ["B1", "New Year", "der Jahreswechsel"]
+        "hierarchy": [
+          "B1",
+          "New Year",
+          "der Jahreswechsel"
+        ]
       }
     },
     {
-      "id": "newyear-b1-006",
+      "id": "b1-new-year-anstossen-to-toast-clink-glasses",
       "german": "anstoßen",
       "english": "to toast / clink glasses",
       "category": "New Year",
       "level": "B1",
-      "tags": ["holidays", "new-year", "verbs", "B1"],
+      "tags": [
+        "holidays",
+        "new-year",
+        "verbs",
+        "B1"
+      ],
       "_meta": {
         "source": "New Year B1",
-        "hierarchy": ["B1", "New Year", "anstoßen"]
+        "hierarchy": [
+          "B1",
+          "New Year",
+          "anstoßen"
+        ]
       }
     },
     {
-      "id": "newyear-b1-007",
+      "id": "b1-new-year-der-sekt-sparkling-wine-champagne",
       "german": "der Sekt",
       "english": "sparkling wine / champagne",
       "category": "New Year",
       "level": "B1",
-      "tags": ["holidays", "new-year", "drinks", "B1"],
+      "tags": [
+        "holidays",
+        "new-year",
+        "drinks",
+        "B1"
+      ],
       "_meta": {
         "source": "New Year B1",
-        "hierarchy": ["B1", "New Year", "der Sekt"]
+        "hierarchy": [
+          "B1",
+          "New Year",
+          "der Sekt"
+        ]
       }
     },
     {
-      "id": "newyear-b1-008",
+      "id": "b1-new-year-feiern-to-celebrate",
       "german": "feiern",
       "english": "to celebrate",
       "category": "New Year",
       "level": "B1",
-      "tags": ["holidays", "new-year", "verbs", "B1"],
+      "tags": [
+        "holidays",
+        "new-year",
+        "verbs",
+        "B1"
+      ],
       "_meta": {
         "source": "New Year B1",
-        "hierarchy": ["B1", "New Year", "feiern"]
+        "hierarchy": [
+          "B1",
+          "New Year",
+          "feiern"
+        ]
       }
     },
     {
-      "id": "newyear-b1-009",
+      "id": "b1-new-year-die-rakete-rocket-firecracker",
       "german": "die Rakete",
       "english": "rocket / firecracker",
       "category": "New Year",
       "level": "B1",
-      "tags": ["holidays", "new-year", "B1"],
+      "tags": [
+        "holidays",
+        "new-year",
+        "B1"
+      ],
       "_meta": {
         "source": "New Year B1",
-        "hierarchy": ["B1", "New Year", "die Rakete"]
+        "hierarchy": [
+          "B1",
+          "New Year",
+          "die Rakete"
+        ]
       }
     },
     {
-      "id": "newyear-b1-010",
+      "id": "b1-new-year-der-countdown-countdown",
       "german": "der Countdown",
       "english": "countdown",
       "category": "New Year",
       "level": "B1",
-      "tags": ["holidays", "new-year", "B1"],
+      "tags": [
+        "holidays",
+        "new-year",
+        "B1"
+      ],
       "_meta": {
         "source": "New Year B1",
-        "hierarchy": ["B1", "New Year", "der Countdown"]
+        "hierarchy": [
+          "B1",
+          "New Year",
+          "der Countdown"
+        ]
       }
     },
     {
-      "id": "newyear-b1-011",
+      "id": "b1-new-year-prost-neujahr-happy-new-year",
       "german": "Prost Neujahr!",
       "english": "Happy New Year!",
       "category": "New Year",
       "level": "B1",
-      "tags": ["holidays", "new-year", "phrases", "B1"],
+      "tags": [
+        "holidays",
+        "new-year",
+        "phrases",
+        "B1"
+      ],
       "_meta": {
         "source": "New Year B1",
-        "hierarchy": ["B1", "New Year", "Prost Neujahr!"]
+        "hierarchy": [
+          "B1",
+          "New Year",
+          "Prost Neujahr!"
+        ]
       }
     },
     {
-      "id": "newyear-b1-012",
+      "id": "b1-new-year-das-bleigiessen-lead-pouring-new-years-tradition",
       "german": "das Bleigießen",
       "english": "lead pouring (New Year's tradition)",
       "category": "New Year",
       "level": "B1",
-      "tags": ["holidays", "new-year", "traditions", "B1"],
+      "tags": [
+        "holidays",
+        "new-year",
+        "traditions",
+        "B1"
+      ],
       "_meta": {
         "source": "New Year B1",
-        "hierarchy": ["B1", "New Year", "das Bleigießen"]
+        "hierarchy": [
+          "B1",
+          "New Year",
+          "das Bleigießen"
+        ]
       }
     }
-  ]
+  ],
+  "totalCards": 12
 }

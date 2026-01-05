@@ -4,7 +4,7 @@
   "totalCards": 30,
   "flashcards": [
     {
-      "id": "b2-sich-auseinandersetzen-mit-044829",
+      "id": "b2-complex-phrases-sich-auseinandersetzen-mit-to-engage-with-to-deal-with",
       "german": "sich auseinandersetzen mit",
       "english": "to engage with / to deal with",
       "category": "Complex Phrases",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "b2-in-betracht-ziehen-044829",
+      "id": "b2-complex-phrases-in-betracht-ziehen-to-consider-to-take-into-account",
       "german": "in Betracht ziehen",
       "english": "to consider / to take into account",
       "category": "Complex Phrases",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "b2-stellung-nehmen-zu-044829",
+      "id": "b2-complex-phrases-stellung-nehmen-zu-to-take-a-position-on",
       "german": "Stellung nehmen zu",
       "english": "to take a position on",
       "category": "Complex Phrases",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "b2-zur-verfuegung-stellen-044829",
+      "id": "b2-complex-phrases-zur-verfuegung-stellen-to-make-available",
       "german": "zur Verfügung stellen",
       "english": "to make available",
       "category": "Complex Phrases",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "b2-in-frage-stellen-044829",
+      "id": "b2-complex-phrases-in-frage-stellen-to-question-to-challenge",
       "german": "in Frage stellen",
       "english": "to question / to challenge",
       "category": "Complex Phrases",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qdo0tp",
+      "id": "b2-complex-phrases-es-liegt-mir-am-herzen-it-is-close-to-my-heart-it-matters-to-me",
       "german": "Es liegt mir am Herzen",
       "english": "It is close to my heart / It matters to me",
       "category": "Complex Phrases",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qudtw0",
+      "id": "b2-complex-phrases-ich-kann-es-nicht-fassen-i-cant-believe-it",
       "german": "Ich kann es nicht fassen",
       "english": "I can't believe it",
       "category": "Complex Phrases",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qlpw6c",
+      "id": "b2-complex-phrases-das-kommt-nicht-in-frage-thats-out-of-the-question",
       "german": "Das kommt nicht in Frage",
       "english": "That's out of the question",
       "category": "Complex Phrases",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qsjybh",
+      "id": "b2-complex-phrases-es-steht-ausser-frage-it-is-beyond-question",
       "german": "Es steht außer Frage",
       "english": "It is beyond question",
       "category": "Complex Phrases",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qbd7qr",
+      "id": "b2-complex-phrases-mir-faellt-ein-stein-vom-herzen-a-weight-is-lifted-off-my-chest",
       "german": "Mir fällt ein Stein vom Herzen",
       "english": "A weight is lifted off my chest",
       "category": "Complex Phrases",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qr08sf",
+      "id": "b2-complex-phrases-das-geht-mir-auf-die-nerven-that-gets-on-my-nerves",
       "german": "Das geht mir auf die Nerven",
       "english": "That gets on my nerves",
       "category": "Complex Phrases",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qmoba2",
+      "id": "b2-complex-phrases-ich-bin-am-ende-meiner-kraefte-im-at-the-end-of-my-strength",
       "german": "Ich bin am Ende meiner Kräfte",
       "english": "I'm at the end of my strength",
       "category": "Complex Phrases",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qj9euy",
+      "id": "b2-complex-phrases-es-ist-hoechste-zeit-its-high-time",
       "german": "Es ist höchste Zeit",
       "english": "It's high time",
       "category": "Complex Phrases",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qxg522",
+      "id": "b2-complex-phrases-das-laesst-sich-machen-that-can-be-done",
       "german": "Das lässt sich machen",
       "english": "That can be done",
       "category": "Complex Phrases",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5q6zeec",
+      "id": "b2-complex-phrases-es-haengt-davon-ab-it-depends-on-that",
       "german": "Es hängt davon ab",
       "english": "It depends on that",
       "category": "Complex Phrases",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qrj31b",
+      "id": "b2-complex-phrases-meines-erachtens-in-my-opinion-to-my-mind",
       "german": "Meines Erachtens",
       "english": "In my opinion / To my mind",
       "category": "Complex Phrases",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qexbsq",
+      "id": "b2-complex-phrases-im-grunde-genommen-basically-fundamentally",
       "german": "Im Grunde genommen",
       "english": "Basically / Fundamentally",
       "category": "Complex Phrases",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qt1bbu",
+      "id": "b2-complex-phrases-unter-umstaenden-under-certain-circumstances-possibly",
       "german": "Unter Umständen",
       "english": "Under certain circumstances / Possibly",
       "category": "Complex Phrases",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qg6fqq",
+      "id": "b2-complex-phrases-auf-lange-sicht-in-the-long-run",
       "german": "Auf lange Sicht",
       "english": "In the long run",
       "category": "Complex Phrases",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5q5igje",
+      "id": "b2-complex-phrases-auf-kurze-sicht-in-the-short-term",
       "german": "Auf kurze Sicht",
       "english": "In the short term",
       "category": "Complex Phrases",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5q2db9k",
+      "id": "b2-complex-phrases-im-nachhinein-in-hindsight-afterwards",
       "german": "Im Nachhinein",
       "english": "In hindsight / Afterwards",
       "category": "Complex Phrases",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qc3fhr",
+      "id": "b2-complex-phrases-im-voraus-in-advance-beforehand",
       "german": "Im Voraus",
       "english": "In advance / Beforehand",
       "category": "Complex Phrases",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5q5wpp7",
+      "id": "b2-complex-phrases-auf-anhieb-straight-away-at-first-attempt",
       "german": "Auf Anhieb",
       "english": "Straight away / At first attempt",
       "category": "Complex Phrases",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qdean0",
+      "id": "b2-complex-phrases-auf-dauer-in-the-long-run-permanently",
       "german": "Auf Dauer",
       "english": "In the long run / Permanently",
       "category": "Complex Phrases",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qevoeu",
+      "id": "b2-complex-phrases-in-bezug-auf-with-regard-to-concerning",
       "german": "In Bezug auf",
       "english": "With regard to / Concerning",
       "category": "Complex Phrases",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qk9tcb",
+      "id": "b2-complex-phrases-im-gegensatz-zu-in-contrast-to-unlike",
       "german": "Im Gegensatz zu",
       "english": "In contrast to / Unlike",
       "category": "Complex Phrases",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qzoh9k",
+      "id": "b2-complex-phrases-im-vergleich-zu-compared-to",
       "german": "Im Vergleich zu",
       "english": "Compared to",
       "category": "Complex Phrases",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5q0dns1",
+      "id": "b2-complex-phrases-anhand-von-based-on-by-means-of",
       "german": "Anhand von",
       "english": "Based on / By means of",
       "category": "Complex Phrases",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkdn5qsznok",
+      "id": "b2-complex-phrases-aufgrund-dessen-due-to-that-because-of-that",
       "german": "Aufgrund dessen",
       "english": "Due to that / Because of that",
       "category": "Complex Phrases",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "b2-complex-phrases-mivkh9d128hkx",
+      "id": "b2-complex-phrases-ausser-frage-stehen-to-be-beyond-question-indisputable",
       "german": "Außer Frage stehen",
       "english": "To be beyond question / indisputable",
       "category": "Complex Phrases",

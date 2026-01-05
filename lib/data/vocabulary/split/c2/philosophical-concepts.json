@@ -4,7 +4,7 @@
   "totalCards": 11,
   "flashcards": [
     {
-      "id": "syllabus-c2-11621",
+      "id": "c2-philosophical-concepts-die-erkenntnis-knowledge-cognition-insight",
       "german": "die Erkenntnis",
       "english": "knowledge / cognition / insight",
       "category": "Philosophical Concepts",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11622",
+      "id": "c2-philosophical-concepts-die-wahrheit-truth",
       "german": "die Wahrheit",
       "english": "truth",
       "category": "Philosophical Concepts",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11623",
+      "id": "c2-philosophical-concepts-die-vernunft-reason-rationality",
       "german": "die Vernunft",
       "english": "reason / rationality",
       "category": "Philosophical Concepts",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11624",
+      "id": "c2-philosophical-concepts-das-dasein-existence-being",
       "german": "das Dasein",
       "english": "existence / being",
       "category": "Philosophical Concepts",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11625",
+      "id": "c2-philosophical-concepts-das-wesen-essence-nature-being",
       "german": "das Wesen",
       "english": "essence / nature / being",
       "category": "Philosophical Concepts",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11627",
+      "id": "c2-philosophical-concepts-die-freiheit-freedom-liberty",
       "german": "die Freiheit",
       "english": "freedom / liberty",
       "category": "Philosophical Concepts",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11628",
+      "id": "c2-philosophical-concepts-die-notwendigkeit-necessity",
       "german": "die Notwendigkeit",
       "english": "necessity",
       "category": "Philosophical Concepts",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11629",
+      "id": "c2-philosophical-concepts-die-wirklichkeit-reality-actuality",
       "german": "die Wirklichkeit",
       "english": "reality / actuality",
       "category": "Philosophical Concepts",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11630",
+      "id": "c2-philosophical-concepts-die-erscheinung-appearance-phenomenon",
       "german": "die Erscheinung",
       "english": "appearance / phenomenon",
       "category": "Philosophical Concepts",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11631",
+      "id": "c2-philosophical-concepts-die-bestimmung-determination-destiny-purpose",
       "german": "die Bestimmung",
       "english": "determination / destiny / purpose",
       "category": "Philosophical Concepts",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-c2-11632",
+      "id": "c2-philosophical-concepts-die-vergaenglichkeit-transience-impermanence",
       "german": "die Vergänglichkeit",
       "english": "transience / impermanence",
       "category": "Philosophical Concepts",

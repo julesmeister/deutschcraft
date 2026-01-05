@@ -4,7 +4,7 @@
   "totalCards": 15,
   "flashcards": [
     {
-      "id": "syllabus-a1-10071",
+      "id": "a1-colors-rot-red",
       "german": "rot",
       "english": "red",
       "category": "Colors",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10072",
+      "id": "a1-colors-blau-blue",
       "german": "blau",
       "english": "blue",
       "category": "Colors",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10073",
+      "id": "a1-colors-gruen-green",
       "german": "grün",
       "english": "green",
       "category": "Colors",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10074",
+      "id": "a1-colors-gelb-yellow",
       "german": "gelb",
       "english": "yellow",
       "category": "Colors",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10075",
+      "id": "a1-colors-schwarz-black",
       "german": "schwarz",
       "english": "black",
       "category": "Colors",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10076",
+      "id": "a1-colors-weiss-white",
       "german": "weiß",
       "english": "white",
       "category": "Colors",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10077",
+      "id": "a1-colors-braun-brown",
       "german": "braun",
       "english": "brown",
       "category": "Colors",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10078",
+      "id": "a1-colors-grau-gray",
       "german": "grau",
       "english": "gray",
       "category": "Colors",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10079",
+      "id": "a1-colors-rosa-pink",
       "german": "rosa",
       "english": "pink",
       "category": "Colors",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10080",
+      "id": "a1-colors-lila-purple",
       "german": "lila",
       "english": "purple",
       "category": "Colors",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10081",
+      "id": "a1-colors-orange-orange",
       "german": "orange",
       "english": "orange",
       "category": "Colors",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10082",
+      "id": "a1-colors-dunkel-dark",
       "german": "dunkel",
       "english": "dark",
       "category": "Colors",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10083",
+      "id": "a1-colors-hell-light-bright",
       "german": "hell",
       "english": "light / bright",
       "category": "Colors",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10084",
+      "id": "a1-colors-bunt-colorful",
       "german": "bunt",
       "english": "colorful",
       "category": "Colors",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10085",
+      "id": "a1-colors-die-farbe-color",
       "german": "die Farbe",
       "english": "color",
       "category": "Colors",

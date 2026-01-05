@@ -4,7 +4,7 @@
   "totalCards": 88,
   "flashcards": [
     {
-      "id": "syllabus-b1-10977",
+      "id": "b1-housing-die-wohnung-apartment",
       "german": "die Wohnung",
       "english": "apartment",
       "category": "Housing",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10978",
+      "id": "b1-housing-die-miete-rent",
       "german": "die Miete",
       "english": "rent",
       "category": "Housing",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10979",
+      "id": "b1-housing-der-vermieter-landlord",
       "german": "der Vermieter",
       "english": "landlord",
       "category": "Housing",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10980",
+      "id": "b1-housing-der-nachbar-neighbor",
       "german": "der Nachbar",
       "english": "neighbor",
       "category": "Housing",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10981",
+      "id": "b1-housing-das-erdgeschoss-ground-floor",
       "german": "das Erdgeschoss",
       "english": "ground floor",
       "category": "Housing",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10982",
+      "id": "b1-housing-der-stock-floor-story",
       "german": "der Stock",
       "english": "floor / story",
       "category": "Housing",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10983",
+      "id": "b1-housing-die-treppe-stairs",
       "german": "die Treppe",
       "english": "stairs",
       "category": "Housing",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10984",
+      "id": "b1-housing-der-aufzug-elevator",
       "german": "der Aufzug",
       "english": "elevator",
       "category": "Housing",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10985",
+      "id": "b1-housing-der-balkon-balcony",
       "german": "der Balkon",
       "english": "balcony",
       "category": "Housing",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10986",
+      "id": "b1-housing-der-keller-basement-cellar",
       "german": "der Keller",
       "english": "basement / cellar",
       "category": "Housing",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10987",
+      "id": "b1-housing-der-dachboden-attic",
       "german": "der Dachboden",
       "english": "attic",
       "category": "Housing",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10988",
+      "id": "b1-housing-die-heizung-heating",
       "german": "die Heizung",
       "english": "heating",
       "category": "Housing",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10989",
+      "id": "b1-housing-die-kaution-security-deposit",
       "german": "die Kaution",
       "english": "security deposit",
       "category": "Housing",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10990",
+      "id": "b1-housing-die-nebenkosten-additional-costs-utilities",
       "german": "die Nebenkosten",
       "english": "additional costs / utilities",
       "category": "Housing",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10991",
+      "id": "b1-housing-die-moebel-furniture",
       "german": "die Möbel",
       "english": "furniture",
       "category": "Housing",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10992",
+      "id": "b1-housing-der-umzug-move-relocation",
       "german": "der Umzug",
       "english": "move / relocation",
       "category": "Housing",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10993",
+      "id": "b1-housing-einziehen-to-move-in",
       "german": "einziehen",
       "english": "to move in",
       "category": "Housing",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "b1-dervorhang-827789",
+      "id": "b1-housing-der-vorhang-curtain-drape",
       "german": "der Vorhang",
       "english": "curtain / drape",
       "category": "Housing",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "b1-dervorhof-827789",
+      "id": "b1-housing-der-vorhof-forecourt-courtyard",
       "german": "der Vorhof",
       "english": "forecourt / courtyard",
       "category": "Housing",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "b1-housing-miv8iuofgqtp9",
+      "id": "b1-housing-der-mieter-tenant",
       "german": "der Mieter",
       "english": "tenant",
       "category": "Housing",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "b1-housing-miv8iuofnjwsd",
+      "id": "b1-housing-der-mietvertrag-rental-contract-lease",
       "german": "der Mietvertrag",
       "english": "rental contract / lease",
       "category": "Housing",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "b1-housing-miv8iuof0qiwz",
+      "id": "b1-housing-die-einrichtung-furniture-furnishings",
       "german": "die Einrichtung",
       "english": "furniture / furnishings",
       "category": "Housing",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "b1-housing-miv8iuofndpx6",
+      "id": "b1-housing-moebliert-furnished",
       "german": "möbliert",
       "english": "furnished",
       "category": "Housing",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "b1-housing-miv8iuof6f1i1",
+      "id": "b1-housing-unmoebliert-unfurnished",
       "german": "unmöbliert",
       "english": "unfurnished",
       "category": "Housing",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "b1-housing-miv8iuofjurym",
+      "id": "b1-housing-die-renovierung-renovation",
       "german": "die Renovierung",
       "english": "renovation",
       "category": "Housing",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "b1-housing-c8971aad",
+      "id": "b1-housing-das-einfamilienhaus-single-family-house",
       "german": "das Einfamilienhaus",
       "english": "single-family house",
       "category": "Housing",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "b1-housing-c78b79f0",
+      "id": "b1-housing-das-mehrfamilienhaus-apartment-building",
       "german": "das Mehrfamilienhaus",
       "english": "apartment building",
       "category": "Housing",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "b1-housing-a8ec2fb3",
+      "id": "b1-housing-die-wg-shared-apartment-flatshare",
       "german": "die WG",
       "english": "shared apartment / flatshare",
       "category": "Housing",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "b1-housing-77d1efe5",
+      "id": "b1-housing-die-wohngemeinschaft-shared-living-community",
       "german": "die Wohngemeinschaft",
       "english": "shared living community",
       "category": "Housing",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "b1-housing-e9c5c71d",
+      "id": "b1-housing-das-badezimmer-bathroom",
       "german": "das Badezimmer",
       "english": "bathroom",
       "category": "Housing",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "b1-housing-f2334c85",
+      "id": "b1-housing-die-toilette-toilet",
       "german": "die Toilette",
       "english": "toilet",
       "category": "Housing",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "b1-housing-e188155a",
+      "id": "b1-housing-der-flur-hallway-corridor",
       "german": "der Flur",
       "english": "hallway / corridor",
       "category": "Housing",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "b1-housing-fc3fef4e",
+      "id": "b1-housing-das-arbeitszimmer-study-home-office",
       "german": "das Arbeitszimmer",
       "english": "study / home office",
       "category": "Housing",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "b1-housing-59be36af",
+      "id": "b1-housing-die-haustuer-front-door",
       "german": "die Haustür",
       "english": "front door",
       "category": "Housing",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "b1-housing-3be6e139",
+      "id": "b1-housing-die-wand-wall",
       "german": "die Wand",
       "english": "wall",
       "category": "Housing",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "b1-housing-ece862a9",
+      "id": "b1-housing-die-decke-ceiling",
       "german": "die Decke",
       "english": "ceiling",
       "category": "Housing",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "b1-housing-a152762a",
+      "id": "b1-housing-der-boden-floor-ground",
       "german": "der Boden",
       "english": "floor / ground",
       "category": "Housing",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "b1-housing-9ed638aa",
+      "id": "b1-housing-das-dach-roof",
       "german": "das Dach",
       "english": "roof",
       "category": "Housing",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "b1-housing-f920811a",
+      "id": "b1-housing-der-hof-courtyard-yard",
       "german": "der Hof",
       "english": "courtyard / yard",
       "category": "Housing",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "b1-housing-ad1929ed",
+      "id": "b1-housing-renovieren-to-renovate",
       "german": "renovieren",
       "english": "to renovate",
       "category": "Housing",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "b1-housing-62216e9f",
+      "id": "b1-housing-mieten-to-rent",
       "german": "mieten",
       "english": "to rent",
       "category": "Housing",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "b1-housing-613360ef",
+      "id": "b1-housing-vermieten-to-rent-out",
       "german": "vermieten",
       "english": "to rent out",
       "category": "Housing",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "b1-housing-6f07873f",
+      "id": "b1-housing-die-klingel-doorbell",
       "german": "die Klingel",
       "english": "doorbell",
       "category": "Housing",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "id": "b1-housing-372ca02a",
+      "id": "b1-housing-der-briefkasten-mailbox",
       "german": "der Briefkasten",
       "english": "mailbox",
       "category": "Housing",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "id": "b1-housing-b23c7fa4",
+      "id": "b1-housing-die-hausverwaltung-property-management",
       "german": "die Hausverwaltung",
       "english": "property management",
       "category": "Housing",
@@ -904,7 +904,7 @@
       }
     },
     {
-      "id": "b1-housing-6ca72a34",
+      "id": "b1-housing-der-strom-electricity",
       "german": "der Strom",
       "english": "electricity",
       "category": "Housing",
@@ -924,7 +924,7 @@
       }
     },
     {
-      "id": "b1-housing-277eb138",
+      "id": "b1-housing-das-gas-gas",
       "german": "das Gas",
       "english": "gas",
       "category": "Housing",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "id": "b1-housing-f14e7263",
+      "id": "b1-housing-die-muelltonne-garbage-bin",
       "german": "die Mülltonne",
       "english": "garbage bin",
       "category": "Housing",
@@ -964,7 +964,7 @@
       }
     },
     {
-      "id": "b1-housing-c28cc9ad",
+      "id": "b1-housing-gemuetlich-cozy-comfortable",
       "german": "gemütlich",
       "english": "cozy / comfortable",
       "category": "Housing",
@@ -984,7 +984,7 @@
       }
     },
     {
-      "id": "b1-housing-47b66d25",
+      "id": "b1-housing-geraeumig-spacious",
       "german": "geräumig",
       "english": "spacious",
       "category": "Housing",
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "id": "b1-housing-88332278",
+      "id": "b1-housing-das-reihenhaus-townhouse-row-house",
       "german": "das Reihenhaus",
       "english": "townhouse / row house",
       "category": "Housing",
@@ -1024,7 +1024,7 @@
       }
     },
     {
-      "id": "b1-housing-f7184158",
+      "id": "b1-housing-die-eigentumswohnung-condominium-owned-apartment",
       "german": "die Eigentumswohnung",
       "english": "condominium / owned apartment",
       "category": "Housing",
@@ -1044,7 +1044,7 @@
       }
     },
     {
-      "id": "b1-housing-b566de25",
+      "id": "b1-housing-das-studentenwohnheim-student-dormitory",
       "german": "das Studentenwohnheim",
       "english": "student dormitory",
       "category": "Housing",
@@ -1064,7 +1064,7 @@
       }
     },
     {
-      "id": "b1-housing-b9b18de6",
+      "id": "b1-housing-der-abstellraum-storage-room",
       "german": "der Abstellraum",
       "english": "storage room",
       "category": "Housing",
@@ -1084,7 +1084,7 @@
       }
     },
     {
-      "id": "b1-housing-d133c9a6",
+      "id": "b1-housing-der-eingang-entrance",
       "german": "der Eingang",
       "english": "entrance",
       "category": "Housing",
@@ -1104,7 +1104,7 @@
       }
     },
     {
-      "id": "b1-housing-91a59a01",
+      "id": "b1-housing-der-ausgang-exit",
       "german": "der Ausgang",
       "english": "exit",
       "category": "Housing",
@@ -1124,7 +1124,7 @@
       }
     },
     {
-      "id": "b1-housing-e122bb3f",
+      "id": "b1-housing-die-waschkueche-laundry-room",
       "german": "die Waschküche",
       "english": "laundry room",
       "category": "Housing",
@@ -1144,7 +1144,7 @@
       }
     },
     {
-      "id": "b1-housing-60af18e2",
+      "id": "b1-housing-die-kaltmiete-base-rent-without-utilities",
       "german": "die Kaltmiete",
       "english": "base rent (without utilities)",
       "category": "Housing",
@@ -1164,7 +1164,7 @@
       }
     },
     {
-      "id": "b1-housing-368a40f0",
+      "id": "b1-housing-die-warmmiete-rent-including-utilities",
       "german": "die Warmmiete",
       "english": "rent including utilities",
       "category": "Housing",
@@ -1184,7 +1184,7 @@
       }
     },
     {
-      "id": "b1-housing-b1aaf4f8",
+      "id": "b1-housing-die-kuendigungsfrist-notice-period",
       "german": "die Kündigungsfrist",
       "english": "notice period",
       "category": "Housing",
@@ -1204,7 +1204,7 @@
       }
     },
     {
-      "id": "b1-housing-c8555ba8",
+      "id": "b1-housing-der-makler-real-estate-agent",
       "german": "der Makler",
       "english": "real estate agent",
       "category": "Housing",
@@ -1224,7 +1224,7 @@
       }
     },
     {
-      "id": "b1-housing-c0be23f5",
+      "id": "b1-housing-die-maklerprovision-agents-commission",
       "german": "die Maklerprovision",
       "english": "agent's commission",
       "category": "Housing",
@@ -1244,7 +1244,7 @@
       }
     },
     {
-      "id": "b1-housing-52b8aaf5",
+      "id": "b1-housing-die-besichtigung-viewing-inspection",
       "german": "die Besichtigung",
       "english": "viewing / inspection",
       "category": "Housing",
@@ -1264,7 +1264,7 @@
       }
     },
     {
-      "id": "b1-housing-16d84bc5",
+      "id": "b1-housing-der-stellplatz-parking-spot",
       "german": "der Stellplatz",
       "english": "parking spot",
       "category": "Housing",
@@ -1284,7 +1284,7 @@
       }
     },
     {
-      "id": "b1-housing-bfd2fddb",
+      "id": "b1-housing-die-klimaanlage-air-conditioning",
       "german": "die Klimaanlage",
       "english": "air conditioning",
       "category": "Housing",
@@ -1304,7 +1304,7 @@
       }
     },
     {
-      "id": "b1-housing-4019df28",
+      "id": "b1-housing-der-kamin-fireplace",
       "german": "der Kamin",
       "english": "fireplace",
       "category": "Housing",
@@ -1324,7 +1324,7 @@
       }
     },
     {
-      "id": "b1-housing-d5869292",
+      "id": "b1-housing-die-alarmanlage-alarm-system",
       "german": "die Alarmanlage",
       "english": "alarm system",
       "category": "Housing",
@@ -1344,7 +1344,7 @@
       }
     },
     {
-      "id": "b1-housing-15d93cf1",
+      "id": "b1-housing-barrierefrei-barrier-free-accessible",
       "german": "barrierefrei",
       "english": "barrier-free / accessible",
       "category": "Housing",
@@ -1364,7 +1364,7 @@
       }
     },
     {
-      "id": "b1-housing-b5591d3e",
+      "id": "b1-housing-die-einbaukueche-fitted-kitchen",
       "german": "die Einbauküche",
       "english": "fitted kitchen",
       "category": "Housing",
@@ -1384,7 +1384,7 @@
       }
     },
     {
-      "id": "b1-housing-c6b39025",
+      "id": "b1-housing-der-teppich-carpet-rug",
       "german": "der Teppich",
       "english": "carpet / rug",
       "category": "Housing",
@@ -1404,7 +1404,7 @@
       }
     },
     {
-      "id": "b1-housing-80bec7cd",
+      "id": "b1-housing-die-reparatur-repair",
       "german": "die Reparatur",
       "english": "repair",
       "category": "Housing",
@@ -1424,7 +1424,7 @@
       }
     },
     {
-      "id": "b1-housing-fa963db1",
+      "id": "b1-housing-der-handwerker-craftsman-tradesperson",
       "german": "der Handwerker",
       "english": "craftsman / tradesperson",
       "category": "Housing",
@@ -1444,7 +1444,7 @@
       }
     },
     {
-      "id": "b1-housing-4ef023f4",
+      "id": "b1-housing-der-installateur-plumber",
       "german": "der Installateur",
       "english": "plumber",
       "category": "Housing",
@@ -1464,7 +1464,7 @@
       }
     },
     {
-      "id": "b1-housing-18fb9d88",
+      "id": "b1-housing-die-wartung-maintenance",
       "german": "die Wartung",
       "english": "maintenance",
       "category": "Housing",
@@ -1484,7 +1484,7 @@
       }
     },
     {
-      "id": "b1-housing-41498e96",
+      "id": "b1-housing-tapezieren-to-wallpaper",
       "german": "tapezieren",
       "english": "to wallpaper",
       "category": "Housing",
@@ -1504,7 +1504,7 @@
       }
     },
     {
-      "id": "b1-housing-5161fe38",
+      "id": "b1-housing-der-schaden-damage",
       "german": "der Schaden",
       "english": "damage",
       "category": "Housing",
@@ -1524,7 +1524,7 @@
       }
     },
     {
-      "id": "b1-housing-a0ba0348",
+      "id": "b1-housing-der-mangel-defect-deficiency",
       "german": "der Mangel",
       "english": "defect / deficiency",
       "category": "Housing",
@@ -1544,7 +1544,7 @@
       }
     },
     {
-      "id": "b1-housing-c7447417",
+      "id": "b1-housing-der-schimmel-mold",
       "german": "der Schimmel",
       "english": "mold",
       "category": "Housing",
@@ -1564,7 +1564,7 @@
       }
     },
     {
-      "id": "b1-housing-94e7d295",
+      "id": "b1-housing-undicht-leaky-not-watertight",
       "german": "undicht",
       "english": "leaky / not watertight",
       "category": "Housing",
@@ -1584,7 +1584,7 @@
       }
     },
     {
-      "id": "b1-housing-ec3b15a6",
+      "id": "b1-housing-lueften-to-air-to-ventilate",
       "german": "lüften",
       "english": "to air / to ventilate",
       "category": "Housing",
@@ -1604,7 +1604,7 @@
       }
     },
     {
-      "id": "b1-housing-3f4d66a6",
+      "id": "b1-housing-heizen-to-heat",
       "german": "heizen",
       "english": "to heat",
       "category": "Housing",
@@ -1624,7 +1624,7 @@
       }
     },
     {
-      "id": "b1-housing-0fbd301b",
+      "id": "b1-housing-die-nachbarschaft-neighborhood",
       "german": "die Nachbarschaft",
       "english": "neighborhood",
       "category": "Housing",
@@ -1644,7 +1644,7 @@
       }
     },
     {
-      "id": "b1-housing-5ed393c8",
+      "id": "b1-housing-die-hausordnung-house-rules",
       "german": "die Hausordnung",
       "english": "house rules",
       "category": "Housing",
@@ -1664,7 +1664,7 @@
       }
     },
     {
-      "id": "b1-housing-aae918f2",
+      "id": "b1-housing-die-ruhezeit-quiet-hours",
       "german": "die Ruhezeit",
       "english": "quiet hours",
       "category": "Housing",
@@ -1684,7 +1684,7 @@
       }
     },
     {
-      "id": "b1-housing-2b1b77ea",
+      "id": "b1-housing-die-lage-location-position",
       "german": "die Lage",
       "english": "location / position",
       "category": "Housing",
@@ -1704,7 +1704,7 @@
       }
     },
     {
-      "id": "b1-housing-db15859e",
+      "id": "b1-housing-zentral-central",
       "german": "zentral",
       "english": "central",
       "category": "Housing",
@@ -1724,7 +1724,7 @@
       }
     },
     {
-      "id": "b1-housing-a39771a0",
+      "id": "b1-housing-verkehrsguenstig-conveniently-located-for-transport",
       "german": "verkehrsgünstig",
       "english": "conveniently located (for transport)",
       "category": "Housing",
@@ -1744,7 +1744,7 @@
       }
     },
     {
-      "id": "b1-housing-ee7f8497",
+      "id": "b1-housing-die-quadratmeter-square-meters",
       "german": "die Quadratmeter",
       "english": "square meters",
       "category": "Housing",

@@ -4,100 +4,160 @@
   "icon": "🌸",
   "flashcards": [
     {
-      "id": "seasons-a1-001",
+      "id": "a1-seasons-der-fruehling-spring",
       "german": "der Frühling",
       "english": "spring",
       "category": "Seasons",
       "level": "A1",
-      "tags": ["seasons", "A1"],
+      "tags": [
+        "seasons",
+        "A1"
+      ],
       "_meta": {
         "source": "Seasons A1",
-        "hierarchy": ["A1", "Seasons", "der Frühling"]
+        "hierarchy": [
+          "A1",
+          "Seasons",
+          "der Frühling"
+        ]
       }
     },
     {
-      "id": "seasons-a1-002",
+      "id": "a1-seasons-der-sommer-summer",
       "german": "der Sommer",
       "english": "summer",
       "category": "Seasons",
       "level": "A1",
-      "tags": ["seasons", "A1"],
+      "tags": [
+        "seasons",
+        "A1"
+      ],
       "_meta": {
         "source": "Seasons A1",
-        "hierarchy": ["A1", "Seasons", "der Sommer"]
+        "hierarchy": [
+          "A1",
+          "Seasons",
+          "der Sommer"
+        ]
       }
     },
     {
-      "id": "seasons-a1-003",
+      "id": "a1-seasons-der-herbst-autumn-fall",
       "german": "der Herbst",
       "english": "autumn / fall",
       "category": "Seasons",
       "level": "A1",
-      "tags": ["seasons", "A1"],
+      "tags": [
+        "seasons",
+        "A1"
+      ],
       "_meta": {
         "source": "Seasons A1",
-        "hierarchy": ["A1", "Seasons", "der Herbst"]
+        "hierarchy": [
+          "A1",
+          "Seasons",
+          "der Herbst"
+        ]
       }
     },
     {
-      "id": "seasons-a1-004",
+      "id": "a1-seasons-der-winter-winter",
       "german": "der Winter",
       "english": "winter",
       "category": "Seasons",
       "level": "A1",
-      "tags": ["seasons", "A1"],
+      "tags": [
+        "seasons",
+        "A1"
+      ],
       "_meta": {
         "source": "Seasons A1",
-        "hierarchy": ["A1", "Seasons", "der Winter"]
+        "hierarchy": [
+          "A1",
+          "Seasons",
+          "der Winter"
+        ]
       }
     },
     {
-      "id": "seasons-a1-005",
+      "id": "a1-seasons-die-jahreszeit-season",
       "german": "die Jahreszeit",
       "english": "season",
       "category": "Seasons",
       "level": "A1",
-      "tags": ["seasons", "A1"],
+      "tags": [
+        "seasons",
+        "A1"
+      ],
       "_meta": {
         "source": "Seasons A1",
-        "hierarchy": ["A1", "Seasons", "die Jahreszeit"]
+        "hierarchy": [
+          "A1",
+          "Seasons",
+          "die Jahreszeit"
+        ]
       }
     },
     {
-      "id": "seasons-a1-006",
+      "id": "a1-seasons-der-schnee-snow",
       "german": "der Schnee",
       "english": "snow",
       "category": "Seasons",
       "level": "A1",
-      "tags": ["seasons", "weather", "A1"],
+      "tags": [
+        "seasons",
+        "weather",
+        "A1"
+      ],
       "_meta": {
         "source": "Seasons A1",
-        "hierarchy": ["A1", "Seasons", "der Schnee"]
+        "hierarchy": [
+          "A1",
+          "Seasons",
+          "der Schnee"
+        ]
       }
     },
     {
-      "id": "seasons-a1-007",
+      "id": "a1-seasons-die-sonne-sun",
       "german": "die Sonne",
       "english": "sun",
       "category": "Seasons",
       "level": "A1",
-      "tags": ["seasons", "weather", "A1"],
+      "tags": [
+        "seasons",
+        "weather",
+        "A1"
+      ],
       "_meta": {
         "source": "Seasons A1",
-        "hierarchy": ["A1", "Seasons", "die Sonne"]
+        "hierarchy": [
+          "A1",
+          "Seasons",
+          "die Sonne"
+        ]
       }
     },
     {
-      "id": "seasons-a1-008",
+      "id": "a1-seasons-der-regen-rain",
       "german": "der Regen",
       "english": "rain",
       "category": "Seasons",
       "level": "A1",
-      "tags": ["seasons", "weather", "A1"],
+      "tags": [
+        "seasons",
+        "weather",
+        "A1"
+      ],
       "_meta": {
         "source": "Seasons A1",
-        "hierarchy": ["A1", "Seasons", "der Regen"]
+        "hierarchy": [
+          "A1",
+          "Seasons",
+          "der Regen"
+        ]
       }
     }
-  ]
+  ],
+  "totalCards": 8
 }

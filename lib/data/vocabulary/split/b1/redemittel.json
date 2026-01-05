@@ -4,7 +4,7 @@
   "totalCards": 34,
   "flashcards": [
     {
-      "id": "remnote-903",
+      "id": "b1-redemittel-ich-vermute-i-assume",
       "german": "Ich vermute",
       "english": "I assume",
       "category": "Redemittel",
@@ -19,7 +19,7 @@
       }
     },
     {
-      "id": "remnote-904",
+      "id": "b1-redemittel-ich-bezweifle-i-doubt",
       "german": "Ich bezweifle",
       "english": "I doubt",
       "category": "Redemittel",
@@ -34,7 +34,7 @@
       }
     },
     {
-      "id": "remnote-906",
+      "id": "b1-redemittel-ich-behaupte-i-claim",
       "german": "Ich behaupte",
       "english": "I claim",
       "category": "Redemittel",
@@ -49,7 +49,7 @@
       }
     },
     {
-      "id": "remnote-909",
+      "id": "b1-redemittel-na-schoen-aber-fine-but",
       "german": "Na schön, aber",
       "english": "Fine, but",
       "category": "Redemittel",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "remnote-913",
+      "id": "b1-redemittel-zu-guter-letzt-on-top-of-that",
       "german": "Zu guter Letzt",
       "english": "On top of that",
       "category": "Redemittel",
@@ -79,7 +79,7 @@
       }
     },
     {
-      "id": "remnote-917",
+      "id": "b1-redemittel-um-so-mehr-all-the-more",
       "german": "um so mehr",
       "english": "all the more",
       "category": "Redemittel",
@@ -94,7 +94,7 @@
       }
     },
     {
-      "id": "remnote-919",
+      "id": "b1-redemittel-abgesehen-davon-apart-from-that-except-for",
       "german": "abgesehen davon",
       "english": "apart from that / except for",
       "category": "Redemittel",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "remnote-927",
+      "id": "b1-redemittel-wie-sie-wollen-have-it-your-own-way",
       "german": "Wie Sie wollen!",
       "english": "Have it your own way!",
       "category": "Redemittel",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "remnote-935",
+      "id": "b1-redemittel-ich-gebe-auf-i-give-up",
       "german": "Ich gebe auf",
       "english": "I give up",
       "category": "Redemittel",
@@ -139,7 +139,7 @@
       }
     },
     {
-      "id": "remnote-938",
+      "id": "b1-redemittel-ich-bin-am-ende-i-am-finished",
       "german": "Ich bin am Ende",
       "english": "I am finished",
       "category": "Redemittel",
@@ -154,7 +154,7 @@
       }
     },
     {
-      "id": "remnote-942",
+      "id": "b1-redemittel-meines-wissens-to-my-knowledge",
       "german": "meines Wissens",
       "english": "to my knowledge",
       "category": "Redemittel",
@@ -169,7 +169,7 @@
       }
     },
     {
-      "id": "remnote-943",
+      "id": "b1-redemittel-zu-meiner-freude-to-my-delight",
       "german": "zu meiner Freude",
       "english": "to my delight",
       "category": "Redemittel",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "remnote-945",
+      "id": "b1-redemittel-entspann-dich-you-need-to-relax",
       "german": "Entspann dich!",
       "english": "You need to relax!",
       "category": "Redemittel",
@@ -199,7 +199,7 @@
       }
     },
     {
-      "id": "remnote-948",
+      "id": "b1-redemittel-bock-haben-have-appetite-for-something",
       "german": "Bock haben",
       "english": "*have appetite for something",
       "category": "Redemittel",
@@ -214,7 +214,7 @@
       }
     },
     {
-      "id": "remnote-950",
+      "id": "b1-redemittel-stimmt-so-keep-the-change",
       "german": "Stimmt so",
       "english": "keep the change",
       "category": "Redemittel",
@@ -229,7 +229,7 @@
       }
     },
     {
-      "id": "remnote-952",
+      "id": "b1-redemittel-sozusagen-so-to-say",
       "german": "Sozusagen",
       "english": "so to say",
       "category": "Redemittel",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "remnote-953",
+      "id": "b1-redemittel-offen-gesagt-frankly-speaking",
       "german": "Offen gesagt",
       "english": "frankly speaking",
       "category": "Redemittel",
@@ -259,7 +259,7 @@
       }
     },
     {
-      "id": "remnote-954",
+      "id": "b1-redemittel-ehrlich-gesagt-to-be-honest",
       "german": "Ehrlich gesagt",
       "english": "to be honest",
       "category": "Redemittel",
@@ -274,7 +274,7 @@
       }
     },
     {
-      "id": "remnote-955",
+      "id": "b1-redemittel-in-der-tat-in-fact",
       "german": "In der Tat",
       "english": "in fact",
       "category": "Redemittel",
@@ -289,7 +289,7 @@
       }
     },
     {
-      "id": "remnote-956",
+      "id": "b1-redemittel-soweit-ich-weiss-as-far-as-i-know",
       "german": "Soweit ich weiß",
       "english": "as far as I know",
       "category": "Redemittel",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "remnote-958",
+      "id": "b1-redemittel-jedem-einzelnen-each-and-everyone",
       "german": "Jedem einzelnen",
       "english": "each and everyone",
       "category": "Redemittel",
@@ -319,7 +319,7 @@
       }
     },
     {
-      "id": "remnote-961",
+      "id": "b1-redemittel-kurz-davor-about-to-on-the-brink",
       "german": "kurz davor",
       "english": "about to / on the brink",
       "category": "Redemittel",
@@ -334,7 +334,7 @@
       }
     },
     {
-      "id": "remnote-965",
+      "id": "b1-redemittel-seither-since-then",
       "german": "Seither",
       "english": "since then",
       "category": "Redemittel",
@@ -355,7 +355,7 @@
       }
     },
     {
-      "id": "remnote-971",
+      "id": "b1-redemittel-trotz-alledem-despite-all-that",
       "german": "trotz alledem",
       "english": "despite all that",
       "category": "Redemittel",
@@ -376,7 +376,7 @@
       }
     },
     {
-      "id": "remnote-972",
+      "id": "b1-redemittel-verdanken-to-owe-sb-sth",
       "german": "verdanken",
       "english": "to owe sb. sth.",
       "category": "Redemittel",
@@ -397,7 +397,7 @@
       }
     },
     {
-      "id": "b1-dasistmire-827792",
+      "id": "b1-redemittel-das-ist-mir-egal-i-dont-care",
       "german": "Das ist mir egal.",
       "english": "I don't care.",
       "category": "Redemittel",
@@ -417,7 +417,7 @@
       }
     },
     {
-      "id": "b1-dasistmirs-827792",
+      "id": "b1-redemittel-das-ist-mir-schnuppe-i-dont-care-colloquial",
       "german": "Das ist mir schnuppe.",
       "english": "I don't care (colloquial).",
       "category": "Redemittel",
@@ -437,7 +437,7 @@
       }
     },
     {
-      "id": "b1-daskmmertm-827792",
+      "id": "b1-redemittel-das-kuemmert-mich-nicht-that-doesnt-concern-me",
       "german": "Das kümmert mich nicht.",
       "english": "That doesn't concern me.",
       "category": "Redemittel",
@@ -457,7 +457,7 @@
       }
     },
     {
-      "id": "b1-miregal-827792",
+      "id": "b1-redemittel-mir-egal-i-dont-care-colloquial",
       "german": "Mir egal.",
       "english": "I don't care (colloquial).",
       "category": "Redemittel",
@@ -477,7 +477,7 @@
       }
     },
     {
-      "id": "b1-darumgehte-827792",
+      "id": "b1-redemittel-darum-geht-es-mir-nicht-thats-not-what-its-about-for-me",
       "german": "Darum geht es mir nicht.",
       "english": "That's not what it's about for me.",
       "category": "Redemittel",
@@ -497,7 +497,7 @@
       }
     },
     {
-      "id": "b1-dasistmirs-827792",
+      "id": "b1-redemittel-das-ist-mir-schnee-von-gestern-thats-ancient-history-to-me",
       "german": "Das ist mir Schnee von gestern.",
       "english": "That's ancient history to me.",
       "category": "Redemittel",
@@ -517,7 +517,7 @@
       }
     },
     {
-      "id": "b1-redemittel-miv8iuoihyc5z",
+      "id": "b1-redemittel-meiner-meinung-nach-in-my-opinion",
       "german": "Meiner Meinung nach",
       "english": "in my opinion",
       "category": "Redemittel",
@@ -537,7 +537,7 @@
       }
     },
     {
-      "id": "b1-redemittel-miv8iuoix3x3b",
+      "id": "b1-redemittel-ich-bin-der-meinung-dass-i-am-of-the-opinion-that",
       "german": "Ich bin der Meinung, dass",
       "english": "I am of the opinion that",
       "category": "Redemittel",
@@ -557,7 +557,7 @@
       }
     },
     {
-      "id": "b1-redemittel-miv8iuoiid2fc",
+      "id": "b1-redemittel-es-scheint-mir-dass-it-seems-to-me-that",
       "german": "Es scheint mir, dass",
       "english": "it seems to me that",
       "category": "Redemittel",

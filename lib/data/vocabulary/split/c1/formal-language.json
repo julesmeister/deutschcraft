@@ -4,7 +4,7 @@
   "totalCards": 10,
   "flashcards": [
     {
-      "id": "syllabus-c1-11573",
+      "id": "c1-formal-language-diesbezueglich-in-this-regard-concerning-this",
       "german": "diesbezüglich",
       "english": "in this regard / concerning this",
       "category": "Formal Language",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11574",
+      "id": "c1-formal-language-infolgedessen-consequently-as-a-result",
       "german": "infolgedessen",
       "english": "consequently / as a result",
       "category": "Formal Language",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11575",
+      "id": "c1-formal-language-nichtsdestotrotz-nevertheless-nonetheless",
       "german": "nichtsdestotrotz",
       "english": "nevertheless / nonetheless",
       "category": "Formal Language",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11576",
+      "id": "c1-formal-language-demzufolge-accordingly-therefore",
       "german": "demzufolge",
       "english": "accordingly / therefore",
       "category": "Formal Language",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11578",
+      "id": "c1-formal-language-inwiefern-to-what-extent-in-what-way",
       "german": "inwiefern",
       "english": "to what extent / in what way",
       "category": "Formal Language",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11581",
+      "id": "c1-formal-language-mithin-consequently-hence",
       "german": "mithin",
       "english": "consequently / hence",
       "category": "Formal Language",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "c1-bezueglich-044830",
+      "id": "c1-formal-language-bezueglich-regarding-concerning",
       "german": "bezüglich",
       "english": "regarding / concerning",
       "category": "Formal Language",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "c1-angesichts-044830",
+      "id": "c1-formal-language-angesichts-in-view-of-considering",
       "german": "angesichts",
       "english": "in view of / considering",
       "category": "Formal Language",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "c1-mittels-044830",
+      "id": "c1-formal-language-mittels-by-means-of-using",
       "german": "mittels",
       "english": "by means of / using",
       "category": "Formal Language",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "c1-infolge-044830",
+      "id": "c1-formal-language-infolge-as-a-result-of-due-to",
       "german": "infolge",
       "english": "as a result of / due to",
       "category": "Formal Language",

@@ -4,7 +4,7 @@
   "totalCards": 27,
   "flashcards": [
     {
-      "id": "syllabus-a1-10157",
+      "id": "a1-fruits-die-banane-banana",
       "german": "die Banane",
       "english": "banana",
       "category": "Fruits",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10159",
+      "id": "a1-fruits-die-erdbeere-strawberry",
       "german": "die Erdbeere",
       "english": "strawberry",
       "category": "Fruits",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10160",
+      "id": "a1-fruits-die-traube-grape",
       "german": "die Traube",
       "english": "grape",
       "category": "Fruits",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10161",
+      "id": "a1-fruits-die-birne-pear",
       "german": "die Birne",
       "english": "pear",
       "category": "Fruits",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10162",
+      "id": "a1-fruits-die-kirsche-cherry",
       "german": "die Kirsche",
       "english": "cherry",
       "category": "Fruits",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10163",
+      "id": "a1-fruits-die-zitrone-lemon",
       "german": "die Zitrone",
       "english": "lemon",
       "category": "Fruits",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10164",
+      "id": "a1-fruits-der-pfirsich-peach",
       "german": "der Pfirsich",
       "english": "peach",
       "category": "Fruits",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10165",
+      "id": "a1-fruits-die-melone-melon",
       "german": "die Melone",
       "english": "melon",
       "category": "Fruits",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10166",
+      "id": "a1-fruits-die-ananas-pineapple",
       "german": "die Ananas",
       "english": "pineapple",
       "category": "Fruits",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10167",
+      "id": "a1-fruits-die-kiwi-kiwi",
       "german": "die Kiwi",
       "english": "kiwi",
       "category": "Fruits",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10168",
+      "id": "a1-fruits-die-mango-mango",
       "german": "die Mango",
       "english": "mango",
       "category": "Fruits",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10169",
+      "id": "a1-fruits-die-himbeere-raspberry",
       "german": "die Himbeere",
       "english": "raspberry",
       "category": "Fruits",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10170",
+      "id": "a1-fruits-die-blaubeere-blueberry",
       "german": "die Blaubeere",
       "english": "blueberry",
       "category": "Fruits",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10173",
+      "id": "a1-fruits-die-aprikose-apricot",
       "german": "die Aprikose",
       "english": "apricot",
       "category": "Fruits",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10174",
+      "id": "a1-fruits-die-pflaume-plum",
       "german": "die Pflaume",
       "english": "plum",
       "category": "Fruits",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10175",
+      "id": "a1-fruits-die-wassermelone-watermelon",
       "german": "die Wassermelone",
       "english": "watermelon",
       "category": "Fruits",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10176",
+      "id": "a1-fruits-die-brombeere-blackberry",
       "german": "die Brombeere",
       "english": "blackberry",
       "category": "Fruits",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10177",
+      "id": "a1-fruits-die-kokosnuss-coconut",
       "german": "die Kokosnuss",
       "english": "coconut",
       "category": "Fruits",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10178",
+      "id": "a1-fruits-die-mandarine-tangerine-mandarin",
       "german": "die Mandarine",
       "english": "tangerine / mandarin",
       "category": "Fruits",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10179",
+      "id": "a1-fruits-die-grapefruit-grapefruit",
       "german": "die Grapefruit",
       "english": "grapefruit",
       "category": "Fruits",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10180",
+      "id": "a1-fruits-die-nektarine-nectarine",
       "german": "die Nektarine",
       "english": "nectarine",
       "category": "Fruits",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10181",
+      "id": "a1-fruits-die-papaya-papaya",
       "german": "die Papaya",
       "english": "papaya",
       "category": "Fruits",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10182",
+      "id": "a1-fruits-die-feige-fig",
       "german": "die Feige",
       "english": "fig",
       "category": "Fruits",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10183",
+      "id": "a1-fruits-die-dattel-date",
       "german": "die Dattel",
       "english": "date",
       "category": "Fruits",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10184",
+      "id": "a1-fruits-die-avocado-avocado",
       "german": "die Avocado",
       "english": "avocado",
       "category": "Fruits",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10185",
+      "id": "a1-fruits-die-limette-lime",
       "german": "die Limette",
       "english": "lime",
       "category": "Fruits",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10186",
+      "id": "a1-fruits-die-passionsfrucht-passion-fruit",
       "german": "die Passionsfrucht",
       "english": "passion fruit",
       "category": "Fruits",

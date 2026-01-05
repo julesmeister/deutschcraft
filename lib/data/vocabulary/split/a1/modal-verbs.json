@@ -4,7 +4,7 @@
   "totalCards": 4,
   "flashcards": [
     {
-      "id": "syllabus-a1-10232",
+      "id": "a1-modal-verbs-koennen-can-to-be-able-to",
       "german": "können",
       "english": "can / to be able to",
       "category": "Modal Verbs",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10233",
+      "id": "a1-modal-verbs-muessen-must-to-have-to",
       "german": "müssen",
       "english": "must / to have to",
       "category": "Modal Verbs",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10236",
+      "id": "a1-modal-verbs-duerfen-may-to-be-allowed-to",
       "german": "dürfen",
       "english": "may / to be allowed to",
       "category": "Modal Verbs",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10237",
+      "id": "a1-modal-verbs-sollen-should-ought-to",
       "german": "sollen",
       "english": "should / ought to",
       "category": "Modal Verbs",

@@ -65,9 +65,9 @@ function loadCategoryFiles(level: string): Flashcard[] {
   const allFlashcards: Flashcard[] = [];
   const files = fs.readdirSync(levelDir);
 
-  // Filter out index file and only process JSON files
+  // Filter out index file, backup files, and only process JSON files
   const categoryFiles = files.filter(
-    (f) => f.endsWith('.json') && f !== '_index.json'
+    (f) => f.endsWith('.json') && f !== '_index.json' && !f.includes('.backup-')
   );
 
   console.log(`   Found ${categoryFiles.length} category files`);
@@ -120,10 +120,10 @@ function ensureUniqueIds(flashcards: Flashcard[]): Flashcard[] {
   let seriousCollisions = 0;
 
   for (const card of flashcards) {
-    // Validate ID format
-    if (card.id.startsWith('FLASH_')) {
-      console.warn(`   ⚠️  ID contains FLASH_ prefix, stripping: ${card.id}`);
-      card.id = card.id.replace('FLASH_', '');
+    // Validate ID format (semantic IDs: {level}-{category}-{german}-{english})
+    // No longer need FLASH_ prefix check - all IDs are now semantic
+    if (!card.id.match(/^[a-z0-9]+-[a-z0-9-]+-[a-z0-9-]+-[a-z0-9-]+$/)) {
+      console.warn(`   ⚠️  Invalid semantic ID format: ${card.id}`);
     }
 
     const existing = idMap.get(card.id);

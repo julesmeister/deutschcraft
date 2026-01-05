@@ -4,7 +4,7 @@
   "totalCards": 52,
   "flashcards": [
     {
-      "id": "syllabus-b1-11450",
+      "id": "b1-genitive-prepositions-waehrend-gen-during-while",
       "german": "während + Gen",
       "english": "during / while",
       "category": "Genitive Prepositions",
@@ -26,7 +26,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11451",
+      "id": "b1-genitive-prepositions-wegen-gen-because-of-due-to",
       "german": "wegen + Gen",
       "english": "because of / due to",
       "category": "Genitive Prepositions",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11452",
+      "id": "b1-genitive-prepositions-trotz-gen-despite-in-spite-of",
       "german": "trotz + Gen",
       "english": "despite / in spite of",
       "category": "Genitive Prepositions",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11453",
+      "id": "b1-genitive-prepositions-stattanstatt-gen-instead-of",
       "german": "statt/anstatt + Gen",
       "english": "instead of",
       "category": "Genitive Prepositions",
@@ -91,7 +91,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11454",
+      "id": "b1-genitive-prepositions-ausserhalb-gen-outside-of",
       "german": "außerhalb + Gen",
       "english": "outside of",
       "category": "Genitive Prepositions",
@@ -113,7 +113,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11455",
+      "id": "b1-genitive-prepositions-innerhalb-gen-inside-within",
       "german": "innerhalb + Gen",
       "english": "inside / within",
       "category": "Genitive Prepositions",
@@ -136,7 +136,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11456",
+      "id": "b1-genitive-prepositions-oberhalb-gen-above",
       "german": "oberhalb + Gen",
       "english": "above",
       "category": "Genitive Prepositions",
@@ -158,7 +158,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11457",
+      "id": "b1-genitive-prepositions-unterhalb-gen-below-beneath",
       "german": "unterhalb + Gen",
       "english": "below / beneath",
       "category": "Genitive Prepositions",
@@ -180,7 +180,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11458",
+      "id": "b1-genitive-prepositions-aufgrund-gen-on-the-basis-of-due-to",
       "german": "aufgrund + Gen",
       "english": "on the basis of / due to",
       "category": "Genitive Prepositions",
@@ -202,7 +202,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11459",
+      "id": "b1-genitive-prepositions-infolge-gen-as-a-result-of-due-to",
       "german": "infolge + Gen",
       "english": "as a result of / due to",
       "category": "Genitive Prepositions",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11460",
+      "id": "b1-genitive-prepositions-laut-gen-according-to",
       "german": "laut + Gen",
       "english": "according to",
       "category": "Genitive Prepositions",
@@ -245,7 +245,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11461",
+      "id": "b1-genitive-prepositions-mittels-gen-by-means-of",
       "german": "mittels + Gen",
       "english": "by means of",
       "category": "Genitive Prepositions",
@@ -266,7 +266,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11462",
+      "id": "b1-genitive-prepositions-anhand-gen-on-the-basis-of-using",
       "german": "anhand + Gen",
       "english": "on the basis of / using",
       "category": "Genitive Prepositions",
@@ -287,7 +287,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11463",
+      "id": "b1-genitive-prepositions-mangels-gen-for-lack-of-due-to-lack-of",
       "german": "mangels + Gen",
       "english": "for lack of / due to lack of",
       "category": "Genitive Prepositions",
@@ -308,7 +308,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11464",
+      "id": "b1-genitive-prepositions-bezueglich-gen-regarding-concerning",
       "german": "bezüglich + Gen",
       "english": "regarding / concerning",
       "category": "Genitive Prepositions",
@@ -330,7 +330,7 @@
       }
     },
     {
-      "id": "b1-trotzgenit-827788",
+      "id": "b1-genitive-prepositions-trotz-genitiv-despite-in-spite-of",
       "german": "trotz (Genitiv)",
       "english": "despite / in spite of",
       "category": "Genitive Prepositions",
@@ -350,7 +350,7 @@
       }
     },
     {
-      "id": "b1-whrendgeni-827788",
+      "id": "b1-genitive-prepositions-waehrend-genitiv-during-while",
       "german": "während (Genitiv)",
       "english": "during / while",
       "category": "Genitive Prepositions",
@@ -370,7 +370,7 @@
       }
     },
     {
-      "id": "b1-wegengenit-827788",
+      "id": "b1-genitive-prepositions-wegen-genitiv-because-of-on-account-of",
       "german": "wegen (Genitiv)",
       "english": "because of / on account of",
       "category": "Genitive Prepositions",
@@ -390,7 +390,7 @@
       }
     },
     {
-      "id": "b1-stattgenit-827788",
+      "id": "b1-genitive-prepositions-statt-genitiv-instead-of",
       "german": "statt (Genitiv)",
       "english": "instead of",
       "category": "Genitive Prepositions",
@@ -410,7 +410,7 @@
       }
     },
     {
-      "id": "b1-anstellevo-827788",
+      "id": "b1-genitive-prepositions-anstelle-von-genitiv-in-place-of",
       "german": "anstelle von (Genitiv)",
       "english": "in place of",
       "category": "Genitive Prepositions",
@@ -430,7 +430,7 @@
       }
     },
     {
-      "id": "b1-auerhalbge-827788",
+      "id": "b1-genitive-prepositions-ausserhalb-genitiv-outside-of",
       "german": "außerhalb (Genitiv)",
       "english": "outside of",
       "category": "Genitive Prepositions",
@@ -450,7 +450,7 @@
       }
     },
     {
-      "id": "b1-innerhalbg-827788",
+      "id": "b1-genitive-prepositions-innerhalb-genitiv-within-inside",
       "german": "innerhalb (Genitiv)",
       "english": "within / inside",
       "category": "Genitive Prepositions",
@@ -470,7 +470,7 @@
       }
     },
     {
-      "id": "b1-unweitgeni-827788",
+      "id": "b1-genitive-prepositions-unweit-genitiv-not-far-from",
       "german": "unweit (Genitiv)",
       "english": "not far from",
       "category": "Genitive Prepositions",
@@ -490,7 +490,7 @@
       }
     },
     {
-      "id": "b1-jenseitsge-827788",
+      "id": "b1-genitive-prepositions-jenseits-genitiv-beyond-on-the-other-side",
       "german": "jenseits (Genitiv)",
       "english": "beyond / on the other side",
       "category": "Genitive Prepositions",
@@ -510,7 +510,7 @@
       }
     },
     {
-      "id": "b1-diesseitsg-827788",
+      "id": "b1-genitive-prepositions-diesseits-genitiv-on-this-side-of",
       "german": "diesseits (Genitiv)",
       "english": "on this side of",
       "category": "Genitive Prepositions",
@@ -530,7 +530,7 @@
       }
     },
     {
-      "id": "b1-halbergeni-827788",
+      "id": "b1-genitive-prepositions-halber-genitiv-for-the-sake-of",
       "german": "halber (Genitiv)",
       "english": "for the sake of",
       "category": "Genitive Prepositions",
@@ -550,7 +550,7 @@
       }
     },
     {
-      "id": "b1-seinetwege-827788",
+      "id": "b1-genitive-prepositions-seinetwegen-for-his-sake-because-of-him",
       "german": "seinetwegen",
       "english": "for his sake / because of him",
       "category": "Genitive Prepositions",
@@ -570,7 +570,7 @@
       }
     },
     {
-      "id": "b1-ihretwegen-827788",
+      "id": "b1-genitive-prepositions-ihretwegen-for-her-sake-because-of-her",
       "german": "ihretwegen",
       "english": "for her sake / because of her",
       "category": "Genitive Prepositions",
@@ -590,7 +590,7 @@
       }
     },
     {
-      "id": "b1-euretwegen-827788",
+      "id": "b1-genitive-prepositions-euretwegen-for-your-sake-because-of-you-plural",
       "german": "euretwegen",
       "english": "for your sake / because of you (plural)",
       "category": "Genitive Prepositions",
@@ -610,7 +610,7 @@
       }
     },
     {
-      "id": "b1-meinetwege-827788",
+      "id": "b1-genitive-prepositions-meinetwegen-for-my-sake-because-of-me",
       "german": "meinetwegen",
       "english": "for my sake / because of me",
       "category": "Genitive Prepositions",
@@ -630,7 +630,7 @@
       }
     },
     {
-      "id": "b1-deinetwege-827788",
+      "id": "b1-genitive-prepositions-deinetwegen-for-your-sake-because-of-you",
       "german": "deinetwegen",
       "english": "for your sake / because of you",
       "category": "Genitive Prepositions",
@@ -650,7 +650,7 @@
       }
     },
     {
-      "id": "b1-unseretweg-827788",
+      "id": "b1-genitive-prepositions-unseretwegen-for-our-sake-because-of-us",
       "german": "unseretwegen",
       "english": "for our sake / because of us",
       "category": "Genitive Prepositions",
@@ -670,7 +670,7 @@
       }
     },
     {
-      "id": "b1-beiderseit-827788",
+      "id": "b1-genitive-prepositions-beiderseits-genitiv-on-both-sides-on-either-side",
       "german": "beiderseits (Genitiv)",
       "english": "on both sides / on either side",
       "category": "Genitive Prepositions",
@@ -690,7 +690,7 @@
       }
     },
     {
-      "id": "b1-behufsgeni-827788",
+      "id": "b1-genitive-prepositions-behufs-genitiv-for-the-purpose-of",
       "german": "behufs (Genitiv)",
       "english": "for the purpose of",
       "category": "Genitive Prepositions",
@@ -710,7 +710,7 @@
       }
     },
     {
-      "id": "b1-besorggeni-827788",
+      "id": "b1-genitive-prepositions-besorg-genitiv-on-behalf-of",
       "german": "besorg (Genitiv)",
       "english": "on behalf of",
       "category": "Genitive Prepositions",
@@ -730,7 +730,7 @@
       }
     },
     {
-      "id": "b1-betreffsge-827788",
+      "id": "b1-genitive-prepositions-betreffs-genitiv-concerning-with-regard-to",
       "german": "betreffs (Genitiv)",
       "english": "concerning / with regard to",
       "category": "Genitive Prepositions",
@@ -750,7 +750,7 @@
       }
     },
     {
-      "id": "b1-einschliel-827788",
+      "id": "b1-genitive-prepositions-einschliesslich-genitiv-including",
       "german": "einschließlich (Genitiv)",
       "english": "including",
       "category": "Genitive Prepositions",
@@ -770,7 +770,7 @@
       }
     },
     {
-      "id": "b1-exklusivge-827788",
+      "id": "b1-genitive-prepositions-exklusiv-genitiv-exclusive-of-excluding",
       "german": "exklusiv (Genitiv)",
       "english": "exclusive of / excluding",
       "category": "Genitive Prepositions",
@@ -790,7 +790,7 @@
       }
     },
     {
-      "id": "b1-infolgegen-827788",
+      "id": "b1-genitive-prepositions-infolge-genitiv-as-a-result-of-due-to",
       "german": "infolge (Genitiv)",
       "english": "as a result of / due to",
       "category": "Genitive Prepositions",
@@ -810,7 +810,7 @@
       }
     },
     {
-      "id": "b1-lautgeniti-827788",
+      "id": "b1-genitive-prepositions-laut-genitiv-according-to",
       "german": "laut (Genitiv)",
       "english": "according to",
       "category": "Genitive Prepositions",
@@ -830,7 +830,7 @@
       }
     },
     {
-      "id": "b1-mangelsgen-827788",
+      "id": "b1-genitive-prepositions-mangels-genitiv-for-lack-of-in-the-absence-of",
       "german": "mangels (Genitiv)",
       "english": "for lack of / in the absence of",
       "category": "Genitive Prepositions",
@@ -850,7 +850,7 @@
       }
     },
     {
-      "id": "b1-notwendigg-827788",
+      "id": "b1-genitive-prepositions-notwendig-genitiv-by-necessity-of",
       "german": "notwendig (Genitiv)",
       "english": "by necessity of",
       "category": "Genitive Prepositions",
@@ -870,7 +870,7 @@
       }
     },
     {
-      "id": "b1-obgleichge-827788",
+      "id": "b1-genitive-prepositions-obgleich-genitiv-although",
       "german": "obgleich (Genitiv)",
       "english": "although",
       "category": "Genitive Prepositions",
@@ -890,7 +890,7 @@
       }
     },
     {
-      "id": "b1-sdlichgeni-827788",
+      "id": "b1-genitive-prepositions-suedlich-genitiv-south-of",
       "german": "südlich (Genitiv)",
       "english": "south of",
       "category": "Genitive Prepositions",
@@ -910,7 +910,7 @@
       }
     },
     {
-      "id": "b1-genitive-prepositions-miv8iuodgx941",
+      "id": "b1-genitive-prepositions-aufgrund-due-to-based-on",
       "german": "aufgrund",
       "english": "due to / based on",
       "category": "Genitive Prepositions",
@@ -930,7 +930,7 @@
       }
     },
     {
-      "id": "b1-genitive-prepositions-miv8iuodcxkie",
+      "id": "b1-genitive-prepositions-oberhalb-above",
       "german": "oberhalb",
       "english": "above",
       "category": "Genitive Prepositions",
@@ -950,7 +950,7 @@
       }
     },
     {
-      "id": "b1-genitive-prepositions-miv8iuodc1ggw",
+      "id": "b1-genitive-prepositions-unterhalb-below",
       "german": "unterhalb",
       "english": "below",
       "category": "Genitive Prepositions",
@@ -970,7 +970,7 @@
       }
     },
     {
-      "id": "b1-genitive-prepositions-miv8iuodwg3w8",
+      "id": "b1-genitive-prepositions-beiderseits-on-both-sides-of",
       "german": "beiderseits",
       "english": "on both sides of",
       "category": "Genitive Prepositions",
@@ -990,7 +990,7 @@
       }
     },
     {
-      "id": "b1-genitive-prepositions-miv8iuodv5xt9",
+      "id": "b1-genitive-prepositions-zwecks-for-the-purpose-of",
       "german": "zwecks",
       "english": "for the purpose of",
       "category": "Genitive Prepositions",
@@ -1010,7 +1010,7 @@
       }
     },
     {
-      "id": "b1-genitive-prepositions-miv8iuodliwe7",
+      "id": "b1-genitive-prepositions-mangels-for-lack-of",
       "german": "mangels",
       "english": "for lack of",
       "category": "Genitive Prepositions",
@@ -1030,7 +1030,7 @@
       }
     },
     {
-      "id": "b1-genitive-prepositions-miv8iuodj2jah",
+      "id": "b1-genitive-prepositions-einschliesslich-including",
       "german": "einschließlich",
       "english": "including",
       "category": "Genitive Prepositions",
@@ -1050,7 +1050,7 @@
       }
     },
     {
-      "id": "b1-genitive-prepositions-miv8iuodg2ut0",
+      "id": "b1-genitive-prepositions-ausschliesslich-excluding-exclusively",
       "german": "ausschließlich",
       "english": "excluding / exclusively",
       "category": "Genitive Prepositions",

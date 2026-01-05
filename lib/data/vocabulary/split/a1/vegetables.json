@@ -4,7 +4,7 @@
   "totalCards": 12,
   "flashcards": [
     {
-      "id": "syllabus-a1-10384",
+      "id": "a1-vegetables-die-tomate-tomato",
       "german": "die Tomate",
       "english": "tomato",
       "category": "Vegetables",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10385",
+      "id": "a1-vegetables-die-gurke-cucumber",
       "german": "die Gurke",
       "english": "cucumber",
       "category": "Vegetables",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10387",
+      "id": "a1-vegetables-die-karotte-carrot",
       "german": "die Karotte",
       "english": "carrot",
       "category": "Vegetables",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10388",
+      "id": "a1-vegetables-die-zwiebel-onion",
       "german": "die Zwiebel",
       "english": "onion",
       "category": "Vegetables",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10389",
+      "id": "a1-vegetables-die-paprika-bell-pepper",
       "german": "die Paprika",
       "english": "bell pepper",
       "category": "Vegetables",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10390",
+      "id": "a1-vegetables-der-pilz-mushroom",
       "german": "der Pilz",
       "english": "mushroom",
       "category": "Vegetables",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10391",
+      "id": "a1-vegetables-der-kohl-cabbage",
       "german": "der Kohl",
       "english": "cabbage",
       "category": "Vegetables",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10392",
+      "id": "a1-vegetables-der-spinat-spinach",
       "german": "der Spinat",
       "english": "spinach",
       "category": "Vegetables",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10393",
+      "id": "a1-vegetables-der-brokkoli-broccoli",
       "german": "der Brokkoli",
       "english": "broccoli",
       "category": "Vegetables",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10394",
+      "id": "a1-vegetables-die-bohne-bean",
       "german": "die Bohne",
       "english": "bean",
       "category": "Vegetables",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10395",
+      "id": "a1-vegetables-die-erbse-pea",
       "german": "die Erbse",
       "english": "pea",
       "category": "Vegetables",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10396",
+      "id": "a1-vegetables-der-mais-corn",
       "german": "der Mais",
       "english": "corn",
       "category": "Vegetables",

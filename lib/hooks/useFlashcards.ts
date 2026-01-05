@@ -52,12 +52,9 @@ export function useFlashcardReviews(userId: string | undefined) {
 
 /**
  * Get flashcards by level and optional category
+ * Fully migrated to React Query pattern for automatic caching and deduplication
  */
 export function useFlashcards(level?: CEFRLevel, category?: string) {
-  const [flashcards, setFlashcards] = useState<Flashcard[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
-
   // OPTIMIZATION: Use split-fetching when category is provided
   const { data: categoryIndex, isLoading: isIndexLoading } =
     useVocabularyCategories(level);
@@ -75,71 +72,39 @@ export function useFlashcards(level?: CEFRLevel, category?: string) {
     isError: isCategoryError,
   } = useVocabularyCategory(level || "A1", filename || null);
 
-  useEffect(() => {
-    if (!level) {
-      setFlashcards([]);
-      setIsLoading(false);
-      return;
+  // Use React Query for full level fetch (when no category specified)
+  const {
+    data: levelData,
+    isLoading: isLevelLoading,
+    isError: isLevelError,
+  } = useVocabularyLevel(level || "A1");
+
+  // Determine final state based on which query is active
+  if (!level) {
+    return { flashcards: [], isLoading: false, isError: false };
+  }
+
+  if (category) {
+    // Category-specific fetch path
+    const isLoading = isIndexLoading || (filename ? isCategoryLoading : false);
+    const isError = isCategoryError;
+    const flashcards = categoryData?.flashcards || [];
+
+    if (!isIndexLoading && !filename && !isLoading) {
+      console.warn(
+        `Category "${category}" not found in index for level ${level}`
+      );
     }
 
-    // Optimization: If category is provided, use the split-fetch data
-    if (category) {
-      // If we are still determining the filename (index loading) or fetching category
-      if (isIndexLoading || (filename && isCategoryLoading)) {
-        setIsLoading(true);
-        return;
-      }
+    return { flashcards, isLoading, isError };
+  }
 
-      // If we have data
-      if (categoryData) {
-        setFlashcards(categoryData.flashcards);
-        setIsLoading(false);
-        setIsError(false);
-      } else if (filename) {
-        // Filename exists but no data yet (error or loading)
-        setIsError(isCategoryError);
-      } else if (!isIndexLoading && !filename) {
-        // Category not found in index
-        console.warn(
-          `Category "${category}" not found in index for level ${level}`
-        );
-        setFlashcards([]);
-        setIsLoading(false);
-      }
-      return;
-    }
-
-    // Fallback: Legacy behavior for "All" or if no category specified
-    // This still uses the monolithic fetch, but we only hit this if category is undefined
-    const fetchFlashcards = async () => {
-      try {
-        setIsLoading(true);
-        setIsError(false);
-
-        // Fetch flashcards using service layer
-        const data = await getFlashcardsByLevel(level);
-
-        setFlashcards(data);
-      } catch (error) {
-        console.error("Error fetching flashcards:", error);
-        setIsError(true);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchFlashcards();
-  }, [
-    level,
-    category,
-    categoryData,
-    isIndexLoading,
-    isCategoryLoading,
-    filename,
-    isCategoryError,
-  ]);
-
-  return { flashcards, isLoading, isError };
+  // Full level fetch path
+  return {
+    flashcards: levelData?.flashcards || [],
+    isLoading: isLevelLoading,
+    isError: isLevelError,
+  };
 }
 
 /**

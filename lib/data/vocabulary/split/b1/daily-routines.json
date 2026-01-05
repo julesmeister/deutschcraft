@@ -4,7 +4,7 @@
   "totalCards": 39,
   "flashcards": [
     {
-      "id": "syllabus-b1-10951",
+      "id": "b1-daily-routines-sich-waschen-to-wash-oneself",
       "german": "sich waschen",
       "english": "to wash oneself",
       "category": "Daily Routines",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10952",
+      "id": "b1-daily-routines-duschen-to-shower",
       "german": "duschen",
       "english": "to shower",
       "category": "Daily Routines",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10953",
+      "id": "b1-daily-routines-sich-rasieren-to-shave",
       "german": "sich rasieren",
       "english": "to shave",
       "category": "Daily Routines",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10954",
+      "id": "b1-daily-routines-sich-kaemmen-to-comb-ones-hair",
       "german": "sich kämmen",
       "english": "to comb one's hair",
       "category": "Daily Routines",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10955",
+      "id": "b1-daily-routines-sich-schminken-to-put-on-makeup",
       "german": "sich schminken",
       "english": "to put on makeup",
       "category": "Daily Routines",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10956",
+      "id": "b1-daily-routines-sich-anziehen-to-get-dressed",
       "german": "sich anziehen",
       "english": "to get dressed",
       "category": "Daily Routines",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10957",
+      "id": "b1-daily-routines-fruehstuecken-to-have-breakfast",
       "german": "frühstücken",
       "english": "to have breakfast",
       "category": "Daily Routines",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10958",
+      "id": "b1-daily-routines-zur-arbeit-gehen-to-go-to-work",
       "german": "zur Arbeit gehen",
       "english": "to go to work",
       "category": "Daily Routines",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10959",
+      "id": "b1-daily-routines-zur-schule-gehen-to-go-to-school",
       "german": "zur Schule gehen",
       "english": "to go to school",
       "category": "Daily Routines",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10960",
+      "id": "b1-daily-routines-die-mittagspause-lunch-break",
       "german": "die Mittagspause",
       "english": "lunch break",
       "category": "Daily Routines",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10961",
+      "id": "b1-daily-routines-zu-mittag-essen-to-have-lunch",
       "german": "zu Mittag essen",
       "english": "to have lunch",
       "category": "Daily Routines",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10963",
+      "id": "b1-daily-routines-nach-hause-kommen-to-come-home",
       "german": "nach Hause kommen",
       "english": "to come home",
       "category": "Daily Routines",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10964",
+      "id": "b1-daily-routines-einkaufen-gehen-to-go-shopping",
       "german": "einkaufen gehen",
       "english": "to go shopping",
       "category": "Daily Routines",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10966",
+      "id": "b1-daily-routines-zu-abend-essen-to-have-dinner",
       "german": "zu Abend essen",
       "english": "to have dinner",
       "category": "Daily Routines",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10967",
+      "id": "b1-daily-routines-abwaschen-to-do-the-dishes",
       "german": "abwaschen",
       "english": "to do the dishes",
       "category": "Daily Routines",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10969",
+      "id": "b1-daily-routines-die-hausaufgaben-machen-to-do-homework",
       "german": "die Hausaufgaben machen",
       "english": "to do homework",
       "category": "Daily Routines",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10974",
+      "id": "b1-daily-routines-die-zaehne-putzen-to-brush-teeth",
       "german": "die Zähne putzen",
       "english": "to brush teeth",
       "category": "Daily Routines",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10975",
+      "id": "b1-daily-routines-ins-bett-gehen-to-go-to-bed",
       "german": "ins Bett gehen",
       "english": "to go to bed",
       "category": "Daily Routines",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "b1-sichanzieh-827791",
+      "id": "b1-daily-routines-sich-anziehn-to-get-dressed-to-dress",
       "german": "sich anziehn",
       "english": "to get dressed / to dress",
       "category": "Daily Routines",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "b1-sichfrisch-827791",
+      "id": "b1-daily-routines-sich-frisch-machen-to-freshen-up",
       "german": "sich frisch machen",
       "english": "to freshen up",
       "category": "Daily Routines",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "b1-zubettgehe-827791",
+      "id": "b1-daily-routines-zu-bett-gehen-to-go-to-bed",
       "german": "zu Bett gehen",
       "english": "to go to bed",
       "category": "Daily Routines",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "b1-ausschlafe-827791",
+      "id": "b1-daily-routines-ausschlafen-to-sleep-in-to-sleep-enough",
       "german": "ausschlafen",
       "english": "to sleep in / to sleep enough",
       "category": "Daily Routines",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "b1-diezhneput-827791",
+      "id": "b1-daily-routines-die-zaehne-putzen-to-brush-teeth",
       "german": "die Zähne putzen",
       "english": "to brush teeth",
       "category": "Daily Routines",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "b1-diehaarekm-827791",
+      "id": "b1-daily-routines-die-haare-kaemmen-to-comb-hair",
       "german": "die Haare kämmen",
       "english": "to comb hair",
       "category": "Daily Routines",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "b1-diehaarewa-827791",
+      "id": "b1-daily-routines-die-haare-waschen-to-wash-hair",
       "german": "die Haare waschen",
       "english": "to wash hair",
       "category": "Daily Routines",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "b1-einenkaffe-827791",
+      "id": "b1-daily-routines-einen-kaffee-trinken-to-drink-a-coffee",
       "german": "einen Kaffee trinken",
       "english": "to drink a coffee",
       "category": "Daily Routines",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "b1-einenteetr-827791",
+      "id": "b1-daily-routines-einen-tee-trinken-to-drink-a-tea",
       "german": "einen Tee trinken",
       "english": "to drink a tea",
       "category": "Daily Routines",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "b1-dietagesze-827791",
+      "id": "b1-daily-routines-die-tageszeitung-lesen-to-read-the-newspaper",
       "german": "die Tageszeitung lesen",
       "english": "to read the newspaper",
       "category": "Daily Routines",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "b1-diewohnung-827791",
+      "id": "b1-daily-routines-die-wohnung-putzen-to-clean-the-apartment",
       "german": "die Wohnung putzen",
       "english": "to clean the apartment",
       "category": "Daily Routines",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "b1-dentischde-827791",
+      "id": "b1-daily-routines-den-tisch-decken-to-set-the-table",
       "german": "den Tisch decken",
       "english": "to set the table",
       "category": "Daily Routines",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "b1-absplen-827791",
+      "id": "b1-daily-routines-abspuelen-to-rinse-to-do-the-dishes",
       "german": "abspülen",
       "english": "to rinse / to do the dishes",
       "category": "Daily Routines",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "b1-diewschewa-827791",
+      "id": "b1-daily-routines-die-waesche-waschen-to-do-laundry",
       "german": "die Wäsche waschen",
       "english": "to do laundry",
       "category": "Daily Routines",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "b1-diewschetr-827791",
+      "id": "b1-daily-routines-die-waesche-trocknen-to-dry-laundry",
       "german": "die Wäsche trocknen",
       "english": "to dry laundry",
       "category": "Daily Routines",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "b1-wschebgeln-827791",
+      "id": "b1-daily-routines-die-waesche-buegeln-to-iron",
       "german": "die Wäsche bügeln",
       "english": "to iron",
       "category": "Daily Routines",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "b1-vonderarbe-827791",
+      "id": "b1-daily-routines-von-der-arbeit-nach-hause-kommen-to-come-home-from-work",
       "german": "von der Arbeit nach Hause kommen",
       "english": "to come home from work",
       "category": "Daily Routines",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "b1-daily-routines-miv8iuogk7d0p",
+      "id": "b1-daily-routines-den-staub-saugen-to-vacuum",
       "german": "den Staub saugen",
       "english": "to vacuum",
       "category": "Daily Routines",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "b1-daily-routines-miv8iuogwkab4",
+      "id": "b1-daily-routines-die-waesche-waschen-to-do-laundry",
       "german": "die Wäsche waschen",
       "english": "to do laundry",
       "category": "Daily Routines",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "b1-daily-routines-miv8iuogv283o",
+      "id": "b1-daily-routines-buegeln-to-iron",
       "german": "bügeln",
       "english": "to iron",
       "category": "Daily Routines",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "b1-daily-routines-miv8iuogbholk",
+      "id": "b1-daily-routines-gassi-gehen-to-walk-the-dog",
       "german": "Gassi gehen",
       "english": "to walk the dog",
       "category": "Daily Routines",

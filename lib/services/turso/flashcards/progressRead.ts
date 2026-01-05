@@ -1,23 +1,18 @@
 /**
- * Turso Flashcard Service - Progress Read Operations
- * Handles fetching flashcard progress and study statistics
+ * Turso Flashcard Service - Basic Progress Read Operations
+ * Handles core flashcard progress queries and study statistics
  */
 
 import { db } from "@/turso/client";
-import {
-  FlashcardProgress,
-  StudyProgress,
-  CardState,
-  CategoryStats,
-} from "@/lib/models";
+import { FlashcardProgress, StudyProgress, CategoryStats } from "@/lib/models";
 import {
   getVocabularyMetadata,
-  getAllVocabularyMetadata,
   getDisplayCategories,
 } from "@/lib/services/vocabularyData";
+import { rowToFlashcardProgress, rowToStudyProgress } from "./progressMappers";
 
 // ============================================================================
-// READ OPERATIONS - Progress
+// BASIC READ OPERATIONS
 // ============================================================================
 
 /**
@@ -54,7 +49,9 @@ export async function getCategoryProgress(
   userId: string
 ): Promise<CategoryStats[]> {
   try {
-    // 1. Fetch only progress data from DB (no JOINs)
+    // 1. Fetch minimal progress data from DB
+    // Note: Cannot use SQL GROUP BY because category/tags are stored in JSON files,
+    // not in the database. This approach minimizes data transfer (3 fields only).
     const result = await db.execute({
       sql: `
         SELECT
@@ -67,55 +64,21 @@ export async function getCategoryProgress(
       args: [userId],
     });
 
-    // 2. Aggregate in memory using static JSON data
+    // 2. Aggregate in memory using static JSON metadata (O(1) lookups)
     const statsMap = new Map<
       string,
       { total: number; learned: number; mastered: number }
     >();
-
-    // Load all vocabulary once for fuzzy matching fallback
-    const allVocab = getAllVocabularyMetadata();
 
     for (const row of result.rows) {
       const wordId = row.word_id as string;
       const repetitions = (row.repetitions as number) || 0;
       const masteryLevel = (row.mastery_level as number) || 0;
 
-      // Look up metadata from JSON file instead of DB
-      let metadata = getVocabularyMetadata(wordId);
+      // Look up metadata from JSON file (O(1) map lookup)
+      const metadata = getVocabularyMetadata(wordId);
 
-      // Fallback for legacy IDs
-      if (!metadata) {
-        // Fuzzy matching logic similar to client-side
-        metadata = allVocab.find((card: any) => {
-          const german = card.german.toLowerCase();
-          const simpleGerman = german.replace(/^(der|die|das)\s+/i, "").trim();
-          return (
-            simpleGerman.length > 2 &&
-            wordId.includes(simpleGerman) &&
-            wordId.startsWith(card.level.toLowerCase())
-          );
-        });
-
-        // If still not found, try category slug match
-        if (!metadata) {
-          const matchingCard = allVocab.find((card: any) => {
-            if (!card.category) return false;
-            const categoryId = card.category
-              .toLowerCase()
-              .replace(/\s+/g, "-")
-              .replace(/[^a-z0-9-]/g, "");
-            return categoryId.length > 3 && wordId.includes(categoryId);
-          });
-          if (matchingCard) {
-            // We only care about the category here
-            metadata = matchingCard;
-            // Note: this metadata object belongs to a DIFFERENT card, but has the correct category.
-            // Since we only use it for getDisplayCategories(metadata), it works!
-          }
-        }
-      }
-
+      // Get display categories for this flashcard
       const tags = getDisplayCategories(metadata);
 
       // Add stats for EACH tag
@@ -169,14 +132,8 @@ export async function getSingleFlashcardProgress(
   flashcardId: string
 ): Promise<FlashcardProgress | null> {
   try {
-    // Handle FLASH_ prefix for syllabus IDs to match saveFlashcardProgress logic
-    let finalFlashcardId = flashcardId;
-    if (
-      flashcardId.startsWith("syllabus-") &&
-      !flashcardId.startsWith("FLASH_")
-    ) {
-      finalFlashcardId = `FLASH_${flashcardId}`;
-    }
+    // ID Normalization REMOVED (Semantic IDs)
+    const finalFlashcardId = flashcardId;
 
     const progressId = `${userId}_${finalFlashcardId}`;
     const result = await db.execute({
@@ -222,169 +179,3 @@ export async function getStudyProgress(
   }
 }
 
-/**
- * Get recent study progress entries across all users
- * Used for activity feeds and dashboard
- * @param limit - Maximum number of entries to return
- * @returns Array of study progress objects sorted by date (most recent first)
- */
-export async function getRecentStudyProgress(
-  limit: number = 20
-): Promise<StudyProgress[]> {
-  try {
-    const result = await db.execute({
-      sql: "SELECT * FROM progress ORDER BY date DESC LIMIT ?",
-      args: [limit],
-    });
-
-    return result.rows.map(rowToStudyProgress);
-  } catch (error) {
-    console.error(
-      "[flashcardService:turso] Error fetching recent study progress:",
-      error
-    );
-    throw error;
-  }
-}
-
-/**
- * Get flashcard progress by card state
- * @param userId - User's email
- * @param state - Card state to filter by
- * @param limit - Maximum number of cards to return
- * @returns Array of flashcard progress objects
- */
-export async function getFlashcardProgressByState(
-  userId: string,
-  state: CardState,
-  limit = 100
-): Promise<FlashcardProgress[]> {
-  try {
-    const result = await db.execute({
-      sql: "SELECT * FROM flashcard_progress WHERE user_id = ? AND state = ? ORDER BY next_review_date ASC LIMIT ?",
-      args: [userId, state, limit],
-    });
-
-    return result.rows.map(rowToFlashcardProgress);
-  } catch (error) {
-    console.error(
-      "[flashcardService:turso] Error fetching flashcard progress by state:",
-      error
-    );
-    throw error;
-  }
-}
-
-/**
- * Get due flashcards for review
- * @param userId - User's email
- * @param limit - Maximum number of cards to return
- * @returns Array of flashcard progress objects that are due for review
- */
-export async function getDueFlashcards(
-  userId: string,
-  limit = 100
-): Promise<FlashcardProgress[]> {
-  try {
-    const now = Date.now();
-    const result = await db.execute({
-      sql: "SELECT * FROM flashcard_progress WHERE user_id = ? AND next_review_date <= ? ORDER BY next_review_date ASC LIMIT ?",
-      args: [userId, now, limit],
-    });
-
-    return result.rows.map(rowToFlashcardProgress);
-  } catch (error) {
-    console.error(
-      "[flashcardService:turso] Error fetching due flashcards:",
-      error
-    );
-    throw error;
-  }
-}
-
-/**
- * Get struggling flashcards
- * Uses multiple criteria to identify struggling cards
- * @param userId - User's email
- * @param limit - Maximum number of cards to return
- * @returns Array of flashcard progress objects for struggling cards
- */
-export async function getStrugglingFlashcards(
-  userId: string,
-  limit = 100
-): Promise<FlashcardProgress[]> {
-  try {
-    const result = await db.execute({
-      sql: `SELECT * FROM flashcard_progress
-            WHERE user_id = ?
-            AND (
-              mastery_level < 40 OR
-              consecutive_incorrect >= 2 OR
-              lapse_count >= 3 OR
-              state IN ('lapsed', 'relearning')
-            )
-            ORDER BY mastery_level ASC
-            LIMIT ?`,
-      args: [userId, limit],
-    });
-
-    return result.rows.map(rowToFlashcardProgress);
-  } catch (error) {
-    console.error(
-      "[flashcardService:turso] Error fetching struggling flashcards:",
-      error
-    );
-    throw error;
-  }
-}
-
-// ============================================================================
-// HELPER FUNCTIONS
-// ============================================================================
-
-function rowToFlashcardProgress(row: any): FlashcardProgress {
-  // Strip FLASH_ prefix if present to match domain model IDs
-  const rawId = row.flashcard_id as string;
-  const flashcardId = rawId.startsWith("FLASH_")
-    ? rawId.replace("FLASH_", "")
-    : rawId;
-
-  return {
-    flashcardId,
-    userId: row.user_id as string,
-    wordId: row.word_id as string,
-    level: row.level as string | undefined,
-    state: row.state as "new" | "learning" | "review" | "relearning" | "lapsed",
-    repetitions: row.repetitions as number,
-    easeFactor: row.ease_factor as number,
-    interval: row.interval as number,
-    nextReviewDate: row.next_review_date as number,
-    correctCount: row.correct_count as number,
-    incorrectCount: row.incorrect_count as number,
-    consecutiveCorrect: row.consecutive_correct as number,
-    consecutiveIncorrect: row.consecutive_incorrect as number,
-    lastReviewDate: row.last_review_date as number | null | undefined,
-    masteryLevel: row.mastery_level as number,
-    lapseCount: row.lapse_count as number,
-    lastLapseDate: row.last_lapse_date as number | null | undefined,
-    firstSeenAt: row.first_seen_at as number | undefined,
-    createdAt: row.created_at as number,
-    updatedAt: row.updated_at as number,
-  };
-}
-
-function rowToStudyProgress(row: any): StudyProgress {
-  return {
-    progressId: row.progress_id as string,
-    userId: row.user_id as string,
-    date: row.date as string,
-    wordsStudied: row.words_studied as number,
-    wordsCorrect: row.words_correct as number,
-    wordsIncorrect: row.words_incorrect as number,
-    timeSpent: row.time_spent as number,
-    sessionsCompleted: row.sessions_completed as number,
-    cardsReviewed: row.cards_reviewed as number,
-    sentencesCreated: row.sentences_created as number,
-    createdAt: row.created_at as number,
-  };
-}

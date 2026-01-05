@@ -178,7 +178,12 @@
       "Bash(curl:*)",
       "Bash(move \"C:\\\\Users\\\\User\\\\Documents\\\\testmanship-web-v2\\\\lib\\\\services\\\\writing\\\\smartMiniExerciseService.ts\" \"C:\\\\Users\\\\User\\\\Documents\\\\testmanship-web-v2\\\\lib\\\\services\\\\writing\\\\smartMiniExercise\\\\firebase.ts\")",
       "Bash(move:*)",
-      "Bash(timeout 60 npm run build:*)"
+      "Bash(timeout 60 npm run build:*)",
+      "Bash(for file in lib/data/vocabulary/levels/*.json)",
+      "Bash(do:*)",
+      "Bash(! echo \"$file\")",
+      "Bash(bc:*)",
+      "Bash(test:*)"
     ],
     "deny": [],
     "ask": []

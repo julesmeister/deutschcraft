@@ -4,7 +4,7 @@
   "totalCards": 52,
   "flashcards": [
     {
-      "id": "syllabus-a2-10812",
+      "id": "a2-travel-der-urlaub-vacation",
       "german": "der Urlaub",
       "english": "vacation",
       "category": "Travel",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10815",
+      "id": "a2-travel-das-hotel-hotel",
       "german": "das Hotel",
       "english": "hotel",
       "category": "Travel",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10827",
+      "id": "a2-travel-der-pass-passport",
       "german": "der Pass",
       "english": "passport",
       "category": "Travel",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10828",
+      "id": "a2-travel-das-visum-visa",
       "german": "das Visum",
       "english": "visa",
       "category": "Travel",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10829",
+      "id": "a2-travel-der-reisefuehrer-travel-guide-guidebook",
       "german": "der Reiseführer",
       "english": "travel guide / guidebook",
       "category": "Travel",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10830",
+      "id": "a2-travel-die-landkarte-map",
       "german": "die Landkarte",
       "english": "map",
       "category": "Travel",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10831",
+      "id": "a2-travel-der-stadtplan-city-map",
       "german": "der Stadtplan",
       "english": "city map",
       "category": "Travel",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10832",
+      "id": "a2-travel-die-sehenswuerdigkeit-sight-attraction",
       "german": "die Sehenswürdigkeit",
       "english": "sight / attraction",
       "category": "Travel",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10834",
+      "id": "a2-travel-das-schloss-castle-palace",
       "german": "das Schloss",
       "english": "castle / palace",
       "category": "Travel",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10835",
+      "id": "a2-travel-die-kirche-church",
       "german": "die Kirche",
       "english": "church",
       "category": "Travel",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10836",
+      "id": "a2-travel-der-dom-cathedral",
       "german": "der Dom",
       "english": "cathedral",
       "category": "Travel",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10837",
+      "id": "a2-travel-das-denkmal-monument-memorial",
       "german": "das Denkmal",
       "english": "monument / memorial",
       "category": "Travel",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10838",
+      "id": "a2-travel-der-ausflug-excursion-day-trip",
       "german": "der Ausflug",
       "english": "excursion / day trip",
       "category": "Travel",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10839",
+      "id": "a2-travel-die-rundfahrt-tour-sightseeing-tour",
       "german": "die Rundfahrt",
       "english": "tour / sightseeing tour",
       "category": "Travel",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10840",
+      "id": "a2-travel-die-fuehrung-guided-tour",
       "german": "die Führung",
       "english": "guided tour",
       "category": "Travel",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10841",
+      "id": "a2-travel-die-unterkunft-accommodation",
       "german": "die Unterkunft",
       "english": "accommodation",
       "category": "Travel",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10842",
+      "id": "a2-travel-die-pension-guesthouse-bed-and-breakfast",
       "german": "die Pension",
       "english": "guesthouse / bed and breakfast",
       "category": "Travel",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10843",
+      "id": "a2-travel-die-jugendherberge-youth-hostel",
       "german": "die Jugendherberge",
       "english": "youth hostel",
       "category": "Travel",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10844",
+      "id": "a2-travel-der-campingplatz-campsite-camping-ground",
       "german": "der Campingplatz",
       "english": "campsite / camping ground",
       "category": "Travel",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10846",
+      "id": "a2-travel-das-einzelzimmer-single-room",
       "german": "das Einzelzimmer",
       "english": "single room",
       "category": "Travel",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10847",
+      "id": "a2-travel-das-doppelzimmer-double-room",
       "german": "das Doppelzimmer",
       "english": "double room",
       "category": "Travel",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10848",
+      "id": "a2-travel-die-rezeption-reception-front-desk",
       "german": "die Rezeption",
       "english": "reception / front desk",
       "category": "Travel",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10849",
+      "id": "a2-travel-der-schluessel-key",
       "german": "der Schlüssel",
       "english": "key",
       "category": "Travel",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10851",
+      "id": "a2-travel-die-halbpension-half-board",
       "german": "die Halbpension",
       "english": "half board",
       "category": "Travel",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10852",
+      "id": "a2-travel-die-vollpension-full-board",
       "german": "die Vollpension",
       "english": "full board",
       "category": "Travel",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10853",
+      "id": "a2-travel-die-bordkarte-boarding-pass",
       "german": "die Bordkarte",
       "english": "boarding pass",
       "category": "Travel",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10854",
+      "id": "a2-travel-das-gate-gate",
       "german": "das Gate",
       "english": "gate",
       "category": "Travel",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10855",
+      "id": "a2-travel-der-flug-flight",
       "german": "der Flug",
       "english": "flight",
       "category": "Travel",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10859",
+      "id": "a2-travel-der-fahrkartenschalter-ticket-counter",
       "german": "der Fahrkartenschalter",
       "english": "ticket counter",
       "category": "Travel",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10862",
+      "id": "a2-travel-die-verbindung-connection",
       "german": "die Verbindung",
       "english": "connection",
       "category": "Travel",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10863",
+      "id": "a2-travel-das-handgepaeck-hand-luggage-carry-on",
       "german": "das Handgepäck",
       "english": "hand luggage / carry-on",
       "category": "Travel",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10866",
+      "id": "a2-travel-der-zoll-customs",
       "german": "der Zoll",
       "english": "customs",
       "category": "Travel",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10867",
+      "id": "a2-travel-die-grenze-border",
       "german": "die Grenze",
       "english": "border",
       "category": "Travel",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10868",
+      "id": "a2-travel-der-tourist-tourist-male",
       "german": "der Tourist",
       "english": "tourist (male)",
       "category": "Travel",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10869",
+      "id": "a2-travel-die-touristin-tourist-female",
       "german": "die Touristin",
       "english": "tourist (female)",
       "category": "Travel",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10870",
+      "id": "a2-travel-der-reisende-traveler-male",
       "german": "der Reisende",
       "english": "traveler (male)",
       "category": "Travel",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10871",
+      "id": "a2-travel-die-reisende-traveler-female",
       "german": "die Reisende",
       "english": "traveler (female)",
       "category": "Travel",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10874",
+      "id": "a2-travel-abfliegen-to-depart-to-take-off",
       "german": "abfliegen",
       "english": "to depart / to take off",
       "category": "Travel",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10877",
+      "id": "a2-travel-buchen-to-book",
       "german": "buchen",
       "english": "to book",
       "category": "Travel",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10878",
+      "id": "a2-travel-reservieren-to-reserve",
       "german": "reservieren",
       "english": "to reserve",
       "category": "Travel",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10879",
+      "id": "a2-travel-packen-to-pack",
       "german": "packen",
       "english": "to pack",
       "category": "Travel",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10881",
+      "id": "a2-travel-einchecken-to-check-in",
       "german": "einchecken",
       "english": "to check in",
       "category": "Travel",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10882",
+      "id": "a2-travel-auschecken-to-check-out",
       "german": "auschecken",
       "english": "to check out",
       "category": "Travel",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10883",
+      "id": "a2-travel-besichtigen-to-visit-to-sightsee",
       "german": "besichtigen",
       "english": "to visit / to sightsee",
       "category": "Travel",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10884",
+      "id": "a2-travel-uebernachten-to-stay-overnight",
       "german": "übernachten",
       "english": "to stay overnight",
       "category": "Travel",
@@ -904,7 +904,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10888",
+      "id": "a2-travel-sich-verirren-to-get-lost",
       "german": "sich verirren",
       "english": "to get lost",
       "category": "Travel",
@@ -924,7 +924,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10891",
+      "id": "a2-travel-das-souvenir-souvenir",
       "german": "das Souvenir",
       "english": "souvenir",
       "category": "Travel",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10892",
+      "id": "a2-travel-die-postkarte-postcard",
       "german": "die Postkarte",
       "english": "postcard",
       "category": "Travel",
@@ -964,7 +964,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10893",
+      "id": "a2-travel-das-reisebuero-travel-agency",
       "german": "das Reisebüro",
       "english": "travel agency",
       "category": "Travel",
@@ -984,7 +984,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10894",
+      "id": "a2-travel-die-touristeninformation-tourist-information",
       "german": "die Touristeninformation",
       "english": "tourist information",
       "category": "Travel",
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10895",
+      "id": "a2-travel-das-ausland-foreign-country-abroad",
       "german": "das Ausland",
       "english": "foreign country / abroad",
       "category": "Travel",
@@ -1024,7 +1024,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10896",
+      "id": "a2-travel-das-inland-domestic-inland",
       "german": "das Inland",
       "english": "domestic / inland",
       "category": "Travel",

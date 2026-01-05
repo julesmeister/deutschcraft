@@ -4,7 +4,7 @@
   "totalCards": 12,
   "flashcards": [
     {
-      "id": "syllabus-c1-11598",
+      "id": "c1-professional-communication-vereinbaren-to-agree-upon-to-arrange",
       "german": "vereinbaren",
       "english": "to agree upon / to arrange",
       "category": "Professional Communication",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11599",
+      "id": "c1-professional-communication-verhandeln-to-negotiate",
       "german": "verhandeln",
       "english": "to negotiate",
       "category": "Professional Communication",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11603",
+      "id": "c1-professional-communication-eroertern-to-discuss-to-debate",
       "german": "erörtern",
       "english": "to discuss / to debate",
       "category": "Professional Communication",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11604",
+      "id": "c1-professional-communication-beurteilen-to-assess-to-evaluate",
       "german": "beurteilen",
       "english": "to assess / to evaluate",
       "category": "Professional Communication",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11607",
+      "id": "c1-professional-communication-zusichern-to-assure-to-guarantee",
       "german": "zusichern",
       "english": "to assure / to guarantee",
       "category": "Professional Communication",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11608",
+      "id": "c1-professional-communication-verpflichten-to-obligate-to-commit",
       "german": "verpflichten",
       "english": "to obligate / to commit",
       "category": "Professional Communication",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-c1-11610",
+      "id": "c1-professional-communication-beanspruchen-to-claim-to-demand",
       "german": "beanspruchen",
       "english": "to claim / to demand",
       "category": "Professional Communication",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "c1-vereinbarung-044831",
+      "id": "c1-professional-communication-die-vereinbarung-agreement-arrangement",
       "german": "die Vereinbarung",
       "english": "agreement / arrangement",
       "category": "Professional Communication",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "c1-zustaendigkeit-044831",
+      "id": "c1-professional-communication-die-zustaendigkeit-responsibility-jurisdiction",
       "german": "die Zuständigkeit",
       "english": "responsibility / jurisdiction",
       "category": "Professional Communication",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "c1-vorgehensweise-044831",
+      "id": "c1-professional-communication-die-vorgehensweise-procedure-approach",
       "german": "die Vorgehensweise",
       "english": "procedure / approach",
       "category": "Professional Communication",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "c1-abwicklung-044831",
+      "id": "c1-professional-communication-die-abwicklung-processing-handling",
       "german": "die Abwicklung",
       "english": "processing / handling",
       "category": "Professional Communication",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "c1-durchfuehrung-044831",
+      "id": "c1-professional-communication-die-durchfuehrung-implementation-execution",
       "german": "die Durchführung",
       "english": "implementation / execution",
       "category": "Professional Communication",

@@ -4,7 +4,7 @@
   "totalCards": 30,
   "flashcards": [
     {
-      "id": "syllabus-a2-10497",
+      "id": "a2-communication-verbs-erzaehlen-to-tell-to-narrate",
       "german": "erzählen",
       "english": "to tell / to narrate",
       "category": "Communication Verbs",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10498",
+      "id": "a2-communication-verbs-beschreiben-to-describe",
       "german": "beschreiben",
       "english": "to describe",
       "category": "Communication Verbs",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10499",
+      "id": "a2-communication-verbs-diskutieren-to-discuss",
       "german": "diskutieren",
       "english": "to discuss",
       "category": "Communication Verbs",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10501",
+      "id": "a2-communication-verbs-mitteilen-to-inform-to-communicate",
       "german": "mitteilen",
       "english": "to inform / to communicate",
       "category": "Communication Verbs",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10502",
+      "id": "a2-communication-verbs-empfehlen-to-recommend",
       "german": "empfehlen",
       "english": "to recommend",
       "category": "Communication Verbs",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10503",
+      "id": "a2-communication-verbs-vorschlagen-to-suggest",
       "german": "vorschlagen",
       "english": "to suggest",
       "category": "Communication Verbs",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10504",
+      "id": "a2-communication-verbs-ueberzeugen-to-convince",
       "german": "überzeugen",
       "english": "to convince",
       "category": "Communication Verbs",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10505",
+      "id": "a2-communication-verbs-versprechen-to-promise",
       "german": "versprechen",
       "english": "to promise",
       "category": "Communication Verbs",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10506",
+      "id": "a2-communication-verbs-sich-beschweren-to-complain",
       "german": "sich beschweren",
       "english": "to complain",
       "category": "Communication Verbs",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10507",
+      "id": "a2-communication-verbs-gratulieren-to-congratulate",
       "german": "gratulieren",
       "english": "to congratulate",
       "category": "Communication Verbs",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10508",
+      "id": "a2-communication-verbs-sich-bedanken-to-thank",
       "german": "sich bedanken",
       "english": "to thank",
       "category": "Communication Verbs",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10509",
+      "id": "a2-communication-verbs-sich-entschuldigen-to-apologize",
       "german": "sich entschuldigen",
       "english": "to apologize",
       "category": "Communication Verbs",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10510",
+      "id": "a2-communication-verbs-berichten-to-report",
       "german": "berichten",
       "english": "to report",
       "category": "Communication Verbs",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10511",
+      "id": "a2-communication-verbs-warnen-to-warn",
       "german": "warnen",
       "english": "to warn",
       "category": "Communication Verbs",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujbk04vvxtn",
+      "id": "a2-communication-verbs-reden-to-talk",
       "german": "reden",
       "english": "to talk",
       "category": "Communication Verbs",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujbk05sr4zb",
+      "id": "a2-communication-verbs-plaudern-to-chat",
       "german": "plaudern",
       "english": "to chat",
       "category": "Communication Verbs",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujbk05a09h3",
+      "id": "a2-communication-verbs-fluestern-to-whisper",
       "german": "flüstern",
       "english": "to whisper",
       "category": "Communication Verbs",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujdiwg2tfz4",
+      "id": "a2-communication-verbs-informieren-to-inform",
       "german": "informieren",
       "english": "to inform",
       "category": "Communication Verbs",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujdiwgvvllz",
+      "id": "a2-communication-verbs-erwaehnen-to-mention",
       "german": "erwähnen",
       "english": "to mention",
       "category": "Communication Verbs",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujdiwg6y2nw",
+      "id": "a2-communication-verbs-betonen-to-emphasize",
       "german": "betonen",
       "english": "to emphasize",
       "category": "Communication Verbs",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujf2nnczdie",
+      "id": "a2-communication-verbs-sich-unterhalten-ueber-to-talk-about",
       "german": "sich unterhalten über",
       "english": "to talk about",
       "category": "Communication Verbs",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujf2nnwhy4t",
+      "id": "a2-communication-verbs-reden-ueber-to-talk-about",
       "german": "reden über",
       "english": "to talk about",
       "category": "Communication Verbs",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujf2nn1z5yk",
+      "id": "a2-communication-verbs-sprechen-ueber-to-speak-about",
       "german": "sprechen über",
       "english": "to speak about",
       "category": "Communication Verbs",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujf2nn546m6",
+      "id": "a2-communication-verbs-sich-besprechen-to-discuss-to-confer",
       "german": "sich besprechen",
       "english": "to discuss / to confer",
       "category": "Communication Verbs",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujf2nnz2ge4",
+      "id": "a2-communication-verbs-sich-aussprechen-to-have-it-out-to-talk-things-over",
       "german": "sich aussprechen",
       "english": "to have it out / to talk things over",
       "category": "Communication Verbs",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujf2nn0aa7l",
+      "id": "a2-communication-verbs-beantworten-to-answer-a-question",
       "german": "beantworten",
       "english": "to answer (a question)",
       "category": "Communication Verbs",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujf2nnoypy5",
+      "id": "a2-communication-verbs-reagieren-auf-to-react-to",
       "german": "reagieren auf",
       "english": "to react to",
       "category": "Communication Verbs",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujg5fenkdu7",
+      "id": "a2-communication-verbs-kritisieren-to-criticize",
       "german": "kritisieren",
       "english": "to criticize",
       "category": "Communication Verbs",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujh1kmwv02i",
+      "id": "a2-communication-verbs-sich-aeussern-zu-to-express-oneself-about",
       "german": "sich äußern zu",
       "english": "to express oneself about",
       "category": "Communication Verbs",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "a2-communication-verbs-miujh1kmtlgcj",
+      "id": "a2-communication-verbs-eine-meinung-aeussern-to-express-an-opinion",
       "german": "eine Meinung äußern",
       "english": "to express an opinion",
       "category": "Communication Verbs",

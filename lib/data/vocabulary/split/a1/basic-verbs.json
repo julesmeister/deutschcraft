@@ -4,7 +4,7 @@
   "totalCards": 33,
   "flashcards": [
     {
-      "id": "syllabus-a1-10030",
+      "id": "a1-basic-verbs-sein-to-be",
       "german": "sein",
       "english": "to be",
       "category": "Basic Verbs",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10031",
+      "id": "a1-basic-verbs-haben-to-have",
       "german": "haben",
       "english": "to have",
       "category": "Basic Verbs",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10032",
+      "id": "a1-basic-verbs-machen-to-do-to-make",
       "german": "machen",
       "english": "to do / to make",
       "category": "Basic Verbs",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10033",
+      "id": "a1-basic-verbs-gehen-to-go",
       "german": "gehen",
       "english": "to go",
       "category": "Basic Verbs",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10034",
+      "id": "a1-basic-verbs-kommen-to-come",
       "german": "kommen",
       "english": "to come",
       "category": "Basic Verbs",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10035",
+      "id": "a1-basic-verbs-sehen-to-see",
       "german": "sehen",
       "english": "to see",
       "category": "Basic Verbs",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10036",
+      "id": "a1-basic-verbs-essen-to-eat",
       "german": "essen",
       "english": "to eat",
       "category": "Basic Verbs",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10037",
+      "id": "a1-basic-verbs-trinken-to-drink",
       "german": "trinken",
       "english": "to drink",
       "category": "Basic Verbs",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10038",
+      "id": "a1-basic-verbs-wohnen-to-live",
       "german": "wohnen",
       "english": "to live",
       "category": "Basic Verbs",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10039",
+      "id": "a1-basic-verbs-heissen-to-be-called",
       "german": "heißen",
       "english": "to be called",
       "category": "Basic Verbs",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10040",
+      "id": "a1-basic-verbs-schlafen-to-sleep",
       "german": "schlafen",
       "english": "to sleep",
       "category": "Basic Verbs",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10041",
+      "id": "a1-basic-verbs-kaufen-to-buy",
       "german": "kaufen",
       "english": "to buy",
       "category": "Basic Verbs",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10042",
+      "id": "a1-basic-verbs-kosten-to-cost",
       "german": "kosten",
       "english": "to cost",
       "category": "Basic Verbs",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10043",
+      "id": "a1-basic-verbs-brauchen-to-need",
       "german": "brauchen",
       "english": "to need",
       "category": "Basic Verbs",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10044",
+      "id": "a1-basic-verbs-moegen-to-like",
       "german": "mögen",
       "english": "to like",
       "category": "Basic Verbs",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10045",
+      "id": "a1-basic-verbs-wollen-to-want",
       "german": "wollen",
       "english": "to want",
       "category": "Basic Verbs",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10046",
+      "id": "a1-basic-verbs-lieben-to-love",
       "german": "lieben",
       "english": "to love",
       "category": "Basic Verbs",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10047",
+      "id": "a1-basic-verbs-hoeren-to-hear-to-listen",
       "german": "hören",
       "english": "to hear / to listen",
       "category": "Basic Verbs",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10048",
+      "id": "a1-basic-verbs-sagen-to-say",
       "german": "sagen",
       "english": "to say",
       "category": "Basic Verbs",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10049",
+      "id": "a1-basic-verbs-fragen-to-ask",
       "german": "fragen",
       "english": "to ask",
       "category": "Basic Verbs",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10050",
+      "id": "a1-basic-verbs-antworten-to-answer",
       "german": "antworten",
       "english": "to answer",
       "category": "Basic Verbs",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10051",
+      "id": "a1-basic-verbs-suchen-to-search-to-look-for",
       "german": "suchen",
       "english": "to search / to look for",
       "category": "Basic Verbs",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10052",
+      "id": "a1-basic-verbs-finden-to-find",
       "german": "finden",
       "english": "to find",
       "category": "Basic Verbs",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10053",
+      "id": "a1-basic-verbs-verstehen-to-understand",
       "german": "verstehen",
       "english": "to understand",
       "category": "Basic Verbs",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10054",
+      "id": "a1-basic-verbs-kennen-to-know-a-personplace",
       "german": "kennen",
       "english": "to know (a person/place)",
       "category": "Basic Verbs",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10055",
+      "id": "a1-basic-verbs-wissen-to-know-a-fact",
       "german": "wissen",
       "english": "to know (a fact)",
       "category": "Basic Verbs",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10056",
+      "id": "a1-basic-verbs-glauben-to-believe-to-think",
       "german": "glauben",
       "english": "to believe / to think",
       "category": "Basic Verbs",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10057",
+      "id": "a1-basic-verbs-denken-to-think",
       "german": "denken",
       "english": "to think",
       "category": "Basic Verbs",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10058",
+      "id": "a1-basic-verbs-geben-to-give",
       "german": "geben",
       "english": "to give",
       "category": "Basic Verbs",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10059",
+      "id": "a1-basic-verbs-nehmen-to-take",
       "german": "nehmen",
       "english": "to take",
       "category": "Basic Verbs",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "a1-putzen-044823",
+      "id": "a1-basic-verbs-putzen-to-clean",
       "german": "putzen",
       "english": "to clean",
       "category": "Basic Verbs",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10328",
+      "id": "a1-common-verbs-bringen-to-bring",
       "german": "bringen",
       "english": "to bring",
       "category": "Common Verbs",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "a2-common-verbs-miujdiwbaiw3f",
+      "id": "a1-common-verbs-tun-to-do",
       "german": "tun",
       "english": "to do",
       "category": "Common Verbs",

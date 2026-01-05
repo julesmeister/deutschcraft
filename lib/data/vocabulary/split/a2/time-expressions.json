@@ -4,7 +4,7 @@
   "totalCards": 30,
   "flashcards": [
     {
-      "id": "syllabus-a2-10804",
+      "id": "a2-time-expressions-jeden-tag-every-day",
       "german": "jeden Tag",
       "english": "every day",
       "category": "Time Expressions",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10807",
+      "id": "a2-time-expressions-letzte-woche-last-week",
       "german": "letzte Woche",
       "english": "last week",
       "category": "Time Expressions",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miuj9qfdut27d",
+      "id": "a2-time-expressions-schon-already",
       "german": "schon",
       "english": "already",
       "category": "Time Expressions",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miuj9qfdzkgzf",
+      "id": "a2-time-expressions-noch-still-yet",
       "german": "noch",
       "english": "still / yet",
       "category": "Time Expressions",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miuj9qfdp12zn",
+      "id": "a2-time-expressions-meistens-mostly-usually",
       "german": "meistens",
       "english": "mostly / usually",
       "category": "Time Expressions",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miuj9qfdopwad",
+      "id": "a2-time-expressions-vorher-before-beforehand",
       "german": "vorher",
       "english": "before / beforehand",
       "category": "Time Expressions",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miuj9qfdtu5lv",
+      "id": "a2-time-expressions-inzwischen-meanwhile-in-the-meantime",
       "german": "inzwischen",
       "english": "meanwhile / in the meantime",
       "category": "Time Expressions",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miuj9qfe8606t",
+      "id": "a2-time-expressions-ploetzlich-suddenly",
       "german": "plötzlich",
       "english": "suddenly",
       "category": "Time Expressions",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miuj9qfe5zul2",
+      "id": "a2-time-expressions-endlich-finally",
       "german": "endlich",
       "english": "finally",
       "category": "Time Expressions",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujdiwcrlbl7",
+      "id": "a2-time-expressions-die-uhrzeit-time-of-day",
       "german": "die Uhrzeit",
       "english": "time (of day)",
       "category": "Time Expressions",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujdiwcymyou",
+      "id": "a2-time-expressions-dauern-to-last-to-take-time",
       "german": "dauern",
       "english": "to last / to take (time)",
       "category": "Time Expressions",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujf2nmkt45q",
+      "id": "a2-time-expressions-die-zeitspanne-time-span",
       "german": "die Zeitspanne",
       "english": "time span",
       "category": "Time Expressions",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujf2nmvz3h1",
+      "id": "a2-time-expressions-die-dauer-duration",
       "german": "die Dauer",
       "english": "duration",
       "category": "Time Expressions",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujf2nmr2xs8",
+      "id": "a2-time-expressions-gleichzeitig-at-the-same-time-simultaneously",
       "german": "gleichzeitig",
       "english": "at the same time / simultaneously",
       "category": "Time Expressions",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujf2nmcmqut",
+      "id": "a2-time-expressions-nacheinander-one-after-another-in-sequence",
       "german": "nacheinander",
       "english": "one after another / in sequence",
       "category": "Time Expressions",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujf2nmwxnhz",
+      "id": "a2-time-expressions-hintereinander-in-a-row-consecutively",
       "german": "hintereinander",
       "english": "in a row / consecutively",
       "category": "Time Expressions",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujf2nmbnrnd",
+      "id": "a2-time-expressions-ab-und-zu-now-and-then-occasionally",
       "german": "ab und zu",
       "english": "now and then / occasionally",
       "category": "Time Expressions",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujf2nmz6nt6",
+      "id": "a2-time-expressions-hin-und-wieder-now-and-again",
       "german": "hin und wieder",
       "english": "now and again",
       "category": "Time Expressions",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujf2nmju7x8",
+      "id": "a2-time-expressions-von-zeit-zu-zeit-from-time-to-time",
       "german": "von Zeit zu Zeit",
       "english": "from time to time",
       "category": "Time Expressions",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujf2nmvwnax",
+      "id": "a2-time-expressions-ab-sofort-from-now-on-immediately",
       "german": "ab sofort",
       "english": "from now on / immediately",
       "category": "Time Expressions",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujg5fd5n15n",
+      "id": "a2-time-expressions-der-augenblick-moment",
       "german": "der Augenblick",
       "english": "moment",
       "category": "Time Expressions",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujg5fd66j6f",
+      "id": "a2-time-expressions-der-moment-moment",
       "german": "der Moment",
       "english": "moment",
       "category": "Time Expressions",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujg5fd60bdt",
+      "id": "a2-time-expressions-im-moment-at-the-moment",
       "german": "im Moment",
       "english": "at the moment",
       "category": "Time Expressions",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujg5fd3t8f0",
+      "id": "a2-time-expressions-im-augenblick-at-the-moment",
       "german": "im Augenblick",
       "english": "at the moment",
       "category": "Time Expressions",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujg5fdq1zv7",
+      "id": "a2-time-expressions-zur-zeit-at-present-currently",
       "german": "zur Zeit",
       "english": "at present / currently",
       "category": "Time Expressions",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujg5feie2hl",
+      "id": "a2-time-expressions-derzeit-currently-at-present",
       "german": "derzeit",
       "english": "currently / at present",
       "category": "Time Expressions",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujg5febnnch",
+      "id": "a2-time-expressions-gegenwaertig-currently-presently",
       "german": "gegenwärtig",
       "english": "currently / presently",
       "category": "Time Expressions",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujh1kllrhbe",
+      "id": "a2-time-expressions-voruebergehend-temporary-temporarily",
       "german": "vorübergehend",
       "english": "temporary / temporarily",
       "category": "Time Expressions",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujk6v2mix4x",
+      "id": "a2-time-expressions-die-zeitzone-time-zone",
       "german": "die Zeitzone",
       "english": "time zone",
       "category": "Time Expressions",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "a2-time-expressions-miujkpdigconb",
+      "id": "a2-time-expressions-jahrelang-for-years",
       "german": "jahrelang",
       "english": "for years",
       "category": "Time Expressions",

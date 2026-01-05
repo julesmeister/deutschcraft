@@ -4,7 +4,7 @@
   "totalCards": 43,
   "flashcards": [
     {
-      "id": "syllabus-b1-10927",
+      "id": "b1-conjunctions-obwohl-although-even-though",
       "german": "obwohl",
       "english": "although / even though",
       "category": "Conjunctions",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10928",
+      "id": "b1-conjunctions-waehrend-while-during",
       "german": "während",
       "english": "while / during",
       "category": "Conjunctions",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10929",
+      "id": "b1-conjunctions-bevor-before",
       "german": "bevor",
       "english": "before",
       "category": "Conjunctions",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10930",
+      "id": "b1-conjunctions-nachdem-after",
       "german": "nachdem",
       "english": "after",
       "category": "Conjunctions",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10931",
+      "id": "b1-conjunctions-sobald-as-soon-as",
       "german": "sobald",
       "english": "as soon as",
       "category": "Conjunctions",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10932",
+      "id": "b1-conjunctions-solange-as-long-as",
       "german": "solange",
       "english": "as long as",
       "category": "Conjunctions",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10933",
+      "id": "b1-conjunctions-falls-in-case-if",
       "german": "falls",
       "english": "in case / if",
       "category": "Conjunctions",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10934",
+      "id": "b1-conjunctions-damit-so-that-in-order-to",
       "german": "damit",
       "english": "so that / in order to",
       "category": "Conjunctions",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10935",
+      "id": "b1-conjunctions-trotzdem-nevertheless-anyway",
       "german": "trotzdem",
       "english": "nevertheless / anyway",
       "category": "Conjunctions",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10937",
+      "id": "b1-conjunctions-entwederoder-eitheror",
       "german": "entweder...oder",
       "english": "either...or",
       "category": "Conjunctions",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10938",
+      "id": "b1-conjunctions-wedernoch-neithernor",
       "german": "weder...noch",
       "english": "neither...nor",
       "category": "Conjunctions",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10939",
+      "id": "b1-conjunctions-sowohlals-auch-bothand",
       "german": "sowohl...als auch",
       "english": "both...and",
       "category": "Conjunctions",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10940",
+      "id": "b1-conjunctions-jedesto-thethe-comparative",
       "german": "je...desto",
       "english": "the...the (comparative)",
       "category": "Conjunctions",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10941",
+      "id": "b1-conjunctions-als-when-as-than",
       "german": "als",
       "english": "when / as / than",
       "category": "Conjunctions",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10942",
+      "id": "b1-conjunctions-wenn-if-when",
       "german": "wenn",
       "english": "if / when",
       "category": "Conjunctions",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10943",
+      "id": "b1-conjunctions-da-since-because",
       "german": "da",
       "english": "since / because",
       "category": "Conjunctions",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10944",
+      "id": "b1-conjunctions-denn-because-for",
       "german": "denn",
       "english": "because / for",
       "category": "Conjunctions",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10945",
+      "id": "b1-conjunctions-deshalb-therefore-thats-why",
       "german": "deshalb",
       "english": "therefore / that's why",
       "category": "Conjunctions",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10946",
+      "id": "b1-conjunctions-deswegen-for-that-reason",
       "german": "deswegen",
       "english": "for that reason",
       "category": "Conjunctions",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10947",
+      "id": "b1-conjunctions-darum-thats-why-therefore",
       "german": "darum",
       "english": "that's why / therefore",
       "category": "Conjunctions",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-b1-10948",
+      "id": "b1-conjunctions-dennoch-nevertheless-yet",
       "german": "dennoch",
       "english": "nevertheless / yet",
       "category": "Conjunctions",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "b1-angenommen-827791",
+      "id": "b1-conjunctions-angenommen-assuming-granted",
       "german": "angenommen",
       "english": "assuming / granted",
       "category": "Conjunctions",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "b1-anstelle-827791",
+      "id": "b1-conjunctions-anstelle-instead-of",
       "german": "anstelle",
       "english": "instead of",
       "category": "Conjunctions",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "b1-anstatt-827791",
+      "id": "b1-conjunctions-anstatt-instead-of",
       "german": "anstatt",
       "english": "instead of",
       "category": "Conjunctions",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "b1-ausgenomme-827791",
+      "id": "b1-conjunctions-ausgenommen-except-for-excepting",
       "german": "ausgenommen",
       "english": "except for / excepting",
       "category": "Conjunctions",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "b1-dabei-827791",
+      "id": "b1-conjunctions-dabei-in-doing-so-while",
       "german": "dabei",
       "english": "in doing so / while",
       "category": "Conjunctions",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "b1-daher-827791",
+      "id": "b1-conjunctions-daher-therefore-for-that-reason",
       "german": "daher",
       "english": "therefore / for that reason",
       "category": "Conjunctions",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "b1-daran-827791",
+      "id": "b1-conjunctions-daran-on-that-with-that",
       "german": "daran",
       "english": "on that / with that",
       "category": "Conjunctions",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "b1-darunterle-827792",
+      "id": "b1-conjunctions-darunter-leiden-to-suffer-from-it",
       "german": "darunter leiden",
       "english": "to suffer from it",
       "category": "Conjunctions",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "b1-darunterve-827792",
+      "id": "b1-conjunctions-darunter-verstehen-to-understand-by-that",
       "german": "darunter verstehen",
       "english": "to understand by that",
       "category": "Conjunctions",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "b1-darunterfa-827792",
+      "id": "b1-conjunctions-darunter-fallen-to-fall-under",
       "german": "darunter fallen",
       "english": "to fall under",
       "category": "Conjunctions",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "b1-darunterhi-827792",
+      "id": "b1-conjunctions-darunter-hinein-into-that",
       "german": "darunter hinein",
       "english": "into that",
       "category": "Conjunctions",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "b1-darunterli-827792",
+      "id": "b1-conjunctions-darunter-liegend-lying-under",
       "german": "darunter liegend",
       "english": "lying under",
       "category": "Conjunctions",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "b1-darunterst-827792",
+      "id": "b1-conjunctions-darunter-stecken-to-be-stuck-underneath",
       "german": "darunter stecken",
       "english": "to be stuck underneath",
       "category": "Conjunctions",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "b1-conjunctions-miv8iuohw7p1n",
+      "id": "b1-conjunctions-und-and",
       "german": "und",
       "english": "and",
       "category": "Conjunctions",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "b1-conjunctions-miv8iuohgn5ud",
+      "id": "b1-conjunctions-oder-or",
       "german": "oder",
       "english": "or",
       "category": "Conjunctions",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "b1-conjunctions-miv8iuoheuq07",
+      "id": "b1-conjunctions-aber-but",
       "german": "aber",
       "english": "but",
       "category": "Conjunctions",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "b1-conjunctions-miv8iuoh4picf",
+      "id": "b1-conjunctions-sondern-but-rather-but-instead",
       "german": "sondern",
       "english": "but rather / but instead",
       "category": "Conjunctions",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "b1-conjunctions-miv8iuohgeedg",
+      "id": "b1-conjunctions-doch-but-however-yet",
       "german": "doch",
       "english": "but / however / yet",
       "category": "Conjunctions",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "b1-conjunctions-miv8iuoh90iwd",
+      "id": "b1-conjunctions-jedoch-however-nevertheless",
       "german": "jedoch",
       "english": "however / nevertheless",
       "category": "Conjunctions",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "b1-conjunctions-miv8iuohfozrx",
+      "id": "b1-conjunctions-zwar-indeed-to-be-sure",
       "german": "zwar",
       "english": "indeed / to be sure",
       "category": "Conjunctions",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "b1-conjunctions-miv8iuohq2kkg",
+      "id": "b1-conjunctions-einerseits-on-the-one-hand",
       "german": "einerseits",
       "english": "on the one hand",
       "category": "Conjunctions",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "b1-conjunctions-miv8iuohswdqk",
+      "id": "b1-conjunctions-andererseits-on-the-other-hand",
       "german": "andererseits",
       "english": "on the other hand",
       "category": "Conjunctions",

@@ -4,7 +4,7 @@
   "totalCards": 39,
   "flashcards": [
     {
-      "id": "body-b1-002",
+      "id": "b1-body-parts-die-lunge-lung",
       "german": "die Lunge",
       "english": "lung",
       "category": "Body Parts",
@@ -25,7 +25,7 @@
       }
     },
     {
-      "id": "body-b1-003",
+      "id": "b1-body-parts-die-leber-liver",
       "german": "die Leber",
       "english": "liver",
       "category": "Body Parts",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "id": "body-b1-004",
+      "id": "b1-body-parts-die-niere-kidney",
       "german": "die Niere",
       "english": "kidney",
       "category": "Body Parts",
@@ -67,7 +67,7 @@
       }
     },
     {
-      "id": "body-b1-005",
+      "id": "b1-body-parts-der-magen-stomach-organ",
       "german": "der Magen",
       "english": "stomach (organ)",
       "category": "Body Parts",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "id": "body-b1-006",
+      "id": "b1-body-parts-der-darm-intestine",
       "german": "der Darm",
       "english": "intestine",
       "category": "Body Parts",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "id": "body-b1-007",
+      "id": "b1-body-parts-das-gehirn-brain",
       "german": "das Gehirn",
       "english": "brain",
       "category": "Body Parts",
@@ -130,7 +130,7 @@
       }
     },
     {
-      "id": "body-b1-008",
+      "id": "b1-body-parts-der-muskel-muscle",
       "german": "der Muskel",
       "english": "muscle",
       "category": "Body Parts",
@@ -151,7 +151,7 @@
       }
     },
     {
-      "id": "body-b1-009",
+      "id": "b1-body-parts-der-nerv-nerve",
       "german": "der Nerv",
       "english": "nerve",
       "category": "Body Parts",
@@ -172,7 +172,7 @@
       }
     },
     {
-      "id": "body-b1-010",
+      "id": "b1-body-parts-die-ader-vein-blood-vessel",
       "german": "die Ader",
       "english": "vein / blood vessel",
       "category": "Body Parts",
@@ -193,7 +193,7 @@
       }
     },
     {
-      "id": "body-b1-011",
+      "id": "b1-body-parts-die-rippe-rib",
       "german": "die Rippe",
       "english": "rib",
       "category": "Body Parts",
@@ -214,7 +214,7 @@
       }
     },
     {
-      "id": "body-b1-012",
+      "id": "b1-body-parts-die-wirbelsaeule-spine-backbone",
       "german": "die Wirbelsäule",
       "english": "spine / backbone",
       "category": "Body Parts",
@@ -235,7 +235,7 @@
       }
     },
     {
-      "id": "body-b1-013",
+      "id": "b1-body-parts-der-schaedel-skull",
       "german": "der Schädel",
       "english": "skull",
       "category": "Body Parts",
@@ -256,7 +256,7 @@
       }
     },
     {
-      "id": "body-b1-014",
+      "id": "b1-body-parts-das-gelenk-joint",
       "german": "das Gelenk",
       "english": "joint",
       "category": "Body Parts",
@@ -277,7 +277,7 @@
       }
     },
     {
-      "id": "body-b1-015",
+      "id": "b1-body-parts-die-huefte-hip",
       "german": "die Hüfte",
       "english": "hip",
       "category": "Body Parts",
@@ -298,7 +298,7 @@
       }
     },
     {
-      "id": "body-b1-016",
+      "id": "b1-body-parts-die-taille-waist",
       "german": "die Taille",
       "english": "waist",
       "category": "Body Parts",
@@ -319,7 +319,7 @@
       }
     },
     {
-      "id": "body-b1-017",
+      "id": "b1-body-parts-der-oberschenkel-thigh",
       "german": "der Oberschenkel",
       "english": "thigh",
       "category": "Body Parts",
@@ -340,7 +340,7 @@
       }
     },
     {
-      "id": "body-b1-018",
+      "id": "b1-body-parts-die-wade-calf-leg",
       "german": "die Wade",
       "english": "calf (leg)",
       "category": "Body Parts",
@@ -361,7 +361,7 @@
       }
     },
     {
-      "id": "body-b1-019",
+      "id": "b1-body-parts-die-ferse-heel",
       "german": "die Ferse",
       "english": "heel",
       "category": "Body Parts",
@@ -382,7 +382,7 @@
       }
     },
     {
-      "id": "body-b1-020",
+      "id": "b1-body-parts-die-fusssohle-sole-of-foot",
       "german": "die Fußsohle",
       "english": "sole of foot",
       "category": "Body Parts",
@@ -403,7 +403,7 @@
       }
     },
     {
-      "id": "body-b1-021",
+      "id": "b1-body-parts-der-oberarm-upper-arm",
       "german": "der Oberarm",
       "english": "upper arm",
       "category": "Body Parts",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "body-b1-022",
+      "id": "b1-body-parts-der-unterarm-forearm",
       "german": "der Unterarm",
       "english": "forearm",
       "category": "Body Parts",
@@ -445,7 +445,7 @@
       }
     },
     {
-      "id": "body-b1-023",
+      "id": "b1-body-parts-die-handflaeche-palm-of-hand",
       "german": "die Handfläche",
       "english": "palm (of hand)",
       "category": "Body Parts",
@@ -466,7 +466,7 @@
       }
     },
     {
-      "id": "body-b1-024",
+      "id": "b1-body-parts-der-fingernagel-fingernail",
       "german": "der Fingernagel",
       "english": "fingernail",
       "category": "Body Parts",
@@ -487,7 +487,7 @@
       }
     },
     {
-      "id": "body-b1-025",
+      "id": "b1-body-parts-der-bart-beard",
       "german": "der Bart",
       "english": "beard",
       "category": "Body Parts",
@@ -508,7 +508,7 @@
       }
     },
     {
-      "id": "body-b1-026",
+      "id": "b1-body-parts-der-schnurrbart-mustache",
       "german": "der Schnurrbart",
       "english": "mustache",
       "category": "Body Parts",
@@ -529,7 +529,7 @@
       }
     },
     {
-      "id": "body-b1-027",
+      "id": "b1-body-parts-die-pupille-pupil-eye",
       "german": "die Pupille",
       "english": "pupil (eye)",
       "category": "Body Parts",
@@ -550,7 +550,7 @@
       }
     },
     {
-      "id": "body-b1-028",
+      "id": "b1-body-parts-das-augenlid-eyelid",
       "german": "das Augenlid",
       "english": "eyelid",
       "category": "Body Parts",
@@ -571,7 +571,7 @@
       }
     },
     {
-      "id": "body-b1-029",
+      "id": "b1-body-parts-die-kehle-throat-gullet",
       "german": "die Kehle",
       "english": "throat / gullet",
       "category": "Body Parts",
@@ -592,7 +592,7 @@
       }
     },
     {
-      "id": "body-b1-030",
+      "id": "b1-body-parts-der-gaumen-palate",
       "german": "der Gaumen",
       "english": "palate",
       "category": "Body Parts",
@@ -613,7 +613,7 @@
       }
     },
     {
-      "id": "b1-dieschlfe-827793",
+      "id": "b1-body-parts-die-schlaefe-temple",
       "german": "die Schläfe",
       "english": "temple",
       "category": "Body Parts",
@@ -633,7 +633,7 @@
       }
     },
     {
-      "id": "b1-dasschienb-827793",
+      "id": "b1-body-parts-das-schienbein-shin-shinbone",
       "german": "das Schienbein",
       "english": "shin / shinbone",
       "category": "Body Parts",
@@ -653,7 +653,7 @@
       }
     },
     {
-      "id": "b1-derfersenk-827793",
+      "id": "b1-body-parts-der-fersenknochen-heel-bone-calcaneus",
       "german": "der Fersenknochen",
       "english": "heel bone / calcaneus",
       "category": "Body Parts",
@@ -673,7 +673,7 @@
       }
     },
     {
-      "id": "b1-derfurcken-827793",
+      "id": "b1-body-parts-der-fussruecken-top-of-the-foot",
       "german": "der Fußrücken",
       "english": "top of the foot",
       "category": "Body Parts",
@@ -693,7 +693,7 @@
       }
     },
     {
-      "id": "b1-dieellboge-827793",
+      "id": "b1-body-parts-die-ellboge-elbow",
       "german": "die Ellboge",
       "english": "elbow",
       "category": "Body Parts",
@@ -713,7 +713,7 @@
       }
     },
     {
-      "id": "b1-dasellboge-827793",
+      "id": "b1-body-parts-das-ellbogengelenk-elbow-joint",
       "german": "das Ellbogengelenk",
       "english": "elbow joint",
       "category": "Body Parts",
@@ -733,7 +733,7 @@
       }
     },
     {
-      "id": "b1-dasschulte-827793",
+      "id": "b1-body-parts-das-schulterblatt-shoulder-blade-scapula",
       "german": "das Schulterblatt",
       "english": "shoulder blade / scapula",
       "category": "Body Parts",
@@ -753,7 +753,7 @@
       }
     },
     {
-      "id": "b1-dasschlsse-827793",
+      "id": "b1-body-parts-das-schluesselbein-collarbone-clavicle",
       "german": "das Schlüsselbein",
       "english": "collarbone / clavicle",
       "category": "Body Parts",
@@ -773,7 +773,7 @@
       }
     },
     {
-      "id": "b1-dasbrustbe-827793",
+      "id": "b1-body-parts-das-brustbein-breastbone-sternum",
       "german": "das Brustbein",
       "english": "breastbone / sternum",
       "category": "Body Parts",
@@ -793,7 +793,7 @@
       }
     },
     {
-      "id": "b1-dasrippenf-827793",
+      "id": "b1-body-parts-das-rippenfell-pleura-rib-membrane",
       "german": "das Rippenfell",
       "english": "pleura / rib membrane",
       "category": "Body Parts",

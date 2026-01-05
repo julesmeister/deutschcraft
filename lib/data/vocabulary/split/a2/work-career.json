@@ -4,7 +4,7 @@
   "totalCards": 30,
   "flashcards": [
     {
-      "id": "a2-ueberstunde-044825",
+      "id": "a2-work-career-die-ueberstunde-overtime",
       "german": "die Überstunde",
       "english": "overtime",
       "category": "Work Career",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "a2-work-career-miuj9qfddmd52",
+      "id": "a2-work-career-die-karriere-career",
       "german": "die Karriere",
       "english": "career",
       "category": "Work Career",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "a2-work-career-miuj9qfd48w6a",
+      "id": "a2-work-career-der-lohn-wage",
       "german": "der Lohn",
       "english": "wage",
       "category": "Work Career",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "a2-work-career-miuj9qfdye55q",
+      "id": "a2-work-career-das-vorstellungsgespraech-job-interview",
       "german": "das Vorstellungsgespräch",
       "english": "job interview",
       "category": "Work Career",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "a2-work-career-miuj9qfdp7fmo",
+      "id": "a2-work-career-die-chefin-boss-female",
       "german": "die Chefin",
       "english": "boss (female)",
       "category": "Work Career",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "a2-work-career-miuj9qfda4hek",
+      "id": "a2-work-career-die-kollegin-colleague-female",
       "german": "die Kollegin",
       "english": "colleague (female)",
       "category": "Work Career",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "a2-work-career-miuj9qfdrawxl",
+      "id": "a2-work-career-die-mitarbeiterin-employee-co-worker-female",
       "german": "die Mitarbeiterin",
       "english": "employee / co-worker (female)",
       "category": "Work Career",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "a2-work-career-miuj9qfd14c8m",
+      "id": "a2-work-career-die-kuendigung-resignation-termination",
       "german": "die Kündigung",
       "english": "resignation / termination",
       "category": "Work Career",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "a2-work-career-miuj9qfdhle11",
+      "id": "a2-work-career-befoerdert-werden-to-be-promoted",
       "german": "befördert werden",
       "english": "to be promoted",
       "category": "Work Career",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujdiwdwuksj",
+      "id": "a2-work-career-das-unternehmen-company-enterprise",
       "german": "das Unternehmen",
       "english": "company / enterprise",
       "category": "Work Career",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujdiwdfdbfa",
+      "id": "a2-work-career-der-betrieb-company-operation",
       "german": "der Betrieb",
       "english": "company / operation",
       "category": "Work Career",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujdiwdgxfnc",
+      "id": "a2-work-career-das-team-team",
       "german": "das Team",
       "english": "team",
       "category": "Work Career",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujdiwdzq2jx",
+      "id": "a2-work-career-die-sitzung-meeting",
       "german": "die Sitzung",
       "english": "meeting",
       "category": "Work Career",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujdiwdo2lmy",
+      "id": "a2-work-career-die-verantwortung-responsibility",
       "german": "die Verantwortung",
       "english": "responsibility",
       "category": "Work Career",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujdiwdbioo5",
+      "id": "a2-work-career-die-faehigkeit-skill-ability",
       "german": "die Fähigkeit",
       "english": "skill / ability",
       "category": "Work Career",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujdiwds536p",
+      "id": "a2-work-career-die-kompetenz-competence",
       "german": "die Kompetenz",
       "english": "competence",
       "category": "Work Career",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujdiwdibv2r",
+      "id": "a2-work-career-die-leistung-performance-achievement",
       "german": "die Leistung",
       "english": "performance / achievement",
       "category": "Work Career",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujdiwdj1r2x",
+      "id": "a2-work-career-die-praxis-practice-internship",
       "german": "die Praxis",
       "english": "practice / internship",
       "category": "Work Career",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujdiwdt6a2d",
+      "id": "a2-work-career-die-praktikantin-intern-female",
       "german": "die Praktikantin",
       "english": "intern (female)",
       "category": "Work Career",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujdiwd3er8w",
+      "id": "a2-work-career-die-frist-deadline",
       "german": "die Frist",
       "english": "deadline",
       "category": "Work Career",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujdiwdqzpjn",
+      "id": "a2-work-career-der-feierabend-end-of-work-day",
       "german": "der Feierabend",
       "english": "end of work day",
       "category": "Work Career",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujf2np864eh",
+      "id": "a2-work-career-die-schicht-shift",
       "german": "die Schicht",
       "english": "shift",
       "category": "Work Career",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujf2npl6fc6",
+      "id": "a2-work-career-die-nachtschicht-night-shift",
       "german": "die Nachtschicht",
       "english": "night shift",
       "category": "Work Career",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujf2npl9xkm",
+      "id": "a2-work-career-die-tagschicht-day-shift",
       "german": "die Tagschicht",
       "english": "day shift",
       "category": "Work Career",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujf2npljuqt",
+      "id": "a2-work-career-die-probezeit-probation-period",
       "german": "die Probezeit",
       "english": "probation period",
       "category": "Work Career",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujf2nph5h2h",
+      "id": "a2-work-career-der-arbeitsvertrag-employment-contract",
       "german": "der Arbeitsvertrag",
       "english": "employment contract",
       "category": "Work Career",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujf2npdgm2i",
+      "id": "a2-work-career-die-sozialversicherung-social-security",
       "german": "die Sozialversicherung",
       "english": "social security",
       "category": "Work Career",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujf2npb2law",
+      "id": "a2-work-career-die-krankenkasse-health-insurance",
       "german": "die Krankenkasse",
       "english": "health insurance",
       "category": "Work Career",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujk6v25rdiz",
+      "id": "a2-work-career-die-rente-pension-retirement",
       "german": "die Rente",
       "english": "pension / retirement",
       "category": "Work Career",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "a2-work-career-miujk6v23m1rl",
+      "id": "a2-work-career-pensioniert-retired",
       "german": "pensioniert",
       "english": "retired",
       "category": "Work Career",

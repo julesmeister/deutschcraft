@@ -5,6 +5,7 @@
 
 import { useState, useEffect } from "react";
 import { useFlashcardMutations } from "./useFlashcardMutations";
+import { useFlashcardKeyboard } from "./useFlashcardKeyboard";
 import { useFirebaseAuth } from "./useFirebaseAuth";
 import { useToast } from "@/components/ui/toast";
 
@@ -63,58 +64,6 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
       ? ((currentIndex + 1) / activeFlashcards.length) * 100
       : 0;
   const isLastCard = currentIndex === activeFlashcards.length - 1;
-
-  // Keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Prevent shortcuts if typing in input
-      if (
-        e.target instanceof HTMLInputElement ||
-        e.target instanceof HTMLTextAreaElement
-      ) {
-        return;
-      }
-
-      switch (e.key) {
-        case " ":
-        case "Enter":
-          e.preventDefault();
-          handleFlip();
-          break;
-        case "1":
-          e.preventDefault();
-          if (isFlipped) handleDifficulty("again");
-          break;
-        case "2":
-          e.preventDefault();
-          if (isFlipped) handleDifficulty("hard");
-          break;
-        case "3":
-          e.preventDefault();
-          if (isFlipped) handleDifficulty("good");
-          break;
-        case "4":
-          e.preventDefault();
-          if (isFlipped) handleDifficulty("easy");
-          break;
-        case "5":
-          e.preventDefault();
-          if (isFlipped) handleDifficulty("expert");
-          break;
-        case "ArrowLeft":
-          e.preventDefault();
-          handlePrevious();
-          break;
-        case "ArrowRight":
-          e.preventDefault();
-          handleNext();
-          break;
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isFlipped, currentIndex]);
 
   const handleDifficulty = async (difficulty: DifficultyLevel) => {
     // Record the review
@@ -222,7 +171,7 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
       finalStats.hard + finalStats.good + finalStats.easy + finalStats.expert; // hard/good/easy/expert all count as correct
     const incorrectCount = finalStats.again; // only "again" is incorrect (forgot the card)
 
-    // Save daily progress (Time only - counts are updated per card now)
+    // Save daily progress (batched at session end for performance)
     if (!session?.user?.email) {
       console.error(
         "❌ [handleSessionComplete] Cannot save: No user session found"
@@ -231,10 +180,10 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
     } else {
       try {
         await saveDailyProgress(session.user.email, {
-          cardsReviewed: 0, // Already updated per card
+          cardsReviewed: totalReviewed,
           timeSpent: Math.ceil(timeSpent / 60), // Convert to minutes
-          correctCount: 0, // Already updated per card
-          incorrectCount: 0, // Already updated per card
+          correctCount: correctCount,
+          incorrectCount: incorrectCount,
         });
       } catch (error) {
         console.error(
@@ -286,6 +235,10 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
     }
   };
 
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+  };
+
   const handleNext = () => {
     if (currentIndex < activeFlashcards.length - 1) {
       setCurrentIndex(currentIndex + 1);
@@ -300,9 +253,16 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
     }
   };
 
-  const handleFlip = () => {
-    setIsFlipped(!isFlipped);
-  };
+  // Keyboard shortcuts (extracted to separate hook)
+  // Must be called after all handlers are defined to avoid reference errors
+  useFlashcardKeyboard({
+    isFlipped,
+    currentIndex,
+    onFlip: handleFlip,
+    onDifficulty: handleDifficulty,
+    onNext: handleNext,
+    onPrevious: handlePrevious,
+  });
 
   return {
     // State

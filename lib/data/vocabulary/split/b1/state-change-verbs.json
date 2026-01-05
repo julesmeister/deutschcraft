@@ -4,7 +4,7 @@
   "totalCards": 45,
   "flashcards": [
     {
-      "id": "syllabus-b1-11101",
+      "id": "b1-state-change-verbs-werden-zu-to-turn-into-to-become",
       "german": "werden zu",
       "english": "to turn into / to become",
       "category": "State Change Verbs",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11102",
+      "id": "b1-state-change-verbs-sich-verwandeln-in-to-transform-into",
       "german": "sich verwandeln in",
       "english": "to transform into",
       "category": "State Change Verbs",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11104",
+      "id": "b1-state-change-verbs-sich-veraendern-to-change",
       "german": "sich verändern",
       "english": "to change",
       "category": "State Change Verbs",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11105",
+      "id": "b1-state-change-verbs-entstehen-to-arise-to-come-into-being",
       "german": "entstehen",
       "english": "to arise / to come into being",
       "category": "State Change Verbs",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11109",
+      "id": "b1-state-change-verbs-auftauchen-to-surface-to-emerge",
       "german": "auftauchen",
       "english": "to surface / to emerge",
       "category": "State Change Verbs",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11112",
+      "id": "b1-state-change-verbs-ansteigen-to-rise-to-increase",
       "german": "ansteigen",
       "english": "to rise / to increase",
       "category": "State Change Verbs",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11115",
+      "id": "b1-state-change-verbs-erwachen-to-awaken",
       "german": "erwachen",
       "english": "to awaken",
       "category": "State Change Verbs",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11117",
+      "id": "b1-state-change-verbs-ausbrechen-to-break-out-to-erupt",
       "german": "ausbrechen",
       "english": "to break out / to erupt",
       "category": "State Change Verbs",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11118",
+      "id": "b1-state-change-verbs-sich-verschlechtern-to-worsen-to-deteriorate",
       "german": "sich verschlechtern",
       "english": "to worsen / to deteriorate",
       "category": "State Change Verbs",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11119",
+      "id": "b1-state-change-verbs-sich-verbessern-to-improve",
       "german": "sich verbessern",
       "english": "to improve",
       "category": "State Change Verbs",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11121",
+      "id": "b1-state-change-verbs-erkranken-to-fall-ill-to-become-sick",
       "german": "erkranken",
       "english": "to fall ill / to become sick",
       "category": "State Change Verbs",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11122",
+      "id": "b1-state-change-verbs-gesunden-to-recover-to-get-well",
       "german": "gesunden",
       "english": "to recover / to get well",
       "category": "State Change Verbs",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11123",
+      "id": "b1-state-change-verbs-altern-to-age",
       "german": "altern",
       "english": "to age",
       "category": "State Change Verbs",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11126",
+      "id": "b1-state-change-verbs-schrumpfen-to-shrink",
       "german": "schrumpfen",
       "english": "to shrink",
       "category": "State Change Verbs",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11128",
+      "id": "b1-state-change-verbs-erblassen-to-turn-pale",
       "german": "erblassen",
       "english": "to turn pale",
       "category": "State Change Verbs",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11129",
+      "id": "b1-state-change-verbs-erstarren-to-freeze-to-stiffen",
       "german": "erstarren",
       "english": "to freeze / to stiffen",
       "category": "State Change Verbs",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-b1-11130",
+      "id": "b1-state-change-verbs-aufbluehen-to-blossom-to-flourish",
       "german": "aufblühen",
       "english": "to blossom / to flourish",
       "category": "State Change Verbs",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "b1-erbleichen-827790",
+      "id": "b1-state-change-verbs-erbleichen-to-turn-pale-to-pale",
       "german": "erbleichen",
       "english": "to turn pale / to pale",
       "category": "State Change Verbs",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "b1-erblhen-827790",
+      "id": "b1-state-change-verbs-erbluehen-to-blossom-to-bloom",
       "german": "erblühen",
       "english": "to blossom / to bloom",
       "category": "State Change Verbs",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "b1-erblte-827790",
+      "id": "b1-state-change-verbs-erbluete-to-bloom",
       "german": "erblüte",
       "english": "to bloom",
       "category": "State Change Verbs",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "b1-erbrausen-827790",
+      "id": "b1-state-change-verbs-erbrausen-to-roar-to-crash",
       "german": "erbrausen",
       "english": "to roar / to crash",
       "category": "State Change Verbs",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "b1-erbrausche-827790",
+      "id": "b1-state-change-verbs-erbrauschen-to-roar-to-crash",
       "german": "erbrauschen",
       "english": "to roar / to crash",
       "category": "State Change Verbs",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "b1-erbrauste-827790",
+      "id": "b1-state-change-verbs-erbrauste-roared-crashed",
       "german": "erbrauste",
       "english": "roared / crashed",
       "category": "State Change Verbs",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "b1-erblichen-827790",
+      "id": "b1-state-change-verbs-erblichen-to-turn-pale",
       "german": "erblichen",
       "english": "to turn pale",
       "category": "State Change Verbs",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "b1-erblichung-827790",
+      "id": "b1-state-change-verbs-erblichung-paling-turning-pale",
       "german": "erblichung",
       "english": "paling / turning pale",
       "category": "State Change Verbs",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "b1-erblhung-827790",
+      "id": "b1-state-change-verbs-erbluehung-blooming-flowering",
       "german": "erblühung",
       "english": "blooming / flowering",
       "category": "State Change Verbs",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "b1-erbrecher-827790",
+      "id": "b1-state-change-verbs-erbrecher-vomiter",
       "german": "erbrecher",
       "english": "vomiter",
       "category": "State Change Verbs",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "b1-erbrechung-827790",
+      "id": "b1-state-change-verbs-erbrechung-vomiting",
       "german": "erbrechung",
       "english": "vomiting",
       "category": "State Change Verbs",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "b1-erbrechene-827790",
+      "id": "b1-state-change-verbs-erbrechenes-vomitus",
       "german": "erbrechenes",
       "english": "vomitus",
       "category": "State Change Verbs",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "b1-erblassung-827790",
+      "id": "b1-state-change-verbs-erblassung-paling-becoming-pale",
       "german": "erblassung",
       "english": "paling / becoming pale",
       "category": "State Change Verbs",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "b1-erblhte-827790",
+      "id": "b1-state-change-verbs-erbluehte-bloomed-blossomed",
       "german": "erblühte",
       "english": "bloomed / blossomed",
       "category": "State Change Verbs",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "b1-erbleichte-827790",
+      "id": "b1-state-change-verbs-erbleichte-paled-turned-pale",
       "german": "erbleichte",
       "english": "paled / turned pale",
       "category": "State Change Verbs",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "b1-erbleichun-827790",
+      "id": "b1-state-change-verbs-erbleichung-paling-pallor",
       "german": "erbleichung",
       "english": "paling / pallor",
       "category": "State Change Verbs",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "b1-erblhungde-827790",
+      "id": "b1-state-change-verbs-erbluehung-des-baumes-blooming-of-the-tree",
       "german": "erblühung des baumes",
       "english": "blooming of the tree",
       "category": "State Change Verbs",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "b1-erbrechung-827790",
+      "id": "b1-state-change-verbs-erbrechung-verursachen-to-cause-vomiting",
       "german": "erbrechung verursachen",
       "english": "to cause vomiting",
       "category": "State Change Verbs",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "b1-erbrechung-827790",
+      "id": "b1-state-change-verbs-erbrechungen-vomiting-plural",
       "german": "erbrechungen",
       "english": "vomiting (plural)",
       "category": "State Change Verbs",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "b1-erbrechend-827790",
+      "id": "b1-state-change-verbs-erbrechendes-mittel-emetic-vomit-inducing-substance",
       "german": "erbrechendes mittel",
       "english": "emetic / vomit-inducing substance",
       "category": "State Change Verbs",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "b1-erbleichte-827790",
+      "id": "b1-state-change-verbs-erbleichtes-gesicht-pale-face",
       "german": "erbleichtes gesicht",
       "english": "pale face",
       "category": "State Change Verbs",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "b1-erblhterba-827790",
+      "id": "b1-state-change-verbs-erbluehter-baum-bloomed-tree",
       "german": "erblühter baum",
       "english": "bloomed tree",
       "category": "State Change Verbs",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "b1-erbrichts-827790",
+      "id": "b1-state-change-verbs-erbrichts-vomiting-archaic",
       "german": "erbrichts",
       "english": "vomiting (archaic)",
       "category": "State Change Verbs",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "b1-erbleichte-827790",
+      "id": "b1-state-change-verbs-erbleichte-wangen-paled-cheeks",
       "german": "erbleichte wangen",
       "english": "paled cheeks",
       "category": "State Change Verbs",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "b1-erblhtekno-827790",
+      "id": "b1-state-change-verbs-erbluehte-knospen-bloomed-buds",
       "german": "erblühte knospen",
       "english": "bloomed buds",
       "category": "State Change Verbs",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "b1-state-change-verbs-miv8iuogcl5rz",
+      "id": "b1-state-change-verbs-gebaeren-to-give-birth",
       "german": "gebären",
       "english": "to give birth",
       "category": "State Change Verbs",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "id": "b1-state-change-verbs-miv8iuogn97p0",
+      "id": "b1-state-change-verbs-anschwellen-to-swell",
       "german": "anschwellen",
       "english": "to swell",
       "category": "State Change Verbs",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "id": "b1-state-change-verbs-miv8iuogo020d",
+      "id": "b1-state-change-verbs-abschwellen-to-reduce-swelling-to-go-down",
       "german": "abschwellen",
       "english": "to reduce swelling / to go down",
       "category": "State Change Verbs",

@@ -1,24 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
+import { unstable_cache } from "next/cache";
 import path from "path";
 import fs from "fs/promises";
 import { CEFRLevel } from "@/lib/models/cefr";
 
-export async function GET(
-  request: NextRequest,
-  { params }: { params: Promise<{ level: string }> }
-) {
-  try {
-    const { level: levelParam } = await params;
-    const level = levelParam.toUpperCase();
-
-    // Validate level
-    if (!Object.values(CEFRLevel).includes(level as CEFRLevel)) {
-      return NextResponse.json(
-        { error: "Invalid CEFR level" },
-        { status: 400 }
-      );
-    }
-
+// Cache vocabulary data for 1 hour (static content that rarely changes)
+const getCachedVocabularyLevel = unstable_cache(
+  async (level: string) => {
     // Construct split directory path
     const splitDir = path.join(
       process.cwd(),
@@ -47,7 +35,7 @@ export async function GET(
         `${level.toLowerCase()}.json`
       );
       const fileContent = await fs.readFile(legacyFilePath, "utf-8");
-      return NextResponse.json(JSON.parse(fileContent));
+      return JSON.parse(fileContent);
     }
 
     // Aggregate flashcards from all categories
@@ -72,11 +60,39 @@ export async function GET(
       results.forEach((cards) => allFlashcards.push(...cards));
     }
 
-    return NextResponse.json({
+    return {
       level: level,
       flashcards: allFlashcards,
       totalCards: allFlashcards.length,
-    });
+    };
+  },
+  ["vocabulary-level"],
+  {
+    revalidate: 3600, // Cache for 1 hour
+    tags: ["vocabulary"],
+  }
+);
+
+export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise<{ level: string }> }
+) {
+  try {
+    const { level: levelParam } = await params;
+    const level = levelParam.toUpperCase();
+
+    // Validate level
+    if (!Object.values(CEFRLevel).includes(level as CEFRLevel)) {
+      return NextResponse.json(
+        { error: "Invalid CEFR level" },
+        { status: 400 }
+      );
+    }
+
+    // Fetch from cache (or compute and cache if not present)
+    const data = await getCachedVocabularyLevel(level);
+
+    return NextResponse.json(data);
   } catch (error) {
     console.error("Error in vocabulary API:", error);
     return NextResponse.json(

@@ -4,7 +4,7 @@
   "totalCards": 15,
   "flashcards": [
     {
-      "id": "syllabus-a1-10187",
+      "id": "a1-home-das-haus-house",
       "german": "das Haus",
       "english": "house",
       "category": "Home",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10188",
+      "id": "a1-home-das-zimmer-room",
       "german": "das Zimmer",
       "english": "room",
       "category": "Home",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10189",
+      "id": "a1-home-die-kueche-kitchen",
       "german": "die Küche",
       "english": "kitchen",
       "category": "Home",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10190",
+      "id": "a1-home-das-bad-bathroom",
       "german": "das Bad",
       "english": "bathroom",
       "category": "Home",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10191",
+      "id": "a1-home-der-tisch-table",
       "german": "der Tisch",
       "english": "table",
       "category": "Home",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10192",
+      "id": "a1-home-der-stuhl-chair",
       "german": "der Stuhl",
       "english": "chair",
       "category": "Home",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10193",
+      "id": "a1-home-das-bett-bed",
       "german": "das Bett",
       "english": "bed",
       "category": "Home",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10194",
+      "id": "a1-home-das-wohnzimmer-living-room",
       "german": "das Wohnzimmer",
       "english": "living room",
       "category": "Home",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10195",
+      "id": "a1-home-das-schlafzimmer-bedroom",
       "german": "das Schlafzimmer",
       "english": "bedroom",
       "category": "Home",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10196",
+      "id": "a1-home-das-fenster-window",
       "german": "das Fenster",
       "english": "window",
       "category": "Home",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10197",
+      "id": "a1-home-die-tuer-door",
       "german": "die Tür",
       "english": "door",
       "category": "Home",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10198",
+      "id": "a1-home-das-sofa-sofa-couch",
       "german": "das Sofa",
       "english": "sofa / couch",
       "category": "Home",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10199",
+      "id": "a1-home-die-lampe-lamp",
       "german": "die Lampe",
       "english": "lamp",
       "category": "Home",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10200",
+      "id": "a1-home-der-schrank-cupboard-wardrobe",
       "german": "der Schrank",
       "english": "cupboard / wardrobe",
       "category": "Home",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10201",
+      "id": "a1-home-der-spiegel-mirror",
       "german": "der Spiegel",
       "english": "mirror",
       "category": "Home",

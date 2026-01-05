@@ -4,7 +4,7 @@
   "totalCards": 24,
   "flashcards": [
     {
-      "id": "syllabus-b1-positional-02",
+      "id": "b1-positional-verbs-stecken-to-put-to-stick-to-be-stuck",
       "german": "stecken",
       "english": "to put / to stick / to be stuck",
       "category": "Positional Verbs",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-03",
+      "id": "b1-positional-verbs-lehnen-to-lean",
       "german": "lehnen",
       "english": "to lean",
       "category": "Positional Verbs",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-04",
+      "id": "b1-positional-verbs-hocken-to-crouch-to-squat",
       "german": "hocken",
       "english": "to crouch / to squat",
       "category": "Positional Verbs",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-05",
+      "id": "b1-positional-verbs-knien-to-kneel",
       "german": "knien",
       "english": "to kneel",
       "category": "Positional Verbs",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-06",
+      "id": "b1-positional-verbs-kauern-to-cower-to-crouch",
       "german": "kauern",
       "english": "to cower / to crouch",
       "category": "Positional Verbs",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-08",
+      "id": "b1-positional-verbs-anlehnen-to-lean-something-against",
       "german": "anlehnen",
       "english": "to lean (something) against",
       "category": "Positional Verbs",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-09",
+      "id": "b1-positional-verbs-sich-hinknien-to-kneel-down",
       "german": "sich hinknien",
       "english": "to kneel down",
       "category": "Positional Verbs",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-13",
+      "id": "b1-positional-verbs-buecken-to-bend-to-stoop",
       "german": "bücken",
       "english": "to bend / to stoop",
       "category": "Positional Verbs",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-14",
+      "id": "b1-positional-verbs-sich-ducken-to-duck-to-crouch",
       "german": "sich ducken",
       "english": "to duck / to crouch",
       "category": "Positional Verbs",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-15",
+      "id": "b1-positional-verbs-ducken-to-duck",
       "german": "ducken",
       "english": "to duck",
       "category": "Positional Verbs",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-16",
+      "id": "b1-positional-verbs-sich-aufrichten-to-straighten-up-to-rise",
       "german": "sich aufrichten",
       "english": "to straighten up / to rise",
       "category": "Positional Verbs",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-17",
+      "id": "b1-positional-verbs-aufrichten-to-erect-to-raise",
       "german": "aufrichten",
       "english": "to erect / to raise",
       "category": "Positional Verbs",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-18",
+      "id": "b1-positional-verbs-sich-erheben-to-rise-to-stand-up",
       "german": "sich erheben",
       "english": "to rise / to stand up",
       "category": "Positional Verbs",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-19",
+      "id": "b1-positional-verbs-erheben-to-raise-to-lift",
       "german": "erheben",
       "english": "to raise / to lift",
       "category": "Positional Verbs",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-20",
+      "id": "b1-positional-verbs-sich-recken-to-stretch-oneself",
       "german": "sich recken",
       "english": "to stretch oneself",
       "category": "Positional Verbs",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-21",
+      "id": "b1-positional-verbs-recken-to-stretch-to-crane",
       "german": "recken",
       "english": "to stretch / to crane",
       "category": "Positional Verbs",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-23",
+      "id": "b1-positional-verbs-strecken-to-stretch-to-extend",
       "german": "strecken",
       "english": "to stretch / to extend",
       "category": "Positional Verbs",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-24",
+      "id": "b1-positional-verbs-sich-neigen-to-lean-to-bend",
       "german": "sich neigen",
       "english": "to lean / to bend",
       "category": "Positional Verbs",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-25",
+      "id": "b1-positional-verbs-neigen-to-tilt-to-incline",
       "german": "neigen",
       "english": "to tilt / to incline",
       "category": "Positional Verbs",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-26",
+      "id": "b1-positional-verbs-sich-kruemmen-to-bend-to-curve",
       "german": "sich krümmen",
       "english": "to bend / to curve",
       "category": "Positional Verbs",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-27",
+      "id": "b1-positional-verbs-kruemmen-to-bend-to-curve",
       "german": "krümmen",
       "english": "to bend / to curve",
       "category": "Positional Verbs",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-28",
+      "id": "b1-positional-verbs-sich-ausstrecken-to-stretch-out",
       "german": "sich ausstrecken",
       "english": "to stretch out",
       "category": "Positional Verbs",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-29",
+      "id": "b1-positional-verbs-ausstrecken-to-stretch-out-to-extend",
       "german": "ausstrecken",
       "english": "to stretch out / to extend",
       "category": "Positional Verbs",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-b1-positional-30",
+      "id": "b1-positional-verbs-sich-zusammenkauern-to-huddle-up-to-curl-up",
       "german": "sich zusammenkauern",
       "english": "to huddle up / to curl up",
       "category": "Positional Verbs",

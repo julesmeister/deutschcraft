@@ -4,7 +4,7 @@
   "totalCards": 54,
   "flashcards": [
     {
-      "id": "syllabus-a2-10600",
+      "id": "a2-prepositions-in-datakk-in-into",
       "german": "in + Dat/Akk",
       "english": "in / into",
       "category": "Prepositions",
@@ -26,7 +26,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10601",
+      "id": "a2-prepositions-an-datakk-at-on-to",
       "german": "an + Dat/Akk",
       "english": "at / on / to",
       "category": "Prepositions",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10602",
+      "id": "a2-prepositions-auf-datakk-on-onto",
       "german": "auf + Dat/Akk",
       "english": "on / onto",
       "category": "Prepositions",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10603",
+      "id": "a2-prepositions-ueber-datakk-over-above-about",
       "german": "über + Dat/Akk",
       "english": "over / above / about",
       "category": "Prepositions",
@@ -92,7 +92,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10604",
+      "id": "a2-prepositions-unter-datakk-under-below-among",
       "german": "unter + Dat/Akk",
       "english": "under / below / among",
       "category": "Prepositions",
@@ -114,7 +114,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10605",
+      "id": "a2-prepositions-vor-datakk-in-front-of-before-ago",
       "german": "vor + Dat/Akk",
       "english": "in front of / before / ago",
       "category": "Prepositions",
@@ -137,7 +137,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10606",
+      "id": "a2-prepositions-hinter-datakk-behind",
       "german": "hinter + Dat/Akk",
       "english": "behind",
       "category": "Prepositions",
@@ -159,7 +159,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10607",
+      "id": "a2-prepositions-neben-datakk-next-to-beside",
       "german": "neben + Dat/Akk",
       "english": "next to / beside",
       "category": "Prepositions",
@@ -181,7 +181,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10608",
+      "id": "a2-prepositions-zwischen-datakk-between",
       "german": "zwischen + Dat/Akk",
       "english": "between",
       "category": "Prepositions",
@@ -203,7 +203,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10609",
+      "id": "a2-prepositions-mit-dat-with",
       "german": "mit + Dat",
       "english": "with",
       "category": "Prepositions",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10610",
+      "id": "a2-prepositions-nach-dat-after-to-direction",
       "german": "nach + Dat",
       "english": "after / to (direction)",
       "category": "Prepositions",
@@ -247,7 +247,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10611",
+      "id": "a2-prepositions-bei-dat-at-near-with-at-someones-place",
       "german": "bei + Dat",
       "english": "at / near / with (at someone's place)",
       "category": "Prepositions",
@@ -268,7 +268,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10612",
+      "id": "a2-prepositions-von-dat-from-of-by",
       "german": "von + Dat",
       "english": "from / of / by",
       "category": "Prepositions",
@@ -289,7 +289,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10613",
+      "id": "a2-prepositions-zu-dat-to-towards",
       "german": "zu + Dat",
       "english": "to / towards",
       "category": "Prepositions",
@@ -311,7 +311,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10614",
+      "id": "a2-prepositions-aus-dat-from-out-of",
       "german": "aus + Dat",
       "english": "from / out of",
       "category": "Prepositions",
@@ -332,7 +332,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10615",
+      "id": "a2-prepositions-seit-dat-since-for-time",
       "german": "seit + Dat",
       "english": "since / for (time)",
       "category": "Prepositions",
@@ -354,7 +354,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10616",
+      "id": "a2-prepositions-gegenueber-dat-opposite-across-from",
       "german": "gegenüber + Dat",
       "english": "opposite / across from",
       "category": "Prepositions",
@@ -376,7 +376,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10617",
+      "id": "a2-prepositions-fuer-akk-for",
       "german": "für + Akk",
       "english": "for",
       "category": "Prepositions",
@@ -397,7 +397,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10618",
+      "id": "a2-prepositions-durch-akk-through",
       "german": "durch + Akk",
       "english": "through",
       "category": "Prepositions",
@@ -418,7 +418,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10619",
+      "id": "a2-prepositions-gegen-akk-against-around-time",
       "german": "gegen + Akk",
       "english": "against / around (time)",
       "category": "Prepositions",
@@ -439,7 +439,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10620",
+      "id": "a2-prepositions-ohne-akk-without",
       "german": "ohne + Akk",
       "english": "without",
       "category": "Prepositions",
@@ -460,7 +460,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10621",
+      "id": "a2-prepositions-um-akk-around-at-time",
       "german": "um + Akk",
       "english": "around / at (time)",
       "category": "Prepositions",
@@ -482,7 +482,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10622",
+      "id": "a2-prepositions-bis-akk-until-to",
       "german": "bis + Akk",
       "english": "until / to",
       "category": "Prepositions",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10623",
+      "id": "a2-prepositions-entlang-akk-along",
       "german": "entlang + Akk",
       "english": "along",
       "category": "Prepositions",
@@ -526,7 +526,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10624",
+      "id": "a2-prepositions-ab-dat-from-starting-from",
       "german": "ab + Dat",
       "english": "from / starting from",
       "category": "Prepositions",
@@ -548,7 +548,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10625",
+      "id": "a2-prepositions-ausser-dat-except-besides",
       "german": "außer + Dat",
       "english": "except / besides",
       "category": "Prepositions",
@@ -569,7 +569,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10626",
+      "id": "a2-prepositions-entgegen-dat-contrary-to-against",
       "german": "entgegen + Dat",
       "english": "contrary to / against",
       "category": "Prepositions",
@@ -590,7 +590,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09ajqsn",
+      "id": "a2-prepositions-in-in",
       "german": "in",
       "english": "in",
       "category": "Prepositions",
@@ -610,7 +610,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09zbftu",
+      "id": "a2-prepositions-an-at-on-vertical-surface",
       "german": "an",
       "english": "at / on (vertical surface)",
       "category": "Prepositions",
@@ -630,7 +630,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09tlztv",
+      "id": "a2-prepositions-ueber-over-above-about",
       "german": "über",
       "english": "over / above / about",
       "category": "Prepositions",
@@ -650,7 +650,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk0928l7t",
+      "id": "a2-prepositions-unter-under-below-among",
       "german": "unter",
       "english": "under / below / among",
       "category": "Prepositions",
@@ -670,7 +670,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk099idid",
+      "id": "a2-prepositions-vor-in-front-of-before",
       "german": "vor",
       "english": "in front of / before",
       "category": "Prepositions",
@@ -690,7 +690,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09aorz1",
+      "id": "a2-prepositions-hinter-behind",
       "german": "hinter",
       "english": "behind",
       "category": "Prepositions",
@@ -710,7 +710,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09giexd",
+      "id": "a2-prepositions-neben-next-to-beside",
       "german": "neben",
       "english": "next to / beside",
       "category": "Prepositions",
@@ -730,7 +730,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09roarp",
+      "id": "a2-prepositions-zwischen-between",
       "german": "zwischen",
       "english": "between",
       "category": "Prepositions",
@@ -750,7 +750,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk094awor",
+      "id": "a2-prepositions-bei-at-by-near",
       "german": "bei",
       "english": "at / by / near",
       "category": "Prepositions",
@@ -770,7 +770,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09f8cb2",
+      "id": "a2-prepositions-mit-with",
       "german": "mit",
       "english": "with",
       "category": "Prepositions",
@@ -790,7 +790,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09pbzvu",
+      "id": "a2-prepositions-nach-after-to-citiescountries",
       "german": "nach",
       "english": "after / to (cities/countries)",
       "category": "Prepositions",
@@ -810,7 +810,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09b8n0l",
+      "id": "a2-prepositions-zu-to-at-peopleplaces",
       "german": "zu",
       "english": "to / at (people/places)",
       "category": "Prepositions",
@@ -830,7 +830,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09aiejn",
+      "id": "a2-prepositions-von-from-of-by",
       "german": "von",
       "english": "from / of / by",
       "category": "Prepositions",
@@ -850,7 +850,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09v1eb3",
+      "id": "a2-prepositions-fuer-for",
       "german": "für",
       "english": "for",
       "category": "Prepositions",
@@ -870,7 +870,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09gnnsp",
+      "id": "a2-prepositions-gegen-against-around-time",
       "german": "gegen",
       "english": "against / around (time)",
       "category": "Prepositions",
@@ -890,7 +890,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09fb6k1",
+      "id": "a2-prepositions-ohne-without",
       "german": "ohne",
       "english": "without",
       "category": "Prepositions",
@@ -910,7 +910,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09ybx9r",
+      "id": "a2-prepositions-durch-through",
       "german": "durch",
       "english": "through",
       "category": "Prepositions",
@@ -930,7 +930,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09dte89",
+      "id": "a2-prepositions-um-around-at-time",
       "german": "um",
       "english": "around / at (time)",
       "category": "Prepositions",
@@ -950,7 +950,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk091smpz",
+      "id": "a2-prepositions-seit-since-for-time",
       "german": "seit",
       "english": "since / for (time)",
       "category": "Prepositions",
@@ -970,7 +970,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09bdybo",
+      "id": "a2-prepositions-wegen-because-of",
       "german": "wegen",
       "english": "because of",
       "category": "Prepositions",
@@ -990,7 +990,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09k3f4t",
+      "id": "a2-prepositions-trotz-despite-in-spite-of",
       "german": "trotz",
       "english": "despite / in spite of",
       "category": "Prepositions",
@@ -1010,7 +1010,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk092gh2v",
+      "id": "a2-prepositions-bis-until-by",
       "german": "bis",
       "english": "until / by",
       "category": "Prepositions",
@@ -1030,7 +1030,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09z6bav",
+      "id": "a2-prepositions-entlang-along",
       "german": "entlang",
       "english": "along",
       "category": "Prepositions",
@@ -1050,7 +1050,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk0947z14",
+      "id": "a2-prepositions-gegenueber-opposite-across-from",
       "german": "gegenüber",
       "english": "opposite / across from",
       "category": "Prepositions",
@@ -1070,7 +1070,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09iwhws",
+      "id": "a2-prepositions-ausserhalb-outside-of",
       "german": "außerhalb",
       "english": "outside of",
       "category": "Prepositions",
@@ -1090,7 +1090,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk096pza9",
+      "id": "a2-prepositions-innerhalb-inside-within",
       "german": "innerhalb",
       "english": "inside / within",
       "category": "Prepositions",
@@ -1110,7 +1110,7 @@
       }
     },
     {
-      "id": "a2-prepositions-miujbk09eh8fn",
+      "id": "a2-prepositions-statt-instead-of",
       "german": "statt",
       "english": "instead of",
       "category": "Prepositions",

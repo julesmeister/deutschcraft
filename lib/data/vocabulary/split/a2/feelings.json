@@ -4,7 +4,7 @@
   "totalCards": 30,
   "flashcards": [
     {
-      "id": "syllabus-a2-11069",
+      "id": "a2-feelings-wuetend-angry",
       "german": "wütend",
       "english": "angry",
       "category": "Feelings",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11070",
+      "id": "a2-feelings-aufgeregt-excited",
       "german": "aufgeregt",
       "english": "excited",
       "category": "Feelings",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11071",
+      "id": "a2-feelings-zufrieden-satisfied-content",
       "german": "zufrieden",
       "english": "satisfied / content",
       "category": "Feelings",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11072",
+      "id": "a2-feelings-enttaeuscht-disappointed",
       "german": "enttäuscht",
       "english": "disappointed",
       "category": "Feelings",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11073",
+      "id": "a2-feelings-ueberrascht-surprised",
       "german": "überrascht",
       "english": "surprised",
       "category": "Feelings",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11074",
+      "id": "a2-feelings-aengstlich-anxious-afraid",
       "german": "ängstlich",
       "english": "anxious / afraid",
       "category": "Feelings",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11075",
+      "id": "a2-feelings-stolz-proud",
       "german": "stolz",
       "english": "proud",
       "category": "Feelings",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11076",
+      "id": "a2-feelings-eifersuechtig-jealous",
       "german": "eifersüchtig",
       "english": "jealous",
       "category": "Feelings",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11077",
+      "id": "a2-feelings-gelangweilt-bored",
       "german": "gelangweilt",
       "english": "bored",
       "category": "Feelings",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11078",
+      "id": "a2-feelings-verwirrt-confused",
       "german": "verwirrt",
       "english": "confused",
       "category": "Feelings",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11079",
+      "id": "a2-feelings-hoffnungsvoll-hopeful",
       "german": "hoffnungsvoll",
       "english": "hopeful",
       "category": "Feelings",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11080",
+      "id": "a2-feelings-einsam-lonely",
       "german": "einsam",
       "english": "lonely",
       "category": "Feelings",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11081",
+      "id": "a2-feelings-entspannt-relaxed",
       "german": "entspannt",
       "english": "relaxed",
       "category": "Feelings",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11082",
+      "id": "a2-feelings-gestresst-stressed",
       "german": "gestresst",
       "english": "stressed",
       "category": "Feelings",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11083",
+      "id": "a2-feelings-begeistert-enthusiastic",
       "german": "begeistert",
       "english": "enthusiastic",
       "category": "Feelings",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11084",
+      "id": "a2-feelings-froh-glad-happy",
       "german": "froh",
       "english": "glad / happy",
       "category": "Feelings",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11085",
+      "id": "a2-feelings-dankbar-grateful-thankful",
       "german": "dankbar",
       "english": "grateful / thankful",
       "category": "Feelings",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11086",
+      "id": "a2-feelings-neugierig-curious",
       "german": "neugierig",
       "english": "curious",
       "category": "Feelings",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11087",
+      "id": "a2-feelings-schuechtern-shy",
       "german": "schüchtern",
       "english": "shy",
       "category": "Feelings",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11088",
+      "id": "a2-feelings-mutig-brave-courageous",
       "german": "mutig",
       "english": "brave / courageous",
       "category": "Feelings",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11089",
+      "id": "a2-feelings-froehlich-cheerful-merry",
       "german": "fröhlich",
       "english": "cheerful / merry",
       "category": "Feelings",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11090",
+      "id": "a2-feelings-satt-full-satisfied-after-eating",
       "german": "satt",
       "english": "full / satisfied (after eating)",
       "category": "Feelings",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11091",
+      "id": "a2-feelings-erschoepft-exhausted",
       "german": "erschöpft",
       "english": "exhausted",
       "category": "Feelings",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11092",
+      "id": "a2-feelings-verliebt-in-love",
       "german": "verliebt",
       "english": "in love",
       "category": "Feelings",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11093",
+      "id": "a2-feelings-boese-angry-evil",
       "german": "böse",
       "english": "angry / evil",
       "category": "Feelings",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11094",
+      "id": "a2-feelings-energisch-energetic",
       "german": "energisch",
       "english": "energetic",
       "category": "Feelings",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11095",
+      "id": "a2-feelings-verlegen-embarrassed",
       "german": "verlegen",
       "english": "embarrassed",
       "category": "Feelings",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11096",
+      "id": "a2-feelings-peinlich-embarrassing-awkward",
       "german": "peinlich",
       "english": "embarrassing / awkward",
       "category": "Feelings",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11097",
+      "id": "a2-feelings-gespannt-curious-excited-tense",
       "german": "gespannt",
       "english": "curious / excited / tense",
       "category": "Feelings",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-a2-11098",
+      "id": "a2-feelings-ratlos-at-a-loss-helpless",
       "german": "ratlos",
       "english": "at a loss / helpless",
       "category": "Feelings",

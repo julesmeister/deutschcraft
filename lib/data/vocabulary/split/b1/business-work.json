@@ -4,7 +4,7 @@
   "totalCards": 41,
   "flashcards": [
     {
-      "id": "b1-diearbeits-186187",
+      "id": "b1-business-work-die-arbeitskraft-labor-workforce",
       "german": "die Arbeitskraft",
       "english": "labor / workforce",
       "category": "Business Work",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "b1-diearbeits-186187",
+      "id": "b1-business-work-die-arbeitszeit-working-hours-work-time",
       "german": "die Arbeitszeit",
       "english": "working hours / work time",
       "category": "Business Work",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "b1-dasarbeits-186187",
+      "id": "b1-business-work-das-arbeitsamt-employment-office",
       "german": "das Arbeitsamt",
       "english": "employment office",
       "category": "Business Work",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "b1-diearbeits-186187",
+      "id": "b1-business-work-die-arbeitsbedingung-working-conditions",
       "german": "die Arbeitsbedingung",
       "english": "working conditions",
       "category": "Business Work",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "b1-diearbeits-186187",
+      "id": "b1-business-work-die-arbeitsgruppe-working-group-team",
       "german": "die Arbeitsgruppe",
       "english": "working group / team",
       "category": "Business Work",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "b1-dasarbeits-186187",
+      "id": "b1-business-work-das-arbeitsklima-working-atmosphere",
       "german": "das Arbeitsklima",
       "english": "working atmosphere",
       "category": "Business Work",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "b1-derarbeits-186187",
+      "id": "b1-business-work-der-arbeitskollege-colleague",
       "german": "der Arbeitskollege",
       "english": "colleague",
       "category": "Business Work",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "b1-diearbeits-186187",
+      "id": "b1-business-work-die-arbeitsvergabe-task-assignment",
       "german": "die Arbeitsvergabe",
       "english": "task assignment",
       "category": "Business Work",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "b1-diearbeits-186187",
+      "id": "b1-business-work-die-arbeitsvermittlung-job-placement",
       "german": "die Arbeitsvermittlung",
       "english": "job placement",
       "category": "Business Work",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "b1-dasarbeits-186187",
+      "id": "b1-business-work-das-arbeitsverhaeltnis-employment-relationship",
       "german": "das Arbeitsverhältnis",
       "english": "employment relationship",
       "category": "Business Work",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "b1-dieberufsa-186187",
+      "id": "b1-business-work-die-berufsausbildung-vocational-training",
       "german": "die Berufsausbildung",
       "english": "vocational training",
       "category": "Business Work",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "b1-derberufsa-186187",
+      "id": "b1-business-work-der-berufsanfaenger-beginner-in-profession",
       "german": "der Berufsanfänger",
       "english": "beginner in profession",
       "category": "Business Work",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "b1-dieberufsb-186187",
+      "id": "b1-business-work-die-berufsberatung-career-counseling",
       "german": "die Berufsberatung",
       "english": "career counseling",
       "category": "Business Work",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "b1-dieberufsb-186187",
+      "id": "b1-business-work-die-berufsbezeichnung-job-title",
       "german": "die Berufsbezeichnung",
       "english": "job title",
       "category": "Business Work",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "b1-dieberufsg-186187",
+      "id": "b1-business-work-die-berufsgenossenschaft-trade-association",
       "german": "die Berufsgenossenschaft",
       "english": "trade association",
       "category": "Business Work",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "b1-dieberufsg-186187",
+      "id": "b1-business-work-die-berufsgruppe-occupational-group",
       "german": "die Berufsgruppe",
       "english": "occupational group",
       "category": "Business Work",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "b1-derberufss-186187",
+      "id": "b1-business-work-der-berufsstand-profession-occupational-group",
       "german": "der Berufsstand",
       "english": "profession / occupational group",
       "category": "Business Work",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "b1-dieberufsu-186187",
+      "id": "b1-business-work-die-berufsunfaehigkeit-occupational-disability",
       "german": "die Berufsunfähigkeit",
       "english": "occupational disability",
       "category": "Business Work",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "b1-derberufsu-186187",
+      "id": "b1-business-work-der-berufsunfall-occupational-accident",
       "german": "der Berufsunfall",
       "english": "occupational accident",
       "category": "Business Work",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "b1-dieberufsv-186187",
+      "id": "b1-business-work-die-berufsvertretung-professional-representation",
       "german": "die Berufsvertretung",
       "english": "professional representation",
       "category": "Business Work",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "b1-diebetrieb-186187",
+      "id": "b1-business-work-die-betriebsamkeit-business-hustle",
       "german": "die Betriebsamkeit",
       "english": "business / hustle",
       "category": "Business Work",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "b1-diebetrieb-186187",
+      "id": "b1-business-work-die-betriebsrat-works-council",
       "german": "die Betriebsrat",
       "english": "works council",
       "category": "Business Work",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "b1-derbetrieb-186187",
+      "id": "b1-business-work-der-betriebsleiter-operations-manager",
       "german": "der Betriebsleiter",
       "english": "operations manager",
       "category": "Business Work",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "b1-diebetrieb-186187",
+      "id": "b1-business-work-die-betriebsrente-occupational-pension",
       "german": "die Betriebsrente",
       "english": "occupational pension",
       "category": "Business Work",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "b1-diegeschft-186187",
+      "id": "b1-business-work-die-geschaeftsfuehrung-business-management",
       "german": "die Geschäftsführung",
       "english": "business management",
       "category": "Business Work",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "b1-dergeschft-186187",
+      "id": "b1-business-work-der-geschaeftsfuehrer-business-manager-ceo",
       "german": "der Geschäftsführer",
       "english": "business manager / CEO",
       "category": "Business Work",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "b1-dergeschft-186187",
+      "id": "b1-business-work-der-geschaeftsbetrieb-business-operations",
       "german": "der Geschäftsbetrieb",
       "english": "business operations",
       "category": "Business Work",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "b1-diegeschft-186187",
+      "id": "b1-business-work-die-geschaeftsstelle-business-office",
       "german": "die Geschäftsstelle",
       "english": "business office",
       "category": "Business Work",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "b1-dasgeschft-186187",
+      "id": "b1-business-work-das-geschaeftsgeheimnis-trade-secret",
       "german": "das Geschäftsgeheimnis",
       "english": "trade secret",
       "category": "Business Work",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "b1-diegeschft-186187",
+      "id": "b1-business-work-die-geschaeftsfrau-businesswoman",
       "german": "die Geschäftsfrau",
       "english": "businesswoman",
       "category": "Business Work",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "b1-dergeschft-186187",
+      "id": "b1-business-work-der-geschaeftskollege-business-colleague",
       "german": "der Geschäftskollege",
       "english": "business colleague",
       "category": "Business Work",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "b1-dasgeschft-186187",
+      "id": "b1-business-work-das-geschaeftsmodell-business-model",
       "german": "das Geschäftsmodell",
       "english": "business model",
       "category": "Business Work",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "b1-business-work-miv8hiwmwnjaa",
+      "id": "b1-business-work-die-kundin-customer-female",
       "german": "die Kundin",
       "english": "customer (female)",
       "category": "Business Work",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "b1-business-work-miv8hiwmf6ubj",
+      "id": "b1-business-work-die-verhandlung-negotiation",
       "german": "die Verhandlung",
       "english": "negotiation",
       "category": "Business Work",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "b1-business-work-miv8hiwm5fgzn",
+      "id": "b1-business-work-die-nachfrage-demand",
       "german": "die Nachfrage",
       "english": "demand",
       "category": "Business Work",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "b1-business-work-miv8hiwmui26z",
+      "id": "b1-business-work-die-quittung-receipt",
       "german": "die Quittung",
       "english": "receipt",
       "category": "Business Work",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "b1-business-work-miv8hiwmr1we8",
+      "id": "b1-business-work-die-lieferung-delivery",
       "german": "die Lieferung",
       "english": "delivery",
       "category": "Business Work",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "b1-business-work-miv8hiwmux25c",
+      "id": "b1-business-work-der-lieferant-supplier",
       "german": "der Lieferant",
       "english": "supplier",
       "category": "Business Work",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "b1-business-work-miv8hiwmwthpl",
+      "id": "b1-business-work-die-konkurrenz-competition-competitors",
       "german": "die Konkurrenz",
       "english": "competition / competitors",
       "category": "Business Work",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "b1-business-work-miv8hiwmvp0tf",
+      "id": "b1-business-work-die-branche-industry-sector",
       "german": "die Branche",
       "english": "industry / sector",
       "category": "Business Work",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "b1-business-work-miv8hiwm11uqc",
+      "id": "b1-business-work-die-befoerderung-promotion",
       "german": "die Beförderung",
       "english": "promotion",
       "category": "Business Work",

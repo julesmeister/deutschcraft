@@ -44,33 +44,37 @@ export function applyFlashcardSettings(
 
     // New cards (never seen) are always included
     if (!progress) {
-      console.log("[FlashcardSelection] ✅ Including NEW card:", {
-        id: card.id,
-        german: card.german,
-        reason: "Never seen before",
-      });
+      if (process.env.NODE_ENV === 'development') {
+        console.log("[FlashcardSelection] ✅ Including NEW card:", {
+          id: card.id,
+          german: card.german,
+          reason: "Never seen before",
+        });
+      }
       return true;
     }
 
     // Only include cards that are actually due for review RIGHT NOW
     const isDue = (progress.nextReviewDate || 0) <= now;
 
-    if (isDue) {
-      console.log("[FlashcardSelection] ✅ Including DUE card:", {
-        id: card.id,
-        german: card.german,
-        nextReviewDate: new Date(progress.nextReviewDate || 0).toISOString(),
-        wasOverdueBy:
-          (now - (progress.nextReviewDate || 0)) / (1000 * 60 * 60) + " hours",
-      });
-    } else {
-      console.log("[FlashcardSelection] ❌ Skipping card NOT due yet:", {
-        id: card.id,
-        german: card.german,
-        nextReviewDate: new Date(progress.nextReviewDate || 0).toISOString(),
-        hoursUntilDue:
-          ((progress.nextReviewDate || 0) - now) / (1000 * 60 * 60),
-      });
+    if (process.env.NODE_ENV === 'development') {
+      if (isDue) {
+        console.log("[FlashcardSelection] ✅ Including DUE card:", {
+          id: card.id,
+          german: card.german,
+          nextReviewDate: new Date(progress.nextReviewDate || 0).toISOString(),
+          wasOverdueBy:
+            (now - (progress.nextReviewDate || 0)) / (1000 * 60 * 60) + " hours",
+        });
+      } else {
+        console.log("[FlashcardSelection] ❌ Skipping card NOT due yet:", {
+          id: card.id,
+          german: card.german,
+          nextReviewDate: new Date(progress.nextReviewDate || 0).toISOString(),
+          hoursUntilDue:
+            ((progress.nextReviewDate || 0) - now) / (1000 * 60 * 60),
+        });
+      }
     }
 
     return isDue;
@@ -148,32 +152,34 @@ export function applyFlashcardSettings(
 
   const finalCards = processedCards.slice(0, cardsPerSession);
 
-  console.log("[FlashcardSelection] STRICT SRS Selection:", {
-    totalAvailable: flashcards.length,
-    dueForReview: dueCards.length,
-    newCards: dueCards.filter((c) => !reviewsMap.get(c.id)).length,
-    reviewCards: dueCards.filter((c) => reviewsMap.get(c.id)).length,
-    selectedForSession: finalCards.length,
-    notDueCards: flashcards.length - dueCards.length,
-    nextDueInfo,
-  });
-
-  // If no due cards, show detailed breakdown
-  if (finalCards.length === 0 && flashcards.length > 0) {
-    console.log("[FlashcardSelection] ✅ No cards due for review! Breakdown:", {
-      totalCards: flashcards.length,
-      cardsWithProgress: flashcards.filter((c) => reviewsMap.get(c.id)).length,
-      newCards: flashcards.filter((c) => !reviewsMap.get(c.id)).length,
-      futureReviews: notDueCards.length,
-      sampleFutureCard: notDueCards[0]
-        ? {
-            german: notDueCards[0].german,
-            nextReview: new Date(
-              reviewsMap.get(notDueCards[0].id)?.nextReviewDate || 0
-            ).toISOString(),
-          }
-        : null,
+  if (process.env.NODE_ENV === 'development') {
+    console.log("[FlashcardSelection] STRICT SRS Selection:", {
+      totalAvailable: flashcards.length,
+      dueForReview: dueCards.length,
+      newCards: dueCards.filter((c) => !reviewsMap.get(c.id)).length,
+      reviewCards: dueCards.filter((c) => reviewsMap.get(c.id)).length,
+      selectedForSession: finalCards.length,
+      notDueCards: flashcards.length - dueCards.length,
+      nextDueInfo,
     });
+
+    // If no due cards, show detailed breakdown
+    if (finalCards.length === 0 && flashcards.length > 0) {
+      console.log("[FlashcardSelection] ✅ No cards due for review! Breakdown:", {
+        totalCards: flashcards.length,
+        cardsWithProgress: flashcards.filter((c) => reviewsMap.get(c.id)).length,
+        newCards: flashcards.filter((c) => !reviewsMap.get(c.id)).length,
+        futureReviews: notDueCards.length,
+        sampleFutureCard: notDueCards[0]
+          ? {
+              german: notDueCards[0].german,
+              nextReview: new Date(
+                reviewsMap.get(notDueCards[0].id)?.nextReviewDate || 0
+              ).toISOString(),
+            }
+          : null,
+      });
+    }
   }
 
   return {

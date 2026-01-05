@@ -4,7 +4,7 @@
   "totalCards": 30,
   "flashcards": [
     {
-      "id": "body-b2-001",
+      "id": "b2-body-parts-die-schilddruese-thyroid-gland",
       "german": "die Schilddrüse",
       "english": "thyroid gland",
       "category": "Body Parts",
@@ -26,7 +26,7 @@
       }
     },
     {
-      "id": "body-b2-002",
+      "id": "b2-body-parts-die-bauchspeicheldruese-pancreas",
       "german": "die Bauchspeicheldrüse",
       "english": "pancreas",
       "category": "Body Parts",
@@ -48,7 +48,7 @@
       }
     },
     {
-      "id": "body-b2-003",
+      "id": "b2-body-parts-die-milz-spleen",
       "german": "die Milz",
       "english": "spleen",
       "category": "Body Parts",
@@ -70,7 +70,7 @@
       }
     },
     {
-      "id": "body-b2-004",
+      "id": "b2-body-parts-die-gallenblase-gallbladder",
       "german": "die Gallenblase",
       "english": "gallbladder",
       "category": "Body Parts",
@@ -92,7 +92,7 @@
       }
     },
     {
-      "id": "body-b2-005",
+      "id": "b2-body-parts-die-blase-bladder",
       "german": "die Blase",
       "english": "bladder",
       "category": "Body Parts",
@@ -114,7 +114,7 @@
       }
     },
     {
-      "id": "body-b2-006",
+      "id": "b2-body-parts-die-gebaermutter-uterus-womb",
       "german": "die Gebärmutter",
       "english": "uterus / womb",
       "category": "Body Parts",
@@ -136,7 +136,7 @@
       }
     },
     {
-      "id": "body-b2-007",
+      "id": "b2-body-parts-die-netzhaut-retina",
       "german": "die Netzhaut",
       "english": "retina",
       "category": "Body Parts",
@@ -158,7 +158,7 @@
       }
     },
     {
-      "id": "body-b2-008",
+      "id": "b2-body-parts-die-hornhaut-cornea",
       "german": "die Hornhaut",
       "english": "cornea",
       "category": "Body Parts",
@@ -180,7 +180,7 @@
       }
     },
     {
-      "id": "body-b2-009",
+      "id": "b2-body-parts-das-trommelfell-eardrum",
       "german": "das Trommelfell",
       "english": "eardrum",
       "category": "Body Parts",
@@ -202,7 +202,7 @@
       }
     },
     {
-      "id": "body-b2-010",
+      "id": "b2-body-parts-die-luftroehre-windpipe-trachea",
       "german": "die Luftröhre",
       "english": "windpipe / trachea",
       "category": "Body Parts",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "body-b2-011",
+      "id": "b2-body-parts-die-speiseroehre-esophagus",
       "german": "die Speiseröhre",
       "english": "esophagus",
       "category": "Body Parts",
@@ -246,7 +246,7 @@
       }
     },
     {
-      "id": "body-b2-012",
+      "id": "b2-body-parts-das-zwerchfell-diaphragm",
       "german": "das Zwerchfell",
       "english": "diaphragm",
       "category": "Body Parts",
@@ -268,7 +268,7 @@
       }
     },
     {
-      "id": "body-b2-013",
+      "id": "b2-body-parts-das-rueckenmark-spinal-cord",
       "german": "das Rückenmark",
       "english": "spinal cord",
       "category": "Body Parts",
@@ -290,7 +290,7 @@
       }
     },
     {
-      "id": "body-b2-014",
+      "id": "b2-body-parts-die-sehne-tendon",
       "german": "die Sehne",
       "english": "tendon",
       "category": "Body Parts",
@@ -312,7 +312,7 @@
       }
     },
     {
-      "id": "body-b2-015",
+      "id": "b2-body-parts-der-knorpel-cartilage",
       "german": "der Knorpel",
       "english": "cartilage",
       "category": "Body Parts",
@@ -334,7 +334,7 @@
       }
     },
     {
-      "id": "body-b2-016",
+      "id": "b2-body-parts-das-band-ligament",
       "german": "das Band",
       "english": "ligament",
       "category": "Body Parts",
@@ -356,7 +356,7 @@
       }
     },
     {
-      "id": "body-b2-017",
+      "id": "b2-body-parts-die-arterie-artery",
       "german": "die Arterie",
       "english": "artery",
       "category": "Body Parts",
@@ -378,7 +378,7 @@
       }
     },
     {
-      "id": "body-b2-018",
+      "id": "b2-body-parts-die-vene-vein",
       "german": "die Vene",
       "english": "vein",
       "category": "Body Parts",
@@ -400,7 +400,7 @@
       }
     },
     {
-      "id": "body-b2-019",
+      "id": "b2-body-parts-die-kapillare-capillary",
       "german": "die Kapillare",
       "english": "capillary",
       "category": "Body Parts",
@@ -422,7 +422,7 @@
       }
     },
     {
-      "id": "body-b2-020",
+      "id": "b2-body-parts-das-knochenmark-bone-marrow",
       "german": "das Knochenmark",
       "english": "bone marrow",
       "category": "Body Parts",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "b2-body-parts-mivkdn5t79y2d",
+      "id": "b2-body-parts-das-blutgefaess-blood-vessel",
       "german": "das Blutgefäß",
       "english": "blood vessel",
       "category": "Body Parts",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "b2-body-parts-mivkeiesq4cov",
+      "id": "b2-body-parts-das-becken-pelvis-basin",
       "german": "das Becken",
       "english": "pelvis / basin",
       "category": "Body Parts",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "b2-body-parts-mivkeiesjs20p",
+      "id": "b2-body-parts-die-zelle-cell",
       "german": "die Zelle",
       "english": "cell",
       "category": "Body Parts",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "b2-body-parts-mivkeies8k4cs",
+      "id": "b2-body-parts-das-gewebe-tissue",
       "german": "das Gewebe",
       "english": "tissue",
       "category": "Body Parts",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "b2-body-parts-mivkeiesxx42z",
+      "id": "b2-body-parts-der-puls-pulse",
       "german": "der Puls",
       "english": "pulse",
       "category": "Body Parts",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "b2-body-parts-mivkg2zhpuu8z",
+      "id": "b2-body-parts-der-eierstock-ovary",
       "german": "der Eierstock",
       "english": "ovary",
       "category": "Body Parts",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "b2-body-parts-mivkg2zhc8qkl",
+      "id": "b2-body-parts-die-prostata-prostate",
       "german": "die Prostata",
       "english": "prostate",
       "category": "Body Parts",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "b2-body-parts-mivkg2zhwveuu",
+      "id": "b2-body-parts-die-mandel-tonsil",
       "german": "die Mandel",
       "english": "tonsil",
       "category": "Body Parts",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "b2-body-parts-mivkgqq41tqxw",
+      "id": "b2-body-parts-die-nebenniere-adrenal-gland",
       "german": "die Nebenniere",
       "english": "adrenal gland",
       "category": "Body Parts",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "b2-body-parts-mivkgqq4nez39",
+      "id": "b2-body-parts-die-rachenmandel-adenoid",
       "german": "die Rachenmandel",
       "english": "adenoid",
       "category": "Body Parts",

@@ -4,7 +4,7 @@
   "totalCards": 133,
   "flashcards": [
     {
-      "id": "syllabus-a2-10776",
+      "id": "a2-technology-der-computer-computer",
       "german": "der Computer",
       "english": "computer",
       "category": "Technology",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10777",
+      "id": "a2-technology-das-handy-mobile-phone",
       "german": "das Handy",
       "english": "mobile phone",
       "category": "Technology",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10778",
+      "id": "a2-technology-das-internet-internet",
       "german": "das Internet",
       "english": "internet",
       "category": "Technology",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10779",
+      "id": "a2-technology-die-e-mail-email",
       "german": "die E-Mail",
       "english": "email",
       "category": "Technology",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10780",
+      "id": "a2-technology-der-laptop-laptop",
       "german": "der Laptop",
       "english": "laptop",
       "category": "Technology",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10781",
+      "id": "a2-technology-das-tablet-tablet",
       "german": "das Tablet",
       "english": "tablet",
       "category": "Technology",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10782",
+      "id": "a2-technology-die-tastatur-keyboard",
       "german": "die Tastatur",
       "english": "keyboard",
       "category": "Technology",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10784",
+      "id": "a2-technology-der-bildschirm-screen-monitor",
       "german": "der Bildschirm",
       "english": "screen / monitor",
       "category": "Technology",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10785",
+      "id": "a2-technology-die-website-website",
       "german": "die Website",
       "english": "website",
       "category": "Technology",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10786",
+      "id": "a2-technology-die-app-app",
       "german": "die App",
       "english": "app",
       "category": "Technology",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10787",
+      "id": "a2-technology-das-passwort-password",
       "german": "das Passwort",
       "english": "password",
       "category": "Technology",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10788",
+      "id": "a2-technology-der-drucker-printer",
       "german": "der Drucker",
       "english": "printer",
       "category": "Technology",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10789",
+      "id": "a2-technology-die-datei-file",
       "german": "die Datei",
       "english": "file",
       "category": "Technology",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10790",
+      "id": "a2-technology-speichern-to-save",
       "german": "speichern",
       "english": "to save",
       "category": "Technology",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10791",
+      "id": "a2-technology-herunterladen-to-download",
       "german": "herunterladen",
       "english": "to download",
       "category": "Technology",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10792",
+      "id": "a2-technology-das-smartphone-smartphone",
       "german": "das Smartphone",
       "english": "smartphone",
       "category": "Technology",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10793",
+      "id": "a2-technology-die-kopfhoerer-headphones",
       "german": "die Kopfhörer",
       "english": "headphones",
       "category": "Technology",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10794",
+      "id": "a2-technology-der-lautsprecher-speaker",
       "german": "der Lautsprecher",
       "english": "speaker",
       "category": "Technology",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10795",
+      "id": "a2-technology-die-kamera-camera",
       "german": "die Kamera",
       "english": "camera",
       "category": "Technology",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10796",
+      "id": "a2-technology-das-mikrofon-microphone",
       "german": "das Mikrofon",
       "english": "microphone",
       "category": "Technology",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10797",
+      "id": "a2-technology-der-usb-stick-usb-stick-flash-drive",
       "german": "der USB-Stick",
       "english": "USB stick / flash drive",
       "category": "Technology",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10798",
+      "id": "a2-technology-die-festplatte-hard-drive",
       "german": "die Festplatte",
       "english": "hard drive",
       "category": "Technology",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10799",
+      "id": "a2-technology-die-ssd-ssd-solid-state-drive",
       "german": "die SSD",
       "english": "SSD / solid state drive",
       "category": "Technology",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10800",
+      "id": "a2-technology-der-akku-battery-rechargeable-battery",
       "german": "der Akku",
       "english": "battery / rechargeable battery",
       "category": "Technology",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10801",
+      "id": "a2-technology-das-ladegeraet-charger",
       "german": "das Ladegerät",
       "english": "charger",
       "category": "Technology",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10802",
+      "id": "a2-technology-das-kabel-cable",
       "german": "das Kabel",
       "english": "cable",
       "category": "Technology",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10803",
+      "id": "a2-technology-das-wlan-wifi-wireless-lan",
       "german": "das WLAN",
       "english": "WiFi / wireless LAN",
       "category": "Technology",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10804",
+      "id": "a2-technology-der-router-router",
       "german": "der Router",
       "english": "router",
       "category": "Technology",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10805",
+      "id": "a2-technology-das-netzwerk-network",
       "german": "das Netzwerk",
       "english": "network",
       "category": "Technology",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10806",
+      "id": "a2-technology-der-server-server",
       "german": "der Server",
       "english": "server",
       "category": "Technology",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10807",
+      "id": "a2-technology-die-cloud-cloud",
       "german": "die Cloud",
       "english": "cloud",
       "category": "Technology",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10808",
+      "id": "a2-technology-der-browser-browser",
       "german": "der Browser",
       "english": "browser",
       "category": "Technology",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10809",
+      "id": "a2-technology-die-suchmaschine-search-engine",
       "german": "die Suchmaschine",
       "english": "search engine",
       "category": "Technology",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10810",
+      "id": "a2-technology-der-link-link",
       "german": "der Link",
       "english": "link",
       "category": "Technology",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10811",
+      "id": "a2-technology-die-url-url-web-address",
       "german": "die URL",
       "english": "URL / web address",
       "category": "Technology",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10812",
+      "id": "a2-technology-der-download-download",
       "german": "der Download",
       "english": "download",
       "category": "Technology",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10813",
+      "id": "a2-technology-der-upload-upload",
       "german": "der Upload",
       "english": "upload",
       "category": "Technology",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10815",
+      "id": "a2-technology-die-software-software",
       "german": "die Software",
       "english": "software",
       "category": "Technology",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10816",
+      "id": "a2-technology-das-programm-program-application",
       "german": "das Programm",
       "english": "program / application",
       "category": "Technology",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10817",
+      "id": "a2-technology-das-betriebssystem-operating-system",
       "german": "das Betriebssystem",
       "english": "operating system",
       "category": "Technology",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10818",
+      "id": "a2-technology-das-update-update",
       "german": "das Update",
       "english": "update",
       "category": "Technology",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10819",
+      "id": "a2-technology-aktualisieren-to-update",
       "german": "aktualisieren",
       "english": "to update",
       "category": "Technology",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10820",
+      "id": "a2-technology-installieren-to-install",
       "german": "installieren",
       "english": "to install",
       "category": "Technology",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10821",
+      "id": "a2-technology-deinstallieren-to-uninstall",
       "german": "deinstallieren",
       "english": "to uninstall",
       "category": "Technology",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10822",
+      "id": "a2-technology-loeschen-to-delete",
       "german": "löschen",
       "english": "to delete",
       "category": "Technology",
@@ -904,7 +904,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10823",
+      "id": "a2-technology-kopieren-to-copy",
       "german": "kopieren",
       "english": "to copy",
       "category": "Technology",
@@ -924,7 +924,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10824",
+      "id": "a2-technology-einfuegen-to-paste",
       "german": "einfügen",
       "english": "to paste",
       "category": "Technology",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10825",
+      "id": "a2-technology-ausschneiden-to-cut",
       "german": "ausschneiden",
       "english": "to cut",
       "category": "Technology",
@@ -964,7 +964,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10826",
+      "id": "a2-technology-drucken-to-print",
       "german": "drucken",
       "english": "to print",
       "category": "Technology",
@@ -984,7 +984,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10827",
+      "id": "a2-technology-scannen-to-scan",
       "german": "scannen",
       "english": "to scan",
       "category": "Technology",
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10828",
+      "id": "a2-technology-der-scanner-scanner",
       "german": "der Scanner",
       "english": "scanner",
       "category": "Technology",
@@ -1024,7 +1024,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10829",
+      "id": "a2-technology-der-ordner-folder",
       "german": "der Ordner",
       "english": "folder",
       "category": "Technology",
@@ -1044,7 +1044,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10830",
+      "id": "a2-technology-das-dokument-document",
       "german": "das Dokument",
       "english": "document",
       "category": "Technology",
@@ -1064,7 +1064,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10831",
+      "id": "a2-technology-das-bild-image-picture",
       "german": "das Bild",
       "english": "image / picture",
       "category": "Technology",
@@ -1084,7 +1084,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10832",
+      "id": "a2-technology-das-foto-photo",
       "german": "das Foto",
       "english": "photo",
       "category": "Technology",
@@ -1104,7 +1104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10833",
+      "id": "a2-technology-das-video-video",
       "german": "das Video",
       "english": "video",
       "category": "Technology",
@@ -1124,7 +1124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10834",
+      "id": "a2-technology-das-audio-audio",
       "german": "das Audio",
       "english": "audio",
       "category": "Technology",
@@ -1144,7 +1144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10836",
+      "id": "a2-technology-das-mp3-mp3",
       "german": "das MP3",
       "english": "MP3",
       "category": "Technology",
@@ -1164,7 +1164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10837",
+      "id": "a2-technology-das-pdf-pdf",
       "german": "das PDF",
       "english": "PDF",
       "category": "Technology",
@@ -1184,7 +1184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10838",
+      "id": "a2-technology-die-textverarbeitung-word-processing",
       "german": "die Textverarbeitung",
       "english": "word processing",
       "category": "Technology",
@@ -1204,7 +1204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10839",
+      "id": "a2-technology-die-tabellenkalkulation-spreadsheet",
       "german": "die Tabellenkalkulation",
       "english": "spreadsheet",
       "category": "Technology",
@@ -1224,7 +1224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10840",
+      "id": "a2-technology-die-praesentation-presentation",
       "german": "die Präsentation",
       "english": "presentation",
       "category": "Technology",
@@ -1244,7 +1244,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10841",
+      "id": "a2-technology-die-datenbank-database",
       "german": "die Datenbank",
       "english": "database",
       "category": "Technology",
@@ -1264,7 +1264,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10842",
+      "id": "a2-technology-die-daten-data",
       "german": "die Daten",
       "english": "data",
       "category": "Technology",
@@ -1284,7 +1284,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10843",
+      "id": "a2-technology-das-backup-backup",
       "german": "das Backup",
       "english": "backup",
       "category": "Technology",
@@ -1304,7 +1304,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10844",
+      "id": "a2-technology-die-sicherung-backup-backup-copy",
       "german": "die Sicherung",
       "english": "backup / backup copy",
       "category": "Technology",
@@ -1324,7 +1324,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10845",
+      "id": "a2-technology-der-virus-virus",
       "german": "der Virus",
       "english": "virus",
       "category": "Technology",
@@ -1344,7 +1344,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10846",
+      "id": "a2-technology-das-antivirus-antivirus",
       "german": "das Antivirus",
       "english": "antivirus",
       "category": "Technology",
@@ -1364,7 +1364,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10847",
+      "id": "a2-technology-die-sicherheit-security",
       "german": "die Sicherheit",
       "english": "security",
       "category": "Technology",
@@ -1384,7 +1384,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10848",
+      "id": "a2-technology-die-firewall-firewall",
       "german": "die Firewall",
       "english": "firewall",
       "category": "Technology",
@@ -1404,7 +1404,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10849",
+      "id": "a2-technology-verschluesseln-to-encrypt",
       "german": "verschlüsseln",
       "english": "to encrypt",
       "category": "Technology",
@@ -1424,7 +1424,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10850",
+      "id": "a2-technology-die-verschluesselung-encryption",
       "german": "die Verschlüsselung",
       "english": "encryption",
       "category": "Technology",
@@ -1444,7 +1444,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10851",
+      "id": "a2-technology-der-benutzername-username",
       "german": "der Benutzername",
       "english": "username",
       "category": "Technology",
@@ -1464,7 +1464,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10852",
+      "id": "a2-technology-anmelden-to-log-in-to-sign-in",
       "german": "anmelden",
       "english": "to log in / to sign in",
       "category": "Technology",
@@ -1484,7 +1484,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10853",
+      "id": "a2-technology-abmelden-to-log-out-to-sign-out",
       "german": "abmelden",
       "english": "to log out / to sign out",
       "category": "Technology",
@@ -1504,7 +1504,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10854",
+      "id": "a2-technology-das-konto-account",
       "german": "das Konto",
       "english": "account",
       "category": "Technology",
@@ -1524,7 +1524,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10855",
+      "id": "a2-technology-das-profil-profile",
       "german": "das Profil",
       "english": "profile",
       "category": "Technology",
@@ -1544,7 +1544,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10856",
+      "id": "a2-technology-die-einstellungen-settings",
       "german": "die Einstellungen",
       "english": "settings",
       "category": "Technology",
@@ -1564,7 +1564,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10857",
+      "id": "a2-technology-die-nachricht-message",
       "german": "die Nachricht",
       "english": "message",
       "category": "Technology",
@@ -1584,7 +1584,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10858",
+      "id": "a2-technology-die-sms-sms-text-message",
       "german": "die SMS",
       "english": "SMS / text message",
       "category": "Technology",
@@ -1604,7 +1604,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10859",
+      "id": "a2-technology-der-chat-chat",
       "german": "der Chat",
       "english": "chat",
       "category": "Technology",
@@ -1624,7 +1624,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10860",
+      "id": "a2-technology-chatten-to-chat",
       "german": "chatten",
       "english": "to chat",
       "category": "Technology",
@@ -1644,7 +1644,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10861",
+      "id": "a2-technology-der-videoanruf-video-call",
       "german": "der Videoanruf",
       "english": "video call",
       "category": "Technology",
@@ -1664,7 +1664,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10862",
+      "id": "a2-technology-die-videokonferenz-video-conference",
       "german": "die Videokonferenz",
       "english": "video conference",
       "category": "Technology",
@@ -1684,7 +1684,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10863",
+      "id": "a2-technology-soziale-medien-social-media",
       "german": "soziale Medien",
       "english": "social media",
       "category": "Technology",
@@ -1704,7 +1704,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10864",
+      "id": "a2-technology-soziales-netzwerk-social-network",
       "german": "soziales Netzwerk",
       "english": "social network",
       "category": "Technology",
@@ -1724,7 +1724,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10865",
+      "id": "a2-technology-die-post-post",
       "german": "die Post",
       "english": "post",
       "category": "Technology",
@@ -1744,7 +1744,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10866",
+      "id": "a2-technology-posten-to-post",
       "german": "posten",
       "english": "to post",
       "category": "Technology",
@@ -1764,7 +1764,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10867",
+      "id": "a2-technology-teilen-to-share",
       "german": "teilen",
       "english": "to share",
       "category": "Technology",
@@ -1784,7 +1784,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10868",
+      "id": "a2-technology-liken-to-like",
       "german": "liken",
       "english": "to like",
       "category": "Technology",
@@ -1804,7 +1804,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10869",
+      "id": "a2-technology-das-like-like",
       "german": "das Like",
       "english": "like",
       "category": "Technology",
@@ -1824,7 +1824,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10870",
+      "id": "a2-technology-der-kommentar-comment",
       "german": "der Kommentar",
       "english": "comment",
       "category": "Technology",
@@ -1844,7 +1844,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10871",
+      "id": "a2-technology-kommentieren-to-comment",
       "german": "kommentieren",
       "english": "to comment",
       "category": "Technology",
@@ -1864,7 +1864,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10872",
+      "id": "a2-technology-der-follower-follower",
       "german": "der Follower",
       "english": "follower",
       "category": "Technology",
@@ -1884,7 +1884,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10873",
+      "id": "a2-technology-folgen-to-follow",
       "german": "folgen",
       "english": "to follow",
       "category": "Technology",
@@ -1904,7 +1904,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10874",
+      "id": "a2-technology-der-hashtag-hashtag",
       "german": "der Hashtag",
       "english": "hashtag",
       "category": "Technology",
@@ -1924,7 +1924,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10875",
+      "id": "a2-technology-die-story-story",
       "german": "die Story",
       "english": "story",
       "category": "Technology",
@@ -1944,7 +1944,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10876",
+      "id": "a2-technology-der-livestream-livestream",
       "german": "der Livestream",
       "english": "livestream",
       "category": "Technology",
@@ -1964,7 +1964,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10877",
+      "id": "a2-technology-streamen-to-stream",
       "german": "streamen",
       "english": "to stream",
       "category": "Technology",
@@ -1984,7 +1984,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10878",
+      "id": "a2-technology-das-streaming-streaming",
       "german": "das Streaming",
       "english": "streaming",
       "category": "Technology",
@@ -2004,7 +2004,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10879",
+      "id": "a2-technology-der-podcast-podcast",
       "german": "der Podcast",
       "english": "podcast",
       "category": "Technology",
@@ -2024,7 +2024,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10880",
+      "id": "a2-technology-abonnieren-to-subscribe",
       "german": "abonnieren",
       "english": "to subscribe",
       "category": "Technology",
@@ -2044,7 +2044,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10881",
+      "id": "a2-technology-das-abonnement-subscription",
       "german": "das Abonnement",
       "english": "subscription",
       "category": "Technology",
@@ -2064,7 +2064,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10882",
+      "id": "a2-technology-die-benachrichtigung-notification",
       "german": "die Benachrichtigung",
       "english": "notification",
       "category": "Technology",
@@ -2084,7 +2084,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10883",
+      "id": "a2-technology-die-bildschirmzeit-screen-time",
       "german": "die Bildschirmzeit",
       "english": "screen time",
       "category": "Technology",
@@ -2104,7 +2104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10884",
+      "id": "a2-technology-online-online",
       "german": "online",
       "english": "online",
       "category": "Technology",
@@ -2124,7 +2124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10885",
+      "id": "a2-technology-offline-offline",
       "german": "offline",
       "english": "offline",
       "category": "Technology",
@@ -2144,7 +2144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10886",
+      "id": "a2-technology-digital-digital",
       "german": "digital",
       "english": "digital",
       "category": "Technology",
@@ -2164,7 +2164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10887",
+      "id": "a2-technology-analog-analog",
       "german": "analog",
       "english": "analog",
       "category": "Technology",
@@ -2184,7 +2184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10888",
+      "id": "a2-technology-drahtlos-wireless",
       "german": "drahtlos",
       "english": "wireless",
       "category": "Technology",
@@ -2204,7 +2204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10889",
+      "id": "a2-technology-das-bluetooth-bluetooth",
       "german": "das Bluetooth",
       "english": "Bluetooth",
       "category": "Technology",
@@ -2224,7 +2224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10890",
+      "id": "a2-technology-das-nfc-nfc-near-field-communication",
       "german": "das NFC",
       "english": "NFC / near field communication",
       "category": "Technology",
@@ -2244,7 +2244,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10891",
+      "id": "a2-technology-der-qr-code-qr-code",
       "german": "der QR-Code",
       "english": "QR code",
       "category": "Technology",
@@ -2264,7 +2264,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10892",
+      "id": "a2-technology-das-gps-gps",
       "german": "das GPS",
       "english": "GPS",
       "category": "Technology",
@@ -2284,7 +2284,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10893",
+      "id": "a2-technology-die-navigation-navigation",
       "german": "die Navigation",
       "english": "navigation",
       "category": "Technology",
@@ -2304,7 +2304,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10894",
+      "id": "a2-technology-navigieren-to-navigate",
       "german": "navigieren",
       "english": "to navigate",
       "category": "Technology",
@@ -2324,7 +2324,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10895",
+      "id": "a2-technology-der-touchscreen-touchscreen",
       "german": "der Touchscreen",
       "english": "touchscreen",
       "category": "Technology",
@@ -2344,7 +2344,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10896",
+      "id": "a2-technology-tippen-to-tap-to-type",
       "german": "tippen",
       "english": "to tap / to type",
       "category": "Technology",
@@ -2364,7 +2364,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10897",
+      "id": "a2-technology-wischen-to-swipe",
       "german": "wischen",
       "english": "to swipe",
       "category": "Technology",
@@ -2384,7 +2384,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10898",
+      "id": "a2-technology-scrollen-to-scroll",
       "german": "scrollen",
       "english": "to scroll",
       "category": "Technology",
@@ -2404,7 +2404,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10899",
+      "id": "a2-technology-zoomen-to-zoom",
       "german": "zoomen",
       "english": "to zoom",
       "category": "Technology",
@@ -2424,7 +2424,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10900",
+      "id": "a2-technology-klicken-to-click",
       "german": "klicken",
       "english": "to click",
       "category": "Technology",
@@ -2444,7 +2444,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10901",
+      "id": "a2-technology-der-doppelklick-double-click",
       "german": "der Doppelklick",
       "english": "double-click",
       "category": "Technology",
@@ -2464,7 +2464,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10902",
+      "id": "a2-technology-der-rechtsklick-right-click",
       "german": "der Rechtsklick",
       "english": "right-click",
       "category": "Technology",
@@ -2484,7 +2484,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10905",
+      "id": "a2-technology-der-bug-bug",
       "german": "der Bug",
       "english": "bug",
       "category": "Technology",
@@ -2504,7 +2504,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10906",
+      "id": "a2-technology-der-absturz-crash",
       "german": "der Absturz",
       "english": "crash",
       "category": "Technology",
@@ -2524,7 +2524,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10907",
+      "id": "a2-technology-abstuerzen-to-crash",
       "german": "abstürzen",
       "english": "to crash",
       "category": "Technology",
@@ -2544,7 +2544,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10908",
+      "id": "a2-technology-einfrieren-to-freeze",
       "german": "einfrieren",
       "english": "to freeze",
       "category": "Technology",
@@ -2564,7 +2564,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10909",
+      "id": "a2-technology-neu-starten-to-restart",
       "german": "neu starten",
       "english": "to restart",
       "category": "Technology",
@@ -2584,7 +2584,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10910",
+      "id": "a2-technology-herunterfahren-to-shut-down",
       "german": "herunterfahren",
       "english": "to shut down",
       "category": "Technology",
@@ -2604,7 +2604,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10911",
+      "id": "a2-technology-hochfahren-to-start-up-to-boot-up",
       "german": "hochfahren",
       "english": "to start up / to boot up",
       "category": "Technology",
@@ -2624,7 +2624,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10912",
+      "id": "a2-technology-funktionieren-to-work-to-function",
       "german": "funktionieren",
       "english": "to work / to function",
       "category": "Technology",
@@ -2644,7 +2644,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10913",
+      "id": "a2-technology-kaputt-broken",
       "german": "kaputt",
       "english": "broken",
       "category": "Technology",

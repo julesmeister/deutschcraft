@@ -4,7 +4,7 @@
   "totalCards": 15,
   "flashcards": [
     {
-      "id": "syllabus-a1-10041",
+      "id": "a1-animals-der-hund-dog",
       "german": "der Hund",
       "english": "dog",
       "category": "Animals",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10042",
+      "id": "a1-animals-die-katze-cat",
       "german": "die Katze",
       "english": "cat",
       "category": "Animals",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10043",
+      "id": "a1-animals-der-vogel-bird",
       "german": "der Vogel",
       "english": "bird",
       "category": "Animals",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10044",
+      "id": "a1-animals-der-fisch-fish",
       "german": "der Fisch",
       "english": "fish",
       "category": "Animals",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10045",
+      "id": "a1-animals-das-pferd-horse",
       "german": "das Pferd",
       "english": "horse",
       "category": "Animals",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10046",
+      "id": "a1-animals-die-maus-mouse",
       "german": "die Maus",
       "english": "mouse",
       "category": "Animals",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10047",
+      "id": "a1-animals-die-kuh-cow",
       "german": "die Kuh",
       "english": "cow",
       "category": "Animals",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10048",
+      "id": "a1-animals-das-schwein-pig",
       "german": "das Schwein",
       "english": "pig",
       "category": "Animals",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10049",
+      "id": "a1-animals-das-huhn-chicken",
       "german": "das Huhn",
       "english": "chicken",
       "category": "Animals",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10050",
+      "id": "a1-animals-das-schaf-sheep",
       "german": "das Schaf",
       "english": "sheep",
       "category": "Animals",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10051",
+      "id": "a1-animals-der-hase-rabbit-hare",
       "german": "der Hase",
       "english": "rabbit / hare",
       "category": "Animals",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10052",
+      "id": "a1-animals-die-ente-duck",
       "german": "die Ente",
       "english": "duck",
       "category": "Animals",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10053",
+      "id": "a1-animals-der-baer-bear",
       "german": "der Bär",
       "english": "bear",
       "category": "Animals",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10054",
+      "id": "a1-animals-der-loewe-lion",
       "german": "der Löwe",
       "english": "lion",
       "category": "Animals",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a1-10055",
+      "id": "a1-animals-das-tier-animal",
       "german": "das Tier",
       "english": "animal",
       "category": "Animals",

@@ -26,9 +26,6 @@ function initializeVocabularyMap() {
   for (const card of cards) {
     // Map by ID
     vocabularyMap.set(card.id, card);
-
-    // Also map by "FLASH_" + ID since flashcard_progress might use that
-    vocabularyMap.set(`FLASH_${card.id}`, card);
   }
 
   return vocabularyMap;

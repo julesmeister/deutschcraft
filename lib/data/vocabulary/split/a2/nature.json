@@ -4,7 +4,7 @@
   "totalCards": 30,
   "flashcards": [
     {
-      "id": "syllabus-a2-10610",
+      "id": "a2-nature-der-baum-tree",
       "german": "der Baum",
       "english": "tree",
       "category": "Nature",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10611",
+      "id": "a2-nature-die-blume-flower",
       "german": "die Blume",
       "english": "flower",
       "category": "Nature",
@@ -44,7 +44,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10612",
+      "id": "a2-nature-der-park-park",
       "german": "der Park",
       "english": "park",
       "category": "Nature",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10613",
+      "id": "a2-nature-der-see-lake",
       "german": "der See",
       "english": "lake",
       "category": "Nature",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10614",
+      "id": "a2-nature-der-wald-forest",
       "german": "der Wald",
       "english": "forest",
       "category": "Nature",
@@ -104,7 +104,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10615",
+      "id": "a2-nature-der-berg-mountain",
       "german": "der Berg",
       "english": "mountain",
       "category": "Nature",
@@ -124,7 +124,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10616",
+      "id": "a2-nature-der-fluss-river",
       "german": "der Fluss",
       "english": "river",
       "category": "Nature",
@@ -144,7 +144,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10617",
+      "id": "a2-nature-das-meer-sea-ocean",
       "german": "das Meer",
       "english": "sea / ocean",
       "category": "Nature",
@@ -164,7 +164,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10618",
+      "id": "a2-nature-der-strand-beach",
       "german": "der Strand",
       "english": "beach",
       "category": "Nature",
@@ -184,7 +184,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10621",
+      "id": "a2-nature-der-mond-moon",
       "german": "der Mond",
       "english": "moon",
       "category": "Nature",
@@ -204,7 +204,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10622",
+      "id": "a2-nature-der-stern-star",
       "german": "der Stern",
       "english": "star",
       "category": "Nature",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10630",
+      "id": "a2-nature-das-insekt-insect",
       "german": "das Insekt",
       "english": "insect",
       "category": "Nature",
@@ -244,7 +244,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10631",
+      "id": "a2-nature-die-pflanze-plant",
       "german": "die Pflanze",
       "english": "plant",
       "category": "Nature",
@@ -264,7 +264,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10632",
+      "id": "a2-nature-das-gras-grass",
       "german": "das Gras",
       "english": "grass",
       "category": "Nature",
@@ -284,7 +284,7 @@
       }
     },
     {
-      "id": "syllabus-a2-10633",
+      "id": "a2-nature-der-stein-stone-rock",
       "german": "der Stein",
       "english": "stone / rock",
       "category": "Nature",
@@ -304,7 +304,7 @@
       }
     },
     {
-      "id": "a2-nature-miujbk06u0c00",
+      "id": "a2-nature-die-natur-nature",
       "german": "die Natur",
       "english": "nature",
       "category": "Nature",
@@ -324,7 +324,7 @@
       }
     },
     {
-      "id": "a2-nature-miujbk06rrra1",
+      "id": "a2-nature-die-insel-island",
       "german": "die Insel",
       "english": "island",
       "category": "Nature",
@@ -344,7 +344,7 @@
       }
     },
     {
-      "id": "a2-nature-miujbk06rt9hq",
+      "id": "a2-nature-die-biene-bee",
       "german": "die Biene",
       "english": "bee",
       "category": "Nature",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "id": "a2-nature-miujdiwgjg4mo",
+      "id": "a2-nature-die-landschaft-landscape",
       "german": "die Landschaft",
       "english": "landscape",
       "category": "Nature",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "id": "a2-nature-miujdiwg086fw",
+      "id": "a2-nature-das-tal-valley",
       "german": "das Tal",
       "english": "valley",
       "category": "Nature",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "id": "a2-nature-miujdiwg62oik",
+      "id": "a2-nature-der-huegel-hill",
       "german": "der Hügel",
       "english": "hill",
       "category": "Nature",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "id": "a2-nature-miujdiwg7jzz7",
+      "id": "a2-nature-der-felsen-rock-cliff",
       "german": "der Felsen",
       "english": "rock / cliff",
       "category": "Nature",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "id": "a2-nature-miujdiwgszhi9",
+      "id": "a2-nature-die-hoehle-cave",
       "german": "die Höhle",
       "english": "cave",
       "category": "Nature",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "id": "a2-nature-miujdiwgvlddy",
+      "id": "a2-nature-die-wiese-meadow",
       "german": "die Wiese",
       "english": "meadow",
       "category": "Nature",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "id": "a2-nature-miujdiwg8hn2d",
+      "id": "a2-nature-das-feld-field",
       "german": "das Feld",
       "english": "field",
       "category": "Nature",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "id": "a2-nature-miujdiwgoc4jj",
+      "id": "a2-nature-der-acker-field-agricultural",
       "german": "der Acker",
       "english": "field (agricultural)",
       "category": "Nature",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "id": "a2-nature-miujdiwgzelns",
+      "id": "a2-nature-die-erde-earth-soil",
       "german": "die Erde",
       "english": "earth / soil",
       "category": "Nature",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "id": "a2-nature-miujdiwgmzzmv",
+      "id": "a2-nature-der-sand-sand",
       "german": "der Sand",
       "english": "sand",
       "category": "Nature",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "id": "a2-nature-miujdiwgzbe7y",
+      "id": "a2-nature-der-staub-dust",
       "german": "der Staub",
       "english": "dust",
       "category": "Nature",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "id": "a2-nature-miujf2ns3pi2t",
+      "id": "a2-nature-der-gipfel-summit-peak",
       "german": "der Gipfel",
       "english": "summit / peak",
       "category": "Nature",
