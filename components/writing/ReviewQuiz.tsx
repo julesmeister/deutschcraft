@@ -216,7 +216,16 @@ export function ReviewQuiz({
             Previous
           </button>
 
-          {currentBlankIndex < blanks.length - 1 ? (
+          {allBlanksFilled ? (
+            <ActionButton
+              onClick={handleSubmit}
+              variant="purple"
+              icon={<ActionButtonIcons.Check />}
+              className="flex-1"
+            >
+              Check Answers
+            </ActionButton>
+          ) : currentBlankIndex < blanks.length - 1 ? (
             <button
               onClick={handleNext}
               className="flex-1 px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-brand-purple to-pastel-ocean rounded-lg hover:opacity-90 transition-opacity"
@@ -224,15 +233,12 @@ export function ReviewQuiz({
               Next
             </button>
           ) : (
-            <ActionButton
-              onClick={handleSubmit}
-              disabled={!allBlanksFilled}
-              variant="purple"
-              icon={<ActionButtonIcons.Check />}
-              className="flex-1"
+            <button
+              disabled
+              className="flex-1 px-4 py-2 text-sm font-semibold text-white bg-gray-300 rounded-lg cursor-not-allowed"
             >
               Check Answers
-            </ActionButton>
+            </button>
           )}
 
           <button

@@ -121,7 +121,7 @@ export function FeedbackWorkspace({
         });
       }
 
-      toast.success(`Quiz completed! Score: ${score}%`, { duration: 5000 });
+      toast.success(`Quiz completed! Score: ${score} points`, { duration: 5000 });
 
       // Invalidate quiz stats to refresh the data
       await queryClient.invalidateQueries({
