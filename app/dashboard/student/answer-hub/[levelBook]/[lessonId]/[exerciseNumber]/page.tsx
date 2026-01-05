@@ -95,10 +95,7 @@ export default function ExerciseDetailPage() {
           subtitle="Loading exercise..."
           backButton={{
             label: "Back to Lesson",
-            onClick: () =>
-              router.push(
-                `/dashboard/student/answer-hub/${levelBook}/${lessonId}`
-              ),
+            href: `/dashboard/student/answer-hub/${levelBook}/${lessonId}`,
           }}
         />
         <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
@@ -116,10 +113,7 @@ export default function ExerciseDetailPage() {
           subtitle="Exercise not found"
           backButton={{
             label: "Back to Lesson",
-            onClick: () =>
-              router.push(
-                `/dashboard/student/answer-hub/${levelBook}/${lessonId}`
-              ),
+            href: `/dashboard/student/answer-hub/${levelBook}/${lessonId}`,
           }}
         />
         <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
@@ -165,10 +159,7 @@ export default function ExerciseDetailPage() {
         subtitle={`${level} ${bookType}`}
         backButton={{
           label: "Back to Lesson",
-          onClick: () =>
-            router.push(
-              `/dashboard/student/answer-hub/${levelBook}/${lessonId}`
-            ),
+          href: `/dashboard/student/answer-hub/${levelBook}/${lessonId}`,
         }}
       />
 
@@ -180,7 +171,6 @@ export default function ExerciseDetailPage() {
           <div className="p-6 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-gray-100">
             <div className="flex items-start justify-between gap-4 mb-3">
               <div className="flex-1">
-
                 {/* Question */}
                 {exercise.question && (
                   <p className="text-base text-gray-700 mb-3">
