@@ -3,33 +3,100 @@
  * Intelligent sentence selection and tracking with spaced repetition
  */
 
-import { db } from '@/turso/client';
-import { QuizBlank } from '@/lib/models/writing';
-import { generateQuizBlanks } from '@/lib/utils/quizGenerator';
+import { QuizBlank } from "@/lib/models/writing";
+import { generateQuizBlanks } from "@/lib/utils/quizGenerator";
+import {
+  createSentence,
+  getUserSentences,
+  updateSentenceStats,
+  recordAttempt,
+  getSentence,
+  updateUserProgress,
+} from "@/lib/services/turso/miniExerciseService";
+import { getWritingSubmission } from "@/lib/services/turso/writing/submissions";
+import {
+  splitIntoSentences,
+  applyCorrectionsSentenceLevel,
+  generateSentenceId,
+  calculatePriority,
+} from "./utils";
 
 export interface MiniExerciseResult {
   sentence: string;
+  originalSentence: string;
   blanks: QuizBlank[];
-  sentenceId?: string;
+  sentenceId: string;
   submissionId: string;
-  sourceType: 'ai' | 'teacher' | 'reference';
+  sourceType: "ai" | "teacher" | "reference";
+  exerciseId?: string;
+  exerciseTitle?: string;
   exerciseType: string;
   submittedAt: number;
 }
+
+// ============================================================================
+// MAIN FUNCTIONS
+// ============================================================================
 
 /**
  * Get a smart mini exercise with spaced repetition
  * Returns sentences that need review based on performance
  */
-export async function getSmartMiniExercise(userId: string): Promise<MiniExerciseResult | null> {
+export async function getSmartMiniExercise(
+  userId: string
+): Promise<MiniExerciseResult | null> {
   try {
-    console.log('[smartMiniExercise:turso] Fetching for user:', userId);
+    // 1. Get candidate sentences
+    // We fetch a larger pool to apply scoring logic
+    const candidates = await getUserSentences(userId, { limit: 50 });
 
-    // For now, just return null and let it fall back to random
-    // TODO: Implement smart tracking with mini_exercise_sentences and mini_exercise_attempts tables
-    return null;
+    if (candidates.length === 0) {
+      return null;
+    }
+
+    // 2. Calculate priority for each sentence
+    const sentencesWithPriority = candidates.map((sentence) => ({
+      sentence,
+      priority: calculatePriority(sentence),
+    }));
+
+    // 3. Sort by priority (highest first)
+    sentencesWithPriority.sort((a, b) => b.priority - a.priority);
+
+    // 4. Take top 10 and randomly select from them (to add variety)
+    const topCandidates = sentencesWithPriority.slice(0, 10);
+    const selected =
+      topCandidates[Math.floor(Math.random() * topCandidates.length)];
+    const sentence = selected.sentence;
+
+    // 5. Generate blanks
+    const blanks = generateQuizBlanks(
+      sentence.originalSentence,
+      sentence.sentence
+    );
+
+    // 6. Update timesShown (async, don't wait)
+    updateSentenceStats(sentence.sentenceId, { wasShown: true }).catch((err) =>
+      console.error("[smartMiniExercise:turso] Error updating view stats:", err)
+    );
+
+    return {
+      sentence: sentence.sentence,
+      originalSentence: sentence.originalSentence,
+      blanks,
+      sentenceId: sentence.sentenceId,
+      submissionId: sentence.submissionId,
+      sourceType: sentence.sourceType,
+      exerciseId: sentence.exerciseId,
+      exerciseTitle: sentence.exerciseTitle,
+      exerciseType: sentence.exerciseType,
+      submittedAt: sentence.submittedAt,
+    };
   } catch (error) {
-    console.error('[smartMiniExercise:turso] Error:', error);
+    console.error(
+      "[smartMiniExercise:turso] Error getting smart exercise:",
+      error
+    );
     return null;
   }
 }
@@ -47,18 +114,64 @@ export async function recordMiniExerciseAttempt(
   points: number
 ): Promise<void> {
   try {
-    console.log('[smartMiniExercise:turso] Recording attempt:', {
+    const accuracy = Math.round((correctAnswers / totalBlanks) * 100);
+    const isPerfect = accuracy === 100;
+    const now = Date.now();
+
+    // 1. Create attempt record
+    const attemptId = `att_${now}_${Math.random().toString(36).substr(2, 9)}`;
+
+    await recordAttempt({
+      attemptId,
       sentenceId,
       userId,
+      answers: userAnswers,
       correctAnswers,
       totalBlanks,
       points,
+      accuracy,
+      completedAt: now,
     });
 
-    // TODO: Implement attempt tracking in mini_exercise_attempts table
-    // For now, just log it
+    // 2. Update sentence statistics
+    await updateSentenceStats(sentenceId, {
+      correctAnswers,
+      totalBlanks,
+      points,
+      wasPerfect: isPerfect,
+    });
+
+    // 3. Update user progress
+    // Calculate review count change (simplified logic)
+    // If mastered, reduce review count. If failed, might increase.
+    // This is handled by updateSentenceStats internal logic mostly,
+    // but here we track aggregate user stats.
+
+    // Check mastery status to update progress counters
+    const sentence = await getSentence(sentenceId);
+    let masteredCountChange = 0;
+
+    // Check if it just became mastered (needsReview went from true to false)
+    // This is tricky without knowing previous state, but we can approximate
+    // based on the stats we just updated.
+    if (
+      sentence &&
+      !sentence.needsReview &&
+      isPerfect &&
+      sentence.consecutiveCorrect === 3
+    ) {
+      masteredCountChange = 1;
+    }
+
+    await updateUserProgress(userId, {
+      sentenceCompleted: true,
+      points,
+      accuracy,
+      masteredCountChange,
+    });
   } catch (error) {
-    console.error('[smartMiniExercise:turso] Error recording attempt:', error);
+    console.error("[smartMiniExercise:turso] Error recording attempt:", error);
+    throw error;
   }
 }
 
@@ -71,11 +184,87 @@ export async function indexSubmissionSentences(
   userId: string
 ): Promise<void> {
   try {
-    console.log('[smartMiniExercise:turso] Indexing sentences for:', submissionId);
+    // 1. Fetch full submission
+    const submission = await getWritingSubmission(submissionId);
+    if (!submission) {
+      console.warn(
+        "[smartMiniExercise:turso] Submission not found:",
+        submissionId
+      );
+      return;
+    }
 
-    // TODO: Implement sentence indexing in mini_exercise_sentences table
-    // For now, just log it
+    // 2. Get corrected text and source type
+    let correctedText = "";
+    let sourceType: "ai" | "teacher" | "reference" = "ai";
+
+    if (submission.teacherCorrectedVersion) {
+      correctedText = submission.teacherCorrectedVersion;
+      sourceType = "teacher";
+    } else if (submission.aiCorrectedVersion) {
+      correctedText = submission.aiCorrectedVersion;
+      sourceType = "ai";
+    } else if (
+      submission.aiFeedback &&
+      submission.aiFeedback.grammarErrors &&
+      submission.aiFeedback.grammarErrors.length > 0
+    ) {
+      correctedText = applyCorrectionsSentenceLevel(
+        submission.content,
+        submission.aiFeedback.grammarErrors
+      );
+      sourceType = "ai";
+    } else {
+      // No corrections available
+      return;
+    }
+
+    // 3. Split both original and corrected into sentences
+    const originalSentences = splitIntoSentences(submission.content);
+    const correctedSentences = splitIntoSentences(correctedText);
+
+    // 4. Index each sentence
+    for (let i = 0; i < correctedSentences.length; i++) {
+      const correctedSentence = correctedSentences[i];
+      const originalSentence = originalSentences[i] || correctedSentence;
+
+      // Generate blanks to check if this sentence has corrections
+      const blanks = generateQuizBlanks(originalSentence, correctedSentence);
+
+      // Only index sentences with corrections (blanks)
+      if (blanks.length === 0) {
+        continue;
+      }
+
+      const sentenceId = generateSentenceId(submission.submissionId, i);
+
+      // Check if sentence already exists
+      const existingSentence = await getSentence(sentenceId);
+      if (existingSentence) {
+        continue;
+      }
+
+      // Create new sentence record
+      await createSentence({
+        sentenceId,
+        submissionId: submission.submissionId,
+        userId: submission.userId,
+        sentence: correctedSentence,
+        originalSentence,
+        sentenceIndex: i,
+        exerciseId: submission.exerciseId,
+        exerciseType: submission.exerciseType,
+        exerciseTitle: submission.exerciseTitle,
+        sourceType,
+        submittedAt: submission.submittedAt || submission.createdAt,
+      });
+    }
+
+    console.log(
+      `[smartMiniExercise:turso] Indexed ${correctedSentences.length} sentences for submission ${submissionId}`
+    );
   } catch (error) {
-    console.error('[smartMiniExercise:turso] Error indexing sentences:', error);
+    console.error("[smartMiniExercise:turso] Error indexing sentences:", error);
+    // Don't throw, just log error to prevent blocking the main flow
   }
 }
