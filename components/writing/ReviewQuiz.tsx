@@ -4,20 +4,29 @@
  * Shows one blank at a time like the quiz page
  */
 
-'use client';
+"use client";
 
-import { useState, useEffect, useRef } from 'react';
-import { QuizBlank } from '@/lib/models/writing';
-import { generateQuizBlanks, checkAnswer, calculateQuizScore } from '@/lib/utils/quizGenerator';
-import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
-import { calculateQuizPoints } from '@/lib/hooks/useQuizStats';
-import { GermanCharAutocomplete } from './GermanCharAutocomplete';
+import { useState, useEffect, useRef } from "react";
+import { QuizBlank } from "@/lib/models/writing";
+import {
+  generateQuizBlanks,
+  checkAnswer,
+  calculateQuizScore,
+} from "@/lib/utils/quizGenerator";
+import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
+import { calculateQuizPoints } from "@/lib/hooks/useQuizStats";
+import { GermanCharAutocomplete } from "./GermanCharAutocomplete";
 
 interface ReviewQuizProps {
   originalText: string;
   correctedText: string;
-  sourceType: 'ai' | 'teacher' | 'reference';
-  onComplete: (points: number, correctAnswers: number, totalBlanks: number, answers: Record<number, string>) => void;
+  sourceType: "ai" | "teacher" | "reference";
+  onComplete: (
+    points: number,
+    correctAnswers: number,
+    totalBlanks: number,
+    answers: Record<number, string>
+  ) => void;
   onCancel: () => void;
 }
 
@@ -26,13 +35,17 @@ export function ReviewQuiz({
   correctedText,
   sourceType,
   onComplete,
-  onCancel
+  onCancel,
 }: ReviewQuizProps) {
   const [blanks, setBlanks] = useState<QuizBlank[]>([]);
   const [currentBlankIndex, setCurrentBlankIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [showResults, setShowResults] = useState(false);
-  const [results, setResults] = useState<{ points: number; correctAnswers: number; totalBlanks: number } | null>(null);
+  const [results, setResults] = useState<{
+    points: number;
+    correctAnswers: number;
+    totalBlanks: number;
+  } | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
@@ -42,9 +55,9 @@ export function ReviewQuiz({
   }, [originalText, correctedText]);
 
   const handleAnswerChange = (blankIndex: number, value: string) => {
-    setAnswers(prev => ({
+    setAnswers((prev) => ({
       ...prev,
-      [blankIndex]: value
+      [blankIndex]: value,
     }));
   };
 
@@ -60,13 +73,38 @@ export function ReviewQuiz({
     }
   };
 
+  const handleEnter = () => {
+    if (currentBlankIndex < blanks.length - 1) {
+      handleNext();
+    } else {
+      // On last blank
+      const allFilled = blanks.every(
+        (blank) => (answers[blank.index] || "").trim().length > 0
+      );
+      if (allFilled) {
+        handleSubmit();
+      } else {
+        // Find first empty blank
+        const firstEmptyIndex = blanks.findIndex(
+          (b) => !(answers[b.index] || "").trim()
+        );
+        if (firstEmptyIndex !== -1) {
+          setCurrentBlankIndex(firstEmptyIndex);
+        }
+      }
+    }
+  };
+
   const handleSubmit = () => {
     const quizResults = calculateQuizScore(answers, blanks);
-    const points = calculateQuizPoints(quizResults.correctAnswers, quizResults.totalBlanks);
+    const points = calculateQuizPoints(
+      quizResults.correctAnswers,
+      quizResults.totalBlanks
+    );
     setResults({
       points,
       correctAnswers: quizResults.correctAnswers,
-      totalBlanks: quizResults.totalBlanks
+      totalBlanks: quizResults.totalBlanks,
     });
     setShowResults(true);
     setCurrentBlankIndex(0); // Reset to first blank for review
@@ -74,7 +112,12 @@ export function ReviewQuiz({
 
   const handleFinish = () => {
     if (results) {
-      onComplete(results.points, results.correctAnswers, results.totalBlanks, answers);
+      onComplete(
+        results.points,
+        results.correctAnswers,
+        results.totalBlanks,
+        answers
+      );
     }
   };
 
@@ -82,12 +125,24 @@ export function ReviewQuiz({
     return (
       <div className="text-center py-12">
         <div className="text-4xl mb-3">✅</div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-2">No corrections to review!</h3>
+        <h3 className="text-lg font-semibold text-gray-900 mb-2">
+          No corrections to review!
+        </h3>
         <p className="text-sm text-gray-600 mb-6">
-          Your {sourceType === 'teacher' ? "teacher's" : sourceType === 'ai' ? "AI" : "reference"} correction had no changes from your original text.
+          Your{" "}
+          {sourceType === "teacher"
+            ? "teacher's"
+            : sourceType === "ai"
+            ? "AI"
+            : "reference"}{" "}
+          correction had no changes from your original text.
         </p>
         <div className="max-w-xs mx-auto mb-8">
-          <ActionButton onClick={onCancel} variant="gray" icon={<ActionButtonIcons.ArrowRight />}>
+          <ActionButton
+            onClick={onCancel}
+            variant="gray"
+            icon={<ActionButtonIcons.ArrowRight />}
+          >
             Back to Review
           </ActionButton>
         </div>
@@ -96,7 +151,9 @@ export function ReviewQuiz({
   }
 
   const currentBlank = blanks[currentBlankIndex];
-  const allBlanksFilled = blanks.every((blank) => (answers[blank.index] || '').trim().length > 0);
+  const allBlanksFilled = blanks.every(
+    (blank) => (answers[blank.index] || "").trim().length > 0
+  );
 
   return (
     <div className="space-y-6">
@@ -106,13 +163,18 @@ export function ReviewQuiz({
           <span className="text-2xl">💡</span>
           <div>
             <h3 className="text-base font-bold text-gray-900 mb-1">
-              {showResults ? 'Quiz Results' : 'Review Quiz'}
+              {showResults ? "Quiz Results" : "Review Quiz"}
             </h3>
             <p className="text-sm text-gray-600">
               {showResults
                 ? `You earned ${results?.points} points • ${results?.correctAnswers}/${results?.totalBlanks} correct`
-                : `Fill in the blanks with the corrected words from the ${sourceType === 'teacher' ? "teacher's" : sourceType === 'ai' ? "AI" : "reference"} correction.`
-              }
+                : `Fill in the blanks with the corrected words from the ${
+                    sourceType === "teacher"
+                      ? "teacher's"
+                      : sourceType === "ai"
+                      ? "AI"
+                      : "reference"
+                  } correction.`}
             </p>
           </div>
         </div>
@@ -133,10 +195,13 @@ export function ReviewQuiz({
         <BlankQuestion
           correctedText={correctedText}
           blank={currentBlank}
-          answer={answers[currentBlank.index] || ''}
-          onAnswerChange={(value) => handleAnswerChange(currentBlank.index, value)}
+          answer={answers[currentBlank.index] || ""}
+          onAnswerChange={(value) =>
+            handleAnswerChange(currentBlank.index, value)
+          }
           showResults={showResults}
           inputRef={inputRef}
+          onEnter={handleEnter}
         />
       </div>
 
@@ -176,6 +241,15 @@ export function ReviewQuiz({
           >
             Cancel
           </button>
+
+          {currentBlankIndex < blanks.length - 1 && (
+            <button
+              onClick={handleNext}
+              className="px-4 py-2 text-sm font-semibold text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+            >
+              Next
+            </button>
+          )}
         </div>
       ) : (
         <div className="flex gap-3">
@@ -222,6 +296,7 @@ interface BlankQuestionProps {
   onAnswerChange: (value: string) => void;
   showResults: boolean;
   inputRef: React.RefObject<HTMLInputElement>;
+  onEnter: () => void;
 }
 
 function BlankQuestion({
@@ -230,21 +305,22 @@ function BlankQuestion({
   answer,
   onAnswerChange,
   showResults,
-  inputRef
+  inputRef,
+  onEnter,
 }: BlankQuestionProps) {
-  const parts: Array<{ type: 'text' | 'blank'; content: string }> = [];
+  const parts: Array<{ type: "text" | "blank"; content: string }> = [];
 
   // Add text before blank
   if (blank.position > 0) {
     parts.push({
-      type: 'text',
+      type: "text",
       content: correctedText.substring(0, blank.position),
     });
   }
 
   // Add blank
   parts.push({
-    type: 'blank',
+    type: "blank",
     content: blank.correctAnswer,
   });
 
@@ -252,13 +328,16 @@ function BlankQuestion({
   // Skip past the word AND any trailing punctuation
   let endPosition = blank.position + blank.correctAnswer.length;
   // Skip punctuation that was part of the original word
-  while (endPosition < correctedText.length && /[^\w\s]/.test(correctedText[endPosition])) {
+  while (
+    endPosition < correctedText.length &&
+    /[^\w\s]/.test(correctedText[endPosition])
+  ) {
     endPosition++;
   }
 
   if (endPosition < correctedText.length) {
     parts.push({
-      type: 'text',
+      type: "text",
       content: correctedText.substring(endPosition),
     });
   }
@@ -269,23 +348,36 @@ function BlankQuestion({
   return (
     <div className="text-base leading-relaxed">
       {parts.map((part, index) => {
-        if (part.type === 'text') {
-          return <span key={index} className="text-gray-900">{part.content}</span>;
+        if (part.type === "text") {
+          return (
+            <span key={index} className="text-gray-900">
+              {part.content}
+            </span>
+          );
         } else {
           return (
-            <span key={index} className="inline-flex items-center gap-1 mx-1 my-1 relative">
+            <span
+              key={index}
+              className="inline-flex items-center gap-1 mx-1 my-1 relative"
+            >
               <input
                 ref={inputRef}
                 type="text"
                 value={answer}
                 onChange={(e) => onAnswerChange(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    onEnter();
+                  }
+                }}
                 disabled={showResults}
                 className={`text-sm font-bold text-center transition-all outline-none ${
                   isCorrect
-                    ? 'bg-piku-mint text-gray-900 px-1.5 py-1 rounded-md'
+                    ? "bg-piku-mint text-gray-900 px-1.5 py-1 rounded-md"
                     : isIncorrect
-                    ? 'bg-red-100 text-red-700 px-1.5 py-1 rounded-l-md'
-                    : 'bg-gray-100 hover:bg-gray-150 focus:bg-white focus:ring-2 focus:ring-blue-400 rounded-md px-1.5 py-1'
+                    ? "bg-red-100 text-red-700 px-1.5 py-1 rounded-l-md"
+                    : "bg-gray-100 hover:bg-gray-150 focus:bg-white focus:ring-2 focus:ring-blue-400 rounded-md px-1.5 py-1"
                 }`}
                 style={{ width: `${Math.max(part.content.length * 9, 50)}px` }}
               />
