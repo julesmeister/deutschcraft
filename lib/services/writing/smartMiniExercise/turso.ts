@@ -47,8 +47,29 @@ export async function getSmartMiniExercise(
 ): Promise<MiniExerciseResult | null> {
   try {
     // 1. Get candidate sentences
-    // We fetch a larger pool to apply scoring logic
-    const candidates = await getUserSentences(userId, { limit: 50 });
+    // Fetch sentences that explicitly need review
+    const reviewCandidates = await getUserSentences(userId, {
+      needsReview: true,
+      limit: 20,
+    });
+
+    // Fetch stale sentences (standard rotation)
+    const staleCandidates = await getUserSentences(userId, { limit: 50 });
+
+    // Merge and deduplicate by sentenceId
+    const candidateMap = new Map<string, any>();
+
+    // Add review candidates first
+    reviewCandidates.forEach((c) => candidateMap.set(c.sentenceId, c));
+
+    // Add stale candidates if not already present
+    staleCandidates.forEach((c) => {
+      if (!candidateMap.has(c.sentenceId)) {
+        candidateMap.set(c.sentenceId, c);
+      }
+    });
+
+    const candidates = Array.from(candidateMap.values());
 
     if (candidates.length === 0) {
       return null;
@@ -63,8 +84,15 @@ export async function getSmartMiniExercise(
     // 3. Sort by priority (highest first)
     sentencesWithPriority.sort((a, b) => b.priority - a.priority);
 
-    // 4. Take top 10 and randomly select from them (to add variety)
-    const topCandidates = sentencesWithPriority.slice(0, 10);
+    // 4. Select candidate
+    // To avoid repetition in small pools, we limit the random selection
+    // to the top 20% or at least top 3 (unless fewer candidates exist).
+    const poolSize = Math.min(
+      candidates.length,
+      Math.max(3, Math.ceil(candidates.length * 0.2))
+    );
+
+    const topCandidates = sentencesWithPriority.slice(0, poolSize);
     const selected =
       topCandidates[Math.floor(Math.random() * topCandidates.length)];
     const sentence = selected.sentence;

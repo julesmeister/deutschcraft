@@ -49,7 +49,16 @@ export function InlineEditableExerciseCard({
   const exerciseNumberRef = useRef<HTMLInputElement>(null);
 
   const handleAddAnswer = () => {
-    const nextNumber = (answers.length + 1).toString();
+    let nextNumber = (answers.length + 1).toString();
+
+    if (answers.length > 0) {
+      const lastAnswer = answers[answers.length - 1];
+      const nextSeq = getNextSequence(lastAnswer.itemNumber);
+      if (nextSeq) {
+        nextNumber = nextSeq;
+      }
+    }
+
     setAnswers([...answers, { itemNumber: nextNumber, correctAnswer: "" }]);
   };
 
@@ -308,4 +317,36 @@ export function InlineEditableExerciseCard({
       </div>
     </div>
   );
+}
+
+function getNextSequence(current: string): string | null {
+  const trimmed = current.trim();
+
+  // Integer (1, 2, 10)
+  if (/^\d+$/.test(trimmed)) {
+    return (parseInt(trimmed, 10) + 1).toString();
+  }
+
+  // Single Letter (a, b, A, B)
+  if (/^[a-zA-Z]$/.test(trimmed)) {
+    const code = trimmed.charCodeAt(0);
+    if (trimmed.toLowerCase() === "z") return null;
+    return String.fromCharCode(code + 1);
+  }
+
+  // Number with separator (1., 1), 1:)
+  const numSepMatch = trimmed.match(/^(\d+)([\.\)\:])$/);
+  if (numSepMatch) {
+    return `${parseInt(numSepMatch[1], 10) + 1}${numSepMatch[2]}`;
+  }
+
+  // Letter with separator (a., a), A:)
+  const charSepMatch = trimmed.match(/^([a-zA-Z])([\.\)\:])$/);
+  if (charSepMatch) {
+    const char = charSepMatch[1];
+    if (char.toLowerCase() === "z") return null;
+    return `${String.fromCharCode(char.charCodeAt(0) + 1)}${charSepMatch[2]}`;
+  }
+
+  return null;
 }
