@@ -5,6 +5,7 @@ import { TaskBoard } from '@/components/ui/TaskBoard';
 import { Select, SelectOption } from '@/components/ui/Select';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { LevelInfoCard } from '@/components/syllabus/LevelInfoCard';
+import { SyllabusScroller } from '@/components/syllabus/SyllabusScroller';
 import { CEFRLevel, CEFRLevelInfo } from '@/lib/models/cefr';
 import { getSyllabusForLevel } from '@/lib/data/syllabusData';
 import {
@@ -77,8 +78,16 @@ export default function SyllabusPage() {
     console.log('Toggle task:', groupId, taskId);
   };
 
+  const scrollSections = [
+    { id: 'grammar', label: 'Grammar', icon: '✍️' },
+    { id: 'vocabulary', label: 'Vocabulary', icon: '📚' },
+    { id: 'communication', label: 'Communication', icon: '💬' },
+    { id: 'schedule', label: 'Weekly Schedule', icon: '📅' },
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <SyllabusScroller sections={scrollSections} />
       <DashboardHeader
         title="German Language Syllabus 📋"
         subtitle="Comprehensive curriculum from beginner to upper-intermediate levels"

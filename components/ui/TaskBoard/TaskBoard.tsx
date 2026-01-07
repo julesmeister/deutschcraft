@@ -198,7 +198,7 @@ export function TaskBoard({
         {/* Task Groups */}
         <div className="flex flex-col gap-10">
           {groups.map((group) => (
-            <div key={group.id}>
+            <div key={group.id} id={group.id} className="scroll-mt-32">
               {/* Group Header */}
               <div className="flex items-center gap-2 mb-4">
                 {showExpandArrow && (
