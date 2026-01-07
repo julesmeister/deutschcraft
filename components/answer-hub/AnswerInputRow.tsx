@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, forwardRef, useImperativeHandle } from "react";
 import { ExerciseAnswer } from "@/lib/models/exercises";
 import { GermanCharAutocomplete } from "@/components/writing/GermanCharAutocomplete";
 import { Clipboard, X, Maximize2, Minimize2 } from "lucide-react";
@@ -12,19 +12,36 @@ export interface AnswerInputRowProps {
   onChange: (value: string) => void;
   canSave: boolean;
   isSaving: boolean;
+  onNavigate?: (direction: "up" | "down") => void;
 }
 
-export function AnswerInputRow({
-  answer,
-  value,
-  onChange,
-  canSave,
-  isSaving,
-}: AnswerInputRowProps) {
+export interface AnswerInputRowHandle {
+  focus: () => void;
+}
+
+export const AnswerInputRow = forwardRef<AnswerInputRowHandle, AnswerInputRowProps>(
+  (
+    {
+      answer,
+      value,
+      onChange,
+      canSave,
+      isSaving,
+      onNavigate,
+    },
+    ref
+  ) => {
   const [isMultiline, setIsMultiline] = useState(false);
   // We use a specific ref type that works for both but we'll cast when passing to specific elements
   const inputRef = useRef<HTMLInputElement | HTMLTextAreaElement>(null);
   const { showToast } = useToast();
+
+  // Expose focus method to parent
+  useImperativeHandle(ref, () => ({
+    focus: () => {
+      inputRef.current?.focus();
+    },
+  }));
 
   const handleValueChange = (newValue: string) => {
     if (newValue.length > 0) {
@@ -66,6 +83,24 @@ export function AnswerInputRow({
     setTimeout(() => {
       (inputRef.current as HTMLElement)?.focus();
     }, 0);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    if (!onNavigate) return;
+
+    // Allow Ctrl+Arrow to move cursor within text
+    if (e.ctrlKey) {
+      return; // Let default behavior handle cursor movement
+    }
+
+    // Always navigate with plain arrow keys
+    if (e.key === "ArrowUp") {
+      e.preventDefault();
+      onNavigate("up");
+    } else if (e.key === "ArrowDown") {
+      e.preventDefault();
+      onNavigate("down");
+    }
   };
 
   return (
@@ -112,6 +147,7 @@ export function AnswerInputRow({
                 }
                 value={value}
                 onChange={(e) => handleValueChange(e.target.value)}
+                onKeyDown={handleKeyDown}
                 disabled={!canSave}
                 rows={3}
                 className={`w-full px-3 py-2 border border-gray-300 outline-none transition-colors text-sm pr-20 rounded-none resize-y min-h-[80px] ${
@@ -134,6 +170,7 @@ export function AnswerInputRow({
                 }
                 value={value}
                 onChange={(e) => handleValueChange(e.target.value)}
+                onKeyDown={handleKeyDown}
                 disabled={!canSave}
                 className={`w-full px-3 py-2 border border-gray-300 outline-none transition-colors text-sm pr-24 rounded-none ${
                   canSave
@@ -210,4 +247,6 @@ export function AnswerInputRow({
       </div>
     </div>
   );
-}
+});
+
+AnswerInputRow.displayName = "AnswerInputRow";

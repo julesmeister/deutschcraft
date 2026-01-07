@@ -5,7 +5,7 @@
 
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import {
   useStudentAnswers,
   useSaveStudentAnswer,
@@ -14,7 +14,10 @@ import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { useCurrentStudent } from "@/lib/hooks/useUsers";
 import { getUserInfo } from "@/lib/utils/userHelpers";
 import { useToast } from "@/lib/hooks/useToast";
-import { StudentAnswerBubble } from "./StudentAnswerBubble";
+import {
+  StudentAnswerBubble,
+  StudentAnswerBubbleHandle,
+} from "./StudentAnswerBubble";
 import { ConfirmDialog } from "@/components/ui/Dialog";
 
 interface StudentAnswersDisplayProps {
@@ -60,6 +63,39 @@ export function StudentAnswersDisplay({
     studentId: string;
     itemNumber: string;
   } | null>(null);
+
+  // Refs for navigation
+  const bubbleRefs = useRef<Map<string, StudentAnswerBubbleHandle>>(new Map());
+
+  const handleNavigate = useCallback(
+    (currentItemNumber: string, direction: "up" | "down") => {
+      // Find current student's answers
+      const myEntry = allStudentAnswers.find((s) => s.studentId === userId);
+      if (!myEntry) return;
+
+      // Sort answers by item number
+      const sortedAnswers = [...myEntry.answers].sort((a, b) =>
+        a.itemNumber.localeCompare(b.itemNumber, undefined, { numeric: true })
+      );
+
+      const currentIndex = sortedAnswers.findIndex(
+        (a) => a.itemNumber === currentItemNumber
+      );
+      if (currentIndex === -1) return;
+
+      const targetIndex =
+        direction === "down" ? currentIndex + 1 : currentIndex - 1;
+
+      if (targetIndex >= 0 && targetIndex < sortedAnswers.length) {
+        const targetItemNumber = sortedAnswers[targetIndex].itemNumber;
+        const ref = bubbleRefs.current.get(targetItemNumber);
+        if (ref) {
+          ref.startEditing();
+        }
+      }
+    },
+    [allStudentAnswers, userId]
+  );
 
   // Save answer immediately (triggered on blur/save click)
   const handleEditChange = useCallback(
@@ -254,6 +290,17 @@ export function StudentAnswersDisplay({
             return (
               <StudentAnswerBubble
                 key={`${idx}_${ansIdx}`}
+                ref={
+                  isOwnAnswer
+                    ? (el) => {
+                        if (el) {
+                          bubbleRefs.current.set(ans.itemNumber, el);
+                        } else {
+                          bubbleRefs.current.delete(ans.itemNumber);
+                        }
+                      }
+                    : undefined
+                }
                 itemNumber={ans.itemNumber}
                 answer={ans.studentAnswer}
                 studentName={studentAnswers.studentName}
@@ -278,6 +325,11 @@ export function StudentAnswersDisplay({
                           studentAnswers.studentId,
                           ans.itemNumber
                         )
+                    : undefined
+                }
+                onNavigate={
+                  isOwnAnswer
+                    ? (direction) => handleNavigate(ans.itemNumber, direction)
                     : undefined
                 }
               />
