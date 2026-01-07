@@ -28,7 +28,7 @@ export {
   getUserCount,
   getPendingEnrollmentsPaginated,
   getPendingEnrollmentsCount,
-} from "../../userPagination";
+} from "../userPagination";
 
 // ============================================================================
 // READ OPERATIONS

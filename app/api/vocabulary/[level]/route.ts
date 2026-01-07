@@ -39,7 +39,7 @@ const getCachedVocabularyLevel = unstable_cache(
     }
 
     // Aggregate flashcards from all categories
-    const allFlashcards = [];
+    const allFlashcards: any[] = [];
 
     if (indexData && indexData.categories) {
       // Read all category files in parallel

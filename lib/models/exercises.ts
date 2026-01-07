@@ -34,9 +34,20 @@ export interface Exercise {
   pageNumber?: number;           // Page in the book
   topic?: string;                // "Verben", "Nomen", "Adjektive", etc.
   difficulty?: 'easy' | 'medium' | 'hard';
+  
+  attachments?: ExerciseAttachment[]; // Links/Attachments (YouTube, etc.)
 
   createdAt?: number;
   updatedAt?: number;
+}
+
+/**
+ * Exercise Attachment Model
+ */
+export interface ExerciseAttachment {
+  type: 'youtube' | 'link';
+  url: string;
+  title?: string;
 }
 
 /**

@@ -5,6 +5,7 @@
 
 "use client";
 
+import { Youtube, Link as LinkIcon, ExternalLink } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
@@ -233,6 +234,39 @@ export default function ExerciseDetailPage() {
                     {exercise.answers.length} item
                     {exercise.answers.length !== 1 ? "s" : ""}
                   </span>
+
+                  {/* Attachments */}
+                  {exercise.attachments && exercise.attachments.length > 0 && (
+                    <div className="flex flex-wrap items-center gap-2 w-full pt-2 mt-1 border-t border-gray-100">
+                      <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                        Attachments:
+                      </span>
+                      {exercise.attachments.map((attachment, index) => (
+                        <a
+                          key={index}
+                          href={attachment.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-full transition-colors ${
+                            attachment.type === "youtube"
+                              ? "bg-red-50 text-red-700 hover:bg-red-100 border border-red-100"
+                              : "bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-100"
+                          }`}
+                        >
+                          {attachment.type === "youtube" ? (
+                            <Youtube className="w-3 h-3" />
+                          ) : (
+                            <LinkIcon className="w-3 h-3" />
+                          )}
+                          {attachment.title ||
+                            (attachment.type === "youtube"
+                              ? "Watch Video"
+                              : "Open Link")}
+                          <ExternalLink className="w-2.5 h-2.5 opacity-50" />
+                        </a>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Batch } from '@/lib/models/batch';
+import { Batch } from '@/lib/models/user';
 
 interface PostFilterProps {
   filter: 'all' | 'batch';

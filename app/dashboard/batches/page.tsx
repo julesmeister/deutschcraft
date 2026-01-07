@@ -21,8 +21,8 @@ export default function BatchManagementPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
   // Fetch batches and students
-  const { batches, isLoading } = useActiveBatches(currentTeacherId);
-  const { students: teacherStudents, isLoading: studentsLoading } = useTeacherStudents(currentTeacherId);
+  const { batches, isLoading } = useActiveBatches(currentTeacherId || undefined);
+  const { students: teacherStudents, isLoading: studentsLoading } = useTeacherStudents(currentTeacherId || undefined);
 
   // Batch handlers
   const {
@@ -37,11 +37,11 @@ export default function BatchManagementPage() {
     handleDeleteBatch,
     openEditDialog,
     closeEditDialog,
-  } = useBatchHandlers(currentTeacherId);
+  } = useBatchHandlers(currentTeacherId || undefined);
 
   // Calculate student count for each batch (from teacher's students only)
   const getStudentCount = (batchId: string) => {
-    return teacherStudents.filter(student => student.batchId === batchId).length;
+    return teacherStudents.filter((student: any) => student.batchId === batchId).length;
   };
 
   // Loading state

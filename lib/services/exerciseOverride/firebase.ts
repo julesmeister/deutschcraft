@@ -26,8 +26,8 @@ import {
   ExerciseOverride,
   CreateExerciseOverrideInput,
   UpdateExerciseOverrideInput,
-} from '../models/exerciseOverride';
-import { CEFRLevel } from '../models/cefr';
+} from '../../models/exerciseOverride';
+import { CEFRLevel } from '../../models/cefr';
 
 // ============================================================================
 // CREATE OPERATIONS

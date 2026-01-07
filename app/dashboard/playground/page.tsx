@@ -8,7 +8,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { PlaygroundLobby } from '@/components/playground/PlaygroundLobby';
-import { PlaygroundRoom } from '@/components/playground/PlaygroundRoom';
+import { PlaygroundRoom as PlaygroundRoomComponent } from '@/components/playground/PlaygroundRoom';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useCurrentStudent } from '@/lib/hooks/useUsers';
 import { useWebRTCAudio } from '@/lib/hooks/useWebRTCAudio-v2';
@@ -42,7 +42,7 @@ export default function PlaygroundPage() {
   const [dialogState, setDialogState] = useState({ isOpen: false, title: '', message: '' });
 
   // Fetch current user from Firestore to get accurate role
-  const { student: currentUser, loading: userLoading } = useCurrentStudent(session?.user?.email || null);
+  const { student: currentUser, isLoading: userLoading } = useCurrentStudent(session?.user?.email || null);
 
   // Use centralized helper to get user info (prevents email display issues)
   const { userId, userName, userEmail, userRole } = getUserInfo(currentUser, session);
@@ -304,7 +304,7 @@ export default function PlaygroundPage() {
 
   // Room view (joined a room)
   return (
-    <PlaygroundRoom
+    <PlaygroundRoomComponent
       currentRoom={currentRoom}
       participants={participants}
       writings={writings}

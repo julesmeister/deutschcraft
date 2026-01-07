@@ -20,7 +20,7 @@ import {
 import {
   Flashcard,
   VocabularyWord,
-} from '../../../models/flashcard';
+} from '../../../models/progress';
 import { CEFRLevel } from '../../../models/cefr';
 
 // ============================================================================

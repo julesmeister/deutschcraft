@@ -1,5 +1,5 @@
 import { CEFRLevel } from './cefr';
-import { Exercise, ExerciseAnswer } from './exercises';
+import { Exercise, ExerciseAnswer, ExerciseAttachment } from './exercises';
 
 /**
  * Exercise Override Model
@@ -34,6 +34,7 @@ export interface ExerciseOverride {
     section?: string;
     pageNumber?: number;
     exerciseNumber?: string;
+    attachments?: ExerciseAttachment[];
   };
 
   // Ordering

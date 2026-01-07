@@ -25,7 +25,7 @@ import {
   SavedVocabulary,
   SavedVocabularyInput,
   IncrementResult,
-} from '../../models/savedVocabulary';
+} from '../../../models/savedVocabulary';
 
 // ============================================================================
 // READ OPERATIONS

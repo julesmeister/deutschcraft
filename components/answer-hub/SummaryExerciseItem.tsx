@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { AnswerNumberBadge } from "./AnswerNumberBadge";
 import { ExerciseWithOverrideMetadata } from "@/lib/models/exerciseOverride";
-import { StudentLessonAnswer } from "@/lib/models/studentAnswer";
+import { StudentLessonAnswer } from "@/lib/models/studentAnswers";
 
 interface SummaryExerciseItemProps {
   exercise: ExerciseWithOverrideMetadata;

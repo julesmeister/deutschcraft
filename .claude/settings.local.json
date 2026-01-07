@@ -184,7 +184,9 @@
       "Bash(! echo \"$file\")",
       "Bash(bc:*)",
       "Bash(test:*)",
-      "Bash(Select-String -Pattern \"\\(useFlashcardSessionManager|useFlashcardData|flashcards/page\\)\" -Context 0,2)"
+      "Bash(Select-String -Pattern \"\\(useFlashcardSessionManager|useFlashcardData|flashcards/page\\)\" -Context 0,2)",
+      "Bash(Select-String -Pattern \"\\(error TS|Found \\\\d+ error\\)\")",
+      "Bash(cut:*)"
     ],
     "deny": [],
     "ask": []

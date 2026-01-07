@@ -72,6 +72,7 @@ export function useLessonPageHandlers(
         difficulty: data.difficulty || "medium",
         level,
         lessonNumber,
+        attachments: (data as any).attachments,
       };
 
       // Only include question if it has a value
@@ -140,6 +141,7 @@ export function useLessonPageHandlers(
         difficulty: data.difficulty || "medium",
         level,
         lessonNumber,
+        attachments: (data as any).attachments,
       };
 
       // Only include question if it has a value

@@ -7,15 +7,36 @@
 "use client";
 
 import { useState, KeyboardEvent, useRef } from "react";
-import { Check, X, Plus, Trash2, GripVertical } from "lucide-react";
-import { ExerciseAnswer } from "@/lib/models/exercises";
+import {
+  Check,
+  X,
+  Plus,
+  Trash2,
+  GripVertical,
+  Link as LinkIcon,
+  Youtube,
+} from "lucide-react";
+import { ExerciseAnswer, ExerciseAttachment } from "@/lib/models/exercises";
 import { CreateExerciseOverrideInput } from "@/lib/models/exerciseOverride";
 import { GermanCharAutocomplete } from "@/components/writing/GermanCharAutocomplete";
 import { InlineAnswerInput } from "./InlineAnswerInput";
 import { InlineItemNumberInput } from "./InlineItemNumberInput";
 
+// Flattened type for inline editing UI
+interface InlineExerciseData {
+  exerciseId?: string;
+  exerciseNumber?: string;
+  question?: string;
+  answers?: ExerciseAnswer[];
+  difficulty?: 'easy' | 'medium' | 'hard';
+  attachments?: ExerciseAttachment[];
+  modifications?: {
+    attachments?: ExerciseAttachment[];
+  };
+}
+
 interface InlineEditableExerciseCardProps {
-  initialData?: Partial<CreateExerciseOverrideInput>;
+  initialData?: InlineExerciseData;
   sectionName: string;
   onSave: (data: CreateExerciseOverrideInput) => Promise<void>;
   onCancel: () => void;
@@ -42,11 +63,14 @@ export function InlineEditableExerciseCard({
       ? initialData.answers
       : [{ itemNumber: "1", correctAnswer: "" }]
   );
+  const [attachments, setAttachments] = useState<ExerciseAttachment[]>(
+    initialData?.modifications?.attachments || initialData?.attachments || []
+  );
   const [isSaving, setIsSaving] = useState(false);
   const [draggedIndex, setDraggedIndex] = useState<number | null>(null);
 
-  const questionRef = useRef<HTMLInputElement>(null);
-  const exerciseNumberRef = useRef<HTMLInputElement>(null);
+  const questionRef = useRef<HTMLInputElement | HTMLTextAreaElement>(null);
+  const exerciseNumberRef = useRef<HTMLInputElement | HTMLTextAreaElement>(null);
 
   const handleAddAnswer = () => {
     let nextNumber = (answers.length + 1).toString();
@@ -65,6 +89,34 @@ export function InlineEditableExerciseCard({
   const handleRemoveAnswer = (index: number) => {
     if (answers.length === 1) return;
     setAnswers(answers.filter((_, i) => i !== index));
+  };
+
+  const handleAddAttachment = () => {
+    setAttachments([...attachments, { type: "link", url: "", title: "" }]);
+  };
+
+  const handleRemoveAttachment = (index: number) => {
+    setAttachments(attachments.filter((_, i) => i !== index));
+  };
+
+  const handleUpdateAttachment = (
+    index: number,
+    field: keyof ExerciseAttachment,
+    value: string
+  ) => {
+    const updated = [...attachments];
+    updated[index] = { ...updated[index], [field]: value };
+
+    // Auto-detect type if URL changes
+    if (field === "url") {
+      if (value.includes("youtube.com") || value.includes("youtu.be")) {
+        updated[index].type = "youtube";
+      } else {
+        updated[index].type = "link";
+      }
+    }
+
+    setAttachments(updated);
   };
 
   const handleDragStart = (e: React.DragEvent, index: number) => {
@@ -139,13 +191,16 @@ export function InlineEditableExerciseCard({
       }
 
       // Build override data without undefined fields
-      const overrideData: CreateExerciseOverrideInput = {
+      // Note: We cast to any because we are constructing the exerciseData properties
+      // which will likely be mapped to exerciseData object in the handler or API
+      const overrideData: any = {
         exerciseId,
         exerciseNumber: exerciseNumber.trim(),
         section: sectionName,
         answers: answers,
         overrideType: "create",
         difficulty: initialData?.difficulty || "medium",
+        attachments: attachments.length > 0 ? attachments : undefined,
       };
 
       // Only add question if it's not empty
@@ -291,6 +346,62 @@ export function InlineEditableExerciseCard({
                   <Trash2 className="w-3 h-3" />
                 </button>
               )}
+            </div>
+          ))}
+        </div>
+
+        {/* Attachments */}
+        <div className="space-y-2">
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-semibold text-gray-600 uppercase">
+              Attachments
+            </span>
+            <button
+              onClick={handleAddAttachment}
+              className="p-1 text-blue-600 hover:bg-blue-50 rounded transition-colors"
+              title="Add attachment"
+            >
+              <Plus className="w-3 h-3" />
+            </button>
+          </div>
+
+          {attachments.map((attachment, index) => (
+            <div key={index} className="flex items-center gap-2">
+              <div className="flex-shrink-0 text-gray-400 p-1">
+                {attachment.type === "youtube" ? (
+                  <Youtube className="w-4 h-4 text-red-500" />
+                ) : (
+                  <LinkIcon className="w-4 h-4" />
+                )}
+              </div>
+
+              <input
+                type="text"
+                value={attachment.url}
+                onChange={(e) =>
+                  handleUpdateAttachment(index, "url", e.target.value)
+                }
+                placeholder="URL (e.g. https://youtube.com/...)"
+                className="flex-1 px-3 py-1.5 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
+              />
+
+              <input
+                type="text"
+                value={attachment.title || ""}
+                onChange={(e) =>
+                  handleUpdateAttachment(index, "title", e.target.value)
+                }
+                placeholder="Title (optional)"
+                className="flex-1 px-3 py-1.5 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
+              />
+
+              <button
+                onClick={() => handleRemoveAttachment(index)}
+                className="p-1 text-red-600 hover:bg-red-50 rounded transition-colors"
+                title="Remove attachment"
+              >
+                <Trash2 className="w-3 h-3" />
+              </button>
             </div>
           ))}
         </div>
