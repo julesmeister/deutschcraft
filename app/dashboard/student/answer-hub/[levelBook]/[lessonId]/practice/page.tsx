@@ -168,13 +168,15 @@ export default function LessonPracticePage() {
             </p>
             <ActionButton
               variant="purple"
+              className="!w-auto px-8"
+              icon={<ActionButtonIcons.ArrowRight />}
               onClick={() =>
                 router.push(
                   `/dashboard/student/answer-hub/${levelBook}/${lessonId}/summary`
                 )
               }
             >
-              Go to Summary
+              Back to Summary
             </ActionButton>
           </div>
         </div>
@@ -268,6 +270,7 @@ export default function LessonPracticePage() {
           exerciseType="marked-word-practice"
           sentenceId={currentItem.sentenceId}
           hasNext={currentIndex < quizItems.length - 1}
+          showFullQuizButton={false}
         />
       </div>
     </div>

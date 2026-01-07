@@ -38,6 +38,7 @@ interface MiniBlankExerciseProps {
   srsStats?: SRSStats | null;
   sessionStats?: SessionStats;
   hasNext?: boolean;
+  showFullQuizButton?: boolean;
 }
 
 export function MiniBlankExercise({
@@ -53,6 +54,7 @@ export function MiniBlankExercise({
   srsStats,
   sessionStats,
   hasNext = true,
+  showFullQuizButton = true,
 }: MiniBlankExerciseProps) {
   // Only use the first blank
   const singleBlank = blanks.length > 0 ? [blanks[0]] : [];
@@ -205,6 +207,7 @@ export function MiniBlankExercise({
         showResult={showResult}
         isFilled={isFilled}
         hasNext={hasNext}
+        showFullQuizButton={showFullQuizButton}
       />
 
       {/* Description */}
@@ -243,41 +246,45 @@ export function MiniBlankExercise({
       />
 
       {/* Mobile Actions */}
-      <div className="lg:hidden flex justify-end gap-3">
-        <div className="w-32">
-          <ActionButton
-            onClick={() => router.push("/dashboard/student/writing/quiz")}
-            variant="cyan"
-            icon={<ActionButtonIcons.Document />}
-          >
-            Full Quiz
-          </ActionButton>
-        </div>
-        {!showResult ? (
-          <div className="w-48">
-            <ActionButton
-              onClick={handleCheck}
-              disabled={!isFilled}
-              variant="purple"
-              icon={<ActionButtonIcons.Check />}
-            >
-              Check Answer
-            </ActionButton>
-          </div>
-        ) : (
-          hasNext && (
-            <div className="w-40">
+      {(showFullQuizButton || !showResult || hasNext) && (
+        <div className="lg:hidden flex justify-end gap-3">
+          {showFullQuizButton && (
+            <div className="w-32">
               <ActionButton
-                onClick={handleNext}
-                variant="mint"
-                icon={<ActionButtonIcons.ArrowRight />}
+                onClick={() => router.push("/dashboard/student/writing/quiz")}
+                variant="cyan"
+                icon={<ActionButtonIcons.Document />}
               >
-                Next
+                Full Quiz
               </ActionButton>
             </div>
-          )
-        )}
-      </div>
+          )}
+          {!showResult ? (
+            <div className="w-48">
+              <ActionButton
+                onClick={handleCheck}
+                disabled={!isFilled}
+                variant="purple"
+                icon={<ActionButtonIcons.Check />}
+              >
+                Check Answer
+              </ActionButton>
+            </div>
+          ) : (
+            hasNext && (
+              <div className="w-40">
+                <ActionButton
+                  onClick={handleNext}
+                  variant="mint"
+                  icon={<ActionButtonIcons.ArrowRight />}
+                >
+                  Next
+                </ActionButton>
+              </div>
+            )
+          )}
+        </div>
+      )}
     </div>
   );
 }

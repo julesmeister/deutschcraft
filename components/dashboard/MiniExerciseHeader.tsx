@@ -18,6 +18,7 @@ interface MiniExerciseHeaderProps {
   showResult: boolean;
   isFilled: boolean;
   hasNext?: boolean;
+  showFullQuizButton?: boolean;
 }
 
 export function MiniExerciseHeader({
@@ -28,6 +29,7 @@ export function MiniExerciseHeader({
   showResult,
   isFilled,
   hasNext = true,
+  showFullQuizButton = true,
 }: MiniExerciseHeaderProps) {
   return (
     <div className="flex items-center justify-between gap-3 mb-4">
@@ -48,16 +50,18 @@ export function MiniExerciseHeader({
             </span>
           </div>
         )}
-        <div className="w-40">
-          <ActionButton
-            onClick={onFullQuiz}
-            variant="cyan"
-            icon={<ActionButtonIcons.Document />}
-            size="compact"
-          >
-            Full Quiz
-          </ActionButton>
-        </div>
+        {showFullQuizButton && (
+          <div className="w-40">
+            <ActionButton
+              onClick={onFullQuiz}
+              variant="cyan"
+              icon={<ActionButtonIcons.Document />}
+              size="compact"
+            >
+              Full Quiz
+            </ActionButton>
+          </div>
+        )}
         {!showResult ? (
           <div className="w-48">
             <ActionButton
