@@ -15,6 +15,7 @@ import { TRANSLATION_EXERCISES } from "@/lib/data/translationExercises";
 import { CREATIVE_EXERCISES } from "@/lib/data/creativeExercises";
 import { EMAIL_TEMPLATES } from "@/lib/data/emailTemplates";
 import { LETTER_TEMPLATES } from "@/lib/data/letterTemplates";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function WritingExercisesPage() {
   const router = useRouter();
@@ -203,59 +204,76 @@ export default function WritingExercisesPage() {
           hasSelectedExercise ? "" : "lg:container lg:mx-auto lg:px-6 py-8"
         }
       >
-        {hasSelectedExercise ? (
-          <WritingWorkspaceRenderer
-            selectedTranslation={selectedTranslation}
-            selectedCreative={selectedCreative}
-            selectedEmail={selectedEmail}
-            selectedLetter={selectedLetter}
-            isFreestyle={isFreestyle}
-            freestyleTopic={freestyleTopic}
-            setFreestyleTopic={setFreestyleTopic}
-            isPublic={isPublic}
-            setIsPublic={setIsPublic}
-            writingText={writingText}
-            emailContent={emailContent}
-            wordCount={wordCount}
-            emailWordCount={emailWordCount}
-            viewingAttempt={viewingAttempt}
-            attempts={attempts}
-            setWritingText={setWritingText}
-            setEmailContent={setEmailContent}
-            handleBackToCurrentDraft={handleBackToCurrentDraft}
-            handleViewSubmission={handleViewSubmission}
-            handleViewAttemptContent={handleViewAttemptContent}
-            detectedWords={detectedWords}
-            onConfirmUsedWords={handleConfirmUsedWords}
-            onDismissDetectedWords={clearDetectedWords}
-          />
-        ) : (
-          <div className="px-6">
-            <WritingHub
-              selectedLevel={selectedLevel}
-              onLevelChange={handleLevelChange}
-              selectedExerciseType={selectedExerciseType}
-              onExerciseTypeSelect={handleExerciseTypeSelect}
-              writingStats={writingStats ?? undefined}
-              statsLoading={statsLoading}
-              submissions={submissions}
-              submissionsLoading={submissionsLoading}
-              showHistory={showHistory}
-              onToggleHistory={handleToggleHistory}
-              onViewSubmission={handleViewSubmission}
-              filteredTranslationExercises={filteredTranslationExercises}
-              filteredCreativeExercises={filteredCreativeExercises}
-              filteredEmailTemplates={filteredEmailTemplates}
-              filteredLetterTemplates={filteredLetterTemplates}
-              onTranslationSelect={handleTranslationSelect}
-              onCreativeSelect={handleCreativeSelect}
-              onEmailSelect={handleEmailSelect}
-              onLetterSelect={handleLetterSelect}
-              onFreestyleSelect={handleFreestyleSelect}
-              userEmail={session?.user?.email}
-            />
-          </div>
-        )}
+        <AnimatePresence mode="wait">
+          {hasSelectedExercise ? (
+            <motion.div
+              key="workspace"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <WritingWorkspaceRenderer
+                selectedTranslation={selectedTranslation}
+                selectedCreative={selectedCreative}
+                selectedEmail={selectedEmail}
+                selectedLetter={selectedLetter}
+                isFreestyle={isFreestyle}
+                freestyleTopic={freestyleTopic}
+                setFreestyleTopic={setFreestyleTopic}
+                isPublic={isPublic}
+                setIsPublic={setIsPublic}
+                writingText={writingText}
+                emailContent={emailContent}
+                wordCount={wordCount}
+                emailWordCount={emailWordCount}
+                viewingAttempt={viewingAttempt}
+                attempts={attempts}
+                setWritingText={setWritingText}
+                setEmailContent={setEmailContent}
+                handleBackToCurrentDraft={handleBackToCurrentDraft}
+                handleViewSubmission={handleViewSubmission}
+                handleViewAttemptContent={handleViewAttemptContent}
+                detectedWords={detectedWords}
+                onConfirmUsedWords={handleConfirmUsedWords}
+                onDismissDetectedWords={clearDetectedWords}
+              />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="hub"
+              className="px-6"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <WritingHub
+                selectedLevel={selectedLevel}
+                onLevelChange={handleLevelChange}
+                selectedExerciseType={selectedExerciseType}
+                onExerciseTypeSelect={handleExerciseTypeSelect}
+                writingStats={writingStats ?? undefined}
+                statsLoading={statsLoading}
+                submissions={submissions}
+                submissionsLoading={submissionsLoading}
+                showHistory={showHistory}
+                onToggleHistory={handleToggleHistory}
+                onViewSubmission={handleViewSubmission}
+                filteredTranslationExercises={filteredTranslationExercises}
+                filteredCreativeExercises={filteredCreativeExercises}
+                filteredEmailTemplates={filteredEmailTemplates}
+                filteredLetterTemplates={filteredLetterTemplates}
+                onTranslationSelect={handleTranslationSelect}
+                onCreativeSelect={handleCreativeSelect}
+                onEmailSelect={handleEmailSelect}
+                onLetterSelect={handleLetterSelect}
+                onFreestyleSelect={handleFreestyleSelect}
+                userEmail={session?.user?.email}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       {/* Dialog for alerts and confirmations */}

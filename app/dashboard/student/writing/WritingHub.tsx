@@ -20,6 +20,7 @@ import { WritingStatsBar } from "./hub/WritingStatsBar";
 import { ExerciseTypeSelector } from "./hub/ExerciseTypeSelector";
 import { FreestyleSection } from "./hub/FreestyleSection";
 import { ExerciseSelectorWrapper } from "./hub/ExerciseSelectorWrapper";
+import { motion } from "framer-motion";
 
 type ExerciseType =
   | "translation"
@@ -117,9 +118,24 @@ export function WritingHub({
       .filter((id): id is string => !!id)
   );
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
   return (
-    <>
-      <div className="mb-8">
+    <motion.div variants={container} initial="hidden" animate="show">
+      <motion.div variants={item} className="mb-8">
         <CEFRLevelSelector
           selectedLevel={selectedLevel}
           onLevelChange={onLevelChange}
@@ -127,41 +143,61 @@ export function WritingHub({
           showDescription={true}
           size="sm"
         />
-      </div>
+      </motion.div>
 
-      <WritingStatsBar
-        writingStats={writingStats}
-        quizStats={quizStats}
-        isLoading={statsLoading}
-      />
+      <motion.div variants={item}>
+        <WritingStatsBar
+          writingStats={writingStats}
+          quizStats={quizStats}
+          isLoading={statsLoading}
+        />
+      </motion.div>
 
-      <ExerciseTypeSelector
-        selectedType={selectedExerciseType}
-        onTypeSelect={onExerciseTypeSelect}
-        translationCount={filteredTranslationExercises.length}
-        creativeCount={filteredCreativeExercises.length}
-        emailCount={filteredEmailTemplates.length}
-        letterCount={filteredLetterTemplates.length}
-      />
+      <motion.div variants={item}>
+        <ExerciseTypeSelector
+          selectedType={selectedExerciseType}
+          onTypeSelect={onExerciseTypeSelect}
+          translationCount={filteredTranslationExercises.length}
+          creativeCount={filteredCreativeExercises.length}
+          emailCount={filteredEmailTemplates.length}
+          letterCount={filteredLetterTemplates.length}
+        />
+      </motion.div>
 
       {selectedExerciseType === "freestyle" && (
-        <FreestyleSection onStart={onFreestyleSelect} />
+        <motion.div
+          variants={item}
+          key="freestyle-section"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <FreestyleSection onStart={onFreestyleSelect} />
+        </motion.div>
       )}
 
-      <ExerciseSelectorWrapper
-        selectedType={selectedExerciseType}
-        translationExercises={filteredTranslationExercises}
-        creativeExercises={filteredCreativeExercises}
-        emailTemplates={filteredEmailTemplates}
-        letterTemplates={filteredLetterTemplates}
-        attemptedExerciseIds={attemptedExerciseIds}
-        onTranslationSelect={onTranslationSelect}
-        onCreativeSelect={onCreativeSelect}
-        onEmailSelect={onEmailSelect}
-        onLetterSelect={onLetterSelect}
-      />
+      <motion.div
+        variants={item}
+        key={`${selectedExerciseType || "all"}-${selectedLevel}`}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+      >
+        <ExerciseSelectorWrapper
+          selectedType={selectedExerciseType}
+          translationExercises={filteredTranslationExercises}
+          creativeExercises={filteredCreativeExercises}
+          emailTemplates={filteredEmailTemplates}
+          letterTemplates={filteredLetterTemplates}
+          attemptedExerciseIds={attemptedExerciseIds}
+          onTranslationSelect={onTranslationSelect}
+          onCreativeSelect={onCreativeSelect}
+          onEmailSelect={onEmailSelect}
+          onLetterSelect={onLetterSelect}
+        />
+      </motion.div>
 
-      <div className="mt-8">
+      <motion.div variants={item} className="mt-8">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-bold text-neutral-900">
             Recent Submissions
@@ -183,11 +219,11 @@ export function WritingHub({
           onViewSubmission={onViewSubmission}
           isLoading={submissionsLoading}
         />
-      </div>
+      </motion.div>
 
-      <div className="mt-8">
+      <motion.div variants={item} className="mt-8">
         <WritingTipsCard />
-      </div>
-    </>
+      </motion.div>
+    </motion.div>
   );
 }

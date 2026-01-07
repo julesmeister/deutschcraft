@@ -5,6 +5,7 @@
  */
 
 import { ReactNode, Children } from 'react';
+import { motion } from 'framer-motion';
 
 interface ExerciseGridProps {
   children: ReactNode;
@@ -29,7 +30,12 @@ export function ExerciseGrid({
 }: ExerciseGridProps) {
   if (isEmpty) {
     return (
-      <div className="text-center py-16">
+      <motion.div 
+        className="text-center py-16"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.3 }}
+      >
         <div className="text-6xl mb-4">{emptyState.icon}</div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">
           {emptyState.title}
@@ -37,7 +43,7 @@ export function ExerciseGrid({
         <p className="text-gray-600">
           {emptyState.description}
         </p>
-      </div>
+      </motion.div>
     );
   }
 
@@ -48,7 +54,16 @@ export function ExerciseGrid({
   const columns: ReactNode[][] = Array.from({ length: columnsPerRow }, () => []);
   childrenArray.forEach((child, index) => {
     const columnIndex = index % columnsPerRow;
-    columns[columnIndex].push(child);
+    columns[columnIndex].push(
+      <motion.div
+        key={`item-${index}`}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: index * 0.05, duration: 0.4, ease: "easeOut" }}
+      >
+        {child}
+      </motion.div>
+    );
   });
 
   return (

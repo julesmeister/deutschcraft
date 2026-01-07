@@ -179,7 +179,7 @@ export function WritingWorkspace({
             className={`w-full bg-transparent border-none outline-none resize-none leading-relaxed ${
               readOnly
                 ? 'text-gray-700 cursor-default'
-                : 'text-gray-900 placeholder-gray-400'
+                : 'text-gray-900 placeholder-gray-400 placeholder:text-gray-400'
             } ${
               isFullscreen
                 ? 'text-xl md:text-2xl lg:text-3xl'

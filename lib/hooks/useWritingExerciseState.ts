@@ -181,12 +181,14 @@ export function useWritingExerciseState({
     setIsPublic(false);
     setWritingText("");
     setEmailContent({ to: "", subject: "", body: "" });
+    setViewingAttempt(null);
   };
 
   const handleTranslationSelect = (exercise: TranslationExercise) => {
     setSelectedTranslation(exercise);
     setWritingText("");
     setEmailContent({ to: "", subject: "", body: "" });
+    setViewingAttempt(null);
     submissionHandlers.resetDraftState();
   };
 
@@ -194,6 +196,7 @@ export function useWritingExerciseState({
     setSelectedCreative(exercise);
     setWritingText("");
     setEmailContent({ to: "", subject: "", body: "" });
+    setViewingAttempt(null);
     submissionHandlers.resetDraftState();
   };
 
@@ -205,6 +208,7 @@ export function useWritingExerciseState({
       subject: template.subject,
       body: "",
     });
+    setViewingAttempt(null);
     submissionHandlers.resetDraftState();
   };
 
@@ -212,6 +216,7 @@ export function useWritingExerciseState({
     setSelectedLetter(template);
     setWritingText("");
     setEmailContent({ to: "", subject: "", body: "" });
+    setViewingAttempt(null);
     submissionHandlers.resetDraftState();
   };
 
@@ -219,6 +224,7 @@ export function useWritingExerciseState({
     setIsFreestyle(true);
     setWritingText("");
     setEmailContent({ to: "", subject: "", body: "" });
+    setViewingAttempt(null);
     submissionHandlers.resetDraftState();
   };
 
@@ -231,6 +237,7 @@ export function useWritingExerciseState({
     setIsFreestyle(false);
     setWritingText("");
     setEmailContent({ to: "", subject: "", body: "" });
+    setViewingAttempt(null);
   };
 
   const handleBackToExerciseList = () => {
@@ -241,6 +248,7 @@ export function useWritingExerciseState({
     setIsFreestyle(false);
     setWritingText("");
     setEmailContent({ to: "", subject: "", body: "" });
+    setViewingAttempt(null);
   };
 
   const handleViewAttemptContent = (attempt: WritingSubmission) => {
