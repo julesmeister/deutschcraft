@@ -44,6 +44,7 @@ interface InlineEditableExerciseCardProps {
     bg: string;
     text: string;
     badge: string;
+    border: string;
   };
 }
 

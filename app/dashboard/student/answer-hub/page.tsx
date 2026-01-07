@@ -77,19 +77,21 @@ export default function AnswerHubPage() {
   return (
     <div className="min-h-screen bg-gray-50 pb-16">
       {/* Header */}
-      <DashboardHeader
-        title="Answer Hub 📝"
-        subtitle="Practice Schritte exercises with your batch"
-        backButton={{
-          label: "Back to Dashboard",
-          onClick: () => router.push("/dashboard/student"),
-        }}
-      />
+      <div className="animate-fade-in-up">
+        <DashboardHeader
+          title="Answer Hub 📝"
+          subtitle="Practice Schritte exercises with your batch"
+          backButton={{
+            label: "Back to Dashboard",
+            onClick: () => router.push("/dashboard/student"),
+          }}
+        />
+      </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
         {/* Controls Section */}
-        <div className="bg-white shadow-sm mb-8 p-6">
+        <div className="bg-white shadow-sm mb-8 p-6 animate-slide-up animation-delay-100 transition-all duration-300">
           {/* Level Selector */}
           <div>
             <label className="block text-sm font-bold text-gray-700 mb-3">
@@ -105,11 +107,15 @@ export default function AnswerHubPage() {
         </div>
 
         {/* Loading State */}
-        {isLoading && <CatLoader message="Loading exercises..." size="md" />}
+        {isLoading && (
+          <div className="animate-fade-in-up">
+            <CatLoader message="Loading exercises..." size="md" />
+          </div>
+        )}
 
         {/* Error State */}
         {error && !isLoading && (
-          <div className="bg-white border border-red-200 shadow-sm p-12 text-center">
+          <div className="bg-white border border-red-200 shadow-sm p-12 text-center animate-scale-in">
             <div className="text-6xl mb-4">⚠️</div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">
               Error Loading Exercises
@@ -120,7 +126,7 @@ export default function AnswerHubPage() {
 
         {/* No Exercises State */}
         {!isLoading && !error && !hasExercises && (
-          <div className="bg-white border border-gray-200 shadow-sm p-12 text-center">
+          <div className="bg-white border border-gray-200 shadow-sm p-12 text-center animate-scale-in">
             <div className="text-6xl mb-4">📚</div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">
               No Exercises Available
@@ -137,32 +143,34 @@ export default function AnswerHubPage() {
 
         {/* Lessons List */}
         {!isLoading && !error && hasExercises && lessons.length > 0 && (
-          <CategoryList
-            categories={[
-              {
-                key: `${selectedLevel}-${selectedBookType}`,
-                header: `Schritte International Neu - ${selectedLevel}`,
-                items: lessons.map((lesson, index) => {
-                  const colorScheme =
-                    CARD_COLOR_SCHEMES[index % CARD_COLOR_SCHEMES.length];
-                  return (
-                    <LessonCard
-                      key={lesson.lessonNumber}
-                      lesson={lesson}
-                      level={selectedLevel}
-                      bookType={selectedBookType}
-                      colorScheme={colorScheme}
-                    />
-                  );
-                }),
-              },
-            ]}
-          />
+          <div className="animate-fade-in-up animation-delay-200">
+            <CategoryList
+              categories={[
+                {
+                  key: `${selectedLevel}-${selectedBookType}`,
+                  header: `Schritte International Neu - ${selectedLevel}`,
+                  items: lessons.map((lesson, index) => {
+                    const colorScheme =
+                      CARD_COLOR_SCHEMES[index % CARD_COLOR_SCHEMES.length];
+                    return (
+                      <LessonCard
+                        key={lesson.lessonNumber}
+                        lesson={lesson}
+                        level={selectedLevel}
+                        bookType={selectedBookType}
+                        colorScheme={colorScheme}
+                      />
+                    );
+                  }),
+                },
+              ]}
+            />
+          </div>
         )}
 
         {/* Footer Info */}
         {!isLoading && hasExercises && (
-          <div className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 p-6">
+          <div className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 p-6 animate-slide-up animation-delay-300 transition-all duration-300 hover:shadow-md">
             <div className="text-center">
               <h3 className="text-lg font-bold text-neutral-900 mb-2">
                 Need Help?

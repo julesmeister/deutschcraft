@@ -120,25 +120,13 @@ export default function FlashcardsLandingPage() {
                 onClick={handleStartPractice}
                 variant="purple"
                 icon={<ActionButtonIcons.ArrowRight />}
-                disabled={isPending || isVocabularyLoading || isLoadingData}
+                disabled={isPageLoading || isPending || isLoadingData}
               >
-                {isPending || isVocabularyLoading || isLoadingData
-                  ? "Loading..."
-                  : "Start Practice"}
+                Start Practice
               </ActionButton>
             )
           }
         />
-
-        {/* Loading indicator for transitions */}
-        {(isPending || isLoadingData) && (
-          <div className="fixed top-20 right-6 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in-down">
-            <div className="flex items-center gap-2">
-              <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
-              <span className="font-medium">Loading flashcards...</span>
-            </div>
-          </div>
-        )}
 
         {/* Data refresh indicator (after completing practice session) */}
         {isRefreshingData && (
@@ -187,31 +175,9 @@ export default function FlashcardsLandingPage() {
                 />
               </div>
 
-              {/* Loading State */}
-              {isPageLoading ? (
-                <div className="space-y-8">
-                  {/* Progress Chart Skeleton */}
-                  <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 animate-pulse">
-                    <div className="h-24 bg-gray-100 rounded-lg w-full"></div>
-                  </div>
-
-                  {/* Categories Grid Skeleton */}
-                  <div className="mb-8">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="h-8 w-64 bg-gray-200 rounded animate-pulse"></div>
-                    </div>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-                      {[...Array(10)].map((_, i) => (
-                        <div
-                          key={i}
-                          className="h-[120px] bg-gray-100 rounded-xl animate-pulse"
-                        />
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                <>
+              {/* Content - show when loaded */}
+              {!isPageLoading && (
+                <div className="animate-fade-in-up">
                   {isVocabularyError ? (
                     <div className="text-center py-12 bg-white border border-red-200 rounded-2xl">
                       <div className="text-6xl mb-4">⚠️</div>
@@ -233,78 +199,76 @@ export default function FlashcardsLandingPage() {
                   ) : (
                     <>
                       {/* Weekly Progress Chart with Stats Button - Collapsible */}
-                      <FlashcardProgressChart
-                        weeklyData={weeklyData}
-                        totalWords={totalWords}
-                        totalRemNoteCards={totalRemNoteCards}
-                        stats={{
-                          cardsLearned: stats.cardsLearned,
-                          streak: stats.streak,
-                          accuracy: stats.accuracy,
-                        }}
-                      />
+                      <div>
+                        <FlashcardProgressChart
+                          weeklyData={weeklyData}
+                          totalWords={totalWords}
+                          totalRemNoteCards={totalRemNoteCards}
+                          stats={{
+                            cardsLearned: stats.cardsLearned,
+                            streak: stats.streak,
+                            accuracy: stats.accuracy,
+                          }}
+                        />
+                      </div>
+
+                      {/* Vocabulary Categories */}
+                      <div className="mb-8">
+                        <div className="flex items-center justify-between mb-4">
+                          <h2 className="text-xl font-bold text-gray-900">
+                            {selectedLevel} Vocabulary Categories
+                          </h2>
+                        </div>
+
+                        {displayCategories.length === 0 ? (
+                          <div className="text-center py-12 bg-white border border-gray-200 rounded-2xl">
+                            <div className="text-6xl mb-4">📝</div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">
+                              No vocabulary yet
+                            </h3>
+                            <p className="text-gray-600">
+                              Vocabulary categories will appear here once you start
+                              learning
+                            </p>
+                          </div>
+                        ) : (
+                          <CategoryButtonGrid
+                            categories={displayCategories}
+                            onSelect={handleCategoryClick}
+                            categoryCompletionStatus={categoryCompletionStatus}
+                            categoryAttemptCounts={categoryAttemptCounts}
+                            categoryDueCounts={categoryDueCounts}
+                          />
+                        )}
+                      </div>
+
+                      {/* Quick Actions */}
+                      <div className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-6">
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                          <div>
+                            <h3 className="text-xl font-bold text-neutral-900 mb-2">
+                              Ready to practice?
+                            </h3>
+                            <p className="text-sm text-neutral-600">
+                              Start a flashcard session with all vocabulary or
+                              choose a specific category
+                            </p>
+                          </div>
+                          <div className="md:w-64">
+                            <ActionButton
+                              onClick={handleStartPractice}
+                              variant="purple"
+                              icon={<ActionButtonIcons.ArrowRight />}
+                              disabled={isPageLoading || isPending || isLoadingData}
+                            >
+                              Start Practice Session
+                            </ActionButton>
+                          </div>
+                        </div>
+                      </div>
                     </>
                   )}
-
-                  {/* Vocabulary Categories */}
-                  <div className="mb-8">
-                    <div className="flex items-center justify-between mb-4">
-                      <h2 className="text-xl font-bold text-gray-900">
-                        {selectedLevel} Vocabulary Categories
-                      </h2>
-                    </div>
-
-                    {displayCategories.length === 0 ? (
-                      <div className="text-center py-12 bg-white border border-gray-200 rounded-2xl">
-                        <div className="text-6xl mb-4">📝</div>
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">
-                          No vocabulary yet
-                        </h3>
-                        <p className="text-gray-600">
-                          Vocabulary categories will appear here once you start
-                          learning
-                        </p>
-                      </div>
-                    ) : (
-                      <CategoryButtonGrid
-                        categories={displayCategories}
-                        onSelect={handleCategoryClick}
-                        categoryCompletionStatus={categoryCompletionStatus}
-                        categoryAttemptCounts={categoryAttemptCounts}
-                        categoryDueCounts={categoryDueCounts}
-                      />
-                    )}
-                  </div>
-
-                  {/* Quick Actions */}
-                  <div className="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-2xl p-6">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                      <div>
-                        <h3 className="text-xl font-bold text-neutral-900 mb-2">
-                          Ready to practice?
-                        </h3>
-                        <p className="text-sm text-neutral-600">
-                          Start a flashcard session with all vocabulary or
-                          choose a specific category
-                        </p>
-                      </div>
-                      <div className="md:w-64">
-                        <ActionButton
-                          onClick={handleStartPractice}
-                          variant="purple"
-                          icon={<ActionButtonIcons.ArrowRight />}
-                          disabled={
-                            isPending || isVocabularyLoading || isLoadingData
-                          }
-                        >
-                          {isVocabularyLoading || isLoadingData
-                            ? "Loading Data..."
-                            : "Start Practice Session"}
-                        </ActionButton>
-                      </div>
-                    </div>
-                  </div>
-                </>
+                </div>
               )}
             </>
           )}

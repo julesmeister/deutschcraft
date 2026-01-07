@@ -27,23 +27,28 @@ export function GrammarSentencesView({
 }: GrammarSentencesViewProps) {
   return (
     <div className="min-h-screen bg-gray-50 pb-16">
-      <DashboardHeader
-        title={selectedRuleData?.title || "Grammar Rule"}
-        subtitle={`Viewing ${allSentences.length} sentences`}
-        backButton={{
-          label: "Back to Rules",
-          onClick: onBack,
-        }}
-      />
+      <div className="opacity-0 animate-fade-in-down" style={{ animationFillMode: 'forwards' }}>
+        <DashboardHeader
+          title={selectedRuleData?.title || "Grammar Rule"}
+          subtitle={`Viewing ${allSentences.length} sentences`}
+          backButton={{
+            label: "Back to Rules",
+            onClick: onBack,
+          }}
+        />
+      </div>
       <div className="container mx-auto px-6 mt-8">
         <div className="bg-white border border-gray-200 shadow-sm overflow-hidden">
           <div className="p-6">
             <h3 className="text-lg font-bold text-gray-900 mb-4">All Sentences</h3>
             <div className="space-y-4">
               {allSentences.map((sentence: any, index: number) => (
-                <div key={sentence.sentenceId} className="border-b border-gray-200 pb-4 last:border-b-0">
+                <div
+                  key={sentence.sentenceId}
+                  className="border-b border-gray-200 pb-4 last:border-b-0"
+                >
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
+                    <div className="flex-shrink-0 w-8 h-8 bg-gray-100 flex items-center justify-center">
                       <span className="text-sm font-bold text-gray-600">{index + 1}</span>
                     </div>
                     <div className="flex-1">

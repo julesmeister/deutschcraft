@@ -43,29 +43,37 @@ export function CategoryButtonGrid({
       {categories.map((category, index) => {
         // Cycle through color schemes
         const colorSet = COLOR_SCHEME[index % COLOR_SCHEME.length];
-        
+
         const completionStatus = categoryCompletionStatus?.get(category.id);
         const dueCount = categoryDueCounts?.get(category.id) || 0;
         const attempts = categoryAttemptCounts?.get(category.id) || 0;
-        
+
+        // Calculate staggered animation delay (max 600ms)
+        const animationDelay = `${Math.min(index * 50, 600)}ms`;
+
         return (
           <button
             key={category.id}
             onClick={() => onSelect(category.id, category.name)}
             className={cn(
-              "relative flex flex-col items-start justify-between p-4 rounded-xl transition-all duration-200 active:scale-95 text-left h-full min-h-[120px]",
+              "group relative flex flex-col items-start justify-between p-4 rounded-xl transition-all duration-200 active:scale-95 text-left h-full min-h-[120px]",
+              "animate-fade-in-up opacity-0",
+              "hover:scale-105 hover:shadow-lg hover:-translate-y-1",
               colorSet.bg,
               colorSet.text,
               colorSet.hover,
               "border-b-4",
               colorSet.border
             )}
+            style={{ animationDelay, animationFillMode: 'forwards' }}
           >
             {/* Top Row: Icon and Due Badge */}
             <div className="flex w-full justify-between items-start mb-2">
-              <span className="text-3xl filter drop-shadow-sm">{category.icon}</span>
+              <span className="text-3xl filter drop-shadow-sm transition-transform duration-300 group-hover:scale-110">
+                {category.icon}
+              </span>
               {dueCount > 0 && (
-                <span className="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full shadow-sm">
+                <span className="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full shadow-sm animate-pulse">
                   {dueCount} due
                 </span>
               )}
@@ -87,9 +95,9 @@ export function CategoryButtonGrid({
             {/* Progress Bar (if started) */}
             {attempts > 0 && (
               <div className="absolute bottom-3 left-4 right-4 h-1.5 bg-black/10 rounded-full overflow-hidden">
-                <div 
+                <div
                   className={cn(
-                    "h-full rounded-full",
+                    "h-full rounded-full transition-all duration-1000 ease-out",
                     completionStatus === 'completed' ? "bg-white" : "bg-black/20"
                   )}
                   style={{ width: `${Math.min((attempts / category.cardCount) * 100, 100)}%` }}

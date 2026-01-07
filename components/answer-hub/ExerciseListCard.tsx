@@ -18,6 +18,7 @@ interface ExerciseListCardProps {
     bg: string;
     text: string;
     badge: string;
+    border: string;
   };
   isTeacher?: boolean;
   onEdit?: (e: React.MouseEvent) => void;
@@ -74,7 +75,7 @@ export function ExerciseListCard({
     <div
       className={`group ${
         colorScheme.bg
-      } px-6 py-4 transition-all duration-200 ${
+      } border-l-4 border-l-transparent px-6 py-4 transition-[background-color,border-color,padding] duration-300 ease-out ${colorScheme.border} hover:pl-5 ${
         isDraggable ? "" : "cursor-pointer"
       } ${exercise._isHidden ? "opacity-50 bg-gray-100" : ""} h-full ${
         isDraggable ? "rounded-r-lg" : ""

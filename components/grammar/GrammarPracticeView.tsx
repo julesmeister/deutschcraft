@@ -49,36 +49,38 @@ export function GrammarPracticeView({
 
   return (
     <div className="min-h-screen bg-gray-50 pb-16">
-      <DashboardHeader
-        title="Grammar Practice"
-        subtitle={
-          isPracticeMode
-            ? `Reviewing ${selectedRuleSentences.length} due sentences`
-            : `Practicing: ${practiceTitle}`
-        }
-        backButton={{
-          label: "Back to Rules",
-          onClick: onBack,
-        }}
-        actions={
-          <ActionButton
-            onClick={handleEndSession}
-            variant={currentSessionResults.length > 0 ? "mint" : "gray"}
-            icon={
-              currentSessionResults.length > 0 ? (
-                <ActionButtonIcons.Check />
-              ) : (
-                <ActionButtonIcons.X />
-              )
-            }
-          >
-            {currentSessionResults.length > 0
-              ? `End Session (${currentSessionResults.length})`
-              : "End Session"}
-          </ActionButton>
-        }
-      />
-      <div className="container mx-auto px-6 mt-8">
+      <div className="opacity-0 animate-fade-in-down" style={{ animationFillMode: 'forwards' }}>
+        <DashboardHeader
+          title="Grammar Practice"
+          subtitle={
+            isPracticeMode
+              ? `Reviewing ${selectedRuleSentences.length} due sentences`
+              : `Practicing: ${practiceTitle}`
+          }
+          backButton={{
+            label: "Back to Rules",
+            onClick: onBack,
+          }}
+          actions={
+            <ActionButton
+              onClick={handleEndSession}
+              variant={currentSessionResults.length > 0 ? "mint" : "gray"}
+              icon={
+                currentSessionResults.length > 0 ? (
+                  <ActionButtonIcons.Check />
+                ) : (
+                  <ActionButtonIcons.X />
+                )
+              }
+            >
+              {currentSessionResults.length > 0
+                ? `End Session (${currentSessionResults.length})`
+                : "End Session"}
+            </ActionButton>
+          }
+        />
+      </div>
+      <div className="container mx-auto px-6 mt-8 opacity-0 animate-fade-in-up animation-delay-100" style={{ animationFillMode: 'forwards' }}>
         <GrammarSentencePractice
           sentences={selectedRuleSentences}
           ruleTitle={practiceTitle}

@@ -67,31 +67,37 @@ const CARD_COLOR_SCHEMES = [
     bg: "hover:bg-blue-100",
     text: "group-hover:text-blue-900",
     badge: "group-hover:bg-blue-500",
+    border: "hover:border-l-blue-500",
   },
   {
     bg: "hover:bg-emerald-100",
     text: "group-hover:text-emerald-900",
     badge: "group-hover:bg-emerald-500",
+    border: "hover:border-l-emerald-500",
   },
   {
     bg: "hover:bg-amber-100",
     text: "group-hover:text-amber-900",
     badge: "group-hover:bg-amber-500",
+    border: "hover:border-l-amber-500",
   },
   {
     bg: "hover:bg-purple-100",
     text: "group-hover:text-purple-900",
     badge: "group-hover:bg-purple-500",
+    border: "hover:border-l-purple-500",
   },
   {
     bg: "hover:bg-pink-100",
     text: "group-hover:text-pink-900",
     badge: "group-hover:bg-pink-500",
+    border: "hover:border-l-pink-500",
   },
   {
     bg: "hover:bg-indigo-100",
     text: "group-hover:text-indigo-900",
     badge: "group-hover:bg-indigo-500",
+    border: "hover:border-l-indigo-500",
   },
 ];
 
@@ -278,29 +284,31 @@ export default function GrammatikPracticePage() {
   return (
     <div className="min-h-screen bg-gray-50 pb-16">
       {/* Header */}
-      <DashboardHeader
-        title="Grammatik Practice"
-        subtitle="Practice German grammar with sentence exercises"
-        backButton={{
-          label: "Back to Dashboard",
-          onClick: () => window.location.href = '/dashboard/student',
-        }}
-        actions={
-          dueSentencesCount > 0 ? (
-            <ActionButton
-              onClick={handleStartPractice}
-              variant="purple"
-              icon={<ActionButtonIcons.Play />}
-            >
-              Practice ({dueSentencesCount} due)
-            </ActionButton>
-          ) : null
-        }
-      />
+      <div className="opacity-0 animate-fade-in-down" style={{ animationFillMode: 'forwards' }}>
+        <DashboardHeader
+          title="Grammatik Practice"
+          subtitle="Practice German grammar with sentence exercises"
+          backButton={{
+            label: "Back to Dashboard",
+            onClick: () => window.location.href = '/dashboard/student',
+          }}
+          actions={
+            dueSentencesCount > 0 ? (
+              <ActionButton
+                onClick={handleStartPractice}
+                variant="purple"
+                icon={<ActionButtonIcons.Play />}
+              >
+                Practice ({dueSentencesCount} due)
+              </ActionButton>
+            ) : null
+          }
+        />
+      </div>
 
       <div className="container mx-auto px-6 mt-8">
         {/* Controls Section */}
-        <div className="bg-white border border-gray-200 shadow-sm mb-6">
+        <div className="bg-white border border-gray-200 shadow-sm mb-6 opacity-0 animate-fade-in-up animation-delay-100 hover:border-gray-300 transition-all duration-500 ease-out" style={{ animationFillMode: 'forwards' }}>
           <div className="space-y-3 p-4">
             <div className="flex items-center justify-between">
               <h5 className="text-neutral-700 uppercase text-sm font-medium leading-snug">
@@ -309,7 +317,7 @@ export default function GrammatikPracticePage() {
             </div>
 
             {/* Level Selector */}
-            <div>
+            <div className="transition-all duration-500 ease-out">
               <CEFRLevelSelector
                 selectedLevel={selectedLevel}
                 onLevelChange={setSelectedLevel}
@@ -322,36 +330,47 @@ export default function GrammatikPracticePage() {
 
         {/* Grammar Rules by Category */}
         {rules.length > 0 && (
-          <CategoryList
-            categories={categories.map((category) => {
-              const items = rulesByCategory[category].map((rule, ruleIndex) => {
-                const colorScheme =
-                  CARD_COLOR_SCHEMES[
-                    ruleIndex % CARD_COLOR_SCHEMES.length
-                  ];
+          <div className="opacity-0 animate-fade-in-up animation-delay-200" style={{ animationFillMode: 'forwards' }}>
+            <CategoryList
+              categories={categories.map((category, categoryIndex) => {
+                const items = rulesByCategory[category].map((rule, ruleIndex) => {
+                  const colorScheme =
+                    CARD_COLOR_SCHEMES[
+                      ruleIndex % CARD_COLOR_SCHEMES.length
+                    ];
 
-                return (
-                  <GrammarRuleCardWithProgress
-                    key={rule.id}
-                    rule={rule}
-                    reviews={reviews}
-                    sentenceDataMap={sentenceDataMap}
-                    selectedLevel={selectedLevel}
-                    colorScheme={colorScheme}
-                    onClick={() => setSelectedRule(rule.id)}
-                    onView={() => handleViewRule(rule.id)}
-                    onRetryMistakes={() => handleRetryMistakes(rule.id)}
-                  />
-                );
-              });
+                  // Calculate staggered delay for each card (smoother, smaller increments)
+                  const cardDelay = (categoryIndex * 50 + ruleIndex * 30) % 500;
+                  const delayClass = cardDelay > 0 ? `animation-delay-${Math.min(cardDelay, 500)}` : '';
 
-              return {
-                key: category,
-                header: category,
-                items,
-              };
-            })}
-          />
+                  return (
+                    <div
+                      key={rule.id}
+                      className={`opacity-0 animate-fade-in-up ${delayClass} transition-all duration-500 ease-out hover:translate-x-1`}
+                      style={{ animationFillMode: 'forwards' }}
+                    >
+                      <GrammarRuleCardWithProgress
+                        rule={rule}
+                        reviews={reviews}
+                        sentenceDataMap={sentenceDataMap}
+                        selectedLevel={selectedLevel}
+                        colorScheme={colorScheme}
+                        onClick={() => setSelectedRule(rule.id)}
+                        onView={() => handleViewRule(rule.id)}
+                        onRetryMistakes={() => handleRetryMistakes(rule.id)}
+                      />
+                    </div>
+                  );
+                });
+
+                return {
+                  key: category,
+                  header: category,
+                  items,
+                };
+              })}
+            />
+          </div>
         )}
       </div>
     </div>

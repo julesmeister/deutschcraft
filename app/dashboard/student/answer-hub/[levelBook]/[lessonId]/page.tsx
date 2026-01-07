@@ -294,50 +294,54 @@ export default function LessonDetailPage() {
   return (
     <div className="min-h-screen bg-gray-50 pb-16">
       {/* Header */}
-      <LessonDetailHeader
-        lessonTitle={lesson?.title || "Lesson"}
-        level={level}
-        bookType={bookType}
-        exerciseCount={exerciseCount}
-        isTeacher={isTeacher}
-        hiddenExercisesCount={hiddenExercises.length}
-        batches={sortedBatches}
-        selectedBatch={selectedBatch}
-        onOpenHiddenModal={openHiddenModal}
-        onSelectBatch={setSelectedBatch}
-        onCreateBatch={() => router.push("/dashboard/teacher/batches")}
-        onBack={() => router.push("/dashboard/student/answer-hub")}
-        onViewSummary={
-          !isTeacher
-            ? () =>
-                router.push(
-                  `/dashboard/student/answer-hub/${levelBook}/${lessonId}/summary`
-                )
-            : undefined
-        }
-        onRefresh={!isTeacher ? handleRefresh : undefined}
-      />
+      <div className="animate-fade-in-up">
+        <LessonDetailHeader
+          lessonTitle={lesson?.title || "Lesson"}
+          level={level}
+          bookType={bookType}
+          exerciseCount={exerciseCount}
+          isTeacher={isTeacher}
+          hiddenExercisesCount={hiddenExercises.length}
+          batches={sortedBatches}
+          selectedBatch={selectedBatch}
+          onOpenHiddenModal={openHiddenModal}
+          onSelectBatch={setSelectedBatch}
+          onCreateBatch={() => router.push("/dashboard/teacher/batches")}
+          onBack={() => router.push("/dashboard/student/answer-hub")}
+          onViewSummary={
+            !isTeacher
+              ? () =>
+                  router.push(
+                    `/dashboard/student/answer-hub/${levelBook}/${lessonId}/summary`
+                  )
+              : undefined
+          }
+          onRefresh={!isTeacher ? handleRefresh : undefined}
+        />
+      </div>
 
       {/* Main Content */}
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
         {/* Teacher Controls */}
         {isTeacher && (
-          <TeacherControls
-            hasOverrides={hasOverrides}
-            overrideCount={overrideCount}
-            onCreateExercise={handleCreateExercise}
-            answerCount={answerCount}
-            onViewAllAnswers={() =>
-              router.push(
-                `/dashboard/student/answer-hub/${levelBook}/${lessonId}/summary`
-              )
-            }
-          />
+          <div className="animate-slide-up animation-delay-100">
+            <TeacherControls
+              hasOverrides={hasOverrides}
+              overrideCount={overrideCount}
+              onCreateExercise={handleCreateExercise}
+              answerCount={answerCount}
+              onViewAllAnswers={() =>
+                router.push(
+                  `/dashboard/student/answer-hub/${levelBook}/${lessonId}/summary`
+                )
+              }
+            />
+          </div>
         )}
 
         {/* Filters */}
         {exerciseCount > 0 && (
-          <div className="mb-6">
+          <div className="mb-6 animate-slide-up animation-delay-100">
             <ExerciseFilters
               filters={filters}
               onFilterChange={setFilters}
@@ -350,7 +354,7 @@ export default function LessonDetailPage() {
         {/* Exercises List */}
         {exerciseCount > 0 ? (
           filteredExercises.length > 0 ? (
-            <>
+            <div className="animate-fade-in-up animation-delay-200">
               {/* Floating Navigator */}
               <FloatingExerciseNavigator
                 exercises={filteredExercises}
@@ -386,9 +390,9 @@ export default function LessonDetailPage() {
                 }
                 editingExerciseId={editingExerciseId}
               />
-            </>
+            </div>
           ) : (
-            <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-12 text-center">
+            <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-12 text-center animate-scale-in">
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">
                 No Exercises Match Your Filters
@@ -412,7 +416,7 @@ export default function LessonDetailPage() {
             </div>
           )
         ) : (
-          <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-12 text-center">
+          <div className="bg-white border border-gray-200 rounded-xl shadow-sm p-12 text-center animate-scale-in">
             <div className="text-6xl mb-4">📝</div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">
               No Exercises Yet
