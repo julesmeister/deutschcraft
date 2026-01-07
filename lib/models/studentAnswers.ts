@@ -4,6 +4,17 @@
  */
 
 /**
+ * Marked Word
+ * Represents a word marked by student for practice
+ */
+export interface MarkedWord {
+  word: string;           // The marked word
+  startIndex: number;     // Character position in studentAnswer
+  endIndex: number;       // Character position (exclusive)
+  markedAt: number;       // Timestamp when marked
+}
+
+/**
  * Student Answer Submission
  * Individual student's answer to a specific exercise item
  */
@@ -15,6 +26,7 @@ export interface StudentAnswerSubmission {
   studentAnswer: string;          // What the student wrote
   submittedAt: number;            // Timestamp
   isCorrect?: boolean;            // Optional: if we want to auto-grade
+  markedWords?: MarkedWord[];     // Optional: Words marked for practice
 }
 
 /**

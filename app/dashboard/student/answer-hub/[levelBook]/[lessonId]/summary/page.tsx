@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
@@ -24,6 +24,7 @@ import {
 import { CEFRLevel } from "@/lib/models/cefr";
 import { FloatingExerciseNavigator } from "@/components/answer-hub/FloatingExerciseNavigator";
 import { SummaryExerciseItem } from "@/components/answer-hub/SummaryExerciseItem";
+import { getMarkedWordCount } from "@/lib/services/writing/markedWordQuizService";
 
 export default function LessonSummaryPage() {
   const router = useRouter();
@@ -55,6 +56,9 @@ export default function LessonSummaryPage() {
     () => lesson?.exercises.map((e) => e.exerciseId) || [],
     [lesson]
   );
+
+  // --- Marked Words Count (for Practice button) ---
+  const [markedWordCount, setMarkedWordCount] = useState(0);
 
   // --- Teacher Logic ---
   const { batches: teacherBatches } = useActiveBatches(
@@ -169,6 +173,13 @@ export default function LessonSummaryPage() {
     }
   };
 
+  // Fetch marked word count for Practice button
+  useEffect(() => {
+    if (!isTeacher && userId && exerciseIds.length > 0) {
+      getMarkedWordCount(userId, exerciseIds).then(setMarkedWordCount);
+    }
+  }, [isTeacher, userId, exerciseIds]);
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 pb-16">
@@ -207,14 +218,28 @@ export default function LessonSummaryPage() {
             ),
         }}
         actions={
-          isTeacher && (
+          isTeacher ? (
             <BatchSelector
               batches={teacherBatches}
               selectedBatch={selectedBatch}
               onSelectBatch={setSelectedBatch}
               onCreateBatch={() => router.push("/dashboard/teacher/batches")}
             />
-          )
+          ) : markedWordCount > 0 ? (
+            <div className="w-48">
+              <ActionButton
+                variant="purple"
+                onClick={() =>
+                  router.push(
+                    `/dashboard/student/answer-hub/${levelBook}/${lessonId}/practice`
+                  )
+                }
+                icon={<ActionButtonIcons.Document />}
+              >
+                Practice ({markedWordCount})
+              </ActionButton>
+            </div>
+          ) : null
         }
       />
 

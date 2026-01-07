@@ -168,7 +168,7 @@ export async function createReviewQuiz(
             ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       args: [
         quizId,
-        quiz.submissionId,
+        quiz.submissionId || null,
         quiz.userId,
         quiz.exerciseId,
         quiz.exerciseType,

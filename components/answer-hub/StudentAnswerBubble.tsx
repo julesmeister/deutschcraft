@@ -7,6 +7,8 @@
 
 import { useState, useEffect, useRef, forwardRef, useImperativeHandle } from "react";
 import { GermanCharAutocomplete } from "@/components/writing/GermanCharAutocomplete";
+import { MarkedWord } from "@/lib/models/studentAnswers";
+import { useToast } from "@/lib/hooks/useToast";
 
 interface StudentAnswerBubbleProps {
   itemNumber: string;
@@ -18,6 +20,8 @@ interface StudentAnswerBubbleProps {
   onEdit?: (value: string) => void;
   onDelete?: () => void;
   onNavigate?: (direction: "up" | "down") => void;
+  markedWords?: MarkedWord[];
+  onSaveMarkedWords?: (words: MarkedWord[]) => void;
 }
 
 export interface StudentAnswerBubbleHandle {
@@ -58,6 +62,8 @@ export const StudentAnswerBubble = forwardRef<
       onEdit,
       onDelete,
       onNavigate,
+      markedWords: initialMarkedWords,
+      onSaveMarkedWords,
     },
     ref
   ) => {
@@ -65,6 +71,12 @@ export const StudentAnswerBubble = forwardRef<
     const [value, setValue] = useState(answer);
     const textareaRef = useRef<HTMLTextAreaElement>(null);
     const prevAnswerRef = useRef(answer);
+    const [isMarkingMode, setIsMarkingMode] = useState(false);
+    const [markedWords, setMarkedWords] = useState<MarkedWord[]>(
+      initialMarkedWords || []
+    );
+    const [isSavingMarks, setIsSavingMarks] = useState(false);
+    const { showToast } = useToast();
 
     useImperativeHandle(ref, () => ({
       startEditing: () => {
@@ -155,6 +167,56 @@ export const StudentAnswerBubble = forwardRef<
       }
     };
 
+    // Tokenize answer text into words with positions
+    function tokenizeAnswer(text: string): Array<{word: string, start: number, end: number}> {
+      const words = [];
+      const regex = /\S+/g;  // Match non-whitespace sequences
+      let match;
+      while ((match = regex.exec(text)) !== null) {
+        words.push({
+          word: match[0],
+          start: match.index,
+          end: match.index + match[0].length
+        });
+      }
+      return words;
+    }
+
+    // Check if word is marked
+    function isWordMarked(startIndex: number): boolean {
+      return markedWords.some(mw => mw.startIndex === startIndex);
+    }
+
+    // Toggle word marking
+    function toggleWordMark(word: string, startIndex: number, endIndex: number) {
+      if (isWordMarked(startIndex)) {
+        setMarkedWords(prev => prev.filter(mw => mw.startIndex !== startIndex));
+      } else {
+        setMarkedWords(prev => [...prev, {
+          word,
+          startIndex,
+          endIndex,
+          markedAt: Date.now()
+        }]);
+      }
+    }
+
+    // Save marked words
+    async function handleSaveMarkedWords() {
+      if (!onSaveMarkedWords) return;
+
+      setIsSavingMarks(true);
+      try {
+        await onSaveMarkedWords(markedWords);
+        setIsMarkingMode(false);
+        showToast(`Saved ${markedWords.length} marked word(s) for practice!`, "success");
+      } catch (error) {
+        showToast("Failed to save marked words", "error");
+      } finally {
+        setIsSavingMarks(false);
+      }
+    }
+
     const timeAgo = getTimeAgo(submittedAt);
     const isNumericItem = /^[0-9.]+$/.test(itemNumber);
 
@@ -207,7 +269,47 @@ export const StudentAnswerBubble = forwardRef<
               >
                 {isCopied ? "Copied!" : "Copy"}
               </button>
-              {isOwnAnswer && !isEditing && onEdit && (
+              {isOwnAnswer && !isEditing && onSaveMarkedWords && (
+                <>
+                  <span className="text-xs text-gray-300">•</span>
+                  {!isMarkingMode ? (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setIsMarkingMode(true);
+                      }}
+                      className="text-xs text-gray-400 hover:text-purple-600 transition-colors"
+                    >
+                      📌 Mark to Practice
+                    </button>
+                  ) : (
+                    <>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleSaveMarkedWords();
+                        }}
+                        disabled={markedWords.length === 0 || isSavingMarks}
+                        className="text-xs font-bold text-green-600 hover:text-green-800 transition-colors disabled:opacity-50"
+                      >
+                        {isSavingMarks ? 'Saving...' : `Save (${markedWords.length})`}
+                      </button>
+                      <span className="text-xs text-gray-300">•</span>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setIsMarkingMode(false);
+                          setMarkedWords(initialMarkedWords || []);
+                        }}
+                        className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
+                      >
+                        Cancel
+                      </button>
+                    </>
+                  )}
+                </>
+              )}
+              {isOwnAnswer && !isEditing && onEdit && !isMarkingMode && (
                 <>
                   <span className="text-xs text-gray-300">•</span>
                   <button
@@ -221,7 +323,7 @@ export const StudentAnswerBubble = forwardRef<
                   </button>
                 </>
               )}
-              {isOwnAnswer && onDelete && (
+              {isOwnAnswer && onDelete && !isMarkingMode && (
                 <>
                   <span className="text-xs text-gray-300">•</span>
                   <button
@@ -266,6 +368,28 @@ export const StudentAnswerBubble = forwardRef<
                     Saving...
                   </span>
                 )}
+              </div>
+            ) : isMarkingMode ? (
+              <div className="leading-relaxed">
+                {tokenizeAnswer(value).map((token, idx) => {
+                  const marked = isWordMarked(token.start);
+                  return (
+                    <span
+                      key={idx}
+                      onClick={() => toggleWordMark(token.word, token.start, token.end)}
+                      className={`
+                        inline-block cursor-pointer px-0.5 mx-0.5 rounded transition-colors
+                        ${marked
+                          ? 'bg-yellow-300 text-gray-900 font-medium'
+                          : 'hover:bg-yellow-100'
+                        }
+                      `}
+                    >
+                      {token.word}
+                      {marked && <span className="ml-1 text-xs">✓</span>}
+                    </span>
+                  );
+                })}
               </div>
             ) : (
               <div

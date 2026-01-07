@@ -3,11 +3,11 @@
  * Automatically switches between Firebase and Turso implementations
  */
 
-import { ReviewQuiz, QuizBlank } from '../../models/writing';
-import * as firebaseImpl from './firebase/reviewQuizService';
-import * as tursoImpl from '../turso/reviewQuizService';
+import { ReviewQuiz, QuizBlank } from "../../models/writing";
+import * as firebaseImpl from "./firebase/reviewQuizService";
+import * as tursoImpl from "../turso/reviewQuizService";
 
-const USE_TURSO = process.env.NEXT_PUBLIC_USE_TURSO === 'true';
+const USE_TURSO = process.env.NEXT_PUBLIC_USE_TURSO === "true";
 
 // ============================================================================
 // TURSO ADAPTERS
@@ -15,11 +15,11 @@ const USE_TURSO = process.env.NEXT_PUBLIC_USE_TURSO === 'true';
 // ============================================================================
 
 async function createReviewQuizTurso(
-  submissionId: string,
+  submissionId: string | undefined,
   userId: string,
   exerciseId: string,
   exerciseType: string,
-  sourceType: 'ai' | 'teacher' | 'reference',
+  sourceType: "ai" | "teacher" | "reference",
   originalText: string,
   correctedText: string,
   blanks: QuizBlank[]
@@ -38,7 +38,7 @@ async function createReviewQuizTurso(
     score: 0,
     correctAnswers: 0,
     totalBlanks: blanks.length,
-    status: 'in-progress' as const,
+    status: "in-progress" as const,
     startedAt: now,
     createdAt: now,
     updatedAt: now,
@@ -67,20 +67,23 @@ const getQuizzesForSubmissionTurso = tursoImpl.getSubmissionQuizzes;
 
 const getQuizzesForUserTurso = tursoImpl.getUserReviewQuizzes;
 
-async function getCompletedQuizzesForUserTurso(userId: string): Promise<ReviewQuiz[]> {
-  return await tursoImpl.getUserReviewQuizzes(userId, 'completed');
+async function getCompletedQuizzesForUserTurso(
+  userId: string
+): Promise<ReviewQuiz[]> {
+  return await tursoImpl.getUserReviewQuizzes(userId, "completed");
 }
 
 async function getUserQuizStatsTurso(userId: string) {
   const stats = await tursoImpl.getUserQuizStats(userId);
-  
+
   // Calculate bestScore and averageScore manually as Turso optimized stats don't provide them yet
-  const quizzes = await tursoImpl.getUserReviewQuizzes(userId, 'completed');
-  const scores = quizzes.map(q => q.score);
+  const quizzes = await tursoImpl.getUserReviewQuizzes(userId, "completed");
+  const scores = quizzes.map((q) => q.score);
   const bestScore = scores.length > 0 ? Math.max(...scores) : 0;
-  const averageScore = scores.length > 0
-    ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length)
-    : 0;
+  const averageScore =
+    scores.length > 0
+      ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length)
+      : 0;
 
   return {
     totalQuizzes: stats.totalQuizzes,

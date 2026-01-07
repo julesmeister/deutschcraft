@@ -389,7 +389,7 @@ export interface WritingStats {
  */
 export interface ReviewQuiz {
   quizId: string;
-  submissionId: string; // Original submission being reviewed
+  submissionId?: string; // Original submission being reviewed (optional for practice quizzes)
   userId: string; // Student taking the quiz
   exerciseId: string;
   exerciseType: WritingExerciseType;

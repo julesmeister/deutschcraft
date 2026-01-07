@@ -19,6 +19,7 @@ import {
   StudentAnswerBubbleHandle,
 } from "./StudentAnswerBubble";
 import { ConfirmDialog } from "@/components/ui/Dialog";
+import { MarkedWord } from "@/lib/models/studentAnswers";
 
 interface StudentAnswersDisplayProps {
   exerciseId: string;
@@ -51,6 +52,7 @@ export function StudentAnswersDisplay({
   const {
     saveAnswer,
     deleteAnswer,
+    updateMarkedWords,
     isSaving: isDeleting,
   } = useSaveStudentAnswer();
   const { showToast } = useToast();
@@ -155,6 +157,30 @@ export function StudentAnswersDisplay({
       showToast(`Failed to delete answer for Item ${itemNumber}`, "error");
     }
   }, [deleteTarget, exerciseId, deleteAnswer, showToast, refresh]);
+
+  const handleSaveMarkedWords = useCallback(
+    async (
+      studentId: string,
+      exerciseId: string,
+      itemNumber: string,
+      markedWords: MarkedWord[]
+    ) => {
+      const success = await updateMarkedWords(
+        studentId,
+        exerciseId,
+        itemNumber,
+        markedWords
+      );
+
+      if (success) {
+        showToast(`Marked ${markedWords.length} word(s) for practice`, "success");
+        refresh(true); // Silent refresh
+      } else {
+        showToast('Failed to save marked words', 'error');
+      }
+    },
+    [updateMarkedWords, showToast, refresh]
+  );
 
   // Copy for AI Review handler
   const [isCopying, setIsCopying] = useState(false);
@@ -307,6 +333,7 @@ export function StudentAnswersDisplay({
                 isOwnAnswer={isOwnAnswer}
                 isSaving={isSaving}
                 submittedAt={ans.submittedAt}
+                markedWords={ans.markedWords}
                 onEdit={
                   isOwnAnswer
                     ? (value) =>
@@ -324,6 +351,17 @@ export function StudentAnswersDisplay({
                         handleDeleteClick(
                           studentAnswers.studentId,
                           ans.itemNumber
+                        )
+                    : undefined
+                }
+                onSaveMarkedWords={
+                  isOwnAnswer
+                    ? (words) =>
+                        handleSaveMarkedWords(
+                          studentAnswers.studentId,
+                          exerciseId,
+                          ans.itemNumber,
+                          words
                         )
                     : undefined
                 }

@@ -22,6 +22,9 @@ function rowToStudentAnswer(row: any): StudentAnswerSubmission {
     studentAnswer: row.student_answer as string,
     submittedAt: row.submitted_at as number,
     isCorrect: row.is_correct !== null ? (row.is_correct as boolean) : undefined,
+    markedWords: row.marked_words
+      ? JSON.parse(row.marked_words as string)
+      : undefined,
   };
 }
 
@@ -280,8 +283,8 @@ export async function saveStudentAnswer(
     await db.execute({
       sql: `INSERT OR REPLACE INTO student_answers (
               answer_id, student_id, student_name, exercise_id, item_number,
-              student_answer, is_correct, submitted_at
-            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+              student_answer, is_correct, submitted_at, marked_words
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       args: [
         answerId,
         answer.studentId,
@@ -291,6 +294,7 @@ export async function saveStudentAnswer(
         answer.studentAnswer,
         answer.isCorrect !== undefined ? (answer.isCorrect ? 1 : 0) : null,
         submittedAt,
+        answer.markedWords ? JSON.stringify(answer.markedWords) : null,
       ],
     });
 
@@ -338,6 +342,60 @@ export async function deleteStudentAnswer(
     });
   } catch (error) {
     console.error('[studentAnswerService:turso] Error deleting answer:', error);
+    throw error;
+  }
+}
+
+/**
+ * Update marked words for a student answer
+ */
+export async function updateMarkedWords(
+  studentId: string,
+  exerciseId: string,
+  itemNumber: string,
+  markedWords: any[]
+): Promise<void> {
+  try {
+    const answerId = `${studentId}_${exerciseId}_${itemNumber}`;
+    const markedWordsJson = JSON.stringify(markedWords);
+
+    await db.execute({
+      sql: 'UPDATE student_answers SET marked_words = ? WHERE answer_id = ?',
+      args: [markedWordsJson, answerId],
+    });
+  } catch (error) {
+    console.error('[studentAnswerService:turso] Error updating marked words:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get all marked words for a lesson (for quiz generation)
+ */
+export async function getMarkedWordsForLesson(
+  studentId: string,
+  exerciseIds: string[]
+): Promise<StudentAnswerSubmission[]> {
+  if (exerciseIds.length === 0) return [];
+
+  try {
+    const placeholders = exerciseIds.map(() => '?').join(',');
+
+    const sql = `
+      SELECT * FROM student_answers
+      WHERE student_id = ?
+      AND exercise_id IN (${placeholders})
+      AND marked_words IS NOT NULL
+      AND marked_words != '[]'
+      ORDER BY submitted_at DESC
+    `;
+
+    const args = [studentId, ...exerciseIds];
+    const result = await db.execute({ sql, args });
+
+    return result.rows.map(rowToStudentAnswer);
+  } catch (error) {
+    console.error('[studentAnswerService:turso] Error fetching marked words:', error);
     throw error;
   }
 }

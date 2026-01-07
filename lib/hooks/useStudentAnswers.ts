@@ -16,7 +16,8 @@ import { db } from '@/lib/firebase';
 import {
   StudentAnswerSubmission,
   StudentExerciseAnswers,
-  groupAnswersByStudent
+  groupAnswersByStudent,
+  MarkedWord
 } from '@/lib/models/studentAnswers';
 
 // Helper to determine if we should use Turso
@@ -85,7 +86,7 @@ export function useSaveStudentAnswer() {
 
     try {
       const submissionId = `${studentId}_${exerciseId}_${itemNumber}`;
-      
+
       // Check if we're using Turso or Firestore
       if (useTurso()) {
         const { deleteStudentAnswer } = await import('@/lib/services/turso/studentAnswerService');
@@ -106,7 +107,41 @@ export function useSaveStudentAnswer() {
     }
   };
 
-  return { saveAnswer, deleteAnswer, isSaving, error };
+  const updateMarkedWords = async (
+    studentId: string,
+    exerciseId: string,
+    itemNumber: string,
+    markedWords: MarkedWord[]
+  ): Promise<boolean> => {
+    setIsSaving(true);
+    setError(null);
+
+    try {
+      const submissionId = `${studentId}_${exerciseId}_${itemNumber}`;
+
+      // Check if we're using Turso or Firestore
+      if (useTurso()) {
+        const { updateMarkedWords: tursoUpdate } = await import(
+          '@/lib/services/turso/studentAnswerService'
+        );
+        await tursoUpdate(studentId, exerciseId, itemNumber, markedWords);
+      } else {
+        const { updateDoc, doc } = await import('firebase/firestore');
+        const { db } = await import('@/lib/firebase');
+        await updateDoc(doc(db, 'studentAnswers', submissionId), { markedWords });
+      }
+
+      setIsSaving(false);
+      return true;
+    } catch (err) {
+      console.error('Error updating marked words:', err);
+      setError(err instanceof Error ? err.message : 'Failed to save marked words');
+      setIsSaving(false);
+      return false;
+    }
+  };
+
+  return { saveAnswer, deleteAnswer, updateMarkedWords, isSaving, error };
 }
 
 /**
