@@ -9,6 +9,7 @@
 import { useMemo } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { useQueryClient } from "@tanstack/react-query";
+import { motion, AnimatePresence } from "framer-motion";
 import { LessonDetailHeader } from "@/components/answer-hub/LessonDetailHeader";
 import { ExerciseOverrideDialog } from "@/components/answer-hub/ExerciseOverrideDialog";
 import { HiddenExercisesModal } from "@/components/answer-hub/HiddenExercisesModal";
@@ -198,114 +199,148 @@ export default function LessonDetailPage() {
     }
   };
 
-  if (isLoading) {
-    return <LessonLoading />;
-  }
-
-  if (error || !lesson) {
-    return (
-      <LessonError
-        error={error as Error}
-        lessonNumber={lessonNumber}
-        level={level}
-        bookType={bookType}
-      />
-    );
-  }
-
   const exerciseCount = lesson?.exercises.length || 0;
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-16">
-      {/* Header */}
-      <div className="animate-fade-in-up">
-        <LessonDetailHeader
-          lessonTitle={lesson?.title || "Lesson"}
-          level={level}
-          bookType={bookType}
-          exerciseCount={exerciseCount}
-          isTeacher={isTeacher}
-          hiddenExercisesCount={hiddenExercises.length}
-          batches={sortedBatches}
-          selectedBatch={selectedBatch}
-          onOpenHiddenModal={openHiddenModal}
-          onSelectBatch={setSelectedBatch}
-          onCreateBatch={() => router.push("/dashboard/teacher/batches")}
-          onBack={() => router.push("/dashboard/student/answer-hub")}
-          onViewSummary={
-            !isTeacher
-              ? () =>
-                  router.push(
-                    `/dashboard/student/answer-hub/${levelBook}/${lessonId}/summary`
-                  )
-              : undefined
-          }
-          onRefresh={!isTeacher ? handleRefresh : undefined}
-        />
-      </div>
+    <AnimatePresence mode="wait">
+      {isLoading ? (
+        <motion.div
+          key="loading"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <LessonLoading />
+        </motion.div>
+      ) : error || !lesson ? (
+        <motion.div
+          key="error"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <LessonError
+            error={error as Error}
+            lessonNumber={lessonNumber}
+            level={level}
+            bookType={bookType}
+          />
+        </motion.div>
+      ) : (
+        <motion.div
+          key="content"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="min-h-screen bg-gray-50 pb-16"
+        >
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <LessonDetailHeader
+              lessonTitle={lesson?.title || "Lesson"}
+              level={level}
+              bookType={bookType}
+              exerciseCount={exerciseCount}
+              isTeacher={isTeacher}
+              hiddenExercisesCount={hiddenExercises.length}
+              batches={sortedBatches}
+              selectedBatch={selectedBatch}
+              onOpenHiddenModal={openHiddenModal}
+              onSelectBatch={setSelectedBatch}
+              onCreateBatch={() => router.push("/dashboard/teacher/batches")}
+              onBack={() => router.push("/dashboard/student/answer-hub")}
+              onViewSummary={
+                !isTeacher
+                  ? () =>
+                      router.push(
+                        `/dashboard/student/answer-hub/${levelBook}/${lessonId}/summary`
+                      )
+                  : undefined
+              }
+              onRefresh={!isTeacher ? handleRefresh : undefined}
+            />
+          </motion.div>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
-        <LessonExercisesView
-          lesson={lesson}
-          isTeacher={isTeacher}
-          levelBook={levelBook}
-          lessonId={lessonId}
-          interactions={interactions}
-          discussions={discussions}
-          teacherInteractions={teacherInteractions}
-          answerCount={answerCount}
-          hasOverrides={hasOverrides}
-          overrideCount={overrideCount}
-          handlers={{
-            onCreateExercise: handleCreateExercise,
-            onReorder: handleReorder,
-            onEditExercise: handleEditExercise,
-            onToggleHide: handleToggleHide,
-            onReorderSections: isTeacher ? handleReorderSections : undefined,
-            onAddToSection: isTeacher ? handleAddToSection : undefined,
-            onSaveInlineExercise: isTeacher
-              ? handleSaveInlineExercise
-              : undefined,
-            onCancelInlineExercise: isTeacher
-              ? handleCancelInlineExercise
-              : undefined,
-            onSaveInlineEdit: isTeacher ? handleSaveInlineEdit : undefined,
-            onCancelInlineEdit: isTeacher ? handleCancelInlineEdit : undefined,
-          }}
-          editingState={{
-            sectionName: editingSectionName,
-            exerciseId: editingExerciseId,
-          }}
-          duplicateInfo={{
-            ids: duplicateExerciseIds,
-            visibleIds: visibleDuplicateIds,
-          }}
-        />
-      </div>
+          {/* Main Content */}
+          <motion.div
+            className="container mx-auto px-4 md:px-6 lg:px-8 py-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <LessonExercisesView
+              lesson={lesson}
+              isTeacher={isTeacher}
+              levelBook={levelBook}
+              lessonId={lessonId}
+              interactions={interactions}
+              discussions={discussions}
+              teacherInteractions={teacherInteractions}
+              answerCount={answerCount}
+              hasOverrides={hasOverrides}
+              overrideCount={overrideCount}
+              handlers={{
+                onCreateExercise: handleCreateExercise,
+                onReorder: handleReorder,
+                onEditExercise: handleEditExercise,
+                onToggleHide: handleToggleHide,
+                onReorderSections: isTeacher
+                  ? handleReorderSections
+                  : undefined,
+                onAddToSection: isTeacher ? handleAddToSection : undefined,
+                onSaveInlineExercise: isTeacher
+                  ? handleSaveInlineExercise
+                  : undefined,
+                onCancelInlineExercise: isTeacher
+                  ? handleCancelInlineExercise
+                  : undefined,
+                onSaveInlineEdit: isTeacher ? handleSaveInlineEdit : undefined,
+                onCancelInlineEdit: isTeacher
+                  ? handleCancelInlineEdit
+                  : undefined,
+              }}
+              editingState={{
+                sectionName: editingSectionName,
+                exerciseId: editingExerciseId,
+              }}
+              duplicateInfo={{
+                ids: duplicateExerciseIds,
+                visibleIds: visibleDuplicateIds,
+              }}
+            />
+          </motion.div>
 
-      {/* Exercise Override Dialog */}
-      <ExerciseOverrideDialog
-        isOpen={isOverrideDialogOpen}
-        onClose={() => {
-          setIsOverrideDialogOpen(false);
-          setEditingExercise(null);
-        }}
-        onSubmit={handleSubmitOverride}
-        mode={dialogMode}
-        exercise={editingExercise || undefined}
-        level={level}
-        bookType={bookType}
-        lessonNumber={lessonNumber}
-      />
+          {/* Exercise Override Dialog */}
+          <ExerciseOverrideDialog
+            isOpen={isOverrideDialogOpen}
+            onClose={() => {
+              setIsOverrideDialogOpen(false);
+              setEditingExercise(null);
+            }}
+            onSubmit={handleSubmitOverride}
+            mode={dialogMode}
+            exercise={editingExercise || undefined}
+            level={level}
+            bookType={bookType}
+            lessonNumber={lessonNumber}
+          />
 
-      {/* Hidden Exercises Modal */}
-      <HiddenExercisesModal
-        isOpen={isHiddenModalOpen}
-        onClose={closeHiddenModal}
-        hiddenExercises={hiddenExercises}
-        onUnhide={(exerciseId) => handleToggleHide(exerciseId, false)}
-      />
-    </div>
+          {/* Hidden Exercises Modal */}
+          <HiddenExercisesModal
+            isOpen={isHiddenModalOpen}
+            onClose={closeHiddenModal}
+            hiddenExercises={hiddenExercises}
+            onUnhide={(exerciseId) => handleToggleHide(exerciseId, false)}
+          />
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }
