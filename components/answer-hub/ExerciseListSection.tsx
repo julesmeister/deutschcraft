@@ -158,6 +158,7 @@ export function ExerciseListSection({
                   section: exercise.section,
                   answers: exercise.answers,
                   difficulty: exercise.difficulty,
+                  attachments: exercise.attachments,
                 }}
                 sectionName={exercise.section || "Übungen"}
                 onSave={onSaveInlineEdit}
