@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import {
   ExerciseFilters,
@@ -65,6 +65,8 @@ interface LessonExercisesViewProps {
     ids: Set<string>;
     visibleIds: Set<string>;
   };
+  isFetchingInteractions?: boolean;
+  isRefreshed?: boolean;
 }
 
 export function LessonExercisesView({
@@ -81,6 +83,8 @@ export function LessonExercisesView({
   handlers,
   editingState,
   duplicateInfo,
+  isFetchingInteractions = false,
+  isRefreshed = true, // Default true to allow usage without explicit refresh logic
 }: LessonExercisesViewProps) {
   const router = useRouter();
 
@@ -110,6 +114,58 @@ export function LessonExercisesView({
       });
     }
   };
+
+  // Auto-scroll to first unanswered exercise
+  const [hasAutoScrolled, setHasAutoScrolled] = useState(false);
+
+  // Reset auto-scroll when lesson changes
+  // useEffect(() => {
+  //   setHasAutoScrolled(false);
+  // }, [lessonId]);
+  // Actually, we only want to do this on mount/return.
+  // If user navigates to another lesson, component remounts, state resets.
+
+  useEffect(() => {
+    // Only scroll if:
+    // 1. We haven't auto-scrolled yet
+    // 2. Interactions are loaded (not fetching)
+    // 3. We have exercises
+    // 4. Data has been refreshed (ensures we are not scrolling based on stale cache)
+    if (
+      !hasAutoScrolled &&
+      !isFetchingInteractions &&
+      isRefreshed &&
+      filteredExercises.length > 0
+    ) {
+      // Find first unsubmitted exercise
+      const firstUnansweredIndex = filteredExercises.findIndex((ex) => {
+        // Use teacherInteractions if teacher, otherwise interactions
+        const stats = isTeacher
+          ? teacherInteractions[ex.exerciseId]
+          : interactions[ex.exerciseId];
+
+        return !stats || stats.submissionCount === 0;
+      });
+
+      if (firstUnansweredIndex !== -1) {
+        const exercise = filteredExercises[firstUnansweredIndex];
+        // Use a small timeout to ensure DOM is ready and layout is stable
+        setTimeout(() => {
+          scrollToExercise(exercise.exerciseId, firstUnansweredIndex);
+        }, 300);
+      }
+
+      setHasAutoScrolled(true);
+    }
+  }, [
+    hasAutoScrolled,
+    isFetchingInteractions,
+    isRefreshed,
+    filteredExercises,
+    interactions,
+    teacherInteractions,
+    isTeacher,
+  ]);
 
   const exerciseCount = lesson?.exercises.length || 0;
 

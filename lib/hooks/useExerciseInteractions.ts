@@ -3,7 +3,7 @@ import { getLessonInteractionStats } from '@/lib/services/turso/studentAnswerSer
 import { getExerciseDiscussionStats } from '@/lib/services/turso/socialService';
 
 export function useExerciseInteractions(studentId: string | undefined, exerciseIds: string[]) {
-  const { data, isLoading } = useQuery({
+  const { data, isLoading, isFetching } = useQuery({
     queryKey: ['exercise-interactions', studentId, exerciseIds],
     queryFn: async () => {
       if (!studentId || exerciseIds.length === 0) {
@@ -24,6 +24,7 @@ export function useExerciseInteractions(studentId: string | undefined, exerciseI
   return { 
     interactions: data?.interactions || {}, 
     discussions: data?.discussions || {}, 
-    isLoading 
+    isLoading,
+    isFetching
   };
 }

@@ -6,7 +6,7 @@
 
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { useQueryClient } from "@tanstack/react-query";
 import { motion, AnimatePresence } from "framer-motion";
@@ -66,10 +66,29 @@ export default function LessonDetailPage() {
     [lesson]
   );
 
-  const { interactions, discussions } = useExerciseInteractions(
+  const { interactions, discussions, isFetching } = useExerciseInteractions(
     userId || userEmail,
     exerciseIds
   );
+
+  const [isRefreshed, setIsRefreshed] = useState(false);
+
+  // Refresh interactions on mount/return to ensure badges are up to date
+  useEffect(() => {
+    const refreshData = async () => {
+      if (userId || userEmail) {
+        await queryClient.invalidateQueries({
+          queryKey: ["exercise-interactions"],
+        });
+        await queryClient.invalidateQueries({
+          queryKey: ["student-answers"],
+        });
+      }
+      setIsRefreshed(true);
+    };
+
+    refreshData();
+  }, [queryClient, userId, userEmail]);
 
   // Check if user is a teacher (role is uppercase in database)
   const isTeacher = currentUser?.role === "TEACHER";
@@ -286,6 +305,8 @@ export default function LessonDetailPage() {
               answerCount={answerCount}
               hasOverrides={hasOverrides}
               overrideCount={overrideCount}
+              isFetchingInteractions={isFetching}
+              isRefreshed={isRefreshed}
               handlers={{
                 onCreateExercise: handleCreateExercise,
                 onReorder: handleReorder,
