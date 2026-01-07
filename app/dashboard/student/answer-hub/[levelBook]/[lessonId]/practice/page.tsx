@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { useQueryClient } from "@tanstack/react-query";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
@@ -11,12 +11,15 @@ import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
 import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
 import {
   generateMarkedWordQuiz,
+  getSRSStats,
   MarkedWordQuizItem,
+  SRSStats,
 } from "@/lib/services/writing/markedWordQuizService";
 import { useLessonWithOverrides } from "@/lib/hooks/useExercisesWithOverrides";
 import { CEFRLevel } from "@/lib/models/cefr";
 import confetti from "canvas-confetti";
 import { savePracticeResult } from "@/lib/actions/quizActions";
+import { SRSStatsDisplay } from "@/components/dashboard/SRSStatsDisplay";
 
 export default function LessonPracticePage() {
   const router = useRouter();
@@ -41,25 +44,35 @@ export default function LessonPracticePage() {
     lessonNumber,
     userId
   );
-  const exerciseIds = lesson?.exercises.map((e) => e.exerciseId) || [];
+  const exerciseIds = useMemo(
+    () => lesson?.exercises.map((e) => e.exerciseId) || [],
+    [lesson]
+  );
 
   const [quizItems, setQuizItems] = useState<MarkedWordQuizItem[]>([]);
+  const [srsStats, setSrsStats] = useState<SRSStats | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [hasLoaded, setHasLoaded] = useState(false);
   const [totalPoints, setTotalPoints] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
 
   useEffect(() => {
-    if (!userId || exerciseIds.length === 0) return;
+    if (!userId || exerciseIds.length === 0 || hasLoaded) return;
 
     async function loadQuiz() {
-      const items = await generateMarkedWordQuiz(userId, exerciseIds);
+      const { items, stats } = await generateMarkedWordQuiz(
+        userId,
+        exerciseIds
+      );
       setQuizItems(items);
+      setSrsStats(stats);
       setIsLoading(false);
+      setHasLoaded(true);
     }
 
     loadQuiz();
-  }, [userId, exerciseIds]);
+  }, [userId, exerciseIds, hasLoaded]);
 
   const handleComplete = async (
     points: number,
@@ -73,6 +86,8 @@ export default function LessonPracticePage() {
       setCorrectCount((prev) => prev + 1);
     }
 
+    const currentItem = quizItems[currentIndex];
+
     // Save to database
     if (userId && currentItem) {
       try {
@@ -83,11 +98,17 @@ export default function LessonPracticePage() {
           blank: currentItem.blank,
           isCorrect: correct === 1,
           points,
+          itemNumber: currentItem.itemNumber,
+          wordStartIndex: currentItem.blank.position,
         });
 
         queryClient.invalidateQueries({
           queryKey: ["user-quiz-stats", userId],
         });
+
+        // Update SRS stats
+        const newStats = await getSRSStats(userId, exerciseIds);
+        setSrsStats(newStats);
       } catch (error) {
         // Error handling silently as requested
       }
@@ -163,6 +184,28 @@ export default function LessonPracticePage() {
 
   const currentItem = quizItems[currentIndex];
 
+  if (!currentItem) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h3 className="text-xl font-bold text-gray-900 mb-2">
+            Practice Complete!
+          </h3>
+          <ActionButton
+            variant="purple"
+            onClick={() =>
+              router.push(
+                `/dashboard/student/answer-hub/${levelBook}/${lessonId}/summary`
+              )
+            }
+          >
+            Return to Summary
+          </ActionButton>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
       <DashboardHeader
@@ -206,10 +249,17 @@ export default function LessonPracticePage() {
                 {correctCount}
               </div>
             </div>
+            {srsStats && (
+              <>
+                <div className="h-10 w-px bg-white/20"></div>
+                <SRSStatsDisplay stats={srsStats} variant="dark" />
+              </>
+            )}
           </div>
         </div>
 
         <MiniBlankExercise
+          key={`${currentItem.sentenceId}-${currentIndex}`}
           sentence={currentItem.sentence}
           blanks={[currentItem.blank]}
           onComplete={handleComplete}
@@ -217,6 +267,7 @@ export default function LessonPracticePage() {
           userId={userId}
           exerciseType="marked-word-practice"
           sentenceId={currentItem.sentenceId}
+          hasNext={currentIndex < quizItems.length - 1}
         />
       </div>
     </div>

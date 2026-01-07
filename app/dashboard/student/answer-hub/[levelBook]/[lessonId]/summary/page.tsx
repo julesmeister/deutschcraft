@@ -304,6 +304,7 @@ export default function LessonSummaryPage() {
                   levelBook={levelBook}
                   lessonId={lessonId}
                   isTeacher={isTeacher}
+                  currentUserId={userId}
                 />
               );
             })}

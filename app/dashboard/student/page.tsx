@@ -88,6 +88,93 @@ export default function StudentDashboard() {
     );
   }
 
+  const handleMiniExerciseComplete = async (
+    points: number,
+    correctAnswers: number,
+    totalBlanks: number,
+    sentenceId?: string
+  ) => {
+    if (!miniExercise || !session?.user?.email) return;
+
+    // Handle Marked Word SRS practice
+    if (miniExercise.sourceType === "marked_word") {
+      const { savePracticeResult } = await import("@/lib/actions/quizActions");
+      try {
+        await savePracticeResult({
+          userId: session.user.email,
+          exerciseId: miniExercise.exerciseId || "unknown",
+          sentence: miniExercise.sentence,
+          blank: miniExercise.blanks[0],
+          isCorrect: correctAnswers === 1,
+          points,
+          itemNumber: miniExercise.itemNumber,
+          wordStartIndex: miniExercise.wordStartIndex,
+        });
+
+        // Invalidate quiz stats to update points immediately
+        queryClient.invalidateQueries({
+          queryKey: ["user-quiz-stats", session.user.email],
+        });
+        queryClient.invalidateQueries({
+          queryKey: ["practice-stats", session.user.email],
+        });
+      } catch (error) {
+        console.error("Failed to save marked word practice:", error);
+      }
+      return;
+    }
+
+    // Handle Smart/Random Mini Exercise
+    const { saveMiniQuizResult } = await import(
+      "@/lib/services/writing/miniQuizService"
+    );
+    try {
+      // Build answers object from blanks
+      const answers: Record<number, string> = {};
+      miniExercise.blanks.forEach((blank) => {
+        answers[blank.index] = blank.correctAnswer;
+      });
+
+      // If we have a sentenceId, use smart tracking
+      if (sentenceId) {
+        const { recordMiniExerciseAttempt } = await import(
+          "@/lib/services/writing/smartMiniExercise"
+        );
+        await recordMiniExerciseAttempt(
+          sentenceId,
+          session.user.email,
+          answers,
+          correctAnswers,
+          totalBlanks,
+          points
+        );
+      }
+
+      // Always save to quiz system for stats
+      await saveMiniQuizResult(
+        session.user.email,
+        miniExercise.submissionId,
+        miniExercise.sentence,
+        miniExercise.blanks,
+        answers,
+        points,
+        correctAnswers,
+        miniExercise.exerciseId,
+        miniExercise.exerciseTitle
+      );
+
+      // Invalidate quiz stats to update points immediately
+      queryClient.invalidateQueries({
+        queryKey: ["user-quiz-stats", session.user.email],
+      });
+      queryClient.invalidateQueries({
+        queryKey: ["practice-stats", session.user.email],
+      });
+    } catch (error) {
+      console.error("Failed to save mini exercise:", error);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <DashboardHeader
@@ -149,61 +236,7 @@ export default function StudentDashboard() {
               exerciseType={miniExercise?.exerciseType}
               submittedAt={miniExercise?.submittedAt}
               sentenceId={miniExercise?.sentenceId}
-              onComplete={async (
-                points,
-                correctAnswers,
-                totalBlanks,
-                sentenceId
-              ) => {
-                // Record attempt
-                if (miniExercise && session?.user?.email) {
-                  const { saveMiniQuizResult } = await import(
-                    "@/lib/services/writing/miniQuizService"
-                  );
-                  try {
-                    // Build answers object from blanks
-                    const answers: Record<number, string> = {};
-                    miniExercise.blanks.forEach((blank) => {
-                      answers[blank.index] = blank.correctAnswer;
-                    });
-
-                    // If we have a sentenceId, use smart tracking
-                    if (sentenceId) {
-                      const { recordMiniExerciseAttempt } = await import(
-                        "@/lib/services/writing/smartMiniExercise"
-                      );
-                      await recordMiniExerciseAttempt(
-                        sentenceId,
-                        session.user.email,
-                        answers,
-                        correctAnswers,
-                        totalBlanks,
-                        points
-                      );
-                    }
-
-                    // Always save to quiz system for stats
-                    await saveMiniQuizResult(
-                      session.user.email,
-                      miniExercise.submissionId,
-                      miniExercise.sentence,
-                      miniExercise.blanks,
-                      answers,
-                      points,
-                      correctAnswers,
-                      miniExercise.exerciseId,
-                      miniExercise.exerciseTitle
-                    );
-
-                    // Invalidate quiz stats to update points immediately
-                    queryClient.invalidateQueries({
-                      queryKey: ["user-quiz-stats", session.user.email],
-                    });
-                  } catch (error) {
-                    console.error("Failed to save mini quiz result:", error);
-                  }
-                }
-              }}
+              onComplete={handleMiniExerciseComplete}
             />
           </div>
 

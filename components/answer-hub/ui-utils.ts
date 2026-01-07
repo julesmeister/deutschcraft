@@ -18,3 +18,19 @@ export function getDifficultyColor(difficulty?: 'easy' | 'medium' | 'hard') {
 export function getBookTypeColor(bookType: 'AB' | 'KB') {
   return BOOK_TYPE_COLORS[bookType] || BOOK_TYPE_COLORS.AB;
 }
+
+export function getTimeAgo(timestamp?: number): string {
+  if (!timestamp) return "";
+
+  const now = Date.now();
+  const diff = now - timestamp;
+  const seconds = Math.floor(diff / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
+
+  if (days > 0) return `${days}d ago`;
+  if (hours > 0) return `${hours}h ago`;
+  if (minutes > 0) return `${minutes}m ago`;
+  return "just now";
+}

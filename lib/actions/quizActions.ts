@@ -14,6 +14,8 @@ interface SavePracticeResultParams {
   blank: QuizBlank;
   isCorrect: boolean;
   points: number;
+  itemNumber?: string;
+  wordStartIndex?: number;
 }
 
 export async function savePracticeResult({
@@ -23,6 +25,8 @@ export async function savePracticeResult({
   blank,
   isCorrect,
   points,
+  itemNumber,
+  wordStartIndex,
 }: SavePracticeResultParams) {
   try {
     // 1. Create a quiz record
@@ -45,6 +49,24 @@ export async function savePracticeResult({
     }
 
     await completeReviewQuiz(quiz.quizId, answers, points, isCorrect ? 1 : 0);
+
+    // 3. Update SRS stats if it's a marked word practice (Turso only optimization)
+    if (
+      process.env.NEXT_PUBLIC_USE_TURSO === "true" &&
+      itemNumber &&
+      wordStartIndex !== undefined
+    ) {
+      const { updateMarkedWordStats } = await import(
+        "@/lib/services/turso/markedWordProgressService"
+      );
+      await updateMarkedWordStats(
+        userId,
+        exerciseId,
+        itemNumber,
+        wordStartIndex,
+        isCorrect
+      );
+    }
 
     // Revalidate paths if necessary (e.g. dashboard)
     revalidatePath("/dashboard");

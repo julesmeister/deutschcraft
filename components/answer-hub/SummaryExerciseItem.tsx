@@ -1,10 +1,10 @@
-
 "use client";
 
 import Link from "next/link";
-import { AnswerNumberBadge } from "./AnswerNumberBadge";
+import { StudentAnswerBubble } from "./StudentAnswerBubble";
 import { ExerciseWithOverrideMetadata } from "@/lib/models/exerciseOverride";
-import { StudentLessonAnswer } from "@/lib/models/studentAnswers";
+import { StudentLessonAnswer, MarkedWord } from "@/lib/models/studentAnswers";
+import { useSaveStudentAnswer } from "@/lib/hooks/useStudentAnswers";
 
 interface SummaryExerciseItemProps {
   exercise: ExerciseWithOverrideMetadata;
@@ -13,6 +13,7 @@ interface SummaryExerciseItemProps {
   levelBook: string;
   lessonId: string;
   isTeacher: boolean;
+  currentUserId?: string;
 }
 
 // Helper for date formatting
@@ -32,7 +33,10 @@ export function SummaryExerciseItem({
   levelBook,
   lessonId,
   isTeacher,
+  currentUserId,
 }: SummaryExerciseItemProps) {
+  const { updateMarkedWords } = useSaveStudentAnswer();
+
   // Sort answers
   const sortedAnswers = [...answers].sort((a, b) => {
     if (isTeacher) {
@@ -45,6 +49,19 @@ export function SummaryExerciseItem({
       numeric: true,
     });
   });
+
+  const handleSaveMarkedWords = async (
+    studentId: string,
+    itemNumber: string,
+    markedWords: MarkedWord[]
+  ) => {
+    await updateMarkedWords(
+      studentId,
+      exercise.exerciseId,
+      itemNumber,
+      markedWords
+    );
+  };
 
   return (
     <div
@@ -83,46 +100,36 @@ export function SummaryExerciseItem({
         </div>
       ) : (
         <div className="divide-y divide-gray-100">
-          {sortedAnswers.map((ans, idx) => (
-            <div
-              key={`${ans.studentId}-${ans.itemNumber}-${idx}`}
-              className="px-6 py-3 flex gap-4 hover:bg-gray-50 transition-colors"
-            >
-              <AnswerNumberBadge itemNumber={ans.itemNumber} />
+          {sortedAnswers.map((ans, idx) => {
+            const isOwnAnswer = currentUserId === ans.studentId;
+            // Only allow marking if it's the user's own answer (even if teacher views it, usually teacher marks student work in detailed view, but here let's stick to user's own answers for now or follow same pattern)
+            // Actually, if isTeacher is true, currentUserId is teacher's ID. Teacher usually doesn't have answers here unless testing.
+            // But if we want to allow marking, we check if it is own answer.
 
-              <div className="flex-1">
-                <div className="flex items-baseline justify-between gap-2 mb-1">
-                  <div className="flex items-baseline gap-2 text-xs">
-                    {isTeacher && (
-                      <span
-                        className="font-bold text-gray-900"
-                        title={ans.studentName}
-                      >
-                        {ans.studentName || "Unknown"}
-                      </span>
-                    )}
-                    <span className="text-gray-400">
-                      {isTeacher && "•"} {formatAnswerDate(ans.submittedAt)}
-                    </span>
-                  </div>
-                  {isTeacher && ans.isCorrect !== undefined && (
-                    <span
-                      className={`text-xs font-medium px-2 py-0.5 rounded ${
-                        ans.isCorrect
-                          ? "bg-green-100 text-green-700"
-                          : "bg-red-100 text-red-700"
-                      }`}
-                    >
-                      {ans.isCorrect ? "Correct" : "Incorrect"}
-                    </span>
-                  )}
-                </div>
-                <div className="text-gray-900 font-medium text-sm whitespace-pre-wrap">
-                  {ans.studentAnswer}
-                </div>
-              </div>
-            </div>
-          ))}
+            return (
+              <StudentAnswerBubble
+                key={`${ans.studentId}-${ans.itemNumber}-${idx}`}
+                itemNumber={ans.itemNumber}
+                answer={ans.studentAnswer}
+                studentName={ans.studentName || "Unknown"}
+                isOwnAnswer={isOwnAnswer}
+                submittedAt={ans.submittedAt}
+                isCorrect={isTeacher ? ans.isCorrect : undefined}
+                markedWords={ans.markedWords}
+                onSaveMarkedWords={
+                  isOwnAnswer
+                    ? (words) =>
+                        handleSaveMarkedWords(
+                          ans.studentId,
+                          ans.itemNumber,
+                          words
+                        )
+                    : undefined
+                }
+                // No edit/delete handlers in summary view
+              />
+            );
+          })}
         </div>
       )}
     </div>

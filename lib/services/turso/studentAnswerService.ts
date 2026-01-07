@@ -3,8 +3,13 @@
  * Handles student responses to exercises
  */
 
-import { db } from '@/turso/client';
-import { StudentAnswerSubmission, StudentExerciseAnswers, groupAnswersByStudent } from '@/lib/models/studentAnswers';
+import { db } from "@/turso/client";
+import {
+  StudentAnswerSubmission,
+  StudentExerciseAnswers,
+  groupAnswersByStudent,
+} from "@/lib/models/studentAnswers";
+import { syncMarkedWordsProgress } from "./markedWordProgressService";
 
 // ============================================================================
 // HELPER FUNCTIONS
@@ -21,7 +26,8 @@ function rowToStudentAnswer(row: any): StudentAnswerSubmission {
     itemNumber: row.item_number as string,
     studentAnswer: row.student_answer as string,
     submittedAt: row.submitted_at as number,
-    isCorrect: row.is_correct !== null ? (row.is_correct as boolean) : undefined,
+    isCorrect:
+      row.is_correct !== null ? (row.is_correct as boolean) : undefined,
     markedWords: row.marked_words
       ? JSON.parse(row.marked_words as string)
       : undefined,
@@ -35,16 +41,21 @@ function rowToStudentAnswer(row: any): StudentAnswerSubmission {
 /**
  * Get all answers for a specific exercise
  */
-export async function getExerciseAnswers(exerciseId: string): Promise<StudentAnswerSubmission[]> {
+export async function getExerciseAnswers(
+  exerciseId: string
+): Promise<StudentAnswerSubmission[]> {
   try {
     const result = await db.execute({
-      sql: 'SELECT * FROM student_answers WHERE exercise_id = ? ORDER BY submitted_at DESC',
+      sql: "SELECT * FROM student_answers WHERE exercise_id = ? ORDER BY submitted_at DESC",
       args: [exerciseId],
     });
 
     return result.rows.map(rowToStudentAnswer);
   } catch (error) {
-    console.error('[studentAnswerService:turso] Error fetching exercise answers:', error);
+    console.error(
+      "[studentAnswerService:turso] Error fetching exercise answers:",
+      error
+    );
     throw error;
   }
 }
@@ -52,12 +63,17 @@ export async function getExerciseAnswers(exerciseId: string): Promise<StudentAns
 /**
  * Get all answers for a specific exercise (grouped by student)
  */
-export async function getExerciseAnswersGrouped(exerciseId: string): Promise<StudentExerciseAnswers[]> {
+export async function getExerciseAnswersGrouped(
+  exerciseId: string
+): Promise<StudentExerciseAnswers[]> {
   try {
     const answers = await getExerciseAnswers(exerciseId);
     return groupAnswersByStudent(answers);
   } catch (error) {
-    console.error('[studentAnswerService:turso] Error fetching grouped answers:', error);
+    console.error(
+      "[studentAnswerService:turso] Error fetching grouped answers:",
+      error
+    );
     throw error;
   }
 }
@@ -70,20 +86,23 @@ export async function getStudentAnswers(
   exerciseId?: string
 ): Promise<StudentAnswerSubmission[]> {
   try {
-    let sql = 'SELECT * FROM student_answers WHERE student_id = ?';
+    let sql = "SELECT * FROM student_answers WHERE student_id = ?";
     const args: any[] = [studentId];
 
     if (exerciseId) {
-      sql += ' AND exercise_id = ?';
+      sql += " AND exercise_id = ?";
       args.push(exerciseId);
     }
 
-    sql += ' ORDER BY submitted_at DESC';
+    sql += " ORDER BY submitted_at DESC";
 
     const result = await db.execute({ sql, args });
     return result.rows.map(rowToStudentAnswer);
   } catch (error) {
-    console.error('[studentAnswerService:turso] Error fetching student answers:', error);
+    console.error(
+      "[studentAnswerService:turso] Error fetching student answers:",
+      error
+    );
     throw error;
   }
 }
@@ -99,7 +118,7 @@ export async function getAnswer(
   try {
     const answerId = `${studentId}_${exerciseId}_${itemNumber}`;
     const result = await db.execute({
-      sql: 'SELECT * FROM student_answers WHERE answer_id = ? LIMIT 1',
+      sql: "SELECT * FROM student_answers WHERE answer_id = ? LIMIT 1",
       args: [answerId],
     });
 
@@ -109,7 +128,7 @@ export async function getAnswer(
 
     return rowToStudentAnswer(result.rows[0]);
   } catch (error) {
-    console.error('[studentAnswerService:turso] Error fetching answer:', error);
+    console.error("[studentAnswerService:turso] Error fetching answer:", error);
     throw error;
   }
 }
@@ -124,7 +143,9 @@ export interface AnswerHubStats {
   recentAnswers: StudentAnswerSubmission[];
 }
 
-export async function getAnswerHubStats(studentId: string): Promise<AnswerHubStats> {
+export async function getAnswerHubStats(
+  studentId: string
+): Promise<AnswerHubStats> {
   try {
     // Get total count and correct count
     const statsResult = await db.execute({
@@ -154,7 +175,10 @@ export async function getAnswerHubStats(studentId: string): Promise<AnswerHubSta
       recentAnswers: recentResult.rows.map(rowToStudentAnswer),
     };
   } catch (error) {
-    console.error('[studentAnswerService:turso] Error fetching answer hub stats:', error);
+    console.error(
+      "[studentAnswerService:turso] Error fetching answer hub stats:",
+      error
+    );
     return {
       totalAnswers: 0,
       exercisesAttempted: 0,
@@ -170,13 +194,15 @@ export async function getAnswerHubStats(studentId: string): Promise<AnswerHubSta
 export async function getLessonInteractionStats(
   studentId: string,
   exerciseIds: string[]
-): Promise<Record<string, { submissionCount: number; lastSubmittedAt: number }>> {
+): Promise<
+  Record<string, { submissionCount: number; lastSubmittedAt: number }>
+> {
   if (exerciseIds.length === 0) return {};
 
   try {
     // Construct placeholders for IN clause
-    const placeholders = exerciseIds.map(() => '?').join(',');
-    
+    const placeholders = exerciseIds.map(() => "?").join(",");
+
     // We want to count distinct items submitted per exercise
     const sql = `
       SELECT 
@@ -192,19 +218,25 @@ export async function getLessonInteractionStats(
     const args = [studentId, ...exerciseIds];
     const result = await db.execute({ sql, args });
 
-    const stats: Record<string, { submissionCount: number; lastSubmittedAt: number }> = {};
-    
+    const stats: Record<
+      string,
+      { submissionCount: number; lastSubmittedAt: number }
+    > = {};
+
     for (const row of result.rows) {
       const exerciseId = row.exercise_id as string;
       stats[exerciseId] = {
         submissionCount: row.submission_count as number,
-        lastSubmittedAt: row.last_submitted as number
+        lastSubmittedAt: row.last_submitted as number,
       };
     }
 
     return stats;
   } catch (error) {
-    console.error('[studentAnswerService:turso] Error fetching lesson stats:', error);
+    console.error(
+      "[studentAnswerService:turso] Error fetching lesson stats:",
+      error
+    );
     return {};
   }
 }
@@ -219,8 +251,8 @@ export async function getStudentAnswersForExercises(
   if (exerciseIds.length === 0) return [];
 
   try {
-    const placeholders = exerciseIds.map(() => '?').join(',');
-    
+    const placeholders = exerciseIds.map(() => "?").join(",");
+
     const sql = `
       SELECT * FROM student_answers 
       WHERE student_id = ? 
@@ -233,7 +265,10 @@ export async function getStudentAnswersForExercises(
 
     return result.rows.map(rowToStudentAnswer);
   } catch (error) {
-    console.error('[studentAnswerService:turso] Error fetching student answers for exercises:', error);
+    console.error(
+      "[studentAnswerService:turso] Error fetching student answers for exercises:",
+      error
+    );
     throw error;
   }
 }
@@ -247,8 +282,8 @@ export async function getAllAnswersForExercises(
   if (exerciseIds.length === 0) return [];
 
   try {
-    const placeholders = exerciseIds.map(() => '?').join(',');
-    
+    const placeholders = exerciseIds.map(() => "?").join(",");
+
     const sql = `
       SELECT * FROM student_answers 
       WHERE exercise_id IN (${placeholders})
@@ -260,7 +295,10 @@ export async function getAllAnswersForExercises(
 
     return result.rows.map(rowToStudentAnswer);
   } catch (error) {
-    console.error('[studentAnswerService:turso] Error fetching all answers for exercises:', error);
+    console.error(
+      "[studentAnswerService:turso] Error fetching all answers for exercises:",
+      error
+    );
     throw error;
   }
 }
@@ -273,7 +311,9 @@ export async function getAllAnswersForExercises(
  * Save a student's answer
  */
 export async function saveStudentAnswer(
-  answer: Omit<StudentAnswerSubmission, 'submittedAt'> & { submittedAt?: number }
+  answer: Omit<StudentAnswerSubmission, "submittedAt"> & {
+    submittedAt?: number;
+  }
 ): Promise<string> {
   try {
     const answerId = `${answer.studentId}_${answer.exerciseId}_${answer.itemNumber}`;
@@ -298,9 +338,19 @@ export async function saveStudentAnswer(
       ],
     });
 
+    // Sync marked words progress for SRS
+    if (answer.markedWords) {
+      await syncMarkedWordsProgress(
+        answer.studentId,
+        answer.exerciseId,
+        answer.itemNumber,
+        answer.markedWords
+      );
+    }
+
     return answerId;
   } catch (error) {
-    console.error('[studentAnswerService:turso] Error saving answer:', error);
+    console.error("[studentAnswerService:turso] Error saving answer:", error);
     throw error;
   }
 }
@@ -317,11 +367,11 @@ export async function gradeAnswer(
   try {
     const answerId = `${studentId}_${exerciseId}_${itemNumber}`;
     await db.execute({
-      sql: 'UPDATE student_answers SET is_correct = ? WHERE answer_id = ?',
+      sql: "UPDATE student_answers SET is_correct = ? WHERE answer_id = ?",
       args: [isCorrect ? 1 : 0, answerId],
     });
   } catch (error) {
-    console.error('[studentAnswerService:turso] Error grading answer:', error);
+    console.error("[studentAnswerService:turso] Error grading answer:", error);
     throw error;
   }
 }
@@ -337,11 +387,11 @@ export async function deleteStudentAnswer(
   try {
     const answerId = `${studentId}_${exerciseId}_${itemNumber}`;
     await db.execute({
-      sql: 'DELETE FROM student_answers WHERE answer_id = ?',
+      sql: "DELETE FROM student_answers WHERE answer_id = ?",
       args: [answerId],
     });
   } catch (error) {
-    console.error('[studentAnswerService:turso] Error deleting answer:', error);
+    console.error("[studentAnswerService:turso] Error deleting answer:", error);
     throw error;
   }
 }
@@ -360,11 +410,22 @@ export async function updateMarkedWords(
     const markedWordsJson = JSON.stringify(markedWords);
 
     await db.execute({
-      sql: 'UPDATE student_answers SET marked_words = ? WHERE answer_id = ?',
+      sql: "UPDATE student_answers SET marked_words = ? WHERE answer_id = ?",
       args: [markedWordsJson, answerId],
     });
+
+    // Sync marked words progress for SRS
+    await syncMarkedWordsProgress(
+      studentId,
+      exerciseId,
+      itemNumber,
+      markedWords
+    );
   } catch (error) {
-    console.error('[studentAnswerService:turso] Error updating marked words:', error);
+    console.error(
+      "[studentAnswerService:turso] Error updating marked words:",
+      error
+    );
     throw error;
   }
 }
@@ -379,7 +440,7 @@ export async function getMarkedWordsForLesson(
   if (exerciseIds.length === 0) return [];
 
   try {
-    const placeholders = exerciseIds.map(() => '?').join(',');
+    const placeholders = exerciseIds.map(() => "?").join(",");
 
     const sql = `
       SELECT * FROM student_answers
@@ -395,7 +456,10 @@ export async function getMarkedWordsForLesson(
 
     return result.rows.map(rowToStudentAnswer);
   } catch (error) {
-    console.error('[studentAnswerService:turso] Error fetching marked words:', error);
+    console.error(
+      "[studentAnswerService:turso] Error fetching marked words:",
+      error
+    );
     throw error;
   }
 }
@@ -406,11 +470,14 @@ export async function getMarkedWordsForLesson(
 export async function deleteExerciseAnswers(exerciseId: string): Promise<void> {
   try {
     await db.execute({
-      sql: 'DELETE FROM student_answers WHERE exercise_id = ?',
+      sql: "DELETE FROM student_answers WHERE exercise_id = ?",
       args: [exerciseId],
     });
   } catch (error) {
-    console.error('[studentAnswerService:turso] Error deleting exercise answers:', error);
+    console.error(
+      "[studentAnswerService:turso] Error deleting exercise answers:",
+      error
+    );
     throw error;
   }
 }

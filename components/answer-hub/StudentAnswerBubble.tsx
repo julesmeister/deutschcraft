@@ -1,14 +1,16 @@
-/**
- * Student Answer Bubble Component
- * Displays student answer with bubble/leaf effect styling
- */
-
 "use client";
 
-import { useState, useEffect, useRef, forwardRef, useImperativeHandle } from "react";
-import { GermanCharAutocomplete } from "@/components/writing/GermanCharAutocomplete";
+import {
+  useState,
+  useEffect,
+  useRef,
+  forwardRef,
+  useImperativeHandle,
+} from "react";
 import { MarkedWord } from "@/lib/models/studentAnswers";
-import { useToast } from "@/lib/hooks/useToast";
+import { AnswerNumberBadge } from "./AnswerNumberBadge";
+import { StudentAnswerBubbleHeader } from "./StudentAnswerBubbleHeader";
+import { StudentAnswerBubbleContent } from "./StudentAnswerBubbleContent";
 
 interface StudentAnswerBubbleProps {
   itemNumber: string;
@@ -17,6 +19,7 @@ interface StudentAnswerBubbleProps {
   isOwnAnswer: boolean;
   isSaving?: boolean;
   submittedAt?: number;
+  isCorrect?: boolean;
   onEdit?: (value: string) => void;
   onDelete?: () => void;
   onNavigate?: (direction: "up" | "down") => void;
@@ -26,25 +29,6 @@ interface StudentAnswerBubbleProps {
 
 export interface StudentAnswerBubbleHandle {
   startEditing: () => void;
-}
-
-import { AnswerNumberBadge } from "./AnswerNumberBadge";
-
-// Helper function to format time ago
-function getTimeAgo(timestamp?: number): string {
-  if (!timestamp) return "";
-
-  const now = Date.now();
-  const diff = now - timestamp;
-  const seconds = Math.floor(diff / 1000);
-  const minutes = Math.floor(seconds / 60);
-  const hours = Math.floor(minutes / 60);
-  const days = Math.floor(hours / 24);
-
-  if (days > 0) return `${days}d ago`;
-  if (hours > 0) return `${hours}h ago`;
-  if (minutes > 0) return `${minutes}m ago`;
-  return "just now";
 }
 
 export const StudentAnswerBubble = forwardRef<
@@ -59,6 +43,7 @@ export const StudentAnswerBubble = forwardRef<
       isOwnAnswer,
       isSaving = false,
       submittedAt,
+      isCorrect,
       onEdit,
       onDelete,
       onNavigate,
@@ -76,7 +61,7 @@ export const StudentAnswerBubble = forwardRef<
       initialMarkedWords || []
     );
     const [isSavingMarks, setIsSavingMarks] = useState(false);
-    const { showToast } = useToast();
+    const [isCopied, setIsCopied] = useState(false);
 
     useImperativeHandle(ref, () => ({
       startEditing: () => {
@@ -154,8 +139,6 @@ export const StudentAnswerBubble = forwardRef<
       }
     };
 
-    const [isCopied, setIsCopied] = useState(false);
-
     const handleCopy = async (e: React.MouseEvent) => {
       e.stopPropagation();
       try {
@@ -167,58 +150,49 @@ export const StudentAnswerBubble = forwardRef<
       }
     };
 
-    // Tokenize answer text into words with positions
-    function tokenizeAnswer(text: string): Array<{word: string, start: number, end: number}> {
-      const words = [];
-      const regex = /\S+/g;  // Match non-whitespace sequences
-      let match;
-      while ((match = regex.exec(text)) !== null) {
-        words.push({
-          word: match[0],
-          start: match.index,
-          end: match.index + match[0].length
-        });
-      }
-      return words;
-    }
-
-    // Check if word is marked
-    function isWordMarked(startIndex: number): boolean {
-      return markedWords.some(mw => mw.startIndex === startIndex);
-    }
-
     // Toggle word marking
-    function toggleWordMark(word: string, startIndex: number, endIndex: number) {
-      if (isWordMarked(startIndex)) {
-        setMarkedWords(prev => prev.filter(mw => mw.startIndex !== startIndex));
+    function toggleWordMark(
+      word: string,
+      startIndex: number,
+      endIndex: number
+    ) {
+      // Check if word is already marked
+      const isWordMarked = markedWords.some(
+        (mw) => mw.startIndex === startIndex
+      );
+
+      if (isWordMarked) {
+        setMarkedWords((prev) =>
+          prev.filter((mw) => mw.startIndex !== startIndex)
+        );
       } else {
-        setMarkedWords(prev => [...prev, {
-          word,
-          startIndex,
-          endIndex,
-          markedAt: Date.now()
-        }]);
+        setMarkedWords((prev) => [
+          ...prev,
+          {
+            word,
+            startIndex,
+            endIndex,
+            markedAt: Date.now(),
+          },
+        ]);
       }
     }
 
     // Save marked words
-    async function handleSaveMarkedWords() {
+    async function handleSaveMarkedWords(e: React.MouseEvent) {
+      e.stopPropagation();
       if (!onSaveMarkedWords) return;
 
       setIsSavingMarks(true);
       try {
         await onSaveMarkedWords(markedWords);
         setIsMarkingMode(false);
-        showToast(`Saved ${markedWords.length} marked word(s) for practice!`, "success");
       } catch (error) {
-        showToast("Failed to save marked words", "error");
+        console.error("Failed to save marked words", error);
       } finally {
         setIsSavingMarks(false);
       }
     }
-
-    const timeAgo = getTimeAgo(submittedAt);
-    const isNumericItem = /^[0-9.]+$/.test(itemNumber);
 
     return (
       <div
@@ -230,180 +204,48 @@ export const StudentAnswerBubble = forwardRef<
         <AnswerNumberBadge itemNumber={itemNumber} />
 
         <div className="flex-1 min-w-0">
-          <div className="flex items-center justify-between mb-1">
-            <div className="flex items-center gap-2">
-              <span
-                className={`text-xs font-medium ${
-                  isOwnAnswer ? "text-blue-700 font-bold" : "text-gray-900"
-                }`}
-              >
-                {studentName}
-                {isOwnAnswer && " (You)"}
-              </span>
-              {timeAgo && (
-                <>
-                  <span className="text-xs text-gray-400">•</span>
-                  <span className="text-xs text-gray-400">{timeAgo}</span>
-                </>
-              )}
-            </div>
-            <div
-              className={`flex items-center gap-2 transition-opacity ${
-                isEditing ? "opacity-100" : "opacity-0 group-hover:opacity-100"
-              }`}
-            >
-              {isEditing && (
-                <>
-                  <button
-                    onMouseDown={handleSave}
-                    className="text-xs text-blue-600 hover:text-blue-800 font-bold transition-colors"
-                  >
-                    Save
-                  </button>
-                  <span className="text-xs text-gray-300">•</span>
-                </>
-              )}
-              <button
-                onClick={handleCopy}
-                className="text-xs text-gray-400 hover:text-blue-600 transition-colors"
-              >
-                {isCopied ? "Copied!" : "Copy"}
-              </button>
-              {isOwnAnswer && !isEditing && onSaveMarkedWords && (
-                <>
-                  <span className="text-xs text-gray-300">•</span>
-                  {!isMarkingMode ? (
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setIsMarkingMode(true);
-                      }}
-                      className="text-xs text-gray-400 hover:text-purple-600 transition-colors"
-                    >
-                      📌 Mark to Practice
-                    </button>
-                  ) : (
-                    <>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleSaveMarkedWords();
-                        }}
-                        disabled={markedWords.length === 0 || isSavingMarks}
-                        className="text-xs font-bold text-green-600 hover:text-green-800 transition-colors disabled:opacity-50"
-                      >
-                        {isSavingMarks ? 'Saving...' : `Save (${markedWords.length})`}
-                      </button>
-                      <span className="text-xs text-gray-300">•</span>
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setIsMarkingMode(false);
-                          setMarkedWords(initialMarkedWords || []);
-                        }}
-                        className="text-xs text-gray-400 hover:text-gray-600 transition-colors"
-                      >
-                        Cancel
-                      </button>
-                    </>
-                  )}
-                </>
-              )}
-              {isOwnAnswer && !isEditing && onEdit && !isMarkingMode && (
-                <>
-                  <span className="text-xs text-gray-300">•</span>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setIsEditing(true);
-                    }}
-                    className="text-xs text-gray-400 hover:text-blue-600 transition-colors"
-                  >
-                    Edit
-                  </button>
-                </>
-              )}
-              {isOwnAnswer && onDelete && !isMarkingMode && (
-                <>
-                  <span className="text-xs text-gray-300">•</span>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onDelete();
-                    }}
-                    className="text-xs text-gray-400 hover:text-red-600 transition-colors"
-                  >
-                    delete
-                  </button>
-                </>
-              )}
-            </div>
-          </div>
+          <StudentAnswerBubbleHeader
+            studentName={studentName}
+            isOwnAnswer={isOwnAnswer}
+            submittedAt={submittedAt}
+            isCorrect={isCorrect}
+            isEditing={isEditing}
+            onSave={handleSave}
+            isCopied={isCopied}
+            onCopy={handleCopy}
+            onEdit={onEdit ? () => setIsEditing(true) : undefined}
+            onDelete={onDelete}
+            canMark={!!onSaveMarkedWords}
+            isMarkingMode={isMarkingMode}
+            markedWordsCount={markedWords.length}
+            isSavingMarks={isSavingMarks}
+            onToggleMarkingMode={(e) => {
+              e.stopPropagation();
+              setIsMarkingMode(true);
+            }}
+            onSaveMarkedWords={handleSaveMarkedWords}
+            onCancelMarkingMode={(e) => {
+              e.stopPropagation();
+              setIsMarkingMode(false);
+              setMarkedWords(initialMarkedWords || []);
+            }}
+          />
 
-          <div className="w-full">
-            {isEditing && isOwnAnswer ? (
-              <div className="relative w-full">
-                <textarea
-                  ref={textareaRef}
-                  value={value}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  onKeyDown={handleKeyDown}
-                  autoFocus
-                  className="w-full p-0 text-sm text-gray-900 bg-transparent border-0 focus:ring-0 focus:outline-none resize-none overflow-hidden font-medium leading-normal"
-                  style={{ minHeight: "24px" }}
-                  onClick={(e) => e.stopPropagation()}
-                />
-                {isEditing && (
-                  <GermanCharAutocomplete
-                    textareaRef={textareaRef}
-                    content={value}
-                    onContentChange={(newContent) => {
-                      setValue(newContent);
-                    }}
-                  />
-                )}
-                {isSaving && (
-                  <span className="text-xs text-blue-600 mt-1 block">
-                    Saving...
-                  </span>
-                )}
-              </div>
-            ) : isMarkingMode ? (
-              <div className="leading-relaxed">
-                {tokenizeAnswer(value).map((token, idx) => {
-                  const marked = isWordMarked(token.start);
-                  return (
-                    <span
-                      key={idx}
-                      onClick={() => toggleWordMark(token.word, token.start, token.end)}
-                      className={`
-                        inline-block cursor-pointer px-0.5 mx-0.5 rounded transition-colors
-                        ${marked
-                          ? 'bg-yellow-300 text-gray-900 font-medium'
-                          : 'hover:bg-yellow-100'
-                        }
-                      `}
-                    >
-                      {token.word}
-                      {marked && <span className="ml-1 text-xs">✓</span>}
-                    </span>
-                  );
-                })}
-              </div>
-            ) : (
-              <div
-                className={`text-sm text-gray-900 font-medium whitespace-pre-wrap leading-normal ${
-                  isOwnAnswer && onEdit
-                    ? "group-hover:text-blue-700 transition-colors"
-                    : ""
-                }`}
-                title={isOwnAnswer && onEdit ? "Click to edit" : ""}
-              >
-                {value}
-              </div>
-            )}
-          </div>
+          <StudentAnswerBubbleContent
+            isEditing={isEditing}
+            isMarkingMode={isMarkingMode}
+            isOwnAnswer={isOwnAnswer}
+            value={value}
+            textareaRef={textareaRef}
+            isSaving={isSaving}
+            markedWords={markedWords}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            onKeyDown={handleKeyDown}
+            onContentChange={(newContent) => setValue(newContent)}
+            onToggleWordMark={toggleWordMark}
+            canEdit={!!onEdit}
+          />
         </div>
       </div>
     );

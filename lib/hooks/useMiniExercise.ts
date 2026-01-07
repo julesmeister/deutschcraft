@@ -8,6 +8,7 @@ import { useState, useCallback } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getSmartMiniExercise } from "@/lib/services/writing/smartMiniExercise";
 import { getRandomMiniExercise } from "@/lib/services/writing/miniExercise";
+import { getOptimizedSRSData } from "@/lib/services/writing/markedWordQuizService";
 import { QuizBlank } from "@/lib/models/writing";
 
 export interface MiniExerciseData {
@@ -16,11 +17,13 @@ export interface MiniExerciseData {
   blanks: QuizBlank[];
   sentenceId?: string;
   submissionId: string;
-  sourceType: "ai" | "teacher" | "reference";
+  sourceType: "ai" | "teacher" | "reference" | "marked_word";
   exerciseId?: string;
   exerciseTitle?: string;
   exerciseType: string;
   submittedAt: number;
+  itemNumber?: string;
+  wordStartIndex?: number;
 }
 
 export function useMiniExercise(userId?: string) {
@@ -34,7 +37,40 @@ export function useMiniExercise(userId?: string) {
         return null;
       }
 
-      // Try smart selection first
+      // 1. Check for due Marked Words (SRS)
+      try {
+        const { items, stats } = await getOptimizedSRSData(userId);
+
+        // If we have items due now, prioritize them
+        if (stats.dueNow > 0 && items.length > 0) {
+          console.log(
+            "[useMiniExercise] Found due marked words:",
+            stats.dueNow
+          );
+          const topItem = items[0];
+          return {
+            sentence: topItem.sentence,
+            blanks: [topItem.blank],
+            submissionId: topItem.sentenceId, // Use sentenceId as submissionId
+            sentenceId: topItem.sentenceId,
+            sourceType: "marked_word" as const,
+            exerciseId: topItem.exerciseId,
+            exerciseTitle: "Marked Word Practice",
+            exerciseType: "marked-word-practice",
+            submittedAt: Date.now(),
+            itemNumber: topItem.itemNumber,
+            wordStartIndex: topItem.blank.position,
+          };
+        }
+      } catch (error) {
+        console.error(
+          "[useMiniExercise] Error fetching marked words SRS:",
+          error
+        );
+        // Continue to smart/random fallback
+      }
+
+      // 2. Try smart selection (Sentence Corrections)
       console.log(
         "[useMiniExercise] Attempting smart mini exercise for user:",
         userId
@@ -46,7 +82,7 @@ export function useMiniExercise(userId?: string) {
         return smartResult;
       }
 
-      // Fall back to random selection
+      // 3. Fall back to random selection
       console.log(
         "[useMiniExercise] No indexed sentences, falling back to random selection"
       );
