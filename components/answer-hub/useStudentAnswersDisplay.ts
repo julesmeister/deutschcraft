@@ -6,22 +6,10 @@ import { useToast } from "@/lib/hooks/useToast";
 import { StudentAnswerBubbleHandle } from "./StudentAnswerBubble";
 import { StudentExerciseAnswers, MarkedWord } from "@/lib/models/studentAnswers";
 
-// Need to extend the type if it's missing markedWords in the original definition
-interface ExtendedStudentAnswer {
-  itemNumber: string;
-  studentAnswer: string;
-  submittedAt: number;
-  markedWords?: MarkedWord[];
-}
-
-interface ExtendedStudentExerciseAnswers extends Omit<StudentExerciseAnswers, 'answers'> {
-  answers: ExtendedStudentAnswer[];
-}
-
 export function useStudentAnswersDisplay(
   exerciseId: string,
   userId: string,
-  allStudentAnswers: ExtendedStudentExerciseAnswers[],
+  allStudentAnswers: StudentExerciseAnswers[],
   refresh: (silent?: boolean) => void
 ) {
   const {

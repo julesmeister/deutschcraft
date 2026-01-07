@@ -19,6 +19,10 @@ import { syncMarkedWordsProgress } from "./markedWordProgressService";
  * Convert database row to StudentAnswerSubmission object
  */
 function rowToStudentAnswer(row: any): StudentAnswerSubmission {
+  const markedWords = row.marked_words
+    ? JSON.parse(row.marked_words as string)
+    : undefined;
+
   return {
     studentId: row.student_id as string,
     studentName: row.student_name as string,
@@ -28,9 +32,7 @@ function rowToStudentAnswer(row: any): StudentAnswerSubmission {
     submittedAt: row.submitted_at as number,
     isCorrect:
       row.is_correct !== null ? (row.is_correct as boolean) : undefined,
-    markedWords: row.marked_words
-      ? JSON.parse(row.marked_words as string)
-      : undefined,
+    markedWords,
   };
 }
 

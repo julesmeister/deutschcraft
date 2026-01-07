@@ -40,6 +40,7 @@ export interface StudentExerciseAnswers {
     itemNumber: string;
     studentAnswer: string;
     submittedAt: number;
+    markedWords?: MarkedWord[];
   }[];
 }
 
@@ -60,7 +61,8 @@ export function groupAnswersByStudent(
     acc[submission.studentId].answers.push({
       itemNumber: submission.itemNumber,
       studentAnswer: submission.studentAnswer,
-      submittedAt: submission.submittedAt
+      submittedAt: submission.submittedAt,
+      markedWords: submission.markedWords
     });
     return acc;
   }, {} as Record<string, StudentExerciseAnswers>);

@@ -173,7 +173,7 @@ export function useStudentAnswers(exerciseId: string | null) {
         const { query, collection, where, getDocs } = await import('firebase/firestore');
         const { db } = await import('@/lib/firebase');
         const { groupAnswersByStudent } = await import('@/lib/models/studentAnswers');
-        
+
         const q = query(
           collection(db, 'studentAnswers'),
           where('exerciseId', '==', exerciseId)
@@ -190,7 +190,7 @@ export function useStudentAnswers(exerciseId: string | null) {
         const grouped = groupAnswersByStudent(submissions);
         setAnswers(grouped);
       }
-      
+
       setIsLoading(false);
     } catch (err) {
       console.error('Error fetching student answers:', err);

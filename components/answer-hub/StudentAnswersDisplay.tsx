@@ -54,7 +54,7 @@ export function StudentAnswersDisplay({
   } = useStudentAnswersDisplay(
     exerciseId,
     userId,
-    allStudentAnswers as any,
+    allStudentAnswers,
     refresh
   );
 
@@ -138,7 +138,7 @@ export function StudentAnswersDisplay({
                 isOwnAnswer={isOwnAnswer}
                 isSaving={isSaving}
                 submittedAt={ans.submittedAt}
-                markedWords={(ans as any).markedWords}
+                markedWords={ans.markedWords}
                 onEdit={
                   isOwnAnswer
                     ? (value) =>

@@ -57,6 +57,18 @@ export function StudentAnswerBubbleContent({
     return markedWords.some(mw => mw.startIndex === startIndex);
   }
 
+  // Strip trailing punctuation from word and adjust indices
+  function stripPunctuation(word: string, start: number, end: number): { word: string, start: number, end: number } {
+    // Preserve German characters (ä, ö, ü, ß) while stripping punctuation
+    const stripped = word.replace(/[^\w\säöüÄÖÜß]+$/g, '');
+    const removedCount = word.length - stripped.length;
+    return {
+      word: stripped,
+      start,
+      end: end - removedCount
+    };
+  }
+
   return (
     <div className="w-full">
       {isEditing && isOwnAnswer ? (
@@ -89,10 +101,11 @@ export function StudentAnswerBubbleContent({
         <div className="leading-relaxed">
           {tokenizeAnswer(value).map((token, idx) => {
             const marked = isWordMarked(token.start);
+            const { word: cleanWord, start, end } = stripPunctuation(token.word, token.start, token.end);
             return (
               <span
                 key={idx}
-                onClick={() => onToggleWordMark(token.word, token.start, token.end)}
+                onClick={() => onToggleWordMark(cleanWord, start, end)}
                 className={`
                   inline-block cursor-pointer px-0.5 mx-0.5 rounded transition-colors
                   ${marked

@@ -57,9 +57,7 @@ export const StudentAnswerBubble = forwardRef<
     const textareaRef = useRef<HTMLTextAreaElement>(null);
     const prevAnswerRef = useRef(answer);
     const [isMarkingMode, setIsMarkingMode] = useState(false);
-    const [markedWords, setMarkedWords] = useState<MarkedWord[]>(
-      initialMarkedWords || []
-    );
+    const [markedWords, setMarkedWords] = useState<MarkedWord[]>(initialMarkedWords || []);
     const [isSavingMarks, setIsSavingMarks] = useState(false);
     const [isCopied, setIsCopied] = useState(false);
 
@@ -74,8 +72,19 @@ export const StudentAnswerBubble = forwardRef<
       if (answer !== prevAnswerRef.current) {
         setValue(answer);
         prevAnswerRef.current = answer;
+        // Reset marked words when answer changes (text positions are now invalid)
+        setMarkedWords(initialMarkedWords || []);
       }
-    }, [answer]);
+    }, [answer, initialMarkedWords, itemNumber]);
+
+    // Sync markedWords when prop changes (from external refresh)
+    useEffect(() => {
+      // Only update if we're not currently in marking mode
+      // This allows the refresh from save to update the markedWords
+      if (!isMarkingMode) {
+        setMarkedWords(initialMarkedWords || []);
+      }
+    }, [initialMarkedWords, isMarkingMode, itemNumber]);
 
     // Auto-resize textarea when content changes
     useEffect(() => {
@@ -162,9 +171,7 @@ export const StudentAnswerBubble = forwardRef<
       );
 
       if (isWordMarked) {
-        setMarkedWords((prev) =>
-          prev.filter((mw) => mw.startIndex !== startIndex)
-        );
+        setMarkedWords((prev) => prev.filter((mw) => mw.startIndex !== startIndex));
       } else {
         setMarkedWords((prev) => [
           ...prev,
@@ -186,9 +193,10 @@ export const StudentAnswerBubble = forwardRef<
       setIsSavingMarks(true);
       try {
         await onSaveMarkedWords(markedWords);
+        // Don't reset markedWords here - let the refresh handle it
         setIsMarkingMode(false);
       } catch (error) {
-        console.error("Failed to save marked words", error);
+        console.error("Failed to save marked words:", error);
       } finally {
         setIsSavingMarks(false);
       }
@@ -222,6 +230,8 @@ export const StudentAnswerBubble = forwardRef<
             onToggleMarkingMode={(e) => {
               e.stopPropagation();
               setIsMarkingMode(true);
+              // Reset to saved marked words when entering marking mode
+              setMarkedWords(initialMarkedWords || []);
             }}
             onSaveMarkedWords={handleSaveMarkedWords}
             onCancelMarkingMode={(e) => {
