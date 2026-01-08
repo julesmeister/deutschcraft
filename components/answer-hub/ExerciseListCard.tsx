@@ -112,14 +112,16 @@ export function ExerciseListCard({
                 <span
                   key={idx}
                   className="inline-flex items-center px-2 py-1 rounded text-xs bg-white/60 border border-black/5 text-gray-700 shadow-sm"
-                  title={answer.correctAnswer}
+                  title={isTeacher ? answer.correctAnswer : undefined}
                 >
                   <span className="font-bold mr-1 text-gray-900">
                     {answer.itemNumber}
                   </span>
-                  <span className="truncate max-w-[120px]">
-                    {answer.correctAnswer}
-                  </span>
+                  {isTeacher && (
+                    <span className="truncate max-w-[120px]">
+                      {answer.correctAnswer}
+                    </span>
+                  )}
                 </span>
               ))}
               {exercise.answers.length > 10 && (
