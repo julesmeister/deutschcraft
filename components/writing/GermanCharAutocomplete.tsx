@@ -16,6 +16,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import { createPortal } from "react-dom";
 
 interface Suggestion {
   trigger: string;
@@ -70,24 +71,41 @@ export function GermanCharAutocomplete({
     const verticalOffset = isInput ? rect.height + 8 : lineHeight;
 
     setSuggestionPosition({
-      top: rect.top + verticalOffset, // Use viewport coordinates for fixed positioning
+      top: rect.top + verticalOffset,
       left: rect.left + 20,
     });
   }, [textareaRef]);
 
-  // Update position on scroll/resize
+  // Update position on scroll/resize and when shown
   useEffect(() => {
     if (!showSuggestion) return;
 
-    const handleScroll = () => updatePosition();
+    // Update immediately when shown
+    updatePosition();
 
-    // Use capture to detect scroll in any container
-    window.addEventListener("scroll", handleScroll, true);
-    window.addEventListener("resize", handleScroll);
+    // Update on scroll (any scrollable element)
+    const handleUpdate = () => {
+      updatePosition();
+    };
+
+    // Listen to multiple scroll sources
+    window.addEventListener("scroll", handleUpdate);
+    document.addEventListener("scroll", handleUpdate, true);
+    window.addEventListener("resize", handleUpdate);
+
+    // Also use requestAnimationFrame for smooth updates during scroll
+    let rafId: number;
+    const rafUpdate = () => {
+      updatePosition();
+      rafId = requestAnimationFrame(rafUpdate);
+    };
+    rafId = requestAnimationFrame(rafUpdate);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll, true);
-      window.removeEventListener("resize", handleScroll);
+      window.removeEventListener("scroll", handleUpdate);
+      document.removeEventListener("scroll", handleUpdate, true);
+      window.removeEventListener("resize", handleUpdate);
+      if (rafId) cancelAnimationFrame(rafId);
     };
   }, [showSuggestion, updatePosition]);
 
@@ -176,7 +194,11 @@ export function GermanCharAutocomplete({
 
   if (!showSuggestion || !currentSuggestion) return null;
 
-  return (
+  // Render the popup using a portal to ensure it's at the document body level
+  // This prevents parent containers with transforms/animations from breaking fixed positioning
+  if (typeof document === 'undefined') return null;
+
+  return createPortal(
     <div
       className="fixed z-50 bg-white border border-blue-500 rounded-lg shadow-lg px-3 py-2"
       style={{
@@ -199,6 +221,7 @@ export function GermanCharAutocomplete({
           </kbd>
         </span>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
