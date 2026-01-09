@@ -24,6 +24,7 @@ interface AnswersListProps {
   showExplanations?: boolean;
   isTeacher?: boolean;
   onAnswerSaved?: () => void;
+  onUpdateAnswer?: (itemIndex: number, newAnswer: string) => Promise<void>;
 }
 
 export function AnswersList({
@@ -32,6 +33,7 @@ export function AnswersList({
   showExplanations = true,
   isTeacher = false,
   onAnswerSaved,
+  onUpdateAnswer,
 }: AnswersListProps) {
   const { session } = useFirebaseAuth();
   const { student: currentUser } = useCurrentStudent(
@@ -90,6 +92,8 @@ export function AnswersList({
       <TeacherAnswerDisplay
         answers={answers}
         showExplanations={showExplanations}
+        exerciseId={exerciseId}
+        onUpdateAnswer={onUpdateAnswer}
       />
     );
   }

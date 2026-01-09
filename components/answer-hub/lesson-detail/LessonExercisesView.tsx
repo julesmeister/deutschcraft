@@ -48,10 +48,17 @@ interface LessonExercisesViewProps {
     ) => void;
     onReorderSections?: (sectionOrder: string[]) => void;
     onAddToSection?: (sectionName: string) => void;
+    onRenameSection?: (oldName: string, newName: string) => void;
+    onToggleHideSection?: (sectionName: string, isHidden: boolean) => void;
     onSaveInlineExercise?: (data: CreateExerciseOverrideInput) => Promise<void>;
     onCancelInlineExercise?: () => void;
     onSaveInlineEdit?: (data: CreateExerciseOverrideInput) => Promise<void>;
     onCancelInlineEdit?: () => void;
+    onUpdateAnswer?: (
+      exerciseId: string,
+      itemIndex: number,
+      newAnswer: string
+    ) => Promise<void>;
   };
 
   // Inline Edit State
@@ -280,12 +287,15 @@ export function LessonExercisesView({
               onToggleHide={handlers.onToggleHide}
               onReorderSections={handlers.onReorderSections}
               onAddToSection={handlers.onAddToSection}
+              onRenameSection={handlers.onRenameSection}
+              onToggleHideSection={handlers.onToggleHideSection}
               onSaveInlineExercise={handlers.onSaveInlineExercise}
               onCancelInlineExercise={handlers.onCancelInlineExercise}
               editingSectionName={editingState.sectionName}
               onSaveInlineEdit={handlers.onSaveInlineEdit}
               onCancelInlineEdit={handlers.onCancelInlineEdit}
               editingExerciseId={editingState.exerciseId}
+              onUpdateAnswer={handlers.onUpdateAnswer}
             />
           </div>
         </>

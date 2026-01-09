@@ -171,17 +171,21 @@ export default function LessonDetailPage() {
     editingExerciseId,
     handleReorderSections,
     handleAddToSection,
+    handleRenameSection,
+    handleToggleHideSection,
     handleSaveInlineExercise,
     handleCancelInlineExercise,
     handleEditExercise,
     handleSaveInlineEdit,
     handleCancelInlineEdit,
+    handleUpdateAnswer,
   } = useLessonPageHandlers(
     userEmail,
     level,
     lessonNumber,
     lesson,
-    handleReorder
+    handleReorder,
+    handleToggleHide
   );
 
   // Refresh handler - invalidate React Query cache to refetch all data
@@ -316,6 +320,8 @@ export default function LessonDetailPage() {
                   ? handleReorderSections
                   : undefined,
                 onAddToSection: isTeacher ? handleAddToSection : undefined,
+                onRenameSection: isTeacher ? handleRenameSection : undefined,
+                onToggleHideSection: isTeacher ? handleToggleHideSection : undefined,
                 onSaveInlineExercise: isTeacher
                   ? handleSaveInlineExercise
                   : undefined,
@@ -326,6 +332,7 @@ export default function LessonDetailPage() {
                 onCancelInlineEdit: isTeacher
                   ? handleCancelInlineEdit
                   : undefined,
+                onUpdateAnswer: isTeacher ? handleUpdateAnswer : undefined,
               }}
               editingState={{
                 sectionName: editingSectionName,

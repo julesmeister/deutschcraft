@@ -16,7 +16,8 @@ export function useLessonPageHandlers(
   level: CEFRLevel,
   lessonNumber: number,
   lesson: { exercises: ExerciseWithOverrideMetadata[] } | null,
-  handleReorder: (exercises: ExerciseWithOverrideMetadata[]) => void
+  handleReorder: (exercises: ExerciseWithOverrideMetadata[]) => void,
+  onToggleHide?: (exerciseId: string, isHidden: boolean, exerciseIndex?: number) => void
 ) {
   // Inline exercise creation state
   const [editingSectionName, setEditingSectionName] = useState<string | null>(
@@ -54,6 +55,111 @@ export function useLessonPageHandlers(
   // Handle adding exercise to a specific section
   const handleAddToSection = (sectionName: string) => {
     setEditingSectionName(sectionName);
+  };
+
+  // Handle hiding/showing an entire section
+  const handleToggleHideSection = async (sectionName: string, isHidden: boolean) => {
+    if (!onToggleHide || !lesson) return;
+
+    try {
+      // Find all exercises in the section
+      const sectionExercises = lesson.exercises.filter(
+        (ex) => (ex.section || "Übungen") === sectionName
+      );
+
+      if (sectionExercises.length === 0) {
+        console.warn("No exercises found in section:", sectionName);
+        return;
+      }
+
+      // Toggle hide for each exercise in the section
+      // We don't need to pass exerciseIndex since we're hiding/showing all
+      const togglePromises = sectionExercises.map((exercise) =>
+        onToggleHide(exercise.exerciseId, isHidden)
+      );
+
+      // Wait for all toggles to complete
+      await Promise.all(togglePromises);
+    } catch (error) {
+      console.error("Error toggling section visibility:", error);
+      alert("Failed to toggle section visibility. Please try again.");
+    }
+  };
+
+  // Handle renaming a section
+  const handleRenameSection = async (oldName: string, newName: string) => {
+    if (!userEmail || !lesson) return;
+
+    try {
+      // Find all exercises in the old section
+      const exercisesToUpdate = lesson.exercises.filter(
+        (ex) => (ex.section || "Übungen") === oldName
+      );
+
+      if (exercisesToUpdate.length === 0) {
+        console.warn("No exercises found in section:", oldName);
+        return;
+      }
+
+      // Update each exercise with the new section name
+      const updatePromises = exercisesToUpdate.map(async (exercise) => {
+        const overrideId = `${userEmail}_${exercise.exerciseId}`;
+
+        // Preserve all existing data
+        const exerciseData: any = {
+          exerciseId: exercise.exerciseId,
+          exerciseNumber: exercise.exerciseNumber,
+          section: newName, // New section name
+          answers: exercise.answers,
+          difficulty: exercise.difficulty || "medium",
+          level,
+          lessonNumber,
+          attachments: exercise.attachments,
+        };
+
+        // Include question if it exists
+        if (exercise.question) {
+          exerciseData.question = exercise.question;
+        }
+
+        // Check if this is a custom exercise or a modification
+        const isCustomExercise = exercise._isCreated;
+
+        if (isCustomExercise) {
+          // Update custom exercise
+          return updateOverrideMutation.mutateAsync({
+            overrideId,
+            updates: {
+              overrideType: "create",
+              exerciseData,
+              teacherEmail: userEmail,
+              exerciseId: exercise.exerciseId,
+              level,
+              lessonNumber,
+            },
+          });
+        } else {
+          // Update modified exercise or create modification
+          return updateOverrideMutation.mutateAsync({
+            overrideId,
+            updates: {
+              overrideType: "modify",
+              modifications: exerciseData,
+              teacherEmail: userEmail,
+              exerciseId: exercise.exerciseId,
+              level,
+              lessonNumber,
+            },
+          });
+        }
+      });
+
+      // Wait for all updates to complete
+      await Promise.all(updatePromises);
+    } catch (error) {
+      console.error("Error renaming section:", error);
+      alert("Failed to rename section. Please try again.");
+    }
   };
 
   // Handle saving inline exercise
@@ -195,6 +301,87 @@ export function useLessonPageHandlers(
     setEditingExerciseId(null);
   };
 
+  // Handle updating a single answer for an exercise
+  const handleUpdateAnswer = async (
+    exerciseId: string,
+    itemIndex: number,
+    newAnswer: string
+  ) => {
+    if (!userEmail || !lesson) return;
+
+    try {
+      // Find the exercise
+      const exercise = lesson.exercises.find((ex) => ex.exerciseId === exerciseId);
+      if (!exercise) {
+        throw new Error("Exercise not found");
+      }
+
+      // Clone the answers array and update the specific item
+      const updatedAnswers = [...exercise.answers];
+      if (itemIndex < 0 || itemIndex >= updatedAnswers.length) {
+        throw new Error("Invalid answer index");
+      }
+
+      updatedAnswers[itemIndex] = {
+        ...updatedAnswers[itemIndex],
+        correctAnswer: newAnswer,
+      };
+
+      const overrideId = `${userEmail}_${exerciseId}`;
+
+      // Build exercise data with updated answers
+      const exerciseData: any = {
+        exerciseId: exercise.exerciseId,
+        exerciseNumber: exercise.exerciseNumber,
+        section: exercise.section,
+        answers: updatedAnswers,
+        difficulty: exercise.difficulty || "medium",
+        level,
+        lessonNumber,
+        attachments: exercise.attachments,
+      };
+
+      // Include question if it exists
+      if (exercise.question) {
+        exerciseData.question = exercise.question;
+      }
+
+      // Check if this is a custom exercise or a modification
+      const isCustomExercise = exercise._isCreated;
+
+      if (isCustomExercise) {
+        // Update existing custom exercise
+        await updateOverrideMutation.mutateAsync({
+          overrideId,
+          updates: {
+            overrideType: "create",
+            exerciseData,
+            teacherEmail: userEmail,
+            exerciseId,
+            level,
+            lessonNumber,
+          },
+        });
+      } else {
+        // Create/update modification override
+        await updateOverrideMutation.mutateAsync({
+          overrideId,
+          updates: {
+            overrideType: "modify",
+            modifications: exerciseData,
+            teacherEmail: userEmail,
+            exerciseId,
+            level,
+            lessonNumber,
+          },
+        });
+      }
+    } catch (error) {
+      console.error("Error updating answer:", error);
+      throw error;
+    }
+  };
+
   return {
     // State
     editingSectionName,
@@ -203,6 +390,8 @@ export function useLessonPageHandlers(
     // Section handlers
     handleReorderSections,
     handleAddToSection,
+    handleRenameSection,
+    handleToggleHideSection,
 
     // Inline creation handlers
     handleSaveInlineExercise,
@@ -212,5 +401,8 @@ export function useLessonPageHandlers(
     handleEditExercise,
     handleSaveInlineEdit,
     handleCancelInlineEdit,
+
+    // Answer update handler
+    handleUpdateAnswer,
   };
 }

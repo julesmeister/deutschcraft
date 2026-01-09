@@ -24,18 +24,24 @@ import { getUserInfo } from "@/lib/utils/userHelpers";
 import { useLessonWithOverrides } from "@/lib/hooks/useExercisesWithOverrides";
 import { useExerciseProgress } from "@/lib/hooks/useExerciseProgress";
 import { CEFRLevel } from "@/lib/models/cefr";
+import { useUpdateOverride } from "@/lib/hooks/useExerciseOverrides";
+import { useQueryClient } from "@tanstack/react-query";
 
 export default function ExerciseDetailPage() {
   const router = useRouter();
   const params = useParams();
+  const queryClient = useQueryClient();
   const { session } = useFirebaseAuth();
   const { student: currentUser } = useCurrentStudent(
     session?.user?.email || null
   );
-  const { userId } = getUserInfo(currentUser, session);
+  const { userId, userEmail } = getUserInfo(currentUser, session);
 
   // State to trigger refresh of student answers
   const [answersRefreshTrigger, setAnswersRefreshTrigger] = useState(0);
+
+  // Direct access to update override mutation
+  const updateOverrideMutation = useUpdateOverride();
 
   // Parse URL params (exerciseNumber param is actually exerciseId now)
   const levelBook = params.levelBook as string;
@@ -87,6 +93,82 @@ export default function ExerciseDetailPage() {
     exercise?.answers.length || 0,
     userId
   );
+
+  // Handle updating a single answer for an exercise (teacher only)
+  const handleUpdateAnswer = async (itemIndex: number, newAnswer: string) => {
+    if (!userEmail || !exercise || !isTeacher) return;
+
+    try {
+      // Clone the answers array and update the specific item
+      const updatedAnswers = [...exercise.answers];
+      if (itemIndex < 0 || itemIndex >= updatedAnswers.length) {
+        throw new Error("Invalid answer index");
+      }
+
+      updatedAnswers[itemIndex] = {
+        ...updatedAnswers[itemIndex],
+        correctAnswer: newAnswer,
+      };
+
+      const overrideId = `${userEmail}_${exercise.exerciseId}`;
+
+      // Build exercise data with updated answers
+      const exerciseData: any = {
+        exerciseId: exercise.exerciseId,
+        exerciseNumber: exercise.exerciseNumber,
+        section: exercise.section,
+        answers: updatedAnswers,
+        difficulty: exercise.difficulty || "medium",
+        level,
+        lessonNumber,
+        attachments: exercise.attachments,
+      };
+
+      // Include question if it exists
+      if (exercise.question) {
+        exerciseData.question = exercise.question;
+      }
+
+      // Check if this is a custom exercise or a modification
+      const isCustomExercise = exercise._isCreated;
+
+      if (isCustomExercise) {
+        // Update existing custom exercise
+        await updateOverrideMutation.mutateAsync({
+          overrideId,
+          updates: {
+            overrideType: "create",
+            exerciseData,
+            teacherEmail: userEmail,
+            exerciseId: exercise.exerciseId,
+            level,
+            lessonNumber,
+          },
+        });
+      } else {
+        // Create/update modification override
+        await updateOverrideMutation.mutateAsync({
+          overrideId,
+          updates: {
+            overrideType: "modify",
+            modifications: exerciseData,
+            teacherEmail: userEmail,
+            exerciseId: exercise.exerciseId,
+            level,
+            lessonNumber,
+          },
+        });
+      }
+
+      // Invalidate cache to refetch updated exercise
+      await queryClient.invalidateQueries({
+        queryKey: ["exercise-overrides"],
+      });
+    } catch (error) {
+      console.error("Error updating answer:", error);
+      throw error;
+    }
+  };
 
   if (isLoading) {
     return (
@@ -305,6 +387,7 @@ export default function ExerciseDetailPage() {
               showExplanations={true}
               isTeacher={isTeacher}
               onAnswerSaved={() => setAnswersRefreshTrigger((prev) => prev + 1)}
+              onUpdateAnswer={isTeacher ? handleUpdateAnswer : undefined}
             />
           </div>
         </div>

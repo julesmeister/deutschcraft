@@ -42,12 +42,19 @@ interface ExerciseListSectionProps {
   ) => void;
   onReorderSections?: (sectionOrder: string[]) => void;
   onAddToSection?: (sectionName: string) => void;
+  onRenameSection?: (oldName: string, newName: string) => void;
+  onToggleHideSection?: (sectionName: string, isHidden: boolean) => void;
   onSaveInlineExercise?: (data: CreateExerciseOverrideInput) => Promise<void>;
   onCancelInlineExercise?: () => void;
   editingSectionName?: string | null;
   onSaveInlineEdit?: (data: CreateExerciseOverrideInput) => Promise<void>;
   onCancelInlineEdit?: () => void;
   editingExerciseId?: string | null;
+  onUpdateAnswer?: (
+    exerciseId: string,
+    itemIndex: number,
+    newAnswer: string
+  ) => Promise<void>;
 }
 
 export function ExerciseListSection({
@@ -64,12 +71,15 @@ export function ExerciseListSection({
   onToggleHide,
   onReorderSections,
   onAddToSection,
+  onRenameSection,
+  onToggleHideSection,
   onSaveInlineExercise,
   onCancelInlineExercise,
   editingSectionName,
   onSaveInlineEdit,
   onCancelInlineEdit,
   editingExerciseId,
+  onUpdateAnswer,
 }: ExerciseListSectionProps) {
   // Group exercises by section and track global indices
   const exercisesBySection: Record<
@@ -113,6 +123,9 @@ export function ExerciseListSection({
     const sectionExercises = exercisesBySection[section].map(
       (item) => item.exercise
     );
+
+    // Determine if section is hidden (all exercises are hidden)
+    const isSectionHidden = sectionExercises.every((ex) => ex._isHidden);
 
     // Render exercises differently for teachers vs students
     const exerciseItems = isTeacher ? (
@@ -211,6 +224,12 @@ export function ExerciseListSection({
                   item?.globalIndex
                 );
               }}
+              onUpdateAnswer={
+                onUpdateAnswer
+                  ? (itemIndex, newAnswer) =>
+                      onUpdateAnswer(exercise.exerciseId, itemIndex, newAnswer)
+                  : undefined
+              }
             />
           );
         }}
@@ -250,6 +269,12 @@ export function ExerciseListSection({
                 : undefined
             }
             commentCount={discussionStats?.[exercise.exerciseId]?.commentCount}
+            onUpdateAnswer={
+              onUpdateAnswer
+                ? (itemIndex, newAnswer) =>
+                    onUpdateAnswer(exercise.exerciseId, itemIndex, newAnswer)
+                : undefined
+            }
           />
         );
       })
@@ -281,6 +306,7 @@ export function ExerciseListSection({
       key: section,
       header: section,
       items: items,
+      isHidden: isSectionHidden,
     };
   });
 
@@ -301,6 +327,12 @@ export function ExerciseListSection({
       }
       onAddToSection={
         isTeacher && onAddToSection ? handleAddToSection : undefined
+      }
+      onRenameSection={
+        isTeacher && onRenameSection ? onRenameSection : undefined
+      }
+      onToggleHideSection={
+        isTeacher && onToggleHideSection ? onToggleHideSection : undefined
       }
     />
   );

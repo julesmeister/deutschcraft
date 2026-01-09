@@ -5,6 +5,7 @@
 
 "use client";
 
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { GripVertical } from "lucide-react";
 import { ExerciseWithOverrideMetadata } from "@/lib/models/exerciseOverride";
@@ -23,6 +24,7 @@ interface ExerciseListCardProps {
   isTeacher?: boolean;
   onEdit?: (e: React.MouseEvent) => void;
   onToggleHide?: (e: React.MouseEvent) => void;
+  onUpdateAnswer?: (itemIndex: number, newAnswer: string) => Promise<void>;
   isDraggable?: boolean;
   isDuplicate?: boolean;
   interactionStats?: {
@@ -42,18 +44,85 @@ export function ExerciseListCard({
   isTeacher,
   onEdit,
   onToggleHide,
+  onUpdateAnswer,
   isDraggable,
   isDuplicate,
   interactionStats,
   commentCount,
   id,
 }: ExerciseListCardProps) {
+  // Inline editing state
+  const [editingIndex, setEditingIndex] = useState<number | null>(null);
+  const [editValue, setEditValue] = useState("");
+  const [isSaving, setIsSaving] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Focus input when editing starts
+  useEffect(() => {
+    if (editingIndex !== null && inputRef.current) {
+      inputRef.current.focus();
+      inputRef.current.select();
+    }
+  }, [editingIndex]);
+
   // Construct exercise detail URL using exerciseId (unique identifier)
   const exerciseUrl = `/dashboard/student/answer-hub/${levelBook}/${lessonId}/${encodeURIComponent(
     exercise.exerciseId
   )}`;
 
   const answerCount = exercise.answers.length;
+
+  // Handle starting inline edit
+  const handleStartEdit = (index: number, currentAnswer: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (isTeacher && onUpdateAnswer) {
+      setEditingIndex(index);
+      setEditValue(currentAnswer);
+    }
+  };
+
+  // Handle saving inline edit
+  const handleSaveEdit = async () => {
+    if (editingIndex === null || !onUpdateAnswer || isSaving) return;
+
+    const trimmedValue = editValue.trim();
+    const originalAnswer = exercise.answers[editingIndex].correctAnswer;
+
+    // Only save if value changed
+    if (trimmedValue && trimmedValue !== originalAnswer) {
+      setIsSaving(true);
+      try {
+        await onUpdateAnswer(editingIndex, trimmedValue);
+      } catch (error) {
+        console.error("Failed to update answer:", error);
+        // Revert on error
+        setEditValue(originalAnswer);
+      } finally {
+        setIsSaving(false);
+      }
+    }
+
+    setEditingIndex(null);
+    setEditValue("");
+  };
+
+  // Handle canceling inline edit
+  const handleCancelEdit = () => {
+    setEditingIndex(null);
+    setEditValue("");
+  };
+
+  // Handle key events
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleSaveEdit();
+    } else if (e.key === "Escape") {
+      e.preventDefault();
+      handleCancelEdit();
+    }
+  };
 
   const handleCardClick = (e: React.MouseEvent) => {
     // Prevent navigation if dragging
@@ -118,9 +187,29 @@ export function ExerciseListCard({
                     {answer.itemNumber}
                   </span>
                   {isTeacher && (
-                    <span className="truncate max-w-[120px]">
-                      {answer.correctAnswer}
-                    </span>
+                    editingIndex === idx ? (
+                      <input
+                        ref={inputRef}
+                        type="text"
+                        value={editValue}
+                        onChange={(e) => setEditValue(e.target.value)}
+                        onBlur={handleSaveEdit}
+                        onKeyDown={handleKeyDown}
+                        disabled={isSaving}
+                        className="w-[120px] px-1 py-0.5 text-xs bg-white border-b-2 border-blue-500 focus:outline-none focus:border-blue-600 transition-colors"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                        }}
+                      />
+                    ) : (
+                      <span
+                        className="truncate max-w-[120px] cursor-pointer hover:bg-white/80 px-1 py-0.5 rounded transition-colors"
+                        onClick={(e) => handleStartEdit(idx, answer.correctAnswer, e)}
+                      >
+                        {answer.correctAnswer}
+                      </span>
+                    )
                   )}
                 </span>
               ))}
