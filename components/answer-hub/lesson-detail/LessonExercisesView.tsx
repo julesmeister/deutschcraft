@@ -137,21 +137,26 @@ export function LessonExercisesView({
       isRefreshed &&
       filteredExercises.length > 0
     ) {
-      // Find first unsubmitted exercise
-      const firstUnansweredIndex = filteredExercises.findIndex((ex) => {
+      // Find last answered exercise
+      let lastAnsweredIndex = -1;
+      for (let i = filteredExercises.length - 1; i >= 0; i--) {
+        const ex = filteredExercises[i];
         // Use teacherInteractions if teacher, otherwise interactions
         const stats = isTeacher
           ? teacherInteractions[ex.exerciseId]
           : interactions[ex.exerciseId];
 
-        return !stats || stats.submissionCount === 0;
-      });
+        if (stats && stats.submissionCount > 0) {
+          lastAnsweredIndex = i;
+          break;
+        }
+      }
 
-      if (firstUnansweredIndex !== -1) {
-        const exercise = filteredExercises[firstUnansweredIndex];
+      if (lastAnsweredIndex !== -1) {
+        const exercise = filteredExercises[lastAnsweredIndex];
         // Use a small timeout to ensure DOM is ready and layout is stable
         setTimeout(() => {
-          scrollToExercise(exercise.exerciseId, firstUnansweredIndex);
+          scrollToExercise(exercise.exerciseId, lastAnsweredIndex);
         }, 300);
       }
 
