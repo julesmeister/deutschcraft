@@ -21,19 +21,40 @@ interface StudentAnswerBubbleContentProps {
   canEdit?: boolean;
 }
 
-// Tokenize answer text into words with positions
-function tokenizeAnswer(text: string): Array<{word: string, start: number, end: number}> {
-  const words = [];
-  const regex = /\S+/g;  // Match non-whitespace sequences
-  let match;
-  while ((match = regex.exec(text)) !== null) {
-    words.push({
-      word: match[0],
-      start: match.index,
-      end: match.index + match[0].length
-    });
-  }
-  return words;
+// Tokenize answer text into words with positions, preserving line structure
+function tokenizeAnswer(text: string): Array<{word: string, start: number, end: number, isLineBreak?: boolean}> {
+  const tokens: Array<{word: string, start: number, end: number, isLineBreak?: boolean}> = [];
+  const lines = text.split('\n');
+  let currentPosition = 0;
+
+  lines.forEach((line, lineIndex) => {
+    // Tokenize words in the line
+    const regex = /\S+/g;
+    let match;
+    while ((match = regex.exec(line)) !== null) {
+      tokens.push({
+        word: match[0],
+        start: currentPosition + match.index,
+        end: currentPosition + match.index + match[0].length
+      });
+    }
+
+    // Add line break token if not the last line
+    if (lineIndex < lines.length - 1) {
+      currentPosition += line.length;
+      tokens.push({
+        word: '\n',
+        start: currentPosition,
+        end: currentPosition + 1,
+        isLineBreak: true
+      });
+      currentPosition += 1; // Account for the newline character
+    } else {
+      currentPosition += line.length;
+    }
+  });
+
+  return tokens;
 }
 
 export function StudentAnswerBubbleContent({
@@ -100,6 +121,11 @@ export function StudentAnswerBubbleContent({
       ) : isMarkingMode ? (
         <div className="leading-relaxed">
           {tokenizeAnswer(value).map((token, idx) => {
+            // Render line breaks
+            if (token.isLineBreak) {
+              return <br key={idx} />;
+            }
+
             const marked = isWordMarked(token.start);
             const { word: cleanWord, start, end } = stripPunctuation(token.word, token.start, token.end);
             return (
