@@ -106,7 +106,7 @@ export function FlashcardPractice({
 
   // Saved vocabulary hooks
   const { session } = useFirebaseAuth();
-  const toast = useToast();
+  const { success: showSuccessToast, error: showErrorToast } = useToast();
   const { data: savedVocabulary = [] } = useSavedVocabulary(
     session?.user?.email
   );
@@ -132,7 +132,7 @@ export function FlashcardPractice({
           userId: session.user.email,
           wordId: currentCard.id,
         });
-        toast.success("Removed from saved vocabulary");
+        showSuccessToast("Removed from saved vocabulary");
       } else {
         await saveMutation.mutateAsync({
           userId: session.user.email,
@@ -146,11 +146,11 @@ export function FlashcardPractice({
             examples: currentCard.examples,
           },
         });
-        toast.success("Saved! Track progress in writing exercises.");
+        showSuccessToast("Saved! Track progress in writing exercises.");
       }
     } catch (error) {
       console.error("Error toggling save:", error);
-      toast.error("Failed to save word. Please try again.");
+      showErrorToast("Failed to save word. Please try again.");
     }
   };
 
