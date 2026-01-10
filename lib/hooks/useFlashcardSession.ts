@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { useFlashcardMutations } from "./useFlashcardMutations";
 import { useFlashcardKeyboard } from "./useFlashcardKeyboard";
 import { useFirebaseAuth } from "./useFirebaseAuth";
-import { useToast } from "@/components/ui/toast";
+import { useToast } from "@/lib/hooks/useToast";
 
 type DifficultyLevel = "again" | "hard" | "good" | "easy" | "expert";
 
@@ -104,9 +104,7 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
     };
 
     const toastConfig = toastMessages[difficulty];
-    toastConfig.method(toastConfig.message, {
-      duration: toastConfig.duration,
-    });
+    toastConfig.method(toastConfig.message, toastConfig.duration);
 
     // Check if this is the last card
     if (isLastCard) {
@@ -176,7 +174,7 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
       console.error(
         "❌ [handleSessionComplete] Cannot save: No user session found"
       );
-      toast.addToast("Error: Not logged in. Progress not saved.", "error");
+      toast.error("Error: Not logged in. Progress not saved.");
     } else {
       try {
         await saveDailyProgress(session.user.email, {
@@ -190,10 +188,7 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
           "❌ [handleSessionComplete] Failed to save daily progress:",
           error
         );
-        toast.addToast(
-          "Failed to save progress. Please check your connection.",
-          "error"
-        );
+        toast.error("Failed to save progress. Please check your connection.");
       }
     }
 

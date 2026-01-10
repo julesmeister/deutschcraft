@@ -19,6 +19,7 @@ export interface ToastMessage {
 }
 
 let toastCounter = 0;
+const activeToasts = new Set<string>();
 
 export function useToast() {
   const showToast = useCallback((
@@ -39,6 +40,10 @@ export function useToast() {
     toastWrapper.className = 'toast-item';
     toastContainer.appendChild(toastWrapper);
 
+    // Track active toasts
+    activeToasts.add(id);
+    updateCloseAllButton();
+
     // Calculate relative time for timestamp
     const timestamp = 'just now';
 
@@ -51,6 +56,8 @@ export function useToast() {
         try {
           root.unmount();
           toastWrapper.remove();
+          activeToasts.delete(id);
+          updateCloseAllButton();
         } catch (e) {
           // Already unmounted
         }
@@ -114,6 +121,43 @@ export function useToast() {
   };
 }
 
+function closeAllToasts() {
+  const toastIds = Array.from(activeToasts);
+  toastIds.forEach(id => {
+    const toastElement = document.getElementById(id);
+    if (toastElement) {
+      // Trigger close button click
+      const closeButton = toastElement.querySelector('button[aria-label="Close"]') as HTMLButtonElement;
+      if (closeButton) {
+        closeButton.click();
+      }
+    }
+  });
+}
+
+function updateCloseAllButton() {
+  const container = document.getElementById('toast-container');
+  if (!container) return;
+
+  let closeAllBtn = document.getElementById('toast-close-all-btn');
+
+  if (activeToasts.size >= 2) {
+    if (!closeAllBtn) {
+      closeAllBtn = document.createElement('button');
+      closeAllBtn.id = 'toast-close-all-btn';
+      closeAllBtn.className = 'toast-close-all';
+      closeAllBtn.innerHTML = 'Close All';
+      closeAllBtn.onclick = closeAllToasts;
+      container.insertBefore(closeAllBtn, container.firstChild);
+    }
+    closeAllBtn.style.display = 'block';
+  } else {
+    if (closeAllBtn) {
+      closeAllBtn.style.display = 'none';
+    }
+  }
+}
+
 function createToastContainer() {
   const container = document.createElement('div');
   container.id = 'toast-container';
@@ -123,7 +167,7 @@ function createToastContainer() {
   `;
   document.body.appendChild(container);
 
-  // Add global styles for toast items
+  // Add global styles for toast items and close all button
   const style = document.createElement('style');
   style.textContent = `
     .toast-item {
@@ -131,6 +175,31 @@ function createToastContainer() {
       transition: opacity 0.3s ease, transform 0.3s ease;
       opacity: 0;
       transform: translateX(20px);
+    }
+    .toast-close-all {
+      pointer-events: auto;
+      display: none;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+      margin-bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    .toast-close-all:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6);
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    }
+    .toast-close-all:active {
+      transform: translateY(0);
     }
   `;
   document.head.appendChild(style);
