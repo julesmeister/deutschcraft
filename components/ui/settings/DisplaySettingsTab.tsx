@@ -6,6 +6,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useQueryClient } from '@tanstack/react-query';
 import { updateUser } from '@/lib/services/user';
 import { useToast } from '@/lib/hooks/useToast';
 
@@ -22,6 +23,7 @@ export function DisplaySettingsTab({
   userRole,
   currentSettings,
 }: DisplaySettingsTabProps) {
+  const queryClient = useQueryClient();
   const { showToast } = useToast();
   const [showTeacherTab, setShowTeacherTab] = useState(
     currentSettings?.showTeacherTabToStudents ?? true
@@ -58,6 +60,11 @@ export function DisplaySettingsTab({
         },
       });
       console.log('[DisplaySettings] Successfully saved');
+
+      // Invalidate user query to refetch fresh data
+      await queryClient.invalidateQueries({ queryKey: ['user', userEmail] });
+      console.log('[DisplaySettings] Cache invalidated, data will refresh');
+
       showToast('Settings saved', 'success', 2000);
     } catch (error) {
       console.error('[DisplaySettings] Save failed:', error);

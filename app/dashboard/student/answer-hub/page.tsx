@@ -11,6 +11,7 @@ import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
 import { CEFRLevelSelector } from "@/components/ui/CEFRLevelSelector";
 import { CatLoader } from "@/components/ui/CatLoader";
 import { CategoryList } from "@/components/ui/CategoryList";
+import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { useCurrentStudent } from "@/lib/hooks/useUsers";
 import { usePersistedLevel } from "@/lib/hooks/usePersistedLevel";
@@ -90,6 +91,24 @@ export default function AnswerHubPage() {
             label: "Back to Dashboard",
             onClick: () => router.push("/dashboard/student"),
           }}
+          actions={
+            hasExercises ? (
+              <div className="w-auto">
+                <ActionButton
+                  onClick={() =>
+                    router.push(
+                      `/dashboard/student/answer-hub/${selectedLevel}-${selectedBookType}/practice`
+                    )
+                  }
+                  variant="cyan"
+                  size="default"
+                  icon={<ActionButtonIcons.Play />}
+                >
+                  Practice All
+                </ActionButton>
+              </div>
+            ) : undefined
+          }
         />
       </motion.div>
 

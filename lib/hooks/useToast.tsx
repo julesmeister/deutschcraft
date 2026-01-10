@@ -88,19 +88,19 @@ export function useToast() {
   }, []);
 
   // Convenience methods
-  const success = useCallback((message: string, duration?: number, title?: string) => {
+  const success = useCallback((message: string, duration: number = 3000, title?: string) => {
     showToast(message, 'success', duration, title);
   }, [showToast]);
 
-  const error = useCallback((message: string, duration?: number, title?: string) => {
+  const error = useCallback((message: string, duration: number = 3000, title?: string) => {
     showToast(message, 'error', duration, title);
   }, [showToast]);
 
-  const warning = useCallback((message: string, duration?: number, title?: string) => {
+  const warning = useCallback((message: string, duration: number = 3000, title?: string) => {
     showToast(message, 'warning', duration, title);
   }, [showToast]);
 
-  const info = useCallback((message: string, duration?: number, title?: string) => {
+  const info = useCallback((message: string, duration: number = 3000, title?: string) => {
     showToast(message, 'info', duration, title);
   }, [showToast]);
 

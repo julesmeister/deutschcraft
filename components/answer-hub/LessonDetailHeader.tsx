@@ -26,6 +26,7 @@ interface LessonDetailHeaderProps {
   onSelectBatch: (batch: Batch | null) => void;
   onCreateBatch: () => void;
   onViewSummary?: () => void;
+  onPractice?: () => void;
   onRefresh?: () => void;
 }
 
@@ -42,6 +43,7 @@ export function LessonDetailHeader({
   onSelectBatch,
   onCreateBatch,
   onViewSummary,
+  onPractice,
   onRefresh,
 }: LessonDetailHeaderProps) {
   const router = useRouter();
@@ -84,6 +86,18 @@ export function LessonDetailHeader({
                   View Summary
                 </ActionButton>
               </div>
+              {onPractice && (
+                <div className="w-auto">
+                  <ActionButton
+                    onClick={onPractice}
+                    variant="cyan"
+                    size="default"
+                    icon={<ActionButtonIcons.Play />}
+                  >
+                    Practice
+                  </ActionButton>
+                </div>
+              )}
               {onRefresh && (
                 <div className="w-auto">
                   <ActionButton

@@ -287,6 +287,14 @@ export default function LessonDetailPage() {
                       )
                   : undefined
               }
+              onPractice={
+                !isTeacher
+                  ? () =>
+                      router.push(
+                        `/dashboard/student/answer-hub/${levelBook}/${lessonId}/practice`
+                      )
+                  : undefined
+              }
               onRefresh={!isTeacher ? handleRefresh : undefined}
             />
           </motion.div>
