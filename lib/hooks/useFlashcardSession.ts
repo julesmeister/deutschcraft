@@ -83,23 +83,23 @@ export function useFlashcardSession(initialFlashcards: Flashcard[]) {
       again: {
         message: "Will review again soon",
         method: toast.error,
-        duration: 800,
+        duration: 2000,
       },
       hard: {
         message: "Keep practicing!",
         method: toast.warning,
-        duration: 800,
+        duration: 2000,
       },
-      good: { message: "Good recall!", method: toast.success, duration: 800 },
+      good: { message: "Good recall!", method: toast.success, duration: 2000 },
       easy: {
         message: "Perfect! Mastered!",
         method: toast.success,
-        duration: 800,
+        duration: 2500,
       },
       expert: {
         message: "Expert! Won't see this for a year!",
         method: toast.success,
-        duration: 1000,
+        duration: 2500,
       },
     };
 
