@@ -467,14 +467,14 @@ export function generateQuizText(
 
 /**
  * Check if an answer is correct (fuzzy matching)
- * Allows for minor differences like capitalization and whitespace
+ * Allows for minor differences like capitalization, whitespace, and trailing punctuation
  */
 export function checkAnswer(
   studentAnswer: string,
   correctAnswer: string
 ): boolean {
   const normalize = (str: string) =>
-    str.trim().toLowerCase().replace(/\s+/g, " ");
+    str.trim().toLowerCase().replace(/[^\w\s]+$/g, "").replace(/\s+/g, " ");
 
   return normalize(studentAnswer) === normalize(correctAnswer);
 }

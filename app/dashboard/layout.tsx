@@ -8,6 +8,7 @@ import { updateUser } from '@/lib/services/user';
 import { useState, useEffect } from 'react';
 import { EnrollmentGuard } from '@/components/dashboard/EnrollmentGuard';
 import { PlaygroundSessionProvider } from '@/lib/contexts/PlaygroundSessionContext';
+import { FirebaseAuthProvider } from '@/lib/contexts/FirebaseAuthContext';
 import { MinimizedPlayground } from '@/components/playground/MinimizedPlayground';
 import { studentMenuConfig, teacherMenuConfig } from './layout/menuConfig';
 import { MobileMenu } from './layout/MobileMenu';
@@ -21,19 +22,21 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <PlaygroundSessionProvider>
-      <div className="min-h-screen bg-gray-50">
-        <DashboardNavbar />
+    <FirebaseAuthProvider>
+      <PlaygroundSessionProvider>
+        <div className="min-h-screen bg-gray-50">
+          <DashboardNavbar />
 
-        <main>
-          <EnrollmentGuard>
-            {children}
-          </EnrollmentGuard>
-        </main>
+          <main>
+            <EnrollmentGuard>
+              {children}
+            </EnrollmentGuard>
+          </main>
 
-        <MinimizedPlayground />
-      </div>
-    </PlaygroundSessionProvider>
+          <MinimizedPlayground />
+        </div>
+      </PlaygroundSessionProvider>
+    </FirebaseAuthProvider>
   );
 }
 
