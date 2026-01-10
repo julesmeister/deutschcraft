@@ -59,13 +59,6 @@ export function useToast() {
 
     // Render Toast component using React
     const root = createRoot(toastWrapper);
-    
-    // Auto-close logic handled by the hook itself to ensure cleanup
-    if (duration > 0) {
-      setTimeout(() => {
-        handleClose();
-      }, duration);
-    }
 
     root.render(
       <Toast
@@ -85,23 +78,31 @@ export function useToast() {
       toastWrapper.style.opacity = '1';
       toastWrapper.style.transform = 'translateX(0)';
     }, 10);
+
+    // Auto-close logic handled by the hook itself to ensure cleanup
+    // Set timer AFTER render to ensure proper cleanup
+    if (duration > 0) {
+      setTimeout(() => {
+        handleClose();
+      }, duration);
+    }
   }, []);
 
   // Convenience methods
-  const success = useCallback((message: string, duration: number = 3000, title?: string) => {
-    showToast(message, 'success', duration, title);
+  const success = useCallback((message: string, duration?: number, title?: string) => {
+    showToast(message, 'success', duration ?? 3000, title);
   }, [showToast]);
 
-  const error = useCallback((message: string, duration: number = 3000, title?: string) => {
-    showToast(message, 'error', duration, title);
+  const error = useCallback((message: string, duration?: number, title?: string) => {
+    showToast(message, 'error', duration ?? 3000, title);
   }, [showToast]);
 
-  const warning = useCallback((message: string, duration: number = 3000, title?: string) => {
-    showToast(message, 'warning', duration, title);
+  const warning = useCallback((message: string, duration?: number, title?: string) => {
+    showToast(message, 'warning', duration ?? 3000, title);
   }, [showToast]);
 
-  const info = useCallback((message: string, duration: number = 3000, title?: string) => {
-    showToast(message, 'info', duration, title);
+  const info = useCallback((message: string, duration?: number, title?: string) => {
+    showToast(message, 'info', duration ?? 3000, title);
   }, [showToast]);
 
   return {
