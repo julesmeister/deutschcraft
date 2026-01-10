@@ -1,0 +1,168 @@
+/**
+ * VideoPanel Component
+ * Displays video feeds for all participants with multiple layout options
+ */
+
+'use client';
+
+import { useState } from 'react';
+import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
+import { VideoLayoutSelector, type VideoLayout } from './VideoLayoutSelector';
+import { VideoGridView } from './VideoGridView';
+
+export type { VideoLayout };
+
+interface MediaParticipant {
+  userId: string;
+  userName: string;
+  isMuted?: boolean;
+  isVideoEnabled?: boolean;
+}
+
+interface VideoPanelProps {
+  isVoiceActive: boolean;
+  isVideoActive: boolean;
+  isMuted: boolean;
+  localStream: MediaStream | null;
+  participants: MediaParticipant[];
+  videoStreams: Map<string, MediaStream>;
+  audioAnalysers: Map<string, AnalyserNode>;
+  currentUserId: string;
+  currentUserName: string;
+  layout?: VideoLayout;
+  onStartVoice: () => void;
+  onStartVideo: () => void;
+  onStopVoice: () => void;
+  onToggleMute: () => void;
+  onToggleVideo: () => void;
+  onLayoutChange?: (layout: VideoLayout) => void;
+}
+
+export function VideoPanel({
+  isVoiceActive,
+  isVideoActive,
+  isMuted,
+  localStream,
+  participants,
+  videoStreams,
+  audioAnalysers,
+  currentUserId,
+  currentUserName,
+  layout: externalLayout,
+  onStartVoice,
+  onStartVideo,
+  onStopVoice,
+  onToggleMute,
+  onToggleVideo,
+  onLayoutChange,
+}: VideoPanelProps) {
+  const [internalLayout, setInternalLayout] = useState<VideoLayout>('teacher');
+
+  // Use external layout if provided, otherwise use internal state
+  const layout = externalLayout || internalLayout;
+
+  const handleLayoutChange = (newLayout: VideoLayout) => {
+    if (onLayoutChange) {
+      onLayoutChange(newLayout);
+    } else {
+      setInternalLayout(newLayout);
+    }
+  };
+
+  return (
+    <div className="bg-white border border-gray-200 p-4 space-y-4">
+      {/* Controls */}
+      <div className="flex items-center justify-between">
+        <h3 className="text-lg font-semibold text-neutral-900">
+          Voice & Video {participants.length > 0 && `(${participants.length + 1})`}
+        </h3>
+      </div>
+
+      {/* Control Buttons */}
+      <div className="flex gap-2 flex-wrap">
+        {!isVoiceActive ? (
+          <>
+            <ActionButton
+              onClick={onStartVoice}
+              variant="purple"
+              icon={<ActionButtonIcons.Microphone />}
+              className="flex-1 min-w-[100px] sm:min-w-[120px]"
+            >
+              <span className="hidden sm:inline">Start Voice</span>
+              <span className="sm:hidden">Voice</span>
+            </ActionButton>
+            <ActionButton
+              onClick={onStartVideo}
+              variant="cyan"
+              icon={
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+              }
+              className="flex-1 min-w-[100px] sm:min-w-[120px]"
+            >
+              <span className="hidden sm:inline">Start Video</span>
+              <span className="sm:hidden">Video</span>
+            </ActionButton>
+          </>
+        ) : (
+          <>
+            <ActionButton
+              onClick={onToggleMute}
+              variant={isMuted ? 'gray' : 'cyan'}
+              icon={<ActionButtonIcons.Microphone />}
+              className="flex-1 min-w-[80px] sm:min-w-[100px]"
+            >
+              {isMuted ? 'Unmute' : 'Mute'}
+            </ActionButton>
+            <ActionButton
+              onClick={onToggleVideo}
+              variant={isVideoActive ? 'purple' : 'gray'}
+              icon={
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  {isVideoActive ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  ) : (
+                    <>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      <line x1="1" y1="1" x2="23" y2="23" />
+                    </>
+                  )}
+                </svg>
+              }
+              className="flex-1 min-w-[80px] sm:min-w-[100px]"
+            >
+              {isVideoActive ? 'Cam On' : 'Cam Off'}
+            </ActionButton>
+            <ActionButton
+              onClick={onStopVoice}
+              variant="red"
+              icon={<ActionButtonIcons.Close />}
+              className="flex-1 min-w-[70px] sm:min-w-[80px]"
+            >
+              Stop
+            </ActionButton>
+          </>
+        )}
+      </div>
+
+      {/* View Selector - Only show when video is active */}
+      {isVoiceActive && isVideoActive && (
+        <VideoLayoutSelector layout={layout} onLayoutChange={handleLayoutChange} />
+      )}
+
+      {/* Teacher View (only shown in 'teacher' layout mode - shows only teacher) */}
+      {isVoiceActive && layout === 'teacher' && (
+        <VideoGridView
+          isVideoActive={isVideoActive}
+          localStream={localStream}
+          participants={[]} // Empty - only show teacher
+          videoStreams={videoStreams}
+          currentUserId={currentUserId}
+          currentUserName={currentUserName}
+          isMuted={isMuted}
+        />
+      )}
+    </div>
+  );
+}

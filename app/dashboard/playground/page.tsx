@@ -5,24 +5,19 @@
 
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { PlaygroundLobby } from '@/components/playground/PlaygroundLobby';
 import { PlaygroundRoom as PlaygroundRoomComponent } from '@/components/playground/PlaygroundRoom';
 import { useFirebaseAuth } from '@/lib/hooks/useFirebaseAuth';
 import { useCurrentStudent } from '@/lib/hooks/useUsers';
-import { useWebRTCAudio } from '@/lib/hooks/useWebRTCAudio-v2';
+import { useWebRTCMedia } from '@/lib/hooks/useWebRTCMedia';
 import { usePlaygroundHandlers } from '@/lib/hooks/usePlaygroundHandlers';
+import { usePlaygroundInitialization } from '@/lib/hooks/usePlaygroundInitialization';
+import { usePlaygroundSubscriptions } from '@/lib/hooks/usePlaygroundSubscriptions';
+import { usePlaygroundSessionSync } from '@/lib/hooks/usePlaygroundSessionSync';
 import { getUserInfo } from '@/lib/utils/userHelpers';
 import { CatLoader } from '@/components/ui/CatLoader';
-import { usePlaygroundSession } from '@/lib/contexts/PlaygroundSessionContext';
-import {
-  subscribeToRoom,
-  subscribeToParticipants,
-  subscribeToWritings,
-  getActiveRooms,
-  getRoomParticipants,
-} from '@/lib/services/playgroundService';
 import type {
   PlaygroundRoom,
   PlaygroundParticipant,
@@ -32,7 +27,6 @@ import type {
 export default function PlaygroundPage() {
   const router = useRouter();
   const { session } = useFirebaseAuth();
-  const playgroundSession = usePlaygroundSession();
 
   const [activeRooms, setActiveRooms] = useState<PlaygroundRoom[]>([]);
   const [currentRoom, setCurrentRoom] = useState<PlaygroundRoom | null>(null);
@@ -47,39 +41,42 @@ export default function PlaygroundPage() {
   // Use centralized helper to get user info (prevents email display issues)
   const { userId, userName, userEmail, userRole } = getUserInfo(currentUser, session);
 
-  // Voice chat hook (using native WebRTC)
+  // Initialize and load rooms
+  const { loadActiveRooms } = usePlaygroundInitialization({
+    userId,
+    setActiveRooms,
+    setCurrentRoom,
+    setMyParticipantId,
+  });
+
+  // Media chat hook (using native WebRTC with video support)
   const {
     isVoiceActive,
+    isVideoActive,
     isMuted,
-    participants: audioParticipants,
+    participants: mediaParticipants,
     audioStreams,
+    videoStreams,
     audioAnalysers,
+    localStream,
     startVoice,
+    startVideo,
     stopVoice,
     toggleMute,
-  } = useWebRTCAudio({
+    toggleVideo,
+  } = useWebRTCMedia({
     userId,
     userName,
     roomId: currentRoom?.roomId || '',
+    enableVideo: false, // Start with video disabled by default
     onError: (error) => {
       setDialogState({
         isOpen: true,
-        title: 'Voice Chat Error',
-        message: error.message || 'Failed to connect voice chat',
+        title: 'Media Chat Error',
+        message: error.message || 'Failed to connect media chat',
       });
     },
   });
-
-  // Load active rooms function
-  const loadActiveRooms = useCallback(async () => {
-    try {
-      const rooms = await getActiveRooms();
-      setActiveRooms(rooms);
-    } catch (error) {
-      // Silent error handling
-      console.error('[Playground] Failed to load rooms:', error);
-    }
-  }, []);
 
   // Playground handlers hook
   const {
@@ -92,8 +89,10 @@ export default function PlaygroundPage() {
     handleSaveWriting,
     handleToggleWritingVisibility,
     handleStartVoice,
+    handleStartVideo,
     handleStopVoice,
     handleToggleMute,
+    handleToggleVideo,
   } = usePlaygroundHandlers({
     userId,
     userName,
@@ -102,6 +101,7 @@ export default function PlaygroundPage() {
     myParticipantId,
     currentRoom,
     isVoiceActive,
+    isVideoActive,
     isMuted,
     setDialogState,
     setMyParticipantId,
@@ -110,121 +110,36 @@ export default function PlaygroundPage() {
     setWritings,
     stopVoice,
     startVoice,
+    startVideo,
     toggleMute,
+    toggleVideo,
     loadActiveRooms,
   });
 
-  // Load active rooms and restore session on mount
-  useEffect(() => {
-    const initializePlayground = async () => {
-      if (!userId) return;
+  // Subscribe to room, participants, and writings
+  usePlaygroundSubscriptions({
+    currentRoom,
+    userId,
+    userRole,
+    handleLeaveRoom,
+    setParticipants,
+    setWritings,
+  });
 
-      try {
-        // Load all active rooms
-        const rooms = await getActiveRooms();
-        setActiveRooms(rooms);
-
-        // Check if user is already in a room (restore session after refresh)
-        for (const room of rooms) {
-          const roomParticipants = await getRoomParticipants(room.roomId);
-          const myParticipant = roomParticipants.find(p => p.userId === userId && !p.leftAt);
-
-          if (myParticipant) {
-            setCurrentRoom(room);
-            setMyParticipantId(myParticipant.participantId);
-            break; // User can only be in one room at a time
-          }
-        }
-      } catch (error) {
-        console.error('[Playground] Failed to initialize:', error);
-      }
-    };
-
-    initializePlayground();
-  }, [userId]);
-
-  // Subscribe to current room
-  useEffect(() => {
-    if (!currentRoom?.roomId) return;
-
-    const roomId = currentRoom.roomId;
-    let isSubscriptionActive = true;
-
-    const unsubRoom = subscribeToRoom(roomId, (room) => {
-      if (!isSubscriptionActive) return;
-
-      if (room) {
-        // Only update if status changed to avoid infinite loops
-        if (room.status !== currentRoom.status) {
-          if (room.status === 'ended') {
-            // Room ended - cleanup immediately without updating state
-            isSubscriptionActive = false;
-            handleLeaveRoom();
-          } else {
-            setCurrentRoom(room);
-          }
-        }
-      }
-    });
-
-    const unsubParticipants = subscribeToParticipants(roomId, (parts) => {
-      if (!isSubscriptionActive) return;
-      setParticipants(parts);
-    });
-
-    const unsubWritings = subscribeToWritings(
-      roomId,
-      userId,
-      userRole,
-      setWritings
-    );
-
-    return () => {
-      isSubscriptionActive = false;
-      unsubRoom();
-      unsubParticipants();
-      unsubWritings();
-    };
-  }, [currentRoom?.roomId, currentRoom?.status, userId, userRole, handleLeaveRoom]);
-
-  // Note: Native WebRTC handles peer connections automatically
-  // No need for manual peerId management or connectToPeer calls
-
-  // Sync with session context when room state changes
-  useEffect(() => {
-    if (currentRoom && userId && userName && userEmail) {
-      playgroundSession.updateSession({
-        currentRoom,
-        participants,
-        writings,
-        myParticipantId,
-        userId,
-        userName,
-        userEmail,
-        userRole,
-        isVoiceActive,
-        isMuted,
-      });
-    }
-  }, [currentRoom, participants, writings, myParticipantId, userId, userName, userEmail, userRole, isVoiceActive, isMuted]);
-
-  // Start session when joining a room
-  useEffect(() => {
-    if (currentRoom && userId && userName && userEmail && !playgroundSession.session) {
-      playgroundSession.startSession({
-        currentRoom,
-        participants,
-        writings,
-        myParticipantId,
-        userId,
-        userName,
-        userEmail,
-        userRole,
-        isVoiceActive,
-        isMuted,
-      });
-    }
-  }, [currentRoom?.roomId]);
+  // Sync with session context
+  const { playgroundSession } = usePlaygroundSessionSync({
+    currentRoom,
+    participants,
+    writings,
+    myParticipantId,
+    userId,
+    userName,
+    userEmail,
+    userRole,
+    isVoiceActive,
+    isVideoActive,
+    isMuted,
+  });
 
   // End session when leaving room
   const wrappedHandleLeaveRoom = async () => {
@@ -310,18 +225,24 @@ export default function PlaygroundPage() {
       writings={writings}
       myWriting={myWriting}
       userId={userId}
+      userName={userName}
       userRole={userRole}
       isVoiceActive={isVoiceActive}
+      isVideoActive={isVideoActive}
       isMuted={isMuted}
-      voiceParticipants={audioParticipants}
-      voiceStreams={audioStreams}
-      voiceAnalysers={audioAnalysers}
+      localStream={localStream}
+      mediaParticipants={mediaParticipants}
+      audioStreams={audioStreams}
+      videoStreams={videoStreams}
+      audioAnalysers={audioAnalysers}
       dialogState={dialogState}
       onLeaveRoom={wrappedHandleLeaveRoom}
       onEndRoom={handleEndRoom}
       onStartVoice={handleStartVoice}
+      onStartVideo={handleStartVideo}
       onStopVoice={handleStopVoice}
       onToggleMute={handleToggleMute}
+      onToggleVideo={handleToggleVideo}
       onSaveWriting={handleSaveWriting}
       onToggleWritingVisibility={handleToggleWritingVisibility}
       onToggleRoomPublicWriting={

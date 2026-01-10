@@ -1,6 +1,6 @@
 /**
- * WebRTC Audio Types
- * Type definitions for voice chat functionality
+ * WebRTC Audio & Video Types
+ * Type definitions for voice and video chat functionality
  */
 
 export interface AudioParticipant {
@@ -11,11 +11,19 @@ export interface AudioParticipant {
   connectionQuality: 'excellent' | 'good' | 'poor' | 'disconnected';
 }
 
+export interface MediaParticipant extends AudioParticipant {
+  isVideoEnabled: boolean;
+}
+
 export interface UseWebRTCAudioOptions {
   roomId: string;
   userId: string;
   userName: string;
   onError?: (error: Error) => void;
+}
+
+export interface UseWebRTCMediaOptions extends UseWebRTCAudioOptions {
+  enableVideo?: boolean;
 }
 
 export interface PeerConnection {

@@ -5,10 +5,12 @@
 
 'use client';
 
+import { useState } from 'react';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { AlertDialog } from '@/components/ui/Dialog';
-import { VoicePanel } from '@/components/playground/VoicePanel';
+import { VideoPanel, type VideoLayout } from '@/components/playground/VideoPanel';
+import { HorizontalVideoStrip } from '@/components/playground/HorizontalVideoStrip';
 import { WritingBoard } from '@/components/playground/WritingBoard';
 import { ParticipantsList } from '@/components/playground/ParticipantsList';
 import { FloatingRedemittelWidget } from '@/components/writing/FloatingRedemittelWidget';
@@ -18,11 +20,11 @@ import type {
   PlaygroundWriting,
 } from '@/lib/models/playground';
 
-interface VoiceParticipant {
-  peerId: string;
+interface MediaParticipant {
   userId: string;
   userName: string;
-  stream?: MediaStream;
+  isMuted?: boolean;
+  isVideoEnabled?: boolean;
 }
 
 interface PlaygroundRoomProps {
@@ -31,14 +33,18 @@ interface PlaygroundRoomProps {
   writings: PlaygroundWriting[];
   myWriting?: PlaygroundWriting;
   userId: string;
+  userName: string;
   userRole: 'teacher' | 'student';
 
-  // Voice chat state
+  // Media chat state
   isVoiceActive: boolean;
+  isVideoActive: boolean;
   isMuted: boolean;
-  voiceParticipants: VoiceParticipant[];
-  voiceStreams: Map<string, MediaStream>;
-  voiceAnalysers: Map<string, AnalyserNode>;
+  localStream: MediaStream | null;
+  mediaParticipants: MediaParticipant[];
+  audioStreams: Map<string, MediaStream>;
+  videoStreams: Map<string, MediaStream>;
+  audioAnalysers: Map<string, AnalyserNode>;
 
   // Dialog state
   dialogState: {
@@ -51,8 +57,10 @@ interface PlaygroundRoomProps {
   onLeaveRoom: () => Promise<void>;
   onEndRoom: () => Promise<void>;
   onStartVoice: () => Promise<void>;
+  onStartVideo: () => Promise<void>;
   onStopVoice: () => Promise<void>;
   onToggleMute: () => Promise<void>;
+  onToggleVideo: () => Promise<void>;
   onSaveWriting: (content: string) => Promise<void>;
   onToggleWritingVisibility: (writingId: string, isPublic: boolean) => Promise<void>;
   onToggleRoomPublicWriting?: (isPublic: boolean) => Promise<void>;
@@ -66,18 +74,24 @@ export function PlaygroundRoom({
   writings,
   myWriting,
   userId,
+  userName,
   userRole,
   isVoiceActive,
+  isVideoActive,
   isMuted,
-  voiceParticipants,
-  voiceStreams,
-  voiceAnalysers,
+  localStream,
+  mediaParticipants,
+  audioStreams,
+  videoStreams,
+  audioAnalysers,
   dialogState,
   onLeaveRoom,
   onEndRoom,
   onStartVoice,
+  onStartVideo,
   onStopVoice,
   onToggleMute,
+  onToggleVideo,
   onSaveWriting,
   onToggleWritingVisibility,
   onToggleRoomPublicWriting,
@@ -86,6 +100,9 @@ export function PlaygroundRoom({
 }: PlaygroundRoomProps) {
   // Only the host (room creator) can end the room
   const isHost = userId === currentRoom.hostId;
+
+  // Video layout state
+  const [videoLayout, setVideoLayout] = useState<VideoLayout>('teacher');
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -128,15 +145,40 @@ export function PlaygroundRoom({
 
       <div className="container mx-auto px-6 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Left: Voice Panel */}
+          {/* Left: Video Panel */}
           <div className="lg:col-span-1">
-            <VoicePanel
+            {/* Horizontal Video Strip on Top (if top-left layout) */}
+            {isVoiceActive && videoLayout === 'top-left' && (
+              <div className="mb-4">
+                <HorizontalVideoStrip
+                  isVideoActive={isVideoActive}
+                  localStream={localStream}
+                  participants={mediaParticipants}
+                  videoStreams={videoStreams}
+                  currentUserId={userId}
+                  currentUserName={userName}
+                  isMuted={isMuted}
+                />
+              </div>
+            )}
+
+            <VideoPanel
               isVoiceActive={isVoiceActive}
+              isVideoActive={isVideoActive}
               isMuted={isMuted}
-              participants={voiceParticipants}
+              localStream={localStream}
+              participants={mediaParticipants}
+              videoStreams={videoStreams}
+              audioAnalysers={audioAnalysers}
+              currentUserId={userId}
+              currentUserName={userName}
+              layout={videoLayout}
               onStartVoice={onStartVoice}
+              onStartVideo={onStartVideo}
               onStopVoice={onStopVoice}
               onToggleMute={onToggleMute}
+              onToggleVideo={onToggleVideo}
+              onLayoutChange={setVideoLayout}
             />
 
             {/* Participants List */}
@@ -146,8 +188,8 @@ export function PlaygroundRoom({
               </h3>
               <ParticipantsList
                 participants={participants}
-                voiceStreams={voiceStreams}
-                voiceAnalysers={voiceAnalysers}
+                voiceStreams={audioStreams}
+                voiceAnalysers={audioAnalysers}
                 currentUserRole={userRole}
                 currentUserId={userId}
               />
@@ -156,6 +198,21 @@ export function PlaygroundRoom({
 
           {/* Right: Writing Board */}
           <div className="lg:col-span-2">
+            {/* Horizontal Video Strip on Top (if top-right layout) */}
+            {isVoiceActive && videoLayout === 'top-right' && (
+              <div className="mb-4">
+                <HorizontalVideoStrip
+                  isVideoActive={isVideoActive}
+                  localStream={localStream}
+                  participants={mediaParticipants}
+                  videoStreams={videoStreams}
+                  currentUserId={userId}
+                  currentUserName={userName}
+                  isMuted={isMuted}
+                />
+              </div>
+            )}
+
             <WritingBoard
               writings={writings}
               currentUserId={userId}

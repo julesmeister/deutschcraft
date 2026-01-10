@@ -25,8 +25,9 @@ interface PlaygroundSessionState {
   // View state
   isMinimized: boolean;
 
-  // Voice state
+  // Media state
   isVoiceActive: boolean;
+  isVideoActive: boolean;
   isMuted: boolean;
 }
 

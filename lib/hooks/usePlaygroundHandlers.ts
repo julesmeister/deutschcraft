@@ -25,6 +25,7 @@ interface UsePlaygroundHandlersProps {
   myParticipantId: string | null;
   currentRoom: PlaygroundRoom | null;
   isVoiceActive: boolean;
+  isVideoActive: boolean;
   isMuted: boolean;
   setDialogState: (state: { isOpen: boolean; title: string; message: string }) => void;
   setMyParticipantId: (id: string | null) => void;
@@ -33,7 +34,9 @@ interface UsePlaygroundHandlersProps {
   setWritings: (writings: any[]) => void;
   stopVoice: () => void;
   startVoice: () => Promise<void>;
+  startVideo: () => Promise<void>;
   toggleMute: () => void;
+  toggleVideo: () => Promise<boolean>;
   loadActiveRooms: () => Promise<void>;
 }
 
@@ -45,6 +48,7 @@ export function usePlaygroundHandlers({
   myParticipantId,
   currentRoom,
   isVoiceActive,
+  isVideoActive,
   isMuted,
   setDialogState,
   setMyParticipantId,
@@ -53,7 +57,9 @@ export function usePlaygroundHandlers({
   setWritings,
   stopVoice,
   startVoice,
+  startVideo,
   toggleMute,
+  toggleVideo,
   loadActiveRooms,
 }: UsePlaygroundHandlersProps) {
   const [isCreatingRoom, setIsCreatingRoom] = useState(false);
@@ -250,6 +256,32 @@ export function usePlaygroundHandlers({
     }
   }, [myParticipantId, toggleMute, isVoiceActive]);
 
+  const handleStartVideo = useCallback(async () => {
+    if (!myParticipantId || !currentRoom) return;
+
+    try {
+      await startVideo();
+      await updateParticipantVoiceStatus(myParticipantId, true, false);
+    } catch (error) {
+      console.error('[Video] Failed to start video:', error);
+      setDialogState({
+        isOpen: true,
+        title: 'Video Error',
+        message: 'Failed to start video. Please check camera permissions.',
+      });
+    }
+  }, [myParticipantId, currentRoom, startVideo, setDialogState]);
+
+  const handleToggleVideo = useCallback(async () => {
+    if (!myParticipantId) return;
+
+    try {
+      await toggleVideo();
+    } catch (error) {
+      console.error('[Video] Failed to toggle video:', error);
+    }
+  }, [myParticipantId, toggleVideo]);
+
   return {
     isCreatingRoom,
     handleCreateRoom,
@@ -260,7 +292,9 @@ export function usePlaygroundHandlers({
     handleSaveWriting,
     handleToggleWritingVisibility,
     handleStartVoice,
+    handleStartVideo,
     handleStopVoice,
     handleToggleMute,
+    handleToggleVideo,
   };
 }
