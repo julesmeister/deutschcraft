@@ -14,6 +14,8 @@ import { CEFRLevel } from "./cefr";
  * Path: users/{email}
  * ONE document per person - email is the document ID
  */
+export type UserRole = "STUDENT" | "TEACHER" | "PENDING_APPROVAL";
+
 export interface User {
   // Primary Key (document ID)
   userId: string; // Email address (same as document ID)

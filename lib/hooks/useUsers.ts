@@ -21,6 +21,7 @@ export {
   useAllUsers,
   useStudentsWithoutTeacher,
   useUsersPaginated,
+  useUserStats,
   usePendingEnrollmentsPaginated,
 } from './useUserQueries';
 

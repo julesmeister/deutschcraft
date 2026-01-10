@@ -200,7 +200,13 @@ export async function getUsersPaginated(options: {
   roleFilter?: "STUDENT" | "TEACHER" | "all";
   orderByField?: string;
 }): Promise<{ users: User[]; hasMore: boolean; lastDoc: any | null }> {
-  const { pageSize, roleFilter = "all", orderByField = "user_id" } = options;
+  const { pageSize, roleFilter = "all" } = options;
+  let { orderByField = "user_id" } = options;
+
+  // Map 'userId' to 'user_id' for SQL compatibility
+  if (orderByField === "userId") {
+    orderByField = "user_id";
+  }
 
   try {
     let sql = "SELECT * FROM users";
@@ -317,6 +323,40 @@ export async function getPendingEnrollmentsCount(): Promise<number> {
   }
 }
 
+/**
+ * Get user statistics (counts by role)
+ * @returns Object with counts for total, students, teachers, and pending users
+ */
+export async function getUserStats(): Promise<{
+  totalUsers: number;
+  students: number;
+  teachers: number;
+  pending: number;
+}> {
+  try {
+    const result = await db.execute({
+      sql: `SELECT
+              COUNT(*) as total,
+              SUM(CASE WHEN role = 'STUDENT' THEN 1 ELSE 0 END) as students,
+              SUM(CASE WHEN role = 'TEACHER' THEN 1 ELSE 0 END) as teachers,
+              SUM(CASE WHEN role = 'PENDING_APPROVAL' THEN 1 ELSE 0 END) as pending
+            FROM users`,
+      args: [],
+    });
+
+    const row = result.rows[0];
+    return {
+      totalUsers: (row.total as number) || 0,
+      students: (row.students as number) || 0,
+      teachers: (row.teachers as number) || 0,
+      pending: (row.pending as number) || 0,
+    };
+  } catch (error) {
+    console.error("[userService:turso] Error getting user stats:", error);
+    throw error;
+  }
+}
+
 // ============================================================================
 // WRITE OPERATIONS
 // ============================================================================
@@ -406,6 +446,14 @@ export async function updateUser(
     if (updates.lastName !== undefined) {
       setClauses.push("last_name = ?");
       values.push(updates.lastName);
+    }
+    if (updates.role !== undefined) {
+      setClauses.push("role = ?");
+      values.push(updates.role);
+    }
+    if (updates.enrollmentStatus !== undefined) {
+      setClauses.push("enrollment_status = ?");
+      values.push(updates.enrollmentStatus);
     }
     if (updates.photoURL !== undefined) {
       setClauses.push("photo_url = ?");

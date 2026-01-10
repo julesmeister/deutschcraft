@@ -10,8 +10,10 @@
  * - Easy to swap databases by changing NEXT_PUBLIC_USE_TURSO environment variable
  */
 
+import type { User } from "../../models";
+
 // Determine which database to use
-const USE_TURSO = process.env.NEXT_PUBLIC_USE_TURSO === 'true';
+const USE_TURSO = process.env.NEXT_PUBLIC_USE_TURSO === "true";
 
 // Import from the appropriate implementation
 const implementation = USE_TURSO
@@ -24,7 +26,7 @@ export const {
   getUser,
   getUsers,
   upsertUser,
-  updateUser,
+  // updateUser, // Overridden below for dual-write
   updateUserPhoto,
   deleteUser,
 
@@ -39,6 +41,7 @@ export const {
   // Pagination
   getUsersPaginated,
   getUserCount,
+  getUserStats,
   getPendingEnrollmentsPaginated,
   getPendingEnrollmentsCount,
 
@@ -52,3 +55,28 @@ export const {
   // Dashboard Settings
   updateDashboardSettings,
 } = implementation;
+
+/**
+ * Update user details
+ * WRAPPER: Handles dual-write to Firebase when Turso is enabled
+ * This ensures legacy Firebase listeners/functions still work
+ */
+export const updateUser = async (
+  email: string,
+  updates: Partial<User>
+): Promise<void> => {
+  // 1. Perform the primary update (Turso or Firebase)
+  await implementation.updateUser(email, updates);
+
+  // 2. If using Turso, sync to Firebase
+  if (USE_TURSO) {
+    try {
+      // Lazy load firebase to avoid circular deps or unnecessary loading
+      const firebase = require("./firebase");
+      await firebase.updateUser(email, updates);
+    } catch (error) {
+      console.warn("[userService] Failed to sync update to Firebase:", error);
+      // Don't throw - primary update succeeded
+    }
+  }
+};

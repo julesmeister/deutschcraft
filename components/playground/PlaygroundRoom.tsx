@@ -3,22 +3,26 @@
  * Active room view with voice chat and writing board
  */
 
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
-import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
-import { AlertDialog } from '@/components/ui/Dialog';
-import { VideoPanel, type VideoLayout } from '@/components/playground/VideoPanel';
-import { HorizontalVideoStrip } from '@/components/playground/HorizontalVideoStrip';
-import { WritingBoard } from '@/components/playground/WritingBoard';
-import { ParticipantsList } from '@/components/playground/ParticipantsList';
-import { FloatingRedemittelWidget } from '@/components/writing/FloatingRedemittelWidget';
+import { useState, useEffect } from "react";
+import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
+import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
+import { AlertDialog } from "@/components/ui/Dialog";
+import {
+  VideoPanel,
+  type VideoLayout,
+} from "@/components/playground/VideoPanel";
+import { HorizontalVideoStrip } from "@/components/playground/HorizontalVideoStrip";
+import { WritingBoard } from "@/components/playground/WritingBoard";
+import { ParticipantsList } from "@/components/playground/ParticipantsList";
+import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
+import { formatDuration } from "@/lib/utils/dateHelpers";
 import type {
   PlaygroundRoom as PlaygroundRoomType,
   PlaygroundParticipant,
   PlaygroundWriting,
-} from '@/lib/models/playground';
+} from "@/lib/models/playground";
 
 interface MediaParticipant {
   userId: string;
@@ -34,7 +38,7 @@ interface PlaygroundRoomProps {
   myWriting?: PlaygroundWriting;
   userId: string;
   userName: string;
-  userRole: 'teacher' | 'student';
+  userRole: "teacher" | "student";
 
   // Media chat state
   isVoiceActive: boolean;
@@ -62,7 +66,10 @@ interface PlaygroundRoomProps {
   onToggleMute: () => Promise<void>;
   onToggleVideo: () => Promise<void>;
   onSaveWriting: (content: string) => Promise<void>;
-  onToggleWritingVisibility: (writingId: string, isPublic: boolean) => Promise<void>;
+  onToggleWritingVisibility: (
+    writingId: string,
+    isPublic: boolean
+  ) => Promise<void>;
   onToggleRoomPublicWriting?: (isPublic: boolean) => Promise<void>;
   onMinimize?: () => void;
   onCloseDialog: () => void;
@@ -102,17 +109,47 @@ export function PlaygroundRoom({
   const isHost = userId === currentRoom.hostId;
 
   // Video layout state
-  const [videoLayout, setVideoLayout] = useState<VideoLayout>('teacher');
+  const [videoLayout, setVideoLayout] = useState<VideoLayout>("teacher");
+  const [duration, setDuration] = useState<string>("00:00");
+  const [formattedDate, setFormattedDate] = useState<string>("");
+
+  useEffect(() => {
+    if (!currentRoom?.createdAt) return;
+
+    // Convert to Date object if it's not already
+    const startTime =
+      currentRoom.createdAt instanceof Date
+        ? currentRoom.createdAt
+        : new Date(currentRoom.createdAt);
+
+    // Format date: e.g. "Oct 24, 2024"
+    setFormattedDate(
+      startTime.toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      })
+    );
+
+    const updateDuration = () => {
+      setDuration(formatDuration(startTime));
+    };
+
+    updateDuration();
+    const interval = setInterval(updateDuration, 1000);
+
+    return () => clearInterval(interval);
+  }, [currentRoom?.createdAt]);
 
   return (
     <div className="min-h-screen bg-gray-50">
       <DashboardHeader
         title={currentRoom.title}
-        subtitle={`${participants.length} ${
-          participants.length === 1 ? 'participant' : 'participants'
-        } • Host: ${currentRoom.hostName}`}
+        subtitle={`${formattedDate} • ${participants.length} ${
+          participants.length === 1 ? "participant" : "participants"
+        } • Host: ${currentRoom.hostName} • ${duration}`}
         backButton={{
-          label: 'Leave Room',
+          label: "Leave Room",
           onClick: onLeaveRoom,
         }}
         actions={
@@ -122,8 +159,18 @@ export function PlaygroundRoom({
                 onClick={onMinimize}
                 variant="default"
                 icon={
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
                   </svg>
                 }
               >
@@ -148,7 +195,7 @@ export function PlaygroundRoom({
           {/* Left: Video Panel */}
           <div className="lg:col-span-1">
             {/* Horizontal Video Strip on Top (if top-left layout) */}
-            {isVoiceActive && videoLayout === 'top-left' && (
+            {isVoiceActive && videoLayout === "top-left" && (
               <div className="mb-4">
                 <HorizontalVideoStrip
                   isVideoActive={isVideoActive}
@@ -199,7 +246,7 @@ export function PlaygroundRoom({
           {/* Right: Writing Board */}
           <div className="lg:col-span-2">
             {/* Horizontal Video Strip on Top (if top-right layout) */}
-            {isVoiceActive && videoLayout === 'top-right' && (
+            {isVoiceActive && videoLayout === "top-right" && (
               <div className="mb-4">
                 <HorizontalVideoStrip
                   isVideoActive={isVideoActive}
@@ -223,7 +270,7 @@ export function PlaygroundRoom({
               onSaveWriting={onSaveWriting}
               onToggleWritingVisibility={onToggleWritingVisibility}
               onToggleRoomPublicWriting={
-                userRole === 'teacher' ? onToggleRoomPublicWriting : undefined
+                userRole === "teacher" ? onToggleRoomPublicWriting : undefined
               }
             />
           </div>

@@ -3,8 +3,8 @@
  * Uses hybrid service that switches between Firebase and Turso
  */
 
-import { useQuery } from '@tanstack/react-query';
-import { useState } from 'react';
+import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 import {
   getUser,
   getTeacherStudents,
@@ -15,19 +15,23 @@ import {
   getUsers,
   getUsersPaginated,
   getUserCount,
+  getUserStats,
   getPendingEnrollmentsPaginated,
   getPendingEnrollmentsCount,
-} from '../services/user';
-import { User } from '../models';
-import { cacheTimes } from '../queryClient';
+} from "../services/user";
+import { User } from "../models";
+import { cacheTimes } from "../queryClient";
 
 /**
  * Fetch current user by email
  * Direct document access: users/{email}
  */
-export function useCurrentUser(email: string | null, isFirebaseReady: boolean = true) {
+export function useCurrentUser(
+  email: string | null,
+  isFirebaseReady: boolean = true
+) {
   const { data, isLoading, isError, error } = useQuery({
-    queryKey: ['user', email],
+    queryKey: ["user", email],
     queryFn: async () => {
       if (!email) {
         return null;
@@ -48,8 +52,37 @@ export function useCurrentUser(email: string | null, isFirebaseReady: boolean = 
   };
 }
 
+/**
+ * Get user statistics (counts by role)
+ */
+export function useUserStats() {
+  const { data, isLoading, isError, error, refetch } = useQuery({
+    queryKey: ["user-stats"],
+    queryFn: async () => {
+      return await getUserStats();
+    },
+    staleTime: 60000, // 1 minute
+  });
+
+  return {
+    stats: data || {
+      totalUsers: 0,
+      students: 0,
+      teachers: 0,
+      pending: 0,
+    },
+    isLoading,
+    isError,
+    error,
+    refetch,
+  };
+}
+
 // Alias for backwards compatibility with student dashboard
-export function useCurrentStudent(email: string | null, isFirebaseReady: boolean = true) {
+export function useCurrentStudent(
+  email: string | null,
+  isFirebaseReady: boolean = true
+) {
   const result = useCurrentUser(email, isFirebaseReady);
   return {
     student: result.user,
@@ -66,7 +99,7 @@ export function useCurrentStudent(email: string | null, isFirebaseReady: boolean
  */
 export function useTeacherStudents(teacherEmail: string | undefined) {
   const { data, isLoading, isError, error } = useQuery({
-    queryKey: ['students', 'teacher', teacherEmail],
+    queryKey: ["students", "teacher", teacherEmail],
     queryFn: async () => {
       if (!teacherEmail) return [];
       return await getTeacherStudents(teacherEmail);
@@ -91,7 +124,7 @@ export function useTeacherStudents(teacherEmail: string | undefined) {
  */
 export function useBatchStudents(batchId: string | undefined) {
   const { data, isLoading, isError, error } = useQuery({
-    queryKey: ['students', 'batch', batchId],
+    queryKey: ["students", "batch", batchId],
     queryFn: async () => {
       if (!batchId) return [];
       return await getBatchStudents(batchId);
@@ -116,7 +149,7 @@ export function useBatchStudents(batchId: string | undefined) {
  */
 export function useAllStudents() {
   const { data, isLoading, isError, error } = useQuery({
-    queryKey: ['students', 'all'],
+    queryKey: ["students", "all"],
     queryFn: async () => {
       const students = await getAllStudents();
       return students;
@@ -144,7 +177,7 @@ export function useAllStudentsNested() {
  */
 export function useAllNonTeachers() {
   const { data, isLoading, isError, error } = useQuery({
-    queryKey: ['users', 'non-teachers'],
+    queryKey: ["users", "non-teachers"],
     queryFn: async () => {
       const users = await getAllNonTeachers();
       return users;
@@ -169,7 +202,7 @@ export function useAllNonTeachers() {
  */
 export function useAllUsers() {
   const { data, isLoading, isError, error } = useQuery({
-    queryKey: ['users', 'all'],
+    queryKey: ["users", "all"],
     queryFn: async () => {
       const users = await getUsers();
       return users;
@@ -195,7 +228,7 @@ export function useAllUsers() {
  */
 export function useStudentsWithoutTeacher() {
   const { data, isLoading, isError, error } = useQuery({
-    queryKey: ['students', 'without-teacher'],
+    queryKey: ["students", "without-teacher"],
     queryFn: async () => {
       const students = await getStudentsWithoutTeacher();
 
@@ -222,24 +255,26 @@ export function useStudentsWithoutTeacher() {
  * @param options.roleFilter - Optional role filter ('STUDENT' | 'TEACHER' | 'all')
  * @returns Hook with users, pagination state, and navigation functions
  */
-export function useUsersPaginated(options: {
-  pageSize?: number;
-  roleFilter?: 'STUDENT' | 'TEACHER' | 'all';
-} = {}) {
-  const { pageSize = 50, roleFilter = 'all' } = options;
+export function useUsersPaginated(
+  options: {
+    pageSize?: number;
+    roleFilter?: "STUDENT" | "TEACHER" | "all";
+  } = {}
+) {
+  const { pageSize = 50, roleFilter = "all" } = options;
   const [page, setPage] = useState(1);
   const [lastDocs, setLastDocs] = useState<(User | null)[]>([null]);
 
   // Fetch current page
   const { data, isLoading, isError, error, refetch } = useQuery({
-    queryKey: ['users', 'paginated', page, roleFilter, pageSize],
+    queryKey: ["users", "paginated", page, roleFilter, pageSize],
     queryFn: async () => {
       const lastDoc = lastDocs[page - 1] || null;
       return await getUsersPaginated({
         pageSize,
         lastDoc,
         roleFilter,
-        orderByField: 'userId',
+        orderByField: "userId",
       });
     },
     staleTime: 60000, // 1 minute
@@ -248,7 +283,7 @@ export function useUsersPaginated(options: {
 
   // Fetch total count (cached separately)
   const { data: totalCount = 0 } = useQuery({
-    queryKey: ['users', 'count', roleFilter],
+    queryKey: ["users", "count", roleFilter],
     queryFn: async () => {
       return await getUserCount(roleFilter);
     },
@@ -308,16 +343,18 @@ export function useUsersPaginated(options: {
  * @param options - Pagination options
  * @returns Hook with pending enrollments, pagination state, and navigation functions
  */
-export function usePendingEnrollmentsPaginated(options: {
-  pageSize?: number;
-} = {}) {
+export function usePendingEnrollmentsPaginated(
+  options: {
+    pageSize?: number;
+  } = {}
+) {
   const { pageSize = 10 } = options;
   const [page, setPage] = useState(1);
   const [lastDocs, setLastDocs] = useState<(User | null)[]>([null]);
 
   // Fetch current page
   const { data, isLoading, isError, error, refetch } = useQuery({
-    queryKey: ['pending-enrollments-paginated', page, pageSize],
+    queryKey: ["pending-enrollments-paginated", page, pageSize],
     queryFn: async () => {
       const lastDoc = lastDocs[page - 1] || null;
       return await getPendingEnrollmentsPaginated({
@@ -331,7 +368,7 @@ export function usePendingEnrollmentsPaginated(options: {
 
   // Fetch total count (cached separately)
   const { data: totalCount = 0 } = useQuery({
-    queryKey: ['pending-enrollments-count'],
+    queryKey: ["pending-enrollments-count"],
     queryFn: async () => {
       return await getPendingEnrollmentsCount();
     },

@@ -7,7 +7,7 @@
  * Format date as YYYY-MM-DD string
  */
 export function formatDateISO(date: Date = new Date()): string {
-  return date.toISOString().split('T')[0];
+  return date.toISOString().split("T")[0];
 }
 
 /**
@@ -51,7 +51,7 @@ export function getLastNDaysISO(n: number): string[] {
  * Get short day name from date (Mon, Tue, etc.)
  */
 export function getShortDayName(date: Date): string {
-  return date.toLocaleDateString('en-US', { weekday: 'short' });
+  return date.toLocaleDateString("en-US", { weekday: "short" });
 }
 
 /**
@@ -64,10 +64,14 @@ export function getLastNDayLabels(n: number): string[] {
 /**
  * Format progress document ID (PROG_YYYYMMDD_email)
  */
-export function formatProgressDocId(date: Date | string, userId: string): string {
-  const dateStr = typeof date === 'string'
-    ? date.replace(/-/g, '')
-    : formatDateISO(date).replace(/-/g, '');
+export function formatProgressDocId(
+  date: Date | string,
+  userId: string
+): string {
+  const dateStr =
+    typeof date === "string"
+      ? date.replace(/-/g, "")
+      : formatDateISO(date).replace(/-/g, "");
   return `PROG_${dateStr}_${userId}`;
 }
 
@@ -91,27 +95,52 @@ export function parseProgressDocId(docId: string): string | null {
  * Get timestamp for N days ago
  */
 export function getDaysAgoTimestamp(daysAgo: number): number {
-  return Date.now() - (daysAgo * 24 * 60 * 60 * 1000);
+  return Date.now() - daysAgo * 24 * 60 * 60 * 1000;
 }
 
 /**
  * Check if two dates are the same day
  */
 export function isSameDay(date1: Date | string, date2: Date | string): boolean {
-  const d1 = typeof date1 === 'string' ? date1 : formatDateISO(date1);
-  const d2 = typeof date2 === 'string' ? date2 : formatDateISO(date2);
-  return d1 === d2;
+  const d1 = typeof date1 === "string" ? new Date(date1) : date1;
+  const d2 = typeof date2 === "string" ? new Date(date2) : date2;
+  return formatDateISO(d1) === formatDateISO(d2);
+}
+
+/**
+ * Format duration from start time to now
+ * Returns string like "1h 30m 15s" or "05m 20s"
+ */
+export function formatDuration(startTime: Date): string {
+  const now = new Date();
+  const diffInSeconds = Math.max(
+    0,
+    Math.floor((now.getTime() - startTime.getTime()) / 1000)
+  );
+
+  const h = Math.floor(diffInSeconds / 3600);
+  const m = Math.floor((diffInSeconds % 3600) / 60);
+  const s = diffInSeconds % 60;
+
+  if (h > 0) {
+    return `${h}h ${m.toString().padStart(2, "0")}m ${s
+      .toString()
+      .padStart(2, "0")}s`;
+  }
+  return `${m.toString().padStart(2, "0")}m ${s.toString().padStart(2, "0")}s`;
 }
 
 /**
  * Get week number of the year
  */
 export function getWeekNumber(date: Date = new Date()): number {
-  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  const d = new Date(
+    Date.UTC(date.getFullYear(), date.getMonth(), date.getDate())
+  );
   const dayNum = d.getUTCDay() || 7;
   d.setUTCDate(d.getUTCDate() + 4 - dayNum);
   const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
-  return Math.ceil((((d.getTime() - yearStart.getTime()) / 86400000) + 1) / 7);
+  return Math.ceil(((d.getTime() - yearStart.getTime()) / 86400000 + 1) / 7);
 }
 
 /**
@@ -122,9 +151,9 @@ export function formatRelativeTime(timestamp: number): string {
   const diff = now - timestamp;
   const hours = Math.floor(diff / (1000 * 60 * 60));
 
-  if (hours < 1) return 'Just now';
-  if (hours < 24) return `${hours}hr${hours > 1 ? 's' : ''} ago`;
+  if (hours < 1) return "Just now";
+  if (hours < 24) return `${hours}hr${hours > 1 ? "s" : ""} ago`;
 
   const days = Math.floor(hours / 24);
-  return `${days} day${days > 1 ? 's' : ''} ago`;
+  return `${days} day${days > 1 ? "s" : ""} ago`;
 }
