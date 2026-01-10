@@ -7,7 +7,8 @@ import { SettingsTab } from "@/lib/hooks/useSettingsData";
 export function getSettingsMenuItems(
   isPending: boolean,
   activeTab: SettingsTab,
-  setActiveTab: (tab: SettingsTab) => void
+  setActiveTab: (tab: SettingsTab) => void,
+  userRole?: 'STUDENT' | 'TEACHER' | 'PENDING_APPROVAL'
 ): SettingsMenuItem[] {
   return [
     // Enrollment tab - only for pending users
@@ -172,6 +173,34 @@ export function getSettingsMenuItems(
             ),
             active: activeTab === "integration",
             onClick: () => setActiveTab("integration"),
+          },
+        ]
+      : []),
+    // Display Settings - only for teachers
+    ...(userRole === "TEACHER" && !isPending
+      ? [
+          {
+            id: "display",
+            label: "Display",
+            icon: (
+              <svg
+                stroke="currentColor"
+                fill="none"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                height="1em"
+                width="1em"
+              >
+                <path d="M3 3m0 1a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1z"></path>
+                <path d="M7 20h10"></path>
+                <path d="M9 17v3"></path>
+                <path d="M15 17v3"></path>
+              </svg>
+            ),
+            active: activeTab === "display",
+            onClick: () => setActiveTab("display"),
           },
         ]
       : []),

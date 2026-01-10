@@ -3,20 +3,16 @@ import { useQueryClient } from '@tanstack/react-query';
 import { User } from '@/lib/models/user';
 import { CEFRLevel } from '@/lib/models/cefr';
 import { updateUser } from '@/lib/services/user';
-import { useToast } from '@/components/ui/toast';
+import { useToast } from '@/lib/hooks/useToast';
 
 export function useEnrollmentActions(teacherEmail: string | null | undefined) {
   const queryClient = useQueryClient();
-  const { showToast } = useToast();
+  const { success, error } = useToast();
   const [processingId, setProcessingId] = useState<string | null>(null);
 
   const handleApprove = async (user: User) => {
     if (!teacherEmail || !user.desiredCefrLevel) {
-      showToast({
-        title: 'Cannot Approve',
-        message: 'Missing CEFR level selection',
-        variant: 'error',
-      });
+      error('Missing CEFR level selection', undefined, 'Cannot Approve');
       return;
     }
 
@@ -36,17 +32,9 @@ export function useEnrollmentActions(teacherEmail: string | null | undefined) {
       queryClient.invalidateQueries({ queryKey: ['pending-enrollments-count'] });
       queryClient.invalidateQueries({ queryKey: ['teacher-students'] });
 
-      showToast({
-        title: 'Enrollment Approved',
-        message: `${user.name || user.email} has been approved`,
-        variant: 'success',
-      });
-    } catch (error) {
-      showToast({
-        title: 'Error',
-        message: 'Failed to approve enrollment. Please try again.',
-        variant: 'error',
-      });
+      success(`${user.name || user.email} has been approved`, undefined, 'Enrollment Approved');
+    } catch (err) {
+      error('Failed to approve enrollment. Please try again.', undefined, 'Error');
     } finally {
       setProcessingId(null);
     }
@@ -69,17 +57,9 @@ export function useEnrollmentActions(teacherEmail: string | null | undefined) {
       queryClient.invalidateQueries({ queryKey: ['pending-enrollments-paginated'] });
       queryClient.invalidateQueries({ queryKey: ['pending-enrollments-count'] });
 
-      showToast({
-        title: 'Enrollment Rejected',
-        message: `${user.name || user.email} has been rejected`,
-        variant: 'success',
-      });
-    } catch (error) {
-      showToast({
-        title: 'Error',
-        message: 'Failed to reject enrollment. Please try again.',
-        variant: 'error',
-      });
+      success(`${user.name || user.email} has been rejected`, undefined, 'Enrollment Rejected');
+    } catch (err) {
+      error('Failed to reject enrollment. Please try again.', undefined, 'Error');
     } finally {
       setProcessingId(null);
     }
@@ -87,25 +67,33 @@ export function useEnrollmentActions(teacherEmail: string | null | undefined) {
 
   const handleUpdateLevel = async (user: User, level: CEFRLevel) => {
     try {
+      // Update the database first
       await updateUser(user.email, {
         desiredCefrLevel: level,
         updatedAt: Date.now(),
       });
 
-      // Invalidate queries to refresh data
-      queryClient.invalidateQueries({ queryKey: ['pending-enrollments-paginated'] });
+      // After successful update, manually update all cached pages
+      const queryCache = queryClient.getQueryCache();
+      const queries = queryCache.findAll({ queryKey: ['pending-enrollments-paginated'] });
 
-      showToast({
-        title: 'Level Updated',
-        message: `CEFR level updated to ${level}`,
-        variant: 'success',
+      queries.forEach((query) => {
+        const oldData = query.state.data as any;
+        if (oldData?.users) {
+          queryClient.setQueryData(query.queryKey, {
+            ...oldData,
+            users: oldData.users.map((u: User) =>
+              u.userId === user.userId
+                ? { ...u, desiredCefrLevel: level }
+                : u
+            ),
+          });
+        }
       });
-    } catch (error) {
-      showToast({
-        title: 'Error',
-        message: 'Failed to update CEFR level. Please try again.',
-        variant: 'error',
-      });
+
+      success(`CEFR level updated to ${level}`, undefined, 'Level Updated');
+    } catch (err) {
+      error('Failed to update CEFR level. Please try again.', undefined, 'Error');
     }
   };
 

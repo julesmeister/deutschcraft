@@ -11,6 +11,7 @@ import { IntegrationTab } from '@/components/ui/settings/IntegrationTab';
 import { EnrollmentTab } from '@/components/ui/settings/EnrollmentTab';
 import { EnrollmentPendingTab } from '@/components/ui/settings/EnrollmentPendingTab';
 import { DatabaseMigrationTab } from '@/components/ui/settings/DatabaseMigrationTab';
+import { DisplaySettingsTab } from '@/components/ui/settings/DisplaySettingsTab';
 import { CatLoader } from '@/components/ui/CatLoader';
 import { useSettingsData } from '@/lib/hooks/useSettingsData';
 import { useProfileForm } from '@/lib/hooks/useProfileForm';
@@ -129,7 +130,7 @@ export default function SettingsPage() {
   }, [sessionComparison.isStale, isPending, isLoading, session?.user?.email, handleRefresh]);
 
   // Build menu items
-  const menuItems = getSettingsMenuItems(isPending, activeTab, setActiveTab);
+  const menuItems = getSettingsMenuItems(isPending, activeTab, setActiveTab, currentUser?.role);
 
   // Show loading while fetching user data or if not authenticated
   if (status === 'loading' || isLoading) {
@@ -282,6 +283,15 @@ export default function SettingsPage() {
 
               {/* Database Migration Tab - Always visible for data recovery */}
               {activeTab === 'migration' && <DatabaseMigrationTab />}
+
+              {/* Display Settings Tab - Only for teachers */}
+              {activeTab === 'display' && (
+                <DisplaySettingsTab
+                  userEmail={session?.user?.email || null}
+                  userRole={currentUser?.role}
+                  currentSettings={currentUser?.displaySettings}
+                />
+              )}
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@ import { useCurrentStudent } from './useUsers';
 import { useSessionComparison } from './useSessionComparison';
 import { isPendingApproval } from '../models/user';
 
-export type SettingsTab = 'enrollment' | 'profile' | 'security' | 'notification' | 'flashcards' | 'integration' | 'migration';
+export type SettingsTab = 'enrollment' | 'profile' | 'security' | 'notification' | 'flashcards' | 'integration' | 'migration' | 'display';
 
 export interface RedirectInfo {
   wasRedirected: boolean;

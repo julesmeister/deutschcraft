@@ -3,6 +3,8 @@
  * Provides a simple interface to show toast notifications
  */
 
+'use client';
+
 import { useCallback } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Toast, ToastVariant } from '@/components/ui/toast/Toast';

@@ -12,6 +12,8 @@ import { MinimizedPlayground } from '@/components/playground/MinimizedPlayground
 import { studentMenuConfig, teacherMenuConfig } from './layout/menuConfig';
 import { MobileMenu } from './layout/MobileMenu';
 import { NavbarLogo } from './layout/NavbarLogo';
+import { useCurrentStudent } from '@/lib/hooks/useUsers';
+import { useTeacherDisplaySettings } from '@/lib/hooks/useTeacherDisplaySettings';
 
 export default function DashboardLayout({
   children,
@@ -39,6 +41,10 @@ function DashboardNavbar() {
   const { data: session } = useSession();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  // Get current user to check role and teacher settings
+  const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
+  const { showTeacherTab } = useTeacherDisplaySettings(currentUser?.teacherId, currentUser?.role);
 
   const handleRoleSwitch = async (newRole: 'STUDENT' | 'TEACHER') => {
     if (!session?.user?.email) return;
@@ -88,7 +94,11 @@ function DashboardNavbar() {
 
             <nav className="flex items-center space-x-10">
               <MegaDropdown {...updatedStudentConfig} />
-              <MegaDropdown {...teacherMenuConfig} />
+
+              {/* Show teacher tab based on user role and teacher's settings */}
+              {(currentUser?.role === 'TEACHER' || showTeacherTab) && (
+                <MegaDropdown {...teacherMenuConfig} />
+              )}
 
               <Link
                 href="/dashboard/social"
@@ -132,7 +142,10 @@ function DashboardNavbar() {
         </div>
       </div>
 
-      <MobileMenu isOpen={mobileMenuOpen} />
+      <MobileMenu
+        isOpen={mobileMenuOpen}
+        showTeacherTab={currentUser?.role === 'TEACHER' || showTeacherTab}
+      />
     </header>
   );
 }

@@ -1,3 +1,5 @@
+'use client';
+
 import { SlimTableColumn } from '@/components/ui/SlimTable';
 import { CompactButtonDropdown } from '@/components/ui/CompactButtonDropdown';
 import { User, getUserFullName } from '@/lib/models/user';
@@ -27,6 +29,39 @@ interface ColumnsConfig {
   onReject: (user: User) => void;
 }
 
+// Separate component for payment cell to properly manage dialog state
+function PaymentCell({ value, reference, user }: { value: number; reference: string; user: User }) {
+  const [showDialog, setShowDialog] = useState(false);
+
+  return (
+    <>
+      <div className="text-center">
+        <p className="font-bold text-gray-900">₱{value.toFixed(2)}</p>
+        {reference && (
+          <p className="text-xs text-gray-500 font-mono">{reference}</p>
+        )}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            setShowDialog(true);
+          }}
+          className="mt-1 text-xs text-piku-purple hover:underline font-medium"
+        >
+          View Transactions
+        </button>
+      </div>
+
+      {showDialog && (
+        <TransactionDialog
+          user={user}
+          isOpen={showDialog}
+          onClose={() => setShowDialog(false)}
+        />
+      )}
+    </>
+  );
+}
+
 export function getEnrollmentColumns(config: ColumnsConfig): SlimTableColumn[] {
   const { processingId, onUpdateLevel, onApprove, onReject } = config;
 
@@ -36,13 +71,6 @@ export function getEnrollmentColumns(config: ColumnsConfig): SlimTableColumn[] {
       label: ' ',
       width: '60px',
       render: (value: string, row: EnrollmentRow) => {
-        console.log('[Avatar Render]', {
-          value,
-          name: row.name,
-          email: row.email,
-          userPhotoURL: row.user?.photoURL,
-        });
-
         // Use the actual photoURL from the user object if available
         const imageUrl = row.user?.photoURL || value || `https://ui-avatars.com/api/?name=${encodeURIComponent(row.name)}&background=random`;
 
@@ -52,13 +80,8 @@ export function getEnrollmentColumns(config: ColumnsConfig): SlimTableColumn[] {
             src={imageUrl}
             className="inline h-10 w-10 rounded-full object-cover"
             onError={(e) => {
-              console.error('[Avatar Error] Failed to load:', imageUrl);
               const fallback = `https://ui-avatars.com/api/?name=${encodeURIComponent(row.name)}&background=random`;
-              console.log('[Avatar] Using fallback:', fallback);
               e.currentTarget.src = fallback;
-            }}
-            onLoad={() => {
-              console.log('[Avatar] Successfully loaded:', imageUrl);
             }}
           />
         );
@@ -122,37 +145,9 @@ export function getEnrollmentColumns(config: ColumnsConfig): SlimTableColumn[] {
       key: 'payment',
       label: 'Payment',
       align: 'center',
-      render: (value: number, row: EnrollmentRow) => {
-        const [showDialog, setShowDialog] = useState(false);
-
-        return (
-          <>
-            <div className="text-center">
-              <p className="font-bold text-gray-900">₱{value.toFixed(2)}</p>
-              {row.reference && (
-                <p className="text-xs text-gray-500 font-mono">{row.reference}</p>
-              )}
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setShowDialog(true);
-                }}
-                className="mt-1 text-xs text-piku-purple hover:underline font-medium"
-              >
-                View Transactions
-              </button>
-            </div>
-
-            {showDialog && (
-              <TransactionDialog
-                user={row.user}
-                isOpen={showDialog}
-                onClose={() => setShowDialog(false)}
-              />
-            )}
-          </>
-        );
-      },
+      render: (value: number, row: EnrollmentRow) => (
+        <PaymentCell value={value} reference={row.reference} user={row.user} />
+      ),
     },
     {
       key: 'signedUp',

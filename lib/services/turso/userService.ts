@@ -463,6 +463,10 @@ export async function updateUser(
       setClauses.push("cefr_level = ?");
       values.push(updates.cefrLevel);
     }
+    if (updates.desiredCefrLevel !== undefined) {
+      setClauses.push("desired_cefr_level = ?");
+      values.push(updates.desiredCefrLevel);
+    }
     if (updates.teacherId !== undefined) {
       setClauses.push("teacher_id = ?");
       values.push(updates.teacherId);
@@ -490,6 +494,26 @@ export async function updateUser(
     if (updates.flashcardSettings !== undefined) {
       setClauses.push("flashcard_settings = ?");
       values.push(JSON.stringify(updates.flashcardSettings));
+    }
+    if (updates.enrollmentSubmittedAt !== undefined) {
+      setClauses.push("enrollment_submitted_at = ?");
+      values.push(updates.enrollmentSubmittedAt);
+    }
+    if (updates.enrollmentReviewedAt !== undefined) {
+      setClauses.push("enrollment_reviewed_at = ?");
+      values.push(updates.enrollmentReviewedAt);
+    }
+    if (updates.enrollmentReviewedBy !== undefined) {
+      setClauses.push("enrollment_reviewed_by = ?");
+      values.push(updates.enrollmentReviewedBy);
+    }
+    if (updates.gcashAmount !== undefined) {
+      setClauses.push("gcash_amount = ?");
+      values.push(updates.gcashAmount);
+    }
+    if (updates.gcashReferenceNumber !== undefined) {
+      setClauses.push("gcash_reference_number = ?");
+      values.push(updates.gcashReferenceNumber);
     }
 
     if (setClauses.length === 0) {
@@ -665,6 +689,7 @@ function rowToUser(row: any): User {
     role: row.role as "STUDENT" | "TEACHER",
     photoURL: row.photo_url as string | undefined,
     cefrLevel: row.cefr_level as any,
+    desiredCefrLevel: row.desired_cefr_level as any,
     teacherId: row.teacher_id as string | null | undefined,
     batchId: row.batch_id as string | null | undefined,
     wordsLearned: row.words_learned as number | undefined,
@@ -686,6 +711,12 @@ function rowToUser(row: any): User {
       : undefined,
     totalStudents: row.total_students as number | undefined,
     activeBatches: row.active_batches as number | undefined,
+    enrollmentStatus: row.enrollment_status as string | undefined,
+    enrollmentSubmittedAt: row.enrollment_submitted_at as number | undefined,
+    enrollmentReviewedAt: row.enrollment_reviewed_at as number | undefined,
+    enrollmentReviewedBy: row.enrollment_reviewed_by as string | undefined,
+    gcashAmount: row.gcash_amount as number | undefined,
+    gcashReferenceNumber: row.gcash_reference_number as string | undefined,
     createdAt: row.created_at as number,
     updatedAt: row.updated_at as number,
   };

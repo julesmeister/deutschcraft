@@ -236,7 +236,7 @@ const CompactButtonDropdownComponent = ({
       {/* Options */}
       {renderOptions()}
     </div>
-  ), [isOpen, usePortal, position, searchable, searchQuery, renderOptions]);
+  ), [isOpen, usePortal, position, searchable, searchQuery, groups, options, filterOptions, handleSelect, isSelected]);
 
   return (
     <div className="relative inline-block">

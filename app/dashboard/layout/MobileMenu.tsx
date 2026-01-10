@@ -2,9 +2,10 @@ import Link from 'next/link';
 
 interface MobileMenuProps {
   isOpen: boolean;
+  showTeacherTab?: boolean;
 }
 
-export function MobileMenu({ isOpen }: MobileMenuProps) {
+export function MobileMenu({ isOpen, showTeacherTab = true }: MobileMenuProps) {
   if (!isOpen) return null;
 
   return (
@@ -51,13 +52,14 @@ export function MobileMenu({ isOpen }: MobileMenuProps) {
             </div>
           </div>
 
-          {/* Teacher Section */}
-          <div className="pt-2 border-t border-gray-700/50">
-            <div className="flex items-center gap-2 font-bold text-sm text-piku-purple mb-2 mt-2 px-3">
-              <span>👨‍🏫</span>
-              <span>Teacher Dashboard</span>
-            </div>
-            <div className="space-y-1">
+          {/* Teacher Section - Conditionally rendered based on settings */}
+          {showTeacherTab && (
+            <div className="pt-2 border-t border-gray-700/50">
+              <div className="flex items-center gap-2 font-bold text-sm text-piku-purple mb-2 mt-2 px-3">
+                <span>👨‍🏫</span>
+                <span>Teacher Dashboard</span>
+              </div>
+              <div className="space-y-1">
               <Link href="/dashboard/teacher" className="block text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg py-2.5 px-3 transition-colors">
                 Students
               </Link>
@@ -84,6 +86,7 @@ export function MobileMenu({ isOpen }: MobileMenuProps) {
               </Link>
             </div>
           </div>
+          )}
 
           {/* Settings & Sign Out */}
           <div className="pt-2 border-t border-gray-700/50 space-y-1 mt-2">

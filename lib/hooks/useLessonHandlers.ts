@@ -14,7 +14,7 @@ import {
   useUpdateOverride,
   useReorderExercises,
 } from "./useExerciseOverrides";
-import { useToast } from "@/components/ui/toast/ToastProvider";
+import { useToast } from "@/components/ui/toast";
 
 export function useLessonHandlers(
   userEmail: string | null,

@@ -71,6 +71,11 @@ export interface User {
     lastSelectedBatchId?: string;
   };
 
+  // Display Settings (for teachers - controls what students see)
+  displaySettings?: {
+    showTeacherTabToStudents?: boolean; // Default: true
+  };
+
   // Teacher-specific fields (only if role === 'TEACHER')
   totalStudents?: number; // Computed
   activeBatches?: number; // Computed
