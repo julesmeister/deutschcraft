@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useToast } from '@/components/ui/toast/ToastProvider';
+import { useToast } from '@/components/ui/toast';
 
 interface Preposition {
   german: string;
