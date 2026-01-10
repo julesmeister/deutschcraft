@@ -41,6 +41,9 @@ interface FlashcardPracticeProps {
     nextDueDate: number;
   };
   upcomingCards?: Flashcard[];
+  hideHeader?: boolean;
+  showEnglishFirst?: boolean;
+  onToggleLanguage?: () => void;
 }
 
 const SHOW_ENGLISH_FIRST_KEY = "flashcard-show-english-first";
@@ -53,22 +56,36 @@ export function FlashcardPractice({
   showExamples = true,
   nextDueInfo,
   upcomingCards = [],
+  hideHeader = false,
+  showEnglishFirst: externalShowEnglishFirst,
+  onToggleLanguage: externalOnToggleLanguage,
 }: FlashcardPracticeProps) {
-  const [showEnglishFirst, setShowEnglishFirst] = useState(false);
+  const [internalShowEnglishFirst, setInternalShowEnglishFirst] = useState(false);
 
-  // Load preference from localStorage on mount
+  const isControlled = typeof externalShowEnglishFirst !== "undefined";
+  const showEnglishFirst = isControlled
+    ? externalShowEnglishFirst
+    : internalShowEnglishFirst;
+
+  // Load preference from localStorage on mount (only if not controlled)
   useEffect(() => {
-    const saved = localStorage.getItem(SHOW_ENGLISH_FIRST_KEY);
-    if (saved !== null) {
-      setShowEnglishFirst(saved === "true");
+    if (!isControlled) {
+      const saved = localStorage.getItem(SHOW_ENGLISH_FIRST_KEY);
+      if (saved !== null) {
+        setInternalShowEnglishFirst(saved === "true");
+      }
     }
-  }, []);
+  }, [isControlled]);
 
   // Save preference to localStorage when changed
   const handleToggleLanguage = () => {
-    const newValue = !showEnglishFirst;
-    setShowEnglishFirst(newValue);
-    localStorage.setItem(SHOW_ENGLISH_FIRST_KEY, String(newValue));
+    if (externalOnToggleLanguage) {
+      externalOnToggleLanguage();
+    } else {
+      const newValue = !internalShowEnglishFirst;
+      setInternalShowEnglishFirst(newValue);
+      localStorage.setItem(SHOW_ENGLISH_FIRST_KEY, String(newValue));
+    }
   };
 
   const {
@@ -184,38 +201,40 @@ export function FlashcardPractice({
   return (
     <div className="space-y-4 sm:space-y-6">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-        <div className="min-w-0 flex-1">
-          <h2 className="text-xl sm:text-2xl font-black text-gray-900 truncate">
-            {categoryName}
-          </h2>
-          <p className="text-sm sm:text-base text-gray-600">
-            {level} • Card {currentIndex + 1} of {flashcards.length}
-          </p>
+      {!hideHeader && (
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div className="min-w-0 flex-1">
+            <h2 className="text-xl sm:text-2xl font-black text-gray-900 truncate">
+              {categoryName}
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600">
+              {level} • Card {currentIndex + 1} of {flashcards.length}
+            </p>
+          </div>
+          <div className="flex items-center gap-2 shrink-0 self-start sm:self-auto">
+            {/* Language Toggle */}
+            <button
+              onClick={handleToggleLanguage}
+              className="px-3 py-1.5 text-xs font-bold uppercase tracking-wide rounded-lg border-2 border-gray-300 hover:border-gray-400 transition-colors"
+              title={
+                showEnglishFirst
+                  ? "Showing English first"
+                  : "Showing German first"
+              }
+            >
+              {showEnglishFirst ? "🇬🇧 → 🇩🇪" : "🇩🇪 → 🇬🇧"}
+            </button>
+            <Button
+              onClick={() => onBack(reviewedCards)}
+              variant="ghost"
+              size="sm"
+            >
+              <span className="hidden sm:inline">← Back to Categories</span>
+              <span className="sm:hidden">← Back</span>
+            </Button>
+          </div>
         </div>
-        <div className="flex items-center gap-2 shrink-0 self-start sm:self-auto">
-          {/* Language Toggle */}
-          <button
-            onClick={handleToggleLanguage}
-            className="px-3 py-1.5 text-xs font-bold uppercase tracking-wide rounded-lg border-2 border-gray-300 hover:border-gray-400 transition-colors"
-            title={
-              showEnglishFirst
-                ? "Showing English first"
-                : "Showing German first"
-            }
-          >
-            {showEnglishFirst ? "🇬🇧 → 🇩🇪" : "🇩🇪 → 🇬🇧"}
-          </button>
-          <Button
-            onClick={() => onBack(reviewedCards)}
-            variant="ghost"
-            size="sm"
-          >
-            <span className="hidden sm:inline">← Back to Categories</span>
-            <span className="sm:hidden">← Back</span>
-          </Button>
-        </div>
-      </div>
+      )}
 
       {/* Mastery Stats */}
       <MasteryStats stats={masteryStats} />

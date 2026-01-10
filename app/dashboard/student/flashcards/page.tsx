@@ -1,10 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState, useEffect, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { CategoryButtonGrid } from "@/components/flashcards/CategoryButtonGrid";
-import { FlashcardPractice } from "@/components/flashcards/FlashcardPractice";
-import { FlashcardReviewList } from "@/components/flashcards/FlashcardReviewList";
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
 import { ToastProvider } from "@/components/ui/toast";
 import { CEFRLevelSelector } from "@/components/ui/CEFRLevelSelector";
@@ -13,31 +11,34 @@ import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { usePersistedLevel } from "@/lib/hooks/usePersistedLevel";
 import { FlashcardProgressChart } from "@/components/flashcards/FlashcardProgressChart";
 import { useFlashcardData } from "./hooks/useFlashcardData";
-import { useFlashcardSessionManager } from "./hooks/useFlashcardSessionManager";
+import { CatLoader } from "@/components/ui/CatLoader";
 
-export default function FlashcardsLandingPage() {
+function FlashcardsLandingContent() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { session } = useFirebaseAuth();
   const [selectedLevel, setSelectedLevel] = usePersistedLevel(
     "flashcards-last-level"
   );
+  
+  // Handle refresh logic
+  const shouldRefresh = searchParams.get("refreshed") === "true";
   const [statsRefreshKey, setStatsRefreshKey] = useState(0);
-  const [recentReviews, setRecentReviews] = useState<
-    Record<string, { difficulty: string; timestamp: number }>
-  >({});
 
-  // 1. Fetch and process data
+  useEffect(() => {
+    if (shouldRefresh) {
+       setStatsRefreshKey(prev => prev + 1);
+       router.replace('/dashboard/student/flashcards');
+    }
+  }, [shouldRefresh, router]);
+
+  // Fetch data
   const {
     stats,
-    statsLoading,
     weeklyData,
     totalWords,
     totalRemNoteCards,
     categoriesLoading,
-    settings,
-    flashcardReviews,
-    reviewsMap,
-    categoryIndex,
     isVocabularyLoading,
     isVocabularyError,
     categoryAttemptCounts,
@@ -48,123 +49,44 @@ export default function FlashcardsLandingPage() {
     session?.user?.email,
     selectedLevel,
     statsRefreshKey,
-    recentReviews
+    {} // We don't have recentReviews local state anymore, updates come from server refetch
   );
-
-  // 2. Manage session state and actions
-  const {
-    selectedCategory,
-    practiceFlashcards,
-    nextDueInfo,
-    upcomingCards,
-    isReviewMode,
-    isLoadingData,
-    isRefreshingData,
-    isPending,
-    handleCategoryClick,
-    handleBackToCategories,
-    handleStartPractice,
-    handleToggleReviewMode,
-  } = useFlashcardSessionManager({
-    selectedLevel,
-    categoryIndex,
-    reviewsMap,
-    flashcardReviews,
-    settings,
-    userEmail: session?.user?.email,
-    onSessionComplete: (reviewedCards) => {
-      if (reviewedCards) {
-        setRecentReviews((prev) => ({ ...prev, ...reviewedCards }));
-      }
-      setStatsRefreshKey((prev) => prev + 1);
-    },
-  });
 
   const isPageLoading = isVocabularyLoading || categoriesLoading;
 
+  const handleStartPractice = () => {
+    router.push("/dashboard/student/flashcards/practice?mode=practice&category=all");
+  };
+
+  const handleCategoryClick = (categoryId: string, categoryName: string) => {
+    // We pass the ID. The practice page hook handles looking it up.
+    router.push(`/dashboard/student/flashcards/practice?mode=practice&category=${categoryId}`);
+  };
+
   return (
-    <ToastProvider>
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         <DashboardHeader
           title="Flashcards 📚"
           subtitle="Master German vocabulary with spaced repetition"
-          backButton={
-            selectedCategory
-              ? {
-                  label: "Back to Categories",
-                  onClick: () => handleBackToCategories(),
-                }
-              : {
-                  label: "Back to Dashboard",
-                  onClick: () => router.push("/dashboard/student"),
-                }
-          }
+          backButton={{
+             label: "Back to Dashboard",
+             onClick: () => router.push("/dashboard/student"),
+          }}
           actions={
-            selectedCategory ? (
-              <ActionButton
-                onClick={handleToggleReviewMode}
-                variant={isReviewMode ? "purple" : "cyan"}
-                icon={
-                  isReviewMode ? (
-                    <ActionButtonIcons.Check />
-                  ) : (
-                    <ActionButtonIcons.Eye />
-                  )
-                }
-                disabled={isPending || isLoadingData}
-              >
-                {isReviewMode ? "Start Practice" : "Review All"}
-              </ActionButton>
-            ) : (
               <ActionButton
                 onClick={handleStartPractice}
                 variant="purple"
                 icon={<ActionButtonIcons.ArrowRight />}
-                disabled={isPageLoading || isPending || isLoadingData}
+                disabled={isPageLoading}
               >
                 Start Practice
               </ActionButton>
-            )
           }
         />
 
-        {/* Data refresh indicator (after completing practice session) */}
-        {isRefreshingData && (
-          <div
-            data-refreshing="true"
-            className="fixed top-20 right-6 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in-down"
-          >
-            <div className="flex items-center gap-2">
-              <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full" />
-              <span className="font-medium">Updating progress...</span>
-            </div>
-          </div>
-        )}
-
         {/* Main Content */}
         <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
-          {/* Show Flashcard Practice/Review if category is selected */}
-          {selectedCategory ? (
-            isReviewMode ? (
-              <FlashcardReviewList
-                flashcards={practiceFlashcards}
-                categoryName={selectedCategory}
-                level={selectedLevel}
-              />
-            ) : (
-              <FlashcardPractice
-                flashcards={practiceFlashcards}
-                categoryName={selectedCategory}
-                level={selectedLevel}
-                onBack={(reviews) => handleBackToCategories(reviews)}
-                showExamples={settings.showExamples}
-                nextDueInfo={nextDueInfo}
-                upcomingCards={upcomingCards}
-              />
-            )
-          ) : (
-            <>
-              {/* Level Selector - Split Button Style */}
+              {/* Level Selector */}
               <div className="mb-8">
                 <CEFRLevelSelector
                   selectedLevel={selectedLevel}
@@ -175,7 +97,6 @@ export default function FlashcardsLandingPage() {
                 />
               </div>
 
-              {/* Content - show when loaded */}
               {!isPageLoading && (
                 <div className="animate-fade-in-up">
                   {isVocabularyError ? (
@@ -198,7 +119,7 @@ export default function FlashcardsLandingPage() {
                     </div>
                   ) : (
                     <>
-                      {/* Weekly Progress Chart with Stats Button - Collapsible */}
+                      {/* Stats */}
                       <div>
                         <FlashcardProgressChart
                           weeklyData={weeklyData}
@@ -212,7 +133,7 @@ export default function FlashcardsLandingPage() {
                         />
                       </div>
 
-                      {/* Vocabulary Categories */}
+                      {/* Categories */}
                       <div className="mb-8">
                         <div className="flex items-center justify-between mb-4">
                           <h2 className="text-xl font-bold text-gray-900">
@@ -259,7 +180,7 @@ export default function FlashcardsLandingPage() {
                               onClick={handleStartPractice}
                               variant="purple"
                               icon={<ActionButtonIcons.ArrowRight />}
-                              disabled={isPageLoading || isPending || isLoadingData}
+                              disabled={isPageLoading}
                             >
                               Start Practice Session
                             </ActionButton>
@@ -270,10 +191,17 @@ export default function FlashcardsLandingPage() {
                   )}
                 </div>
               )}
-            </>
-          )}
         </div>
       </div>
+  );
+}
+
+export default function FlashcardsLandingPage() {
+  return (
+    <ToastProvider>
+      <Suspense fallback={<CatLoader fullScreen message="Loading..." />}>
+        <FlashcardsLandingContent />
+      </Suspense>
     </ToastProvider>
   );
 }
