@@ -59,13 +59,21 @@ export function useToast() {
 
     // Render Toast component using React
     const root = createRoot(toastWrapper);
+    
+    // Auto-close logic handled by the hook itself to ensure cleanup
+    if (duration > 0) {
+      setTimeout(() => {
+        handleClose();
+      }, duration);
+    }
+
     root.render(
       <Toast
         id={id}
         message={message}
         title={title}
         variant={type}
-        duration={duration}
+        duration={0} // Disable internal timer since we handle it here
         onClose={handleClose}
         timestamp={timestamp}
         showIcon={true}
