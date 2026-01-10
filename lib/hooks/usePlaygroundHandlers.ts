@@ -262,12 +262,12 @@ export function usePlaygroundHandlers({
     try {
       await startVideo();
       await updateParticipantVoiceStatus(myParticipantId, true, false);
-    } catch (error) {
+    } catch (error: any) {
       console.error('[Video] Failed to start video:', error);
       setDialogState({
         isOpen: true,
         title: 'Video Error',
-        message: 'Failed to start video. Please check camera permissions.',
+        message: `Failed to start video: ${error.name || 'Unknown error'}. Please check camera permissions.`,
       });
     }
   }, [myParticipantId, currentRoom, startVideo, setDialogState]);

@@ -3,7 +3,7 @@
  * Handles starting and stopping WebRTC media sessions
  */
 
-import { useCallback } from 'react';
+import { useCallback, useRef } from "react";
 import {
   registerParticipant,
   unregisterParticipant,
@@ -11,9 +11,9 @@ import {
   listenForParticipants,
   sendOffer,
   type SignalMessage,
-} from './firebaseSignaling';
-import { getMediaStream, enableAllTracks } from './mediaStreamManager';
-import type { MediaParticipant } from './types';
+} from "./firebaseSignaling";
+import { getMediaStream, enableAllTracks } from "./mediaStreamManager";
+import type { MediaParticipant } from "./types";
 
 interface UseMediaSessionProps {
   roomId: string;
@@ -52,14 +52,30 @@ export function useMediaSession({
   cleanup,
   onError,
 }: UseMediaSessionProps) {
+  const isRequestingRef = useRef<boolean>(false);
+
   // Start media (voice and optionally video)
   const startMedia = useCallback(
     async (withVideo: boolean = false) => {
       try {
-        console.log('[Media Session] Starting media...', { roomId, userId, userName, withVideo });
+        console.log("[Media Session] Starting media...", {
+          roomId,
+          userId,
+          userName,
+          withVideo,
+        });
 
         if (!roomId || !userId) {
-          throw new Error('No room ID or user ID provided');
+          throw new Error("No room ID or user ID provided");
+        }
+
+        // Stop existing stream if any to prevent "Device in use" errors
+        if (localStreamRef.current) {
+          console.log(
+            "[Media Session] Stopping existing stream before starting new one"
+          );
+          localStreamRef.current.getTracks().forEach((track) => track.stop());
+          localStreamRef.current = null;
         }
 
         const stream = await getMediaStream(withVideo);
@@ -78,27 +94,37 @@ export function useMediaSession({
 
         await registerParticipant(roomId, userId, userName, false);
 
-        signalUnsubscribeRef.current = listenForSignals(roomId, userId, handleSignal);
+        signalUnsubscribeRef.current = listenForSignals(
+          roomId,
+          userId,
+          handleSignal
+        );
 
-        participantsUnsubscribeRef.current = listenForParticipants(roomId, userId, (participants) => {
-          setParticipants(participants.map((p) => ({ ...p, isVideoEnabled: false })));
+        participantsUnsubscribeRef.current = listenForParticipants(
+          roomId,
+          userId,
+          (participants) => {
+            setParticipants(
+              participants.map((p) => ({ ...p, isVideoEnabled: false }))
+            );
 
-          participants.forEach((participant) => {
-            const shouldInitiate = userId < participant.userId;
-            if (shouldInitiate) {
-              setTimeout(async () => {
-                const pc = createPeer(participant.userId);
-                const offer = await pc.createOffer();
-                await pc.setLocalDescription(offer);
-                await sendOffer(roomId, userId, participant.userId, offer);
-              }, Math.random() * 1000);
-            }
-          });
-        });
+            participants.forEach((participant) => {
+              const shouldInitiate = userId < participant.userId;
+              if (shouldInitiate) {
+                setTimeout(async () => {
+                  const pc = createPeer(participant.userId);
+                  const offer = await pc.createOffer();
+                  await pc.setLocalDescription(offer);
+                  await sendOffer(roomId, userId, participant.userId, offer);
+                }, Math.random() * 1000);
+              }
+            });
+          }
+        );
 
-        console.log('[Media Session] ✅ Media started successfully');
+        console.log("[Media Session] ✅ Media started successfully");
       } catch (error) {
-        console.error('[Media Session] ❌ Failed to start media:', error);
+        console.error("[Media Session] ❌ Failed to start media:", error);
         setIsVoiceActive(false);
         setIsVideoActive(false);
         onError?.(error as Error);
@@ -133,7 +159,15 @@ export function useMediaSession({
   }, [startMedia]);
 
   const stopMedia = useCallback(async () => {
-    console.log('[Media Session] Stopping media...');
+    console.log("[Media Session] Stopping media...");
+
+    // Stop tracks immediately to free hardware resources
+    // This must happen BEFORE any async network calls
+    if (localStreamRef.current) {
+      localStreamRef.current.getTracks().forEach((track) => track.stop());
+      // We don't null it here, cleanup() will do that, but tracks are stopped
+    }
+
     if (roomId && userId) {
       await unregisterParticipant(roomId, userId);
     }

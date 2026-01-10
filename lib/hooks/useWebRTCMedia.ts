@@ -3,12 +3,17 @@
  * Simplified WebRTC implementation using modular peer and signal management
  */
 
-import { useEffect, useRef, useState, useCallback } from 'react';
-import { createPeerConnection, setupAudioPlayback, cleanupPeerConnection, type PeerConnection } from './webrtc/peerManager';
-import { createSignalHandler } from './webrtc/signalHandler';
-import { useMediaSession } from './webrtc/useMediaSession';
-import { useMediaControls } from './webrtc/useMediaControls';
-import type { MediaParticipant, UseWebRTCMediaOptions } from './webrtc/types';
+import { useEffect, useRef, useState, useCallback } from "react";
+import {
+  createPeerConnection,
+  setupAudioPlayback,
+  cleanupPeerConnection,
+  type PeerConnection,
+} from "./webrtc/peerManager";
+import { createSignalHandler } from "./webrtc/signalHandler";
+import { useMediaSession } from "./webrtc/useMediaSession";
+import { useMediaControls } from "./webrtc/useMediaControls";
+import type { MediaParticipant, UseWebRTCMediaOptions } from "./webrtc/types";
 
 export function useWebRTCMedia({
   roomId,
@@ -21,9 +26,15 @@ export function useWebRTCMedia({
   const [isVideoActive, setIsVideoActive] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [participants, setParticipants] = useState<MediaParticipant[]>([]);
-  const [audioStreams, setAudioStreams] = useState<Map<string, MediaStream>>(new Map());
-  const [videoStreams, setVideoStreams] = useState<Map<string, MediaStream>>(new Map());
-  const [audioAnalysers, setAudioAnalysers] = useState<Map<string, AnalyserNode>>(new Map());
+  const [audioStreams, setAudioStreams] = useState<Map<string, MediaStream>>(
+    new Map()
+  );
+  const [videoStreams, setVideoStreams] = useState<Map<string, MediaStream>>(
+    new Map()
+  );
+  const [audioAnalysers, setAudioAnalysers] = useState<
+    Map<string, AnalyserNode>
+  >(new Map());
 
   const localStreamRef = useRef<MediaStream | null>(null);
   const peerConnectionsRef = useRef<Map<string, PeerConnection>>(new Map());
@@ -36,7 +47,7 @@ export function useWebRTCMedia({
   // Reset state when room changes
   useEffect(() => {
     if (previousRoomIdRef.current && previousRoomIdRef.current !== roomId) {
-      console.log('[WebRTC Media] Room changed, resetting state');
+      console.log("[WebRTC Media] Room changed, resetting state");
       cleanup();
     }
     previousRoomIdRef.current = roomId;
@@ -81,7 +92,12 @@ export function useWebRTCMedia({
 
   // Handle received track
   const handleTrackReceived = useCallback(
-    (remoteUserId: string, stream: MediaStream, hasAudio: boolean, hasVideo: boolean) => {
+    (
+      remoteUserId: string,
+      stream: MediaStream,
+      hasAudio: boolean,
+      hasVideo: boolean
+    ) => {
       const peer = peerConnectionsRef.current.get(remoteUserId);
       if (!peer) return;
 
@@ -121,30 +137,36 @@ export function useWebRTCMedia({
   );
 
   // Handle connection state change
-  const handleConnectionStateChange = useCallback((remoteUserId: string, state: RTCPeerConnectionState) => {
-    if (state === 'failed' || state === 'disconnected') {
-      console.error('[WebRTC Media] Connection failed/disconnected:', remoteUserId);
-      peerConnectionsRef.current.delete(remoteUserId);
+  const handleConnectionStateChange = useCallback(
+    (remoteUserId: string, state: RTCPeerConnectionState) => {
+      if (state === "failed" || state === "disconnected") {
+        console.error(
+          "[WebRTC Media] Connection failed/disconnected:",
+          remoteUserId
+        );
+        peerConnectionsRef.current.delete(remoteUserId);
 
-      setAudioStreams((prev) => {
-        const updated = new Map(prev);
-        updated.delete(remoteUserId);
-        return updated;
-      });
+        setAudioStreams((prev) => {
+          const updated = new Map(prev);
+          updated.delete(remoteUserId);
+          return updated;
+        });
 
-      setVideoStreams((prev) => {
-        const updated = new Map(prev);
-        updated.delete(remoteUserId);
-        return updated;
-      });
+        setVideoStreams((prev) => {
+          const updated = new Map(prev);
+          updated.delete(remoteUserId);
+          return updated;
+        });
 
-      setAudioAnalysers((prev) => {
-        const updated = new Map(prev);
-        updated.delete(remoteUserId);
-        return updated;
-      });
-    }
-  }, []);
+        setAudioAnalysers((prev) => {
+          const updated = new Map(prev);
+          updated.delete(remoteUserId);
+          return updated;
+        });
+      }
+    },
+    []
+  );
 
   // Create peer connection helper
   const createPeer = useCallback(
@@ -197,24 +219,25 @@ export function useWebRTCMedia({
   });
 
   // Media session controls
-  const { startVoice, startVideo, stopVoice, stopVideo, stopMedia } = useMediaSession({
-    roomId,
-    userId,
-    userName,
-    localStreamRef,
-    audioContextRef,
-    signalUnsubscribeRef,
-    participantsUnsubscribeRef,
-    isMediaActiveRef,
-    setIsVoiceActive,
-    setIsVideoActive,
-    setIsMuted,
-    setParticipants,
-    handleSignal,
-    createPeer,
-    cleanup,
-    onError,
-  });
+  const { startVoice, startVideo, stopVoice, stopVideo, stopMedia } =
+    useMediaSession({
+      roomId,
+      userId,
+      userName,
+      localStreamRef,
+      audioContextRef,
+      signalUnsubscribeRef,
+      participantsUnsubscribeRef,
+      isMediaActiveRef,
+      setIsVoiceActive,
+      setIsVideoActive,
+      setIsMuted,
+      setParticipants,
+      handleSignal,
+      createPeer,
+      cleanup,
+      onError,
+    });
 
   // Media controls (mute/video toggle)
   const { toggleMute, toggleVideo } = useMediaControls({
@@ -236,7 +259,19 @@ export function useWebRTCMedia({
 
   useEffect(() => {
     return () => {
+      // Synchronously stop all tracks immediately to release hardware lock
+      // This is critical for Fast Refresh / Page Reloads where async cleanup is too slow
+      const hadStream = !!localStreamRef.current;
+
       if (localStreamRef.current) {
+        console.log(
+          "[WebRTC Media] Unmounting - releasing hardware immediately"
+        );
+        localStreamRef.current.getTracks().forEach((track) => track.stop());
+        localStreamRef.current = null;
+      }
+
+      if (hadStream) {
         stopMedia();
       }
     };
