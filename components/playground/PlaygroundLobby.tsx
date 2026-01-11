@@ -5,6 +5,7 @@
 
 'use client';
 
+import Link from 'next/link';
 import { DashboardHeader } from '@/components/dashboard/DashboardHeader';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { AlertDialog } from '@/components/ui/Dialog';
@@ -12,6 +13,7 @@ import type { PlaygroundRoom } from '@/lib/models/playground';
 
 interface PlaygroundLobbyProps {
   activeRooms: PlaygroundRoom[];
+  userId: string;
   userRole: 'teacher' | 'student';
   isCreatingRoom: boolean;
   dialogState: {
@@ -26,6 +28,7 @@ interface PlaygroundLobbyProps {
 
 export function PlaygroundLobby({
   activeRooms,
+  userId,
   userRole,
   isCreatingRoom,
   dialogState,
@@ -39,16 +42,30 @@ export function PlaygroundLobby({
         title="Playground"
         subtitle="Collaborate with voice chat and writing exercises"
         actions={
-          userRole === 'teacher' ? (
-            <ActionButton
-              onClick={onCreateRoom}
-              disabled={isCreatingRoom}
-              variant="purple"
-              icon={<ActionButtonIcons.Plus />}
-            >
-              {isCreatingRoom ? 'Creating Room...' : 'Create New Room'}
-            </ActionButton>
-          ) : undefined
+          <div className="flex gap-2">
+            <Link href="/dashboard/playground/history">
+              <ActionButton
+                variant="cyan"
+                icon={
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                }
+              >
+                History
+              </ActionButton>
+            </Link>
+            {userRole === 'teacher' && (
+              <ActionButton
+                onClick={onCreateRoom}
+                disabled={isCreatingRoom}
+                variant="purple"
+                icon={<ActionButtonIcons.Plus />}
+              >
+                {isCreatingRoom ? 'Creating Room...' : 'Create New Room'}
+              </ActionButton>
+            )}
+          </div>
         }
       />
 

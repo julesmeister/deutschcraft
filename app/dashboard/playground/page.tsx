@@ -109,6 +109,7 @@ function PlaygroundLobbyContent() {
     >
       <PlaygroundLobby
         activeRooms={activeRooms}
+        userId={userId}
         userRole={userRole}
         isCreatingRoom={isCreatingRoom}
         dialogState={dialogState}

@@ -15,6 +15,7 @@ export {
   togglePublicWriting,
   getPlaygroundRoom,
   getActiveRooms,
+  getRoomHistory,
 } from './rooms';
 
 // Participant management

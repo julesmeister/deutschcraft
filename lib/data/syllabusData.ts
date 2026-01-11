@@ -348,3 +348,39 @@ function getCommunicationSkills(level: CEFRLevel): string[] {
       return [];
   }
 }
+
+/**
+ * Get all available syllabus tags from all levels
+ * Returns lesson titles, grammar topics, vocabulary themes, and communication skills
+ */
+export function getAllSyllabusTagsOptions(): string[] {
+  const allTags: string[] = [];
+  const levels = [CEFRLevel.A1, CEFRLevel.A2, CEFRLevel.B1, CEFRLevel.B2];
+
+  levels.forEach((level) => {
+    const syllabus = getSyllabusForLevel(level);
+
+    // Add lesson titles with level prefix
+    syllabus.weeklySchedule.forEach((week) => {
+      allTags.push(`${level}: ${week.title}`);
+    });
+
+    // Add grammar topics
+    syllabus.grammarTopics.forEach((topic) => {
+      allTags.push(topic);
+    });
+
+    // Add vocabulary themes
+    syllabus.vocabularyThemes.forEach((theme) => {
+      allTags.push(theme);
+    });
+
+    // Add communication skills
+    syllabus.communicationSkills.forEach((skill) => {
+      allTags.push(skill);
+    });
+  });
+
+  // Remove duplicates and sort
+  return Array.from(new Set(allTags)).sort();
+}

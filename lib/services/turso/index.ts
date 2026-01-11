@@ -388,6 +388,17 @@ export {
 } from './ganttService';
 
 // ============================================================================
+// PLAYGROUND HISTORY SERVICE (NEW - 2026-01-11)
+// ============================================================================
+export {
+  logPlaygroundRoomHistory,
+  getRoomHistory,
+  getPlaygroundHistoryStats,
+  getHistoryRecord,
+  updateHistoryTags,
+} from './playgroundHistoryService';
+
+// ============================================================================
 // TYPE EXPORTS
 // ============================================================================
 export type { Session } from './sessionService';
@@ -396,3 +407,4 @@ export type { MediaFile, UploadOptions } from './mediaService';
 export type { LearningVideo, VideoUploadData, VideoCategory, CEFRLevel } from './videoService';
 export type { QuizStats } from './reviewQuizService';
 export type { AnswerHubStats } from './studentAnswerService';
+export type { PlaygroundHistoryRecord, PlaygroundHistoryStats } from './playgroundHistoryService';
