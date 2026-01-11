@@ -399,6 +399,22 @@ export {
 } from './playgroundHistoryService';
 
 // ============================================================================
+// MATERIALS SERVICE (NEW - 2026-01-12)
+// ============================================================================
+export {
+  createMaterial,
+  updateMaterialVisibility,
+  incrementDownloadCount,
+  deleteMaterial,
+  getPublicMaterials,
+  getAllMaterials,
+  getMaterialsByLevel,
+  getMaterialsByCategory,
+  getMaterialById,
+  searchMaterials,
+} from './materialsService';
+
+// ============================================================================
 // TYPE EXPORTS
 // ============================================================================
 export type { Session } from './sessionService';
@@ -408,3 +424,4 @@ export type { LearningVideo, VideoUploadData, VideoCategory, CEFRLevel } from '.
 export type { QuizStats } from './reviewQuizService';
 export type { AnswerHubStats } from './studentAnswerService';
 export type { PlaygroundHistoryRecord, PlaygroundHistoryStats } from './playgroundHistoryService';
+export type { Material } from './materialsService';

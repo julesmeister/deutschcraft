@@ -54,3 +54,7 @@ next-env.d.ts
 *~
 nul
 *.backup-*.json
+
+# media
+*.mp3
+

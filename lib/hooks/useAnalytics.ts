@@ -45,7 +45,8 @@ export function useAnalytics(students: User[]) {
     };
 
     fetchAllStats();
-  }, [students]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [students.length, students.map(s => s.email).join(',')]);
 
   // Calculate analytics from real student data
   const analytics = useMemo(() => {

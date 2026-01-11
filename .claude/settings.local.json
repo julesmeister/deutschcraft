@@ -186,7 +186,9 @@
       "Bash(test:*)",
       "Bash(Select-String -Pattern \"\\(useFlashcardSessionManager|useFlashcardData|flashcards/page\\)\" -Context 0,2)",
       "Bash(Select-String -Pattern \"\\(error TS|Found \\\\d+ error\\)\")",
-      "Bash(cut:*)"
+      "Bash(cut:*)",
+      "Bash(robocopy:*)",
+      "Bash(xcopy \"C:\\\\Users\\\\User\\\\Documents\\\\Schritte\" \"public\\\\materials\"\" /E /I /Y /Q && echo \"Copy completed successfully \")"
     ],
     "deny": [],
     "ask": []
