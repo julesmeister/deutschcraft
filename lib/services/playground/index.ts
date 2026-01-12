@@ -13,6 +13,7 @@ export {
   createPlaygroundRoom,
   endPlaygroundRoom,
   togglePublicWriting,
+  setCurrentMaterial,
   getPlaygroundRoom,
   getActiveRooms,
   getRoomHistory,

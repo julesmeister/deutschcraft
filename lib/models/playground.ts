@@ -14,6 +14,9 @@ export interface PlaygroundRoom {
   participantCount: number;
   maxParticipants?: number;
   isPublicWriting: boolean; // If true, all students can see each other's writing
+  currentMaterialId?: string; // Material being displayed in the room
+  currentMaterialTitle?: string;
+  currentMaterialUrl?: string;
 }
 
 export interface PlaygroundParticipant {

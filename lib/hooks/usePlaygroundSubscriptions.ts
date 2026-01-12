@@ -3,7 +3,7 @@
  * Manages real-time subscriptions to room, participants, and writings
  */
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import {
   subscribeToRoom,
   subscribeToParticipants,
@@ -20,6 +20,7 @@ interface UsePlaygroundSubscriptionsProps {
   userId: string;
   userRole: 'teacher' | 'student';
   handleLeaveRoom: () => Promise<void>;
+  setCurrentRoom: (room: PlaygroundRoom | null) => void;
   setParticipants: (participants: PlaygroundParticipant[]) => void;
   setWritings: (writings: PlaygroundWriting[]) => void;
 }
@@ -29,42 +30,64 @@ export function usePlaygroundSubscriptions({
   userId,
   userRole,
   handleLeaveRoom,
+  setCurrentRoom,
   setParticipants,
   setWritings,
 }: UsePlaygroundSubscriptionsProps) {
+  // Use refs to store latest callbacks without causing re-subscriptions
+  const callbacksRef = useRef({
+    handleLeaveRoom,
+    setCurrentRoom,
+    setParticipants,
+    setWritings,
+  });
+
+  // Update refs on each render
+  useEffect(() => {
+    callbacksRef.current = {
+      handleLeaveRoom,
+      setCurrentRoom,
+      setParticipants,
+      setWritings,
+    };
+  });
+
   // Subscribe to current room
   useEffect(() => {
     if (!currentRoom?.roomId) return;
 
     const roomId = currentRoom.roomId;
-    const roomStatus = currentRoom.status;
     let isSubscriptionActive = true;
 
     const unsubRoom = subscribeToRoom(roomId, (room) => {
       if (!isSubscriptionActive) return;
 
       if (room) {
-        // Only update if status changed to avoid infinite loops
-        if (room.status !== roomStatus) {
-          if (room.status === 'ended') {
-            // Room ended - cleanup immediately without updating state
-            isSubscriptionActive = false;
-            handleLeaveRoom();
-          }
+        // Update room state with all changes (including material updates)
+        callbacksRef.current.setCurrentRoom(room);
+
+        // Check if room ended
+        if (room.status === 'ended') {
+          // Room ended - cleanup immediately
+          isSubscriptionActive = false;
+          callbacksRef.current.handleLeaveRoom();
         }
       }
     });
 
     const unsubParticipants = subscribeToParticipants(roomId, (parts) => {
       if (!isSubscriptionActive) return;
-      setParticipants(parts);
+      callbacksRef.current.setParticipants(parts);
     });
 
     const unsubWritings = subscribeToWritings(
       roomId,
       userId,
       userRole,
-      setWritings
+      (writings) => {
+        if (!isSubscriptionActive) return;
+        callbacksRef.current.setWritings(writings);
+      }
     );
 
     return () => {
@@ -73,5 +96,5 @@ export function usePlaygroundSubscriptions({
       unsubParticipants();
       unsubWritings();
     };
-  }, [currentRoom?.roomId, currentRoom?.status, userId, userRole]);
+  }, [currentRoom?.roomId, userId, userRole]);
 }

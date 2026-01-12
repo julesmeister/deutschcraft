@@ -201,6 +201,20 @@ export async function togglePublicWriting(
   });
 }
 
+export async function setCurrentMaterial(
+  roomId: string,
+  materialId: string | null,
+  materialTitle: string | null,
+  materialUrl: string | null
+): Promise<void> {
+  const roomRef = doc(db, COLLECTIONS.ROOMS, roomId);
+  await updateDoc(roomRef, {
+    currentMaterialId: materialId || null,
+    currentMaterialTitle: materialTitle || null,
+    currentMaterialUrl: materialUrl || null,
+  });
+}
+
 export async function getPlaygroundRoom(
   roomId: string
 ): Promise<PlaygroundRoom | null> {

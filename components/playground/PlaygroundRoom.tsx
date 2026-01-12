@@ -17,6 +17,8 @@ import { HorizontalVideoStrip } from "@/components/playground/HorizontalVideoStr
 import { WritingBoard } from "@/components/playground/WritingBoard";
 import { ParticipantsList } from "@/components/playground/ParticipantsList";
 import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
+import { MaterialSelector } from "@/components/playground/MaterialSelector";
+import { PDFViewer } from "@/components/playground/PDFViewer";
 import { formatDuration } from "@/lib/utils/dateHelpers";
 import type {
   PlaygroundRoom as PlaygroundRoomType,
@@ -71,6 +73,11 @@ interface PlaygroundRoomProps {
     isPublic: boolean
   ) => Promise<void>;
   onToggleRoomPublicWriting?: (isPublic: boolean) => Promise<void>;
+  onSetCurrentMaterial?: (
+    materialId: string | null,
+    materialTitle: string | null,
+    materialUrl: string | null
+  ) => Promise<void>;
   onMinimize?: () => void;
   onCloseDialog: () => void;
 }
@@ -102,6 +109,7 @@ export function PlaygroundRoom({
   onSaveWriting,
   onToggleWritingVisibility,
   onToggleRoomPublicWriting,
+  onSetCurrentMaterial,
   onMinimize,
   onCloseDialog,
 }: PlaygroundRoomProps) {
@@ -112,6 +120,7 @@ export function PlaygroundRoom({
   const [videoLayout, setVideoLayout] = useState<VideoLayout>("teacher");
   const [duration, setDuration] = useState<string>("00:00");
   const [formattedDate, setFormattedDate] = useState<string>("");
+  const [isMaterialSelectorOpen, setIsMaterialSelectorOpen] = useState(false);
 
   useEffect(() => {
     if (!currentRoom?.createdAt) return;
@@ -141,6 +150,22 @@ export function PlaygroundRoom({
     return () => clearInterval(interval);
   }, [currentRoom?.createdAt]);
 
+  const handleSelectMaterial = async (
+    materialId: string,
+    materialTitle: string,
+    materialUrl: string
+  ) => {
+    if (onSetCurrentMaterial) {
+      await onSetCurrentMaterial(materialId, materialTitle, materialUrl);
+    }
+  };
+
+  const handleCloseMaterial = async () => {
+    if (onSetCurrentMaterial) {
+      await onSetCurrentMaterial(null, null, null);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <DashboardHeader
@@ -154,6 +179,29 @@ export function PlaygroundRoom({
         }}
         actions={
           <div className="flex items-center gap-2">
+            {userRole === "teacher" && onSetCurrentMaterial && (
+              <ActionButton
+                onClick={() => setIsMaterialSelectorOpen(true)}
+                variant="default"
+                icon={
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    />
+                  </svg>
+                }
+              >
+                Materials
+              </ActionButton>
+            )}
             {onMinimize && (
               <ActionButton
                 onClick={onMinimize}
@@ -243,8 +291,8 @@ export function PlaygroundRoom({
             </div>
           </div>
 
-          {/* Right: Writing Board */}
-          <div className="lg:col-span-2">
+          {/* Right: Writing Board and PDF Viewer */}
+          <div className="lg:col-span-2 space-y-6">
             {/* Horizontal Video Strip on Top (if top-right layout) */}
             {isVoiceActive && videoLayout === "top-right" && (
               <div className="mb-4">
@@ -260,6 +308,19 @@ export function PlaygroundRoom({
               </div>
             )}
 
+            {/* PDF Viewer (shown when material is selected) */}
+            {currentRoom.currentMaterialUrl && currentRoom.currentMaterialTitle && (
+              <div className="h-[600px]">
+                <PDFViewer
+                  materialTitle={currentRoom.currentMaterialTitle}
+                  materialUrl={currentRoom.currentMaterialUrl}
+                  onClose={userRole === "teacher" ? handleCloseMaterial : undefined}
+                  showCloseButton={userRole === "teacher"}
+                />
+              </div>
+            )}
+
+            {/* Writing Board */}
             <WritingBoard
               writings={writings}
               currentUserId={userId}
@@ -286,6 +347,16 @@ export function PlaygroundRoom({
 
       {/* Floating Redemittel Widget */}
       <FloatingRedemittelWidget />
+
+      {/* Material Selector (Teacher Only) */}
+      {userRole === "teacher" && onSetCurrentMaterial && (
+        <MaterialSelector
+          isOpen={isMaterialSelectorOpen}
+          onClose={() => setIsMaterialSelectorOpen(false)}
+          onSelectMaterial={handleSelectMaterial}
+          currentMaterialId={currentRoom.currentMaterialId}
+        />
+      )}
     </div>
   );
 }

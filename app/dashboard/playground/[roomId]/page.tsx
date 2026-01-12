@@ -21,6 +21,7 @@ import {
   getPlaygroundRoom,
   getRoomParticipants,
   joinPlaygroundRoom,
+  setCurrentMaterial,
 } from "@/lib/services/playgroundService";
 import type {
   PlaygroundRoom,
@@ -143,6 +144,7 @@ export default function PlaygroundRoomPage({
       await handleLeaveRoom();
       router.push("/dashboard/playground");
     },
+    setCurrentRoom,
     setParticipants,
     setWritings,
   });
@@ -248,6 +250,29 @@ export default function PlaygroundRoomPage({
 
   const myWriting = writings.find((w) => w.userId === userId);
 
+  const handleSetCurrentMaterial = async (
+    materialId: string | null,
+    materialTitle: string | null,
+    materialUrl: string | null
+  ) => {
+    if (!currentRoom) return;
+    try {
+      await setCurrentMaterial(
+        currentRoom.roomId,
+        materialId,
+        materialTitle,
+        materialUrl
+      );
+    } catch (error) {
+      console.error("[Room] Error setting material:", error);
+      setDialogState({
+        isOpen: true,
+        title: "Error",
+        message: "Failed to set material",
+      });
+    }
+  };
+
   if (!session || userLoading || isInitializing || !currentRoom) {
     return (
       <CatLoader
@@ -296,6 +321,9 @@ export default function PlaygroundRoomPage({
         onToggleWritingVisibility={handleToggleWritingVisibility}
         onToggleRoomPublicWriting={
           userRole === "teacher" ? handleToggleRoomPublicWriting : undefined
+        }
+        onSetCurrentMaterial={
+          userRole === "teacher" ? handleSetCurrentMaterial : undefined
         }
         onMinimize={handleMinimize}
         onCloseDialog={() => setDialogState({ ...dialogState, isOpen: false })}
