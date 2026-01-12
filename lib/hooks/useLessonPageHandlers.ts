@@ -37,16 +37,36 @@ export function useLessonPageHandlers(
   const handleReorderSections = (newSectionOrder: string[]) => {
     if (!lesson) return;
 
+    console.log("[Section Reorder] New order:", newSectionOrder);
+
     // Reorder exercises based on new section order
     const reorderedExercises: ExerciseWithOverrideMetadata[] = [];
+    const sectionsSet = new Set(newSectionOrder);
 
     // For each section in the new order, add all its exercises
     newSectionOrder.forEach((sectionName) => {
       const sectionExercises = lesson.exercises.filter(
         (ex) => (ex.section || "Übungen") === sectionName
       );
+      console.log(`[Section Reorder] Section "${sectionName}": ${sectionExercises.length} exercises`);
       reorderedExercises.push(...sectionExercises);
     });
+
+    // Add any exercises from sections NOT in newSectionOrder at the end
+    // This ensures filtered/hidden exercises maintain their relative order
+    const remainingExercises = lesson.exercises.filter((ex) => {
+      const sectionName = ex.section || "Übungen";
+      return !sectionsSet.has(sectionName);
+    });
+
+    if (remainingExercises.length > 0) {
+      console.log(`[Section Reorder] Remaining exercises (not in newSectionOrder): ${remainingExercises.length}`);
+    }
+
+    reorderedExercises.push(...remainingExercises);
+
+    console.log(`[Section Reorder] Total exercises to reorder: ${reorderedExercises.length} (was ${lesson.exercises.length})`);
+    console.log("[Section Reorder] First 5 exercise sections:", reorderedExercises.slice(0, 5).map(e => `${e.exerciseId}[${e.section || "Übungen"}]`));
 
     // Call existing handleReorder with the reordered exercises
     handleReorder(reorderedExercises);

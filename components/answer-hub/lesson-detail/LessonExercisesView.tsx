@@ -144,18 +144,6 @@ export function LessonExercisesView({
       isRefreshed &&
       filteredExercises.length > 0
     ) {
-      // Debug: Log all exercises and their submission status
-      console.log("[Auto-scroll] All exercises status:");
-      filteredExercises.forEach((ex, idx) => {
-        const stats = isTeacher
-          ? teacherInteractions[ex.exerciseId]
-          : interactions[ex.exerciseId];
-        console.log(`  [${idx}] ${ex.exerciseNumber} (${ex.exerciseId}):`, {
-          submitted: stats?.submissionCount || 0,
-          lastSubmittedAt: stats?.lastSubmittedAt,
-        });
-      });
-
       // Find the exercise that was most recently answered (by timestamp)
       let lastAnsweredIndex = -1;
       let mostRecentTimestamp = 0;
@@ -176,38 +164,11 @@ export function LessonExercisesView({
       }
 
       if (lastAnsweredIndex !== -1) {
-        const ex = filteredExercises[lastAnsweredIndex];
-        const stats = isTeacher
-          ? teacherInteractions[ex.exerciseId]
-          : interactions[ex.exerciseId];
-        console.log("[Auto-scroll] Found most recently answered exercise:", {
-          index: lastAnsweredIndex,
-          exerciseId: ex.exerciseId,
-          exerciseNumber: ex.exerciseNumber,
-          submissionCount: stats?.submissionCount,
-          lastSubmittedAt: stats?.lastSubmittedAt,
-          date: new Date(stats?.lastSubmittedAt || 0).toLocaleString(),
-        });
-      }
-
-      if (lastAnsweredIndex !== -1) {
         const exercise = filteredExercises[lastAnsweredIndex];
         // Use a longer timeout to ensure DOM is fully rendered and animations complete
         setTimeout(() => {
-          const elementId = `exercise-${exercise.exerciseId}-${lastAnsweredIndex}`;
-          console.log("[Auto-scroll] Attempting to scroll to:", elementId);
-          const element = document.getElementById(elementId);
-          console.log("[Auto-scroll] Element found:", !!element);
-          if (element) {
-            console.log("[Auto-scroll] Element position:", {
-              top: element.getBoundingClientRect().top,
-              scrollY: window.pageYOffset,
-            });
-          }
           scrollToExercise(exercise.exerciseId, lastAnsweredIndex);
         }, 800);
-      } else {
-        console.log("[Auto-scroll] No answered exercises found");
       }
 
       setHasAutoScrolled(true);

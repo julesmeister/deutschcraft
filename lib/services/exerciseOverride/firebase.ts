@@ -208,7 +208,7 @@ export async function bulkUpdateDisplayOrder(
 
     await batch.commit();
   } catch (error) {
-    console.error('[exerciseOverrideService] Error bulk updating orders:', error);
+    console.error('[bulkUpdateDisplayOrder] Error bulk updating orders:', error);
     throw error;
   }
 }

@@ -234,22 +234,58 @@ export function useReorderExercises() {
         const { teacherEmail, level, lessonNumber } = orderUpdates[0];
         const queryKey = ['exercise-overrides', teacherEmail, level, lessonNumber];
 
-        queryClient.setQueryData(queryKey, (old: ExerciseOverride[] | undefined) => {
-          if (!old) return old;
+        console.log("[Optimistic] Query key:", queryKey);
+        console.log("[Optimistic] Updating", orderUpdates.length, "exercises");
 
-          // Create a map of new display orders
+        queryClient.setQueryData(queryKey, (old: ExerciseOverride[] | undefined) => {
+          if (!old) {
+            console.log("[Optimistic] No old data in cache!");
+            return old;
+          }
+
+          const now = Date.now();
+
+          // Create a map: exerciseId -> new displayOrder
           const orderMap = new Map(
             orderUpdates.map((u) => [u.exerciseId, u.displayOrder])
           );
 
-          // Update display orders
-          return old.map((override) => {
+          let updatedCount = 0;
+          let addedCount = 0;
+
+          // Update existing overrides that match
+          const updated = old.map((override) => {
             const newOrder = orderMap.get(override.exerciseId);
             if (newOrder !== undefined) {
-              return { ...override, displayOrder: newOrder };
+              updatedCount++;
+              return { ...override, displayOrder: newOrder, updatedAt: now };
             }
             return override;
           });
+
+          // Add NEW overrides that don't exist yet
+          orderUpdates.forEach((update) => {
+            const exists = updated.some(o => o.exerciseId === update.exerciseId);
+            if (!exists) {
+              addedCount++;
+              // Create a new override entry
+              updated.push({
+                overrideId: update.overrideId,
+                exerciseId: update.exerciseId,
+                teacherEmail: update.teacherEmail,
+                level: update.level,
+                lessonNumber: update.lessonNumber,
+                overrideType: 'modify',
+                displayOrder: update.displayOrder,
+                createdAt: now,
+                updatedAt: now,
+              });
+            }
+          });
+
+          console.log("[Optimistic] Updated:", updatedCount, "Added:", addedCount, "Total:", updated.length, "(was", old.length, ")");
+          console.log("[Optimistic] Returning new array?", updated !== old);
+          return updated;
         });
       }
 
@@ -265,16 +301,19 @@ export function useReorderExercises() {
         });
       }
     },
-    onSettled: () => {
-      // Refetch to ensure sync with server
-      queryClient.invalidateQueries({
-        predicate: (query) => {
-          return (
-            Array.isArray(query.queryKey) &&
-            query.queryKey[0] === 'exercise-overrides'
-          );
-        },
-      });
+    onSuccess: () => {
+      console.log("[Reorder Mutation] Success! Invalidating cache...");
+      // Refetch to ensure sync with server (only after success)
+      setTimeout(() => {
+        queryClient.invalidateQueries({
+          predicate: (query) => {
+            return (
+              Array.isArray(query.queryKey) &&
+              query.queryKey[0] === 'exercise-overrides'
+            );
+          },
+        });
+      }, 100); // Small delay to ensure database write completes
     },
   });
 }

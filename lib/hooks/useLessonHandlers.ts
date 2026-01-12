@@ -62,13 +62,13 @@ export function useLessonHandlers(
       return;
     }
 
-    // For duplicates, append occurrence index to make unique override ID
+    // For duplicates, use original index to make unique override ID
     const isDuplicate = duplicateExerciseIds.has(exerciseId);
     let uniqueExerciseId = exerciseId;
 
     if (isDuplicate && exerciseIndex !== undefined) {
-      const occurrenceIndex = exerciseIndexMap.get(`${exerciseIndex}`) || 0;
-      uniqueExerciseId = `${exerciseId}_dup${occurrenceIndex}`;
+      // exerciseIndex is the global index which equals the original JSON index
+      uniqueExerciseId = `${exerciseId}_at${exerciseIndex}`;
     }
 
     const overrideId = `${userEmail}_${uniqueExerciseId}`;
@@ -133,19 +133,37 @@ export function useLessonHandlers(
   ) => {
     if (!userEmail) return;
 
-    const orderUpdates = reorderedExercises.map((ex, idx) => ({
-      overrideId: `${userEmail}_${ex.exerciseId}`,
-      displayOrder: idx,
-      exerciseId: ex.exerciseId,
-      teacherEmail: userEmail,
-      level,
-      lessonNumber,
-    }));
+    const orderUpdates = reorderedExercises.map((ex, idx) => {
+      const baseExerciseId = ex.exerciseId;
+      const exWithMeta = ex as any;
+
+      // Check if this is a duplicate
+      const isDuplicate = duplicateExerciseIds.has(baseExerciseId);
+      let uniqueExerciseId = baseExerciseId;
+
+      if (isDuplicate && exWithMeta._originalIndex !== undefined) {
+        // For duplicates, use original JSON index for stable identification
+        uniqueExerciseId = `${baseExerciseId}_at${exWithMeta._originalIndex}`;
+      }
+
+      return {
+        overrideId: `${userEmail}_${uniqueExerciseId}`,
+        displayOrder: idx,
+        exerciseId: uniqueExerciseId,
+        teacherEmail: userEmail,
+        level,
+        lessonNumber,
+      };
+    });
+
+    console.log("[Reorder] Saving display orders for", orderUpdates.length, "exercises");
+    console.log("[Reorder] First 5:", orderUpdates.slice(0, 5).map(u => `${u.exerciseId}=${u.displayOrder}`));
 
     try {
       await reorderExercises.mutateAsync(orderUpdates);
+      console.log("[Reorder] ✓ Saved successfully");
     } catch (error) {
-      console.error("[useLessonHandlers] Error reordering exercises:", error);
+      console.error("[Reorder] ✗ Error:", error);
     }
   };
 

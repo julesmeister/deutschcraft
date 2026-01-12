@@ -43,6 +43,11 @@ function mergeExercisesWithOverrides(
   overrides: ExerciseOverride[],
   isTeacherView: boolean = false
 ): ExerciseWithOverrideMetadata[] {
+  // First, tag each exercise with its original JSON index for stable identification
+  const exercisesWithIndex = jsonExercises.map((ex, idx) => ({
+    ...ex,
+    _originalIndex: idx,
+  }));
   // Step 1: Mark hidden exercises with metadata
   const hideOverrides = overrides.filter(o => o.overrideType === 'hide' && o.isHidden);
 
@@ -54,31 +59,24 @@ function mergeExercisesWithOverrides(
     })
   );
 
-  // Track which duplicate occurrence to hide (for exercises with _dup suffix)
+  // Track which duplicate occurrence to hide (for exercises with _at suffix)
   const hiddenDuplicates = new Map<string, Set<number>>();
   hideOverrides.forEach(o => {
-    const match = o.exerciseId.match(/^(.+)_dup(\d+)$/);
+    const match = o.exerciseId.match(/^(.+)_at(\d+)$/);
     if (match) {
-      const [_, baseId, dupIndex] = match;
+      const [_, baseId, originalIndex] = match;
       if (!hiddenDuplicates.has(baseId)) {
         hiddenDuplicates.set(baseId, new Set());
       }
-      hiddenDuplicates.get(baseId)!.add(parseInt(dupIndex));
+      hiddenDuplicates.get(baseId)!.add(parseInt(originalIndex));
     }
   });
 
-  // Track occurrence index for each exerciseId
-  const occurrenceMap = new Map<string, number>();
-
-  let exercises: ExerciseWithOverrideMetadata[] = jsonExercises
-    .map((ex, index) => {
-      // Track which occurrence this is
-      const currentOccurrence = occurrenceMap.get(ex.exerciseId) || 0;
-      occurrenceMap.set(ex.exerciseId, currentOccurrence + 1);
-
-      // Check if this specific occurrence should be hidden
+  let exercises: ExerciseWithOverrideMetadata[] = exercisesWithIndex
+    .map((ex) => {
+      // Check if this specific occurrence should be hidden (using original index)
       const isDuplicateHidden = hiddenDuplicates.has(ex.exerciseId) &&
-                                hiddenDuplicates.get(ex.exerciseId)!.has(currentOccurrence);
+                                hiddenDuplicates.get(ex.exerciseId)!.has(ex._originalIndex);
 
       // Check if the whole exercise ID is hidden (non-duplicate case)
       const isDirectlyHidden = hiddenIds.has(ex.exerciseId);
@@ -128,15 +126,110 @@ function mergeExercisesWithOverrides(
   exercises = [...exercises, ...createdExercises];
 
   // Step 4: Apply custom ordering
+  // Build order map with both base IDs and duplicate IDs
   const orderMap = new Map(
     overrides
       .filter(o => o.displayOrder !== undefined)
       .map(o => [o.exerciseId, o.displayOrder!])
   );
 
+  // Build a lookup map from original index to occurrence index for fallback
+  // This handles old _dup{occurrenceIndex} overrides in the database
+  const originalIndexToOccurrence = new Map<number, number>();
+  const occurrenceCounter = new Map<string, number>();
+  exercises.forEach((ex) => {
+    const exWithIndex = ex as any;
+    if (exWithIndex._originalIndex !== undefined) {
+      const currentCount = occurrenceCounter.get(ex.exerciseId) || 0;
+      originalIndexToOccurrence.set(exWithIndex._originalIndex, currentCount);
+      occurrenceCounter.set(ex.exerciseId, currentCount + 1);
+    }
+  });
+
+  // Debug logging for L8 only
+  const isL8 = exercises.length > 0 && exercises[0].exerciseId?.includes('L8');
+  if (isL8 && orderMap.size > 0) {
+    console.log("[Sort L8] Order map size:", orderMap.size);
+    const atKeys = Array.from(orderMap.keys()).filter(k => k.includes('_at'));
+    if (atKeys.length > 0) {
+      console.log("[Sort L8] Found", atKeys.length, "_at keys in order map");
+      console.log("[Sort L8] Sample _at keys:", Array.from(orderMap.entries())
+        .filter(([k, v]) => k.includes('_at'))
+        .slice(0, 3)
+        .map(([k, v]) => `${k}=${v}`));
+    }
+    console.log("[Sort L8] Before sort:", exercises.slice(0, 5).map(e => {
+      const ex = e as any;
+      return `${e.exerciseId}@${ex._originalIndex}`;
+    }));
+
+    // Show what displayOrders will be found for first 5 exercises
+    console.log("[Sort L8] Display orders for first 5:");
+    exercises.slice(0, 5).forEach((e, idx) => {
+      const ex = e as any;
+      let order = orderMap.get(e.exerciseId);
+      let source = "base";
+      if (order === undefined && ex._originalIndex !== undefined) {
+        const atKey = `${e.exerciseId}_at${ex._originalIndex}`;
+        order = orderMap.get(atKey);
+        if (order !== undefined) source = `_at${ex._originalIndex}`;
+      }
+      order = order ?? 9999;
+      console.log(`  [${idx}] ${e.exerciseId}@${ex._originalIndex} -> order=${order} (${source})`);
+    });
+  }
+
   exercises.sort((a, b) => {
-    const orderA = orderMap.get(a.exerciseId) ?? 9999;
-    const orderB = orderMap.get(b.exerciseId) ?? 9999;
+    const aWithIndex = a as any;
+    const bWithIndex = b as any;
+
+    // CRITICAL FIX: For exercises with _originalIndex, try _at suffix FIRST
+    // This ensures duplicates use their specific displayOrder, not a shared base ID order
+    let orderA: number | undefined;
+    let lookupKeyA = a.exerciseId;
+
+    if (aWithIndex._originalIndex !== undefined) {
+      // Try _at{originalIndex} first (new format for duplicates)
+      const atKey = `${a.exerciseId}_at${aWithIndex._originalIndex}`;
+      orderA = orderMap.get(atKey);
+      if (orderA !== undefined) {
+        lookupKeyA = atKey;
+      } else {
+        // Fallback to _dup{occurrenceIndex} (old format)
+        const occIndex = originalIndexToOccurrence.get(aWithIndex._originalIndex);
+        if (occIndex !== undefined) {
+          const dupKey = `${a.exerciseId}_dup${occIndex}`;
+          orderA = orderMap.get(dupKey);
+          if (orderA !== undefined) lookupKeyA = dupKey;
+        }
+      }
+    }
+
+    // If no _at or _dup match, try base ID
+    if (orderA === undefined) {
+      orderA = orderMap.get(a.exerciseId);
+    }
+    orderA = orderA ?? 9999;
+
+    // Same logic for B
+    let orderB: number | undefined;
+
+    if (bWithIndex._originalIndex !== undefined) {
+      const atKey = `${b.exerciseId}_at${bWithIndex._originalIndex}`;
+      orderB = orderMap.get(atKey);
+
+      if (orderB === undefined) {
+        const occIndex = originalIndexToOccurrence.get(bWithIndex._originalIndex);
+        if (occIndex !== undefined) {
+          orderB = orderMap.get(`${b.exerciseId}_dup${occIndex}`);
+        }
+      }
+    }
+
+    if (orderB === undefined) {
+      orderB = orderMap.get(b.exerciseId);
+    }
+    orderB = orderB ?? 9999;
 
     if (orderA !== orderB) {
       return orderA - orderB;
@@ -145,6 +238,28 @@ function mergeExercisesWithOverrides(
     // Fallback to original exercise number
     return a.exerciseNumber.localeCompare(b.exerciseNumber);
   });
+
+  if (isL8 && orderMap.size > 0) {
+    console.log("[Sort L8] After sort:", exercises.slice(0, 5).map(e => {
+      const ex = e as any;
+      return `${e.exerciseId}@${ex._originalIndex}`;
+    }));
+
+    // Show what displayOrders were actually used after sorting
+    console.log("[Sort L8] Actual display orders after sort:");
+    exercises.slice(0, 5).forEach((e, idx) => {
+      const ex = e as any;
+      let order = orderMap.get(e.exerciseId);
+      let source = "base";
+      if (order === undefined && ex._originalIndex !== undefined) {
+        const atKey = `${e.exerciseId}_at${ex._originalIndex}`;
+        order = orderMap.get(atKey);
+        if (order !== undefined) source = `_at${ex._originalIndex}`;
+      }
+      order = order ?? 9999;
+      console.log(`  [${idx}] ${e.exerciseId}@${ex._originalIndex} -> order=${order} (${source})`);
+    });
+  }
 
   return exercises;
 }

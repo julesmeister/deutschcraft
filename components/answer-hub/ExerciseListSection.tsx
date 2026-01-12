@@ -100,21 +100,25 @@ export function ExerciseListSection({
   // Section reorder handlers
   const handleMoveSectionUp = (index: number) => {
     if (index === 0 || !onReorderSections) return;
+
     const newOrder = [...sections];
     [newOrder[index - 1], newOrder[index]] = [
       newOrder[index],
       newOrder[index - 1],
     ];
+
     onReorderSections(newOrder);
   };
 
   const handleMoveSectionDown = (index: number) => {
     if (index === sections.length - 1 || !onReorderSections) return;
+
     const newOrder = [...sections];
     [newOrder[index], newOrder[index + 1]] = [
       newOrder[index + 1],
       newOrder[index],
     ];
+
     onReorderSections(newOrder);
   };
 
@@ -134,12 +138,13 @@ export function ExerciseListSection({
         onReorder={onReorder}
         onEdit={onEditExercise}
         onToggleHide={(exerciseId, isHidden, sectionIndex) => {
-          // Use the section index to get the correct globalIndex for duplicates
+          // Use the section index to get the exercise's original JSON index for duplicates
           const item =
             sectionIndex !== undefined
               ? exercisesBySection[section][sectionIndex]
               : undefined;
-          onToggleHide(exerciseId, isHidden, item?.globalIndex);
+          const originalIndex = (item?.exercise as any)?._originalIndex;
+          onToggleHide(exerciseId, isHidden, originalIndex);
         }}
         isTeacher={true}
         renderExercise={(exercise, sectionIndex) => {
@@ -218,10 +223,11 @@ export function ExerciseListSection({
               onToggleHide={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
+                const originalIndex = (item?.exercise as any)?._originalIndex;
                 onToggleHide(
                   exercise.exerciseId,
                   !exercise._isHidden,
-                  item?.globalIndex
+                  originalIndex
                 );
               }}
               onUpdateAnswer={
