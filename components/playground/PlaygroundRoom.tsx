@@ -182,7 +182,7 @@ export function PlaygroundRoom({
             {userRole === "teacher" && onSetCurrentMaterial && (
               <ActionButton
                 onClick={() => setIsMaterialSelectorOpen(true)}
-                variant="default"
+                variant="cyan"
                 icon={
                   <svg
                     className="w-4 h-4"
@@ -205,7 +205,7 @@ export function PlaygroundRoom({
             {onMinimize && (
               <ActionButton
                 onClick={onMinimize}
-                variant="default"
+                variant="gray"
                 icon={
                   <svg
                     className="w-4 h-4"
