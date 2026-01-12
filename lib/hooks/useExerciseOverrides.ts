@@ -234,14 +234,8 @@ export function useReorderExercises() {
         const { teacherEmail, level, lessonNumber } = orderUpdates[0];
         const queryKey = ['exercise-overrides', teacherEmail, level, lessonNumber];
 
-        console.log("[Optimistic] Query key:", queryKey);
-        console.log("[Optimistic] Updating", orderUpdates.length, "exercises");
-
         queryClient.setQueryData(queryKey, (old: ExerciseOverride[] | undefined) => {
-          if (!old) {
-            console.log("[Optimistic] No old data in cache!");
-            return old;
-          }
+          if (!old) return old;
 
           const now = Date.now();
 
@@ -250,14 +244,10 @@ export function useReorderExercises() {
             orderUpdates.map((u) => [u.exerciseId, u.displayOrder])
           );
 
-          let updatedCount = 0;
-          let addedCount = 0;
-
           // Update existing overrides that match
           const updated = old.map((override) => {
             const newOrder = orderMap.get(override.exerciseId);
             if (newOrder !== undefined) {
-              updatedCount++;
               return { ...override, displayOrder: newOrder, updatedAt: now };
             }
             return override;
@@ -267,7 +257,6 @@ export function useReorderExercises() {
           orderUpdates.forEach((update) => {
             const exists = updated.some(o => o.exerciseId === update.exerciseId);
             if (!exists) {
-              addedCount++;
               // Create a new override entry
               updated.push({
                 overrideId: update.overrideId,
@@ -283,8 +272,6 @@ export function useReorderExercises() {
             }
           });
 
-          console.log("[Optimistic] Updated:", updatedCount, "Added:", addedCount, "Total:", updated.length, "(was", old.length, ")");
-          console.log("[Optimistic] Returning new array?", updated !== old);
           return updated;
         });
       }
@@ -302,7 +289,6 @@ export function useReorderExercises() {
       }
     },
     onSuccess: () => {
-      console.log("[Reorder Mutation] Success! Invalidating cache...");
       // Refetch to ensure sync with server (only after success)
       setTimeout(() => {
         queryClient.invalidateQueries({

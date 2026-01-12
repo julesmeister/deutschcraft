@@ -146,39 +146,6 @@ function mergeExercisesWithOverrides(
     }
   });
 
-  // Debug logging for L8 only
-  const isL8 = exercises.length > 0 && exercises[0].exerciseId?.includes('L8');
-  if (isL8 && orderMap.size > 0) {
-    console.log("[Sort L8] Order map size:", orderMap.size);
-    const atKeys = Array.from(orderMap.keys()).filter(k => k.includes('_at'));
-    if (atKeys.length > 0) {
-      console.log("[Sort L8] Found", atKeys.length, "_at keys in order map");
-      console.log("[Sort L8] Sample _at keys:", Array.from(orderMap.entries())
-        .filter(([k, v]) => k.includes('_at'))
-        .slice(0, 3)
-        .map(([k, v]) => `${k}=${v}`));
-    }
-    console.log("[Sort L8] Before sort:", exercises.slice(0, 5).map(e => {
-      const ex = e as any;
-      return `${e.exerciseId}@${ex._originalIndex}`;
-    }));
-
-    // Show what displayOrders will be found for first 5 exercises
-    console.log("[Sort L8] Display orders for first 5:");
-    exercises.slice(0, 5).forEach((e, idx) => {
-      const ex = e as any;
-      let order = orderMap.get(e.exerciseId);
-      let source = "base";
-      if (order === undefined && ex._originalIndex !== undefined) {
-        const atKey = `${e.exerciseId}_at${ex._originalIndex}`;
-        order = orderMap.get(atKey);
-        if (order !== undefined) source = `_at${ex._originalIndex}`;
-      }
-      order = order ?? 9999;
-      console.log(`  [${idx}] ${e.exerciseId}@${ex._originalIndex} -> order=${order} (${source})`);
-    });
-  }
-
   exercises.sort((a, b) => {
     const aWithIndex = a as any;
     const bWithIndex = b as any;
@@ -238,28 +205,6 @@ function mergeExercisesWithOverrides(
     // Fallback to original exercise number
     return a.exerciseNumber.localeCompare(b.exerciseNumber);
   });
-
-  if (isL8 && orderMap.size > 0) {
-    console.log("[Sort L8] After sort:", exercises.slice(0, 5).map(e => {
-      const ex = e as any;
-      return `${e.exerciseId}@${ex._originalIndex}`;
-    }));
-
-    // Show what displayOrders were actually used after sorting
-    console.log("[Sort L8] Actual display orders after sort:");
-    exercises.slice(0, 5).forEach((e, idx) => {
-      const ex = e as any;
-      let order = orderMap.get(e.exerciseId);
-      let source = "base";
-      if (order === undefined && ex._originalIndex !== undefined) {
-        const atKey = `${e.exerciseId}_at${ex._originalIndex}`;
-        order = orderMap.get(atKey);
-        if (order !== undefined) source = `_at${ex._originalIndex}`;
-      }
-      order = order ?? 9999;
-      console.log(`  [${idx}] ${e.exerciseId}@${ex._originalIndex} -> order=${order} (${source})`);
-    });
-  }
 
   return exercises;
 }

@@ -156,14 +156,10 @@ export function useLessonHandlers(
       };
     });
 
-    console.log("[Reorder] Saving display orders for", orderUpdates.length, "exercises");
-    console.log("[Reorder] First 5:", orderUpdates.slice(0, 5).map(u => `${u.exerciseId}=${u.displayOrder}`));
-
     try {
       await reorderExercises.mutateAsync(orderUpdates);
-      console.log("[Reorder] ✓ Saved successfully");
     } catch (error) {
-      console.error("[Reorder] ✗ Error:", error);
+      console.error("[Reorder] Error:", error);
     }
   };
 
