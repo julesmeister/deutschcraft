@@ -7,6 +7,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
+import { useToast } from "@/components/ui/toast";
 
 interface AudioPlayerProps {
   materialTitle: string;
@@ -26,6 +27,7 @@ export function AudioPlayer({
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
+  const toast = useToast();
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -44,27 +46,70 @@ export function AudioPlayer({
       setCurrentTime(0);
     };
 
+    const handleError = () => {
+      console.error("[AudioPlayer] Audio load error");
+      toast.error(
+        "Failed to load audio file. Please check your R2 bucket configuration.",
+        5000,
+        "Load Error"
+      );
+      setIsPlaying(false);
+    };
+
     audio.addEventListener("loadedmetadata", handleLoadedMetadata);
     audio.addEventListener("timeupdate", handleTimeUpdate);
     audio.addEventListener("ended", handleEnded);
+    audio.addEventListener("error", handleError);
 
     return () => {
       audio.removeEventListener("loadedmetadata", handleLoadedMetadata);
       audio.removeEventListener("timeupdate", handleTimeUpdate);
       audio.removeEventListener("ended", handleEnded);
+      audio.removeEventListener("error", handleError);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [materialUrl]);
 
-  const handlePlayPause = () => {
+  const handlePlayPause = async () => {
     const audio = audioRef.current;
     if (!audio) return;
 
     if (isPlaying) {
       audio.pause();
+      setIsPlaying(false);
     } else {
-      audio.play();
+      try {
+        await audio.play();
+        setIsPlaying(true);
+      } catch (error) {
+        console.error("[AudioPlayer] Playback error:", error);
+
+        // Show user-friendly error message
+        const errorMessage = error instanceof Error ? error.message : String(error);
+
+        if (errorMessage.includes("not suitable") || errorMessage.includes("CORS")) {
+          toast.error(
+            "Audio file cannot be played. Please enable public access and CORS on your R2 bucket.",
+            5000,
+            "Playback Error"
+          );
+        } else if (errorMessage.includes("network")) {
+          toast.error(
+            "Network error. Please check your internet connection.",
+            3000,
+            "Connection Error"
+          );
+        } else {
+          toast.error(
+            "Failed to play audio. The file may be unavailable or corrupted.",
+            3000,
+            "Playback Error"
+          );
+        }
+
+        setIsPlaying(false);
+      }
     }
-    setIsPlaying(!isPlaying);
   };
 
   const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {

@@ -188,7 +188,9 @@
       "Bash(Select-String -Pattern \"\\(error TS|Found \\\\d+ error\\)\")",
       "Bash(cut:*)",
       "Bash(robocopy:*)",
-      "Bash(xcopy \"C:\\\\Users\\\\User\\\\Documents\\\\Schritte\" \"public\\\\materials\"\" /E /I /Y /Q && echo \"Copy completed successfully \")"
+      "Bash(xcopy \"C:\\\\Users\\\\User\\\\Documents\\\\Schritte\" \"public\\\\materials\"\" /E /I /Y /Q && echo \"Copy completed successfully \")",
+      "Bash(timeout /t 8)",
+      "Bash(taskkill:*)"
     ],
     "deny": [],
     "ask": []

@@ -177,14 +177,30 @@ export default function MaterialsPage() {
         // Play audio
         if (audioRef.current) {
           audioRef.current.src = audio.fileUrl;
-          audioRef.current.play();
+          try {
+            await audioRef.current.play();
+            setCurrentlyPlaying(audio.audioId);
+            await incrementPlayCount(audio.audioId);
+          } catch (playError) {
+            console.error("[Materials] Playback error:", playError);
+            const errorMessage = playError instanceof Error ? playError.message : String(playError);
+
+            if (errorMessage.includes("not suitable") || errorMessage.includes("CORS")) {
+              toast.error(
+                "Audio cannot be played. Please enable public access and CORS on your R2 bucket.",
+                5000,
+                "Playback Error"
+              );
+            } else {
+              toast.error("Failed to play audio file.", 3000, "Playback Error");
+            }
+            setCurrentlyPlaying(null);
+          }
         }
-        setCurrentlyPlaying(audio.audioId);
-        await incrementPlayCount(audio.audioId);
       }
     } catch (error) {
-      console.error("[Materials] Error playing audio:", error);
-      toast.error("Failed to play audio");
+      console.error("[Materials] Error handling audio:", error);
+      toast.error("An unexpected error occurred", 3000);
     }
   };
 
