@@ -116,14 +116,14 @@ export async function joinPlaygroundRoom(
 
   const allUserParticipants = await getDocs(allUserParticipantsQuery);
 
-  // Find active participant (leftAt == null)
-  let activeParticipant = null;
+  // Find active participants (leftAt == null)
+  const activeParticipants = [];
   const oldParticipants = [];
 
   allUserParticipants.forEach((doc) => {
     const data = doc.data();
     if (data.leftAt === null) {
-      activeParticipant = doc;
+      activeParticipants.push(doc);
     } else {
       // Old participant that already left - mark for deletion
       oldParticipants.push(doc);
@@ -134,8 +134,17 @@ export async function joinPlaygroundRoom(
   const deletePromises = oldParticipants.map((doc) => deleteDoc(doc.ref));
   await Promise.all(deletePromises);
 
+  // If multiple active participants exist (shouldn't happen, but handle it)
+  // Keep the first one and delete the rest
+  if (activeParticipants.length > 1) {
+    console.warn(`[joinPlaygroundRoom] Found ${activeParticipants.length} active participants for user ${userId} in room ${roomId}, cleaning up duplicates`);
+    const duplicatesToDelete = activeParticipants.slice(1).map((doc) => deleteDoc(doc.ref));
+    await Promise.all(duplicatesToDelete);
+  }
+
   // If active participant exists, update and return it
-  if (activeParticipant) {
+  if (activeParticipants.length > 0) {
+    const activeParticipant = activeParticipants[0];
     await updateDoc(activeParticipant.ref, {
       joinedAt: serverTimestamp(), // Update join time
       peerId: peerId || null,
