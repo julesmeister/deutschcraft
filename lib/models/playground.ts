@@ -17,6 +17,7 @@ export interface PlaygroundRoom {
   currentMaterialId?: string; // Material being displayed in the room
   currentMaterialTitle?: string;
   currentMaterialUrl?: string;
+  currentMaterialType?: 'pdf' | 'audio'; // Type of material currently displayed
 }
 
 export interface PlaygroundParticipant {

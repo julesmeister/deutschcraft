@@ -22,6 +22,24 @@ export interface Material {
   updatedAt: number;
 }
 
+export interface AudioMaterial {
+  audioId: string;
+  title: string;
+  fileName: string;
+  fileUrl: string;
+  fileSize: number | null;
+  level: 'A1.1' | 'A1.2' | 'A2.1' | 'A2.2' | 'B1.1' | 'B1.2';
+  bookType: 'KB' | 'AB';  // Kursbuch or Arbeitsbuch
+  cdNumber: string | null;
+  trackNumber: string | null;
+  lessonNumber: number | null;
+  description: string | null;
+  isPublic: boolean;
+  playCount: number;
+  createdAt: number;
+  updatedAt: number;
+}
+
 // ============================================================================
 // WRITE OPERATIONS
 // ============================================================================
@@ -260,6 +278,209 @@ function mapRowToMaterial(row: any): Material {
     uploadedBy: row.uploaded_by as string | null,
     tags: JSON.parse((row.tags as string) || '[]'),
     downloadCount: row.download_count as number,
+    createdAt: row.created_at as number,
+    updatedAt: row.updated_at as number,
+  };
+}
+
+// ============================================================================
+// AUDIO MATERIALS - WRITE OPERATIONS
+// ============================================================================
+
+/**
+ * Create a new audio material record
+ */
+export async function createAudioMaterial(data: Omit<AudioMaterial, 'audioId' | 'playCount' | 'createdAt' | 'updatedAt'>): Promise<string> {
+  try {
+    const audioId = `audio_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    const now = Date.now();
+
+    await db.execute({
+      sql: `INSERT INTO audio_materials (
+        audio_id, title, file_name, file_url, file_size,
+        level, book_type, cd_number, track_number, lesson_number,
+        description, is_public, created_at, updated_at
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      args: [
+        audioId,
+        data.title,
+        data.fileName,
+        data.fileUrl,
+        data.fileSize,
+        data.level,
+        data.bookType,
+        data.cdNumber,
+        data.trackNumber,
+        data.lessonNumber,
+        data.description,
+        data.isPublic ? 1 : 0,
+        now,
+        now,
+      ],
+    });
+
+    return audioId;
+  } catch (error) {
+    console.error('[materialsService] Error creating audio material:', error);
+    throw error;
+  }
+}
+
+/**
+ * Increment play count for audio
+ */
+export async function incrementPlayCount(audioId: string): Promise<void> {
+  try {
+    await db.execute({
+      sql: 'UPDATE audio_materials SET play_count = play_count + 1 WHERE audio_id = ?',
+      args: [audioId],
+    });
+  } catch (error) {
+    console.error('[materialsService] Error incrementing play count:', error);
+    throw error;
+  }
+}
+
+/**
+ * Delete an audio material
+ */
+export async function deleteAudioMaterial(audioId: string): Promise<void> {
+  try {
+    await db.execute({
+      sql: 'DELETE FROM audio_materials WHERE audio_id = ?',
+      args: [audioId],
+    });
+  } catch (error) {
+    console.error('[materialsService] Error deleting audio material:', error);
+    throw error;
+  }
+}
+
+// ============================================================================
+// AUDIO MATERIALS - READ OPERATIONS
+// ============================================================================
+
+/**
+ * Get all public audio materials
+ */
+export async function getPublicAudioMaterials(): Promise<AudioMaterial[]> {
+  try {
+    const result = await db.execute({
+      sql: `SELECT * FROM audio_materials WHERE is_public = 1 ORDER BY level, lesson_number, track_number`,
+      args: [],
+    });
+
+    return result.rows.map(mapRowToAudioMaterial);
+  } catch (error) {
+    console.error('[materialsService] Error fetching public audio materials:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get all audio materials (for teachers)
+ */
+export async function getAllAudioMaterials(): Promise<AudioMaterial[]> {
+  try {
+    const result = await db.execute({
+      sql: `SELECT * FROM audio_materials ORDER BY level, lesson_number, track_number`,
+      args: [],
+    });
+
+    return result.rows.map(mapRowToAudioMaterial);
+  } catch (error) {
+    console.error('[materialsService] Error fetching all audio materials:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get audio materials by level
+ */
+export async function getAudioMaterialsByLevel(
+  level: string,
+  publicOnly: boolean = true
+): Promise<AudioMaterial[]> {
+  try {
+    const sql = publicOnly
+      ? `SELECT * FROM audio_materials WHERE level = ? AND is_public = 1 ORDER BY lesson_number, track_number`
+      : `SELECT * FROM audio_materials WHERE level = ? ORDER BY lesson_number, track_number`;
+
+    const result = await db.execute({
+      sql,
+      args: [level],
+    });
+
+    return result.rows.map(mapRowToAudioMaterial);
+  } catch (error) {
+    console.error('[materialsService] Error fetching audio materials by level:', error);
+    throw error;
+  }
+}
+
+/**
+ * Get audio material by ID
+ */
+export async function getAudioMaterialById(audioId: string): Promise<AudioMaterial | null> {
+  try {
+    const result = await db.execute({
+      sql: 'SELECT * FROM audio_materials WHERE audio_id = ? LIMIT 1',
+      args: [audioId],
+    });
+
+    if (result.rows.length === 0) return null;
+
+    return mapRowToAudioMaterial(result.rows[0]);
+  } catch (error) {
+    console.error('[materialsService] Error fetching audio material by ID:', error);
+    throw error;
+  }
+}
+
+/**
+ * Search audio materials
+ */
+export async function searchAudioMaterials(
+  query: string,
+  publicOnly: boolean = true
+): Promise<AudioMaterial[]> {
+  try {
+    const searchPattern = `%${query}%`;
+    const sql = publicOnly
+      ? `SELECT * FROM audio_materials
+         WHERE (title LIKE ? OR file_name LIKE ? OR description LIKE ?) AND is_public = 1
+         ORDER BY level, lesson_number, track_number`
+      : `SELECT * FROM audio_materials
+         WHERE title LIKE ? OR file_name LIKE ? OR description LIKE ?
+         ORDER BY level, lesson_number, track_number`;
+
+    const result = await db.execute({
+      sql,
+      args: [searchPattern, searchPattern, searchPattern],
+    });
+
+    return result.rows.map(mapRowToAudioMaterial);
+  } catch (error) {
+    console.error('[materialsService] Error searching audio materials:', error);
+    throw error;
+  }
+}
+
+function mapRowToAudioMaterial(row: any): AudioMaterial {
+  return {
+    audioId: row.audio_id as string,
+    title: row.title as string,
+    fileName: row.file_name as string,
+    fileUrl: row.file_url as string,
+    fileSize: row.file_size as number | null,
+    level: row.level as AudioMaterial['level'],
+    bookType: row.book_type as 'KB' | 'AB',
+    cdNumber: row.cd_number as string | null,
+    trackNumber: row.track_number as string | null,
+    lessonNumber: row.lesson_number as number | null,
+    description: row.description as string | null,
+    isPublic: (row.is_public as number) === 1,
+    playCount: row.play_count as number,
     createdAt: row.created_at as number,
     updatedAt: row.updated_at as number,
   };

@@ -253,7 +253,8 @@ export default function PlaygroundRoomPage({
   const handleSetCurrentMaterial = async (
     materialId: string | null,
     materialTitle: string | null,
-    materialUrl: string | null
+    materialUrl: string | null,
+    materialType?: "pdf" | "audio" | null
   ) => {
     if (!currentRoom) return;
     try {
@@ -261,7 +262,8 @@ export default function PlaygroundRoomPage({
         currentRoom.roomId,
         materialId,
         materialTitle,
-        materialUrl
+        materialUrl,
+        materialType
       );
     } catch (error) {
       console.error("[Room] Error setting material:", error);

@@ -19,6 +19,7 @@ import { ParticipantsList } from "@/components/playground/ParticipantsList";
 import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
 import { MaterialSelector } from "@/components/playground/MaterialSelector";
 import { PDFViewer } from "@/components/playground/PDFViewer";
+import { AudioPlayer } from "@/components/playground/AudioPlayer";
 import { formatDuration } from "@/lib/utils/dateHelpers";
 import type {
   PlaygroundRoom as PlaygroundRoomType,
@@ -76,7 +77,8 @@ interface PlaygroundRoomProps {
   onSetCurrentMaterial?: (
     materialId: string | null,
     materialTitle: string | null,
-    materialUrl: string | null
+    materialUrl: string | null,
+    materialType?: "pdf" | "audio" | null
   ) => Promise<void>;
   onMinimize?: () => void;
   onCloseDialog: () => void;
@@ -153,10 +155,11 @@ export function PlaygroundRoom({
   const handleSelectMaterial = async (
     materialId: string,
     materialTitle: string,
-    materialUrl: string
+    materialUrl: string,
+    materialType: "pdf" | "audio"
   ) => {
     if (onSetCurrentMaterial) {
-      await onSetCurrentMaterial(materialId, materialTitle, materialUrl);
+      await onSetCurrentMaterial(materialId, materialTitle, materialUrl, materialType);
     }
   };
 
@@ -308,15 +311,24 @@ export function PlaygroundRoom({
               </div>
             )}
 
-            {/* PDF Viewer (shown when material is selected) */}
+            {/* Material Viewer (PDF or Audio - shown when material is selected) */}
             {currentRoom.currentMaterialUrl && currentRoom.currentMaterialTitle && (
-              <div className="h-[600px]">
-                <PDFViewer
-                  materialTitle={currentRoom.currentMaterialTitle}
-                  materialUrl={currentRoom.currentMaterialUrl}
-                  onClose={userRole === "teacher" ? handleCloseMaterial : undefined}
-                  showCloseButton={userRole === "teacher"}
-                />
+              <div className={currentRoom.currentMaterialType === "audio" ? "" : "h-[600px]"}>
+                {currentRoom.currentMaterialType === "audio" ? (
+                  <AudioPlayer
+                    materialTitle={currentRoom.currentMaterialTitle}
+                    materialUrl={currentRoom.currentMaterialUrl}
+                    onClose={userRole === "teacher" ? handleCloseMaterial : undefined}
+                    showCloseButton={userRole === "teacher"}
+                  />
+                ) : (
+                  <PDFViewer
+                    materialTitle={currentRoom.currentMaterialTitle}
+                    materialUrl={currentRoom.currentMaterialUrl}
+                    onClose={userRole === "teacher" ? handleCloseMaterial : undefined}
+                    showCloseButton={userRole === "teacher"}
+                  />
+                )}
               </div>
             )}
 

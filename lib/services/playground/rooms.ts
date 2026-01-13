@@ -205,13 +205,15 @@ export async function setCurrentMaterial(
   roomId: string,
   materialId: string | null,
   materialTitle: string | null,
-  materialUrl: string | null
+  materialUrl: string | null,
+  materialType?: "pdf" | "audio" | null
 ): Promise<void> {
   const roomRef = doc(db, COLLECTIONS.ROOMS, roomId);
   await updateDoc(roomRef, {
     currentMaterialId: materialId || null,
     currentMaterialTitle: materialTitle || null,
     currentMaterialUrl: materialUrl || null,
+    currentMaterialType: materialType || null,
   });
 }
 
