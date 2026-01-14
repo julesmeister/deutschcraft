@@ -5,6 +5,8 @@
  * Similar to Google's account switcher functionality.
  */
 
+import { getStorageKey } from '@/lib/brand-config';
+
 export interface SavedAccount {
   email: string;
   name: string;
@@ -12,7 +14,7 @@ export interface SavedAccount {
   lastUsed: number; // timestamp
 }
 
-const STORAGE_KEY = 'testmanship_account_history';
+const STORAGE_KEY = getStorageKey('account_history');
 const MAX_ACCOUNTS = 5; // Maximum number of accounts to remember
 
 /**

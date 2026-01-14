@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "rebrand": "tsx scripts/rebrand.ts",
     "seed:students": "tsx scripts/seed-students.ts",
     "seed:translations": "tsx scripts/seed-translation-exercises.ts",
     "fix:student": "tsx scripts/fix-existing-student.ts",

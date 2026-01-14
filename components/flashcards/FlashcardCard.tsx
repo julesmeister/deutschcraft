@@ -23,6 +23,41 @@ interface FlashcardCardProps {
   onToggleSave?: () => void;
 }
 
+/**
+ * Extract the German article (der/die/das) from the beginning of text
+ * @param text - German text that may start with an article
+ * @returns 'der' | 'die' | 'das' | null
+ */
+function extractArticle(text: string): 'der' | 'die' | 'das' | null {
+  const trimmed = text.trim().toLowerCase();
+  if (trimmed.startsWith('der ')) return 'der';
+  if (trimmed.startsWith('die ')) return 'die';
+  if (trimmed.startsWith('das ')) return 'das';
+  return null;
+}
+
+/**
+ * Get gradient background class based on German article
+ * @param article - German article (der/die/das)
+ * @returns Tailwind gradient classes
+ */
+function getArticleGradient(article: 'der' | 'die' | 'das' | null): string {
+  switch (article) {
+    case 'der':
+      // Blue gradient for masculine (der)
+      return 'bg-gradient-to-br from-blue-100 via-blue-50 to-cyan-50';
+    case 'die':
+      // Pink gradient for feminine (die)
+      return 'bg-gradient-to-br from-pink-100 via-pink-50 to-rose-50';
+    case 'das':
+      // Green gradient for neuter (das)
+      return 'bg-gradient-to-br from-green-100 via-green-50 to-emerald-50';
+    default:
+      // White background for other word types
+      return 'bg-white';
+  }
+}
+
 export function FlashcardCard({
   card,
   isFlipped,
@@ -45,10 +80,21 @@ export function FlashcardCard({
     return 'bg-gray-400';
   };
 
+  // Detect German article for color-coding
+  // Apply gradient whenever German text is displayed (front or back):
+  // - German first mode + not flipped = showing German front → apply gradient
+  // - English first mode + flipped = showing German back → apply gradient
+  const germanArticle = extractArticle(card.german);
+  const isShowingGerman = isFlipped === showEnglishFirst;
+  const shouldApplyGradient = isShowingGerman && germanArticle !== null;
+  const cardGradient = shouldApplyGradient
+    ? getArticleGradient(germanArticle)
+    : 'bg-white';
+
   return (
     <Card padding="none" rounded="2xl" className="overflow-hidden">
       <div
-        className="relative min-h-[400px] cursor-pointer"
+        className={`relative min-h-[400px] cursor-pointer transition-colors duration-500 ${cardGradient}`}
         onClick={onFlip}
       >
         {/* Mastery Battery Bar - Top Right */}

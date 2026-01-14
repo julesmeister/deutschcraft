@@ -4,6 +4,7 @@ import "./globals.css";
 import { SessionProvider } from "@/components/providers/SessionProvider";
 import { AccountHistoryProvider } from "@/components/providers/AccountHistoryProvider";
 import { ToastProvider } from "@/components/ui/toast";
+import { brandConfig } from "@/lib/brand-config";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -18,16 +19,14 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Testmanship - Learn German Together",
-  description:
-    "A unique approach to learning German with AI-powered flashcards, peer collaboration, and personalized teacher feedback.",
+  title: `${brandConfig.name} - ${brandConfig.tagline}`,
+  description: brandConfig.description,
   keywords:
     "German learning, language learning, flashcards, AI tutor, peer learning, teacher feedback",
-  authors: [{ name: "Testmanship" }],
+  authors: [{ name: brandConfig.name }],
   openGraph: {
-    title: "Testmanship - Learn German Together",
-    description:
-      "A unique approach to learning German with AI-powered flashcards, peer collaboration, and personalized teacher feedback.",
+    title: `${brandConfig.name} - ${brandConfig.tagline}`,
+    description: brandConfig.description,
     type: "website",
   },
 };

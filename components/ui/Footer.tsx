@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { brandConfig } from '@/lib/brand-config';
 
 export function Footer() {
   return (
@@ -12,7 +13,7 @@ export function Footer() {
               <div className="w-10 h-10 rounded-lg bg-piku-purple-dark flex items-center justify-center">
                 <span className="text-white font-black text-xl">T</span>
               </div>
-              <span className="font-black text-xl">Testmanship</span>
+              <span className="font-black text-xl">{brandConfig.name}</span>
             </div>
             <p className="text-gray-400">
               A unique approach to learning German with AI and peer collaboration
@@ -47,7 +48,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-          <p>&copy; 2025 Testmanship. All rights reserved.</p>
+          <p>{brandConfig.legal.copyright}</p>
         </div>
       </div>
     </footer>

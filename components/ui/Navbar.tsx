@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
 import { AccountSwitcher } from '@/components/ui/AccountSwitcher';
+import { brandConfig } from '@/lib/brand-config';
 
 interface NavItem {
   name: string;
@@ -99,7 +100,7 @@ export function Navbar({
                 <span className={`font-black text-xl ${dark ? 'text-gray-900' : 'text-white'}`}>T</span>
               </div>
               <span className={`font-black text-xl ${dark ? 'text-white' : 'text-gray-900'}`}>
-                Testmanship
+                {brandConfig.name}
               </span>
             </Link>
 
