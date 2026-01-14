@@ -42,7 +42,7 @@
  * COMMAND LINE OPTIONS:
  *   --name                (REQUIRED) New brand name (e.g., "MyApp")
  *   --domain              (REQUIRED) New domain without protocol (e.g., "myapp.com")
- *   --folder              (optional) New folder name (defaults to kebab-case of name + "-web-v2")
+ *   --folder              (optional) New folder/repo name (defaults to kebab-case of name, e.g., "myapp")
  *   --bucket              (optional) New R2 bucket name (defaults to kebab-case of name)
  *   --database            (optional) New database name (defaults to folder name)
  *   --tagline             (optional) New tagline/slogan
@@ -262,9 +262,9 @@ function validateOptions(options: Partial<RebrandOptions>): RebrandOptions {
   return {
     name: options.name,
     domain: options.domain,
-    folder: options.folder || `${kebabName}-web-v2`,
+    folder: options.folder || kebabName,
     bucket: options.bucket || kebabName,
-    database: options.database || options.folder || `${kebabName}-web-v2`,
+    database: options.database || options.folder || kebabName,
     tagline: options.tagline,
     description: options.description,
     dryRun: options.dryRun || false,
