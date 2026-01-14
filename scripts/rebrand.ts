@@ -33,19 +33,25 @@
  *   Preview changes without applying (dry-run):
  *     npm run rebrand -- --dry-run --name "NewBrand" --domain "newbrand.com"
  *
- *   Rebrand and rename folder:
- *     npm run rebrand -- --name "NewBrand" --domain "newbrand.com" --rename-folder
+ *   Rebrand with GitHub repo rename (in GitHub Codespaces):
+ *     npm run rebrand -- --name "DeutschCraft" --domain "deutschcraft.com" --rename-github-repo
+ *
+ *   Rebrand and create new GitHub repo:
+ *     npm run rebrand -- --name "NewBrand" --domain "newbrand.com" --create-github-repo
  *
  * COMMAND LINE OPTIONS:
- *   --name          (REQUIRED) New brand name (e.g., "MyApp")
- *   --domain        (REQUIRED) New domain without protocol (e.g., "myapp.com")
- *   --folder        (optional) New folder name (defaults to kebab-case of name + "-web-v2")
- *   --bucket        (optional) New R2 bucket name (defaults to kebab-case of name)
- *   --database      (optional) New database name (defaults to folder name)
- *   --tagline       (optional) New tagline/slogan
- *   --description   (optional) New description for SEO
- *   --dry-run       (optional) Preview changes without applying them
- *   --rename-folder (optional) Rename the project folder (requires confirmation)
+ *   --name                (REQUIRED) New brand name (e.g., "MyApp")
+ *   --domain              (REQUIRED) New domain without protocol (e.g., "myapp.com")
+ *   --folder              (optional) New folder name (defaults to kebab-case of name + "-web-v2")
+ *   --bucket              (optional) New R2 bucket name (defaults to kebab-case of name)
+ *   --database            (optional) New database name (defaults to folder name)
+ *   --tagline             (optional) New tagline/slogan
+ *   --description         (optional) New description for SEO
+ *   --github-username     (optional) GitHub username for new repo (defaults to current owner)
+ *   --dry-run             (optional) Preview changes without applying them
+ *   --rename-folder       (optional) Rename the project folder (requires confirmation)
+ *   --create-github-repo  (optional) Create new GitHub repository (requires gh CLI)
+ *   --rename-github-repo  (optional) Rename existing GitHub repository (requires gh CLI)
  *
  * AFTER RUNNING THIS SCRIPT:
  * 1. Review changes: git diff
@@ -95,6 +101,12 @@ interface RebrandOptions {
   dryRun: boolean;
   /** Whether to rename the project folder */
   renameFolder: boolean;
+  /** Whether to create a new GitHub repository */
+  createGithubRepo: boolean;
+  /** Whether to rename the existing GitHub repository */
+  renameGithubRepo: boolean;
+  /** GitHub username for new repository */
+  githubUsername?: string;
 }
 
 /**
@@ -131,6 +143,8 @@ function parseArgs(): Partial<RebrandOptions> {
   const options: Partial<RebrandOptions> = {
     dryRun: false,
     renameFolder: false,
+    createGithubRepo: false,
+    renameGithubRepo: false,
   };
 
   for (let i = 0; i < args.length; i++) {
@@ -166,11 +180,21 @@ function parseArgs(): Partial<RebrandOptions> {
         options.description = nextArg;
         i++;
         break;
+      case "--github-username":
+        options.githubUsername = nextArg;
+        i++;
+        break;
       case "--dry-run":
         options.dryRun = true;
         break;
       case "--rename-folder":
         options.renameFolder = true;
+        break;
+      case "--create-github-repo":
+        options.createGithubRepo = true;
+        break;
+      case "--rename-github-repo":
+        options.renameGithubRepo = true;
         break;
     }
   }
@@ -245,6 +269,9 @@ function validateOptions(options: Partial<RebrandOptions>): RebrandOptions {
     description: options.description,
     dryRun: options.dryRun || false,
     renameFolder: options.renameFolder || false,
+    createGithubRepo: options.createGithubRepo || false,
+    renameGithubRepo: options.renameGithubRepo || false,
+    githubUsername: options.githubUsername,
   };
 }
 
@@ -649,6 +676,109 @@ function renameFolderIfRequested(options: RebrandOptions): void {
 
 /**
  * ============================================================================
+ * GITHUB REPOSITORY OPERATIONS
+ * ============================================================================
+ */
+
+/**
+ * Handle GitHub repository operations (create new or rename existing)
+ *
+ * Uses GitHub CLI (gh) which is pre-installed in GitHub Codespaces.
+ *
+ * @param options - Rebranding options including GitHub flags
+ */
+function handleGithubRepoOperations(options: RebrandOptions): void {
+  // Skip if no GitHub operations requested
+  if (!options.createGithubRepo && !options.renameGithubRepo) {
+    return;
+  }
+
+  // Check if gh CLI is available
+  try {
+    execSync("gh --version", { stdio: "ignore" });
+  } catch (error) {
+    console.error("\n❌ Error: GitHub CLI (gh) is not installed");
+    console.log("   Install it from: https://cli.github.com/");
+    console.log("   Or run this in GitHub Codespaces where it's pre-installed");
+    return;
+  }
+
+  console.log("\n🐙 GitHub Repository Operations...");
+
+  // Get current repository info
+  let currentRepo = "";
+  try {
+    currentRepo = execSync("git remote get-url origin", { encoding: "utf-8" }).trim();
+  } catch (error) {
+    console.warn("   ⚠️  Could not determine current repository");
+  }
+
+  // Option 1: Create new GitHub repository
+  if (options.createGithubRepo) {
+    const username = options.githubUsername || "";
+    const repoName = options.folder;
+    const description = options.description || `${options.name} - Rebranded application`;
+
+    console.log(`\n📦 Creating new repository: ${repoName}`);
+
+    if (options.dryRun) {
+      console.log(`   📝 Would create: ${username}/${repoName} (dry-run mode)`);
+      console.log(`   📝 Would update git remote to new repository`);
+      return;
+    }
+
+    try {
+      // Create the repository
+      const createCmd = username
+        ? `gh repo create ${username}/${repoName} --private --description "${description}"`
+        : `gh repo create ${repoName} --private --description "${description}"`;
+
+      console.log(`   Running: ${createCmd}`);
+      execSync(createCmd, { stdio: "inherit" });
+
+      // Update git remote
+      const newRemote = username
+        ? `https://github.com/${username}/${repoName}.git`
+        : execSync(`gh repo view ${repoName} --json url -q .url`, { encoding: "utf-8" }).trim() + ".git";
+
+      execSync(`git remote set-url origin ${newRemote}`, { stdio: "inherit" });
+
+      console.log(`   ✅ Repository created: ${newRemote}`);
+      console.log(`   ✅ Git remote updated to new repository`);
+    } catch (error: any) {
+      console.error(`\n❌ Error creating repository: ${error.message}`);
+      console.log("   You may need to:");
+      console.log("   1. Authenticate: gh auth login");
+      console.log("   2. Check if repository already exists");
+    }
+  }
+
+  // Option 2: Rename existing GitHub repository
+  if (options.renameGithubRepo) {
+    const newName = options.folder;
+
+    console.log(`\n🔄 Renaming current repository to: ${newName}`);
+
+    if (options.dryRun) {
+      console.log(`   📝 Would rename repository to: ${newName} (dry-run mode)`);
+      return;
+    }
+
+    try {
+      execSync(`gh repo rename ${newName} --yes`, { stdio: "inherit" });
+      console.log(`   ✅ Repository renamed to: ${newName}`);
+      console.log(`   ✅ Git remote URL automatically updated`);
+    } catch (error: any) {
+      console.error(`\n❌ Error renaming repository: ${error.message}`);
+      console.log("   You may need:");
+      console.log("   1. Owner/admin permissions on the repository");
+      console.log("   2. To authenticate: gh auth login");
+    }
+  }
+}
+
+/**
+ * ============================================================================
  * SUMMARY & REPORTING
  * ============================================================================
  */
@@ -793,6 +923,7 @@ function main(): void {
   updateUtilityFiles(options);
   updateDocumentationFiles(options);
   renameFolderIfRequested(options);
+  handleGithubRepoOperations(options);
 
   // Show final summary
   printSummary(options);
