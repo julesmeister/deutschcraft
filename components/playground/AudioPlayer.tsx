@@ -8,6 +8,7 @@
 import { useRef, useState, useEffect } from "react";
 import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
 import { useToast } from "@/components/ui/toast";
+import { getPlayableUrl } from "@/lib/utils/urlHelpers";
 
 interface AudioPlayerProps {
   materialTitle: string;
@@ -28,6 +29,8 @@ export function AudioPlayer({
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
   const toast = useToast();
+
+  const playableUrl = getPlayableUrl(materialUrl);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -68,7 +71,7 @@ export function AudioPlayer({
       audio.removeEventListener("error", handleError);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [materialUrl]);
+  }, [playableUrl]);
 
   const handlePlayPause = async () => {
     const audio = audioRef.current;
@@ -85,9 +88,13 @@ export function AudioPlayer({
         console.error("[AudioPlayer] Playback error:", error);
 
         // Show user-friendly error message
-        const errorMessage = error instanceof Error ? error.message : String(error);
+        const errorMessage =
+          error instanceof Error ? error.message : String(error);
 
-        if (errorMessage.includes("not suitable") || errorMessage.includes("CORS")) {
+        if (
+          errorMessage.includes("not suitable") ||
+          errorMessage.includes("CORS")
+        ) {
           toast.error(
             "Audio file cannot be played. Please enable public access and CORS on your R2 bucket.",
             5000,
@@ -149,9 +156,7 @@ export function AudioPlayer({
             <h3 className="text-sm font-bold text-neutral-900">
               {materialTitle}
             </h3>
-            <p className="text-xs text-neutral-600">
-              Shared Audio Material
-            </p>
+            <p className="text-xs text-neutral-600">Shared Audio Material</p>
           </div>
         </div>
         {showCloseButton && onClose && (
@@ -166,7 +171,7 @@ export function AudioPlayer({
 
       {/* Audio Player */}
       <div className="p-8 bg-gradient-to-br from-purple-50 via-white to-blue-50">
-        <audio ref={audioRef} src={materialUrl} />
+        <audio ref={audioRef} src={playableUrl} />
 
         {/* Progress Bar */}
         <div className="mb-6">
@@ -192,11 +197,7 @@ export function AudioPlayer({
             className="w-10 h-10 bg-gray-800 hover:bg-gray-900 text-white rounded-full flex items-center justify-center transition-colors"
           >
             {isPlaying ? (
-              <svg
-                className="w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M5 4a1 1 0 011 1v10a1 1 0 11-2 0V5a1 1 0 011-1zm8 0a1 1 0 011 1v10a1 1 0 11-2 0V5a1 1 0 011-1z" />
               </svg>
             ) : (

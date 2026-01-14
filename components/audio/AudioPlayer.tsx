@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import { useState, useRef, useEffect } from 'react';
-import { AudioTrack } from '@/lib/models/audio';
+import { useState, useRef, useEffect } from "react";
+import { AudioTrack } from "@/lib/models/audio";
+import { getPlayableUrl } from "@/lib/utils/urlHelpers";
 
 interface AudioPlayerProps {
   tracks: AudioTrack[];
@@ -9,7 +10,11 @@ interface AudioPlayerProps {
   onTrackComplete?: (trackId: string) => void;
 }
 
-export function AudioPlayer({ tracks, sectionTitle, onTrackComplete }: AudioPlayerProps) {
+export function AudioPlayer({
+  tracks,
+  sectionTitle,
+  onTrackComplete,
+}: AudioPlayerProps) {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -25,7 +30,7 @@ export function AudioPlayer({ tracks, sectionTitle, onTrackComplete }: AudioPlay
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
+    return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
   // Play/Pause handler
@@ -82,7 +87,9 @@ export function AudioPlayer({ tracks, sectionTitle, onTrackComplete }: AudioPlay
     <div className="bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-gray-200 rounded-2xl p-6">
       {/* Section Title */}
       <div className="mb-6">
-        <h3 className="text-2xl font-black text-gray-900 mb-1">{sectionTitle}</h3>
+        <h3 className="text-2xl font-black text-gray-900 mb-1">
+          {sectionTitle}
+        </h3>
         <p className="text-sm text-gray-600">
           Track {currentTrackIndex + 1} of {tracks.length}
         </p>
@@ -90,15 +97,19 @@ export function AudioPlayer({ tracks, sectionTitle, onTrackComplete }: AudioPlay
 
       {/* Current Track Info */}
       <div className="bg-white rounded-xl p-6 mb-6 shadow-sm">
-        <h4 className="text-lg font-bold text-gray-900 mb-2">{currentTrack.title}</h4>
+        <h4 className="text-lg font-bold text-gray-900 mb-2">
+          {currentTrack.title}
+        </h4>
         {currentTrack.description && (
-          <p className="text-sm text-gray-600 mb-4">{currentTrack.description}</p>
+          <p className="text-sm text-gray-600 mb-4">
+            {currentTrack.description}
+          </p>
         )}
 
         {/* Audio Element (hidden) */}
         <audio
           ref={audioRef}
-          src={currentTrack.audioUrl}
+          src={getPlayableUrl(currentTrack.audioUrl)}
           onTimeUpdate={(e) => setCurrentTime(e.currentTarget.currentTime)}
           onLoadedMetadata={(e) => setDuration(e.currentTarget.duration)}
           onEnded={() => {
@@ -149,7 +160,11 @@ export function AudioPlayer({ tracks, sectionTitle, onTrackComplete }: AudioPlay
                 <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
               </svg>
             ) : (
-              <svg className="w-6 h-6 ml-1" fill="currentColor" viewBox="0 0 24 24">
+              <svg
+                className="w-6 h-6 ml-1"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
                 <path d="M8 5v14l11-7z" />
               </svg>
             )}
@@ -181,7 +196,7 @@ export function AudioPlayer({ tracks, sectionTitle, onTrackComplete }: AudioPlay
             onClick={() => setShowTranscript(!showTranscript)}
             className="w-full py-2 px-4 rounded-lg bg-gray-100 hover:bg-gray-200 text-sm font-bold transition-colors"
           >
-            {showTranscript ? 'Hide' : 'Show'} Transcript
+            {showTranscript ? "Hide" : "Show"} Transcript
           </button>
         )}
       </div>
@@ -210,15 +225,21 @@ export function AudioPlayer({ tracks, sectionTitle, onTrackComplete }: AudioPlay
               }}
               className={`w-full text-left p-3 rounded-lg transition-all ${
                 index === currentTrackIndex
-                  ? 'bg-blue-100 border-2 border-blue-400'
-                  : 'bg-white border-2 border-gray-200 hover:border-gray-300'
+                  ? "bg-blue-100 border-2 border-blue-400"
+                  : "bg-white border-2 border-gray-200 hover:border-gray-300"
               }`}
             >
               <div className="flex items-center gap-3">
-                <span className="text-sm font-bold text-gray-500">{index + 1}</span>
+                <span className="text-sm font-bold text-gray-500">
+                  {index + 1}
+                </span>
                 <div className="flex-1">
-                  <div className="font-bold text-sm text-gray-900">{track.title}</div>
-                  <div className="text-xs text-gray-500">{formatTime(track.duration)}</div>
+                  <div className="font-bold text-sm text-gray-900">
+                    {track.title}
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    {formatTime(track.duration)}
+                  </div>
                 </div>
                 {index === currentTrackIndex && isPlaying && (
                   <div className="flex gap-1">
