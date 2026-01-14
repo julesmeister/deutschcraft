@@ -353,21 +353,25 @@ function escapeRegExp(str: string): string {
  * Updates:
  * - name, productName
  * - domain, productionUrl
- * - r2BucketName, databaseName
  * - folderName, packageName
  * - companyName, copyright
  * - tagline, description (if provided)
+ *
+ * Does NOT update (handle manually):
+ * - r2BucketName (keep using existing bucket)
+ * - databaseName (keep using existing database)
  */
 function updateBrandConfig(options: RebrandOptions): void {
   console.log("\n📝 Updating brand configuration...");
+  console.log("   ⚠️  Skipping R2 bucket and database name updates (migrate manually later)");
 
   const replacements = [
     { from: `name: "${CURRENT_BRAND.name}"`, to: `name: "${options.name}"` },
     { from: `productName: "${CURRENT_BRAND.name} Web V2"`, to: `productName: "${options.name} Web V2"` },
     { from: `domain: "${CURRENT_BRAND.domain}"`, to: `domain: "${options.domain}"` },
     { from: `productionUrl: "https://${CURRENT_BRAND.domain}"`, to: `productionUrl: "https://${options.domain}"` },
-    { from: `r2BucketName: "${CURRENT_BRAND.bucket}"`, to: `r2BucketName: "${options.bucket}"` },
-    { from: `databaseName: "${CURRENT_BRAND.database}"`, to: `databaseName: "${options.database}"` },
+    // SKIP: r2BucketName - keep using existing bucket
+    // SKIP: databaseName - keep using existing database
     { from: `folderName: "${CURRENT_BRAND.folder}"`, to: `folderName: "${options.folder}"` },
     { from: `packageName: "${CURRENT_BRAND.folder}"`, to: `packageName: "${options.folder}"` },
     { from: `companyName: "${CURRENT_BRAND.name}"`, to: `companyName: "${options.name}"` },
@@ -401,20 +405,22 @@ function updateBrandConfig(options: RebrandOptions): void {
 }
 
 /**
- * Update package.json with new package name and database scripts
+ * Update package.json with new package name
  *
  * Updates:
  * - "name" field
- * - "db:shell" script
- * - "db:status" script
+ *
+ * Does NOT update:
+ * - Database scripts (keep using existing database)
  */
 function updatePackageJson(options: RebrandOptions): void {
   console.log("\n📦 Updating package.json...");
+  console.log("   ⚠️  Keeping database scripts unchanged");
 
   const replacements = [
     { from: `"name": "${CURRENT_BRAND.folder}"`, to: `"name": "${options.folder}"` },
-    { from: `"db:shell": "turso db shell ${CURRENT_BRAND.database}"`, to: `"db:shell": "turso db shell ${options.database}"` },
-    { from: `"db:status": "turso db show ${CURRENT_BRAND.database}"`, to: `"db:status": "turso db show ${options.database}"` },
+    // SKIP: db:shell script - keep using existing database
+    // SKIP: db:status script - keep using existing database
   ];
 
   updateFile("package.json", replacements, options.dryRun);
@@ -448,8 +454,8 @@ function updateCoreFiles(options: RebrandOptions): void {
       { from: `${CURRENT_BRAND.name} Web V2`, to: `${options.name} Web V2` },
       { from: CURRENT_BRAND.domain, to: options.domain },
       { from: CURRENT_BRAND.folder, to: options.folder },
-      { from: CURRENT_BRAND.bucket, to: options.bucket },
-      { from: CURRENT_BRAND.database, to: options.database },
+      // SKIP: bucket name - keep using existing bucket
+      // SKIP: database name - keep using existing database
       // Case variations
       { from: CURRENT_BRAND.name.toLowerCase(), to: options.name.toLowerCase() },
       { from: CURRENT_BRAND.name.toUpperCase(), to: options.name.toUpperCase() },
@@ -476,7 +482,7 @@ function updateCorsFiles(options: RebrandOptions): void {
   for (const file of corsFiles) {
     const replacements = [
       { from: CURRENT_BRAND.domain, to: options.domain },
-      { from: CURRENT_BRAND.bucket, to: options.bucket },
+      // SKIP: bucket name - keep using existing bucket
       { from: CURRENT_BRAND.folder, to: options.folder },
     ];
 
@@ -535,7 +541,7 @@ function updateUtilityFiles(options: RebrandOptions): void {
   for (const file of utilityFiles) {
     const replacements = [
       { from: CURRENT_BRAND.name.toLowerCase(), to: options.name.toLowerCase() },
-      { from: CURRENT_BRAND.bucket, to: options.bucket },
+      // SKIP: bucket name - keep using existing bucket
     ];
 
     updateFile(file, replacements, options.dryRun);
@@ -575,7 +581,7 @@ function updateDocumentationFiles(options: RebrandOptions): void {
       { from: `${CURRENT_BRAND.name} Web V2`, to: `${options.name} Web V2` },
       { from: CURRENT_BRAND.folder, to: options.folder },
       { from: CURRENT_BRAND.domain, to: options.domain },
-      { from: CURRENT_BRAND.database, to: options.database },
+      // SKIP: database name - keep using existing database
     ];
 
     updateFile(file, replacements, options.dryRun);
