@@ -180,16 +180,22 @@ jobs:
           git config --local user.name "GitHub Actions"
 
           git add .
-          git commit -m "Rebrand to ${{ inputs.brand_name }}
 
-Automated rebranding via GitHub Actions workflow.
+          # Create commit message
+          cat > /tmp/commit-msg.txt << 'EOF'
+          Rebrand to ${{ inputs.brand_name }}
 
-Changes:
-- Brand name: ${{ inputs.brand_name }}
-- Domain: ${{ inputs.domain }}
-- Folder: ${{ inputs.folder_name || 'auto-generated' }}
+          Automated rebranding via GitHub Actions workflow.
 
-Co-Authored-By: GitHub Actions <github-actions[bot]@users.noreply.github.com>"
+          Changes:
+          - Brand name: ${{ inputs.brand_name }}
+          - Domain: ${{ inputs.domain }}
+          - Folder: ${{ inputs.folder_name || 'auto-generated' }}
+
+          Co-Authored-By: GitHub Actions <github-actions[bot]@users.noreply.github.com>
+          EOF
+
+          git commit -F /tmp/commit-msg.txt
 
           # Push to current or new remote
           git push origin HEAD:${{ github.ref_name }} || git push -u origin HEAD:${{ github.ref_name }}
