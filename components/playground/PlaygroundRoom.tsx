@@ -318,6 +318,7 @@ export function PlaygroundRoom({
                   <AudioPlayer
                     materialTitle={currentRoom.currentMaterialTitle}
                     materialUrl={currentRoom.currentMaterialUrl}
+                    audioId={currentRoom.currentMaterialId || undefined}
                     onClose={userRole === "teacher" ? handleCloseMaterial : undefined}
                     showCloseButton={userRole === "teacher"}
                   />

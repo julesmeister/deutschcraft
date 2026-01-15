@@ -36,6 +36,7 @@ export interface AudioMaterial {
   description: string | null;
   isPublic: boolean;
   playCount: number;
+  hasBlob?: boolean;  // Indicates if blob backup is available
   createdAt: number;
   updatedAt: number;
 }
@@ -466,6 +467,41 @@ export async function searchAudioMaterials(
   }
 }
 
+/**
+ * Get audio blob data by audio ID
+ */
+export async function getAudioBlob(audioId: string): Promise<Buffer | null> {
+  try {
+    const result = await db.execute({
+      sql: 'SELECT audio_blob FROM audio_materials WHERE audio_id = ? LIMIT 1',
+      args: [audioId],
+    });
+
+    if (result.rows.length === 0 || !result.rows[0].audio_blob) {
+      return null;
+    }
+
+    const blobData = result.rows[0].audio_blob;
+
+    // Handle different blob data formats from Turso
+    if (Buffer.isBuffer(blobData)) {
+      return blobData;
+    } else if (blobData instanceof Uint8Array) {
+      return Buffer.from(blobData);
+    } else if (ArrayBuffer.isView(blobData)) {
+      return Buffer.from(blobData.buffer, blobData.byteOffset, blobData.byteLength);
+    } else if (blobData instanceof ArrayBuffer) {
+      return Buffer.from(blobData);
+    } else {
+      console.error('[materialsService] Unexpected blob data type:', typeof blobData);
+      return null;
+    }
+  } catch (error) {
+    console.error('[materialsService] Error fetching audio blob:', error);
+    throw error;
+  }
+}
+
 function mapRowToAudioMaterial(row: any): AudioMaterial {
   return {
     audioId: row.audio_id as string,
@@ -481,6 +517,7 @@ function mapRowToAudioMaterial(row: any): AudioMaterial {
     description: row.description as string | null,
     isPublic: (row.is_public as number) === 1,
     playCount: row.play_count as number,
+    hasBlob: row.audio_blob != null, // Check if blob exists
     createdAt: row.created_at as number,
     updatedAt: row.updated_at as number,
   };

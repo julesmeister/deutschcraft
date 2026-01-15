@@ -201,6 +201,21 @@ export default function MaterialsPage() {
                 ? playError.message
                 : String(playError);
 
+            // Try backup blob source if available
+            if (audio.hasBlob) {
+              console.log("[Materials] Trying backup blob source...");
+              try {
+                audioRef.current.src = `/api/materials/audio/${audio.audioId}/blob`;
+                await audioRef.current.play();
+                setCurrentlyPlaying(audio.audioId);
+                await incrementPlayCount(audio.audioId);
+                toast.success("Playing from backup source", 2000);
+                return;
+              } catch (blobError) {
+                console.error("[Materials] Blob playback error:", blobError);
+              }
+            }
+
             if (
               errorMessage.includes("not suitable") ||
               errorMessage.includes("CORS")

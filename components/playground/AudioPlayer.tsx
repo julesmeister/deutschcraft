@@ -13,6 +13,7 @@ import { getPlayableUrl } from "@/lib/utils/urlHelpers";
 interface AudioPlayerProps {
   materialTitle: string;
   materialUrl: string;
+  audioId?: string; // Optional audio ID for blob fallback
   onClose?: () => void;
   showCloseButton?: boolean;
 }
@@ -20,6 +21,7 @@ interface AudioPlayerProps {
 export function AudioPlayer({
   materialTitle,
   materialUrl,
+  audioId,
   onClose,
   showCloseButton = false,
 }: AudioPlayerProps) {
@@ -28,9 +30,24 @@ export function AudioPlayer({
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
+  const [triedBlobFallback, setTriedBlobFallback] = useState(false);
   const toast = useToast();
 
   const playableUrl = getPlayableUrl(materialUrl);
+
+  // Debug log on mount
+  console.log("[AudioPlayer] Initialized with:", {
+    materialTitle,
+    materialUrl,
+    audioId,
+    playableUrl,
+  });
+
+  // Reset blob fallback state when URL changes
+  useEffect(() => {
+    setTriedBlobFallback(false);
+    setIsPlaying(false);
+  }, [playableUrl, audioId]);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -49,8 +66,37 @@ export function AudioPlayer({
       setCurrentTime(0);
     };
 
-    const handleError = () => {
-      console.error("[AudioPlayer] Audio load error");
+    const handleError = async () => {
+      console.error("[AudioPlayer] Audio load error", {
+        currentSrc: audio?.src,
+        audioId,
+        triedBlobFallback,
+        error: audio?.error,
+      });
+
+      // Try blob fallback if available and not already tried
+      if (audioId && !triedBlobFallback && audio) {
+        console.log("[AudioPlayer] Trying blob fallback for audioId:", audioId);
+        setTriedBlobFallback(true);
+        const blobUrl = `/api/materials/audio/${audioId}/blob`;
+        console.log("[AudioPlayer] Blob URL:", blobUrl);
+        audio.src = blobUrl;
+        try {
+          await audio.load();
+          console.log("[AudioPlayer] Blob loaded successfully");
+          toast.success("Loaded from backup source", 2000);
+          return; // Don't show error if fallback works
+        } catch (blobError) {
+          console.error("[AudioPlayer] Blob fallback also failed:", blobError);
+        }
+      } else {
+        console.log("[AudioPlayer] Cannot try blob fallback:", {
+          hasAudioId: !!audioId,
+          alreadyTried: triedBlobFallback,
+          hasAudio: !!audio,
+        });
+      }
+
       toast.error(
         "Failed to load audio file. Please check your R2 bucket configuration.",
         5000,
@@ -86,6 +132,21 @@ export function AudioPlayer({
         setIsPlaying(true);
       } catch (error) {
         console.error("[AudioPlayer] Playback error:", error);
+
+        // Try blob fallback if available and not already tried
+        if (audioId && !triedBlobFallback) {
+          console.log("[AudioPlayer] Trying blob fallback on playback error...");
+          setTriedBlobFallback(true);
+          audio.src = `/api/materials/audio/${audioId}/blob`;
+          try {
+            await audio.play();
+            setIsPlaying(true);
+            toast.success("Playing from backup source", 2000);
+            return;
+          } catch (blobError) {
+            console.error("[AudioPlayer] Blob fallback also failed:", blobError);
+          }
+        }
 
         // Show user-friendly error message
         const errorMessage =
