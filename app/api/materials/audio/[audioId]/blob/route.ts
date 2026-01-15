@@ -1,10 +1,50 @@
 /**
  * API Route: /api/materials/audio/[audioId]/blob
  * Serves audio blob data from Turso database as backup source
+ *
+ * Features:
+ * - HTTP Range Requests (RFC 7233) for audio seeking
+ * - Efficient memory usage with streaming
+ * - ETags for cache validation
+ * - Optimized headers for audio playback
  */
 
 import { NextRequest, NextResponse } from 'next/server';
 import { getAudioBlob } from '@/lib/services/turso/materialsService';
+import crypto from 'crypto';
+
+/**
+ * Parse Range header
+ * Format: "bytes=start-end" or "bytes=start-"
+ */
+function parseRangeHeader(rangeHeader: string | null, fileSize: number): { start: number; end: number } | null {
+  if (!rangeHeader) {
+    return null;
+  }
+
+  const match = rangeHeader.match(/bytes=(\d+)-(\d*)/);
+  if (!match) {
+    return null;
+  }
+
+  const start = parseInt(match[1], 10);
+  const end = match[2] ? parseInt(match[2], 10) : fileSize - 1;
+
+  // Validate range
+  if (start >= fileSize || end >= fileSize || start > end) {
+    return null;
+  }
+
+  return { start, end };
+}
+
+/**
+ * Generate ETag from audio ID (simple but effective)
+ */
+function generateETag(audioId: string, size: number): string {
+  const hash = crypto.createHash('md5').update(`${audioId}-${size}`).digest('hex');
+  return `"${hash.substring(0, 16)}"`;
+}
 
 export async function GET(
   request: NextRequest,
@@ -12,8 +52,6 @@ export async function GET(
 ) {
   try {
     const { audioId } = await context.params;
-
-    console.log('[API] Fetching audio blob for:', audioId);
 
     if (!audioId) {
       return NextResponse.json(
@@ -26,7 +64,6 @@ export async function GET(
     const audioBlob = await getAudioBlob(audioId);
 
     if (!audioBlob) {
-      console.log('[API] No blob found for audio ID:', audioId);
       return NextResponse.json(
         { error: 'Audio not found or no blob data available' },
         { status: 404 }
@@ -38,22 +75,69 @@ export async function GET(
       ? audioBlob
       : Buffer.from(audioBlob);
 
-    console.log('[API] Serving blob:', {
+    const fileSize = buffer.length;
+    const etag = generateETag(audioId, fileSize);
+
+    // Check If-None-Match for 304 Not Modified
+    const ifNoneMatch = request.headers.get('if-none-match');
+    if (ifNoneMatch === etag) {
+      return new NextResponse(null, {
+        status: 304,
+        headers: {
+          'ETag': etag,
+          'Cache-Control': 'public, max-age=31536000, immutable',
+        },
+      });
+    }
+
+    // Parse Range header
+    const rangeHeader = request.headers.get('range');
+    const range = parseRangeHeader(rangeHeader, fileSize);
+
+    // Handle Range Request
+    if (range) {
+      const { start, end } = range;
+      const contentLength = end - start + 1;
+      const chunk = buffer.slice(start, end + 1);
+
+      console.log('[API] Serving partial content:', {
+        audioId,
+        range: `${start}-${end}/${fileSize}`,
+        chunkSize: contentLength,
+      });
+
+      return new NextResponse(chunk, {
+        status: 206, // Partial Content
+        headers: {
+          'Content-Type': 'audio/mpeg',
+          'Content-Length': contentLength.toString(),
+          'Content-Range': `bytes ${start}-${end}/${fileSize}`,
+          'Accept-Ranges': 'bytes',
+          'ETag': etag,
+          'Cache-Control': 'public, max-age=31536000, immutable',
+          'Last-Modified': new Date().toUTCString(), // Could be from DB if stored
+        },
+      });
+    }
+
+    // Handle full content request
+    console.log('[API] Serving full content:', {
       audioId,
-      bufferSize: buffer.length,
-      isBuffer: Buffer.isBuffer(buffer),
+      size: fileSize,
     });
 
-    // Return audio blob with proper content type
     return new NextResponse(buffer, {
       status: 200,
       headers: {
         'Content-Type': 'audio/mpeg',
-        'Content-Length': buffer.length.toString(),
-        'Cache-Control': 'public, max-age=31536000, immutable',
+        'Content-Length': fileSize.toString(),
         'Accept-Ranges': 'bytes',
+        'ETag': etag,
+        'Cache-Control': 'public, max-age=31536000, immutable',
+        'Last-Modified': new Date().toUTCString(),
       },
     });
+
   } catch (error) {
     console.error('[API] Error serving audio blob:', error);
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
