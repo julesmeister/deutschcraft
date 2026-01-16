@@ -199,79 +199,69 @@ export function AudioPlayer({
   };
 
   return (
-    <div className="bg-white border border-gray-200 overflow-hidden">
-      {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-gradient-to-r from-purple-50 to-blue-50">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-lg">
-            🎵
-          </div>
-          <div>
-            <h3 className="text-sm font-bold text-neutral-900">
+    <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-gray-300 rounded-lg overflow-hidden">
+      <audio ref={audioRef} src={playableUrl} />
+
+      <div className="p-3">
+        {/* Header with title */}
+        <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center gap-2 flex-1 min-w-0">
+            <span className="text-lg">🎵</span>
+            <h3 className="text-xs font-semibold text-gray-800 truncate">
               {materialTitle}
             </h3>
-            <p className="text-xs text-neutral-600">Shared Audio Material</p>
           </div>
+          {showCloseButton && onClose && (
+            <button
+              onClick={onClose}
+              className="text-gray-400 hover:text-gray-600 transition-colors ml-2"
+            >
+              <ActionButtonIcons.Close />
+            </button>
+          )}
         </div>
-        {showCloseButton && onClose && (
+
+        {/* Controls and Progress in one row */}
+        <div className="flex items-center gap-3">
+          {/* Play/Pause Button */}
           <button
-            onClick={onClose}
-            className="text-gray-500 hover:text-gray-700 transition-colors"
+            onClick={handlePlayPause}
+            className="flex-shrink-0 w-8 h-8 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors shadow-sm"
           >
-            <ActionButtonIcons.Close />
+            {isPlaying ? (
+              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5 4a1 1 0 011 1v10a1 1 0 11-2 0V5a1 1 0 011-1zm8 0a1 1 0 011 1v10a1 1 0 11-2 0V5a1 1 0 011-1z" />
+              </svg>
+            ) : (
+              <svg className="w-3 h-3 ml-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+              </svg>
+            )}
           </button>
-        )}
-      </div>
 
-      {/* Audio Player */}
-      <div className="p-8 bg-gradient-to-br from-purple-50 via-white to-blue-50">
-        <audio ref={audioRef} src={playableUrl} />
+          {/* Time */}
+          <span className="text-xs text-gray-600 flex-shrink-0">
+            {formatTime(currentTime)}
+          </span>
 
-        {/* Progress Bar */}
-        <div className="mb-6">
+          {/* Progress Bar */}
           <input
             type="range"
             min="0"
             max={duration || 0}
             value={currentTime}
             onChange={handleSeek}
-            className="w-full h-1 bg-gray-200 rounded-full appearance-none cursor-pointer accent-gray-700"
+            className="flex-1 h-1 bg-gray-300 rounded-full appearance-none cursor-pointer accent-blue-600"
           />
-          <div className="flex items-center justify-between text-xs text-neutral-500 mt-2">
-            <span>{formatTime(currentTime)}</span>
-            <span>{formatTime(duration)}</span>
-          </div>
-        </div>
 
-        {/* Minimal Controls */}
-        <div className="flex items-center justify-between">
-          {/* Play/Pause Button */}
-          <button
-            onClick={handlePlayPause}
-            className="w-10 h-10 bg-gray-800 hover:bg-gray-900 text-white rounded-full flex items-center justify-center transition-colors"
-          >
-            {isPlaying ? (
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M5 4a1 1 0 011 1v10a1 1 0 11-2 0V5a1 1 0 011-1zm8 0a1 1 0 011 1v10a1 1 0 11-2 0V5a1 1 0 011-1z" />
-              </svg>
-            ) : (
-              <svg
-                className="w-4 h-4 ml-0.5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-              </svg>
-            )}
-          </button>
+          {/* Duration */}
+          <span className="text-xs text-gray-600 flex-shrink-0">
+            {formatTime(duration)}
+          </span>
 
           {/* Volume Control */}
-          <div className="flex items-center gap-2">
-            <svg
-              className="w-4 h-4 text-neutral-500"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-            >
+          <div className="flex items-center gap-1.5 flex-shrink-0">
+            <svg className="w-3.5 h-3.5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
               <path
                 fillRule="evenodd"
                 d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z"
@@ -285,11 +275,8 @@ export function AudioPlayer({
               step="0.1"
               value={volume}
               onChange={handleVolumeChange}
-              className="w-24 h-1 bg-gray-200 rounded-full appearance-none cursor-pointer accent-gray-700"
+              className="w-16 h-1 bg-gray-300 rounded-full appearance-none cursor-pointer accent-blue-600"
             />
-            <span className="text-xs text-neutral-500 w-8">
-              {Math.round(volume * 100)}%
-            </span>
           </div>
         </div>
       </div>
