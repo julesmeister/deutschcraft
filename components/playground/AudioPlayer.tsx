@@ -340,21 +340,27 @@ export function AudioPlayer({
           backdropFilter: 'blur(20px)',
         }}
       >
-        {/* White bubble pattern background - only in top section */}
-        <div className="absolute inset-0 pointer-events-none">
-          {/* Sparse bubbles spread far apart */}
-          <div className="absolute top-2 left-6 w-14 h-14 rounded-full bg-white opacity-12" />
-          <div className="absolute bottom-3 left-24 w-8 h-8 rounded-full bg-white opacity-18" />
+        {/* Diagonal stripe pattern background - fades towards center */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {/* Left stripes - fade right */}
+          <div
+            className="absolute left-0 top-0 bottom-0 w-1/2"
+            style={{
+              background: 'repeating-linear-gradient(45deg, rgba(255,255,255,0.15) 0px, rgba(255,255,255,0.15) 2px, transparent 2px, transparent 12px)',
+              maskImage: 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
+              WebkitMaskImage: 'linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
+            }}
+          />
 
-          <div className="absolute top-8 left-1/3 w-10 h-10 rounded-full bg-white opacity-15" />
-
-          <div className="absolute top-3 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white opacity-10" />
-          <div className="absolute bottom-2 left-1/2 translate-x-12 w-7 h-7 rounded-full bg-white opacity-20" />
-
-          <div className="absolute top-10 right-1/3 w-9 h-9 rounded-full bg-white opacity-14" />
-
-          <div className="absolute top-4 right-24 w-11 h-11 rounded-full bg-white opacity-16" />
-          <div className="absolute bottom-4 right-8 w-8 h-8 rounded-full bg-white opacity-12" />
+          {/* Right stripes - fade left */}
+          <div
+            className="absolute right-0 top-0 bottom-0 w-1/2"
+            style={{
+              background: 'repeating-linear-gradient(-45deg, rgba(255,255,255,0.15) 0px, rgba(255,255,255,0.15) 2px, transparent 2px, transparent 12px)',
+              maskImage: 'linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
+              WebkitMaskImage: 'linear-gradient(to left, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
+            }}
+          />
         </div>
         <div className="flex flex-col lg:flex-row gap-2 lg:gap-3 w-full" style={{ transform: 'translateY(8px)' }}>
           {/* Left - Audio icon placeholder */}
