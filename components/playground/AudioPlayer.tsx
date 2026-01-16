@@ -30,22 +30,26 @@ export function AudioPlayer({
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
-  const [triedBlobFallback, setTriedBlobFallback] = useState(false);
+  const triedBlobFallbackRef = useRef(false);
+  const blobLoadSuccessRef = useRef(false);
   const toast = useToast();
 
   const playableUrl = getPlayableUrl(materialUrl);
 
-  // Debug log on mount
-  console.log("[AudioPlayer] Initialized with:", {
-    materialTitle,
-    materialUrl,
-    audioId,
-    playableUrl,
-  });
+  // Debug log on mount (only once)
+  useEffect(() => {
+    console.log("[AudioPlayer] Initialized with:", {
+      materialTitle,
+      materialUrl,
+      audioId,
+      playableUrl,
+    });
+  }, []);
 
   // Reset blob fallback state when URL changes
   useEffect(() => {
-    setTriedBlobFallback(false);
+    triedBlobFallbackRef.current = false;
+    blobLoadSuccessRef.current = false;
     setIsPlaying(false);
   }, [playableUrl, audioId]);
 
@@ -53,15 +57,13 @@ export function AudioPlayer({
     const audio = audioRef.current;
     if (!audio) return;
 
-    let blobLoadSuccess = false;
-
     const handleLoadedMetadata = () => {
       setDuration(audio.duration);
       // Show success toast if this is the blob fallback loading successfully
-      if (triedBlobFallback && !blobLoadSuccess) {
+      if (triedBlobFallbackRef.current && !blobLoadSuccessRef.current) {
         console.log("[AudioPlayer] ✅ Backup blob loaded successfully");
         toast.success("Playing from backup", 2000);
-        blobLoadSuccess = true;
+        blobLoadSuccessRef.current = true;
       }
     };
 
@@ -78,13 +80,13 @@ export function AudioPlayer({
       console.log("[AudioPlayer] Error event fired. Current state:", {
         src: audio.src,
         audioId,
-        triedBlobFallback,
+        triedBlobFallback: triedBlobFallbackRef.current,
       });
 
       // Try blob fallback if available and not already tried
-      if (audioId && !triedBlobFallback && audio) {
+      if (audioId && !triedBlobFallbackRef.current && audio) {
         console.log("[AudioPlayer] Switching to backup blob for:", audioId);
-        setTriedBlobFallback(true);
+        triedBlobFallbackRef.current = true;
         const blobUrl = `/api/materials/audio/${audioId}/blob`;
         console.log("[AudioPlayer] Blob URL:", blobUrl);
         audio.src = blobUrl;
@@ -119,7 +121,8 @@ export function AudioPlayer({
       audio.removeEventListener("ended", handleEnded);
       audio.removeEventListener("error", handleError);
     };
-  }, [playableUrl, audioId, triedBlobFallback, materialUrl, toast]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [playableUrl, audioId]);
 
   const handlePlayPause = async () => {
     const audio = audioRef.current;
@@ -136,9 +139,9 @@ export function AudioPlayer({
         console.error("[AudioPlayer] Playback error:", error);
 
         // Try blob fallback if available and not already tried
-        if (audioId && !triedBlobFallback) {
+        if (audioId && !triedBlobFallbackRef.current) {
           console.log("[AudioPlayer] Primary source failed, trying backup blob...");
-          setTriedBlobFallback(true);
+          triedBlobFallbackRef.current = true;
           audio.src = `/api/materials/audio/${audioId}/blob`;
           audio.load(); // Important: load the new source before playing
           try {
