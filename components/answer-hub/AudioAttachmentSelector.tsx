@@ -27,17 +27,26 @@ export function AudioAttachmentSelector({
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
+    console.log("[AudioAttachmentSelector] Component mounted with props:", {
+      level,
+      bookType,
+      lessonNumber,
+      attachmentsCount: attachments.length,
+    });
     loadAudioMaterials();
   }, [level, bookType, lessonNumber]);
 
   const loadAudioMaterials = async () => {
     setLoading(true);
     try {
+      console.log("[AudioAttachmentSelector] Loading audio for:", { level, bookType, lessonNumber });
+
       // Construct level string (e.g., "B1.1")
       const levelStr = level as string;
 
       // Load all audio materials for this level
       const allMaterials = await getAudioMaterialsByLevel(levelStr, false);
+      console.log("[AudioAttachmentSelector] Fetched materials:", allMaterials.length);
 
       // Filter by book type and lesson number
       const filtered = allMaterials.filter(
@@ -46,6 +55,7 @@ export function AudioAttachmentSelector({
           audio.lessonNumber === lessonNumber
       );
 
+      console.log("[AudioAttachmentSelector] Filtered materials:", filtered.length);
       setAudioMaterials(filtered);
     } catch (error) {
       console.error("[AudioAttachmentSelector] Error loading audio materials:", error);
