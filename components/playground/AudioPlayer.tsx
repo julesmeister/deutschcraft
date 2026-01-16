@@ -128,16 +128,17 @@ export function AudioPlayer({
 
         // Try blob fallback if available and not already tried
         if (audioId && !triedBlobFallback) {
-          console.log("[AudioPlayer] Trying blob fallback on playback error...");
+          console.log("[AudioPlayer] Primary source failed, trying backup blob...");
           setTriedBlobFallback(true);
           audio.src = `/api/materials/audio/${audioId}/blob`;
+          audio.load(); // Important: load the new source before playing
           try {
             await audio.play();
             setIsPlaying(true);
-            toast.success("Playing from backup source", 2000);
+            toast.success("Playing from backup", 2000);
             return;
           } catch (blobError) {
-            console.error("[AudioPlayer] Blob fallback also failed:", blobError);
+            console.error("[AudioPlayer] ❌ Blob fallback also failed:", blobError);
           }
         }
 
