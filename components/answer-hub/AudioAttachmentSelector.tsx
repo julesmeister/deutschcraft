@@ -29,7 +29,7 @@ export function AudioAttachmentSelector({
   const [searchQuery, setSearchQuery] = useState("");
   // Auto-filter based on current exercise context
   const [levelFilter, setLevelFilter] = useState<string>(level);
-  const [bookTypeFilter, setBookTypeFilter] = useState<string>(bookType);
+  const [bookTypeFilter, setBookTypeFilter] = useState<string>("KB"); // Default to KB
   const [lessonFilter, setLessonFilter] = useState<string>(lessonNumber.toString());
   const [showAllLessons, setShowAllLessons] = useState(false);
 
@@ -77,8 +77,8 @@ export function AudioAttachmentSelector({
         // Match level (handle both "B1" and "B1.2" formats)
         const levelMatch = audio.level?.startsWith(level);
 
-        // Match book type
-        const bookTypeMatch = audio.bookType === bookType;
+        // Match book type (use filter state, not prop)
+        const bookTypeMatch = audio.bookType === bookTypeFilter;
 
         // Match lesson number
         const lessonMatch = audio.lessonNumber === lessonNumber;
@@ -111,13 +111,13 @@ export function AudioAttachmentSelector({
     }
 
     setFilteredMaterials(filtered);
-  }, [searchQuery, audioMaterials, showAllLessons, level, bookType, lessonNumber]);
+  }, [searchQuery, audioMaterials, showAllLessons, level, bookTypeFilter, lessonNumber]);
 
   // Get count of matching files for current lesson
   const currentLessonCount = audioMaterials.filter(
     (audio) =>
       audio.level?.startsWith(level) &&
-      audio.bookType === bookType &&
+      audio.bookType === bookTypeFilter &&
       audio.lessonNumber === lessonNumber
   ).length;
 
@@ -216,6 +216,32 @@ export function AudioAttachmentSelector({
               />
             </div>
 
+            {/* Book type toggle */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setBookTypeFilter("KB")}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+                    bookTypeFilter === "KB"
+                      ? "bg-purple-100 text-purple-700 border border-purple-200"
+                      : "bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200"
+                  }`}
+                >
+                  📘 Kursbuch
+                </button>
+                <button
+                  onClick={() => setBookTypeFilter("AB")}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+                    bookTypeFilter === "AB"
+                      ? "bg-green-100 text-green-700 border border-green-200"
+                      : "bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200"
+                  }`}
+                >
+                  📗 Arbeitsbuch
+                </button>
+              </div>
+            </div>
+
             {/* Lesson filter toggle */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -251,7 +277,7 @@ export function AudioAttachmentSelector({
             {!showAllLessons && (
               <div className="flex items-center gap-2 px-2 py-1 bg-blue-50 border border-blue-100 rounded text-xs">
                 <span className="font-medium text-blue-700">
-                  Showing: {level} {bookType} - Lesson {lessonNumber}
+                  Showing: {level} {bookTypeFilter} - Lesson {lessonNumber}
                 </span>
               </div>
             )}
@@ -267,7 +293,7 @@ export function AudioAttachmentSelector({
                 <p>No audio files match "{searchQuery}"</p>
               ) : !showAllLessons ? (
                 <div className="space-y-2">
-                  <p>No audio files for {level} {bookType} - Lesson {lessonNumber}</p>
+                  <p>No audio files for {level} {bookTypeFilter} - Lesson {lessonNumber}</p>
                   <button
                     onClick={() => setShowAllLessons(true)}
                     className="text-blue-600 hover:text-blue-700 underline text-xs"
