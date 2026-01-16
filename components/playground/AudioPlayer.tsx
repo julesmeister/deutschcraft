@@ -53,8 +53,16 @@ export function AudioPlayer({
     const audio = audioRef.current;
     if (!audio) return;
 
+    let blobLoadSuccess = false;
+
     const handleLoadedMetadata = () => {
       setDuration(audio.duration);
+      // Show success toast if this is the blob fallback loading successfully
+      if (triedBlobFallback && !blobLoadSuccess) {
+        console.log("[AudioPlayer] ✅ Backup blob loaded successfully");
+        toast.success("Playing from backup", 2000);
+        blobLoadSuccess = true;
+      }
     };
 
     const handleTimeUpdate = () => {
@@ -66,29 +74,31 @@ export function AudioPlayer({
       setCurrentTime(0);
     };
 
-    const handleError = async () => {
+    const handleError = () => {
+      console.log("[AudioPlayer] Error event fired. Current state:", {
+        src: audio.src,
+        audioId,
+        triedBlobFallback,
+      });
+
       // Try blob fallback if available and not already tried
       if (audioId && !triedBlobFallback && audio) {
-        console.log("[AudioPlayer] Primary source failed, trying backup blob for:", audioId);
+        console.log("[AudioPlayer] Switching to backup blob for:", audioId);
         setTriedBlobFallback(true);
         const blobUrl = `/api/materials/audio/${audioId}/blob`;
         console.log("[AudioPlayer] Blob URL:", blobUrl);
         audio.src = blobUrl;
-        try {
-          await audio.load();
-          console.log("[AudioPlayer] ✅ Backup blob loaded successfully");
-          toast.success("Playing from backup", 2000);
-          return; // Don't show error if fallback works
-        } catch (blobError) {
-          console.error("[AudioPlayer] ❌ Both primary and backup sources failed");
-        }
+        audio.load();
+        // The audio element will fire loadedmetadata event if blob loads successfully
+        return;
       }
 
       // Only show error if no blob fallback available or it also failed
-      console.error("[AudioPlayer] ❌ Audio failed to load:", {
-        url: materialUrl,
-        hasBackup: !!audioId,
-      });
+      if (!audioId) {
+        console.error("[AudioPlayer] ❌ Audio failed to load (no backup available):", materialUrl);
+      } else {
+        console.error("[AudioPlayer] ❌ Both primary and backup sources failed");
+      }
 
       toast.error(
         "Failed to load audio file. Please check your R2 bucket configuration.",
@@ -109,8 +119,7 @@ export function AudioPlayer({
       audio.removeEventListener("ended", handleEnded);
       audio.removeEventListener("error", handleError);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [playableUrl]);
+  }, [playableUrl, audioId, triedBlobFallback, materialUrl, toast]);
 
   const handlePlayPause = async () => {
     const audio = audioRef.current;
