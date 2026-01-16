@@ -367,7 +367,14 @@ export async function deleteAudioMaterial(audioId: string): Promise<void> {
 export async function getPublicAudioMaterials(): Promise<AudioMaterial[]> {
   try {
     const result = await db.execute({
-      sql: `SELECT * FROM audio_materials WHERE is_public = 1 ORDER BY level, lesson_number, track_number`,
+      sql: `SELECT
+        audio_id, title, file_name, file_url, file_size,
+        level, book_type, cd_number, track_number, lesson_number,
+        description, is_public, play_count, created_at, updated_at,
+        CASE WHEN audio_blob IS NOT NULL THEN 1 ELSE 0 END as has_blob
+      FROM audio_materials
+      WHERE is_public = 1
+      ORDER BY level, lesson_number, track_number`,
       args: [],
     });
 
@@ -384,7 +391,13 @@ export async function getPublicAudioMaterials(): Promise<AudioMaterial[]> {
 export async function getAllAudioMaterials(): Promise<AudioMaterial[]> {
   try {
     const result = await db.execute({
-      sql: `SELECT * FROM audio_materials ORDER BY level, lesson_number, track_number`,
+      sql: `SELECT
+        audio_id, title, file_name, file_url, file_size,
+        level, book_type, cd_number, track_number, lesson_number,
+        description, is_public, play_count, created_at, updated_at,
+        CASE WHEN audio_blob IS NOT NULL THEN 1 ELSE 0 END as has_blob
+      FROM audio_materials
+      ORDER BY level, lesson_number, track_number`,
       args: [],
     });
 
@@ -403,9 +416,16 @@ export async function getAudioMaterialsByLevel(
   publicOnly: boolean = true
 ): Promise<AudioMaterial[]> {
   try {
+    const selectClause = `SELECT
+      audio_id, title, file_name, file_url, file_size,
+      level, book_type, cd_number, track_number, lesson_number,
+      description, is_public, play_count, created_at, updated_at,
+      CASE WHEN audio_blob IS NOT NULL THEN 1 ELSE 0 END as has_blob
+    FROM audio_materials`;
+
     const sql = publicOnly
-      ? `SELECT * FROM audio_materials WHERE level = ? AND is_public = 1 ORDER BY lesson_number, track_number`
-      : `SELECT * FROM audio_materials WHERE level = ? ORDER BY lesson_number, track_number`;
+      ? `${selectClause} WHERE level = ? AND is_public = 1 ORDER BY lesson_number, track_number`
+      : `${selectClause} WHERE level = ? ORDER BY lesson_number, track_number`;
 
     const result = await db.execute({
       sql,
@@ -425,7 +445,13 @@ export async function getAudioMaterialsByLevel(
 export async function getAudioMaterialById(audioId: string): Promise<AudioMaterial | null> {
   try {
     const result = await db.execute({
-      sql: 'SELECT * FROM audio_materials WHERE audio_id = ? LIMIT 1',
+      sql: `SELECT
+        audio_id, title, file_name, file_url, file_size,
+        level, book_type, cd_number, track_number, lesson_number,
+        description, is_public, play_count, created_at, updated_at,
+        CASE WHEN audio_blob IS NOT NULL THEN 1 ELSE 0 END as has_blob
+      FROM audio_materials
+      WHERE audio_id = ? LIMIT 1`,
       args: [audioId],
     });
 
@@ -447,11 +473,18 @@ export async function searchAudioMaterials(
 ): Promise<AudioMaterial[]> {
   try {
     const searchPattern = `%${query}%`;
+    const selectClause = `SELECT
+      audio_id, title, file_name, file_url, file_size,
+      level, book_type, cd_number, track_number, lesson_number,
+      description, is_public, play_count, created_at, updated_at,
+      CASE WHEN audio_blob IS NOT NULL THEN 1 ELSE 0 END as has_blob
+    FROM audio_materials`;
+
     const sql = publicOnly
-      ? `SELECT * FROM audio_materials
+      ? `${selectClause}
          WHERE (title LIKE ? OR file_name LIKE ? OR description LIKE ?) AND is_public = 1
          ORDER BY level, lesson_number, track_number`
-      : `SELECT * FROM audio_materials
+      : `${selectClause}
          WHERE title LIKE ? OR file_name LIKE ? OR description LIKE ?
          ORDER BY level, lesson_number, track_number`;
 
@@ -517,7 +550,7 @@ function mapRowToAudioMaterial(row: any): AudioMaterial {
     description: row.description as string | null,
     isPublic: (row.is_public as number) === 1,
     playCount: row.play_count as number,
-    hasBlob: row.audio_blob != null, // Check if blob exists
+    hasBlob: (row.has_blob as number) === 1, // From SQL: CASE WHEN audio_blob IS NOT NULL THEN 1 ELSE 0 END
     createdAt: row.created_at as number,
     updatedAt: row.updated_at as number,
   };
