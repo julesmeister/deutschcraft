@@ -41,11 +41,28 @@ export function AudioAttachmentSelector({
     try {
       console.log("[AudioAttachmentSelector] Loading audio for:", { level, bookType, lessonNumber });
 
-      // Construct level string (e.g., "B1.1")
       const levelStr = level as string;
 
-      // Load all audio materials for this level
-      const allMaterials = await getAudioMaterialsByLevel(levelStr, false);
+      // Fetch all matching audio materials
+      // If level is like "B1", we need to fetch both "B1.1" and "B1.2"
+      let allMaterials: AudioMaterial[] = [];
+
+      if (levelStr.includes(".")) {
+        // Already specific (e.g., "B1.1")
+        allMaterials = await getAudioMaterialsByLevel(levelStr, false);
+      } else {
+        // Base level (e.g., "B1"), fetch both sub-levels
+        const subLevel1 = `${levelStr}.1`;
+        const subLevel2 = `${levelStr}.2`;
+
+        const [materials1, materials2] = await Promise.all([
+          getAudioMaterialsByLevel(subLevel1, false).catch(() => []),
+          getAudioMaterialsByLevel(subLevel2, false).catch(() => []),
+        ]);
+
+        allMaterials = [...materials1, ...materials2];
+      }
+
       console.log("[AudioAttachmentSelector] Fetched materials:", allMaterials.length);
 
       // Filter by book type and lesson number
