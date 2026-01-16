@@ -172,14 +172,14 @@ export function AudioAttachmentSelector({
 
       {/* Current attachments */}
       {audioAttachments.length > 0 && (
-        <div className="space-y-2">
-          <p className="text-xs text-gray-600">
+        <div className="space-y-2 p-2 bg-blue-50 border border-blue-200">
+          <p className="text-xs text-gray-600 font-semibold">
             Selected audio files ({audioAttachments.length}):
           </p>
           {audioAttachments.map((attachment) => (
             <div
               key={attachment.audioId}
-              className="flex items-center gap-3 p-3 bg-blue-50 border border-blue-200 rounded-lg"
+              className="flex items-center gap-3 p-2 bg-white border border-blue-300"
             >
               <Music className="w-4 h-4 text-blue-600 flex-shrink-0" />
               <div className="flex-1 min-w-0">
@@ -190,7 +190,7 @@ export function AudioAttachmentSelector({
               <button
                 type="button"
                 onClick={() => handleRemoveAudio(attachment.audioId!)}
-                className="flex-shrink-0 p-1 text-red-500 hover:text-red-700 hover:bg-red-100 rounded transition-colors"
+                className="flex-shrink-0 p-1 text-red-500 hover:text-red-700 hover:bg-red-100 transition-colors"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -201,9 +201,9 @@ export function AudioAttachmentSelector({
 
       {/* Audio library (collapsible) */}
       {expanded && (
-        <div className="mt-3 border border-gray-200 rounded-lg">
+        <div className="mt-3 border border-gray-200 bg-white">
           {/* Search and filters */}
-          <div className="p-3 border-b border-gray-200 bg-gray-50 space-y-3">
+          <div className="p-3 border-b border-gray-200 bg-gray-50 space-y-2">
             {/* Search box */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -216,71 +216,64 @@ export function AudioAttachmentSelector({
               />
             </div>
 
-            {/* Book type toggle */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
+            {/* Filters in one line */}
+            <div className="flex items-center justify-between gap-2">
+              {/* Book type toggle */}
+              <div className="flex items-center gap-1">
                 <button
                   onClick={() => setBookTypeFilter("KB")}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+                  className={`px-2 py-1 text-xs font-medium transition-colors ${
                     bookTypeFilter === "KB"
-                      ? "bg-purple-100 text-purple-700 border border-purple-200"
-                      : "bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200"
+                      ? "bg-purple-600 text-white"
+                      : "bg-gray-200 text-gray-600 hover:bg-gray-300"
                   }`}
                 >
-                  📘 Kursbuch
+                  📘 KB
                 </button>
                 <button
                   onClick={() => setBookTypeFilter("AB")}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+                  className={`px-2 py-1 text-xs font-medium transition-colors ${
                     bookTypeFilter === "AB"
-                      ? "bg-green-100 text-green-700 border border-green-200"
-                      : "bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200"
+                      ? "bg-green-600 text-white"
+                      : "bg-gray-200 text-gray-600 hover:bg-gray-300"
                   }`}
                 >
-                  📗 Arbeitsbuch
+                  📗 AB
                 </button>
               </div>
-            </div>
 
-            {/* Lesson filter toggle */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
+              {/* Separator */}
+              <div className="h-4 w-px bg-gray-300"></div>
+
+              {/* Lesson filter toggle */}
+              <div className="flex items-center gap-1">
                 <button
-                  onClick={() => setShowAllLessons(!showAllLessons)}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+                  onClick={() => setShowAllLessons(false)}
+                  className={`px-2 py-1 text-xs font-medium transition-colors ${
                     !showAllLessons
-                      ? "bg-blue-100 text-blue-700 border border-blue-200"
-                      : "bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200"
+                      ? "bg-blue-600 text-white"
+                      : "bg-gray-200 text-gray-600 hover:bg-gray-300"
                   }`}
                 >
-                  This Lesson ({currentLessonCount})
+                  L{lessonNumber} ({currentLessonCount})
                 </button>
                 <button
-                  onClick={() => setShowAllLessons(!showAllLessons)}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+                  onClick={() => setShowAllLessons(true)}
+                  className={`px-2 py-1 text-xs font-medium transition-colors ${
                     showAllLessons
-                      ? "bg-blue-100 text-blue-700 border border-blue-200"
-                      : "bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200"
+                      ? "bg-blue-600 text-white"
+                      : "bg-gray-200 text-gray-600 hover:bg-gray-300"
                   }`}
                 >
-                  All Audio ({audioMaterials.length})
+                  All ({audioMaterials.length})
                 </button>
               </div>
 
               {/* Results count */}
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-500 ml-auto">
                 {filteredMaterials.length} file{filteredMaterials.length !== 1 ? "s" : ""}
               </p>
             </div>
-
-            {/* Context info when filtered */}
-            {!showAllLessons && (
-              <div className="flex items-center gap-2 px-2 py-1 bg-blue-50 border border-blue-100 rounded text-xs">
-                <span className="font-medium text-blue-700">
-                  Showing: {level} {bookTypeFilter} - Lesson {lessonNumber}
-                </span>
-              </div>
-            )}
           </div>
 
           {loading ? (
