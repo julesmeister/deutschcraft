@@ -15,12 +15,15 @@ import {
   GripVertical,
   Link as LinkIcon,
   Youtube,
+  Music,
 } from "lucide-react";
 import { ExerciseAnswer, ExerciseAttachment } from "@/lib/models/exercises";
 import { CreateExerciseOverrideInput } from "@/lib/models/exerciseOverride";
 import { GermanCharAutocomplete } from "@/components/writing/GermanCharAutocomplete";
 import { InlineAnswerInput } from "./InlineAnswerInput";
 import { InlineItemNumberInput } from "./InlineItemNumberInput";
+import { AudioAttachmentSelector } from "./AudioAttachmentSelector";
+import { CEFRLevel } from "@/lib/models/cefr";
 
 // Flattened type for inline editing UI
 interface InlineExerciseData {
@@ -38,6 +41,9 @@ interface InlineExerciseData {
 interface InlineEditableExerciseCardProps {
   initialData?: InlineExerciseData;
   sectionName: string;
+  level: CEFRLevel;
+  bookType: "AB" | "KB";
+  lessonNumber: number;
   onSave: (data: CreateExerciseOverrideInput) => Promise<void>;
   onCancel: () => void;
   colorScheme: {
@@ -51,6 +57,9 @@ interface InlineEditableExerciseCardProps {
 export function InlineEditableExerciseCard({
   initialData,
   sectionName,
+  level,
+  bookType,
+  lessonNumber,
   onSave,
   onCancel,
   colorScheme,
@@ -351,60 +360,76 @@ export function InlineEditableExerciseCard({
           ))}
         </div>
 
-        {/* Attachments */}
+        {/* Audio Attachments */}
+        <div className="border-t pt-3">
+          <AudioAttachmentSelector
+            level={level}
+            bookType={bookType}
+            lessonNumber={lessonNumber}
+            attachments={attachments}
+            onAttachmentsChange={setAttachments}
+          />
+        </div>
+
+        {/* Link/YouTube Attachments */}
         <div className="space-y-2">
           <div className="flex items-center gap-2">
             <span className="text-xs font-semibold text-gray-600 uppercase">
-              Attachments
+              Links & YouTube
             </span>
             <button
               onClick={handleAddAttachment}
               className="p-1 text-blue-600 hover:bg-blue-50 rounded transition-colors"
-              title="Add attachment"
+              title="Add link or YouTube video"
             >
               <Plus className="w-3 h-3" />
             </button>
           </div>
 
-          {attachments.map((attachment, index) => (
-            <div key={index} className="flex items-center gap-2">
-              <div className="flex-shrink-0 text-gray-400 p-1">
-                {attachment.type === "youtube" ? (
-                  <Youtube className="w-4 h-4 text-red-500" />
-                ) : (
-                  <LinkIcon className="w-4 h-4" />
-                )}
+          {attachments.filter(a => a.type !== 'audio').map((attachment, index) => {
+            // Find the actual index in the full attachments array
+            const actualIndex = attachments.findIndex(a => a === attachment);
+
+            return (
+              <div key={actualIndex} className="flex items-center gap-2">
+                <div className="flex-shrink-0 text-gray-400 p-1">
+                  {attachment.type === "youtube" ? (
+                    <Youtube className="w-4 h-4 text-red-500" />
+                  ) : (
+                    <LinkIcon className="w-4 h-4" />
+                  )}
+                </div>
+
+                <input
+                  type="text"
+                  value={attachment.url}
+                  onChange={(e) =>
+                    handleUpdateAttachment(actualIndex, "url", e.target.value)
+                  }
+                  placeholder="URL (e.g. https://youtube.com/...)"
+                  className="flex-1 px-3 py-1.5 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
+                />
+
+                <input
+                  type="text"
+                  value={attachment.title || ""}
+                  onChange={(e) =>
+                    handleUpdateAttachment(actualIndex, "title", e.target.value)
+                  }
+                  placeholder="Title (optional)"
+                  className="flex-1 px-3 py-1.5 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
+                />
+
+                <button
+                  onClick={() => handleRemoveAttachment(actualIndex)}
+                  className="p-1 text-red-600 hover:bg-red-50 rounded transition-colors"
+                  title="Remove attachment"
+                >
+                  <Trash2 className="w-3 h-3" />
+                </button>
               </div>
-
-              <input
-                type="text"
-                value={attachment.url}
-                onChange={(e) =>
-                  handleUpdateAttachment(index, "url", e.target.value)
-                }
-                placeholder="URL (e.g. https://youtube.com/...)"
-                className="flex-1 px-3 py-1.5 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
-              />
-
-              <input
-                type="text"
-                value={attachment.title || ""}
-                onChange={(e) =>
-                  handleUpdateAttachment(index, "title", e.target.value)
-                }
-                placeholder="Title (optional)"
-                className="flex-1 px-3 py-1.5 text-sm border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-piku-purple"
-              />
-
-              <button
-                onClick={() => handleRemoveAttachment(index)}
-                className="p-1 text-red-600 hover:bg-red-50 rounded transition-colors"
-                title="Remove attachment"
-              >
-                <Trash2 className="w-3 h-3" />
-              </button>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Action Buttons */}

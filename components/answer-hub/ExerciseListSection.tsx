@@ -81,6 +81,13 @@ export function ExerciseListSection({
   editingExerciseId,
   onUpdateAnswer,
 }: ExerciseListSectionProps) {
+  // Parse level and book type from levelBook (e.g., "B1-AB")
+  const [levelPart, bookType] = levelBook.split("-") as [string, "AB" | "KB"];
+  const level = levelPart as any; // CEFRLevel
+
+  // Parse lesson number from lessonId (e.g., "L9")
+  const lessonNumber = parseInt(lessonId.replace("L", ""));
+
   // Group exercises by section and track global indices
   const exercisesBySection: Record<
     string,
@@ -179,6 +186,9 @@ export function ExerciseListSection({
                   attachments: exercise.attachments,
                 }}
                 sectionName={exercise.section || "Übungen"}
+                level={level}
+                bookType={bookType}
+                lessonNumber={lessonNumber}
                 onSave={onSaveInlineEdit}
                 onCancel={onCancelInlineEdit}
                 colorScheme={colorScheme}
@@ -301,6 +311,9 @@ export function ExerciseListSection({
         <InlineEditableExerciseCard
           key="inline-editor"
           sectionName={section}
+          level={level}
+          bookType={bookType}
+          lessonNumber={lessonNumber}
           onSave={onSaveInlineExercise}
           onCancel={onCancelInlineExercise}
           colorScheme={colorScheme}
