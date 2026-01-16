@@ -45,9 +45,10 @@ export interface Exercise {
  * Exercise Attachment Model
  */
 export interface ExerciseAttachment {
-  type: 'youtube' | 'link';
+  type: 'youtube' | 'link' | 'audio';
   url: string;
   title?: string;
+  audioId?: string; // For audio type: ID from audio_materials table
 }
 
 /**

@@ -8,10 +8,11 @@ import { Label } from "../ui/Label";
 import { Select, SelectOption } from "../ui/Select";
 import { Edit3, FileText } from "lucide-react";
 import { AnswerFieldsManager } from "./AnswerFieldsManager";
-import { Exercise, ExerciseAnswer } from "@/lib/models/exercises";
+import { Exercise, ExerciseAnswer, ExerciseAttachment } from "@/lib/models/exercises";
 import { CEFRLevel } from "@/lib/models/cefr";
 import { CreateExerciseOverrideInput } from "@/lib/models/exerciseOverride";
 import { GermanCharAutocomplete } from "@/components/writing/GermanCharAutocomplete";
+import { AudioAttachmentSelector } from "./AudioAttachmentSelector";
 
 interface ExerciseOverrideDialogProps {
   isOpen: boolean;
@@ -47,6 +48,7 @@ export function ExerciseOverrideDialog({
   const [answers, setAnswers] = useState<ExerciseAnswer[]>([
     { itemNumber: "1", correctAnswer: "" },
   ]);
+  const [attachments, setAttachments] = useState<ExerciseAttachment[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Refs for autocomplete
@@ -71,6 +73,7 @@ export function ExerciseOverrideDialog({
           ? exercise.answers
           : [{ itemNumber: "1", correctAnswer: "" }]
       );
+      setAttachments(exercise.attachments || []);
     } else if (isOpen && mode === "create") {
       // Reset to defaults for create mode
       setTitle("");
@@ -81,6 +84,7 @@ export function ExerciseOverrideDialog({
       setPageNumber("");
       setDifficulty("medium");
       setAnswers([{ itemNumber: "1", correctAnswer: "" }]);
+      setAttachments([]);
     }
   }, [isOpen, mode, exercise]);
 
@@ -141,6 +145,7 @@ export function ExerciseOverrideDialog({
                 pageNumber: pageNumber ? parseInt(pageNumber) : undefined,
                 difficulty,
                 answers: answers.filter((a) => a.correctAnswer.trim() !== ""),
+                attachments: attachments.length > 0 ? attachments : undefined,
               },
             }
           : {
@@ -154,6 +159,7 @@ export function ExerciseOverrideDialog({
                 pageNumber: pageNumber ? parseInt(pageNumber) : undefined,
                 difficulty,
                 answers: answers.filter((a) => a.correctAnswer.trim() !== ""),
+                attachments: attachments.length > 0 ? attachments : undefined,
               },
             }),
       };
@@ -170,6 +176,7 @@ export function ExerciseOverrideDialog({
       setPageNumber("");
       setDifficulty("medium");
       setAnswers([{ itemNumber: "1", correctAnswer: "" }]);
+      setAttachments([]);
     } catch (error) {
       console.error("Error submitting exercise override:", error);
     } finally {
@@ -344,6 +351,17 @@ export function ExerciseOverrideDialog({
                 onUpdateAnswer={handleUpdateAnswer}
                 onAddAnswer={handleAddAnswer}
                 onRemoveAnswer={handleRemoveAnswer}
+              />
+            </div>
+
+            {/* Audio Attachments Section */}
+            <div className="border-t pt-4">
+              <AudioAttachmentSelector
+                level={level}
+                bookType={bookType}
+                lessonNumber={lessonNumber}
+                attachments={attachments}
+                onAttachmentsChange={setAttachments}
               />
             </div>
 

@@ -53,18 +53,20 @@ export default function MaterialsPage() {
   );
   const { userId, userName, userRole } = getUserInfo(currentUser, session);
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [materialType, setMaterialType] = useState<MaterialType>("audio");
 
   // PDF Materials state
   const [materials, setMaterials] = useState<Material[]>([]);
   const [filteredMaterials, setFilteredMaterials] = useState<Material[]>([]);
+  const [materialsLoaded, setMaterialsLoaded] = useState(false);
 
   // Audio Materials state
   const [audioMaterials, setAudioMaterials] = useState<AudioMaterial[]>([]);
   const [filteredAudioMaterials, setFilteredAudioMaterials] = useState<
     AudioMaterial[]
   >([]);
+  const [audioMaterialsLoaded, setAudioMaterialsLoaded] = useState(false);
   const [currentlyPlaying, setCurrentlyPlaying] = useState<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -77,11 +79,16 @@ export default function MaterialsPage() {
 
   const isTeacher = userRole === "teacher";
 
+  // Load data for the currently selected tab only (lazy loading)
   useEffect(() => {
     if (userId) {
-      loadAllMaterials();
+      if (materialType === "audio" && !audioMaterialsLoaded) {
+        loadAudioMaterials();
+      } else if (materialType === "pdf" && !materialsLoaded) {
+        loadPDFMaterials();
+      }
     }
-  }, [userId, isTeacher]);
+  }, [userId, isTeacher, materialType]);
 
   useEffect(() => {
     if (materialType === "pdf") {
@@ -99,23 +106,37 @@ export default function MaterialsPage() {
     materialType,
   ]);
 
-  const loadAllMaterials = async () => {
+  const loadPDFMaterials = async () => {
+    if (materialsLoaded) return; // Skip if already loaded
+
     setLoading(true);
     try {
-      // Load PDFs
       const materialsData = isTeacher
         ? await getAllMaterials()
         : await getPublicMaterials();
       setMaterials(materialsData);
+      setMaterialsLoaded(true);
+    } catch (error) {
+      console.error("[Materials] Error loading PDF materials:", error);
+      toast.error("Failed to load PDF materials");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-      // Load Audio
+  const loadAudioMaterials = async () => {
+    if (audioMaterialsLoaded) return; // Skip if already loaded
+
+    setLoading(true);
+    try {
       const audioData = isTeacher
         ? await getAllAudioMaterials()
         : await getPublicAudioMaterials();
       setAudioMaterials(audioData);
+      setAudioMaterialsLoaded(true);
     } catch (error) {
-      console.error("[Materials] Error loading materials:", error);
-      toast.error("Failed to load materials");
+      console.error("[Materials] Error loading audio materials:", error);
+      toast.error("Failed to load audio materials");
     } finally {
       setLoading(false);
     }

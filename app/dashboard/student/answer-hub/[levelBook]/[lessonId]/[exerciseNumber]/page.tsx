@@ -16,6 +16,7 @@ import { ExerciseDiscussion } from "@/components/answer-hub/ExerciseDiscussion";
 import { StudentAnswersDisplay } from "@/components/answer-hub/StudentAnswersDisplay";
 import { DictionaryLookup } from "@/components/dictionary/DictionaryLookup";
 import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
+import { AudioPlayer } from "@/components/playground/AudioPlayer";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { useCurrentStudent } from "@/lib/hooks/useUsers";
 import { useActiveBatches } from "@/lib/hooks/useBatches";
@@ -319,34 +320,55 @@ export default function ExerciseDetailPage() {
 
                   {/* Attachments */}
                   {exercise.attachments && exercise.attachments.length > 0 && (
-                    <div className="flex flex-wrap items-center gap-2 w-full pt-2 mt-1 border-t border-gray-100">
+                    <div className="w-full pt-2 mt-1 border-t border-gray-100 space-y-2">
                       <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
                         Attachments:
                       </span>
-                      {exercise.attachments.map((attachment, index) => (
-                        <a
-                          key={index}
-                          href={attachment.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-full transition-colors ${
-                            attachment.type === "youtube"
-                              ? "bg-red-50 text-red-700 hover:bg-red-100 border border-red-100"
-                              : "bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-100"
-                          }`}
-                        >
-                          {attachment.type === "youtube" ? (
-                            <Youtube className="w-3 h-3" />
-                          ) : (
-                            <LinkIcon className="w-3 h-3" />
-                          )}
-                          {attachment.title ||
-                            (attachment.type === "youtube"
-                              ? "Watch Video"
-                              : "Open Link")}
-                          <ExternalLink className="w-2.5 h-2.5 opacity-50" />
-                        </a>
-                      ))}
+
+                      {/* Link/YouTube attachments */}
+                      {exercise.attachments.some((att) => att.type !== "audio") && (
+                        <div className="flex flex-wrap items-center gap-2">
+                          {exercise.attachments
+                            .filter((att) => att.type !== "audio")
+                            .map((attachment, index) => (
+                              <a
+                                key={index}
+                                href={attachment.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium rounded-full transition-colors ${
+                                  attachment.type === "youtube"
+                                    ? "bg-red-50 text-red-700 hover:bg-red-100 border border-red-100"
+                                    : "bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-100"
+                                }`}
+                              >
+                                {attachment.type === "youtube" ? (
+                                  <Youtube className="w-3 h-3" />
+                                ) : (
+                                  <LinkIcon className="w-3 h-3" />
+                                )}
+                                {attachment.title ||
+                                  (attachment.type === "youtube"
+                                    ? "Watch Video"
+                                    : "Open Link")}
+                                <ExternalLink className="w-2.5 h-2.5 opacity-50" />
+                              </a>
+                            ))}
+                        </div>
+                      )}
+
+                      {/* Audio attachments */}
+                      {exercise.attachments
+                        .filter((att) => att.type === "audio")
+                        .map((attachment, index) => (
+                          <div key={index} className="pt-1">
+                            <AudioPlayer
+                              materialTitle={attachment.title || "Audio"}
+                              materialUrl={attachment.url}
+                              audioId={attachment.audioId}
+                            />
+                          </div>
+                        ))}
                     </div>
                   )}
                 </div>
