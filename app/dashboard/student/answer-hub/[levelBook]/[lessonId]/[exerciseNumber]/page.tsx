@@ -16,6 +16,7 @@ import { ExerciseDiscussion } from "@/components/answer-hub/ExerciseDiscussion";
 import { StudentAnswersDisplay } from "@/components/answer-hub/StudentAnswersDisplay";
 import { DictionaryLookup } from "@/components/dictionary/DictionaryLookup";
 import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
+import { FloatingSectionNavigator } from "@/components/answer-hub/FloatingSectionNavigator";
 import { AudioPlayer } from "@/components/playground/AudioPlayer";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { useCurrentStudent } from "@/lib/hooks/useUsers";
@@ -94,6 +95,14 @@ export default function ExerciseDetailPage() {
     exercise?.answers.length || 0,
     userId
   );
+
+  // Handle scrolling to section
+  const handleScrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   // Handle updating a single answer for an exercise (teacher only)
   const handleUpdateAnswer = async (itemIndex: number, newAnswer: string) => {
@@ -250,7 +259,7 @@ export default function ExerciseDetailPage() {
       {/* Main Content */}
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-8">
         {/* Exercise Card */}
-        <div className="bg-white border border-gray-200 shadow-sm overflow-hidden mb-6">
+        <div id="exercise" className="bg-white border border-gray-200 shadow-sm overflow-hidden mb-6 scroll-mt-20">
           {/* Exercise Header */}
           <div className="p-6 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-gray-100">
             <div className="flex items-start justify-between gap-4 mb-3">
@@ -415,13 +424,15 @@ export default function ExerciseDetailPage() {
         </div>
 
         {/* Student Answers Section */}
-        <StudentAnswersDisplay
-          exerciseId={exercise.exerciseId}
-          refreshTrigger={answersRefreshTrigger}
-        />
+        <div id="student-answers" className="scroll-mt-20">
+          <StudentAnswersDisplay
+            exerciseId={exercise.exerciseId}
+            refreshTrigger={answersRefreshTrigger}
+          />
+        </div>
 
         {/* Discussion Section */}
-        <div className="bg-white border border-gray-200 shadow-sm overflow-hidden mt-6">
+        <div id="discussion" className="bg-white border border-gray-200 shadow-sm overflow-hidden mt-6 scroll-mt-20">
           <ExerciseDiscussion
             exerciseId={exercise.exerciseId}
             currentUser={currentUser}
@@ -430,7 +441,7 @@ export default function ExerciseDetailPage() {
         </div>
 
         {/* Dictionary Section */}
-        <div className="bg-white border border-gray-200 shadow-sm rounded-lg mt-6 p-6">
+        <div id="dictionary" className="bg-white border border-gray-200 shadow-sm rounded-lg mt-6 p-6 scroll-mt-20">
           <div className="flex items-center gap-2 mb-4">
             <span className="text-2xl">📚</span>
             <h2 className="font-black text-lg text-gray-900">
@@ -472,6 +483,7 @@ export default function ExerciseDetailPage() {
       </div>
 
       <FloatingRedemittelWidget currentLevel={level} />
+      <FloatingSectionNavigator onScrollToSection={handleScrollToSection} />
     </div>
   );
 }
