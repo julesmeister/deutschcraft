@@ -67,35 +67,28 @@ export function AudioPlayer({
     };
 
     const handleError = async () => {
-      console.error("[AudioPlayer] Audio load error", {
-        currentSrc: audio?.src,
-        audioId,
-        triedBlobFallback,
-        error: audio?.error,
-      });
-
       // Try blob fallback if available and not already tried
       if (audioId && !triedBlobFallback && audio) {
-        console.log("[AudioPlayer] Trying blob fallback for audioId:", audioId);
+        console.log("[AudioPlayer] Primary source failed, trying backup blob for:", audioId);
         setTriedBlobFallback(true);
         const blobUrl = `/api/materials/audio/${audioId}/blob`;
         console.log("[AudioPlayer] Blob URL:", blobUrl);
         audio.src = blobUrl;
         try {
           await audio.load();
-          console.log("[AudioPlayer] Blob loaded successfully");
-          toast.success("Loaded from backup source", 2000);
+          console.log("[AudioPlayer] ✅ Backup blob loaded successfully");
+          toast.success("Playing from backup", 2000);
           return; // Don't show error if fallback works
         } catch (blobError) {
-          console.error("[AudioPlayer] Blob fallback also failed:", blobError);
+          console.error("[AudioPlayer] ❌ Both primary and backup sources failed");
         }
-      } else {
-        console.log("[AudioPlayer] Cannot try blob fallback:", {
-          hasAudioId: !!audioId,
-          alreadyTried: triedBlobFallback,
-          hasAudio: !!audio,
-        });
       }
+
+      // Only show error if no blob fallback available or it also failed
+      console.error("[AudioPlayer] ❌ Audio failed to load:", {
+        url: materialUrl,
+        hasBackup: !!audioId,
+      });
 
       toast.error(
         "Failed to load audio file. Please check your R2 bucket configuration.",
