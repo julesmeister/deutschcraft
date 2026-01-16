@@ -34,7 +34,11 @@ export function AudioAttachmentSelector({
   const [showAllLessons, setShowAllLessons] = useState(false);
 
   useEffect(() => {
-    console.log("[AudioAttachmentSelector] Component mounted");
+    console.log("[AudioAttachmentSelector] Component mounted with context:", {
+      level,
+      bookType,
+      lessonNumber,
+    });
     loadAudioMaterials();
   }, []);
 
@@ -62,12 +66,38 @@ export function AudioAttachmentSelector({
 
     // If not showing all lessons, auto-filter by current exercise context
     if (!showAllLessons) {
-      filtered = filtered.filter(
-        (audio) =>
-          audio.level === level &&
-          audio.bookType === bookType &&
-          audio.lessonNumber === lessonNumber
-      );
+      console.log("[AudioAttachmentSelector] Filtering by context:", {
+        level,
+        bookType,
+        lessonNumber,
+        sampleAudio: audioMaterials[0],
+      });
+
+      filtered = filtered.filter((audio) => {
+        // Match level (handle both "B1" and "B1.2" formats)
+        const levelMatch = audio.level?.startsWith(level);
+
+        // Match book type
+        const bookTypeMatch = audio.bookType === bookType;
+
+        // Match lesson number
+        const lessonMatch = audio.lessonNumber === lessonNumber;
+
+        console.log("[AudioAttachmentSelector] Audio match check:", {
+          title: audio.title,
+          audioLevel: audio.level,
+          audioBookType: audio.bookType,
+          audioLesson: audio.lessonNumber,
+          levelMatch,
+          bookTypeMatch,
+          lessonMatch,
+          allMatch: levelMatch && bookTypeMatch && lessonMatch,
+        });
+
+        return levelMatch && bookTypeMatch && lessonMatch;
+      });
+
+      console.log("[AudioAttachmentSelector] Filtered results:", filtered.length);
     }
 
     // Apply search query
@@ -86,7 +116,7 @@ export function AudioAttachmentSelector({
   // Get count of matching files for current lesson
   const currentLessonCount = audioMaterials.filter(
     (audio) =>
-      audio.level === level &&
+      audio.level?.startsWith(level) &&
       audio.bookType === bookType &&
       audio.lessonNumber === lessonNumber
   ).length;
