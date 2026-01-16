@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { AudioTrack } from "@/lib/models/audio";
 import { getPlayableUrl } from "@/lib/utils/urlHelpers";
+import { formatTime } from "@/lib/utils/audioHelpers";
 
 interface AudioPlayerProps {
   tracks: AudioTrack[];
@@ -25,13 +26,6 @@ export function AudioPlayer({
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const currentTrack = tracks[currentTrackIndex];
-
-  // Format time in MM:SS
-  const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${mins}:${secs.toString().padStart(2, "0")}`;
-  };
 
   // Play/Pause handler
   const togglePlayPause = () => {
