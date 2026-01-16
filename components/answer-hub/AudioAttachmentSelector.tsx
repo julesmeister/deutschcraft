@@ -27,9 +27,11 @@ export function AudioAttachmentSelector({
   const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [levelFilter, setLevelFilter] = useState<string>("All");
-  const [bookTypeFilter, setBookTypeFilter] = useState<string>("All");
-  const [lessonFilter, setLessonFilter] = useState<string>("All");
+  // Auto-filter based on current exercise context
+  const [levelFilter, setLevelFilter] = useState<string>(level);
+  const [bookTypeFilter, setBookTypeFilter] = useState<string>(bookType);
+  const [lessonFilter, setLessonFilter] = useState<string>(lessonNumber.toString());
+  const [showAllLessons, setShowAllLessons] = useState(false);
 
   useEffect(() => {
     console.log("[AudioAttachmentSelector] Component mounted");
@@ -54,24 +56,17 @@ export function AudioAttachmentSelector({
     }
   };
 
-  // Filter materials based on search query and filters
+  // Filter materials based on search query and lesson context
   useEffect(() => {
     let filtered = [...audioMaterials];
 
-    // Apply level filter
-    if (levelFilter !== "All") {
-      filtered = filtered.filter((audio) => audio.level === levelFilter);
-    }
-
-    // Apply book type filter
-    if (bookTypeFilter !== "All") {
-      filtered = filtered.filter((audio) => audio.bookType === bookTypeFilter);
-    }
-
-    // Apply lesson filter
-    if (lessonFilter !== "All") {
+    // If not showing all lessons, auto-filter by current exercise context
+    if (!showAllLessons) {
       filtered = filtered.filter(
-        (audio) => audio.lessonNumber === parseInt(lessonFilter)
+        (audio) =>
+          audio.level === level &&
+          audio.bookType === bookType &&
+          audio.lessonNumber === lessonNumber
       );
     }
 
@@ -86,19 +81,15 @@ export function AudioAttachmentSelector({
     }
 
     setFilteredMaterials(filtered);
-  }, [searchQuery, audioMaterials, levelFilter, bookTypeFilter, lessonFilter]);
+  }, [searchQuery, audioMaterials, showAllLessons, level, bookType, lessonNumber]);
 
-  // Extract unique values for filters
-  const uniqueLevels = Array.from(
-    new Set(audioMaterials.map((a) => a.level))
-  ).sort();
-  const uniqueLessons = Array.from(
-    new Set(
-      audioMaterials
-        .map((a) => a.lessonNumber)
-        .filter((l): l is number => l !== null)
-    )
-  ).sort((a, b) => a - b);
+  // Get count of matching files for current lesson
+  const currentLessonCount = audioMaterials.filter(
+    (audio) =>
+      audio.level === level &&
+      audio.bookType === bookType &&
+      audio.lessonNumber === lessonNumber
+  ).length;
 
   const handleAddAudio = (audio: AudioMaterial) => {
     // Check if already added
@@ -195,52 +186,45 @@ export function AudioAttachmentSelector({
               />
             </div>
 
-            {/* Filters */}
-            <div className="grid grid-cols-3 gap-2">
-              {/* Level filter */}
-              <select
-                value={levelFilter}
-                onChange={(e) => setLevelFilter(e.target.value)}
-                className="px-2 py-1.5 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="All">All Levels</option>
-                {uniqueLevels.map((lvl) => (
-                  <option key={lvl} value={lvl}>
-                    {lvl}
-                  </option>
-                ))}
-              </select>
+            {/* Lesson filter toggle */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setShowAllLessons(!showAllLessons)}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+                    !showAllLessons
+                      ? "bg-blue-100 text-blue-700 border border-blue-200"
+                      : "bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200"
+                  }`}
+                >
+                  This Lesson ({currentLessonCount})
+                </button>
+                <button
+                  onClick={() => setShowAllLessons(!showAllLessons)}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+                    showAllLessons
+                      ? "bg-blue-100 text-blue-700 border border-blue-200"
+                      : "bg-gray-100 text-gray-600 border border-gray-200 hover:bg-gray-200"
+                  }`}
+                >
+                  All Audio ({audioMaterials.length})
+                </button>
+              </div>
 
-              {/* Book type filter */}
-              <select
-                value={bookTypeFilter}
-                onChange={(e) => setBookTypeFilter(e.target.value)}
-                className="px-2 py-1.5 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="All">All Books</option>
-                <option value="KB">Kursbuch</option>
-                <option value="AB">Arbeitsbuch</option>
-              </select>
-
-              {/* Lesson filter */}
-              <select
-                value={lessonFilter}
-                onChange={(e) => setLessonFilter(e.target.value)}
-                className="px-2 py-1.5 text-xs border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="All">All Lessons</option>
-                {uniqueLessons.map((lesson) => (
-                  <option key={lesson} value={lesson.toString()}>
-                    Lesson {lesson}
-                  </option>
-                ))}
-              </select>
+              {/* Results count */}
+              <p className="text-xs text-gray-500">
+                {filteredMaterials.length} file{filteredMaterials.length !== 1 ? "s" : ""}
+              </p>
             </div>
 
-            {/* Results count */}
-            <p className="text-xs text-gray-500">
-              Showing {filteredMaterials.length} of {audioMaterials.length} audio files
-            </p>
+            {/* Context info when filtered */}
+            {!showAllLessons && (
+              <div className="flex items-center gap-2 px-2 py-1 bg-blue-50 border border-blue-100 rounded text-xs">
+                <span className="font-medium text-blue-700">
+                  Showing: {level} {bookType} - Lesson {lessonNumber}
+                </span>
+              </div>
+            )}
           </div>
 
           {loading ? (
@@ -249,9 +233,21 @@ export function AudioAttachmentSelector({
             </div>
           ) : filteredMaterials.length === 0 ? (
             <div className="p-4 text-center text-sm text-gray-500">
-              {searchQuery
-                ? `No audio files match "${searchQuery}"`
-                : "No audio files available"}
+              {searchQuery ? (
+                <p>No audio files match "{searchQuery}"</p>
+              ) : !showAllLessons ? (
+                <div className="space-y-2">
+                  <p>No audio files for {level} {bookType} - Lesson {lessonNumber}</p>
+                  <button
+                    onClick={() => setShowAllLessons(true)}
+                    className="text-blue-600 hover:text-blue-700 underline text-xs"
+                  >
+                    Browse all audio files
+                  </button>
+                </div>
+              ) : (
+                <p>No audio files available</p>
+              )}
             </div>
           ) : (
             <div className="max-h-80 overflow-y-auto">
