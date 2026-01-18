@@ -363,63 +363,63 @@ export function AudioPlayer({
           />
         </div>
         <div className="flex flex-col lg:flex-row gap-2 lg:gap-3 w-full" style={{ transform: 'translateY(8px)' }}>
-          {/* Left - Audio icon placeholder */}
-          <div className="w-14 h-14 lg:w-16 lg:h-16 flex-shrink-0 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center border border-gray-700/50">
-            <svg className="w-7 h-7 lg:w-8 lg:h-8 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
-            </svg>
+          {/* Left - Control buttons */}
+          <div className="flex items-center gap-2 flex-shrink-0">
+            <button
+              onClick={handlePlayPause}
+              className="w-10 h-10 bg-gray-800/70 hover:bg-gray-700/70 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors"
+            >
+              {isPlaying ? (
+                <svg className="w-4 h-4" fill="rgba(252, 252, 252, 0.8)" viewBox="0 0 320 512">
+                  <path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z" />
+                </svg>
+              ) : (
+                <svg className="w-4 h-4 ml-0.5" fill="rgba(252, 252, 252, 0.8)" viewBox="0 0 384 512">
+                  <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                </svg>
+              )}
+            </button>
+
+            <button
+              onClick={toggleMute}
+              className="w-8 h-8 bg-gray-800/70 hover:bg-gray-700/70 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors"
+            >
+              {volume === 0 ? (
+                <svg className="w-3.5 h-3.5" fill="rgba(252, 252, 252, 0.8)" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              ) : (
+                <svg className="w-3.5 h-3.5" fill="rgba(252, 252, 252, 0.8)" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clipRule="evenodd" />
+                </svg>
+              )}
+            </button>
+
+            {showCloseButton && onClose && (
+              <button
+                onClick={onClose}
+                className="w-8 h-8 bg-gray-800/70 hover:bg-gray-700/70 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors"
+              >
+                <ActionButtonIcons.Close />
+              </button>
+            )}
           </div>
 
-          {/* Right - Track info and controls in one row on desktop */}
-          <div className="flex-1 flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-3">
-            {/* Track info */}
-            <div className="flex-1 min-w-0">
+          {/* Spacer */}
+          <div className="flex-1" />
+
+          {/* Right - Audio icon and Track info */}
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <div className="min-w-0 text-right">
               <div className="text-xs" style={{ color: 'rgba(252, 252, 252, 0.4)' }}>Audio Track</div>
               <h3 className="text-sm font-medium truncate" style={{ color: '#FCFCFC' }}>
                 {materialTitle}
               </h3>
             </div>
-
-            {/* Control buttons */}
-            <div className="flex items-center gap-2">
-              <button
-                onClick={handlePlayPause}
-                className="w-10 h-10 bg-gray-800/70 hover:bg-gray-700/70 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors"
-              >
-                {isPlaying ? (
-                  <svg className="w-4 h-4" fill="rgba(252, 252, 252, 0.8)" viewBox="0 0 320 512">
-                    <path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z" />
-                  </svg>
-                ) : (
-                  <svg className="w-4 h-4 ml-0.5" fill="rgba(252, 252, 252, 0.8)" viewBox="0 0 384 512">
-                    <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
-                  </svg>
-                )}
-              </button>
-
-              <button
-                onClick={toggleMute}
-                className="w-8 h-8 bg-gray-800/70 hover:bg-gray-700/70 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors"
-              >
-                {volume === 0 ? (
-                  <svg className="w-3.5 h-3.5" fill="rgba(252, 252, 252, 0.8)" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                ) : (
-                  <svg className="w-3.5 h-3.5" fill="rgba(252, 252, 252, 0.8)" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clipRule="evenodd" />
-                  </svg>
-                )}
-              </button>
-
-              {showCloseButton && onClose && (
-                <button
-                  onClick={onClose}
-                  className="w-8 h-8 bg-gray-800/70 hover:bg-gray-700/70 backdrop-blur-sm rounded-full flex items-center justify-center transition-colors"
-                >
-                  <ActionButtonIcons.Close />
-                </button>
-              )}
+            <div className="w-14 h-14 lg:w-16 lg:h-16 flex-shrink-0 bg-gray-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center border border-gray-700/50">
+              <svg className="w-7 h-7 lg:w-8 lg:h-8 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
+              </svg>
             </div>
           </div>
         </div>

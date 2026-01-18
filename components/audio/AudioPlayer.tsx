@@ -224,9 +224,13 @@ export function AudioPlayer({
               }`}
             >
               <div className="flex items-center gap-3">
-                <span className="text-sm font-bold text-gray-500">
-                  {index + 1}
-                </span>
+                {index === currentTrackIndex && isPlaying && (
+                  <div className="flex gap-1">
+                    <div className="w-1 h-4 bg-blue-600 animate-pulse"></div>
+                    <div className="w-1 h-4 bg-blue-600 animate-pulse delay-75"></div>
+                    <div className="w-1 h-4 bg-blue-600 animate-pulse delay-150"></div>
+                  </div>
+                )}
                 <div className="flex-1">
                   <div className="font-bold text-sm text-gray-900">
                     {track.title}
@@ -235,13 +239,9 @@ export function AudioPlayer({
                     {formatTime(track.duration)}
                   </div>
                 </div>
-                {index === currentTrackIndex && isPlaying && (
-                  <div className="flex gap-1">
-                    <div className="w-1 h-4 bg-blue-600 animate-pulse"></div>
-                    <div className="w-1 h-4 bg-blue-600 animate-pulse delay-75"></div>
-                    <div className="w-1 h-4 bg-blue-600 animate-pulse delay-150"></div>
-                  </div>
-                )}
+                <span className="text-sm font-bold text-gray-500">
+                  {index + 1}
+                </span>
               </div>
             </button>
           ))}
