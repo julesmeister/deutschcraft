@@ -19,7 +19,7 @@ import { ParticipantsList } from "@/components/playground/ParticipantsList";
 import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
 import { MaterialSelector } from "@/components/playground/MaterialSelector";
 import { PDFViewer } from "@/components/playground/PDFViewer";
-import { AudioPlayer } from "@/components/playground/AudioPlayer";
+import { AudioPlayer } from "@/components/audio/AudioPlayer";
 import { formatDuration } from "@/lib/utils/dateHelpers";
 import type {
   PlaygroundRoom as PlaygroundRoomType,

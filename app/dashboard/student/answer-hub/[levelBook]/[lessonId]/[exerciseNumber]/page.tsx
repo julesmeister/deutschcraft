@@ -17,7 +17,7 @@ import { StudentAnswersDisplay } from "@/components/answer-hub/StudentAnswersDis
 import { DictionaryLookup } from "@/components/dictionary/DictionaryLookup";
 import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
 import { FloatingSectionNavigator } from "@/components/answer-hub/FloatingSectionNavigator";
-import { AudioPlayer } from "@/components/playground/AudioPlayer";
+import { AudioPlayer } from "@/components/audio/AudioPlayer";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { useCurrentStudent } from "@/lib/hooks/useUsers";
 import { useActiveBatches } from "@/lib/hooks/useBatches";
