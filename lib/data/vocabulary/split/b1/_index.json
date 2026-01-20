@@ -1,91 +1,43 @@
 {
   "level": "B1",
   "totalCards": 1554,
-  "totalCategories": 24,
+  "totalCategories": 29,
   "categories": [
     {
       "name": "Abstract Concepts",
-      "count": 73,
+      "count": 25,
       "file": "abstract-concepts.json",
       "ids": [
-        "b1-abstract-concepts-die-meinung-opinion",
         "b1-abstract-concepts-der-grund-reason",
         "b1-abstract-concepts-die-loesung-solution",
         "b1-abstract-concepts-das-problem-problem",
-        "b1-abstract-concepts-die-chance-chance-opportunity",
         "b1-abstract-concepts-das-ziel-goal",
         "b1-abstract-concepts-der-misserfolg-failure",
         "b1-abstract-concepts-die-aktion-action-campaign",
-        "b1-abstract-concepts-die-aktivitaet-activity",
         "b1-abstract-concepts-die-angelegenheit-matter-affair",
-        "b1-abstract-concepts-die-angewohnheit-habit-custom",
-        "b1-abstract-concepts-die-annahme-assumption-acceptance",
-        "b1-abstract-concepts-die-auffassung-view-conception",
-        "b1-abstract-concepts-die-aufmerksamkeit-attention-consideration",
-        "b1-abstract-concepts-die-aufopferung-sacrifice-devotion",
-        "b1-abstract-concepts-die-aufregung-excitement-agitation",
-        "b1-abstract-concepts-die-aufrichtigkeit-sincerity-honesty",
         "b1-abstract-concepts-die-aufschliessung-disclosure-opening-up",
-        "b1-abstract-concepts-die-aufschwung-upswing-prosperity",
-        "b1-abstract-concepts-die-aufsicht-supervision-oversight",
-        "b1-abstract-concepts-die-aufstieg-rise-ascent",
-        "b1-abstract-concepts-die-aufstellung-setting-up-arrangement",
         "b1-abstract-concepts-die-aufwaertsbewegung-upward-movement",
-        "b1-abstract-concepts-die-aufwendung-effort-expenditure",
-        "b1-abstract-concepts-die-aufwertung-revaluation-appreciation",
         "b1-abstract-concepts-die-aufzaehlung-enumeration-listing",
         "b1-abstract-concepts-die-aufzehrung-consumption-depletion",
         "b1-abstract-concepts-die-aufzucht-breeding-raising",
-        "b1-abstract-concepts-die-aufzug-elevator-act-of-a-play",
         "b1-abstract-concepts-die-augenschein-inspection-examination",
         "b1-abstract-concepts-die-augenblick-moment-instant",
         "b1-abstract-concepts-die-ausarbeitung-elaboration-drafting",
         "b1-abstract-concepts-die-ausbleiben-absence-non-occurrence",
         "b1-abstract-concepts-die-ausblick-outlook-view",
         "b1-abstract-concepts-die-ausbruch-outbreak-eruption",
-        "b1-abstract-concepts-die-freiheit-freedom",
-        "b1-abstract-concepts-die-gerechtigkeit-justice",
-        "b1-abstract-concepts-die-gleichheit-equality",
-        "b1-abstract-concepts-die-pflicht-duty-obligation",
-        "b1-abstract-concepts-das-recht-right-law",
-        "b1-abstract-concepts-die-macht-power",
-        "b1-abstract-concepts-die-gewalt-violence-force",
-        "b1-abstract-concepts-der-frieden-peace",
-        "b1-abstract-concepts-der-krieg-war",
-        "b1-abstract-concepts-der-fortschritt-progress",
-        "b1-abstract-concepts-die-tradition-tradition",
-        "b1-abstract-concepts-die-kultur-culture",
-        "b1-abstract-concepts-die-gemeinschaft-community",
-        "b1-abstract-concepts-die-oeffentlichkeit-public-publicity",
-        "b1-abstract-concepts-die-privatsphaere-privacy",
-        "b1-abstract-concepts-die-gefahr-danger",
-        "b1-abstract-concepts-das-risiko-risk",
-        "b1-abstract-concepts-die-moeglichkeit-possibility-opportunity",
-        "b1-abstract-concepts-die-wahrscheinlichkeit-probability-likelihood",
-        "b1-abstract-concepts-die-wahrheit-truth",
-        "b1-abstract-concepts-die-luege-lie",
-        "b1-abstract-concepts-die-ehrlichkeit-honesty",
-        "b1-abstract-concepts-das-vertrauen-trust-confidence",
-        "b1-abstract-concepts-der-zweifel-doubt",
-        "b1-abstract-concepts-die-hoffnung-hope",
-        "b1-abstract-concepts-die-beklemmung-anxiety-uneasiness",
         "b1-abstract-concepts-die-bekoestigung-provisioning-feeding",
-        "b1-abstract-concepts-die-bekraeftigung-affirmation-confirmation",
         "b1-abstract-concepts-der-belag-coating-layer",
         "b1-abstract-concepts-die-belagerung-siege-blockade",
         "b1-abstract-concepts-der-belang-concern-importance",
         "b1-abstract-concepts-die-belanglosigkeit-insignificance",
         "b1-abstract-concepts-die-belangung-prosecution-legal-action",
-        "b1-abstract-concepts-die-belappung-clothing-apparel",
-        "b1-abstract-concepts-die-belaschung-loading-burden",
-        "b1-abstract-concepts-die-belastung-burden-stress",
-        "b1-abstract-concepts-die-beatmung-respiration-breathing",
-        "b1-abstract-concepts-die-betaeubung-stunning-dazedness"
+        "b1-abstract-concepts-die-belastung-burden-stress"
       ]
     },
     {
       "name": "Adjectives",
-      "count": 97,
+      "count": 98,
       "file": "adjectives.json",
       "ids": [
         "b1-adjectives-fleissig-diligent-hardworking",
@@ -184,7 +136,8 @@
         "b1-adjectives-bekuemmert-worried-concerned",
         "b1-adjectives-belanglos-unimportant-insignificant",
         "b1-adjectives-belangreich-important-significant",
-        "b1-adjectives-belastend-burdensome-stressful"
+        "b1-adjectives-belastend-burdensome-stressful",
+        "b1-adjectives-vornehm-distinguished-elegant-refined"
       ]
     },
     {
@@ -356,7 +309,7 @@
     },
     {
       "name": "Business Work",
-      "count": 41,
+      "count": 55,
       "file": "business-work.json",
       "ids": [
         "b1-business-work-die-arbeitskraft-labor-workforce",
@@ -399,7 +352,21 @@
         "b1-business-work-der-lieferant-supplier",
         "b1-business-work-die-konkurrenz-competition-competitors",
         "b1-business-work-die-branche-industry-sector",
-        "b1-business-work-die-befoerderung-promotion"
+        "b1-business-work-die-befoerderung-promotion",
+        "b1-business-work-ausgabe-expenditure-spending",
+        "b1-business-work-ausgleich-compensation-balance",
+        "b1-business-work-auskunft-information-notice",
+        "b1-business-work-ausleihung-lending-loan",
+        "b1-business-work-auslieferung-delivery-surrender",
+        "b1-business-work-ausladung-cancellation-revocation",
+        "b1-business-work-ausnutzung-exploitation-utilization",
+        "b1-business-work-aufsicht-supervision-oversight",
+        "b1-business-work-aufstellung-arrangement-lineup",
+        "b1-business-work-aufwertung-revaluation-appreciation",
+        "b1-business-work-aufwendung-expenditure-expense",
+        "b1-business-work-aufschwung-upswing-boom",
+        "b1-business-work-fortschritt-progress",
+        "b1-business-work-aufstieg-rise-ascent-promotion"
       ]
     },
     {
@@ -496,7 +463,7 @@
     },
     {
       "name": "Daily Routines",
-      "count": 39,
+      "count": 42,
       "file": "daily-routines.json",
       "ids": [
         "b1-daily-routines-sich-waschen-to-wash-oneself",
@@ -537,7 +504,10 @@
         "b1-daily-routines-den-staub-saugen-to-vacuum",
         "b1-daily-routines-die-waesche-waschen-to-do-laundry",
         "b1-daily-routines-buegeln-to-iron",
-        "b1-daily-routines-gassi-gehen-to-walk-the-dog"
+        "b1-daily-routines-gassi-gehen-to-walk-the-dog",
+        "b1-daily-routines-auspackung-unpacking",
+        "b1-daily-routines-angewohnheit-habit-custom",
+        "b1-daily-routines-aktivitaet-activity"
       ]
     },
     {
@@ -762,7 +732,7 @@
     },
     {
       "name": "Housing",
-      "count": 88,
+      "count": 90,
       "file": "housing.json",
       "ids": [
         "b1-housing-die-wohnung-apartment",
@@ -852,7 +822,9 @@
         "b1-housing-die-lage-location-position",
         "b1-housing-zentral-central",
         "b1-housing-verkehrsguenstig-conveniently-located-for-transport",
-        "b1-housing-die-quadratmeter-square-meters"
+        "b1-housing-die-quadratmeter-square-meters",
+        "b1-housing-ausgang-exit-way-out",
+        "b1-housing-auspolsterung-upholstering-padding"
       ]
     },
     {
@@ -1083,7 +1055,7 @@
     },
     {
       "name": "Medical Health",
-      "count": 58,
+      "count": 60,
       "file": "medical-health.json",
       "ids": [
         "b1-medical-health-das-rezept-prescription",
@@ -1143,7 +1115,9 @@
         "b1-medical-health-untersuchen-to-examine",
         "b1-medical-health-behandeln-to-treat",
         "b1-medical-health-heilen-to-heal-to-cure",
-        "b1-medical-health-operieren-to-operate-on"
+        "b1-medical-health-operieren-to-operate-on",
+        "b1-medical-health-beatmung-respiration-ventilation",
+        "b1-medical-health-betaeubung-anesthesia-numbness"
       ]
     },
     {
@@ -1455,35 +1429,14 @@
     },
     {
       "name": "Separable Verbs",
-      "count": 143,
+      "count": 135,
       "file": "separable-verbs.json",
       "ids": [
         "b1-separable-verbs-anschauen-to-watch-to-look-at",
         "b1-separable-verbs-ausbilden-to-train",
         "b1-separable-verbs-auseinandersetzen-to-explain-to-discuss",
         "b1-separable-verbs-ausfallen-to-fall-out-to-fail",
-        "b1-separable-verbs-ausgabe-expenditure-spending",
-        "b1-separable-verbs-ausgang-exit-way-out",
-        "b1-separable-verbs-ausgleich-compensation-balance",
         "b1-separable-verbs-aushandeln-to-negotiate",
-        "b1-separable-verbs-auskunft-information-notice",
-        "b1-separable-verbs-ausladung-cancellation-revocation",
-        "b1-separable-verbs-auslaender-foreigner-alien",
-        "b1-separable-verbs-ausleihung-lending-loan",
-        "b1-separable-verbs-ausleser-one-who-selects",
-        "b1-separable-verbs-auslieferung-delivery-surrender",
-        "b1-separable-verbs-auslosung-drawing-of-lots-raffle",
-        "b1-separable-verbs-ausloesung-triggering-release",
-        "b1-separable-verbs-ausnahme-exception",
-        "b1-separable-verbs-ausnahmefall-exceptional-case",
-        "b1-separable-verbs-ausnehmer-one-who-exempts",
-        "b1-separable-verbs-ausnutzung-exploitation-utilization",
-        "b1-separable-verbs-auspackung-unpacking",
-        "b1-separable-verbs-auspeitscher-one-who-whips",
-        "b1-separable-verbs-auspluenderung-plunder-looting",
-        "b1-separable-verbs-auspolsterung-upholstering-padding",
-        "b1-separable-verbs-auspowderung-powdering",
-        "b1-separable-verbs-auspresser-one-who-squeezes",
         "b1-separable-verbs-umdrehen-to-turn-around",
         "b1-separable-verbs-beinhalten-to-involve-to-contain",
         "b1-separable-verbs-durchziehen-to-pull-off-to-swipe-credit-card-to-follow--zc1cjm",
@@ -1578,7 +1531,6 @@
         "b1-separable-verbs-aufloesen-to-dissolve-to-dissipate-to-disperse",
         "b1-separable-verbs-ausloesen-to-trigger-to-cause-to-provoke",
         "b1-separable-verbs-nachfuellen-to-refill",
-        "b1-separable-verbs-vornehme-distinguished",
         "b1-separable-verbs-abschalten-to-extinguish-to-disconnect-to-disable-to-s-vnf9h",
         "b1-separable-verbs-anschalten-to-turn-on",
         "b1-separable-verbs-anstossen-to-toast",
@@ -1600,7 +1552,21 @@
         "b1-separable-verbs-zubereiten-to-prepare",
         "b1-separable-verbs-zurueckkehren-to-return",
         "b1-separable-verbs-zusammengehoeren-to-belong-together",
-        "b1-separable-verbs-zuschneiden-to-cut-to-size-to-tailor-sth-to-sth"
+        "b1-separable-verbs-zuschneiden-to-cut-to-size-to-tailor-sth-to-sth",
+        "b1-separable-verbs-ausgeben-to-spend-to-issue-to-publish",
+        "b1-separable-verbs-ausgehen-to-go-out",
+        "b1-separable-verbs-ausladen-to-uninvite-to-unload",
+        "b1-separable-verbs-auslesen-to-select-to-read-out-to-sort-",
+        "b1-separable-verbs-ausliefern-to-deliver-to-hand-over",
+        "b1-separable-verbs-auslosen-to-draw-lots-to-raffle",
+        "b1-separable-verbs-ausnehmen-to-exempt-to-gut-fish-",
+        "b1-separable-verbs-ausnutzen-to-exploit-to-take-advantage-o",
+        "b1-separable-verbs-auspacken-to-unpack",
+        "b1-separable-verbs-auspeitschen-to-whip-to-flog",
+        "b1-separable-verbs-auspluendern-to-plunder-to-loot",
+        "b1-separable-verbs-auspolstern-to-upholster-to-pad",
+        "b1-separable-verbs-auspudern-to-powder",
+        "b1-separable-verbs-vornehmen-to-carry-out-to-intend-to-unde"
       ]
     },
     {
@@ -1723,6 +1689,75 @@
         "b1-verbs-with-prepositions-schmecken-nach-dat-to-taste-of",
         "b1-verbs-with-prepositions-sich-verstehen-mit-dat-to-get-along-with",
         "b1-verbs-with-prepositions-halten-von-dat-to-think-of-to-have-an-opinion-about"
+      ]
+    },
+    {
+      "name": "Society & Politics",
+      "count": 14,
+      "file": "society-politics.json",
+      "ids": [
+        "b1-society-politics-freiheit-freedom",
+        "b1-society-politics-gerechtigkeit-justice",
+        "b1-society-politics-gleichheit-equality",
+        "b1-society-politics-macht-power",
+        "b1-society-politics-gewalt-violence-force",
+        "b1-society-politics-frieden-peace",
+        "b1-society-politics-krieg-war",
+        "b1-society-politics-recht-right-law",
+        "b1-society-politics-pflicht-duty-obligation",
+        "b1-society-politics-oeffentlichkeit-public-publicity",
+        "b1-society-politics-privatsphaere-privacy",
+        "b1-society-politics-gemeinschaft-community",
+        "b1-society-politics-kultur-culture",
+        "b1-society-politics-tradition-tradition"
+      ]
+    },
+    {
+      "name": "Emotions & Feelings",
+      "count": 6,
+      "file": "emotions-feelings.json",
+      "ids": [
+        "b1-emotions-feelings-hoffnung-hope",
+        "b1-emotions-feelings-zweifel-doubt",
+        "b1-emotions-feelings-aufregung-excitement-agitation",
+        "b1-emotions-feelings-beklemmung-anxiety-uneasiness",
+        "b1-emotions-feelings-vertrauen-trust-confidence",
+        "b1-emotions-feelings-aufopferung-sacrifice-devotion"
+      ]
+    },
+    {
+      "name": "Opinion & Thinking",
+      "count": 5,
+      "file": "opinion-thinking.json",
+      "ids": [
+        "b1-opinion-thinking-meinung-opinion",
+        "b1-opinion-thinking-auffassung-view-conception",
+        "b1-opinion-thinking-annahme-assumption-acceptance",
+        "b1-opinion-thinking-bekraeftigung-affirmation-confirmation",
+        "b1-opinion-thinking-aufmerksamkeit-attention-consideration"
+      ]
+    },
+    {
+      "name": "Risk & Probability",
+      "count": 5,
+      "file": "risk-probability.json",
+      "ids": [
+        "b1-risk-probability-gefahr-danger",
+        "b1-risk-probability-risiko-risk",
+        "b1-risk-probability-moeglichkeit-possibility-opportunity",
+        "b1-risk-probability-wahrscheinlichkeit-probability-likelihood",
+        "b1-risk-probability-chance-chance-opportunity"
+      ]
+    },
+    {
+      "name": "Truth & Morality",
+      "count": 4,
+      "file": "truth-morality.json",
+      "ids": [
+        "b1-truth-morality-wahrheit-truth",
+        "b1-truth-morality-luege-lie",
+        "b1-truth-morality-ehrlichkeit-honesty",
+        "b1-truth-morality-aufrichtigkeit-sincerity-honesty"
       ]
     }
   ]

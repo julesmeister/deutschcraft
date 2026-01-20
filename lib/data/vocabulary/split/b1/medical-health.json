@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Medical Health",
-  "totalCards": 58,
+  "totalCards": 60,
   "flashcards": [
     {
       "id": "b1-medical-health-das-rezept-prescription",
@@ -1161,6 +1161,34 @@
           "Medical Health",
           "operieren"
         ]
+      }
+    },
+    {
+      "id": "b1-medical-health-beatmung-respiration-ventilation",
+      "german": "die Beatmung",
+      "english": "respiration / ventilation",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-medical-health-betaeubung-anesthesia-numbness",
+      "german": "die Betäubung",
+      "english": "anesthesia / numbness",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
       }
     }
   ]

@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Housing",
-  "totalCards": 88,
+  "totalCards": 90,
   "flashcards": [
     {
       "id": "b1-housing-die-wohnung-apartment",
@@ -1761,6 +1761,34 @@
           "Housing",
           "die Quadratmeter"
         ]
+      }
+    },
+    {
+      "id": "b1-housing-ausgang-exit-way-out",
+      "german": "Ausgang",
+      "english": "exit / way out",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-housing-auspolsterung-upholstering-padding",
+      "german": "Auspolsterung",
+      "english": "upholstering / padding",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
       }
     }
   ]

@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Business Work",
-  "totalCards": 41,
+  "totalCards": 55,
   "flashcards": [
     {
       "id": "b1-business-work-die-arbeitskraft-labor-workforce",
@@ -821,6 +821,202 @@
           "Business Work",
           "die Beförderung"
         ]
+      }
+    },
+    {
+      "id": "b1-business-work-ausgabe-expenditure-spending",
+      "german": "Ausgabe",
+      "english": "expenditure / spending",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-business-work-ausgleich-compensation-balance",
+      "german": "Ausgleich",
+      "english": "compensation / balance",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-business-work-auskunft-information-notice",
+      "german": "Auskunft",
+      "english": "information / notice",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-business-work-ausleihung-lending-loan",
+      "german": "Ausleihung",
+      "english": "lending / loan",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-business-work-auslieferung-delivery-surrender",
+      "german": "Auslieferung",
+      "english": "delivery / surrender",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-business-work-ausladung-cancellation-revocation",
+      "german": "Ausladung",
+      "english": "cancellation / revocation",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-business-work-ausnutzung-exploitation-utilization",
+      "german": "Ausnutzung",
+      "english": "exploitation / utilization",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-business-work-aufsicht-supervision-oversight",
+      "german": "die Aufsicht",
+      "english": "supervision / oversight",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-business-work-aufstellung-arrangement-lineup",
+      "german": "die Aufstellung",
+      "english": "arrangement / lineup",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-business-work-aufwertung-revaluation-appreciation",
+      "german": "die Aufwertung",
+      "english": "revaluation / appreciation",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-business-work-aufwendung-expenditure-expense",
+      "german": "die Aufwendung",
+      "english": "expenditure / expense",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-business-work-aufschwung-upswing-boom",
+      "german": "der Aufschwung",
+      "english": "upswing / boom",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-business-work-fortschritt-progress",
+      "german": "der Fortschritt",
+      "english": "progress",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-business-work-aufstieg-rise-ascent-promotion",
+      "german": "der Aufstieg",
+      "english": "rise / ascent / promotion",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
       }
     }
   ]

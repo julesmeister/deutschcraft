@@ -1,0 +1,77 @@
+{
+  "level": "B1",
+  "category": "Risk & Probability",
+  "totalCards": 5,
+  "flashcards": [
+    {
+      "id": "b1-risk-probability-gefahr-danger",
+      "german": "die Gefahr",
+      "english": "danger",
+      "category": "Risk & Probability",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-risk-probability-risiko-risk",
+      "german": "das Risiko",
+      "english": "risk",
+      "category": "Risk & Probability",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-risk-probability-moeglichkeit-possibility-opportunity",
+      "german": "die Möglichkeit",
+      "english": "possibility / opportunity",
+      "category": "Risk & Probability",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-risk-probability-wahrscheinlichkeit-probability-likelihood",
+      "german": "die Wahrscheinlichkeit",
+      "english": "probability / likelihood",
+      "category": "Risk & Probability",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-risk-probability-chance-chance-opportunity",
+      "german": "die Chance",
+      "english": "chance / opportunity",
+      "category": "Risk & Probability",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    }
+  ]
+}

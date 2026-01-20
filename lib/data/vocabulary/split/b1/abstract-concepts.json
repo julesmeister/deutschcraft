@@ -1,28 +1,8 @@
 {
   "level": "B1",
   "category": "Abstract Concepts",
-  "totalCards": 73,
+  "totalCards": 25,
   "flashcards": [
-    {
-      "id": "b1-abstract-concepts-die-meinung-opinion",
-      "german": "die Meinung",
-      "english": "opinion",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "Meinung"
-        ]
-      }
-    },
     {
       "id": "b1-abstract-concepts-der-grund-reason",
       "german": "der Grund",
@@ -80,26 +60,6 @@
           "B1",
           "Abstract Concepts",
           "Problem"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-chance-chance-opportunity",
-      "german": "die Chance",
-      "english": "chance / opportunity",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 4,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "Chance"
         ]
       }
     },
@@ -164,26 +124,6 @@
       }
     },
     {
-      "id": "b1-abstract-concepts-die-aktivitaet-activity",
-      "german": "die Aktivität",
-      "english": "activity",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 1,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
       "id": "b1-abstract-concepts-die-angelegenheit-matter-affair",
       "german": "die Angelegenheit",
       "english": "matter / affair",
@@ -196,146 +136,6 @@
       "_meta": {
         "source": "B1 Category Expansion 2025",
         "lineNumber": 2,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-angewohnheit-habit-custom",
-      "german": "die Angewohnheit",
-      "english": "habit / custom",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 3,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-annahme-assumption-acceptance",
-      "german": "die Annahme",
-      "english": "assumption / acceptance",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 4,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-auffassung-view-conception",
-      "german": "die Auffassung",
-      "english": "view / conception",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 5,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufmerksamkeit-attention-consideration",
-      "german": "die Aufmerksamkeit",
-      "english": "attention / consideration",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 6,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufopferung-sacrifice-devotion",
-      "german": "die Aufopferung",
-      "english": "sacrifice / devotion",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 7,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufregung-excitement-agitation",
-      "german": "die Aufregung",
-      "english": "excitement / agitation",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 8,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufrichtigkeit-sincerity-honesty",
-      "german": "die Aufrichtigkeit",
-      "english": "sincerity / honesty",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 9,
         "hierarchy": [
           "B1",
           "Abstract Concepts",
@@ -364,86 +164,6 @@
       }
     },
     {
-      "id": "b1-abstract-concepts-die-aufschwung-upswing-prosperity",
-      "german": "die Aufschwung",
-      "english": "upswing / prosperity",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 11,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufsicht-supervision-oversight",
-      "german": "die Aufsicht",
-      "english": "supervision / oversight",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 12,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufstieg-rise-ascent",
-      "german": "die Aufstieg",
-      "english": "rise / ascent",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 13,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufstellung-setting-up-arrangement",
-      "german": "die Aufstellung",
-      "english": "setting up / arrangement",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 14,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
       "id": "b1-abstract-concepts-die-aufwaertsbewegung-upward-movement",
       "german": "die Aufwärtsbewegung",
       "english": "upward movement",
@@ -456,46 +176,6 @@
       "_meta": {
         "source": "B1 Category Expansion 2025",
         "lineNumber": 15,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufwendung-effort-expenditure",
-      "german": "die Aufwendung",
-      "english": "effort / expenditure",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 16,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufwertung-revaluation-appreciation",
-      "german": "die Aufwertung",
-      "english": "revaluation / appreciation",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 17,
         "hierarchy": [
           "B1",
           "Abstract Concepts",
@@ -564,28 +244,8 @@
       }
     },
     {
-      "id": "b1-abstract-concepts-die-aufzug-elevator-act-of-a-play",
-      "german": "die Aufzug",
-      "english": "elevator / act (of a play)",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 21,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
       "id": "b1-abstract-concepts-die-augenschein-inspection-examination",
-      "german": "die Augenschein",
+      "german": "der Augenschein",
       "english": "inspection / examination",
       "category": "Abstract Concepts",
       "level": "B1",
@@ -605,7 +265,7 @@
     },
     {
       "id": "b1-abstract-concepts-die-augenblick-moment-instant",
-      "german": "die Augenblick",
+      "german": "der Augenblick",
       "english": "moment / instant",
       "category": "Abstract Concepts",
       "level": "B1",
@@ -645,7 +305,7 @@
     },
     {
       "id": "b1-abstract-concepts-die-ausbleiben-absence-non-occurrence",
-      "german": "die Ausbleiben",
+      "german": "das Ausbleiben",
       "english": "absence / non-occurrence",
       "category": "Abstract Concepts",
       "level": "B1",
@@ -665,7 +325,7 @@
     },
     {
       "id": "b1-abstract-concepts-die-ausblick-outlook-view",
-      "german": "die Ausblick",
+      "german": "der Ausblick",
       "english": "outlook / view",
       "category": "Abstract Concepts",
       "level": "B1",
@@ -685,7 +345,7 @@
     },
     {
       "id": "b1-abstract-concepts-die-ausbruch-outbreak-eruption",
-      "german": "die Ausbruch",
+      "german": "der Ausbruch",
       "english": "outbreak / eruption",
       "category": "Abstract Concepts",
       "level": "B1",
@@ -700,526 +360,6 @@
           "B1",
           "Abstract Concepts",
           "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-freiheit-freedom",
-      "german": "die Freiheit",
-      "english": "freedom",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 35,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Freiheit"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-gerechtigkeit-justice",
-      "german": "die Gerechtigkeit",
-      "english": "justice",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 36,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Gerechtigkeit"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-gleichheit-equality",
-      "german": "die Gleichheit",
-      "english": "equality",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 37,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Gleichheit"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-pflicht-duty-obligation",
-      "german": "die Pflicht",
-      "english": "duty / obligation",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 38,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Pflicht"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-das-recht-right-law",
-      "german": "das Recht",
-      "english": "right / law",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 39,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "das Recht"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-macht-power",
-      "german": "die Macht",
-      "english": "power",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 40,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Macht"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-gewalt-violence-force",
-      "german": "die Gewalt",
-      "english": "violence / force",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 41,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Gewalt"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-der-frieden-peace",
-      "german": "der Frieden",
-      "english": "peace",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 42,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "der Frieden"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-der-krieg-war",
-      "german": "der Krieg",
-      "english": "war",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 43,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "der Krieg"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-der-fortschritt-progress",
-      "german": "der Fortschritt",
-      "english": "progress",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 44,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "der Fortschritt"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-tradition-tradition",
-      "german": "die Tradition",
-      "english": "tradition",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 45,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Tradition"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-kultur-culture",
-      "german": "die Kultur",
-      "english": "culture",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 46,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Kultur"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-gemeinschaft-community",
-      "german": "die Gemeinschaft",
-      "english": "community",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 47,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Gemeinschaft"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-oeffentlichkeit-public-publicity",
-      "german": "die Öffentlichkeit",
-      "english": "public / publicity",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 48,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Öffentlichkeit"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-privatsphaere-privacy",
-      "german": "die Privatsphäre",
-      "english": "privacy",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 49,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Privatsphäre"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-gefahr-danger",
-      "german": "die Gefahr",
-      "english": "danger",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 50,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Gefahr"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-das-risiko-risk",
-      "german": "das Risiko",
-      "english": "risk",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 51,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "das Risiko"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-moeglichkeit-possibility-opportunity",
-      "german": "die Möglichkeit",
-      "english": "possibility / opportunity",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 52,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Möglichkeit"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-wahrscheinlichkeit-probability-likelihood",
-      "german": "die Wahrscheinlichkeit",
-      "english": "probability / likelihood",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 53,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Wahrscheinlichkeit"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-wahrheit-truth",
-      "german": "die Wahrheit",
-      "english": "truth",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 54,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Wahrheit"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-luege-lie",
-      "german": "die Lüge",
-      "english": "lie",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 55,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Lüge"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-ehrlichkeit-honesty",
-      "german": "die Ehrlichkeit",
-      "english": "honesty",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 56,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Ehrlichkeit"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-das-vertrauen-trust-confidence",
-      "german": "das Vertrauen",
-      "english": "trust / confidence",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 57,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "das Vertrauen"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-der-zweifel-doubt",
-      "german": "der Zweifel",
-      "english": "doubt",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 58,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "der Zweifel"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-hoffnung-hope",
-      "german": "die Hoffnung",
-      "english": "hope",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 59,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Hoffnung"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-beklemmung-anxiety-uneasiness",
-      "german": "die Beklemmung",
-      "english": "anxiety / uneasiness",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 4,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "beklemmung"
         ]
       }
     },
@@ -1240,26 +380,6 @@
           "B1",
           "Abstract Concepts",
           "beköstigung"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-bekraeftigung-affirmation-confirmation",
-      "german": "die Bekräftigung",
-      "english": "affirmation / confirmation",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 7,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "bekräftigung"
         ]
       }
     },
@@ -1364,46 +484,6 @@
       }
     },
     {
-      "id": "b1-abstract-concepts-die-belappung-clothing-apparel",
-      "german": "die Belappung",
-      "english": "clothing / apparel",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 22,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "belappung"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-belaschung-loading-burden",
-      "german": "die Belaschung",
-      "english": "loading / burden",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 24,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "belaschung"
-        ]
-      }
-    },
-    {
       "id": "b1-abstract-concepts-die-belastung-burden-stress",
       "german": "die Belastung",
       "english": "burden / stress",
@@ -1420,46 +500,6 @@
           "B1",
           "Abstract Concepts",
           "belastung"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-beatmung-respiration-breathing",
-      "german": "die Beatmung",
-      "english": "respiration / breathing",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 28,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "belatmung"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-betaeubung-stunning-dazedness",
-      "german": "die Betäubung",
-      "english": "stunning / dazedness",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 29,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "beläubung"
         ]
       }
     }

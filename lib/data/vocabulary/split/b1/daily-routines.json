@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Daily Routines",
-  "totalCards": 39,
+  "totalCards": 42,
   "flashcards": [
     {
       "id": "b1-daily-routines-sich-waschen-to-wash-oneself",
@@ -781,6 +781,48 @@
           "Daily Routines",
           "Gassi gehen"
         ]
+      }
+    },
+    {
+      "id": "b1-daily-routines-auspackung-unpacking",
+      "german": "Auspackung",
+      "english": "unpacking",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-daily-routines-angewohnheit-habit-custom",
+      "german": "die Angewohnheit",
+      "english": "habit / custom",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-daily-routines-aktivitaet-activity",
+      "german": "die Aktivität",
+      "english": "activity",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
       }
     }
   ]

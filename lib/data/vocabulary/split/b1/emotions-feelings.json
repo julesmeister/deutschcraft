@@ -1,0 +1,91 @@
+{
+  "level": "B1",
+  "category": "Emotions & Feelings",
+  "totalCards": 6,
+  "flashcards": [
+    {
+      "id": "b1-emotions-feelings-hoffnung-hope",
+      "german": "die Hoffnung",
+      "english": "hope",
+      "category": "Emotions & Feelings",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-emotions-feelings-zweifel-doubt",
+      "german": "der Zweifel",
+      "english": "doubt",
+      "category": "Emotions & Feelings",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-emotions-feelings-aufregung-excitement-agitation",
+      "german": "die Aufregung",
+      "english": "excitement / agitation",
+      "category": "Emotions & Feelings",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-emotions-feelings-beklemmung-anxiety-uneasiness",
+      "german": "die Beklemmung",
+      "english": "anxiety / uneasiness",
+      "category": "Emotions & Feelings",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-emotions-feelings-vertrauen-trust-confidence",
+      "german": "das Vertrauen",
+      "english": "trust / confidence",
+      "category": "Emotions & Feelings",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-emotions-feelings-aufopferung-sacrifice-devotion",
+      "german": "die Aufopferung",
+      "english": "sacrifice / devotion",
+      "category": "Emotions & Feelings",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    }
+  ]
+}

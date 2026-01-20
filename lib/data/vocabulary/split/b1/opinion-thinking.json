@@ -1,0 +1,77 @@
+{
+  "level": "B1",
+  "category": "Opinion & Thinking",
+  "totalCards": 5,
+  "flashcards": [
+    {
+      "id": "b1-opinion-thinking-meinung-opinion",
+      "german": "die Meinung",
+      "english": "opinion",
+      "category": "Opinion & Thinking",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-opinion-thinking-auffassung-view-conception",
+      "german": "die Auffassung",
+      "english": "view / conception",
+      "category": "Opinion & Thinking",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-opinion-thinking-annahme-assumption-acceptance",
+      "german": "die Annahme",
+      "english": "assumption / acceptance",
+      "category": "Opinion & Thinking",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-opinion-thinking-bekraeftigung-affirmation-confirmation",
+      "german": "die Bekräftigung",
+      "english": "affirmation / confirmation",
+      "category": "Opinion & Thinking",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-opinion-thinking-aufmerksamkeit-attention-consideration",
+      "german": "die Aufmerksamkeit",
+      "english": "attention / consideration",
+      "category": "Opinion & Thinking",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    }
+  ]
+}

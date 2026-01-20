@@ -1,0 +1,63 @@
+{
+  "level": "B1",
+  "category": "Truth & Morality",
+  "totalCards": 4,
+  "flashcards": [
+    {
+      "id": "b1-truth-morality-wahrheit-truth",
+      "german": "die Wahrheit",
+      "english": "truth",
+      "category": "Truth & Morality",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-truth-morality-luege-lie",
+      "german": "die Lüge",
+      "english": "lie",
+      "category": "Truth & Morality",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-truth-morality-ehrlichkeit-honesty",
+      "german": "die Ehrlichkeit",
+      "english": "honesty",
+      "category": "Truth & Morality",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-truth-morality-aufrichtigkeit-sincerity-honesty",
+      "german": "die Aufrichtigkeit",
+      "english": "sincerity / honesty",
+      "category": "Truth & Morality",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    }
+  ]
+}

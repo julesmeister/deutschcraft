@@ -23,66 +23,6 @@
       }
     },
     {
-      "id": "b1-abstract-concepts-das-recht-right-law",
-      "german": "das Recht",
-      "english": "right / law",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 39,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "das Recht"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-das-risiko-risk",
-      "german": "das Risiko",
-      "english": "risk",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 51,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "das Risiko"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-das-vertrauen-trust-confidence",
-      "german": "das Vertrauen",
-      "english": "trust / confidence",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 57,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "das Vertrauen"
-        ]
-      }
-    },
-    {
       "id": "b1-abstract-concepts-das-ziel-goal",
       "german": "das Ziel",
       "english": "goal",
@@ -143,46 +83,6 @@
       }
     },
     {
-      "id": "b1-abstract-concepts-der-fortschritt-progress",
-      "german": "der Fortschritt",
-      "english": "progress",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 44,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "der Fortschritt"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-der-frieden-peace",
-      "german": "der Frieden",
-      "english": "peace",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 42,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "der Frieden"
-        ]
-      }
-    },
-    {
       "id": "b1-abstract-concepts-der-grund-reason",
       "german": "der Grund",
       "english": "reason",
@@ -199,26 +99,6 @@
           "B1",
           "Abstract Concepts",
           "Grund"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-der-krieg-war",
-      "german": "der Krieg",
-      "english": "war",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 43,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "der Krieg"
         ]
       }
     },
@@ -243,26 +123,6 @@
       }
     },
     {
-      "id": "b1-abstract-concepts-der-zweifel-doubt",
-      "german": "der Zweifel",
-      "english": "doubt",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 58,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "der Zweifel"
-        ]
-      }
-    },
-    {
       "id": "b1-abstract-concepts-die-aktion-action-campaign",
       "german": "die Aktion",
       "english": "action / campaign",
@@ -275,26 +135,6 @@
       "_meta": {
         "source": "B1 Category Expansion 2025",
         "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aktivitaet-activity",
-      "german": "die Aktivität",
-      "english": "activity",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 1,
         "hierarchy": [
           "B1",
           "Abstract Concepts",
@@ -323,146 +163,6 @@
       }
     },
     {
-      "id": "b1-abstract-concepts-die-angewohnheit-habit-custom",
-      "german": "die Angewohnheit",
-      "english": "habit / custom",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 3,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-annahme-assumption-acceptance",
-      "german": "die Annahme",
-      "english": "assumption / acceptance",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 4,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-auffassung-view-conception",
-      "german": "die Auffassung",
-      "english": "view / conception",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 5,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufmerksamkeit-attention-consideration",
-      "german": "die Aufmerksamkeit",
-      "english": "attention / consideration",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 6,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufopferung-sacrifice-devotion",
-      "german": "die Aufopferung",
-      "english": "sacrifice / devotion",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 7,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufregung-excitement-agitation",
-      "german": "die Aufregung",
-      "english": "excitement / agitation",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 8,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufrichtigkeit-sincerity-honesty",
-      "german": "die Aufrichtigkeit",
-      "english": "sincerity / honesty",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 9,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
       "id": "b1-abstract-concepts-die-aufschliessung-disclosure-opening-up",
       "german": "die Aufschließung",
       "english": "disclosure / opening up",
@@ -483,86 +183,6 @@
       }
     },
     {
-      "id": "b1-abstract-concepts-die-aufschwung-upswing-prosperity",
-      "german": "die Aufschwung",
-      "english": "upswing / prosperity",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 11,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufsicht-supervision-oversight",
-      "german": "die Aufsicht",
-      "english": "supervision / oversight",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 12,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufstellung-setting-up-arrangement",
-      "german": "die Aufstellung",
-      "english": "setting up / arrangement",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 14,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufstieg-rise-ascent",
-      "german": "die Aufstieg",
-      "english": "rise / ascent",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 13,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
       "id": "b1-abstract-concepts-die-aufwaertsbewegung-upward-movement",
       "german": "die Aufwärtsbewegung",
       "english": "upward movement",
@@ -575,46 +195,6 @@
       "_meta": {
         "source": "B1 Category Expansion 2025",
         "lineNumber": 15,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufwendung-effort-expenditure",
-      "german": "die Aufwendung",
-      "english": "effort / expenditure",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 16,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-aufwertung-revaluation-appreciation",
-      "german": "die Aufwertung",
-      "english": "revaluation / appreciation",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 17,
         "hierarchy": [
           "B1",
           "Abstract Concepts",
@@ -683,28 +263,8 @@
       }
     },
     {
-      "id": "b1-abstract-concepts-die-aufzug-elevator-act-of-a-play",
-      "german": "die Aufzug",
-      "english": "elevator / act (of a play)",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 21,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die"
-        ]
-      }
-    },
-    {
       "id": "b1-abstract-concepts-die-augenblick-moment-instant",
-      "german": "die Augenblick",
+      "german": "der Augenblick",
       "english": "moment / instant",
       "category": "Abstract Concepts",
       "level": "B1",
@@ -724,7 +284,7 @@
     },
     {
       "id": "b1-abstract-concepts-die-augenschein-inspection-examination",
-      "german": "die Augenschein",
+      "german": "der Augenschein",
       "english": "inspection / examination",
       "category": "Abstract Concepts",
       "level": "B1",
@@ -764,7 +324,7 @@
     },
     {
       "id": "b1-abstract-concepts-die-ausbleiben-absence-non-occurrence",
-      "german": "die Ausbleiben",
+      "german": "das Ausbleiben",
       "english": "absence / non-occurrence",
       "category": "Abstract Concepts",
       "level": "B1",
@@ -784,7 +344,7 @@
     },
     {
       "id": "b1-abstract-concepts-die-ausblick-outlook-view",
-      "german": "die Ausblick",
+      "german": "der Ausblick",
       "english": "outlook / view",
       "category": "Abstract Concepts",
       "level": "B1",
@@ -804,7 +364,7 @@
     },
     {
       "id": "b1-abstract-concepts-die-ausbruch-outbreak-eruption",
-      "german": "die Ausbruch",
+      "german": "der Ausbruch",
       "english": "outbreak / eruption",
       "category": "Abstract Concepts",
       "level": "B1",
@@ -819,46 +379,6 @@
           "B1",
           "Abstract Concepts",
           "die"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-beatmung-respiration-breathing",
-      "german": "die Beatmung",
-      "english": "respiration / breathing",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 28,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "belatmung"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-beklemmung-anxiety-uneasiness",
-      "german": "die Beklemmung",
-      "english": "anxiety / uneasiness",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 4,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "beklemmung"
         ]
       }
     },
@@ -879,26 +399,6 @@
           "B1",
           "Abstract Concepts",
           "beköstigung"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-bekraeftigung-affirmation-confirmation",
-      "german": "die Bekräftigung",
-      "english": "affirmation / confirmation",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 7,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "bekräftigung"
         ]
       }
     },
@@ -963,46 +463,6 @@
       }
     },
     {
-      "id": "b1-abstract-concepts-die-belappung-clothing-apparel",
-      "german": "die Belappung",
-      "english": "clothing / apparel",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 22,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "belappung"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-belaschung-loading-burden",
-      "german": "die Belaschung",
-      "english": "loading / burden",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 24,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "belaschung"
-        ]
-      }
-    },
-    {
       "id": "b1-abstract-concepts-die-belastung-burden-stress",
       "german": "die Belastung",
       "english": "burden / stress",
@@ -1023,226 +483,6 @@
       }
     },
     {
-      "id": "b1-abstract-concepts-die-betaeubung-stunning-dazedness",
-      "german": "die Betäubung",
-      "english": "stunning / dazedness",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 29,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "beläubung"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-chance-chance-opportunity",
-      "german": "die Chance",
-      "english": "chance / opportunity",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 4,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "Chance"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-ehrlichkeit-honesty",
-      "german": "die Ehrlichkeit",
-      "english": "honesty",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 56,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Ehrlichkeit"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-freiheit-freedom",
-      "german": "die Freiheit",
-      "english": "freedom",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 35,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Freiheit"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-gefahr-danger",
-      "german": "die Gefahr",
-      "english": "danger",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 50,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Gefahr"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-gemeinschaft-community",
-      "german": "die Gemeinschaft",
-      "english": "community",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 47,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Gemeinschaft"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-gerechtigkeit-justice",
-      "german": "die Gerechtigkeit",
-      "english": "justice",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 36,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Gerechtigkeit"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-gewalt-violence-force",
-      "german": "die Gewalt",
-      "english": "violence / force",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 41,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Gewalt"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-gleichheit-equality",
-      "german": "die Gleichheit",
-      "english": "equality",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 37,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Gleichheit"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-hoffnung-hope",
-      "german": "die Hoffnung",
-      "english": "hope",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 59,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Hoffnung"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-kultur-culture",
-      "german": "die Kultur",
-      "english": "culture",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 46,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Kultur"
-        ]
-      }
-    },
-    {
       "id": "b1-abstract-concepts-die-loesung-solution",
       "german": "die Lösung",
       "english": "solution",
@@ -1259,206 +499,6 @@
           "B1",
           "Abstract Concepts",
           "Lösung"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-luege-lie",
-      "german": "die Lüge",
-      "english": "lie",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 55,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Lüge"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-macht-power",
-      "german": "die Macht",
-      "english": "power",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 40,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Macht"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-meinung-opinion",
-      "german": "die Meinung",
-      "english": "opinion",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "Priority Expansion 2025",
-        "lineNumber": 0,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "Meinung"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-moeglichkeit-possibility-opportunity",
-      "german": "die Möglichkeit",
-      "english": "possibility / opportunity",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 52,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Möglichkeit"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-oeffentlichkeit-public-publicity",
-      "german": "die Öffentlichkeit",
-      "english": "public / publicity",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 48,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Öffentlichkeit"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-pflicht-duty-obligation",
-      "german": "die Pflicht",
-      "english": "duty / obligation",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 38,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Pflicht"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-privatsphaere-privacy",
-      "german": "die Privatsphäre",
-      "english": "privacy",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 49,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Privatsphäre"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-tradition-tradition",
-      "german": "die Tradition",
-      "english": "tradition",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 45,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Tradition"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-wahrheit-truth",
-      "german": "die Wahrheit",
-      "english": "truth",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 54,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Wahrheit"
-        ]
-      }
-    },
-    {
-      "id": "b1-abstract-concepts-die-wahrscheinlichkeit-probability-likelihood",
-      "german": "die Wahrscheinlichkeit",
-      "english": "probability / likelihood",
-      "category": "Abstract Concepts",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 53,
-        "hierarchy": [
-          "B1",
-          "Abstract Concepts",
-          "die Wahrscheinlichkeit"
         ]
       }
     },
@@ -3380,6 +2420,20 @@
           "Adjectives",
           "veraltet"
         ]
+      }
+    },
+    {
+      "id": "b1-adjectives-vornehm-distinguished-elegant-refined",
+      "german": "vornehm",
+      "english": "distinguished / elegant / refined",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
       }
     },
     {
@@ -6380,6 +5434,188 @@
       }
     },
     {
+      "id": "b1-business-work-aufschwung-upswing-boom",
+      "german": "der Aufschwung",
+      "english": "upswing / boom",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-business-work-aufsicht-supervision-oversight",
+      "german": "die Aufsicht",
+      "english": "supervision / oversight",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-business-work-aufstellung-arrangement-lineup",
+      "german": "die Aufstellung",
+      "english": "arrangement / lineup",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-business-work-aufstieg-rise-ascent-promotion",
+      "german": "der Aufstieg",
+      "english": "rise / ascent / promotion",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-business-work-aufwendung-expenditure-expense",
+      "german": "die Aufwendung",
+      "english": "expenditure / expense",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-business-work-aufwertung-revaluation-appreciation",
+      "german": "die Aufwertung",
+      "english": "revaluation / appreciation",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-business-work-ausgabe-expenditure-spending",
+      "german": "Ausgabe",
+      "english": "expenditure / spending",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-business-work-ausgleich-compensation-balance",
+      "german": "Ausgleich",
+      "english": "compensation / balance",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-business-work-auskunft-information-notice",
+      "german": "Auskunft",
+      "english": "information / notice",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-business-work-ausladung-cancellation-revocation",
+      "german": "Ausladung",
+      "english": "cancellation / revocation",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-business-work-ausleihung-lending-loan",
+      "german": "Ausleihung",
+      "english": "lending / loan",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-business-work-auslieferung-delivery-surrender",
+      "german": "Auslieferung",
+      "english": "delivery / surrender",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-business-work-ausnutzung-exploitation-utilization",
+      "german": "Ausnutzung",
+      "english": "exploitation / utilization",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
       "id": "b1-business-work-das-arbeitsamt-employment-office",
       "german": "das Arbeitsamt",
       "english": "employment office",
@@ -7197,6 +6433,20 @@
           "Business Work",
           "die Verhandlung"
         ]
+      }
+    },
+    {
+      "id": "b1-business-work-fortschritt-progress",
+      "german": "der Fortschritt",
+      "english": "progress",
+      "category": "Business Work",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
       }
     },
     {
@@ -8777,6 +8027,48 @@
       }
     },
     {
+      "id": "b1-daily-routines-aktivitaet-activity",
+      "german": "die Aktivität",
+      "english": "activity",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-daily-routines-angewohnheit-habit-custom",
+      "german": "die Angewohnheit",
+      "english": "habit / custom",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-daily-routines-auspackung-unpacking",
+      "german": "Auspackung",
+      "english": "unpacking",
+      "category": "Daily Routines",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
       "id": "b1-daily-routines-ausschlafen-to-sleep-in-to-sleep-enough",
       "german": "ausschlafen",
       "english": "to sleep in / to sleep enough",
@@ -9474,6 +8766,90 @@
           "Daily Routines",
           "zur Schule gehen"
         ]
+      }
+    },
+    {
+      "id": "b1-emotions-feelings-aufopferung-sacrifice-devotion",
+      "german": "die Aufopferung",
+      "english": "sacrifice / devotion",
+      "category": "Emotions & Feelings",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-emotions-feelings-aufregung-excitement-agitation",
+      "german": "die Aufregung",
+      "english": "excitement / agitation",
+      "category": "Emotions & Feelings",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-emotions-feelings-beklemmung-anxiety-uneasiness",
+      "german": "die Beklemmung",
+      "english": "anxiety / uneasiness",
+      "category": "Emotions & Feelings",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-emotions-feelings-hoffnung-hope",
+      "german": "die Hoffnung",
+      "english": "hope",
+      "category": "Emotions & Feelings",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-emotions-feelings-vertrauen-trust-confidence",
+      "german": "das Vertrauen",
+      "english": "trust / confidence",
+      "category": "Emotions & Feelings",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-emotions-feelings-zweifel-doubt",
+      "german": "der Zweifel",
+      "english": "doubt",
+      "category": "Emotions & Feelings",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
       }
     },
     {
@@ -13118,6 +12494,34 @@
           "Genitive Prepositions",
           "zwecks"
         ]
+      }
+    },
+    {
+      "id": "b1-housing-ausgang-exit-way-out",
+      "german": "Ausgang",
+      "english": "exit / way out",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
+      }
+    },
+    {
+      "id": "b1-housing-auspolsterung-upholstering-padding",
+      "german": "Auspolsterung",
+      "english": "upholstering / padding",
+      "category": "Housing",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
       }
     },
     {
@@ -18398,6 +17802,20 @@
       }
     },
     {
+      "id": "b1-medical-health-beatmung-respiration-ventilation",
+      "german": "die Beatmung",
+      "english": "respiration / ventilation",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
       "id": "b1-medical-health-behandeln-to-treat",
       "german": "behandeln",
       "english": "to treat",
@@ -18415,6 +17833,20 @@
           "Medical Health",
           "behandeln"
         ]
+      }
+    },
+    {
+      "id": "b1-medical-health-betaeubung-anesthesia-numbness",
+      "german": "die Betäubung",
+      "english": "anesthesia / numbness",
+      "category": "Medical Health",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
       }
     },
     {
@@ -19800,6 +19232,76 @@
           "New Year",
           "Silvester"
         ]
+      }
+    },
+    {
+      "id": "b1-opinion-thinking-annahme-assumption-acceptance",
+      "german": "die Annahme",
+      "english": "assumption / acceptance",
+      "category": "Opinion & Thinking",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-opinion-thinking-auffassung-view-conception",
+      "german": "die Auffassung",
+      "english": "view / conception",
+      "category": "Opinion & Thinking",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-opinion-thinking-aufmerksamkeit-attention-consideration",
+      "german": "die Aufmerksamkeit",
+      "english": "attention / consideration",
+      "category": "Opinion & Thinking",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-opinion-thinking-bekraeftigung-affirmation-confirmation",
+      "german": "die Bekräftigung",
+      "english": "affirmation / confirmation",
+      "category": "Opinion & Thinking",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-opinion-thinking-meinung-opinion",
+      "german": "die Meinung",
+      "english": "opinion",
+      "category": "Opinion & Thinking",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
       }
     },
     {
@@ -24665,6 +24167,76 @@
       }
     },
     {
+      "id": "b1-risk-probability-chance-chance-opportunity",
+      "german": "die Chance",
+      "english": "chance / opportunity",
+      "category": "Risk & Probability",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-risk-probability-gefahr-danger",
+      "german": "die Gefahr",
+      "english": "danger",
+      "category": "Risk & Probability",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-risk-probability-moeglichkeit-possibility-opportunity",
+      "german": "die Möglichkeit",
+      "english": "possibility / opportunity",
+      "category": "Risk & Probability",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-risk-probability-risiko-risk",
+      "german": "das Risiko",
+      "english": "risk",
+      "category": "Risk & Probability",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-risk-probability-wahrscheinlichkeit-probability-likelihood",
+      "german": "die Wahrscheinlichkeit",
+      "english": "probability / likelihood",
+      "category": "Risk & Probability",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
       "id": "b1-separable-verbs-abbestellen-to-discontinue",
       "german": "abbestellen",
       "english": "to discontinue",
@@ -25384,63 +24956,33 @@
       }
     },
     {
-      "id": "b1-separable-verbs-ausgabe-expenditure-spending",
-      "german": "ausgabe",
-      "english": "expenditure / spending",
+      "id": "b1-separable-verbs-ausgeben-to-spend-to-issue-to-publish",
+      "german": "ausgeben",
+      "english": "to spend / to issue / to publish",
       "category": "Separable Verbs",
       "level": "B1",
       "tags": [
-        "expansion",
+        "separable-verb",
         "B1"
       ],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 6,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "ausgabe"
-        ]
+        "source": "Added to replace noun form",
+        "replacedNoun": "ausgabe"
       }
     },
     {
-      "id": "b1-separable-verbs-ausgang-exit-way-out",
-      "german": "ausgang",
-      "english": "exit / way out",
+      "id": "b1-separable-verbs-ausgehen-to-go-out",
+      "german": "ausgehen",
+      "english": "to go out",
       "category": "Separable Verbs",
       "level": "B1",
       "tags": [
-        "expansion",
+        "separable-verb",
         "B1"
       ],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 7,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "ausgang"
-        ]
-      }
-    },
-    {
-      "id": "b1-separable-verbs-ausgleich-compensation-balance",
-      "german": "ausgleich",
-      "english": "compensation / balance",
-      "category": "Separable Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 8,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "ausgleich"
-        ]
+        "source": "Added to replace noun form",
+        "replacedNoun": "ausgang"
       }
     },
     {
@@ -25479,63 +25021,18 @@
       }
     },
     {
-      "id": "b1-separable-verbs-auskunft-information-notice",
-      "german": "auskunft",
-      "english": "information / notice",
+      "id": "b1-separable-verbs-ausladen-to-uninvite-to-unload",
+      "german": "ausladen",
+      "english": "to uninvite / to unload",
       "category": "Separable Verbs",
       "level": "B1",
       "tags": [
-        "expansion",
+        "separable-verb",
         "B1"
       ],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 11,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "auskunft"
-        ]
-      }
-    },
-    {
-      "id": "b1-separable-verbs-ausladung-cancellation-revocation",
-      "german": "ausladung",
-      "english": "cancellation / revocation",
-      "category": "Separable Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 12,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "ausladung"
-        ]
-      }
-    },
-    {
-      "id": "b1-separable-verbs-auslaender-foreigner-alien",
-      "german": "ausländer",
-      "english": "foreigner / alien",
-      "category": "Separable Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 13,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "ausländer"
-        ]
+        "source": "Added to replace noun form",
+        "replacedNoun": "ausladung"
       }
     },
     {
@@ -25558,63 +25055,33 @@
       }
     },
     {
-      "id": "b1-separable-verbs-ausleihung-lending-loan",
-      "german": "ausleihung",
-      "english": "lending / loan",
+      "id": "b1-separable-verbs-auslesen-to-select-to-read-out-to-sort-",
+      "german": "auslesen",
+      "english": "to select / to read out / to sort out",
       "category": "Separable Verbs",
       "level": "B1",
       "tags": [
-        "expansion",
+        "separable-verb",
         "B1"
       ],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 15,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "ausleihung"
-        ]
+        "source": "Added to replace noun form",
+        "replacedNoun": "ausleser"
       }
     },
     {
-      "id": "b1-separable-verbs-ausleser-one-who-selects",
-      "german": "ausleser",
-      "english": "one who selects",
+      "id": "b1-separable-verbs-ausliefern-to-deliver-to-hand-over",
+      "german": "ausliefern",
+      "english": "to deliver / to hand over",
       "category": "Separable Verbs",
       "level": "B1",
       "tags": [
-        "expansion",
+        "separable-verb",
         "B1"
       ],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 16,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "ausleser"
-        ]
-      }
-    },
-    {
-      "id": "b1-separable-verbs-auslieferung-delivery-surrender",
-      "german": "auslieferung",
-      "english": "delivery / surrender",
-      "category": "Separable Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 17,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "auslieferung"
-        ]
+        "source": "Added to replace noun form",
+        "replacedNoun": "auslieferung"
       }
     },
     {
@@ -25637,223 +25104,108 @@
       }
     },
     {
-      "id": "b1-separable-verbs-ausloesung-triggering-release",
-      "german": "auslösung",
-      "english": "triggering / release",
+      "id": "b1-separable-verbs-auslosen-to-draw-lots-to-raffle",
+      "german": "auslosen",
+      "english": "to draw lots / to raffle",
       "category": "Separable Verbs",
       "level": "B1",
       "tags": [
-        "expansion",
+        "separable-verb",
         "B1"
       ],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 19,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "auslösung"
-        ]
+        "source": "Added to replace noun form",
+        "replacedNoun": "auslosung"
       }
     },
     {
-      "id": "b1-separable-verbs-auslosung-drawing-of-lots-raffle",
-      "german": "auslosung",
-      "english": "drawing of lots / raffle",
+      "id": "b1-separable-verbs-ausnehmen-to-exempt-to-gut-fish-",
+      "german": "ausnehmen",
+      "english": "to exempt / to gut (fish)",
       "category": "Separable Verbs",
       "level": "B1",
       "tags": [
-        "expansion",
+        "separable-verb",
         "B1"
       ],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 18,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "auslosung"
-        ]
+        "source": "Added to replace noun form",
+        "replacedNoun": "ausnahme"
       }
     },
     {
-      "id": "b1-separable-verbs-ausnahme-exception",
-      "german": "ausnahme",
-      "english": "exception",
+      "id": "b1-separable-verbs-ausnutzen-to-exploit-to-take-advantage-o",
+      "german": "ausnutzen",
+      "english": "to exploit / to take advantage of",
       "category": "Separable Verbs",
       "level": "B1",
       "tags": [
-        "expansion",
+        "separable-verb",
         "B1"
       ],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 20,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "ausnahme"
-        ]
+        "source": "Added to replace noun form",
+        "replacedNoun": "ausnutzung"
       }
     },
     {
-      "id": "b1-separable-verbs-ausnahmefall-exceptional-case",
-      "german": "ausnahmefall",
-      "english": "exceptional case",
+      "id": "b1-separable-verbs-auspacken-to-unpack",
+      "german": "auspacken",
+      "english": "to unpack",
       "category": "Separable Verbs",
       "level": "B1",
       "tags": [
-        "expansion",
+        "separable-verb",
         "B1"
       ],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 21,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "ausnahmefall"
-        ]
+        "source": "Added to replace noun form",
+        "replacedNoun": "auspackung"
       }
     },
     {
-      "id": "b1-separable-verbs-ausnehmer-one-who-exempts",
-      "german": "ausnehmer",
-      "english": "one who exempts",
+      "id": "b1-separable-verbs-auspeitschen-to-whip-to-flog",
+      "german": "auspeitschen",
+      "english": "to whip / to flog",
       "category": "Separable Verbs",
       "level": "B1",
       "tags": [
-        "expansion",
+        "separable-verb",
         "B1"
       ],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 22,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "ausnehmer"
-        ]
+        "source": "Added to replace noun form",
+        "replacedNoun": "auspeitscher"
       }
     },
     {
-      "id": "b1-separable-verbs-ausnutzung-exploitation-utilization",
-      "german": "ausnutzung",
-      "english": "exploitation / utilization",
+      "id": "b1-separable-verbs-auspluendern-to-plunder-to-loot",
+      "german": "ausplündern",
+      "english": "to plunder / to loot",
       "category": "Separable Verbs",
       "level": "B1",
       "tags": [
-        "expansion",
+        "separable-verb",
         "B1"
       ],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 23,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "ausnutzung"
-        ]
+        "source": "Added to replace noun form",
+        "replacedNoun": "ausplünderung"
       }
     },
     {
-      "id": "b1-separable-verbs-auspackung-unpacking",
-      "german": "auspackung",
-      "english": "unpacking",
+      "id": "b1-separable-verbs-auspolstern-to-upholster-to-pad",
+      "german": "auspolstern",
+      "english": "to upholster / to pad",
       "category": "Separable Verbs",
       "level": "B1",
       "tags": [
-        "expansion",
+        "separable-verb",
         "B1"
       ],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 24,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "auspackung"
-        ]
-      }
-    },
-    {
-      "id": "b1-separable-verbs-auspeitscher-one-who-whips",
-      "german": "auspeitscher",
-      "english": "one who whips",
-      "category": "Separable Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 25,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "auspeitscher"
-        ]
-      }
-    },
-    {
-      "id": "b1-separable-verbs-auspluenderung-plunder-looting",
-      "german": "ausplünderung",
-      "english": "plunder / looting",
-      "category": "Separable Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 26,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "ausplünderung"
-        ]
-      }
-    },
-    {
-      "id": "b1-separable-verbs-auspolsterung-upholstering-padding",
-      "german": "auspolsterung",
-      "english": "upholstering / padding",
-      "category": "Separable Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 27,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "auspolsterung"
-        ]
-      }
-    },
-    {
-      "id": "b1-separable-verbs-auspowderung-powdering",
-      "german": "auspowderung",
-      "english": "powdering",
-      "category": "Separable Verbs",
-      "level": "B1",
-      "tags": [
-        "expansion",
-        "B1"
-      ],
-      "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 28,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "auspowderung"
-        ]
+        "source": "Added to replace noun form",
+        "replacedNoun": "auspolsterung"
       }
     },
     {
@@ -25872,23 +25224,18 @@
       }
     },
     {
-      "id": "b1-separable-verbs-auspresser-one-who-squeezes",
-      "german": "auspresser",
-      "english": "one who squeezes",
+      "id": "b1-separable-verbs-auspudern-to-powder",
+      "german": "auspudern",
+      "english": "to powder",
       "category": "Separable Verbs",
       "level": "B1",
       "tags": [
-        "expansion",
+        "separable-verb",
         "B1"
       ],
       "_meta": {
-        "source": "B1 Category Expansion 2025",
-        "lineNumber": 29,
-        "hierarchy": [
-          "B1",
-          "Separable Verbs",
-          "auspresser"
-        ]
+        "source": "Added to replace noun form",
+        "replacedNoun": "auspowderung"
       }
     },
     {
@@ -26932,24 +26279,18 @@
       }
     },
     {
-      "id": "b1-separable-verbs-vornehme-distinguished",
-      "german": "vornehme",
-      "english": "distinguished",
+      "id": "b1-separable-verbs-vornehmen-to-carry-out-to-intend-to-unde",
+      "german": "vornehmen",
+      "english": "to carry out / to intend / to undertake",
       "category": "Separable Verbs",
       "level": "B1",
       "tags": [
-        "nehmen",
-        "vornehmen"
+        "separable-verb",
+        "B1"
       ],
       "_meta": {
-        "source": "RemNote German.md",
-        "lineNumber": 3049,
-        "hierarchy": [
-          "Verbs",
-          "nehmen",
-          "vornehmen",
-          "vornehme"
-        ]
+        "source": "Added to replace noun form",
+        "replacedNoun": "vornehme"
       }
     },
     {
@@ -27173,6 +26514,202 @@
           "Verbs",
           "zuschneiden"
         ]
+      }
+    },
+    {
+      "id": "b1-society-politics-freiheit-freedom",
+      "german": "die Freiheit",
+      "english": "freedom",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-frieden-peace",
+      "german": "der Frieden",
+      "english": "peace",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-gemeinschaft-community",
+      "german": "die Gemeinschaft",
+      "english": "community",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-gerechtigkeit-justice",
+      "german": "die Gerechtigkeit",
+      "english": "justice",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-gewalt-violence-force",
+      "german": "die Gewalt",
+      "english": "violence / force",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-gleichheit-equality",
+      "german": "die Gleichheit",
+      "english": "equality",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-krieg-war",
+      "german": "der Krieg",
+      "english": "war",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-kultur-culture",
+      "german": "die Kultur",
+      "english": "culture",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-macht-power",
+      "german": "die Macht",
+      "english": "power",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-oeffentlichkeit-public-publicity",
+      "german": "die Öffentlichkeit",
+      "english": "public / publicity",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-pflicht-duty-obligation",
+      "german": "die Pflicht",
+      "english": "duty / obligation",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-privatsphaere-privacy",
+      "german": "die Privatsphäre",
+      "english": "privacy",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-recht-right-law",
+      "german": "das Recht",
+      "english": "right / law",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-tradition-tradition",
+      "german": "die Tradition",
+      "english": "tradition",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
       }
     },
     {
@@ -28073,6 +27610,62 @@
           "State Change Verbs",
           "werden zu"
         ]
+      }
+    },
+    {
+      "id": "b1-truth-morality-aufrichtigkeit-sincerity-honesty",
+      "german": "die Aufrichtigkeit",
+      "english": "sincerity / honesty",
+      "category": "Truth & Morality",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-truth-morality-ehrlichkeit-honesty",
+      "german": "die Ehrlichkeit",
+      "english": "honesty",
+      "category": "Truth & Morality",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-truth-morality-luege-lie",
+      "german": "die Lüge",
+      "english": "lie",
+      "category": "Truth & Morality",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-truth-morality-wahrheit-truth",
+      "german": "die Wahrheit",
+      "english": "truth",
+      "category": "Truth & Morality",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
       }
     },
     {

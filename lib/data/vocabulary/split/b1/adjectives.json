@@ -1,7 +1,7 @@
 {
   "level": "B1",
   "category": "Adjectives",
-  "totalCards": 97,
+  "totalCards": 98,
   "flashcards": [
     {
       "id": "b1-adjectives-fleissig-diligent-hardworking",
@@ -1941,6 +1941,20 @@
           "Adjectives",
           "belastend"
         ]
+      }
+    },
+    {
+      "id": "b1-adjectives-vornehm-distinguished-elegant-refined",
+      "german": "vornehm",
+      "english": "distinguished / elegant / refined",
+      "category": "Adjectives",
+      "level": "B1",
+      "tags": [
+        "redistributed",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Redistributed from Separable Verbs cleanup"
       }
     }
   ]

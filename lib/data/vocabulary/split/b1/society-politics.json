@@ -1,0 +1,203 @@
+{
+  "level": "B1",
+  "category": "Society & Politics",
+  "totalCards": 14,
+  "flashcards": [
+    {
+      "id": "b1-society-politics-freiheit-freedom",
+      "german": "die Freiheit",
+      "english": "freedom",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-gerechtigkeit-justice",
+      "german": "die Gerechtigkeit",
+      "english": "justice",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-gleichheit-equality",
+      "german": "die Gleichheit",
+      "english": "equality",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-macht-power",
+      "german": "die Macht",
+      "english": "power",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-gewalt-violence-force",
+      "german": "die Gewalt",
+      "english": "violence / force",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-frieden-peace",
+      "german": "der Frieden",
+      "english": "peace",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-krieg-war",
+      "german": "der Krieg",
+      "english": "war",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-recht-right-law",
+      "german": "das Recht",
+      "english": "right / law",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-pflicht-duty-obligation",
+      "german": "die Pflicht",
+      "english": "duty / obligation",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-oeffentlichkeit-public-publicity",
+      "german": "die Öffentlichkeit",
+      "english": "public / publicity",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-privatsphaere-privacy",
+      "german": "die Privatsphäre",
+      "english": "privacy",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-gemeinschaft-community",
+      "german": "die Gemeinschaft",
+      "english": "community",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-kultur-culture",
+      "german": "die Kultur",
+      "english": "culture",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    },
+    {
+      "id": "b1-society-politics-tradition-tradition",
+      "german": "die Tradition",
+      "english": "tradition",
+      "category": "Society & Politics",
+      "level": "B1",
+      "tags": [
+        "reorganized",
+        "B1"
+      ],
+      "_meta": {
+        "source": "Reorganized from Abstract Concepts"
+      }
+    }
+  ]
+}
