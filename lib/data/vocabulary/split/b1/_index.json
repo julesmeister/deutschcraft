@@ -1,6 +1,6 @@
 {
   "level": "B1",
-  "totalCards": 1554,
+  "totalCards": 1531,
   "totalCategories": 29,
   "categories": [
     {
@@ -1571,7 +1571,7 @@
     },
     {
       "name": "State Change Verbs",
-      "count": 45,
+      "count": 22,
       "file": "state-change-verbs.json",
       "ids": [
         "b1-state-change-verbs-werden-zu-to-turn-into-to-become",
@@ -1593,29 +1593,6 @@
         "b1-state-change-verbs-aufbluehen-to-blossom-to-flourish",
         "b1-state-change-verbs-erbleichen-to-turn-pale-to-pale",
         "b1-state-change-verbs-erbluehen-to-blossom-to-bloom",
-        "b1-state-change-verbs-erbluete-to-bloom",
-        "b1-state-change-verbs-erbrausen-to-roar-to-crash",
-        "b1-state-change-verbs-erbrauschen-to-roar-to-crash",
-        "b1-state-change-verbs-erbrauste-roared-crashed",
-        "b1-state-change-verbs-erblichen-to-turn-pale",
-        "b1-state-change-verbs-erblichung-paling-turning-pale",
-        "b1-state-change-verbs-erbluehung-blooming-flowering",
-        "b1-state-change-verbs-erbrecher-vomiter",
-        "b1-state-change-verbs-erbrechung-vomiting",
-        "b1-state-change-verbs-erbrechenes-vomitus",
-        "b1-state-change-verbs-erblassung-paling-becoming-pale",
-        "b1-state-change-verbs-erbluehte-bloomed-blossomed",
-        "b1-state-change-verbs-erbleichte-paled-turned-pale",
-        "b1-state-change-verbs-erbleichung-paling-pallor",
-        "b1-state-change-verbs-erbluehung-des-baumes-blooming-of-the-tree",
-        "b1-state-change-verbs-erbrechung-verursachen-to-cause-vomiting",
-        "b1-state-change-verbs-erbrechungen-vomiting-plural",
-        "b1-state-change-verbs-erbrechendes-mittel-emetic-vomit-inducing-substance",
-        "b1-state-change-verbs-erbleichtes-gesicht-pale-face",
-        "b1-state-change-verbs-erbluehter-baum-bloomed-tree",
-        "b1-state-change-verbs-erbrichts-vomiting-archaic",
-        "b1-state-change-verbs-erbleichte-wangen-paled-cheeks",
-        "b1-state-change-verbs-erbluehte-knospen-bloomed-buds",
         "b1-state-change-verbs-gebaeren-to-give-birth",
         "b1-state-change-verbs-anschwellen-to-swell",
         "b1-state-change-verbs-abschwellen-to-reduce-swelling-to-go-down"
