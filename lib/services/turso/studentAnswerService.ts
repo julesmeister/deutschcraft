@@ -11,9 +11,14 @@ import {
 } from "@/lib/models/studentAnswers";
 import { syncMarkedWordsProgress } from "./markedWordProgressService";
 
-// ============================================================================
-// HELPER FUNCTIONS
-// ============================================================================
+// Re-export stats functions for backwards compatibility
+export {
+  getAnswerHubStats,
+  getLessonInteractionStats,
+  getRecentAnswerActivity,
+  type AnswerHubStats,
+  type RecentAnswerActivity,
+} from "./studentAnswerStatsService";
 
 /**
  * Convert database row to StudentAnswerSubmission object
@@ -51,11 +56,10 @@ export async function getExerciseAnswers(
       sql: "SELECT * FROM student_answers WHERE exercise_id = ? ORDER BY submitted_at DESC",
       args: [exerciseId],
     });
-
     return result.rows.map(rowToStudentAnswer);
   } catch (error) {
     console.error(
-      "[studentAnswerService:turso] Error fetching exercise answers:",
+      "[studentAnswerService] Error fetching exercise answers:",
       error
     );
     throw error;
@@ -73,7 +77,7 @@ export async function getExerciseAnswersGrouped(
     return groupAnswersByStudent(answers);
   } catch (error) {
     console.error(
-      "[studentAnswerService:turso] Error fetching grouped answers:",
+      "[studentAnswerService] Error fetching grouped answers:",
       error
     );
     throw error;
@@ -95,14 +99,13 @@ export async function getStudentAnswers(
       sql += " AND exercise_id = ?";
       args.push(exerciseId);
     }
-
     sql += " ORDER BY submitted_at DESC";
 
     const result = await db.execute({ sql, args });
     return result.rows.map(rowToStudentAnswer);
   } catch (error) {
     console.error(
-      "[studentAnswerService:turso] Error fetching student answers:",
+      "[studentAnswerService] Error fetching student answers:",
       error
     );
     throw error;
@@ -124,122 +127,11 @@ export async function getAnswer(
       args: [answerId],
     });
 
-    if (result.rows.length === 0) {
-      return null;
-    }
-
+    if (result.rows.length === 0) return null;
     return rowToStudentAnswer(result.rows[0]);
   } catch (error) {
-    console.error("[studentAnswerService:turso] Error fetching answer:", error);
+    console.error("[studentAnswerService] Error fetching answer:", error);
     throw error;
-  }
-}
-
-/**
- * Get Answer Hub statistics for a student
- */
-export interface AnswerHubStats {
-  totalAnswers: number;
-  exercisesAttempted: number;
-  correctAnswers: number;
-  recentAnswers: StudentAnswerSubmission[];
-}
-
-export async function getAnswerHubStats(
-  studentId: string
-): Promise<AnswerHubStats> {
-  try {
-    // Get total count and correct count
-    const statsResult = await db.execute({
-      sql: `SELECT
-              COUNT(*) as total,
-              COUNT(DISTINCT exercise_id) as exercises,
-              SUM(CASE WHEN is_correct = 1 THEN 1 ELSE 0 END) as correct
-            FROM student_answers
-            WHERE student_id = ?`,
-      args: [studentId],
-    });
-
-    // Get recent answers (last 10)
-    const recentResult = await db.execute({
-      sql: `SELECT * FROM student_answers
-            WHERE student_id = ?
-            ORDER BY submitted_at DESC
-            LIMIT 10`,
-      args: [studentId],
-    });
-
-    const stats = statsResult.rows[0];
-    return {
-      totalAnswers: (stats.total as number) || 0,
-      exercisesAttempted: (stats.exercises as number) || 0,
-      correctAnswers: (stats.correct as number) || 0,
-      recentAnswers: recentResult.rows.map(rowToStudentAnswer),
-    };
-  } catch (error) {
-    console.error(
-      "[studentAnswerService:turso] Error fetching answer hub stats:",
-      error
-    );
-    return {
-      totalAnswers: 0,
-      exercisesAttempted: 0,
-      correctAnswers: 0,
-      recentAnswers: [],
-    };
-  }
-}
-
-/**
- * Get aggregated exercise interaction stats for a student in a specific lesson
- */
-export async function getLessonInteractionStats(
-  studentId: string,
-  exerciseIds: string[]
-): Promise<
-  Record<string, { submissionCount: number; lastSubmittedAt: number }>
-> {
-  if (exerciseIds.length === 0) return {};
-
-  try {
-    // Construct placeholders for IN clause
-    const placeholders = exerciseIds.map(() => "?").join(",");
-
-    // We want to count distinct items submitted per exercise
-    const sql = `
-      SELECT 
-        exercise_id, 
-        COUNT(*) as submission_count,
-        MAX(submitted_at) as last_submitted
-      FROM student_answers 
-      WHERE student_id = ? 
-      AND exercise_id IN (${placeholders})
-      GROUP BY exercise_id
-    `;
-
-    const args = [studentId, ...exerciseIds];
-    const result = await db.execute({ sql, args });
-
-    const stats: Record<
-      string,
-      { submissionCount: number; lastSubmittedAt: number }
-    > = {};
-
-    for (const row of result.rows) {
-      const exerciseId = row.exercise_id as string;
-      stats[exerciseId] = {
-        submissionCount: row.submission_count as number,
-        lastSubmittedAt: row.last_submitted as number,
-      };
-    }
-
-    return stats;
-  } catch (error) {
-    console.error(
-      "[studentAnswerService:turso] Error fetching lesson stats:",
-      error
-    );
-    return {};
   }
 }
 
@@ -254,21 +146,18 @@ export async function getStudentAnswersForExercises(
 
   try {
     const placeholders = exerciseIds.map(() => "?").join(",");
-
     const sql = `
-      SELECT * FROM student_answers 
-      WHERE student_id = ? 
+      SELECT * FROM student_answers
+      WHERE student_id = ?
       AND exercise_id IN (${placeholders})
       ORDER BY exercise_id, item_number
     `;
-
     const args = [studentId, ...exerciseIds];
     const result = await db.execute({ sql, args });
-
     return result.rows.map(rowToStudentAnswer);
   } catch (error) {
     console.error(
-      "[studentAnswerService:turso] Error fetching student answers for exercises:",
+      "[studentAnswerService] Error fetching student answers for exercises:",
       error
     );
     throw error;
@@ -285,20 +174,47 @@ export async function getAllAnswersForExercises(
 
   try {
     const placeholders = exerciseIds.map(() => "?").join(",");
-
     const sql = `
-      SELECT * FROM student_answers 
+      SELECT * FROM student_answers
       WHERE exercise_id IN (${placeholders})
       ORDER BY exercise_id, item_number, submitted_at DESC
     `;
-
-    const args = [...exerciseIds];
-    const result = await db.execute({ sql, args });
-
+    const result = await db.execute({ sql, args: [...exerciseIds] });
     return result.rows.map(rowToStudentAnswer);
   } catch (error) {
     console.error(
-      "[studentAnswerService:turso] Error fetching all answers for exercises:",
+      "[studentAnswerService] Error fetching all answers for exercises:",
+      error
+    );
+    throw error;
+  }
+}
+
+/**
+ * Get all marked words for a lesson (for quiz generation)
+ */
+export async function getMarkedWordsForLesson(
+  studentId: string,
+  exerciseIds: string[]
+): Promise<StudentAnswerSubmission[]> {
+  if (exerciseIds.length === 0) return [];
+
+  try {
+    const placeholders = exerciseIds.map(() => "?").join(",");
+    const sql = `
+      SELECT * FROM student_answers
+      WHERE student_id = ?
+      AND exercise_id IN (${placeholders})
+      AND marked_words IS NOT NULL
+      AND marked_words != '[]'
+      ORDER BY submitted_at DESC
+    `;
+    const args = [studentId, ...exerciseIds];
+    const result = await db.execute({ sql, args });
+    return result.rows.map(rowToStudentAnswer);
+  } catch (error) {
+    console.error(
+      "[studentAnswerService] Error fetching marked words:",
       error
     );
     throw error;
@@ -321,7 +237,6 @@ export async function saveStudentAnswer(
     const answerId = `${answer.studentId}_${answer.exerciseId}_${answer.itemNumber}`;
     const submittedAt = answer.submittedAt || Date.now();
 
-    // Use INSERT OR REPLACE to handle duplicates
     await db.execute({
       sql: `INSERT OR REPLACE INTO student_answers (
               answer_id, student_id, student_name, exercise_id, item_number,
@@ -340,7 +255,6 @@ export async function saveStudentAnswer(
       ],
     });
 
-    // Sync marked words progress for SRS
     if (answer.markedWords) {
       await syncMarkedWordsProgress(
         answer.studentId,
@@ -352,7 +266,7 @@ export async function saveStudentAnswer(
 
     return answerId;
   } catch (error) {
-    console.error("[studentAnswerService:turso] Error saving answer:", error);
+    console.error("[studentAnswerService] Error saving answer:", error);
     throw error;
   }
 }
@@ -373,7 +287,7 @@ export async function gradeAnswer(
       args: [isCorrect ? 1 : 0, answerId],
     });
   } catch (error) {
-    console.error("[studentAnswerService:turso] Error grading answer:", error);
+    console.error("[studentAnswerService] Error grading answer:", error);
     throw error;
   }
 }
@@ -393,7 +307,7 @@ export async function deleteStudentAnswer(
       args: [answerId],
     });
   } catch (error) {
-    console.error("[studentAnswerService:turso] Error deleting answer:", error);
+    console.error("[studentAnswerService] Error deleting answer:", error);
     throw error;
   }
 }
@@ -409,14 +323,11 @@ export async function updateMarkedWords(
 ): Promise<void> {
   try {
     const answerId = `${studentId}_${exerciseId}_${itemNumber}`;
-    const markedWordsJson = JSON.stringify(markedWords);
-
     await db.execute({
       sql: "UPDATE student_answers SET marked_words = ? WHERE answer_id = ?",
-      args: [markedWordsJson, answerId],
+      args: [JSON.stringify(markedWords), answerId],
     });
 
-    // Sync marked words progress for SRS
     await syncMarkedWordsProgress(
       studentId,
       exerciseId,
@@ -425,41 +336,7 @@ export async function updateMarkedWords(
     );
   } catch (error) {
     console.error(
-      "[studentAnswerService:turso] Error updating marked words:",
-      error
-    );
-    throw error;
-  }
-}
-
-/**
- * Get all marked words for a lesson (for quiz generation)
- */
-export async function getMarkedWordsForLesson(
-  studentId: string,
-  exerciseIds: string[]
-): Promise<StudentAnswerSubmission[]> {
-  if (exerciseIds.length === 0) return [];
-
-  try {
-    const placeholders = exerciseIds.map(() => "?").join(",");
-
-    const sql = `
-      SELECT * FROM student_answers
-      WHERE student_id = ?
-      AND exercise_id IN (${placeholders})
-      AND marked_words IS NOT NULL
-      AND marked_words != '[]'
-      ORDER BY submitted_at DESC
-    `;
-
-    const args = [studentId, ...exerciseIds];
-    const result = await db.execute({ sql, args });
-
-    return result.rows.map(rowToStudentAnswer);
-  } catch (error) {
-    console.error(
-      "[studentAnswerService:turso] Error fetching marked words:",
+      "[studentAnswerService] Error updating marked words:",
       error
     );
     throw error;
@@ -477,64 +354,9 @@ export async function deleteExerciseAnswers(exerciseId: string): Promise<void> {
     });
   } catch (error) {
     console.error(
-      "[studentAnswerService:turso] Error deleting exercise answers:",
+      "[studentAnswerService] Error deleting exercise answers:",
       error
     );
     throw error;
-  }
-}
-
-/**
- * Recent answer activity for dashboard
- */
-export interface RecentAnswerActivity {
-  exerciseId: string;
-  itemNumber: string;
-  submittedAt: number;
-  exerciseTitle?: string;
-}
-
-/**
- * Get the last 5 answers the student submitted (ascending order - oldest to newest)
- */
-export async function getRecentAnswerActivity(
-  studentId: string,
-  limit: number = 5
-): Promise<RecentAnswerActivity[]> {
-  try {
-    // Get most recent 5, then order ascending (oldest of recent first)
-    const result = await db.execute({
-      sql: `
-        SELECT * FROM (
-          SELECT
-            sa.exercise_id,
-            sa.item_number,
-            sa.submitted_at,
-            COALESCE(
-              json_extract(eo.exercise_data, '$.title'),
-              json_extract(eo.exercise_data, '$.exerciseNumber')
-            ) as exercise_title
-          FROM student_answers sa
-          LEFT JOIN exercise_overrides eo ON sa.exercise_id = eo.exercise_id
-          WHERE sa.student_id = ?
-          ORDER BY sa.submitted_at DESC
-          LIMIT ?
-        ) ORDER BY submitted_at ASC
-      `,
-      args: [studentId, limit],
-    });
-
-    return result.rows.map((row) => ({
-      exerciseId: row.exercise_id as string,
-      itemNumber: row.item_number as string,
-      submittedAt: row.submitted_at as number,
-      exerciseTitle: row.exercise_title as string | undefined,
-    }));
-  } catch (error) {
-    console.error(
-      "[studentAnswerService:turso] Error fetching recent answers:",
-      error
-    );
-    return [];
   }
 }
