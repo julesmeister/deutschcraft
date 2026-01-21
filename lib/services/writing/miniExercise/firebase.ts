@@ -23,6 +23,7 @@ export interface MiniExerciseData {
   sentence: string;
   blanks: QuizBlank[];
   submissionId: string;
+  sentenceId?: string;
   sourceType: "ai" | "teacher" | "reference";
   exerciseTitle?: string;
   exerciseId?: string;
@@ -204,6 +205,7 @@ export async function getRandomMiniExercise(
           sentence,
           blanks,
           submissionId: submission.submissionId,
+          sentenceId: `${submission.submissionId}_${sentenceIdx}`,
           sourceType,
           exerciseTitle: submission.exerciseTitle,
           exerciseId: submission.exerciseId,
@@ -228,6 +230,7 @@ export async function getRandomMiniExercise(
       sentence: firstSentence,
       blanks,
       submissionId: submission.submissionId,
+      sentenceId: `${submission.submissionId}_0`,
       sourceType,
       exerciseTitle: submission.exerciseTitle,
       exerciseId: submission.exerciseId,

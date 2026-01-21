@@ -483,3 +483,58 @@ export async function deleteExerciseAnswers(exerciseId: string): Promise<void> {
     throw error;
   }
 }
+
+/**
+ * Recent answer activity for dashboard
+ */
+export interface RecentAnswerActivity {
+  exerciseId: string;
+  itemNumber: string;
+  submittedAt: number;
+  exerciseTitle?: string;
+}
+
+/**
+ * Get the last 5 answers the student submitted (ascending order - oldest to newest)
+ */
+export async function getRecentAnswerActivity(
+  studentId: string,
+  limit: number = 5
+): Promise<RecentAnswerActivity[]> {
+  try {
+    // Get most recent 5, then order ascending (oldest of recent first)
+    const result = await db.execute({
+      sql: `
+        SELECT * FROM (
+          SELECT
+            sa.exercise_id,
+            sa.item_number,
+            sa.submitted_at,
+            COALESCE(
+              json_extract(eo.exercise_data, '$.title'),
+              json_extract(eo.exercise_data, '$.exerciseNumber')
+            ) as exercise_title
+          FROM student_answers sa
+          LEFT JOIN exercise_overrides eo ON sa.exercise_id = eo.exercise_id
+          WHERE sa.student_id = ?
+          ORDER BY sa.submitted_at DESC
+          LIMIT ?
+        ) ORDER BY submitted_at ASC
+      `,
+      args: [studentId, limit],
+    });
+
+    return result.rows.map((row) => ({
+      exerciseId: row.exercise_id as string,
+      itemNumber: row.item_number as string,
+      submittedAt: row.submitted_at as number,
+      exerciseTitle: row.exercise_title as string | undefined,
+    }));
+  } catch (error) {
+    console.error(
+      "[studentAnswerService:turso] Error fetching recent answers:",
+      error
+    );
+    return [];
+  }
+}

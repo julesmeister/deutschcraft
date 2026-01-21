@@ -4,18 +4,17 @@ import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { useCurrentStudent } from "@/lib/hooks/useUsers";
 import { useWeeklyProgress } from "@/lib/hooks/useWeeklyProgress";
 import { usePracticeStats } from "@/lib/hooks/usePracticeStats";
-import { useStudentTasks } from "@/lib/hooks/useWritingTasks";
 import { useBatch } from "@/lib/hooks/useBatches";
 import { useStudentDashboardStats } from "@/lib/hooks/useStudentDashboardStats";
+import { useRecentAnswerActivity } from "@/lib/hooks/useRecentLessonActivity";
 import { SAMPLE_STUDENT } from "@/lib/models";
 import { StudentStatsCard } from "@/components/dashboard/StudentStatsCard";
 import { WeeklyProgressChart } from "@/components/dashboard/WeeklyProgressChart";
 import { StudentQuickActions } from "@/components/dashboard/StudentQuickActions";
 import { DailyGoalCard } from "@/components/dashboard/DailyGoalCard";
-import { StudentRecentTasksCard } from "@/components/dashboard/StudentRecentTasksCard";
+import { RecentAnswerHubCard } from "@/components/dashboard/RecentAnswerHubCard";
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
 import { MiniBlankExercise } from "@/components/dashboard/MiniBlankExercise";
-import { useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { getTodayProgress } from "@/lib/services/progressService";
 import { CatLoader } from "@/components/ui/CatLoader";
@@ -31,9 +30,10 @@ export default function StudentDashboard() {
   const { cardsReady, wordsToReview } = usePracticeStats(
     session?.user?.email || null
   );
-  const { tasks: allTasks, isLoading: isLoadingTasks } = useStudentTasks(
-    session?.user?.email || undefined
-  );
+
+  // Get recent Answer Hub activity
+  const { data: recentActivity, isLoading: isLoadingActivity } =
+    useRecentAnswerActivity(session?.user?.email);
 
   // Get today's progress for daily goal (using React Query for real-time updates)
   const { data: todayProgressData } = useQuery({
@@ -47,9 +47,6 @@ export default function StudentDashboard() {
   });
 
   const todayProgress = todayProgressData?.cardsReviewed || 0;
-
-  // Get recent tasks (last 5)
-  const recentTasks = allTasks.slice(0, 5);
 
   // Get random mini exercise
   const {
@@ -242,9 +239,9 @@ export default function StudentDashboard() {
 
           {/* Sidebar */}
           <div className="space-y-6">
-            <StudentRecentTasksCard
-              tasks={recentTasks}
-              isLoading={isLoadingTasks}
+            <RecentAnswerHubCard
+              activities={recentActivity || []}
+              isLoading={isLoadingActivity}
             />
             <DailyGoalCard
               current={todayProgress}
