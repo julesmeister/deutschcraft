@@ -141,6 +141,8 @@ export interface RecentAnswerActivity {
   itemNumber: string;
   submittedAt: number;
   exerciseTitle?: string;
+  level?: string;
+  lessonNumber?: number;
 }
 
 /**
@@ -161,7 +163,9 @@ export async function getRecentAnswerActivity(
             COALESCE(
               json_extract(eo.exercise_data, '$.title'),
               json_extract(eo.exercise_data, '$.exerciseNumber')
-            ) as exercise_title
+            ) as exercise_title,
+            eo.level as override_level,
+            eo.lesson_number as override_lesson
           FROM student_answers sa
           LEFT JOIN exercise_overrides eo ON sa.exercise_id = eo.exercise_id
           WHERE sa.student_id = ?
@@ -177,6 +181,8 @@ export async function getRecentAnswerActivity(
       itemNumber: row.item_number as string,
       submittedAt: row.submitted_at as number,
       exerciseTitle: row.exercise_title as string | undefined,
+      level: row.override_level as string | undefined,
+      lessonNumber: row.override_lesson as number | undefined,
     }));
   } catch (error) {
     console.error(

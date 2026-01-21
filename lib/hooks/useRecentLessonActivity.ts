@@ -9,6 +9,8 @@ export interface RecentAnswerActivity {
   itemNumber: string;
   submittedAt: number;
   exerciseTitle?: string;
+  level?: string;
+  lessonNumber?: number;
 }
 
 async function fetchRecentAnswerActivity(

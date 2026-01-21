@@ -9,22 +9,22 @@ interface RecentAnswerHubCardProps {
 }
 
 // Parse exercise ID to extract level, lesson, bookType
-// Format 1: "B1.1-L1-AB-Folge1-1" (standard)
-// Format 2: "CUSTOM_1705123456789_B1_3" (custom: CUSTOM_timestamp_level_lesson)
-function parseExerciseId(exerciseId: string) {
+// Uses API data when available (for custom exercises), otherwise parses from exerciseId
+function parseExerciseId(
+  exerciseId: string,
+  apiLevel?: string,
+  apiLessonNumber?: number
+) {
   let level = "";
   let lessonNumber = 0;
   let bookType = "AB";
   let shortName = "";
 
+  // For custom exercises, prefer API data (from exercise_overrides table)
   if (exerciseId.startsWith("CUSTOM_")) {
-    // Custom format: CUSTOM_{timestamp}_{level}_{lessonNumber}
-    const parts = exerciseId.split("_");
-    if (parts.length >= 4) {
-      level = parts[2]?.toUpperCase() || "";
-      lessonNumber = parseInt(parts[3], 10) || 0;
-    }
-    shortName = ""; // Will use exerciseTitle from DB if available
+    level = apiLevel?.toUpperCase() || "";
+    lessonNumber = apiLessonNumber || 0;
+    shortName = ""; // Will use exerciseTitle from DB
   } else {
     // Standard format: "B1.1-L1-AB-Folge1-1"
     const parts = exerciseId.split("-");
@@ -103,7 +103,11 @@ export function RecentAnswerHubCard({
           </div>
         ) : activities.length > 0 ? (
           activities.map((activity, idx) => {
-            const parsed = parseExerciseId(activity.exerciseId);
+            const parsed = parseExerciseId(
+              activity.exerciseId,
+              activity.level,
+              activity.lessonNumber
+            );
             return (
               <button
                 key={`${activity.exerciseId}-${activity.itemNumber}-${idx}`}
