@@ -20,10 +20,23 @@ function parseExerciseId(
   let bookType = "AB";
   let shortName = "";
 
-  // For custom exercises, prefer API data (from exercise_overrides table)
+  // For custom exercises: CUSTOM_{timestamp}_{level}_{lessonNumber}
   if (exerciseId.startsWith("CUSTOM_")) {
-    level = apiLevel?.toUpperCase() || "";
-    lessonNumber = apiLessonNumber || 0;
+    // First try API data from exercise_overrides table
+    if (apiLevel) {
+      level = apiLevel.toUpperCase();
+    }
+    if (apiLessonNumber) {
+      lessonNumber = apiLessonNumber;
+    }
+    // Fallback: parse from exerciseId if API data missing
+    if (!level || !lessonNumber) {
+      const parts = exerciseId.split("_");
+      if (parts.length >= 4) {
+        if (!level) level = parts[2]?.toUpperCase() || "";
+        if (!lessonNumber) lessonNumber = parseInt(parts[3], 10) || 0;
+      }
+    }
     shortName = ""; // Will use exerciseTitle from DB
   } else {
     // Standard format: "B1.1-L1-AB-Folge1-1"
