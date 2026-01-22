@@ -111,9 +111,9 @@ export function DashboardHeader({
           ))}
 
         {/* Header Content */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4">
           {/* Left Side: Title/Avatar */}
-          <div className="flex items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-3 sm:gap-4 min-w-0">
             {/* Avatar (optional) */}
             {avatar && (
               <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-piku-purple to-piku-cyan flex items-center justify-center text-xl sm:text-2xl md:text-3xl font-black text-white overflow-hidden flex-shrink-0">
@@ -154,7 +154,7 @@ export function DashboardHeader({
 
           {/* Right Side: Actions */}
           {actions && (
-            <div className="flex-shrink-0 w-full sm:w-auto relative z-20">
+            <div className="flex-shrink-0 w-full md:w-auto relative z-20">
               {actions}
             </div>
           )}

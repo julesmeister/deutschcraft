@@ -73,7 +73,7 @@ export function LessonDetailHeader({
         onClick: () => router.push("/dashboard/student/answer-hub"),
       }}
       actions={
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2 md:gap-3">
           {onViewSummary && (
             <>
               <div className="w-auto">
