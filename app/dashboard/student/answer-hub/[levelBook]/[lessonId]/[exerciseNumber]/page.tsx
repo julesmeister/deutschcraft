@@ -5,7 +5,7 @@
 
 "use client";
 
-import { Youtube, Link as LinkIcon, ExternalLink } from "lucide-react";
+import { Youtube, Link as LinkIcon, ExternalLink, FileText } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import Link from "next/link";
@@ -18,6 +18,7 @@ import { DictionaryLookup } from "@/components/dictionary/DictionaryLookup";
 import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
 import { FloatingSectionNavigator } from "@/components/answer-hub/FloatingSectionNavigator";
 import { AudioPlayer } from "@/components/audio/AudioPlayer";
+import { PDFViewer } from "@/components/playground/PDFViewer";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { useCurrentStudent } from "@/lib/hooks/useUsers";
 import { useActiveBatches } from "@/lib/hooks/useBatches";
@@ -335,10 +336,10 @@ export default function ExerciseDetailPage() {
                       </span>
 
                       {/* Link/YouTube attachments */}
-                      {exercise.attachments.some((att) => att.type !== "audio") && (
+                      {exercise.attachments.some((att) => att.type !== "audio" && att.type !== "pdf") && (
                         <div className="flex flex-wrap items-center gap-2">
                           {exercise.attachments
-                            .filter((att) => att.type !== "audio")
+                            .filter((att) => att.type !== "audio" && att.type !== "pdf")
                             .map((attachment, index) => (
                               <a
                                 key={index}
@@ -370,11 +371,26 @@ export default function ExerciseDetailPage() {
                       {exercise.attachments
                         .filter((att) => att.type === "audio")
                         .map((attachment, index) => (
-                          <div key={index} className="pt-1">
+                          <div key={`audio-${index}`} className="pt-1">
                             <AudioPlayer
                               materialTitle={attachment.title || "Audio"}
                               materialUrl={attachment.url}
                               audioId={attachment.audioId}
+                            />
+                          </div>
+                        ))}
+
+                      {/* PDF attachments */}
+                      {exercise.attachments
+                        .filter((att) => att.type === "pdf")
+                        .map((attachment, index) => (
+                          <div key={`pdf-${index}`} className="pt-2 h-[70vh] min-h-[500px]">
+                            <PDFViewer
+                              materialTitle={attachment.title || "PDF Document"}
+                              materialUrl={attachment.url}
+                              pageStart={attachment.pageStart}
+                              pageEnd={attachment.pageEnd}
+                              showCloseButton={false}
                             />
                           </div>
                         ))}

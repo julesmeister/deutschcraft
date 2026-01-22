@@ -23,6 +23,7 @@ import { GermanCharAutocomplete } from "@/components/writing/GermanCharAutocompl
 import { InlineAnswerInput } from "./InlineAnswerInput";
 import { InlineItemNumberInput } from "./InlineItemNumberInput";
 import { AudioAttachmentSelector } from "./AudioAttachmentSelector";
+import { PDFAttachmentSelector } from "./PDFAttachmentSelector";
 import { CEFRLevel } from "@/lib/models/cefr";
 
 // Flattened type for inline editing UI
@@ -371,6 +372,17 @@ export function InlineEditableExerciseCard({
           />
         </div>
 
+        {/* PDF Attachments */}
+        <div className="border-t pt-3">
+          <PDFAttachmentSelector
+            level={level}
+            bookType={bookType}
+            lessonNumber={lessonNumber}
+            attachments={attachments}
+            onAttachmentsChange={setAttachments}
+          />
+        </div>
+
         {/* Link/YouTube Attachments */}
         <div className="space-y-2">
           <div className="flex items-center gap-2">
@@ -386,7 +398,7 @@ export function InlineEditableExerciseCard({
             </button>
           </div>
 
-          {attachments.filter(a => a.type !== 'audio').map((attachment, index) => {
+          {attachments.filter(a => a.type !== 'audio' && a.type !== 'pdf').map((attachment, index) => {
             // Find the actual index in the full attachments array
             const actualIndex = attachments.findIndex(a => a === attachment);
 

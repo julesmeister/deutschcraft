@@ -12,6 +12,8 @@ interface PDFViewerProps {
   materialUrl: string;
   onClose?: () => void;
   showCloseButton?: boolean;
+  pageStart?: number;  // Starting page (1-indexed)
+  pageEnd?: number;    // Ending page (optional)
 }
 
 export function PDFViewer({
@@ -19,7 +21,23 @@ export function PDFViewer({
   materialUrl,
   onClose,
   showCloseButton = true,
+  pageStart,
+  pageEnd,
 }: PDFViewerProps) {
+  // Append #page=X to URL when pageStart is set to open at specific page
+  const pdfUrl = pageStart ? `${materialUrl}#page=${pageStart}` : materialUrl;
+
+  // Format page range badge text
+  const getPageRangeBadge = () => {
+    if (!pageStart) return null;
+    if (pageEnd && pageEnd > pageStart) {
+      return `Pages ${pageStart}-${pageEnd}`;
+    }
+    return `Page ${pageStart}`;
+  };
+
+  const pageRangeBadge = getPageRangeBadge();
+
   return (
     <div className="bg-white border border-gray-200 h-full flex flex-col">
       {/* Header */}
@@ -29,10 +47,15 @@ export function PDFViewer({
           <h4 className="font-semibold text-sm text-neutral-900">
             {materialTitle}
           </h4>
+          {pageRangeBadge && (
+            <span className="inline-flex items-center px-2 py-0.5 text-xs font-medium bg-orange-100 text-orange-700 rounded">
+              {pageRangeBadge}
+            </span>
+          )}
         </div>
         <div className="flex items-center gap-2">
           <a
-            href={materialUrl}
+            href={pdfUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs text-blue-600 hover:text-blue-800 font-medium"
@@ -54,7 +77,7 @@ export function PDFViewer({
       {/* PDF Viewer */}
       <div className="flex-1 bg-gray-100">
         <iframe
-          src={materialUrl}
+          src={pdfUrl}
           className="w-full h-full border-0"
           title={materialTitle}
         />

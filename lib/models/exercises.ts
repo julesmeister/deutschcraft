@@ -45,10 +45,13 @@ export interface Exercise {
  * Exercise Attachment Model
  */
 export interface ExerciseAttachment {
-  type: 'youtube' | 'link' | 'audio';
+  type: 'youtube' | 'link' | 'audio' | 'pdf';
   url: string;
   title?: string;
-  audioId?: string; // For audio type: ID from audio_materials table
+  audioId?: string;    // For audio type: ID from audio_materials table
+  materialId?: string; // For pdf type: ID from materials table
+  pageStart?: number;  // For pdf type: starting page (1-indexed)
+  pageEnd?: number;    // For pdf type: ending page (optional)
 }
 
 /**
