@@ -23,7 +23,7 @@ import { GermanCharAutocomplete } from "@/components/writing/GermanCharAutocompl
 import { InlineAnswerInput } from "./InlineAnswerInput";
 import { InlineItemNumberInput } from "./InlineItemNumberInput";
 import { AudioAttachmentSelector } from "./AudioAttachmentSelector";
-import { PDFAttachmentSelector } from "./PDFAttachmentSelector";
+import { PDFAttachmentSelector } from "./pdf";
 import { CEFRLevel } from "@/lib/models/cefr";
 
 // Flattened type for inline editing UI
