@@ -50,10 +50,10 @@ export function Pagination({
              ? 'text-white bg-[#559adc]'
              : 'text-[#11316e] bg-transparent hover:bg-[#559adc] hover:text-white'
            }`
-        : `block px-4 transition-all duration-400 ease-in-out text-sm font-medium tracking-wide leading-[45px]
+        : `flex items-center justify-center w-9 h-9 transition-all duration-300 ease-in-out text-sm font-bold rounded-full
            ${isCurrent
-             ? 'bg-brand-purple text-white rounded-lg'
-             : 'text-gray-600 hover:bg-brand-purple hover:text-white hover:rounded-lg'
+             ? 'bg-gray-800 text-white shadow-sm'
+             : 'text-gray-500 hover:bg-gray-200 hover:text-gray-800'
            }`;
 
       pages.push(
@@ -96,9 +96,8 @@ export function Pagination({
             }
           }}
           disabled={currentPage === 1}
-          className="block px-4 transition-all duration-400 ease-in-out text-gray-600 text-sm font-medium
-                     tracking-wide leading-[45px] hover:bg-transparent hover:text-brand-purple
-                     disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-2 text-xs font-semibold text-gray-500 hover:text-gray-800
+                     transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
         >
           prev
         </button>
@@ -110,9 +109,8 @@ export function Pagination({
             }
           }}
           disabled={currentPage === totalPages}
-          className="block px-4 transition-all duration-400 ease-in-out text-gray-600 text-sm font-medium
-                     tracking-wide leading-[45px] hover:bg-transparent hover:text-brand-purple
-                     disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-2 text-xs font-semibold text-gray-500 hover:text-gray-800
+                     transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
         >
           next
         </button>
@@ -160,7 +158,7 @@ export function Pagination({
 
   const innerClasses = variant === 'pills'
     ? ''
-    : 'inline-flex h-[45px] px-4 rounded-[22px] bg-gray-100';
+    : 'inline-flex items-center gap-1 h-[45px] px-3 rounded-full bg-gray-100';
 
   return (
     <div className={containerClasses}>

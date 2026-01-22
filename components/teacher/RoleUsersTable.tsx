@@ -189,7 +189,7 @@ export function RoleUsersTable({
               render: (value, row) => (
                 <div className="flex flex-col justify-center">
                   <div className="flex items-center gap-2">
-                    {SlimTableRenderers.Link(value)}
+                    {SlimTableRenderers.Link(value, `/dashboard/teacher/students/${encodeURIComponent(row.id)}`)}
                     {row.isCurrentUser && (
                       <span className="text-xs text-piku-purple font-medium">
                         (You)
