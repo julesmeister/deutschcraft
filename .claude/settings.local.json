@@ -190,7 +190,19 @@
       "Bash(robocopy:*)",
       "Bash(xcopy \"C:\\\\Users\\\\User\\\\Documents\\\\Schritte\" \"public\\\\materials\"\" /E /I /Y /Q && echo \"Copy completed successfully \")",
       "Bash(timeout /t 8)",
-      "Bash(taskkill:*)"
+      "Bash(taskkill:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(tee:*)",
+      "Bash(node scripts/fix-separable-verbs.js:*)",
+      "Bash(node scripts/update-b1-index.js:*)",
+      "Bash(node scripts/redistribute-nouns.js:*)",
+      "Bash(node scripts/update-index.js:*)",
+      "Bash(node scripts/reorganize-abstract.js:*)",
+      "Bash(node scripts/update-index-full.js:*)",
+      "Bash(node scripts/fix-state-change-verbs.js:*)",
+      "Bash(node scripts/update-index-state.js:*)",
+      "Bash(cd:*)"
     ],
     "deny": [],
     "ask": []

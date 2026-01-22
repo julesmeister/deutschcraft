@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-01-20T18:59:39.533Z",
+  "summary": {
+    "totalFiles": 0,
+    "looseFiles": 0,
+    "infiniteRecursionFiles": 0,
+    "duplicates": 0,
+    "issues": 0
+  },
+  "details": {
+    "looseFiles": [],
+    "infiniteRecursionFiles": [],
+    "levelsFiles": [],
+    "splitFiles": [],
+    "duplicates": {}
+  },
+  "issues": [],
+  "recommendations": [
+    "Generate stats.json file for quick category lookups",
+    "Rename \"remnote\" directory to \"vocabulary\" for clarity",
+    "Update all import statements to use new directory name"
+  ]
+}
