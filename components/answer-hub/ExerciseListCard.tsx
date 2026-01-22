@@ -7,7 +7,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { GripVertical } from "lucide-react";
+import { GripVertical, Youtube, Music } from "lucide-react";
 import { ExerciseWithOverrideMetadata } from "@/lib/models/exerciseOverride";
 import { ExerciseStatusBadge } from "./ExerciseStatusBadge";
 
@@ -164,6 +164,13 @@ export function ExerciseListCard({
               >
                 {exercise.exerciseNumber}
               </h3>
+              {/* Attachment icons */}
+              {exercise.attachments?.some(a => a.type === 'audio') && (
+                <Music className="w-4 h-4 text-blue-500" title="Has audio" />
+              )}
+              {exercise.attachments?.some(a => a.type === 'youtube') && (
+                <Youtube className="w-4 h-4 text-red-500" title="Has YouTube video" />
+              )}
             </div>
             <p
               className={`text-sm mb-0 ${
