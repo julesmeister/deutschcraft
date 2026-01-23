@@ -146,17 +146,17 @@ export function VideoPanel({
         )}
       </div>
 
-      {/* View Selector - Only show when video is active */}
-      {isVoiceActive && isVideoActive && (
+      {/* View Selector - Show when voice is active (camera can be off) */}
+      {isVoiceActive && (
         <VideoLayoutSelector layout={layout} onLayoutChange={handleLayoutChange} />
       )}
 
-      {/* Teacher View (only shown in 'teacher' layout mode - shows only teacher) */}
+      {/* Video Grid - Show remote streams when voice is active regardless of local camera */}
       {isVoiceActive && layout === 'teacher' && (
         <VideoGridView
           isVideoActive={isVideoActive}
           localStream={localStream}
-          participants={[]} // Empty - only show teacher
+          participants={participants}
           videoStreams={videoStreams}
           currentUserId={currentUserId}
           currentUserName={currentUserName}

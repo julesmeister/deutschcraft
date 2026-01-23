@@ -11,6 +11,7 @@ import {
   type PeerConnection,
 } from "./webrtc/peerManager";
 import { createSignalHandler } from "./webrtc/signalHandler";
+import { sendOffer } from "./webrtc/firebaseSignaling";
 import { useMediaSession } from "./webrtc/useMediaSession";
 import { useMediaControls } from "./webrtc/useMediaControls";
 import type { MediaParticipant, UseWebRTCMediaOptions } from "./webrtc/types";
@@ -139,11 +140,8 @@ export function useWebRTCMedia({
   // Handle connection state change
   const handleConnectionStateChange = useCallback(
     (remoteUserId: string, state: RTCPeerConnectionState) => {
-      if (state === "failed" || state === "disconnected") {
-        console.error(
-          "[WebRTC Media] Connection failed/disconnected:",
-          remoteUserId
-        );
+      if (state === "failed") {
+        console.error("[WebRTC Media] Connection failed:", remoteUserId);
         peerConnectionsRef.current.delete(remoteUserId);
 
         setAudioStreams((prev) => {
@@ -163,9 +161,46 @@ export function useWebRTCMedia({
           updated.delete(remoteUserId);
           return updated;
         });
+      } else if (state === "disconnected") {
+        // Disconnected is often temporary - wait before cleaning up
+        console.warn("[WebRTC Media] Connection disconnected (may recover):", remoteUserId);
+        setTimeout(() => {
+          const peer = peerConnectionsRef.current.get(remoteUserId);
+          if (peer && peer.pc.connectionState === "disconnected") {
+            console.error("[WebRTC Media] Connection did not recover, cleaning up:", remoteUserId);
+            peerConnectionsRef.current.delete(remoteUserId);
+
+            setAudioStreams((prev) => {
+              const updated = new Map(prev);
+              updated.delete(remoteUserId);
+              return updated;
+            });
+
+            setVideoStreams((prev) => {
+              const updated = new Map(prev);
+              updated.delete(remoteUserId);
+              return updated;
+            });
+
+            setAudioAnalysers((prev) => {
+              const updated = new Map(prev);
+              updated.delete(remoteUserId);
+              return updated;
+            });
+          }
+        }, 5000);
       }
     },
     []
+  );
+
+  // Handle renegotiation (when tracks are added after connection)
+  const handleNegotiationNeeded = useCallback(
+    (remoteUserId: string, offer: RTCSessionDescriptionInit) => {
+      console.log('[WebRTC Media] Sending renegotiation offer to:', remoteUserId);
+      sendOffer(roomId, userId, remoteUserId, offer);
+    },
+    [roomId, userId]
   );
 
   // Create peer connection helper
@@ -179,12 +214,13 @@ export function useWebRTCMedia({
         audioContext: audioContextRef.current,
         onTrackReceived: handleTrackReceived,
         onConnectionStateChange: handleConnectionStateChange,
+        onNegotiationNeeded: handleNegotiationNeeded,
       });
 
       peerConnectionsRef.current.set(remoteUserId, { pc, stream: null });
       return pc;
     },
-    [roomId, userId, handleTrackReceived, handleConnectionStateChange]
+    [roomId, userId, handleTrackReceived, handleConnectionStateChange, handleNegotiationNeeded]
   );
 
   // Handle peer disconnected
@@ -229,6 +265,7 @@ export function useWebRTCMedia({
       signalUnsubscribeRef,
       participantsUnsubscribeRef,
       isMediaActiveRef,
+      peerConnectionsRef,
       setIsVoiceActive,
       setIsVideoActive,
       setIsMuted,

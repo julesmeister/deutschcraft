@@ -24,6 +24,7 @@ interface UseMediaSessionProps {
   signalUnsubscribeRef: React.MutableRefObject<(() => void) | null>;
   participantsUnsubscribeRef: React.MutableRefObject<(() => void) | null>;
   isMediaActiveRef: React.MutableRefObject<boolean>;
+  peerConnectionsRef: React.MutableRefObject<Map<string, any>>;
   setIsVoiceActive: (active: boolean) => void;
   setIsVideoActive: (active: boolean) => void;
   setIsMuted: (muted: boolean) => void;
@@ -43,6 +44,7 @@ export function useMediaSession({
   signalUnsubscribeRef,
   participantsUnsubscribeRef,
   isMediaActiveRef,
+  peerConnectionsRef,
   setIsVoiceActive,
   setIsVideoActive,
   setIsMuted,
@@ -92,8 +94,8 @@ export function useMediaSession({
           audioContextRef.current = new AudioContext();
         }
 
-        await registerParticipant(roomId, userId, userName, false);
-
+        // Set up listeners BEFORE registering - ensures we receive offers
+        // triggered by our registration announcement
         signalUnsubscribeRef.current = listenForSignals(
           roomId,
           userId,
@@ -110,8 +112,11 @@ export function useMediaSession({
 
             participants.forEach((participant) => {
               const shouldInitiate = userId < participant.userId;
-              if (shouldInitiate) {
+              const alreadyConnected = peerConnectionsRef.current.has(participant.userId);
+              if (shouldInitiate && !alreadyConnected) {
                 setTimeout(async () => {
+                  // Double-check after timeout to avoid race with signal handler
+                  if (peerConnectionsRef.current.has(participant.userId)) return;
                   const pc = createPeer(participant.userId);
                   const offer = await pc.createOffer();
                   await pc.setLocalDescription(offer);
@@ -121,6 +126,9 @@ export function useMediaSession({
             });
           }
         );
+
+        // Register AFTER listeners are set up - other users' responses will be caught
+        await registerParticipant(roomId, userId, userName, false);
 
         console.log("[Media Session] ✅ Media started successfully");
       } catch (error) {
@@ -140,6 +148,7 @@ export function useMediaSession({
       signalUnsubscribeRef,
       participantsUnsubscribeRef,
       isMediaActiveRef,
+      peerConnectionsRef,
       setIsVoiceActive,
       setIsVideoActive,
       setIsMuted,

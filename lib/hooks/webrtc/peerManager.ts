@@ -24,6 +24,7 @@ interface CreatePeerOptions {
   audioContext: AudioContext | null;
   onTrackReceived: (remoteUserId: string, stream: MediaStream, hasAudio: boolean, hasVideo: boolean) => void;
   onConnectionStateChange: (remoteUserId: string, state: RTCPeerConnectionState) => void;
+  onNegotiationNeeded?: (remoteUserId: string, offer: RTCSessionDescriptionInit) => void;
 }
 
 export function createPeerConnection({
@@ -34,6 +35,7 @@ export function createPeerConnection({
   audioContext,
   onTrackReceived,
   onConnectionStateChange,
+  onNegotiationNeeded,
 }: CreatePeerOptions): RTCPeerConnection {
   console.log('[WebRTC Peer] Creating peer connection for:', remoteUserId);
 
@@ -78,6 +80,34 @@ export function createPeerConnection({
   // Handle ICE connection state
   pc.oniceconnectionstatechange = () => {
     console.log('[WebRTC Peer] 🧊 ICE state with', remoteUserId, ':', pc.iceConnectionState);
+  };
+
+  // Handle renegotiation (fires when tracks are added/removed after connection)
+  let isNegotiating = false;
+  pc.onnegotiationneeded = async () => {
+    if (isNegotiating) return;
+
+    // Only renegotiate when in stable state (not during initial offer/answer)
+    if (pc.signalingState !== 'stable') {
+      console.log('[WebRTC Peer] Skipping negotiation - state:', pc.signalingState);
+      return;
+    }
+
+    isNegotiating = true;
+
+    try {
+      console.log('[WebRTC Peer] 🔄 Negotiation needed with:', remoteUserId);
+      const offer = await pc.createOffer();
+      await pc.setLocalDescription(offer);
+
+      if (onNegotiationNeeded) {
+        onNegotiationNeeded(remoteUserId, offer);
+      }
+    } catch (error) {
+      console.error('[WebRTC Peer] Renegotiation failed:', error);
+    } finally {
+      isNegotiating = false;
+    }
   };
 
   return pc;

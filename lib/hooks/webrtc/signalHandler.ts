@@ -24,7 +24,11 @@ export function createSignalHandler({
   createPeer,
   onPeerDisconnected,
 }: SignalHandlerOptions) {
-  return async (signal: SignalMessage) => {
+  // Signal queue to serialize processing - prevents race conditions
+  // where ICE candidates arrive before remote description is set
+  let processingQueue: Promise<void> = Promise.resolve();
+
+  const processSignal = async (signal: SignalMessage) => {
     const { type, fromUserId, data } = signal;
 
     console.log('[WebRTC Signal] Processing:', type, 'from:', fromUserId);
@@ -55,8 +59,17 @@ export function createSignalHandler({
 
         case 'ice-candidate':
           console.log('[WebRTC Signal] Received ICE candidate from:', fromUserId);
-          if (data) {
+          if (data && pc.remoteDescription) {
             await pc.addIceCandidate(new RTCIceCandidate(data));
+          } else if (data) {
+            // Remote description not set yet - wait briefly and retry
+            console.log('[WebRTC Signal] Waiting for remote description before adding ICE candidate');
+            await new Promise(resolve => setTimeout(resolve, 100));
+            if (pc.remoteDescription) {
+              await pc.addIceCandidate(new RTCIceCandidate(data));
+            } else {
+              console.warn('[WebRTC Signal] Dropping ICE candidate - no remote description after wait');
+            }
           }
           break;
 
@@ -92,5 +105,11 @@ export function createSignalHandler({
     } catch (error) {
       console.error('[WebRTC Signal] Error handling signal:', type, error);
     }
+  };
+
+  // Return a queued handler that serializes signal processing
+  return async (signal: SignalMessage) => {
+    processingQueue = processingQueue.then(() => processSignal(signal));
+    await processingQueue;
   };
 }

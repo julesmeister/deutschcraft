@@ -115,7 +115,7 @@ export function VideoGridView({
                   }}
                   autoPlay
                   playsInline
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover scale-x-[-1]"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-pastel-blossom to-pastel-coral">
