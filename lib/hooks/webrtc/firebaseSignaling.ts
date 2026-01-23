@@ -37,7 +37,6 @@ export async function broadcastSignal(
       timestamp: Date.now(),
     });
 
-    console.log('[Signaling] Broadcast:', message.type, 'from:', message.fromUserId, 'to:', message.toUserId || 'all');
   } catch (error) {
     console.error('[Signaling] Broadcast failed:', error);
     throw error;
@@ -58,34 +57,22 @@ export function listenForSignals(
   // Only listen to recent signals (last 50)
   const signalsQuery = query(signalsRef, orderByChild('timestamp'), limitToLast(50));
 
-  console.log('[Signaling] Setting up onChildAdded listener for room:', roomId);
-
   // Use onChildAdded - triggers for each existing child AND each new child added
   const unsubscribe = onChildAdded(signalsQuery, (snapshot) => {
     const signal = snapshot.val() as SignalMessage;
     if (!signal) return;
 
     // Skip own messages
-    if (signal.fromUserId === myUserId) {
-      console.log('[Signaling] Skipping own message:', signal.type);
-      return;
-    }
+    if (signal.fromUserId === myUserId) return;
 
     // Filter: only process if message is for me or broadcast
     const isForMe = !signal.toUserId || signal.toUserId === myUserId;
-    if (!isForMe) {
-      console.log('[Signaling] Message not for me:', signal.type, 'toUserId:', signal.toUserId);
-      return;
-    }
+    if (!isForMe) return;
 
     // Skip old messages (more than 10 seconds old)
     const age = Date.now() - (signal.timestamp || 0);
-    if (age > 10000) {
-      console.log('[Signaling] Skipping old message:', signal.type, 'age:', age, 'ms');
-      return;
-    }
+    if (age > 10000) return;
 
-    console.log('[Signaling] ✅ NEW SIGNAL:', signal.type, 'from:', signal.fromUserId);
     onSignal(signal);
   });
 
@@ -111,8 +98,6 @@ export async function registerParticipant(
       isMuted,
       timestamp: Date.now(),
     });
-
-    console.log('[Signaling] Registered participant:', userName);
 
     // Broadcast join announcement
     await broadcastSignal(roomId, {
@@ -144,8 +129,6 @@ export async function unregisterParticipant(
     const sanitizedUserId = sanitizeUserId(userId);
     const participantRef = dbRef(rtdb, `playground_voice/${roomId}/participants/${sanitizedUserId}`);
     await set(participantRef, null);
-
-    console.log('[Signaling] Unregistered participant:', userId);
   } catch (error) {
     console.error('[Signaling] Failed to unregister participant:', error);
   }
@@ -171,7 +154,6 @@ export async function updateMuteStatus(
       timestamp: Date.now(),
     });
 
-    console.log('[Signaling] Updated mute status:', userName, isMuted ? 'MUTED' : 'UNMUTED');
   } catch (error) {
     console.error('[Signaling] Failed to update mute status:', error);
   }

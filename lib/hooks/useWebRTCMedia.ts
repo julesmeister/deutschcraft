@@ -3,7 +3,7 @@
  * Simplified WebRTC implementation using modular peer and signal management
  */
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback, useMemo } from "react";
 import {
   createPeerConnection,
   setupAudioPlayback,
@@ -28,13 +28,16 @@ export function useWebRTCMedia({
   const [isMuted, setIsMuted] = useState(false);
   const [participants, setParticipants] = useState<MediaParticipant[]>([]);
   const [audioStreams, setAudioStreams] = useState<Map<string, MediaStream>>(
-    new Map()
+    new Map(),
   );
   const [videoStreams, setVideoStreams] = useState<Map<string, MediaStream>>(
-    new Map()
+    new Map(),
   );
   const [audioAnalysers, setAudioAnalysers] = useState<
     Map<string, AnalyserNode>
+  >(new Map());
+  const [audioElements, setAudioElements] = useState<
+    Map<string, HTMLAudioElement>
   >(new Map());
 
   const localStreamRef = useRef<MediaStream | null>(null);
@@ -97,7 +100,7 @@ export function useWebRTCMedia({
       remoteUserId: string,
       stream: MediaStream,
       hasAudio: boolean,
-      hasVideo: boolean
+      hasVideo: boolean,
     ) => {
       const peer = peerConnectionsRef.current.get(remoteUserId);
       if (!peer) return;
@@ -117,6 +120,12 @@ export function useWebRTCMedia({
         peer.analyser = audioSetup.analyser;
         peer.gainNode = audioSetup.gainNode;
 
+        setAudioElements((prev) => {
+          const updated = new Map(prev);
+          updated.set(remoteUserId, audioSetup.audioElement);
+          return updated;
+        });
+
         if (audioSetup.analyser) {
           setAudioAnalysers((prev) => {
             const updated = new Map(prev);
@@ -134,7 +143,7 @@ export function useWebRTCMedia({
         });
       }
     },
-    []
+    [],
   );
 
   // Handle connection state change
@@ -163,11 +172,17 @@ export function useWebRTCMedia({
         });
       } else if (state === "disconnected") {
         // Disconnected is often temporary - wait before cleaning up
-        console.warn("[WebRTC Media] Connection disconnected (may recover):", remoteUserId);
+        console.warn(
+          "[WebRTC Media] Connection disconnected (may recover):",
+          remoteUserId,
+        );
         setTimeout(() => {
           const peer = peerConnectionsRef.current.get(remoteUserId);
           if (peer && peer.pc.connectionState === "disconnected") {
-            console.error("[WebRTC Media] Connection did not recover, cleaning up:", remoteUserId);
+            console.error(
+              "[WebRTC Media] Connection did not recover, cleaning up:",
+              remoteUserId,
+            );
             peerConnectionsRef.current.delete(remoteUserId);
 
             setAudioStreams((prev) => {
@@ -191,16 +206,19 @@ export function useWebRTCMedia({
         }, 5000);
       }
     },
-    []
+    [],
   );
 
   // Handle renegotiation (when tracks are added after connection)
   const handleNegotiationNeeded = useCallback(
     (remoteUserId: string, offer: RTCSessionDescriptionInit) => {
-      console.log('[WebRTC Media] Sending renegotiation offer to:', remoteUserId);
+      console.log(
+        "[WebRTC Media] Sending renegotiation offer to:",
+        remoteUserId,
+      );
       sendOffer(roomId, userId, remoteUserId, offer);
     },
-    [roomId, userId]
+    [roomId, userId],
   );
 
   // Create peer connection helper
@@ -220,7 +238,13 @@ export function useWebRTCMedia({
       peerConnectionsRef.current.set(remoteUserId, { pc, stream: null });
       return pc;
     },
-    [roomId, userId, handleTrackReceived, handleConnectionStateChange, handleNegotiationNeeded]
+    [
+      roomId,
+      userId,
+      handleTrackReceived,
+      handleConnectionStateChange,
+      handleNegotiationNeeded,
+    ],
   );
 
   // Handle peer disconnected
@@ -245,14 +269,18 @@ export function useWebRTCMedia({
   }, []);
 
   // Handle incoming signals
-  const handleSignal = createSignalHandler({
-    roomId,
-    userId,
-    isMediaActiveRef,
-    peerConnectionsRef,
-    createPeer,
-    onPeerDisconnected,
-  });
+  const handleSignal = useMemo(
+    () =>
+      createSignalHandler({
+        roomId,
+        userId,
+        isMediaActiveRef,
+        peerConnectionsRef,
+        createPeer,
+        onPeerDisconnected,
+      }),
+    [roomId, userId, createPeer, onPeerDisconnected],
+  );
 
   // Media session controls
   const { startVoice, startVideo, stopVoice, stopVideo, stopMedia } =
@@ -302,7 +330,7 @@ export function useWebRTCMedia({
 
       if (localStreamRef.current) {
         console.log(
-          "[WebRTC Media] Unmounting - releasing hardware immediately"
+          "[WebRTC Media] Unmounting - releasing hardware immediately",
         );
         localStreamRef.current.getTracks().forEach((track) => track.stop());
         localStreamRef.current = null;
@@ -322,6 +350,7 @@ export function useWebRTCMedia({
     audioStreams,
     videoStreams,
     audioAnalysers,
+    audioElements,
     localStream: getLocalStream(),
     startVoice,
     startVideo,

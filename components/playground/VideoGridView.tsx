@@ -3,9 +3,11 @@
  * Displays video feeds in a responsive grid layout
  */
 
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
+import { useAudioOutput } from "@/lib/hooks/useAudioOutput";
+import { CompactButtonDropdown } from "@/components/ui/CompactButtonDropdown";
 
 interface MediaParticipant {
   userId: string;
@@ -21,7 +23,9 @@ interface VideoGridViewProps {
   videoStreams: Map<string, MediaStream>;
   currentUserId: string;
   currentUserName: string;
+  hostId?: string;
   isMuted: boolean;
+  audioElements?: Map<string, HTMLAudioElement>;
 }
 
 export function VideoGridView({
@@ -31,10 +35,29 @@ export function VideoGridView({
   videoStreams,
   currentUserId,
   currentUserName,
+  hostId,
   isMuted,
+  audioElements,
 }: VideoGridViewProps) {
   const localVideoRef = useRef<HTMLVideoElement>(null);
   const remoteVideoRefs = useRef<Map<string, HTMLVideoElement>>(new Map());
+
+  const {
+    devices,
+    selectedDeviceId,
+    setSelectedDeviceId,
+    isSupported,
+    setAudioOutput,
+  } = useAudioOutput();
+
+  // Handle setting audio output when device or elements change
+  useEffect(() => {
+    if (isSupported && selectedDeviceId && audioElements) {
+      audioElements.forEach((audioEl) => {
+        setAudioOutput(audioEl, selectedDeviceId);
+      });
+    }
+  }, [selectedDeviceId, audioElements, isSupported, setAudioOutput]);
 
   // Attach local stream to video element
   useEffect(() => {
@@ -60,52 +83,102 @@ export function VideoGridView({
     });
   }, [videoStreams]);
 
-  // Calculate grid layout based on number of participants
-  const totalParticipants = participants.length + 1; // +1 for local user
+  // In teacher mode (hostId set): only show the host's camera
+  const isTeacherMode = !!hostId;
+  const isHost = currentUserId === hostId;
 
-  // Responsive grid: 1 col on mobile, 2 cols on tablet, dynamic on desktop
+  // Determine which participants to show
+  const visibleParticipants = isTeacherMode
+    ? participants.filter((p) => p.userId === hostId) // Students see only host
+    : participants;
+
+  // Show local video only if: not teacher mode, or current user IS the host
+  const showLocalVideo = !isTeacherMode || isHost;
+
+  const totalVisible = visibleParticipants.length + (showLocalVideo ? 1 : 0);
+
+  // Responsive grid
   const getGridCols = () => {
-    if (totalParticipants === 1) return 'grid-cols-1';
-    if (totalParticipants === 2) return 'grid-cols-1 md:grid-cols-2';
-    if (totalParticipants <= 4) return 'grid-cols-1 sm:grid-cols-2';
-    if (totalParticipants <= 9) return 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
-    return 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4';
+    if (totalVisible <= 1) return "grid-cols-1";
+    if (totalVisible === 2) return "grid-cols-1 md:grid-cols-2";
+    if (totalVisible <= 4) return "grid-cols-1 sm:grid-cols-2";
+    if (totalVisible <= 9) return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
+    return "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4";
   };
 
   return (
     <>
       <div className={`grid ${getGridCols()} gap-2 sm:gap-3 md:gap-4`}>
-        {/* Local Video */}
-        <div className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden">
-          {isVideoActive ? (
-            <video
-              ref={localVideoRef}
-              autoPlay
-              muted
-              playsInline
-              className="w-full h-full object-cover scale-x-[-1]"
-            />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-brand-purple to-pastel-ocean">
-              <div className="text-center text-white">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-2 rounded-full bg-white/20 flex items-center justify-center text-lg sm:text-xl md:text-2xl font-bold">
-                  {currentUserName.charAt(0).toUpperCase()}
+        {/* Local Video - shown if host in teacher mode, or always in grid mode */}
+        {showLocalVideo && (
+          <div className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden">
+            {isVideoActive ? (
+              <video
+                ref={localVideoRef}
+                autoPlay
+                muted
+                playsInline
+                disablePictureInPicture
+                className="w-full h-full object-cover scale-x-[-1]"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-brand-purple to-pastel-ocean">
+                <div className="text-center text-white">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-2 rounded-full bg-white/20 flex items-center justify-center text-lg sm:text-xl md:text-2xl font-bold">
+                    {currentUserName.charAt(0).toUpperCase()}
+                  </div>
+                  <p className="text-xs sm:text-sm font-medium">
+                    {currentUserName}
+                  </p>
                 </div>
-                <p className="text-xs sm:text-sm font-medium">{currentUserName}</p>
               </div>
+            )}
+            <div className="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-xs text-white">
+              You {isMuted && "(muted)"}
             </div>
-          )}
-          <div className="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-xs text-white">
-            You {isMuted && '(muted)'}
+
+            {/* Audio Output Selector - Overlaid on local video */}
+            {isSupported && devices.length > 0 && (
+              <div className="absolute top-2 right-2 z-10">
+                <CompactButtonDropdown
+                  label=""
+                  options={devices.map((d) => ({
+                    value: d.deviceId,
+                    label: d.label,
+                  }))}
+                  onChange={(val) => setSelectedDeviceId(val as string)}
+                  buttonClassName="bg-neutral-800/90 hover:bg-neutral-800 text-white border border-white/10 px-3 py-1.5 h-auto rounded-md shadow-sm backdrop-blur-sm transition-colors"
+                  icon={
+                    <svg
+                      className="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
+                      />
+                    </svg>
+                  }
+                  usePortal={true}
+                />
+              </div>
+            )}
           </div>
-        </div>
+        )}
 
         {/* Remote Videos */}
-        {participants.map((participant) => {
+        {visibleParticipants.map((participant) => {
           const hasVideo = videoStreams.has(participant.userId);
 
           return (
-            <div key={participant.userId} className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden">
+            <div
+              key={participant.userId}
+              className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden"
+            >
               {hasVideo ? (
                 <video
                   ref={(el) => {
@@ -115,6 +188,7 @@ export function VideoGridView({
                   }}
                   autoPlay
                   playsInline
+                  disablePictureInPicture
                   className="w-full h-full object-cover scale-x-[-1]"
                 />
               ) : (
@@ -123,12 +197,14 @@ export function VideoGridView({
                     <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-2 rounded-full bg-white/20 flex items-center justify-center text-lg sm:text-xl md:text-2xl font-bold">
                       {participant.userName.charAt(0).toUpperCase()}
                     </div>
-                    <p className="text-xs sm:text-sm font-medium">{participant.userName}</p>
+                    <p className="text-xs sm:text-sm font-medium">
+                      {participant.userName}
+                    </p>
                   </div>
                 </div>
               )}
               <div className="absolute bottom-2 left-2 bg-black/60 px-2 py-1 rounded text-xs text-white">
-                {participant.userName} {participant.isMuted && '(muted)'}
+                {participant.userName} {participant.isMuted && "(muted)"}
               </div>
             </div>
           );

@@ -144,8 +144,9 @@ export function HorizontalVideoStrip({
                       }
                     }}
                     autoPlay
-                    muted={isLocal}
+                    muted
                     playsInline
+                    disablePictureInPicture
                     className={`w-full h-full object-cover ${isLocal ? 'scale-x-[-1]' : ''}`}
                   />
                 ) : (

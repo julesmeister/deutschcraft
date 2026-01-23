@@ -52,6 +52,7 @@ interface PlaygroundRoomProps {
   audioStreams: Map<string, MediaStream>;
   videoStreams: Map<string, MediaStream>;
   audioAnalysers: Map<string, AnalyserNode>;
+  audioElements: Map<string, HTMLAudioElement>;
 
   // Dialog state
   dialogState: {
@@ -100,6 +101,7 @@ export function PlaygroundRoom({
   audioStreams,
   videoStreams,
   audioAnalysers,
+  audioElements,
   dialogState,
   onLeaveRoom,
   onEndRoom,
@@ -270,6 +272,7 @@ export function PlaygroundRoom({
               audioAnalysers={audioAnalysers}
               currentUserId={userId}
               currentUserName={userName}
+              hostId={currentRoom.hostId}
               layout={videoLayout}
               onStartVoice={onStartVoice}
               onStartVideo={onStartVideo}
@@ -288,6 +291,7 @@ export function PlaygroundRoom({
                 participants={participants}
                 voiceStreams={audioStreams}
                 voiceAnalysers={audioAnalysers}
+                audioElements={audioElements}
                 currentUserRole={userRole}
                 currentUserId={userId}
               />

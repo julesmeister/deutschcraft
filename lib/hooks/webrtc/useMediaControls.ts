@@ -54,13 +54,24 @@ export function useMediaControls({
     if (videoTracks.length === 0) {
       try {
         const videoStream = await addVideoToStream(localStreamRef.current);
+        const newVideoTrack = videoStream.getVideoTracks()[0];
 
-        // Add video tracks to all peer connections
-        videoStream.getVideoTracks().forEach((track) => {
+        if (newVideoTrack) {
+          // Replace track on existing video transceivers (created with recvonly)
           peerConnectionsRef.current.forEach((peer) => {
-            peer.pc.addTrack(track, localStreamRef.current!);
+            const videoTransceiver = peer.pc.getTransceivers().find(
+              (t: RTCRtpTransceiver) => t.receiver.track?.kind === 'video' || t.sender.track?.kind === 'video'
+            );
+
+            if (videoTransceiver) {
+              videoTransceiver.sender.replaceTrack(newVideoTrack);
+              videoTransceiver.direction = 'sendrecv';
+            } else {
+              // Fallback: no existing transceiver found
+              peer.pc.addTrack(newVideoTrack, localStreamRef.current!);
+            }
           });
-        });
+        }
 
         setIsVideoActive(true);
         console.log('[Media Controls] ✅ Video started');

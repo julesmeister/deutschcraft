@@ -220,7 +220,7 @@ export function usePlaygroundHandlers({
 
     try {
       await startVoice();
-      await updateParticipantVoiceStatus(myParticipantId, true, false);
+      updateParticipantVoiceStatus(myParticipantId, true, false).catch(() => {});
     } catch (error) {
       console.error('[Voice] Failed to start voice:', error);
       setDialogState({
@@ -236,10 +236,12 @@ export function usePlaygroundHandlers({
 
     try {
       await stopVoice();
-      await updateParticipantVoiceStatus(myParticipantId, false, false);
     } catch (error) {
       console.error('[Voice] Failed to stop voice:', error);
     }
+
+    // Update Firestore status separately - non-critical, doc may already be gone
+    updateParticipantVoiceStatus(myParticipantId, false, false).catch(() => {});
   }, [myParticipantId, stopVoice]);
 
   const handleToggleMute = useCallback(async () => {
@@ -249,7 +251,7 @@ export function usePlaygroundHandlers({
       const newMutedState = await toggleMute();
 
       if (typeof newMutedState === 'boolean') {
-        await updateParticipantVoiceStatus(myParticipantId, isVoiceActive, newMutedState);
+        updateParticipantVoiceStatus(myParticipantId, isVoiceActive, newMutedState).catch(() => {});
       }
     } catch (error) {
       console.error('[Voice] Failed to toggle mute:', error);
@@ -261,7 +263,7 @@ export function usePlaygroundHandlers({
 
     try {
       await startVideo();
-      await updateParticipantVoiceStatus(myParticipantId, true, false);
+      updateParticipantVoiceStatus(myParticipantId, true, false).catch(() => {});
     } catch (error: any) {
       console.error('[Video] Failed to start video:', error);
       setDialogState({

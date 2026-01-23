@@ -5,7 +5,7 @@
 
 "use client";
 
-import { useState, useEffect, use } from "react";
+import { useState, useEffect, use, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { PlaygroundRoom as PlaygroundRoomComponent } from "@/components/playground/PlaygroundRoom";
@@ -51,12 +51,21 @@ export default function PlaygroundRoomPage({
 
   // Fetch current user
   const { student: currentUser, isLoading: userLoading } = useCurrentStudent(
-    session?.user?.email || null
+    session?.user?.email || null,
   );
   const { userId, userName, userEmail, userRole } = getUserInfo(
     currentUser,
-    session
+    session,
   );
+
+  // Stable error handler
+  const handleMediaError = useCallback((error: Error) => {
+    setDialogState({
+      isOpen: true,
+      title: "Media Chat Error",
+      message: error.message || "Failed to connect media chat",
+    });
+  }, []);
 
   // Media chat hook
   const {
@@ -67,6 +76,7 @@ export default function PlaygroundRoomPage({
     audioStreams,
     videoStreams,
     audioAnalysers,
+    audioElements,
     localStream,
     startVoice,
     startVideo,
@@ -78,13 +88,7 @@ export default function PlaygroundRoomPage({
     userName,
     roomId: roomId,
     enableVideo: false,
-    onError: (error) => {
-      setDialogState({
-        isOpen: true,
-        title: "Media Chat Error",
-        message: error.message || "Failed to connect media chat",
-      });
-    },
+    onError: handleMediaError,
   });
 
   // Load active rooms (needed for handlers)
@@ -198,15 +202,17 @@ export default function PlaygroundRoomPage({
         // Check if already a participant
         const roomParticipants = await getRoomParticipants(roomId);
         const myParticipant = roomParticipants.find(
-          (p) => p.userId === userId && !p.leftAt
+          (p) => p.userId === userId && !p.leftAt,
         );
 
         if (myParticipant) {
           console.log(
             "[Room Init] Found existing participant:",
-            myParticipant.participantId
+            myParticipant.participantId,
           );
           setMyParticipantId(myParticipant.participantId);
+          // Auto-start voice for returning participant
+          startVoice();
         } else {
           // Auto-join
           console.log("[Room Init] Auto-joining room...");
@@ -215,9 +221,11 @@ export default function PlaygroundRoomPage({
             userId,
             userName,
             userEmail,
-            userRole
+            userRole,
           );
           setMyParticipantId(participantId);
+          // Auto-start voice for new participant
+          startVoice();
         }
       } catch (error) {
         console.error("[Room Init] Error:", error);
@@ -234,7 +242,16 @@ export default function PlaygroundRoomPage({
     if (userId && !userLoading) {
       initializeRoom();
     }
-  }, [userId, userLoading, roomId, userName, userEmail, userRole, router]);
+  }, [
+    userId,
+    userLoading,
+    roomId,
+    userName,
+    userEmail,
+    userRole,
+    router,
+    startVoice,
+  ]);
 
   // Wrapped leave handler
   const wrappedHandleLeaveRoom = async () => {
@@ -254,7 +271,7 @@ export default function PlaygroundRoomPage({
     materialId: string | null,
     materialTitle: string | null,
     materialUrl: string | null,
-    materialType?: "pdf" | "audio" | null
+    materialType?: "pdf" | "audio" | null,
   ) => {
     if (!currentRoom) return;
     try {
@@ -263,7 +280,7 @@ export default function PlaygroundRoomPage({
         materialId,
         materialTitle,
         materialUrl,
-        materialType
+        materialType,
       );
     } catch (error) {
       console.error("[Room] Error setting material:", error);
@@ -308,6 +325,7 @@ export default function PlaygroundRoomPage({
         audioStreams={audioStreams}
         videoStreams={videoStreams}
         audioAnalysers={audioAnalysers}
+        audioElements={audioElements}
         dialogState={dialogState}
         onLeaveRoom={wrappedHandleLeaveRoom}
         onEndRoom={async () => {

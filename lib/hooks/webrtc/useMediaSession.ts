@@ -60,12 +60,6 @@ export function useMediaSession({
   const startMedia = useCallback(
     async (withVideo: boolean = false) => {
       try {
-        console.log("[Media Session] Starting media...", {
-          roomId,
-          userId,
-          userName,
-          withVideo,
-        });
 
         if (!roomId || !userId) {
           throw new Error("No room ID or user ID provided");
@@ -73,9 +67,6 @@ export function useMediaSession({
 
         // Stop existing stream if any to prevent "Device in use" errors
         if (localStreamRef.current) {
-          console.log(
-            "[Media Session] Stopping existing stream before starting new one"
-          );
           localStreamRef.current.getTracks().forEach((track) => track.stop());
           localStreamRef.current = null;
         }
@@ -92,6 +83,10 @@ export function useMediaSession({
 
         if (!audioContextRef.current) {
           audioContextRef.current = new AudioContext();
+        }
+        // Resume AudioContext (browsers require user gesture)
+        if (audioContextRef.current.state === 'suspended') {
+          await audioContextRef.current.resume();
         }
 
         // Set up listeners BEFORE registering - ensures we receive offers
@@ -130,9 +125,8 @@ export function useMediaSession({
         // Register AFTER listeners are set up - other users' responses will be caught
         await registerParticipant(roomId, userId, userName, false);
 
-        console.log("[Media Session] ✅ Media started successfully");
       } catch (error) {
-        console.error("[Media Session] ❌ Failed to start media:", error);
+        console.error("[Media Session] Failed to start media:", error);
         setIsVoiceActive(false);
         setIsVideoActive(false);
         onError?.(error as Error);
@@ -168,8 +162,6 @@ export function useMediaSession({
   }, [startMedia]);
 
   const stopMedia = useCallback(async () => {
-    console.log("[Media Session] Stopping media...");
-
     // Stop tracks immediately to free hardware resources
     // This must happen BEFORE any async network calls
     if (localStreamRef.current) {

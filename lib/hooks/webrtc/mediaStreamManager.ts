@@ -29,10 +29,6 @@ export async function getMediaStream(withVideo: boolean): Promise<MediaStream> {
       video: withVideo ? videoConstraints : false,
     });
   } catch (error) {
-    console.warn(
-      "[Media Stream] First attempt failed, trying fallback constraints:",
-      error
-    );
 
     // Wait a bit to let OS/hardware release the device if it was busy
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -51,10 +47,6 @@ export async function getMediaStream(withVideo: boolean): Promise<MediaStream> {
           : false,
       });
     } catch (err2) {
-      console.warn(
-        "[Media Stream] Second attempt failed, trying minimal constraints:",
-        err2
-      );
 
       // Wait a bit more
       await new Promise((resolve) => setTimeout(resolve, 1000));
