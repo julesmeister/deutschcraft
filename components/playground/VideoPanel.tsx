@@ -111,7 +111,8 @@ export function VideoPanel({
               onClick={onToggleMute}
               variant={isMuted ? 'gray' : 'cyan'}
               icon={<ActionButtonIcons.Microphone />}
-              className="flex-1 min-w-[80px] sm:min-w-[100px]"
+              size="compact"
+              className="flex-1"
             >
               {isMuted ? 'Unmute' : 'Mute'}
             </ActionButton>
@@ -119,7 +120,7 @@ export function VideoPanel({
               onClick={onToggleVideo}
               variant={isVideoActive ? 'purple' : 'gray'}
               icon={
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                   {isVideoActive ? (
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                   ) : (
@@ -130,15 +131,17 @@ export function VideoPanel({
                   )}
                 </svg>
               }
-              className="flex-1 min-w-[80px] sm:min-w-[100px]"
+              size="compact"
+              className="flex-1"
             >
-              {isVideoActive ? 'Cam On' : 'Cam Off'}
+              {isVideoActive ? 'Cam' : 'Cam'}
             </ActionButton>
             <ActionButton
               onClick={onStopVoice}
               variant="red"
               icon={<ActionButtonIcons.Close />}
-              className="flex-1 min-w-[70px] sm:min-w-[80px]"
+              size="compact"
+              className="flex-1"
             >
               Stop
             </ActionButton>
