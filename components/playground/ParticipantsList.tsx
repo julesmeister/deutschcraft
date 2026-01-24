@@ -30,6 +30,8 @@ export function ParticipantsList({
     ParticipantWithAudio[]
   >([]);
   const [volumes, setVolumes] = useState<Map<string, number>>(new Map());
+  const [draggingUserId, setDraggingUserId] = useState<string | null>(null);
+  const pillRefs = useRef<Map<string, HTMLDivElement>>(new Map());
 
   useEffect(() => {
     if (!voiceAnalysers || voiceAnalysers.size === 0) {
@@ -119,16 +121,58 @@ export function ParticipantsList({
   };
 
   const handleVolumeChange = (userId: string, volume: number) => {
+    const clamped = Math.max(0, Math.min(1, volume));
     const audioEl = audioElements?.get(userId);
     if (audioEl) {
-      audioEl.volume = volume;
+      audioEl.volume = clamped;
     }
     setVolumes((prev) => {
       const updated = new Map(prev);
-      updated.set(userId, volume);
+      updated.set(userId, clamped);
       return updated;
     });
   };
+
+  const getVolumeFromEvent = (userId: string, clientX: number): number => {
+    const pill = pillRefs.current.get(userId);
+    if (!pill) return 1;
+    const rect = pill.getBoundingClientRect();
+    return Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
+  };
+
+  const handleDragStart = (userId: string, clientX: number) => {
+    setDraggingUserId(userId);
+    handleVolumeChange(userId, getVolumeFromEvent(userId, clientX));
+  };
+
+  const handleDragMove = (clientX: number) => {
+    if (!draggingUserId) return;
+    handleVolumeChange(draggingUserId, getVolumeFromEvent(draggingUserId, clientX));
+  };
+
+  const handleDragEnd = () => {
+    setDraggingUserId(null);
+  };
+
+  useEffect(() => {
+    if (!draggingUserId) return;
+
+    const onMouseMove = (e: MouseEvent) => handleDragMove(e.clientX);
+    const onTouchMove = (e: TouchEvent) => handleDragMove(e.touches[0].clientX);
+    const onEnd = () => handleDragEnd();
+
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mouseup", onEnd);
+    window.addEventListener("touchmove", onTouchMove);
+    window.addEventListener("touchend", onEnd);
+
+    return () => {
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseup", onEnd);
+      window.removeEventListener("touchmove", onTouchMove);
+      window.removeEventListener("touchend", onEnd);
+    };
+  }, [draggingUserId]);
 
   return (
     <div className="space-y-4">
@@ -137,27 +181,53 @@ export function ParticipantsList({
           const isCurrentUser = p.userId === currentUserId;
           const canMute = currentUserRole === "teacher" && !isCurrentUser;
 
+          const volume = volumes.get(p.userId) ?? 1;
+          const isDragging = draggingUserId === p.userId;
+
           return (
             <div
               key={p.participantId}
+              ref={(el) => { if (el) pillRefs.current.set(p.userId, el); }}
               className={`
-              relative overflow-hidden
+              relative overflow-hidden select-none
               flex items-center gap-2 px-3 py-2 rounded-full
-              transition-all duration-200
+              transition-all duration-200 cursor-ew-resize
               ${
                 p.isTalking
                   ? "bg-gradient-to-r from-green-100 to-green-50 border border-green-400 shadow-sm"
-                  : "bg-gray-100 border border-transparent"
+                  : isDragging
+                    ? "bg-gray-50 border border-amber-200 shadow-sm"
+                    : "bg-gray-100 border border-transparent"
               }
             `}
+              onMouseDown={(e) => {
+                if ((e.target as HTMLElement).closest("button")) return;
+                handleDragStart(p.userId, e.clientX);
+              }}
+              onTouchStart={(e) => {
+                if ((e.target as HTMLElement).closest("button")) return;
+                handleDragStart(p.userId, e.touches[0].clientX);
+              }}
             >
-              {/* Audio level visualization */}
-              {p.isVoiceActive && (
+              {/* Volume fill indicator */}
+              <div
+                className={`absolute left-0 top-0 h-full rounded-full transition-[width] ${
+                  isDragging ? "duration-0" : "duration-150"
+                } ${
+                  p.isTalking
+                    ? "bg-gradient-to-r from-cyan-300/45 to-blue-200/35"
+                    : "bg-gradient-to-r from-amber-200/40 to-rose-200/35"
+                }`}
+                style={{ width: `${volume * 100}%` }}
+              />
+
+              {/* Audio level visualization (layered on top of volume) */}
+              {p.isVoiceActive && p.isTalking && (
                 <div
-                  className="absolute left-0 top-0 h-full bg-green-200 transition-all duration-100"
+                  className="absolute left-0 top-0 h-full bg-green-400 transition-all duration-100 pointer-events-none"
                   style={{
-                    width: `${p.audioLevel * 100}%`,
-                    opacity: 0.3,
+                    width: `${Math.min(p.audioLevel * 100, volume * 100)}%`,
+                    opacity: 0.2,
                   }}
                 />
               )}
@@ -185,7 +255,6 @@ export function ParticipantsList({
               >
                 {p.isVoiceActive ? (
                   <div className="relative">
-                    {/* Animated rings when talking */}
                     {p.isTalking && (
                       <>
                         <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-75" />
@@ -195,7 +264,6 @@ export function ParticipantsList({
                         />
                       </>
                     )}
-                    {/* Microphone icon - larger with more padding */}
                     <div
                       className={`relative w-8 h-8 rounded-full flex items-center justify-center ${
                         p.isMuted
@@ -245,38 +313,22 @@ export function ParticipantsList({
                 )}
               </div>
 
-              {/* Volume slider - for remote participants with audio */}
-              <div className="relative z-10 flex items-center gap-1.5 w-20">
-                <svg
-                  className="w-3 h-3 text-gray-400 flex-shrink-0"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217z" />
-                </svg>
-                <input
-                  type="range"
-                  min="0"
-                  max="1"
-                  step="0.05"
-                  value={volumes.get(p.userId) ?? 1}
-                  onChange={(e) =>
-                    handleVolumeChange(p.userId, parseFloat(e.target.value))
-                  }
-                  className="w-full h-1 bg-gray-300 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-green-500"
-                  title={`Volume: ${Math.round((volumes.get(p.userId) ?? 1) * 100)}%`}
-                />
-              </div>
+              {/* Volume percentage (shown while dragging) */}
+              {isDragging && (
+                <span className="relative z-10 text-xs font-medium text-amber-600 tabular-nums">
+                  {Math.round(volume * 100)}%
+                </span>
+              )}
 
               {/* Talking indicator - pulsing dot */}
-              {p.isTalking && !p.isMuted && (
+              {p.isTalking && !p.isMuted && !isDragging && (
                 <div className="relative z-10 flex items-center gap-1">
                   <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
                 </div>
               )}
 
               {/* Muted indicator */}
-              {p.isMuted && p.isVoiceActive && (
+              {p.isMuted && p.isVoiceActive && !isDragging && (
                 <div className="relative z-10 flex items-center gap-1">
                   <span className="text-xs font-medium text-red-600">
                     Muted
