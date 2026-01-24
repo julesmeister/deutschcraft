@@ -158,9 +158,11 @@ export function useWebRTCMedia({
       }];
     });
 
-    const pc = createPeer(peerId);
-
+    // Only create the peer connection for the offerer side.
+    // The non-offerer's peer is created lazily when the offer SDP arrives
+    // (in handleSessionDescription), avoiding onnegotiationneeded glare.
     if (shouldCreateOffer) {
+      const pc = createPeer(peerId);
       try {
         const offer = await pc.createOffer();
         await pc.setLocalDescription(offer);

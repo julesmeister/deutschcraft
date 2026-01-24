@@ -86,6 +86,9 @@ export function createPeerConnection({
   // Connection state
   pc.onconnectionstatechange = () => {
     console.log('[RTC]', remoteUserId, '| connection:', pc.connectionState);
+    if (pc.connectionState === 'connected') {
+      connectionEstablished = true;
+    }
     onConnectionStateChange(remoteUserId, pc.connectionState);
   };
 
@@ -108,9 +111,11 @@ export function createPeerConnection({
     }
   };
 
-  // Renegotiation
+  // Renegotiation — only enabled after connection is established
   let isNegotiating = false;
+  let connectionEstablished = false;
   pc.onnegotiationneeded = async () => {
+    if (!connectionEstablished) return; // Skip initial setup — first offer is created manually
     if (isNegotiating || pc.signalingState !== 'stable') return;
     isNegotiating = true;
     try {
