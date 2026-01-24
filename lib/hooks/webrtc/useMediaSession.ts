@@ -1,36 +1,28 @@
 /**
  * useMediaSession Hook
- * Handles starting and stopping WebRTC media sessions
+ * Handles starting and stopping WebRTC media sessions via WebSocket signaling
  */
 
-import { useCallback, useRef } from "react";
+import { useCallback } from 'react';
+import { getAudioStream, getVideoStream, stopStream } from './mediaStreamManager';
 import {
-  registerParticipant,
-  unregisterParticipant,
-  listenForSignals,
-  listenForParticipants,
-  sendOffer,
-  type SignalMessage,
-} from "./firebaseSignaling";
-import { getMediaStream, enableAllTracks } from "./mediaStreamManager";
-import type { MediaParticipant } from "./types";
+  type SignalingSocket,
+  joinRoom,
+  leaveRoom,
+} from './socketSignaling';
 
 interface UseMediaSessionProps {
   roomId: string;
   userId: string;
   userName: string;
-  localStreamRef: React.MutableRefObject<MediaStream | null>;
+  localAudioStreamRef: React.MutableRefObject<MediaStream | null>;
+  localVideoStreamRef: React.MutableRefObject<MediaStream | null>;
   audioContextRef: React.MutableRefObject<AudioContext | null>;
-  signalUnsubscribeRef: React.MutableRefObject<(() => void) | null>;
-  participantsUnsubscribeRef: React.MutableRefObject<(() => void) | null>;
+  socketRef: React.MutableRefObject<SignalingSocket | null>;
   isMediaActiveRef: React.MutableRefObject<boolean>;
-  peerConnectionsRef: React.MutableRefObject<Map<string, any>>;
   setIsVoiceActive: (active: boolean) => void;
   setIsVideoActive: (active: boolean) => void;
   setIsMuted: (muted: boolean) => void;
-  setParticipants: (participants: MediaParticipant[]) => void;
-  handleSignal: (signal: SignalMessage) => Promise<void>;
-  createPeer: (remoteUserId: string) => RTCPeerConnection;
   cleanup: () => void;
   onError?: (error: Error) => void;
 }
@@ -39,150 +31,111 @@ export function useMediaSession({
   roomId,
   userId,
   userName,
-  localStreamRef,
+  localAudioStreamRef,
+  localVideoStreamRef,
   audioContextRef,
-  signalUnsubscribeRef,
-  participantsUnsubscribeRef,
+  socketRef,
   isMediaActiveRef,
-  peerConnectionsRef,
   setIsVoiceActive,
   setIsVideoActive,
   setIsMuted,
-  setParticipants,
-  handleSignal,
-  createPeer,
   cleanup,
   onError,
 }: UseMediaSessionProps) {
-  const isRequestingRef = useRef<boolean>(false);
-
-  // Start media (voice and optionally video)
-  const startMedia = useCallback(
-    async (withVideo: boolean = false) => {
-      try {
-
-        if (!roomId || !userId) {
-          throw new Error("No room ID or user ID provided");
-        }
-
-        // Stop existing stream if any to prevent "Device in use" errors
-        if (localStreamRef.current) {
-          localStreamRef.current.getTracks().forEach((track) => track.stop());
-          localStreamRef.current = null;
-        }
-
-        const stream = await getMediaStream(withVideo);
-
-        localStreamRef.current = stream;
-        setIsVoiceActive(true);
-        setIsVideoActive(withVideo);
-        setIsMuted(false);
-        isMediaActiveRef.current = true;
-
-        enableAllTracks(stream, true);
-
-        if (!audioContextRef.current) {
-          audioContextRef.current = new AudioContext();
-        }
-        // Resume AudioContext (browsers require user gesture)
-        if (audioContextRef.current.state === 'suspended') {
-          await audioContextRef.current.resume();
-        }
-
-        // Set up listeners BEFORE registering - ensures we receive offers
-        // triggered by our registration announcement
-        signalUnsubscribeRef.current = listenForSignals(
-          roomId,
-          userId,
-          handleSignal
-        );
-
-        participantsUnsubscribeRef.current = listenForParticipants(
-          roomId,
-          userId,
-          (participants) => {
-            setParticipants(
-              participants.map((p) => ({ ...p, isVideoEnabled: false }))
-            );
-
-            participants.forEach((participant) => {
-              const shouldInitiate = userId < participant.userId;
-              const alreadyConnected = peerConnectionsRef.current.has(participant.userId);
-              if (shouldInitiate && !alreadyConnected) {
-                setTimeout(async () => {
-                  // Double-check after timeout to avoid race with signal handler
-                  if (peerConnectionsRef.current.has(participant.userId)) return;
-                  const pc = createPeer(participant.userId);
-                  const offer = await pc.createOffer();
-                  await pc.setLocalDescription(offer);
-                  await sendOffer(roomId, userId, participant.userId, offer);
-                }, Math.random() * 1000);
-              }
-            });
-          }
-        );
-
-        // Register AFTER listeners are set up - other users' responses will be caught
-        await registerParticipant(roomId, userId, userName, false);
-
-      } catch (error) {
-        console.error("[Media Session] Failed to start media:", error);
-        setIsVoiceActive(false);
-        setIsVideoActive(false);
-        onError?.(error as Error);
-        throw error;
-      }
-    },
-    [
-      roomId,
-      userId,
-      userName,
-      localStreamRef,
-      audioContextRef,
-      signalUnsubscribeRef,
-      participantsUnsubscribeRef,
-      isMediaActiveRef,
-      peerConnectionsRef,
-      setIsVoiceActive,
-      setIsVideoActive,
-      setIsMuted,
-      setParticipants,
-      handleSignal,
-      createPeer,
-      onError,
-    ]
-  );
-
   const startVoice = useCallback(async () => {
-    await startMedia(false);
-  }, [startMedia]);
+    try {
+      if (!roomId || !userId) throw new Error('No room ID or user ID');
+
+      // Stop existing audio stream
+      stopStream(localAudioStreamRef.current);
+      localAudioStreamRef.current = null;
+
+      const audioStream = await getAudioStream();
+      localAudioStreamRef.current = audioStream;
+
+      if (!audioContextRef.current) {
+        audioContextRef.current = new AudioContext();
+      }
+      if (audioContextRef.current.state === 'suspended') {
+        await audioContextRef.current.resume();
+      }
+
+      setIsVoiceActive(true);
+      setIsMuted(false);
+      isMediaActiveRef.current = true;
+
+      // Join signaling room (triggers addPeer events)
+      if (socketRef.current?.connected) {
+        joinRoom(socketRef.current, roomId, userId, userName);
+      }
+    } catch (error) {
+      console.error('[Media Session] Failed to start voice:', error);
+      setIsVoiceActive(false);
+      onError?.(error as Error);
+      throw error;
+    }
+  }, [roomId, userId, userName, localAudioStreamRef, audioContextRef, socketRef, isMediaActiveRef, setIsVoiceActive, setIsMuted, onError]);
 
   const startVideo = useCallback(async () => {
-    await startMedia(true);
-  }, [startMedia]);
+    try {
+      if (!roomId || !userId) throw new Error('No room ID or user ID');
 
-  const stopMedia = useCallback(async () => {
-    // Stop tracks immediately to free hardware resources
-    // This must happen BEFORE any async network calls
-    if (localStreamRef.current) {
-      localStreamRef.current.getTracks().forEach((track) => track.stop());
-      // We don't null it here, cleanup() will do that, but tracks are stopped
+      // Stop existing streams
+      stopStream(localAudioStreamRef.current);
+      stopStream(localVideoStreamRef.current);
+      localAudioStreamRef.current = null;
+      localVideoStreamRef.current = null;
+
+      const [audioStream, videoStream] = await Promise.all([
+        getAudioStream(),
+        getVideoStream(),
+      ]);
+
+      localAudioStreamRef.current = audioStream;
+      localVideoStreamRef.current = videoStream;
+
+      if (!audioContextRef.current) {
+        audioContextRef.current = new AudioContext();
+      }
+      if (audioContextRef.current.state === 'suspended') {
+        await audioContextRef.current.resume();
+      }
+
+      setIsVoiceActive(true);
+      setIsVideoActive(true);
+      setIsMuted(false);
+      isMediaActiveRef.current = true;
+
+      if (socketRef.current?.connected) {
+        joinRoom(socketRef.current, roomId, userId, userName);
+      }
+    } catch (error) {
+      console.error('[Media Session] Failed to start video:', error);
+      setIsVoiceActive(false);
+      setIsVideoActive(false);
+      onError?.(error as Error);
+      throw error;
+    }
+  }, [roomId, userId, userName, localAudioStreamRef, localVideoStreamRef, audioContextRef, socketRef, isMediaActiveRef, setIsVoiceActive, setIsVideoActive, setIsMuted, onError]);
+
+  const stopMedia = useCallback(() => {
+    // Stop tracks immediately
+    stopStream(localAudioStreamRef.current);
+    stopStream(localVideoStreamRef.current);
+    localAudioStreamRef.current = null;
+    localVideoStreamRef.current = null;
+
+    // Leave signaling room
+    if (socketRef.current?.connected) {
+      leaveRoom(socketRef.current);
     }
 
-    if (roomId && userId) {
-      await unregisterParticipant(roomId, userId);
-    }
     cleanup();
     isMediaActiveRef.current = false;
-  }, [roomId, userId, cleanup, isMediaActiveRef]);
+  }, [localAudioStreamRef, localVideoStreamRef, socketRef, cleanup, isMediaActiveRef]);
 
-  const stopVoice = useCallback(async () => {
-    await stopMedia();
-  }, [stopMedia]);
-
-  const stopVideo = useCallback(async () => {
-    await stopMedia();
-  }, [stopMedia]);
+  const stopVoice = useCallback(() => { stopMedia(); }, [stopMedia]);
+  const stopVideo = useCallback(() => { stopMedia(); }, [stopMedia]);
 
   return { startVoice, startVideo, stopVoice, stopVideo, stopMedia };
 }

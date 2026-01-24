@@ -269,6 +269,7 @@ export function PlaygroundRoom({
               localStream={localStream}
               participants={mediaParticipants}
               videoStreams={videoStreams}
+              audioStreams={audioStreams}
               audioAnalysers={audioAnalysers}
               currentUserId={userId}
               currentUserName={userName}

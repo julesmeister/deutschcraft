@@ -115,22 +115,39 @@ testmanship-web-v2/
 ├── app/
 │   ├── layout.tsx           # Root layout with fonts
 │   ├── page.tsx             # Landing page
-│   └── globals.css          # Global styles + animations
+│   ├── globals.css          # Global styles + animations
+│   └── dashboard/
+│       └── playground/[roomId]/page.tsx  # WebRTC playground room
 ├── components/
-│   ├── sections/
-│   │   ├── HeroSection.tsx         # Animated hero with floating cards
-│   │   ├── FeaturesSection.tsx     # 3-column feature grid
-│   │   ├── StatsSection.tsx        # Partner logos
-│   │   ├── HowItWorksSection.tsx   # 3-step process
-│   │   ├── TestimonialsSection.tsx # Customer reviews
-│   │   ├── PricingSection.tsx      # 3-tier pricing
-│   │   └── CTASection.tsx          # Final call-to-action
+│   ├── sections/            # Landing page sections
+│   ├── playground/          # WebRTC video/audio UI components
+│   │   ├── VideoPanel.tsx
+│   │   ├── VideoGridView.tsx
+│   │   └── VideoLayoutSelector.tsx
 │   └── ui/
 │       ├── Navbar.tsx       # Sticky nav with scroll effect
 │       └── Footer.tsx       # Site footer
 ├── lib/
 │   ├── design-system.ts     # Complete design tokens
-│   └── models.ts            # Data models (TypeScript)
+│   ├── models.ts            # Data models (TypeScript)
+│   └── hooks/
+│       ├── useWebRTCMedia.ts        # Main WebRTC hook (v3)
+│       └── webrtc/
+│           ├── config.ts            # ICE/TURN server configuration
+│           ├── types.ts             # WebRTC type definitions
+│           ├── socketSignaling.ts   # Native WebSocket signaling client
+│           ├── mediaStreamManager.ts # Separate audio/video streams
+│           ├── peerManager.ts       # RTCPeerConnection lifecycle
+│           ├── useMediaSession.ts   # Start/stop media sessions
+│           └── useMediaControls.ts  # Mute/video toggle controls
+├── signaling-worker/        # Cloudflare Worker + Durable Object signaling
+│   ├── src/
+│   │   ├── index.ts         # Worker entry: routes /room/:roomId to DO
+│   │   ├── signalingRoom.ts # Durable Object: WebSocket Hibernation handlers
+│   │   └── types.ts         # JSON message protocol types
+│   ├── wrangler.toml        # Worker config + DO binding
+│   ├── package.json
+│   └── tsconfig.json
 ├── public/                  # Static assets
 ├── next.config.ts           # Next.js config (optimized for Vercel)
 ├── tailwind.config.ts       # Tailwind + design system integration
@@ -140,12 +157,14 @@ testmanship-web-v2/
 
 ## Tech Stack
 
-- **Framework**: Next.js 15.1.5 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **React**: 19.0.0
 - **TypeScript**: 5.x
-- **Styling**: Tailwind CSS 4.1.8
+- **Styling**: Tailwind CSS 3.4
 - **Animations**: Framer Motion 12.0.0 + CSS animations
 - **Fonts**: Inter + Manrope (Google Fonts)
+- **WebRTC Signaling**: Native WebSocket + Cloudflare Durable Objects (WebSocket Hibernation API)
+- **Database**: Firestore (primary), LibSQL/Turso (supplementary)
 
 ## Performance Optimizations
 
@@ -181,6 +200,12 @@ testmanship-web-v2/
 # Development (with Turbopack)
 npm run dev
 
+# Signaling worker (required for WebRTC voice/video)
+npm run dev:signaling
+
+# Deploy signaling worker to Cloudflare
+npm run deploy:signaling
+
 # Production build
 npm run build
 
@@ -189,6 +214,64 @@ npm run start
 
 # Linting
 npm run lint
+```
+
+For WebRTC playground functionality, run both the Next.js dev server and the signaling worker simultaneously in separate terminals.
+
+## WebRTC Architecture
+
+### Overview
+
+The playground uses peer-to-peer WebRTC for real-time voice and video, with a Cloudflare Durable Object for signaling coordination via native WebSockets.
+
+### Signaling Flow
+
+```
+Client A                    Server                    Client B
+   |-- join(roomId) ------->|                          |
+   |                        |<------ join(roomId) -----|
+   |<-- addPeer(B, offer:F)-|                          |
+   |                        |-- addPeer(A, offer:T) -->|
+   |                        |<-- relaySDP(A, offer) ---|
+   |<-- sessionDescription -|                          |
+   |--- relaySDP(B, answer)>|                          |
+   |                        |-- sessionDescription --->|
+   |<========= ICE candidates via relayICE ==========>|
+   |<============= P2P WebRTC connected ==============>|
+```
+
+The newer joiner receives `shouldCreateOffer: true` and initiates the WebRTC offer.
+
+### Separate Media Streams
+
+Audio and video use independent `getUserMedia()` calls and separate `MediaStream` objects:
+
+- `localAudioStreamRef` - Microphone only
+- `localVideoStreamRef` - Camera only
+
+Each track is added to the peer connection with its own stream via `pc.addTrack(track, stream)`. The `ontrack` handler splits incoming tracks by `track.kind` into separate audio/video state maps.
+
+This allows toggling video on/off without affecting the audio pipeline.
+
+### Hook Architecture
+
+```
+useWebRTCMedia (orchestrator)
+├── socketSignaling (native WebSocket connection + JSON message protocol)
+├── useMediaSession (start/stop + signaling join/leave)
+├── useMediaControls (mute/video toggle + peer status)
+├── peerManager (RTCPeerConnection creation + audio playback)
+└── mediaStreamManager (getUserMedia for audio/video independently)
+```
+
+### Environment Variables
+
+```
+NEXT_PUBLIC_SIGNALING_URL=ws://localhost:8787    # Local: wrangler dev on port 8787
+                                                # Prod: wss://testmanship-signaling.<subdomain>.workers.dev
+NEXT_PUBLIC_TURN_URL=turn:host:3478             # TURN server for NAT traversal
+NEXT_PUBLIC_TURN_USERNAME=...
+NEXT_PUBLIC_TURN_CREDENTIAL=...
 ```
 
 ## Next Steps / TODO
@@ -272,18 +355,25 @@ className="bg-gradient-to-r from-brand-purple to-pastel-ocean"
 3. Auto-deploys on every push to `main`
 4. Environment variables via Vercel dashboard
 
-**Environment Variables Needed (future):**
+**Environment Variables Needed:**
 ```
-NEXT_PUBLIC_API_URL=
-DATABASE_URL=
-OPENAI_API_KEY=
+NEXT_PUBLIC_SIGNALING_URL=wss://testmanship-signaling.<subdomain>.workers.dev
+NEXT_PUBLIC_TURN_URL=turn:your-turn-server:3478
+NEXT_PUBLIC_TURN_USERNAME=...
+NEXT_PUBLIC_TURN_CREDENTIAL=...
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=...
+NEXT_PUBLIC_FIREBASE_API_KEY=...
+NEXTAUTH_URL=https://your-domain.com
+NEXTAUTH_SECRET=...
+GOOGLE_CLIENT_ID=...
+GOOGLE_CLIENT_SECRET=...
 ```
 
 ## Known Issues / Limitations
 
-- ❌ No backend/database yet (static data only)
-- ❌ No authentication (placeholder links)
-- ❌ No actual flashcard functionality (UI only)
+- ✅ Signaling via Cloudflare Durable Objects (deploy with `npm run deploy:signaling`)
+- ✅ WebRTC voice/video with native WebSocket signaling (separate audio/video streams)
+- ✅ Firestore database with NextAuth authentication
 - ✅ Optimized for fast loading on Vercel
 - ✅ Responsive design works on all devices
 - ✅ Animations perform well (60fps)

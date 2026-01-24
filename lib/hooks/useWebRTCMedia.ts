@@ -1,87 +1,60 @@
 /**
- * useWebRTCMedia Hook (v2 - Modular)
- * Simplified WebRTC implementation using modular peer and signal management
+ * useWebRTCMedia Hook (v3 - WebSocket + Separate Streams)
+ * Orchestrates WebRTC with Durable Object signaling and independent audio/video streams
  */
 
-import { useEffect, useRef, useState, useCallback, useMemo } from "react";
+import { useEffect, useRef, useState, useCallback } from 'react';
 import {
   createPeerConnection,
   setupAudioPlayback,
   cleanupPeerConnection,
   type PeerConnection,
-} from "./webrtc/peerManager";
-import { createSignalHandler } from "./webrtc/signalHandler";
-import { sendOffer } from "./webrtc/firebaseSignaling";
-import { useMediaSession } from "./webrtc/useMediaSession";
-import { useMediaControls } from "./webrtc/useMediaControls";
-import type { MediaParticipant, UseWebRTCMediaOptions } from "./webrtc/types";
+} from './webrtc/peerManager';
+import {
+  createSignalingSocket,
+  registerCallbacks,
+  unregisterCallbacks,
+  relaySDP,
+  relayICE,
+  type SignalingSocket,
+  type PeerStatusUpdate,
+} from './webrtc/socketSignaling';
+import { stopStream } from './webrtc/mediaStreamManager';
+import { useMediaSession } from './webrtc/useMediaSession';
+import { useMediaControls } from './webrtc/useMediaControls';
+import type { MediaParticipant, UseWebRTCMediaOptions } from './webrtc/types';
 
 export function useWebRTCMedia({
   roomId,
   userId,
   userName,
-  enableVideo = false,
   onError,
 }: UseWebRTCMediaOptions) {
   const [isVoiceActive, setIsVoiceActive] = useState(false);
   const [isVideoActive, setIsVideoActive] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [participants, setParticipants] = useState<MediaParticipant[]>([]);
-  const [audioStreams, setAudioStreams] = useState<Map<string, MediaStream>>(
-    new Map(),
-  );
-  const [videoStreams, setVideoStreams] = useState<Map<string, MediaStream>>(
-    new Map(),
-  );
-  const [audioAnalysers, setAudioAnalysers] = useState<
-    Map<string, AnalyserNode>
-  >(new Map());
-  const [audioElements, setAudioElements] = useState<
-    Map<string, HTMLAudioElement>
-  >(new Map());
+  const [audioStreams, setAudioStreams] = useState<Map<string, MediaStream>>(new Map());
+  const [videoStreams, setVideoStreams] = useState<Map<string, MediaStream>>(new Map());
+  const [audioAnalysers, setAudioAnalysers] = useState<Map<string, AnalyserNode>>(new Map());
+  const [audioElements, setAudioElements] = useState<Map<string, HTMLAudioElement>>(new Map());
 
-  const localStreamRef = useRef<MediaStream | null>(null);
+  const localAudioStreamRef = useRef<MediaStream | null>(null);
+  const localVideoStreamRef = useRef<MediaStream | null>(null);
   const peerConnectionsRef = useRef<Map<string, PeerConnection>>(new Map());
   const audioContextRef = useRef<AudioContext | null>(null);
-  const previousRoomIdRef = useRef<string | null>(null);
-  const signalUnsubscribeRef = useRef<(() => void) | null>(null);
-  const participantsUnsubscribeRef = useRef<(() => void) | null>(null);
+  const socketRef = useRef<SignalingSocket | null>(null);
   const isMediaActiveRef = useRef<boolean>(false);
+  const previousRoomIdRef = useRef<string | null>(null);
 
-  // Reset state when room changes
-  useEffect(() => {
-    if (previousRoomIdRef.current && previousRoomIdRef.current !== roomId) {
-      console.log("[WebRTC Media] Room changed, resetting state");
-      cleanup();
-    }
-    previousRoomIdRef.current = roomId;
-  }, [roomId]);
-
-  // Cleanup function
+  // Cleanup all peer connections and state
   const cleanup = useCallback(() => {
-    if (localStreamRef.current) {
-      localStreamRef.current.getTracks().forEach((track) => track.stop());
-      localStreamRef.current = null;
-    }
-
-    peerConnectionsRef.current.forEach((peer) => {
-      cleanupPeerConnection(peer);
-    });
+    peerConnectionsRef.current.forEach((peer) => cleanupPeerConnection(peer));
     peerConnectionsRef.current.clear();
 
     if (audioContextRef.current) {
       audioContextRef.current.close();
       audioContextRef.current = null;
-    }
-
-    if (signalUnsubscribeRef.current) {
-      signalUnsubscribeRef.current();
-      signalUnsubscribeRef.current = null;
-    }
-
-    if (participantsUnsubscribeRef.current) {
-      participantsUnsubscribeRef.current();
-      participantsUnsubscribeRef.current = null;
     }
 
     setIsVoiceActive(false);
@@ -91,226 +64,236 @@ export function useWebRTCMedia({
     setAudioStreams(new Map());
     setVideoStreams(new Map());
     setAudioAnalysers(new Map());
+    setAudioElements(new Map());
     isMediaActiveRef.current = false;
   }, []);
 
-  // Handle received track
-  const handleTrackReceived = useCallback(
-    (
-      remoteUserId: string,
-      stream: MediaStream,
-      hasAudio: boolean,
-      hasVideo: boolean,
-    ) => {
-      const peer = peerConnectionsRef.current.get(remoteUserId);
-      if (!peer) return;
+  // Create a peer connection for a remote user
+  const createPeer = useCallback((remoteUserId: string): RTCPeerConnection => {
+    const pc = createPeerConnection({
+      remoteUserId,
+      localAudioStream: localAudioStreamRef.current,
+      localVideoStream: localVideoStreamRef.current,
+      audioContext: audioContextRef.current,
+      onAudioTrack: (peerId, stream) => {
+        const peer = peerConnectionsRef.current.get(peerId);
+        if (peer) peer.audioStream = stream;
 
-      peer.stream = stream;
-
-      if (hasAudio) {
-        setAudioStreams((prev) => {
-          const updated = new Map(prev);
-          updated.set(remoteUserId, stream);
-          return updated;
-        });
+        setAudioStreams(prev => { const m = new Map(prev); m.set(peerId, stream); return m; });
 
         const audioSetup = setupAudioPlayback(stream, audioContextRef.current);
-        peer.audioElement = audioSetup.audioElement;
-        peer.source = audioSetup.source;
-        peer.analyser = audioSetup.analyser;
-        peer.gainNode = audioSetup.gainNode;
-
-        setAudioElements((prev) => {
-          const updated = new Map(prev);
-          updated.set(remoteUserId, audioSetup.audioElement);
-          return updated;
-        });
-
-        if (audioSetup.analyser) {
-          setAudioAnalysers((prev) => {
-            const updated = new Map(prev);
-            updated.set(remoteUserId, audioSetup.analyser!);
-            return updated;
-          });
+        if (peer) {
+          peer.audioElement = audioSetup.audioElement;
+          peer.source = audioSetup.source;
+          peer.analyser = audioSetup.analyser;
+          peer.gainNode = audioSetup.gainNode;
         }
-      }
 
-      if (hasVideo) {
-        setVideoStreams((prev) => {
-          const updated = new Map(prev);
-          updated.set(remoteUserId, stream);
-          return updated;
-        });
-      }
-    },
-    [],
-  );
-
-  // Handle connection state change
-  const handleConnectionStateChange = useCallback(
-    (remoteUserId: string, state: RTCPeerConnectionState) => {
-      if (state === "failed") {
-        console.error("[WebRTC Media] Connection failed:", remoteUserId);
-        peerConnectionsRef.current.delete(remoteUserId);
-
-        setAudioStreams((prev) => {
-          const updated = new Map(prev);
-          updated.delete(remoteUserId);
-          return updated;
-        });
-
-        setVideoStreams((prev) => {
-          const updated = new Map(prev);
-          updated.delete(remoteUserId);
-          return updated;
-        });
-
-        setAudioAnalysers((prev) => {
-          const updated = new Map(prev);
-          updated.delete(remoteUserId);
-          return updated;
-        });
-      } else if (state === "disconnected") {
-        // Disconnected is often temporary - wait before cleaning up
-        console.warn(
-          "[WebRTC Media] Connection disconnected (may recover):",
-          remoteUserId,
-        );
-        setTimeout(() => {
-          const peer = peerConnectionsRef.current.get(remoteUserId);
-          if (peer && peer.pc.connectionState === "disconnected") {
-            console.error(
-              "[WebRTC Media] Connection did not recover, cleaning up:",
-              remoteUserId,
-            );
-            peerConnectionsRef.current.delete(remoteUserId);
-
-            setAudioStreams((prev) => {
-              const updated = new Map(prev);
-              updated.delete(remoteUserId);
-              return updated;
-            });
-
-            setVideoStreams((prev) => {
-              const updated = new Map(prev);
-              updated.delete(remoteUserId);
-              return updated;
-            });
-
-            setAudioAnalysers((prev) => {
-              const updated = new Map(prev);
-              updated.delete(remoteUserId);
-              return updated;
-            });
-          }
-        }, 5000);
-      }
-    },
-    [],
-  );
-
-  // Handle renegotiation (when tracks are added after connection)
-  const handleNegotiationNeeded = useCallback(
-    (remoteUserId: string, offer: RTCSessionDescriptionInit) => {
-      console.log(
-        "[WebRTC Media] Sending renegotiation offer to:",
-        remoteUserId,
-      );
-      sendOffer(roomId, userId, remoteUserId, offer);
-    },
-    [roomId, userId],
-  );
-
-  // Create peer connection helper
-  const createPeer = useCallback(
-    (remoteUserId: string): RTCPeerConnection => {
-      const pc = createPeerConnection({
-        roomId,
-        userId,
-        remoteUserId,
-        localStream: localStreamRef.current,
-        audioContext: audioContextRef.current,
-        onTrackReceived: handleTrackReceived,
-        onConnectionStateChange: handleConnectionStateChange,
-        onNegotiationNeeded: handleNegotiationNeeded,
-      });
-
-      peerConnectionsRef.current.set(remoteUserId, { pc, stream: null });
-      return pc;
-    },
-    [
-      roomId,
-      userId,
-      handleTrackReceived,
-      handleConnectionStateChange,
-      handleNegotiationNeeded,
-    ],
-  );
-
-  // Handle peer disconnected
-  const onPeerDisconnected = useCallback((userId: string) => {
-    setAudioStreams((prev) => {
-      const updated = new Map(prev);
-      updated.delete(userId);
-      return updated;
+        setAudioElements(prev => { const m = new Map(prev); m.set(peerId, audioSetup.audioElement); return m; });
+        if (audioSetup.analyser) {
+          setAudioAnalysers(prev => { const m = new Map(prev); m.set(peerId, audioSetup.analyser!); return m; });
+        }
+      },
+      onVideoTrack: (peerId, stream) => {
+        const peer = peerConnectionsRef.current.get(peerId);
+        if (peer) peer.videoStream = stream;
+        setVideoStreams(prev => { const m = new Map(prev); m.set(peerId, stream); return m; });
+      },
+      onConnectionStateChange: (peerId, state) => {
+        if (state === 'failed' || state === 'closed') {
+          const peer = peerConnectionsRef.current.get(peerId);
+          if (peer) cleanupPeerConnection(peer);
+          peerConnectionsRef.current.delete(peerId);
+          removePeerFromState(peerId);
+        } else if (state === 'disconnected') {
+          setTimeout(() => {
+            const peer = peerConnectionsRef.current.get(peerId);
+            if (peer && peer.pc.connectionState === 'disconnected') {
+              cleanupPeerConnection(peer);
+              peerConnectionsRef.current.delete(peerId);
+              removePeerFromState(peerId);
+            }
+          }, 5000);
+        }
+      },
+      onIceCandidate: (peerId, candidate) => {
+        if (socketRef.current?.connected) {
+          relayICE(socketRef.current, peerId, candidate);
+        }
+      },
+      onNegotiationNeeded: (peerId, offer) => {
+        if (socketRef.current?.connected) {
+          relaySDP(socketRef.current, peerId, offer);
+        }
+      },
     });
 
-    setVideoStreams((prev) => {
-      const updated = new Map(prev);
-      updated.delete(userId);
-      return updated;
-    });
-
-    setAudioAnalysers((prev) => {
-      const updated = new Map(prev);
-      updated.delete(userId);
-      return updated;
-    });
+    peerConnectionsRef.current.set(remoteUserId, { pc, audioStream: null, videoStream: null });
+    return pc;
   }, []);
 
-  // Handle incoming signals
-  const handleSignal = useMemo(
-    () =>
-      createSignalHandler({
-        roomId,
-        userId,
-        isMediaActiveRef,
-        peerConnectionsRef,
-        createPeer,
-        onPeerDisconnected,
-      }),
-    [roomId, userId, createPeer, onPeerDisconnected],
-  );
+  const removePeerFromState = useCallback((peerId: string) => {
+    setAudioStreams(prev => { const m = new Map(prev); m.delete(peerId); return m; });
+    setVideoStreams(prev => { const m = new Map(prev); m.delete(peerId); return m; });
+    setAudioAnalysers(prev => { const m = new Map(prev); m.delete(peerId); return m; });
+    setAudioElements(prev => { const m = new Map(prev); m.delete(peerId); return m; });
+    setParticipants(prev => prev.filter(p => p.userId !== peerId));
+  }, []);
 
-  // Media session controls
-  const { startVoice, startVideo, stopVoice, stopVideo, stopMedia } =
-    useMediaSession({
-      roomId,
-      userId,
-      userName,
-      localStreamRef,
-      audioContextRef,
-      signalUnsubscribeRef,
-      participantsUnsubscribeRef,
-      isMediaActiveRef,
-      peerConnectionsRef,
-      setIsVoiceActive,
-      setIsVideoActive,
-      setIsMuted,
-      setParticipants,
-      handleSignal,
-      createPeer,
-      cleanup,
-      onError,
+  // Signaling event handlers
+  const handleAddPeer = useCallback(async (peerId: string, peerName: string, shouldCreateOffer: boolean) => {
+    if (peerConnectionsRef.current.has(peerId)) return;
+
+    // Add to participants
+    setParticipants(prev => {
+      if (prev.find(p => p.userId === peerId)) return prev;
+      return [...prev, {
+        userId: peerId,
+        userName: peerName,
+        isMuted: false,
+        isVideoEnabled: false,
+        audioLevel: 0,
+        connectionQuality: 'good' as const,
+      }];
     });
 
-  // Media controls (mute/video toggle)
-  const { toggleMute, toggleVideo } = useMediaControls({
+    const pc = createPeer(peerId);
+
+    if (shouldCreateOffer) {
+      try {
+        const offer = await pc.createOffer();
+        await pc.setLocalDescription(offer);
+        if (socketRef.current?.connected) {
+          relaySDP(socketRef.current, peerId, offer);
+        }
+      } catch (error) {
+        console.error('[WebRTC] Failed to create offer for', peerId, error);
+      }
+    }
+  }, [createPeer]);
+
+  const handleRemovePeer = useCallback((peerId: string) => {
+    const peer = peerConnectionsRef.current.get(peerId);
+    if (peer) {
+      cleanupPeerConnection(peer);
+      peerConnectionsRef.current.delete(peerId);
+    }
+    removePeerFromState(peerId);
+  }, [removePeerFromState]);
+
+  const handleSessionDescription = useCallback(async (peerId: string, sdp: RTCSessionDescriptionInit) => {
+    let peer = peerConnectionsRef.current.get(peerId);
+
+    if (!peer) {
+      // Create peer if we don't have one (answerer side)
+      createPeer(peerId);
+      peer = peerConnectionsRef.current.get(peerId);
+    }
+
+    if (!peer) return;
+
+    try {
+      await peer.pc.setRemoteDescription(new RTCSessionDescription(sdp));
+
+      if (sdp.type === 'offer') {
+        const answer = await peer.pc.createAnswer();
+        await peer.pc.setLocalDescription(answer);
+        if (socketRef.current?.connected) {
+          relaySDP(socketRef.current, peerId, answer);
+        }
+      }
+    } catch (error) {
+      console.error('[WebRTC] SDP handling failed for', peerId, error);
+    }
+  }, [createPeer]);
+
+  const handleIceCandidate = useCallback(async (peerId: string, candidate: RTCIceCandidateInit) => {
+    const peer = peerConnectionsRef.current.get(peerId);
+    if (!peer) return;
+
+    try {
+      await peer.pc.addIceCandidate(new RTCIceCandidate(candidate));
+    } catch (error) {
+      // ICE candidates before remote description are common - queue retry
+      setTimeout(async () => {
+        try {
+          const p = peerConnectionsRef.current.get(peerId);
+          if (p) await p.pc.addIceCandidate(new RTCIceCandidate(candidate));
+        } catch { /* ignore late candidates */ }
+      }, 200);
+    }
+  }, []);
+
+  const handlePeerStatus = useCallback((peerId: string, status: PeerStatusUpdate) => {
+    setParticipants(prev => prev.map(p => {
+      if (p.userId !== peerId) return p;
+      return {
+        ...p,
+        ...(status.isMuted !== undefined && { isMuted: status.isMuted }),
+        ...(status.isVideoEnabled !== undefined && { isVideoEnabled: status.isVideoEnabled }),
+      };
+    }));
+  }, []);
+
+  // WebSocket connection lifecycle
+  useEffect(() => {
+    if (!roomId || !userId) return;
+
+    const socket = createSignalingSocket(roomId);
+    socketRef.current = socket;
+
+    registerCallbacks(socket, {
+      onAddPeer: handleAddPeer,
+      onRemovePeer: handleRemovePeer,
+      onSessionDescription: handleSessionDescription,
+      onIceCandidate: handleIceCandidate,
+      onPeerStatus: handlePeerStatus,
+    });
+
+    socket.connect();
+
+    return () => {
+      unregisterCallbacks(socket);
+      socket.disconnect();
+      socketRef.current = null;
+    };
+  }, [roomId, userId, handleAddPeer, handleRemovePeer, handleSessionDescription, handleIceCandidate, handlePeerStatus]);
+
+  // Room change detection
+  useEffect(() => {
+    if (previousRoomIdRef.current && previousRoomIdRef.current !== roomId) {
+      stopStream(localAudioStreamRef.current);
+      stopStream(localVideoStreamRef.current);
+      localAudioStreamRef.current = null;
+      localVideoStreamRef.current = null;
+      cleanup();
+    }
+    previousRoomIdRef.current = roomId;
+  }, [roomId, cleanup]);
+
+  // Media session controls
+  const { startVoice, startVideo, stopVoice, stopVideo, stopMedia } = useMediaSession({
     roomId,
     userId,
     userName,
-    localStreamRef,
+    localAudioStreamRef,
+    localVideoStreamRef,
+    audioContextRef,
+    socketRef,
+    isMediaActiveRef,
+    setIsVoiceActive,
+    setIsVideoActive,
+    setIsMuted,
+    cleanup,
+    onError,
+  });
+
+  // Media controls
+  const { toggleMute, toggleVideo } = useMediaControls({
+    localAudioStreamRef,
+    localVideoStreamRef,
     peerConnectionsRef,
+    socketRef,
     isMuted,
     isVideoActive,
     setIsMuted,
@@ -318,29 +301,16 @@ export function useWebRTCMedia({
     onError,
   });
 
-  const getLocalStream = useCallback(() => {
-    return localStreamRef.current;
-  }, []);
-
+  // Cleanup on unmount
   useEffect(() => {
     return () => {
-      // Synchronously stop all tracks immediately to release hardware lock
-      // This is critical for Fast Refresh / Page Reloads where async cleanup is too slow
-      const hadStream = !!localStreamRef.current;
-
-      if (localStreamRef.current) {
-        console.log(
-          "[WebRTC Media] Unmounting - releasing hardware immediately",
-        );
-        localStreamRef.current.getTracks().forEach((track) => track.stop());
-        localStreamRef.current = null;
-      }
-
-      if (hadStream) {
-        stopMedia();
-      }
+      stopStream(localAudioStreamRef.current);
+      stopStream(localVideoStreamRef.current);
+      localAudioStreamRef.current = null;
+      localVideoStreamRef.current = null;
+      cleanup();
     };
-  }, [stopMedia]);
+  }, [cleanup]);
 
   return {
     isVoiceActive,
@@ -351,7 +321,7 @@ export function useWebRTCMedia({
     videoStreams,
     audioAnalysers,
     audioElements,
-    localStream: getLocalStream(),
+    localStream: localVideoStreamRef.current || localAudioStreamRef.current,
     startVoice,
     startVideo,
     stopVoice,

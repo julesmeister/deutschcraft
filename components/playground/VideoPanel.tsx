@@ -26,6 +26,7 @@ interface VideoPanelProps {
   localStream: MediaStream | null;
   participants: MediaParticipant[];
   videoStreams: Map<string, MediaStream>;
+  audioStreams?: Map<string, MediaStream>;
   audioAnalysers: Map<string, AnalyserNode>;
   audioElements?: Map<string, HTMLAudioElement>;
   currentUserId: string;
@@ -47,6 +48,7 @@ export function VideoPanel({
   localStream,
   participants,
   videoStreams,
+  audioStreams,
   audioAnalysers,
   audioElements,
   currentUserId,
@@ -193,6 +195,7 @@ export function VideoPanel({
           localStream={localStream}
           participants={participants}
           videoStreams={videoStreams}
+          audioStreams={audioStreams}
           currentUserId={currentUserId}
           currentUserName={currentUserName}
           hostId={hostId}

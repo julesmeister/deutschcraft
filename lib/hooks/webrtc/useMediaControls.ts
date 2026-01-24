@@ -1,18 +1,18 @@
 /**
  * useMediaControls Hook
- * Handles mute and video toggling for WebRTC media streams
+ * Handles mute and video toggling with separate stream refs
  */
 
 import { useCallback } from 'react';
-import { updateMuteStatus } from './firebaseSignaling';
-import { toggleAudioTracks, toggleVideoTracks, addVideoToStream } from './mediaStreamManager';
+import { getVideoStream, setAudioEnabled, setVideoEnabled, stopStream } from './mediaStreamManager';
+import { type SignalingSocket, sendPeerStatus } from './socketSignaling';
+import type { PeerConnection } from './peerManager';
 
 interface UseMediaControlsProps {
-  roomId: string;
-  userId: string;
-  userName: string;
-  localStreamRef: React.MutableRefObject<MediaStream | null>;
-  peerConnectionsRef: React.MutableRefObject<Map<string, any>>;
+  localAudioStreamRef: React.MutableRefObject<MediaStream | null>;
+  localVideoStreamRef: React.MutableRefObject<MediaStream | null>;
+  peerConnectionsRef: React.MutableRefObject<Map<string, PeerConnection>>;
+  socketRef: React.MutableRefObject<SignalingSocket | null>;
   isMuted: boolean;
   isVideoActive: boolean;
   setIsMuted: (muted: boolean) => void;
@@ -21,60 +21,61 @@ interface UseMediaControlsProps {
 }
 
 export function useMediaControls({
-  roomId,
-  userId,
-  userName,
-  localStreamRef,
+  localAudioStreamRef,
+  localVideoStreamRef,
   peerConnectionsRef,
+  socketRef,
   isMuted,
   isVideoActive,
   setIsMuted,
   setIsVideoActive,
   onError,
 }: UseMediaControlsProps) {
-  // Toggle mute
-  const toggleMute = useCallback(async () => {
-    if (!localStreamRef.current) return false;
+  const toggleMute = useCallback(() => {
+    if (!localAudioStreamRef.current) return;
 
-    const newMutedState = toggleAudioTracks(localStreamRef.current, isMuted);
-    setIsMuted(newMutedState);
-    await updateMuteStatus(roomId, userId, userName, newMutedState);
+    const newMuted = !isMuted;
+    setAudioEnabled(localAudioStreamRef.current, !newMuted);
+    setIsMuted(newMuted);
 
-    console.log('[Media Controls] Mute toggled:', newMutedState ? 'MUTED' : 'UNMUTED');
-    return newMutedState;
-  }, [isMuted, roomId, userId, userName, localStreamRef, setIsMuted]);
+    // Notify all peers via socket
+    if (socketRef.current?.connected) {
+      peerConnectionsRef.current.forEach((_, peerId) => {
+        sendPeerStatus(socketRef.current!, peerId, { isMuted: newMuted });
+      });
+    }
+  }, [isMuted, localAudioStreamRef, peerConnectionsRef, socketRef, setIsMuted]);
 
-  // Toggle video
   const toggleVideo = useCallback(async () => {
-    if (!localStreamRef.current) return false;
-
-    const videoTracks = localStreamRef.current.getVideoTracks();
-
-    // If no video tracks, add video
-    if (videoTracks.length === 0) {
+    if (!localVideoStreamRef.current) {
+      // Start video if none exists
       try {
-        const videoStream = await addVideoToStream(localStreamRef.current);
+        const videoStream = await getVideoStream();
+        localVideoStreamRef.current = videoStream;
         const newVideoTrack = videoStream.getVideoTracks()[0];
 
         if (newVideoTrack) {
-          // Replace track on existing video transceivers (created with recvonly)
+          // Add or replace video track on all peer connections
           peerConnectionsRef.current.forEach((peer) => {
             const videoTransceiver = peer.pc.getTransceivers().find(
-              (t: RTCRtpTransceiver) => t.receiver.track?.kind === 'video' || t.sender.track?.kind === 'video'
+              (t) => t.receiver.track?.kind === 'video' || t.sender.track?.kind === 'video'
             );
-
             if (videoTransceiver) {
               videoTransceiver.sender.replaceTrack(newVideoTrack);
               videoTransceiver.direction = 'sendrecv';
             } else {
-              // Fallback: no existing transceiver found
-              peer.pc.addTrack(newVideoTrack, localStreamRef.current!);
+              peer.pc.addTrack(newVideoTrack, videoStream);
             }
           });
         }
 
         setIsVideoActive(true);
-        console.log('[Media Controls] ✅ Video started');
+
+        if (socketRef.current?.connected) {
+          peerConnectionsRef.current.forEach((_, peerId) => {
+            sendPeerStatus(socketRef.current!, peerId, { isVideoEnabled: true });
+          });
+        }
         return true;
       } catch (error) {
         console.error('[Media Controls] Failed to start video:', error);
@@ -83,13 +84,35 @@ export function useMediaControls({
       }
     }
 
-    // Toggle existing video tracks
-    const newVideoState = toggleVideoTracks(localStreamRef.current, isVideoActive);
+    // Toggle existing video
+    const newVideoState = !isVideoActive;
+    setVideoEnabled(localVideoStreamRef.current, newVideoState);
+
+    if (!newVideoState) {
+      // Stopping video: stop tracks and clear ref
+      stopStream(localVideoStreamRef.current);
+      localVideoStreamRef.current = null;
+      // Replace sender track with null
+      peerConnectionsRef.current.forEach((peer) => {
+        const videoTransceiver = peer.pc.getTransceivers().find(
+          (t) => t.sender.track?.kind === 'video'
+        );
+        if (videoTransceiver) {
+          videoTransceiver.sender.replaceTrack(null);
+        }
+      });
+    }
+
     setIsVideoActive(newVideoState);
-    console.log('[Media Controls] Video toggled:', newVideoState ? 'ON' : 'OFF');
+
+    if (socketRef.current?.connected) {
+      peerConnectionsRef.current.forEach((_, peerId) => {
+        sendPeerStatus(socketRef.current!, peerId, { isVideoEnabled: newVideoState });
+      });
+    }
 
     return newVideoState;
-  }, [isVideoActive, localStreamRef, peerConnectionsRef, setIsVideoActive, onError]);
+  }, [isVideoActive, localVideoStreamRef, peerConnectionsRef, socketRef, setIsVideoActive, onError]);
 
   return { toggleMute, toggleVideo };
 }

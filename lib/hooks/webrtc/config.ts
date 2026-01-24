@@ -33,7 +33,3 @@ export const ICE_SERVERS: RTCIceServer[] = [
   ...getTurnServers(),
 ];
 
-// Sanitize userId for Firebase paths (remove invalid characters)
-export function sanitizeUserId(id: string): string {
-  return id.replace(/[.#$[\]@]/g, '_');
-}

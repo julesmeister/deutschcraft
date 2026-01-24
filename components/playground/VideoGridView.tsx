@@ -21,6 +21,7 @@ interface VideoGridViewProps {
   localStream: MediaStream | null;
   participants: MediaParticipant[];
   videoStreams: Map<string, MediaStream>;
+  audioStreams?: Map<string, MediaStream>;
   currentUserId: string;
   currentUserName: string;
   hostId?: string;
@@ -33,6 +34,7 @@ export function VideoGridView({
   localStream,
   participants,
   videoStreams,
+  audioStreams,
   currentUserId,
   currentUserName,
   hostId,
@@ -73,15 +75,46 @@ export function VideoGridView({
     }
   }, [localStream, isVideoActive]);
 
-  // Attach remote streams to video elements
+  // Attach remote streams (combined audio+video) to video elements
   useEffect(() => {
-    videoStreams.forEach((stream, userId) => {
-      const videoElement = remoteVideoRefs.current.get(userId);
-      if (videoElement && videoElement.srcObject !== stream) {
-        videoElement.srcObject = stream;
+    participants.forEach((participant) => {
+      const videoElement = remoteVideoRefs.current.get(participant.userId);
+      if (!videoElement) return;
+
+      const videoStream = videoStreams.get(participant.userId);
+      const audioStream = audioStreams?.get(participant.userId);
+
+      // Combine audio + video tracks into one stream for the video element
+      const combined = new MediaStream();
+      if (videoStream) {
+        videoStream.getVideoTracks().forEach((t) => combined.addTrack(t));
+      }
+      if (audioStream) {
+        audioStream.getAudioTracks().forEach((t) => combined.addTrack(t));
+      }
+
+      if (combined.getTracks().length > 0) {
+        // Only reassign if tracks changed
+        const current = videoElement.srcObject as MediaStream | null;
+        const currentIds = current?.getTracks().map((t) => t.id).sort().join(',') || '';
+        const newIds = combined.getTracks().map((t) => t.id).sort().join(',');
+        if (currentIds !== newIds) {
+          videoElement.srcObject = combined;
+          videoElement.play().catch(() => {
+            // Retry on next user interaction if autoplay blocked
+            const retry = () => {
+              videoElement.play().then(() => {
+                document.removeEventListener('click', retry);
+                document.removeEventListener('touchstart', retry);
+              }).catch(() => {});
+            };
+            document.addEventListener('click', retry);
+            document.addEventListener('touchstart', retry);
+          });
+        }
       }
     });
-  }, [videoStreams]);
+  }, [videoStreams, audioStreams, participants]);
 
   // In teacher mode (hostId set): only show the host's camera
   const isTeacherMode = !!hostId;
@@ -170,16 +203,18 @@ export function VideoGridView({
           </div>
         )}
 
-        {/* Remote Videos */}
+        {/* Remote Participants */}
         {visibleParticipants.map((participant) => {
           const hasVideo = videoStreams.has(participant.userId);
+          const hasAudio = audioStreams?.has(participant.userId);
 
           return (
             <div
               key={participant.userId}
               className="relative aspect-video bg-gray-900 rounded-lg overflow-hidden"
             >
-              {hasVideo ? (
+              {/* Always render video element for audio+video playback */}
+              {(hasVideo || hasAudio) && (
                 <video
                   ref={(el) => {
                     if (el) {
@@ -189,9 +224,11 @@ export function VideoGridView({
                   autoPlay
                   playsInline
                   disablePictureInPicture
-                  className="w-full h-full object-cover scale-x-[-1]"
+                  className={`w-full h-full object-cover scale-x-[-1] ${!hasVideo ? 'hidden' : ''}`}
                 />
-              ) : (
+              )}
+              {/* Avatar overlay when no video */}
+              {!hasVideo && (
                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-pastel-blossom to-pastel-coral">
                   <div className="text-center text-white">
                     <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-2 rounded-full bg-white/20 flex items-center justify-center text-lg sm:text-xl md:text-2xl font-bold">

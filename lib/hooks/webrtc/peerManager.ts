@@ -1,51 +1,41 @@
 /**
  * WebRTC Peer Connection Manager
- * Handles creation and management of RTCPeerConnections
+ * Handles creation and management of RTCPeerConnections with separate audio/video streams
  */
 
-import { ICE_SERVERS } from "./config";
-import { sendIceCandidate, sendOffer } from "./firebaseSignaling";
+import { ICE_SERVERS } from './config';
 
 export interface PeerConnection {
   pc: RTCPeerConnection;
-  stream: MediaStream | null;
+  audioStream: MediaStream | null;
+  videoStream: MediaStream | null;
   audioElement?: HTMLAudioElement;
-  videoElement?: HTMLVideoElement;
   gainNode?: GainNode;
   source?: MediaStreamAudioSourceNode;
   analyser?: AnalyserNode;
 }
 
 interface CreatePeerOptions {
-  roomId: string;
-  userId: string;
   remoteUserId: string;
-  localStream: MediaStream | null;
+  localAudioStream: MediaStream | null;
+  localVideoStream: MediaStream | null;
   audioContext: AudioContext | null;
-  onTrackReceived: (
-    remoteUserId: string,
-    stream: MediaStream,
-    hasAudio: boolean,
-    hasVideo: boolean,
-  ) => void;
-  onConnectionStateChange: (
-    remoteUserId: string,
-    state: RTCPeerConnectionState,
-  ) => void;
-  onNegotiationNeeded?: (
-    remoteUserId: string,
-    offer: RTCSessionDescriptionInit,
-  ) => void;
+  onAudioTrack: (remoteUserId: string, stream: MediaStream) => void;
+  onVideoTrack: (remoteUserId: string, stream: MediaStream) => void;
+  onConnectionStateChange: (remoteUserId: string, state: RTCPeerConnectionState) => void;
+  onIceCandidate: (remoteUserId: string, candidate: RTCIceCandidateInit) => void;
+  onNegotiationNeeded: (remoteUserId: string, offer: RTCSessionDescriptionInit) => void;
 }
 
 export function createPeerConnection({
-  roomId,
-  userId,
   remoteUserId,
-  localStream,
+  localAudioStream,
+  localVideoStream,
   audioContext,
-  onTrackReceived,
+  onAudioTrack,
+  onVideoTrack,
   onConnectionStateChange,
+  onIceCandidate,
   onNegotiationNeeded,
 }: CreatePeerOptions): RTCPeerConnection {
   const pc = new RTCPeerConnection({
@@ -53,114 +43,77 @@ export function createPeerConnection({
     iceCandidatePoolSize: 10,
   });
 
-  // Use addTransceiver for reliable bidirectional media setup
-  // This ensures transceivers exist for both sending and receiving
-  // even before tracks are available (important for the answering side)
-  if (localStream) {
-    const audioTrack = localStream.getAudioTracks()[0];
-    const videoTrack = localStream.getVideoTracks()[0];
-
-    if (audioTrack) {
-      pc.addTransceiver(audioTrack, {
-        direction: "sendrecv",
-        streams: [localStream],
-      });
-    } else {
-      pc.addTransceiver("audio", { direction: "recvonly" });
-    }
-
-    if (videoTrack) {
-      pc.addTransceiver(videoTrack, {
-        direction: "sendrecv",
-        streams: [localStream],
-      });
-    } else {
-      pc.addTransceiver("video", { direction: "recvonly" });
-    }
+  // Add audio track with its own stream
+  const audioTrack = localAudioStream?.getAudioTracks()[0];
+  if (audioTrack && localAudioStream) {
+    pc.addTrack(audioTrack, localAudioStream);
   } else {
-    // No local stream - still set up receivers
-    pc.addTransceiver("audio", { direction: "recvonly" });
-    pc.addTransceiver("video", { direction: "recvonly" });
+    pc.addTransceiver('audio', { direction: 'recvonly' });
   }
 
-  // Handle ICE candidates
-  pc.onicecandidate = async (event) => {
+  // Add video track with its own stream
+  const videoTrack = localVideoStream?.getVideoTracks()[0];
+  if (videoTrack && localVideoStream) {
+    pc.addTrack(videoTrack, localVideoStream);
+  } else {
+    pc.addTransceiver('video', { direction: 'recvonly' });
+  }
+
+  // ICE candidates → callback (relay via socket)
+  pc.onicecandidate = (event) => {
     if (event.candidate) {
-      await sendIceCandidate(
-        roomId,
-        userId,
-        remoteUserId,
-        event.candidate.toJSON(),
-      );
+      onIceCandidate(remoteUserId, event.candidate.toJSON());
     }
   };
 
-  // Handle incoming stream
+  // Incoming tracks - split by kind
   pc.ontrack = (event) => {
-    const [remoteStream] = event.streams;
+    const track = event.track;
+    // Use event.streams[0] if available, otherwise create a new stream for the track
+    const stream = event.streams[0] || new MediaStream([track]);
 
-    if (remoteStream) {
-      const hasVideo = remoteStream.getVideoTracks().length > 0;
-      const hasAudio = remoteStream.getAudioTracks().length > 0;
-      onTrackReceived(remoteUserId, remoteStream, hasAudio, hasVideo);
+    if (track.kind === 'audio') {
+      onAudioTrack(remoteUserId, stream);
+    } else if (track.kind === 'video') {
+      onVideoTrack(remoteUserId, stream);
     }
   };
 
-  // Handle connection state
+  // Connection state
   pc.onconnectionstatechange = () => {
     onConnectionStateChange(remoteUserId, pc.connectionState);
   };
 
-  // Handle ICE connection state with restart on failure
+  // ICE restart on failure
   let iceRestartAttempts = 0;
-  const MAX_ICE_RESTARTS = 3;
-
   pc.oniceconnectionstatechange = async () => {
-    if (
-      pc.iceConnectionState === "failed" &&
-      iceRestartAttempts < MAX_ICE_RESTARTS
-    ) {
+    if (pc.iceConnectionState === 'failed' && iceRestartAttempts < 3) {
       iceRestartAttempts++;
-      console.warn(
-        `[WebRTC] ICE restart ${iceRestartAttempts}/${MAX_ICE_RESTARTS} for:`,
-        remoteUserId,
-      );
-
+      console.warn(`[WebRTC] ICE restart ${iceRestartAttempts}/3 for:`, remoteUserId);
       try {
         pc.restartIce();
         const offer = await pc.createOffer({ iceRestart: true });
         await pc.setLocalDescription(offer);
-        await sendOffer(roomId, userId, remoteUserId, offer);
+        onNegotiationNeeded(remoteUserId, offer);
       } catch (error) {
-        console.error("[WebRTC Peer] ICE restart failed:", error);
+        console.error('[WebRTC Peer] ICE restart failed:', error);
       }
-    } else if (
-      pc.iceConnectionState === "connected" ||
-      pc.iceConnectionState === "completed"
-    ) {
-      iceRestartAttempts = 0; // Reset on success
+    } else if (pc.iceConnectionState === 'connected' || pc.iceConnectionState === 'completed') {
+      iceRestartAttempts = 0;
     }
   };
 
-  // Handle renegotiation (fires when tracks are added/removed after connection)
+  // Renegotiation
   let isNegotiating = false;
   pc.onnegotiationneeded = async () => {
-    if (isNegotiating) return;
-
-    // Only renegotiate when in stable state (not during initial offer/answer)
-    if (pc.signalingState !== "stable") return;
-
+    if (isNegotiating || pc.signalingState !== 'stable') return;
     isNegotiating = true;
-
     try {
       const offer = await pc.createOffer();
       await pc.setLocalDescription(offer);
-
-      if (onNegotiationNeeded) {
-        onNegotiationNeeded(remoteUserId, offer);
-      }
+      onNegotiationNeeded(remoteUserId, offer);
     } catch (error) {
-      console.error("[WebRTC Peer] Renegotiation failed:", error);
+      console.error('[WebRTC Peer] Renegotiation failed:', error);
     } finally {
       isNegotiating = false;
     }
@@ -170,7 +123,7 @@ export function createPeerConnection({
 }
 
 export function setupAudioPlayback(
-  remoteStream: MediaStream,
+  audioStream: MediaStream,
   audioContext: AudioContext | null,
 ): {
   audioElement: HTMLAudioElement;
@@ -178,47 +131,42 @@ export function setupAudioPlayback(
   analyser?: AnalyserNode;
   gainNode?: GainNode;
 } {
-  // Create a dedicated MediaStream for audio to avoid interference with video
-  const audioTracks = remoteStream.getAudioTracks();
-  const audioStream = new MediaStream(audioTracks);
-
-  // HTML Audio Element for reliable playback
   const audio = new Audio();
   audio.srcObject = audioStream;
   audio.autoplay = true;
   audio.volume = 1.0;
 
-  // Attach to DOM to ensure playback works on all browsers
-  // Use 1x1 pixel with opacity 0 instead of display:none to avoid autoplay restrictions
-  audio.style.position = "fixed";
-  audio.style.top = "0";
-  audio.style.left = "0";
-  audio.style.width = "1px";
-  audio.style.height = "1px";
-  audio.style.opacity = "0";
-  audio.style.pointerEvents = "none";
-  audio.style.zIndex = "-1";
+  // Attach to DOM for reliable playback
+  audio.style.position = 'fixed';
+  audio.style.top = '0';
+  audio.style.left = '0';
+  audio.style.width = '1px';
+  audio.style.height = '1px';
+  audio.style.opacity = '0';
+  audio.style.pointerEvents = 'none';
+  audio.style.zIndex = '-1';
   document.body.appendChild(audio);
 
-  audio.play().catch((err) => {
-    console.error("[WebRTC Peer] Audio element play failed:", err);
-    // Retry once after a short delay (helps with race conditions)
-    setTimeout(() => {
-      audio
-        .play()
-        .catch((e) => console.error("[WebRTC Peer] Retry play failed:", e));
-    }, 1000);
+  audio.play().catch(() => {
+    // Browser blocked autoplay — retry on next user interaction
+    const playOnInteraction = () => {
+      audio.play().then(() => {
+        document.removeEventListener('click', playOnInteraction);
+        document.removeEventListener('touchstart', playOnInteraction);
+        document.removeEventListener('keydown', playOnInteraction);
+      }).catch(() => {});
+    };
+    document.addEventListener('click', playOnInteraction);
+    document.addEventListener('touchstart', playOnInteraction);
+    document.addEventListener('keydown', playOnInteraction);
   });
 
   let source: MediaStreamAudioSourceNode | undefined;
   let analyser: AnalyserNode | undefined;
   let gainNode: GainNode | undefined;
 
-  // Web Audio API for speaking detection only (NOT for playback)
-  // Don't connect to destination - that causes Chrome to mute the Audio element
   try {
-    if (audioContext && audioTracks.length > 0) {
-      // Use the separated audio stream for analysis too
+    if (audioContext && audioStream.getAudioTracks().length > 0) {
       source = audioContext.createMediaStreamSource(audioStream);
       analyser = audioContext.createAnalyser();
       gainNode = audioContext.createGain();
@@ -227,23 +175,25 @@ export function setupAudioPlayback(
       analyser.smoothingTimeConstant = 0.8;
       gainNode.gain.value = 0; // Silent - analysis only
 
-      // source -> analyser -> silentGain -> destination (keeps graph alive for analysis)
       source.connect(analyser);
       analyser.connect(gainNode);
       gainNode.connect(audioContext.destination);
     }
-  } catch (audioApiError) {
-    console.error("[WebRTC Peer] Web Audio API setup failed:", audioApiError);
+  } catch (error) {
+    console.error('[WebRTC Peer] Web Audio API setup failed:', error);
   }
 
   return { audioElement: audio, source, analyser, gainNode };
 }
 
-export function cleanupPeerConnection(peer: PeerConnection) {
+export function cleanupPeerConnection(peer: PeerConnection): void {
   peer.pc.close();
 
-  if (peer.stream) {
-    peer.stream.getTracks().forEach((track) => track.stop());
+  if (peer.audioStream) {
+    peer.audioStream.getTracks().forEach(track => track.stop());
+  }
+  if (peer.videoStream) {
+    peer.videoStream.getTracks().forEach(track => track.stop());
   }
 
   if (peer.audioElement) {
@@ -252,15 +202,9 @@ export function cleanupPeerConnection(peer: PeerConnection) {
     peer.audioElement.remove();
   }
 
-  if (peer.videoElement) {
-    peer.videoElement.pause();
-    peer.videoElement.srcObject = null;
-  }
-
   if (peer.source) {
     peer.source.disconnect();
   }
-
   if (peer.gainNode) {
     peer.gainNode.disconnect();
   }

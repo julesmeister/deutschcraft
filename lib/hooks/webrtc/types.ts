@@ -25,13 +25,3 @@ export interface UseWebRTCAudioOptions {
 export interface UseWebRTCMediaOptions extends UseWebRTCAudioOptions {
   enableVideo?: boolean;
 }
-
-export interface PeerConnection {
-  pc: RTCPeerConnection;
-  stream: MediaStream | null;
-  retryCount: number;
-  lastRetry: number;
-}
-
-export const MAX_RETRIES = 3;
-export const RETRY_DELAY = 2000;

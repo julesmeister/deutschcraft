@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "dev:signaling": "cd signaling-worker && npx wrangler dev",
+    "deploy:signaling": "cd signaling-worker && npx wrangler deploy",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
