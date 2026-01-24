@@ -35,7 +35,9 @@ export function MinimizedPlayground() {
 
   const handleMaximize = () => {
     maximize();
-    router.push('/dashboard/playground');
+    if (session.currentRoom?.roomId) {
+      router.push(`/dashboard/playground/${session.currentRoom.roomId}`);
+    }
   };
 
   const handleLeave = async () => {
