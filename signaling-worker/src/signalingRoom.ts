@@ -18,6 +18,9 @@ export class SignalingRoom implements DurableObject {
 
     this.ctx.acceptWebSocket(server);
 
+    const existingSockets = this.ctx.getWebSockets();
+    console.log(`[DO] new WebSocket connection | total sockets now: ${existingSockets.length}`);
+
     return new Response(null, { status: 101, webSocket: client });
   }
 
@@ -28,8 +31,12 @@ export class SignalingRoom implements DurableObject {
     try {
       msg = JSON.parse(rawMessage);
     } catch {
+      console.log('[DO] failed to parse message:', rawMessage.slice(0, 100));
       return;
     }
+
+    const attachment = ws.deserializeAttachment() as PeerAttachment | null;
+    console.log(`[DO] ← ${msg.type} from ${attachment?.peerId || '(unregistered)'}`);
 
     switch (msg.type) {
       case 'join':
@@ -51,10 +58,14 @@ export class SignalingRoom implements DurableObject {
   }
 
   async webSocketClose(ws: WebSocket, _code: number, _reason: string, _wasClean: boolean): Promise<void> {
+    const attachment = ws.deserializeAttachment() as PeerAttachment | null;
+    console.log(`[DO] webSocketClose: ${attachment?.peerId || '(unknown)'} code=${_code} reason=${_reason}`);
     this.handleLeave(ws);
   }
 
   async webSocketError(ws: WebSocket, _error: unknown): Promise<void> {
+    const attachment = ws.deserializeAttachment() as PeerAttachment | null;
+    console.log(`[DO] webSocketError: ${attachment?.peerId || '(unknown)'}`, _error);
     this.handleLeave(ws);
   }
 
@@ -64,11 +75,20 @@ export class SignalingRoom implements DurableObject {
 
     // Get all existing peers
     const allSockets = this.ctx.getWebSockets();
+    const joinedPeers = allSockets.filter(s => {
+      if (s === ws) return false;
+      const a = s.deserializeAttachment() as PeerAttachment | null;
+      return a !== null;
+    });
+
+    console.log(`[DO] join: ${peerId} (${userName}) | existing peers: ${joinedPeers.length} | total sockets: ${allSockets.length}`);
+
     for (const other of allSockets) {
       if (other === ws) continue;
       const attachment = other.deserializeAttachment() as PeerAttachment | null;
       if (!attachment) continue;
 
+      console.log(`[DO]   → addPeer to ${peerId}: knows about ${attachment.peerId} (offer:true)`);
       // Tell the new joiner about existing peer (new joiner creates offer)
       this.send(ws, {
         type: 'addPeer',
@@ -77,6 +97,7 @@ export class SignalingRoom implements DurableObject {
         shouldCreateOffer: true,
       });
 
+      console.log(`[DO]   → addPeer to ${attachment.peerId}: knows about ${peerId} (offer:false)`);
       // Tell existing peer about new joiner (existing peer waits for offer)
       this.send(other, {
         type: 'addPeer',
@@ -89,11 +110,12 @@ export class SignalingRoom implements DurableObject {
 
   private handleRelaySDP(ws: WebSocket, targetPeerId: string, sessionDescription: Record<string, unknown>): void {
     const sender = ws.deserializeAttachment() as PeerAttachment | null;
-    if (!sender) return;
+    if (!sender) { console.log('[DO] relaySDP: no sender attachment'); return; }
 
     const target = this.findPeerSocket(targetPeerId);
-    if (!target) return;
+    if (!target) { console.log(`[DO] relaySDP: target ${targetPeerId} not found`); return; }
 
+    console.log(`[DO] relay SDP ${(sessionDescription as {type?: string}).type || '?'}: ${sender.peerId} → ${targetPeerId}`);
     this.send(target, {
       type: 'sessionDescription',
       peerId: sender.peerId,
@@ -133,11 +155,14 @@ export class SignalingRoom implements DurableObject {
     const attachment = ws.deserializeAttachment() as PeerAttachment | null;
     if (!attachment) return;
 
+    console.log(`[DO] leave: ${attachment.peerId} (${attachment.userName})`);
+
     // Clear attachment so we don't process this peer again
     ws.serializeAttachment(null);
 
     // Notify remaining peers
     const allSockets = this.ctx.getWebSockets();
+    let notified = 0;
     for (const other of allSockets) {
       if (other === ws) continue;
       const otherAttachment = other.deserializeAttachment() as PeerAttachment | null;
@@ -147,7 +172,9 @@ export class SignalingRoom implements DurableObject {
         type: 'removePeer',
         peerId: attachment.peerId,
       });
+      notified++;
     }
+    console.log(`[DO]   notified ${notified} remaining peers`);
 
     try { ws.close(1000, 'leaving'); } catch { /* already closed */ }
   }

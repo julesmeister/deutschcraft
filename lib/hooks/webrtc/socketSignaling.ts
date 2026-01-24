@@ -31,6 +31,7 @@ let reconnectTimer: ReturnType<typeof setTimeout> | null = null;
 let reconnectAttempt = 0;
 let intentionalClose = false;
 let pendingMessages: string[] = [];
+let joinedInfo: { peerId: string; userName: string } | null = null;
 
 function getReconnectDelay(): number {
   const delay = Math.min(1000 * Math.pow(2, reconnectAttempt), 10000);
@@ -51,6 +52,13 @@ function connectWebSocket(roomId: string): void {
   socket.onopen = () => {
     reconnectAttempt = 0;
     console.log('[SIG] WebSocket connected to', url);
+
+    // Re-send join on reconnection (DO lost peer state when socket dropped)
+    if (joinedInfo && ws === socket) {
+      console.log('[SIG] re-joining after reconnect as', joinedInfo.peerId, joinedInfo.userName);
+      socket.send(JSON.stringify({ type: 'join', peerId: joinedInfo.peerId, userName: joinedInfo.userName }));
+    }
+
     // Flush any messages queued while connecting
     if (pendingMessages.length > 0 && ws === socket) {
       console.log('[SIG] flushing', pendingMessages.length, 'queued messages');
@@ -136,6 +144,7 @@ export function createSignalingSocket(roomId: string): SignalingSocket {
     disconnect() {
       intentionalClose = true;
       currentRoomId = null;
+      joinedInfo = null;
       pendingMessages = [];
       if (reconnectTimer) {
         clearTimeout(reconnectTimer);
@@ -150,10 +159,12 @@ export function createSignalingSocket(roomId: string): SignalingSocket {
 }
 
 export function joinRoom(socket: SignalingSocket, roomId: string, peerId: string, userName: string): void {
+  joinedInfo = { peerId, userName };
   send({ type: 'join', peerId, userName });
 }
 
 export function leaveRoom(socket: SignalingSocket): void {
+  joinedInfo = null;
   send({ type: 'leave' });
 }
 

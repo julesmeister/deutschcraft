@@ -11,15 +11,26 @@ export async function getAudioStream(): Promise<MediaStream> {
     sampleRate: 48000,
   };
 
+  console.log('[MIC] requesting audio stream...');
   try {
-    return await navigator.mediaDevices.getUserMedia({ audio: constraints, video: false });
-  } catch {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: constraints, video: false });
+    const track = stream.getAudioTracks()[0];
+    console.log('[MIC] got audio track:', track.label, 'enabled:', track.enabled, 'readyState:', track.readyState, 'muted:', track.muted);
+    return stream;
+  } catch (err) {
+    console.warn('[MIC] advanced constraints failed, retrying basic...', err);
     await new Promise(resolve => setTimeout(resolve, 500));
     try {
-      return await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
-    } catch {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+      const track = stream.getAudioTracks()[0];
+      console.log('[MIC] got audio track (basic):', track.label, 'enabled:', track.enabled, 'readyState:', track.readyState);
+      return stream;
+    } catch (err2) {
+      console.warn('[MIC] retry 1 failed, final attempt...', err2);
       await new Promise(resolve => setTimeout(resolve, 500));
-      return await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+      console.log('[MIC] got audio track (final):', stream.getAudioTracks()[0]?.label);
+      return stream;
     }
   }
 }
@@ -32,17 +43,26 @@ export async function getVideoStream(): Promise<MediaStream> {
     frameRate: { ideal: 30 },
   };
 
+  console.log('[CAM] requesting video stream...');
   try {
-    return await navigator.mediaDevices.getUserMedia({ audio: false, video: constraints });
-  } catch {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: false, video: constraints });
+    const track = stream.getVideoTracks()[0];
+    console.log('[CAM] got video track:', track.label, 'enabled:', track.enabled, 'readyState:', track.readyState);
+    return stream;
+  } catch (err) {
+    console.warn('[CAM] HD constraints failed, retrying lower...', err);
     await new Promise(resolve => setTimeout(resolve, 500));
     try {
-      return await navigator.mediaDevices.getUserMedia({
+      const stream = await navigator.mediaDevices.getUserMedia({
         audio: false,
         video: { width: { ideal: 640 }, height: { ideal: 480 }, frameRate: { ideal: 30 } },
       });
+      console.log('[CAM] got video track (480p):', stream.getVideoTracks()[0]?.label);
+      return stream;
     } catch {
-      return await navigator.mediaDevices.getUserMedia({ audio: false, video: true });
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: false, video: true });
+      console.log('[CAM] got video track (basic):', stream.getVideoTracks()[0]?.label);
+      return stream;
     }
   }
 }
