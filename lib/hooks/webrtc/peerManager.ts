@@ -47,16 +47,20 @@ export function createPeerConnection({
   const audioTrack = localAudioStream?.getAudioTracks()[0];
   if (audioTrack && localAudioStream) {
     pc.addTrack(audioTrack, localAudioStream);
+    console.log('[RTC]', remoteUserId, '| added local audio track', audioTrack.id, 'enabled:', audioTrack.enabled);
   } else {
     pc.addTransceiver('audio', { direction: 'recvonly' });
+    console.log('[RTC]', remoteUserId, '| no local audio — added recvonly transceiver');
   }
 
   // Add video track with its own stream
   const videoTrack = localVideoStream?.getVideoTracks()[0];
   if (videoTrack && localVideoStream) {
     pc.addTrack(videoTrack, localVideoStream);
+    console.log('[RTC]', remoteUserId, '| added local video track', videoTrack.id, 'enabled:', videoTrack.enabled);
   } else {
     pc.addTransceiver('video', { direction: 'recvonly' });
+    console.log('[RTC]', remoteUserId, '| no local video — added recvonly transceiver');
   }
 
   // ICE candidates → callback (relay via socket)
@@ -69,8 +73,8 @@ export function createPeerConnection({
   // Incoming tracks - split by kind
   pc.ontrack = (event) => {
     const track = event.track;
-    // Use event.streams[0] if available, otherwise create a new stream for the track
     const stream = event.streams[0] || new MediaStream([track]);
+    console.log('[RTC]', remoteUserId, '| ontrack:', track.kind, 'id:', track.id, 'enabled:', track.enabled, 'muted:', track.muted);
 
     if (track.kind === 'audio') {
       onAudioTrack(remoteUserId, stream);
@@ -81,6 +85,7 @@ export function createPeerConnection({
 
   // Connection state
   pc.onconnectionstatechange = () => {
+    console.log('[RTC]', remoteUserId, '| connection:', pc.connectionState);
     onConnectionStateChange(remoteUserId, pc.connectionState);
   };
 

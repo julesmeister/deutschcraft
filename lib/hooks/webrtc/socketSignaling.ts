@@ -30,6 +30,7 @@ let currentRoomId: string | null = null;
 let reconnectTimer: ReturnType<typeof setTimeout> | null = null;
 let reconnectAttempt = 0;
 let intentionalClose = false;
+let pendingMessages: string[] = [];
 
 function getReconnectDelay(): number {
   const delay = Math.min(1000 * Math.pow(2, reconnectAttempt), 10000);
@@ -44,13 +45,23 @@ function connectWebSocket(roomId: string): void {
 
   const baseUrl = SIGNALING_URL.replace(/\/$/, '');
   const url = `${baseUrl}/room/${roomId}`;
-  ws = new WebSocket(url);
+  const socket = new WebSocket(url);
+  ws = socket;
 
-  ws.onopen = () => {
+  socket.onopen = () => {
     reconnectAttempt = 0;
+    console.log('[SIG] WebSocket connected to', url);
+    // Flush any messages queued while connecting
+    if (pendingMessages.length > 0 && ws === socket) {
+      console.log('[SIG] flushing', pendingMessages.length, 'queued messages');
+      for (const raw of pendingMessages) {
+        socket.send(raw);
+      }
+      pendingMessages = [];
+    }
   };
 
-  ws.onmessage = (event) => {
+  socket.onmessage = (event) => {
     if (!callbacks) return;
 
     let msg;
@@ -59,6 +70,8 @@ function connectWebSocket(roomId: string): void {
     } catch {
       return;
     }
+
+    console.log('[SIG] ←', msg.type, msg.peerId || '');
 
     switch (msg.type) {
       case 'addPeer':
@@ -79,21 +92,32 @@ function connectWebSocket(roomId: string): void {
     }
   };
 
-  ws.onclose = () => {
-    ws = null;
-    if (!intentionalClose && currentRoomId) {
-      reconnectTimer = setTimeout(() => connectWebSocket(currentRoomId!), getReconnectDelay());
+  socket.onclose = (e) => {
+    console.log('[SIG] WebSocket closed', e.code, e.reason);
+    // Only clear if this is still the current connection
+    if (ws === socket) {
+      ws = null;
+      if (!intentionalClose && currentRoomId) {
+        reconnectTimer = setTimeout(() => connectWebSocket(currentRoomId!), getReconnectDelay());
+      }
     }
   };
 
-  ws.onerror = () => {
-    // onclose will fire after onerror
+  socket.onerror = () => {
+    console.log('[SIG] WebSocket error');
   };
 }
 
-function send(msg: object): void {
+function send(msg: Record<string, unknown>): void {
+  const raw = JSON.stringify(msg);
   if (ws && ws.readyState === WebSocket.OPEN) {
-    ws.send(JSON.stringify(msg));
+    console.log('[SIG] →', msg.type, msg.peerId || '');
+    ws.send(raw);
+  } else if (ws && ws.readyState === WebSocket.CONNECTING) {
+    console.log('[SIG] queuing (connecting):', msg.type, msg.peerId || '');
+    pendingMessages.push(raw);
+  } else {
+    console.warn('[SIG] send failed — no ws or closed, state:', ws?.readyState);
   }
 }
 
@@ -112,6 +136,7 @@ export function createSignalingSocket(roomId: string): SignalingSocket {
     disconnect() {
       intentionalClose = true;
       currentRoomId = null;
+      pendingMessages = [];
       if (reconnectTimer) {
         clearTimeout(reconnectTimer);
         reconnectTimer = null;

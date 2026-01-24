@@ -117,12 +117,12 @@ export function useWebRTCMedia({
         }
       },
       onIceCandidate: (peerId, candidate) => {
-        if (socketRef.current?.connected) {
+        if (socketRef.current) {
           relayICE(socketRef.current, peerId, candidate);
         }
       },
       onNegotiationNeeded: (peerId, offer) => {
-        if (socketRef.current?.connected) {
+        if (socketRef.current) {
           relaySDP(socketRef.current, peerId, offer);
         }
       },
@@ -142,6 +142,7 @@ export function useWebRTCMedia({
 
   // Signaling event handlers
   const handleAddPeer = useCallback(async (peerId: string, peerName: string, shouldCreateOffer: boolean) => {
+    console.log('[MEDIA] addPeer', peerId, peerName, 'offer:', shouldCreateOffer);
     if (peerConnectionsRef.current.has(peerId)) return;
 
     // Add to participants
@@ -163,11 +164,12 @@ export function useWebRTCMedia({
       try {
         const offer = await pc.createOffer();
         await pc.setLocalDescription(offer);
-        if (socketRef.current?.connected) {
+        console.log('[MEDIA] created offer for', peerId, '→ sending SDP');
+        if (socketRef.current) {
           relaySDP(socketRef.current, peerId, offer);
         }
       } catch (error) {
-        console.error('[WebRTC] Failed to create offer for', peerId, error);
+        console.error('[MEDIA] Failed to create offer for', peerId, error);
       }
     }
   }, [createPeer]);
@@ -182,10 +184,10 @@ export function useWebRTCMedia({
   }, [removePeerFromState]);
 
   const handleSessionDescription = useCallback(async (peerId: string, sdp: RTCSessionDescriptionInit) => {
+    console.log('[MEDIA] received SDP', sdp.type, 'from', peerId);
     let peer = peerConnectionsRef.current.get(peerId);
 
     if (!peer) {
-      // Create peer if we don't have one (answerer side)
       createPeer(peerId);
       peer = peerConnectionsRef.current.get(peerId);
     }
@@ -194,16 +196,18 @@ export function useWebRTCMedia({
 
     try {
       await peer.pc.setRemoteDescription(new RTCSessionDescription(sdp));
+      console.log('[MEDIA] setRemoteDescription OK for', peerId);
 
       if (sdp.type === 'offer') {
         const answer = await peer.pc.createAnswer();
         await peer.pc.setLocalDescription(answer);
-        if (socketRef.current?.connected) {
+        console.log('[MEDIA] created answer for', peerId, '→ sending SDP');
+        if (socketRef.current) {
           relaySDP(socketRef.current, peerId, answer);
         }
       }
     } catch (error) {
-      console.error('[WebRTC] SDP handling failed for', peerId, error);
+      console.error('[MEDIA] SDP handling failed for', peerId, error);
     }
   }, [createPeer]);
 

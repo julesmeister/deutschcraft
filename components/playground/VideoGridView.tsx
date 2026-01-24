@@ -99,6 +99,9 @@ export function VideoGridView({
         const currentIds = current?.getTracks().map((t) => t.id).sort().join(',') || '';
         const newIds = combined.getTracks().map((t) => t.id).sort().join(',');
         if (currentIds !== newIds) {
+          const aTracks = combined.getAudioTracks().length;
+          const vTracks = combined.getVideoTracks().length;
+          console.log('[VIDEO]', participant.userId, '| attaching stream:', aTracks, 'audio +', vTracks, 'video tracks');
           videoElement.srcObject = combined;
           videoElement.play().catch(() => {
             // Retry on next user interaction if autoplay blocked

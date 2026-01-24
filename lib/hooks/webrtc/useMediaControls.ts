@@ -39,7 +39,7 @@ export function useMediaControls({
     setIsMuted(newMuted);
 
     // Notify all peers via socket
-    if (socketRef.current?.connected) {
+    if (socketRef.current) {
       peerConnectionsRef.current.forEach((_, peerId) => {
         sendPeerStatus(socketRef.current!, peerId, { isMuted: newMuted });
       });
@@ -71,7 +71,7 @@ export function useMediaControls({
 
         setIsVideoActive(true);
 
-        if (socketRef.current?.connected) {
+        if (socketRef.current) {
           peerConnectionsRef.current.forEach((_, peerId) => {
             sendPeerStatus(socketRef.current!, peerId, { isVideoEnabled: true });
           });
@@ -105,7 +105,7 @@ export function useMediaControls({
 
     setIsVideoActive(newVideoState);
 
-    if (socketRef.current?.connected) {
+    if (socketRef.current) {
       peerConnectionsRef.current.forEach((_, peerId) => {
         sendPeerStatus(socketRef.current!, peerId, { isVideoEnabled: newVideoState });
       });

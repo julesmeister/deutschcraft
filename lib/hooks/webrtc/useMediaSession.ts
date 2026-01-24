@@ -65,11 +65,12 @@ export function useMediaSession({
       isMediaActiveRef.current = true;
 
       // Join signaling room (triggers addPeer events)
-      if (socketRef.current?.connected) {
+      if (socketRef.current) {
+        console.log('[SESSION] joining room', roomId, 'as', userId, userName);
         joinRoom(socketRef.current, roomId, userId, userName);
       }
     } catch (error) {
-      console.error('[Media Session] Failed to start voice:', error);
+      console.error('[SESSION] Failed to start voice:', error);
       setIsVoiceActive(false);
       onError?.(error as Error);
       throw error;
@@ -106,11 +107,12 @@ export function useMediaSession({
       setIsMuted(false);
       isMediaActiveRef.current = true;
 
-      if (socketRef.current?.connected) {
+      if (socketRef.current) {
+        console.log('[SESSION] joining room (video)', roomId, 'as', userId, userName);
         joinRoom(socketRef.current, roomId, userId, userName);
       }
     } catch (error) {
-      console.error('[Media Session] Failed to start video:', error);
+      console.error('[SESSION] Failed to start video:', error);
       setIsVoiceActive(false);
       setIsVideoActive(false);
       onError?.(error as Error);
@@ -126,7 +128,7 @@ export function useMediaSession({
     localVideoStreamRef.current = null;
 
     // Leave signaling room
-    if (socketRef.current?.connected) {
+    if (socketRef.current) {
       leaveRoom(socketRef.current);
     }
 
