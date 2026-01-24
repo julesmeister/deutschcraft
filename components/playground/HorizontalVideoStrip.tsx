@@ -147,7 +147,7 @@ export function HorizontalVideoStrip({
                     muted
                     playsInline
                     disablePictureInPicture
-                    className={`w-full h-full object-cover ${isLocal ? 'scale-x-[-1]' : ''}`}
+                    className="w-full h-full object-cover scale-x-[-1]"
                   />
                 ) : (
                   <div className={`w-full h-full flex items-center justify-center ${
