@@ -186,7 +186,7 @@ export function useWebRTCMedia({
   }, [removePeerFromState]);
 
   const handleSessionDescription = useCallback(async (peerId: string, sdp: RTCSessionDescriptionInit) => {
-    console.log('[MEDIA] received SDP', sdp.type, 'from', peerId);
+    console.log('[MEDIA] received SDP', sdp.type, 'from', peerId, 'current state:', peerConnectionsRef.current.get(peerId)?.pc.signalingState);
     let peer = peerConnectionsRef.current.get(peerId);
 
     if (!peer) {
@@ -195,6 +195,19 @@ export function useWebRTCMedia({
     }
 
     if (!peer) return;
+
+    const signalingState = peer.pc.signalingState;
+
+    // Check if we can accept this SDP based on current state
+    if (sdp.type === 'answer' && signalingState !== 'have-local-offer') {
+      console.log('[MEDIA] Ignoring answer - not in have-local-offer state (current:', signalingState, ')');
+      return;
+    }
+
+    if (sdp.type === 'offer' && signalingState !== 'stable') {
+      console.log('[MEDIA] Ignoring offer - not in stable state (current:', signalingState, ')');
+      return;
+    }
 
     try {
       await peer.pc.setRemoteDescription(new RTCSessionDescription(sdp));
