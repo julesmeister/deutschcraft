@@ -7,7 +7,8 @@
 
 import { useState, useMemo } from "react";
 import { ActionButtonIcons } from "@/components/ui/ActionButton";
-import { useExercises } from "@/lib/hooks/useExercises";
+import { useExercisesWithOverrides } from "@/lib/hooks/useExercisesWithOverrides";
+import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { CEFRLevel } from "@/lib/models/cefr";
 import type { Exercise, Lesson } from "@/lib/models/exercises";
 
@@ -33,13 +34,20 @@ export function ExerciseSelector({
   onSelectExercise,
   currentExerciseId,
 }: ExerciseSelectorProps) {
+  const { session } = useFirebaseAuth();
   const [selectedLevel, setSelectedLevel] = useState<CEFRLevel>(CEFRLevel.B1);
   const [selectedBookType, setSelectedBookType] = useState<"AB" | "KB">("AB");
   const [selectedLesson, setSelectedLesson] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [isSelecting, setIsSelecting] = useState(false);
 
-  const { lessons, isLoading, error } = useExercises(selectedLevel, selectedBookType);
+  // Use exercises with teacher overrides to match Answer Hub
+  const { lessons, isLoading, error } = useExercisesWithOverrides(
+    selectedLevel,
+    selectedBookType,
+    undefined, // No specific lesson filter
+    session?.user?.email || null
+  );
 
   // Filter exercises by search query
   const filteredLessons = useMemo(() => {

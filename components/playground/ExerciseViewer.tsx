@@ -8,7 +8,7 @@
 
 import { useMemo, useState } from "react";
 import { Youtube, Link as LinkIcon, ExternalLink, X } from "lucide-react";
-import { useExercises } from "@/lib/hooks/useExercises";
+import { useExercisesWithOverrides } from "@/lib/hooks/useExercisesWithOverrides";
 import { CEFRLevel } from "@/lib/models/cefr";
 import { AudioPlayer } from "@/components/audio/AudioPlayer";
 import { PDFViewer } from "@/components/playground/PDFViewer";
@@ -43,7 +43,14 @@ export function ExerciseViewer({
   const isTeacher = userRole === "teacher";
 
   const [answersRefreshTrigger, setAnswersRefreshTrigger] = useState(0);
-  const { lessons, isLoading, error } = useExercises(level as CEFRLevel, bookType);
+
+  // Use exercises with teacher overrides to match Answer Hub
+  const { lessons, isLoading, error } = useExercisesWithOverrides(
+    level as CEFRLevel,
+    bookType,
+    lessonNumber,
+    session?.user?.email || null
+  );
 
   // Find the exercise in the lessons
   const exercise = useMemo(() => {
