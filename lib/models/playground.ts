@@ -18,6 +18,11 @@ export interface PlaygroundRoom {
   currentMaterialTitle?: string;
   currentMaterialUrl?: string;
   currentMaterialType?: 'pdf' | 'audio'; // Type of material currently displayed
+  currentExerciseId?: string; // Exercise being displayed in the room
+  currentExerciseNumber?: string; // Exercise number for display
+  currentExerciseLevel?: string; // Level (B1, A2, etc.)
+  currentExerciseLessonNumber?: number; // Lesson number
+  currentExerciseBookType?: 'AB' | 'KB'; // Arbeitsbuch or Kursbuch
 }
 
 export interface PlaygroundParticipant {

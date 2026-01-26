@@ -22,6 +22,7 @@ import {
   getRoomParticipants,
   joinPlaygroundRoom,
   setCurrentMaterial,
+  setCurrentExercise,
 } from "@/lib/services/playgroundService";
 import type {
   PlaygroundRoom,
@@ -291,6 +292,33 @@ export default function PlaygroundRoomPage({
     }
   };
 
+  const handleSetCurrentExercise = async (
+    exerciseId: string | null,
+    exerciseNumber: string | null,
+    level: string | null,
+    lessonNumber: number | null,
+    bookType: "AB" | "KB" | null,
+  ) => {
+    if (!currentRoom) return;
+    try {
+      await setCurrentExercise(
+        currentRoom.roomId,
+        exerciseId,
+        exerciseNumber,
+        level,
+        lessonNumber,
+        bookType,
+      );
+    } catch (error) {
+      console.error("[Room] Error setting exercise:", error);
+      setDialogState({
+        isOpen: true,
+        title: "Error",
+        message: "Failed to set exercise",
+      });
+    }
+  };
+
   if (!session || userLoading || isInitializing || !currentRoom) {
     return (
       <CatLoader
@@ -364,6 +392,9 @@ export default function PlaygroundRoomPage({
         }
         onSetCurrentMaterial={
           userRole === "teacher" ? handleSetCurrentMaterial : undefined
+        }
+        onSetCurrentExercise={
+          userRole === "teacher" ? handleSetCurrentExercise : undefined
         }
         onMinimize={handleMinimize}
         onCloseDialog={() => setDialogState({ ...dialogState, isOpen: false })}

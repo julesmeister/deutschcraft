@@ -217,6 +217,24 @@ export async function setCurrentMaterial(
   });
 }
 
+export async function setCurrentExercise(
+  roomId: string,
+  exerciseId: string | null,
+  exerciseNumber: string | null,
+  level: string | null,
+  lessonNumber: number | null,
+  bookType: "AB" | "KB" | null
+): Promise<void> {
+  const roomRef = doc(db, COLLECTIONS.ROOMS, roomId);
+  await updateDoc(roomRef, {
+    currentExerciseId: exerciseId || null,
+    currentExerciseNumber: exerciseNumber || null,
+    currentExerciseLevel: level || null,
+    currentExerciseLessonNumber: lessonNumber || null,
+    currentExerciseBookType: bookType || null,
+  });
+}
+
 export async function getPlaygroundRoom(
   roomId: string
 ): Promise<PlaygroundRoom | null> {

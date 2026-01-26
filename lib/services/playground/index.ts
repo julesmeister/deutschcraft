@@ -14,6 +14,7 @@ export {
   endPlaygroundRoom,
   togglePublicWriting,
   setCurrentMaterial,
+  setCurrentExercise,
   getPlaygroundRoom,
   getActiveRooms,
   getRoomHistory,

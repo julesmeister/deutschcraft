@@ -7,19 +7,15 @@
 
 import { useState, useEffect } from "react";
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
-import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
 import { AlertDialog } from "@/components/ui/Dialog";
-import {
-  VideoPanel,
-  type VideoLayout,
-} from "@/components/playground/VideoPanel";
+import { VideoPanel, type VideoLayout } from "@/components/playground/VideoPanel";
 import { HorizontalVideoStrip } from "@/components/playground/HorizontalVideoStrip";
-import { WritingBoard } from "@/components/playground/WritingBoard";
 import { ParticipantsList } from "@/components/playground/ParticipantsList";
 import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
 import { MaterialSelector } from "@/components/playground/MaterialSelector";
-import { PDFViewer } from "@/components/playground/PDFViewer";
-import { AudioPlayer } from "@/components/audio/AudioPlayer";
+import { ExerciseSelector } from "@/components/playground/ExerciseSelector";
+import { PlaygroundRoomHeaderActions } from "@/components/playground/PlaygroundRoomHeaderActions";
+import { PlaygroundRoomContent } from "@/components/playground/PlaygroundRoomContent";
 import { formatDuration } from "@/lib/utils/dateHelpers";
 import type {
   PlaygroundRoom as PlaygroundRoomType,
@@ -42,8 +38,6 @@ interface PlaygroundRoomProps {
   userId: string;
   userName: string;
   userRole: "teacher" | "student";
-
-  // Media chat state
   isVoiceActive: boolean;
   isVideoActive: boolean;
   isMuted: boolean;
@@ -53,15 +47,7 @@ interface PlaygroundRoomProps {
   videoStreams: Map<string, MediaStream>;
   audioAnalysers: Map<string, AnalyserNode>;
   audioElements: Map<string, HTMLAudioElement>;
-
-  // Dialog state
-  dialogState: {
-    isOpen: boolean;
-    title: string;
-    message: string;
-  };
-
-  // Handlers
+  dialogState: { isOpen: boolean; title: string; message: string };
   onLeaveRoom: () => Promise<void>;
   onEndRoom: () => Promise<void>;
   onStartVoice: () => Promise<void>;
@@ -70,16 +56,20 @@ interface PlaygroundRoomProps {
   onToggleMute: () => Promise<void>;
   onToggleVideo: () => Promise<void>;
   onSaveWriting: (content: string) => Promise<void>;
-  onToggleWritingVisibility: (
-    writingId: string,
-    isPublic: boolean
-  ) => Promise<void>;
+  onToggleWritingVisibility: (writingId: string, isPublic: boolean) => Promise<void>;
   onToggleRoomPublicWriting?: (isPublic: boolean) => Promise<void>;
   onSetCurrentMaterial?: (
     materialId: string | null,
     materialTitle: string | null,
     materialUrl: string | null,
     materialType?: "pdf" | "audio" | null
+  ) => Promise<void>;
+  onSetCurrentExercise?: (
+    exerciseId: string | null,
+    exerciseNumber: string | null,
+    level: string | null,
+    lessonNumber: number | null,
+    bookType: "AB" | "KB" | null
   ) => Promise<void>;
   onMinimize?: () => void;
   onCloseDialog: () => void;
@@ -114,43 +104,28 @@ export function PlaygroundRoom({
   onToggleWritingVisibility,
   onToggleRoomPublicWriting,
   onSetCurrentMaterial,
+  onSetCurrentExercise,
   onMinimize,
   onCloseDialog,
 }: PlaygroundRoomProps) {
-  // Only the host (room creator) can end the room
   const isHost = userId === currentRoom.hostId;
-
-  // Video layout state
   const [videoLayout, setVideoLayout] = useState<VideoLayout>("teacher");
   const [duration, setDuration] = useState<string>("00:00");
   const [formattedDate, setFormattedDate] = useState<string>("");
   const [isMaterialSelectorOpen, setIsMaterialSelectorOpen] = useState(false);
+  const [isExerciseSelectorOpen, setIsExerciseSelectorOpen] = useState(false);
 
   useEffect(() => {
     if (!currentRoom?.createdAt) return;
-
-    // Convert to Date object if it's not already
-    const startTime =
-      currentRoom.createdAt instanceof Date
-        ? currentRoom.createdAt
-        : new Date(currentRoom.createdAt);
-
-    // Format date: e.g. "Oct 24, 2024"
+    const startTime = currentRoom.createdAt instanceof Date
+      ? currentRoom.createdAt
+      : new Date(currentRoom.createdAt);
     setFormattedDate(
-      startTime.toLocaleDateString("en-US", {
-        month: "short",
-        day: "numeric",
-        year: "numeric",
-      })
+      startTime.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
     );
-
-    const updateDuration = () => {
-      setDuration(formatDuration(startTime));
-    };
-
+    const updateDuration = () => setDuration(formatDuration(startTime));
     updateDuration();
     const interval = setInterval(updateDuration, 1000);
-
     return () => clearInterval(interval);
   }, [currentRoom?.createdAt]);
 
@@ -166,9 +141,23 @@ export function PlaygroundRoom({
   };
 
   const handleCloseMaterial = async () => {
-    if (onSetCurrentMaterial) {
-      await onSetCurrentMaterial(null, null, null);
+    if (onSetCurrentMaterial) await onSetCurrentMaterial(null, null, null);
+  };
+
+  const handleSelectExercise = async (
+    exerciseId: string,
+    exerciseNumber: string,
+    level: string,
+    lessonNumber: number,
+    bookType: "AB" | "KB"
+  ) => {
+    if (onSetCurrentExercise) {
+      await onSetCurrentExercise(exerciseId, exerciseNumber, level, lessonNumber, bookType);
     }
+  };
+
+  const handleCloseExercise = async () => {
+    if (onSetCurrentExercise) await onSetCurrentExercise(null, null, null, null, null);
   };
 
   return (
@@ -178,68 +167,16 @@ export function PlaygroundRoom({
         subtitle={`${formattedDate} • ${participants.length} ${
           participants.length === 1 ? "participant" : "participants"
         } • Host: ${currentRoom.hostName} • ${duration}`}
-        backButton={{
-          label: "Leave Room",
-          onClick: onLeaveRoom,
-        }}
+        backButton={{ label: "Leave Room", onClick: onLeaveRoom }}
         actions={
-          <div className="flex items-center gap-2">
-            {userRole === "teacher" && onSetCurrentMaterial && (
-              <ActionButton
-                onClick={() => setIsMaterialSelectorOpen(true)}
-                variant="cyan"
-                icon={
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                    />
-                  </svg>
-                }
-              >
-                Materials
-              </ActionButton>
-            )}
-            {onMinimize && (
-              <ActionButton
-                onClick={onMinimize}
-                variant="gray"
-                icon={
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                }
-              >
-                Minimize
-              </ActionButton>
-            )}
-            {isHost && (
-              <ActionButton
-                onClick={onEndRoom}
-                variant="red"
-                icon={<ActionButtonIcons.Close />}
-              >
-                End
-              </ActionButton>
-            )}
-          </div>
+          <PlaygroundRoomHeaderActions
+            userRole={userRole}
+            isHost={isHost}
+            onOpenExerciseSelector={onSetCurrentExercise ? () => setIsExerciseSelectorOpen(true) : undefined}
+            onOpenMaterialSelector={onSetCurrentMaterial ? () => setIsMaterialSelectorOpen(true) : undefined}
+            onMinimize={onMinimize}
+            onEndRoom={onEndRoom}
+          />
         }
       />
 
@@ -247,7 +184,6 @@ export function PlaygroundRoom({
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Left: Video Panel */}
           <div className="lg:col-span-1">
-            {/* Horizontal Video Strip on Top (if top-left layout) */}
             {isVoiceActive && videoLayout === "top-left" && (
               <div className="mb-4">
                 <HorizontalVideoStrip
@@ -261,7 +197,6 @@ export function PlaygroundRoom({
                 />
               </div>
             )}
-
             <VideoPanel
               isVoiceActive={isVoiceActive}
               isVideoActive={isVideoActive}
@@ -282,8 +217,6 @@ export function PlaygroundRoom({
               onToggleVideo={onToggleVideo}
               onLayoutChange={setVideoLayout}
             />
-
-            {/* Participants List */}
             <div className="mt-6 bg-white border border-gray-200 p-4">
               <h3 className="text-lg font-semibold text-neutral-900 mb-3">
                 Participants ({participants.length})
@@ -299,9 +232,8 @@ export function PlaygroundRoom({
             </div>
           </div>
 
-          {/* Right: Writing Board and PDF Viewer */}
+          {/* Right: Content Panel */}
           <div className="lg:col-span-2 space-y-6">
-            {/* Horizontal Video Strip on Top (if top-right layout) */}
             {isVoiceActive && videoLayout === "top-right" && (
               <div className="mb-4">
                 <HorizontalVideoStrip
@@ -315,42 +247,17 @@ export function PlaygroundRoom({
                 />
               </div>
             )}
-
-            {/* Material Viewer (PDF or Audio - shown when material is selected) */}
-            {currentRoom.currentMaterialUrl && currentRoom.currentMaterialTitle && (
-              <div className={currentRoom.currentMaterialType === "audio" ? "" : "h-[600px]"}>
-                {currentRoom.currentMaterialType === "audio" ? (
-                  <AudioPlayer
-                    materialTitle={currentRoom.currentMaterialTitle}
-                    materialUrl={currentRoom.currentMaterialUrl}
-                    audioId={currentRoom.currentMaterialId || undefined}
-                    onClose={userRole === "teacher" ? handleCloseMaterial : undefined}
-                    showCloseButton={userRole === "teacher"}
-                  />
-                ) : (
-                  <PDFViewer
-                    materialTitle={currentRoom.currentMaterialTitle}
-                    materialUrl={currentRoom.currentMaterialUrl}
-                    onClose={userRole === "teacher" ? handleCloseMaterial : undefined}
-                    showCloseButton={userRole === "teacher"}
-                  />
-                )}
-              </div>
-            )}
-
-            {/* Writing Board */}
-            <WritingBoard
+            <PlaygroundRoomContent
+              currentRoom={currentRoom}
               writings={writings}
-              currentUserId={userId}
-              currentUserRole={userRole}
               myWriting={myWriting}
-              isRoomPublicWriting={currentRoom.isPublicWriting}
-              hostId={currentRoom.hostId}
+              userId={userId}
+              userRole={userRole}
               onSaveWriting={onSaveWriting}
               onToggleWritingVisibility={onToggleWritingVisibility}
-              onToggleRoomPublicWriting={
-                userRole === "teacher" ? onToggleRoomPublicWriting : undefined
-              }
+              onToggleRoomPublicWriting={onToggleRoomPublicWriting}
+              onCloseMaterial={handleCloseMaterial}
+              onCloseExercise={handleCloseExercise}
             />
           </div>
         </div>
@@ -363,16 +270,23 @@ export function PlaygroundRoom({
         message={dialogState.message}
       />
 
-      {/* Floating Redemittel Widget */}
       <FloatingRedemittelWidget />
 
-      {/* Material Selector (Teacher Only) */}
       {userRole === "teacher" && onSetCurrentMaterial && (
         <MaterialSelector
           isOpen={isMaterialSelectorOpen}
           onClose={() => setIsMaterialSelectorOpen(false)}
           onSelectMaterial={handleSelectMaterial}
           currentMaterialId={currentRoom.currentMaterialId}
+        />
+      )}
+
+      {userRole === "teacher" && onSetCurrentExercise && (
+        <ExerciseSelector
+          isOpen={isExerciseSelectorOpen}
+          onClose={() => setIsExerciseSelectorOpen(false)}
+          onSelectExercise={handleSelectExercise}
+          currentExerciseId={currentRoom.currentExerciseId}
         />
       )}
     </div>
