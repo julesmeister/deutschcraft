@@ -9,6 +9,8 @@ import { useState, useMemo } from "react";
 import { ActionButtonIcons } from "@/components/ui/ActionButton";
 import { useExercisesWithOverrides } from "@/lib/hooks/useExercisesWithOverrides";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
+import { useCurrentStudent } from "@/lib/hooks/useUsers";
+import { getUserInfo } from "@/lib/utils/userHelpers";
 import { CEFRLevel } from "@/lib/models/cefr";
 import type { Exercise, Lesson } from "@/lib/models/exercises";
 
@@ -35,6 +37,9 @@ export function ExerciseSelector({
   currentExerciseId,
 }: ExerciseSelectorProps) {
   const { session } = useFirebaseAuth();
+  const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
+  const { userEmail } = getUserInfo(currentUser, session);
+
   const [selectedLevel, setSelectedLevel] = useState<CEFRLevel>(CEFRLevel.B1);
   const [selectedBookType, setSelectedBookType] = useState<"AB" | "KB">("AB");
   const [selectedLesson, setSelectedLesson] = useState<number | null>(null);
@@ -42,12 +47,19 @@ export function ExerciseSelector({
   const [isSelecting, setIsSelecting] = useState(false);
 
   // Use exercises with teacher overrides to match Answer Hub
-  const { lessons, isLoading, error } = useExercisesWithOverrides(
+  const { lessons, isLoading, error, hasOverrides, overrideCount } = useExercisesWithOverrides(
     selectedLevel,
     selectedBookType,
     undefined, // No specific lesson filter
-    session?.user?.email || null
+    userEmail
   );
+
+  // Debug logging
+  if (process.env.NODE_ENV === 'development' && isOpen) {
+    console.log('[ExerciseSelector] userEmail:', userEmail);
+    console.log('[ExerciseSelector] hasOverrides:', hasOverrides, 'count:', overrideCount);
+    console.log('[ExerciseSelector] lessons count:', lessons.length);
+  }
 
   // Filter exercises by search query
   const filteredLessons = useMemo(() => {
