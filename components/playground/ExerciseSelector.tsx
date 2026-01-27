@@ -54,13 +54,6 @@ export function ExerciseSelector({
     userEmail
   );
 
-  // Debug logging
-  if (process.env.NODE_ENV === 'development' && isOpen) {
-    console.log('[ExerciseSelector] userEmail:', userEmail);
-    console.log('[ExerciseSelector] hasOverrides:', hasOverrides, 'count:', overrideCount);
-    console.log('[ExerciseSelector] lessons count:', lessons.length);
-  }
-
   // Filter exercises by search query
   const filteredLessons = useMemo(() => {
     if (!searchQuery.trim()) return lessons;

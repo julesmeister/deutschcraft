@@ -54,7 +54,7 @@ export function useAnswerSaving(
           }!`,
           "success"
         );
-        setStudentInputs({});
+        // Keep the saved values visible - don't clear inputs
         if (onAnswerSaved) {
           onAnswerSaved();
         }

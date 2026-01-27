@@ -6,12 +6,13 @@
 
 "use client";
 
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect, useMemo } from "react";
 import { ExerciseAnswer } from "@/lib/models/exercises";
 import { TeacherAnswerDisplay } from "./TeacherAnswerDisplay";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { useCurrentStudent } from "@/lib/hooks/useUsers";
 import { getUserInfo } from "@/lib/utils/userHelpers";
+import { useStudentLessonAnswers } from "@/lib/hooks/useStudentAnswers";
 import { AnswerInputRow, AnswerInputRowHandle } from "./AnswerInputRow";
 import { useAnswerSaving, useCopyForAI } from "./useAnswerSaving";
 import { ExerciseItemsSection } from "./ExerciseItemsSection";
@@ -43,9 +44,37 @@ export function AnswersList({
 
   const [isCollapsed, setIsCollapsed] = useState(!isTeacher);
   const [studentInputs, setStudentInputs] = useState<Record<string, string>>({});
+  const [hasLoadedExisting, setHasLoadedExisting] = useState(false);
 
   // Refs for navigation
   const inputRefs = useRef<Map<string, AnswerInputRowHandle>>(new Map());
+
+  // Memoize exerciseIds array to prevent infinite loops
+  const exerciseIds = useMemo(() => [exerciseId], [exerciseId]);
+
+  // Fetch student's existing answers for this exercise
+  const { answers: existingAnswers, isLoading: isLoadingExisting } = useStudentLessonAnswers(
+    isTeacher ? undefined : userId || undefined,
+    exerciseIds
+  );
+
+  // Reset when exercise changes
+  useEffect(() => {
+    setHasLoadedExisting(false);
+    setStudentInputs({});
+  }, [exerciseId]);
+
+  // Pre-populate input fields with existing answers (only once when loaded)
+  useEffect(() => {
+    if (!isTeacher && existingAnswers.length > 0 && !hasLoadedExisting && !isLoadingExisting) {
+      const existingInputs: Record<string, string> = {};
+      existingAnswers.forEach((ans) => {
+        existingInputs[ans.itemNumber] = ans.studentAnswer;
+      });
+      setStudentInputs(existingInputs);
+      setHasLoadedExisting(true);
+    }
+  }, [existingAnswers, isTeacher, hasLoadedExisting, isLoadingExisting]);
 
   // Use custom hooks for saving and copying
   const { canSave, isGlobalSaving, savingStates, handleManualSave } = useAnswerSaving(
