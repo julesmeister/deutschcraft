@@ -103,6 +103,27 @@ export function ParticipantsList({
     };
   }, [participants, voiceStreams, voiceAnalysers]);
 
+  // Drag event listeners for volume control
+  useEffect(() => {
+    if (!draggingUserId) return;
+
+    const onMouseMove = (e: MouseEvent) => handleDragMove(e.clientX);
+    const onTouchMove = (e: TouchEvent) => handleDragMove(e.touches[0].clientX);
+    const onEnd = () => handleDragEnd();
+
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mouseup", onEnd);
+    window.addEventListener("touchmove", onTouchMove);
+    window.addEventListener("touchend", onEnd);
+
+    return () => {
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseup", onEnd);
+      window.removeEventListener("touchmove", onTouchMove);
+      window.removeEventListener("touchend", onEnd);
+    };
+  }, [draggingUserId]);
+
   if (participants.length === 0) {
     return (
       <div className="text-center text-gray-500 py-4">No participants yet</div>
@@ -153,26 +174,6 @@ export function ParticipantsList({
   const handleDragEnd = () => {
     setDraggingUserId(null);
   };
-
-  useEffect(() => {
-    if (!draggingUserId) return;
-
-    const onMouseMove = (e: MouseEvent) => handleDragMove(e.clientX);
-    const onTouchMove = (e: TouchEvent) => handleDragMove(e.touches[0].clientX);
-    const onEnd = () => handleDragEnd();
-
-    window.addEventListener("mousemove", onMouseMove);
-    window.addEventListener("mouseup", onEnd);
-    window.addEventListener("touchmove", onTouchMove);
-    window.addEventListener("touchend", onEnd);
-
-    return () => {
-      window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("mouseup", onEnd);
-      window.removeEventListener("touchmove", onTouchMove);
-      window.removeEventListener("touchend", onEnd);
-    };
-  }, [draggingUserId]);
 
   return (
     <div className="space-y-4">
