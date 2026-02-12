@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { fetchVocabularyCategory } from "@/lib/hooks/useVocabulary";
 import { applyFlashcardSettings } from "@/lib/utils/flashcardSelection";
@@ -19,7 +19,13 @@ const enrichFlashcardsWithProgress = (flashcards: any[], reviewsMap: any) => {
   });
 };
 
-export function useFlashcardPracticeData() {
+interface UseFlashcardPracticeDataOptions {
+  /** Maximum number of categories to fetch when loading "all" (default: unlimited) */
+  maxCategories?: number;
+}
+
+export function useFlashcardPracticeData(options: UseFlashcardPracticeDataOptions = {}) {
+  const { maxCategories } = options;
   const searchParams = useSearchParams();
   const categoryId = searchParams.get("category");
   const mode = searchParams.get("mode"); // 'practice' | 'review'
@@ -44,6 +50,10 @@ export function useFlashcardPracticeData() {
   const [upcomingCards, setUpcomingCards] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  // Create stable keys for arrays to use in dependency array
+  const reviewsKey = useMemo(() => flashcardReviews?.length ?? 0, [flashcardReviews]);
+  const settingsKey = useMemo(() => JSON.stringify(settings), [settings]);
 
   useEffect(() => {
     let isMounted = true;
@@ -89,10 +99,13 @@ export function useFlashcardPracticeData() {
             }
           }
 
-          const filesToFetch = Array.from(categoriesToFetch);
+          let filesToFetch = Array.from(categoriesToFetch);
 
-          // If reviewing all, limit to avoid massive downloads?
-          // For now, follow the practice logic which fetches all identified categories
+          // Limit categories if maxCategories is set (useful for games)
+          if (maxCategories && filesToFetch.length > maxCategories) {
+            filesToFetch = filesToFetch.slice(0, maxCategories);
+          }
+
           const promises = filesToFetch.map((file) =>
             fetchVocabularyCategory(selectedLevel, file)
           );
@@ -182,8 +195,9 @@ export function useFlashcardPracticeData() {
     categoriesLoading,
     selectedLevel,
     reviewsMap,
-    flashcardReviews,
-    settings,
+    reviewsKey,
+    settingsKey,
+    maxCategories,
   ]);
 
   return {

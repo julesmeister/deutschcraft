@@ -7,6 +7,7 @@ import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
 import { ToastProvider } from "@/components/ui/toast";
 import { CEFRLevelSelector } from "@/components/ui/CEFRLevelSelector";
 import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
+import { ActionButtonDropdown, DropdownIcons } from "@/components/ui/ActionButtonDropdown";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { usePersistedLevel } from "@/lib/hooks/usePersistedLevel";
 import { FlashcardProgressChart } from "@/components/flashcards/FlashcardProgressChart";
@@ -58,6 +59,10 @@ function FlashcardsLandingContent() {
     router.push("/dashboard/student/flashcards/practice?mode=practice&category=all");
   };
 
+  const handleStartPacman = () => {
+    router.push("/dashboard/student/flashcards/pacman?category=all");
+  };
+
   const handleCategoryClick = (categoryId: string, categoryName: string) => {
     // We pass the ID. The practice page hook handles looking it up.
     router.push(`/dashboard/student/flashcards/practice?mode=practice&category=${categoryId}`);
@@ -73,14 +78,23 @@ function FlashcardsLandingContent() {
              onClick: () => router.push("/dashboard/student"),
           }}
           actions={
-              <ActionButton
-                onClick={handleStartPractice}
+              <ActionButtonDropdown
+                label="Practice"
                 variant="purple"
-                icon={<ActionButtonIcons.ArrowRight />}
                 disabled={isPageLoading}
-              >
-                Start Practice
-              </ActionButton>
+                items={[
+                  {
+                    label: "Start Practice",
+                    onClick: handleStartPractice,
+                    icon: <DropdownIcons.ArrowRight />,
+                  },
+                  {
+                    label: "Prefix Chomper",
+                    onClick: handleStartPacman,
+                    icon: <DropdownIcons.Game />,
+                  },
+                ]}
+              />
           }
         />
 
@@ -171,18 +185,25 @@ function FlashcardsLandingContent() {
                               Ready to practice?
                             </h3>
                             <p className="text-sm text-neutral-600">
-                              Start a flashcard session with all vocabulary or
-                              choose a specific category
+                              Start a flashcard session or play Prefix Chomper to master German verb prefixes!
                             </p>
                           </div>
-                          <div className="md:w-64">
+                          <div className="flex gap-3 md:w-auto">
                             <ActionButton
                               onClick={handleStartPractice}
                               variant="purple"
                               icon={<ActionButtonIcons.ArrowRight />}
                               disabled={isPageLoading}
                             >
-                              Start Practice Session
+                              Practice
+                            </ActionButton>
+                            <ActionButton
+                              onClick={handleStartPacman}
+                              variant="cyan"
+                              icon={<ActionButtonIcons.Play />}
+                              disabled={isPageLoading}
+                            >
+                              Play Game
                             </ActionButton>
                           </div>
                         </div>
