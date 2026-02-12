@@ -205,7 +205,8 @@
       "Bash(cd:*)",
       "Bash(npx wrangler deploy)",
       "Bash(npx wrangler login)",
-      "Bash(in state stable\" errors caused by race conditions or duplicate messages.\n- Only accept answers when in have-local-offer state\n- Only accept offers when in stable state\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(in state stable\" errors caused by race conditions or duplicate messages.\n- Only accept answers when in have-local-offer state\n- Only accept offers when in stable state\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(npx dotenvx run:*)"
     ],
     "deny": [],
     "ask": []

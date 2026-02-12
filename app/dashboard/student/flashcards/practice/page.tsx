@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { FlashcardPractice } from "@/components/flashcards/FlashcardPractice";
 import { FlashcardReviewList } from "@/components/flashcards/FlashcardReviewList";
 import { CatLoader } from "@/components/ui/CatLoader";
@@ -13,6 +13,8 @@ const SHOW_ENGLISH_FIRST_KEY = "flashcard-show-english-first";
 
 function FlashcardPracticeContent() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const categoryId = searchParams.get("category") || "";
   const {
     practiceFlashcards,
     categoryName,
@@ -78,17 +80,25 @@ function FlashcardPracticeContent() {
         }}
         actions={
           mode !== "review" ? (
-            <button
-              onClick={handleToggleLanguage}
-              className="px-3 py-1.5 text-xs font-bold uppercase tracking-wide rounded-lg border-2 border-gray-300 hover:border-gray-400 transition-colors bg-white text-gray-700"
-              title={
-                showEnglishFirst
-                  ? "Showing English first"
-                  : "Showing German first"
-              }
-            >
-              {showEnglishFirst ? "🇬🇧 → 🇩🇪" : "🇩🇪 → 🇬🇧"}
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => router.push(`/dashboard/student/flashcards/practice?mode=review&category=${categoryId}`)}
+                className="px-3 py-1.5 text-xs font-bold rounded-lg border-2 border-gray-300 hover:border-gray-400 transition-colors bg-white text-gray-700"
+              >
+                Review All
+              </button>
+              <button
+                onClick={handleToggleLanguage}
+                className="px-3 py-1.5 text-xs font-bold uppercase tracking-wide rounded-lg border-2 border-gray-300 hover:border-gray-400 transition-colors bg-white text-gray-700"
+                title={
+                  showEnglishFirst
+                    ? "Showing English first"
+                    : "Showing German first"
+                }
+              >
+                {showEnglishFirst ? "🇬🇧 → 🇩🇪" : "🇩🇪 → 🇬🇧"}
+              </button>
+            </div>
           ) : undefined
         }
       />

@@ -12,7 +12,7 @@ import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
 function PacmanGameContent() {
   const router = useRouter();
   const gameRef = useRef<PacmanGameRef>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [gameState, setGameState] = useState('menu');
   const {
     practiceFlashcards,
     isLoading,
@@ -27,8 +27,12 @@ function PacmanGameContent() {
     gameRef.current?.endGame();
   };
 
+  const handleReviewWords = () => {
+    gameRef.current?.reviewWords();
+  };
+
   const handleGameStateChange = (state: string) => {
-    setIsPlaying(state === 'playing');
+    setGameState(state);
   };
 
   if (isLoading) {
@@ -61,13 +65,21 @@ function PacmanGameContent() {
           onClick: handleBack,
         }}
         actions={
-          isPlaying ? (
+          gameState === 'playing' ? (
             <ActionButton
               onClick={handleEndGame}
               variant="red"
               icon={<ActionButtonIcons.X />}
             >
               End Game
+            </ActionButton>
+          ) : gameState === 'menu' ? (
+            <ActionButton
+              onClick={handleReviewWords}
+              variant="cyan"
+              icon={<ActionButtonIcons.Eye />}
+            >
+              Review Words
             </ActionButton>
           ) : undefined
         }

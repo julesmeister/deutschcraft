@@ -415,6 +415,14 @@ export {
 } from './materialsService';
 
 // ============================================================================
+// PACMAN GAME SERVICE
+// ============================================================================
+export {
+  savePacmanVerbCorrect,
+  getPacmanVerbProgress,
+} from './pacmanService';
+
+// ============================================================================
 // TYPE EXPORTS
 // ============================================================================
 export type { Session } from './sessionService';
@@ -425,3 +433,4 @@ export type { QuizStats } from './reviewQuizService';
 export type { AnswerHubStats } from './studentAnswerService';
 export type { PlaygroundHistoryRecord, PlaygroundHistoryStats } from './playgroundHistoryService';
 export type { Material } from './materialsService';
+export type { PacmanVerbProgress } from './pacmanService';
