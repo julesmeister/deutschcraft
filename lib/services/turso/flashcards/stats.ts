@@ -71,22 +71,32 @@ export async function getStudyStats(userId: string): Promise<{
   accuracy: number;
 }> {
   try {
-    // Get flashcard stats with a single query
-    const result = await db.execute({
-      sql: `
-        SELECT 
-          COUNT(*) as total_cards,
-          SUM(CASE WHEN repetitions > 0 THEN 1 ELSE 0 END) as cards_learned,
-          SUM(CASE WHEN mastery_level >= 70 THEN 1 ELSE 0 END) as cards_mastered,
-          SUM(correct_count) as total_correct,
-          SUM(incorrect_count) as total_incorrect
-        FROM flashcard_progress 
-        WHERE user_id = ?
-      `,
-      args: [userId],
-    });
+    // Get flashcard stats + game stats in parallel
+    const [flashcardResult, pacmanResult, derdiedasResult] = await Promise.all([
+      db.execute({
+        sql: `
+          SELECT
+            COUNT(*) as total_cards,
+            SUM(CASE WHEN repetitions > 0 THEN 1 ELSE 0 END) as cards_learned,
+            SUM(CASE WHEN mastery_level >= 70 THEN 1 ELSE 0 END) as cards_mastered,
+            SUM(correct_count) as total_correct,
+            SUM(incorrect_count) as total_incorrect
+          FROM flashcard_progress
+          WHERE user_id = ?
+        `,
+        args: [userId],
+      }),
+      db.execute({
+        sql: `SELECT COUNT(*) as total, COALESCE(SUM(correct_count), 0) as correct FROM pacman_verb_progress WHERE user_id = ?`,
+        args: [userId],
+      }),
+      db.execute({
+        sql: `SELECT COUNT(*) as total, COALESCE(SUM(correct_count), 0) as correct FROM derdiedas_progress WHERE user_id = ?`,
+        args: [userId],
+      }),
+    ]);
 
-    const row = result.rows[0];
+    const row = flashcardResult.rows[0];
 
     // Check if we got any data
     if (!row) {
@@ -99,17 +109,24 @@ export async function getStudyStats(userId: string): Promise<{
       };
     }
 
-    // IMPORTANT: In Turso/SQLite, COUNT and SUM can return 0 or null, so we must handle both.
-    // However, if the WHERE clause finds no rows, the aggregate function might return a single row with 0s or nulls.
     const totalCards = Number(row.total_cards) || 0;
     const cardsLearned = Number(row.cards_learned) || 0;
     const cardsMastered = Number(row.cards_mastered) || 0;
     const totalCorrect = Number(row.total_correct) || 0;
     const totalIncorrect = Number(row.total_incorrect) || 0;
 
-    const totalAttempts = totalCorrect + totalIncorrect;
+    // Add game items to cardsLearned and correct counts
+    const pacmanItems = Number(pacmanResult.rows[0]?.total) || 0;
+    const pacmanCorrect = Number(pacmanResult.rows[0]?.correct) || 0;
+    const derdiedasItems = Number(derdiedasResult.rows[0]?.total) || 0;
+    const derdiedasCorrect = Number(derdiedasResult.rows[0]?.correct) || 0;
+
+    const combinedCardsLearned = cardsLearned + pacmanItems + derdiedasItems;
+    const combinedCorrect = totalCorrect + pacmanCorrect + derdiedasCorrect;
+
+    const totalAttempts = combinedCorrect + totalIncorrect;
     const accuracy =
-      totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
+      totalAttempts > 0 ? Math.round((combinedCorrect / totalAttempts) * 100) : 0;
 
     // Fetch study progress for streak calculation
     // Note: We use the progressService which is already switched to use Turso if configured
@@ -117,8 +134,8 @@ export async function getStudyStats(userId: string): Promise<{
     const streak = calculateStreak(studyProgressData);
 
     return {
-      totalCards,
-      cardsLearned,
+      totalCards: totalCards + pacmanItems + derdiedasItems,
+      cardsLearned: combinedCardsLearned,
       cardsMastered,
       streak,
       accuracy,

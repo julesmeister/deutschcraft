@@ -423,6 +423,14 @@ export {
 } from './pacmanService';
 
 // ============================================================================
+// DER DIE DAS GAME SERVICE
+// ============================================================================
+export {
+  saveDerDieDasCorrect,
+  getDerDieDasProgress,
+} from './derDieDasService';
+
+// ============================================================================
 // TYPE EXPORTS
 // ============================================================================
 export type { Session } from './sessionService';
@@ -434,3 +442,4 @@ export type { AnswerHubStats } from './studentAnswerService';
 export type { PlaygroundHistoryRecord, PlaygroundHistoryStats } from './playgroundHistoryService';
 export type { Material } from './materialsService';
 export type { PacmanVerbProgress } from './pacmanService';
+export type { DerDieDasProgress } from './derDieDasService';

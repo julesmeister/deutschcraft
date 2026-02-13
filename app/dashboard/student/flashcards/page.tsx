@@ -63,6 +63,10 @@ function FlashcardsLandingContent() {
     router.push("/dashboard/student/flashcards/pacman?category=all");
   };
 
+  const handleStartDerDieDas = () => {
+    router.push("/dashboard/student/flashcards/derdiedas?category=all");
+  };
+
   const handleCategoryClick = (categoryId: string, categoryName: string) => {
     // We pass the ID. The practice page hook handles looking it up.
     router.push(`/dashboard/student/flashcards/practice?mode=practice&category=${categoryId}`);
@@ -91,6 +95,11 @@ function FlashcardsLandingContent() {
                   {
                     label: "Prefix Chomper",
                     onClick: handleStartPacman,
+                    icon: <DropdownIcons.Game />,
+                  },
+                  {
+                    label: "Der Die Das",
+                    onClick: handleStartDerDieDas,
                     icon: <DropdownIcons.Game />,
                   },
                 ]}
