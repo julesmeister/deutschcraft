@@ -29,10 +29,19 @@ export function GroupRandomizer({
   const { useToolValue, isTeacher } = toolState;
   const [groupCount, setGroupCount] = useToolValue("groups-count", 2);
   const [teacherJoinsGroup, setTeacherJoinsGroup] = useToolValue("groups-teacher-joins", false);
-  // Groups contain participant objects — not persisted (depend on live participants)
-  const [groups, setGroups] = useState<PlaygroundParticipant[][]>([]);
+  // Persisted group assignments: array of arrays of { userId, userName }
+  const [persistedGroups, setPersistedGroups] = useToolValue<{ userId: string; userName: string; role?: string }[][]>("groups-result", []);
   const [isIsolated, setIsIsolated] = useState(false);
   const [teacherListeningTo, setTeacherListeningTo] = useState<number | null>(null);
+
+  // Resolve persisted group assignments against live participants
+  const groups: PlaygroundParticipant[][] = persistedGroups.length > 0
+    ? persistedGroups.map(group =>
+        group
+          .map(g => participants.find(p => p.userId === g.userId))
+          .filter((p): p is PlaygroundParticipant => p !== undefined)
+      ).filter(g => g.length > 0)
+    : [];
 
   // Find teacher userId(s) from participants
   const teacherUserIds = new Set(
@@ -96,20 +105,24 @@ export function GroupRandomizer({
     // Fallback: if filtering leaves < 2, use all
     const pool = toAssign.length >= 2 ? toAssign : participants;
     const shuffled = [...pool].sort(() => Math.random() - 0.5);
-    const result: PlaygroundParticipant[][] = Array.from(
+    const result: { userId: string; userName: string; role?: string }[][] = Array.from(
       { length: groupCount },
       () => []
     );
-    shuffled.forEach((p, i) => result[i % groupCount].push(p));
-    setGroups(result);
+    shuffled.forEach((p, i) => result[i % groupCount].push({
+      userId: p.userId,
+      userName: p.userName,
+      role: p.role,
+    }));
+    setPersistedGroups(result);
     setTeacherListeningTo(null);
-  }, [participants, groupCount, teacherJoinsGroup, isTeacher]);
+  }, [participants, groupCount, teacherJoinsGroup, isTeacher, setPersistedGroups]);
 
   const clearGroups = useCallback(() => {
-    setGroups([]);
+    setPersistedGroups([]);
     setIsIsolated(false);
     setTeacherListeningTo(null);
-  }, []);
+  }, [setPersistedGroups]);
 
   if (participants.length < 2) {
     return (
