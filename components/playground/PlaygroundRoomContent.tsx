@@ -84,10 +84,7 @@ export function PlaygroundRoomContent({
       <div className="flex items-center gap-1 p-1 bg-gray-100 rounded-lg mb-4">
         {/* Panel tab - only visible below xl */}
         <button
-          onClick={() => {
-            onToggleSidebar();
-            if (!isSidebarOpen) setActiveView("exercise");
-          }}
+          onClick={onToggleSidebar}
           className={`xl:hidden flex items-center justify-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
             showPanel
               ? "bg-white text-gray-900 shadow-sm"

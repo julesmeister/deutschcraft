@@ -1,6 +1,6 @@
 /**
  * usePlaygroundHandlers Hook
- * Encapsulates all handler functions for playground room management
+ * Encapsulates room management and writing handler functions
  */
 
 import { useState, useCallback } from 'react';
@@ -9,15 +9,13 @@ import {
   endPlaygroundRoom,
   joinPlaygroundRoom,
   leavePlaygroundRoom,
-  updateParticipantVoiceStatus,
   togglePublicWriting as toggleRoomPublicWriting,
   savePlaygroundWriting,
   toggleWritingVisibility,
   getActiveRooms,
 } from '@/lib/services/playgroundService';
+import { usePlaygroundMediaHandlers } from './usePlaygroundMediaHandlers';
 import type { PlaygroundRoom } from '@/lib/models/playground';
-
-const CAMERA_ERROR_NAMES = new Set(['NotAllowedError', 'AbortError', 'NotFoundError', 'NotReadableError']);
 
 interface UsePlaygroundHandlersProps {
   userId: string;
@@ -51,8 +49,6 @@ export function usePlaygroundHandlers({
   myParticipantId,
   currentRoom,
   isVoiceActive,
-  isVideoActive,
-  isMuted,
   setDialogState,
   setMyParticipantId,
   setCurrentRoom,
@@ -68,6 +64,26 @@ export function usePlaygroundHandlers({
 }: UsePlaygroundHandlersProps) {
   const [isCreatingRoom, setIsCreatingRoom] = useState(false);
 
+  // Media handlers (voice/video)
+  const {
+    handleStartVoice,
+    handleStartVideo,
+    handleStopVoice,
+    handleToggleMute,
+    handleToggleVideo,
+  } = usePlaygroundMediaHandlers({
+    myParticipantId,
+    currentRoom,
+    isVoiceActive,
+    setDialogState,
+    stopVoice,
+    startVoice,
+    startVideo,
+    toggleMute,
+    toggleVideo,
+    onCameraError,
+  });
+
   const handleCreateRoom = useCallback(async () => {
     if (isCreatingRoom) return;
 
@@ -77,22 +93,14 @@ export function usePlaygroundHandlers({
       const roomId = await createPlaygroundRoom(userId, userName, roomTitle);
 
       const participantId = await joinPlaygroundRoom(
-        roomId,
-        userId,
-        userName,
-        userEmail,
-        userRole,
-        undefined // No peerId needed with native WebRTC
+        roomId, userId, userName, userEmail, userRole, undefined
       );
 
       setMyParticipantId(participantId);
 
       const rooms = await getActiveRooms();
       const room = rooms.find((r) => r.roomId === roomId);
-
-      if (room) {
-        setCurrentRoom(room);
-      }
+      if (room) setCurrentRoom(room);
 
       setDialogState({
         isOpen: true,
@@ -114,12 +122,7 @@ export function usePlaygroundHandlers({
   const handleJoinRoom = useCallback(async (room: PlaygroundRoom) => {
     try {
       const participantId = await joinPlaygroundRoom(
-        room.roomId,
-        userId,
-        userName,
-        userEmail,
-        userRole,
-        undefined // No peerId needed with native WebRTC
+        room.roomId, userId, userName, userEmail, userRole, undefined
       );
 
       setMyParticipantId(participantId);
@@ -140,7 +143,6 @@ export function usePlaygroundHandlers({
     try {
       await leavePlaygroundRoom(myParticipantId, currentRoom.roomId);
     } catch (error) {
-      // Silent error handling
       console.error('[Playground] Failed to leave room:', error);
     } finally {
       stopVoice();
@@ -159,14 +161,12 @@ export function usePlaygroundHandlers({
     const participantIdToLeave = myParticipantId;
 
     try {
-      // First cleanup local state immediately
       stopVoice();
       setCurrentRoom(null);
       setMyParticipantId(null);
       setParticipants([]);
       setWritings([]);
 
-      // Then update Firestore
       await endPlaygroundRoom(roomIdToEnd);
 
       if (participantIdToLeave) {
@@ -175,125 +175,35 @@ export function usePlaygroundHandlers({
 
       loadActiveRooms();
     } catch (error) {
-      // Silent error handling
       console.error('[Playground] Failed to end room:', error);
     }
   }, [currentRoom, userId, myParticipantId, stopVoice, setCurrentRoom, setMyParticipantId, setParticipants, setWritings, loadActiveRooms]);
 
   const handleToggleRoomPublicWriting = useCallback(async (isPublic: boolean) => {
     if (!currentRoom) return;
-
     try {
       await toggleRoomPublicWriting(currentRoom.roomId, isPublic);
     } catch (error) {
-      // Silent error handling
       console.error('[Playground] Failed to toggle room public writing:', error);
     }
   }, [currentRoom]);
 
   const handleSaveWriting = useCallback(async (content: string) => {
     if (!currentRoom) return;
-
     try {
-      await savePlaygroundWriting(
-        currentRoom.roomId,
-        userId,
-        userName,
-        content,
-        false
-      );
+      await savePlaygroundWriting(currentRoom.roomId, userId, userName, content, false);
     } catch (error) {
       throw error;
     }
   }, [currentRoom, userId, userName]);
 
-  const handleToggleWritingVisibility = useCallback(async (
-    writingId: string,
-    isPublic: boolean
-  ) => {
+  const handleToggleWritingVisibility = useCallback(async (writingId: string, isPublic: boolean) => {
     try {
       await toggleWritingVisibility(writingId, isPublic);
     } catch (error) {
-      // Silent error handling
       console.error('[Playground] Failed to toggle writing visibility:', error);
     }
   }, []);
-
-  const handleStartVoice = useCallback(async () => {
-    if (!myParticipantId || !currentRoom) return;
-
-    try {
-      await startVoice();
-      updateParticipantVoiceStatus(myParticipantId, true, false).catch(() => {});
-    } catch (error) {
-      console.error('[Voice] Failed to start voice:', error);
-      setDialogState({
-        isOpen: true,
-        title: 'Voice Error',
-        message: 'Failed to start voice. Please check microphone permissions.',
-      });
-    }
-  }, [myParticipantId, currentRoom, startVoice, setDialogState]);
-
-  const handleStopVoice = useCallback(async () => {
-    if (!myParticipantId) return;
-
-    try {
-      await stopVoice();
-    } catch (error) {
-      console.error('[Voice] Failed to stop voice:', error);
-    }
-
-    // Update Firestore status separately - non-critical, doc may already be gone
-    updateParticipantVoiceStatus(myParticipantId, false, false).catch(() => {});
-  }, [myParticipantId, stopVoice]);
-
-  const handleToggleMute = useCallback(async () => {
-    if (!myParticipantId) return;
-
-    try {
-      const newMutedState = await toggleMute();
-
-      if (typeof newMutedState === 'boolean') {
-        updateParticipantVoiceStatus(myParticipantId, isVoiceActive, newMutedState).catch(() => {});
-      }
-    } catch (error) {
-      console.error('[Voice] Failed to toggle mute:', error);
-    }
-  }, [myParticipantId, toggleMute, isVoiceActive]);
-
-  const handleStartVideo = useCallback(async () => {
-    if (!myParticipantId || !currentRoom) return;
-
-    try {
-      await startVideo();
-      updateParticipantVoiceStatus(myParticipantId, true, false).catch(() => {});
-    } catch (error: any) {
-      console.error('[Video] Failed to start video:', error);
-      if (onCameraError && CAMERA_ERROR_NAMES.has(error?.name)) {
-        onCameraError({ name: error.name, message: error.message || '' });
-      } else {
-        setDialogState({
-          isOpen: true,
-          title: 'Video Error',
-          message: `Failed to start video: ${error?.name || 'Unknown error'}. Please check camera permissions.`,
-        });
-      }
-    }
-  }, [myParticipantId, currentRoom, startVideo, setDialogState, onCameraError]);
-
-  const handleToggleVideo = useCallback(async () => {
-    if (!myParticipantId) return;
-
-    try {
-      await toggleVideo();
-    } catch (error: any) {
-      console.error('[Video] Failed to toggle video:', error);
-      if (onCameraError && CAMERA_ERROR_NAMES.has(error?.name)) {
-        onCameraError({ name: error.name, message: error.message || '' });
-      }
-    }
-  }, [myParticipantId, toggleVideo, onCameraError]);
 
   return {
     isCreatingRoom,
