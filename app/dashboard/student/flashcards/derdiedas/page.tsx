@@ -47,7 +47,7 @@ function DerDieDasGameContent() {
             >
               End Game
             </ActionButton>
-          ) : gameState === 'menu' ? (
+          ) : gameState === 'menu' || gameState === 'paused' || gameState === 'summary' ? (
             <ActionButton
               onClick={handleReviewEndings}
               variant="cyan"

@@ -214,10 +214,20 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
     return <MenuScreen onStart={startGame} onReview={() => setGameState('review')} />;
   }
   if (gameState === 'summary') {
-    return <SummaryScreen stats={stats} onPlayAgain={startGame} onBack={onBack} />;
+    return (
+      <div>
+        <SummaryScreen stats={stats} onPlayAgain={startGame} onBack={onBack} />
+        <AnsweredEndingsList answeredEndings={answeredEndings} progressMap={progressMap} />
+      </div>
+    );
   }
   if (gameState === 'paused') {
-    return <PausedScreen onResume={() => setGameState('playing')} onRestart={startGame} onQuit={onBack} />;
+    return (
+      <div>
+        <PausedScreen onResume={() => setGameState('playing')} onRestart={startGame} onQuit={onBack} />
+        <AnsweredEndingsList answeredEndings={answeredEndings} progressMap={progressMap} />
+      </div>
+    );
   }
   if (gameState === 'review') {
     return <ReviewScreen onBack={() => setGameState('menu')} onStart={startGame} />;

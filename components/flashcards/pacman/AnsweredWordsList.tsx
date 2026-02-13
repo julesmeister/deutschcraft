@@ -13,7 +13,7 @@ export function AnsweredWordsList({ answeredVerbs, progressMap = {} }: AnsweredW
       <h3 className="text-white font-bold mb-2 sm:mb-3 text-xs sm:text-sm">
         Words Learned ({answeredVerbs.length})
       </h3>
-      <div className="space-y-1.5 sm:space-y-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-1.5 sm:gap-2">
         {answeredVerbs.map((verb) => {
           const count = progressMap[verb.full] || 0;
           return (

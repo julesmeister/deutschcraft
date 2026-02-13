@@ -73,7 +73,7 @@ function PacmanGameContent() {
             >
               End Game
             </ActionButton>
-          ) : gameState === 'menu' ? (
+          ) : gameState === 'menu' || gameState === 'paused' || gameState === 'summary' ? (
             <ActionButton
               onClick={handleReviewWords}
               variant="cyan"
