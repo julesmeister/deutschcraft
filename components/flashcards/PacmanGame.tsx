@@ -17,6 +17,7 @@ import { StatsBar } from "./pacman/StatsBar";
 import { usePacmanProgress } from "@/lib/hooks/usePacmanProgress";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { saveDailyProgress } from "@/lib/services/turso";
+import { weightedRandomPick } from "@/lib/utils/weightedRandom";
 
 export interface PacmanGameRef {
   endGame: () => void;
@@ -47,6 +48,7 @@ export const PacmanGame = forwardRef<PacmanGameRef, PacmanGameProps>(function Pa
   const [collisionPhase, setCollisionPhase] = useState<'start' | 'moving' | 'combined' | null>(null);
   const [answeredVerbs, setAnsweredVerbs] = useState<VerbEntry[]>([]);
   const answeredVerbsRef = useRef<Set<string>>(new Set());
+  const mistakeCountsRef = useRef<Record<string, number>>({});
   const [selectedRoots, setSelectedRoots] = useState<Set<string>>(new Set());
   const { progressMap, recordCorrect } = usePacmanProgress();
   const { session } = useFirebaseAuth();
@@ -104,15 +106,14 @@ export const PacmanGame = forwardRef<PacmanGameRef, PacmanGameProps>(function Pa
   }, [gameState]);
 
   const getRandomVerb = useCallback(() => {
-    const pool = activeVerbData;
-    const fresh = pool.filter(v => !answeredVerbsRef.current.has(v.full));
-    if (fresh.length === 0) {
+    let pool = activeVerbData.filter(v => !answeredVerbsRef.current.has(v.full));
+    if (pool.length === 0) {
       answeredVerbsRef.current.clear();
       setAnsweredVerbs([]);
-      return pool[Math.floor(Math.random() * pool.length)];
+      pool = activeVerbData;
     }
-    return fresh[Math.floor(Math.random() * fresh.length)];
-  }, [activeVerbData]);
+    return weightedRandomPick(pool, v => v.full, progressMap, mistakeCountsRef.current);
+  }, [activeVerbData, progressMap]);
 
   const getWrongPrefixes = useCallback((correctPrefix: string): string[] => {
     return PREFIXES.filter(p => p !== correctPrefix);
@@ -200,6 +201,9 @@ export const PacmanGame = forwardRef<PacmanGameRef, PacmanGameProps>(function Pa
       setShowWrongFlash(true);
       setTimeout(() => setShowWrongFlash(false), 300);
       setStats(prev => ({ ...prev, incorrect: prev.incorrect + 1, streak: 0 }));
+      if (currentVerb) {
+        mistakeCountsRef.current[currentVerb.full] = (mistakeCountsRef.current[currentVerb.full] || 0) + 1;
+      }
     }
   }, [stats, fireConfetti, getRandomVerb, currentVerb]);
 
@@ -290,6 +294,7 @@ export const PacmanGame = forwardRef<PacmanGameRef, PacmanGameProps>(function Pa
     prefixCountRef.current = 0;
     usedVerbIds.current.clear();
     answeredVerbsRef.current.clear();
+    mistakeCountsRef.current = {};
     setAnsweredVerbs([]);
     setCurrentVerb(getRandomVerb());
   };

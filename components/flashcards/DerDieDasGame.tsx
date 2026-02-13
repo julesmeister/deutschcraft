@@ -17,6 +17,7 @@ import { SummaryScreen } from "./pacman/SummaryScreen";
 import { useDerDieDasProgress } from "@/lib/hooks/useDerDieDasProgress";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { saveDailyProgress } from "@/lib/services/turso";
+import { weightedRandomPick } from "@/lib/utils/weightedRandom";
 
 export interface DerDieDasGameRef {
   endGame: () => void;
@@ -46,6 +47,7 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
   const [collisionPhase, setCollisionPhase] = useState<'start' | 'moving' | 'combined' | null>(null);
   const [answeredEndings, setAnsweredEndings] = useState<EndingEntry[]>([]);
   const answeredEndingsRef = useRef<Set<string>>(new Set());
+  const mistakeCountsRef = useRef<Record<string, number>>({});
   const { progressMap, recordCorrect } = useDerDieDasProgress();
   const { session } = useFirebaseAuth();
   const userId = session?.user?.email || null;
@@ -87,14 +89,14 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
   }, [gameState]);
 
   const getRandomEnding = useCallback(() => {
-    const fresh = ENDING_DATA.filter(e => !answeredEndingsRef.current.has(e.ending));
-    if (fresh.length === 0) {
+    let pool = ENDING_DATA.filter(e => !answeredEndingsRef.current.has(e.ending));
+    if (pool.length === 0) {
       answeredEndingsRef.current.clear();
       setAnsweredEndings([]);
-      return ENDING_DATA[Math.floor(Math.random() * ENDING_DATA.length)];
+      pool = ENDING_DATA;
     }
-    return fresh[Math.floor(Math.random() * fresh.length)];
-  }, []);
+    return weightedRandomPick(pool, e => e.ending, progressMap, mistakeCountsRef.current);
+  }, [progressMap]);
 
   const spawnArticle = useCallback(() => {
     if (!currentEnding) return;
@@ -184,6 +186,9 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
       setShowWrongFlash(true);
       setTimeout(() => setShowWrongFlash(false), 300);
       setStats(prev => ({ ...prev, incorrect: prev.incorrect + 1, streak: 0 }));
+      if (currentEnding) {
+        mistakeCountsRef.current[currentEnding.ending] = (mistakeCountsRef.current[currentEnding.ending] || 0) + 1;
+      }
     }
   }, [stats, fireConfetti, getRandomEnding, currentEnding, recordCorrect]);
 
@@ -273,6 +278,7 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
     setFloatingArticles([]);
     articleCountRef.current = 0;
     answeredEndingsRef.current.clear();
+    mistakeCountsRef.current = {};
     setAnsweredEndings([]);
     setCurrentEnding(getRandomEnding());
   };
