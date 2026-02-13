@@ -141,7 +141,7 @@ export default function ExerciseDetailPage() {
       }
 
       // Check if this is a custom exercise or a modification
-      const isCustomExercise = exercise._isCreated;
+      const isCustomExercise = (exercise as unknown as Record<string, unknown>)._isCreated;
 
       if (isCustomExercise) {
         // Update existing custom exercise
@@ -217,7 +217,7 @@ export default function ExerciseDetailPage() {
               Exercise Not Found
             </h3>
             <p className="text-gray-600 mb-4">
-              {error ||
+              {error?.message ||
                 `Could not find this exercise in ${
                   lesson?.title || `Lektion ${lessonNumber}`
                 }`}

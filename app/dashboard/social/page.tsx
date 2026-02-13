@@ -9,10 +9,10 @@ import { CatLoader } from '@/components/ui/CatLoader';
 export default function SocialRedirectPage() {
   const { data: session } = useSession();
   const router = useRouter();
-  const { user, loading } = useCurrentUser(session?.user?.email || null);
+  const { user, isLoading } = useCurrentUser(session?.user?.email || null);
 
   useEffect(() => {
-    if (loading) return;
+    if (isLoading) return;
 
     if (!user) {
       // If no user, redirect to settings
@@ -29,7 +29,7 @@ export default function SocialRedirectPage() {
       // Default to student for pending approval users
       router.push('/dashboard/student/social');
     }
-  }, [user, loading, router]);
+  }, [user, isLoading, router]);
 
   return <CatLoader message="Loading social feed..." size="lg" fullScreen />;
 }

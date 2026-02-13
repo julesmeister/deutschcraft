@@ -160,7 +160,7 @@ export default function AnswerHubPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-2">
                 Error Loading Exercises
               </h3>
-              <p className="text-gray-600">{error}</p>
+              <p className="text-gray-600">{error?.message || "An error occurred"}</p>
             </motion.div>
           ) : !hasExercises ? (
             <motion.div

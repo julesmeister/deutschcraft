@@ -278,7 +278,6 @@ export default function LessonDetailPage() {
               onOpenHiddenModal={openHiddenModal}
               onSelectBatch={setSelectedBatch}
               onCreateBatch={() => router.push("/dashboard/teacher/batches")}
-              onBack={() => router.push("/dashboard/student/answer-hub")}
               onViewSummary={
                 !isTeacher
                   ? () =>

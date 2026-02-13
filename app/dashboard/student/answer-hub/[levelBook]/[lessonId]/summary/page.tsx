@@ -236,7 +236,7 @@ export default function LessonSummaryPage() {
                 }
                 icon={<ActionButtonIcons.Document />}
               >
-                Practice ({markedWordCount})
+                {`Practice (${markedWordCount})`}
               </ActionButton>
             </div>
           ) : null

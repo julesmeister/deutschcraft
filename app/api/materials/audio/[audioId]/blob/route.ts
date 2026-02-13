@@ -106,7 +106,7 @@ export async function GET(
         chunkSize: contentLength,
       });
 
-      return new NextResponse(chunk, {
+      return new NextResponse(new Uint8Array(chunk), {
         status: 206, // Partial Content
         headers: {
           'Content-Type': 'audio/mpeg',
@@ -126,7 +126,7 @@ export async function GET(
       size: fileSize,
     });
 
-    return new NextResponse(buffer, {
+    return new NextResponse(new Uint8Array(buffer), {
       status: 200,
       headers: {
         'Content-Type': 'audio/mpeg',
