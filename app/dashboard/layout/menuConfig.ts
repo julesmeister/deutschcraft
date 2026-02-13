@@ -1,13 +1,5 @@
 export const studentMenuConfig = {
   trigger: 'Student',
-  icon: '📚',
-  highlight: {
-    badge: 'Learning Dashboard',
-    title: 'Track Your Progress!',
-    description: 'Manage your German learning journey with AI-powered flashcards and progress tracking.',
-    buttonText: 'View Dashboard',
-    buttonHref: '/dashboard/student',
-  },
   columns: [
     {
       title: 'Practice',
@@ -48,14 +40,6 @@ export const studentMenuConfig = {
 
 export const teacherMenuConfig = {
   trigger: 'Teacher',
-  icon: '👨‍🏫',
-  highlight: {
-    badge: 'Teacher Dashboard',
-    title: 'Manage Your Students!',
-    description: 'Monitor student progress, create assignments, and view detailed analytics.',
-    buttonText: 'View Dashboard',
-    buttonHref: '/dashboard/teacher',
-  },
   columns: [
     {
       title: 'Management',

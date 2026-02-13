@@ -20,6 +20,7 @@ export function DashboardNavbar() {
   // Get current user to check role and teacher settings
   const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
   const { showTeacherTab } = useTeacherDisplaySettings(currentUser?.teacherId, currentUser?.role);
+  const isTeacher = currentUser?.role === 'TEACHER' || showTeacherTab;
 
   const handleRoleSwitch = async (newRole: 'STUDENT' | 'TEACHER') => {
     if (!session?.user?.email) return;
@@ -56,7 +57,7 @@ export function DashboardNavbar() {
   return (
     <header className="pt-3 lg:pt-3 relative z-[100]">
       <div className="container mx-auto px-4 sm:px-6 relative z-[100]">
-        <div className={`w-full flex items-center justify-between transition-all duration-500 ease-out bg-gray-900/95 text-white backdrop-blur-md border rounded-2xl py-2.5 px-4 lg:py-3 lg:px-8
+        <div data-navbar className={`w-full flex items-center justify-between transition-all duration-500 ease-out bg-gray-900/95 text-white backdrop-blur-md border rounded-2xl py-2.5 px-4 lg:py-3 lg:px-8
           ${isScrolled
             ? 'border-gray-700/60 shadow-lg'
             : 'border-transparent shadow-none'
@@ -68,23 +69,28 @@ export function DashboardNavbar() {
             <div className="h-4 w-px bg-gray-600/60"></div>
 
             <nav className="flex items-center space-x-10">
-              <MegaDropdown {...updatedStudentConfig} />
+              <Link
+                href={isTeacher ? '/dashboard/teacher' : '/dashboard/student'}
+                className="font-semibold text-[15px] text-gray-300 hover:text-piku-cyan-accent transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-cyan-accent after:transition-all after:duration-300 hover:after:w-full"
+              >
+                Dashboard
+              </Link>
 
-              {/* Show teacher tab based on user role and teacher's settings */}
-              {(currentUser?.role === 'TEACHER' || showTeacherTab) && (
-                <MegaDropdown {...teacherMenuConfig} />
-              )}
+              {isTeacher
+                ? <MegaDropdown {...teacherMenuConfig} />
+                : <MegaDropdown {...updatedStudentConfig} />
+              }
 
               <Link
                 href="/dashboard/social"
-                className="font-semibold text-sm text-gray-300 hover:text-piku-mint transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-mint after:transition-all after:duration-300 hover:after:w-full"
+                className="font-semibold text-[15px] text-gray-300 hover:text-piku-mint transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-mint after:transition-all after:duration-300 hover:after:w-full"
               >
                 Social
               </Link>
 
               <Link
                 href="/dashboard/settings"
-                className="font-semibold text-sm text-gray-300 hover:text-piku-cyan-accent transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-cyan-accent after:transition-all after:duration-300 hover:after:w-full"
+                className="font-semibold text-[15px] text-gray-300 hover:text-piku-cyan-accent transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-cyan-accent after:transition-all after:duration-300 hover:after:w-full"
               >
                 Settings
               </Link>
@@ -119,7 +125,7 @@ export function DashboardNavbar() {
 
       <MobileMenu
         isOpen={mobileMenuOpen}
-        showTeacherTab={currentUser?.role === 'TEACHER' || showTeacherTab}
+        showTeacherTab={isTeacher}
       />
     </header>
   );
