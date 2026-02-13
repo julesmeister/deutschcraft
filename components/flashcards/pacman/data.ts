@@ -14,13 +14,8 @@ export interface FloatingPrefix {
   isCorrect: boolean;
 }
 
-export interface GameStats {
-  score: number;
-  correct: number;
-  incorrect: number;
-  streak: number;
-  maxStreak: number;
-}
+// Re-export from shared location for backwards compatibility
+export type { GameStats } from "../shared/types";
 
 export const PREFIXES = [
   "ab-", "an-", "auf-", "aus-", "be-", "bei-", "dar-", "durch-", "ein-",

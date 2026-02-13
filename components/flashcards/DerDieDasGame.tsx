@@ -7,7 +7,7 @@ import {
   LANE_COUNT, PACMAN_X, ARTICLE_SPAWN_X, BASE_SPEED, SPEED_INCREMENT, MAX_ARTICLES,
   getArticleColor, getArticleTextColor,
 } from "./derdiedas/data";
-import { GameStats } from "./pacman/data";
+import { GameStats } from "./shared/types";
 import { MenuScreen } from "./derdiedas/MenuScreen";
 import { ReviewScreen } from "./derdiedas/ReviewScreen";
 import { AnsweredEndingsList } from "./derdiedas/AnsweredEndingsList";
@@ -18,6 +18,11 @@ import { useDerDieDasProgress } from "@/lib/hooks/useDerDieDasProgress";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { saveDailyProgress } from "@/lib/services/turso";
 import { weightedRandomPick } from "@/lib/utils/weightedRandom";
+import { usePacmanControls } from "./shared/usePacmanControls";
+import { useGameLoop } from "./shared/useGameLoop";
+import { PacmanCharacter } from "./shared/PacmanCharacter";
+import { LaneGuides } from "./shared/LaneGuides";
+import { ControlsHint } from "./shared/ControlsHint";
 
 export interface DerDieDasGameRef {
   endGame: () => void;
@@ -39,7 +44,6 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
   const [currentEnding, setCurrentEnding] = useState<EndingEntry | null>(null);
   const [stats, setStats] = useState<GameStats>({ score: 0, correct: 0, incorrect: 0, streak: 0, maxStreak: 0 });
   const [level, setLevel] = useState(1);
-  const [pacmanMouthOpen, setPacmanMouthOpen] = useState(true);
   const [showCorrectFlash, setShowCorrectFlash] = useState(false);
   const [showWrongFlash, setShowWrongFlash] = useState(false);
   const [showWordReveal, setShowWordReveal] = useState(false);
@@ -51,6 +55,9 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
   const { progressMap, recordCorrect } = useDerDieDasProgress();
   const { session } = useFirebaseAuth();
   const userId = session?.user?.email || null;
+
+  const { pacmanMouthOpen, gameAreaRef, handleTouchStart, handleTouchMove, handleTouchEnd } =
+    usePacmanControls(gameState, LANE_COUNT, pacmanLane, setPacmanLane, setGameState);
 
   // Refs
   const endGame = useCallback(() => {
@@ -71,22 +78,9 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
     onGameStateChange?.(gameState);
   }, [gameState, onGameStateChange]);
 
-  const gameLoopRef = useRef<number>();
-  const gameAreaRef = useRef<HTMLDivElement>(null);
   const articleCountRef = useRef(0);
   const showWordRevealRef = useRef(false);
   const catchProcessingRef = useRef(false);
-
-  // Touch drag state
-  const touchStartY = useRef<number | null>(null);
-  const touchStartLane = useRef<number>(0);
-
-  // Pacman mouth animation
-  useEffect(() => {
-    if (gameState !== 'playing') return;
-    const interval = setInterval(() => setPacmanMouthOpen(prev => !prev), 200);
-    return () => clearInterval(interval);
-  }, [gameState]);
 
   const getRandomEnding = useCallback(() => {
     let pool = ENDING_DATA.filter(e => !answeredEndingsRef.current.has(e.ending));
@@ -133,11 +127,6 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
       colors: ['#3B82F6', '#EC4899', '#22C55E', '#FACC15'],
     });
   }, []);
-
-  const checkCollision = useCallback((article: FloatingArticle) => {
-    const pacmanXEnd = PACMAN_X + 8;
-    return article.x <= pacmanXEnd && article.x > PACMAN_X - 2 && article.lane === pacmanLane;
-  }, [pacmanLane]);
 
   const handleCatch = useCallback((article: FloatingArticle) => {
     // Guard against double-calls from React strict mode re-running state updaters
@@ -192,28 +181,8 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
     }
   }, [stats, fireConfetti, getRandomEnding, currentEnding, recordCorrect]);
 
-  // Game loop
-  useEffect(() => {
-    if (gameState !== 'playing') return;
-    const gameLoop = () => {
-      setFloatingArticles(prev => {
-        const updated: FloatingArticle[] = [];
-        let caughtArticle: FloatingArticle | null = null;
-        for (const article of prev) {
-          const newX = article.x - article.speed;
-          if (checkCollision({ ...article, x: newX })) { caughtArticle = article; continue; }
-          if (newX < -15) continue;
-          updated.push({ ...article, x: newX });
-        }
-        articleCountRef.current = updated.length;
-        if (caughtArticle) setTimeout(() => handleCatch(caughtArticle!), 0);
-        return updated;
-      });
-      gameLoopRef.current = requestAnimationFrame(gameLoop);
-    };
-    gameLoopRef.current = requestAnimationFrame(gameLoop);
-    return () => { if (gameLoopRef.current) cancelAnimationFrame(gameLoopRef.current); };
-  }, [gameState, checkCollision, handleCatch]);
+  // Game loop (shared hook)
+  useGameLoop(gameState, pacmanLane, PACMAN_X, setFloatingArticles, articleCountRef, handleCatch);
 
   // Spawn articles
   useEffect(() => {
@@ -226,49 +195,6 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
     }, spawnInterval);
     return () => clearInterval(intervalId);
   }, [gameState, currentEnding, spawnArticle, level]);
-
-  // Keyboard controls
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (gameState === 'playing') {
-        if (e.key === 'ArrowUp' || e.key === 'w' || e.key === 'W') {
-          e.preventDefault();
-          setPacmanLane(prev => Math.max(0, prev - 1));
-        } else if (e.key === 'ArrowDown' || e.key === 's' || e.key === 'S') {
-          e.preventDefault();
-          setPacmanLane(prev => Math.min(LANE_COUNT - 1, prev + 1));
-        } else if (e.key === 'Escape') {
-          setGameState('paused');
-        }
-      } else if (gameState === 'paused') {
-        if (e.key === 'Escape' || e.key === ' ') setGameState('playing');
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [gameState]);
-
-  // Touch drag handlers
-  const handleTouchStart = useCallback((e: React.TouchEvent) => {
-    if (gameState !== 'playing') return;
-    touchStartY.current = e.touches[0].clientY;
-    touchStartLane.current = pacmanLane;
-  }, [gameState, pacmanLane]);
-
-  const handleTouchMove = useCallback((e: React.TouchEvent) => {
-    if (gameState !== 'playing' || touchStartY.current === null || !gameAreaRef.current) return;
-    e.preventDefault();
-    const deltaY = e.touches[0].clientY - touchStartY.current;
-    const areaHeight = gameAreaRef.current.getBoundingClientRect().height;
-    const laneHeight = areaHeight / LANE_COUNT;
-    const laneDelta = Math.round(deltaY / laneHeight);
-    const newLane = Math.max(0, Math.min(LANE_COUNT - 1, touchStartLane.current + laneDelta));
-    setPacmanLane(newLane);
-  }, [gameState]);
-
-  const handleTouchEnd = useCallback(() => {
-    touchStartY.current = null;
-  }, []);
 
   const startGame = () => {
     setGameState('playing');
@@ -300,7 +226,6 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
   // --- Playing screen ---
   const laneHeight = 100 / LANE_COUNT;
   const pacmanTop = pacmanLane * laneHeight + laneHeight / 2;
-  const mouthAngle = pacmanMouthOpen ? 25 : 5;
 
   return (
     <div>
@@ -331,14 +256,7 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
           </div>
         )}
 
-        {/* Lane guides */}
-        {Array.from({ length: LANE_COUNT }, (_, i) => (
-          <div
-            key={i}
-            className="absolute left-0 right-0 border-b border-gray-700/30"
-            style={{ top: `${((i + 1) / LANE_COUNT) * 100}%` }}
-          />
-        ))}
+        <LaneGuides laneCount={LANE_COUNT} />
 
         {/* Floating articles */}
         {floatingArticles.map(article => (
@@ -366,15 +284,7 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
             transform: 'translate(-50%, -50%)',
           }}
         >
-          <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16">
-            <svg viewBox="0 0 100 100" className="w-full h-full">
-              <path
-                d={`M50,50 L${50 + 45 * Math.cos(mouthAngle * Math.PI / 180)},${50 - 45 * Math.sin(mouthAngle * Math.PI / 180)} A45,45 0 1,0 ${50 + 45 * Math.cos(mouthAngle * Math.PI / 180)},${50 + 45 * Math.sin(mouthAngle * Math.PI / 180)} Z`}
-                fill="#FACC15"
-              />
-              <circle cx="55" cy="25" r="6" fill="#000" />
-            </svg>
-          </div>
+          <PacmanCharacter mouthOpen={pacmanMouthOpen} />
         </div>
 
         {/* Target info */}
@@ -432,11 +342,7 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
         )}
       </div>
 
-      {/* Mobile controls hint */}
-      <div className="text-center text-gray-500 text-xs mt-3 sm:mt-4">
-        <span className="sm:hidden">Drag up/down to move Pacman</span>
-        <span className="hidden sm:inline">Arrow Keys or W/S to move Pacman</span>
-      </div>
+      <ControlsHint />
 
       <AnsweredEndingsList answeredEndings={answeredEndings} progressMap={progressMap} />
     </div>
