@@ -11,6 +11,7 @@ import { AlertDialog } from "@/components/ui/Dialog";
 import { VideoPanel, type VideoLayout } from "@/components/playground/VideoPanel";
 import { HorizontalVideoStrip } from "@/components/playground/HorizontalVideoStrip";
 import { ParticipantsList } from "@/components/playground/ParticipantsList";
+import { ClassroomTools } from "@/components/playground/ClassroomTools";
 import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
 import { MaterialSelector } from "@/components/playground/MaterialSelector";
 import { ExerciseSelector } from "@/components/playground/ExerciseSelector";
@@ -114,6 +115,7 @@ export function PlaygroundRoom({
   const [formattedDate, setFormattedDate] = useState<string>("");
   const [isMaterialSelectorOpen, setIsMaterialSelectorOpen] = useState(false);
   const [isExerciseSelectorOpen, setIsExerciseSelectorOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     if (!currentRoom?.createdAt) return;
@@ -181,9 +183,35 @@ export function PlaygroundRoom({
       />
 
       <div className="container mx-auto px-6 py-8">
+        {/* Tablet sidebar toggle */}
+        <button
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          className="lg:hidden mb-4 flex items-center gap-2 px-4 py-2.5 bg-white border border-gray-200 rounded-xl text-sm font-semibold text-neutral-700 hover:bg-gray-50 transition-colors w-full"
+        >
+          <svg className="w-5 h-5 text-neutral-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            {isSidebarOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            )}
+          </svg>
+          <span className="flex-1 text-left">
+            {isSidebarOpen ? "Hide Panel" : "Video, Participants & Tools"}
+          </span>
+          <span className="text-xs text-neutral-400 bg-gray-100 px-2 py-0.5 rounded-full">
+            {participants.length}
+          </span>
+          <svg
+            className={`w-4 h-4 text-neutral-400 transition-transform ${isSidebarOpen ? "rotate-180" : ""}`}
+            fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Left: Video Panel */}
-          <div className="lg:col-span-1">
+          {/* Left: Video Panel — always visible on lg, collapsible below */}
+          <div className={`lg:col-span-1 ${isSidebarOpen ? "" : "hidden lg:block"}`}>
             {isVoiceActive && videoLayout === "top-left" && (
               <div className="mb-4">
                 <HorizontalVideoStrip
@@ -229,6 +257,9 @@ export function PlaygroundRoom({
                 currentUserRole={userRole}
                 currentUserId={userId}
               />
+            </div>
+            <div className="mt-6 bg-white border border-gray-200 p-4">
+              <ClassroomTools participants={participants} audioElements={audioElements} currentUserId={userId} userRole={userRole} roomId={currentRoom.roomId} />
             </div>
           </div>
 

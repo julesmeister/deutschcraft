@@ -17,6 +17,8 @@ import {
 } from '@/lib/services/playgroundService';
 import type { PlaygroundRoom } from '@/lib/models/playground';
 
+const CAMERA_ERROR_NAMES = new Set(['NotAllowedError', 'AbortError', 'NotFoundError', 'NotReadableError']);
+
 interface UsePlaygroundHandlersProps {
   userId: string;
   userName: string;
@@ -38,6 +40,7 @@ interface UsePlaygroundHandlersProps {
   toggleMute: () => void;
   toggleVideo: () => Promise<boolean>;
   loadActiveRooms: () => Promise<void>;
+  onCameraError?: (error: { name: string; message: string }) => void;
 }
 
 export function usePlaygroundHandlers({
@@ -61,6 +64,7 @@ export function usePlaygroundHandlers({
   toggleMute,
   toggleVideo,
   loadActiveRooms,
+  onCameraError,
 }: UsePlaygroundHandlersProps) {
   const [isCreatingRoom, setIsCreatingRoom] = useState(false);
 
@@ -266,23 +270,30 @@ export function usePlaygroundHandlers({
       updateParticipantVoiceStatus(myParticipantId, true, false).catch(() => {});
     } catch (error: any) {
       console.error('[Video] Failed to start video:', error);
-      setDialogState({
-        isOpen: true,
-        title: 'Video Error',
-        message: `Failed to start video: ${error.name || 'Unknown error'}. Please check camera permissions.`,
-      });
+      if (onCameraError && CAMERA_ERROR_NAMES.has(error?.name)) {
+        onCameraError({ name: error.name, message: error.message || '' });
+      } else {
+        setDialogState({
+          isOpen: true,
+          title: 'Video Error',
+          message: `Failed to start video: ${error?.name || 'Unknown error'}. Please check camera permissions.`,
+        });
+      }
     }
-  }, [myParticipantId, currentRoom, startVideo, setDialogState]);
+  }, [myParticipantId, currentRoom, startVideo, setDialogState, onCameraError]);
 
   const handleToggleVideo = useCallback(async () => {
     if (!myParticipantId) return;
 
     try {
       await toggleVideo();
-    } catch (error) {
+    } catch (error: any) {
       console.error('[Video] Failed to toggle video:', error);
+      if (onCameraError && CAMERA_ERROR_NAMES.has(error?.name)) {
+        onCameraError({ name: error.name, message: error.message || '' });
+      }
     }
-  }, [myParticipantId, toggleVideo]);
+  }, [myParticipantId, toggleVideo, onCameraError]);
 
   return {
     isCreatingRoom,

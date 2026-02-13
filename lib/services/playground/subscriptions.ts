@@ -61,7 +61,7 @@ export function subscribeToParticipants(
   );
 
   return onSnapshot(q, (snapshot) => {
-    const participants = snapshot.docs.map((doc) => {
+    const allDocs = snapshot.docs.map((doc) => {
       const data = doc.data();
       return {
         participantId: doc.id,
@@ -70,7 +70,17 @@ export function subscribeToParticipants(
         leftAt: data.leftAt ? (data.leftAt as Timestamp).toDate() : undefined,
       } as PlaygroundParticipant;
     });
-    callback(participants);
+
+    // Deduplicate by userId — keep the doc with the latest joinedAt
+    const byUser = new Map<string, PlaygroundParticipant>();
+    for (const p of allDocs) {
+      const existing = byUser.get(p.userId);
+      if (!existing || p.joinedAt > existing.joinedAt) {
+        byUser.set(p.userId, p);
+      }
+    }
+
+    callback(Array.from(byUser.values()));
   });
 }
 

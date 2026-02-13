@@ -5,7 +5,7 @@
 
 "use client";
 
-import { use, useCallback } from "react";
+import { use, useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { PlaygroundRoom as PlaygroundRoomComponent } from "@/components/playground/PlaygroundRoom";
@@ -18,7 +18,10 @@ import { usePlaygroundSessionSync } from "@/lib/hooks/usePlaygroundSessionSync";
 import { usePlaygroundRoomInit } from "@/lib/hooks/usePlaygroundRoomInit";
 import { getUserInfo } from "@/lib/utils/userHelpers";
 import { CatLoader } from "@/components/ui/CatLoader";
+import { CameraPermissionSnackbar } from "@/components/playground/CameraPermissionSnackbar";
 import { MinimizedRoomView } from "./MinimizedRoomView";
+
+const CAMERA_ERROR_NAMES = new Set(['NotAllowedError', 'AbortError', 'NotFoundError', 'NotReadableError']);
 
 export default function PlaygroundRoomPage({
   params,
@@ -34,9 +37,14 @@ export default function PlaygroundRoomPage({
     session?.user?.email || null
   );
   const { userId, userName, userEmail, userRole } = getUserInfo(currentUser, session);
+  const [cameraError, setCameraError] = useState<{ name: string; message: string } | null>(null);
 
   // Stable error handler for media
   const handleMediaError = useCallback((error: Error) => {
+    if (CAMERA_ERROR_NAMES.has(error.name)) {
+      setCameraError({ name: error.name, message: error.message || '' });
+      return;
+    }
     setDialogState({
       isOpen: true,
       title: "Media Chat Error",
@@ -128,6 +136,7 @@ export default function PlaygroundRoomPage({
     toggleMute,
     toggleVideo,
     loadActiveRooms,
+    onCameraError: setCameraError,
   });
 
   // Subscribe to room, participants, and writings
@@ -198,6 +207,34 @@ export default function PlaygroundRoomPage({
       transition={{ duration: 0.3 }}
       className="h-[calc(100vh-4rem)]"
     >
+      <CameraPermissionSnackbar
+        error={cameraError}
+        onRetry={() => {
+          setCameraError(null);
+          handleStartVideo();
+        }}
+        onResetCamera={async () => {
+          setCameraError(null);
+          try {
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            stream.getTracks().forEach((t) => t.stop());
+            handleStartVideo();
+          } catch (err: any) {
+            setCameraError({ name: err.name, message: err.message || "" });
+          }
+        }}
+        onResetMic={async () => {
+          setCameraError(null);
+          try {
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            stream.getTracks().forEach((t) => t.stop());
+            handleStartVideo();
+          } catch (err: any) {
+            setCameraError({ name: err.name, message: err.message || "" });
+          }
+        }}
+        onDismiss={() => setCameraError(null)}
+      />
       <PlaygroundRoomComponent
         currentRoom={currentRoom}
         participants={participants}

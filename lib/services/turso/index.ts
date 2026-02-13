@@ -431,6 +431,17 @@ export {
 } from './derDieDasService';
 
 // ============================================================================
+// CLASSROOM TOOLS SERVICE
+// ============================================================================
+export {
+  getToolState,
+  upsertToolState,
+  getToolStateIfChanged,
+} from './classroomToolsService';
+
+export type { ClassroomToolState } from './classroomToolsService';
+
+// ============================================================================
 // TYPE EXPORTS
 // ============================================================================
 export type { Session } from './sessionService';
