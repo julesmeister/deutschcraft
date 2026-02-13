@@ -22,6 +22,9 @@ interface PlaygroundRoomContentProps {
   myWriting?: PlaygroundWriting;
   userId: string;
   userRole: "teacher" | "student";
+  participantCount: number;
+  isSidebarOpen: boolean;
+  onToggleSidebar: () => void;
   onSaveWriting: (content: string) => Promise<void>;
   onToggleWritingVisibility: (writingId: string, isPublic: boolean) => Promise<void>;
   onToggleRoomPublicWriting?: (isPublic: boolean) => Promise<void>;
@@ -35,6 +38,9 @@ export function PlaygroundRoomContent({
   myWriting,
   userId,
   userRole,
+  participantCount,
+  isSidebarOpen,
+  onToggleSidebar,
   onSaveWriting,
   onToggleWritingVisibility,
   onToggleRoomPublicWriting,
@@ -45,6 +51,10 @@ export function PlaygroundRoomContent({
   const [activeView, setActiveView] = useState<"exercise" | "writing">("exercise");
 
   const hasExercise = !!currentRoom.currentExerciseId;
+
+  // When sidebar is toggled open on tablet, close the active content view indicator
+  // so the sidebar takes visual priority
+  const showPanel = isSidebarOpen;
 
   return (
     <>
@@ -70,13 +80,34 @@ export function PlaygroundRoomContent({
         </div>
       )}
 
-      {/* View Toggle Tabs - shown when exercise is active */}
-      {hasExercise && (
-        <div className="flex items-center gap-1 p-1 bg-gray-100 rounded-lg mb-4">
+      {/* View Toggle Tabs */}
+      <div className="flex items-center gap-1 p-1 bg-gray-100 rounded-lg mb-4">
+        {/* Panel tab - only visible below xl */}
+        <button
+          onClick={() => {
+            onToggleSidebar();
+            if (!isSidebarOpen) setActiveView("exercise");
+          }}
+          className={`xl:hidden flex items-center justify-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+            showPanel
+              ? "bg-white text-gray-900 shadow-sm"
+              : "text-gray-600 hover:text-gray-900"
+          }`}
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+          Panel
+          <span className="text-[10px] text-gray-400 bg-gray-200 rounded-full px-1.5 py-0.5 leading-none">
+            {participantCount}
+          </span>
+        </button>
+
+        {hasExercise && (
           <button
-            onClick={() => setActiveView("exercise")}
+            onClick={() => { setActiveView("exercise"); if (isSidebarOpen) onToggleSidebar(); }}
             className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-md transition-colors ${
-              activeView === "exercise"
+              !showPanel && activeView === "exercise"
                 ? "bg-white text-gray-900 shadow-sm"
                 : "text-gray-600 hover:text-gray-900"
             }`}
@@ -86,21 +117,21 @@ export function PlaygroundRoomContent({
             </svg>
             Exercise
           </button>
-          <button
-            onClick={() => setActiveView("writing")}
-            className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-md transition-colors ${
-              activeView === "writing"
-                ? "bg-white text-gray-900 shadow-sm"
-                : "text-gray-600 hover:text-gray-900"
-            }`}
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-            </svg>
-            Writing Board
-          </button>
-        </div>
-      )}
+        )}
+        <button
+          onClick={() => { setActiveView("writing"); if (isSidebarOpen) onToggleSidebar(); }}
+          className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+            !showPanel && (activeView === "writing" || !hasExercise)
+              ? "bg-white text-gray-900 shadow-sm"
+              : "text-gray-600 hover:text-gray-900"
+          }`}
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+          </svg>
+          Writing Board
+        </button>
+      </div>
 
       {/* Content Area */}
       {hasExercise && activeView === "exercise" ? (
