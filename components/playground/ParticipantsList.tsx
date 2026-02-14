@@ -2,16 +2,17 @@
 
 import { useEffect, useState, useRef } from "react";
 import type { PlaygroundParticipant } from "@/lib/models/playground";
+import type { AudioControlState } from "./audioTypes";
 import { updateParticipantVoiceStatus } from "@/lib/services/playgroundService";
 import { ParticipantRow } from "./ParticipantRow";
 
 interface ParticipantsListProps {
   participants: PlaygroundParticipant[];
-  voiceStreams?: Map<string, MediaStream>;
-  voiceAnalysers?: Map<string, AnalyserNode>;
-  audioElements?: Map<string, HTMLAudioElement>;
-  currentUserRole?: "teacher" | "student";
-  currentUserId?: string;
+  audioStreams?: Map<string, MediaStream>;
+  audioAnalysers?: Map<string, AnalyserNode>;
+  audioControl?: AudioControlState;
+  userRole?: "teacher" | "student";
+  userId?: string;
 }
 
 interface ParticipantWithAudio extends PlaygroundParticipant {
@@ -21,19 +22,21 @@ interface ParticipantWithAudio extends PlaygroundParticipant {
 
 export function ParticipantsList({
   participants,
-  voiceStreams,
-  voiceAnalysers,
-  audioElements,
-  currentUserRole = "student",
-  currentUserId = "",
+  audioStreams,
+  audioAnalysers,
+  audioControl,
+  userRole = "student",
+  userId = "",
 }: ParticipantsListProps) {
   const [participantsWithAudio, setParticipantsWithAudio] = useState<ParticipantWithAudio[]>([]);
-  const [volumes, setVolumes] = useState<Map<string, number>>(new Map());
   const [draggingUserId, setDraggingUserId] = useState<string | null>(null);
   const pillRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+  // Ref to read audioControl inside RAF without it being a dependency
+  const audioControlRef = useRef(audioControl);
+  audioControlRef.current = audioControl;
 
   useEffect(() => {
-    if (!voiceAnalysers || voiceAnalysers.size === 0) {
+    if (!audioAnalysers || audioAnalysers.size === 0) {
       setParticipantsWithAudio(
         participants.map((p) => ({ ...p, isTalking: false, audioLevel: 0 })),
       );
@@ -43,8 +46,14 @@ export function ParticipantsList({
     let animationFrameId: number;
 
     const checkAudioLevels = () => {
+      const ctrl = audioControlRef.current;
       const updated = participants.map((p) => {
-        const analyser = voiceAnalysers?.get(p.userId);
+        // Skip expensive analysis for isolated users
+        if (ctrl?.isUserIsolated(p.userId)) {
+          return { ...p, isTalking: false, audioLevel: 0 };
+        }
+
+        const analyser = audioAnalysers?.get(p.userId);
         if (!analyser || !p.isVoiceActive) {
           return { ...p, isTalking: false, audioLevel: 0 };
         }
@@ -67,7 +76,7 @@ export function ParticipantsList({
 
     checkAudioLevels();
     return () => { if (animationFrameId) cancelAnimationFrame(animationFrameId); };
-  }, [participants, voiceStreams, voiceAnalysers]);
+  }, [participants, audioStreams, audioAnalysers]);
 
   // Drag event listeners for volume control
   useEffect(() => {
@@ -82,9 +91,9 @@ export function ParticipantsList({
 
     const applyVolume = (clientX: number) => {
       const vol = getVolume(clientX);
-      const audioEl = audioElements?.get(draggingUserId);
-      if (audioEl) audioEl.volume = vol;
-      setVolumes((prev) => new Map(prev).set(draggingUserId!, vol));
+      if (audioControl) {
+        audioControl.setUserVolume(draggingUserId!, vol);
+      }
     };
 
     const onMouseMove = (e: MouseEvent) => applyVolume(e.clientX);
@@ -102,7 +111,7 @@ export function ParticipantsList({
       window.removeEventListener("touchmove", onTouchMove);
       window.removeEventListener("touchend", onEnd);
     };
-  }, [draggingUserId, audioElements]);
+  }, [draggingUserId, audioControl]);
 
   if (participants.length === 0) {
     return <div className="text-center text-gray-500 py-4">No participants yet</div>;
@@ -122,9 +131,9 @@ export function ParticipantsList({
     if (!pill) return;
     const rect = pill.getBoundingClientRect();
     const vol = Math.max(0, Math.min(1, (clientX - rect.left) / rect.width));
-    const audioEl = audioElements?.get(userId);
-    if (audioEl) audioEl.volume = vol;
-    setVolumes((prev) => new Map(prev).set(userId, vol));
+    if (audioControl) {
+      audioControl.setUserVolume(userId, vol);
+    }
   };
 
   return (
@@ -137,10 +146,11 @@ export function ParticipantsList({
           >
             <ParticipantRow
               participant={p}
-              isCurrentUser={p.userId === currentUserId}
-              canMute={currentUserRole === "teacher" && p.userId !== currentUserId}
-              volume={volumes.get(p.userId) ?? 1}
+              isCurrentUser={p.userId === userId}
+              canMute={userRole === "teacher" && p.userId !== userId}
+              volume={audioControl?.getUserVolume(p.userId) ?? 1}
               isDragging={draggingUserId === p.userId}
+              isIsolated={audioControl?.isUserIsolated(p.userId)}
               onMute={handleMute}
               onDragStart={handleDragStart}
             />

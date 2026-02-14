@@ -9,6 +9,7 @@ import { useState } from "react";
 import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
 import { VideoLayoutSelector, type VideoLayout } from "./VideoLayoutSelector";
 import { VideoGridView } from "./VideoGridView";
+import type { AudioControlState } from "./audioTypes";
 
 export type { VideoLayout };
 
@@ -28,7 +29,7 @@ interface VideoPanelProps {
   videoStreams: Map<string, MediaStream>;
   audioStreams?: Map<string, MediaStream>;
   audioAnalysers: Map<string, AnalyserNode>;
-  audioElements?: Map<string, HTMLAudioElement>;
+  audioControl?: AudioControlState;
   currentUserId: string;
   currentUserName: string;
   hostId: string;
@@ -50,7 +51,7 @@ export function VideoPanel({
   videoStreams,
   audioStreams,
   audioAnalysers,
-  audioElements,
+  audioControl,
   currentUserId,
   currentUserName,
   hostId,
@@ -80,9 +81,13 @@ export function VideoPanel({
       {/* Controls */}
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-semibold text-neutral-900">
-          Voice & Video{" "}
-          {participants.length > 0 && `(${participants.length + 1})`}
+          Voice & Video
         </h3>
+        {participants.length > 0 && (
+          <span className="inline-flex items-center justify-center min-w-[1.5rem] h-6 px-1.5 rounded-md bg-pastel-ocean/15 text-pastel-ocean text-xs font-bold">
+            {participants.length + 1}
+          </span>
+        )}
       </div>
 
       {/* Control Buttons */}
@@ -200,7 +205,7 @@ export function VideoPanel({
           currentUserName={currentUserName}
           hostId={hostId}
           isMuted={isMuted}
-          audioElements={audioElements}
+          audioElements={audioControl?.audioElements}
         />
       )}
     </div>

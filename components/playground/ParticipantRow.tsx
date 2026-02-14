@@ -19,6 +19,7 @@ interface ParticipantRowProps {
   canMute: boolean;
   volume: number;
   isDragging: boolean;
+  isIsolated?: boolean;
   onMute: (participantId: string, currentIsMuted: boolean) => void;
   onDragStart: (userId: string, clientX: number) => void;
 }
@@ -29,17 +30,21 @@ export function ParticipantRow({
   canMute,
   volume,
   isDragging,
+  isIsolated = false,
   onMute,
   onDragStart,
 }: ParticipantRowProps) {
+  const effectiveTalking = p.isTalking && !isIsolated;
+
   return (
     <div
       className={`
         relative overflow-hidden select-none
         flex items-center gap-1.5 px-2.5 py-1.5 rounded-full
-        transition-all duration-200 cursor-ew-resize
+        transition-all duration-200
+        ${isIsolated ? "cursor-default opacity-50" : "cursor-ew-resize"}
         ${
-          p.isTalking
+          effectiveTalking
             ? "bg-gradient-to-r from-green-100 to-green-50 border border-green-400 shadow-sm"
             : isDragging
               ? "bg-gray-50 border border-amber-200 shadow-sm"
@@ -47,28 +52,32 @@ export function ParticipantRow({
         }
       `}
       onMouseDown={(e) => {
+        if (isIsolated) return;
         if ((e.target as HTMLElement).closest("button")) return;
         onDragStart(p.userId, e.clientX);
       }}
       onTouchStart={(e) => {
+        if (isIsolated) return;
         if ((e.target as HTMLElement).closest("button")) return;
         onDragStart(p.userId, e.touches[0].clientX);
       }}
     >
       {/* Volume fill indicator */}
-      <div
-        className={`absolute left-0 top-0 h-full rounded-full transition-[width] ${
-          isDragging ? "duration-0" : "duration-150"
-        } ${
-          p.isTalking
-            ? "bg-gradient-to-r from-cyan-300/45 to-blue-200/35"
-            : "bg-gradient-to-r from-amber-200/40 to-rose-200/35"
-        }`}
-        style={{ width: `${volume * 100}%` }}
-      />
+      {!isIsolated && (
+        <div
+          className={`absolute left-0 top-0 h-full rounded-full transition-[width] ${
+            isDragging ? "duration-0" : "duration-150"
+          } ${
+            effectiveTalking
+              ? "bg-gradient-to-r from-cyan-300/45 to-blue-200/35"
+              : "bg-gradient-to-r from-amber-200/40 to-rose-200/35"
+          }`}
+          style={{ width: `${volume * 100}%` }}
+        />
+      )}
 
       {/* Audio level visualization */}
-      {p.isVoiceActive && p.isTalking && (
+      {p.isVoiceActive && effectiveTalking && (
         <div
           className="absolute left-0 top-0 h-full bg-green-400 transition-all duration-100 pointer-events-none"
           style={{
@@ -81,23 +90,24 @@ export function ParticipantRow({
       {/* Microphone icon */}
       <button
         onClick={() =>
-          canMute && p.isVoiceActive && onMute(p.participantId, p.isMuted)
+          canMute && p.isVoiceActive && !isIsolated && onMute(p.participantId, p.isMuted)
         }
-        disabled={!canMute || !p.isVoiceActive}
+        disabled={!canMute || !p.isVoiceActive || isIsolated}
         className={`relative z-10 flex items-center justify-center w-6 h-6 ${
-          canMute && p.isVoiceActive
+          canMute && p.isVoiceActive && !isIsolated
             ? "cursor-pointer hover:opacity-80"
             : "cursor-default"
         }`}
         title={
-          canMute && p.isVoiceActive
+          isIsolated ? "Isolated by group"
+          : canMute && p.isVoiceActive
             ? p.isMuted ? "Click to unmute" : "Click to mute"
             : ""
         }
       >
         {p.isVoiceActive ? (
           <div className="relative">
-            {p.isTalking && (
+            {effectiveTalking && (
               <>
                 <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-75" />
                 <div
@@ -135,10 +145,10 @@ export function ParticipantRow({
 
       {/* Name and role */}
       <div className="relative z-10 flex-1 min-w-0">
-        <span className={`text-xs font-semibold ${p.isTalking ? "text-green-900" : "text-neutral-800"}`}>
+        <span className={`text-xs font-semibold ${effectiveTalking ? "text-green-900" : "text-neutral-800"}`}>
           {p.userName}
         </span>
-        {!p.isTalking && !p.isVoiceActive && (
+        {!effectiveTalking && !p.isVoiceActive && (
           <span className="ml-1.5 text-[10px] text-gray-500 uppercase tracking-wide">
             {p.role}
           </span>
@@ -146,14 +156,19 @@ export function ParticipantRow({
       </div>
 
       {/* Volume percentage (shown while dragging) */}
-      {isDragging && (
+      {isDragging && !isIsolated && (
         <span className="relative z-10 text-xs font-medium text-amber-600 tabular-nums">
           {Math.round(volume * 100)}%
         </span>
       )}
 
+      {/* Isolated indicator */}
+      {isIsolated && (
+        <span className="relative z-10 text-[10px] font-medium text-gray-500">Isolated</span>
+      )}
+
       {/* Muted indicator */}
-      {!isDragging && p.isMuted && p.isVoiceActive && (
+      {!isDragging && !isIsolated && p.isMuted && p.isVoiceActive && (
         <span className="relative z-10 text-[10px] font-medium text-red-600">Muted</span>
       )}
     </div>

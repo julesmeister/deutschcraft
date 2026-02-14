@@ -8,6 +8,7 @@ import { StudentPicker } from "./tools/StudentPicker";
 import { ActivityTimer } from "./tools/ActivityTimer";
 import { Scoreboard } from "./tools/Scoreboard";
 import type { PlaygroundParticipant } from "@/lib/models/playground";
+import type { AudioControlState, GroupIsolationState } from "./audioTypes";
 
 type ToolTab = "dice" | "groups" | "picker" | "timer" | "score";
 
@@ -21,13 +22,14 @@ const TABS: { key: ToolTab; label: string; icon: string }[] = [
 
 interface ClassroomToolsProps {
   participants: PlaygroundParticipant[];
-  audioElements?: Map<string, HTMLAudioElement>;
+  audioControl?: AudioControlState;
   currentUserId?: string;
   userRole?: "teacher" | "student";
   roomId: string;
+  onIsolationChange: (state: GroupIsolationState) => void;
 }
 
-export function ClassroomTools({ participants, audioElements, currentUserId, userRole, roomId }: ClassroomToolsProps) {
+export function ClassroomTools({ participants, audioControl, currentUserId, userRole, roomId, onIsolationChange }: ClassroomToolsProps) {
   const [isOpen, setIsOpen] = useLocalStorage("tools-open", false);
   const [activeTab, setActiveTab] = useLocalStorage<ToolTab>("tools-active-tab", "dice");
 
@@ -81,10 +83,11 @@ export function ClassroomTools({ participants, audioElements, currentUserId, use
           <div className={activeTab === "groups" ? "" : "hidden"}>
             <GroupRandomizer
               participants={participants}
-              audioElements={audioElements}
+              hasAudio={!!audioControl && audioControl.audioElements.size > 0}
               currentUserId={currentUserId}
               userRole={userRole}
               toolState={toolState}
+              onIsolationChange={onIsolationChange}
             />
           </div>
           <div className={activeTab === "picker" ? "" : "hidden"}>

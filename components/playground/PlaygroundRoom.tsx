@@ -5,7 +5,7 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { DashboardHeader } from "@/components/dashboard/DashboardHeader";
 import { AlertDialog } from "@/components/ui/Dialog";
 import { VideoPanel, type VideoLayout } from "@/components/playground/VideoPanel";
@@ -17,7 +17,9 @@ import { MaterialSelector } from "@/components/playground/MaterialSelector";
 import { ExerciseSelector } from "@/components/playground/ExerciseSelector";
 import { PlaygroundRoomHeaderActions } from "@/components/playground/PlaygroundRoomHeaderActions";
 import { PlaygroundRoomContent } from "@/components/playground/PlaygroundRoomContent";
+import { useAudioController } from "@/components/playground/useAudioController";
 import { formatDuration } from "@/lib/utils/dateHelpers";
+import type { GroupIsolationState } from "@/components/playground/audioTypes";
 import type {
   PlaygroundRoom as PlaygroundRoomType,
   PlaygroundParticipant,
@@ -119,6 +121,28 @@ export function PlaygroundRoom({
   // true = explicitly shown, false = explicitly hidden
   const [sidebarState, setSidebarState] = useState<boolean | null>(null);
 
+  // Centralized audio control: isolation state + volume management
+  const [isolation, setIsolation] = useState<GroupIsolationState>({
+    isIsolated: false,
+    mutedUserIds: new Set(),
+    myGroupIndex: -1,
+  });
+  const audioControl = useAudioController(audioElements, isolation);
+  const handleIsolationChange = useCallback((state: GroupIsolationState) => {
+    setIsolation(prev => {
+      // Bail out if nothing materially changed to prevent re-render loops
+      if (
+        prev.isIsolated === state.isIsolated &&
+        prev.myGroupIndex === state.myGroupIndex &&
+        prev.mutedUserIds.size === state.mutedUserIds.size &&
+        [...prev.mutedUserIds].every(id => state.mutedUserIds.has(id))
+      ) {
+        return prev;
+      }
+      return state;
+    });
+  }, []);
+
   useEffect(() => {
     if (!currentRoom?.createdAt) return;
     const startTime = currentRoom.createdAt instanceof Date
@@ -218,6 +242,7 @@ export function PlaygroundRoom({
               videoStreams={videoStreams}
               audioStreams={audioStreams}
               audioAnalysers={audioAnalysers}
+              audioControl={audioControl}
               currentUserId={userId}
               currentUserName={userName}
               hostId={currentRoom.hostId}
@@ -230,20 +255,25 @@ export function PlaygroundRoom({
               onLayoutChange={setVideoLayout}
             />
             <div className="mt-6 bg-white border border-gray-200 p-4">
-              <h3 className="text-lg font-semibold text-neutral-900 mb-3">
-                Participants ({participants.length})
-              </h3>
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-lg font-semibold text-neutral-900">
+                  Participants
+                </h3>
+                <span className="inline-flex items-center justify-center min-w-[1.5rem] h-6 px-1.5 rounded-md bg-pastel-ocean/15 text-pastel-ocean text-xs font-bold">
+                  {participants.length}
+                </span>
+              </div>
               <ParticipantsList
                 participants={participants}
-                voiceStreams={audioStreams}
-                voiceAnalysers={audioAnalysers}
-                audioElements={audioElements}
-                currentUserRole={userRole}
-                currentUserId={userId}
+                audioStreams={audioStreams}
+                audioAnalysers={audioAnalysers}
+                audioControl={audioControl}
+                userRole={userRole}
+                userId={userId}
               />
             </div>
             <div className="mt-6 bg-white border border-gray-200 p-4">
-              <ClassroomTools participants={participants} audioElements={audioElements} currentUserId={userId} userRole={userRole} roomId={currentRoom.roomId} />
+              <ClassroomTools participants={participants} audioControl={audioControl} currentUserId={userId} userRole={userRole} roomId={currentRoom.roomId} onIsolationChange={handleIsolationChange} />
             </div>
           </div>
 

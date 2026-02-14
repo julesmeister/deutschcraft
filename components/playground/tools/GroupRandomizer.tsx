@@ -1,24 +1,27 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useMemo } from "react";
 import type { ClassroomToolContext } from "./useClassroomToolState";
 import type { PlaygroundParticipant } from "@/lib/models/playground";
+import type { GroupIsolationState } from "../audioTypes";
 import { GroupDisplay } from "./GroupDisplay";
 
 interface GroupRandomizerProps {
   participants: PlaygroundParticipant[];
-  audioElements?: Map<string, HTMLAudioElement>;
+  hasAudio: boolean;
   currentUserId?: string;
   userRole?: "teacher" | "student";
   toolState: ClassroomToolContext;
+  onIsolationChange: (state: GroupIsolationState) => void;
 }
 
 export function GroupRandomizer({
   participants,
-  audioElements,
+  hasAudio,
   currentUserId,
   userRole,
   toolState,
+  onIsolationChange,
 }: GroupRandomizerProps) {
   const { useToolValue, isTeacher } = toolState;
   const [groupCount, setGroupCount] = useToolValue("groups-count", 2);
@@ -27,60 +30,74 @@ export function GroupRandomizer({
   const [isIsolated, setIsIsolated] = useToolValue("groups-isolated", false);
   const [teacherListeningTo, setTeacherListeningTo] = useState<number | null>(null);
 
-  // Resolve persisted group assignments against live participants
-  const groups: PlaygroundParticipant[][] = persistedGroups.length > 0
-    ? persistedGroups.map(group =>
-        group
-          .map(g => participants.find(p => p.userId === g.userId))
-          .filter((p): p is PlaygroundParticipant => p !== undefined)
-      ).filter(g => g.length > 0)
-    : [];
-
-  const teacherUserIds = new Set(
-    participants.filter((p) => p.role === "teacher").map((p) => p.userId)
+  // Resolve persisted group assignments against live participants (memoized to prevent re-render loops)
+  const groups: PlaygroundParticipant[][] = useMemo(() =>
+    persistedGroups.length > 0
+      ? persistedGroups.map(group =>
+          group
+            .map(g => participants.find(p => p.userId === g.userId))
+            .filter((p): p is PlaygroundParticipant => p !== undefined)
+        ).filter(g => g.length > 0)
+      : [],
+    [persistedGroups, participants],
   );
+
+  const teacherUserIds = useMemo(() => new Set(
+    participants.filter((p) => p.role === "teacher").map((p) => p.userId)
+  ), [participants]);
 
   const myGroupIndex = groups.findIndex((g) =>
     g.some((p) => p.userId === currentUserId)
   );
 
-  // Apply audio isolation
+  // Compute and emit isolation state
   useEffect(() => {
-    if (!audioElements || !currentUserId) return;
-
-    if (!isIsolated || groups.length === 0) {
-      audioElements.forEach((el) => { el.muted = false; });
+    if (!currentUserId || groups.length === 0 || !isIsolated) {
+      onIsolationChange({ isIsolated: false, mutedUserIds: new Set(), myGroupIndex: -1 });
       return;
     }
 
+    const mutedUserIds = new Set<string>();
+    const allUserIds = new Set<string>();
+    participants.forEach(p => allUserIds.add(p.userId));
+
     if (isTeacher && !teacherJoinsGroup) {
-      if (teacherListeningTo === null) {
-        audioElements.forEach((el) => { el.muted = false; });
-      } else {
+      // Floating teacher
+      if (teacherListeningTo !== null) {
         const listenGroupUserIds = new Set(
           groups[teacherListeningTo]?.map((p) => p.userId) || []
         );
-        audioElements.forEach((el, peerId) => {
-          el.muted = !listenGroupUserIds.has(peerId);
+        allUserIds.forEach(uid => {
+          if (uid !== currentUserId && !listenGroupUserIds.has(uid)) {
+            mutedUserIds.add(uid);
+          }
         });
       }
+      // teacherListeningTo === null → hear everyone, no mutes
     } else {
       if (myGroupIndex === -1) {
-        audioElements.forEach((el) => { el.muted = false; });
+        onIsolationChange({ isIsolated: false, mutedUserIds: new Set(), myGroupIndex: -1 });
         return;
       }
       const myGroupUserIds = new Set(groups[myGroupIndex].map((p) => p.userId));
-      audioElements.forEach((el, peerId) => {
-        const isFloating = teacherUserIds.has(peerId) && !groups.some((g) => g.some((p) => p.userId === peerId));
-        el.muted = !isFloating && !myGroupUserIds.has(peerId);
+      allUserIds.forEach(uid => {
+        if (uid === currentUserId) return;
+        const isFloating = teacherUserIds.has(uid) && !groups.some((g) => g.some((p) => p.userId === uid));
+        if (!isFloating && !myGroupUserIds.has(uid)) {
+          mutedUserIds.add(uid);
+        }
       });
     }
-  }, [isIsolated, groups, myGroupIndex, teacherListeningTo, teacherJoinsGroup, audioElements, currentUserId, isTeacher, teacherUserIds]);
 
-  // Unmute all on unmount
+    onIsolationChange({ isIsolated: true, mutedUserIds, myGroupIndex });
+  }, [isIsolated, groups, myGroupIndex, teacherListeningTo, teacherJoinsGroup, currentUserId, isTeacher, teacherUserIds, participants, onIsolationChange]);
+
+  // Cleanup: clear isolation on unmount
   useEffect(() => {
-    return () => { audioElements?.forEach((el) => { el.muted = false; }); };
-  }, [audioElements]);
+    return () => {
+      onIsolationChange({ isIsolated: false, mutedUserIds: new Set(), myGroupIndex: -1 });
+    };
+  }, [onIsolationChange]);
 
   const shuffle = useCallback(() => {
     if (!isTeacher) return;
@@ -191,7 +208,7 @@ export function GroupRandomizer({
           teacherJoinsGroup={teacherJoinsGroup}
           teacherListeningTo={teacherListeningTo}
           myGroupIndex={myGroupIndex}
-          hasAudio={!!audioElements && !!currentUserId}
+          hasAudio={hasAudio}
           onToggleIsolation={() => {
             if (!isTeacher) return;
             setIsIsolated(!isIsolated);
