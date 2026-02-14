@@ -50,24 +50,20 @@ export function Navbar({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleAuthClick = () => {
-    console.info('🔵 NAVBAR AUTH BUTTON CLICKED');
-    console.info('Status:', status, '| Session exists:', !!session, '| Has custom handler:', !!onAuthClick);
+  const getDashboardPath = () => {
+    const role = (session?.user as any)?.role?.toUpperCase();
+    if (role === 'TEACHER') return '/dashboard/teacher';
+    if (role === 'STUDENT') return '/dashboard/student';
+    return '/dashboard';
+  };
 
+  const handleAuthClick = () => {
     if (onAuthClick) {
-      console.info('✓ Using custom onAuthClick handler');
       onAuthClick();
     } else if (session) {
-      console.info('✅ Session found, navigating to dashboard');
-      console.info('Current path:', window.location.pathname);
-      // User is signed in, redirect to dashboard
-      window.location.href = '/dashboard';
-      console.info('✓ window.location.href set to /dashboard');
+      router.push(getDashboardPath());
     } else {
-      console.info('🔐 No session, triggering Google sign-in');
-      // User is not signed in, trigger Google sign-in
       signIn('google', { callbackUrl: '/dashboard' });
-      console.info('✓ signIn called');
     }
   };
 

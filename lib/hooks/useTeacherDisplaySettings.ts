@@ -22,8 +22,8 @@ export function useTeacherDisplaySettings(
     staleTime: 60000, // 1 minute
   });
 
-  // Default to true if no setting is found (backwards compatibility)
-  const showTeacherTab = teacherData?.displaySettings?.showTeacherTabToStudents ?? true;
+  // Only show teacher tab if teacher data was actually loaded and setting is enabled
+  const showTeacherTab = teacherData ? (teacherData.displaySettings?.showTeacherTabToStudents ?? true) : false;
 
   return {
     showTeacherTab,

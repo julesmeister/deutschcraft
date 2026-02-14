@@ -20,7 +20,8 @@ export function DashboardNavbar() {
   // Get current user to check role and teacher settings
   const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
   const { showTeacherTab } = useTeacherDisplaySettings(currentUser?.teacherId, currentUser?.role);
-  const isTeacher = currentUser?.role === 'TEACHER' || showTeacherTab;
+  const isTeacher = currentUser?.role === 'TEACHER';
+  const showTeacherMenu = isTeacher || showTeacherTab;
 
   const handleRoleSwitch = async (newRole: 'STUDENT' | 'TEACHER') => {
     if (!session?.user?.email) return;
@@ -76,7 +77,7 @@ export function DashboardNavbar() {
                 Dashboard
               </Link>
 
-              {isTeacher
+              {showTeacherMenu
                 ? <MegaDropdown {...teacherMenuConfig} />
                 : <MegaDropdown {...updatedStudentConfig} />
               }
@@ -125,7 +126,7 @@ export function DashboardNavbar() {
 
       <MobileMenu
         isOpen={mobileMenuOpen}
-        showTeacherTab={isTeacher}
+        showTeacherTab={showTeacherMenu}
       />
     </header>
   );
