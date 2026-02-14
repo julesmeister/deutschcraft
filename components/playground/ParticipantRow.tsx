@@ -36,7 +36,7 @@ export function ParticipantRow({
     <div
       className={`
         relative overflow-hidden select-none
-        flex items-center gap-2 px-3 py-2 rounded-full
+        flex items-center gap-1.5 px-2.5 py-1.5 rounded-full
         transition-all duration-200 cursor-ew-resize
         ${
           p.isTalking
@@ -84,7 +84,7 @@ export function ParticipantRow({
           canMute && p.isVoiceActive && onMute(p.participantId, p.isMuted)
         }
         disabled={!canMute || !p.isVoiceActive}
-        className={`relative z-10 flex items-center justify-center w-8 h-8 ${
+        className={`relative z-10 flex items-center justify-center w-6 h-6 ${
           canMute && p.isVoiceActive
             ? "cursor-pointer hover:opacity-80"
             : "cursor-default"
@@ -107,7 +107,7 @@ export function ParticipantRow({
               </>
             )}
             <div
-              className={`relative w-8 h-8 rounded-full flex items-center justify-center ${
+              className={`relative w-6 h-6 rounded-full flex items-center justify-center ${
                 p.isMuted
                   ? "bg-red-600"
                   : p.isTalking
@@ -116,12 +116,12 @@ export function ParticipantRow({
               }`}
             >
               {p.isMuted ? (
-                <svg className="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-14-14zM13 4a3 3 0 00-6 0v6c0 .556.151 1.077.415 1.524L13 5.939V4z" />
                   <path d="M5.5 9.643a.75.75 0 00-1.5 0V10c0 3.06 2.29 5.585 5.25 5.954V17.5h-1.5a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-1.5v-1.546A6.001 6.001 0 0016 10v-.357a.75.75 0 00-1.5 0V10a4.5 4.5 0 01-9 0v-.357z" />
                 </svg>
               ) : (
-                <svg className="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M7 4a3 3 0 016 0v6a3 3 0 11-6 0V4z" />
                   <path d="M5.5 9.643a.75.75 0 00-1.5 0V10c0 3.06 2.29 5.585 5.25 5.954V17.5h-1.5a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-1.5v-1.546A6.001 6.001 0 0016 10v-.357a.75.75 0 00-1.5 0V10a4.5 4.5 0 01-9 0v-.357z" />
                 </svg>
@@ -129,17 +129,17 @@ export function ParticipantRow({
             </div>
           </div>
         ) : (
-          <div className="w-2.5 h-2.5 rounded-full bg-gray-400" />
+          <div className="w-2 h-2 rounded-full bg-green-400 animate-[pulse_3s_ease-in-out_infinite]" />
         )}
       </button>
 
       {/* Name and role */}
       <div className="relative z-10 flex-1 min-w-0">
-        <span className={`text-sm font-semibold ${p.isTalking ? "text-green-900" : "text-neutral-800"}`}>
+        <span className={`text-xs font-semibold ${p.isTalking ? "text-green-900" : "text-neutral-800"}`}>
           {p.userName}
         </span>
         {!p.isTalking && !p.isVoiceActive && (
-          <span className="ml-2 text-xs text-gray-500 uppercase tracking-wide">
+          <span className="ml-1.5 text-[10px] text-gray-500 uppercase tracking-wide">
             {p.role}
           </span>
         )}
@@ -152,18 +152,9 @@ export function ParticipantRow({
         </span>
       )}
 
-      {/* Talking indicator */}
-      {p.isTalking && !p.isMuted && !isDragging && (
-        <div className="relative z-10 flex items-center gap-1">
-          <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
-        </div>
-      )}
-
       {/* Muted indicator */}
-      {p.isMuted && p.isVoiceActive && !isDragging && (
-        <div className="relative z-10 flex items-center gap-1">
-          <span className="text-xs font-medium text-red-600">Muted</span>
-        </div>
+      {!isDragging && p.isMuted && p.isVoiceActive && (
+        <span className="relative z-10 text-[10px] font-medium text-red-600">Muted</span>
       )}
     </div>
   );

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import type { PlaygroundParticipant } from "@/lib/models/playground";
 
 const GROUP_COLORS = [
@@ -7,6 +8,8 @@ const GROUP_COLORS = [
   { bg: "bg-green-50", border: "border-green-200", label: "text-green-700" },
   { bg: "bg-amber-50", border: "border-amber-200", label: "text-amber-700" },
   { bg: "bg-purple-50", border: "border-purple-200", label: "text-purple-700" },
+  { bg: "bg-rose-50", border: "border-rose-200", label: "text-rose-700" },
+  { bg: "bg-cyan-50", border: "border-cyan-200", label: "text-cyan-700" },
 ];
 
 interface GroupDisplayProps {
@@ -20,6 +23,13 @@ interface GroupDisplayProps {
   hasAudio: boolean;
   onToggleIsolation: () => void;
   onSetListeningTo: (group: number | null) => void;
+  onSwapMembers?: (groupA: number, userIdA: string, groupB: number, userIdB: string) => void;
+}
+
+interface SelectedMember {
+  groupIndex: number;
+  userId: string;
+  userName: string;
 }
 
 export function GroupDisplay({
@@ -33,10 +43,37 @@ export function GroupDisplay({
   hasAudio,
   onToggleIsolation,
   onSetListeningTo,
+  onSwapMembers,
 }: GroupDisplayProps) {
+  const [selected, setSelected] = useState<SelectedMember | null>(null);
+
+  const handleMemberClick = (groupIndex: number, p: PlaygroundParticipant) => {
+    if (!isTeacher || !onSwapMembers) return;
+
+    if (!selected) {
+      setSelected({ groupIndex, userId: p.userId, userName: p.userName });
+      return;
+    }
+
+    if (selected.userId === p.userId) {
+      setSelected(null);
+      return;
+    }
+
+    if (selected.groupIndex === groupIndex) {
+      // Same group — just reselect
+      setSelected({ groupIndex, userId: p.userId, userName: p.userName });
+      return;
+    }
+
+    // Different groups — swap
+    onSwapMembers(selected.groupIndex, selected.userId, groupIndex, p.userId);
+    setSelected(null);
+  };
+
   return (
     <>
-      {/* Audio isolation toggle — teacher controls, students see status */}
+      {/* Audio isolation toggle */}
       {hasAudio && (
         <button
           onClick={onToggleIsolation}
@@ -66,9 +103,7 @@ export function GroupDisplay({
             <button
               onClick={() => onSetListeningTo(null)}
               className={`px-3 py-1 rounded-md text-xs font-semibold transition-colors ${
-                teacherListeningTo === null
-                  ? "bg-indigo-600 text-white"
-                  : "bg-white text-indigo-600 hover:bg-indigo-100"
+                teacherListeningTo === null ? "bg-indigo-600 text-white" : "bg-white text-indigo-600 hover:bg-indigo-100"
               }`}
             >
               All
@@ -78,9 +113,7 @@ export function GroupDisplay({
                 key={i}
                 onClick={() => onSetListeningTo(i)}
                 className={`px-3 py-1 rounded-md text-xs font-semibold transition-colors ${
-                  teacherListeningTo === i
-                    ? "bg-indigo-600 text-white"
-                    : "bg-white text-indigo-600 hover:bg-indigo-100"
+                  teacherListeningTo === i ? "bg-indigo-600 text-white" : "bg-white text-indigo-600 hover:bg-indigo-100"
                 }`}
               >
                 Group {i + 1}
@@ -91,17 +124,22 @@ export function GroupDisplay({
         </div>
       )}
 
-      {/* Teacher in group: info */}
+      {/* Info messages */}
       {isIsolated && isTeacher && teacherJoinsGroup && myGroupIndex !== -1 && (
         <p className="text-[11px] text-gray-500 text-center">
           You are in Group {myGroupIndex + 1}. Only your group can hear you.
         </p>
       )}
-
-      {/* Student: info */}
       {isIsolated && !isTeacher && (
         <p className="text-[11px] text-gray-500 text-center">
           You can hear your group{!teacherJoinsGroup ? " + the teacher" : ""}.
+        </p>
+      )}
+
+      {/* Swap hint */}
+      {selected && (
+        <p className="text-[11px] text-pastel-ocean text-center font-semibold animate-pulse">
+          Tap someone in another group to swap with {selected.userName}
         </p>
       )}
 
@@ -110,8 +148,8 @@ export function GroupDisplay({
         {groups.map((group, i) => {
           const color = GROUP_COLORS[i % GROUP_COLORS.length];
           const isMyGroup = i === myGroupIndex;
-          const isMutedForMe = isIsolated && !isMyGroup && !isFloatingTeacher;
-          const isMutedForFloatingTeacher = isIsolated && isFloatingTeacher && teacherListeningTo !== null && teacherListeningTo !== i;
+          const isMuted = isIsolated && !isMyGroup && !isFloatingTeacher;
+          const isMutedFloating = isIsolated && isFloatingTeacher && teacherListeningTo !== null && teacherListeningTo !== i;
           return (
             <div
               key={i}
@@ -127,24 +165,36 @@ export function GroupDisplay({
                 {isIsolated && isFloatingTeacher && teacherListeningTo === i && (
                   <span className="text-[10px] bg-white/80 text-indigo-600 font-semibold rounded px-1.5 py-0.5">Listening</span>
                 )}
-                {(isMutedForMe || isMutedForFloatingTeacher) && (
+                {(isMuted || isMutedFloating) && (
                   <span className="text-[10px] bg-white/60 text-gray-400 rounded px-1.5 py-0.5">Muted</span>
                 )}
               </div>
               <div className="flex flex-wrap gap-1">
-                {group.map((p) => (
-                  <span
-                    key={p.userId}
-                    className={`text-xs rounded px-2 py-0.5 ${
-                      isMutedForMe || isMutedForFloatingTeacher
-                        ? "bg-white/40 text-gray-400 line-through"
-                        : "bg-white/70 text-gray-700"
-                    }`}
-                  >
-                    {p.userName}
-                    {p.role === "teacher" && <span className="text-[9px] ml-0.5 opacity-60">(T)</span>}
-                  </span>
-                ))}
+                {group.map((p) => {
+                  const isSelected = selected?.userId === p.userId;
+                  const isSwapTarget = selected && selected.groupIndex !== i;
+                  return (
+                    <button
+                      key={p.userId}
+                      onClick={() => handleMemberClick(i, p)}
+                      disabled={!isTeacher || !onSwapMembers}
+                      className={`text-xs rounded px-2 py-0.5 transition-all ${
+                        isSelected
+                          ? "bg-pastel-ocean text-white ring-2 ring-pastel-ocean ring-offset-1"
+                          : isMuted || isMutedFloating
+                            ? "bg-white/40 text-gray-400 line-through"
+                            : isTeacher && isSwapTarget
+                              ? "bg-white/70 text-gray-700 hover:bg-pastel-ocean/20 hover:ring-1 hover:ring-pastel-ocean cursor-pointer"
+                              : isTeacher
+                                ? "bg-white/70 text-gray-700 hover:bg-white cursor-pointer"
+                                : "bg-white/70 text-gray-700"
+                      }`}
+                    >
+                      {p.userName}
+                      {p.role === "teacher" && <span className="text-[9px] ml-0.5 opacity-60">(T)</span>}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           );

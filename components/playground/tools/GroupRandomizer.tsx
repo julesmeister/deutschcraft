@@ -105,6 +105,20 @@ export function GroupRandomizer({
     setTeacherListeningTo(null);
   }, [setPersistedGroups, setIsIsolated]);
 
+  const handleSwapMembers = useCallback((groupA: number, userIdA: string, groupB: number, userIdB: string) => {
+    if (!isTeacher) return;
+    setPersistedGroups(prev => {
+      const next = prev.map(g => [...g]);
+      const idxA = next[groupA]?.findIndex(m => m.userId === userIdA);
+      const idxB = next[groupB]?.findIndex(m => m.userId === userIdB);
+      if (idxA === -1 || idxB === -1 || idxA === undefined || idxB === undefined) return prev;
+      const temp = next[groupA][idxA];
+      next[groupA][idxA] = next[groupB][idxB];
+      next[groupB][idxB] = temp;
+      return next;
+    });
+  }, [isTeacher, setPersistedGroups]);
+
   if (participants.length < 2) {
     return (
       <p className="text-sm text-gray-500 text-center py-4">
@@ -121,7 +135,7 @@ export function GroupRandomizer({
       <div className="flex items-center justify-between">
         <span className="text-sm text-gray-600">Number of groups</span>
         <div className="flex gap-1">
-          {[2, 3, 4].map((n) => (
+          {[2, 3, 4, 5, 6].map((n) => (
             <button
               key={n}
               onClick={() => { if (!isTeacher) return; setGroupCount(n); clearGroups(); }}
@@ -184,6 +198,7 @@ export function GroupRandomizer({
             if (isIsolated) setTeacherListeningTo(null);
           }}
           onSetListeningTo={setTeacherListeningTo}
+          onSwapMembers={isTeacher ? handleSwapMembers : undefined}
         />
       )}
     </div>
