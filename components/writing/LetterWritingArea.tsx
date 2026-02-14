@@ -4,9 +4,10 @@
  * and a format hint overlay showing proper German letter layout
  */
 
-import { ReactNode, useState } from 'react';
+import { ReactNode, useState, useRef } from 'react';
 import { LetterTemplate } from '@/lib/data/letterTemplates';
 import { WritingWorkspace } from './WritingWorkspace';
+import { GermanCharAutocomplete } from './GermanCharAutocomplete';
 import { FileText, X } from 'lucide-react';
 
 export interface LetterHeaderValues {
@@ -271,7 +272,7 @@ export function InformalLetterHeader({ readOnly, values, onChange }: {
   );
 }
 
-/** Reusable letter field with faint border styling */
+/** Reusable letter field with faint border styling and German umlaut autocomplete */
 function LetterField({
   label,
   placeholder,
@@ -291,6 +292,7 @@ function LetterField({
   value?: string;
   onValueChange?: (v: string) => void;
 }) {
+  const fieldRef = useRef<HTMLTextAreaElement | HTMLInputElement>(null);
   const baseClasses = `w-full bg-transparent outline-none placeholder-gray-300 text-gray-900 ${
     bold ? 'font-semibold' : ''
   } ${align === 'right' ? 'text-right' : ''}`;
@@ -302,6 +304,7 @@ function LetterField({
       </label>
       {multiline ? (
         <textarea
+          ref={fieldRef as React.RefObject<HTMLTextAreaElement>}
           placeholder={placeholder}
           readOnly={readOnly}
           rows={3}
@@ -311,12 +314,20 @@ function LetterField({
         />
       ) : (
         <input
+          ref={fieldRef as React.RefObject<HTMLInputElement>}
           type="text"
           placeholder={placeholder}
           readOnly={readOnly}
           value={value ?? ''}
           onChange={(e) => onValueChange?.(e.target.value)}
           className={`${baseClasses} text-sm`}
+        />
+      )}
+      {!readOnly && (
+        <GermanCharAutocomplete
+          textareaRef={fieldRef}
+          content={value ?? ''}
+          onContentChange={(v) => onValueChange?.(v)}
         />
       )}
     </div>

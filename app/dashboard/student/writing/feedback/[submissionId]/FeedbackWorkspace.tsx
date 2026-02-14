@@ -16,6 +16,7 @@ import { generateQuizBlanks } from '@/lib/utils/quizGenerator';
 import { getUser } from '@/lib/services/user';
 import { getUserFullName } from '@/lib/models/user';
 import { useUpdateProgressForQuiz } from '@/lib/hooks/useWritingExercises';
+import { useUpdateWritingSubmission } from '@/lib/hooks/useWritingMutations';
 import { SubmissionContent } from './SubmissionContent';
 import { FeedbackContent } from './FeedbackContent';
 import { HistoryContent } from './HistoryContent';
@@ -43,6 +44,7 @@ export function FeedbackWorkspace({
   const queryClient = useQueryClient();
   const toast = useToast();
   const updateProgressForQuiz = useUpdateProgressForQuiz();
+  const updateSubmission = useUpdateWritingSubmission();
   const [quizMode, setQuizMode] = useState<'ai' | 'teacher' | 'reference' | null>(null);
   const [currentQuizId, setCurrentQuizId] = useState<string | null>(null);
   const [authorName, setAuthorName] = useState<string>('You');
@@ -144,6 +146,19 @@ export function FeedbackWorkspace({
     setCurrentQuizId(null);
   };
 
+  const handleSaveStructuredFields = async (fields: NonNullable<WritingSubmission['structuredFields']>) => {
+    try {
+      await updateSubmission.mutateAsync({
+        submissionId: submission.submissionId,
+        updates: { structuredFields: fields },
+      });
+      toast.success('Header fields saved');
+    } catch (error) {
+      console.error('Failed to save structured fields:', error);
+      toast.error('Failed to save header fields');
+    }
+  };
+
   return (
     <div className="bg-white flex flex-col lg:flex-row">
       {/* Mobile/Tablet: Tab Navigation */}
@@ -179,6 +194,7 @@ export function FeedbackWorkspace({
           onCompleteQuiz={handleCompleteQuiz}
           onCancelQuiz={handleCancelQuiz}
           onSaveAICorrection={handleSaveAICorrection}
+          onSaveStructuredFields={handleSaveStructuredFields}
         />
       </div>
 

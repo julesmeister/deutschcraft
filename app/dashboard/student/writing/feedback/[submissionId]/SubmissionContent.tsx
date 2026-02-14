@@ -30,6 +30,7 @@ interface SubmissionContentProps {
   ) => void;
   onCancelQuiz: () => void;
   onSaveAICorrection: (correctedText: string) => Promise<void>;
+  onSaveStructuredFields?: (fields: NonNullable<WritingSubmission['structuredFields']>) => void;
 }
 
 export function SubmissionContent({
@@ -42,6 +43,7 @@ export function SubmissionContent({
   onCompleteQuiz,
   onCancelQuiz,
   onSaveAICorrection,
+  onSaveStructuredFields,
 }: SubmissionContentProps) {
   const [isAIEditing, setIsAIEditing] = useState(false);
 
@@ -113,12 +115,12 @@ export function SubmissionContent({
             )}
 
           {/* Structured Fields (email/letter headers) */}
-          {submission.structuredFields && (
-            <StructuredFieldsDisplay
-              fields={submission.structuredFields}
-              exerciseType={submission.exerciseType}
-            />
-          )}
+          <StructuredFieldsDisplay
+            fields={submission.structuredFields}
+            exerciseType={submission.exerciseType}
+            editable={true}
+            onSave={onSaveStructuredFields}
+          />
 
           {/* Student's Translation */}
           <div>

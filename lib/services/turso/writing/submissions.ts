@@ -151,8 +151,8 @@ export async function createWritingSubmission(
         content, word_count, character_count, original_text, status,
         started_at, submitted_at, last_saved_at, ai_feedback, teacher_feedback,
         teacher_score, reviewed_by, reviewed_at, version, previous_versions,
-        created_at, updated_at
-      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+        structured_fields, created_at, updated_at
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       args: [
         submissionId,
         submissionData.userId,
@@ -175,6 +175,7 @@ export async function createWritingSubmission(
         submissionData.reviewedAt || null,
         1,
         submissionData.previousVersions ? JSON.stringify(submissionData.previousVersions) : null,
+        submissionData.structuredFields ? JSON.stringify(submissionData.structuredFields) : null,
         now,
         now,
       ],
@@ -225,6 +226,18 @@ export async function updateWritingSubmission(
     if (updates.teacherFeedback !== undefined) {
       setClauses.push('teacher_feedback = ?');
       args.push(updates.teacherFeedback);
+    }
+    if (updates.structuredFields !== undefined) {
+      setClauses.push('structured_fields = ?');
+      args.push(JSON.stringify(updates.structuredFields));
+    }
+    if (updates.wordCount !== undefined) {
+      setClauses.push('word_count = ?');
+      args.push(updates.wordCount);
+    }
+    if (updates.characterCount !== undefined) {
+      setClauses.push('character_count = ?');
+      args.push(updates.characterCount);
     }
 
     setClauses.push('updated_at = ?');

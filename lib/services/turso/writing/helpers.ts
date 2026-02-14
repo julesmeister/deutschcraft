@@ -44,6 +44,9 @@ export function rowToSubmission(row: any): WritingSubmission {
     previousVersions: row.previous_versions
       ? JSON.parse(row.previous_versions as string)
       : undefined,
+    structuredFields: row.structured_fields
+      ? JSON.parse(row.structured_fields as string)
+      : undefined,
     isPublic: Boolean(row.is_public),
     exerciseTitle: row.exercise_title as string | undefined,
     createdAt: Number(row.created_at),
