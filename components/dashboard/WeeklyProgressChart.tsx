@@ -111,7 +111,7 @@ export function WeeklyProgressChart({ weeklyData, totalWords, showViewDetailsBut
           <span className="text-sm md:text-base text-gray-600">WORDS</span>
         </p>
         <p className="text-xs md:text-sm font-bold uppercase text-gray-900 mb-2">WEEKLY PROGRESS</p>
-        <p className="text-xs md:text-sm text-gray-500 mb-4 pr-24 md:pr-0">
+        <p className="text-xs md:text-sm text-gray-500 mb-4 pr-0">
           You've learned {totalWords} words this week. Keep up the excellent work!
         </p>
       </div>

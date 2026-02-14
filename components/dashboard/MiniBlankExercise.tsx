@@ -4,25 +4,20 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { QuizBlank } from "@/lib/models/writing";
 import { checkAnswer } from "@/lib/utils/quizGenerator";
-import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
 import { useUserQuizStats } from "@/lib/hooks/useReviewQuizzes";
 import { calculateQuizPoints } from "@/lib/hooks/useQuizStats";
 import { useToast } from "@/components/ui/toast";
 import confetti from "canvas-confetti";
 import { MiniExerciseHeader } from "./MiniExerciseHeader";
 import { MiniExerciseSentence } from "./MiniExerciseSentence";
+import { MiniExerciseStatsBar, SessionStats } from "./MiniExerciseStatsBar";
+import { MiniExerciseMobileActions } from "./MiniExerciseMobileActions";
 
 import { SRSStats } from "@/lib/services/writing/markedWordQuizService";
-import { SRSStatsDisplay } from "./SRSStatsDisplay";
-
-interface SessionStats {
-  points: number;
-  accuracy: number;
-}
 
 interface MiniBlankExerciseProps {
   sentence: string;
-  blanks: QuizBlank[]; // Will use only the first blank
+  blanks: QuizBlank[];
   onRefresh: () => void;
   onComplete?: (
     points: number,
@@ -56,7 +51,6 @@ export function MiniBlankExercise({
   hasNext = true,
   showFullQuizButton = true,
 }: MiniBlankExerciseProps) {
-  // Only use the first blank
   const singleBlank = blanks.length > 0 ? [blanks[0]] : [];
 
   const [answer, setAnswer] = useState<string>("");
@@ -66,10 +60,8 @@ export function MiniBlankExercise({
   const toast = useToast();
   const router = useRouter();
 
-  // Fetch quiz stats
   const { data: quizStats } = useUserQuizStats(userId || null);
 
-  // Reset state when sentence changes
   useEffect(() => {
     setAnswer("");
     setShowResult(false);
@@ -77,26 +69,17 @@ export function MiniBlankExercise({
   }, [sentence, sentenceId]);
 
   const handleCheck = () => {
-    // Check if blank is filled
     if (!answer.trim()) return;
 
-    // Check if answer is correct
     const blank = singleBlank[0];
     const correct = checkAnswer(answer, blank.correctAnswer);
-
     const points = calculateQuizPoints(correct ? 1 : 0, 1);
 
     setIsCorrect(correct);
     setShowResult(true);
 
-    // Show toast with results
     if (correct) {
-      // Trigger confetti for correct answer
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
+      confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
       toast.success(`Perfect! +${points} points!`);
     } else {
       toast.warning(
@@ -104,26 +87,22 @@ export function MiniBlankExercise({
       );
     }
 
-    // Notify parent component
     if (onComplete) {
       onComplete(points, correct ? 1 : 0, 1, sentenceId);
     }
   };
 
-  const handleNext = () => {
-    onRefresh();
-  };
+  const handleNext = () => onRefresh();
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    const isFilled = answer.trim().length > 0;
-    if (e.key === "Enter" && !showResult && isFilled) {
+    if (e.key === "Enter" && !showResult && answer.trim().length > 0) {
       handleCheck();
     }
   };
 
   if (isLoading) {
     return (
-      <div className="bg-white border border-gray-200 p-6">
+      <div className="bg-white border border-gray-200 p-4 sm:p-6">
         <div className="flex items-center gap-3 mb-4">
           <span className="text-2xl">📝</span>
           <h3 className="text-lg font-bold text-gray-900">Quick Practice</h3>
@@ -138,7 +117,7 @@ export function MiniBlankExercise({
 
   if (singleBlank.length === 0) {
     return (
-      <div className="bg-white border border-gray-200 p-6">
+      <div className="bg-white border border-gray-200 p-4 sm:p-6">
         <div className="flex items-center gap-3 mb-4">
           <span className="text-2xl">📝</span>
           <h3 className="text-lg font-bold text-gray-900">Quick Practice</h3>
@@ -153,51 +132,8 @@ export function MiniBlankExercise({
   const isFilled = answer.trim().length > 0;
 
   return (
-    <div className="bg-white border border-gray-200 p-6">
-      {/* Optional Stats Bar */}
-      {(srsStats || sessionStats) && (
-        <div className="mb-6 bg-gray-900 rounded-xl p-4">
-          <div className="flex flex-col md:flex-row items-center gap-6">
-            {/* Session Stats */}
-            {sessionStats && (
-              <div
-                className={`flex items-center gap-6 ${
-                  srsStats
-                    ? "border-b md:border-b-0 md:border-r border-gray-700 pb-4 md:pb-0 md:pr-6 w-full md:w-auto justify-center md:justify-start"
-                    : "w-full justify-center"
-                }`}
-              >
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-white leading-none">
-                    {Math.round(sessionStats.accuracy)}%
-                  </div>
-                  <div className="text-xs text-gray-400 font-medium uppercase tracking-wider mt-1">
-                    Accuracy
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-piku-mint leading-none">
-                    {sessionStats.points}
-                  </div>
-                  <div className="text-xs text-gray-400 font-medium uppercase tracking-wider mt-1">
-                    Points
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* SRS Stats */}
-            {srsStats && (
-              <div className="flex-1 w-full md:w-auto">
-                <SRSStatsDisplay
-                  stats={srsStats}
-                  className="justify-center md:justify-end"
-                />
-              </div>
-            )}
-          </div>
-        </div>
-      )}
+    <div className="bg-white border border-gray-200 p-4 sm:p-6 overflow-hidden">
+      <MiniExerciseStatsBar srsStats={srsStats} sessionStats={sessionStats} />
 
       <MiniExerciseHeader
         quizStats={quizStats}
@@ -210,7 +146,6 @@ export function MiniBlankExercise({
         showFullQuizButton={showFullQuizButton}
       />
 
-      {/* Description */}
       <p className="text-sm text-gray-600 mb-6">
         {exerciseType && submittedAt ? (
           <>
@@ -234,7 +169,6 @@ export function MiniBlankExercise({
         )}
       </p>
 
-      {/* Sentence with blank */}
       <MiniExerciseSentence
         sentence={sentence}
         blank={singleBlank[0]}
@@ -245,46 +179,15 @@ export function MiniBlankExercise({
         inputRef={inputRef}
       />
 
-      {/* Mobile Actions */}
-      {(showFullQuizButton || !showResult || hasNext) && (
-        <div className="lg:hidden flex justify-end gap-3">
-          {showFullQuizButton && (
-            <div className="w-32">
-              <ActionButton
-                onClick={() => router.push("/dashboard/student/writing/quiz")}
-                variant="cyan"
-                icon={<ActionButtonIcons.Document />}
-              >
-                Full Quiz
-              </ActionButton>
-            </div>
-          )}
-          {!showResult ? (
-            <div className="w-48">
-              <ActionButton
-                onClick={handleCheck}
-                disabled={!isFilled}
-                variant="purple"
-                icon={<ActionButtonIcons.Check />}
-              >
-                Check Answer
-              </ActionButton>
-            </div>
-          ) : (
-            hasNext && (
-              <div className="w-40">
-                <ActionButton
-                  onClick={handleNext}
-                  variant="mint"
-                  icon={<ActionButtonIcons.ArrowRight />}
-                >
-                  Next
-                </ActionButton>
-              </div>
-            )
-          )}
-        </div>
-      )}
+      <MiniExerciseMobileActions
+        onFullQuiz={() => router.push("/dashboard/student/writing/quiz")}
+        onCheck={handleCheck}
+        onNext={handleNext}
+        showResult={showResult}
+        isFilled={isFilled}
+        hasNext={hasNext}
+        showFullQuizButton={showFullQuizButton}
+      />
     </div>
   );
 }

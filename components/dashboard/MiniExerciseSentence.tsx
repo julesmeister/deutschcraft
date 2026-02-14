@@ -51,7 +51,7 @@ export function MiniExerciseSentence({
   }
 
   return (
-    <div className="mb-6 text-lg leading-loose">
+    <div className="mb-6 text-base sm:text-lg leading-loose overflow-hidden">
       {parts.map((part, index) => {
         if (part.type === "text") {
           return (
@@ -84,7 +84,8 @@ export function MiniExerciseSentence({
                     : "bg-gray-100 hover:bg-gray-150 focus:bg-white focus:ring-2 focus:ring-blue-400 rounded-md px-1.5 py-1"
                 }`}
                 style={{
-                  width: `${Math.max(part.content.length * 10, 60)}px`,
+                  width: `${Math.min(Math.max(part.content.length * 10, 60), 200)}px`,
+                  maxWidth: "calc(100vw - 6rem)",
                 }}
               />
               {!showResult && (

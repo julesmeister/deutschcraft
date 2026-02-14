@@ -180,7 +180,7 @@ export default function StudentDashboard() {
       />
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 py-8 space-y-6">
+      <div className="container mx-auto px-4 sm:px-6 py-8 space-y-6">
         {/* Stats Grid - Slim Style (NO rounded corners) */}
         <div className="bg-white overflow-hidden border border-gray-200">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
