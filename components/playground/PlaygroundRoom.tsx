@@ -115,7 +115,9 @@ export function PlaygroundRoom({
   const [formattedDate, setFormattedDate] = useState<string>("");
   const [isMaterialSelectorOpen, setIsMaterialSelectorOpen] = useState(false);
   const [isExerciseSelectorOpen, setIsExerciseSelectorOpen] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  // null = CSS-responsive default (hidden on mobile, visible on xl+)
+  // true = explicitly shown, false = explicitly hidden
+  const [sidebarState, setSidebarState] = useState<boolean | null>(null);
 
   useEffect(() => {
     if (!currentRoom?.createdAt) return;
@@ -183,9 +185,17 @@ export function PlaygroundRoom({
       />
 
       <div className="container mx-auto px-6 py-8">
-        <div className={`grid gap-6 ${isSidebarOpen ? "grid-cols-3" : "grid-cols-1 xl:grid-cols-3"}`}>
+        <div className={`grid gap-6 ${
+          sidebarState === true ? "grid-cols-3" :
+          sidebarState === false ? "grid-cols-1" :
+          "grid-cols-1 xl:grid-cols-3"
+        }`}>
           {/* Left: Video Panel — always visible on xl, collapsible below */}
-          <div className={`col-span-1 ${isSidebarOpen ? "" : "hidden xl:block"}`}>
+          <div className={`col-span-1 ${
+            sidebarState === true ? "" :
+            sidebarState === false ? "hidden" :
+            "hidden xl:block"
+          }`}>
             {isVoiceActive && videoLayout === "top-left" && (
               <div className="mb-4">
                 <HorizontalVideoStrip
@@ -238,7 +248,11 @@ export function PlaygroundRoom({
           </div>
 
           {/* Right: Content Panel */}
-          <div className={`${isSidebarOpen ? "col-span-2" : "xl:col-span-2"} space-y-6`}>
+          <div className={`${
+            sidebarState === true ? "col-span-2" :
+            sidebarState === false ? "" :
+            "xl:col-span-2"
+          } space-y-6`}>
             {isVoiceActive && videoLayout === "top-right" && (
               <div className="mb-4">
                 <HorizontalVideoStrip
@@ -259,8 +273,16 @@ export function PlaygroundRoom({
               userId={userId}
               userRole={userRole}
               participantCount={participants.length}
-              isSidebarOpen={isSidebarOpen}
-              onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
+              isSidebarOpen={sidebarState}
+              onToggleSidebar={() => {
+                if (sidebarState === null) {
+                  // First toggle: on xl+ panel is visible so hide it, on mobile it's hidden so show it
+                  const isXl = window.matchMedia("(min-width: 1280px)").matches;
+                  setSidebarState(isXl ? false : true);
+                } else {
+                  setSidebarState(null); // Reset to CSS-responsive default
+                }
+              }}
               onSaveWriting={onSaveWriting}
               onToggleWritingVisibility={onToggleWritingVisibility}
               onToggleRoomPublicWriting={onToggleRoomPublicWriting}

@@ -23,7 +23,7 @@ interface PlaygroundRoomContentProps {
   userId: string;
   userRole: "teacher" | "student";
   participantCount: number;
-  isSidebarOpen: boolean;
+  isSidebarOpen: boolean | null;
   onToggleSidebar: () => void;
   onSaveWriting: (content: string) => Promise<void>;
   onToggleWritingVisibility: (writingId: string, isPublic: boolean) => Promise<void>;
@@ -54,7 +54,7 @@ export function PlaygroundRoomContent({
 
   // When sidebar is toggled open on tablet, close the active content view indicator
   // so the sidebar takes visual priority
-  const showPanel = isSidebarOpen;
+  const showPanel = isSidebarOpen === true;
 
   return (
     <>
@@ -85,7 +85,7 @@ export function PlaygroundRoomContent({
         {/* Panel tab - only visible below xl */}
         <button
           onClick={onToggleSidebar}
-          className={`xl:hidden flex items-center justify-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+          className={`flex items-center justify-center gap-1.5 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
             showPanel
               ? "bg-white text-gray-900 shadow-sm"
               : "text-gray-600 hover:text-gray-900"
@@ -102,7 +102,7 @@ export function PlaygroundRoomContent({
 
         {hasExercise && (
           <button
-            onClick={() => { setActiveView("exercise"); if (isSidebarOpen) onToggleSidebar(); }}
+            onClick={() => { setActiveView("exercise"); if (isSidebarOpen === true) onToggleSidebar(); }}
             className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-md transition-colors ${
               !showPanel && activeView === "exercise"
                 ? "bg-white text-gray-900 shadow-sm"
@@ -116,7 +116,7 @@ export function PlaygroundRoomContent({
           </button>
         )}
         <button
-          onClick={() => { setActiveView("writing"); if (isSidebarOpen) onToggleSidebar(); }}
+          onClick={() => { setActiveView("writing"); if (isSidebarOpen === true) onToggleSidebar(); }}
           className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium rounded-md transition-colors ${
             !showPanel && (activeView === "writing" || !hasExercise)
               ? "bg-white text-gray-900 shadow-sm"
