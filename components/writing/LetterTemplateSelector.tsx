@@ -1,12 +1,12 @@
 /**
  * LetterTemplateSelector Component
- * Grid of letter templates to choose from
+ * Grid of letter templates that link to dedicated letter exercise pages
  */
 
+import { useRouter } from 'next/navigation';
 import { LetterTemplate } from '@/lib/data/letterTemplates';
 import { ExerciseGrid } from './ExerciseGrid';
 import { ExerciseCard } from './ExerciseCard';
-import { ExerciseFooter } from './ExerciseFooter';
 
 interface LetterTemplateSelectorProps {
   templates: LetterTemplate[];
@@ -19,6 +19,8 @@ export function LetterTemplateSelector({
   onSelect,
   attemptedExerciseIds
 }: LetterTemplateSelectorProps) {
+  const router = useRouter();
+
   return (
     <ExerciseGrid
       isEmpty={templates.length === 0}
@@ -42,7 +44,7 @@ export function LetterTemplateSelector({
             icon="✉️"
             title={template.title}
             difficulty={template.difficulty}
-            onClick={() => onSelect(template)}
+            onClick={() => router.push(`/dashboard/student/writing/letters/${template.id}`)}
             isAttempted={attemptedExerciseIds?.has(template.id)}
             description={template.type}
             sampleSentences={scenarioPoints}

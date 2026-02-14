@@ -172,7 +172,7 @@ export function WritingHub({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
-          <FreestyleSection onStart={onFreestyleSelect} />
+          <FreestyleSection />
         </motion.div>
       )}
 

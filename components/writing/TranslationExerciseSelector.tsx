@@ -3,10 +3,10 @@
  * Grid display of available translation exercises
  */
 
+import { useRouter } from 'next/navigation';
 import { TranslationExercise } from '@/lib/models/writing';
 import { ExerciseCard } from './ExerciseCard';
 import { ExerciseGrid } from './ExerciseGrid';
-import { ExerciseFooter } from './ExerciseFooter';
 
 interface TranslationExerciseSelectorProps {
   exercises: TranslationExercise[];
@@ -15,6 +15,8 @@ interface TranslationExerciseSelectorProps {
 }
 
 export function TranslationExerciseSelector({ exercises, onSelect, attemptedExerciseIds }: TranslationExerciseSelectorProps) {
+  const router = useRouter();
+
   return (
     <ExerciseGrid
       isEmpty={exercises.length === 0}
@@ -38,7 +40,7 @@ export function TranslationExerciseSelector({ exercises, onSelect, attemptedExer
             icon=""
             title={exercise.title}
             difficulty={exercise.difficulty}
-            onClick={() => onSelect(exercise)}
+            onClick={() => router.push(`/dashboard/student/writing/translations/${exercise.exerciseId}`)}
             isAttempted={attemptedExerciseIds?.has(exercise.exerciseId)}
             description={exercise.category}
             sampleSentences={sentences}

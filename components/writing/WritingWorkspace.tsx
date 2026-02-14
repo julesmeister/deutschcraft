@@ -47,6 +47,15 @@ export function WritingWorkspace({
   const [isFullscreen, setIsFullscreen] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
+  // Auto-resize textarea to fit content
+  useEffect(() => {
+    const textarea = textareaRef.current;
+    if (!textarea) return;
+    textarea.style.height = 'auto';
+    const minH = isFullscreen ? window.innerHeight - 200 : 300;
+    textarea.style.height = `${Math.max(textarea.scrollHeight, minH)}px`;
+  }, [value, isFullscreen]);
+
   // Keyboard shortcuts for fullscreen
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -139,8 +148,8 @@ export function WritingWorkspace({
           />
         )}
 
-        {/* Textarea area with fixed min-height */}
-        <div className="p-4 md:p-8 relative" style={{ minHeight: '500px' }}>
+        {/* Textarea area */}
+        <div className="p-4 md:p-8 relative">
           {/* Fullscreen Toggle Button */}
           {!readOnly && (
             <button
@@ -186,9 +195,9 @@ export function WritingWorkspace({
                 : 'text-lg md:text-xl lg:text-2xl'
             }`}
             style={{
-              minHeight: isFullscreen ? 'calc(100vh - 200px)' : '400px',
               lineHeight: '1.6',
-              fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif'
+              fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+              overflow: 'hidden',
             }}
             autoFocus={!readOnly && autoFocus}
           />
@@ -305,14 +314,14 @@ interface EmailFieldProps {
 
 export function EmailField({ label, value, onChange, placeholder }: EmailFieldProps) {
   return (
-    <div className="border-b border-gray-200 pb-2">
-      <label className="text-sm text-gray-500 mb-1 block">{label}</label>
+    <div className="border border-dashed border-gray-200 rounded-lg px-3 py-2 hover:border-gray-300 focus-within:border-blue-300 transition-colors">
+      <label className="text-[10px] font-medium text-gray-400 uppercase tracking-wider block mb-1">{label}</label>
       <input
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="w-full bg-transparent border-none outline-none text-lg text-gray-900 placeholder-gray-400"
+        className="w-full bg-transparent outline-none placeholder-gray-300 text-gray-900 text-sm"
       />
     </div>
   );

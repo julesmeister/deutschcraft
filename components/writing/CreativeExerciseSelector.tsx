@@ -3,10 +3,10 @@
  * Grid display of available creative writing exercises
  */
 
+import { useRouter } from 'next/navigation';
 import { CreativeWritingExercise } from '@/lib/models/writing';
 import { ExerciseCard } from './ExerciseCard';
 import { ExerciseGrid } from './ExerciseGrid';
-import { ExerciseFooter } from './ExerciseFooter';
 
 interface CreativeExerciseSelectorProps {
   exercises: CreativeWritingExercise[];
@@ -24,6 +24,8 @@ function getCreativeIcon(type: string): string {
 }
 
 export function CreativeExerciseSelector({ exercises, onSelect, attemptedExerciseIds }: CreativeExerciseSelectorProps) {
+  const router = useRouter();
+
   return (
     <ExerciseGrid
       isEmpty={exercises.length === 0}
@@ -47,7 +49,7 @@ export function CreativeExerciseSelector({ exercises, onSelect, attemptedExercis
             icon={getCreativeIcon(exercise.type)}
             title={exercise.title}
             difficulty={exercise.difficulty}
-            onClick={() => onSelect(exercise)}
+            onClick={() => router.push(`/dashboard/student/writing/creative/${exercise.exerciseId}`)}
             isAttempted={attemptedExerciseIds?.has(exercise.exerciseId)}
             description={exercise.type}
             sampleSentences={promptSentences}

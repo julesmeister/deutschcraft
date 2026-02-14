@@ -1,10 +1,9 @@
+import { useRouter } from "next/navigation";
 import { ActionButton, ActionButtonIcons } from "@/components/ui/ActionButton";
 
-interface FreestyleSectionProps {
-  onStart: () => void;
-}
+export function FreestyleSection() {
+  const router = useRouter();
 
-export function FreestyleSection({ onStart }: FreestyleSectionProps) {
   return (
     <div className="mt-8 bg-white p-6 rounded-2xl border border-gray-200 text-center">
       <div className="text-4xl mb-4">✍️</div>
@@ -17,7 +16,7 @@ export function FreestyleSection({ onStart }: FreestyleSectionProps) {
       </p>
       <div className="max-w-[200px] mx-auto">
         <ActionButton
-          onClick={onStart}
+          onClick={() => router.push("/dashboard/student/writing/freestyle")}
           icon={<ActionButtonIcons.Play />}
           variant="purple"
         >

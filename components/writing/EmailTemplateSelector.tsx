@@ -3,10 +3,10 @@
  * Grid display of available email templates
  */
 
+import { useRouter } from 'next/navigation';
 import { EmailTemplate } from '@/lib/data/emailTemplates';
 import { ExerciseCard } from './ExerciseCard';
 import { ExerciseGrid } from './ExerciseGrid';
-import { ExerciseFooter } from './ExerciseFooter';
 
 interface EmailTemplateSelectorProps {
   templates: EmailTemplate[];
@@ -15,6 +15,8 @@ interface EmailTemplateSelectorProps {
 }
 
 export function EmailTemplateSelector({ templates, onSelect, attemptedExerciseIds }: EmailTemplateSelectorProps) {
+  const router = useRouter();
+
   return (
     <ExerciseGrid
       isEmpty={templates.length === 0}
@@ -38,9 +40,9 @@ export function EmailTemplateSelector({ templates, onSelect, attemptedExerciseId
             icon="📧"
             title={template.title}
             difficulty={template.difficulty}
-            onClick={() => onSelect(template)}
+            onClick={() => router.push(`/dashboard/student/writing/emails/${template.id}`)}
             isAttempted={attemptedExerciseIds?.has(template.id)}
-            description={template.type === 'formal' ? 'Formal Email' : 'Informal Email'}
+            description="Email"
             sampleSentences={scenarioPoints}
             footerLeft={`⏱️ 20-30 min`}
             footerRight={`📝 ${template.minWords}+ words`}
