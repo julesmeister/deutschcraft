@@ -5,7 +5,7 @@ interface MobileMenuProps {
   showTeacherTab?: boolean;
 }
 
-export function MobileMenu({ isOpen, showTeacherTab = true }: MobileMenuProps) {
+export function MobileMenu({ isOpen, showTeacherTab = false }: MobileMenuProps) {
   if (!isOpen) return null;
 
   return (

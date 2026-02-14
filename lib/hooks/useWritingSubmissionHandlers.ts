@@ -103,7 +103,7 @@ export function useWritingSubmissionHandlers({
     setDialogState({ isOpen: false, title: "", message: "", type: "alert" });
   };
 
-  const handleSaveDraft = async () => {
+  const handleSaveDraft = async (additionalFields?: any) => {
     if (!userEmail) {
       showDialog(
         "Authentication Required",

@@ -5,6 +5,7 @@
 
 import { SectionHeader } from '@/components/writing/SectionHeader';
 import { CorrectedTextSection } from '@/components/writing/CorrectedTextSection';
+import { StructuredFieldsDisplay } from '@/components/writing/StructuredFieldsDisplay';
 
 interface SubmissionDisplayProps {
   submission: {
@@ -15,6 +16,15 @@ interface SubmissionDisplayProps {
     submittedAt?: number;
     userId: string;
     aiCorrectedVersion?: string;
+    structuredFields?: {
+      emailTo?: string;
+      emailSubject?: string;
+      letterSender?: string;
+      letterDate?: string;
+      letterRecipient?: string;
+      letterSubject?: string;
+      letterGreeting?: string;
+    };
   };
   userName?: string;
   referenceTranslation?: string;
@@ -66,6 +76,14 @@ export function SubmissionDisplay({
 
       {/* Student's Writing Content */}
       <div className="flex-1 p-8 overflow-y-auto">
+        {/* Structured Fields (email/letter headers) */}
+        {submission.structuredFields && (
+          <StructuredFieldsDisplay
+            fields={submission.structuredFields}
+            exerciseType={submission.exerciseType}
+          />
+        )}
+
         {/* Student's Original Answer */}
         <div>
           <SectionHeader label="Student's Answer" />

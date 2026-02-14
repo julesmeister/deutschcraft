@@ -9,6 +9,14 @@ import { LetterTemplate } from '@/lib/data/letterTemplates';
 import { WritingWorkspace } from './WritingWorkspace';
 import { FileText, X } from 'lucide-react';
 
+export interface LetterHeaderValues {
+  sender?: string;
+  date?: string;
+  recipient?: string;
+  subject?: string;
+  greeting?: string;
+}
+
 interface LetterWritingAreaProps {
   template: LetterTemplate;
   content: string;
@@ -18,6 +26,8 @@ interface LetterWritingAreaProps {
   attemptHistory?: ReactNode;
   readOnly?: boolean;
   viewingAttempt?: { attemptNumber: number; status: string };
+  headerValues?: LetterHeaderValues;
+  onHeaderChange?: (values: LetterHeaderValues) => void;
 }
 
 export function LetterWritingArea({
@@ -28,7 +38,9 @@ export function LetterWritingArea({
   attemptCount,
   attemptHistory,
   readOnly,
-  viewingAttempt
+  viewingAttempt,
+  headerValues,
+  onHeaderChange
 }: LetterWritingAreaProps) {
   const [showFormatHint, setShowFormatHint] = useState(false);
   const isFormal = template.type === 'formal';
@@ -54,9 +66,9 @@ export function LetterWritingArea({
   );
 
   const headerFields = isFormal ? (
-    <FormalLetterHeader readOnly={readOnly} />
+    <FormalLetterHeader readOnly={readOnly} values={headerValues} onChange={onHeaderChange} />
   ) : (
-    <InformalLetterHeader readOnly={readOnly} />
+    <InformalLetterHeader readOnly={readOnly} values={headerValues} onChange={onHeaderChange} />
   );
 
   const instructions = (
@@ -154,7 +166,15 @@ export function LetterWritingArea({
 }
 
 /** Structured header for formal German letters */
-export function FormalLetterHeader({ readOnly }: { readOnly?: boolean }) {
+export function FormalLetterHeader({ readOnly, values, onChange }: {
+  readOnly?: boolean;
+  values?: LetterHeaderValues;
+  onChange?: (values: LetterHeaderValues) => void;
+}) {
+  const update = (key: keyof LetterHeaderValues, v: string) => {
+    onChange?.({ ...values, [key]: v });
+  };
+
   return (
     <div className="space-y-4">
       {/* Row 1: Sender (left) + Date/Place (right) */}
@@ -165,6 +185,8 @@ export function FormalLetterHeader({ readOnly }: { readOnly?: boolean }) {
             placeholder="Max Mustermann&#10;Musterstraße 1&#10;12345 Berlin"
             multiline
             readOnly={readOnly}
+            value={values?.sender}
+            onValueChange={(v) => update('sender', v)}
           />
         </div>
         <div className="sm:w-48 sm:text-right">
@@ -173,6 +195,8 @@ export function FormalLetterHeader({ readOnly }: { readOnly?: boolean }) {
             placeholder="Berlin, 14.02.2026"
             align="right"
             readOnly={readOnly}
+            value={values?.date}
+            onValueChange={(v) => update('date', v)}
           />
         </div>
       </div>
@@ -183,6 +207,8 @@ export function FormalLetterHeader({ readOnly }: { readOnly?: boolean }) {
         placeholder="Firma GmbH&#10;Frau/Herr Name&#10;Straße Nr.&#10;PLZ Ort"
         multiline
         readOnly={readOnly}
+        value={values?.recipient}
+        onValueChange={(v) => update('recipient', v)}
       />
 
       {/* Row 3: Subject line */}
@@ -191,6 +217,8 @@ export function FormalLetterHeader({ readOnly }: { readOnly?: boolean }) {
         placeholder="Bewerbung als..."
         bold
         readOnly={readOnly}
+        value={values?.subject}
+        onValueChange={(v) => update('subject', v)}
       />
 
       {/* Row 4: Greeting */}
@@ -198,13 +226,23 @@ export function FormalLetterHeader({ readOnly }: { readOnly?: boolean }) {
         label="Anrede (Greeting)"
         placeholder="Sehr geehrte Damen und Herren,"
         readOnly={readOnly}
+        value={values?.greeting}
+        onValueChange={(v) => update('greeting', v)}
       />
     </div>
   );
 }
 
 /** Simpler header for informal letters */
-export function InformalLetterHeader({ readOnly }: { readOnly?: boolean }) {
+export function InformalLetterHeader({ readOnly, values, onChange }: {
+  readOnly?: boolean;
+  values?: LetterHeaderValues;
+  onChange?: (values: LetterHeaderValues) => void;
+}) {
+  const update = (key: keyof LetterHeaderValues, v: string) => {
+    onChange?.({ ...values, [key]: v });
+  };
+
   return (
     <div className="space-y-4">
       {/* Date/Place on the right */}
@@ -215,6 +253,8 @@ export function InformalLetterHeader({ readOnly }: { readOnly?: boolean }) {
             placeholder="Berlin, 14.02.2026"
             align="right"
             readOnly={readOnly}
+            value={values?.date}
+            onValueChange={(v) => update('date', v)}
           />
         </div>
       </div>
@@ -224,6 +264,8 @@ export function InformalLetterHeader({ readOnly }: { readOnly?: boolean }) {
         label="Anrede (Greeting)"
         placeholder="Liebe/r ...,"
         readOnly={readOnly}
+        value={values?.greeting}
+        onValueChange={(v) => update('greeting', v)}
       />
     </div>
   );
@@ -237,6 +279,8 @@ function LetterField({
   bold,
   align,
   readOnly,
+  value,
+  onValueChange,
 }: {
   label: string;
   placeholder: string;
@@ -244,6 +288,8 @@ function LetterField({
   bold?: boolean;
   align?: 'left' | 'right';
   readOnly?: boolean;
+  value?: string;
+  onValueChange?: (v: string) => void;
 }) {
   const baseClasses = `w-full bg-transparent outline-none placeholder-gray-300 text-gray-900 ${
     bold ? 'font-semibold' : ''
@@ -259,6 +305,8 @@ function LetterField({
           placeholder={placeholder}
           readOnly={readOnly}
           rows={3}
+          value={value ?? ''}
+          onChange={(e) => onValueChange?.(e.target.value)}
           className={`${baseClasses} resize-none text-sm leading-relaxed`}
         />
       ) : (
@@ -266,6 +314,8 @@ function LetterField({
           type="text"
           placeholder={placeholder}
           readOnly={readOnly}
+          value={value ?? ''}
+          onChange={(e) => onValueChange?.(e.target.value)}
           className={`${baseClasses} text-sm`}
         />
       )}

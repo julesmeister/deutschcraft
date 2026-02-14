@@ -17,11 +17,14 @@ export function DashboardNavbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Get current user to check role and teacher settings
+  // Use session role (from JWT, available instantly) to avoid flicker
+  const sessionRole = (session?.user as any)?.role?.toUpperCase();
+
+  // Firestore data for teacher display settings (only needed for students with a teacherId)
   const { student: currentUser } = useCurrentStudent(session?.user?.email || null);
   const { showTeacherTab } = useTeacherDisplaySettings(currentUser?.teacherId, currentUser?.role);
-  const isTeacher = currentUser?.role === 'TEACHER';
-  const showTeacherMenu = isTeacher || showTeacherTab;
+
+  const isTeacher = sessionRole === 'TEACHER';
 
   const handleRoleSwitch = async (newRole: 'STUDENT' | 'TEACHER') => {
     if (!session?.user?.email) return;
@@ -77,10 +80,13 @@ export function DashboardNavbar() {
                 Dashboard
               </Link>
 
-              {showTeacherMenu
+              {isTeacher
                 ? <MegaDropdown {...teacherMenuConfig} />
                 : <MegaDropdown {...updatedStudentConfig} />
               }
+              {!isTeacher && showTeacherTab && (
+                <MegaDropdown {...teacherMenuConfig} />
+              )}
 
               <Link
                 href="/dashboard/social"
@@ -126,7 +132,7 @@ export function DashboardNavbar() {
 
       <MobileMenu
         isOpen={mobileMenuOpen}
-        showTeacherTab={showTeacherMenu}
+        showTeacherTab={isTeacher || showTeacherTab}
       />
     </header>
   );

@@ -10,6 +10,7 @@ import { AICorrectionsPanel } from "@/components/writing/AICorrectionsPanel";
 import { SectionHeader } from "@/components/writing/SectionHeader";
 import { CorrectedTextSection } from "@/components/writing/CorrectedTextSection";
 import { ReviewQuiz } from "@/components/writing/ReviewQuiz";
+import { StructuredFieldsDisplay } from "@/components/writing/StructuredFieldsDisplay";
 
 interface SubmissionContentProps {
   submission: WritingSubmission;
@@ -110,6 +111,14 @@ export function SubmissionContent({
                 <div className="w-full h-px bg-gray-200 my-6" />
               </>
             )}
+
+          {/* Structured Fields (email/letter headers) */}
+          {submission.structuredFields && (
+            <StructuredFieldsDisplay
+              fields={submission.structuredFields}
+              exerciseType={submission.exerciseType}
+            />
+          )}
 
           {/* Student's Translation */}
           <div>

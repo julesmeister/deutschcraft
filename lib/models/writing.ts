@@ -169,6 +169,17 @@ export interface WritingSubmission {
   version: number;
   previousVersions?: WritingVersion[];
 
+  // Structured header fields (email/letter)
+  structuredFields?: {
+    emailTo?: string;
+    emailSubject?: string;
+    letterSender?: string;
+    letterDate?: string;
+    letterRecipient?: string;
+    letterSubject?: string;
+    letterGreeting?: string;
+  };
+
   // Visibility
   isPublic?: boolean;
   exerciseTitle?: string;

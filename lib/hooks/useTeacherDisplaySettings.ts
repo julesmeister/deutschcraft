@@ -23,7 +23,7 @@ export function useTeacherDisplaySettings(
   });
 
   // Only show teacher tab if teacher data was actually loaded and setting is enabled
-  const showTeacherTab = teacherData ? (teacherData.displaySettings?.showTeacherTabToStudents ?? true) : false;
+  const showTeacherTab = teacherData ? (teacherData.displaySettings?.showTeacherTabToStudents ?? false) : false;
 
   return {
     showTeacherTab,

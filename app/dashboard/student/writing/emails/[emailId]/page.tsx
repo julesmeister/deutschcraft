@@ -93,8 +93,15 @@ export default function EmailExercisePage() {
     await confirmUsedWords(session?.user?.email, wordIds);
   };
 
+  const buildStructuredFields = () => ({
+    structuredFields: {
+      ...(emailContent.to && { emailTo: emailContent.to }),
+      ...(emailContent.subject && { emailSubject: emailContent.subject }),
+    },
+  });
+
   const handleSubmit = async () => {
-    await submissionHandlers.handleSubmit();
+    await submissionHandlers.handleSubmit(buildStructuredFields());
     await detectWords(session?.user?.email, emailContent.body);
   };
 
@@ -124,7 +131,7 @@ export default function EmailExercisePage() {
           !viewingAttempt ? (
             <div className="flex items-center gap-3">
               <ActionButton
-                onClick={submissionHandlers.handleSaveDraft}
+                onClick={() => submissionHandlers.handleSaveDraft(buildStructuredFields())}
                 disabled={submissionHandlers.isSaving || !hasContent}
                 variant="gray"
                 icon={<ActionButtonIcons.Save />}

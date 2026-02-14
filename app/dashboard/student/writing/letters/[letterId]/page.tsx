@@ -11,7 +11,7 @@ import { useExerciseAttempts } from "@/lib/hooks/useWritingAttempts";
 import { useWritingWordDetection } from "@/lib/hooks/useWritingWordDetection";
 import { getTemplateById } from "@/lib/data/letterTemplates";
 import { CEFRLevelInfo } from "@/lib/models/cefr";
-import { LetterWritingArea } from "@/components/writing/LetterWritingArea";
+import { LetterWritingArea, LetterHeaderValues } from "@/components/writing/LetterWritingArea";
 import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
 import { AttemptHistory } from "@/components/writing/AttemptHistory";
 import { SavedWordDetection } from "@/components/writing/SavedWordDetection";
@@ -28,6 +28,7 @@ export default function LetterExercisePage() {
 
   // Writing state
   const [writingText, setWritingText] = useState("");
+  const [letterFields, setLetterFields] = useState<LetterHeaderValues>({});
   const [viewingAttempt, setViewingAttempt] =
     useState<WritingSubmission | null>(null);
 
@@ -88,8 +89,18 @@ export default function LetterExercisePage() {
     await confirmUsedWords(session?.user?.email, wordIds);
   };
 
+  const buildStructuredFields = () => ({
+    structuredFields: {
+      ...(letterFields.sender && { letterSender: letterFields.sender }),
+      ...(letterFields.date && { letterDate: letterFields.date }),
+      ...(letterFields.recipient && { letterRecipient: letterFields.recipient }),
+      ...(letterFields.subject && { letterSubject: letterFields.subject }),
+      ...(letterFields.greeting && { letterGreeting: letterFields.greeting }),
+    },
+  });
+
   const handleSubmit = async () => {
-    await submissionHandlers.handleSubmit();
+    await submissionHandlers.handleSubmit(buildStructuredFields());
     await detectWords(session?.user?.email, writingText);
   };
 
@@ -119,7 +130,7 @@ export default function LetterExercisePage() {
           !viewingAttempt ? (
             <div className="flex items-center gap-3">
               <ActionButton
-                onClick={submissionHandlers.handleSaveDraft}
+                onClick={() => submissionHandlers.handleSaveDraft(buildStructuredFields())}
                 disabled={submissionHandlers.isSaving || !hasContent}
                 variant="gray"
                 icon={<ActionButtonIcons.Save />}
@@ -154,6 +165,8 @@ export default function LetterExercisePage() {
             readOnly={!!viewingAttempt}
             viewingAttempt={viewingProps}
             attemptHistory={attemptHistory}
+            headerValues={letterFields}
+            onHeaderChange={setLetterFields}
           />
 
           {/* Saved Word Detection */}

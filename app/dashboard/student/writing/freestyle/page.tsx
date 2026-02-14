@@ -9,7 +9,7 @@ import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { useWritingSubmissionHandlers } from "@/lib/hooks/useWritingSubmissionHandlers";
 import { useWritingWordDetection } from "@/lib/hooks/useWritingWordDetection";
 import { WritingWorkspace, EmailField } from "@/components/writing/WritingWorkspace";
-import { FormalLetterHeader, InformalLetterHeader } from "@/components/writing/LetterWritingArea";
+import { FormalLetterHeader, InformalLetterHeader, LetterHeaderValues } from "@/components/writing/LetterWritingArea";
 import { FloatingRedemittelWidget } from "@/components/writing/FloatingRedemittelWidget";
 import { SavedWordDetection } from "@/components/writing/SavedWordDetection";
 import { CEFRLevel } from "@/lib/models/cefr";
@@ -36,6 +36,7 @@ export default function FreestylePage() {
   // Writing state
   const [writingText, setWritingText] = useState("");
   const [emailContent, setEmailContent] = useState({ to: "", subject: "", body: "" });
+  const [letterFields, setLetterFields] = useState<LetterHeaderValues>({});
 
   // Word detection
   const { detectedWords, detectWords, confirmUsedWords, clearDetectedWords } =
@@ -61,11 +62,37 @@ export default function FreestylePage() {
 
   const hasContent = activeText.trim().length > 0 && topic.trim().length > 0;
 
+  const buildStructuredFields = () => {
+    switch (writingMode) {
+      case "email":
+        return {
+          ...(emailContent.to && { emailTo: emailContent.to }),
+          ...(emailContent.subject && { emailSubject: emailContent.subject }),
+        };
+      case "letter-formal":
+        return {
+          ...(letterFields.sender && { letterSender: letterFields.sender }),
+          ...(letterFields.date && { letterDate: letterFields.date }),
+          ...(letterFields.recipient && { letterRecipient: letterFields.recipient }),
+          ...(letterFields.subject && { letterSubject: letterFields.subject }),
+          ...(letterFields.greeting && { letterGreeting: letterFields.greeting }),
+        };
+      case "letter-informal":
+        return {
+          ...(letterFields.date && { letterDate: letterFields.date }),
+          ...(letterFields.greeting && { letterGreeting: letterFields.greeting }),
+        };
+      default:
+        return undefined;
+    }
+  };
+
   const freestyleFields = {
     exerciseTitle: topic,
     exerciseType: "freestyle" as const,
     isPublic,
     writingMode,
+    ...(buildStructuredFields() && { structuredFields: buildStructuredFields() }),
   };
 
   const handleSubmit = async () => {
@@ -101,9 +128,9 @@ export default function FreestylePage() {
           </>
         );
       case "letter-formal":
-        return <FormalLetterHeader />;
+        return <FormalLetterHeader values={letterFields} onChange={setLetterFields} />;
       case "letter-informal":
-        return <InformalLetterHeader />;
+        return <InformalLetterHeader values={letterFields} onChange={setLetterFields} />;
       default:
         return undefined;
     }
@@ -247,7 +274,7 @@ export default function FreestylePage() {
         actions={
           <div className="flex items-center gap-3">
             <ActionButton
-              onClick={submissionHandlers.handleSaveDraft}
+              onClick={() => submissionHandlers.handleSaveDraft(freestyleFields)}
               disabled={submissionHandlers.isSaving || !hasContent}
               variant="gray"
               icon={<ActionButtonIcons.Save />}
