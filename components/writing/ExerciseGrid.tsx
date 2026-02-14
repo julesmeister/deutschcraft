@@ -74,7 +74,20 @@ export function ExerciseGrid({
         transformStyle: 'preserve-3d'
       }}
     >
-      <div className="flex gap-5 overflow-x-auto">
+      {/* Single column on mobile, multi-column on md+ */}
+      <div className="flex flex-col md:hidden gap-4">
+        {childrenArray.map((child, index) => (
+          <motion.div
+            key={`item-${index}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.05, duration: 0.4, ease: "easeOut" }}
+          >
+            {child}
+          </motion.div>
+        ))}
+      </div>
+      <div className="hidden md:flex gap-5">
         {columns.map((column, columnIndex) => (
           <div
             key={columnIndex}
