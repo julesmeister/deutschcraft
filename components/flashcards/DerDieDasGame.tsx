@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef, forwardRef, useImperativeHandle } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef, forwardRef, useImperativeHandle } from "react";
 import confetti from "canvas-confetti";
 import {
   EndingEntry, FloatingArticle, ARTICLES, ENDING_DATA,
@@ -14,6 +14,7 @@ import { AnsweredEndingsList } from "./derdiedas/AnsweredEndingsList";
 import { StatsBar } from "./pacman/StatsBar";
 import { PausedScreen } from "./pacman/PausedScreen";
 import { SummaryScreen } from "./pacman/SummaryScreen";
+import { MultipleChoiceQuiz, QuizItem } from "./shared/MultipleChoiceQuiz";
 import { useDerDieDasProgress } from "@/lib/hooks/useDerDieDasProgress";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { saveDailyProgress } from "@/lib/services/turso";
@@ -38,7 +39,7 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
   { onBack, onGameStateChange },
   ref
 ) {
-  const [gameState, setGameState] = useState<'menu' | 'playing' | 'paused' | 'summary' | 'review'>('menu');
+  const [gameState, setGameState] = useState<'menu' | 'playing' | 'quiz' | 'paused' | 'summary' | 'review'>('menu');
   const [pacmanLane, setPacmanLane] = useState(1); // Middle of 3 lanes
   const [floatingArticles, setFloatingArticles] = useState<FloatingArticle[]>([]);
   const [currentEnding, setCurrentEnding] = useState<EndingEntry | null>(null);
@@ -209,9 +210,89 @@ export const DerDieDasGame = forwardRef<DerDieDasGameRef, DerDieDasGameProps>(fu
     setCurrentEnding(getRandomEnding());
   };
 
+  // --- Quiz mode ---
+  const quizItems = useMemo<QuizItem[]>(() => {
+    const shuffled = [...ENDING_DATA].sort(() => Math.random() - 0.5);
+    return shuffled.map(entry => ({
+      id: entry.ending,
+      prompt: entry.ending,
+      correctAnswer: entry.article,
+      choices: [...ARTICLES],
+      meta: { rule: entry.rule, examples: entry.examples },
+    }));
+  }, []);
+
+  const articleChoiceColors: Record<string, { bg: string; text: string; ring: string }> = {
+    der: { bg: "bg-blue-600/80", text: "text-blue-100", ring: "ring-blue-400" },
+    die: { bg: "bg-pink-600/80", text: "text-pink-100", ring: "ring-pink-400" },
+    das: { bg: "bg-green-600/80", text: "text-green-100", ring: "ring-green-400" },
+  };
+
+  const startQuiz = () => {
+    setGameState('quiz');
+    answeredEndingsRef.current.clear();
+    mistakeCountsRef.current = {};
+    setAnsweredEndings([]);
+  };
+
+  const handleQuizAnswer = useCallback((item: QuizItem, _selectedAnswer: string, isCorrect: boolean) => {
+    const entry = ENDING_DATA.find(e => e.ending === item.id);
+    if (!entry) return;
+
+    // Keep parent stats in sync so endGame() has correct values
+    setStats(prev => {
+      const newStreak = isCorrect ? prev.streak + 1 : 0;
+      const streakBonus = isCorrect ? Math.floor(newStreak / 3) * 5 : 0;
+      return {
+        score: prev.score + (isCorrect ? 10 + streakBonus : 0),
+        correct: prev.correct + (isCorrect ? 1 : 0),
+        incorrect: prev.incorrect + (isCorrect ? 0 : 1),
+        streak: newStreak,
+        maxStreak: Math.max(prev.maxStreak, newStreak),
+      };
+    });
+
+    if (isCorrect) {
+      if (!answeredEndingsRef.current.has(entry.ending)) {
+        answeredEndingsRef.current.add(entry.ending);
+        setAnsweredEndings(prev => [...prev, entry]);
+      }
+      recordCorrect({ ending: entry.ending, article: entry.article });
+    } else {
+      mistakeCountsRef.current[entry.ending] = (mistakeCountsRef.current[entry.ending] || 0) + 1;
+    }
+  }, [recordCorrect]);
+
+  const handleQuizComplete = useCallback((finalStats: GameStats) => {
+    setStats(finalStats);
+    setGameState('summary');
+    if (userId && (finalStats.correct > 0 || finalStats.incorrect > 0)) {
+      saveDailyProgress(userId, {
+        cardsReviewed: finalStats.correct + finalStats.incorrect,
+        correctCount: finalStats.correct,
+        incorrectCount: finalStats.incorrect,
+        timeSpent: 0,
+      }).catch((err) => console.error("[DerDieDasGame] Failed to save daily progress:", err));
+    }
+  }, [userId]);
+
   // --- Non-playing screens ---
   if (gameState === 'menu') {
-    return <MenuScreen onStart={startGame} onReview={() => setGameState('review')} />;
+    return <MenuScreen onStart={startGame} onStartQuiz={startQuiz} onReview={() => setGameState('review')} />;
+  }
+  if (gameState === 'quiz') {
+    return (
+      <div>
+        <MultipleChoiceQuiz
+          items={quizItems}
+          onAnswer={handleQuizAnswer}
+          onComplete={handleQuizComplete}
+          choiceColors={articleChoiceColors}
+          maxQuestions={20}
+        />
+        <AnsweredEndingsList answeredEndings={answeredEndings} progressMap={progressMap} />
+      </div>
+    );
   }
   if (gameState === 'summary') {
     return (

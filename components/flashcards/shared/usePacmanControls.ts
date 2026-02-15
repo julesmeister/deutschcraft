@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 
-type GameState = "menu" | "playing" | "paused" | "summary" | "review";
+type GameState = "menu" | "playing" | "quiz" | "paused" | "summary" | "review";
 
 /**
  * Shared hook for Pacman-style game controls:

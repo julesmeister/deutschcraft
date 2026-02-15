@@ -9,6 +9,7 @@ interface MenuScreenProps {
   onToggleRoot: (root: string) => void;
   onClearRoots: () => void;
   onStart: () => void;
+  onStartQuiz: () => void;
   onReview: () => void;
 }
 
@@ -19,6 +20,7 @@ export function MenuScreen({
   onToggleRoot,
   onClearRoots,
   onStart,
+  onStartQuiz,
   onReview,
 }: MenuScreenProps) {
   return (
@@ -30,28 +32,40 @@ export function MenuScreen({
           Catch the correct German prefix to complete the verb!
         </p>
 
-        <div className="bg-gray-700/50 rounded-xl p-3 sm:p-4 mb-6 text-left">
-          <h3 className="font-bold text-white mb-2 text-sm sm:text-base">How to Play:</h3>
-          <ul className="text-gray-300 text-xs sm:text-sm space-y-1">
-            <li><span className="text-yellow-400">Arrow Keys / W/S</span> or <span className="text-yellow-400">drag</span> to move</li>
-            <li>Read the meaning shown on screen</li>
-            <li>Catch the <span className="text-green-400">correct prefix</span> to form the verb</li>
-            <li>Avoid the <span className="text-gray-400">wrong prefixes</span>!</li>
-          </ul>
-        </div>
-
         <div className="text-gray-400 text-sm mb-4">
           {activeVerbData.length} verb combinations to practice
         </div>
 
-        <div className="space-y-3">
-          <Button onClick={onStart} variant="primary" className="w-full">
-            Start Game
-          </Button>
-          <Button onClick={onReview} variant="secondary" className="w-full">
-            Review Words First
-          </Button>
+        {/* Game modes */}
+        <div className="space-y-3 mb-4">
+          <div className="bg-gray-700/50 rounded-xl p-3 sm:p-4">
+            <h3 className="font-bold text-white mb-1 text-sm sm:text-base flex items-center justify-center gap-2">
+              <span className="text-xl">👾</span> Pacman Mode
+            </h3>
+            <p className="text-gray-400 text-xs sm:text-sm mb-3">
+              Move Pacman to catch the correct prefix as they float across the screen.
+            </p>
+            <Button onClick={onStart} variant="primary" className="w-full">
+              Start Pacman
+            </Button>
+          </div>
+
+          <div className="bg-gray-700/50 rounded-xl p-3 sm:p-4">
+            <h3 className="font-bold text-white mb-1 text-sm sm:text-base flex items-center justify-center gap-2">
+              <span className="text-xl">📝</span> Quiz Mode
+            </h3>
+            <p className="text-gray-400 text-xs sm:text-sm mb-3">
+              See a verb meaning and pick the right prefix from choices.
+            </p>
+            <Button onClick={onStartQuiz} variant="cyan" className="w-full">
+              Start Quiz
+            </Button>
+          </div>
         </div>
+
+        <Button onClick={onReview} variant="secondary" className="w-full">
+          Review Words First
+        </Button>
       </div>
 
       <RootSelector

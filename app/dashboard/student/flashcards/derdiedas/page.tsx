@@ -39,7 +39,7 @@ function DerDieDasGameContent() {
           onClick: handleBack,
         }}
         actions={
-          gameState === 'playing' ? (
+          gameState === 'playing' || gameState === 'quiz' ? (
             <ActionButton
               onClick={handleEndGame}
               variant="red"

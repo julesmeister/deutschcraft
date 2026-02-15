@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef, forwardRef, useImperativeHandle } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef, forwardRef, useImperativeHandle } from "react";
 import confetti from "canvas-confetti";
 import {
   VerbEntry, FloatingPrefix, PREFIXES, VERB_DATA,
@@ -15,6 +15,7 @@ import { ReviewScreen } from "./pacman/ReviewScreen";
 import { RootSelector } from "./pacman/RootSelector";
 import { AnsweredWordsList } from "./pacman/AnsweredWordsList";
 import { StatsBar } from "./pacman/StatsBar";
+import { MultipleChoiceQuiz, QuizItem } from "./shared/MultipleChoiceQuiz";
 import { usePacmanProgress } from "@/lib/hooks/usePacmanProgress";
 import { useFirebaseAuth } from "@/lib/hooks/useFirebaseAuth";
 import { saveDailyProgress } from "@/lib/services/turso";
@@ -40,7 +41,7 @@ export const PacmanGame = forwardRef<PacmanGameRef, PacmanGameProps>(function Pa
   { onBack, onGameStateChange },
   ref
 ) {
-  const [gameState, setGameState] = useState<'menu' | 'playing' | 'paused' | 'summary' | 'review'>('menu');
+  const [gameState, setGameState] = useState<'menu' | 'playing' | 'quiz' | 'paused' | 'summary' | 'review'>('menu');
   const [pacmanLane, setPacmanLane] = useState(Math.floor(LANE_COUNT / 2));
   const [floatingPrefixes, setFloatingPrefixes] = useState<FloatingPrefix[]>([]);
   const [currentVerb, setCurrentVerb] = useState<VerbEntry | null>(null);
@@ -226,6 +227,79 @@ export const PacmanGame = forwardRef<PacmanGameRef, PacmanGameProps>(function Pa
     setCurrentVerb(getRandomVerb());
   };
 
+  // --- Quiz mode ---
+  const quizItems = useMemo<QuizItem[]>(() => {
+    const shuffled = [...activeVerbData].sort(() => Math.random() - 0.5);
+    return shuffled.map(verb => {
+      // Pick 3 wrong prefixes from the same root's other verbs when possible
+      const samRootPrefixes = activeVerbData
+        .filter(v => v.root === verb.root && v.prefix !== verb.prefix)
+        .map(v => v.prefix);
+      const otherPrefixes = PREFIXES.filter(p => p !== verb.prefix);
+      const wrongPool = samRootPrefixes.length >= 3 ? samRootPrefixes : otherPrefixes;
+      const shuffledWrong = [...wrongPool].sort(() => Math.random() - 0.5);
+      const wrong = shuffledWrong.slice(0, 3);
+      const choices = [verb.prefix, ...wrong].sort(() => Math.random() - 0.5);
+
+      return {
+        id: verb.full,
+        prompt: verb.meaning,
+        subtitle: `____${verb.root}`,
+        correctAnswer: verb.prefix,
+        choices,
+        meta: { rule: `${verb.prefix.replace('-', '')}${verb.root} = ${verb.meaning}` },
+      };
+    });
+  }, [activeVerbData]);
+
+  const startQuiz = () => {
+    setGameState('quiz');
+    setStats({ score: 0, correct: 0, incorrect: 0, streak: 0, maxStreak: 0 });
+    answeredVerbsRef.current.clear();
+    mistakeCountsRef.current = {};
+    setAnsweredVerbs([]);
+  };
+
+  const handleQuizAnswer = useCallback((item: QuizItem, _selectedAnswer: string, isCorrect: boolean) => {
+    const verb = activeVerbData.find(v => v.full === item.id);
+    if (!verb) return;
+
+    setStats(prev => {
+      const newStreak = isCorrect ? prev.streak + 1 : 0;
+      const streakBonus = isCorrect ? Math.floor(newStreak / 3) * 5 : 0;
+      return {
+        score: prev.score + (isCorrect ? 10 + streakBonus : 0),
+        correct: prev.correct + (isCorrect ? 1 : 0),
+        incorrect: prev.incorrect + (isCorrect ? 0 : 1),
+        streak: newStreak,
+        maxStreak: Math.max(prev.maxStreak, newStreak),
+      };
+    });
+
+    if (isCorrect) {
+      if (!answeredVerbsRef.current.has(verb.full)) {
+        answeredVerbsRef.current.add(verb.full);
+        setAnsweredVerbs(prev => [...prev, verb]);
+      }
+      recordCorrect(verb);
+    } else {
+      mistakeCountsRef.current[verb.full] = (mistakeCountsRef.current[verb.full] || 0) + 1;
+    }
+  }, [activeVerbData, recordCorrect]);
+
+  const handleQuizComplete = useCallback((finalStats: GameStats) => {
+    setStats(finalStats);
+    setGameState('summary');
+    if (userId && (finalStats.correct > 0 || finalStats.incorrect > 0)) {
+      saveDailyProgress(userId, {
+        cardsReviewed: finalStats.correct + finalStats.incorrect,
+        correctCount: finalStats.correct,
+        incorrectCount: finalStats.incorrect,
+        timeSpent: 0,
+      }).catch((err) => console.error("[PacmanGame] Failed to save daily progress:", err));
+    }
+  }, [userId]);
+
   // Shared root selector props
   const rootSelectorProps = {
     allRoots, selectedRoots, activeVerbData,
@@ -234,7 +308,23 @@ export const PacmanGame = forwardRef<PacmanGameRef, PacmanGameProps>(function Pa
 
   // --- Non-playing screens ---
   if (gameState === 'menu') {
-    return <MenuScreen {...rootSelectorProps} onStart={startGame} onReview={() => setGameState('review')} />;
+    return <MenuScreen {...rootSelectorProps} onStart={startGame} onStartQuiz={startQuiz} onReview={() => setGameState('review')} />;
+  }
+  if (gameState === 'quiz') {
+    return (
+      <div>
+        <MultipleChoiceQuiz
+          items={quizItems}
+          onAnswer={handleQuizAnswer}
+          onComplete={handleQuizComplete}
+          maxQuestions={20}
+        />
+        <AnsweredWordsList answeredVerbs={answeredVerbs} progressMap={progressMap} />
+        <div className="mt-3 sm:mt-4">
+          <RootSelector {...rootSelectorProps} onClear={clearRoots} />
+        </div>
+      </div>
+    );
   }
   if (gameState === 'summary') {
     return (
