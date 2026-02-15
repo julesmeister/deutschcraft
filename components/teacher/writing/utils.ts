@@ -10,8 +10,13 @@ import { LETTER_TEMPLATES } from '@/lib/data/letterTemplates';
 
 /**
  * Get exercise title from exerciseId and type
+ * Searches all static data sources, handling both DB-stored type names
+ * (e.g. 'formal', 'informal') and model type names ('formal-letter', 'informal-letter')
  */
-export function getExerciseTitle(exerciseId: string, exerciseType: WritingExerciseType): string {
+export function getExerciseTitle(exerciseId: string, exerciseType: WritingExerciseType | string, dbTitle?: string): string {
+  // Prefer title fetched from DB (via JOIN)
+  if (dbTitle) return dbTitle;
+
   try {
     switch (exerciseType) {
       case 'translation': {
@@ -27,12 +32,24 @@ export function getExerciseTitle(exerciseId: string, exerciseType: WritingExerci
         return template?.title || 'Email Exercise';
       }
       case 'formal-letter':
-      case 'informal-letter': {
+      case 'informal-letter':
+      case 'formal':
+      case 'informal': {
         const template = LETTER_TEMPLATES.find((t) => t.id === exerciseId);
         return template?.title || 'Letter Exercise';
       }
-      default:
+      default: {
+        // Fallback: search all static sources by ID
+        const fromTranslation = TRANSLATION_EXERCISES.find((ex) => ex.exerciseId === exerciseId);
+        if (fromTranslation) return fromTranslation.title;
+        const fromCreative = CREATIVE_EXERCISES.find((ex) => ex.exerciseId === exerciseId);
+        if (fromCreative) return fromCreative.title;
+        const fromEmail = EMAIL_TEMPLATES.find((t) => t.id === exerciseId);
+        if (fromEmail) return fromEmail.title;
+        const fromLetter = LETTER_TEMPLATES.find((t) => t.id === exerciseId);
+        if (fromLetter) return fromLetter.title;
         return 'Writing Exercise';
+      }
     }
   } catch (error) {
     console.error('[getExerciseTitle] Error:', error);

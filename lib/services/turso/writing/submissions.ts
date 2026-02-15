@@ -328,25 +328,28 @@ export async function getWritingSubmissionsPaginated(options: {
   const { pageSize, statusFilter = 'all', batchId = null, studentIds = [] } = options;
 
   try {
-    let sql = 'SELECT * FROM writing_submissions WHERE 1=1';
+    let sql = `SELECT ws.*, we.title as exercise_title
+      FROM writing_submissions ws
+      LEFT JOIN writing_exercises we ON ws.exercise_id = we.exercise_id
+      WHERE 1=1`;
     const args: any[] = [];
 
     // Add status filter
     if (statusFilter === 'submitted') {
-      sql += " AND status = 'submitted'";
+      sql += " AND ws.status = 'submitted'";
     } else if (statusFilter === 'reviewed') {
-      sql += " AND status = 'reviewed'";
+      sql += " AND ws.status = 'reviewed'";
     }
 
     // Add batch filter (via studentIds)
     if (batchId && studentIds.length > 0) {
       const placeholders = studentIds.map(() => '?').join(',');
-      sql += ` AND user_id IN (${placeholders})`;
+      sql += ` AND ws.user_id IN (${placeholders})`;
       args.push(...studentIds);
     }
 
     // Add ordering and limit
-    sql += ' ORDER BY updated_at DESC LIMIT ?';
+    sql += ' ORDER BY ws.updated_at DESC LIMIT ?';
     args.push(pageSize + 1); // Fetch one extra to check if there's more
 
     const result = await db.execute({ sql, args });

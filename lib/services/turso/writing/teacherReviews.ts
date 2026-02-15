@@ -134,7 +134,7 @@ export async function createTeacherReview(reviewData: any): Promise<any> {
           reviewData.vocabularyScore,
           reviewData.coherenceScore,
           reviewData.overallScore,
-          reviewData.comments,
+          reviewData.overallComment || reviewData.comments || null,
           reviewData.correctedVersion || null,
           JSON.stringify(reviewData.strengths || []),
           JSON.stringify(reviewData.areasForImprovement || []),
@@ -149,8 +149,8 @@ export async function createTeacherReview(reviewData: any): Promise<any> {
           status = 'reviewed',
           teacher_score = ?,
           teacher_feedback = ?,
-          teacher_corrected_version = ?,
-          teacher_corrected_at = ?,
+          reviewed_by = ?,
+          reviewed_at = ?,
           updated_at = ?
         WHERE submission_id = ?`,
         args: [
@@ -160,10 +160,11 @@ export async function createTeacherReview(reviewData: any): Promise<any> {
             vocabularyScore: reviewData.vocabularyScore,
             coherenceScore: reviewData.coherenceScore,
             overallScore: reviewData.overallScore,
-            overallComment: reviewData.comments, // Include comment in feedback JSON for easy access
+            overallComment: reviewData.overallComment || reviewData.comments || null,
+            correctedVersion: reviewData.correctedVersion || null,
           }),
-          reviewData.correctedVersion || null,
-          reviewData.correctedVersion ? now : null,
+          reviewData.teacherId,
+          now,
           now,
           reviewData.submissionId,
         ],
@@ -262,11 +263,10 @@ export async function updateTeacherReview(
       const submissionUpdates: string[] = [];
       const submissionArgs: any[] = [];
 
-      if (updates.correctedVersion !== undefined) {
-        submissionUpdates.push("teacher_corrected_version = ?");
-        submissionArgs.push(updates.correctedVersion);
-        submissionUpdates.push("teacher_corrected_at = ?");
-        submissionArgs.push(updates.correctedVersion ? Date.now() : null);
+      if (updates.correctedVersion !== undefined || updates.overallComment !== undefined) {
+        // Store corrected version and comment in teacher_feedback JSON
+        submissionUpdates.push("reviewed_at = ?");
+        submissionArgs.push(Date.now());
       }
 
       if (updates.overallScore !== undefined) {

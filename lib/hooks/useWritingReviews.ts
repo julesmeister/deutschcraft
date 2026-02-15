@@ -130,6 +130,8 @@ export function useCreateTeacherReview() {
       queryClient.invalidateQueries({ queryKey: ['teacher-reviews-by-teacher', data.teacherId] });
       queryClient.invalidateQueries({ queryKey: ['writing-submission', data.submissionId] });
       queryClient.invalidateQueries({ queryKey: ['all-writing-submissions'] });
+      queryClient.invalidateQueries({ queryKey: ['writing-submissions-paginated'] });
+      queryClient.invalidateQueries({ queryKey: ['writing-submissions-count'] });
       queryClient.invalidateQueries({ queryKey: ['pending-writing-count'] });
       queryClient.invalidateQueries({ queryKey: ['writing-stats', data.studentId] });
     },
@@ -150,6 +152,10 @@ export function useUpdateTeacherReview() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['teacher-review'] });
       queryClient.invalidateQueries({ queryKey: ['teacher-reviews-by-teacher'] });
+      queryClient.invalidateQueries({ queryKey: ['writing-submissions-paginated'] });
+      queryClient.invalidateQueries({ queryKey: ['writing-submissions-count'] });
+      queryClient.invalidateQueries({ queryKey: ['all-writing-submissions'] });
+      queryClient.invalidateQueries({ queryKey: ['pending-writing-count'] });
     },
   });
 }

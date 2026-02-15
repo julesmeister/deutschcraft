@@ -29,8 +29,27 @@ type ExerciseTypeFilter = WritingExerciseType | 'all';
 export default function TeacherWritingDashboard() {
   const { session } = useFirebaseAuth();
   const currentTeacherId = session?.user?.email;
-  const [statusFilter, setStatusFilter] = useState<StatusFilter>('submitted');
-  const [exerciseTypeFilter, setExerciseTypeFilter] = useState<ExerciseTypeFilter>('all');
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('teacher-writing-status-filter');
+      if (saved === 'all' || saved === 'submitted' || saved === 'reviewed') return saved;
+    }
+    return 'submitted';
+  });
+  const [exerciseTypeFilter, setExerciseTypeFilter] = useState<ExerciseTypeFilter>(() => {
+    if (typeof window !== 'undefined') {
+      return (localStorage.getItem('teacher-writing-type-filter') as ExerciseTypeFilter) || 'all';
+    }
+    return 'all';
+  });
+
+  // Persist filter selections to localStorage
+  useEffect(() => {
+    localStorage.setItem('teacher-writing-status-filter', statusFilter);
+  }, [statusFilter]);
+  useEffect(() => {
+    localStorage.setItem('teacher-writing-type-filter', exerciseTypeFilter);
+  }, [exerciseTypeFilter]);
   const [searchQuery, setSearchQuery] = useState('');
   const deferredQuery = useDeferredValue(searchQuery);
 
@@ -102,7 +121,7 @@ export default function TeacherWritingDashboard() {
         const matchesUser = submission.userId.toLowerCase().includes(query);
         const studentName = getStudentName(submission.userId, allStudents).toLowerCase();
         const matchesName = studentName.includes(query);
-        const exerciseTitle = getExerciseTitle(submission.exerciseId, submission.exerciseType);
+        const exerciseTitle = getExerciseTitle(submission.exerciseId, submission.exerciseType, submission.exerciseTitle);
         const matchesTitle = exerciseTitle.toLowerCase().includes(query);
         return matchesUser || matchesName || matchesTitle;
       }
@@ -117,7 +136,7 @@ export default function TeacherWritingDashboard() {
   const tableData = filteredSubmissions.map((submission) => ({
     id: submission.submissionId,
     exerciseType: submission.exerciseType,
-    exerciseTitle: getExerciseTitle(submission.exerciseId, submission.exerciseType),
+    exerciseTitle: getExerciseTitle(submission.exerciseId, submission.exerciseType, submission.exerciseTitle),
     userId: submission.userId,
     studentName: getStudentName(submission.userId, allStudents),
     wordCount: submission.wordCount,
