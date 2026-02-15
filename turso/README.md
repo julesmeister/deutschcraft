@@ -1,6 +1,6 @@
 # Turso Database Setup
 
-This folder contains all Turso database configuration, migrations, and utilities for Testmanship Web V2.
+This folder contains all Turso database configuration, migrations, and utilities for DeutschCraft Web V2.
 
 ## Overview
 
@@ -47,16 +47,16 @@ turso auth signup
 
 ```bash
 # Create a new database
-turso db create testmanship-web-v2
+turso db create deutschcraft
 
 # Get the database URL
-turso db show testmanship-web-v2 --url
+turso db show deutschcraft --url
 ```
 
 ### 4. Create an Auth Token
 
 ```bash
-turso db tokens create testmanship-web-v2
+turso db tokens create deutschcraft
 ```
 
 ### 5. Configure Environment Variables
@@ -64,7 +64,7 @@ turso db tokens create testmanship-web-v2
 Add to your `.env.local` file:
 
 ```env
-TURSO_DATABASE_URL=libsql://testmanship-web-v2-your-org.turso.io
+TURSO_DATABASE_URL=libsql://deutschcraft-your-org.turso.io
 TURSO_AUTH_TOKEN=eyJhbGc...your-token-here
 ```
 
@@ -140,7 +140,7 @@ await transaction([
 
 ```bash
 # Connect to your database shell
-turso db shell testmanship-web-v2
+turso db shell deutschcraft
 
 # List all tables
 .tables
@@ -163,8 +163,8 @@ Add these to your `package.json`:
 {
   "scripts": {
     "db:migrate": "tsx turso/migrate.ts",
-    "db:shell": "turso db shell testmanship-web-v2",
-    "db:status": "turso db show testmanship-web-v2"
+    "db:shell": "turso db shell deutschcraft",
+    "db:status": "turso db show deutschcraft"
   }
 }
 ```
@@ -208,7 +208,7 @@ CREATE INDEX IF NOT EXISTS idx_new_table_name ON new_table(name);
 
 ```bash
 # Check which migrations have been executed
-turso db shell testmanship-web-v2
+turso db shell deutschcraft
 > SELECT * FROM migrations ORDER BY id;
 ```
 
@@ -216,8 +216,8 @@ turso db shell testmanship-web-v2
 
 ```bash
 # Drop and recreate database
-turso db destroy testmanship-web-v2 --yes
-turso db create testmanship-web-v2
+turso db destroy deutschcraft --yes
+turso db create deutschcraft
 
 # Run all migrations
 npm run db:migrate
@@ -226,7 +226,7 @@ npm run db:migrate
 ### View Database Metrics
 
 ```bash
-turso db inspect testmanship-web-v2
+turso db inspect deutschcraft
 ```
 
 ## Local Development
@@ -246,7 +246,7 @@ TURSO_AUTH_TOKEN=your-local-token
 
 1. Create a production database:
    ```bash
-   turso db create testmanship-web-v2-prod
+   turso db create deutschcraft-prod
    ```
 
 2. Add environment variables to Vercel:

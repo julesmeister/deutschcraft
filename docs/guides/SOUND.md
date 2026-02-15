@@ -5,13 +5,13 @@ This document compares the working implementation from `alter.gay` with our curr
 ## Overview
 
 **alter.gay**: ✅ Working WebRTC audio with Supabase Realtime
-**testmanship-web-v2**: ❌ No audio - WebRTC connections not establishing
+**deutschcraft**: ❌ No audio - WebRTC connections not establishing
 
 ## Core Differences
 
 ### Signaling Backend
 
-| Feature | alter.gay | testmanship-web-v2 | Status |
+| Feature | alter.gay | deutschcraft | Status |
 |---------|-----------|-------------------|--------|
 | Signaling Service | **Supabase Realtime** (broadcast channels) | **Firebase RTDB** (onChildAdded) | ⚠️ Different |
 | Signal Delivery | Instant broadcast to all clients | Push to RTDB, listen with onChildAdded | ⚠️ May be delayed |
@@ -55,7 +55,7 @@ const ICE_SERVERS = [
 ];
 ```
 
-**testmanship-web-v2** (10 servers):
+**deutschcraft** (10 servers):
 ```typescript
 const ICE_SERVERS = [
   // Same as alter.gay
@@ -85,7 +85,7 @@ const audioConstraints: MediaTrackConstraints & Record<string, any> = {
 };
 ```
 
-**testmanship-web-v2**:
+**deutschcraft**:
 ```typescript
 const stream = await navigator.mediaDevices.getUserMedia({
   audio: {
@@ -131,7 +131,7 @@ compressor.connect(analyser);
 // NOTE: No connection to destination - prevents echo
 ```
 
-**testmanship-web-v2**:
+**deutschcraft**:
 ```typescript
 // Only for remote audio
 if (!audioContextRef.current) {
@@ -194,7 +194,7 @@ pc.ontrack = (event) => {
 };
 ```
 
-**testmanship-web-v2**:
+**deutschcraft**:
 ```typescript
 pc.ontrack = (event) => {
   const [remoteStream] = event.streams;
@@ -274,7 +274,7 @@ channel.on('broadcast', { event: 'signal' }, ({ payload }) => {
 
 5. **Connection established** ✅
 
-#### testmanship-web-v2 Flow
+#### deutschcraft Flow
 
 1. **User starts voice**:
 ```typescript
@@ -313,7 +313,7 @@ channel.on('broadcast', { event: 'participant-joined' }, ({ payload }) => {
 });
 ```
 
-**testmanship-web-v2**:
+**deutschcraft**:
 ```typescript
 // Complex: Only initiate if userId is "smaller"
 if (userId < remoteUserId && isVoiceActiveRef.current) {
@@ -331,7 +331,7 @@ if (userId < remoteUserId && isVoiceActiveRef.current) {
 ### Data Channels
 
 **alter.gay**: ✅ Uses data channels for ping/pong
-**testmanship-web-v2**: ❌ No data channels
+**deutschcraft**: ❌ No data channels
 
 ### Retry Logic
 
@@ -348,7 +348,7 @@ if (peer.retryCount < MAX_RETRIES) {
 }
 ```
 
-**testmanship-web-v2**: ❌ No retry logic
+**deutschcraft**: ❌ No retry logic
 
 ## Critical Issues Found
 
@@ -382,7 +382,7 @@ new AudioContext({
 });
 ```
 
-**testmanship-web-v2**:
+**deutschcraft**:
 ```typescript
 new AudioContext(); // Uses defaults
 ```

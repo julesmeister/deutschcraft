@@ -1,7 +1,7 @@
 # Role-Based Features Documentation
 
 ## Overview
-This document describes the role-based features implemented in the Testmanship Web V2 application, specifically for the Tasks page and Student Dashboard.
+This document describes the role-based features implemented in the DeutschCraft Web V2 application, specifically for the Tasks page and Student Dashboard.
 
 ## Changes Made
 

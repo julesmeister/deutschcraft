@@ -83,7 +83,7 @@ fetch(R2_PUBLIC_URL)
         console.log('═'.repeat(60));
         console.log('\n✅ To fix audio playback:');
         console.log('   1. Go to Cloudflare R2 dashboard');
-        console.log('   2. Select "testmanship" bucket');
+        console.log('   2. Select "deutschcraft" bucket');
         console.log('   3. Click "Settings" tab');
         console.log('   4. Enable "Public Access"');
         console.log('   5. Add CORS policy (see CORS-SETUP-GUIDE.md)');

@@ -1,6 +1,6 @@
 # Documentation Index
 
-Welcome to the Testmanship Web V2 documentation. All documentation has been organized into logical categories for easy navigation.
+Welcome to the DeutschCraft Web V2 documentation. All documentation has been organized into logical categories for easy navigation.
 
 ---
 

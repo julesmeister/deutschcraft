@@ -67,8 +67,8 @@ Scroll down to find **"CORS policy"** section
   {
     "AllowedOrigins": [
       "http://localhost:3000",
-      "https://testmanship.com",
-      "https://www.testmanship.com",
+      "https://deutschcraft.com",
+      "https://www.deutschcraft.com",
       "https://*.vercel.app"
     ],
     "AllowedMethods": [
@@ -92,8 +92,8 @@ Scroll down to find **"CORS policy"** section
 **What this does:**
 - `AllowedOrigins`: Allows requests from:
   - `localhost:3000` (your local development)
-  - `testmanship.com` (your production site)
-  - `www.testmanship.com` (www version)
+  - `deutschcraft.com` (your production site)
+  - `www.deutschcraft.com` (www version)
   - `*.vercel.app` (if you deploy to Vercel)
 - `AllowedMethods`: Only GET and HEAD (read-only, secure)
 - `AllowedHeaders`: Accept any request headers
@@ -199,10 +199,10 @@ access-control-allow-methods: GET, HEAD
 - ✅ Did you clear browser cache (Ctrl+Shift+R)?
 - ✅ Is the domain spelling correct (no typos)?
 
-### Problem 4: Audio plays on localhost but not on testmanship.com
+### Problem 4: Audio plays on localhost but not on deutschcraft.com
 
 **Solution:**
-- Make sure you added both `https://testmanship.com` AND `https://www.testmanship.com`
+- Make sure you added both `https://deutschcraft.com` AND `https://www.deutschcraft.com`
 - Check if your site uses `http://` (it shouldn't, but just in case)
 - Try adding both http and https versions
 
@@ -230,7 +230,7 @@ After configuration, verify:
 - [ ] No CORS errors in browser console
 - [ ] Network tab shows `access-control-allow-origin` header
 - [ ] Audio plays when clicking play button on localhost:3000
-- [ ] (If deployed) Audio plays on testmanship.com
+- [ ] (If deployed) Audio plays on deutschcraft.com
 
 ---
 
@@ -244,7 +244,7 @@ After configuration, verify:
 Run this script to check your setup:
 
 ```bash
-cd C:\Users\User\Documents\testmanship-web-v2
+cd C:\Users\User\Documents\deutschcraft
 npx tsx scripts/verify-r2-setup.ts
 ```
 

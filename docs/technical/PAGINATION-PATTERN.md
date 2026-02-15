@@ -1,6 +1,6 @@
 # Pagination Pattern - Database Agnostic
 
-This document explains the pagination pattern used in Testmanship Web V2 for fetching large datasets efficiently while maintaining database abstraction.
+This document explains the pagination pattern used in DeutschCraft Web V2 for fetching large datasets efficiently while maintaining database abstraction.
 
 ## Architecture
 

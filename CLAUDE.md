@@ -1,8 +1,8 @@
-# CLAUDE.md - Testmanship Web V2
+# CLAUDE.md - DeutschCraft Web V2
 
 ## Project Overview
 
-**Testmanship Web V2** is a German language learning platform built with Next.js 15, designed for deployment on Vercel. It features:
+**DeutschCraft Web V2** is a German language learning platform built with Next.js 15, designed for deployment on Vercel. It features:
 
 - 🎨 **Modern SaaS Design** - Inspired by Piku template colors and Hosue template animations
 - ⚡ **Heavily Animated Landing Page** - Smooth transitions and scroll effects
@@ -24,7 +24,7 @@ Based on analysis of Piku template:
 - Gold: `#FFD542` - Accent 2
 - Pink: `#EF62E9` - Accent 3
 
-**Pastel Palette** (from Testmanship Android app):
+**Pastel Palette** (from DeutschCraft Android app):
 - Ocean: `#778BEB`
 - Coral: `#EB8686`
 - Blossom: `#F8A5C2`
@@ -63,7 +63,7 @@ Defined in `app/globals.css`
 
 ### Core Entities
 
-Based on Testmanship Android app (Kotlin to TypeScript conversion):
+Based on DeutschCraft Android app (Kotlin to TypeScript conversion):
 
 **User**
 ```typescript
@@ -111,7 +111,7 @@ Complete models in `lib/models.ts`
 ## File Structure
 
 ```
-testmanship-web-v2/
+deutschcraft/
 ├── app/
 │   ├── layout.tsx           # Root layout with fonts
 │   ├── page.tsx             # Landing page
@@ -268,7 +268,7 @@ useWebRTCMedia (orchestrator)
 
 ```
 NEXT_PUBLIC_SIGNALING_URL=ws://localhost:8787    # Local: wrangler dev on port 8787
-                                                # Prod: wss://testmanship-signaling.<subdomain>.workers.dev
+                                                # Prod: wss://deutschcraft-signaling.<subdomain>.workers.dev
 NEXT_PUBLIC_TURN_URL=turn:host:3478             # TURN server for NAT traversal
 NEXT_PUBLIC_TURN_USERNAME=...
 NEXT_PUBLIC_TURN_CREDENTIAL=...
@@ -357,7 +357,7 @@ className="bg-gradient-to-r from-brand-purple to-pastel-ocean"
 
 **Environment Variables Needed:**
 ```
-NEXT_PUBLIC_SIGNALING_URL=wss://testmanship-signaling.<subdomain>.workers.dev
+NEXT_PUBLIC_SIGNALING_URL=wss://deutschcraft-signaling.<subdomain>.workers.dev
 NEXT_PUBLIC_TURN_URL=turn:your-turn-server:3478
 NEXT_PUBLIC_TURN_USERNAME=...
 NEXT_PUBLIC_TURN_CREDENTIAL=...

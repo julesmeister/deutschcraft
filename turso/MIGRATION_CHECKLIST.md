@@ -11,14 +11,14 @@
 
 ```bash
 # Create new database
-turso db create testmanship-web-v2
+turso db create deutschcraft
 
 # Get database URL
-turso db show testmanship-web-v2 --url
-# Example output: libsql://testmanship-web-v2-yourorg.turso.io
+turso db show deutschcraft --url
+# Example output: libsql://deutschcraft-yourorg.turso.io
 
 # Create authentication token
-turso db tokens create testmanship-web-v2
+turso db tokens create deutschcraft
 # Example output: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9...
 ```
 
@@ -28,7 +28,7 @@ Edit `.env.local`:
 
 ```env
 # Turso Database
-TURSO_DATABASE_URL=libsql://testmanship-web-v2-yourorg.turso.io
+TURSO_DATABASE_URL=libsql://deutschcraft-yourorg.turso.io
 TURSO_AUTH_TOKEN=eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9...
 
 # Switch to Turso
@@ -134,10 +134,10 @@ npx tsx turso/migrate.ts
 
 ```bash
 # Run individual migration
-turso db shell testmanship-web-v2 < turso/migrations/014_create_social_posts_table.sql
+turso db shell deutschcraft < turso/migrations/014_create_social_posts_table.sql
 
 # Check tables
-turso db shell testmanship-web-v2
+turso db shell deutschcraft
 > .tables
 > .schema social_posts
 > .quit
@@ -148,7 +148,7 @@ turso db shell testmanship-web-v2
 ### 1. Check Tables Created
 
 ```bash
-turso db shell testmanship-web-v2
+turso db shell deutschcraft
 ```
 
 ```sql
@@ -223,7 +223,7 @@ node -e "require('dotenv').config({ path: '.env.local' }); console.log(process.e
 **Solution:** Regenerate token:
 
 ```bash
-turso db tokens create testmanship-web-v2
+turso db tokens create deutschcraft
 # Copy new token to .env.local
 ```
 
@@ -326,7 +326,7 @@ After migrations:
 ### Check Database Size
 
 ```bash
-turso db show testmanship-web-v2
+turso db show deutschcraft
 ```
 
 Output shows:
@@ -338,7 +338,7 @@ Output shows:
 ### View Recent Queries (Pro Plan)
 
 ```bash
-turso db shell testmanship-web-v2
+turso db shell deutschcraft
 ```
 
 ```sql
@@ -358,10 +358,10 @@ ORDER BY name;
 
 ```bash
 # Export database to file
-turso db shell testmanship-web-v2 .dump > backup.sql
+turso db shell deutschcraft .dump > backup.sql
 
 # Restore from backup
-turso db shell testmanship-web-v2 < backup.sql
+turso db shell deutschcraft < backup.sql
 ```
 
 ### Automated Backups

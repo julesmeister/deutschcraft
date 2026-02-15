@@ -61,7 +61,7 @@ export const brandConfig = {
    * - "Testmanship" → appears as "Welcome to Testmanship"
    * - Used in: components/ui/Navbar.tsx, components/ui/Footer.tsx
    */
-  name: "Testmanship",
+  name: "DeutschCraft",
 
   /**
    * Product Name (with version/variant identifier)
@@ -80,7 +80,7 @@ export const brandConfig = {
    * - "Testmanship Web V2" (current version)
    * - Could be "Testmanship Pro" or "Testmanship Enterprise"
    */
-  productName: "Testmanship Web V2",
+  productName: "DeutschCraft Web V2",
 
   /**
    * Tagline / Slogan
@@ -143,7 +143,7 @@ export const brandConfig = {
    * - "https://testmanship.com" ✗ (don't include protocol)
    * - "www.testmanship.com" ✗ (don't include www)
    */
-  domain: "testmanship.com",
+  domain: "deutschcraft.com",
 
   /**
    * Production URL (with protocol)
@@ -161,7 +161,7 @@ export const brandConfig = {
    * Format: https://{domain}
    * No trailing slash!
    */
-  productionUrl: "https://testmanship.com",
+  productionUrl: "https://deutschcraft.com",
 
   /**
    * Development URL
@@ -249,7 +249,7 @@ export const brandConfig = {
    *
    * Note: Use --rename-folder flag with rebrand script to rename directory
    */
-  folderName: "testmanship-web-v2",
+  folderName: "deutschcraft",
 
   /**
    * NPM Package Name
@@ -267,7 +267,7 @@ export const brandConfig = {
    * - Automatically updated by rebrand script
    * - May need to run: npm install to regenerate lock file
    */
-  packageName: "testmanship-web-v2",
+  packageName: "deutschcraft",
 
   /**
    * ═══════════════════════════════════════════════════════════════════════
@@ -285,14 +285,14 @@ export const brandConfig = {
      * Support Email
      * Used in: Footer, Contact forms, Error messages, mailto: links
      */
-    email: "support@testmanship.com",
+    email: "support@deutschcraft.com",
 
     /**
      * GitHub Repository
      * Used in: Footer, Documentation, Contributing guides
      * Format: Full HTTPS URL to repository
      */
-    github: "https://github.com/julesmeister/testmanship-web-v2",
+    github: "https://github.com/julesmeister/deutschcraft",
   },
 
   /**
@@ -311,13 +311,13 @@ export const brandConfig = {
    */
   social: {
     /** Twitter/X handle (without @) */
-    twitter: "@testmanship",
+    twitter: "@deutschcraft",
 
     /** Facebook page name */
-    facebook: "testmanship",
+    facebook: "deutschcraft",
 
     /** Instagram handle (without @) */
-    instagram: "testmanship",
+    instagram: "deutschcraft",
   },
 
   /**
@@ -336,7 +336,7 @@ export const brandConfig = {
      * Company/Owner Name
      * The legal entity that owns and operates the platform
      */
-    companyName: "Testmanship",
+    companyName: "DeutschCraft",
 
     /**
      * Copyright Notice

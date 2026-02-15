@@ -9,8 +9,8 @@ Copy this **EXACT** JSON and paste it into Cloudflare R2:
   {
     "AllowedOrigins": [
       "http://localhost:3000",
-      "https://testmanship.com",
-      "https://www.testmanship.com",
+      "https://deutschcraft.com",
+      "https://www.deutschcraft.com",
       "https://*.vercel.app"
     ],
     "AllowedMethods": [

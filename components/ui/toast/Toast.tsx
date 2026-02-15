@@ -99,7 +99,7 @@ export function Toast({
 
         {/* Title */}
         <div className="font-bold text-neutral-800 text-sm mr-auto">
-          {title || 'Testmanship'}
+          {title || 'DeutschCraft'}
         </div>
 
         {/* Timestamp */}

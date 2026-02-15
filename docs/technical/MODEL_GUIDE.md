@@ -2,7 +2,7 @@
 
 ## Overview
 
-This guide explains how to work with data models, hooks, and caching in Testmanship Web V2. It provides a clear pattern for creating new models and ensures consistency across the codebase.
+This guide explains how to work with data models, hooks, and caching in DeutschCraft Web V2. It provides a clear pattern for creating new models and ensures consistency across the codebase.
 
 ---
 

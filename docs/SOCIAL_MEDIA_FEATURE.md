@@ -1,8 +1,8 @@
-# Social Media Feature - Testmanship Web V2
+# Social Media Feature - DeutschCraft Web V2
 
 ## Overview
 
-This document describes the social media feature designed for the Testmanship German learning platform. The key innovation is the **suggestion/correction system** that allows students and teachers to help each other improve their German writing.
+This document describes the social media feature designed for the DeutschCraft German learning platform. The key innovation is the **suggestion/correction system** that allows students and teachers to help each other improve their German writing.
 
 ## Core Concept
 

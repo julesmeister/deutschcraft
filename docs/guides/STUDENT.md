@@ -1,6 +1,6 @@
 # Student Learning System - Documentation Index
 
-Welcome to the Testmanship Web V2 student learning system documentation. This system includes two main learning modules:
+Welcome to the DeutschCraft Web V2 student learning system documentation. This system includes two main learning modules:
 
 ---
 

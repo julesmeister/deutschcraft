@@ -469,4 +469,4 @@ For issues or questions:
 
 ## License
 
-Part of Testmanship Web V2 project.
+Part of DeutschCraft Web V2 project.

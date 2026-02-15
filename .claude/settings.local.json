@@ -209,7 +209,8 @@
       "Bash(npx dotenvx run:*)",
       "Bash(npx next build:*)",
       "Bash(Select-String \"error TS\")",
-      "Bash(Measure-Object -Line)"
+      "Bash(Measure-Object -Line)",
+      "Bash(git remote set-url:*)"
     ],
     "deny": [],
     "ask": []

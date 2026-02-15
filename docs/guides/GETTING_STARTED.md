@@ -1,6 +1,6 @@
 # Getting Started Guide
 
-Quick start guide for developers, teachers, and students using Testmanship Web V2.
+Quick start guide for developers, teachers, and students using DeutschCraft Web V2.
 
 ---
 
@@ -15,8 +15,8 @@ Quick start guide for developers, teachers, and students using Testmanship Web V
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/your-org/testmanship-web-v2.git
-cd testmanship-web-v2
+git clone https://github.com/your-org/deutschcraft.git
+cd deutschcraft
 npm install
 ```
 
@@ -83,7 +83,7 @@ npm run dev
 3. Navigate to: **APIs & Services** → **Credentials**
 4. Click **Create Credentials** → **OAuth client ID**
 5. Application type: **Web application**
-6. Name: "Testmanship Web V2"
+6. Name: "DeutschCraft Web V2"
 
 ### 2. Configure Authorized Domains
 
@@ -282,8 +282,8 @@ npm run dev
 **Fix:**
 ```bash
 # Verify credentials
-turso db show testmanship-web-v2 --url
-turso db tokens create testmanship-web-v2
+turso db show deutschcraft --url
+turso db tokens create deutschcraft
 
 # Update .env.local with new values
 ```
@@ -339,7 +339,7 @@ npm run flashcards:rebuild-index  # Rebuild flashcard indexes
 
 **Turso Shell:**
 ```bash
-turso db shell testmanship-web-v2
+turso db shell deutschcraft
 
 # Useful queries
 SELECT COUNT(*) FROM flashcard_progress;

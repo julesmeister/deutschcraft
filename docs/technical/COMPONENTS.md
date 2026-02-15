@@ -1,6 +1,6 @@
 # Reusable UI Components
 
-This document describes all reusable UI components available for building the Testmanship dashboard and pages.
+This document describes all reusable UI components available for building the DeutschCraft dashboard and pages.
 
 ## Dashboard Components (New!)
 

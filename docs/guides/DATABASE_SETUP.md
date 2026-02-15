@@ -6,7 +6,7 @@ Complete guide for setting up and understanding the dual-database architecture (
 
 ## Architecture Overview
 
-**Testmanship Web V2 uses a dual-database system:**
+**DeutschCraft Web V2 uses a dual-database system:**
 
 1. **Turso (Primary)** - Edge-hosted SQLite for performance-critical data
    - Flashcard progress & SRS data
@@ -48,18 +48,18 @@ turso auth signup
 
 ```bash
 # Create a new database
-turso db create testmanship-web-v2
+turso db create deutschcraft
 
 # Get the database URL (copy this!)
-turso db show testmanship-web-v2 --url
-# Output: libsql://testmanship-web-v2-your-org.turso.io
+turso db show deutschcraft --url
+# Output: libsql://deutschcraft-your-org.turso.io
 ```
 
 ### 4. Generate Auth Token
 
 ```bash
 # Create an auth token (copy this!)
-turso db tokens create testmanship-web-v2
+turso db tokens create deutschcraft
 # Output: eyJhbGc...your-long-token-here
 ```
 
@@ -67,7 +67,7 @@ turso db tokens create testmanship-web-v2
 
 Create `.env.local`:
 ```bash
-TURSO_DATABASE_URL="libsql://testmanship-web-v2-your-org.turso.io"
+TURSO_DATABASE_URL="libsql://deutschcraft-your-org.turso.io"
 TURSO_AUTH_TOKEN="eyJhbGc...your-long-token-here"
 ```
 
@@ -79,7 +79,7 @@ npm run turso:migrate
 
 **Verify:**
 ```bash
-turso db shell testmanship-web-v2
+turso db shell deutschcraft
 > SELECT COUNT(*) FROM flashcard_progress;
 ```
 
@@ -90,7 +90,7 @@ turso db shell testmanship-web-v2
 ### 1. Create Firebase Project
 
 1. Go to [Firebase Console](https://console.firebase.google.com/)
-2. Create new project: "Testmanship Web V2"
+2. Create new project: "DeutschCraft Web V2"
 3. Enable Firestore Database (production mode)
 4. Enable Authentication → Google Sign-In
 
@@ -268,7 +268,7 @@ echo $TURSO_DATABASE_URL
 echo $TURSO_AUTH_TOKEN
 
 # Test connection
-turso db shell testmanship-web-v2
+turso db shell deutschcraft
 ```
 
 **Error: "Table does not exist"**
@@ -309,7 +309,7 @@ Migrates all flashcard progress from Firestore to Turso.
 
 ```bash
 # Turso backup
-turso db dump testmanship-web-v2 > backup.sql
+turso db dump deutschcraft > backup.sql
 
 # Firestore backup (via Firebase Console)
 # Project Settings → Backups → Create backup

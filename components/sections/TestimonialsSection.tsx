@@ -12,8 +12,8 @@ export function TestimonialsSection() {
       name: 'Alexy Queen',
       label: 'Happy Student',
       image: '👩‍🎓',
-      title: 'Highly recommend Testmanship!',
-      quote: 'After using Testmanship, I can confidently say it was one of the most effective German learning experiences.',
+      title: 'Highly recommend DeutschCraft!',
+      quote: 'After using DeutschCraft, I can confidently say it was one of the most effective German learning experiences.',
     },
     {
       name: 'Jofra Archer',
@@ -34,7 +34,7 @@ export function TestimonialsSection() {
       label: 'Happy Student',
       image: '👨‍🎓',
       title: 'Perfect for busy professionals!',
-      quote: 'Testmanship fits perfectly into my busy schedule. Learning German has never been this efficient.',
+      quote: 'DeutschCraft fits perfectly into my busy schedule. Learning German has never been this efficient.',
     },
   ];
 

@@ -1,4 +1,4 @@
-# Testmanship Web V2
+# DeutschCraft Web V2
 
 German language learning platform with AI-powered flashcards and adaptive learning.
 
@@ -14,11 +14,14 @@ German language learning platform with AI-powered flashcards and adaptive learni
 
 ## Tech Stack
 
-- **Framework**: Next.js 15 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS 4
+- **Styling**: Tailwind CSS 3.4
 - **Animations**: Framer Motion + CSS animations
 - **Fonts**: Inter & Manrope (Google Fonts)
+- **Database**: Firestore (primary) + Turso/LibSQL (supplementary)
+- **Auth**: NextAuth.js with Google OAuth
+- **WebRTC**: Peer-to-peer voice/video with Cloudflare Durable Objects signaling
 - **Deployment**: Optimized for Vercel
 
 ## Quick Start
@@ -32,7 +35,7 @@ cp .env.example .env.local
 # Edit .env.local with your Turso and Firebase credentials
 
 # 3. Run database migrations
-npm run turso:migrate
+npm run db:migrate
 
 # 4. Start development server
 npm run dev
@@ -70,7 +73,7 @@ See `lib/design-system.ts` for complete color specifications.
 
 ## Data Models
 
-Based on the Testmanship Android app with support for:
+Based on the DeutschCraft Android app with support for:
 
 - **Users**: Students and Teachers
 - **CEFR Levels**: A1, A2, B1, B2, C1, C2
@@ -83,17 +86,25 @@ See `lib/models.ts` for complete data models.
 ## Project Structure
 
 ```
-testmanship-web-v2/
+deutschcraft/
 ├── app/                    # Next.js app directory
 │   ├── layout.tsx         # Root layout
-│   ├── page.tsx           # Home page
-│   └── globals.css        # Global styles
+│   ├── page.tsx           # Landing page
+│   ├── globals.css        # Global styles + animations
+│   └── dashboard/         # Student & teacher dashboards
 ├── components/            # React components
-│   ├── sections/          # Page sections
-│   └── ui/                # UI components
+│   ├── sections/          # Landing page sections
+│   ├── playground/        # WebRTC video/audio UI
+│   └── ui/                # Reusable UI components
 ├── lib/                   # Utilities and configs
+│   ├── brand-config.ts    # Centralized brand configuration
 │   ├── design-system.ts   # Design tokens
-│   └── models.ts          # Data models
+│   ├── models/            # Data models
+│   ├── hooks/             # React hooks (incl. WebRTC)
+│   └── services/          # Firestore & Turso services
+├── signaling-worker/      # Cloudflare Worker for WebRTC signaling
+├── turso/                 # Turso database migrations
+├── scripts/               # Utility & data scripts
 ├── public/                # Static assets
 └── package.json           # Dependencies
 ```
@@ -101,9 +112,11 @@ testmanship-web-v2/
 ## Scripts
 
 - `npm run dev` - Start development server (with Turbopack)
+- `npm run dev:signaling` - Start WebRTC signaling worker locally
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
+- `npm run db:migrate` - Run Turso database migrations
 
 ## Deployment
 
@@ -117,4 +130,4 @@ Deploy with one click on [Vercel](https://vercel.com).
 
 ## License
 
-Private - Testmanship © 2025
+Private - DeutschCraft © 2025-2026

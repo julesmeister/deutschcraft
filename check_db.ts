@@ -1,4 +1,4 @@
-process.env.TURSO_DATABASE_URL = "libsql://testmanship-orbitandchill.aws-ap-northeast-1.turso.io";
+process.env.TURSO_DATABASE_URL = "libsql://deutschcraft-orbitandchill.aws-ap-northeast-1.turso.io";
 process.env.TURSO_AUTH_TOKEN = "eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3NjY5MTIwNjQsImlkIjoiOGYzZDNlMTQtNjBhNC00YTMwLTgzNjMtMjU3ZGE1OTRkMDUwIiwicmlkIjoiN2FkNTU5ZDQtNjhkMS00Nzg0LTg5YjctMGIwN2I1NzM5NTZiIn0.Kq6w9rAGRly0_vHfCv6fvEtJ-Ca8XJ4wRsr3g1ZRySQYUhlX7NhxWKuDPArXjL_gt9JEUpYO0dJuOMA9wU4YBg";
 
 import { db } from './turso/client';

@@ -6,7 +6,7 @@ Complete guide to the flashcard management system, spaced repetition algorithm, 
 
 ## System Overview
 
-**Testmanship Flashcards** uses a spaced repetition system (SRS) based on the SM-2 algorithm with 5 difficulty levels.
+**DeutschCraft Flashcards** uses a spaced repetition system (SRS) based on the SM-2 algorithm with 5 difficulty levels.
 
 ### Key Features
 - ✅ **Semantic IDs** - Human-readable flashcard identifiers
