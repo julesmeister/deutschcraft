@@ -159,7 +159,11 @@ export default function EmailExercisePage() {
         <div className="lg:container lg:mx-auto">
           <EmailWritingForm
             template={template}
-            emailContent={viewingAttempt ? { to: "", subject: "", body: viewingAttempt.content } : emailContent}
+            emailContent={viewingAttempt ? {
+              to: viewingAttempt.structuredFields?.emailTo ?? "",
+              subject: viewingAttempt.structuredFields?.emailSubject ?? "",
+              body: viewingAttempt.content,
+            } : emailContent}
             wordCount={viewingAttempt ? viewingAttempt.wordCount : emailWordCount}
             onChange={setEmailContent}
             attemptCount={attempts.length}

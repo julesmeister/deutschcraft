@@ -165,7 +165,13 @@ export default function LetterExercisePage() {
             readOnly={!!viewingAttempt}
             viewingAttempt={viewingProps}
             attemptHistory={attemptHistory}
-            headerValues={letterFields}
+            headerValues={viewingAttempt?.structuredFields ? {
+              sender: viewingAttempt.structuredFields.letterSender,
+              date: viewingAttempt.structuredFields.letterDate,
+              recipient: viewingAttempt.structuredFields.letterRecipient,
+              subject: viewingAttempt.structuredFields.letterSubject,
+              greeting: viewingAttempt.structuredFields.letterGreeting,
+            } : letterFields}
             onHeaderChange={setLetterFields}
           />
 

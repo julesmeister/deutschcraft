@@ -20,7 +20,7 @@ import {
   getPendingEnrollmentsCount,
 } from "../services/user";
 import { User } from "../models";
-import { cacheTimes } from "../queryClient";
+import { cacheTimes, queryKeys } from "../queryClient";
 
 /**
  * Fetch current user by email
@@ -149,7 +149,7 @@ export function useBatchStudents(batchId: string | undefined) {
  */
 export function useAllStudents() {
   const { data, isLoading, isError, error } = useQuery({
-    queryKey: ["students", "all"],
+    queryKey: queryKeys.allStudents(),
     queryFn: async () => {
       const students = await getAllStudents();
       return students;
@@ -228,7 +228,7 @@ export function useAllUsers() {
  */
 export function useStudentsWithoutTeacher() {
   const { data, isLoading, isError, error } = useQuery({
-    queryKey: ["students", "without-teacher"],
+    queryKey: queryKeys.studentsWithoutTeacher(),
     queryFn: async () => {
       const students = await getStudentsWithoutTeacher();
 

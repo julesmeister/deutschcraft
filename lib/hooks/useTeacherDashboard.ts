@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import { Batch, CEFRLevel } from "../models";
 import {
   useAllStudentsNested,
-  useStudentsWithoutTeacher,
   useCurrentStudent,
 } from "./useUsers";
 import { useActiveBatches, useCreateBatch } from "./useBatches";
@@ -40,7 +39,6 @@ export function useTeacherDashboard({
     isLoading: studentsLoading,
     isError: studentsError,
   } = useAllStudentsNested();
-  const { students: studentsWithoutTeacher } = useStudentsWithoutTeacher();
   const { batches } = useActiveBatches(currentTeacherId);
   const { student: currentUser } = useCurrentStudent(currentTeacherId);
   const createBatchMutation = useCreateBatch();
@@ -55,7 +53,6 @@ export function useTeacherDashboard({
   const studentManagement = useStudentManagement({
     currentTeacherId,
     selectedBatchId: selectedBatch?.batchId,
-    studentsWithoutTeacher,
     onSuccess,
     onError,
     onInfo,

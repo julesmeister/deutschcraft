@@ -12,7 +12,6 @@ import { User } from '../models';
 interface UseStudentManagementProps {
   currentTeacherId: string | undefined;
   selectedBatchId: string | undefined;
-  studentsWithoutTeacher: User[];
   onSuccess?: (message: string) => void;
   onError?: (message: string) => void;
   onInfo?: (message: string) => void;
@@ -21,7 +20,6 @@ interface UseStudentManagementProps {
 export function useStudentManagement({
   currentTeacherId,
   selectedBatchId,
-  studentsWithoutTeacher,
   onSuccess,
   onError,
   onInfo,
@@ -78,20 +76,8 @@ export function useStudentManagement({
       setIsAddingStudents(true);
       onInfo?.(`Adding ${selectedStudents.length} student(s)...`);
 
-      // Get student emails from selected IDs
-      const studentEmails = selectedStudents
-        .map(studentId => {
-          const student = studentsWithoutTeacher.find(s => s.userId === studentId);
-          if (!student) {
-            console.error('[addStudentsToBatch] Student not found for ID:', studentId);
-            return null;
-          }
-          return student.userId; // userId is email
-        })
-        .filter((email): email is string => email !== null);
-
-      // Assign all students using service layer
-      await assignStudentsToBatch(studentEmails, currentTeacherId, selectedBatchId);
+      // selectedStudents already contains userId (email) values
+      await assignStudentsToBatch(selectedStudents, currentTeacherId, selectedBatchId);
 
       // Refetch the students list
       await queryClient.invalidateQueries({ queryKey: queryKeys.allStudents() });

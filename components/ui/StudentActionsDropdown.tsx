@@ -1,6 +1,31 @@
 'use client';
 
+import { useState } from 'react';
 import { CompactButtonDropdown, DropdownOption } from './CompactButtonDropdown';
+import { ConfirmDialog } from './Dialog';
+
+type PendingAction = { type: 'remove' | 'expire' | 'approve' } | null;
+
+const confirmConfig = {
+  remove: {
+    title: 'Remove Student',
+    message: 'Are you sure you want to remove this student? They will be unassigned from your class.',
+    confirmText: 'Remove',
+    variant: 'danger' as const,
+  },
+  expire: {
+    title: 'Expire Student',
+    message: 'Are you sure you want to expire this student? Their status will change to pending approval.',
+    confirmText: 'Expire',
+    variant: 'danger' as const,
+  },
+  approve: {
+    title: 'Approve Student',
+    message: 'Are you sure you want to approve this student? They will gain full access.',
+    confirmText: 'Approve',
+    variant: 'primary' as const,
+  },
+};
 
 interface StudentActionsDropdownProps {
   studentId: string;
@@ -19,16 +44,28 @@ export function StudentActionsDropdown({
   isRemoving,
   isChangingRole = false,
 }: StudentActionsDropdownProps) {
+  const [pendingAction, setPendingAction] = useState<PendingAction>(null);
+
   const handleAction = (value: string | string[]) => {
     if (isRemoving || isChangingRole) return;
 
-    if (value === 'remove') {
+    if (value === 'remove' || value === 'expire' || value === 'approve') {
+      setPendingAction({ type: value });
+    }
+  };
+
+  const handleConfirm = () => {
+    if (!pendingAction) return;
+
+    if (pendingAction.type === 'remove') {
       onRemoveStudent(studentId);
-    } else if (value === 'expire' && onChangeRole) {
+    } else if (pendingAction.type === 'expire' && onChangeRole) {
       onChangeRole(studentId, 'PENDING_APPROVAL');
-    } else if (value === 'approve' && onChangeRole) {
+    } else if (pendingAction.type === 'approve' && onChangeRole) {
       onChangeRole(studentId, 'STUDENT');
     }
+
+    setPendingAction(null);
   };
 
   const actionOptions: DropdownOption[] = [];
@@ -158,6 +195,18 @@ export function StudentActionsDropdown({
         usePortal={true}
         buttonClassName="!text-xs !py-1 !px-2.5 !bg-gray-100 hover:!bg-gray-200"
       />
+
+      {pendingAction && (
+        <ConfirmDialog
+          open={true}
+          onClose={() => setPendingAction(null)}
+          onConfirm={handleConfirm}
+          title={confirmConfig[pendingAction.type].title}
+          message={confirmConfig[pendingAction.type].message}
+          confirmText={confirmConfig[pendingAction.type].confirmText}
+          variant={confirmConfig[pendingAction.type].variant}
+        />
+      )}
     </div>
   );
 }

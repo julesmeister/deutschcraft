@@ -8,7 +8,7 @@ import {
   getUserExerciseAttempts,
   getLatestAttempt,
   getAttemptStats,
-} from '@/lib/services/writingAttemptService';
+} from '@/lib/services/turso/writingAttemptService';
 
 /**
  * Get all attempts for a specific user/exercise combination

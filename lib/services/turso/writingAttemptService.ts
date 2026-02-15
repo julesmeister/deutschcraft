@@ -36,6 +36,7 @@ function rowToSubmission(row: any): WritingSubmission {
     reviewedAt: row.reviewed_at ? Number(row.reviewed_at) : undefined,
     version: Number(row.version) || 1,
     previousVersions: row.previous_versions ? JSON.parse(row.previous_versions as string) : undefined,
+    structuredFields: row.structured_fields ? JSON.parse(row.structured_fields as string) : undefined,
     createdAt: Number(row.created_at),
     updatedAt: Number(row.updated_at),
   };

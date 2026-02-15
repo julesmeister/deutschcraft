@@ -24,7 +24,7 @@ import {
 import {
   getNextAttemptNumber,
   hasDraftAttempt,
-} from "@/lib/services/writingAttemptService";
+} from "@/lib/services/turso/writingAttemptService";
 import { EmailTemplate } from "@/lib/data/emailTemplates";
 import { LetterTemplate } from "@/lib/data/letterTemplates";
 
