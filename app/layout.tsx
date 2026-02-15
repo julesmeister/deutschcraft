@@ -19,9 +19,9 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const specialElite = localFont({
-  src: "../public/fonts/SpecialElite-Regular.ttf",
-  variable: "--font-special-elite",
+const brandFont = localFont({
+  src: "../public/fonts/Righteous-Regular.ttf",
+  variable: "--font-brand",
   display: "swap",
 });
 
@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body
-        className={`${inter.variable} ${manrope.variable} ${specialElite.variable} font-sans antialiased`}
+        className={`${inter.variable} ${manrope.variable} ${brandFont.variable} font-sans antialiased`}
       >
         <SessionProvider>
           <AccountHistoryProvider>

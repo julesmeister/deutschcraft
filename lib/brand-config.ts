@@ -64,6 +64,14 @@ export const brandConfig = {
   name: "DeutschCraft",
 
   /**
+   * Brand Font Class
+   *
+   * The Tailwind CSS class for the brand name font.
+   * Change this single value to update the font everywhere.
+   */
+  fontClass: "font-brand",
+
+  /**
    * Product Name (with version/variant identifier)
    *
    * The full product name including version or variant information.
