@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { SessionProvider } from "@/components/providers/SessionProvider";
 import { AccountHistoryProvider } from "@/components/providers/AccountHistoryProvider";
@@ -15,6 +16,12 @@ const inter = Inter({
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const specialElite = localFont({
+  src: "../public/fonts/SpecialElite-Regular.ttf",
+  variable: "--font-special-elite",
   display: "swap",
 });
 
@@ -39,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body
-        className={`${inter.variable} ${manrope.variable} font-sans antialiased`}
+        className={`${inter.variable} ${manrope.variable} ${specialElite.variable} font-sans antialiased`}
       >
         <SessionProvider>
           <AccountHistoryProvider>

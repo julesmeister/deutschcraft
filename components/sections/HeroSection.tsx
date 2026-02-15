@@ -3,6 +3,7 @@
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+import Image from 'next/image';
 
 export function HeroSection() {
   const router = useRouter();
@@ -216,23 +217,17 @@ export function HeroSection() {
                 </div>
               </div>
 
-              {/* Center Main Card */}
-              <div className="relative z-10 w-80 mx-auto p-8 bg-white rounded-3xl shadow-lg">
-                <div className="text-center mb-6">
-                  <p className="text-sm text-gray-600 mb-2">Flashcard</p>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">der Apfel</h3>
-                  <p className="text-gray-600">What does this mean?</p>
-                </div>
-                <div className="space-y-3">
-                  <button className="w-full p-4 bg-gradient-to-r from-piku-mint to-piku-green text-gray-900 font-semibold rounded-xl hover:shadow-lg transition-all">
-                    Apple
-                  </button>
-                  <button className="w-full p-4 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transition-all">
-                    Orange
-                  </button>
-                  <button className="w-full p-4 bg-gray-100 text-gray-700 font-semibold rounded-xl hover:bg-gray-200 transition-all">
-                    Banana
-                  </button>
+              {/* Center Logo Card */}
+              <div className="relative z-10 w-72 sm:w-80 mx-auto p-6 sm:p-8 bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl">
+                <div className="flex justify-center">
+                  <Image
+                    src="/images/logo.png"
+                    alt="DeutschCraft"
+                    width={240}
+                    height={240}
+                    className="w-48 h-48 sm:w-56 sm:h-56 object-contain"
+                    priority
+                  />
                 </div>
               </div>
             </div>

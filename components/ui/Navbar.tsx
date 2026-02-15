@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { ActionButton, ActionButtonIcons } from '@/components/ui/ActionButton';
@@ -87,17 +88,23 @@ export function Navbar({
           <div className="flex items-center justify-between gap-8 p-2 pl-4 lg:p-2.5"
 >
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2 group">
-              <div className={`w-10 h-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ${
-                dark
-                  ? 'rounded-full bg-white'
-                  : 'rounded-lg bg-piku-purple-dark'
-              }`}>
-                <span className={`font-black text-xl ${dark ? 'text-gray-900' : 'text-white'}`}>T</span>
+            <Link href="/" className="flex items-center group relative">
+              <div className="relative flex items-center px-3 py-1">
+                {/* Shapes behind text */}
+                <div className={`absolute left-5 top-1 w-4 h-4 rounded-full transition-all duration-500 group-hover:scale-110 ${dark ? 'bg-piku-purple-dark/50' : 'bg-piku-purple-light/40'}`} />
+                <div className={`absolute right-10 top-2 w-3 h-3 rotate-45 transition-all duration-500 group-hover:rotate-[60deg] ${dark ? 'bg-piku-cyan/50' : 'bg-piku-cyan/40'}`} />
+                <div className={`absolute left-1/2 -translate-x-1/2 bottom-1 w-3.5 h-3.5 rounded-sm rotate-12 transition-all duration-500 group-hover:rotate-[25deg] ${dark ? 'bg-piku-magenta/35' : 'bg-piku-magenta/25'}`} />
+                {/* Corner dots */}
+                <div className={`absolute -left-1 -top-0.5 w-2 h-2 rotate-45 transition-all duration-300 group-hover:rotate-[60deg] ${dark ? 'bg-piku-yellow-light/70' : 'bg-piku-yellow-gold/60'}`} />
+                <div className={`absolute -right-1 -top-0.5 w-1.5 h-1.5 rounded-full transition-all duration-300 group-hover:scale-125 ${dark ? 'bg-piku-green/60' : 'bg-piku-green/50'}`} />
+                <div className={`absolute -right-1 -bottom-0.5 w-2 h-2 rotate-45 transition-all duration-300 group-hover:rotate-90 ${dark ? 'bg-piku-orange/60' : 'bg-piku-orange/50'}`} />
+                {/* Underline */}
+                <div className={`absolute left-1/2 -translate-x-1/2 -bottom-2 w-10 h-[2px] transition-all duration-300 group-hover:w-14 ${dark ? 'bg-piku-mint/60' : 'bg-piku-purple-dark/40'}`} />
+                {/* Text */}
+                <span className={`relative z-10 font-special-elite text-2xl transition-transform duration-300 ${dark ? 'text-white' : 'text-gray-900'}`}>
+                  {brandConfig.name}
+                </span>
               </div>
-              <span className={`font-black text-xl ${dark ? 'text-white' : 'text-gray-900'}`}>
-                {brandConfig.name}
-              </span>
             </Link>
 
             {/* Desktop Navigation with separator */}
