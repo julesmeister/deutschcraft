@@ -108,7 +108,7 @@ export function WritingWorkspace({
   };
 
   return (
-    <div className={`bg-white flex flex-col lg:flex-row ${isFullscreen ? 'fixed inset-0 z-50' : ''}`}>
+    <div className={`bg-white flex flex-col lg:flex-row ${isFullscreen ? 'fixed inset-0 z-[100]' : ''}`}>
       {/* German Character Autocomplete */}
       {!readOnly && (
         <GermanCharAutocomplete
@@ -154,19 +154,19 @@ export function WritingWorkspace({
           {!readOnly && (
             <button
               onClick={() => setIsFullscreen(!isFullscreen)}
-              className="absolute top-4 right-4 md:top-8 md:right-8 p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg transition-colors z-10"
+              className="absolute right-4 md:right-8 top-4 md:top-8 p-1.5 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg transition-colors z-10"
               title={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
             >
               {isFullscreen ? (
-                <Minimize2 className="w-5 h-5" />
+                <Minimize2 className="w-[15px] h-[15px]" />
               ) : (
-                <Maximize2 className="w-5 h-5" />
+                <Maximize2 className="w-[15px] h-[15px]" />
               )}
             </button>
           )}
           {/* Optional Top Indicator (e.g., word count) */}
           {topIndicator && (
-            <div className="mb-4">
+            <div className="mb-4 pr-10">
               {topIndicator}
             </div>
           )}
