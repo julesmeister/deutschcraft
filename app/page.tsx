@@ -6,6 +6,7 @@ import { StatsSection } from '@/components/sections/StatsSection';
 import { HowItWorksSection } from '@/components/sections/HowItWorksSection';
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection';
 import { CoursePricingSection } from '@/components/sections/CoursePricingSection';
+import { ScreenshotCarousel } from '@/components/sections/ScreenshotCarousel';
 import { CTASection } from '@/components/sections/CTASection';
 import { Navbar } from '@/components/ui/Navbar';
 import { Footer } from '@/components/ui/Footer';
@@ -28,6 +29,9 @@ export default function Home() {
       <ScrollReveal variant="scale" duration={0.8} delay={0.1}>
         <FeaturesSection />
       </ScrollReveal>
+
+      {/* Screenshots - Carousel (no ScrollReveal — continuously animating) */}
+      <ScreenshotCarousel />
 
       {/* How It Works - Slide from right */}
       <ScrollReveal variant="slideRight" duration={0.7} delay={0.2}>

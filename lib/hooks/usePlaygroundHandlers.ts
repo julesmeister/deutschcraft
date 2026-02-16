@@ -9,6 +9,7 @@ import {
   endPlaygroundRoom,
   joinPlaygroundRoom,
   leavePlaygroundRoom,
+  updateRoomTitle,
   togglePublicWriting as toggleRoomPublicWriting,
   savePlaygroundWriting,
   toggleWritingVisibility,
@@ -205,6 +206,15 @@ export function usePlaygroundHandlers({
     }
   }, []);
 
+  const handleUpdateRoomTitle = useCallback(async (newTitle: string) => {
+    if (!currentRoom) return;
+    try {
+      await updateRoomTitle(currentRoom.roomId, newTitle);
+    } catch (error) {
+      console.error('[Playground] Failed to update room title:', error);
+    }
+  }, [currentRoom]);
+
   return {
     isCreatingRoom,
     handleCreateRoom,
@@ -214,6 +224,7 @@ export function usePlaygroundHandlers({
     handleToggleRoomPublicWriting,
     handleSaveWriting,
     handleToggleWritingVisibility,
+    handleUpdateRoomTitle,
     handleStartVoice,
     handleStartVideo,
     handleStopVoice,

@@ -74,6 +74,7 @@ interface PlaygroundRoomProps {
     lessonNumber: number | null,
     bookType: "AB" | "KB" | null
   ) => Promise<void>;
+  onUpdateRoomTitle?: (newTitle: string) => Promise<void>;
   onMinimize?: () => void;
   onCloseDialog: () => void;
 }
@@ -108,6 +109,7 @@ export function PlaygroundRoom({
   onToggleRoomPublicWriting,
   onSetCurrentMaterial,
   onSetCurrentExercise,
+  onUpdateRoomTitle,
   onMinimize,
   onCloseDialog,
 }: PlaygroundRoomProps) {
@@ -196,6 +198,7 @@ export function PlaygroundRoom({
           participants.length === 1 ? "participant" : "participants"
         } • Host: ${currentRoom.hostName} • ${duration}`}
         backButton={{ label: "Leave Room", onClick: onLeaveRoom }}
+        onTitleEdit={isHost ? onUpdateRoomTitle : undefined}
         actions={
           <PlaygroundRoomHeaderActions
             userRole={userRole}

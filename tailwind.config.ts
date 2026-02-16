@@ -59,6 +59,8 @@ const config: Config = {
         'bounce-in': 'bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
         'float': 'float 3s ease-in-out infinite',
         'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
+        'marquee': 'marquee 60s linear infinite',
+        'marquee-reverse': 'marquee-reverse 60s linear infinite',
       },
       keyframes: {
         'border-beam': {
@@ -94,6 +96,14 @@ const config: Config = {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'marquee-reverse': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
         },
       },
     },

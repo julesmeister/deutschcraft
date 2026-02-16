@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 
 interface DashboardHeaderProps {
@@ -21,6 +21,8 @@ interface DashboardHeaderProps {
     subtitle?: string;
     subtitleAsBadge?: boolean; // Display subtitle as a badge
   };
+  /** When provided, the title becomes click-to-edit (host only) */
+  onTitleEdit?: (newTitle: string) => Promise<void>;
 }
 
 /**
@@ -62,7 +64,41 @@ export function DashboardHeader({
   actions,
   backButton,
   avatar,
+  onTitleEdit,
 }: DashboardHeaderProps) {
+  const [isEditing, setIsEditing] = useState(false);
+  const [editValue, setEditValue] = useState(title);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Sync editValue when title prop changes (e.g. from Firestore subscription)
+  useEffect(() => {
+    if (!isEditing) setEditValue(title);
+  }, [title, isEditing]);
+
+  // Focus input when entering edit mode
+  useEffect(() => {
+    if (isEditing && inputRef.current) {
+      inputRef.current.focus();
+      inputRef.current.select();
+    }
+  }, [isEditing]);
+
+  const handleSave = useCallback(async () => {
+    const trimmed = editValue.trim();
+    setIsEditing(false);
+    if (!trimmed || trimmed === title || !onTitleEdit) return;
+    await onTitleEdit(trimmed);
+  }, [editValue, title, onTitleEdit]);
+
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleSave();
+    } else if (e.key === "Escape") {
+      setEditValue(title);
+      setIsEditing(false);
+    }
+  }, [handleSave, title]);
   return (
     <div className="border-b border-gray-200">
       <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6">
@@ -131,9 +167,41 @@ export function DashboardHeader({
 
             {/* Title & Subtitle */}
             <div className="min-w-0">
-              <h1 className="text-xl sm:text-2xl md:text-3xl font-black text-gray-900 truncate">
-                {title}
-              </h1>
+              {onTitleEdit && isEditing ? (
+                <input
+                  ref={inputRef}
+                  value={editValue}
+                  onChange={(e) => setEditValue(e.target.value)}
+                  onBlur={handleSave}
+                  onKeyDown={handleKeyDown}
+                  className="text-xl sm:text-2xl md:text-3xl font-black text-gray-900 bg-transparent border-b-2 border-piku-purple outline-none w-full"
+                  maxLength={100}
+                />
+              ) : (
+                <h1
+                  className={`text-xl sm:text-2xl md:text-3xl font-black text-gray-900 truncate${
+                    onTitleEdit ? " group/title cursor-pointer inline-flex items-center gap-2" : ""
+                  }`}
+                  onClick={onTitleEdit ? () => setIsEditing(true) : undefined}
+                >
+                  {title}
+                  {onTitleEdit && (
+                    <svg
+                      className="w-4 h-4 text-gray-400 opacity-0 group-hover/title:opacity-100 transition-opacity flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+                      />
+                    </svg>
+                  )}
+                </h1>
+              )}
               {subtitle && (
                 <p className="text-sm sm:text-base text-gray-600 mt-0.5 sm:mt-1 line-clamp-2">
                   {subtitle}

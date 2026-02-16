@@ -100,8 +100,19 @@ export function CourseResults({
                   one-time
                 </span>
               </motion.div>
-              <div className="text-xs sm:text-sm text-gray-500 mb-4 md:mb-6">
+              <div className="text-xs sm:text-sm text-gray-500 mb-1">
                 (~₱{courseCalc.pricePerWeek.toLocaleString()}/week)
+              </div>
+              <div className="text-xs text-gray-400 mb-4 md:mb-6">
+                Book not included — available on{" "}
+                <a
+                  href="https://shopee.ph"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-piku-purple hover:underline"
+                >
+                  Shopee
+                </a>
               </div>
 
               <button className="theme-btn group w-full sm:w-auto inline-flex items-center justify-between bg-piku-purple-dark text-white font-black text-sm sm:text-[15px] py-2 pl-6 sm:pl-8 pr-2 rounded-md transition-all hover:scale-105">

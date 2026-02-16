@@ -110,6 +110,7 @@ export default function PlaygroundRoomPage({
     handleToggleRoomPublicWriting,
     handleSaveWriting,
     handleToggleWritingVisibility,
+    handleUpdateRoomTitle,
     handleStartVoice,
     handleStartVideo,
     handleStopVoice,
@@ -271,6 +272,7 @@ export default function PlaygroundRoomPage({
         onSetCurrentExercise={
           userRole === "teacher" ? handleSetCurrentExercise : undefined
         }
+        onUpdateRoomTitle={handleUpdateRoomTitle}
         onMinimize={() => playgroundSession.minimize()}
         onCloseDialog={closeDialog}
       />

@@ -191,6 +191,14 @@ export async function endPlaygroundRoom(roomId: string): Promise<void> {
   }
 }
 
+export async function updateRoomTitle(
+  roomId: string,
+  title: string
+): Promise<void> {
+  const roomRef = doc(db, COLLECTIONS.ROOMS, roomId);
+  await updateDoc(roomRef, { title });
+}
+
 export async function togglePublicWriting(
   roomId: string,
   isPublic: boolean

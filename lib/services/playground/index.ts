@@ -12,6 +12,7 @@ export {
   endAllHostRooms,
   createPlaygroundRoom,
   endPlaygroundRoom,
+  updateRoomTitle,
   togglePublicWriting,
   setCurrentMaterial,
   setCurrentExercise,
