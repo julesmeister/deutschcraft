@@ -67,6 +67,10 @@ function FlashcardsLandingContent() {
     router.push("/dashboard/student/flashcards/derdiedas?category=all");
   };
 
+  const handleStartPrepositionCases = () => {
+    router.push("/dashboard/student/flashcards/prepositioncases");
+  };
+
   const handleCategoryClick = (categoryId: string, categoryName: string) => {
     // We pass the ID. The practice page hook handles looking it up.
     router.push(`/dashboard/student/flashcards/practice?mode=practice&category=${categoryId}`);
@@ -100,6 +104,11 @@ function FlashcardsLandingContent() {
                   {
                     label: "Der Die Das",
                     onClick: handleStartDerDieDas,
+                    icon: <DropdownIcons.Game />,
+                  },
+                  {
+                    label: "Preposition Cases",
+                    onClick: handleStartPrepositionCases,
                     icon: <DropdownIcons.Game />,
                   },
                 ]}

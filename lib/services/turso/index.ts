@@ -431,6 +431,14 @@ export {
 } from './derDieDasService';
 
 // ============================================================================
+// PREPOSITION CASES GAME SERVICE
+// ============================================================================
+export {
+  savePrepositionCaseCorrect,
+  getPrepositionCasesProgress,
+} from './prepositionCasesService';
+
+// ============================================================================
 // CLASSROOM TOOLS SERVICE
 // ============================================================================
 export {
@@ -454,3 +462,4 @@ export type { PlaygroundHistoryRecord, PlaygroundHistoryStats } from './playgrou
 export type { Material } from './materialsService';
 export type { PacmanVerbProgress } from './pacmanService';
 export type { DerDieDasProgress } from './derDieDasService';
+export type { PrepositionCasesProgress } from './prepositionCasesService';

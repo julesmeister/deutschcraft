@@ -120,7 +120,15 @@ export function ActionButtonDropdown({
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setIsOpen(false);
-    }, 150); // Small delay to prevent accidental close
+    }, 200);
+  };
+
+  // Cancel leave timeout when entering the dropdown panel
+  const handleDropdownEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
   };
 
   const handleItemClick = (item: DropdownItem) => {
@@ -159,7 +167,9 @@ export function ActionButtonDropdown({
       {/* Dropdown Menu */}
       {isOpen && (
         <div
-          className={`absolute top-full left-0 right-0 mt-1 rounded-2xl shadow-lg overflow-hidden z-50 ${dropdownBgStyles[variant]}`}
+          className={`absolute top-full right-0 mt-1 rounded-2xl shadow-lg overflow-hidden z-50 animate-fade-in-up min-w-full w-max ${dropdownBgStyles[variant]}`}
+          onMouseEnter={handleDropdownEnter}
+          onMouseLeave={handleMouseLeave}
         >
           {items.map((item, index) => (
             <button
