@@ -61,21 +61,21 @@ export function DashboardNavbar() {
   return (
     <header className="pt-3 lg:pt-3 relative z-[100]">
       <div className="container mx-auto px-4 sm:px-6 relative z-[100]">
-        <div data-navbar className={`w-full flex items-center justify-between transition-all duration-500 ease-out bg-gray-900/95 text-white backdrop-blur-md border rounded-2xl py-2.5 px-4 lg:py-3 lg:px-8
+        <div data-navbar className={`w-full flex items-center justify-between transition-all duration-500 ease-out bg-white/95 backdrop-blur-md border rounded-2xl py-2.5 px-4 lg:py-3 lg:px-8
           ${isScrolled
-            ? 'border-gray-700/60 shadow-lg'
+            ? 'border-gray-200/60 shadow-lg'
             : 'border-transparent shadow-none'
           }`}>
           <NavbarLogo />
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center flex-1 justify-end gap-8 z-[100]">
-            <div className="h-4 w-px bg-gray-600/60"></div>
+            <div className="h-4 w-px bg-gray-200/80"></div>
 
             <nav className="flex items-center space-x-10">
               <Link
                 href={isTeacher ? '/dashboard/teacher' : '/dashboard/student'}
-                className="font-semibold text-[15px] text-gray-300 hover:text-piku-cyan-accent transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-cyan-accent after:transition-all after:duration-300 hover:after:w-full"
+                className="font-semibold text-[15px] text-gray-700 hover:text-gray-900 transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-purple-dark after:transition-all after:duration-300 hover:after:w-full"
               >
                 Dashboard
               </Link>
@@ -90,14 +90,14 @@ export function DashboardNavbar() {
 
               <Link
                 href="/dashboard/social"
-                className="font-semibold text-[15px] text-gray-300 hover:text-piku-mint transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-mint after:transition-all after:duration-300 hover:after:w-full"
+                className="font-semibold text-[15px] text-gray-700 hover:text-gray-900 transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-purple-dark after:transition-all after:duration-300 hover:after:w-full"
               >
                 Social
               </Link>
 
               <Link
                 href="/dashboard/settings"
-                className="font-semibold text-[15px] text-gray-300 hover:text-piku-cyan-accent transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-cyan-accent after:transition-all after:duration-300 hover:after:w-full"
+                className="font-semibold text-[15px] text-gray-700 hover:text-gray-900 transition-all duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-purple-dark after:transition-all after:duration-300 hover:after:w-full"
               >
                 Settings
               </Link>
@@ -108,7 +108,6 @@ export function DashboardNavbar() {
                 currentUserEmail={session?.user?.email}
                 currentUserName={session?.user?.name}
                 currentUserImage={session?.user?.image}
-                dark={true}
               />
             </div>
           </div>
@@ -116,10 +115,10 @@ export function DashboardNavbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg transition-colors hover:bg-gray-800 active:bg-gray-700"
+            className="lg:hidden p-2 rounded-lg transition-colors hover:bg-gray-100 active:bg-gray-200"
             aria-label="Toggle menu"
           >
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               {mobileMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               ) : (

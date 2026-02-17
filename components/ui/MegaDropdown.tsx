@@ -84,11 +84,11 @@ export function MegaDropdown({ trigger, columns, onNavigate }: MegaDropdownProps
           className="z-[9999]"
           style={panelStyle}
         >
-          <div className="bg-gray-900/95 backdrop-blur-md rounded-2xl border border-gray-700/60 shadow-2xl p-5 sm:p-6 relative">
+          <div className="bg-white/95 backdrop-blur-md rounded-2xl border border-gray-200/60 shadow-2xl p-5 sm:p-6 relative">
             {/* Close button */}
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-3 right-3 p-1.5 rounded-lg text-gray-500 hover:text-gray-300 hover:bg-gray-800 transition-colors"
+              className="absolute top-3 right-3 p-1.5 rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors"
               aria-label="Close menu"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
@@ -102,7 +102,7 @@ export function MegaDropdown({ trigger, columns, onNavigate }: MegaDropdownProps
             >
               {columns.map((column, colIdx) => (
                 <div key={colIdx}>
-                  <h6 className="text-[11px] font-semibold text-gray-500 uppercase tracking-wider mb-2.5 pb-1.5 border-b border-gray-700/50">
+                  <h6 className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider mb-2.5 pb-1.5 border-b border-gray-200/80">
                     {column.title}
                   </h6>
                   <ul className="space-y-0.5">
@@ -116,11 +116,11 @@ export function MegaDropdown({ trigger, columns, onNavigate }: MegaDropdownProps
                             setIsOpen(false);
                             onNavigate?.();
                           }}
-                          className="flex items-center gap-2 py-1.5 px-2 rounded-lg text-sm text-gray-300 hover:bg-gray-800 hover:text-white transition-colors duration-150"
+                          className="flex items-center gap-2 py-1.5 px-2 rounded-lg text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-150"
                         >
                           <span>{item.label}</span>
                           {item.badge && (
-                            <span className="text-[10px] font-medium bg-gray-800 text-gray-400 px-1.5 py-0.5 rounded-full">
+                            <span className="text-[10px] font-medium bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded-full">
                               {item.badge}
                             </span>
                           )}
@@ -142,7 +142,7 @@ export function MegaDropdown({ trigger, columns, onNavigate }: MegaDropdownProps
       <button
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className="font-semibold text-[15px] text-gray-300 hover:text-piku-cyan-accent transition-all duration-300 relative flex items-center gap-2 after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-cyan-accent after:transition-all after:duration-300 hover:after:w-full"
+        className="font-semibold text-[15px] text-gray-700 hover:text-gray-900 transition-all duration-300 relative flex items-center gap-2 after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-piku-purple-dark after:transition-all after:duration-300 hover:after:w-full"
       >
         {trigger}
         <svg
