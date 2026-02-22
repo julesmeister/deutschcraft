@@ -74,12 +74,27 @@ export function QuizSetManager({ data }: QuizSetManagerProps) {
           </div>
         )}
 
-        {quizzes.length === 0 ? (
-          <div className="text-center py-8 text-gray-400">
-            <div className="text-3xl mb-2">📝</div>
-            <p className="text-sm">No quizzes yet. Create one to get started!</p>
+        {quizzes.length === 0 && !showNewQuiz ? (
+          <div className="text-center py-6">
+            <div className="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <svg className="w-7 h-7 text-teal-500" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <p className="text-gray-800 font-bold text-sm mb-2">Create your first quiz</p>
+            <div className="text-xs text-gray-400 space-y-1 mb-4">
+              <p>1. Click <span className="font-semibold text-gray-500">+ New Quiz</span> to create a quiz set</p>
+              <p>2. Add text or multiple-choice questions</p>
+              <p>3. Hit <span className="font-semibold text-green-600">Start Quiz</span> to go live</p>
+            </div>
+            <button
+              onClick={() => setShowNewQuiz(true)}
+              className="px-4 py-2 bg-piku-purple text-white text-sm font-bold rounded-xl hover:bg-opacity-90 transition"
+            >
+              + New Quiz
+            </button>
           </div>
-        ) : (
+        ) : quizzes.length === 0 ? null : (
           <div className="space-y-2">
             {quizzes.map((quiz) => (
               <div

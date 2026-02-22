@@ -128,7 +128,7 @@ export function PlaygroundRoom({
   const [isExerciseSelectorOpen, setIsExerciseSelectorOpen] = useState(false);
 
   // Flexible layout state
-  const { layout, moveWidget, toggleLeftPanel, setPanelSizes, setColumnCount, resetLayout } = usePlaygroundLayout();
+  const { layout, moveWidget, toggleLeftPanel, setPanelSizes, setColumnCount, resetLayout, toggleWidget, isWidgetInLayout } = usePlaygroundLayout();
 
   // Centralized audio control
   const [isolation, setIsolation] = useState<GroupIsolationState>({
@@ -260,9 +260,11 @@ export function PlaygroundRoom({
         isHost={isHost}
         isLeftPanelVisible={layout.isLeftPanelVisible}
         columnCount={layout.columnCount}
+        isQuizVisible={isWidgetInLayout("quiz")}
         onToggleLeftPanel={toggleLeftPanel}
         onSetColumnCount={setColumnCount}
         onResetLayout={resetLayout}
+        onToggleQuiz={() => toggleWidget("quiz")}
         onOpenExerciseSelector={onSetCurrentExercise ? () => setIsExerciseSelectorOpen(true) : undefined}
         onOpenMaterialSelector={onSetCurrentMaterial ? () => setIsMaterialSelectorOpen(true) : undefined}
         onReconnectAudio={isVoiceActive ? handleReconnectAudio : undefined}

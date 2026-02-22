@@ -12,6 +12,7 @@ import {
   type PanelId,
   type ColumnCount,
   ALL_WIDGET_IDS,
+  WIDGET_CONFIGS,
   DEFAULT_LAYOUT,
   STORAGE_KEY,
 } from "./types";
@@ -148,6 +149,35 @@ export function usePlaygroundLayout() {
     setLayout(DEFAULT_LAYOUT);
   }, []);
 
+  /** Add or remove a widget from its default panel */
+  const toggleWidget = useCallback((widgetId: WidgetId) => {
+    setLayout((prev) => {
+      const allInLayout = [...prev.leftWidgets, ...prev.centerWidgets, ...prev.rightWidgets];
+      const isVisible = allInLayout.includes(widgetId);
+
+      if (isVisible) {
+        // Remove from whichever panel it's in
+        return {
+          ...prev,
+          leftWidgets: prev.leftWidgets.filter((id) => id !== widgetId),
+          centerWidgets: prev.centerWidgets.filter((id) => id !== widgetId),
+          rightWidgets: prev.rightWidgets.filter((id) => id !== widgetId),
+        };
+      }
+
+      // Add back to its default panel
+      const config = WIDGET_CONFIGS[widgetId];
+      const panelKey = PANEL_KEYS[config.defaultPanel];
+      return { ...prev, [panelKey]: [...prev[panelKey], widgetId] };
+    });
+  }, []);
+
+  /** Check if a widget is currently in the layout */
+  const isWidgetInLayout = useCallback((widgetId: WidgetId): boolean => {
+    const all = [...layout.leftWidgets, ...layout.centerWidgets, ...layout.rightWidgets];
+    return all.includes(widgetId);
+  }, [layout]);
+
   return {
     layout,
     moveWidget,
@@ -155,5 +185,7 @@ export function usePlaygroundLayout() {
     setPanelSizes,
     setColumnCount,
     resetLayout,
+    toggleWidget,
+    isWidgetInLayout,
   };
 }
