@@ -1,7 +1,8 @@
 /**
- * BlockAuthorOverlay — always-visible author indicators on blocks edited by others.
- * Shows a colored left border + name tag on every block the current user didn't edit.
- * Scans the editor DOM for [data-yoopta-block-id] elements and overlays markers.
+ * BlockAuthorOverlay — cursor-style author indicators at the end of blocks
+ * edited by someone other than the current user. Uses the same visual style
+ * as NotebookCursor: colored vertical caret + name tag above it.
+ * For teachers, shows approve (keep) / reject (undo) buttons.
  */
 
 "use client";
@@ -9,28 +10,23 @@
 import { useState, useEffect, useCallback, type RefObject } from "react";
 import type { BlockAuthor } from "@/lib/models/notebook";
 
-const AUTHOR_COLORS = [
-  { bg: "#8B5CF6", light: "rgba(139,92,246,0.08)" },
-  { bg: "#3B82F6", light: "rgba(59,130,246,0.08)" },
-  { bg: "#F59E0B", light: "rgba(245,158,11,0.08)" },
-  { bg: "#10B981", light: "rgba(16,185,129,0.08)" },
-  { bg: "#EF4444", light: "rgba(239,68,68,0.08)" },
-  { bg: "#14B8A6", light: "rgba(20,184,166,0.08)" },
+const CURSOR_PALETTE = [
+  "#8B5CF6", "#3B82F6", "#F59E0B",
+  "#10B981", "#EF4444", "#14B8A6",
 ];
 
-function getAuthorColor(name: string) {
+function getColor(name: string) {
   let h = 0;
   for (let i = 0; i < name.length; i++) h = name.charCodeAt(i) + ((h << 5) - h);
-  return AUTHOR_COLORS[Math.abs(h) % AUTHOR_COLORS.length];
+  return CURSOR_PALETTE[Math.abs(h) % CURSOR_PALETTE.length];
 }
 
-interface BlockOverlayItem {
+interface CursorItem {
   blockId: string;
   author: BlockAuthor;
-  top: number;
-  left: number;
-  width: number;
-  height: number;
+  x: number;
+  y: number;
+  containerWidth: number;
 }
 
 interface BlockAuthorOverlayProps {
@@ -38,6 +34,8 @@ interface BlockAuthorOverlayProps {
   editorKey: string;
   blockAuthors: Record<string, BlockAuthor>;
   currentUserId: string;
+  isTeacher: boolean;
+  onRevertBlock?: (blockId: string) => void;
 }
 
 export function BlockAuthorOverlay({
@@ -45,15 +43,17 @@ export function BlockAuthorOverlay({
   editorKey,
   blockAuthors,
   currentUserId,
+  isTeacher,
+  onRevertBlock,
 }: BlockAuthorOverlayProps) {
-  const [items, setItems] = useState<BlockOverlayItem[]>([]);
+  const [cursors, setCursors] = useState<CursorItem[]>([]);
 
   const scan = useCallback(() => {
     const container = editorContainerRef.current;
-    if (!container) { setItems([]); return; }
+    if (!container) { setCursors([]); return; }
 
     const box = container.getBoundingClientRect();
-    const results: BlockOverlayItem[] = [];
+    const results: CursorItem[] = [];
 
     const blockEls = container.querySelectorAll("[data-yoopta-block-id]");
     for (const el of blockEls) {
@@ -62,81 +62,135 @@ export function BlockAuthorOverlay({
       const author = blockAuthors[blockId];
       if (!author || author.userId === currentUserId) continue;
 
-      const rect = el.getBoundingClientRect();
+      // Find the end of text content in this block
+      const pos = getEndOfBlockPosition(el as HTMLElement, box);
+      if (!pos) continue;
+
       results.push({
         blockId,
         author,
-        top: rect.top - box.top,
-        left: rect.left - box.left,
-        width: rect.width,
-        height: rect.height,
+        x: pos.x,
+        y: pos.y,
+        containerWidth: box.width,
       });
     }
 
-    setItems(results);
+    setCursors(results);
   }, [editorContainerRef, blockAuthors, currentUserId]);
 
-  // Scan after render / data changes
   useEffect(() => {
     const t = setTimeout(scan, 300);
     return () => clearTimeout(t);
   }, [scan, editorKey]);
 
-  // Re-scan on scroll
   useEffect(() => {
-    const container = editorContainerRef.current?.closest(".overflow-y-auto");
-    if (!container) return;
+    const scrollParent = editorContainerRef.current?.closest(".overflow-y-auto");
+    if (!scrollParent) return;
     const onScroll = () => requestAnimationFrame(scan);
-    container.addEventListener("scroll", onScroll, { passive: true });
-    return () => container.removeEventListener("scroll", onScroll);
+    scrollParent.addEventListener("scroll", onScroll, { passive: true });
+    return () => scrollParent.removeEventListener("scroll", onScroll);
   }, [editorContainerRef, scan]);
 
-  // Periodic rescan for layout shifts
   useEffect(() => {
     const interval = setInterval(scan, 2000);
     return () => clearInterval(interval);
   }, [scan]);
 
-  if (items.length === 0) return null;
+  if (cursors.length === 0) return null;
 
   return (
     <>
-      {items.map((item) => {
-        const color = getAuthorColor(item.author.userName);
+      {cursors.map((item) => {
+        const color = getColor(item.author.userName);
+        const flipLeft = item.x > item.containerWidth * 0.55;
+
         return (
           <div
             key={item.blockId}
-            className="absolute pointer-events-none"
-            style={{
-              top: item.top,
-              left: item.left,
-              width: item.width,
-              height: item.height,
-              zIndex: 10,
-            }}
+            className="absolute"
+            style={{ left: item.x, top: item.y, zIndex: 20 }}
           >
-            {/* Tinted background */}
+            {/* Name label + optional approve/reject — above the caret */}
             <div
-              className="absolute inset-0 rounded-md"
-              style={{ backgroundColor: color.light }}
-            />
-            {/* Left border bar */}
-            <div
-              className="absolute left-0 top-0 bottom-0 w-[3px] rounded-full"
-              style={{ backgroundColor: color.bg }}
-            />
-            {/* Name tag pinned to top-right */}
-            <div className="absolute right-0 top-0" style={{ transform: "translateY(-50%)" }}>
+              className={`absolute flex items-stretch gap-px pointer-events-auto whitespace-nowrap ${
+                flipLeft ? "right-0 flex-row-reverse" : "left-0"
+              }`}
+              style={{ bottom: "100%" }}
+            >
               <span
-                className="text-[9px] font-bold text-white px-1.5 py-0.5 rounded-md whitespace-nowrap shadow-sm"
-                style={{ backgroundColor: color.bg }}
+                className={`text-[9px] font-bold text-white px-1.5 py-px flex items-center ${
+                  flipLeft
+                    ? (isTeacher && onRevertBlock ? "" : "rounded-tl-md") + " rounded-tr-md"
+                    : "rounded-tl-md" + (isTeacher && onRevertBlock ? "" : " rounded-tr-md")
+                }`}
+                style={{ backgroundColor: color }}
               >
                 {item.author.userName}
               </span>
+              {isTeacher && onRevertBlock && (
+                <button
+                  onClick={() => onRevertBlock(item.blockId)}
+                  className={`px-1.5 flex items-center justify-center active:scale-90 ${
+                    flipLeft ? "rounded-tl-md" : "rounded-tr-md"
+                  }`}
+                  style={{ backgroundColor: "#EF4444" }}
+                  title="Undo this edit"
+                >
+                  <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              )}
             </div>
+            {/* Caret line */}
+            <div className="w-0.5 rounded-full" style={{ backgroundColor: color, height: 18 }} />
           </div>
         );
       })}
     </>
   );
+}
+
+/**
+ * Find the position at the end of the last text node inside a block element,
+ * relative to the container. This places the cursor right after the last character.
+ */
+function getEndOfBlockPosition(
+  blockEl: HTMLElement,
+  containerBox: DOMRect
+): { x: number; y: number } | null {
+  // Walk backwards to find the last text node with content
+  const walker = document.createTreeWalker(blockEl, NodeFilter.SHOW_TEXT);
+  let lastTextNode: Text | null = null;
+  let node: Text | null;
+  while ((node = walker.nextNode() as Text | null)) {
+    if (node.textContent && node.textContent.trim().length > 0) {
+      lastTextNode = node;
+    }
+  }
+
+  if (lastTextNode) {
+    try {
+      const range = document.createRange();
+      range.setStart(lastTextNode, lastTextNode.length);
+      range.collapse(true);
+      const rects = range.getClientRects();
+      if (rects.length > 0) {
+        const rect = rects[0];
+        return {
+          x: rect.left - containerBox.left,
+          y: rect.top - containerBox.top,
+        };
+      }
+    } catch {
+      // fallback below
+    }
+  }
+
+  // Fallback: use the block element's right edge
+  const blockRect = blockEl.getBoundingClientRect();
+  return {
+    x: blockRect.right - containerBox.left - 4,
+    y: blockRect.top - containerBox.top + 4,
+  };
 }

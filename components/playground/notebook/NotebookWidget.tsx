@@ -148,6 +148,7 @@ export function NotebookWidget(props: NotebookWidgetProps = {}) {
                   editorKey={editorKey}
                   blockAuthors={blockAuthors}
                   currentUserId={userId}
+                  isTeacher={isTeacher}
                 />
 
                 <TableCellOverlay
