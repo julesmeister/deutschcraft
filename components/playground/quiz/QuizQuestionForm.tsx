@@ -53,32 +53,31 @@ export function QuizQuestionForm({ onAdd }: QuizQuestionFormProps) {
         value={questionText}
         onChange={(e) => setQuestionText(e.target.value)}
         placeholder="Type your question..."
-        className="w-full px-4 py-3 bg-[#FFFBFE] rounded-[12px] text-sm text-[#1D1B20] placeholder:text-[#CAC4D0] resize-none focus:outline-none focus:ring-2 focus:ring-[#6750A4] border border-[#CAC4D0]"
+        className="w-full px-4 py-3 bg-[#FFFBFE] rounded-[12px] text-sm text-[#1D1B20] placeholder:text-[#CAC4D0] resize-none focus:outline-none focus:ring-2 focus:ring-[#6750A4]"
         rows={2}
       />
 
       {/* M3 segmented button + time chip */}
       <div className="flex items-center gap-3 mt-3">
         {/* Segmented button */}
-        <div className="flex rounded-full border border-[#79747E] overflow-hidden">
+        <div className="flex rounded-full overflow-hidden bg-[#E7E0EC]">
           <button
             onClick={() => setQuestionType("text")}
-            className={`text-[11px] h-8 px-4 font-medium transition-all ${
+            className={`text-[11px] h-8 px-4 font-medium rounded-full transition-all ${
               questionType === "text"
                 ? "bg-[#E8DEF8] text-[#1D1B20]"
-                : "bg-transparent text-[#49454F] hover:bg-[#1D1B20]/8"
+                : "text-[#49454F] hover:bg-[#1D1B20]/8"
             }`}
           >
             {questionType === "text" && <span className="mr-1">&#10003;</span>}
             Text
           </button>
-          <div className="w-px bg-[#79747E]" />
           <button
             onClick={() => setQuestionType("multiple_choice")}
-            className={`text-[11px] h-8 px-4 font-medium transition-all ${
+            className={`text-[11px] h-8 px-4 font-medium rounded-full transition-all ${
               questionType === "multiple_choice"
                 ? "bg-[#E8DEF8] text-[#1D1B20]"
-                : "bg-transparent text-[#49454F] hover:bg-[#1D1B20]/8"
+                : "text-[#49454F] hover:bg-[#1D1B20]/8"
             }`}
           >
             {questionType === "multiple_choice" && <span className="mr-1">&#10003;</span>}
@@ -87,7 +86,7 @@ export function QuizQuestionForm({ onAdd }: QuizQuestionFormProps) {
         </div>
 
         {/* Time chip — M3 input chip style */}
-        <div className="flex items-center gap-1.5 h-8 px-3 rounded-[8px] border border-[#79747E] bg-transparent">
+        <div className="flex items-center gap-1.5 h-8 px-3 rounded-[8px] bg-transparent">
           <svg className="w-[14px] h-[14px] text-[#49454F]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
@@ -113,10 +112,10 @@ export function QuizQuestionForm({ onAdd }: QuizQuestionFormProps) {
               <button
                 type="button"
                 onClick={() => setCorrectIndex(i)}
-                className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all text-xs font-medium border-2 ${
+                className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all text-xs font-medium ${
                   correctIndex === i
-                    ? "bg-[#6750A4] text-white border-[#6750A4]"
-                    : "bg-transparent text-[#79747E] border-[#79747E] hover:border-[#6750A4] hover:text-[#6750A4]"
+                    ? "bg-[#6750A4] text-white"
+                    : "bg-[#E7E0EC] text-[#79747E] hover:bg-[#D0BCFF] hover:text-[#6750A4]"
                 }`}
               >
                 {correctIndex === i ? "✓" : String.fromCharCode(65 + i)}
@@ -129,7 +128,7 @@ export function QuizQuestionForm({ onAdd }: QuizQuestionFormProps) {
                   setChoices(next);
                 }}
                 placeholder={`Option ${String.fromCharCode(65 + i)}`}
-                className="flex-1 h-10 px-3 bg-[#FFFBFE] rounded-[12px] text-sm text-[#1D1B20] placeholder:text-[#CAC4D0] focus:outline-none focus:ring-2 focus:ring-[#6750A4] border border-[#CAC4D0]"
+                className="flex-1 h-10 px-3 bg-[#FFFBFE] rounded-[12px] text-sm text-[#1D1B20] placeholder:text-[#CAC4D0] focus:outline-none focus:ring-2 focus:ring-[#6750A4]"
               />
             </div>
           ))}

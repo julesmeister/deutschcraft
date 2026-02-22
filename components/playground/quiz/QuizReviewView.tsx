@@ -61,7 +61,7 @@ export function QuizReviewView({ data }: QuizReviewViewProps) {
           {isTeacher && (
             <button
               onClick={handleClearSession}
-              className="h-10 px-5 bg-transparent text-[#6750A4] text-sm font-medium rounded-full border border-[#79747E] hover:bg-[#6750A4]/8 active:scale-[0.97] transition-all"
+              className="h-10 px-5 bg-[#E8DEF8] text-[#6750A4] text-sm font-medium rounded-full hover:bg-[#D0BCFF] active:scale-[0.97] transition-all"
             >
               Close
             </button>
@@ -77,7 +77,7 @@ export function QuizReviewView({ data }: QuizReviewViewProps) {
               const rankBg = i === 0 ? "#FFD8E4" : i === 1 ? "#E8DEF8" : "#E7E0EC";
               const rankFg = i === 0 ? "#633B48" : i === 1 ? "#6750A4" : "#49454F";
               return (
-                <div key={i} className="flex items-center gap-3 p-4 bg-[#FFFBFE] rounded-[16px] border border-[#CAC4D0]">
+                <div key={i} className="flex items-center gap-3 p-4 bg-[#FFFBFE] rounded-[16px]">
                   <span
                     className="w-9 h-9 text-sm font-bold rounded-full flex items-center justify-center shrink-0"
                     style={{ backgroundColor: rankBg, color: rankFg }}
@@ -134,7 +134,7 @@ export function QuizReviewView({ data }: QuizReviewViewProps) {
                 const cardBg = isCorrect ? "#C8FFC7" : isWrong ? "#FFDAD6" : "#FFFBFE";
                 const cardBorder = isCorrect ? "#4CAF50" : isWrong ? "#BA1A1A" : "#CAC4D0";
                 return (
-                  <div key={q.questionId} className="p-4 rounded-[16px] border" style={{ backgroundColor: cardBg, borderColor: `${cardBorder}40` }}>
+                  <div key={q.questionId} className="p-4 rounded-[16px]" style={{ backgroundColor: cardBg }}>
                     <div className="flex items-center gap-2 mb-2">
                       <span className="w-7 h-7 bg-[#6750A4] text-white text-xs font-bold rounded-full flex items-center justify-center">
                         {idx + 1}
@@ -183,7 +183,7 @@ export function QuizReviewView({ data }: QuizReviewViewProps) {
       </div>
 
       {/* M3 segmented button navigation */}
-      <div className="flex gap-0 mb-5 overflow-x-auto pb-1 rounded-full border border-[#79747E]" style={{ width: "fit-content" }}>
+      <div className="flex gap-0 mb-5 overflow-x-auto pb-1 rounded-full bg-[#E7E0EC]" style={{ width: "fit-content" }}>
         {questions.map((_, idx) => {
           const qAnswers = answers.filter((a) => a.questionId === questions[idx].questionId);
           const allGraded = qAnswers.length > 0 && qAnswers.every((a) => a.isCorrect !== null && a.isCorrect !== undefined);
@@ -193,7 +193,7 @@ export function QuizReviewView({ data }: QuizReviewViewProps) {
               key={idx}
               onClick={() => setReviewQuestionIndex(idx)}
               className={`shrink-0 h-8 min-w-[40px] px-3 text-[11px] font-bold transition-all ${
-                idx > 0 ? "border-l border-[#79747E]" : ""
+                ""
               } ${
                 isActive
                   ? "bg-[#E8DEF8] text-[#1D1B20]"
@@ -212,7 +212,7 @@ export function QuizReviewView({ data }: QuizReviewViewProps) {
       {reviewQuestion && (
         <div>
           {/* M3 outlined card */}
-          <div className="mb-4 p-4 bg-[#FFFBFE] rounded-[16px] border border-[#CAC4D0]">
+          <div className="mb-4 p-4 bg-[#FFFBFE] rounded-[16px]">
             <p className="text-sm font-medium text-[#1D1B20] leading-relaxed">{reviewQuestion.questionText}</p>
             {reviewQuestion.correctAnswer && (
               <div className="flex items-center gap-2 mt-3 h-7 px-3 rounded-[8px] bg-[#C8FFC7] w-fit">
@@ -260,14 +260,10 @@ function AnswerGradeRow({
   const bg = isGraded
     ? answer.isCorrect ? "#C8FFC7" : "#FFDAD6"
     : "#FFFBFE";
-  const border = isGraded
-    ? answer.isCorrect ? "#4CAF50" : "#BA1A1A"
-    : "#CAC4D0";
-
   return (
     <div
-      className="flex items-center justify-between p-4 rounded-[16px] border transition-all"
-      style={{ backgroundColor: bg, borderColor: `${border}40` }}
+      className="flex items-center justify-between p-4 rounded-[16px] transition-all"
+      style={{ backgroundColor: bg }}
     >
       <div className="flex-1 min-w-0">
         <p className="text-[11px] font-bold text-[#79747E] mb-0.5 tracking-wide uppercase">{answer.userName}</p>

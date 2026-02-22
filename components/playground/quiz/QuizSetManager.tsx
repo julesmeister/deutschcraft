@@ -57,7 +57,7 @@ export function QuizSetManager({ data }: QuizSetManagerProps) {
               onChange={(e) => setNewTitle(e.target.value)}
               placeholder="Enter quiz title..."
               autoFocus
-              className="w-full h-14 px-4 bg-[#FEF7FF] rounded-[12px] text-sm text-[#1D1B20] placeholder:text-[#CAC4D0] focus:outline-none focus:ring-2 focus:ring-[#6750A4] border border-[#CAC4D0]"
+              className="w-full h-14 px-4 bg-[#FEF7FF] rounded-[12px] text-sm text-[#1D1B20] placeholder:text-[#CAC4D0] focus:outline-none focus:ring-2 focus:ring-[#6750A4]"
               onKeyDown={(e) => {
                 if (e.key === "Enter" && newTitle.trim()) {
                   handleCreateQuiz(newTitle.trim());
@@ -82,7 +82,7 @@ export function QuizSetManager({ data }: QuizSetManagerProps) {
               </button>
               <button
                 onClick={() => { setShowNewQuiz(false); setNewTitle(""); }}
-                className="h-10 px-6 bg-transparent text-[#6750A4] text-sm font-medium rounded-full border border-[#79747E] hover:bg-[#6750A4]/8 active:scale-[0.98] transition-all"
+                className="h-10 px-6 bg-transparent text-[#6750A4] text-sm font-medium rounded-full hover:bg-[#6750A4]/8 active:scale-[0.98] transition-all"
               >
                 Cancel
               </button>
@@ -190,7 +190,7 @@ export function QuizSetManager({ data }: QuizSetManagerProps) {
       {questions.length > 0 && (
         <div className="space-y-3 mb-5">
           {questions.map((q, idx) => (
-            <div key={q.questionId} className="p-4 bg-[#FFFBFE] rounded-[16px] border border-[#CAC4D0] group">
+            <div key={q.questionId} className="p-4 bg-[#FFFBFE] rounded-[16px] group">
               <div className="flex items-start justify-between gap-3">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-2">
@@ -198,14 +198,14 @@ export function QuizSetManager({ data }: QuizSetManagerProps) {
                       {idx + 1}
                     </span>
                     {/* M3 assist chip */}
-                    <span className={`text-[11px] h-7 px-3 rounded-[8px] font-medium flex items-center border ${
+                    <span className={`text-[11px] h-7 px-3 rounded-[8px] font-medium flex items-center ${
                       q.questionType === "multiple_choice"
-                        ? "border-[#D0BCFF] bg-[#EADDFF] text-[#6750A4]"
-                        : "border-[#FFD8E4] bg-[#FFD8E4] text-[#633B48]"
+                        ? "bg-[#EADDFF] text-[#6750A4]"
+                        : "bg-[#FFD8E4] text-[#633B48]"
                     }`}>
                       {q.questionType === "multiple_choice" ? "Multiple Choice" : "Text"}
                     </span>
-                    <span className="text-[11px] text-[#79747E] font-medium h-7 px-2 rounded-[8px] border border-[#CAC4D0] flex items-center">{q.timeLimit}s</span>
+                    <span className="text-[11px] text-[#79747E] font-medium h-7 px-2 rounded-[8px] flex items-center">{q.timeLimit}s</span>
                   </div>
                   <p className="text-sm text-[#1D1B20] leading-relaxed">{q.questionText}</p>
                   {q.choices && (
@@ -215,7 +215,7 @@ export function QuizSetManager({ data }: QuizSetManagerProps) {
                           key={i}
                           className={`text-[11px] h-6 px-2.5 rounded-[8px] font-medium flex items-center ${
                             c === q.correctAnswer
-                              ? "bg-[#C8FFC7] text-[#1B5E20] border border-[#4CAF50]/30"
+                              ? "bg-[#C8FFC7] text-[#1B5E20]"
                               : "bg-[#E7E0EC] text-[#49454F]"
                           }`}
                         >

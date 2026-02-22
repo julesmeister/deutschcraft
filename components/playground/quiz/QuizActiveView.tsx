@@ -94,10 +94,10 @@ export function QuizActiveView({ data }: QuizActiveViewProps) {
       {/* Question card — M3 filled card */}
       <div className="p-5 bg-[#EADDFF] rounded-[16px] mb-5">
         {/* M3 assist chip for type */}
-        <span className={`inline-flex items-center text-[11px] h-7 px-3 rounded-[8px] font-medium mb-3 border ${
+        <span className={`inline-flex items-center text-[11px] h-7 px-3 rounded-[8px] font-medium mb-3 ${
           currentQuestion.questionType === "multiple_choice"
-            ? "border-[#D0BCFF] bg-[#FEF7FF] text-[#6750A4]"
-            : "border-[#FFD8E4] bg-[#FEF7FF] text-[#633B48]"
+            ? "bg-[#EADDFF] text-[#6750A4]"
+            : "bg-[#FFD8E4] text-[#633B48]"
         }`}>
           {currentQuestion.questionType === "multiple_choice" ? "Multiple Choice" : "Text Answer"}
         </span>
@@ -113,16 +113,16 @@ export function QuizActiveView({ data }: QuizActiveViewProps) {
                 <button
                   key={i}
                   onClick={() => setSelectedChoice(choice)}
-                  className={`w-full text-left px-4 py-3.5 rounded-[16px] text-sm font-medium transition-all duration-200 border-2 ${
+                  className={`w-full text-left px-4 py-3.5 rounded-[16px] text-sm font-medium transition-all duration-200 ${
                     selectedChoice === choice
-                      ? "bg-[#EADDFF] text-[#21005D] border-[#6750A4]"
-                      : "bg-[#FFFBFE] text-[#1D1B20] border-[#CAC4D0] hover:bg-[#F6EDFF] hover:border-[#D0BCFF]"
+                      ? "bg-[#EADDFF] text-[#21005D] ring-2 ring-[#6750A4]"
+                      : "bg-[#F3EDF7] text-[#1D1B20] hover:bg-[#E8DEF8]"
                   }`}
                 >
-                  <span className={`inline-flex items-center justify-center w-7 h-7 rounded-full mr-3 text-xs font-bold border-2 ${
+                  <span className={`inline-flex items-center justify-center w-7 h-7 rounded-full mr-3 text-xs font-bold ${
                     selectedChoice === choice
-                      ? "bg-[#6750A4] text-white border-[#6750A4]"
-                      : "bg-transparent text-[#79747E] border-[#79747E]"
+                      ? "bg-[#6750A4] text-white"
+                      : "bg-[#E7E0EC] text-[#79747E]"
                   }`}>
                     {String.fromCharCode(65 + i)}
                   </span>
@@ -135,7 +135,7 @@ export function QuizActiveView({ data }: QuizActiveViewProps) {
               value={answerText}
               onChange={(e) => setAnswerText(e.target.value)}
               placeholder="Type your answer..."
-              className="w-full px-4 py-3 bg-[#FFFBFE] rounded-[12px] text-sm text-[#1D1B20] placeholder:text-[#CAC4D0] resize-none focus:outline-none focus:ring-2 focus:ring-[#6750A4] border border-[#CAC4D0] mb-4"
+              className="w-full px-4 py-3 bg-[#FFFBFE] rounded-[12px] text-sm text-[#1D1B20] placeholder:text-[#CAC4D0] resize-none focus:outline-none focus:ring-2 focus:ring-[#6750A4] mb-4"
               rows={3}
             />
           )}
@@ -190,7 +190,7 @@ export function QuizActiveView({ data }: QuizActiveViewProps) {
             {/* M3 outlined button */}
             <button
               onClick={handleEndQuiz}
-              className="h-10 px-5 bg-transparent text-[#BA1A1A] font-medium rounded-full border border-[#BA1A1A] hover:bg-[#BA1A1A]/8 active:scale-[0.98] transition-all text-sm"
+              className="h-10 px-5 bg-[#FFDAD6] text-[#BA1A1A] font-medium rounded-full hover:bg-[#FFB4AB] active:scale-[0.98] transition-all text-sm"
             >
               End
             </button>

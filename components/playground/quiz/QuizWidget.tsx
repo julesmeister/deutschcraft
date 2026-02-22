@@ -16,7 +16,7 @@ export function QuizWidget() {
 
   if (isLoading) {
     return (
-      <div className="bg-[#FEF7FF] rounded-[28px] h-full flex items-center justify-center">
+      <div className="bg-white rounded-[28px] h-full flex items-center justify-center">
         <div className="text-center">
           <div className="relative w-12 h-12 mx-auto mb-4">
             <div className="absolute inset-0 rounded-full border-[3px] border-[#E8DEF8]" />
@@ -32,13 +32,13 @@ export function QuizWidget() {
   if (!sessionState) {
     if (isTeacher) {
       return (
-        <div className="bg-[#FEF7FF] rounded-[28px] h-full overflow-y-auto">
+        <div className="bg-white rounded-[28px] h-full overflow-y-auto">
           <QuizSetManager data={data} />
         </div>
       );
     }
     return (
-      <div className="bg-[#FEF7FF] rounded-[28px] h-full flex items-center justify-center">
+      <div className="bg-white rounded-[28px] h-full flex items-center justify-center">
         <div className="text-center px-8 max-w-xs">
           {/* M3 icon container — squircle with tonal fill */}
           <div className="w-[72px] h-[72px] bg-[#EADDFF] rounded-[22px] flex items-center justify-center mx-auto mb-6">
@@ -58,7 +58,7 @@ export function QuizWidget() {
   // Active quiz session
   if (sessionState.status === "active") {
     return (
-      <div className="bg-[#FEF7FF] rounded-[28px] h-full overflow-y-auto">
+      <div className="bg-white rounded-[28px] h-full overflow-y-auto">
         <QuizActiveView data={data} />
       </div>
     );
@@ -67,7 +67,7 @@ export function QuizWidget() {
   // Reviewing or finished
   if (sessionState.status === "reviewing" || sessionState.status === "finished") {
     return (
-      <div className="bg-[#FEF7FF] rounded-[28px] h-full overflow-y-auto">
+      <div className="bg-white rounded-[28px] h-full overflow-y-auto">
         <QuizReviewView data={data} />
       </div>
     );
